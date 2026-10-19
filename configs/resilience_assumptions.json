@@ -1,0 +1,39 @@
+{
+  "schema_version": "4.1-research-prototype",
+  "provenance": "All limits here are illustrative research assumptions, NOT OEM relay or hospital safety ratings.",
+  "grid_import_limit_kW": 850.0,
+  "diesel_initial_energy_kWh": 2400.0,
+  "diesel_start_delay_minutes": 15.0,
+  "gt_ramp_kW_per_hour": 900.0,
+  "gt_short_term_overload_multiple": 1.05,
+  "gt_protection_trip_multiple": 1.05,
+  "gt_overload_hold_minutes": 15,
+  "thermal_setpoint_margin_C": 2.0,
+  "mass_participation": 0.5,
+  "effective_U_W_m2K": 1.5,
+  "solver_time_limit_sec": 6.0,
+  "priority": "strict lexicographic 0,1,2,3 then cost; each carrier normalized by total demand; P0-P2 lock abs tolerance 1e-7, P3 lock abs tolerance 1e-5, with relative tolerance",
+  "lex_lock_abs_tol_by_priority": [
+    1e-07,
+    1e-07,
+    1e-07,
+    1e-05
+  ],
+  "lex_lock_rel_tol_by_priority": [
+    0.0,
+    0.0,
+    0.0,
+    1e-08
+  ],
+  "p0_solver_feasibility_tol_kW": 0.001,
+  "p0_unserved_abs_tol_kW": 0.01,
+  "p0_unserved_rel_tol": 0.001,
+  "p0_unserved_abs_tol_kWh": 0.01,
+  "precontrol_load_shed_enabled": true,
+  "cascade": "Delayed pre-control proxy subtracts incremental grid headroom, diesel reserve available after start delay, and executable P3/P2/P1 shedding (P0 preserved) before sharing residual across surviving GTs; not a network or relay simulation.",
+  "dynamic_temperature": "baseline DOE zone mean temperature + uncalibrated 1R1C cold-loss perturbation",
+  "cost": "uses historical 2001 prices from v2; diesel $0.30/kWh illustrative only",
+  "precontrol_cooling_to_el_fraction": 0.6,
+  "cooling_tower_topology": "shared_common_tower_for_all_EC_and_ABS",
+  "mpc_cold_tracking_penalty_USD_per_kW_step": 0.2
+}

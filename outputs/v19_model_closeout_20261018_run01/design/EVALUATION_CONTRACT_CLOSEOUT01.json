@@ -1,0 +1,108 @@
+{
+  "schema": "hospital_ies.v19.evaluation_contract.v1",
+  "main_window_minutes": [
+    0.0,
+    600.0
+  ],
+  "registered_full_window": "[0, registered duration)",
+  "normal_costs": "Separate 24/48/72-hour windows, never pooled",
+  "metrics": [
+    "P0_P1_carrier_ENS",
+    "material_duration",
+    "longest_interruption",
+    "recovery_and_recurrence",
+    "P2_P3_actual_service",
+    "actual_sources",
+    "grid_gas_and_DG_shaft_energy",
+    "actual_energy_cost",
+    "ex_post_emissions"
+  ],
+  "material_thresholds": "Unchanged inherited source-bound analyzer thresholds",
+  "class_mapping": {
+    "L1": "L1",
+    "L2": "L3",
+    "L3": "L2",
+    "L4": "L4b"
+  },
+  "propagation_label_is_not_an_actual_trip": true,
+  "emission_semantics": "Ex-post grid/gas subtotal plus conditional diesel cases; no CO2 objective",
+  "original_final12": "sealed",
+  "independent_confirmation_requires_support_certificate": true,
+  "confirmation_preregistration": {
+    "selector_path": "outputs/v19_model_closeout_20261018_run01/scripts/select_confirmation.py",
+    "selector_sha256": "21861391bd9e59e51aa11516993ec4ffab8511436e0b897135ae699cb0fe9d59",
+    "seed": 20261018,
+    "background_count": 8,
+    "four_class_per_background": true,
+    "policies": [
+      "E",
+      "K1",
+      "C19"
+    ],
+    "window_minutes": [
+      0.0,
+      600.0
+    ],
+    "quarter_quotas": [
+      1,
+      3,
+      2,
+      2
+    ],
+    "one_background_per_calendar_day": true,
+    "support_and_embargo": "Full original load support including warmup/tail; exclude all prior/V19 registered supports plus 60 minute embargo; final12 sealed",
+    "selection_only_after_this_freeze": true,
+    "no_selection_fallback_or_confirmation_tuning": true
+  },
+  "finite_energy_comparison": {
+    "variants": [
+      "C19",
+      "C18_M19"
+    ],
+    "background_days": [
+      40,
+      100
+    ],
+    "outage_minutes": [
+      120,
+      360,
+      780
+    ],
+    "full_window_minutes": [
+      0.0,
+      1065.0
+    ],
+    "no_outage_endpoint_online": true,
+    "preregistration_path": "outputs/v19_model_closeout_20261018_run01/design/ENERGY_TRADEOFF_PREREGISTRATION.json",
+    "preregistration_sha256": "2a650f96f94552d5f84194cc17fdcec24654af122ce69b4003ae7716e32d7b2b",
+    "scope": "One current-critical reserve rule versus service-rich preference; no global winner required"
+  },
+  "normal_execution": {
+    "windows": 4,
+    "policies": [
+      "E",
+      "K1",
+      "C19"
+    ],
+    "batching": "Separate single-policy processes, globally serial",
+    "pairing": "Actual source/config/input/reset/exogenous hashes and complete registered window; never mix durations in a cost sum"
+  },
+  "finite_clock_sensitivities": {
+    "grid_open_transfer_minutes": [
+      0.25,
+      1.0
+    ],
+    "local_contact_restore_delay_minutes": [
+      0.0,
+      0.25
+    ],
+    "scope": "Registered seen-case mechanisms; positive delay may retain material losses. Aggregate quasi-steady model with explicitly measured limits; no robust mechanical transient claim."
+  },
+  "interpretation": {
+    "seen80": "Regression cases, not unseen confirmation",
+    "initial_failure_propagation_functional_loss": "Separate actual event counts",
+    "critical_carrier_metrics": "Report e/h/c individually; no unqualified clinical damage sum",
+    "emissions": "Actual energy ledger ex post; conditional representative diesel conversion, no CO2 dispatch objective",
+    "no_annual_or_clinical_extrapolation": true
+  }
+}

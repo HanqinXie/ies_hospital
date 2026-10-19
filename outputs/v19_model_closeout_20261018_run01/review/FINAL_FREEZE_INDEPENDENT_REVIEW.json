@@ -1,0 +1,39 @@
+{
+  "schema": "hospital_ies.v19.independent_freeze_review.v1",
+  "reviewed_utc": "2026-10-18T13:54:28.371257+00:00",
+  "status": "passed",
+  "freeze_path": "outputs/v19_model_closeout_20261018_run01/MODEL_FREEZE_CLOSEOUT01.json",
+  "freeze_sha256": "80815ef85196a05e496b48b3340a843a00079a7c0de425cbffd13c949e52e2f7",
+  "freeze_signature": "2e4535b1b8a02b3950ef90ee33dbdfd49eeef07c605e1bf7b7c6fcf1f8f5a339",
+  "source_files": 345,
+  "source_binding_digest": "f88ebed9d52dfe7d5c62d1ea994a70245063e365fb52ba80d478fc3104202823",
+  "current_sources_exactly_match": true,
+  "test_files_bound": 235,
+  "actual_affected_tests": "165 passed in development_gate04; 235 is the bound file count, not executed test count",
+  "actual_gate_command_sha256": "290b429b20a2616090383f68df2f0068cf023772db4860f6fb91ceb3e06d607c",
+  "gate_sha256": "0a4b55b1c75c6d09a2fa8d59ca3b854f25a2573962e3fefcad81b4f6c75de27f",
+  "evaluation_config_sha256": "b4932d315678088b79aa96d1ef8ce41cfbd805a76ffcb29c9b099a72901650f6",
+  "factor_registry_sha256": "67ad5404000040d9665f016ee4b9c540783b26a9ad8038550f148881cefc6ab0",
+  "emissions": {
+    "registry_path": "outputs/v19_model_closeout_20261018_run01/references/EMISSIONS_FACTOR_REGISTRY.json",
+    "registry_sha256": "67ad5404000040d9665f016ee4b9c540783b26a9ad8038550f148881cefc6ab0",
+    "main_case_id": "CAMX2023r2_DG75pct",
+    "case_canonical_sha256": {
+      "CAMX2023r2_DG75pct": "f80874b189f3a21bb1e49bd064b387753002fe74a10a2cd2cc1eb85513e90505",
+      "CAMX2023r2_DG100pct": "6d8b50d198526d44e4d2d386b333248115704b1db4771e6e3acea09ed13f082c",
+      "CAMX2023r2_DG25pct": "c15b8a4015e2f52ff2fcc69e845f3bd96de4f0db90857b6e10937318fb3a09c8",
+      "CAMX2023_originalHub_DG75pct": "ddd7539a922418439b242ee2c18e933bc2e65682e10654e240a80db0623ae1e2"
+    },
+    "boundary": "operational CO2 only; site fuel combustion plus location-based purchased electricity; not CO2e/lifecycle/avoided emissions",
+    "is_dispatch_objective": false,
+    "diesel_total_is_conditional": true
+  },
+  "selector_sha256": "21861391bd9e59e51aa11516993ec4ffab8511436e0b897135ae699cb0fe9d59",
+  "positive_coverage_gate_sha256": "1b95fa9ce85c1a911c42de99817e632c6c7deacde9bde1ff33f733b1d3e20890",
+  "current_model_and_all_policy_specs_match": true,
+  "original_final12": "unopened; metadata-only exclusion to be independently checked in selection certificate",
+  "selection_not_yet_certified": true,
+  "physical_episodes_started_by_reviewer": 0,
+  "training_started_by_reviewer": 0,
+  "freeze_or_production_modified": false
+}

@@ -1,0 +1,52 @@
+{
+  "schema_version": "1.0",
+  "source_equipment": {
+    "gas_turbines": {"count": 3, "rated_electric_kW_each": 800.0},
+    "hrsg": {"count": 3, "rated_steam_lb_per_hr_each": 7265.0},
+    "absorption_single_effect": {"count": 1, "rated_cooling_RT_each": 800.0},
+    "centrifugal_electric_chillers": {"rated_cooling_RT_each": [800.0, 800.0, 1200.0]},
+    "boilers": {"count": 3, "rated_steam_lb_per_hr_each": 25000.0},
+    "cooling_towers": {"count": 4, "rated_cooling_RT_each": 1200.0},
+    "emergency_diesel_generators": {"count": 3, "rated_electric_kW_each": 600.0}
+  },
+  "study_cases": {
+    "original_historical_capacity": {
+      "description": "Historical 2001 existing equipment capacity; does not mean the DOE building is this real hospital.",
+      "gas_turbine_scale": 1.0, "hrsg_scale": 1.0,
+      "absorption_scale": 1.0, "electric_chiller_scale": 1.0,
+      "boiler_scale": 1.0, "diesel_scale": 1.0
+    },
+    "doe_capacity_matched_exploratory": {
+      "description": "Explicit research scenario; equipment ratings scaled from historical topology, NOT real marketed nameplates.",
+      "gas_turbine_scale": 0.4, "hrsg_scale": 0.4,
+      "absorption_scale": 0.25, "electric_chiller_scale": 0.25,
+      "boiler_scale": 0.04, "diesel_scale": 0.5
+    }
+  },
+  "engineering_assumptions_not_from_source": {
+    "kWh_thermal_per_lb_steam": 0.30,
+    "steam_to_building_heat_exchanger_efficiency": 0.95,
+    "hrsg_steam_output_scales_with_gt_loading": true,
+    "gas_turbine_operating_load_fractions": [0.4,0.6,0.8,1.0],
+    "default_unresolved_electricity_treatment": "include_all",
+    "base_year_tariff_schedule": "illustrative_weekday_hours_not_verified_SDGE_tariff"
+  },
+  "historical_pnnl_performance": {
+    "existing_absorption_steam_lb_per_RT_hr": 19.5,
+    "existing_absorption_aux_kW_per_RT": 0.14,
+    "existing_electric_chiller_all_in_kW_per_RT": 0.77,
+    "boiler_thermal_efficiency": 0.80,
+    "gt_hhv_heat_rate_Btu_per_kWh_constant": 29477.0,
+    "gt_hhv_heat_rate_Btu_per_kWh_ln_coeff": 1954.9,
+    "gt_partload_correction_multiplier": 0.9851,
+    "gt_partload_correction_exponent": -0.327,
+    "hrsg_steam_exponential_constant_lb_per_hr": 5623.74,
+    "hrsg_steam_exponential_exponent_per_kW": 0.0003202
+  },
+  "historical_2001_prices_USD": {
+    "gas_per_MMBtu": 4.84,
+    "electricity_onpeak_per_kWh": 0.09256,
+    "electricity_midpeak_per_kWh": 0.07356,
+    "electricity_offpeak_per_kWh": 0.05456
+  }
+}

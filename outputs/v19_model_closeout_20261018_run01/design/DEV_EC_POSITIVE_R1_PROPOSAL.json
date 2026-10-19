@@ -1,0 +1,288 @@
+{
+  "panel": "v19_key",
+  "scenarios": [
+    {
+      "start_hour": 841,
+      "source_day_index": 35,
+      "season_quarter": 1,
+      "duration_steps": 40,
+      "step_minutes": 15.0,
+      "pre_event_warmup_steps": 6,
+      "initialization_seed": 20261018,
+      "automatic_fast_shedding": false,
+      "grid_limit_kW": 850.0,
+      "pre_event_grid_limit_kW": 850.0,
+      "response_delay_minutes": 0.0,
+      "root_family_id": "v17_calendar:acf47a1b298c58eb59eb0cb8",
+      "family_id": "v17_calendar:acf47a1b298c58eb59eb0cb8",
+      "parent_template_id": "v17_calendar:acf47a1b298c58eb59eb0cb8",
+      "parent_instance_id": "v17_calendar:acf47a1b298c58eb59eb0cb8",
+      "design_family": "v17_calendar:acf47a1b298c58eb59eb0cb8",
+      "base_state_id": "v17_initial:938b7118486b087dd59ab9e3188a9f71cc772c68aeaab64a7d555d856cc0d9de",
+      "event_schema_version": "p2a.events.v1",
+      "sample_schema_version": "hospital_ies.state_coordinated_metadata.v17.v1",
+      "distribution_id": "state_coordinated.v17.finite_mechanism_design",
+      "sampling_method": "calendar_identity_and_disjoint_support_only",
+      "sampling_weight_is_failure_probability": false,
+      "p_reference": null,
+      "q_design_density": null,
+      "importance_weight": null,
+      "history_interval_minutes": [
+        0.0,
+        60.0
+      ],
+      "score_interval_minutes": [
+        60.0,
+        420.0
+      ],
+      "tail_interval_minutes": [
+        420.0,
+        600.0
+      ],
+      "label_horizons_minutes": [
+        15,
+        30,
+        60,
+        120
+      ],
+      "prehistory_mode": "same_continuous_episode_no_reset",
+      "initialization_semantics": "Repeated first-hour algebraic initialization is not actual prehistory",
+      "state_inheritance": "Actual uninterrupted GT ages, fuel, temperatures, source/contact ledgers and command queues",
+      "stage": 4,
+      "event_class": "L4b",
+      "analysis_class": "L4b",
+      "enable_propagation": true,
+      "faults": {
+        "EC_2": 0.0
+      },
+      "shock": {
+        "e": 0.25,
+        "h": 0.25,
+        "c": 0.25
+      },
+      "shock_by_priority": {},
+      "exogenous_events": [
+        {
+          "origin": "exogenous",
+          "kind": "device_fault",
+          "faults": {
+            "EC_2": 0.0
+          },
+          "start_minute": 187.5,
+          "end_minute": 247.5
+        },
+        {
+          "origin": "exogenous",
+          "kind": "demand_shock",
+          "shock": {
+            "e": 0.25,
+            "h": 0.25,
+            "c": 0.25
+          },
+          "shock_by_priority": {},
+          "start_minute": 170.0,
+          "end_minute": 200.0
+        }
+      ],
+      "first_event_minute": 170.0,
+      "normal_history_minutes": 170.0,
+      "initial_binding_status": "not_observed; classify from actual prefix, never from success",
+      "actual_p0_load_multiplier": {
+        "e": 1.25,
+        "h": 1.25,
+        "c": 1.25
+      },
+      "experiment_role": "development",
+      "selection_allowed": true,
+      "requires_policy_freeze": false,
+      "fit_allowed": false,
+      "is_final_blind": false,
+      "purpose": "v15_frozen_evaluation",
+      "sampling_cohort": "v17_confirmation",
+      "analysis_cohort": "v17_confirmation",
+      "sampling_role": "post_freeze_new_coordinates",
+      "new_independent_background": false,
+      "old_results_read_only": true,
+      "demand_background": "same_hospital_annual_source_no_unseen_background_claim",
+      "canonical_class": "L4",
+      "legacy_class": "L4b",
+      "core_four_class_denominator": true,
+      "coordinate_design_version": "state_coordinated.v17.explicit_coordinates.v1",
+      "background_status": "held_out_from_v17_development",
+      "historical_exposure_status": "not_fully_audited_no_global_unseen_claim",
+      "source_outcomes_used_for_selection": true,
+      "development_background": false,
+      "fault_start_minute": 187.5,
+      "fault_duration_minutes": 60.0,
+      "shock_start_minute": 170.0,
+      "shock_duration_minutes": 30.0,
+      "design_variant": "main_L4_3",
+      "target_operating_role": "in_service_candidate",
+      "target_service_attribution": "actual pre-event source output and bus-level service; no invented source-to-priority allocation",
+      "demand_carrier_design": "mixed",
+      "propagation_pair_id": null,
+      "propagation_design": "allowed_observe_actual",
+      "continuous_recovery_tail_minutes": 300.0,
+      "original_final12_evaluated": false,
+      "full_source_support": {
+        "raw_start_minute": 50400,
+        "raw_end_minute": 51060,
+        "actual_trajectory_interval_minutes": [
+          50400,
+          51000.0
+        ],
+        "initialization_source_hours": [
+          841
+        ],
+        "initialization_historical_minutes": 0,
+        "algebraic_initialization_iterations": 6,
+        "historical_observation_interval_minutes": [
+          0.0,
+          60.0
+        ],
+        "score_interval_minutes": [
+          60.0,
+          420.0
+        ],
+        "label_tail_interval_minutes": [
+          420.0,
+          600.0
+        ],
+        "endpoint_source_hour_reserved": true,
+        "source_semantics": "hourly rows; reset repeats first row; final boundary hour conservatively included"
+      },
+      "time_block_id": "v17_support:14d08dc903340114988c99c3",
+      "exogenous_stream_id": "v17_exogenous:45835e42e81852a14abd7f5d",
+      "physical_scenario_signature": "ba5a619c2fff04e62c4f749f3fbcbff2e1dfa919846069b0836066a90b548a94",
+      "id": "v17_L4_bf7050c737ce06fa33867a0c",
+      "matched_group_id": "v17_cell:bf0ae7421cb969116f574478",
+      "design_cell_id": "v17_cell:bf0ae7421cb969116f574478",
+      "v18_source_scene_id": "v17_L4_bf7050c737ce06fa33867a0c",
+      "v18_seen_regression": true,
+      "v19_source_scene_id": "v17_L4_bf7050c737ce06fa33867a0c",
+      "v19_seen_regression": false
+    }
+  ],
+  "roots": [
+    {
+      "root_family_id": "v17_calendar:acf47a1b298c58eb59eb0cb8",
+      "start_hour": 841,
+      "source_day_index": 35,
+      "season_quarter": 1,
+      "raw_start_minute": 50400,
+      "raw_end_minute": 51060,
+      "embargo_start_minute": 50340,
+      "embargo_end_minute": 51120,
+      "new_independent_background": false
+    }
+  ],
+  "analysis_class_counts": {
+    "L4b": 1
+  },
+  "source_metadata_bindings": {
+    "outputs/v18_execution_recovery_20261018_run01/design/MAIN_FINAL_R1_PROPOSAL.json": {
+      "sha256": "8d26d6447f0c7fd45f7b143b6a015affa36d63b49228623bcc7f3c486088ed45"
+    },
+    "outputs/v18_execution_recovery_20261018_run01/design/LONG_FINAL_R1_PROPOSAL.json": {
+      "sha256": "4c5ef87c24c4e8000bf8b54c663801178de8516b61a78090381cc392b34e3e48"
+    }
+  },
+  "freeze_signature": null,
+  "incident_denominator_classes": [
+    "L1",
+    "L2",
+    "L3",
+    "L4b"
+  ],
+  "separately_reported_classes": [
+    "N2",
+    "L4a"
+  ],
+  "scoring_windows": {
+    "primary": [
+      60.0,
+      420.0
+    ],
+    "full": [
+      0.0,
+      600.0
+    ]
+  },
+  "additional_scoring_windows": "registered_full [0,actual requested end); prefix and explicitly named event windows",
+  "independence": "New roots/coordinates on one hospital-year; no iid or never-seen demand claim",
+  "coordinate_design_version": "state_coordinated.v17.explicit_coordinates.v1",
+  "coordinate_recipe": {
+    "growth_cycle": [
+      0.25,
+      0.75,
+      1.2
+    ],
+    "fault_duration_cycle_minutes": [
+      30.0,
+      60.0,
+      180.0,
+      300.0
+    ],
+    "shock_duration_cycle_minutes": [
+      30.0,
+      60.0,
+      90.0,
+      270.0
+    ],
+    "growth_period": 3,
+    "duration_period": 4,
+    "growth_is_not_bound_to_quarter": true,
+    "fault_and_shock_are_separate_registered_axes": true,
+    "complete_duration_factorial_claim": false,
+    "selection_uses_outcomes": false,
+    "hold_declarations_are_not_service_guarantees": true,
+    "current_static_copy_support_hours": 2.0
+  },
+  "schema": "hospital_ies.model_closeout_metadata.v19.v1",
+  "study_name": "hospital_ies_model_closeout_v19",
+  "strict_final_gate": "not_verified",
+  "original_final12_evaluated": false,
+  "original_final_release_authorized": false,
+  "sealed_final_days": [
+    21,
+    26,
+    59,
+    77,
+    92,
+    127,
+    140,
+    196,
+    264,
+    284,
+    344,
+    359
+  ],
+  "new_independent_background_count": 0,
+  "hospital_count": 1,
+  "source_year_count": 1,
+  "statistical_iid_claim": false,
+  "source_load_values_read": false,
+  "raw_or_result_files_read": false,
+  "physical_episodes_started": 0,
+  "resource_limits": {
+    "max_actual_attempts": 700,
+    "max_experiment_wall_hours": 48,
+    "max_registered_pairs": 700,
+    "max_main_dispatch_configurations": 4,
+    "ceilings_not_quotas": true,
+    "internally_predeclared_engineering_bounds": true,
+    "user_authorized_budget_claim": false,
+    "revision_requires_recorded_evidence": true
+  },
+  "study_contract_id": "hospital_ies.model_closeout_study.v19.v1",
+  "evaluation_role": "development",
+  "historical_unseen_claim": false,
+  "old80_role": "seen_regression",
+  "confirmation_background_count": 0,
+  "canonical_class_counts": {
+    "L4": 1
+  },
+  "confirmation_isolation_registration": null,
+  "final_archive_hard_limit_bytes": 200000000,
+  "signature": "454e4cb7c2dc8e127dc073d15e48558251236fa076637c545d23f33c16c8aa0b"
+}

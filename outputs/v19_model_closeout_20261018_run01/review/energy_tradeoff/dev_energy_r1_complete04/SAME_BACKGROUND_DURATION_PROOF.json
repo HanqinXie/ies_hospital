@@ -1,0 +1,34 @@
+[
+  {
+    "source_day_index": 40,
+    "outage_durations_minutes": [
+      120.0,
+      360.0,
+      780.0
+    ],
+    "registered_cases": 3,
+    "policy_outcomes": 6,
+    "same_background_duration_design_valid": true,
+    "duration_proof_status": "verified",
+    "unchanged_physical_projection_except_common_fault_endpoint_sha256": "54c6e0774c21431b8772c96bc554d6e92263eceaa2ed06aac64622dec714324c",
+    "source_and_reset_inputs_match_across_durations": true,
+    "exogenous_streams_intentionally_different": true,
+    "claim": "Predeclared duration scenario sensitivity, not a same-exogenous-stream policy comparison or independent population sample"
+  },
+  {
+    "source_day_index": 100,
+    "outage_durations_minutes": [
+      120.0,
+      360.0,
+      780.0
+    ],
+    "registered_cases": 3,
+    "policy_outcomes": 6,
+    "same_background_duration_design_valid": true,
+    "duration_proof_status": "verified",
+    "unchanged_physical_projection_except_common_fault_endpoint_sha256": "a23f0255fda54f77bb1acc8724401ab7a009b6cac2b691b379e0fa38275f976a",
+    "source_and_reset_inputs_match_across_durations": true,
+    "exogenous_streams_intentionally_different": true,
+    "claim": "Predeclared duration scenario sensitivity, not a same-exogenous-stream policy comparison or independent population sample"
+  }
+]

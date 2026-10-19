@@ -1,0 +1,552 @@
+{
+  "schema": "hospital_ies.v19.saved_energy_tradeoff_results.v1",
+  "cohort": "development",
+  "batches": [
+    "dev_energy_r1_d040_short_120",
+    "dev_energy_r1_d040_medium_360",
+    "dev_energy_r1_d040_long_780",
+    "dev_energy_r1_d100_short_120",
+    "dev_energy_r1_d100_medium_360",
+    "dev_energy_r1_d100_long_780"
+  ],
+  "registered_policy_outcomes": 12,
+  "eligible_complete_policy_outcomes": 12,
+  "matched_policy_case_comparisons": 6,
+  "table_rows": {
+    "CASES": 12,
+    "CRITICAL_SERVICE": 72,
+    "CRITICAL_COMPARISON": 36,
+    "LOWER_PRIORITY_SERVICE": 72,
+    "ECONOMICS_ENERGY": 12,
+    "EMISSIONS": 48,
+    "ENERGY_COMPARISONS": 24
+  },
+  "sources": [
+    {
+      "path": "experiments/dev_energy_r1_d040_short_120/plan.json",
+      "bytes": 42062,
+      "sha256": "eb455a319aa374c544988ebfa1247eec86f3c5c5a0c40c5c1b4198256d55c627",
+      "mtime_ns": 1792325282242106900
+    },
+    {
+      "path": "experiments/dev_energy_r1_d040_short_120/manifest.json",
+      "bytes": 73360,
+      "sha256": "b4877649891942f0207010dac6c4463571a118d44e66036a762eee23f05b5a21",
+      "mtime_ns": 1792325282241106000
+    },
+    {
+      "path": "experiments/dev_energy_r1_d040_short_120/BATCH_RESULT.json",
+      "bytes": 8186,
+      "sha256": "19a173a24213cfcdac904a4469d71a7811c44ad6ec28801e06d0458048a66728",
+      "mtime_ns": 1792327121700647300
+    },
+    {
+      "path": "experiments/dev_energy_r1_d040_short_120/pairs/v17_L1_cc1ad4f3b51e1c4d17ec25b5__C19_critical_reserve_v19r1/RESULT.json",
+      "bytes": 531559,
+      "sha256": "ae3d479943653955523fca79b0fa9188f5703ea7d48b2b60573048aec5150166",
+      "mtime_ns": 1792326817982476600
+    },
+    {
+      "path": "experiments/dev_energy_r1_d040_short_120/pairs/v17_L1_cc1ad4f3b51e1c4d17ec25b5__C18_service_rich_M19compat/RESULT.json",
+      "bytes": 526301,
+      "sha256": "87419f45d19d3c254893edb7ff2f5e51ac91ff16d6671c20194bbf28ed935361",
+      "mtime_ns": 1792327099657436700
+    },
+    {
+      "path": "experiments/dev_energy_r1_d040_short_120/analysis/ENGINEERING_INTERVALS.csv",
+      "bytes": 24425079,
+      "sha256": "8b0a6ccf5793bb8651d8fd020cb769fdcd17b8838f5cccd8d6377a544b7d7003",
+      "mtime_ns": 1792327117634251400
+    },
+    {
+      "path": "experiments/dev_energy_r1_d040_short_120/analysis/EVENT_TIMELINE.csv",
+      "bytes": 22747783,
+      "sha256": "84fc9244fa35939f51c4d1ddd692fd1c9c84cfcce592cf606d46822bdcc5c2e9",
+      "mtime_ns": 1792327117126022300
+    },
+    {
+      "path": "experiments/dev_energy_r1_d040_short_120/analysis/COMMAND_LIFECYCLE.csv",
+      "bytes": 3662527,
+      "sha256": "66a68d483ad45f6aa75006f073af33486f5f8d0c8fb9f67ae099477de431b307",
+      "mtime_ns": 1792327116668710500
+    },
+    {
+      "path": "experiments/dev_energy_r1_d040_medium_360/plan.json",
+      "bytes": 42062,
+      "sha256": "23f3159482aaed70b9ed5873c1270b78c8bb8a4e9b42b74254408b18ee0c55de",
+      "mtime_ns": 1792325282570991700
+    },
+    {
+      "path": "experiments/dev_energy_r1_d040_medium_360/manifest.json",
+      "bytes": 73361,
+      "sha256": "51c010227cdfb802021503587d5fad7c503665f7a2cd6ff66d3fdde3bd6f5683",
+      "mtime_ns": 1792325282569992600
+    },
+    {
+      "path": "experiments/dev_energy_r1_d040_medium_360/BATCH_RESULT.json",
+      "bytes": 8187,
+      "sha256": "f4f9a8d446a5dbf67f0f2dc007cdcaf93bebd6bc7495831a2c8c0fa77b90da7e",
+      "mtime_ns": 1792327695107812000
+    },
+    {
+      "path": "experiments/dev_energy_r1_d040_medium_360/pairs/v17_L1_c19dbc4c67fdbf3e8c0bd097__C19_critical_reserve_v19r1/RESULT.json",
+      "bytes": 533696,
+      "sha256": "66291f983649a4963522acef446a16271e9618d8970f3832ea67f58807eca28a",
+      "mtime_ns": 1792327399896413500
+    },
+    {
+      "path": "experiments/dev_energy_r1_d040_medium_360/pairs/v17_L1_c19dbc4c67fdbf3e8c0bd097__C18_service_rich_M19compat/RESULT.json",
+      "bytes": 532048,
+      "sha256": "d252aa5bc060cd4f5e8d82d5e5c8f7ee09ae11f75080cd19f5da6cea814e5d78",
+      "mtime_ns": 1792327672656440600
+    },
+    {
+      "path": "experiments/dev_energy_r1_d040_medium_360/analysis/ENGINEERING_INTERVALS.csv",
+      "bytes": 24380417,
+      "sha256": "56a748c0c40f0e00df7731561f52d678b0ad5a45e4fde4e5c238c214e4ef308c",
+      "mtime_ns": 1792327691047088100
+    },
+    {
+      "path": "experiments/dev_energy_r1_d040_medium_360/analysis/EVENT_TIMELINE.csv",
+      "bytes": 22559220,
+      "sha256": "0c17d0dc3a0b8c65da1e7dc5f6369b2aad8b30a0e113700c9561df3feff7046c",
+      "mtime_ns": 1792327690557430800
+    },
+    {
+      "path": "experiments/dev_energy_r1_d040_medium_360/analysis/COMMAND_LIFECYCLE.csv",
+      "bytes": 3640030,
+      "sha256": "53ece293f5ae30a900ab9cd5ced6c990df17bfa55ad3aa0ec137673ee6bd68af",
+      "mtime_ns": 1792327690095489100
+    },
+    {
+      "path": "experiments/dev_energy_r1_d040_long_780/plan.json",
+      "bytes": 42062,
+      "sha256": "36b212b70331d5e8bf5ebe64504c8e7a9c4b0f01575e13082f06f6e732737b6e",
+      "mtime_ns": 1792325282853437000
+    },
+    {
+      "path": "experiments/dev_energy_r1_d040_long_780/manifest.json",
+      "bytes": 73359,
+      "sha256": "d2c139cb4416f7309a12ef37f5343ced33cc32d71de40a994864fce9d529b990",
+      "mtime_ns": 1792325282853437000
+    },
+    {
+      "path": "experiments/dev_energy_r1_d040_long_780/BATCH_RESULT.json",
+      "bytes": 8182,
+      "sha256": "78379fc889e118d487bcea5f408251d7061fd5607db2dfb2d5fc27fec40ee89e",
+      "mtime_ns": 1792328114896646600
+    },
+    {
+      "path": "experiments/dev_energy_r1_d040_long_780/pairs/v17_L1_d59892a485ce7e0848cc634a__C19_critical_reserve_v19r1/RESULT.json",
+      "bytes": 548305,
+      "sha256": "fc1400b9c92dc465df56e4bd0f6e6eb5b26b8b75e9aeea5e38ca15947597b3b4",
+      "mtime_ns": 1792327901276276100
+    },
+    {
+      "path": "experiments/dev_energy_r1_d040_long_780/pairs/v17_L1_d59892a485ce7e0848cc634a__C18_service_rich_M19compat/RESULT.json",
+      "bytes": 567779,
+      "sha256": "f87498b871659f4f0a55fbd878b6af09e35bd1144a9b5d322b9a0fdef44515cd",
+      "mtime_ns": 1792328106633674700
+    },
+    {
+      "path": "experiments/dev_energy_r1_d040_long_780/analysis/ENGINEERING_INTERVALS.csv",
+      "bytes": 1672165,
+      "sha256": "6468c8afc8c5f59874dadb28497b4c8acdf5f6fea628cefb1dca779adabd0061",
+      "mtime_ns": 1792328113681043400
+    },
+    {
+      "path": "experiments/dev_energy_r1_d040_long_780/analysis/EVENT_TIMELINE.csv",
+      "bytes": 17200227,
+      "sha256": "3d45096a1a5853d4559735053f32e8a468747ff024725355f71ab6587cebf8b1",
+      "mtime_ns": 1792328113640018400
+    },
+    {
+      "path": "experiments/dev_energy_r1_d040_long_780/analysis/COMMAND_LIFECYCLE.csv",
+      "bytes": 478950,
+      "sha256": "db463fc8d5b10969c38cd218ac7fcd4755ff51245b3c6d778ce807dc9e074514",
+      "mtime_ns": 1792328113304958700
+    },
+    {
+      "path": "experiments/dev_energy_r1_d100_short_120/plan.json",
+      "bytes": 42062,
+      "sha256": "105d7781880120ac05e90c8b7a956688cb2315b737d4ddfa43a299f771b28ed6",
+      "mtime_ns": 1792325283126162000
+    },
+    {
+      "path": "experiments/dev_energy_r1_d100_short_120/manifest.json",
+      "bytes": 73669,
+      "sha256": "7a857d9f4aa704f122a99c3bd95199a49d4b1eb9cf37e007bd5743386b456f7d",
+      "mtime_ns": 1792325283125162500
+    },
+    {
+      "path": "experiments/dev_energy_r1_d100_short_120/BATCH_RESULT.json",
+      "bytes": 8188,
+      "sha256": "43c6129c430eefc7bf6de04ee0f04c1fbe39d266506be53d9f5144e5ce0f4a8d",
+      "mtime_ns": 1792328992901436600
+    },
+    {
+      "path": "experiments/dev_energy_r1_d100_short_120/pairs/v17_L4_4e8aeda219e1205821ff2119__C19_critical_reserve_v19r1/RESULT.json",
+      "bytes": 651385,
+      "sha256": "787fd24461d7fcbc91add13211203397b0e892219246eed2d84dcce8bac1d55a",
+      "mtime_ns": 1792328352339823100
+    },
+    {
+      "path": "experiments/dev_energy_r1_d100_short_120/pairs/v17_L4_4e8aeda219e1205821ff2119__C18_service_rich_M19compat/RESULT.json",
+      "bytes": 654392,
+      "sha256": "1fab13772881486ba49c083ab53a65ddedb16a668cab93741993b6c395cef254",
+      "mtime_ns": 1792328955712330700
+    },
+    {
+      "path": "experiments/dev_energy_r1_d100_short_120/analysis/ENGINEERING_INTERVALS.csv",
+      "bytes": 8192228,
+      "sha256": "34be06ed316db51d8ea3d317143704cbbadcb816f60107d361af3aed7b7d66ab",
+      "mtime_ns": 1792328986381810100
+    },
+    {
+      "path": "experiments/dev_energy_r1_d100_short_120/analysis/EVENT_TIMELINE.csv",
+      "bytes": 18344386,
+      "sha256": "7c5b66a5cb8e02c391984c452d8ffd9c5255fb5e41177b9eebdf1b3816ac2364",
+      "mtime_ns": 1792328985785914100
+    },
+    {
+      "path": "experiments/dev_energy_r1_d100_short_120/analysis/COMMAND_LIFECYCLE.csv",
+      "bytes": 1351477,
+      "sha256": "985266b9a5177a2cb22623e04cc7add46343285e4b64a498a3e3d4a04b36f9ae",
+      "mtime_ns": 1792328984557081500
+    },
+    {
+      "path": "experiments/dev_energy_r1_d100_medium_360/plan.json",
+      "bytes": 42062,
+      "sha256": "168295cd0dc0bc4116c9bc07ed8103f4e6d943a3a002872c63c9527fd9ddd2aa",
+      "mtime_ns": 1792325283406802400
+    },
+    {
+      "path": "experiments/dev_energy_r1_d100_medium_360/manifest.json",
+      "bytes": 73670,
+      "sha256": "bdebd414892fe82be603209bfa85dd4293eb3651fd013cca7d31f87a5a44c86a",
+      "mtime_ns": 1792325283405802400
+    },
+    {
+      "path": "experiments/dev_energy_r1_d100_medium_360/BATCH_RESULT.json",
+      "bytes": 8189,
+      "sha256": "234cae54976e275cd89b9702873647c32f7beb00ee32f1c013a07c7bb08b5d60",
+      "mtime_ns": 1792330194269911600
+    },
+    {
+      "path": "experiments/dev_energy_r1_d100_medium_360/pairs/v17_L4_29b08b3cd8dc9fed1adee450__C19_critical_reserve_v19r1/RESULT.json",
+      "bytes": 647315,
+      "sha256": "123d76c06d6230ced11c0d5f8d8dff2be6adfe8159ccb9a4b07c474343313391",
+      "mtime_ns": 1792329597603298800
+    },
+    {
+      "path": "experiments/dev_energy_r1_d100_medium_360/pairs/v17_L4_29b08b3cd8dc9fed1adee450__C18_service_rich_M19compat/RESULT.json",
+      "bytes": 690507,
+      "sha256": "87b09ddc3574fa96d02821d3f529d0e344e7d8d5ddec9b8d5e3c14b2f83d6e4c",
+      "mtime_ns": 1792330165220067700
+    },
+    {
+      "path": "experiments/dev_energy_r1_d100_medium_360/analysis/ENGINEERING_INTERVALS.csv",
+      "bytes": 2971557,
+      "sha256": "90f2c298953bd86603a25eff820603c77dbc71646d8937b1dd584736d72b054a",
+      "mtime_ns": 1792330188835715200
+    },
+    {
+      "path": "experiments/dev_energy_r1_d100_medium_360/analysis/EVENT_TIMELINE.csv",
+      "bytes": 16747128,
+      "sha256": "da6e5001b9a0bdba9d63f7069c2f0cd83470af492d31a7eea816d9cd6107adc9",
+      "mtime_ns": 1792330188628581300
+    },
+    {
+      "path": "experiments/dev_energy_r1_d100_medium_360/analysis/COMMAND_LIFECYCLE.csv",
+      "bytes": 640086,
+      "sha256": "0cb3395242fd23b4d000aed5b4b4f5807fbf8022655451abd157b6c0bb963351",
+      "mtime_ns": 1792330187270596500
+    },
+    {
+      "path": "experiments/dev_energy_r1_d100_long_780/plan.json",
+      "bytes": 42062,
+      "sha256": "48f1c22f4dbb22e2e93b07b29fc8f578bd29f1d80bdd0f5258c145e67b292b54",
+      "mtime_ns": 1792325283688201200
+    },
+    {
+      "path": "experiments/dev_energy_r1_d100_long_780/manifest.json",
+      "bytes": 73668,
+      "sha256": "3ac481101ca8f2e8c49ad0f8ab0a6fd61a74ec1f0e3023f2f56d912f185f08a2",
+      "mtime_ns": 1792325283687201300
+    },
+    {
+      "path": "experiments/dev_energy_r1_d100_long_780/BATCH_RESULT.json",
+      "bytes": 8184,
+      "sha256": "802b5a948bdccfb205ee22aa62effde495970d2c21c19dfa309dff71ed9c46f8",
+      "mtime_ns": 1792331345550215900
+    },
+    {
+      "path": "experiments/dev_energy_r1_d100_long_780/pairs/v17_L4_dab66622a158b109cd0bab6d__C19_critical_reserve_v19r1/RESULT.json",
+      "bytes": 680220,
+      "sha256": "576877b521d93eef93a5652e0c94c7c9d8b2343141c565a93a92414938ecec80",
+      "mtime_ns": 1792330809605703500
+    },
+    {
+      "path": "experiments/dev_energy_r1_d100_long_780/pairs/v17_L4_dab66622a158b109cd0bab6d__C18_service_rich_M19compat/RESULT.json",
+      "bytes": 705203,
+      "sha256": "217a5fd3f1bb4db388636f71b74d06ce81ec7a27859f8670a0f3f47d880f5fa9",
+      "mtime_ns": 1792331325132402900
+    },
+    {
+      "path": "experiments/dev_energy_r1_d100_long_780/analysis/ENGINEERING_INTERVALS.csv",
+      "bytes": 1669544,
+      "sha256": "3577e2af38703e331ed595494837d4766b2e670eee35f0a01f65de9fa674a7f7",
+      "mtime_ns": 1792331342796339900
+    },
+    {
+      "path": "experiments/dev_energy_r1_d100_long_780/analysis/EVENT_TIMELINE.csv",
+      "bytes": 16124028,
+      "sha256": "495b55582c9630c0a0b9d74e24d79e41b994c0572aed5e4eaf4198cd3084bca2",
+      "mtime_ns": 1792331342702582000
+    },
+    {
+      "path": "experiments/dev_energy_r1_d100_long_780/analysis/COMMAND_LIFECYCLE.csv",
+      "bytes": 466447,
+      "sha256": "48033a4b0e037a095eb0f8bbd8af8f30f2e61fae5b5e506bb03142f7bb2df421",
+      "mtime_ns": 1792331341684389100
+    },
+    {
+      "path": "D:\\云大文件\\论文\\医院ies\\code_4_2\\outputs\\v19_model_closeout_20261018_run01\\references\\EMISSIONS_FACTOR_REGISTRY.json",
+      "bytes": 13555,
+      "sha256": "67ad5404000040d9665f016ee4b9c540783b26a9ad8038550f148881cefc6ab0"
+    },
+    {
+      "path": "D:\\云大文件\\论文\\医院ies\\code_4_2\\outputs\\v19_model_closeout_20261018_run01\\design\\ENERGY_TRADEOFF_PREREGISTRATION.json",
+      "bytes": 96488,
+      "sha256": "2a650f96f94552d5f84194cc17fdcec24654af122ce69b4003ae7716e32d7b2b"
+    },
+    {
+      "path": "D:\\云大文件\\论文\\医院ies\\code_4_2\\outputs\\v19_model_closeout_20261018_run01\\experiments\\dev_energy_r1_d040_short_120\\plan.json",
+      "sha256": "eb455a319aa374c544988ebfa1247eec86f3c5c5a0c40c5c1b4198256d55c627",
+      "bytes": 42062
+    },
+    {
+      "path": "D:\\云大文件\\论文\\医院ies\\code_4_2\\outputs\\v19_model_closeout_20261018_run01\\experiments\\dev_energy_r1_d040_short_120\\manifest.json",
+      "sha256": "b4877649891942f0207010dac6c4463571a118d44e66036a762eee23f05b5a21",
+      "bytes": 73360
+    },
+    {
+      "path": "D:\\云大文件\\论文\\医院ies\\code_4_2\\outputs\\v19_model_closeout_20261018_run01\\experiments\\dev_energy_r1_d040_short_120\\BATCH_RESULT.json",
+      "sha256": "19a173a24213cfcdac904a4469d71a7811c44ad6ec28801e06d0458048a66728",
+      "bytes": 8186
+    },
+    {
+      "path": "D:\\云大文件\\论文\\医院ies\\code_4_2\\outputs\\v19_model_closeout_20261018_run01\\experiments\\dev_energy_r1_d040_short_120\\pairs\\v17_L1_cc1ad4f3b51e1c4d17ec25b5__C19_critical_reserve_v19r1\\RESULT.json",
+      "sha256": "ae3d479943653955523fca79b0fa9188f5703ea7d48b2b60573048aec5150166",
+      "bytes": 531559
+    },
+    {
+      "path": "D:\\云大文件\\论文\\医院ies\\code_4_2\\outputs\\v19_model_closeout_20261018_run01\\experiments\\dev_energy_r1_d040_short_120\\pairs\\v17_L1_cc1ad4f3b51e1c4d17ec25b5__C18_service_rich_M19compat\\RESULT.json",
+      "sha256": "87419f45d19d3c254893edb7ff2f5e51ac91ff16d6671c20194bbf28ed935361",
+      "bytes": 526301
+    },
+    {
+      "path": "D:\\云大文件\\论文\\医院ies\\code_4_2\\outputs\\v19_model_closeout_20261018_run01\\experiments\\dev_energy_r1_d040_short_120\\analysis\\V19_ANALYSIS_RECEIPT.json",
+      "bytes": 3833,
+      "sha256": "70c0eacc3a7cdd4b3a7d95de7dd24549d8749ca9ebe7dc4a16dc98d930da5459"
+    },
+    {
+      "path": "D:\\云大文件\\论文\\医院ies\\code_4_2\\outputs\\v19_model_closeout_20261018_run01\\experiments\\dev_energy_r1_d040_short_120\\analysis\\V19_EMISSIONS.csv",
+      "sha256": "547d9c51e5c4ccf6395a03a0c434cf73072f6c39854392fe8c8de57ef4492599"
+    },
+    {
+      "path": "D:\\云大文件\\论文\\医院ies\\code_4_2\\outputs\\v19_model_closeout_20261018_run01\\experiments\\dev_energy_r1_d040_medium_360\\plan.json",
+      "sha256": "23f3159482aaed70b9ed5873c1270b78c8bb8a4e9b42b74254408b18ee0c55de",
+      "bytes": 42062
+    },
+    {
+      "path": "D:\\云大文件\\论文\\医院ies\\code_4_2\\outputs\\v19_model_closeout_20261018_run01\\experiments\\dev_energy_r1_d040_medium_360\\manifest.json",
+      "sha256": "51c010227cdfb802021503587d5fad7c503665f7a2cd6ff66d3fdde3bd6f5683",
+      "bytes": 73361
+    },
+    {
+      "path": "D:\\云大文件\\论文\\医院ies\\code_4_2\\outputs\\v19_model_closeout_20261018_run01\\experiments\\dev_energy_r1_d040_medium_360\\BATCH_RESULT.json",
+      "sha256": "f4f9a8d446a5dbf67f0f2dc007cdcaf93bebd6bc7495831a2c8c0fa77b90da7e",
+      "bytes": 8187
+    },
+    {
+      "path": "D:\\云大文件\\论文\\医院ies\\code_4_2\\outputs\\v19_model_closeout_20261018_run01\\experiments\\dev_energy_r1_d040_medium_360\\pairs\\v17_L1_c19dbc4c67fdbf3e8c0bd097__C19_critical_reserve_v19r1\\RESULT.json",
+      "sha256": "66291f983649a4963522acef446a16271e9618d8970f3832ea67f58807eca28a",
+      "bytes": 533696
+    },
+    {
+      "path": "D:\\云大文件\\论文\\医院ies\\code_4_2\\outputs\\v19_model_closeout_20261018_run01\\experiments\\dev_energy_r1_d040_medium_360\\pairs\\v17_L1_c19dbc4c67fdbf3e8c0bd097__C18_service_rich_M19compat\\RESULT.json",
+      "sha256": "d252aa5bc060cd4f5e8d82d5e5c8f7ee09ae11f75080cd19f5da6cea814e5d78",
+      "bytes": 532048
+    },
+    {
+      "path": "D:\\云大文件\\论文\\医院ies\\code_4_2\\outputs\\v19_model_closeout_20261018_run01\\experiments\\dev_energy_r1_d040_medium_360\\analysis\\V19_ANALYSIS_RECEIPT.json",
+      "bytes": 3833,
+      "sha256": "9f7893b25c2ad6ef3d6ea9cf87322013b2554aefaff08041917a1a3a9067b368"
+    },
+    {
+      "path": "D:\\云大文件\\论文\\医院ies\\code_4_2\\outputs\\v19_model_closeout_20261018_run01\\experiments\\dev_energy_r1_d040_medium_360\\analysis\\V19_EMISSIONS.csv",
+      "sha256": "2636354c9fa3d615a157614c141396b006317f251022142cfbcf891bfe26f77b"
+    },
+    {
+      "path": "D:\\云大文件\\论文\\医院ies\\code_4_2\\outputs\\v19_model_closeout_20261018_run01\\experiments\\dev_energy_r1_d040_long_780\\plan.json",
+      "sha256": "36b212b70331d5e8bf5ebe64504c8e7a9c4b0f01575e13082f06f6e732737b6e",
+      "bytes": 42062
+    },
+    {
+      "path": "D:\\云大文件\\论文\\医院ies\\code_4_2\\outputs\\v19_model_closeout_20261018_run01\\experiments\\dev_energy_r1_d040_long_780\\manifest.json",
+      "sha256": "d2c139cb4416f7309a12ef37f5343ced33cc32d71de40a994864fce9d529b990",
+      "bytes": 73359
+    },
+    {
+      "path": "D:\\云大文件\\论文\\医院ies\\code_4_2\\outputs\\v19_model_closeout_20261018_run01\\experiments\\dev_energy_r1_d040_long_780\\BATCH_RESULT.json",
+      "sha256": "78379fc889e118d487bcea5f408251d7061fd5607db2dfb2d5fc27fec40ee89e",
+      "bytes": 8182
+    },
+    {
+      "path": "D:\\云大文件\\论文\\医院ies\\code_4_2\\outputs\\v19_model_closeout_20261018_run01\\experiments\\dev_energy_r1_d040_long_780\\pairs\\v17_L1_d59892a485ce7e0848cc634a__C19_critical_reserve_v19r1\\RESULT.json",
+      "sha256": "fc1400b9c92dc465df56e4bd0f6e6eb5b26b8b75e9aeea5e38ca15947597b3b4",
+      "bytes": 548305
+    },
+    {
+      "path": "D:\\云大文件\\论文\\医院ies\\code_4_2\\outputs\\v19_model_closeout_20261018_run01\\experiments\\dev_energy_r1_d040_long_780\\pairs\\v17_L1_d59892a485ce7e0848cc634a__C18_service_rich_M19compat\\RESULT.json",
+      "sha256": "f87498b871659f4f0a55fbd878b6af09e35bd1144a9b5d322b9a0fdef44515cd",
+      "bytes": 567779
+    },
+    {
+      "path": "D:\\云大文件\\论文\\医院ies\\code_4_2\\outputs\\v19_model_closeout_20261018_run01\\experiments\\dev_energy_r1_d040_long_780\\analysis\\V19_ANALYSIS_RECEIPT.json",
+      "bytes": 3830,
+      "sha256": "a187b423fe8bfb231786d83fde6d4e1df368a008fcdf309868d040329bc36686"
+    },
+    {
+      "path": "D:\\云大文件\\论文\\医院ies\\code_4_2\\outputs\\v19_model_closeout_20261018_run01\\experiments\\dev_energy_r1_d040_long_780\\analysis\\V19_EMISSIONS.csv",
+      "sha256": "6fff016c23e4132748626bc0498dbc8ca0333f16837fcdcd6485ecd42ecd0142"
+    },
+    {
+      "path": "D:\\云大文件\\论文\\医院ies\\code_4_2\\outputs\\v19_model_closeout_20261018_run01\\experiments\\dev_energy_r1_d100_short_120\\plan.json",
+      "sha256": "105d7781880120ac05e90c8b7a956688cb2315b737d4ddfa43a299f771b28ed6",
+      "bytes": 42062
+    },
+    {
+      "path": "D:\\云大文件\\论文\\医院ies\\code_4_2\\outputs\\v19_model_closeout_20261018_run01\\experiments\\dev_energy_r1_d100_short_120\\manifest.json",
+      "sha256": "7a857d9f4aa704f122a99c3bd95199a49d4b1eb9cf37e007bd5743386b456f7d",
+      "bytes": 73669
+    },
+    {
+      "path": "D:\\云大文件\\论文\\医院ies\\code_4_2\\outputs\\v19_model_closeout_20261018_run01\\experiments\\dev_energy_r1_d100_short_120\\BATCH_RESULT.json",
+      "sha256": "43c6129c430eefc7bf6de04ee0f04c1fbe39d266506be53d9f5144e5ce0f4a8d",
+      "bytes": 8188
+    },
+    {
+      "path": "D:\\云大文件\\论文\\医院ies\\code_4_2\\outputs\\v19_model_closeout_20261018_run01\\experiments\\dev_energy_r1_d100_short_120\\pairs\\v17_L4_4e8aeda219e1205821ff2119__C19_critical_reserve_v19r1\\RESULT.json",
+      "sha256": "787fd24461d7fcbc91add13211203397b0e892219246eed2d84dcce8bac1d55a",
+      "bytes": 651385
+    },
+    {
+      "path": "D:\\云大文件\\论文\\医院ies\\code_4_2\\outputs\\v19_model_closeout_20261018_run01\\experiments\\dev_energy_r1_d100_short_120\\pairs\\v17_L4_4e8aeda219e1205821ff2119__C18_service_rich_M19compat\\RESULT.json",
+      "sha256": "1fab13772881486ba49c083ab53a65ddedb16a668cab93741993b6c395cef254",
+      "bytes": 654392
+    },
+    {
+      "path": "D:\\云大文件\\论文\\医院ies\\code_4_2\\outputs\\v19_model_closeout_20261018_run01\\experiments\\dev_energy_r1_d100_short_120\\analysis\\V19_ANALYSIS_RECEIPT.json",
+      "bytes": 3831,
+      "sha256": "71a6d681f21cd924a37342726b4e78d52b35b7ea44d3a53e3de5d408a51cdfcf"
+    },
+    {
+      "path": "D:\\云大文件\\论文\\医院ies\\code_4_2\\outputs\\v19_model_closeout_20261018_run01\\experiments\\dev_energy_r1_d100_short_120\\analysis\\V19_EMISSIONS.csv",
+      "sha256": "0e77dad8fa488e3ecf3ebf91d578fd9639736d4b372833472dca68350ab48735"
+    },
+    {
+      "path": "D:\\云大文件\\论文\\医院ies\\code_4_2\\outputs\\v19_model_closeout_20261018_run01\\experiments\\dev_energy_r1_d100_medium_360\\plan.json",
+      "sha256": "168295cd0dc0bc4116c9bc07ed8103f4e6d943a3a002872c63c9527fd9ddd2aa",
+      "bytes": 42062
+    },
+    {
+      "path": "D:\\云大文件\\论文\\医院ies\\code_4_2\\outputs\\v19_model_closeout_20261018_run01\\experiments\\dev_energy_r1_d100_medium_360\\manifest.json",
+      "sha256": "bdebd414892fe82be603209bfa85dd4293eb3651fd013cca7d31f87a5a44c86a",
+      "bytes": 73670
+    },
+    {
+      "path": "D:\\云大文件\\论文\\医院ies\\code_4_2\\outputs\\v19_model_closeout_20261018_run01\\experiments\\dev_energy_r1_d100_medium_360\\BATCH_RESULT.json",
+      "sha256": "234cae54976e275cd89b9702873647c32f7beb00ee32f1c013a07c7bb08b5d60",
+      "bytes": 8189
+    },
+    {
+      "path": "D:\\云大文件\\论文\\医院ies\\code_4_2\\outputs\\v19_model_closeout_20261018_run01\\experiments\\dev_energy_r1_d100_medium_360\\pairs\\v17_L4_29b08b3cd8dc9fed1adee450__C19_critical_reserve_v19r1\\RESULT.json",
+      "sha256": "123d76c06d6230ced11c0d5f8d8dff2be6adfe8159ccb9a4b07c474343313391",
+      "bytes": 647315
+    },
+    {
+      "path": "D:\\云大文件\\论文\\医院ies\\code_4_2\\outputs\\v19_model_closeout_20261018_run01\\experiments\\dev_energy_r1_d100_medium_360\\pairs\\v17_L4_29b08b3cd8dc9fed1adee450__C18_service_rich_M19compat\\RESULT.json",
+      "sha256": "87b09ddc3574fa96d02821d3f529d0e344e7d8d5ddec9b8d5e3c14b2f83d6e4c",
+      "bytes": 690507
+    },
+    {
+      "path": "D:\\云大文件\\论文\\医院ies\\code_4_2\\outputs\\v19_model_closeout_20261018_run01\\experiments\\dev_energy_r1_d100_medium_360\\analysis\\V19_ANALYSIS_RECEIPT.json",
+      "bytes": 3830,
+      "sha256": "1b6f1080c93c5d639c2c48ce0ce74924d83308e35574fd313eb85fb4bd1207cf"
+    },
+    {
+      "path": "D:\\云大文件\\论文\\医院ies\\code_4_2\\outputs\\v19_model_closeout_20261018_run01\\experiments\\dev_energy_r1_d100_medium_360\\analysis\\V19_EMISSIONS.csv",
+      "sha256": "c32ec7a8a034d0b15341394d2458621a96cfc59cb6f1aee4406064a2bc163e14"
+    },
+    {
+      "path": "D:\\云大文件\\论文\\医院ies\\code_4_2\\outputs\\v19_model_closeout_20261018_run01\\experiments\\dev_energy_r1_d100_long_780\\plan.json",
+      "sha256": "48f1c22f4dbb22e2e93b07b29fc8f578bd29f1d80bdd0f5258c145e67b292b54",
+      "bytes": 42062
+    },
+    {
+      "path": "D:\\云大文件\\论文\\医院ies\\code_4_2\\outputs\\v19_model_closeout_20261018_run01\\experiments\\dev_energy_r1_d100_long_780\\manifest.json",
+      "sha256": "3ac481101ca8f2e8c49ad0f8ab0a6fd61a74ec1f0e3023f2f56d912f185f08a2",
+      "bytes": 73668
+    },
+    {
+      "path": "D:\\云大文件\\论文\\医院ies\\code_4_2\\outputs\\v19_model_closeout_20261018_run01\\experiments\\dev_energy_r1_d100_long_780\\BATCH_RESULT.json",
+      "sha256": "802b5a948bdccfb205ee22aa62effde495970d2c21c19dfa309dff71ed9c46f8",
+      "bytes": 8184
+    },
+    {
+      "path": "D:\\云大文件\\论文\\医院ies\\code_4_2\\outputs\\v19_model_closeout_20261018_run01\\experiments\\dev_energy_r1_d100_long_780\\pairs\\v17_L4_dab66622a158b109cd0bab6d__C19_critical_reserve_v19r1\\RESULT.json",
+      "sha256": "576877b521d93eef93a5652e0c94c7c9d8b2343141c565a93a92414938ecec80",
+      "bytes": 680220
+    },
+    {
+      "path": "D:\\云大文件\\论文\\医院ies\\code_4_2\\outputs\\v19_model_closeout_20261018_run01\\experiments\\dev_energy_r1_d100_long_780\\pairs\\v17_L4_dab66622a158b109cd0bab6d__C18_service_rich_M19compat\\RESULT.json",
+      "sha256": "217a5fd3f1bb4db388636f71b74d06ce81ec7a27859f8670a0f3f47d880f5fa9",
+      "bytes": 705203
+    },
+    {
+      "path": "D:\\云大文件\\论文\\医院ies\\code_4_2\\outputs\\v19_model_closeout_20261018_run01\\experiments\\dev_energy_r1_d100_long_780\\analysis\\V19_ANALYSIS_RECEIPT.json",
+      "bytes": 3830,
+      "sha256": "04697b31b4761fb8a7a73e47fe03eae223dabb3aa6b5c165e370e4ec21666f65"
+    },
+    {
+      "path": "D:\\云大文件\\论文\\医院ies\\code_4_2\\outputs\\v19_model_closeout_20261018_run01\\experiments\\dev_energy_r1_d100_long_780\\analysis\\V19_EMISSIONS.csv",
+      "sha256": "40ddabdbade4277ca29d0f404c1e1474810ea9c7d8a4d987b7b4041c55780402"
+    }
+  ],
+  "issues": [],
+  "raw_files_opened": 0,
+  "annual_inputs_loaded": 0,
+  "physical_episodes_started": 0,
+  "development_is_not_final": true,
+  "DG_exact_CO2_unknown": true,
+  "no_across_background_or_duration_totals": true,
+  "script_sha256": "44c3266043db784f25b1a3726b67a48f50cc62b9abde98086c6b97206fcd2857",
+  "diagnostic_program_sha256": "dcf57ed7f501d02376181b4a23ef4fc3a055b692e12e9f2d0076c192f62c207c",
+  "compatibility_program_sha256": "428d9e950912e38ebcca21f2a49c49c4bc26f45eecc93cbfe588326d8e0134aa",
+  "main_factor_case_id": "CAMX2023r2_DG75pct",
+  "emissions_registry_sha256": "67ad5404000040d9665f016ee4b9c540783b26a9ad8038550f148881cefc6ab0",
+  "output_sha256": {
+    "CASES.csv": "be33e0e575d88d054f7805473a1abbd0ce016a4de3814ac5e7a515bbfcfc8d73",
+    "CRITICAL_COMPARISON.csv": "7c6d99a9a9c217f0b0068dc43efcb94d54a5a5a678b73edc18f334d1324d1a2f",
+    "CRITICAL_SERVICE.csv": "6e6602db1eaf9d1987ab1ff368a678c6c4807dafa2e0e3d08d13659db901e6a1",
+    "ECONOMICS_ENERGY.csv": "65d182b36b1f6c5bf8402cf5def48719a1bcfc5ba8705e092cd45d8825bda515",
+    "EMISSIONS.csv": "07b46a6d9be37e70b3ce44dadc7475d319af14a65f5068ef7265af251069a83e",
+    "ENERGY_COMPARISONS.csv": "f7f8306dc4238775be43b957dada0b211b8fbd479788f52838ede5af587fd30f",
+    "LOWER_PRIORITY_SERVICE.csv": "0d849d0b6444404e7a912c631aef22c57bbfb14bb96d7e09c5d034fa7d942ca6",
+    "MATCH_PROOFS.json": "88e1d92c52f06fdba309e7ba85883117a1e357e0504bcbcca06f3508bdf580c9",
+    "REPORT.md": "96ece37a2e8b6e29c24e3eb8a4e3641be352473391a19a3d582e3cbac6c4cf81",
+    "SAME_BACKGROUND_DURATION_PROOF.json": "a1b8649358a07aea8708dadbd277b0ec523269ac5e658f497fe745aefce1608e"
+  }
+}

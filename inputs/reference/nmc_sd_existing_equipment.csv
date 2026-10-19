@@ -1,0 +1,8 @@
+﻿item,technology,quantity,nameplate_per_unit,unit,total,source,source_page,status,caution
+GT,gas turbine generator with HRSG,3,800,kW_e,2400,"Brown and Dirks, NMCSD",1,real historic existing (2001),No make/model specified
+ABS,single-stage absorption chiller,1,800,RT_cool,800,"Brown and Dirks, NMCSD",1,real historic existing (2001),Steam 19.5 lb/RT-h was used for ORIGINAL existing system
+EC800,electric centrifugal chiller,2,800,RT_cool,1600,"Brown and Dirks, NMCSD",1,real historic existing (2001),
+EC1200,electric centrifugal chiller,1,1200,RT_cool,1200,"Brown and Dirks, NMCSD",1,real historic existing (2001),
+BOILER,steam boiler,3,25000,lb_steam_per_hour,75000,"Brown and Dirks, NMCSD",1,real historic existing (2001),
+TOWER,cooling tower,4,1200,RT_nominal_tower,4800,"Brown and Dirks, NMCSD",1,real historic existing (2001),Tower nominal rating is not automatically condenser-duty at every condition
+DG,diesel emergency generator for life-critical loads,3,600,kW_e,1800,"Brown and Dirks, NMCSD",1,real historic existing (2001),Emergency service only; not dispatched in normal operation

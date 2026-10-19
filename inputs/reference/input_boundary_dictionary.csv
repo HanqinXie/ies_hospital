@@ -1,0 +1,9 @@
+﻿field,unit,meaning,origin,use_in_IES
+P_e_facility_kW,kW,Original EnergyPlus whole facility including plant equipment,DOE/PNNL EnergyPlus,Diagnostic only; do not use as external base demand
+P_e_nonplant_kW,kW,Building nonplant electricity after plant allocation,EnergyPlus audit,Base electric service load
+P_e_unresolved_kW,kW,Unresolved original electricity metering component,EnergyPlus audit,"Conservatively included in service demand, not a measured clinical category"
+P_e_plant_kW,kW,Original EnergyPlus source plant equipment electricity,EnergyPlus audit,Excluded; independently modeled chiller/auxiliary load
+Q_h_demand_kW,kW_th,Heating coils plus domestic hot water useful heat,EnergyPlus audit,Heating service request
+Q_c_demand_kW,kW_th,Terminal cooling coil total cooling service,EnergyPlus audit,Cooling service request
+Q_c_chiller_evaporator_kW,kW_th,Original model chillers evaporator output,EnergyPlus audit,"Only boundary diagnostic, not an added demand"
+outdoor_temperature_C,degC,San Diego Brown Field TMY3 outdoor dry bulb,EnergyPlus hourly audit,Ambient GT correction

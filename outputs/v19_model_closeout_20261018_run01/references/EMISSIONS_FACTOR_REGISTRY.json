@@ -1,0 +1,260 @@
+{
+  "schema": "hospital_ies.v19.emissions.factor_registry.v1",
+  "registered_at_utc": "2026-10-18T11:20:25.724079+00:00",
+  "registration_scope": "before receipt of actual V19 resource rows; no V19 result was inspected to choose factors",
+  "main_case_id": "CAMX2023r2_DG75pct",
+  "boundary": "operational CO2 only; site fuel combustion plus location-based purchased electricity; not CO2e/lifecycle/avoided emissions",
+  "sensitivity_design": "four fixed cases; three constant diesel specific consumptions under current CAMX factor plus old published grid factor at reference diesel rate; no Cartesian grid or fitted efficiency",
+  "cases": {
+    "CAMX2023r2_DG75pct": {
+      "case_id": "CAMX2023r2_DG75pct",
+      "grid_kgCO2_per_kWh": 0.19434800121968002,
+      "grid_region": "CAMX (WECC California)",
+      "grid_data_year": 2023,
+      "grid_version": "eGRID2023 Revision 2; released 2025-06-12",
+      "grid_rate_type": "annual total-output CO2; no T&D loss uplift",
+      "natural_gas_kgCO2_per_MMBtu_HHV": 53.06,
+      "natural_gas_heat_basis": "HHV",
+      "diesel_kgCO2_per_MMBtu_HHV": 73.96,
+      "diesel_MMBtu_HHV_per_US_gallon": 0.138,
+      "diesel_heat_basis": "HHV",
+      "US_gallon_liters": 3.785411784,
+      "diesel_liters_per_shaft_kWh": 0.25877192982456143,
+      "diesel_source_rate_L_per_h": 118,
+      "diesel_source_gross_engine_power_kWm": 456,
+      "diesel_source_load_percent": 75,
+      "diesel_conversion_identity": "W_shaft_debit_kWh * L_per_kWhm / L_per_USgal * MMBtu_HHV_per_USgal * kgCO2_per_MMBtu_HHV",
+      "diesel_estimate_status": "conditional constant-s proxy; not identified hospital equipment; startup/idle extrapolation uncalibrated",
+      "chemical_fuel_exact_unknown": true,
+      "is_dispatch_objective": false,
+      "gas_source": {
+        "url": "https://www.epa.gov/system/files/documents/2025-01/ghg-emission-factors-hub-2025.pdf",
+        "version": "2025-01-15",
+        "locator": "PDF p1 Table1; Natural Gas",
+        "snapshot_sha256": "5d07c678fae6783623acb1e23faa4a7c46268ee6c5a0654c9e49c50de7caf924",
+        "accessed_at_utc": "2026-10-18T11:16:29.620852+00:00"
+      },
+      "diesel_factor_source": {
+        "url": "https://www.epa.gov/system/files/documents/2025-01/ghg-emission-factors-hub-2025.pdf",
+        "version": "2025-01-15",
+        "locator": "PDF p1 Table1; Distillate Fuel Oil No.2",
+        "snapshot_sha256": "5d07c678fae6783623acb1e23faa4a7c46268ee6c5a0654c9e49c50de7caf924",
+        "accessed_at_utc": "2026-10-18T11:16:29.620852+00:00"
+      },
+      "grid_source": {
+        "url": "https://www.epa.gov/egrid/summary-data",
+        "version": "eGRID2023 Revision2, 2025-06-12",
+        "locator": "CAMX annual total-output CO2, 428.464 lb/MWh; PDF rounds to 428.5",
+        "snapshot_sha256": "38100a11698d8428de4ff5ebd3b0fbc6e92cfd56c5f79ef10b7cddcea58e11e3",
+        "accessed_at_utc": "2026-10-18T11:17:19.286204+00:00"
+      },
+      "diesel_consumption_source": {
+        "url": "https://mart.cummins.com/imagelibrary/data/assetfiles/0070377.pdf",
+        "version": "VTA28-G5 PD00000747 (09/21)",
+        "locator": "PDF p2 right Fuel Consumption 1800 (60Hz), Prime Power",
+        "snapshot_sha256": "e71ab8914b16a47cb99eeef3d9bdaf3527338936c8f7c19d181a6b0c46db8103",
+        "accessed_at_utc": "2026-10-18T11:16:50.414908+00:00"
+      },
+      "assumption_ids": [
+        "V19-E01",
+        "V19-E02",
+        "V19-E03",
+        "V19-E04",
+        "V19-E05"
+      ]
+    },
+    "CAMX2023r2_DG100pct": {
+      "case_id": "CAMX2023r2_DG100pct",
+      "grid_kgCO2_per_kWh": 0.19434800121968002,
+      "grid_region": "CAMX (WECC California)",
+      "grid_data_year": 2023,
+      "grid_version": "eGRID2023 Revision 2; released 2025-06-12",
+      "grid_rate_type": "annual total-output CO2; no T&D loss uplift",
+      "natural_gas_kgCO2_per_MMBtu_HHV": 53.06,
+      "natural_gas_heat_basis": "HHV",
+      "diesel_kgCO2_per_MMBtu_HHV": 73.96,
+      "diesel_MMBtu_HHV_per_US_gallon": 0.138,
+      "diesel_heat_basis": "HHV",
+      "US_gallon_liters": 3.785411784,
+      "diesel_liters_per_shaft_kWh": 0.2532894736842105,
+      "diesel_source_rate_L_per_h": 154,
+      "diesel_source_gross_engine_power_kWm": 608,
+      "diesel_source_load_percent": 100,
+      "diesel_conversion_identity": "W_shaft_debit_kWh * L_per_kWhm / L_per_USgal * MMBtu_HHV_per_USgal * kgCO2_per_MMBtu_HHV",
+      "diesel_estimate_status": "conditional constant-s proxy; not identified hospital equipment; startup/idle extrapolation uncalibrated",
+      "chemical_fuel_exact_unknown": true,
+      "is_dispatch_objective": false,
+      "gas_source": {
+        "url": "https://www.epa.gov/system/files/documents/2025-01/ghg-emission-factors-hub-2025.pdf",
+        "version": "2025-01-15",
+        "locator": "PDF p1 Table1; Natural Gas",
+        "snapshot_sha256": "5d07c678fae6783623acb1e23faa4a7c46268ee6c5a0654c9e49c50de7caf924",
+        "accessed_at_utc": "2026-10-18T11:16:29.620852+00:00"
+      },
+      "diesel_factor_source": {
+        "url": "https://www.epa.gov/system/files/documents/2025-01/ghg-emission-factors-hub-2025.pdf",
+        "version": "2025-01-15",
+        "locator": "PDF p1 Table1; Distillate Fuel Oil No.2",
+        "snapshot_sha256": "5d07c678fae6783623acb1e23faa4a7c46268ee6c5a0654c9e49c50de7caf924",
+        "accessed_at_utc": "2026-10-18T11:16:29.620852+00:00"
+      },
+      "grid_source": {
+        "url": "https://www.epa.gov/egrid/summary-data",
+        "version": "eGRID2023 Revision2, 2025-06-12",
+        "locator": "CAMX annual total-output CO2, 428.464 lb/MWh; PDF rounds to 428.5",
+        "snapshot_sha256": "38100a11698d8428de4ff5ebd3b0fbc6e92cfd56c5f79ef10b7cddcea58e11e3",
+        "accessed_at_utc": "2026-10-18T11:17:19.286204+00:00"
+      },
+      "diesel_consumption_source": {
+        "url": "https://mart.cummins.com/imagelibrary/data/assetfiles/0070377.pdf",
+        "version": "VTA28-G5 PD00000747 (09/21)",
+        "locator": "PDF p2 right Fuel Consumption 1800 (60Hz), Prime Power",
+        "snapshot_sha256": "e71ab8914b16a47cb99eeef3d9bdaf3527338936c8f7c19d181a6b0c46db8103",
+        "accessed_at_utc": "2026-10-18T11:16:50.414908+00:00"
+      },
+      "assumption_ids": [
+        "V19-E01",
+        "V19-E02",
+        "V19-E03",
+        "V19-E04",
+        "V19-E05"
+      ]
+    },
+    "CAMX2023r2_DG25pct": {
+      "case_id": "CAMX2023r2_DG25pct",
+      "grid_kgCO2_per_kWh": 0.19434800121968002,
+      "grid_region": "CAMX (WECC California)",
+      "grid_data_year": 2023,
+      "grid_version": "eGRID2023 Revision 2; released 2025-06-12",
+      "grid_rate_type": "annual total-output CO2; no T&D loss uplift",
+      "natural_gas_kgCO2_per_MMBtu_HHV": 53.06,
+      "natural_gas_heat_basis": "HHV",
+      "diesel_kgCO2_per_MMBtu_HHV": 73.96,
+      "diesel_MMBtu_HHV_per_US_gallon": 0.138,
+      "diesel_heat_basis": "HHV",
+      "US_gallon_liters": 3.785411784,
+      "diesel_liters_per_shaft_kWh": 0.32894736842105265,
+      "diesel_source_rate_L_per_h": 50,
+      "diesel_source_gross_engine_power_kWm": 152,
+      "diesel_source_load_percent": 25,
+      "diesel_conversion_identity": "W_shaft_debit_kWh * L_per_kWhm / L_per_USgal * MMBtu_HHV_per_USgal * kgCO2_per_MMBtu_HHV",
+      "diesel_estimate_status": "conditional constant-s proxy; not identified hospital equipment; startup/idle extrapolation uncalibrated",
+      "chemical_fuel_exact_unknown": true,
+      "is_dispatch_objective": false,
+      "gas_source": {
+        "url": "https://www.epa.gov/system/files/documents/2025-01/ghg-emission-factors-hub-2025.pdf",
+        "version": "2025-01-15",
+        "locator": "PDF p1 Table1; Natural Gas",
+        "snapshot_sha256": "5d07c678fae6783623acb1e23faa4a7c46268ee6c5a0654c9e49c50de7caf924",
+        "accessed_at_utc": "2026-10-18T11:16:29.620852+00:00"
+      },
+      "diesel_factor_source": {
+        "url": "https://www.epa.gov/system/files/documents/2025-01/ghg-emission-factors-hub-2025.pdf",
+        "version": "2025-01-15",
+        "locator": "PDF p1 Table1; Distillate Fuel Oil No.2",
+        "snapshot_sha256": "5d07c678fae6783623acb1e23faa4a7c46268ee6c5a0654c9e49c50de7caf924",
+        "accessed_at_utc": "2026-10-18T11:16:29.620852+00:00"
+      },
+      "grid_source": {
+        "url": "https://www.epa.gov/egrid/summary-data",
+        "version": "eGRID2023 Revision2, 2025-06-12",
+        "locator": "CAMX annual total-output CO2, 428.464 lb/MWh; PDF rounds to 428.5",
+        "snapshot_sha256": "38100a11698d8428de4ff5ebd3b0fbc6e92cfd56c5f79ef10b7cddcea58e11e3",
+        "accessed_at_utc": "2026-10-18T11:17:19.286204+00:00"
+      },
+      "diesel_consumption_source": {
+        "url": "https://mart.cummins.com/imagelibrary/data/assetfiles/0070377.pdf",
+        "version": "VTA28-G5 PD00000747 (09/21)",
+        "locator": "PDF p2 right Fuel Consumption 1800 (60Hz), Prime Power",
+        "snapshot_sha256": "e71ab8914b16a47cb99eeef3d9bdaf3527338936c8f7c19d181a6b0c46db8103",
+        "accessed_at_utc": "2026-10-18T11:16:50.414908+00:00"
+      },
+      "assumption_ids": [
+        "V19-E01",
+        "V19-E02",
+        "V19-E03",
+        "V19-E04",
+        "V19-E05"
+      ]
+    },
+    "CAMX2023_originalHub_DG75pct": {
+      "case_id": "CAMX2023_originalHub_DG75pct",
+      "grid_kgCO2_per_kWh": 0.198083787979,
+      "grid_region": "CAMX (WECC California)",
+      "grid_data_year": 2023,
+      "grid_version": "EPA Hub January2025; original eGRID2023 rate; version sensitivity only",
+      "grid_rate_type": "annual total-output CO2; no T&D loss uplift",
+      "natural_gas_kgCO2_per_MMBtu_HHV": 53.06,
+      "natural_gas_heat_basis": "HHV",
+      "diesel_kgCO2_per_MMBtu_HHV": 73.96,
+      "diesel_MMBtu_HHV_per_US_gallon": 0.138,
+      "diesel_heat_basis": "HHV",
+      "US_gallon_liters": 3.785411784,
+      "diesel_liters_per_shaft_kWh": 0.25877192982456143,
+      "diesel_source_rate_L_per_h": 118,
+      "diesel_source_gross_engine_power_kWm": 456,
+      "diesel_source_load_percent": 75,
+      "diesel_conversion_identity": "W_shaft_debit_kWh * L_per_kWhm / L_per_USgal * MMBtu_HHV_per_USgal * kgCO2_per_MMBtu_HHV",
+      "diesel_estimate_status": "conditional constant-s proxy; not identified hospital equipment; startup/idle extrapolation uncalibrated",
+      "chemical_fuel_exact_unknown": true,
+      "is_dispatch_objective": false,
+      "gas_source": {
+        "url": "https://www.epa.gov/system/files/documents/2025-01/ghg-emission-factors-hub-2025.pdf",
+        "version": "2025-01-15",
+        "locator": "PDF p1 Table1; Natural Gas",
+        "snapshot_sha256": "5d07c678fae6783623acb1e23faa4a7c46268ee6c5a0654c9e49c50de7caf924",
+        "accessed_at_utc": "2026-10-18T11:16:29.620852+00:00"
+      },
+      "diesel_factor_source": {
+        "url": "https://www.epa.gov/system/files/documents/2025-01/ghg-emission-factors-hub-2025.pdf",
+        "version": "2025-01-15",
+        "locator": "PDF p1 Table1; Distillate Fuel Oil No.2",
+        "snapshot_sha256": "5d07c678fae6783623acb1e23faa4a7c46268ee6c5a0654c9e49c50de7caf924",
+        "accessed_at_utc": "2026-10-18T11:16:29.620852+00:00"
+      },
+      "grid_source": {
+        "url": "https://www.epa.gov/system/files/documents/2025-01/ghg-emission-factors-hub-2025.pdf",
+        "version": "2025-01-15",
+        "locator": "PDF p3 Table6 CAMX annual total-output CO2, 436.7 lb/MWh",
+        "snapshot_sha256": "5d07c678fae6783623acb1e23faa4a7c46268ee6c5a0654c9e49c50de7caf924",
+        "accessed_at_utc": "2026-10-18T11:16:29.620852+00:00"
+      },
+      "diesel_consumption_source": {
+        "url": "https://mart.cummins.com/imagelibrary/data/assetfiles/0070377.pdf",
+        "version": "VTA28-G5 PD00000747 (09/21)",
+        "locator": "PDF p2 right Fuel Consumption 1800 (60Hz), Prime Power",
+        "snapshot_sha256": "e71ab8914b16a47cb99eeef3d9bdaf3527338936c8f7c19d181a6b0c46db8103",
+        "accessed_at_utc": "2026-10-18T11:16:50.414908+00:00"
+      },
+      "assumption_ids": [
+        "V19-E01",
+        "V19-E02",
+        "V19-E03",
+        "V19-E04",
+        "V19-E05"
+      ]
+    }
+  },
+  "case_canonical_sha256": {
+    "CAMX2023r2_DG75pct": "f80874b189f3a21bb1e49bd064b387753002fe74a10a2cd2cc1eb85513e90505",
+    "CAMX2023r2_DG100pct": "6d8b50d198526d44e4d2d386b333248115704b1db4771e6e3acea09ed13f082c",
+    "CAMX2023r2_DG25pct": "c15b8a4015e2f52ff2fcc69e845f3bd96de4f0db90857b6e10937318fb3a09c8",
+    "CAMX2023_originalHub_DG75pct": "ddd7539a922418439b242ee2c18e933bc2e65682e10654e240a80db0623ae1e2"
+  },
+  "eia_crosscheck": {
+    "release": "2024-09-18; factors based on 2022",
+    "natural_gas_kgCO2_per_MMBtu": 52.91,
+    "distillate_kgCO2_per_MMBtu": 74.14,
+    "diesel_kgCO2_per_US_gallon": 10.19,
+    "heat_content_MMBtu_per_barrel": 5.77,
+    "used_in_primary_calculation": false,
+    "reason": "Different official estimation basis; retain as source crosscheck without mixing EIA coefficients and EPA heat contents."
+  },
+  "input_field_contract": {
+    "grid_purchase_kWh": "kWh electric imported",
+    "GT_gas_MMBtu": "MMBtu_HHV assumed",
+    "boiler_gas_MMBtu": "MMBtu_HHV declared accounting assumption; original .80 basis unspecified",
+    "natural_gas_total_MMBtu": "sum GT + boiler, no extra HRSG fuel",
+    "DG_fuel_budget_debit_shaft_equivalent_kWh": "kWh mechanical work already containing modeled startup/loss/rotor exchange; not chemical kWh"
+  }
+}

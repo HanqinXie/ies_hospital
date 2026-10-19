@@ -1,0 +1,16 @@
+{
+  "name": "p1b_no_export_interlock",
+  "provenance": "Explicit uncalibrated research contract; see docs/v43/P1B_EXECUTION_CONTRACT.md. No OEM/ATS/relay data supplied. Not the default baseline.",
+  "grid_import_mode": "arrived_ceiling",
+  "gt_local_down_rate_kW_per_hour": 900.0,
+  "gt_local_down_delay_minutes": 0.25,
+  "local_max_segment_minutes": 0.25,
+  "surplus_interlock": "isolate_largest_gt",
+  "surplus_interlock_delay_minutes": 0.0,
+  "automatic_shedding_delay_minutes": 0.0,
+  "gt_start_delay_minutes": 0.0,
+  "diesel_mode": "legacy_explicit_permission",
+  "ats_transfer_minutes": 0.0,
+  "diesel_allowed_priorities": ["P0", "P1"],
+  "thermal_mode": "legacy_loss_fraction"
+}

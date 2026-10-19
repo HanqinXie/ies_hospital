@@ -1,0 +1,46 @@
+{
+  "created_local_date": "2026-10-10",
+  "model_engine": "EnergyPlus 26.2.0",
+  "source_model_version": "EnergyPlus 22.1.0",
+  "weather_description": "San Diego Brown Field TMY3; calendar year label in SQLite is not an observed-weather year",
+  "annual_run_period_hours": 8760,
+  "simulation_runs": [
+    {
+      "directory": "simulation/engineering_audit_20261010",
+      "purpose": "Full boundary and critical-zone output requests",
+      "severe_errors": 0,
+      "fatal_errors": 0,
+      "warning_message_markers": 199,
+      "sqlite_sha256": "12771fb55683c2f08df7008ed8358a8912c41f0d14e9c1b9c47f317769838ef9"
+    },
+    {
+      "directory": "simulation/engineering_audit_submeters_20261010",
+      "purpose": "Split Transformer/ElevatorLift/ElevatorLightsFan child meters",
+      "severe_errors": 0,
+      "fatal_errors": 0,
+      "warning_message_markers": 199,
+      "sqlite_sha256": "0c5cbb6ba1fba7eaca0350dec21f0b0bb0fb7c70aadef4475845d419b8824bd9"
+    }
+  ],
+  "source_files_sha256": {
+    "Hospital_SanDiego.idf": "129bd06f9dccc1030d6461f284da788342569319c0d3d3fc933fa72ffcdcb8e2",
+    "SanDiego_BrownField_TMY3.epw": "0cb0f545b288a7c05fde482b3a2f6061783e120e470d810b36d0585a094db37d",
+    "Hospital_SanDiego_annual_summary.html": "0674b585fae3caa560fd06c8c4ab23e9d0698e4a35bc9fc735b9126a84ccb60d",
+    "modified_idf/Hospital_SanDiego_262_coil_autosize_trial_262_repaired_diagnostic.idf": "13f6398f66ec14078694e427c016530b842da7d793f5510b84519e30bb13913e"
+  },
+  "derived_audit_idfs_sha256": {
+    "modified_idf/Hospital_SanDiego_262_engineering_audit.idf": "7b8a6c95743529e8174a7912992674e469a991d3cc6f0f58ae5a83d1fcd8b0d1",
+    "modified_idf/Hospital_SanDiego_262_engineering_audit_submeters.idf": "d5c898c08c072f8c4b54d03793a9d6bcb5f9e405210f5f66a9154a1bf550f75c"
+  },
+  "corrected_csv_sha256": {
+    "hospital_ies_demand_8760.csv": "0adc2c3f2cd82d600cd17b38e634eae7701710fff0a146e588482dd3cd0a0627",
+    "electricity_boundary_8760.csv": "f6c3a165363f617f20b63553974a727ae0489095d7c38224a773943d95914599",
+    "thermal_boundary_8760.csv": "f937d23a03357a3eb363a97410ee667fd53be20fd3531e3b22af69747b7b4741",
+    "critical_zones_8760.csv": "6577fa5bed87c5b53dae2a814231e8fbd98d34bf486ddb351224bedde60d88d6"
+  },
+  "preservation": {
+    "original_source_idf_and_epw_modified": false,
+    "legacy_outputs_directory_overwritten": false,
+    "legacy_snapshot": "outputs_legacy_snapshot_20261010"
+  }
+}

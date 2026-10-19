@@ -1,0 +1,806 @@
+{
+  "schema": "hospital_ies.v19.saved_energy_tradeoff_results.v1",
+  "cohort": "frozen_final",
+  "batches": [
+    "long_final_r1_000",
+    "long_final_r1_001",
+    "long_final_r1_002",
+    "long_final_r1_003",
+    "long_final_r1_004",
+    "long_final_r1_005",
+    "long_final_r1_006",
+    "long_final_r1_007"
+  ],
+  "registered_policy_outcomes": 24,
+  "eligible_complete_policy_outcomes": 24,
+  "matched_policy_case_comparisons": 16,
+  "table_rows": {
+    "CASES": 24,
+    "CRITICAL_SERVICE": 144,
+    "CRITICAL_COMPARISON": 96,
+    "LOWER_PRIORITY_SERVICE": 144,
+    "ECONOMICS_ENERGY": 24,
+    "EMISSIONS": 96,
+    "ENERGY_COMPARISONS": 64
+  },
+  "sources": [
+    {
+      "path": "experiments/long_final_r1_000/plan.json",
+      "bytes": 42297,
+      "sha256": "64d3de50ffb746006f238ebc87ab94495b0a7ca7deea30d55aa7855904207067",
+      "mtime_ns": 1792331544243819000
+    },
+    {
+      "path": "experiments/long_final_r1_000/manifest.json",
+      "bytes": 74765,
+      "sha256": "3d012b7fa014cee9571205bf650c67d0553dd5a9db1781ad414d758a5845429d",
+      "mtime_ns": 1792331544240285200
+    },
+    {
+      "path": "experiments/long_final_r1_000/BATCH_RESULT.json",
+      "bytes": 9277,
+      "sha256": "e03530287881fae00875a46c8bc0e096b4d851817e05ac64122fa54a17e2c24d",
+      "mtime_ns": 1792332631760612700
+    },
+    {
+      "path": "experiments/long_final_r1_000/pairs/v17_L1_c3293aa6e9401f244ec3406c__endurance_restore_p0_ready_v14r6/RESULT.json",
+      "bytes": 572328,
+      "sha256": "174633cf6591d45ddf7cd0fc8f090e1b57b5406b5cb461dc7bf73085ff192422",
+      "mtime_ns": 1792331970033214400
+    },
+    {
+      "path": "experiments/long_final_r1_000/pairs/v17_L1_c3293aa6e9401f244ec3406c__readiness_handoff_K1_v15/RESULT.json",
+      "bytes": 572988,
+      "sha256": "d778cc645f806b0116aea339a2e5bf080b87878fd57f7478334c87dbf0f127c5",
+      "mtime_ns": 1792332302735095600
+    },
+    {
+      "path": "experiments/long_final_r1_000/pairs/v17_L1_c3293aa6e9401f244ec3406c__C19_critical_reserve_v19r1/RESULT.json",
+      "bytes": 548298,
+      "sha256": "a34067eb7038bd4c346e38953e03365b985f672911bed757095b6248483abe7a",
+      "mtime_ns": 1792332622254072700
+    },
+    {
+      "path": "experiments/long_final_r1_000/analysis/ENGINEERING_INTERVALS.csv",
+      "bytes": 2525751,
+      "sha256": "c4e625cde798235b6e6ab839285ee55496403cad3759ce01b3d90c8ef9c27327",
+      "mtime_ns": 1792332630195329700
+    },
+    {
+      "path": "experiments/long_final_r1_000/analysis/EVENT_TIMELINE.csv",
+      "bytes": 18364197,
+      "sha256": "3b895413849963e75a97b6cf40142eb2df0e52eb91ce2482c1ce4d588c8320b4",
+      "mtime_ns": 1792332630136695600
+    },
+    {
+      "path": "experiments/long_final_r1_000/analysis/COMMAND_LIFECYCLE.csv",
+      "bytes": 716755,
+      "sha256": "293beb193f75381a4ac015a0ad5bae765731e2a921e5112c98902772745d4090",
+      "mtime_ns": 1792332629726749500
+    },
+    {
+      "path": "experiments/long_final_r1_001/plan.json",
+      "bytes": 42297,
+      "sha256": "19ce7a59c36170b4f2d5063ac74e0ad9bf6e9f8b11e4c5a1f5b0ab32a4ce1f72",
+      "mtime_ns": 1792331545511229900
+    },
+    {
+      "path": "experiments/long_final_r1_001/manifest.json",
+      "bytes": 74530,
+      "sha256": "71dd220e67344caa65aed3c9d1bcda194e32b0bd3389cf4348881577b26055ce",
+      "mtime_ns": 1792331545508168300
+    },
+    {
+      "path": "experiments/long_final_r1_001/BATCH_RESULT.json",
+      "bytes": 9273,
+      "sha256": "692a1295a076f99342d16bb72b9e3781a08d01de664e44eabaa107ac20ac8642",
+      "mtime_ns": 1792332670231325300
+    },
+    {
+      "path": "experiments/long_final_r1_001/pairs/v17_L1_0995567ca7ec6a68eb33cb68__endurance_restore_p0_ready_v14r6/RESULT.json",
+      "bytes": 558434,
+      "sha256": "17bb3df0ab15f71e6a322bffe4ccf7cd1e49f1ddbad2056f626d49bfeb704ee5",
+      "mtime_ns": 1792331990034294400
+    },
+    {
+      "path": "experiments/long_final_r1_001/pairs/v17_L1_0995567ca7ec6a68eb33cb68__readiness_handoff_K1_v15/RESULT.json",
+      "bytes": 545495,
+      "sha256": "64162f8b5805fa253cf0342533e9fe3ad7f86073fe569a6d520932126403dba8",
+      "mtime_ns": 1792332326233087800
+    },
+    {
+      "path": "experiments/long_final_r1_001/pairs/v17_L1_0995567ca7ec6a68eb33cb68__C19_critical_reserve_v19r1/RESULT.json",
+      "bytes": 530239,
+      "sha256": "046999fe93139c7ce443603479f877313e615851285ae5d2bde81d2fc24c7457",
+      "mtime_ns": 1792332657111448000
+    },
+    {
+      "path": "experiments/long_final_r1_001/analysis/ENGINEERING_INTERVALS.csv",
+      "bytes": 7224480,
+      "sha256": "7c5ea127990be78dbbe8cd9c306c1f73c28e14626b5797f181cb94b81fcabcb7",
+      "mtime_ns": 1792332668071947300
+    },
+    {
+      "path": "experiments/long_final_r1_001/analysis/EVENT_TIMELINE.csv",
+      "bytes": 19751745,
+      "sha256": "701d864d12e2042bdfe620f9b27389aaaa4810fe862c8ca00c0bcb2bdb5a578d",
+      "mtime_ns": 1792332667894259400
+    },
+    {
+      "path": "experiments/long_final_r1_001/analysis/COMMAND_LIFECYCLE.csv",
+      "bytes": 1452974,
+      "sha256": "96f6ad8915700ed2417c1ec8e7de1673b37f684b244956b840eca6e66591b623",
+      "mtime_ns": 1792332667419104700
+    },
+    {
+      "path": "experiments/long_final_r1_002/plan.json",
+      "bytes": 42297,
+      "sha256": "2a88dafc075c22768588feaa38f11117b0abf74f6e27b0d316cc8ae57415190c",
+      "mtime_ns": 1792331546714612600
+    },
+    {
+      "path": "experiments/long_final_r1_002/manifest.json",
+      "bytes": 75065,
+      "sha256": "71c4c1b00d0b75a3221499eb1bad482ae59752d4716a72f7ed5eb0ee0ec81b1a",
+      "mtime_ns": 1792331546711384600
+    },
+    {
+      "path": "experiments/long_final_r1_002/BATCH_RESULT.json",
+      "bytes": 9280,
+      "sha256": "a6931524f927308d4401495bacaf19dbb5abdc8fe57b87e1b8eded0b77b06b94",
+      "mtime_ns": 1792333035368013000
+    },
+    {
+      "path": "experiments/long_final_r1_002/pairs/v17_L4_9c15f066a87ebf45f0acc31d__endurance_restore_p0_ready_v14r6/RESULT.json",
+      "bytes": 716001,
+      "sha256": "2f1d84b5a0b487e39b6aa7043837612a155f94b7cf5bc83de5bc56cf64833222",
+      "mtime_ns": 1792332675502161800
+    },
+    {
+      "path": "experiments/long_final_r1_002/pairs/v17_L4_9c15f066a87ebf45f0acc31d__readiness_handoff_K1_v15/RESULT.json",
+      "bytes": 716421,
+      "sha256": "8737c8e75cbf6f0a647bbfdb649272e8c40cef5e4a97f47820e49ce84302ce0c",
+      "mtime_ns": 1792332791372058600
+    },
+    {
+      "path": "experiments/long_final_r1_002/pairs/v17_L4_9c15f066a87ebf45f0acc31d__C19_critical_reserve_v19r1/RESULT.json",
+      "bytes": 649963,
+      "sha256": "543940ce9984ad7c60adc6cea49c6f623ba005c9bd1d54669da6852494024e8a",
+      "mtime_ns": 1792333024355782700
+    },
+    {
+      "path": "experiments/long_final_r1_002/analysis/ENGINEERING_INTERVALS.csv",
+      "bytes": 2772840,
+      "sha256": "0b7bf57e781d5db5087757ba9629392e3aa807d80bf25b83fa6d46e7bf6c4ad2",
+      "mtime_ns": 1792333033655752200
+    },
+    {
+      "path": "experiments/long_final_r1_002/analysis/EVENT_TIMELINE.csv",
+      "bytes": 22984545,
+      "sha256": "9d56be2423816a9f7c151cc50c988e7f31fa0aa283eaf7592f60c23ea7202a69",
+      "mtime_ns": 1792333033590038300
+    },
+    {
+      "path": "experiments/long_final_r1_002/analysis/COMMAND_LIFECYCLE.csv",
+      "bytes": 741496,
+      "sha256": "e87e9d12460ebb514b6a331449d0d2341ccf3f266fb7a4ca34cc80df9d0a6311",
+      "mtime_ns": 1792333033071948500
+    },
+    {
+      "path": "experiments/long_final_r1_003/plan.json",
+      "bytes": 42297,
+      "sha256": "ae946342bac301777110ae13b006af144ab9a8bcde91361e6cb2b3a4fb61bf32",
+      "mtime_ns": 1792331547904650800
+    },
+    {
+      "path": "experiments/long_final_r1_003/manifest.json",
+      "bytes": 74830,
+      "sha256": "8318ad807589ad39cfc07b8af94a399badad007ca09a53e3b8ad8cf24fc39f13",
+      "mtime_ns": 1792331547903143900
+    },
+    {
+      "path": "experiments/long_final_r1_003/BATCH_RESULT.json",
+      "bytes": 9277,
+      "sha256": "8b11808b606fedba5889a049e9487f3aee16a0adcd1b3ba4ea2f281a78afc744",
+      "mtime_ns": 1792333076011309400
+    },
+    {
+      "path": "experiments/long_final_r1_003/pairs/v17_L4_43a206ad03d1a5ec334e4cae__endurance_restore_p0_ready_v14r6/RESULT.json",
+      "bytes": 665244,
+      "sha256": "874a866f237313996532acfd973a52b2ac43bc634e53a977f4832cd99be5411d",
+      "mtime_ns": 1792332715146518700
+    },
+    {
+      "path": "experiments/long_final_r1_003/pairs/v17_L4_43a206ad03d1a5ec334e4cae__readiness_handoff_K1_v15/RESULT.json",
+      "bytes": 656509,
+      "sha256": "e869b66351126056805d5078a528f402f164cf9034010a5fe01467162d6cf2b0",
+      "mtime_ns": 1792332834208328400
+    },
+    {
+      "path": "experiments/long_final_r1_003/pairs/v17_L4_43a206ad03d1a5ec334e4cae__C19_critical_reserve_v19r1/RESULT.json",
+      "bytes": 648603,
+      "sha256": "91591c594da959d5ee68d3a166a02bb2dea5ee735270ef00a4f3cddbc63ada46",
+      "mtime_ns": 1792333065338410800
+    },
+    {
+      "path": "experiments/long_final_r1_003/analysis/ENGINEERING_INTERVALS.csv",
+      "bytes": 3712891,
+      "sha256": "1606b703a3cf596c53df3e849007753bbec541bc57f665327e440f407a78b8f7",
+      "mtime_ns": 1792333074100472200
+    },
+    {
+      "path": "experiments/long_final_r1_003/analysis/EVENT_TIMELINE.csv",
+      "bytes": 17685262,
+      "sha256": "509e358a01e1cb23c677280287df93ce456a361139c81f9d10cd7ed9f8313dc6",
+      "mtime_ns": 1792333074010082100
+    },
+    {
+      "path": "experiments/long_final_r1_003/analysis/COMMAND_LIFECYCLE.csv",
+      "bytes": 937377,
+      "sha256": "4e453296ed27f622c444926f1ccf67a4fb2f7d00eea3f1a77d34a735ae37039b",
+      "mtime_ns": 1792333073600102900
+    },
+    {
+      "path": "experiments/long_final_r1_004/plan.json",
+      "bytes": 42297,
+      "sha256": "c5339d2399aad6562c86abbec8aa303bce92acdb4a5a2d16ca6478225554b593",
+      "mtime_ns": 1792331549054450400
+    },
+    {
+      "path": "experiments/long_final_r1_004/manifest.json",
+      "bytes": 75068,
+      "sha256": "4e468fb3f7148f130aba7838d668e7f1a05436b9f4bc426c86258347a23a0778",
+      "mtime_ns": 1792331549051950100
+    },
+    {
+      "path": "experiments/long_final_r1_004/BATCH_RESULT.json",
+      "bytes": 9283,
+      "sha256": "8e1524ae228d487d961c58264d1ed1f62c728cb7539619bfb9163698280abdd1",
+      "mtime_ns": 1792333425475412200
+    },
+    {
+      "path": "experiments/long_final_r1_004/pairs/v17_L4_0cc5382dc74b2c88db5f224b__endurance_restore_p0_ready_v14r6/RESULT.json",
+      "bytes": 733890,
+      "sha256": "81680a6b48ce84f1c1c6db63b60cd4c75ec52ab84acd44c254ee8d68339349d2",
+      "mtime_ns": 1792333079147477500
+    },
+    {
+      "path": "experiments/long_final_r1_004/pairs/v17_L4_0cc5382dc74b2c88db5f224b__readiness_handoff_K1_v15/RESULT.json",
+      "bytes": 725520,
+      "sha256": "139cf033c4577e7b2045994aaa01ec91f54a838e7aefa2d62ed671dc40080255",
+      "mtime_ns": 1792333194070083600
+    },
+    {
+      "path": "experiments/long_final_r1_004/pairs/v17_L4_0cc5382dc74b2c88db5f224b__C19_critical_reserve_v19r1/RESULT.json",
+      "bytes": 680214,
+      "sha256": "086332e955813cf1d6e6270a7d2e745471608fac8752816875cb34eff2d13699",
+      "mtime_ns": 1792333416266181500
+    },
+    {
+      "path": "experiments/long_final_r1_004/analysis/ENGINEERING_INTERVALS.csv",
+      "bytes": 2520807,
+      "sha256": "f842c16bb63d9a226b0677ebb62917f6939de681943f133e8fb5bfd8a2ae6b9c",
+      "mtime_ns": 1792333423636244200
+    },
+    {
+      "path": "experiments/long_final_r1_004/analysis/EVENT_TIMELINE.csv",
+      "bytes": 17281724,
+      "sha256": "67686c95495bcaf09805973a0d6d11fb963acd596602875621e25f5adf648a62",
+      "mtime_ns": 1792333423582997400
+    },
+    {
+      "path": "experiments/long_final_r1_004/analysis/COMMAND_LIFECYCLE.csv",
+      "bytes": 711554,
+      "sha256": "9ab664f7459500e68c483dd26d4547fa8a608c57f95666ef67eb989dbc900470",
+      "mtime_ns": 1792333423215720600
+    },
+    {
+      "path": "experiments/long_final_r1_005/plan.json",
+      "bytes": 42297,
+      "sha256": "08c66fd00afc58ce45ac14bb417e6d1423e6deeb8bd26a9031b0bc16ac6b5ab4",
+      "mtime_ns": 1792331550286012900
+    },
+    {
+      "path": "experiments/long_final_r1_005/manifest.json",
+      "bytes": 74833,
+      "sha256": "bc0239d6b5678e3a164beb43a190f19c6111619526e6e359e4a5631f8ca38ffe",
+      "mtime_ns": 1792331550282889600
+    },
+    {
+      "path": "experiments/long_final_r1_005/BATCH_RESULT.json",
+      "bytes": 9283,
+      "sha256": "ce14a461d00efae97843c02e6c671c64bd04bb71f04a50ea4eee73388c57bc54",
+      "mtime_ns": 1792333515205426600
+    },
+    {
+      "path": "experiments/long_final_r1_005/pairs/v17_L4_389265c703efac3494a1ce02__endurance_restore_p0_ready_v14r6/RESULT.json",
+      "bytes": 684959,
+      "sha256": "478a6da81e71720748c3c3e95bb7f9d01b330ce67dfb740e81ce70c4cee4bff6",
+      "mtime_ns": 1792333125470402500
+    },
+    {
+      "path": "experiments/long_final_r1_005/pairs/v17_L4_389265c703efac3494a1ce02__readiness_handoff_K1_v15/RESULT.json",
+      "bytes": 666921,
+      "sha256": "f4f181c20f08a11a44c112098cb6e2726004005f0721baa15a8acec3621f1710",
+      "mtime_ns": 1792333249056642100
+    },
+    {
+      "path": "experiments/long_final_r1_005/pairs/v17_L4_389265c703efac3494a1ce02__C19_critical_reserve_v19r1/RESULT.json",
+      "bytes": 647819,
+      "sha256": "f69e29fa61a71ad8cb1f1d04765e72dc7aec0b00708caf880d4548e0dd93cf0b",
+      "mtime_ns": 1792333502855445000
+    },
+    {
+      "path": "experiments/long_final_r1_005/analysis/ENGINEERING_INTERVALS.csv",
+      "bytes": 6316586,
+      "sha256": "74ad837d31f8958f52064284afa33fb70776a82dea57993eb733a11b49e7aad9",
+      "mtime_ns": 1792333512922095800
+    },
+    {
+      "path": "experiments/long_final_r1_005/analysis/EVENT_TIMELINE.csv",
+      "bytes": 19389882,
+      "sha256": "5fc3a7bd4271275677d82a11a696427845e3e534936533e02eb457e4ee02ec55",
+      "mtime_ns": 1792333512773451600
+    },
+    {
+      "path": "experiments/long_final_r1_005/analysis/COMMAND_LIFECYCLE.csv",
+      "bytes": 1322243,
+      "sha256": "734a0e65f725ddd806299717d80d4973368f3ebe07335a424f952647a8048635",
+      "mtime_ns": 1792333512327164700
+    },
+    {
+      "path": "experiments/long_final_r1_006/plan.json",
+      "bytes": 42297,
+      "sha256": "a59b16277fcf49cb61bb157d932731a4dfc339b238a42f4ed9f20883ad540e0e",
+      "mtime_ns": 1792331551663920800
+    },
+    {
+      "path": "experiments/long_final_r1_006/manifest.json",
+      "bytes": 75071,
+      "sha256": "6bfb6bb92957e6534e8f01428a81c4e9b881835ca12e0ccb806e1a5b6c6fca0d",
+      "mtime_ns": 1792331551660202700
+    },
+    {
+      "path": "experiments/long_final_r1_006/BATCH_RESULT.json",
+      "bytes": 9284,
+      "sha256": "2ea14363d6f9db43d1216913b3850c81dfb095e43e4c572bad5ff89d0d517d9d",
+      "mtime_ns": 1792333825111296300
+    },
+    {
+      "path": "experiments/long_final_r1_006/pairs/v17_L4_2e117d129f125a3a6d573eb4__endurance_restore_p0_ready_v14r6/RESULT.json",
+      "bytes": 731342,
+      "sha256": "b2be5affc46b4a6011acbb25b6011e3f5451f8f8e4f717e85554ae4fdb591af4",
+      "mtime_ns": 1792333469394405100
+    },
+    {
+      "path": "experiments/long_final_r1_006/pairs/v17_L4_2e117d129f125a3a6d573eb4__readiness_handoff_K1_v15/RESULT.json",
+      "bytes": 714116,
+      "sha256": "c50699ef36c219601a73b4bfacf6d73618e4134a76f15aa50f6ef45286ef82d6",
+      "mtime_ns": 1792333584658557700
+    },
+    {
+      "path": "experiments/long_final_r1_006/pairs/v17_L4_2e117d129f125a3a6d573eb4__C19_critical_reserve_v19r1/RESULT.json",
+      "bytes": 647695,
+      "sha256": "8eb4c1ac6e34c4930e23a04e24f4293dbc9b1a5fe5ec1f95738aa1af61a75f15",
+      "mtime_ns": 1792333814218703300
+    },
+    {
+      "path": "experiments/long_final_r1_006/analysis/ENGINEERING_INTERVALS.csv",
+      "bytes": 3067283,
+      "sha256": "a2dc6de2638d5df4e8f376353f5f91e3c33474710e149d02be7935e3d8790787",
+      "mtime_ns": 1792333823292743700
+    },
+    {
+      "path": "experiments/long_final_r1_006/analysis/EVENT_TIMELINE.csv",
+      "bytes": 21962908,
+      "sha256": "6e64346f5f00b355868c0333402c257ce3fcd5bca279112bc9ed93a8609129bf",
+      "mtime_ns": 1792333823222446900
+    },
+    {
+      "path": "experiments/long_final_r1_006/analysis/COMMAND_LIFECYCLE.csv",
+      "bytes": 784559,
+      "sha256": "c4ea8385b0f4e3906a1786634360428e206afdb373db71b75c5a1beba5325754",
+      "mtime_ns": 1792333822737092000
+    },
+    {
+      "path": "experiments/long_final_r1_007/plan.json",
+      "bytes": 42297,
+      "sha256": "45eabf9e51fe00de68133a17023f0affda99ff65d99d8e2123768844255c7418",
+      "mtime_ns": 1792331553083442400
+    },
+    {
+      "path": "experiments/long_final_r1_007/manifest.json",
+      "bytes": 74836,
+      "sha256": "101725535ce84664653d20bca6c54c3ff7120a391585185156f22e4b4853338a",
+      "mtime_ns": 1792331553081443900
+    },
+    {
+      "path": "experiments/long_final_r1_007/BATCH_RESULT.json",
+      "bytes": 9276,
+      "sha256": "ce0fc089fcaf6b617855f99d04460538868be7471b3e9accfa422bfae96c8d72",
+      "mtime_ns": 1792333916712829200
+    },
+    {
+      "path": "experiments/long_final_r1_007/pairs/v17_L4_649e27ae52a573ef10e673bd__endurance_restore_p0_ready_v14r6/RESULT.json",
+      "bytes": 671152,
+      "sha256": "6eaaf099f085023816eac7456fd77c637b51b0ee547a5357a3497742f5110f5d",
+      "mtime_ns": 1792333565063601000
+    },
+    {
+      "path": "experiments/long_final_r1_007/pairs/v17_L4_649e27ae52a573ef10e673bd__readiness_handoff_K1_v15/RESULT.json",
+      "bytes": 654743,
+      "sha256": "a0880c7b56a01e46b03fe22cc828c80c6fbeb5de2b6b1bbcbd4b906523e3a37f",
+      "mtime_ns": 1792333684096717300
+    },
+    {
+      "path": "experiments/long_final_r1_007/pairs/v17_L4_649e27ae52a573ef10e673bd__C19_critical_reserve_v19r1/RESULT.json",
+      "bytes": 649875,
+      "sha256": "43e93e830ca01e05084daec04fe7d4996308f4771dcd8b2ccede5e7b736048ea",
+      "mtime_ns": 1792333906030297600
+    },
+    {
+      "path": "experiments/long_final_r1_007/analysis/ENGINEERING_INTERVALS.csv",
+      "bytes": 4112486,
+      "sha256": "a7cae6c3a54ac41f1a00a269b7bb1eb7dafc3e2c573410a52966ecbac89e5408",
+      "mtime_ns": 1792333914869425400
+    },
+    {
+      "path": "experiments/long_final_r1_007/analysis/EVENT_TIMELINE.csv",
+      "bytes": 18574767,
+      "sha256": "6a4c514165aded1d9b087ec41a00056982d7766bdf6a053fe89395316f6f7a0a",
+      "mtime_ns": 1792333914771430800
+    },
+    {
+      "path": "experiments/long_final_r1_007/analysis/COMMAND_LIFECYCLE.csv",
+      "bytes": 1000533,
+      "sha256": "5cdfcef04ca11311502432ef5729952984afc84dc8a3f4053073b451cf912e95",
+      "mtime_ns": 1792333914367256100
+    },
+    {
+      "path": "D:\\云大文件\\论文\\医院ies\\code_4_2\\outputs\\v19_model_closeout_20261018_run01\\MODEL_FREEZE_CLOSEOUT01.json",
+      "bytes": 184601,
+      "sha256": "80815ef85196a05e496b48b3340a843a00079a7c0de425cbffd13c949e52e2f7"
+    },
+    {
+      "path": "D:\\云大文件\\论文\\医院ies\\code_4_2\\outputs\\v19_model_closeout_20261018_run01\\references\\EMISSIONS_FACTOR_REGISTRY.json",
+      "bytes": 13555,
+      "sha256": "67ad5404000040d9665f016ee4b9c540783b26a9ad8038550f148881cefc6ab0"
+    },
+    {
+      "path": "D:\\云大文件\\论文\\医院ies\\code_4_2\\outputs\\v19_model_closeout_20261018_run01\\experiments\\long_final_r1_000\\plan.json",
+      "sha256": "64d3de50ffb746006f238ebc87ab94495b0a7ca7deea30d55aa7855904207067",
+      "bytes": 42297
+    },
+    {
+      "path": "D:\\云大文件\\论文\\医院ies\\code_4_2\\outputs\\v19_model_closeout_20261018_run01\\experiments\\long_final_r1_000\\manifest.json",
+      "sha256": "3d012b7fa014cee9571205bf650c67d0553dd5a9db1781ad414d758a5845429d",
+      "bytes": 74765
+    },
+    {
+      "path": "D:\\云大文件\\论文\\医院ies\\code_4_2\\outputs\\v19_model_closeout_20261018_run01\\experiments\\long_final_r1_000\\BATCH_RESULT.json",
+      "sha256": "e03530287881fae00875a46c8bc0e096b4d851817e05ac64122fa54a17e2c24d",
+      "bytes": 9277
+    },
+    {
+      "path": "D:\\云大文件\\论文\\医院ies\\code_4_2\\outputs\\v19_model_closeout_20261018_run01\\experiments\\long_final_r1_000\\pairs\\v17_L1_c3293aa6e9401f244ec3406c__endurance_restore_p0_ready_v14r6\\RESULT.json",
+      "sha256": "174633cf6591d45ddf7cd0fc8f090e1b57b5406b5cb461dc7bf73085ff192422",
+      "bytes": 572328
+    },
+    {
+      "path": "D:\\云大文件\\论文\\医院ies\\code_4_2\\outputs\\v19_model_closeout_20261018_run01\\experiments\\long_final_r1_000\\pairs\\v17_L1_c3293aa6e9401f244ec3406c__readiness_handoff_K1_v15\\RESULT.json",
+      "sha256": "d778cc645f806b0116aea339a2e5bf080b87878fd57f7478334c87dbf0f127c5",
+      "bytes": 572988
+    },
+    {
+      "path": "D:\\云大文件\\论文\\医院ies\\code_4_2\\outputs\\v19_model_closeout_20261018_run01\\experiments\\long_final_r1_000\\pairs\\v17_L1_c3293aa6e9401f244ec3406c__C19_critical_reserve_v19r1\\RESULT.json",
+      "sha256": "a34067eb7038bd4c346e38953e03365b985f672911bed757095b6248483abe7a",
+      "bytes": 548298
+    },
+    {
+      "path": "D:\\云大文件\\论文\\医院ies\\code_4_2\\outputs\\v19_model_closeout_20261018_run01\\experiments\\long_final_r1_000\\analysis\\V19_ANALYSIS_RECEIPT.json",
+      "bytes": 3832,
+      "sha256": "93ab75ce75a107e65d71fb7a713a9b150c23b917f347d32247470fa4d64fe73e"
+    },
+    {
+      "path": "D:\\云大文件\\论文\\医院ies\\code_4_2\\outputs\\v19_model_closeout_20261018_run01\\experiments\\long_final_r1_000\\analysis\\V19_EMISSIONS.csv",
+      "sha256": "50fb13d672184065d3da7f56a199200f719b808263cb42ac532e62afbaff5b11"
+    },
+    {
+      "path": "D:\\云大文件\\论文\\医院ies\\code_4_2\\outputs\\v19_model_closeout_20261018_run01\\experiments\\long_final_r1_001\\plan.json",
+      "sha256": "19ce7a59c36170b4f2d5063ac74e0ad9bf6e9f8b11e4c5a1f5b0ab32a4ce1f72",
+      "bytes": 42297
+    },
+    {
+      "path": "D:\\云大文件\\论文\\医院ies\\code_4_2\\outputs\\v19_model_closeout_20261018_run01\\experiments\\long_final_r1_001\\manifest.json",
+      "sha256": "71dd220e67344caa65aed3c9d1bcda194e32b0bd3389cf4348881577b26055ce",
+      "bytes": 74530
+    },
+    {
+      "path": "D:\\云大文件\\论文\\医院ies\\code_4_2\\outputs\\v19_model_closeout_20261018_run01\\experiments\\long_final_r1_001\\BATCH_RESULT.json",
+      "sha256": "692a1295a076f99342d16bb72b9e3781a08d01de664e44eabaa107ac20ac8642",
+      "bytes": 9273
+    },
+    {
+      "path": "D:\\云大文件\\论文\\医院ies\\code_4_2\\outputs\\v19_model_closeout_20261018_run01\\experiments\\long_final_r1_001\\pairs\\v17_L1_0995567ca7ec6a68eb33cb68__endurance_restore_p0_ready_v14r6\\RESULT.json",
+      "sha256": "17bb3df0ab15f71e6a322bffe4ccf7cd1e49f1ddbad2056f626d49bfeb704ee5",
+      "bytes": 558434
+    },
+    {
+      "path": "D:\\云大文件\\论文\\医院ies\\code_4_2\\outputs\\v19_model_closeout_20261018_run01\\experiments\\long_final_r1_001\\pairs\\v17_L1_0995567ca7ec6a68eb33cb68__readiness_handoff_K1_v15\\RESULT.json",
+      "sha256": "64162f8b5805fa253cf0342533e9fe3ad7f86073fe569a6d520932126403dba8",
+      "bytes": 545495
+    },
+    {
+      "path": "D:\\云大文件\\论文\\医院ies\\code_4_2\\outputs\\v19_model_closeout_20261018_run01\\experiments\\long_final_r1_001\\pairs\\v17_L1_0995567ca7ec6a68eb33cb68__C19_critical_reserve_v19r1\\RESULT.json",
+      "sha256": "046999fe93139c7ce443603479f877313e615851285ae5d2bde81d2fc24c7457",
+      "bytes": 530239
+    },
+    {
+      "path": "D:\\云大文件\\论文\\医院ies\\code_4_2\\outputs\\v19_model_closeout_20261018_run01\\experiments\\long_final_r1_001\\analysis\\V19_ANALYSIS_RECEIPT.json",
+      "bytes": 3832,
+      "sha256": "1076d221564e57c62f4a499ea265004266128c78090d35c81dac5097365216c9"
+    },
+    {
+      "path": "D:\\云大文件\\论文\\医院ies\\code_4_2\\outputs\\v19_model_closeout_20261018_run01\\experiments\\long_final_r1_001\\analysis\\V19_EMISSIONS.csv",
+      "sha256": "0e23647ac606ae3dc6d715283f56748b150c2a55ed002b96f85388b6da929b59"
+    },
+    {
+      "path": "D:\\云大文件\\论文\\医院ies\\code_4_2\\outputs\\v19_model_closeout_20261018_run01\\experiments\\long_final_r1_002\\plan.json",
+      "sha256": "2a88dafc075c22768588feaa38f11117b0abf74f6e27b0d316cc8ae57415190c",
+      "bytes": 42297
+    },
+    {
+      "path": "D:\\云大文件\\论文\\医院ies\\code_4_2\\outputs\\v19_model_closeout_20261018_run01\\experiments\\long_final_r1_002\\manifest.json",
+      "sha256": "71c4c1b00d0b75a3221499eb1bad482ae59752d4716a72f7ed5eb0ee0ec81b1a",
+      "bytes": 75065
+    },
+    {
+      "path": "D:\\云大文件\\论文\\医院ies\\code_4_2\\outputs\\v19_model_closeout_20261018_run01\\experiments\\long_final_r1_002\\BATCH_RESULT.json",
+      "sha256": "a6931524f927308d4401495bacaf19dbb5abdc8fe57b87e1b8eded0b77b06b94",
+      "bytes": 9280
+    },
+    {
+      "path": "D:\\云大文件\\论文\\医院ies\\code_4_2\\outputs\\v19_model_closeout_20261018_run01\\experiments\\long_final_r1_002\\pairs\\v17_L4_9c15f066a87ebf45f0acc31d__endurance_restore_p0_ready_v14r6\\RESULT.json",
+      "sha256": "2f1d84b5a0b487e39b6aa7043837612a155f94b7cf5bc83de5bc56cf64833222",
+      "bytes": 716001
+    },
+    {
+      "path": "D:\\云大文件\\论文\\医院ies\\code_4_2\\outputs\\v19_model_closeout_20261018_run01\\experiments\\long_final_r1_002\\pairs\\v17_L4_9c15f066a87ebf45f0acc31d__readiness_handoff_K1_v15\\RESULT.json",
+      "sha256": "8737c8e75cbf6f0a647bbfdb649272e8c40cef5e4a97f47820e49ce84302ce0c",
+      "bytes": 716421
+    },
+    {
+      "path": "D:\\云大文件\\论文\\医院ies\\code_4_2\\outputs\\v19_model_closeout_20261018_run01\\experiments\\long_final_r1_002\\pairs\\v17_L4_9c15f066a87ebf45f0acc31d__C19_critical_reserve_v19r1\\RESULT.json",
+      "sha256": "543940ce9984ad7c60adc6cea49c6f623ba005c9bd1d54669da6852494024e8a",
+      "bytes": 649963
+    },
+    {
+      "path": "D:\\云大文件\\论文\\医院ies\\code_4_2\\outputs\\v19_model_closeout_20261018_run01\\experiments\\long_final_r1_002\\analysis\\V19_ANALYSIS_RECEIPT.json",
+      "bytes": 3832,
+      "sha256": "e308b3f4dc5711ed3c939f211350ed0cfd12f38d621e949f90e2ec80a851bf02"
+    },
+    {
+      "path": "D:\\云大文件\\论文\\医院ies\\code_4_2\\outputs\\v19_model_closeout_20261018_run01\\experiments\\long_final_r1_002\\analysis\\V19_EMISSIONS.csv",
+      "sha256": "2f3970c3bbc69fb894b4037ad236b1fe42e4c0464dfaf04a821294147cd33c0f"
+    },
+    {
+      "path": "D:\\云大文件\\论文\\医院ies\\code_4_2\\outputs\\v19_model_closeout_20261018_run01\\experiments\\long_final_r1_003\\plan.json",
+      "sha256": "ae946342bac301777110ae13b006af144ab9a8bcde91361e6cb2b3a4fb61bf32",
+      "bytes": 42297
+    },
+    {
+      "path": "D:\\云大文件\\论文\\医院ies\\code_4_2\\outputs\\v19_model_closeout_20261018_run01\\experiments\\long_final_r1_003\\manifest.json",
+      "sha256": "8318ad807589ad39cfc07b8af94a399badad007ca09a53e3b8ad8cf24fc39f13",
+      "bytes": 74830
+    },
+    {
+      "path": "D:\\云大文件\\论文\\医院ies\\code_4_2\\outputs\\v19_model_closeout_20261018_run01\\experiments\\long_final_r1_003\\BATCH_RESULT.json",
+      "sha256": "8b11808b606fedba5889a049e9487f3aee16a0adcd1b3ba4ea2f281a78afc744",
+      "bytes": 9277
+    },
+    {
+      "path": "D:\\云大文件\\论文\\医院ies\\code_4_2\\outputs\\v19_model_closeout_20261018_run01\\experiments\\long_final_r1_003\\pairs\\v17_L4_43a206ad03d1a5ec334e4cae__endurance_restore_p0_ready_v14r6\\RESULT.json",
+      "sha256": "874a866f237313996532acfd973a52b2ac43bc634e53a977f4832cd99be5411d",
+      "bytes": 665244
+    },
+    {
+      "path": "D:\\云大文件\\论文\\医院ies\\code_4_2\\outputs\\v19_model_closeout_20261018_run01\\experiments\\long_final_r1_003\\pairs\\v17_L4_43a206ad03d1a5ec334e4cae__readiness_handoff_K1_v15\\RESULT.json",
+      "sha256": "e869b66351126056805d5078a528f402f164cf9034010a5fe01467162d6cf2b0",
+      "bytes": 656509
+    },
+    {
+      "path": "D:\\云大文件\\论文\\医院ies\\code_4_2\\outputs\\v19_model_closeout_20261018_run01\\experiments\\long_final_r1_003\\pairs\\v17_L4_43a206ad03d1a5ec334e4cae__C19_critical_reserve_v19r1\\RESULT.json",
+      "sha256": "91591c594da959d5ee68d3a166a02bb2dea5ee735270ef00a4f3cddbc63ada46",
+      "bytes": 648603
+    },
+    {
+      "path": "D:\\云大文件\\论文\\医院ies\\code_4_2\\outputs\\v19_model_closeout_20261018_run01\\experiments\\long_final_r1_003\\analysis\\V19_ANALYSIS_RECEIPT.json",
+      "bytes": 3831,
+      "sha256": "54f7d2c868caacdb02446111830327d26bfbe2f77ee8fb3d534d0ef2d9ded27c"
+    },
+    {
+      "path": "D:\\云大文件\\论文\\医院ies\\code_4_2\\outputs\\v19_model_closeout_20261018_run01\\experiments\\long_final_r1_003\\analysis\\V19_EMISSIONS.csv",
+      "sha256": "e5276d1d380f090dd87886e7e6c102635416e12d911c7da6d4366f9c36a3a140"
+    },
+    {
+      "path": "D:\\云大文件\\论文\\医院ies\\code_4_2\\outputs\\v19_model_closeout_20261018_run01\\experiments\\long_final_r1_004\\plan.json",
+      "sha256": "c5339d2399aad6562c86abbec8aa303bce92acdb4a5a2d16ca6478225554b593",
+      "bytes": 42297
+    },
+    {
+      "path": "D:\\云大文件\\论文\\医院ies\\code_4_2\\outputs\\v19_model_closeout_20261018_run01\\experiments\\long_final_r1_004\\manifest.json",
+      "sha256": "4e468fb3f7148f130aba7838d668e7f1a05436b9f4bc426c86258347a23a0778",
+      "bytes": 75068
+    },
+    {
+      "path": "D:\\云大文件\\论文\\医院ies\\code_4_2\\outputs\\v19_model_closeout_20261018_run01\\experiments\\long_final_r1_004\\BATCH_RESULT.json",
+      "sha256": "8e1524ae228d487d961c58264d1ed1f62c728cb7539619bfb9163698280abdd1",
+      "bytes": 9283
+    },
+    {
+      "path": "D:\\云大文件\\论文\\医院ies\\code_4_2\\outputs\\v19_model_closeout_20261018_run01\\experiments\\long_final_r1_004\\pairs\\v17_L4_0cc5382dc74b2c88db5f224b__endurance_restore_p0_ready_v14r6\\RESULT.json",
+      "sha256": "81680a6b48ce84f1c1c6db63b60cd4c75ec52ab84acd44c254ee8d68339349d2",
+      "bytes": 733890
+    },
+    {
+      "path": "D:\\云大文件\\论文\\医院ies\\code_4_2\\outputs\\v19_model_closeout_20261018_run01\\experiments\\long_final_r1_004\\pairs\\v17_L4_0cc5382dc74b2c88db5f224b__readiness_handoff_K1_v15\\RESULT.json",
+      "sha256": "139cf033c4577e7b2045994aaa01ec91f54a838e7aefa2d62ed671dc40080255",
+      "bytes": 725520
+    },
+    {
+      "path": "D:\\云大文件\\论文\\医院ies\\code_4_2\\outputs\\v19_model_closeout_20261018_run01\\experiments\\long_final_r1_004\\pairs\\v17_L4_0cc5382dc74b2c88db5f224b__C19_critical_reserve_v19r1\\RESULT.json",
+      "sha256": "086332e955813cf1d6e6270a7d2e745471608fac8752816875cb34eff2d13699",
+      "bytes": 680214
+    },
+    {
+      "path": "D:\\云大文件\\论文\\医院ies\\code_4_2\\outputs\\v19_model_closeout_20261018_run01\\experiments\\long_final_r1_004\\analysis\\V19_ANALYSIS_RECEIPT.json",
+      "bytes": 3833,
+      "sha256": "f4b1a89b42545f837886f05ea5a19e56e9b0aea30cea109dcaa4efce464d9a8b"
+    },
+    {
+      "path": "D:\\云大文件\\论文\\医院ies\\code_4_2\\outputs\\v19_model_closeout_20261018_run01\\experiments\\long_final_r1_004\\analysis\\V19_EMISSIONS.csv",
+      "sha256": "77691312f960ad85454b334ca5206b56a59b9ad9952d6a745e41c55e0612e588"
+    },
+    {
+      "path": "D:\\云大文件\\论文\\医院ies\\code_4_2\\outputs\\v19_model_closeout_20261018_run01\\experiments\\long_final_r1_005\\plan.json",
+      "sha256": "08c66fd00afc58ce45ac14bb417e6d1423e6deeb8bd26a9031b0bc16ac6b5ab4",
+      "bytes": 42297
+    },
+    {
+      "path": "D:\\云大文件\\论文\\医院ies\\code_4_2\\outputs\\v19_model_closeout_20261018_run01\\experiments\\long_final_r1_005\\manifest.json",
+      "sha256": "bc0239d6b5678e3a164beb43a190f19c6111619526e6e359e4a5631f8ca38ffe",
+      "bytes": 74833
+    },
+    {
+      "path": "D:\\云大文件\\论文\\医院ies\\code_4_2\\outputs\\v19_model_closeout_20261018_run01\\experiments\\long_final_r1_005\\BATCH_RESULT.json",
+      "sha256": "ce14a461d00efae97843c02e6c671c64bd04bb71f04a50ea4eee73388c57bc54",
+      "bytes": 9283
+    },
+    {
+      "path": "D:\\云大文件\\论文\\医院ies\\code_4_2\\outputs\\v19_model_closeout_20261018_run01\\experiments\\long_final_r1_005\\pairs\\v17_L4_389265c703efac3494a1ce02__endurance_restore_p0_ready_v14r6\\RESULT.json",
+      "sha256": "478a6da81e71720748c3c3e95bb7f9d01b330ce67dfb740e81ce70c4cee4bff6",
+      "bytes": 684959
+    },
+    {
+      "path": "D:\\云大文件\\论文\\医院ies\\code_4_2\\outputs\\v19_model_closeout_20261018_run01\\experiments\\long_final_r1_005\\pairs\\v17_L4_389265c703efac3494a1ce02__readiness_handoff_K1_v15\\RESULT.json",
+      "sha256": "f4f181c20f08a11a44c112098cb6e2726004005f0721baa15a8acec3621f1710",
+      "bytes": 666921
+    },
+    {
+      "path": "D:\\云大文件\\论文\\医院ies\\code_4_2\\outputs\\v19_model_closeout_20261018_run01\\experiments\\long_final_r1_005\\pairs\\v17_L4_389265c703efac3494a1ce02__C19_critical_reserve_v19r1\\RESULT.json",
+      "sha256": "f69e29fa61a71ad8cb1f1d04765e72dc7aec0b00708caf880d4548e0dd93cf0b",
+      "bytes": 647819
+    },
+    {
+      "path": "D:\\云大文件\\论文\\医院ies\\code_4_2\\outputs\\v19_model_closeout_20261018_run01\\experiments\\long_final_r1_005\\analysis\\V19_ANALYSIS_RECEIPT.json",
+      "bytes": 3833,
+      "sha256": "f2e791dc27a236d6733d65f623c61e20737f32a736043288dac9ea7f300bbd37"
+    },
+    {
+      "path": "D:\\云大文件\\论文\\医院ies\\code_4_2\\outputs\\v19_model_closeout_20261018_run01\\experiments\\long_final_r1_005\\analysis\\V19_EMISSIONS.csv",
+      "sha256": "3444bdc1290a3359021e7edb6edaa895f89e1902a618aed13eb6fe591f885a0d"
+    },
+    {
+      "path": "D:\\云大文件\\论文\\医院ies\\code_4_2\\outputs\\v19_model_closeout_20261018_run01\\experiments\\long_final_r1_006\\plan.json",
+      "sha256": "a59b16277fcf49cb61bb157d932731a4dfc339b238a42f4ed9f20883ad540e0e",
+      "bytes": 42297
+    },
+    {
+      "path": "D:\\云大文件\\论文\\医院ies\\code_4_2\\outputs\\v19_model_closeout_20261018_run01\\experiments\\long_final_r1_006\\manifest.json",
+      "sha256": "6bfb6bb92957e6534e8f01428a81c4e9b881835ca12e0ccb806e1a5b6c6fca0d",
+      "bytes": 75071
+    },
+    {
+      "path": "D:\\云大文件\\论文\\医院ies\\code_4_2\\outputs\\v19_model_closeout_20261018_run01\\experiments\\long_final_r1_006\\BATCH_RESULT.json",
+      "sha256": "2ea14363d6f9db43d1216913b3850c81dfb095e43e4c572bad5ff89d0d517d9d",
+      "bytes": 9284
+    },
+    {
+      "path": "D:\\云大文件\\论文\\医院ies\\code_4_2\\outputs\\v19_model_closeout_20261018_run01\\experiments\\long_final_r1_006\\pairs\\v17_L4_2e117d129f125a3a6d573eb4__endurance_restore_p0_ready_v14r6\\RESULT.json",
+      "sha256": "b2be5affc46b4a6011acbb25b6011e3f5451f8f8e4f717e85554ae4fdb591af4",
+      "bytes": 731342
+    },
+    {
+      "path": "D:\\云大文件\\论文\\医院ies\\code_4_2\\outputs\\v19_model_closeout_20261018_run01\\experiments\\long_final_r1_006\\pairs\\v17_L4_2e117d129f125a3a6d573eb4__readiness_handoff_K1_v15\\RESULT.json",
+      "sha256": "c50699ef36c219601a73b4bfacf6d73618e4134a76f15aa50f6ef45286ef82d6",
+      "bytes": 714116
+    },
+    {
+      "path": "D:\\云大文件\\论文\\医院ies\\code_4_2\\outputs\\v19_model_closeout_20261018_run01\\experiments\\long_final_r1_006\\pairs\\v17_L4_2e117d129f125a3a6d573eb4__C19_critical_reserve_v19r1\\RESULT.json",
+      "sha256": "8eb4c1ac6e34c4930e23a04e24f4293dbc9b1a5fe5ec1f95738aa1af61a75f15",
+      "bytes": 647695
+    },
+    {
+      "path": "D:\\云大文件\\论文\\医院ies\\code_4_2\\outputs\\v19_model_closeout_20261018_run01\\experiments\\long_final_r1_006\\analysis\\V19_ANALYSIS_RECEIPT.json",
+      "bytes": 3833,
+      "sha256": "fd58eab1c418e20d292404874c140f9dad3d663a86108a14c98411fd5ab608b9"
+    },
+    {
+      "path": "D:\\云大文件\\论文\\医院ies\\code_4_2\\outputs\\v19_model_closeout_20261018_run01\\experiments\\long_final_r1_006\\analysis\\V19_EMISSIONS.csv",
+      "sha256": "68421073b6b40d82a07768719c81bb7ec146f9cbb0bede6b084cc6f2e219189f"
+    },
+    {
+      "path": "D:\\云大文件\\论文\\医院ies\\code_4_2\\outputs\\v19_model_closeout_20261018_run01\\experiments\\long_final_r1_007\\plan.json",
+      "sha256": "45eabf9e51fe00de68133a17023f0affda99ff65d99d8e2123768844255c7418",
+      "bytes": 42297
+    },
+    {
+      "path": "D:\\云大文件\\论文\\医院ies\\code_4_2\\outputs\\v19_model_closeout_20261018_run01\\experiments\\long_final_r1_007\\manifest.json",
+      "sha256": "101725535ce84664653d20bca6c54c3ff7120a391585185156f22e4b4853338a",
+      "bytes": 74836
+    },
+    {
+      "path": "D:\\云大文件\\论文\\医院ies\\code_4_2\\outputs\\v19_model_closeout_20261018_run01\\experiments\\long_final_r1_007\\BATCH_RESULT.json",
+      "sha256": "ce0fc089fcaf6b617855f99d04460538868be7471b3e9accfa422bfae96c8d72",
+      "bytes": 9276
+    },
+    {
+      "path": "D:\\云大文件\\论文\\医院ies\\code_4_2\\outputs\\v19_model_closeout_20261018_run01\\experiments\\long_final_r1_007\\pairs\\v17_L4_649e27ae52a573ef10e673bd__endurance_restore_p0_ready_v14r6\\RESULT.json",
+      "sha256": "6eaaf099f085023816eac7456fd77c637b51b0ee547a5357a3497742f5110f5d",
+      "bytes": 671152
+    },
+    {
+      "path": "D:\\云大文件\\论文\\医院ies\\code_4_2\\outputs\\v19_model_closeout_20261018_run01\\experiments\\long_final_r1_007\\pairs\\v17_L4_649e27ae52a573ef10e673bd__readiness_handoff_K1_v15\\RESULT.json",
+      "sha256": "a0880c7b56a01e46b03fe22cc828c80c6fbeb5de2b6b1bbcbd4b906523e3a37f",
+      "bytes": 654743
+    },
+    {
+      "path": "D:\\云大文件\\论文\\医院ies\\code_4_2\\outputs\\v19_model_closeout_20261018_run01\\experiments\\long_final_r1_007\\pairs\\v17_L4_649e27ae52a573ef10e673bd__C19_critical_reserve_v19r1\\RESULT.json",
+      "sha256": "43e93e830ca01e05084daec04fe7d4996308f4771dcd8b2ccede5e7b736048ea",
+      "bytes": 649875
+    },
+    {
+      "path": "D:\\云大文件\\论文\\医院ies\\code_4_2\\outputs\\v19_model_closeout_20261018_run01\\experiments\\long_final_r1_007\\analysis\\V19_ANALYSIS_RECEIPT.json",
+      "bytes": 3833,
+      "sha256": "15f9a877617bfe1734d8da5439047daebb07e30a139c0cc240094c617da61310"
+    },
+    {
+      "path": "D:\\云大文件\\论文\\医院ies\\code_4_2\\outputs\\v19_model_closeout_20261018_run01\\experiments\\long_final_r1_007\\analysis\\V19_EMISSIONS.csv",
+      "sha256": "c4b01b47fe9d02df8907622e168dc655ac38a5171dedd366c76df1509dcaaa17"
+    }
+  ],
+  "issues": [],
+  "raw_files_opened": 0,
+  "annual_inputs_loaded": 0,
+  "physical_episodes_started": 0,
+  "development_is_not_final": true,
+  "DG_exact_CO2_unknown": true,
+  "no_across_background_or_duration_totals": true,
+  "script_sha256": "44c3266043db784f25b1a3726b67a48f50cc62b9abde98086c6b97206fcd2857",
+  "diagnostic_program_sha256": "dcf57ed7f501d02376181b4a23ef4fc3a055b692e12e9f2d0076c192f62c207c",
+  "compatibility_program_sha256": "e877c7429aaf6ccd06b6a772e71a888745d4ece289052d242993a8e6afba0ff5",
+  "main_factor_case_id": "CAMX2023r2_DG75pct",
+  "emissions_registry_sha256": "67ad5404000040d9665f016ee4b9c540783b26a9ad8038550f148881cefc6ab0",
+  "output_sha256": {
+    "CASES.csv": "e018ae5c7c2031bd145f859dafa820d25371b814643a7345f0820d0ca348d6a6",
+    "CRITICAL_COMPARISON.csv": "f34bea4b6b9d0e2314a8d85da220c624163f70d18512fea1bfb95e0bdac8554b",
+    "CRITICAL_SERVICE.csv": "bdef358a3f6597f44945591acd73b5af41285733b015e0c987bcecfcd26324ae",
+    "ECONOMICS_ENERGY.csv": "b31775c8cb0f76615f97ac07aeb3d56d1dd6fd9bc4aed5e83f3ac93c41e173c7",
+    "EMISSIONS.csv": "f2f885e2be01f8c456060d42b0c950ffbaf312810b91c4917c6face29b8379e7",
+    "ENERGY_COMPARISONS.csv": "52731955c156df6c984df7fe08923c7bacc3a4a9c0887762b57a01a6a5e1d308",
+    "LOWER_PRIORITY_SERVICE.csv": "28c51cd93c8cd9081beb9402b787fcebf0bd828bee8e6b374ac48ae1260e690e",
+    "MATCH_PROOFS.json": "f332fcba5d6e868489b2e2e1b1bec1d0f39337e7424f9eafd73aabcdaffd6122",
+    "REPORT.md": "7e5464efc727eab18d6f857791c8f8bfdc21c7933cd035c677d0a9845c34536e",
+    "SAME_BACKGROUND_DURATION_PROOF.json": "843469328052c6802d16df2ab5fc5f6a722996c9b7f6c5be0b0ab1f20c45b195"
+  }
+}

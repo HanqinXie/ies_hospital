@@ -1,0 +1,149 @@
+{
+  "schema": "hospital_ies.v19.final_expost_completion.v1",
+  "utc": "2026-10-18T20:33:07.978868+00:00",
+  "all_succeeded": true,
+  "source": {
+    "source_files_verified": 345,
+    "source_binding_sha256": "f88ebed9d52dfe7d5c62d1ea994a70245063e365fb52ba80d478fc3104202823"
+  },
+  "verified_outputs": [
+    {
+      "directory": "review\\summary_ALL_FINAL02",
+      "receipt": "SUMMARY_RECEIPT.json",
+      "receipt_sha256": "0cab7270aa6a7e4404ddaeb58d581a547b0d5a874b92c71c20764a6cee3d881a",
+      "output_files_verified": 9
+    },
+    {
+      "directory": "review\\compatibility_key7_final",
+      "receipt": "SUMMARY.json",
+      "receipt_sha256": "d5b1fff579c4d2b22a19dbbacc042ed550572a168b4a367dcd181b130d632d35",
+      "output_files_verified": 7
+    },
+    {
+      "directory": "review\\energy_tradeoff\\long_final_complete01",
+      "receipt": "RECEIPT.json",
+      "receipt_sha256": "242fef1adbe0764aba4a249cc514233a48b2571fb9d31465aba5beafb8a4006d",
+      "output_files_verified": 10
+    },
+    {
+      "directory": "review\\compatibility_normal4_final_r3",
+      "receipt": "SUMMARY.json",
+      "receipt_sha256": "b21684d8c49ec71f91a3d8fcda28e9b272a2e89ceae4d124765a86560ef69af0",
+      "output_files_verified": 7
+    },
+    {
+      "directory": "paper_results\\FINAL02",
+      "receipt": "PAPER_RESULTS_RECEIPT.json",
+      "receipt_sha256": "fd1d9ba52e41e33380fed34a198632edc2f53dc1194a18602f1431f6023931d4",
+      "output_files_verified": 13
+    }
+  ],
+  "strict_key_registered_full_pairs": 35,
+  "strict_normal_registered_full_pairs": 12,
+  "final_long_policy_outcomes": 24,
+  "final_long_C19_E_or_K1_pairs": 16,
+  "qualified_cases_per_policy": {
+    "main": 80,
+    "confirmation": 32,
+    "normal": 4
+  },
+  "actual_confirmation_background_verification": {
+    "verified_registered_backgrounds": 8,
+    "background_ids": [
+      "v19_confirmation_root:255b51214337dc0601377572",
+      "v19_confirmation_root:4060850012a6e2fc9434c2ad",
+      "v19_confirmation_root:50ec061c397c5a9fadf3e7f3",
+      "v19_confirmation_root:5dea2fff75c19cbfa6b6843d",
+      "v19_confirmation_root:6e28d55a70b6484670b77b61",
+      "v19_confirmation_root:a9a9c6677e614464c2a57b0d",
+      "v19_confirmation_root:cb12c7c592f7af97d0e36e11",
+      "v19_confirmation_root:efd41ff241399b277554e4c5"
+    ],
+    "complete_mechanisms_per_policy": {
+      "C19": 32,
+      "E": 32,
+      "K1": 32
+    },
+    "actual_background_policy_rows": 24,
+    "independent_design_is_registered_not_inferred_from_row_count": true
+  },
+  "main_factor_case_numbers": {
+    "main": {
+      "E": {
+        "actual_energy_fee_USD": 28102.61754140852,
+        "grid_plus_gas_CO2_kg": 152866.60437080657,
+        "DG_CO2_kg_conditional": 2635.8353103852905,
+        "total_CO2_kg_conditional": 155502.4396811919
+      },
+      "K1": {
+        "actual_energy_fee_USD": 29712.544359668806,
+        "grid_plus_gas_CO2_kg": 186216.05144888294,
+        "DG_CO2_kg_conditional": 3459.1052103102993,
+        "total_CO2_kg_conditional": 189675.15665919325
+      },
+      "C19": {
+        "actual_energy_fee_USD": 28035.939030242913,
+        "grid_plus_gas_CO2_kg": 186635.10999653535,
+        "DG_CO2_kg_conditional": 561.262150976977,
+        "total_CO2_kg_conditional": 187196.37214751227
+      }
+    },
+    "confirmation": {
+      "E": {
+        "actual_energy_fee_USD": 10728.548624632143,
+        "grid_plus_gas_CO2_kg": 57236.2618480659,
+        "DG_CO2_kg_conditional": 2305.973523433295,
+        "total_CO2_kg_conditional": 59542.2353714992
+      },
+      "K1": {
+        "actual_energy_fee_USD": 10274.140748196864,
+        "grid_plus_gas_CO2_kg": 71181.53904303451,
+        "DG_CO2_kg_conditional": 224.5140239768387,
+        "total_CO2_kg_conditional": 71406.05306701135
+      },
+      "C19": {
+        "actual_energy_fee_USD": 10126.356807758253,
+        "grid_plus_gas_CO2_kg": 69129.80170147741,
+        "DG_CO2_kg_conditional": 221.3742922787823,
+        "total_CO2_kg_conditional": 69351.17599375619
+      }
+    }
+  },
+  "C19_directional_differences": {
+    "main": {
+      "E": {
+        "C19_minus_comparator_CO2_kg": 31693.932466320373,
+        "C19_minus_comparator_fee_USD": -66.67851116560632
+      },
+      "K1": {
+        "C19_minus_comparator_CO2_kg": -2478.7845116809767,
+        "C19_minus_comparator_fee_USD": -1676.6053294258927
+      }
+    },
+    "confirmation": {
+      "E": {
+        "C19_minus_comparator_CO2_kg": 9808.940622256989,
+        "C19_minus_comparator_fee_USD": -602.1918168738903
+      },
+      "K1": {
+        "C19_minus_comparator_CO2_kg": -2054.877073255164,
+        "C19_minus_comparator_fee_USD": -147.78394043861044
+      }
+    }
+  },
+  "emissions_scope": "factor-based operational grid+gas subtotal plus explicitly conditional DG/total; exact DG chemical emissions unknown; no lifecycle/CO2e or emissions objective",
+  "negative_CO2_result_preserved": "C19 conditional total exceeds E in both the main and confirmation case ensembles; lower DG alone is not a carbon-reduction result.",
+  "normal_windows_not_pooled_or_annualized": true,
+  "version_map_sha256": "c5c3150856970465a92c9d699fa0512db792c22c7a36191557377f913156bf66",
+  "previous_failed_or_unknown_results_retained": [
+    "FINAL_EXPOST_AUTORUN_R2_RESULT.json",
+    "FINAL_EXPOST_AUTORUN_R3_RESULT.json",
+    "FINAL_EXPOST_AUTORUN_R4_RESULT.json",
+    "paper_results/FINAL01",
+    "review/summary_ALL_FINAL01"
+  ],
+  "physical_episodes_started": 0,
+  "raw_files_opened": 0,
+  "annual_inputs_loaded": 0,
+  "verifier_sha256": "a7d5386e61ca1b4338708e9673c6af5d70a893b7721288bd604874bcd801b548"
+}

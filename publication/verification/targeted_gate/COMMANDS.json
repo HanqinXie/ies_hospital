@@ -1,0 +1,62 @@
+{
+  "commands": [
+    {
+      "command": [
+        "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\python.exe",
+        "-B",
+        "D:\\hospital_v19_github_checkout_20261019\\scripts\\repository_assets.py",
+        "verify"
+      ],
+      "cwd": "D:\\hospital_v19_github_checkout_20261019",
+      "started_utc": "2026-10-19T02:57:30.484319+00:00",
+      "finished_utc": "2026-10-19T02:57:32.043816+00:00",
+      "exit_code": 0,
+      "raw_log": "command_0.log"
+    },
+    {
+      "command": [
+        "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\python.exe",
+        "-B",
+        "-m",
+        "pytest",
+        "-q",
+        "--basetemp",
+        "D:\\hospital_v19_github_checkout_20261019\\publication_checks\\20261019T025730484319Z\\pytest_tmp",
+        "tests/test_model_closeout_analysis.py",
+        "tests/test_model_closeout_contacts_review.py",
+        "tests/test_model_closeout_contact_semantics.py",
+        "tests/test_model_closeout_emissions.py",
+        "tests/test_model_closeout_environment.py",
+        "tests/test_model_closeout_execution.py",
+        "tests/test_model_closeout_numerics.py",
+        "tests/test_model_closeout_numerics_guards.py",
+        "tests/test_model_closeout_registration.py",
+        "tests/test_model_closeout_reserve.py",
+        "tests/test_execution_recovery_numerics.py",
+        "tests/test_execution_recovery_runner.py",
+        "tests/test_execution_recovery_freeze.py"
+      ],
+      "cwd": "D:\\hospital_v19_github_checkout_20261019",
+      "started_utc": "2026-10-19T02:57:32.043816+00:00",
+      "finished_utc": "2026-10-19T02:57:51.323487+00:00",
+      "exit_code": 0,
+      "raw_log": "command_1.log"
+    },
+    {
+      "command": [
+        "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\python.exe",
+        "-B",
+        "D:\\hospital_v19_github_checkout_20261019\\scripts\\repository_assets.py",
+        "verify"
+      ],
+      "cwd": "D:\\hospital_v19_github_checkout_20261019",
+      "started_utc": "2026-10-19T02:57:51.323487+00:00",
+      "finished_utc": "2026-10-19T02:57:52.859895+00:00",
+      "exit_code": 0,
+      "raw_log": "command_2.log"
+    }
+  ],
+  "exit_code": 0,
+  "targeted_test_files": 13,
+  "full_historical_suite_executed": false
+}

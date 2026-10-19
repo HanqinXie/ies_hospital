@@ -1,0 +1,143 @@
+diff --git "a/D:\\\344\272\221\345\244\247\346\226\207\344\273\266\\\350\256\272\346\226\207\\\345\214\273\351\231\242ies\\code_4_2\\README.md" "b/D:\\hospital_ies_github_v19_20261019\\README.md"
+index 293148c..d353ced 100644
+--- "a/D:\\\344\272\221\345\244\247\346\226\207\344\273\266\\\350\256\272\346\226\207\\\345\214\273\351\231\242ies\\code_4_2\\README.md"
++++ "b/D:\\hospital_ies_github_v19_20261019\\README.md"
+@@ -1,75 +1,63 @@
+-# Hospital NMCSD–DOE IES v4.2 | NON-MPC
+-
+-医院综合能源系统（IES）四阶段故障与训练研究代码。**正式工作流没有MPC，不依赖 `horizon_mpc.py`**。
+-
+-## 版本和来源
+-
+-- **代码基线**：之前已提供的完整 `Hospital_NMCSD_IES_v4_1_完整覆盖包.zip`，保留 DOE/IDF/8760h 数据、正常能源站模型及原3层实体（GT–HRSG、锅炉、冷机、电网、柴油）。
+-- **新增文献来源**：本轮上传的 `故障模拟(1).zip` 含19篇PDF，**只有文献、没有代码**；据此参考故障枚举、跨能源事件树、运行状态相关传播和风险代理分析方法。
+-- 保留原 `src/hospital_ies/model.py` 的常规正常工况；新增的故障仿真依然是线性化能源站代理，并非1:1 OEM 保护或真实临床设备验证。
+-
+-## 目录/脚本
+-
+-| 路径 | 用途 |
+-| --- | --- |
+-| `scenario_sampler.py` | L1: 20种故障对象枚举；L2: 独立与复合载能冲击；L3: 20种原发故障类型；L4: Sobol+分层采样与独立极端集 |
+-| `src/hospital_ies/resilience.py` | 四层负荷优先级、冷热电/蒸汽平衡、GT过载继发保护研究代理 |
+-| `src/hospital_ies/control_env.py` | 单步闭环仿真、动态故障事件、P0温度评价、安全MILP调用 |
+-| `src/hospital_ies/training_schema.py` | 仅使用行动前已知状态的机器学习特征白名单 |
+-| `generate_nonmpc_training.py` | 配对运行普通单步MILP与GT低负荷偏好安全MILP；可断点续跑 |
+-| `scripts/audit_v42_dataset.py` | 验证L1/L3覆盖、L4重复模板、步长缺失、未来冲击泄漏、守恒等 |
+-| `scripts/run_v42_validation.py` | 原92个故障场景配对重跑（非MPC） |
+-| `train_nonmpc_baselines.py` | 风险RF（未来H步P0失效）+ 单步安全MILP实际动作的RF行为克隆 |
+-| `docs/NONMPC_METHOD_AND_REFERENCES.md` | 论文与代码方法依据、研究假设边界 |
+-
+-## 运行
+-
+-在根目录打开 PowerShell（需 Python、NumPy、Pandas、SciPy、scikit-learn、pytest）
+-
+-```powershell
+-pip install -r requirements-training.txt
+-python -m pytest -q
+-python scripts/run_v42_validation.py --output-dir outputs/v42_validation_local
+-
+-# 最小完整设备覆盖试验：每级20个事故，两种单步MILP，各12步
+-python generate_nonmpc_training.py --episodes-per-stage 20 --steps 12 --risk-horizon 4 --seed 20261012 --suite-id coverage --output-dir outputs/v42_coverage
+-python scripts/audit_v42_dataset.py --run-dir outputs/v42_coverage --strict
+-
+-# 扩充设计：每级100个独立事故，800条配对轨迹
+-python generate_nonmpc_training.py --episodes-per-stage 100 --steps 12 --risk-horizon 4 --seed 20261013 --suite-id main --output-dir outputs/v42_main
+-python scripts/audit_v42_dataset.py --run-dir outputs/v42_main --strict
+-
+-# 使用本版当前预动作特征、未来H步标签（不使用MPC）试训
+-python train_nonmpc_baselines.py --data outputs/v42_main/closed_loop_expert_steps.csv --output-dir outputs/v42_models --policy secure_milp
+-```
+-
+-断点恢复：**同一个命令加 `--resume`**；场景、模型代码或配置哈希不一致时会拒绝混合旧轨迹。
+-
+-## 研究策略（两种单步 MILP，不是MPC）
+-
+-- `priority_milp`：P0、P1、P2、P3 优先最小未供冷热电需求，之后最小运行费用；只有当前状态信息。
+-- `secure_milp`：同样严格锁定P0–P3四层最优失供，**仅在最后的平局目标中**添加 `w·ΣP_GT·Δt`（缺省 `w = 0.35 USD/kWh`）使燃机出力更低，从而增加某些工况的机组负荷裕度。它不是经校准的跳机风险概率，也不保证降低继发故障，更不应将其设为“安全保证”或“真实经济成本”。
+-
+-### 四阶段解释
+-
+-- L1 单设备故障或降额（无继发保护传播）。单台TOWER_i等于并联塔聚合能力损失1/4，共因TOWER代表全塔系统故障；属于**设备连接假设**。
+-- L2 电/热/冷负荷冲击（无继发保护传播）。
+-- L3 允许原发设备故障的运行状态触发继发**GT过载**停机。非GT初始设备故障不强制产生次生故障。
+-- L4 允许负荷冲击触发继发**GT过载**停机。极端压力集和普通设计集分开；采样比例不是自然故障发生概率。
+-
+-## 风险标签
+-
+-`future_P0_failure_H` = 当前时间步 t 的行动前观察，是否在执行所记录政策之后的 `t+1..t+H` 时段内出现P0最终保障失效；最后H个步长标为 `future_horizon_valid=False`，不可作为完整时间窗内未失效的负样本。
+-
+-机器学习仅用 `training_schema.FEATURES`。`stage`、`stratum`、未来冲击、后决策供能缺口、继发故障输出等**不是预测输入**。训练/测试按独立事故家族分割，10%极端压力集独立评估。不能把预测分数称为真实医院故障概率。
+-
+-## 验收与局限
+-
+-- 新的设备枚举/L4采样并未赋予真实故障发生频率，研究中不能直接估计实际LOLP或失效概率。
+-- 未校准：GT保护参数及均分暂态缺口、负荷快速切除能力、柴油启动/ATS、共享冷却塔水力连接、1R1C区域温度参数；尚无完整电力潮流、频率瞬态或冷热管网。
+-- 原热惯性在此版只用于闭环温度更新/后验评价，**未使用MPC进行未来温度预测控制**。
+-- `secure_milp` 与 `priority_milp` 必须配对报告包括更差结果，不能预设它优越。
+-
+-### 旧版覆盖提醒
+-
+-完整包是一个**干净的非MPC项目**。如果你把它解压到旧v4.1目录，解压软件的“覆盖”通常不会删除旧文件。为避免误运行旧MPC脚本，建议优先解压到新目录；必须同目录覆盖时请先移走/删除旧的 `generate_v4_training.py`、`train_v4_baselines.py`、`src/hospital_ies/horizon_mpc.py`、`scan_v4_boundary.py` 及旧MPC验证脚本。可先运行 `python scripts/cleanup_legacy_mpc.py` 预览，再运行 `python scripts/cleanup_legacy_mpc.py --apply` 删除这些旧入口；原数据和实验输出不会删除。原数据输出建议先备份。
++# 医院综合能源系统研究模型 V19
++
++本仓库保存医院电、热、冷综合能源系统的 **M19 聚合准稳态模型**、执行感知调度策略及其冻结研究结果。模型以既有 DOE/IDF/8760 小时需求和设备参数为基础，分别记录命令生成、队列到达、持久许可、实际执行、保护和服务恢复；不使用 MPC，也不向策略提供未来故障、修复或停电结束时间。
++
++方法、参数来源和假设见 [模型说明](docs/v19/PAPER_MODEL_SPECIFICATION.md)，仓库资源补齐及复现步骤见 [复现指南](docs/REPOSITORY_REPRODUCTION.md)。
++
++## 场景与策略
++
++论文类别采用下列定义。旧代码的 native 标签保留作兼容，不能直接按旧标签解释论文结果。
++
++| 类别 | 定义 |
++|---|---|
++| L1：单设备故障 | 一个设备或接口失效/降额，关闭继发传播作对照。 |
++| L2：故障连锁 | 与配对 L1 保持相同故障靶和事件时钟，允许已登记的应力代理触发继发保护；L2 标签不等于实际发生了跳机。 |
++| L3：无故障需求突增 | 电、热、冷或混合需求冲击，没有初始设备故障。 |
++| L4：需求突增叠加故障 | 外生故障与需求冲击共同作用，保留各自事件时钟。 |
++
++四种策略共享 M19 物理模型、动作权限、执行队列和服务判据：
++
++| 策略 | 登记身份 | 主要区别 |
++|---|---|---|
++| E | `endurance_restore_p0_ready_v14r6` | 沿用续航、恢复和关键服务准备偏好。 |
++| K1 | `readiness_handoff_K1_v15` | 考虑命令已到达而机组尚未就绪时的服务交接与准备。 |
++| C19 | `C19_critical_reserve_v19r1` | 根据当前关键需求和剩余 DG 轴功预算，加入关键能源预留偏好及相应目标重排。 |
++| C18/M19 兼容版 | `C18_service_rich_M19compat` | 接受共同接点与回切接口适配，关闭 C19 的关键能源预留，保留原偏重一般服务的相对次序；不是旧 C18/M18 的字节不变复现。 |
++
++P0–P3 是模型中的服务优先级。主动切除、已连接少供和实际交付分别评价；电、热、冷 ENS 分列，不直接相加解释为医疗损害。
++
++## 先检查资源，再运行
++
++在仓库根目录、已准备好 Python 依赖和求解器的环境中执行：
++
++```powershell
++python scripts/repository_assets.py verify
++```
++
++仓库保留继承代码、历史小型配置和数学回归 fixture 的原路径，但**不上传11篇文献PDF及3份来源PDF/XLSX原件**。严格冻结复现要求原 66 项输入的字节及 SHA 全部一致，因此新克隆不自动等于完整复现环境。若检查报告缺少外部资料，可从已有的完整原项目目录按登记清单补齐，再检查：
++
++```powershell
++python scripts/repository_assets.py restore --source-root "D:\path\to\code_4_2"
++python scripts/repository_assets.py verify --require-full
++python scripts/test_v19.py
++```
++
++`restore` 的来源目录应包含哈希一致的原资料，不能用同名不同版本文件替代。文献及设备/排放资料的来源、版次和 SHA 见复现指南与参数登记。实际模型注册、运行和结果复核步骤以 [复现指南](docs/REPOSITORY_REPRODUCTION.md) 为准；不能通过省略输入清单、修改冻结绑定或扩大容差来宣称同版本复现。
++
++求解器及可用的 Gurobi 许可是外部运行条件；仓库和 GitHub CI 不提供或保证该许可。
++
++## 已验证什么
++
++- 本次仓库发布已从实际Git文件选择重新运行：13文件门槛 **165 passed**；本地补齐14项外部原件后，long000/E全1065分钟独立复现 **92项指标比较通过**。命令、退出码和原始日志见 [发布验证](publication/verification/final_profile/VALIDATION.json)。
++- 已记录的 **165 passed** 来自 13 个针对性测试文件，是 V19 阶段门槛，不代表全历史测试全集已执行或全部通过。
++- 冻结后的 **406 条最终轨迹**包括 310 条比较轨迹和 96 条确认轨迹，均完整结束且单轨迹审计通过。完整结束不等于服务零中断。
++- 本轮 V19 跨开发源码版本的登记共 **506 条**：实际启动 466 条，其中 465 条完整完成、1 条旧 native 求解失败；另有 40 条未开始。失败与未开始记录保留，不能写成“506 条全部通过”。
++- 主 80 规格属于已见回归；冻结后的八背景确认单列，仍来自同一医院模型与年度数据支持。原最终 12 背景保持封存。
++
++结果存在实际取舍：八背景确认没有显示 C19 相对 E/K1 的 P0 优势；主面板 C19 的条件 CO₂ 高于 E，72 h 正常窗费用也高于 E。DG 排放采用代表油耗的条件映射，真实启动、空载和低载油耗仍有未知；这里的 CO₂ 评价不是完整生命周期 CO₂e。详见 [收尾报告](docs/v19/V19_MODEL_CLOSEOUT_REPORT.md) 与 [排放方法](docs/v19/EMISSIONS_METHOD.md)。
++
++## 适用边界
++
++这是设备转换、有限执行时钟和服务后果的研究模型，缺少真实配电潮流、厂家暂态与继电保护校准、完整医院支路拓扑和临床后果验证。共塔故障、初始启动、有限能源及正接点延迟仍可能造成缺供。条件静态准备检查不证明连续转供路径或未来持续供能；仿真未越温度阈值也不能替代缺冷评价。本仓库不提供现场、临床或全场景供能保障结论。
++
++源码位于 `src/`、`tools/`，测试位于 `tests/`，参数位于 `configs/`。V19 依赖跨代继承链，不能只复制 `tools/model_closeout/`；`bootstrap_planners.py` 是历史一次性迁移工具，不是运行入口，不应重新执行。后续升级应另建版本并重新登记、测试和冻结，保留 V19 的输入、失败证据及原结果。

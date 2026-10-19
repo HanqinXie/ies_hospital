@@ -1,0 +1,62 @@
+[
+  {
+    "id": "L1_single_GT1_fault",
+    "stage": 1,
+    "start_hour": 4300,
+    "duration_steps": 16,
+    "step_minutes": 15,
+    "faults": {
+      "GT_1": 0.0
+    },
+    "fault_duration_steps": 12,
+    "enable_propagation": false,
+    "response_delay_steps": 0
+  },
+  {
+    "id": "L2_cooling_electric_surge",
+    "stage": 2,
+    "start_hour": 4300,
+    "duration_steps": 16,
+    "step_minutes": 15,
+    "shock": {
+      "e": 0.25,
+      "c": 0.4
+    },
+    "shock_duration_steps": 12,
+    "enable_propagation": false,
+    "response_delay_steps": 0
+  },
+  {
+    "id": "L3_single_fault_and_delayed_protection",
+    "stage": 3,
+    "start_hour": 6347,
+    "duration_steps": 16,
+    "step_minutes": 15,
+    "faults": {
+      "GT_1": 0.0
+    },
+    "fault_duration_steps": 16,
+    "enable_propagation": true,
+    "response_delay_steps": 2,
+    "grid_limit_kW": 250.0,
+    "pre_event_warmup_steps": 8,
+    "pre_event_grid_limit_kW": 250.0
+  },
+  {
+    "id": "L4_load_surge_and_delayed_protection",
+    "stage": 4,
+    "start_hour": 6347,
+    "duration_steps": 16,
+    "step_minutes": 15,
+    "shock": {
+      "e": 0.85,
+      "c": 0.55
+    },
+    "shock_duration_steps": 16,
+    "enable_propagation": true,
+    "response_delay_steps": 2,
+    "grid_limit_kW": 250.0,
+    "pre_event_warmup_steps": 8,
+    "pre_event_grid_limit_kW": 250.0
+  }
+]

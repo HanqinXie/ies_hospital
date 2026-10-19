@@ -1,0 +1,8 @@
+﻿code,gas_turbine_strategy,chiller_priority,source,note
+A,Minimize gas turbines; only run if boiler steam is insufficient,ABS first; VC backup,Brown and Dirks p.5,"Original paper, not imposed in this code"
+B,Minimize gas turbines; only run if boiler steam is insufficient,VC first; ABS backup,Brown and Dirks p.5,"Original paper, not imposed in this code"
+C,Turbine meets hospital and chiller electric loads where possible,ABS first; VC backup; boiler steam as needed,Brown and Dirks p.5,"Original paper, not imposed in this code"
+C',Turbine meets hospital/chiller electricity; increase for steam as needed,ABS first with steam-limited VC backup,Brown and Dirks p.5,"Original paper, not imposed in this code"
+D,Turbine maximizes power for hospital/chiller electricity,VC first; ABS backup when boiler/HRSG steam available,Brown and Dirks p.5,"Original paper, not imposed in this code"
+E',Turbine dispatch to meet hospital and chiller steam/electricity,"ABS first, steam-driven turbine response",Brown and Dirks p.5,"Original paper, not imposed in this code"
+F',Turbine dispatch to meet hospital and chiller steam/electricity,VC first; ABS supplementary; original description notes grid export,Brown and Dirks p.5,The research system here prohibits grid export

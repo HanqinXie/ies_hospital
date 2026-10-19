@@ -1,0 +1,5386 @@
+{
+  "schema": "hospital_ies.v19.confirmation_pool_review.v1",
+  "created_utc": "2026-10-18T11:21:39.985503+00:00",
+  "status": "metadata_capacity_established_selection_deferred_until_v19_freeze",
+  "authority": "V19_Hospital_IES_Model_Closeout_Task.txt section 8.3",
+  "scope": {
+    "annual_load_values_read": false,
+    "full_raw_read": false,
+    "original_final12_trajectories_or_fault_scripts_opened": false,
+    "original_final12_metadata_exclusion_only": true,
+    "physical_episodes_started": 0,
+    "training_started": 0,
+    "confirmation_backgrounds_selected": 0,
+    "production_files_modified": false,
+    "old_outputs_modified": false
+  },
+  "support_rule": {
+    "start": "(start_hour-1)*60",
+    "end": "start+(floor(duration_steps*step_minutes/60)+1)*60",
+    "warmup": "Six algebraic initialization iterations repeat the first source hour; real normal prefix is inside the uninterrupted episode, not an unrecorded prior chronological window.",
+    "candidate_and_prior_embargo_minutes_each_side": 60,
+    "full_trajectory_tail_and_endpoint_included": true,
+    "prior_unrun_reservations_conservatively_excluded": true,
+    "model_training_exposure_included": "V4.2 coverage80 RF dataset plus frozen V43 attempted and continuation registry, V5 and V6 whole-day reservations, and V7-V18 design support including old confirmation, normal and long windows."
+  },
+  "sealed_final_day_count": 12,
+  "sealed_identity_digest": "b91bc03838d77ddc2565382dc2a12dcfe2c7deb92526e1979f8c0bdc9a3923ce",
+  "source_inventory": [
+    {
+      "path": "outputs/v5_policy_search_20261015_run01/design/source_proposal.json",
+      "bytes": 2165674,
+      "sha256": "ffa57eb0a4eb732d5e7f1a91f30a9d11565353f6cec03f64c9dcfbd466eb82c4",
+      "kind": "historical_attempted_exposure_registry_and_v5_whole_day_reservations",
+      "scenario_rows": 270,
+      "signature_checked": true,
+      "signature_valid": true
+    },
+    {
+      "path": "outputs/v6_policy_redesign_20261016_run01/design/v6_source_proposal.json",
+      "bytes": 303152,
+      "sha256": "553314b9323f7e76176e92a8d7e4b9443d0015c520b61beb680e408f0a459114",
+      "kind": "registered_or_reserved_v6_design_support_conservative_exclusion",
+      "scenario_rows": 60,
+      "support_formula_mismatches": 0,
+      "signature_checked": true,
+      "signature_valid": true
+    },
+    {
+      "path": "outputs/v7_four_scenarios_20261016_run01/design/SOURCE_PROPOSAL.json",
+      "bytes": 329076,
+      "sha256": "ed423f53d9ee1519e4d7a6ebeb2293bd23efce2490bce156824fb48e5045d75a",
+      "kind": "registered_or_reserved_v7_design_support_conservative_exclusion",
+      "scenario_rows": 84,
+      "support_formula_mismatches": 0,
+      "signature_checked": true,
+      "signature_valid": true
+    },
+    {
+      "path": "outputs/v8_four_scenarios_clockmatched_20261016_run01/design/SOURCE_PROPOSAL.json",
+      "bytes": 229668,
+      "sha256": "79d7cf8db3f60d4495dade98e3c5ddf80cea287985da9c446a703b246d9c2043",
+      "kind": "registered_or_reserved_v8_design_support_conservative_exclusion",
+      "scenario_rows": 24,
+      "support_formula_mismatches": 0,
+      "signature_checked": true,
+      "signature_valid": true
+    },
+    {
+      "path": "outputs/v8_four_scenarios_deepening_20261016_run01/design/SOURCE_PROPOSAL.json",
+      "bytes": 2358425,
+      "sha256": "539137449cb425d254c5f17fd299697c0692f6c4fbfbd0c6f94644925e142f6d",
+      "kind": "registered_or_reserved_v8_design_support_conservative_exclusion",
+      "scenario_rows": 528,
+      "support_formula_mismatches": 0,
+      "signature_checked": true,
+      "signature_valid": true
+    },
+    {
+      "path": "outputs/v8_four_scenarios_fault_cross_20261016_run01/design/SOURCE_PROPOSAL.json",
+      "bytes": 70377,
+      "sha256": "0f337932b75590f64136925e445bd8f6ef07ce75c6159fa7f649627c149e32ca",
+      "kind": "registered_or_reserved_v8_design_support_conservative_exclusion",
+      "scenario_rows": 16,
+      "support_formula_mismatches": 0,
+      "signature_checked": true,
+      "signature_valid": true
+    },
+    {
+      "path": "outputs/v9_state_dispatch_20261016_run01/design/SOURCE_PROPOSAL.json",
+      "bytes": 560683,
+      "sha256": "ff43e852fe5893e016f5938ba8c6c1ddfab44c831a725e5b282fd0f0d37c11d5",
+      "kind": "registered_or_reserved_v9_design_support_conservative_exclusion",
+      "scenario_rows": 119,
+      "support_formula_mismatches": 0,
+      "signature_checked": true,
+      "signature_valid": true
+    },
+    {
+      "path": "outputs/v10_dispatch_closeout_20261016_run01/design/SOURCE_PROPOSAL.json",
+      "bytes": 229280,
+      "sha256": "c0c9eee7c33ff1acbb4b367cb513095d51a3d8584dcc63e7e91e37805c76c6a9",
+      "kind": "registered_or_reserved_v10_design_support_conservative_exclusion",
+      "scenario_rows": 40,
+      "support_formula_mismatches": 0,
+      "signature_checked": true,
+      "signature_valid": true
+    },
+    {
+      "path": "outputs/v11_autonomous_dispatch_20261016_run01/design/NOVEL_BACKGROUND_PROPOSAL.json",
+      "bytes": 443171,
+      "sha256": "76fb472335e127cf3f0a47071459af4d8e3628ebb3ec0026a39ac0efc230ec5e",
+      "kind": "registered_or_reserved_v11_design_support_conservative_exclusion",
+      "scenario_rows": 80,
+      "support_formula_mismatches": 0,
+      "signature_checked": true,
+      "signature_valid": true
+    },
+    {
+      "path": "outputs/v11_autonomous_dispatch_20261016_run01/design/SOURCE_PROPOSAL.json",
+      "bytes": 3844552,
+      "sha256": "ca4afa15d803fc427f4afe5bda0e35cb58985082ac74055e3e9fb44fcd209f3b",
+      "kind": "registered_or_reserved_v11_design_support_conservative_exclusion",
+      "scenario_rows": 760,
+      "support_formula_mismatches": 0,
+      "signature_checked": true,
+      "signature_valid": true
+    },
+    {
+      "path": "outputs/v12_service_switch_20261017_run01/design/COMBINED_FROZEN_PROPOSAL.json",
+      "bytes": 1015508,
+      "sha256": "c2c42070a58cc3d145ed0b14b84dd49dd3a69f8ffdec2f04f71a905e5ec1135b",
+      "kind": "registered_or_reserved_v12_design_support_conservative_exclusion",
+      "scenario_rows": 162,
+      "support_formula_mismatches": 0,
+      "signature_checked": true,
+      "signature_valid": true
+    },
+    {
+      "path": "outputs/v12_service_switch_20261017_run01/design/DISTRIBUTED_DEVELOPMENT_PROPOSAL.json",
+      "bytes": 810603,
+      "sha256": "cdad93dc817e5fd11a21b02ed1d2a457df61b876311fea4d917ff1fbd2b857fc",
+      "kind": "registered_or_reserved_v12_design_support_conservative_exclusion",
+      "scenario_rows": 140,
+      "support_formula_mismatches": 0,
+      "signature_checked": true,
+      "signature_valid": true
+    },
+    {
+      "path": "outputs/v12_service_switch_20261017_run01/design/EXPOSED_V11_POOL.json",
+      "bytes": 3051130,
+      "sha256": "aff8265bbf702874df6af6d3b0226d0fcdcd76e4a0e5b6a446d340f55e32b8ef",
+      "kind": "registered_or_reserved_v12_design_support_conservative_exclusion",
+      "scenario_rows": 576,
+      "support_formula_mismatches": 0,
+      "signature_checked": true,
+      "signature_valid": true
+    },
+    {
+      "path": "outputs/v12_service_switch_20261017_run01/design/FOCUSED_FROZEN_PROPOSAL.json",
+      "bytes": 177236,
+      "sha256": "b2469497442a347fc1b9e9160d48b695807ce3048e15119f22550d26dbffc8e7",
+      "kind": "registered_or_reserved_v12_design_support_conservative_exclusion",
+      "scenario_rows": 22,
+      "support_formula_mismatches": 0,
+      "signature_checked": true,
+      "signature_valid": true
+    },
+    {
+      "path": "outputs/v12_service_switch_20261017_run01/design/FROZEN_PHASE_PROPOSAL.json",
+      "bytes": 847969,
+      "sha256": "6a76e90d9bd99a851a42ca71318909e63aeb31fbfe4b4a2779dbba4f779a3ff7",
+      "kind": "registered_or_reserved_v12_design_support_conservative_exclusion",
+      "scenario_rows": 140,
+      "support_formula_mismatches": 0,
+      "signature_checked": true,
+      "signature_valid": true
+    },
+    {
+      "path": "outputs/v12_service_switch_20261017_run01/design/TARGETED_DEVELOPMENT_PROPOSAL.json",
+      "bytes": 89581,
+      "sha256": "023616f10dd9fb76ba2a0f9cd2a0f573aca370be06de304178c1013ce84f0c54",
+      "kind": "registered_or_reserved_v12_design_support_conservative_exclusion",
+      "scenario_rows": 12,
+      "support_formula_mismatches": 0,
+      "signature_checked": true,
+      "signature_valid": true
+    },
+    {
+      "path": "outputs/v13_executed_service_20261017_run01/design/CONFIRMATION_PROPOSAL.json",
+      "bytes": 323757,
+      "sha256": "1a2d8d42689c80de724cc95713e3a79782b2e6ad1c99df8ef845e032e03cd59d",
+      "kind": "registered_or_reserved_v13_design_support_conservative_exclusion",
+      "scenario_rows": 48,
+      "support_formula_mismatches": 0,
+      "signature_checked": true,
+      "signature_valid": true
+    },
+    {
+      "path": "outputs/v13_executed_service_20261017_run01/design/DEVELOPMENT_PROPOSAL.json",
+      "bytes": 180557,
+      "sha256": "b5f2486d5008c4a90122bccb610b6ccf5afb900917593e1e35541072b6aa64fc",
+      "kind": "registered_or_reserved_v13_design_support_conservative_exclusion",
+      "scenario_rows": 24,
+      "support_formula_mismatches": 0,
+      "signature_checked": true,
+      "signature_valid": true
+    },
+    {
+      "path": "outputs/v14_engineering_model_20261017_run01/design/CONFIRMATION_PROPOSAL.json",
+      "bytes": 62323,
+      "sha256": "ae5c3909006082b9a98c086b24d200906d0676f0d6338f1aa8f234370fc94a40",
+      "kind": "registered_or_reserved_v14_design_support_conservative_exclusion",
+      "scenario_rows": 8,
+      "support_formula_mismatches": 0,
+      "signature_checked": true,
+      "signature_valid": true
+    },
+    {
+      "path": "outputs/v14_engineering_model_20261017_run01/design/DEVELOPMENT_PROPOSAL.json",
+      "bytes": 157306,
+      "sha256": "18a1ba77bd0d7bb20cd1ca716e0cabdc6e24794205624f8c383d1020d868049a",
+      "kind": "registered_or_reserved_v14_design_support_conservative_exclusion",
+      "scenario_rows": 20,
+      "support_formula_mismatches": 0,
+      "signature_checked": true,
+      "signature_valid": true
+    },
+    {
+      "path": "outputs/v14_engineering_model_20261017_run01/design/LONG_NORMAL_PROPOSAL.json",
+      "bytes": 28405,
+      "sha256": "1a6cd5ecb02a8106e9b9b5136db56551fbe3b03f0f0a51348e9767e9e844b476",
+      "kind": "registered_or_reserved_v14_design_support_conservative_exclusion",
+      "scenario_rows": 3,
+      "support_formula_mismatches": 0,
+      "signature_checked": true,
+      "signature_valid": true
+    },
+    {
+      "path": "outputs/v15_engineering_operation_20261017_run01/design/DEV_V2_PROPOSAL.json",
+      "bytes": 327074,
+      "sha256": "d7d4bcfb8117ee5fc1140630748bef3ee367643481453063e902c341070e2628",
+      "kind": "registered_or_reserved_v15_design_support_conservative_exclusion",
+      "scenario_rows": 48,
+      "support_formula_mismatches": 0,
+      "signature_checked": true,
+      "signature_valid": true
+    },
+    {
+      "path": "outputs/v15_engineering_operation_20261017_run01/design/DEVELOPMENT_PROPOSAL.json",
+      "bytes": 256735,
+      "sha256": "3ea46eb2f7e7a4454304727d1297416788cecb51be72855559b856879ebf8aa6",
+      "kind": "registered_or_reserved_v15_design_support_conservative_exclusion",
+      "scenario_rows": 48,
+      "support_formula_mismatches": 0,
+      "signature_checked": true,
+      "signature_valid": true
+    },
+    {
+      "path": "outputs/v15_engineering_operation_20261017_run01/design/DEVELOPMENT_V2_PROPOSAL.json",
+      "bytes": 327074,
+      "sha256": "d7d4bcfb8117ee5fc1140630748bef3ee367643481453063e902c341070e2628",
+      "kind": "registered_or_reserved_v15_design_support_conservative_exclusion",
+      "scenario_rows": 48,
+      "support_formula_mismatches": 0,
+      "signature_checked": true,
+      "signature_valid": true
+    },
+    {
+      "path": "outputs/v15_engineering_operation_20261017_run01/design/EXACT_V14_NORMAL_PROPOSAL.json",
+      "bytes": 25664,
+      "sha256": "872b3a19a5a3c566ec998c582ff431c4e6af947c4fa0acfab35fbd98df82070d",
+      "kind": "registered_or_reserved_v15_design_support_conservative_exclusion",
+      "scenario_rows": 3,
+      "support_formula_mismatches": 0,
+      "signature_checked": true,
+      "signature_valid": true
+    },
+    {
+      "path": "outputs/v15_engineering_operation_20261017_run01/design/FROZEN_INCIDENTS_PROPOSAL.json",
+      "bytes": 219991,
+      "sha256": "e3323ab2aaa66a52f2d6788c01a108d49c37d74ed76d83b94cdf5cd5f01dfb27",
+      "kind": "registered_or_reserved_v15_design_support_conservative_exclusion",
+      "scenario_rows": 32,
+      "support_formula_mismatches": 0,
+      "signature_checked": true,
+      "signature_valid": true
+    },
+    {
+      "path": "outputs/v15_engineering_operation_20261017_run01/design/FROZEN_L4A_EXTENSION_PROPOSAL.json",
+      "bytes": 16874,
+      "sha256": "044d996fcd9cd3ea7e15b5445b4b135d2ce85eb3f8461f311f466393d73f6c6f",
+      "kind": "registered_or_reserved_v15_design_support_conservative_exclusion",
+      "scenario_rows": 2,
+      "support_formula_mismatches": 0,
+      "signature_checked": true,
+      "signature_valid": true
+    },
+    {
+      "path": "outputs/v15_engineering_operation_20261017_run01/design/FROZEN_NORMAL_PROPOSAL.json",
+      "bytes": 38055,
+      "sha256": "fd4abd805bdd131fcd4780b40d5f04553bd8fa6782a239bcb291199471b1f0bd",
+      "kind": "registered_or_reserved_v15_design_support_conservative_exclusion",
+      "scenario_rows": 8,
+      "support_formula_mismatches": 0,
+      "signature_checked": true,
+      "signature_valid": true
+    },
+    {
+      "path": "outputs/v15_engineering_operation_20261017_run01/design/KNOWN_PROPOSAL.json",
+      "bytes": 50354,
+      "sha256": "ab29eb07803a8b58423f2ae2a944cf3274a1223566cacdb7bdffde3344083aa0",
+      "kind": "registered_or_reserved_v15_design_support_conservative_exclusion",
+      "scenario_rows": 5,
+      "support_formula_mismatches": 0,
+      "signature_checked": true,
+      "signature_valid": true
+    },
+    {
+      "path": "outputs/v15_engineering_operation_20261017_run01/design/L4A_EXTENSION_PROPOSAL.json",
+      "bytes": 31158,
+      "sha256": "1ebd639b660e2ef234a435d57068be2f719931a6096efb114314af0e63df545f",
+      "kind": "registered_or_reserved_v15_design_support_conservative_exclusion",
+      "scenario_rows": 4,
+      "support_formula_mismatches": 0,
+      "signature_checked": true,
+      "signature_valid": true
+    },
+    {
+      "path": "outputs/v15_engineering_operation_20261017_run01/design/NORMAL_PROPOSAL.json",
+      "bytes": 55889,
+      "sha256": "4a32e4847e43017a543cb1f1d2a75ef47b2770002e85ef4fae7be820c137a454",
+      "kind": "registered_or_reserved_v15_design_support_conservative_exclusion",
+      "scenario_rows": 12,
+      "support_formula_mismatches": 0,
+      "signature_checked": true,
+      "signature_valid": true
+    },
+    {
+      "path": "outputs/v15_engineering_operation_20261017_run01/design/PILOT_NORMAL_PROPOSAL.json",
+      "bytes": 15435,
+      "sha256": "75362674bee2d76a77bc580464afe9115cc4b7d3ac63ec4af599b066785083c8",
+      "kind": "registered_or_reserved_v15_design_support_conservative_exclusion",
+      "scenario_rows": 3,
+      "support_formula_mismatches": 0,
+      "signature_checked": true,
+      "signature_valid": true
+    },
+    {
+      "path": "outputs/v16_essential_engineering_20261017_run01/design/DIESEL_PROPOSAL.json",
+      "bytes": 48276,
+      "sha256": "4e179af1baaf2726bd42f10bc013fe79cf796040c17e5f689f3ce9029b5470a3",
+      "kind": "registered_or_reserved_v16_design_support_conservative_exclusion",
+      "scenario_rows": 8,
+      "support_formula_mismatches": 0,
+      "signature_checked": true,
+      "signature_valid": true
+    },
+    {
+      "path": "outputs/v16_essential_engineering_20261017_run01/design/FOUR_CLASS_PROPOSAL.json",
+      "bytes": 160472,
+      "sha256": "b52194523fb844e1e1edc861a5d629d76697d301ba72eee7f3182b4bed6da0b9",
+      "kind": "registered_or_reserved_v16_design_support_conservative_exclusion",
+      "scenario_rows": 32,
+      "support_formula_mismatches": 0,
+      "signature_checked": true,
+      "signature_valid": true
+    },
+    {
+      "path": "outputs/v16_essential_engineering_20261017_run01/design/KNOWN_PROPOSAL.json",
+      "bytes": 38617,
+      "sha256": "d992b5a31723e91e896c4f93b6f6cc0f3775be9b54a3dac38ddd0d63dfc788af",
+      "kind": "registered_or_reserved_v16_design_support_conservative_exclusion",
+      "scenario_rows": 4,
+      "support_formula_mismatches": 0,
+      "signature_checked": true,
+      "signature_valid": true
+    },
+    {
+      "path": "outputs/v16_essential_engineering_20261017_run01/design/L4A_PROPOSAL.json",
+      "bytes": 21342,
+      "sha256": "0e35cdb696bfb79d17e0a1e66d0076a58f998800f8e28e058973a61c29e62cd8",
+      "kind": "registered_or_reserved_v16_design_support_conservative_exclusion",
+      "scenario_rows": 4,
+      "support_formula_mismatches": 0,
+      "signature_checked": true,
+      "signature_valid": true
+    },
+    {
+      "path": "outputs/v16_essential_engineering_20261017_run01/design/LOCAL_A_PROPOSAL.json",
+      "bytes": 64035,
+      "sha256": "80b330d6357746fedbb001cde6373eddebdddb9ace6b37b1b2848ac903880242",
+      "kind": "registered_or_reserved_v16_design_support_conservative_exclusion",
+      "scenario_rows": 9,
+      "support_formula_mismatches": 0,
+      "signature_checked": true,
+      "signature_valid": true
+    },
+    {
+      "path": "outputs/v16_essential_engineering_20261017_run01/design/NORMAL_PROPOSAL.json",
+      "bytes": 10940,
+      "sha256": "f053d7bd2cc0264721d36ce8f442154a3a4b2bc5f0fead200f83aa5945d89f78",
+      "kind": "registered_or_reserved_v16_design_support_conservative_exclusion",
+      "scenario_rows": 2,
+      "support_formula_mismatches": 0,
+      "signature_checked": true,
+      "signature_valid": true
+    },
+    {
+      "path": "outputs/v17_state_coordinated_20261018_run01/design/ABLATION_PROPOSAL.json",
+      "bytes": 33851,
+      "sha256": "a81a37e77fefc5100b2782d6fec6a0646c0ec22936b46314ecb4c52b6e8d8353",
+      "kind": "registered_or_reserved_v17_design_support_conservative_exclusion",
+      "scenario_rows": 5,
+      "support_formula_mismatches": 0,
+      "signature_checked": true,
+      "signature_valid": true
+    },
+    {
+      "path": "outputs/v17_state_coordinated_20261018_run01/design/DEVELOPMENT01_PROPOSAL.json",
+      "bytes": 47413,
+      "sha256": "cb3832267915bc49634b963ccbc69d58b64e59a172196a84d813ab2156c7ad74",
+      "kind": "registered_or_reserved_v17_design_support_conservative_exclusion",
+      "scenario_rows": 8,
+      "support_formula_mismatches": 0,
+      "signature_checked": true,
+      "signature_valid": true
+    },
+    {
+      "path": "outputs/v17_state_coordinated_20261018_run01/design/DEVELOPMENT02_PROPOSAL.json",
+      "bytes": 47413,
+      "sha256": "c606f6e000d602546189c62c91ca64e361a28ad4fe61a3c33923b49820818965",
+      "kind": "registered_or_reserved_v17_design_support_conservative_exclusion",
+      "scenario_rows": 8,
+      "support_formula_mismatches": 0,
+      "signature_checked": true,
+      "signature_valid": true
+    },
+    {
+      "path": "outputs/v17_state_coordinated_20261018_run01/design/DEVELOPMENT03_PROPOSAL.json",
+      "bytes": 47413,
+      "sha256": "a1961335ee4a2bb0a1975544c62585a1f349213df7a7ce36b04fd53fa64b7ed2",
+      "kind": "registered_or_reserved_v17_design_support_conservative_exclusion",
+      "scenario_rows": 8,
+      "support_formula_mismatches": 0,
+      "signature_checked": true,
+      "signature_valid": true
+    },
+    {
+      "path": "outputs/v17_state_coordinated_20261018_run01/design/DEVELOPMENT04_PROPOSAL.json",
+      "bytes": 47413,
+      "sha256": "a481b44e211839313b6ae55fd4abbf59733f8c0026ac8273514bcb3e720ebf05",
+      "kind": "registered_or_reserved_v17_design_support_conservative_exclusion",
+      "scenario_rows": 8,
+      "support_formula_mismatches": 0,
+      "signature_checked": true,
+      "signature_valid": true
+    },
+    {
+      "path": "outputs/v17_state_coordinated_20261018_run01/design/LONG_DEVELOPMENT04_PROPOSAL.json",
+      "bytes": 54237,
+      "sha256": "1a79ff202ca453d5a031d4c2cbd4ae12f2341117b611787b9d6694e274a7d5cd",
+      "kind": "registered_or_reserved_v17_design_support_conservative_exclusion",
+      "scenario_rows": 8,
+      "support_formula_mismatches": 0,
+      "signature_checked": true,
+      "signature_valid": true
+    },
+    {
+      "path": "outputs/v17_state_coordinated_20261018_run01/design/LONG_DEVELOPMENT_PROPOSAL.json",
+      "bytes": 54203,
+      "sha256": "35376509d7c9fa713e5b255ad94463538602979a9f9a03982d589b398c51e009",
+      "kind": "registered_or_reserved_v17_design_support_conservative_exclusion",
+      "scenario_rows": 8,
+      "support_formula_mismatches": 0,
+      "signature_checked": true,
+      "signature_valid": true
+    },
+    {
+      "path": "outputs/v17_state_coordinated_20261018_run01/design/MAIN_PROPOSAL.json",
+      "bytes": 451047,
+      "sha256": "a81d6838aeb6a48e934723d42cdae21eb155f088e8f1f678903a98be4fff73d6",
+      "kind": "registered_or_reserved_v17_design_support_conservative_exclusion",
+      "scenario_rows": 80,
+      "support_formula_mismatches": 0,
+      "signature_checked": true,
+      "signature_valid": true
+    },
+    {
+      "path": "outputs/v17_state_coordinated_20261018_run01/design/NORMAL_PROPOSAL.json",
+      "bytes": 23290,
+      "sha256": "8cafbe92264b894759441fbf6eec0dfc38c8681abcea2de51aad9d5a1ca1458b",
+      "kind": "registered_or_reserved_v17_design_support_conservative_exclusion",
+      "scenario_rows": 4,
+      "support_formula_mismatches": 0,
+      "signature_checked": true,
+      "signature_valid": true
+    },
+    {
+      "path": "outputs/v17_state_coordinated_20261018_run01/design/PERMISSION_PROPOSAL.json",
+      "bytes": 74425,
+      "sha256": "3e98077e6e53f26111a3bd1c2a6fe09644d122d8fc13bb4fc1ea84ab5e5cb05a",
+      "kind": "registered_or_reserved_v17_design_support_conservative_exclusion",
+      "scenario_rows": 12,
+      "support_formula_mismatches": 0,
+      "signature_checked": true,
+      "signature_valid": true
+    },
+    {
+      "path": "outputs/v17_state_coordinated_20261018_run01/design/PROPAGATION_PROPOSAL.json",
+      "bytes": 36944,
+      "sha256": "efcfa51e33a589a759742a207efa988cbbfb2f0001b60fddc1f26f2101320bb3",
+      "kind": "registered_or_reserved_v17_design_support_conservative_exclusion",
+      "scenario_rows": 6,
+      "support_formula_mismatches": 0,
+      "signature_checked": true,
+      "signature_valid": true
+    },
+    {
+      "path": "outputs/v18_execution_recovery_20261018_run01/design/COMPAT_FINAL_R1_PROPOSAL.json",
+      "bytes": 32893,
+      "sha256": "b230db3f0950d86af36e8b7c0de8ed4f4ff784acf9581a0ef345b078c6c09d6b",
+      "kind": "registered_or_reserved_v18_design_support_conservative_exclusion",
+      "scenario_rows": 5,
+      "support_formula_mismatches": 0,
+      "signature_checked": true,
+      "signature_valid": true
+    },
+    {
+      "path": "outputs/v18_execution_recovery_20261018_run01/design/KEY01_PROPOSAL.json",
+      "bytes": 71088,
+      "sha256": "50a8eb9da6f46ad8e6526f15684712866ac1169ee61154c227e1da9ab5eda127",
+      "kind": "registered_or_reserved_v18_design_support_conservative_exclusion",
+      "scenario_rows": 11,
+      "support_formula_mismatches": 0,
+      "signature_checked": true,
+      "signature_valid": true
+    },
+    {
+      "path": "outputs/v18_execution_recovery_20261018_run01/design/KEY02_PROPOSAL.json",
+      "bytes": 71088,
+      "sha256": "50a8eb9da6f46ad8e6526f15684712866ac1169ee61154c227e1da9ab5eda127",
+      "kind": "registered_or_reserved_v18_design_support_conservative_exclusion",
+      "scenario_rows": 11,
+      "support_formula_mismatches": 0,
+      "signature_checked": true,
+      "signature_valid": true
+    },
+    {
+      "path": "outputs/v18_execution_recovery_20261018_run01/design/KEY02COMPAT_PROPOSAL.json",
+      "bytes": 33183,
+      "sha256": "c9dbfbd540da335ff910a725be7ca4ac6439c3df6ab76e6dd96854617828d535",
+      "kind": "registered_or_reserved_v18_design_support_conservative_exclusion",
+      "scenario_rows": 5,
+      "support_formula_mismatches": 0,
+      "signature_checked": true,
+      "signature_valid": true
+    },
+    {
+      "path": "outputs/v18_execution_recovery_20261018_run01/design/KEY03_PROPOSAL.json",
+      "bytes": 71088,
+      "sha256": "50a8eb9da6f46ad8e6526f15684712866ac1169ee61154c227e1da9ab5eda127",
+      "kind": "registered_or_reserved_v18_design_support_conservative_exclusion",
+      "scenario_rows": 11,
+      "support_formula_mismatches": 0,
+      "signature_checked": true,
+      "signature_valid": true
+    },
+    {
+      "path": "outputs/v18_execution_recovery_20261018_run01/design/KEY03COMPAT_PROPOSAL.json",
+      "bytes": 33183,
+      "sha256": "c9dbfbd540da335ff910a725be7ca4ac6439c3df6ab76e6dd96854617828d535",
+      "kind": "registered_or_reserved_v18_design_support_conservative_exclusion",
+      "scenario_rows": 5,
+      "support_formula_mismatches": 0,
+      "signature_checked": true,
+      "signature_valid": true
+    },
+    {
+      "path": "outputs/v18_execution_recovery_20261018_run01/design/KEY04_PROPOSAL.json",
+      "bytes": 71088,
+      "sha256": "50a8eb9da6f46ad8e6526f15684712866ac1169ee61154c227e1da9ab5eda127",
+      "kind": "registered_or_reserved_v18_design_support_conservative_exclusion",
+      "scenario_rows": 11,
+      "support_formula_mismatches": 0,
+      "signature_checked": true,
+      "signature_valid": true
+    },
+    {
+      "path": "outputs/v18_execution_recovery_20261018_run01/design/KEY04COMPAT_PROPOSAL.json",
+      "bytes": 33183,
+      "sha256": "c9dbfbd540da335ff910a725be7ca4ac6439c3df6ab76e6dd96854617828d535",
+      "kind": "registered_or_reserved_v18_design_support_conservative_exclusion",
+      "scenario_rows": 5,
+      "support_formula_mismatches": 0,
+      "signature_checked": true,
+      "signature_valid": true
+    },
+    {
+      "path": "outputs/v18_execution_recovery_20261018_run01/design/LONG_FINAL_PROPOSAL.json",
+      "bytes": 55229,
+      "sha256": "6a761cf31b73178fd672bd082636a36e59d942cd5e6ef34323f8827bfd5d0ffb",
+      "kind": "registered_or_reserved_v18_design_support_conservative_exclusion",
+      "scenario_rows": 8,
+      "support_formula_mismatches": 0,
+      "signature_checked": true,
+      "signature_valid": true
+    },
+    {
+      "path": "outputs/v18_execution_recovery_20261018_run01/design/LONG_FINAL_R1_PROPOSAL.json",
+      "bytes": 55229,
+      "sha256": "4c5ef87c24c4e8000bf8b54c663801178de8516b61a78090381cc392b34e3e48",
+      "kind": "registered_or_reserved_v18_design_support_conservative_exclusion",
+      "scenario_rows": 8,
+      "support_formula_mismatches": 0,
+      "signature_checked": true,
+      "signature_valid": true
+    },
+    {
+      "path": "outputs/v18_execution_recovery_20261018_run01/design/MAIN_FINAL_PROPOSAL.json",
+      "bytes": 459255,
+      "sha256": "5b8c419954d5f2e23bcaa310dde33d22d2f6a146cf91f709d2dd60dfc85d87c2",
+      "kind": "registered_or_reserved_v18_design_support_conservative_exclusion",
+      "scenario_rows": 80,
+      "support_formula_mismatches": 0,
+      "signature_checked": true,
+      "signature_valid": true
+    },
+    {
+      "path": "outputs/v18_execution_recovery_20261018_run01/design/MAIN_FINAL_R1_PROPOSAL.json",
+      "bytes": 459255,
+      "sha256": "8d26d6447f0c7fd45f7b143b6a015affa36d63b49228623bcc7f3c486088ed45",
+      "kind": "registered_or_reserved_v18_design_support_conservative_exclusion",
+      "scenario_rows": 80,
+      "support_formula_mismatches": 0,
+      "signature_checked": true,
+      "signature_valid": true
+    },
+    {
+      "path": "outputs/v18_execution_recovery_20261018_run01/design/NORMAL_FINAL_PROPOSAL.json",
+      "bytes": 23822,
+      "sha256": "65bb1eebac06058ab5ec7b52149173cb5020cee6012bc52c7e06d69f66c0d399",
+      "kind": "registered_or_reserved_v18_design_support_conservative_exclusion",
+      "scenario_rows": 4,
+      "support_formula_mismatches": 0,
+      "signature_checked": true,
+      "signature_valid": true
+    },
+    {
+      "path": "outputs/v18_execution_recovery_20261018_run01/design/NORMAL_FINAL_R1_PROPOSAL.json",
+      "bytes": 23822,
+      "sha256": "adb854e00f0ceac5fe93232a39d2ad419f4b8e96001336925d4345b3aaea85fb",
+      "kind": "registered_or_reserved_v18_design_support_conservative_exclusion",
+      "scenario_rows": 4,
+      "support_formula_mismatches": 0,
+      "signature_checked": true,
+      "signature_valid": true
+    },
+    {
+      "path": "outputs/v18_execution_recovery_20261018_run01/design/NUMERIC02_PROPOSAL.json",
+      "bytes": 9634,
+      "sha256": "0c78fd16270688deb397e850c8d26ae53111bb25fb0696fcbc820544375d96b9",
+      "kind": "registered_or_reserved_v18_design_support_conservative_exclusion",
+      "scenario_rows": 1,
+      "support_formula_mismatches": 0,
+      "signature_checked": true,
+      "signature_valid": true
+    },
+    {
+      "path": "outputs/v18_execution_recovery_20261018_run01/design/PROPAGATION_FINAL_PROPOSAL.json",
+      "bytes": 37678,
+      "sha256": "3c59b500ea2a2b505b7fd64dd43c026b078eda7cfce6098ecb23db56921d7de0",
+      "kind": "registered_or_reserved_v18_design_support_conservative_exclusion",
+      "scenario_rows": 6,
+      "support_formula_mismatches": 0,
+      "signature_checked": true,
+      "signature_valid": true
+    },
+    {
+      "path": "outputs/v18_execution_recovery_20261018_run01/design/PROPAGATION_FINAL_R1_PROPOSAL.json",
+      "bytes": 37678,
+      "sha256": "1a41d6fd5422a384a6b2ef04baf6781434ba7c02836de871d809e2f7e54be602",
+      "kind": "registered_or_reserved_v18_design_support_conservative_exclusion",
+      "scenario_rows": 6,
+      "support_formula_mismatches": 0,
+      "signature_checked": true,
+      "signature_valid": true
+    },
+    {
+      "path": "outputs/v18_execution_recovery_20261018_run01/design/SENSITIVITY_CONTACT025_PROPOSAL.json",
+      "bytes": 25956,
+      "sha256": "78b8e44d56757dd45f57129f0d8ce013d2294890d8f989d0b79799ecac6ec084",
+      "kind": "registered_or_reserved_v18_design_support_conservative_exclusion",
+      "scenario_rows": 1,
+      "support_formula_mismatches": 0,
+      "signature_checked": true,
+      "signature_valid": true
+    },
+    {
+      "path": "outputs/v18_execution_recovery_20261018_run01/design/SENSITIVITY_CONTACT025_R1_PROPOSAL.json",
+      "bytes": 25915,
+      "sha256": "7a3c2c3f2824409a1fcb0fa4468ac40b98991ed4a154c75bc69e16af9e44caf7",
+      "kind": "registered_or_reserved_v18_design_support_conservative_exclusion",
+      "scenario_rows": 1,
+      "support_formula_mismatches": 0,
+      "signature_checked": true,
+      "signature_valid": true
+    },
+    {
+      "path": "outputs/v18_execution_recovery_20261018_run01/design/SENSITIVITY_OPEN1_PROPOSAL.json",
+      "bytes": 31327,
+      "sha256": "ba6c8adb60232b3e879a1a00cf0e06e2b85c03c0392308c92f492106fb3c3ffa",
+      "kind": "registered_or_reserved_v18_design_support_conservative_exclusion",
+      "scenario_rows": 2,
+      "support_formula_mismatches": 0,
+      "signature_checked": true,
+      "signature_valid": true
+    },
+    {
+      "path": "outputs/v18_execution_recovery_20261018_run01/design/SENSITIVITY_OPEN1_R1_PROPOSAL.json",
+      "bytes": 31277,
+      "sha256": "7028266792904905a48a9bab65e9a8850656377fb3c62dd521c27c400d841db2",
+      "kind": "registered_or_reserved_v18_design_support_conservative_exclusion",
+      "scenario_rows": 2,
+      "support_formula_mismatches": 0,
+      "signature_checked": true,
+      "signature_valid": true
+    },
+    {
+      "path": "configs/four_stage_examples.json",
+      "bytes": 1339,
+      "sha256": "7353e335af03d8da8c3a62c189fe7cce8e5335ae57bc2dc4c4a1db090688d184",
+      "kind": "legacy_training_validation_or_early_development_support",
+      "scenario_rows": 4,
+      "support_formula_mismatches": 0
+    },
+    {
+      "path": "configs/legacy_92_scenarios.json",
+      "bytes": 27217,
+      "sha256": "8588d35ad7c6bf113c2df9b557df0b6f5aae99af819ccfbab14ae726e2e56c9f",
+      "kind": "legacy_training_validation_or_early_development_support",
+      "scenario_rows": 92,
+      "support_formula_mismatches": 0
+    },
+    {
+      "path": "outputs/v42_coverage_validation/scenario_definitions.json",
+      "bytes": 47978,
+      "sha256": "bf5e38e0df5c954f14cdbd4fe54486985a26d368c34ff2f83608b608841a9faa",
+      "kind": "legacy_training_validation_or_early_development_support",
+      "scenario_rows": 80,
+      "support_formula_mismatches": 0
+    },
+    {
+      "path": "outputs/v43_p0_20261012_212909/supplemental/scenario_definitions.json",
+      "bytes": 3564,
+      "sha256": "2e15d7d08d9df05adc3fc994ed382ffdb8b259dbbbb41da8dcbc0195e9764f1f",
+      "kind": "legacy_training_validation_or_early_development_support",
+      "scenario_rows": 7,
+      "support_formula_mismatches": 0
+    },
+    {
+      "path": "outputs/v43_p1b_20261012_235940/attempt_12_replay/scenarios.json",
+      "bytes": 5315,
+      "sha256": "9ab3704cf6caba50c4a1f6313bf3fbfe40c828a01456da5e9fd4ea0461fd9321",
+      "kind": "legacy_training_validation_or_early_development_support",
+      "scenario_rows": 9,
+      "support_formula_mismatches": 0
+    },
+    {
+      "path": "outputs/v43_p1b_20261012_235940/delivery_replay/scenarios.json",
+      "bytes": 5315,
+      "sha256": "9ab3704cf6caba50c4a1f6313bf3fbfe40c828a01456da5e9fd4ea0461fd9321",
+      "kind": "legacy_training_validation_or_early_development_support",
+      "scenario_rows": 9,
+      "support_formula_mismatches": 0
+    },
+    {
+      "path": "outputs/v43_p1b_20261012_235940/final_replay/scenarios.json",
+      "bytes": 5315,
+      "sha256": "9ab3704cf6caba50c4a1f6313bf3fbfe40c828a01456da5e9fd4ea0461fd9321",
+      "kind": "legacy_training_validation_or_early_development_support",
+      "scenario_rows": 9,
+      "support_formula_mismatches": 0
+    },
+    {
+      "path": "outputs/v43_p1b_20261012_235940/review_replay/scenarios.json",
+      "bytes": 5315,
+      "sha256": "9ab3704cf6caba50c4a1f6313bf3fbfe40c828a01456da5e9fd4ea0461fd9321",
+      "kind": "legacy_training_validation_or_early_development_support",
+      "scenario_rows": 9,
+      "support_formula_mismatches": 0
+    },
+    {
+      "path": "outputs/v43_p2a_20261013_120000/baseline_replay/scenarios.json",
+      "bytes": 5315,
+      "sha256": "9ab3704cf6caba50c4a1f6313bf3fbfe40c828a01456da5e9fd4ea0461fd9321",
+      "kind": "legacy_training_validation_or_early_development_support",
+      "scenario_rows": 9,
+      "support_formula_mismatches": 0
+    },
+    {
+      "path": "outputs/v43_p2a_20261013_120000/diagnostic_plan.json",
+      "bytes": 34350,
+      "sha256": "ca0f19c17aa0d2db1b2e625de4a861ab7aec4964a68ec4d75e9be45fc24bbb2f",
+      "kind": "legacy_training_validation_or_early_development_support",
+      "scenario_rows": 23,
+      "support_formula_mismatches": 0
+    },
+    {
+      "path": "outputs/v43_p2b_20261013_run01/baseline_replay/scenario_definitions.json",
+      "bytes": 11577,
+      "sha256": "bc0b29e692f8a84e16269a62b3ee4f7bb4710df17e9f16f5878354c43b6d7ba1",
+      "kind": "legacy_training_validation_or_early_development_support",
+      "scenario_rows": 9,
+      "support_formula_mismatches": 0
+    },
+    {
+      "path": "outputs/v43_p2c_20261013_run01/baseline_replay/scenario_definitions.json",
+      "bytes": 11577,
+      "sha256": "bc0b29e692f8a84e16269a62b3ee4f7bb4710df17e9f16f5878354c43b6d7ba1",
+      "kind": "legacy_training_validation_or_early_development_support",
+      "scenario_rows": 9,
+      "support_formula_mismatches": 0
+    }
+  ],
+  "source_inventory_digest": "cc282a0110165327372d13b4e3c7d8e1e960b4cb15c72e9d20c0aa193d2a322b",
+  "metadata_signature_checks": {
+    "proposals_checked": 70,
+    "issues": 0
+  },
+  "coordinate_support_check": {
+    "rows": 3829,
+    "mismatch_count": 0
+  },
+  "frozen_v43_registry_live_checks": [
+    {
+      "path": "outputs/v43_control_improvement_20261014_run01/new_data_v1/global_manifest.json",
+      "sha256": "eeefcaac9fe75f535139900ede32e5c19ff880a5b5f35005ebfa0d72c0d86f4f",
+      "matches_registry_sha256": true,
+      "registry_attempted_specs": 300,
+      "current_attempted_specs": 300,
+      "attempt_count_unchanged": true,
+      "journal_bindings": [
+        {
+          "path": "outputs/v43_control_improvement_20261014_run01/new_data_v1/shards/shard_00/attempts.jsonl",
+          "sha256": "580d754c8e750553d16d5f93094c7034b8690b7ba520e52813c8d775001f22fc"
+        },
+        {
+          "path": "outputs/v43_control_improvement_20261014_run01/new_data_v1/shards/shard_01/attempts.jsonl",
+          "sha256": "d51980d50da0c83bb926d2c2d4118706b5d74d43fd0531a18eb43c9fa7d3d443"
+        },
+        {
+          "path": "outputs/v43_control_improvement_20261014_run01/new_data_v1/shards/shard_02/attempts.jsonl",
+          "sha256": "c9ab9c6aed62bb7815cc09f6eb71b2586565305b446c2206dbd9b69e6a180bc3"
+        },
+        {
+          "path": "outputs/v43_control_improvement_20261014_run01/new_data_v1/shards/shard_03/attempts.jsonl",
+          "sha256": "41e2f8b55009dc7bb06ffa5366bd5034497986ba7a4eff8399a5cff5b7ed0713"
+        },
+        {
+          "path": "outputs/v43_control_improvement_20261014_run01/new_data_v1/shards/shard_04/attempts.jsonl",
+          "sha256": "3b070349ec32cc802a90183faa84c60b1408790bfe488908919ade7fad204035"
+        },
+        {
+          "path": "outputs/v43_control_improvement_20261014_run01/new_data_v1/shards/shard_05/attempts.jsonl",
+          "sha256": "00ba8f249f96768e5d973bb367fbce9524739691f4ba09c4bd1176087b5f95d8"
+        },
+        {
+          "path": "outputs/v43_control_improvement_20261014_run01/new_data_v1/shards/shard_06/attempts.jsonl",
+          "sha256": "6b38e4b90d5f218c14dc08014b6ac9e40cacc8dcb21b05a54229231153ec2155"
+        },
+        {
+          "path": "outputs/v43_control_improvement_20261014_run01/new_data_v1/shards/shard_07/attempts.jsonl",
+          "sha256": "e173135c23c55f031591900308b7a7c3095132dd25cfd6342eebda18b335aed7"
+        },
+        {
+          "path": "outputs/v43_control_improvement_20261014_run01/new_data_v1/shards/shard_08/attempts.jsonl",
+          "sha256": "4f3cc8dfcde2696779f28dacb00d3aebc5959f22bd912ed7ba4bfd6cd86c5423"
+        },
+        {
+          "path": "outputs/v43_control_improvement_20261014_run01/new_data_v1/shards/shard_09/attempts.jsonl",
+          "sha256": "d67772d145b8786525dc15bd6fce0932aad8f951b1aedf0a748f45646690967c"
+        },
+        {
+          "path": "outputs/v43_control_improvement_20261014_run01/new_data_v1/shards/shard_10/attempts.jsonl",
+          "sha256": "e5843160a3a9f1f3cf48126a4ed154a8a276139c339f14668341cfcfce6eb750"
+        },
+        {
+          "path": "outputs/v43_control_improvement_20261014_run01/new_data_v1/shards/shard_11/attempts.jsonl",
+          "sha256": "394af5455d9a2c338ad192f0c943dedaf825bc6b5f920bc690382aad4562c8e4"
+        }
+      ]
+    },
+    {
+      "path": "outputs/v43_integrated_20261014_run01/new_adaptive_v1/global_manifest.json",
+      "sha256": "e2cfd1128f5ad83ea5d4fe716090a0954d66c0ac39cc11dd413c211f88870ace",
+      "matches_registry_sha256": true,
+      "registry_attempted_specs": 60,
+      "current_attempted_specs": 60,
+      "attempt_count_unchanged": true,
+      "journal_bindings": [
+        {
+          "path": "outputs/v43_integrated_20261014_run01/new_adaptive_v1/shards/shard_00/attempts.jsonl",
+          "sha256": "10781789f67882a711546dff8742695db7fd1b35b1e0904d18dd4595da1501a3"
+        },
+        {
+          "path": "outputs/v43_integrated_20261014_run01/new_adaptive_v1/shards/shard_01/attempts.jsonl",
+          "sha256": "8e655563940793fe65cd5f9ce7ded408f49c732b056cd842ff53a87449a5fb35"
+        },
+        {
+          "path": "outputs/v43_integrated_20261014_run01/new_adaptive_v1/shards/shard_02/attempts.jsonl",
+          "sha256": "14a32b1be340a77ff42fcd4da153207bfc40412e52ba464bb72f973253220e6d"
+        }
+      ]
+    },
+    {
+      "path": "outputs/v43_integrated_20261014_run01/new_fixed_v1/global_manifest.json",
+      "sha256": "75311911c345183ddf704099ccdc8d9b9af465cc847cee1c853161025aecc840",
+      "matches_registry_sha256": true,
+      "registry_attempted_specs": 240,
+      "current_attempted_specs": 240,
+      "attempt_count_unchanged": true,
+      "journal_bindings": [
+        {
+          "path": "outputs/v43_integrated_20261014_run01/new_fixed_v1/shards/shard_00/attempts.jsonl",
+          "sha256": "d416a5d4ce6a7628e8d5beedbc104da56451dffb641730eeda0946cb4b69a88f"
+        },
+        {
+          "path": "outputs/v43_integrated_20261014_run01/new_fixed_v1/shards/shard_01/attempts.jsonl",
+          "sha256": "b6e1dd70b51678ce7ad99479e8077757b2e346ef0209358b56e66afe3138af80"
+        },
+        {
+          "path": "outputs/v43_integrated_20261014_run01/new_fixed_v1/shards/shard_02/attempts.jsonl",
+          "sha256": "2dc41752ec4ecc2c38f3d334b4b6d4429f017a162caedd0245fe7c90c6c4b09e"
+        },
+        {
+          "path": "outputs/v43_integrated_20261014_run01/new_fixed_v1/shards/shard_03/attempts.jsonl",
+          "sha256": "8e2501142e71f1d4c9ef83886a60fee9aeb837fd8a64395ccb4882ac73fe147b"
+        },
+        {
+          "path": "outputs/v43_integrated_20261014_run01/new_fixed_v1/shards/shard_04/attempts.jsonl",
+          "sha256": "c8fdfd156baade8d90da82421c5da332dd8de0922970683c883f0439ede7c9bf"
+        },
+        {
+          "path": "outputs/v43_integrated_20261014_run01/new_fixed_v1/shards/shard_05/attempts.jsonl",
+          "sha256": "fe2aba6e265da2f29048e1f618b9046b6afff2c91ca7288e50556cd7f0ad72d9"
+        },
+        {
+          "path": "outputs/v43_integrated_20261014_run01/new_fixed_v1/shards/shard_06/attempts.jsonl",
+          "sha256": "f921e1d6b9209667aa99c69260bd49b2578f81c21e0833b57c4b0b6f31c355f2"
+        },
+        {
+          "path": "outputs/v43_integrated_20261014_run01/new_fixed_v1/shards/shard_07/attempts.jsonl",
+          "sha256": "704385ce0a04d6e4d3a9ea0967091c47239605e368c6faa7dfd1b8426fd62638"
+        },
+        {
+          "path": "outputs/v43_integrated_20261014_run01/new_fixed_v1/shards/shard_08/attempts.jsonl",
+          "sha256": "76a18fe9682efe5d06f22fdcf4492c53d9ffa9319156360df3cc427ba3322ff9"
+        },
+        {
+          "path": "outputs/v43_integrated_20261014_run01/new_fixed_v1/shards/shard_09/attempts.jsonl",
+          "sha256": "010bf51e52236c906001658f83009d83c7a120c92e1c21e67b8fbeca80d2eed7"
+        }
+      ]
+    },
+    {
+      "path": "outputs/v43_integrated_20261014_run01/replay_v2/global_manifest.json",
+      "sha256": "19336befd65e5e53888f6d0e1efd816fb8b72352dddff6faabb49a7cb22471af",
+      "matches_registry_sha256": true,
+      "registry_attempted_specs": 400,
+      "current_attempted_specs": 400,
+      "attempt_count_unchanged": true,
+      "journal_bindings": [
+        {
+          "path": "outputs/v43_integrated_20261014_run01/replay_v2/shards/shard_00/attempts.jsonl",
+          "sha256": "19c7c0d0a0a67c9daf9c19836edab993e35831ac2216b223d49eef9d31bd7e4a"
+        },
+        {
+          "path": "outputs/v43_integrated_20261014_run01/replay_v2/shards/shard_01/attempts.jsonl",
+          "sha256": "48158fbefc7a71876c301e3f377ccd6a609fa03c6313e86e0ef2a0d7605d15f2"
+        },
+        {
+          "path": "outputs/v43_integrated_20261014_run01/replay_v2/shards/shard_02/attempts.jsonl",
+          "sha256": "5e90bcd677ee0f8d37e8f3b78802003da7fc8d2330688645fa6f74f805934537"
+        },
+        {
+          "path": "outputs/v43_integrated_20261014_run01/replay_v2/shards/shard_03/attempts.jsonl",
+          "sha256": "fcfbed6b9060a7438356564a316056c23669be87ea14fb23ab20312a3e6c26e1"
+        },
+        {
+          "path": "outputs/v43_integrated_20261014_run01/replay_v2/shards/shard_04/attempts.jsonl",
+          "sha256": "0157d98b195035b0ffce63b8e4e870e37ce13b5e73b46e49c1bfa18e52bbe052"
+        },
+        {
+          "path": "outputs/v43_integrated_20261014_run01/replay_v2/shards/shard_05/attempts.jsonl",
+          "sha256": "22650401747013c64093994c750224f0724a0843c361ec498faa08e4f7d1e9ed"
+        },
+        {
+          "path": "outputs/v43_integrated_20261014_run01/replay_v2/shards/shard_06/attempts.jsonl",
+          "sha256": "e43547a3145c93a59b124266a625e912c2a6ccbbe4080b6510d958b92dc8f969"
+        },
+        {
+          "path": "outputs/v43_integrated_20261014_run01/replay_v2/shards/shard_07/attempts.jsonl",
+          "sha256": "b3cd3463f697f7f96be736b5f2bb943bc755533d1710e9fc8e584061c5623f51"
+        }
+      ]
+    },
+    {
+      "path": "outputs/v43_p2b_20261013_run01/experiment/global_manifest.json",
+      "sha256": "7142dc12a073000f37dc95c853b156ae28e135193f176589a4f80217d5d62be8",
+      "matches_registry_sha256": true,
+      "registry_attempted_specs": 400,
+      "current_attempted_specs": 400,
+      "attempt_count_unchanged": true,
+      "journal_bindings": [
+        {
+          "path": "outputs/v43_p2b_20261013_run01/experiment/shards/shard_00/attempts.jsonl",
+          "sha256": "7b76f7a582bde1c89eb1b755c8bbd9f104ea2e9e49ba97fe640f99c8e074b5fb"
+        },
+        {
+          "path": "outputs/v43_p2b_20261013_run01/experiment/shards/shard_01/attempts.jsonl",
+          "sha256": "96985f0ed2d020875c58f2d1e6024020c5da187fdd13df921f327f4173d5357f"
+        },
+        {
+          "path": "outputs/v43_p2b_20261013_run01/experiment/shards/shard_02/attempts.jsonl",
+          "sha256": "148be27e7a8d8bc18a67d06144b38382abe32e384f222f274acf321ec1cc1eb8"
+        },
+        {
+          "path": "outputs/v43_p2b_20261013_run01/experiment/shards/shard_03/attempts.jsonl",
+          "sha256": "c7c8b1caa11cbb02bf0ce4878c957d6e09ec4f13dd68498af0cb636816afcb31"
+        },
+        {
+          "path": "outputs/v43_p2b_20261013_run01/experiment/shards/shard_04/attempts.jsonl",
+          "sha256": "0d48fa86a2a28ff4a7a34d3b4fcc83493b0dea699a96e26c55c39926dde8e859"
+        },
+        {
+          "path": "outputs/v43_p2b_20261013_run01/experiment/shards/shard_05/attempts.jsonl",
+          "sha256": "4e8cd286f224e1eaebbddb0806287bca6a88f2b89f6a5623b893257ffed53306"
+        },
+        {
+          "path": "outputs/v43_p2b_20261013_run01/experiment/shards/shard_06/attempts.jsonl",
+          "sha256": "e0d4acca5a6c84b140b79277bc0e2559a9fd5b5bbff43e7b7544b16d4055445a"
+        },
+        {
+          "path": "outputs/v43_p2b_20261013_run01/experiment/shards/shard_07/attempts.jsonl",
+          "sha256": "13e7c914aebbc37e88e5ff4a09536ca00dbb1ba1f494644d6c87641ce68e9896"
+        }
+      ]
+    },
+    {
+      "path": "outputs/v43_p2c_20261013_run01/replay/global_manifest.json",
+      "sha256": "ad6283809c493a30e51f7a1732ffc8cd5e822597d5818d2b292c8d9bf8383ea1",
+      "matches_registry_sha256": true,
+      "registry_attempted_specs": 200,
+      "current_attempted_specs": 200,
+      "attempt_count_unchanged": true,
+      "journal_bindings": [
+        {
+          "path": "outputs/v43_p2c_20261013_run01/replay/shards/shard_00/attempts.jsonl",
+          "sha256": "c3b3dca5012111d19ce3dcb87a442359afb1d00a3ecf77e74a78dcf7b333d026"
+        },
+        {
+          "path": "outputs/v43_p2c_20261013_run01/replay/shards/shard_01/attempts.jsonl",
+          "sha256": "5142b049ee749df97b67684a9bf4f1f7c53059599cea9dd98c63418d3458a1c3"
+        },
+        {
+          "path": "outputs/v43_p2c_20261013_run01/replay/shards/shard_02/attempts.jsonl",
+          "sha256": "574d303c58071d2b8ad8f8f589ba76fc664063be34ea62aa26950c171daecb0f"
+        },
+        {
+          "path": "outputs/v43_p2c_20261013_run01/replay/shards/shard_03/attempts.jsonl",
+          "sha256": "d3e19d7cb6d264ef4b9f7c09fbc87b3d02160f702fb4fbc5d316bebcc153ae2d"
+        }
+      ]
+    },
+    {
+      "path": "outputs/v43_reliability_first_20261015_run01/new_data/global_manifest.json",
+      "sha256": "2db56edafca81a48c4a51ad6615becca781848677ab56229898d28c9d864b876",
+      "matches_registry_sha256": true,
+      "registry_attempted_specs": 300,
+      "current_attempted_specs": 300,
+      "attempt_count_unchanged": true,
+      "journal_bindings": [
+        {
+          "path": "outputs/v43_reliability_first_20261015_run01/new_data/shards/shard_00/attempts.jsonl",
+          "sha256": "e4ca567e8cebd2d95d06a9e6ef17db3ceb072df4ffba2744642b7663c766cc73"
+        },
+        {
+          "path": "outputs/v43_reliability_first_20261015_run01/new_data/shards/shard_01/attempts.jsonl",
+          "sha256": "256ec5ec1404841471bd75fef9bd097131445d3c4e13721141efc423bd28cfd6"
+        },
+        {
+          "path": "outputs/v43_reliability_first_20261015_run01/new_data/shards/shard_02/attempts.jsonl",
+          "sha256": "1fd554db5b24348be1ff6bb6e90706c63f09296a2b6a887358cc3d02e46b9ec7"
+        },
+        {
+          "path": "outputs/v43_reliability_first_20261015_run01/new_data/shards/shard_03/attempts.jsonl",
+          "sha256": "6076b2d94abaf2ce814ccba172de70a4085b04b40db4e5fe09f27d301f5d64b5"
+        },
+        {
+          "path": "outputs/v43_reliability_first_20261015_run01/new_data/shards/shard_04/attempts.jsonl",
+          "sha256": "f053c964a5a075add2a6a357ef75ab0a6809bae45ecbbaab19947d941840d311"
+        },
+        {
+          "path": "outputs/v43_reliability_first_20261015_run01/new_data/shards/shard_05/attempts.jsonl",
+          "sha256": "17de49694355ff99d408fbd1d9e0623aa39fceb568ec9dd15abd6d45d48f77a2"
+        },
+        {
+          "path": "outputs/v43_reliability_first_20261015_run01/new_data/shards/shard_06/attempts.jsonl",
+          "sha256": "ca1023537f9e0921883f713db008c3c591b8b47c08eb78ebc5ce461239b57a9f"
+        },
+        {
+          "path": "outputs/v43_reliability_first_20261015_run01/new_data/shards/shard_07/attempts.jsonl",
+          "sha256": "4969e8792df00eeae3380ff21bd9cc30622eeb7c36c45c3b8e1028dff69547c3"
+        },
+        {
+          "path": "outputs/v43_reliability_first_20261015_run01/new_data/shards/shard_08/attempts.jsonl",
+          "sha256": "5edd06c1bd9f0f744c34691b58c7bcd3515056d13396a22a8ddd53e52ce01036"
+        },
+        {
+          "path": "outputs/v43_reliability_first_20261015_run01/new_data/shards/shard_09/attempts.jsonl",
+          "sha256": "a488c2d4f1df49705154973834611bd2947216a1a6ea798949bf0e921c9f7215"
+        },
+        {
+          "path": "outputs/v43_reliability_first_20261015_run01/new_data/shards/shard_10/attempts.jsonl",
+          "sha256": "cb5dffa170f5128f3b9f5035023749a58225264d28a3f56d83d963fd43981277"
+        },
+        {
+          "path": "outputs/v43_reliability_first_20261015_run01/new_data/shards/shard_11/attempts.jsonl",
+          "sha256": "ddf77e0f40b11c14daff499869ea7c127bdf11d98f45b84e9d4d689bdcaf4c87"
+        }
+      ]
+    }
+  ],
+  "stages": [
+    {
+      "version": 6,
+      "proposal_files": 1,
+      "scenario_rows": 60,
+      "occupied_union_minutes": 372360.0,
+      "available_600min_starts": 259
+    },
+    {
+      "version": 7,
+      "proposal_files": 1,
+      "scenario_rows": 84,
+      "occupied_union_minutes": 381720.0,
+      "available_600min_starts": 130
+    },
+    {
+      "version": 8,
+      "proposal_files": 3,
+      "scenario_rows": 568,
+      "occupied_union_minutes": 381720.0,
+      "available_600min_starts": 130
+    },
+    {
+      "version": 9,
+      "proposal_files": 1,
+      "scenario_rows": 119,
+      "occupied_union_minutes": 381720.0,
+      "available_600min_starts": 130
+    },
+    {
+      "version": 10,
+      "proposal_files": 1,
+      "scenario_rows": 40,
+      "occupied_union_minutes": 381720.0,
+      "available_600min_starts": 130
+    },
+    {
+      "version": 11,
+      "proposal_files": 2,
+      "scenario_rows": 840,
+      "occupied_union_minutes": 394200.0,
+      "available_600min_starts": 92
+    },
+    {
+      "version": 12,
+      "proposal_files": 6,
+      "scenario_rows": 1052,
+      "occupied_union_minutes": 394200.0,
+      "available_600min_starts": 92
+    },
+    {
+      "version": 13,
+      "proposal_files": 2,
+      "scenario_rows": 72,
+      "occupied_union_minutes": 394200.0,
+      "available_600min_starts": 92
+    },
+    {
+      "version": 14,
+      "proposal_files": 3,
+      "scenario_rows": 31,
+      "occupied_union_minutes": 394680.0,
+      "available_600min_starts": 92
+    },
+    {
+      "version": 15,
+      "proposal_files": 11,
+      "scenario_rows": 213,
+      "occupied_union_minutes": 406980.0,
+      "available_600min_starts": 83
+    },
+    {
+      "version": 16,
+      "proposal_files": 6,
+      "scenario_rows": 59,
+      "occupied_union_minutes": 406980.0,
+      "available_600min_starts": 83
+    },
+    {
+      "version": 17,
+      "proposal_files": 11,
+      "scenario_rows": 155,
+      "occupied_union_minutes": 414660.0,
+      "available_600min_starts": 71
+    },
+    {
+      "version": 18,
+      "proposal_files": 21,
+      "scenario_rows": 267,
+      "occupied_union_minutes": 414660.0,
+      "available_600min_starts": 71
+    }
+  ],
+  "legacy_additions": {
+    "extra_paths_considered": 13,
+    "before_600min_start_count": 71,
+    "after_600min_start_count": 68,
+    "removed_600min_start_hours": [
+      6502,
+      7771,
+      7772
+    ]
+  },
+  "pool_capacity_by_duration": [
+    {
+      "trajectory_minutes": 600,
+      "raw_support_minutes": 660,
+      "embargo_each_side_minutes": 60,
+      "eligible_hour_start_count": 68,
+      "eligible_calendar_day_count": 23,
+      "pairwise_nonoverlap_capacity_lower_bound": 21,
+      "eligible_start_hours": [
+        1769,
+        1770,
+        2974,
+        3236,
+        3237,
+        3238,
+        3239,
+        3240,
+        3241,
+        3242,
+        3307,
+        3308,
+        3309,
+        3408,
+        3409,
+        3410,
+        3411,
+        3412,
+        3499,
+        3500,
+        3501,
+        3502,
+        3739,
+        3740,
+        3741,
+        4237,
+        4238,
+        4239,
+        4240,
+        4241,
+        4242,
+        4243,
+        4244,
+        5060,
+        5061,
+        5062,
+        5231,
+        5248,
+        5249,
+        5948,
+        5949,
+        6188,
+        6189,
+        6190,
+        6475,
+        6476,
+        6477,
+        6478,
+        6519,
+        6520,
+        6521,
+        6522,
+        6548,
+        6549,
+        7678,
+        7695,
+        7696,
+        7697,
+        7698,
+        7699,
+        7700,
+        7701,
+        7773,
+        8681,
+        8682,
+        8683,
+        8684,
+        8708
+      ],
+      "quarter_counts_of_eligible_calendar_days": {
+        "3": 8,
+        "2": 9,
+        "4": 5,
+        "1": 1
+      }
+    },
+    {
+      "trajectory_minutes": 1065,
+      "raw_support_minutes": 1080,
+      "embargo_each_side_minutes": 60,
+      "eligible_hour_start_count": 1,
+      "eligible_calendar_day_count": 1,
+      "pairwise_nonoverlap_capacity_lower_bound": 1,
+      "eligible_start_hours": [
+        4237
+      ],
+      "quarter_counts_of_eligible_calendar_days": {
+        "2": 1
+      }
+    },
+    {
+      "trajectory_minutes": 1440,
+      "raw_support_minutes": 1500,
+      "embargo_each_side_minutes": 60,
+      "eligible_hour_start_count": 0,
+      "eligible_calendar_day_count": 0,
+      "pairwise_nonoverlap_capacity_lower_bound": 0,
+      "eligible_start_hours": [],
+      "quarter_counts_of_eligible_calendar_days": {}
+    },
+    {
+      "trajectory_minutes": 2880,
+      "raw_support_minutes": 2940,
+      "embargo_each_side_minutes": 60,
+      "eligible_hour_start_count": 0,
+      "eligible_calendar_day_count": 0,
+      "pairwise_nonoverlap_capacity_lower_bound": 0,
+      "eligible_start_hours": [],
+      "quarter_counts_of_eligible_calendar_days": {}
+    },
+    {
+      "trajectory_minutes": 4320,
+      "raw_support_minutes": 4380,
+      "embargo_each_side_minutes": 60,
+      "eligible_hour_start_count": 0,
+      "eligible_calendar_day_count": 0,
+      "pairwise_nonoverlap_capacity_lower_bound": 0,
+      "eligible_start_hours": [],
+      "quarter_counts_of_eligible_calendar_days": {}
+    }
+  ],
+  "occupied_support_union_digest": "30e368955bdac594f2c5d89c7d214c5d2df774b4b0e11100d5b2b15ed5926551",
+  "occupied_support_union_minutes": 418980.0,
+  "proposal": {
+    "default_background_count": 8,
+    "upper_background_count": 12,
+    "classes_per_background": [
+      "L1",
+      "L2",
+      "L3",
+      "L4"
+    ],
+    "default_specification_count": 32,
+    "default_matched_trajectory_count": 96,
+    "policies": [
+      "E_M19",
+      "K1_M19",
+      "C19_M19"
+    ],
+    "selection_not_yet_performed": true,
+    "freeze_required": [
+      "code_and_source_SHA",
+      "fully_resolved_model_config",
+      "all_policy_parameters",
+      "evaluation_windows_thresholds_and_metrics",
+      "claim_scope",
+      "full_v19_development_support_registry"
+    ],
+    "candidate_horizon_minutes": 600,
+    "normal_prefix_minutes_at_least": 60,
+    "recovery_tail_minutes_at_least": 300,
+    "endpoint_source_minutes_reserved": 60,
+    "quarter_limitation": "Only one Q1 eligible calendar day remains; do not claim balanced seasonal validation.",
+    "default_quarter_allocation": [
+      1,
+      3,
+      2,
+      2
+    ],
+    "selection_rule": "After signed freeze, refresh all exposure ledgers including V19 development, use fixed calendar-only seed 20261018, stratify without load/outcome values, retain one support per calendar day and pairwise disjoint expanded supports; do not select faults by policy-specific pre-event operation.",
+    "freeze_followup_rule": "If a real logic defect appears, retain all errors, fix under new version, mark this confirmation seen, and refresh the unused pool. Reasonable tradeoff or losing outcome does not trigger retuning."
+  },
+  "planned_seen_panel_inventory": [
+    {
+      "source_proposal": "outputs/v18_execution_recovery_20261018_run01/design/MAIN_FINAL_R1_PROPOSAL.json",
+      "source_sha256": "8d26d6447f0c7fd45f7b143b6a015affa36d63b49228623bcc7f3c486088ed45",
+      "specifications": 80,
+      "expected_specifications": 80,
+      "planned_trajectories": 240,
+      "policy_count": 3,
+      "scenario_metadata": [
+        {
+          "index": 0,
+          "id": "v17_L1_05d91fa94a2b551ad7ab17ff",
+          "source_day_index": 5,
+          "start_hour": 121,
+          "duration_minutes": 600.0,
+          "raw_support": {
+            "raw_start_minute": 7200,
+            "raw_end_minute": 7860,
+            "actual_trajectory_interval_minutes": [
+              7200,
+              7800.0
+            ],
+            "initialization_source_hours": [
+              121
+            ],
+            "initialization_historical_minutes": 0,
+            "algebraic_initialization_iterations": 6,
+            "historical_observation_interval_minutes": [
+              0.0,
+              60.0
+            ],
+            "score_interval_minutes": [
+              60.0,
+              420.0
+            ],
+            "label_tail_interval_minutes": [
+              420.0,
+              600.0
+            ],
+            "endpoint_source_hour_reserved": true,
+            "source_semantics": "hourly rows; reset repeats first row; final boundary hour conservatively included"
+          },
+          "canonical_class": "L1",
+          "design_variant": "main_L1_0"
+        },
+        {
+          "index": 1,
+          "id": "v17_L2_930a90c9394a8c400dc812e8",
+          "source_day_index": 5,
+          "start_hour": 121,
+          "duration_minutes": 600.0,
+          "raw_support": {
+            "raw_start_minute": 7200,
+            "raw_end_minute": 7860,
+            "actual_trajectory_interval_minutes": [
+              7200,
+              7800.0
+            ],
+            "initialization_source_hours": [
+              121
+            ],
+            "initialization_historical_minutes": 0,
+            "algebraic_initialization_iterations": 6,
+            "historical_observation_interval_minutes": [
+              0.0,
+              60.0
+            ],
+            "score_interval_minutes": [
+              60.0,
+              420.0
+            ],
+            "label_tail_interval_minutes": [
+              420.0,
+              600.0
+            ],
+            "endpoint_source_hour_reserved": true,
+            "source_semantics": "hourly rows; reset repeats first row; final boundary hour conservatively included"
+          },
+          "canonical_class": "L2",
+          "design_variant": "main_L2_0"
+        },
+        {
+          "index": 2,
+          "id": "v17_L3_bda80f1911921fe85a87fe8c",
+          "source_day_index": 5,
+          "start_hour": 121,
+          "duration_minutes": 600.0,
+          "raw_support": {
+            "raw_start_minute": 7200,
+            "raw_end_minute": 7860,
+            "actual_trajectory_interval_minutes": [
+              7200,
+              7800.0
+            ],
+            "initialization_source_hours": [
+              121
+            ],
+            "initialization_historical_minutes": 0,
+            "algebraic_initialization_iterations": 6,
+            "historical_observation_interval_minutes": [
+              0.0,
+              60.0
+            ],
+            "score_interval_minutes": [
+              60.0,
+              420.0
+            ],
+            "label_tail_interval_minutes": [
+              420.0,
+              600.0
+            ],
+            "endpoint_source_hour_reserved": true,
+            "source_semantics": "hourly rows; reset repeats first row; final boundary hour conservatively included"
+          },
+          "canonical_class": "L3",
+          "design_variant": "main_L3_0"
+        },
+        {
+          "index": 3,
+          "id": "v17_L4_c2faf2e1d7f42b796ae27e04",
+          "source_day_index": 5,
+          "start_hour": 121,
+          "duration_minutes": 600.0,
+          "raw_support": {
+            "raw_start_minute": 7200,
+            "raw_end_minute": 7860,
+            "actual_trajectory_interval_minutes": [
+              7200,
+              7800.0
+            ],
+            "initialization_source_hours": [
+              121
+            ],
+            "initialization_historical_minutes": 0,
+            "algebraic_initialization_iterations": 6,
+            "historical_observation_interval_minutes": [
+              0.0,
+              60.0
+            ],
+            "score_interval_minutes": [
+              60.0,
+              420.0
+            ],
+            "label_tail_interval_minutes": [
+              420.0,
+              600.0
+            ],
+            "endpoint_source_hour_reserved": true,
+            "source_semantics": "hourly rows; reset repeats first row; final boundary hour conservatively included"
+          },
+          "canonical_class": "L4",
+          "design_variant": "main_L4_0"
+        },
+        {
+          "index": 4,
+          "id": "v17_L1_569b7cb242101ec92e58945b",
+          "source_day_index": 8,
+          "start_hour": 193,
+          "duration_minutes": 600.0,
+          "raw_support": {
+            "raw_start_minute": 11520,
+            "raw_end_minute": 12180,
+            "actual_trajectory_interval_minutes": [
+              11520,
+              12120.0
+            ],
+            "initialization_source_hours": [
+              193
+            ],
+            "initialization_historical_minutes": 0,
+            "algebraic_initialization_iterations": 6,
+            "historical_observation_interval_minutes": [
+              0.0,
+              60.0
+            ],
+            "score_interval_minutes": [
+              60.0,
+              420.0
+            ],
+            "label_tail_interval_minutes": [
+              420.0,
+              600.0
+            ],
+            "endpoint_source_hour_reserved": true,
+            "source_semantics": "hourly rows; reset repeats first row; final boundary hour conservatively included"
+          },
+          "canonical_class": "L1",
+          "design_variant": "main_L1_1"
+        },
+        {
+          "index": 5,
+          "id": "v17_L2_b088b5bbb5e801878f15f2fd",
+          "source_day_index": 8,
+          "start_hour": 193,
+          "duration_minutes": 600.0,
+          "raw_support": {
+            "raw_start_minute": 11520,
+            "raw_end_minute": 12180,
+            "actual_trajectory_interval_minutes": [
+              11520,
+              12120.0
+            ],
+            "initialization_source_hours": [
+              193
+            ],
+            "initialization_historical_minutes": 0,
+            "algebraic_initialization_iterations": 6,
+            "historical_observation_interval_minutes": [
+              0.0,
+              60.0
+            ],
+            "score_interval_minutes": [
+              60.0,
+              420.0
+            ],
+            "label_tail_interval_minutes": [
+              420.0,
+              600.0
+            ],
+            "endpoint_source_hour_reserved": true,
+            "source_semantics": "hourly rows; reset repeats first row; final boundary hour conservatively included"
+          },
+          "canonical_class": "L2",
+          "design_variant": "main_L2_1"
+        },
+        {
+          "index": 6,
+          "id": "v17_L3_6c6065a2bba69827af7c542e",
+          "source_day_index": 8,
+          "start_hour": 193,
+          "duration_minutes": 600.0,
+          "raw_support": {
+            "raw_start_minute": 11520,
+            "raw_end_minute": 12180,
+            "actual_trajectory_interval_minutes": [
+              11520,
+              12120.0
+            ],
+            "initialization_source_hours": [
+              193
+            ],
+            "initialization_historical_minutes": 0,
+            "algebraic_initialization_iterations": 6,
+            "historical_observation_interval_minutes": [
+              0.0,
+              60.0
+            ],
+            "score_interval_minutes": [
+              60.0,
+              420.0
+            ],
+            "label_tail_interval_minutes": [
+              420.0,
+              600.0
+            ],
+            "endpoint_source_hour_reserved": true,
+            "source_semantics": "hourly rows; reset repeats first row; final boundary hour conservatively included"
+          },
+          "canonical_class": "L3",
+          "design_variant": "main_L3_1"
+        },
+        {
+          "index": 7,
+          "id": "v17_L4_91f9be43a8b6e9ba6e4d9e8a",
+          "source_day_index": 8,
+          "start_hour": 193,
+          "duration_minutes": 600.0,
+          "raw_support": {
+            "raw_start_minute": 11520,
+            "raw_end_minute": 12180,
+            "actual_trajectory_interval_minutes": [
+              11520,
+              12120.0
+            ],
+            "initialization_source_hours": [
+              193
+            ],
+            "initialization_historical_minutes": 0,
+            "algebraic_initialization_iterations": 6,
+            "historical_observation_interval_minutes": [
+              0.0,
+              60.0
+            ],
+            "score_interval_minutes": [
+              60.0,
+              420.0
+            ],
+            "label_tail_interval_minutes": [
+              420.0,
+              600.0
+            ],
+            "endpoint_source_hour_reserved": true,
+            "source_semantics": "hourly rows; reset repeats first row; final boundary hour conservatively included"
+          },
+          "canonical_class": "L4",
+          "design_variant": "main_L4_1"
+        },
+        {
+          "index": 8,
+          "id": "v17_L1_6dac18bfa809dde927999c0b",
+          "source_day_index": 32,
+          "start_hour": 769,
+          "duration_minutes": 750.0,
+          "raw_support": {
+            "raw_start_minute": 46080,
+            "raw_end_minute": 46860,
+            "actual_trajectory_interval_minutes": [
+              46080,
+              46830.0
+            ],
+            "initialization_source_hours": [
+              769
+            ],
+            "initialization_historical_minutes": 0,
+            "algebraic_initialization_iterations": 6,
+            "historical_observation_interval_minutes": [
+              0.0,
+              60.0
+            ],
+            "score_interval_minutes": [
+              60.0,
+              420.0
+            ],
+            "label_tail_interval_minutes": [
+              420.0,
+              600.0
+            ],
+            "endpoint_source_hour_reserved": true,
+            "source_semantics": "hourly rows; reset repeats first row; final boundary hour conservatively included"
+          },
+          "canonical_class": "L1",
+          "design_variant": "main_L1_2"
+        },
+        {
+          "index": 9,
+          "id": "v17_L2_9ae38bf581c256e9465d49c7",
+          "source_day_index": 32,
+          "start_hour": 769,
+          "duration_minutes": 750.0,
+          "raw_support": {
+            "raw_start_minute": 46080,
+            "raw_end_minute": 46860,
+            "actual_trajectory_interval_minutes": [
+              46080,
+              46830.0
+            ],
+            "initialization_source_hours": [
+              769
+            ],
+            "initialization_historical_minutes": 0,
+            "algebraic_initialization_iterations": 6,
+            "historical_observation_interval_minutes": [
+              0.0,
+              60.0
+            ],
+            "score_interval_minutes": [
+              60.0,
+              420.0
+            ],
+            "label_tail_interval_minutes": [
+              420.0,
+              600.0
+            ],
+            "endpoint_source_hour_reserved": true,
+            "source_semantics": "hourly rows; reset repeats first row; final boundary hour conservatively included"
+          },
+          "canonical_class": "L2",
+          "design_variant": "main_L2_2"
+        },
+        {
+          "index": 10,
+          "id": "v17_L3_7585c157c81048bf9dbbfb57",
+          "source_day_index": 32,
+          "start_hour": 769,
+          "duration_minutes": 750.0,
+          "raw_support": {
+            "raw_start_minute": 46080,
+            "raw_end_minute": 46860,
+            "actual_trajectory_interval_minutes": [
+              46080,
+              46830.0
+            ],
+            "initialization_source_hours": [
+              769
+            ],
+            "initialization_historical_minutes": 0,
+            "algebraic_initialization_iterations": 6,
+            "historical_observation_interval_minutes": [
+              0.0,
+              60.0
+            ],
+            "score_interval_minutes": [
+              60.0,
+              420.0
+            ],
+            "label_tail_interval_minutes": [
+              420.0,
+              600.0
+            ],
+            "endpoint_source_hour_reserved": true,
+            "source_semantics": "hourly rows; reset repeats first row; final boundary hour conservatively included"
+          },
+          "canonical_class": "L3",
+          "design_variant": "main_L3_2"
+        },
+        {
+          "index": 11,
+          "id": "v17_L4_a68fb24ebecb5e5406d3bce9",
+          "source_day_index": 32,
+          "start_hour": 769,
+          "duration_minutes": 750.0,
+          "raw_support": {
+            "raw_start_minute": 46080,
+            "raw_end_minute": 46860,
+            "actual_trajectory_interval_minutes": [
+              46080,
+              46830.0
+            ],
+            "initialization_source_hours": [
+              769
+            ],
+            "initialization_historical_minutes": 0,
+            "algebraic_initialization_iterations": 6,
+            "historical_observation_interval_minutes": [
+              0.0,
+              60.0
+            ],
+            "score_interval_minutes": [
+              60.0,
+              420.0
+            ],
+            "label_tail_interval_minutes": [
+              420.0,
+              600.0
+            ],
+            "endpoint_source_hour_reserved": true,
+            "source_semantics": "hourly rows; reset repeats first row; final boundary hour conservatively included"
+          },
+          "canonical_class": "L4",
+          "design_variant": "main_L4_2"
+        },
+        {
+          "index": 12,
+          "id": "v17_L1_8522bd26496a9943a857b0eb",
+          "source_day_index": 35,
+          "start_hour": 841,
+          "duration_minutes": 600.0,
+          "raw_support": {
+            "raw_start_minute": 50400,
+            "raw_end_minute": 51060,
+            "actual_trajectory_interval_minutes": [
+              50400,
+              51000.0
+            ],
+            "initialization_source_hours": [
+              841
+            ],
+            "initialization_historical_minutes": 0,
+            "algebraic_initialization_iterations": 6,
+            "historical_observation_interval_minutes": [
+              0.0,
+              60.0
+            ],
+            "score_interval_minutes": [
+              60.0,
+              420.0
+            ],
+            "label_tail_interval_minutes": [
+              420.0,
+              600.0
+            ],
+            "endpoint_source_hour_reserved": true,
+            "source_semantics": "hourly rows; reset repeats first row; final boundary hour conservatively included"
+          },
+          "canonical_class": "L1",
+          "design_variant": "main_L1_3"
+        },
+        {
+          "index": 13,
+          "id": "v17_L2_4d887fd34c890ac2eaa81b86",
+          "source_day_index": 35,
+          "start_hour": 841,
+          "duration_minutes": 600.0,
+          "raw_support": {
+            "raw_start_minute": 50400,
+            "raw_end_minute": 51060,
+            "actual_trajectory_interval_minutes": [
+              50400,
+              51000.0
+            ],
+            "initialization_source_hours": [
+              841
+            ],
+            "initialization_historical_minutes": 0,
+            "algebraic_initialization_iterations": 6,
+            "historical_observation_interval_minutes": [
+              0.0,
+              60.0
+            ],
+            "score_interval_minutes": [
+              60.0,
+              420.0
+            ],
+            "label_tail_interval_minutes": [
+              420.0,
+              600.0
+            ],
+            "endpoint_source_hour_reserved": true,
+            "source_semantics": "hourly rows; reset repeats first row; final boundary hour conservatively included"
+          },
+          "canonical_class": "L2",
+          "design_variant": "main_L2_3"
+        },
+        {
+          "index": 14,
+          "id": "v17_L3_bd6b88fa7c1bfd6605d8c93c",
+          "source_day_index": 35,
+          "start_hour": 841,
+          "duration_minutes": 600.0,
+          "raw_support": {
+            "raw_start_minute": 50400,
+            "raw_end_minute": 51060,
+            "actual_trajectory_interval_minutes": [
+              50400,
+              51000.0
+            ],
+            "initialization_source_hours": [
+              841
+            ],
+            "initialization_historical_minutes": 0,
+            "algebraic_initialization_iterations": 6,
+            "historical_observation_interval_minutes": [
+              0.0,
+              60.0
+            ],
+            "score_interval_minutes": [
+              60.0,
+              420.0
+            ],
+            "label_tail_interval_minutes": [
+              420.0,
+              600.0
+            ],
+            "endpoint_source_hour_reserved": true,
+            "source_semantics": "hourly rows; reset repeats first row; final boundary hour conservatively included"
+          },
+          "canonical_class": "L3",
+          "design_variant": "main_L3_3"
+        },
+        {
+          "index": 15,
+          "id": "v17_L4_bf7050c737ce06fa33867a0c",
+          "source_day_index": 35,
+          "start_hour": 841,
+          "duration_minutes": 600.0,
+          "raw_support": {
+            "raw_start_minute": 50400,
+            "raw_end_minute": 51060,
+            "actual_trajectory_interval_minutes": [
+              50400,
+              51000.0
+            ],
+            "initialization_source_hours": [
+              841
+            ],
+            "initialization_historical_minutes": 0,
+            "algebraic_initialization_iterations": 6,
+            "historical_observation_interval_minutes": [
+              0.0,
+              60.0
+            ],
+            "score_interval_minutes": [
+              60.0,
+              420.0
+            ],
+            "label_tail_interval_minutes": [
+              420.0,
+              600.0
+            ],
+            "endpoint_source_hour_reserved": true,
+            "source_semantics": "hourly rows; reset repeats first row; final boundary hour conservatively included"
+          },
+          "canonical_class": "L4",
+          "design_variant": "main_L4_3"
+        },
+        {
+          "index": 16,
+          "id": "v17_L1_50eac3cbb8b05a1430fe828a",
+          "source_day_index": 64,
+          "start_hour": 1537,
+          "duration_minutes": 675.0,
+          "raw_support": {
+            "raw_start_minute": 92160,
+            "raw_end_minute": 92880,
+            "actual_trajectory_interval_minutes": [
+              92160,
+              92835.0
+            ],
+            "initialization_source_hours": [
+              1537
+            ],
+            "initialization_historical_minutes": 0,
+            "algebraic_initialization_iterations": 6,
+            "historical_observation_interval_minutes": [
+              0.0,
+              60.0
+            ],
+            "score_interval_minutes": [
+              60.0,
+              420.0
+            ],
+            "label_tail_interval_minutes": [
+              420.0,
+              600.0
+            ],
+            "endpoint_source_hour_reserved": true,
+            "source_semantics": "hourly rows; reset repeats first row; final boundary hour conservatively included"
+          },
+          "canonical_class": "L1",
+          "design_variant": "main_L1_4"
+        },
+        {
+          "index": 17,
+          "id": "v17_L2_c10eed4e94017b6d8a5d7478",
+          "source_day_index": 64,
+          "start_hour": 1537,
+          "duration_minutes": 675.0,
+          "raw_support": {
+            "raw_start_minute": 92160,
+            "raw_end_minute": 92880,
+            "actual_trajectory_interval_minutes": [
+              92160,
+              92835.0
+            ],
+            "initialization_source_hours": [
+              1537
+            ],
+            "initialization_historical_minutes": 0,
+            "algebraic_initialization_iterations": 6,
+            "historical_observation_interval_minutes": [
+              0.0,
+              60.0
+            ],
+            "score_interval_minutes": [
+              60.0,
+              420.0
+            ],
+            "label_tail_interval_minutes": [
+              420.0,
+              600.0
+            ],
+            "endpoint_source_hour_reserved": true,
+            "source_semantics": "hourly rows; reset repeats first row; final boundary hour conservatively included"
+          },
+          "canonical_class": "L2",
+          "design_variant": "main_L2_4"
+        },
+        {
+          "index": 18,
+          "id": "v17_L3_52f33cbce9d3923c2169b222",
+          "source_day_index": 64,
+          "start_hour": 1537,
+          "duration_minutes": 675.0,
+          "raw_support": {
+            "raw_start_minute": 92160,
+            "raw_end_minute": 92880,
+            "actual_trajectory_interval_minutes": [
+              92160,
+              92835.0
+            ],
+            "initialization_source_hours": [
+              1537
+            ],
+            "initialization_historical_minutes": 0,
+            "algebraic_initialization_iterations": 6,
+            "historical_observation_interval_minutes": [
+              0.0,
+              60.0
+            ],
+            "score_interval_minutes": [
+              60.0,
+              420.0
+            ],
+            "label_tail_interval_minutes": [
+              420.0,
+              600.0
+            ],
+            "endpoint_source_hour_reserved": true,
+            "source_semantics": "hourly rows; reset repeats first row; final boundary hour conservatively included"
+          },
+          "canonical_class": "L3",
+          "design_variant": "main_L3_4"
+        },
+        {
+          "index": 19,
+          "id": "v17_L4_7a0db79fc29b72bd879a7bcb",
+          "source_day_index": 64,
+          "start_hour": 1537,
+          "duration_minutes": 675.0,
+          "raw_support": {
+            "raw_start_minute": 92160,
+            "raw_end_minute": 92880,
+            "actual_trajectory_interval_minutes": [
+              92160,
+              92835.0
+            ],
+            "initialization_source_hours": [
+              1537
+            ],
+            "initialization_historical_minutes": 0,
+            "algebraic_initialization_iterations": 6,
+            "historical_observation_interval_minutes": [
+              0.0,
+              60.0
+            ],
+            "score_interval_minutes": [
+              60.0,
+              420.0
+            ],
+            "label_tail_interval_minutes": [
+              420.0,
+              600.0
+            ],
+            "endpoint_source_hour_reserved": true,
+            "source_semantics": "hourly rows; reset repeats first row; final boundary hour conservatively included"
+          },
+          "canonical_class": "L4",
+          "design_variant": "main_L4_4"
+        },
+        {
+          "index": 20,
+          "id": "v17_L1_403655df36c72152b478bd44",
+          "source_day_index": 66,
+          "start_hour": 1585,
+          "duration_minutes": 600.0,
+          "raw_support": {
+            "raw_start_minute": 95040,
+            "raw_end_minute": 95700,
+            "actual_trajectory_interval_minutes": [
+              95040,
+              95640.0
+            ],
+            "initialization_source_hours": [
+              1585
+            ],
+            "initialization_historical_minutes": 0,
+            "algebraic_initialization_iterations": 6,
+            "historical_observation_interval_minutes": [
+              0.0,
+              60.0
+            ],
+            "score_interval_minutes": [
+              60.0,
+              420.0
+            ],
+            "label_tail_interval_minutes": [
+              420.0,
+              600.0
+            ],
+            "endpoint_source_hour_reserved": true,
+            "source_semantics": "hourly rows; reset repeats first row; final boundary hour conservatively included"
+          },
+          "canonical_class": "L1",
+          "design_variant": "main_L1_5"
+        },
+        {
+          "index": 21,
+          "id": "v17_L2_ddd1eb4941f9dae4a9a016df",
+          "source_day_index": 66,
+          "start_hour": 1585,
+          "duration_minutes": 600.0,
+          "raw_support": {
+            "raw_start_minute": 95040,
+            "raw_end_minute": 95700,
+            "actual_trajectory_interval_minutes": [
+              95040,
+              95640.0
+            ],
+            "initialization_source_hours": [
+              1585
+            ],
+            "initialization_historical_minutes": 0,
+            "algebraic_initialization_iterations": 6,
+            "historical_observation_interval_minutes": [
+              0.0,
+              60.0
+            ],
+            "score_interval_minutes": [
+              60.0,
+              420.0
+            ],
+            "label_tail_interval_minutes": [
+              420.0,
+              600.0
+            ],
+            "endpoint_source_hour_reserved": true,
+            "source_semantics": "hourly rows; reset repeats first row; final boundary hour conservatively included"
+          },
+          "canonical_class": "L2",
+          "design_variant": "main_L2_5"
+        },
+        {
+          "index": 22,
+          "id": "v17_L3_bdd178d66c44346d19392029",
+          "source_day_index": 66,
+          "start_hour": 1585,
+          "duration_minutes": 600.0,
+          "raw_support": {
+            "raw_start_minute": 95040,
+            "raw_end_minute": 95700,
+            "actual_trajectory_interval_minutes": [
+              95040,
+              95640.0
+            ],
+            "initialization_source_hours": [
+              1585
+            ],
+            "initialization_historical_minutes": 0,
+            "algebraic_initialization_iterations": 6,
+            "historical_observation_interval_minutes": [
+              0.0,
+              60.0
+            ],
+            "score_interval_minutes": [
+              60.0,
+              420.0
+            ],
+            "label_tail_interval_minutes": [
+              420.0,
+              600.0
+            ],
+            "endpoint_source_hour_reserved": true,
+            "source_semantics": "hourly rows; reset repeats first row; final boundary hour conservatively included"
+          },
+          "canonical_class": "L3",
+          "design_variant": "main_L3_5"
+        },
+        {
+          "index": 23,
+          "id": "v17_L4_462d1be0140dd793fece176d",
+          "source_day_index": 66,
+          "start_hour": 1585,
+          "duration_minutes": 600.0,
+          "raw_support": {
+            "raw_start_minute": 95040,
+            "raw_end_minute": 95700,
+            "actual_trajectory_interval_minutes": [
+              95040,
+              95640.0
+            ],
+            "initialization_source_hours": [
+              1585
+            ],
+            "initialization_historical_minutes": 0,
+            "algebraic_initialization_iterations": 6,
+            "historical_observation_interval_minutes": [
+              0.0,
+              60.0
+            ],
+            "score_interval_minutes": [
+              60.0,
+              420.0
+            ],
+            "label_tail_interval_minutes": [
+              420.0,
+              600.0
+            ],
+            "endpoint_source_hour_reserved": true,
+            "source_semantics": "hourly rows; reset repeats first row; final boundary hour conservatively included"
+          },
+          "canonical_class": "L4",
+          "design_variant": "main_L4_5"
+        },
+        {
+          "index": 24,
+          "id": "v17_L1_7580c032b091141f4946b9f5",
+          "source_day_index": 104,
+          "start_hour": 2497,
+          "duration_minutes": 690.0,
+          "raw_support": {
+            "raw_start_minute": 149760,
+            "raw_end_minute": 150480,
+            "actual_trajectory_interval_minutes": [
+              149760,
+              150450.0
+            ],
+            "initialization_source_hours": [
+              2497
+            ],
+            "initialization_historical_minutes": 0,
+            "algebraic_initialization_iterations": 6,
+            "historical_observation_interval_minutes": [
+              0.0,
+              60.0
+            ],
+            "score_interval_minutes": [
+              60.0,
+              420.0
+            ],
+            "label_tail_interval_minutes": [
+              420.0,
+              600.0
+            ],
+            "endpoint_source_hour_reserved": true,
+            "source_semantics": "hourly rows; reset repeats first row; final boundary hour conservatively included"
+          },
+          "canonical_class": "L1",
+          "design_variant": "main_L1_6"
+        },
+        {
+          "index": 25,
+          "id": "v17_L2_1ab3f511e9c62cbe66f6dc87",
+          "source_day_index": 104,
+          "start_hour": 2497,
+          "duration_minutes": 690.0,
+          "raw_support": {
+            "raw_start_minute": 149760,
+            "raw_end_minute": 150480,
+            "actual_trajectory_interval_minutes": [
+              149760,
+              150450.0
+            ],
+            "initialization_source_hours": [
+              2497
+            ],
+            "initialization_historical_minutes": 0,
+            "algebraic_initialization_iterations": 6,
+            "historical_observation_interval_minutes": [
+              0.0,
+              60.0
+            ],
+            "score_interval_minutes": [
+              60.0,
+              420.0
+            ],
+            "label_tail_interval_minutes": [
+              420.0,
+              600.0
+            ],
+            "endpoint_source_hour_reserved": true,
+            "source_semantics": "hourly rows; reset repeats first row; final boundary hour conservatively included"
+          },
+          "canonical_class": "L2",
+          "design_variant": "main_L2_6"
+        },
+        {
+          "index": 26,
+          "id": "v17_L3_10a34bde309fd9fd414f5e24",
+          "source_day_index": 104,
+          "start_hour": 2497,
+          "duration_minutes": 690.0,
+          "raw_support": {
+            "raw_start_minute": 149760,
+            "raw_end_minute": 150480,
+            "actual_trajectory_interval_minutes": [
+              149760,
+              150450.0
+            ],
+            "initialization_source_hours": [
+              2497
+            ],
+            "initialization_historical_minutes": 0,
+            "algebraic_initialization_iterations": 6,
+            "historical_observation_interval_minutes": [
+              0.0,
+              60.0
+            ],
+            "score_interval_minutes": [
+              60.0,
+              420.0
+            ],
+            "label_tail_interval_minutes": [
+              420.0,
+              600.0
+            ],
+            "endpoint_source_hour_reserved": true,
+            "source_semantics": "hourly rows; reset repeats first row; final boundary hour conservatively included"
+          },
+          "canonical_class": "L3",
+          "design_variant": "main_L3_6"
+        },
+        {
+          "index": 27,
+          "id": "v17_L4_308702044d96a2941be001d4",
+          "source_day_index": 104,
+          "start_hour": 2497,
+          "duration_minutes": 690.0,
+          "raw_support": {
+            "raw_start_minute": 149760,
+            "raw_end_minute": 150480,
+            "actual_trajectory_interval_minutes": [
+              149760,
+              150450.0
+            ],
+            "initialization_source_hours": [
+              2497
+            ],
+            "initialization_historical_minutes": 0,
+            "algebraic_initialization_iterations": 6,
+            "historical_observation_interval_minutes": [
+              0.0,
+              60.0
+            ],
+            "score_interval_minutes": [
+              60.0,
+              420.0
+            ],
+            "label_tail_interval_minutes": [
+              420.0,
+              600.0
+            ],
+            "endpoint_source_hour_reserved": true,
+            "source_semantics": "hourly rows; reset repeats first row; final boundary hour conservatively included"
+          },
+          "canonical_class": "L4",
+          "design_variant": "main_L4_6"
+        },
+        {
+          "index": 28,
+          "id": "v17_L1_b07eafcffad73681cd2e0e96",
+          "source_day_index": 107,
+          "start_hour": 2569,
+          "duration_minutes": 615.0,
+          "raw_support": {
+            "raw_start_minute": 154080,
+            "raw_end_minute": 154740,
+            "actual_trajectory_interval_minutes": [
+              154080,
+              154695.0
+            ],
+            "initialization_source_hours": [
+              2569
+            ],
+            "initialization_historical_minutes": 0,
+            "algebraic_initialization_iterations": 6,
+            "historical_observation_interval_minutes": [
+              0.0,
+              60.0
+            ],
+            "score_interval_minutes": [
+              60.0,
+              420.0
+            ],
+            "label_tail_interval_minutes": [
+              420.0,
+              600.0
+            ],
+            "endpoint_source_hour_reserved": true,
+            "source_semantics": "hourly rows; reset repeats first row; final boundary hour conservatively included"
+          },
+          "canonical_class": "L1",
+          "design_variant": "main_L1_7"
+        },
+        {
+          "index": 29,
+          "id": "v17_L2_8716e7bb7b7213c09341b14b",
+          "source_day_index": 107,
+          "start_hour": 2569,
+          "duration_minutes": 615.0,
+          "raw_support": {
+            "raw_start_minute": 154080,
+            "raw_end_minute": 154740,
+            "actual_trajectory_interval_minutes": [
+              154080,
+              154695.0
+            ],
+            "initialization_source_hours": [
+              2569
+            ],
+            "initialization_historical_minutes": 0,
+            "algebraic_initialization_iterations": 6,
+            "historical_observation_interval_minutes": [
+              0.0,
+              60.0
+            ],
+            "score_interval_minutes": [
+              60.0,
+              420.0
+            ],
+            "label_tail_interval_minutes": [
+              420.0,
+              600.0
+            ],
+            "endpoint_source_hour_reserved": true,
+            "source_semantics": "hourly rows; reset repeats first row; final boundary hour conservatively included"
+          },
+          "canonical_class": "L2",
+          "design_variant": "main_L2_7"
+        },
+        {
+          "index": 30,
+          "id": "v17_L3_6f82c2eb8eacbc2bcf87b526",
+          "source_day_index": 107,
+          "start_hour": 2569,
+          "duration_minutes": 615.0,
+          "raw_support": {
+            "raw_start_minute": 154080,
+            "raw_end_minute": 154740,
+            "actual_trajectory_interval_minutes": [
+              154080,
+              154695.0
+            ],
+            "initialization_source_hours": [
+              2569
+            ],
+            "initialization_historical_minutes": 0,
+            "algebraic_initialization_iterations": 6,
+            "historical_observation_interval_minutes": [
+              0.0,
+              60.0
+            ],
+            "score_interval_minutes": [
+              60.0,
+              420.0
+            ],
+            "label_tail_interval_minutes": [
+              420.0,
+              600.0
+            ],
+            "endpoint_source_hour_reserved": true,
+            "source_semantics": "hourly rows; reset repeats first row; final boundary hour conservatively included"
+          },
+          "canonical_class": "L3",
+          "design_variant": "main_L3_7"
+        },
+        {
+          "index": 31,
+          "id": "v17_L4_5251bdb66c3e9a5ed7d71f1a",
+          "source_day_index": 107,
+          "start_hour": 2569,
+          "duration_minutes": 615.0,
+          "raw_support": {
+            "raw_start_minute": 154080,
+            "raw_end_minute": 154740,
+            "actual_trajectory_interval_minutes": [
+              154080,
+              154695.0
+            ],
+            "initialization_source_hours": [
+              2569
+            ],
+            "initialization_historical_minutes": 0,
+            "algebraic_initialization_iterations": 6,
+            "historical_observation_interval_minutes": [
+              0.0,
+              60.0
+            ],
+            "score_interval_minutes": [
+              60.0,
+              420.0
+            ],
+            "label_tail_interval_minutes": [
+              420.0,
+              600.0
+            ],
+            "endpoint_source_hour_reserved": true,
+            "source_semantics": "hourly rows; reset repeats first row; final boundary hour conservatively included"
+          },
+          "canonical_class": "L4",
+          "design_variant": "main_L4_7"
+        },
+        {
+          "index": 32,
+          "id": "v17_L1_98f26b144b8d20f8c7255861",
+          "source_day_index": 145,
+          "start_hour": 3481,
+          "duration_minutes": 675.0,
+          "raw_support": {
+            "raw_start_minute": 208800,
+            "raw_end_minute": 209520,
+            "actual_trajectory_interval_minutes": [
+              208800,
+              209475.0
+            ],
+            "initialization_source_hours": [
+              3481
+            ],
+            "initialization_historical_minutes": 0,
+            "algebraic_initialization_iterations": 6,
+            "historical_observation_interval_minutes": [
+              0.0,
+              60.0
+            ],
+            "score_interval_minutes": [
+              60.0,
+              420.0
+            ],
+            "label_tail_interval_minutes": [
+              420.0,
+              600.0
+            ],
+            "endpoint_source_hour_reserved": true,
+            "source_semantics": "hourly rows; reset repeats first row; final boundary hour conservatively included"
+          },
+          "canonical_class": "L1",
+          "design_variant": "main_L1_8"
+        },
+        {
+          "index": 33,
+          "id": "v17_L2_ed3383b65317c6d21e300709",
+          "source_day_index": 145,
+          "start_hour": 3481,
+          "duration_minutes": 675.0,
+          "raw_support": {
+            "raw_start_minute": 208800,
+            "raw_end_minute": 209520,
+            "actual_trajectory_interval_minutes": [
+              208800,
+              209475.0
+            ],
+            "initialization_source_hours": [
+              3481
+            ],
+            "initialization_historical_minutes": 0,
+            "algebraic_initialization_iterations": 6,
+            "historical_observation_interval_minutes": [
+              0.0,
+              60.0
+            ],
+            "score_interval_minutes": [
+              60.0,
+              420.0
+            ],
+            "label_tail_interval_minutes": [
+              420.0,
+              600.0
+            ],
+            "endpoint_source_hour_reserved": true,
+            "source_semantics": "hourly rows; reset repeats first row; final boundary hour conservatively included"
+          },
+          "canonical_class": "L2",
+          "design_variant": "main_L2_8"
+        },
+        {
+          "index": 34,
+          "id": "v17_L3_1bed6529a599589195f9d206",
+          "source_day_index": 145,
+          "start_hour": 3481,
+          "duration_minutes": 675.0,
+          "raw_support": {
+            "raw_start_minute": 208800,
+            "raw_end_minute": 209520,
+            "actual_trajectory_interval_minutes": [
+              208800,
+              209475.0
+            ],
+            "initialization_source_hours": [
+              3481
+            ],
+            "initialization_historical_minutes": 0,
+            "algebraic_initialization_iterations": 6,
+            "historical_observation_interval_minutes": [
+              0.0,
+              60.0
+            ],
+            "score_interval_minutes": [
+              60.0,
+              420.0
+            ],
+            "label_tail_interval_minutes": [
+              420.0,
+              600.0
+            ],
+            "endpoint_source_hour_reserved": true,
+            "source_semantics": "hourly rows; reset repeats first row; final boundary hour conservatively included"
+          },
+          "canonical_class": "L3",
+          "design_variant": "main_L3_8"
+        },
+        {
+          "index": 35,
+          "id": "v17_L4_451724372e670ad47b48fccb",
+          "source_day_index": 145,
+          "start_hour": 3481,
+          "duration_minutes": 675.0,
+          "raw_support": {
+            "raw_start_minute": 208800,
+            "raw_end_minute": 209520,
+            "actual_trajectory_interval_minutes": [
+              208800,
+              209475.0
+            ],
+            "initialization_source_hours": [
+              3481
+            ],
+            "initialization_historical_minutes": 0,
+            "algebraic_initialization_iterations": 6,
+            "historical_observation_interval_minutes": [
+              0.0,
+              60.0
+            ],
+            "score_interval_minutes": [
+              60.0,
+              420.0
+            ],
+            "label_tail_interval_minutes": [
+              420.0,
+              600.0
+            ],
+            "endpoint_source_hour_reserved": true,
+            "source_semantics": "hourly rows; reset repeats first row; final boundary hour conservatively included"
+          },
+          "canonical_class": "L4",
+          "design_variant": "main_L4_8"
+        },
+        {
+          "index": 36,
+          "id": "v17_L1_d2865816facd0262a3e0d609",
+          "source_day_index": 148,
+          "start_hour": 3553,
+          "duration_minutes": 885.0,
+          "raw_support": {
+            "raw_start_minute": 213120,
+            "raw_end_minute": 214020,
+            "actual_trajectory_interval_minutes": [
+              213120,
+              214005.0
+            ],
+            "initialization_source_hours": [
+              3553
+            ],
+            "initialization_historical_minutes": 0,
+            "algebraic_initialization_iterations": 6,
+            "historical_observation_interval_minutes": [
+              0.0,
+              60.0
+            ],
+            "score_interval_minutes": [
+              60.0,
+              420.0
+            ],
+            "label_tail_interval_minutes": [
+              420.0,
+              600.0
+            ],
+            "endpoint_source_hour_reserved": true,
+            "source_semantics": "hourly rows; reset repeats first row; final boundary hour conservatively included"
+          },
+          "canonical_class": "L1",
+          "design_variant": "main_L1_9"
+        },
+        {
+          "index": 37,
+          "id": "v17_L2_1c74f39c4e698d5164fe6613",
+          "source_day_index": 148,
+          "start_hour": 3553,
+          "duration_minutes": 885.0,
+          "raw_support": {
+            "raw_start_minute": 213120,
+            "raw_end_minute": 214020,
+            "actual_trajectory_interval_minutes": [
+              213120,
+              214005.0
+            ],
+            "initialization_source_hours": [
+              3553
+            ],
+            "initialization_historical_minutes": 0,
+            "algebraic_initialization_iterations": 6,
+            "historical_observation_interval_minutes": [
+              0.0,
+              60.0
+            ],
+            "score_interval_minutes": [
+              60.0,
+              420.0
+            ],
+            "label_tail_interval_minutes": [
+              420.0,
+              600.0
+            ],
+            "endpoint_source_hour_reserved": true,
+            "source_semantics": "hourly rows; reset repeats first row; final boundary hour conservatively included"
+          },
+          "canonical_class": "L2",
+          "design_variant": "main_L2_9"
+        },
+        {
+          "index": 38,
+          "id": "v17_L3_12dda8d5246a32c94d6ad9d9",
+          "source_day_index": 148,
+          "start_hour": 3553,
+          "duration_minutes": 885.0,
+          "raw_support": {
+            "raw_start_minute": 213120,
+            "raw_end_minute": 214020,
+            "actual_trajectory_interval_minutes": [
+              213120,
+              214005.0
+            ],
+            "initialization_source_hours": [
+              3553
+            ],
+            "initialization_historical_minutes": 0,
+            "algebraic_initialization_iterations": 6,
+            "historical_observation_interval_minutes": [
+              0.0,
+              60.0
+            ],
+            "score_interval_minutes": [
+              60.0,
+              420.0
+            ],
+            "label_tail_interval_minutes": [
+              420.0,
+              600.0
+            ],
+            "endpoint_source_hour_reserved": true,
+            "source_semantics": "hourly rows; reset repeats first row; final boundary hour conservatively included"
+          },
+          "canonical_class": "L3",
+          "design_variant": "main_L3_9"
+        },
+        {
+          "index": 39,
+          "id": "v17_L4_ab0cb5ea546a0fcaa3fa4320",
+          "source_day_index": 148,
+          "start_hour": 3553,
+          "duration_minutes": 885.0,
+          "raw_support": {
+            "raw_start_minute": 213120,
+            "raw_end_minute": 214020,
+            "actual_trajectory_interval_minutes": [
+              213120,
+              214005.0
+            ],
+            "initialization_source_hours": [
+              3553
+            ],
+            "initialization_historical_minutes": 0,
+            "algebraic_initialization_iterations": 6,
+            "historical_observation_interval_minutes": [
+              0.0,
+              60.0
+            ],
+            "score_interval_minutes": [
+              60.0,
+              420.0
+            ],
+            "label_tail_interval_minutes": [
+              420.0,
+              600.0
+            ],
+            "endpoint_source_hour_reserved": true,
+            "source_semantics": "hourly rows; reset repeats first row; final boundary hour conservatively included"
+          },
+          "canonical_class": "L4",
+          "design_variant": "main_L4_9"
+        },
+        {
+          "index": 40,
+          "id": "v17_L1_52fe951d1f3c87040a4d2060",
+          "source_day_index": 171,
+          "start_hour": 4105,
+          "duration_minutes": 675.0,
+          "raw_support": {
+            "raw_start_minute": 246240,
+            "raw_end_minute": 246960,
+            "actual_trajectory_interval_minutes": [
+              246240,
+              246915.0
+            ],
+            "initialization_source_hours": [
+              4105
+            ],
+            "initialization_historical_minutes": 0,
+            "algebraic_initialization_iterations": 6,
+            "historical_observation_interval_minutes": [
+              0.0,
+              60.0
+            ],
+            "score_interval_minutes": [
+              60.0,
+              420.0
+            ],
+            "label_tail_interval_minutes": [
+              420.0,
+              600.0
+            ],
+            "endpoint_source_hour_reserved": true,
+            "source_semantics": "hourly rows; reset repeats first row; final boundary hour conservatively included"
+          },
+          "canonical_class": "L1",
+          "design_variant": "main_L1_10"
+        },
+        {
+          "index": 41,
+          "id": "v17_L2_f053cb4ed49553810a94ea80",
+          "source_day_index": 171,
+          "start_hour": 4105,
+          "duration_minutes": 675.0,
+          "raw_support": {
+            "raw_start_minute": 246240,
+            "raw_end_minute": 246960,
+            "actual_trajectory_interval_minutes": [
+              246240,
+              246915.0
+            ],
+            "initialization_source_hours": [
+              4105
+            ],
+            "initialization_historical_minutes": 0,
+            "algebraic_initialization_iterations": 6,
+            "historical_observation_interval_minutes": [
+              0.0,
+              60.0
+            ],
+            "score_interval_minutes": [
+              60.0,
+              420.0
+            ],
+            "label_tail_interval_minutes": [
+              420.0,
+              600.0
+            ],
+            "endpoint_source_hour_reserved": true,
+            "source_semantics": "hourly rows; reset repeats first row; final boundary hour conservatively included"
+          },
+          "canonical_class": "L2",
+          "design_variant": "main_L2_10"
+        },
+        {
+          "index": 42,
+          "id": "v17_L3_318c944e402ea6a10fa25d57",
+          "source_day_index": 171,
+          "start_hour": 4105,
+          "duration_minutes": 675.0,
+          "raw_support": {
+            "raw_start_minute": 246240,
+            "raw_end_minute": 246960,
+            "actual_trajectory_interval_minutes": [
+              246240,
+              246915.0
+            ],
+            "initialization_source_hours": [
+              4105
+            ],
+            "initialization_historical_minutes": 0,
+            "algebraic_initialization_iterations": 6,
+            "historical_observation_interval_minutes": [
+              0.0,
+              60.0
+            ],
+            "score_interval_minutes": [
+              60.0,
+              420.0
+            ],
+            "label_tail_interval_minutes": [
+              420.0,
+              600.0
+            ],
+            "endpoint_source_hour_reserved": true,
+            "source_semantics": "hourly rows; reset repeats first row; final boundary hour conservatively included"
+          },
+          "canonical_class": "L3",
+          "design_variant": "main_L3_10"
+        },
+        {
+          "index": 43,
+          "id": "v17_L4_dd6008ccc4bd2acacb5b3870",
+          "source_day_index": 171,
+          "start_hour": 4105,
+          "duration_minutes": 675.0,
+          "raw_support": {
+            "raw_start_minute": 246240,
+            "raw_end_minute": 246960,
+            "actual_trajectory_interval_minutes": [
+              246240,
+              246915.0
+            ],
+            "initialization_source_hours": [
+              4105
+            ],
+            "initialization_historical_minutes": 0,
+            "algebraic_initialization_iterations": 6,
+            "historical_observation_interval_minutes": [
+              0.0,
+              60.0
+            ],
+            "score_interval_minutes": [
+              60.0,
+              420.0
+            ],
+            "label_tail_interval_minutes": [
+              420.0,
+              600.0
+            ],
+            "endpoint_source_hour_reserved": true,
+            "source_semantics": "hourly rows; reset repeats first row; final boundary hour conservatively included"
+          },
+          "canonical_class": "L4",
+          "design_variant": "main_L4_10"
+        },
+        {
+          "index": 44,
+          "id": "v17_L1_0e96edd36b0c0651f06e8704",
+          "source_day_index": 174,
+          "start_hour": 4177,
+          "duration_minutes": 690.0,
+          "raw_support": {
+            "raw_start_minute": 250560,
+            "raw_end_minute": 251280,
+            "actual_trajectory_interval_minutes": [
+              250560,
+              251250.0
+            ],
+            "initialization_source_hours": [
+              4177
+            ],
+            "initialization_historical_minutes": 0,
+            "algebraic_initialization_iterations": 6,
+            "historical_observation_interval_minutes": [
+              0.0,
+              60.0
+            ],
+            "score_interval_minutes": [
+              60.0,
+              420.0
+            ],
+            "label_tail_interval_minutes": [
+              420.0,
+              600.0
+            ],
+            "endpoint_source_hour_reserved": true,
+            "source_semantics": "hourly rows; reset repeats first row; final boundary hour conservatively included"
+          },
+          "canonical_class": "L1",
+          "design_variant": "main_L1_11"
+        },
+        {
+          "index": 45,
+          "id": "v17_L2_1fab9f8ee2d56306526b8414",
+          "source_day_index": 174,
+          "start_hour": 4177,
+          "duration_minutes": 690.0,
+          "raw_support": {
+            "raw_start_minute": 250560,
+            "raw_end_minute": 251280,
+            "actual_trajectory_interval_minutes": [
+              250560,
+              251250.0
+            ],
+            "initialization_source_hours": [
+              4177
+            ],
+            "initialization_historical_minutes": 0,
+            "algebraic_initialization_iterations": 6,
+            "historical_observation_interval_minutes": [
+              0.0,
+              60.0
+            ],
+            "score_interval_minutes": [
+              60.0,
+              420.0
+            ],
+            "label_tail_interval_minutes": [
+              420.0,
+              600.0
+            ],
+            "endpoint_source_hour_reserved": true,
+            "source_semantics": "hourly rows; reset repeats first row; final boundary hour conservatively included"
+          },
+          "canonical_class": "L2",
+          "design_variant": "main_L2_11"
+        },
+        {
+          "index": 46,
+          "id": "v17_L3_b40274e2ed3637fffcac611f",
+          "source_day_index": 174,
+          "start_hour": 4177,
+          "duration_minutes": 690.0,
+          "raw_support": {
+            "raw_start_minute": 250560,
+            "raw_end_minute": 251280,
+            "actual_trajectory_interval_minutes": [
+              250560,
+              251250.0
+            ],
+            "initialization_source_hours": [
+              4177
+            ],
+            "initialization_historical_minutes": 0,
+            "algebraic_initialization_iterations": 6,
+            "historical_observation_interval_minutes": [
+              0.0,
+              60.0
+            ],
+            "score_interval_minutes": [
+              60.0,
+              420.0
+            ],
+            "label_tail_interval_minutes": [
+              420.0,
+              600.0
+            ],
+            "endpoint_source_hour_reserved": true,
+            "source_semantics": "hourly rows; reset repeats first row; final boundary hour conservatively included"
+          },
+          "canonical_class": "L3",
+          "design_variant": "main_L3_11"
+        },
+        {
+          "index": 47,
+          "id": "v17_L4_1107c9d29bdba9ec933a3f80",
+          "source_day_index": 174,
+          "start_hour": 4177,
+          "duration_minutes": 690.0,
+          "raw_support": {
+            "raw_start_minute": 250560,
+            "raw_end_minute": 251280,
+            "actual_trajectory_interval_minutes": [
+              250560,
+              251250.0
+            ],
+            "initialization_source_hours": [
+              4177
+            ],
+            "initialization_historical_minutes": 0,
+            "algebraic_initialization_iterations": 6,
+            "historical_observation_interval_minutes": [
+              0.0,
+              60.0
+            ],
+            "score_interval_minutes": [
+              60.0,
+              420.0
+            ],
+            "label_tail_interval_minutes": [
+              420.0,
+              600.0
+            ],
+            "endpoint_source_hour_reserved": true,
+            "source_semantics": "hourly rows; reset repeats first row; final boundary hour conservatively included"
+          },
+          "canonical_class": "L4",
+          "design_variant": "main_L4_11"
+        },
+        {
+          "index": 48,
+          "id": "v17_L1_8308404e2aacf638967373f6",
+          "source_day_index": 208,
+          "start_hour": 4993,
+          "duration_minutes": 600.0,
+          "raw_support": {
+            "raw_start_minute": 299520,
+            "raw_end_minute": 300180,
+            "actual_trajectory_interval_minutes": [
+              299520,
+              300120.0
+            ],
+            "initialization_source_hours": [
+              4993
+            ],
+            "initialization_historical_minutes": 0,
+            "algebraic_initialization_iterations": 6,
+            "historical_observation_interval_minutes": [
+              0.0,
+              60.0
+            ],
+            "score_interval_minutes": [
+              60.0,
+              420.0
+            ],
+            "label_tail_interval_minutes": [
+              420.0,
+              600.0
+            ],
+            "endpoint_source_hour_reserved": true,
+            "source_semantics": "hourly rows; reset repeats first row; final boundary hour conservatively included"
+          },
+          "canonical_class": "L1",
+          "design_variant": "main_L1_12"
+        },
+        {
+          "index": 49,
+          "id": "v17_L2_17ec1363127a154fd272e474",
+          "source_day_index": 208,
+          "start_hour": 4993,
+          "duration_minutes": 600.0,
+          "raw_support": {
+            "raw_start_minute": 299520,
+            "raw_end_minute": 300180,
+            "actual_trajectory_interval_minutes": [
+              299520,
+              300120.0
+            ],
+            "initialization_source_hours": [
+              4993
+            ],
+            "initialization_historical_minutes": 0,
+            "algebraic_initialization_iterations": 6,
+            "historical_observation_interval_minutes": [
+              0.0,
+              60.0
+            ],
+            "score_interval_minutes": [
+              60.0,
+              420.0
+            ],
+            "label_tail_interval_minutes": [
+              420.0,
+              600.0
+            ],
+            "endpoint_source_hour_reserved": true,
+            "source_semantics": "hourly rows; reset repeats first row; final boundary hour conservatively included"
+          },
+          "canonical_class": "L2",
+          "design_variant": "main_L2_12"
+        },
+        {
+          "index": 50,
+          "id": "v17_L3_e794bfd7e03dd8de9fb0071b",
+          "source_day_index": 208,
+          "start_hour": 4993,
+          "duration_minutes": 600.0,
+          "raw_support": {
+            "raw_start_minute": 299520,
+            "raw_end_minute": 300180,
+            "actual_trajectory_interval_minutes": [
+              299520,
+              300120.0
+            ],
+            "initialization_source_hours": [
+              4993
+            ],
+            "initialization_historical_minutes": 0,
+            "algebraic_initialization_iterations": 6,
+            "historical_observation_interval_minutes": [
+              0.0,
+              60.0
+            ],
+            "score_interval_minutes": [
+              60.0,
+              420.0
+            ],
+            "label_tail_interval_minutes": [
+              420.0,
+              600.0
+            ],
+            "endpoint_source_hour_reserved": true,
+            "source_semantics": "hourly rows; reset repeats first row; final boundary hour conservatively included"
+          },
+          "canonical_class": "L3",
+          "design_variant": "main_L3_12"
+        },
+        {
+          "index": 51,
+          "id": "v17_L4_59998c20b358dcd66ad403eb",
+          "source_day_index": 208,
+          "start_hour": 4993,
+          "duration_minutes": 600.0,
+          "raw_support": {
+            "raw_start_minute": 299520,
+            "raw_end_minute": 300180,
+            "actual_trajectory_interval_minutes": [
+              299520,
+              300120.0
+            ],
+            "initialization_source_hours": [
+              4993
+            ],
+            "initialization_historical_minutes": 0,
+            "algebraic_initialization_iterations": 6,
+            "historical_observation_interval_minutes": [
+              0.0,
+              60.0
+            ],
+            "score_interval_minutes": [
+              60.0,
+              420.0
+            ],
+            "label_tail_interval_minutes": [
+              420.0,
+              600.0
+            ],
+            "endpoint_source_hour_reserved": true,
+            "source_semantics": "hourly rows; reset repeats first row; final boundary hour conservatively included"
+          },
+          "canonical_class": "L4",
+          "design_variant": "main_L4_12"
+        },
+        {
+          "index": 52,
+          "id": "v17_L1_6b1b632f310c3f76e18d19cd",
+          "source_day_index": 236,
+          "start_hour": 5665,
+          "duration_minutes": 675.0,
+          "raw_support": {
+            "raw_start_minute": 339840,
+            "raw_end_minute": 340560,
+            "actual_trajectory_interval_minutes": [
+              339840,
+              340515.0
+            ],
+            "initialization_source_hours": [
+              5665
+            ],
+            "initialization_historical_minutes": 0,
+            "algebraic_initialization_iterations": 6,
+            "historical_observation_interval_minutes": [
+              0.0,
+              60.0
+            ],
+            "score_interval_minutes": [
+              60.0,
+              420.0
+            ],
+            "label_tail_interval_minutes": [
+              420.0,
+              600.0
+            ],
+            "endpoint_source_hour_reserved": true,
+            "source_semantics": "hourly rows; reset repeats first row; final boundary hour conservatively included"
+          },
+          "canonical_class": "L1",
+          "design_variant": "main_L1_13"
+        },
+        {
+          "index": 53,
+          "id": "v17_L2_c8375aef01a34b323135bbbc",
+          "source_day_index": 236,
+          "start_hour": 5665,
+          "duration_minutes": 675.0,
+          "raw_support": {
+            "raw_start_minute": 339840,
+            "raw_end_minute": 340560,
+            "actual_trajectory_interval_minutes": [
+              339840,
+              340515.0
+            ],
+            "initialization_source_hours": [
+              5665
+            ],
+            "initialization_historical_minutes": 0,
+            "algebraic_initialization_iterations": 6,
+            "historical_observation_interval_minutes": [
+              0.0,
+              60.0
+            ],
+            "score_interval_minutes": [
+              60.0,
+              420.0
+            ],
+            "label_tail_interval_minutes": [
+              420.0,
+              600.0
+            ],
+            "endpoint_source_hour_reserved": true,
+            "source_semantics": "hourly rows; reset repeats first row; final boundary hour conservatively included"
+          },
+          "canonical_class": "L2",
+          "design_variant": "main_L2_13"
+        },
+        {
+          "index": 54,
+          "id": "v17_L3_6b35cf677ef8d6d1e87d12e9",
+          "source_day_index": 236,
+          "start_hour": 5665,
+          "duration_minutes": 675.0,
+          "raw_support": {
+            "raw_start_minute": 339840,
+            "raw_end_minute": 340560,
+            "actual_trajectory_interval_minutes": [
+              339840,
+              340515.0
+            ],
+            "initialization_source_hours": [
+              5665
+            ],
+            "initialization_historical_minutes": 0,
+            "algebraic_initialization_iterations": 6,
+            "historical_observation_interval_minutes": [
+              0.0,
+              60.0
+            ],
+            "score_interval_minutes": [
+              60.0,
+              420.0
+            ],
+            "label_tail_interval_minutes": [
+              420.0,
+              600.0
+            ],
+            "endpoint_source_hour_reserved": true,
+            "source_semantics": "hourly rows; reset repeats first row; final boundary hour conservatively included"
+          },
+          "canonical_class": "L3",
+          "design_variant": "main_L3_13"
+        },
+        {
+          "index": 55,
+          "id": "v17_L4_0ada352dba7f7622310cd1a4",
+          "source_day_index": 236,
+          "start_hour": 5665,
+          "duration_minutes": 675.0,
+          "raw_support": {
+            "raw_start_minute": 339840,
+            "raw_end_minute": 340560,
+            "actual_trajectory_interval_minutes": [
+              339840,
+              340515.0
+            ],
+            "initialization_source_hours": [
+              5665
+            ],
+            "initialization_historical_minutes": 0,
+            "algebraic_initialization_iterations": 6,
+            "historical_observation_interval_minutes": [
+              0.0,
+              60.0
+            ],
+            "score_interval_minutes": [
+              60.0,
+              420.0
+            ],
+            "label_tail_interval_minutes": [
+              420.0,
+              600.0
+            ],
+            "endpoint_source_hour_reserved": true,
+            "source_semantics": "hourly rows; reset repeats first row; final boundary hour conservatively included"
+          },
+          "canonical_class": "L4",
+          "design_variant": "main_L4_13"
+        },
+        {
+          "index": 56,
+          "id": "v17_L1_218e4dbf64eacf47ecd1fb75",
+          "source_day_index": 239,
+          "start_hour": 5737,
+          "duration_minutes": 900.0,
+          "raw_support": {
+            "raw_start_minute": 344160,
+            "raw_end_minute": 345120,
+            "actual_trajectory_interval_minutes": [
+              344160,
+              345060.0
+            ],
+            "initialization_source_hours": [
+              5737
+            ],
+            "initialization_historical_minutes": 0,
+            "algebraic_initialization_iterations": 6,
+            "historical_observation_interval_minutes": [
+              0.0,
+              60.0
+            ],
+            "score_interval_minutes": [
+              60.0,
+              420.0
+            ],
+            "label_tail_interval_minutes": [
+              420.0,
+              600.0
+            ],
+            "endpoint_source_hour_reserved": true,
+            "source_semantics": "hourly rows; reset repeats first row; final boundary hour conservatively included"
+          },
+          "canonical_class": "L1",
+          "design_variant": "main_L1_14"
+        },
+        {
+          "index": 57,
+          "id": "v17_L2_e35e9214777386a88e4e48b8",
+          "source_day_index": 239,
+          "start_hour": 5737,
+          "duration_minutes": 900.0,
+          "raw_support": {
+            "raw_start_minute": 344160,
+            "raw_end_minute": 345120,
+            "actual_trajectory_interval_minutes": [
+              344160,
+              345060.0
+            ],
+            "initialization_source_hours": [
+              5737
+            ],
+            "initialization_historical_minutes": 0,
+            "algebraic_initialization_iterations": 6,
+            "historical_observation_interval_minutes": [
+              0.0,
+              60.0
+            ],
+            "score_interval_minutes": [
+              60.0,
+              420.0
+            ],
+            "label_tail_interval_minutes": [
+              420.0,
+              600.0
+            ],
+            "endpoint_source_hour_reserved": true,
+            "source_semantics": "hourly rows; reset repeats first row; final boundary hour conservatively included"
+          },
+          "canonical_class": "L2",
+          "design_variant": "main_L2_14"
+        },
+        {
+          "index": 58,
+          "id": "v17_L3_d73b10f91f990a20f1a9ca04",
+          "source_day_index": 239,
+          "start_hour": 5737,
+          "duration_minutes": 900.0,
+          "raw_support": {
+            "raw_start_minute": 344160,
+            "raw_end_minute": 345120,
+            "actual_trajectory_interval_minutes": [
+              344160,
+              345060.0
+            ],
+            "initialization_source_hours": [
+              5737
+            ],
+            "initialization_historical_minutes": 0,
+            "algebraic_initialization_iterations": 6,
+            "historical_observation_interval_minutes": [
+              0.0,
+              60.0
+            ],
+            "score_interval_minutes": [
+              60.0,
+              420.0
+            ],
+            "label_tail_interval_minutes": [
+              420.0,
+              600.0
+            ],
+            "endpoint_source_hour_reserved": true,
+            "source_semantics": "hourly rows; reset repeats first row; final boundary hour conservatively included"
+          },
+          "canonical_class": "L3",
+          "design_variant": "main_L3_14"
+        },
+        {
+          "index": 59,
+          "id": "v17_L4_42294e25fcebbd3eee664a87",
+          "source_day_index": 239,
+          "start_hour": 5737,
+          "duration_minutes": 900.0,
+          "raw_support": {
+            "raw_start_minute": 344160,
+            "raw_end_minute": 345120,
+            "actual_trajectory_interval_minutes": [
+              344160,
+              345060.0
+            ],
+            "initialization_source_hours": [
+              5737
+            ],
+            "initialization_historical_minutes": 0,
+            "algebraic_initialization_iterations": 6,
+            "historical_observation_interval_minutes": [
+              0.0,
+              60.0
+            ],
+            "score_interval_minutes": [
+              60.0,
+              420.0
+            ],
+            "label_tail_interval_minutes": [
+              420.0,
+              600.0
+            ],
+            "endpoint_source_hour_reserved": true,
+            "source_semantics": "hourly rows; reset repeats first row; final boundary hour conservatively included"
+          },
+          "canonical_class": "L4",
+          "design_variant": "main_L4_14"
+        },
+        {
+          "index": 60,
+          "id": "v17_L1_a468e4872ef3ea6efb22437e",
+          "source_day_index": 260,
+          "start_hour": 6241,
+          "duration_minutes": 600.0,
+          "raw_support": {
+            "raw_start_minute": 374400,
+            "raw_end_minute": 375060,
+            "actual_trajectory_interval_minutes": [
+              374400,
+              375000.0
+            ],
+            "initialization_source_hours": [
+              6241
+            ],
+            "initialization_historical_minutes": 0,
+            "algebraic_initialization_iterations": 6,
+            "historical_observation_interval_minutes": [
+              0.0,
+              60.0
+            ],
+            "score_interval_minutes": [
+              60.0,
+              420.0
+            ],
+            "label_tail_interval_minutes": [
+              420.0,
+              600.0
+            ],
+            "endpoint_source_hour_reserved": true,
+            "source_semantics": "hourly rows; reset repeats first row; final boundary hour conservatively included"
+          },
+          "canonical_class": "L1",
+          "design_variant": "main_L1_15"
+        },
+        {
+          "index": 61,
+          "id": "v17_L2_154951640fa5a1aea2374b2e",
+          "source_day_index": 260,
+          "start_hour": 6241,
+          "duration_minutes": 600.0,
+          "raw_support": {
+            "raw_start_minute": 374400,
+            "raw_end_minute": 375060,
+            "actual_trajectory_interval_minutes": [
+              374400,
+              375000.0
+            ],
+            "initialization_source_hours": [
+              6241
+            ],
+            "initialization_historical_minutes": 0,
+            "algebraic_initialization_iterations": 6,
+            "historical_observation_interval_minutes": [
+              0.0,
+              60.0
+            ],
+            "score_interval_minutes": [
+              60.0,
+              420.0
+            ],
+            "label_tail_interval_minutes": [
+              420.0,
+              600.0
+            ],
+            "endpoint_source_hour_reserved": true,
+            "source_semantics": "hourly rows; reset repeats first row; final boundary hour conservatively included"
+          },
+          "canonical_class": "L2",
+          "design_variant": "main_L2_15"
+        },
+        {
+          "index": 62,
+          "id": "v17_L3_cbea0e20286f126c4fefe6e8",
+          "source_day_index": 260,
+          "start_hour": 6241,
+          "duration_minutes": 600.0,
+          "raw_support": {
+            "raw_start_minute": 374400,
+            "raw_end_minute": 375060,
+            "actual_trajectory_interval_minutes": [
+              374400,
+              375000.0
+            ],
+            "initialization_source_hours": [
+              6241
+            ],
+            "initialization_historical_minutes": 0,
+            "algebraic_initialization_iterations": 6,
+            "historical_observation_interval_minutes": [
+              0.0,
+              60.0
+            ],
+            "score_interval_minutes": [
+              60.0,
+              420.0
+            ],
+            "label_tail_interval_minutes": [
+              420.0,
+              600.0
+            ],
+            "endpoint_source_hour_reserved": true,
+            "source_semantics": "hourly rows; reset repeats first row; final boundary hour conservatively included"
+          },
+          "canonical_class": "L3",
+          "design_variant": "main_L3_15"
+        },
+        {
+          "index": 63,
+          "id": "v17_L4_ecb2eec725d5919a6a3fbd68",
+          "source_day_index": 260,
+          "start_hour": 6241,
+          "duration_minutes": 600.0,
+          "raw_support": {
+            "raw_start_minute": 374400,
+            "raw_end_minute": 375060,
+            "actual_trajectory_interval_minutes": [
+              374400,
+              375000.0
+            ],
+            "initialization_source_hours": [
+              6241
+            ],
+            "initialization_historical_minutes": 0,
+            "algebraic_initialization_iterations": 6,
+            "historical_observation_interval_minutes": [
+              0.0,
+              60.0
+            ],
+            "score_interval_minutes": [
+              60.0,
+              420.0
+            ],
+            "label_tail_interval_minutes": [
+              420.0,
+              600.0
+            ],
+            "endpoint_source_hour_reserved": true,
+            "source_semantics": "hourly rows; reset repeats first row; final boundary hour conservatively included"
+          },
+          "canonical_class": "L4",
+          "design_variant": "main_L4_15"
+        },
+        {
+          "index": 64,
+          "id": "v17_L1_7868ca580bb4fb434d6820c9",
+          "source_day_index": 292,
+          "start_hour": 7009,
+          "duration_minutes": 600.0,
+          "raw_support": {
+            "raw_start_minute": 420480,
+            "raw_end_minute": 421140,
+            "actual_trajectory_interval_minutes": [
+              420480,
+              421080.0
+            ],
+            "initialization_source_hours": [
+              7009
+            ],
+            "initialization_historical_minutes": 0,
+            "algebraic_initialization_iterations": 6,
+            "historical_observation_interval_minutes": [
+              0.0,
+              60.0
+            ],
+            "score_interval_minutes": [
+              60.0,
+              420.0
+            ],
+            "label_tail_interval_minutes": [
+              420.0,
+              600.0
+            ],
+            "endpoint_source_hour_reserved": true,
+            "source_semantics": "hourly rows; reset repeats first row; final boundary hour conservatively included"
+          },
+          "canonical_class": "L1",
+          "design_variant": "main_L1_16"
+        },
+        {
+          "index": 65,
+          "id": "v17_L2_d2a17f08eb235566a3ec4094",
+          "source_day_index": 292,
+          "start_hour": 7009,
+          "duration_minutes": 600.0,
+          "raw_support": {
+            "raw_start_minute": 420480,
+            "raw_end_minute": 421140,
+            "actual_trajectory_interval_minutes": [
+              420480,
+              421080.0
+            ],
+            "initialization_source_hours": [
+              7009
+            ],
+            "initialization_historical_minutes": 0,
+            "algebraic_initialization_iterations": 6,
+            "historical_observation_interval_minutes": [
+              0.0,
+              60.0
+            ],
+            "score_interval_minutes": [
+              60.0,
+              420.0
+            ],
+            "label_tail_interval_minutes": [
+              420.0,
+              600.0
+            ],
+            "endpoint_source_hour_reserved": true,
+            "source_semantics": "hourly rows; reset repeats first row; final boundary hour conservatively included"
+          },
+          "canonical_class": "L2",
+          "design_variant": "main_L2_16"
+        },
+        {
+          "index": 66,
+          "id": "v17_L3_cf9c03a071d4968e364007ea",
+          "source_day_index": 292,
+          "start_hour": 7009,
+          "duration_minutes": 600.0,
+          "raw_support": {
+            "raw_start_minute": 420480,
+            "raw_end_minute": 421140,
+            "actual_trajectory_interval_minutes": [
+              420480,
+              421080.0
+            ],
+            "initialization_source_hours": [
+              7009
+            ],
+            "initialization_historical_minutes": 0,
+            "algebraic_initialization_iterations": 6,
+            "historical_observation_interval_minutes": [
+              0.0,
+              60.0
+            ],
+            "score_interval_minutes": [
+              60.0,
+              420.0
+            ],
+            "label_tail_interval_minutes": [
+              420.0,
+              600.0
+            ],
+            "endpoint_source_hour_reserved": true,
+            "source_semantics": "hourly rows; reset repeats first row; final boundary hour conservatively included"
+          },
+          "canonical_class": "L3",
+          "design_variant": "main_L3_16"
+        },
+        {
+          "index": 67,
+          "id": "v17_L4_a4f5b9b30175cdba88eb305e",
+          "source_day_index": 292,
+          "start_hour": 7009,
+          "duration_minutes": 600.0,
+          "raw_support": {
+            "raw_start_minute": 420480,
+            "raw_end_minute": 421140,
+            "actual_trajectory_interval_minutes": [
+              420480,
+              421080.0
+            ],
+            "initialization_source_hours": [
+              7009
+            ],
+            "initialization_historical_minutes": 0,
+            "algebraic_initialization_iterations": 6,
+            "historical_observation_interval_minutes": [
+              0.0,
+              60.0
+            ],
+            "score_interval_minutes": [
+              60.0,
+              420.0
+            ],
+            "label_tail_interval_minutes": [
+              420.0,
+              600.0
+            ],
+            "endpoint_source_hour_reserved": true,
+            "source_semantics": "hourly rows; reset repeats first row; final boundary hour conservatively included"
+          },
+          "canonical_class": "L4",
+          "design_variant": "main_L4_16"
+        },
+        {
+          "index": 68,
+          "id": "v17_L1_7f6927a4d94f423b8ea5a7e9",
+          "source_day_index": 326,
+          "start_hour": 7825,
+          "duration_minutes": 630.0,
+          "raw_support": {
+            "raw_start_minute": 469440,
+            "raw_end_minute": 470100,
+            "actual_trajectory_interval_minutes": [
+              469440,
+              470070.0
+            ],
+            "initialization_source_hours": [
+              7825
+            ],
+            "initialization_historical_minutes": 0,
+            "algebraic_initialization_iterations": 6,
+            "historical_observation_interval_minutes": [
+              0.0,
+              60.0
+            ],
+            "score_interval_minutes": [
+              60.0,
+              420.0
+            ],
+            "label_tail_interval_minutes": [
+              420.0,
+              600.0
+            ],
+            "endpoint_source_hour_reserved": true,
+            "source_semantics": "hourly rows; reset repeats first row; final boundary hour conservatively included"
+          },
+          "canonical_class": "L1",
+          "design_variant": "main_L1_17"
+        },
+        {
+          "index": 69,
+          "id": "v17_L2_71a3efb04c6a8bd3c78ecdc5",
+          "source_day_index": 326,
+          "start_hour": 7825,
+          "duration_minutes": 630.0,
+          "raw_support": {
+            "raw_start_minute": 469440,
+            "raw_end_minute": 470100,
+            "actual_trajectory_interval_minutes": [
+              469440,
+              470070.0
+            ],
+            "initialization_source_hours": [
+              7825
+            ],
+            "initialization_historical_minutes": 0,
+            "algebraic_initialization_iterations": 6,
+            "historical_observation_interval_minutes": [
+              0.0,
+              60.0
+            ],
+            "score_interval_minutes": [
+              60.0,
+              420.0
+            ],
+            "label_tail_interval_minutes": [
+              420.0,
+              600.0
+            ],
+            "endpoint_source_hour_reserved": true,
+            "source_semantics": "hourly rows; reset repeats first row; final boundary hour conservatively included"
+          },
+          "canonical_class": "L2",
+          "design_variant": "main_L2_17"
+        },
+        {
+          "index": 70,
+          "id": "v17_L3_cca3350297346ab1636e08aa",
+          "source_day_index": 326,
+          "start_hour": 7825,
+          "duration_minutes": 630.0,
+          "raw_support": {
+            "raw_start_minute": 469440,
+            "raw_end_minute": 470100,
+            "actual_trajectory_interval_minutes": [
+              469440,
+              470070.0
+            ],
+            "initialization_source_hours": [
+              7825
+            ],
+            "initialization_historical_minutes": 0,
+            "algebraic_initialization_iterations": 6,
+            "historical_observation_interval_minutes": [
+              0.0,
+              60.0
+            ],
+            "score_interval_minutes": [
+              60.0,
+              420.0
+            ],
+            "label_tail_interval_minutes": [
+              420.0,
+              600.0
+            ],
+            "endpoint_source_hour_reserved": true,
+            "source_semantics": "hourly rows; reset repeats first row; final boundary hour conservatively included"
+          },
+          "canonical_class": "L3",
+          "design_variant": "main_L3_17"
+        },
+        {
+          "index": 71,
+          "id": "v17_L4_15b0018e6655eb542a9af2cc",
+          "source_day_index": 326,
+          "start_hour": 7825,
+          "duration_minutes": 630.0,
+          "raw_support": {
+            "raw_start_minute": 469440,
+            "raw_end_minute": 470100,
+            "actual_trajectory_interval_minutes": [
+              469440,
+              470070.0
+            ],
+            "initialization_source_hours": [
+              7825
+            ],
+            "initialization_historical_minutes": 0,
+            "algebraic_initialization_iterations": 6,
+            "historical_observation_interval_minutes": [
+              0.0,
+              60.0
+            ],
+            "score_interval_minutes": [
+              60.0,
+              420.0
+            ],
+            "label_tail_interval_minutes": [
+              420.0,
+              600.0
+            ],
+            "endpoint_source_hour_reserved": true,
+            "source_semantics": "hourly rows; reset repeats first row; final boundary hour conservatively included"
+          },
+          "canonical_class": "L4",
+          "design_variant": "main_L4_17"
+        },
+        {
+          "index": 72,
+          "id": "v17_L1_5e49da7b844e52d6f47a3e4b",
+          "source_day_index": 329,
+          "start_hour": 7897,
+          "duration_minutes": 795.0,
+          "raw_support": {
+            "raw_start_minute": 473760,
+            "raw_end_minute": 474600,
+            "actual_trajectory_interval_minutes": [
+              473760,
+              474555.0
+            ],
+            "initialization_source_hours": [
+              7897
+            ],
+            "initialization_historical_minutes": 0,
+            "algebraic_initialization_iterations": 6,
+            "historical_observation_interval_minutes": [
+              0.0,
+              60.0
+            ],
+            "score_interval_minutes": [
+              60.0,
+              420.0
+            ],
+            "label_tail_interval_minutes": [
+              420.0,
+              600.0
+            ],
+            "endpoint_source_hour_reserved": true,
+            "source_semantics": "hourly rows; reset repeats first row; final boundary hour conservatively included"
+          },
+          "canonical_class": "L1",
+          "design_variant": "main_L1_18"
+        },
+        {
+          "index": 73,
+          "id": "v17_L2_f5d72ccde3b848fdb592204d",
+          "source_day_index": 329,
+          "start_hour": 7897,
+          "duration_minutes": 795.0,
+          "raw_support": {
+            "raw_start_minute": 473760,
+            "raw_end_minute": 474600,
+            "actual_trajectory_interval_minutes": [
+              473760,
+              474555.0
+            ],
+            "initialization_source_hours": [
+              7897
+            ],
+            "initialization_historical_minutes": 0,
+            "algebraic_initialization_iterations": 6,
+            "historical_observation_interval_minutes": [
+              0.0,
+              60.0
+            ],
+            "score_interval_minutes": [
+              60.0,
+              420.0
+            ],
+            "label_tail_interval_minutes": [
+              420.0,
+              600.0
+            ],
+            "endpoint_source_hour_reserved": true,
+            "source_semantics": "hourly rows; reset repeats first row; final boundary hour conservatively included"
+          },
+          "canonical_class": "L2",
+          "design_variant": "main_L2_18"
+        },
+        {
+          "index": 74,
+          "id": "v17_L3_4a6b9e376097bc9706add9a6",
+          "source_day_index": 329,
+          "start_hour": 7897,
+          "duration_minutes": 795.0,
+          "raw_support": {
+            "raw_start_minute": 473760,
+            "raw_end_minute": 474600,
+            "actual_trajectory_interval_minutes": [
+              473760,
+              474555.0
+            ],
+            "initialization_source_hours": [
+              7897
+            ],
+            "initialization_historical_minutes": 0,
+            "algebraic_initialization_iterations": 6,
+            "historical_observation_interval_minutes": [
+              0.0,
+              60.0
+            ],
+            "score_interval_minutes": [
+              60.0,
+              420.0
+            ],
+            "label_tail_interval_minutes": [
+              420.0,
+              600.0
+            ],
+            "endpoint_source_hour_reserved": true,
+            "source_semantics": "hourly rows; reset repeats first row; final boundary hour conservatively included"
+          },
+          "canonical_class": "L3",
+          "design_variant": "main_L3_18"
+        },
+        {
+          "index": 75,
+          "id": "v17_L4_c3c1562ede147d80bcea0dd9",
+          "source_day_index": 329,
+          "start_hour": 7897,
+          "duration_minutes": 795.0,
+          "raw_support": {
+            "raw_start_minute": 473760,
+            "raw_end_minute": 474600,
+            "actual_trajectory_interval_minutes": [
+              473760,
+              474555.0
+            ],
+            "initialization_source_hours": [
+              7897
+            ],
+            "initialization_historical_minutes": 0,
+            "algebraic_initialization_iterations": 6,
+            "historical_observation_interval_minutes": [
+              0.0,
+              60.0
+            ],
+            "score_interval_minutes": [
+              60.0,
+              420.0
+            ],
+            "label_tail_interval_minutes": [
+              420.0,
+              600.0
+            ],
+            "endpoint_source_hour_reserved": true,
+            "source_semantics": "hourly rows; reset repeats first row; final boundary hour conservatively included"
+          },
+          "canonical_class": "L4",
+          "design_variant": "main_L4_18"
+        },
+        {
+          "index": 76,
+          "id": "v17_L1_66d7ed84325e88684821301c",
+          "source_day_index": 349,
+          "start_hour": 8377,
+          "duration_minutes": 765.0,
+          "raw_support": {
+            "raw_start_minute": 502560,
+            "raw_end_minute": 503340,
+            "actual_trajectory_interval_minutes": [
+              502560,
+              503325.0
+            ],
+            "initialization_source_hours": [
+              8377
+            ],
+            "initialization_historical_minutes": 0,
+            "algebraic_initialization_iterations": 6,
+            "historical_observation_interval_minutes": [
+              0.0,
+              60.0
+            ],
+            "score_interval_minutes": [
+              60.0,
+              420.0
+            ],
+            "label_tail_interval_minutes": [
+              420.0,
+              600.0
+            ],
+            "endpoint_source_hour_reserved": true,
+            "source_semantics": "hourly rows; reset repeats first row; final boundary hour conservatively included"
+          },
+          "canonical_class": "L1",
+          "design_variant": "main_L1_19"
+        },
+        {
+          "index": 77,
+          "id": "v17_L2_47f2ec8cd89009a922cedbe2",
+          "source_day_index": 349,
+          "start_hour": 8377,
+          "duration_minutes": 765.0,
+          "raw_support": {
+            "raw_start_minute": 502560,
+            "raw_end_minute": 503340,
+            "actual_trajectory_interval_minutes": [
+              502560,
+              503325.0
+            ],
+            "initialization_source_hours": [
+              8377
+            ],
+            "initialization_historical_minutes": 0,
+            "algebraic_initialization_iterations": 6,
+            "historical_observation_interval_minutes": [
+              0.0,
+              60.0
+            ],
+            "score_interval_minutes": [
+              60.0,
+              420.0
+            ],
+            "label_tail_interval_minutes": [
+              420.0,
+              600.0
+            ],
+            "endpoint_source_hour_reserved": true,
+            "source_semantics": "hourly rows; reset repeats first row; final boundary hour conservatively included"
+          },
+          "canonical_class": "L2",
+          "design_variant": "main_L2_19"
+        },
+        {
+          "index": 78,
+          "id": "v17_L3_49f04f99c75df4d5cfc65f29",
+          "source_day_index": 349,
+          "start_hour": 8377,
+          "duration_minutes": 765.0,
+          "raw_support": {
+            "raw_start_minute": 502560,
+            "raw_end_minute": 503340,
+            "actual_trajectory_interval_minutes": [
+              502560,
+              503325.0
+            ],
+            "initialization_source_hours": [
+              8377
+            ],
+            "initialization_historical_minutes": 0,
+            "algebraic_initialization_iterations": 6,
+            "historical_observation_interval_minutes": [
+              0.0,
+              60.0
+            ],
+            "score_interval_minutes": [
+              60.0,
+              420.0
+            ],
+            "label_tail_interval_minutes": [
+              420.0,
+              600.0
+            ],
+            "endpoint_source_hour_reserved": true,
+            "source_semantics": "hourly rows; reset repeats first row; final boundary hour conservatively included"
+          },
+          "canonical_class": "L3",
+          "design_variant": "main_L3_19"
+        },
+        {
+          "index": 79,
+          "id": "v17_L4_f8a72fd72d463473ec70c4b6",
+          "source_day_index": 349,
+          "start_hour": 8377,
+          "duration_minutes": 765.0,
+          "raw_support": {
+            "raw_start_minute": 502560,
+            "raw_end_minute": 503340,
+            "actual_trajectory_interval_minutes": [
+              502560,
+              503325.0
+            ],
+            "initialization_source_hours": [
+              8377
+            ],
+            "initialization_historical_minutes": 0,
+            "algebraic_initialization_iterations": 6,
+            "historical_observation_interval_minutes": [
+              0.0,
+              60.0
+            ],
+            "score_interval_minutes": [
+              60.0,
+              420.0
+            ],
+            "label_tail_interval_minutes": [
+              420.0,
+              600.0
+            ],
+            "endpoint_source_hour_reserved": true,
+            "source_semantics": "hourly rows; reset repeats first row; final boundary hour conservatively included"
+          },
+          "canonical_class": "L4",
+          "design_variant": "main_L4_19"
+        }
+      ]
+    },
+    {
+      "source_proposal": "outputs/v18_execution_recovery_20261018_run01/design/NORMAL_FINAL_R1_PROPOSAL.json",
+      "source_sha256": "adb854e00f0ceac5fe93232a39d2ad419f4b8e96001336925d4345b3aaea85fb",
+      "specifications": 4,
+      "expected_specifications": 4,
+      "planned_trajectories": 12,
+      "policy_count": 3,
+      "scenario_metadata": [
+        {
+          "index": 0,
+          "id": "v17_N2_b4ceb5196ab287f531271081",
+          "source_day_index": 47,
+          "start_hour": 1129,
+          "duration_minutes": 1440.0,
+          "raw_support": {
+            "raw_start_minute": 67680,
+            "raw_end_minute": 69180,
+            "actual_trajectory_interval_minutes": [
+              67680,
+              69120.0
+            ],
+            "initialization_source_hours": [
+              1129
+            ],
+            "initialization_historical_minutes": 0,
+            "algebraic_initialization_iterations": 6,
+            "historical_observation_interval_minutes": [
+              0.0,
+              60.0
+            ],
+            "score_interval_minutes": [
+              60.0,
+              420.0
+            ],
+            "label_tail_interval_minutes": [
+              420.0,
+              600.0
+            ],
+            "endpoint_source_hour_reserved": true,
+            "source_semantics": "hourly rows; reset repeats first row; final boundary hour conservatively included"
+          },
+          "canonical_class": "N2",
+          "design_variant": "normal_24.0"
+        },
+        {
+          "index": 1,
+          "id": "v17_N2_e0d9a833029c50478833febd",
+          "source_day_index": 113,
+          "start_hour": 2713,
+          "duration_minutes": 2880.0,
+          "raw_support": {
+            "raw_start_minute": 162720,
+            "raw_end_minute": 165660,
+            "actual_trajectory_interval_minutes": [
+              162720,
+              165600.0
+            ],
+            "initialization_source_hours": [
+              2713
+            ],
+            "initialization_historical_minutes": 0,
+            "algebraic_initialization_iterations": 6,
+            "historical_observation_interval_minutes": [
+              0.0,
+              60.0
+            ],
+            "score_interval_minutes": [
+              60.0,
+              420.0
+            ],
+            "label_tail_interval_minutes": [
+              420.0,
+              600.0
+            ],
+            "endpoint_source_hour_reserved": true,
+            "source_semantics": "hourly rows; reset repeats first row; final boundary hour conservatively included"
+          },
+          "canonical_class": "N2",
+          "design_variant": "normal_48.0"
+        },
+        {
+          "index": 2,
+          "id": "v17_N2_d7ae489a9d9b2341333e4104",
+          "source_day_index": 202,
+          "start_hour": 4849,
+          "duration_minutes": 4320.0,
+          "raw_support": {
+            "raw_start_minute": 290880,
+            "raw_end_minute": 295260,
+            "actual_trajectory_interval_minutes": [
+              290880,
+              295200.0
+            ],
+            "initialization_source_hours": [
+              4849
+            ],
+            "initialization_historical_minutes": 0,
+            "algebraic_initialization_iterations": 6,
+            "historical_observation_interval_minutes": [
+              0.0,
+              60.0
+            ],
+            "score_interval_minutes": [
+              60.0,
+              420.0
+            ],
+            "label_tail_interval_minutes": [
+              420.0,
+              600.0
+            ],
+            "endpoint_source_hour_reserved": true,
+            "source_semantics": "hourly rows; reset repeats first row; final boundary hour conservatively included"
+          },
+          "canonical_class": "N2",
+          "design_variant": "normal_72.0"
+        },
+        {
+          "index": 3,
+          "id": "v17_N2_68c28ce356bdd0d883b76642",
+          "source_day_index": 353,
+          "start_hour": 8473,
+          "duration_minutes": 1440.0,
+          "raw_support": {
+            "raw_start_minute": 508320,
+            "raw_end_minute": 509820,
+            "actual_trajectory_interval_minutes": [
+              508320,
+              509760.0
+            ],
+            "initialization_source_hours": [
+              8473
+            ],
+            "initialization_historical_minutes": 0,
+            "algebraic_initialization_iterations": 6,
+            "historical_observation_interval_minutes": [
+              0.0,
+              60.0
+            ],
+            "score_interval_minutes": [
+              60.0,
+              420.0
+            ],
+            "label_tail_interval_minutes": [
+              420.0,
+              600.0
+            ],
+            "endpoint_source_hour_reserved": true,
+            "source_semantics": "hourly rows; reset repeats first row; final boundary hour conservatively included"
+          },
+          "canonical_class": "N2",
+          "design_variant": "normal_24.0"
+        }
+      ]
+    },
+    {
+      "source_proposal": "outputs/v18_execution_recovery_20261018_run01/design/LONG_FINAL_R1_PROPOSAL.json",
+      "source_sha256": "4c5ef87c24c4e8000bf8b54c663801178de8516b61a78090381cc392b34e3e48",
+      "specifications": 8,
+      "expected_specifications": 8,
+      "planned_trajectories": 24,
+      "policy_count": 3,
+      "scenario_metadata": [
+        {
+          "index": 0,
+          "id": "v17_L1_c3293aa6e9401f244ec3406c",
+          "source_day_index": 40,
+          "start_hour": 961,
+          "duration_minutes": 1065.0,
+          "raw_support": {
+            "raw_start_minute": 57600,
+            "raw_end_minute": 58680,
+            "actual_trajectory_interval_minutes": [
+              57600,
+              58665.0
+            ],
+            "initialization_source_hours": [
+              961
+            ],
+            "initialization_historical_minutes": 0,
+            "algebraic_initialization_iterations": 6,
+            "historical_observation_interval_minutes": [
+              0.0,
+              60.0
+            ],
+            "score_interval_minutes": [
+              60.0,
+              420.0
+            ],
+            "label_tail_interval_minutes": [
+              420.0,
+              600.0
+            ],
+            "endpoint_source_hour_reserved": true,
+            "source_semantics": "hourly rows; reset repeats first row; final boundary hour conservatively included"
+          },
+          "canonical_class": "L1",
+          "design_variant": "long_outage_v17_v16_L1_2b57aea8ac2a2f870c02630f"
+        },
+        {
+          "index": 1,
+          "id": "v17_L1_0995567ca7ec6a68eb33cb68",
+          "source_day_index": 40,
+          "start_hour": 961,
+          "duration_minutes": 1065.0,
+          "raw_support": {
+            "raw_start_minute": 57600,
+            "raw_end_minute": 58680,
+            "actual_trajectory_interval_minutes": [
+              57600,
+              58665.0
+            ],
+            "initialization_source_hours": [
+              961
+            ],
+            "initialization_historical_minutes": 0,
+            "algebraic_initialization_iterations": 6,
+            "historical_observation_interval_minutes": [
+              0.0,
+              60.0
+            ],
+            "score_interval_minutes": [
+              60.0,
+              420.0
+            ],
+            "label_tail_interval_minutes": [
+              420.0,
+              600.0
+            ],
+            "endpoint_source_hour_reserved": true,
+            "source_semantics": "hourly rows; reset repeats first row; final boundary hour conservatively included"
+          },
+          "canonical_class": "L1",
+          "design_variant": "long_outage_v17_v16_L1_41c5adf85d2f969afc1c474d"
+        },
+        {
+          "index": 2,
+          "id": "v17_L4_9c15f066a87ebf45f0acc31d",
+          "source_day_index": 70,
+          "start_hour": 1681,
+          "duration_minutes": 1065.0,
+          "raw_support": {
+            "raw_start_minute": 100800,
+            "raw_end_minute": 101880,
+            "actual_trajectory_interval_minutes": [
+              100800,
+              101865.0
+            ],
+            "initialization_source_hours": [
+              1681
+            ],
+            "initialization_historical_minutes": 0,
+            "algebraic_initialization_iterations": 6,
+            "historical_observation_interval_minutes": [
+              0.0,
+              60.0
+            ],
+            "score_interval_minutes": [
+              60.0,
+              420.0
+            ],
+            "label_tail_interval_minutes": [
+              420.0,
+              600.0
+            ],
+            "endpoint_source_hour_reserved": true,
+            "source_semantics": "hourly rows; reset repeats first row; final boundary hour conservatively included"
+          },
+          "canonical_class": "L4",
+          "design_variant": "long_outage_v17_v16_L4b_f73f727bf3e61a0466498324"
+        },
+        {
+          "index": 3,
+          "id": "v17_L4_43a206ad03d1a5ec334e4cae",
+          "source_day_index": 70,
+          "start_hour": 1681,
+          "duration_minutes": 1065.0,
+          "raw_support": {
+            "raw_start_minute": 100800,
+            "raw_end_minute": 101880,
+            "actual_trajectory_interval_minutes": [
+              100800,
+              101865.0
+            ],
+            "initialization_source_hours": [
+              1681
+            ],
+            "initialization_historical_minutes": 0,
+            "algebraic_initialization_iterations": 6,
+            "historical_observation_interval_minutes": [
+              0.0,
+              60.0
+            ],
+            "score_interval_minutes": [
+              60.0,
+              420.0
+            ],
+            "label_tail_interval_minutes": [
+              420.0,
+              600.0
+            ],
+            "endpoint_source_hour_reserved": true,
+            "source_semantics": "hourly rows; reset repeats first row; final boundary hour conservatively included"
+          },
+          "canonical_class": "L4",
+          "design_variant": "long_outage_v17_v16_L4b_a50f24512aca83ef6ee5a2c1"
+        },
+        {
+          "index": 4,
+          "id": "v17_L4_0cc5382dc74b2c88db5f224b",
+          "source_day_index": 100,
+          "start_hour": 2401,
+          "duration_minutes": 1065.0,
+          "raw_support": {
+            "raw_start_minute": 144000,
+            "raw_end_minute": 145080,
+            "actual_trajectory_interval_minutes": [
+              144000,
+              145065.0
+            ],
+            "initialization_source_hours": [
+              2401
+            ],
+            "initialization_historical_minutes": 0,
+            "algebraic_initialization_iterations": 6,
+            "historical_observation_interval_minutes": [
+              0.0,
+              60.0
+            ],
+            "score_interval_minutes": [
+              60.0,
+              420.0
+            ],
+            "label_tail_interval_minutes": [
+              420.0,
+              600.0
+            ],
+            "endpoint_source_hour_reserved": true,
+            "source_semantics": "hourly rows; reset repeats first row; final boundary hour conservatively included"
+          },
+          "canonical_class": "L4",
+          "design_variant": "long_outage_v17_v16_L4b_ee60c61098cad5a39b4c1108"
+        },
+        {
+          "index": 5,
+          "id": "v17_L4_389265c703efac3494a1ce02",
+          "source_day_index": 100,
+          "start_hour": 2401,
+          "duration_minutes": 1065.0,
+          "raw_support": {
+            "raw_start_minute": 144000,
+            "raw_end_minute": 145080,
+            "actual_trajectory_interval_minutes": [
+              144000,
+              145065.0
+            ],
+            "initialization_source_hours": [
+              2401
+            ],
+            "initialization_historical_minutes": 0,
+            "algebraic_initialization_iterations": 6,
+            "historical_observation_interval_minutes": [
+              0.0,
+              60.0
+            ],
+            "score_interval_minutes": [
+              60.0,
+              420.0
+            ],
+            "label_tail_interval_minutes": [
+              420.0,
+              600.0
+            ],
+            "endpoint_source_hour_reserved": true,
+            "source_semantics": "hourly rows; reset repeats first row; final boundary hour conservatively included"
+          },
+          "canonical_class": "L4",
+          "design_variant": "long_outage_v17_v16_L4b_bbe594c9adb1f1f9eaa51c78"
+        },
+        {
+          "index": 6,
+          "id": "v17_L4_2e117d129f125a3a6d573eb4",
+          "source_day_index": 160,
+          "start_hour": 3841,
+          "duration_minutes": 1065.0,
+          "raw_support": {
+            "raw_start_minute": 230400,
+            "raw_end_minute": 231480,
+            "actual_trajectory_interval_minutes": [
+              230400,
+              231465.0
+            ],
+            "initialization_source_hours": [
+              3841
+            ],
+            "initialization_historical_minutes": 0,
+            "algebraic_initialization_iterations": 6,
+            "historical_observation_interval_minutes": [
+              0.0,
+              60.0
+            ],
+            "score_interval_minutes": [
+              60.0,
+              420.0
+            ],
+            "label_tail_interval_minutes": [
+              420.0,
+              600.0
+            ],
+            "endpoint_source_hour_reserved": true,
+            "source_semantics": "hourly rows; reset repeats first row; final boundary hour conservatively included"
+          },
+          "canonical_class": "L4",
+          "design_variant": "long_outage_v17_v16_L4b_250c5e5993819a71474c6931"
+        },
+        {
+          "index": 7,
+          "id": "v17_L4_649e27ae52a573ef10e673bd",
+          "source_day_index": 160,
+          "start_hour": 3841,
+          "duration_minutes": 1065.0,
+          "raw_support": {
+            "raw_start_minute": 230400,
+            "raw_end_minute": 231480,
+            "actual_trajectory_interval_minutes": [
+              230400,
+              231465.0
+            ],
+            "initialization_source_hours": [
+              3841
+            ],
+            "initialization_historical_minutes": 0,
+            "algebraic_initialization_iterations": 6,
+            "historical_observation_interval_minutes": [
+              0.0,
+              60.0
+            ],
+            "score_interval_minutes": [
+              60.0,
+              420.0
+            ],
+            "label_tail_interval_minutes": [
+              420.0,
+              600.0
+            ],
+            "endpoint_source_hour_reserved": true,
+            "source_semantics": "hourly rows; reset repeats first row; final boundary hour conservatively included"
+          },
+          "canonical_class": "L4",
+          "design_variant": "long_outage_v17_v16_L4b_d0b9f356e2d29856d93de319"
+        }
+      ]
+    },
+    {
+      "source_proposal": "outputs/v18_execution_recovery_20261018_run01/design/PROPAGATION_FINAL_R1_PROPOSAL.json",
+      "source_sha256": "1a41d6fd5422a384a6b2ef04baf6781434ba7c02836de871d809e2f7e54be602",
+      "specifications": 6,
+      "expected_specifications": 6,
+      "planned_trajectories": 18,
+      "policy_count": 3,
+      "scenario_metadata": [
+        {
+          "index": 0,
+          "id": "v17_L4_a30b65a2d99406faedc08d53",
+          "source_day_index": 10,
+          "start_hour": 241,
+          "duration_minutes": 600.0,
+          "raw_support": {
+            "raw_start_minute": 14400,
+            "raw_end_minute": 15060,
+            "actual_trajectory_interval_minutes": [
+              14400,
+              15000.0
+            ],
+            "initialization_source_hours": [
+              241
+            ],
+            "initialization_historical_minutes": 0,
+            "algebraic_initialization_iterations": 6,
+            "historical_observation_interval_minutes": [
+              0.0,
+              60.0
+            ],
+            "score_interval_minutes": [
+              60.0,
+              420.0
+            ],
+            "label_tail_interval_minutes": [
+              420.0,
+              600.0
+            ],
+            "endpoint_source_hour_reserved": true,
+            "source_semantics": "hourly rows; reset repeats first row; final boundary hour conservatively included"
+          },
+          "canonical_class": "L4",
+          "design_variant": "GRID_GT_propagation_0.15_True"
+        },
+        {
+          "index": 1,
+          "id": "v17_L4_2ce3a5ff988bffb403f17841",
+          "source_day_index": 10,
+          "start_hour": 241,
+          "duration_minutes": 600.0,
+          "raw_support": {
+            "raw_start_minute": 14400,
+            "raw_end_minute": 15060,
+            "actual_trajectory_interval_minutes": [
+              14400,
+              15000.0
+            ],
+            "initialization_source_hours": [
+              241
+            ],
+            "initialization_historical_minutes": 0,
+            "algebraic_initialization_iterations": 6,
+            "historical_observation_interval_minutes": [
+              0.0,
+              60.0
+            ],
+            "score_interval_minutes": [
+              60.0,
+              420.0
+            ],
+            "label_tail_interval_minutes": [
+              420.0,
+              600.0
+            ],
+            "endpoint_source_hour_reserved": true,
+            "source_semantics": "hourly rows; reset repeats first row; final boundary hour conservatively included"
+          },
+          "canonical_class": "L4",
+          "design_variant": "GRID_GT_propagation_0.15_False"
+        },
+        {
+          "index": 2,
+          "id": "v17_L4_09435ced65b39306a1cbae0f",
+          "source_day_index": 10,
+          "start_hour": 241,
+          "duration_minutes": 600.0,
+          "raw_support": {
+            "raw_start_minute": 14400,
+            "raw_end_minute": 15060,
+            "actual_trajectory_interval_minutes": [
+              14400,
+              15000.0
+            ],
+            "initialization_source_hours": [
+              241
+            ],
+            "initialization_historical_minutes": 0,
+            "algebraic_initialization_iterations": 6,
+            "historical_observation_interval_minutes": [
+              0.0,
+              60.0
+            ],
+            "score_interval_minutes": [
+              60.0,
+              420.0
+            ],
+            "label_tail_interval_minutes": [
+              420.0,
+              600.0
+            ],
+            "endpoint_source_hour_reserved": true,
+            "source_semantics": "hourly rows; reset repeats first row; final boundary hour conservatively included"
+          },
+          "canonical_class": "L4",
+          "design_variant": "GRID_GT_propagation_0.35_True"
+        },
+        {
+          "index": 3,
+          "id": "v17_L4_98f0a578e32994e007abce2a",
+          "source_day_index": 10,
+          "start_hour": 241,
+          "duration_minutes": 600.0,
+          "raw_support": {
+            "raw_start_minute": 14400,
+            "raw_end_minute": 15060,
+            "actual_trajectory_interval_minutes": [
+              14400,
+              15000.0
+            ],
+            "initialization_source_hours": [
+              241
+            ],
+            "initialization_historical_minutes": 0,
+            "algebraic_initialization_iterations": 6,
+            "historical_observation_interval_minutes": [
+              0.0,
+              60.0
+            ],
+            "score_interval_minutes": [
+              60.0,
+              420.0
+            ],
+            "label_tail_interval_minutes": [
+              420.0,
+              600.0
+            ],
+            "endpoint_source_hour_reserved": true,
+            "source_semantics": "hourly rows; reset repeats first row; final boundary hour conservatively included"
+          },
+          "canonical_class": "L4",
+          "design_variant": "GRID_GT_propagation_0.35_False"
+        },
+        {
+          "index": 4,
+          "id": "v17_L4_eb3c02f70264966adc9229bd",
+          "source_day_index": 10,
+          "start_hour": 241,
+          "duration_minutes": 600.0,
+          "raw_support": {
+            "raw_start_minute": 14400,
+            "raw_end_minute": 15060,
+            "actual_trajectory_interval_minutes": [
+              14400,
+              15000.0
+            ],
+            "initialization_source_hours": [
+              241
+            ],
+            "initialization_historical_minutes": 0,
+            "algebraic_initialization_iterations": 6,
+            "historical_observation_interval_minutes": [
+              0.0,
+              60.0
+            ],
+            "score_interval_minutes": [
+              60.0,
+              420.0
+            ],
+            "label_tail_interval_minutes": [
+              420.0,
+              600.0
+            ],
+            "endpoint_source_hour_reserved": true,
+            "source_semantics": "hourly rows; reset repeats first row; final boundary hour conservatively included"
+          },
+          "canonical_class": "L4",
+          "design_variant": "GRID_GT_propagation_0.6_True"
+        },
+        {
+          "index": 5,
+          "id": "v17_L4_b0d0b44c7cb3bfe0e16fd163",
+          "source_day_index": 10,
+          "start_hour": 241,
+          "duration_minutes": 600.0,
+          "raw_support": {
+            "raw_start_minute": 14400,
+            "raw_end_minute": 15060,
+            "actual_trajectory_interval_minutes": [
+              14400,
+              15000.0
+            ],
+            "initialization_source_hours": [
+              241
+            ],
+            "initialization_historical_minutes": 0,
+            "algebraic_initialization_iterations": 6,
+            "historical_observation_interval_minutes": [
+              0.0,
+              60.0
+            ],
+            "score_interval_minutes": [
+              60.0,
+              420.0
+            ],
+            "label_tail_interval_minutes": [
+              420.0,
+              600.0
+            ],
+            "endpoint_source_hour_reserved": true,
+            "source_semantics": "hourly rows; reset repeats first row; final boundary hour conservatively included"
+          },
+          "canonical_class": "L4",
+          "design_variant": "GRID_GT_propagation_0.6_False"
+        }
+      ]
+    },
+    {
+      "source_proposal": "outputs/v18_execution_recovery_20261018_run01/design/SENSITIVITY_OPEN1_R1_PROPOSAL.json",
+      "source_sha256": "7028266792904905a48a9bab65e9a8850656377fb3c62dd521c27c400d841db2",
+      "specifications": 2,
+      "expected_specifications": 2,
+      "planned_trajectories": 6,
+      "policy_count": 3,
+      "scenario_metadata": [
+        {
+          "index": 0,
+          "id": "v17_L4_c2faf2e1d7f42b796ae27e04",
+          "source_day_index": 5,
+          "start_hour": 121,
+          "duration_minutes": 600.0,
+          "raw_support": {
+            "raw_start_minute": 7200,
+            "raw_end_minute": 7860,
+            "actual_trajectory_interval_minutes": [
+              7200,
+              7800.0
+            ],
+            "initialization_source_hours": [
+              121
+            ],
+            "initialization_historical_minutes": 0,
+            "algebraic_initialization_iterations": 6,
+            "historical_observation_interval_minutes": [
+              0.0,
+              60.0
+            ],
+            "score_interval_minutes": [
+              60.0,
+              420.0
+            ],
+            "label_tail_interval_minutes": [
+              420.0,
+              600.0
+            ],
+            "endpoint_source_hour_reserved": true,
+            "source_semantics": "hourly rows; reset repeats first row; final boundary hour conservatively included"
+          },
+          "canonical_class": "L4",
+          "design_variant": "main_L4_0"
+        },
+        {
+          "index": 1,
+          "id": "v17_L4_a4f5b9b30175cdba88eb305e",
+          "source_day_index": 292,
+          "start_hour": 7009,
+          "duration_minutes": 600.0,
+          "raw_support": {
+            "raw_start_minute": 420480,
+            "raw_end_minute": 421140,
+            "actual_trajectory_interval_minutes": [
+              420480,
+              421080.0
+            ],
+            "initialization_source_hours": [
+              7009
+            ],
+            "initialization_historical_minutes": 0,
+            "algebraic_initialization_iterations": 6,
+            "historical_observation_interval_minutes": [
+              0.0,
+              60.0
+            ],
+            "score_interval_minutes": [
+              60.0,
+              420.0
+            ],
+            "label_tail_interval_minutes": [
+              420.0,
+              600.0
+            ],
+            "endpoint_source_hour_reserved": true,
+            "source_semantics": "hourly rows; reset repeats first row; final boundary hour conservatively included"
+          },
+          "canonical_class": "L4",
+          "design_variant": "main_L4_16"
+        }
+      ]
+    },
+    {
+      "source_proposal": "outputs/v18_execution_recovery_20261018_run01/design/SENSITIVITY_CONTACT025_R1_PROPOSAL.json",
+      "source_sha256": "7a3c2c3f2824409a1fcb0fa4468ac40b98991ed4a154c75bc69e16af9e44caf7",
+      "specifications": 1,
+      "expected_specifications": 1,
+      "planned_trajectories": 3,
+      "policy_count": 3,
+      "scenario_metadata": [
+        {
+          "index": 0,
+          "id": "v17_L4_389265c703efac3494a1ce02",
+          "source_day_index": 100,
+          "start_hour": 2401,
+          "duration_minutes": 1065.0,
+          "raw_support": {
+            "raw_start_minute": 144000,
+            "raw_end_minute": 145080,
+            "actual_trajectory_interval_minutes": [
+              144000,
+              145065.0
+            ],
+            "initialization_source_hours": [
+              2401
+            ],
+            "initialization_historical_minutes": 0,
+            "algebraic_initialization_iterations": 6,
+            "historical_observation_interval_minutes": [
+              0.0,
+              60.0
+            ],
+            "score_interval_minutes": [
+              60.0,
+              420.0
+            ],
+            "label_tail_interval_minutes": [
+              420.0,
+              600.0
+            ],
+            "endpoint_source_hour_reserved": true,
+            "source_semantics": "hourly rows; reset repeats first row; final boundary hour conservatively included"
+          },
+          "canonical_class": "L4",
+          "design_variant": "long_outage_v17_v16_L4b_bbe594c9adb1f1f9eaa51c78"
+        }
+      ]
+    },
+    {
+      "source_proposal": "outputs/v18_execution_recovery_20261018_run01/design/COMPAT_FINAL_R1_PROPOSAL.json",
+      "source_sha256": "b230db3f0950d86af36e8b7c0de8ed4f4ff784acf9581a0ef345b078c6c09d6b",
+      "specifications": 5,
+      "expected_specifications": 5,
+      "planned_trajectories": 5,
+      "policy_count": 1,
+      "scenario_metadata": [
+        {
+          "index": 0,
+          "id": "v17_L2_930a90c9394a8c400dc812e8",
+          "source_day_index": 5,
+          "start_hour": 121,
+          "duration_minutes": 600.0,
+          "raw_support": {
+            "raw_start_minute": 7200,
+            "raw_end_minute": 7860,
+            "actual_trajectory_interval_minutes": [
+              7200,
+              7800.0
+            ],
+            "initialization_source_hours": [
+              121
+            ],
+            "initialization_historical_minutes": 0,
+            "algebraic_initialization_iterations": 6,
+            "historical_observation_interval_minutes": [
+              0.0,
+              60.0
+            ],
+            "score_interval_minutes": [
+              60.0,
+              420.0
+            ],
+            "label_tail_interval_minutes": [
+              420.0,
+              600.0
+            ],
+            "endpoint_source_hour_reserved": true,
+            "source_semantics": "hourly rows; reset repeats first row; final boundary hour conservatively included"
+          },
+          "canonical_class": "L2",
+          "design_variant": "main_L2_0"
+        },
+        {
+          "index": 1,
+          "id": "v17_L4_c2faf2e1d7f42b796ae27e04",
+          "source_day_index": 5,
+          "start_hour": 121,
+          "duration_minutes": 600.0,
+          "raw_support": {
+            "raw_start_minute": 7200,
+            "raw_end_minute": 7860,
+            "actual_trajectory_interval_minutes": [
+              7200,
+              7800.0
+            ],
+            "initialization_source_hours": [
+              121
+            ],
+            "initialization_historical_minutes": 0,
+            "algebraic_initialization_iterations": 6,
+            "historical_observation_interval_minutes": [
+              0.0,
+              60.0
+            ],
+            "score_interval_minutes": [
+              60.0,
+              420.0
+            ],
+            "label_tail_interval_minutes": [
+              420.0,
+              600.0
+            ],
+            "endpoint_source_hour_reserved": true,
+            "source_semantics": "hourly rows; reset repeats first row; final boundary hour conservatively included"
+          },
+          "canonical_class": "L4",
+          "design_variant": "main_L4_0"
+        },
+        {
+          "index": 2,
+          "id": "v17_L4_91f9be43a8b6e9ba6e4d9e8a",
+          "source_day_index": 8,
+          "start_hour": 193,
+          "duration_minutes": 600.0,
+          "raw_support": {
+            "raw_start_minute": 11520,
+            "raw_end_minute": 12180,
+            "actual_trajectory_interval_minutes": [
+              11520,
+              12120.0
+            ],
+            "initialization_source_hours": [
+              193
+            ],
+            "initialization_historical_minutes": 0,
+            "algebraic_initialization_iterations": 6,
+            "historical_observation_interval_minutes": [
+              0.0,
+              60.0
+            ],
+            "score_interval_minutes": [
+              60.0,
+              420.0
+            ],
+            "label_tail_interval_minutes": [
+              420.0,
+              600.0
+            ],
+            "endpoint_source_hour_reserved": true,
+            "source_semantics": "hourly rows; reset repeats first row; final boundary hour conservatively included"
+          },
+          "canonical_class": "L4",
+          "design_variant": "main_L4_1"
+        },
+        {
+          "index": 3,
+          "id": "v17_L4_dd6008ccc4bd2acacb5b3870",
+          "source_day_index": 171,
+          "start_hour": 4105,
+          "duration_minutes": 675.0,
+          "raw_support": {
+            "raw_start_minute": 246240,
+            "raw_end_minute": 246960,
+            "actual_trajectory_interval_minutes": [
+              246240,
+              246915.0
+            ],
+            "initialization_source_hours": [
+              4105
+            ],
+            "initialization_historical_minutes": 0,
+            "algebraic_initialization_iterations": 6,
+            "historical_observation_interval_minutes": [
+              0.0,
+              60.0
+            ],
+            "score_interval_minutes": [
+              60.0,
+              420.0
+            ],
+            "label_tail_interval_minutes": [
+              420.0,
+              600.0
+            ],
+            "endpoint_source_hour_reserved": true,
+            "source_semantics": "hourly rows; reset repeats first row; final boundary hour conservatively included"
+          },
+          "canonical_class": "L4",
+          "design_variant": "main_L4_10"
+        },
+        {
+          "index": 4,
+          "id": "v17_L4_a4f5b9b30175cdba88eb305e",
+          "source_day_index": 292,
+          "start_hour": 7009,
+          "duration_minutes": 600.0,
+          "raw_support": {
+            "raw_start_minute": 420480,
+            "raw_end_minute": 421140,
+            "actual_trajectory_interval_minutes": [
+              420480,
+              421080.0
+            ],
+            "initialization_source_hours": [
+              7009
+            ],
+            "initialization_historical_minutes": 0,
+            "algebraic_initialization_iterations": 6,
+            "historical_observation_interval_minutes": [
+              0.0,
+              60.0
+            ],
+            "score_interval_minutes": [
+              60.0,
+              420.0
+            ],
+            "label_tail_interval_minutes": [
+              420.0,
+              600.0
+            ],
+            "endpoint_source_hour_reserved": true,
+            "source_semantics": "hourly rows; reset repeats first row; final boundary hour conservatively included"
+          },
+          "canonical_class": "L4",
+          "design_variant": "main_L4_16"
+        }
+      ]
+    }
+  ],
+  "planned_seen_same_model_trajectories": 308,
+  "compatibility_note": "The five historical compatibility specifications need a C18-on-M19 compatibility policy to separate shared repair from C19-only changes; C4-on-M19 is optional extra history and cannot replace C18 compatibility.",
+  "resources": {
+    "source_path": "outputs/v18_execution_recovery_20261018_run01/review/final_resources_r1/SUMMARY.json",
+    "source_sha256": "5547b46c181196f5f7fa23c4ed5cc25c5edd216892602aabe50d5c8438501827",
+    "normal_actual_rows": [
+      {
+        "batch": "normal_final_r1_000",
+        "lifetime_peak_working_set_bytes": 9157693440,
+        "sampled_private_bytes": 10696445952
+      },
+      {
+        "batch": "normal_final_r1_001",
+        "lifetime_peak_working_set_bytes": 18122878976,
+        "sampled_private_bytes": 20112531456
+      },
+      {
+        "batch": "normal_final_r1_002",
+        "lifetime_peak_working_set_bytes": 25603457024,
+        "sampled_private_bytes": 27791896576
+      },
+      {
+        "batch": "normal_final_r1_003",
+        "lifetime_peak_working_set_bytes": 9144102912,
+        "sampled_private_bytes": 10853494784
+      }
+    ],
+    "minimum_observed_host_free_bytes": 708927488,
+    "normal_24_48_72_hours_serial_and_exclusive": true,
+    "recommended_short_or_long_physical_workers_initial": 1,
+    "recommended_short_or_long_physical_workers_after_measurement_max": 2,
+    "recommended_600min_reservation_GiB_per_worker": 8,
+    "recommended_1065min_reservation_GiB_per_worker": 10,
+    "recommended_normal_24_48_72h_reservation_GiB": [
+      12,
+      22,
+      30
+    ],
+    "recommended_host_margin_GiB": 6,
+    "reservations_are_not_hard_caps": true,
+    "normal_saved_log_processing_must_not_overlap_physical_normal": true,
+    "system_pagefile_or_global_temp_changes": false
+  },
+  "reuse_notes": [
+    "Create a V19-specific adapter/run root and M19 binding; do not mutate or monkeypatch V18 RUN/B paths or source05 freeze.",
+    "Read V18 final R1 proposals as immutable exogenous metadata and bind each fresh M19 attempt to its SHA.",
+    "V18 main recipe requires 20 calendar roots and seals them seen; it cannot directly create a small genuinely new confirmation set.",
+    "Reuse runner immutable plan/manifest/freeze/scenario/policy binding, ordinary queue execution, allowed-hours load guard, started/error/result journal, and matching evidence logic via explicit V19 identities.",
+    "Reuse scheduler admission/source recheck/terminal scientific gate and preserve explicit unstarted or unknown statuses; lower initial concurrency and use observed peaks.",
+    "Do not reuse old 8/12/18GiB normal admission estimates as an upper bound, nor old success as proof of future memory safety."
+  ],
+  "known_limits": [
+    "This is support-isolated incident confirmation within one existing hospital/year, not independent measured hospital data, IID accident sampling, failure-probability estimation or unseen annual raw measurements.",
+    "All registered/reserved windows are excluded conservatively; unresolved external unregistered historical exposure would invalidate global unseen claims.",
+    "V19 has not frozen yet; new development may consume candidates. Pool must be refreshed at freeze before any selection.",
+    "No unused 24/48/72-hour normal confirmation support exists in this registered pool; only one 1065-minute candidate exists.",
+    "No source load ranking, event outcome or future online script was read for selection."
+  ],
+  "executed_analysis_attempts": [
+    {
+      "command": "stdlib metadata union reconstruction attempt 1",
+      "exit_code": 1,
+      "error": "A metadata receipt stored scenarios as an integer; corrected by checking list type."
+    },
+    {
+      "command": "stdlib metadata union reconstruction attempt 2",
+      "exit_code": 0,
+      "result": "71 starts on 24 days before legacy additions"
+    },
+    {
+      "command": "stdlib legacy additions attempt 1",
+      "exit_code": 1,
+      "error": "Mixed tuple/list interval sort; corrected by normalizing interval pairs before sort."
+    },
+    {
+      "command": "stdlib complete legacy additions reconstruction",
+      "exit_code": 0,
+      "result": "68 starts on 23 days; 1065min=1; 24/48/72h=0"
+    },
+    {
+      "command": "stdlib metadata signature and resource record checks",
+      "exit_code": 0,
+      "result": "70 proposal signatures valid; observed normal memory peaks extracted"
+    }
+  ],
+  "tests": {
+    "pytest": "not_run_read_only_design_only",
+    "physical_replay": "not_run",
+    "model_fit": "not_run"
+  }
+}

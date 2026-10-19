@@ -1,0 +1,1570 @@
+{
+  "panel": "v19_long",
+  "scenarios": [
+    {
+      "start_hour": 961,
+      "source_day_index": 40,
+      "season_quarter": 1,
+      "duration_steps": 71,
+      "step_minutes": 15.0,
+      "pre_event_warmup_steps": 6,
+      "initialization_seed": 20261017,
+      "automatic_fast_shedding": false,
+      "grid_limit_kW": 850.0,
+      "pre_event_grid_limit_kW": 850.0,
+      "response_delay_minutes": 15.0,
+      "root_family_id": "v16_diesel_calendar:40",
+      "family_id": "v15_dev_root:c6e8802ee14abdb833c5dcbe",
+      "parent_template_id": "v15_dev_root:c6e8802ee14abdb833c5dcbe",
+      "parent_instance_id": "v15_dev_root:c6e8802ee14abdb833c5dcbe",
+      "design_family": "v15_dev_root:c6e8802ee14abdb833c5dcbe",
+      "base_state_id": "v15_initial:1c4d8289d556b97eac1379201866ef9414b8d26bb04912961f7f6e20eaa831e0",
+      "event_schema_version": "p2a.events.v1",
+      "sample_schema_version": "hospital_ies.state_coordinated_metadata.v17.v1",
+      "distribution_id": "operating_response.v15.finite_mechanism_coverage.q_design",
+      "sampling_method": "calendar_identity_and_disjoint_support_only",
+      "sampling_weight_is_failure_probability": false,
+      "p_reference": null,
+      "q_design_density": null,
+      "importance_weight": null,
+      "history_interval_minutes": [
+        0.0,
+        60.0
+      ],
+      "score_interval_minutes": [
+        60.0,
+        420.0
+      ],
+      "tail_interval_minutes": [
+        420.0,
+        600.0
+      ],
+      "label_horizons_minutes": [
+        15,
+        30,
+        60,
+        120
+      ],
+      "prehistory_mode": "same_continuous_episode_no_reset",
+      "initialization_semantics": "Repeated first-hour algebraic initialization is not actual prehistory",
+      "state_inheritance": "Actual uninterrupted GT ages, fuel, temperatures, source/contact ledgers and command queues",
+      "stage": 1,
+      "event_class": "L1",
+      "analysis_class": "L1",
+      "enable_propagation": false,
+      "faults": {
+        "GRID": 0.0,
+        "GT_1": 0.0,
+        "GT_2": 0.0,
+        "GT_3": 0.0
+      },
+      "shock": {},
+      "shock_by_priority": {},
+      "exogenous_events": [
+        {
+          "origin": "exogenous",
+          "kind": "device_fault",
+          "device": "GRID",
+          "availability": 0.0,
+          "start_minute": 32.5,
+          "end_minute": 812.5
+        },
+        {
+          "origin": "exogenous",
+          "kind": "device_fault",
+          "device": "GT_1",
+          "availability": 0.0,
+          "start_minute": 32.5,
+          "end_minute": 812.5
+        },
+        {
+          "origin": "exogenous",
+          "kind": "device_fault",
+          "device": "GT_2",
+          "availability": 0.0,
+          "start_minute": 32.5,
+          "end_minute": 812.5
+        },
+        {
+          "origin": "exogenous",
+          "kind": "device_fault",
+          "device": "GT_3",
+          "availability": 0.0,
+          "start_minute": 32.5,
+          "end_minute": 812.5
+        }
+      ],
+      "first_event_minute": 32.5,
+      "normal_history_minutes": 32.5,
+      "initial_binding_status": "not_observed; classify from actual prefix, never from success",
+      "actual_p0_load_multiplier": {
+        "e": 1.0,
+        "h": 1.0,
+        "c": 1.0
+      },
+      "experiment_role": "confirmation",
+      "selection_allowed": false,
+      "requires_policy_freeze": true,
+      "fit_allowed": false,
+      "is_final_blind": false,
+      "purpose": "v16_frozen_loaded_diesel",
+      "sampling_cohort": "v17_long_development04",
+      "analysis_cohort": "v17_long_development04",
+      "sampling_role": "registered_engineering_development",
+      "new_independent_background": false,
+      "old_results_read_only": true,
+      "demand_background": "same_hospital_annual_source_no_unseen_background_claim",
+      "fault_start_minute": 32.5,
+      "fault_duration_minutes": 780.0,
+      "shock_start_minute": 32.5,
+      "shock_duration_minutes": 420.0,
+      "diesel_design": "all_GT_lost",
+      "core_four_class_denominator": false,
+      "coordinate_design_version": "state_coordinated.v17.explicit_coordinates.v1",
+      "source_outcomes_used_for_selection": false,
+      "original_final12_evaluated": false,
+      "full_source_support": {
+        "raw_start_minute": 57600,
+        "raw_end_minute": 58680,
+        "actual_trajectory_interval_minutes": [
+          57600,
+          58665.0
+        ],
+        "initialization_source_hours": [
+          961
+        ],
+        "initialization_historical_minutes": 0,
+        "algebraic_initialization_iterations": 6,
+        "historical_observation_interval_minutes": [
+          0.0,
+          60.0
+        ],
+        "score_interval_minutes": [
+          60.0,
+          420.0
+        ],
+        "label_tail_interval_minutes": [
+          420.0,
+          600.0
+        ],
+        "endpoint_source_hour_reserved": true,
+        "source_semantics": "hourly rows; reset repeats first row; final boundary hour conservatively included"
+      },
+      "time_block_id": "v17_support:75d732aaf5f30335ffa7d796",
+      "exogenous_stream_id": "v17_exogenous:164ad3913109b312d0a58cce",
+      "physical_scenario_signature": "48d67d1d6039e9182f25b5e782b250ca06bf97202d8f825740df6c4b4210f516",
+      "id": "v17_L1_c3293aa6e9401f244ec3406c",
+      "matched_group_id": "v17_cell:ab5f770cb1c162faa0d0f39b",
+      "design_cell_id": "v17_cell:ab5f770cb1c162faa0d0f39b",
+      "canonical_class": "L1",
+      "legacy_class": "L1",
+      "design_variant": "long_outage_v17_v16_L1_2b57aea8ac2a2f870c02630f",
+      "development_background": true,
+      "background_status": "previously_exposed_calendar",
+      "historical_exposure_status": "known_v16_exposed",
+      "long_outage_mechanism": "multiple_exogenous_faults_no_demand_shock",
+      "exogenous_multi_fault_is_endogenous_propagation": false,
+      "continuous_recovery_tail_minutes": 240.0,
+      "source_scenario_id": "v16_L1_2b57aea8ac2a2f870c02630f",
+      "source_coordinate_design_version": "v16_diesel_20261017_v1",
+      "v18_source_scene_id": "v17_L1_c3293aa6e9401f244ec3406c",
+      "v18_seen_regression": true,
+      "v19_source_scene_id": "v17_L1_c3293aa6e9401f244ec3406c",
+      "v19_seen_regression": true
+    },
+    {
+      "start_hour": 961,
+      "source_day_index": 40,
+      "season_quarter": 1,
+      "duration_steps": 71,
+      "step_minutes": 15.0,
+      "pre_event_warmup_steps": 6,
+      "initialization_seed": 20261017,
+      "automatic_fast_shedding": false,
+      "grid_limit_kW": 850.0,
+      "pre_event_grid_limit_kW": 850.0,
+      "response_delay_minutes": 15.0,
+      "root_family_id": "v16_diesel_calendar:40",
+      "family_id": "v15_dev_root:c6e8802ee14abdb833c5dcbe",
+      "parent_template_id": "v15_dev_root:c6e8802ee14abdb833c5dcbe",
+      "parent_instance_id": "v15_dev_root:c6e8802ee14abdb833c5dcbe",
+      "design_family": "v15_dev_root:c6e8802ee14abdb833c5dcbe",
+      "base_state_id": "v15_initial:1c4d8289d556b97eac1379201866ef9414b8d26bb04912961f7f6e20eaa831e0",
+      "event_schema_version": "p2a.events.v1",
+      "sample_schema_version": "hospital_ies.state_coordinated_metadata.v17.v1",
+      "distribution_id": "operating_response.v15.finite_mechanism_coverage.q_design",
+      "sampling_method": "calendar_identity_and_disjoint_support_only",
+      "sampling_weight_is_failure_probability": false,
+      "p_reference": null,
+      "q_design_density": null,
+      "importance_weight": null,
+      "history_interval_minutes": [
+        0.0,
+        60.0
+      ],
+      "score_interval_minutes": [
+        60.0,
+        420.0
+      ],
+      "tail_interval_minutes": [
+        420.0,
+        600.0
+      ],
+      "label_horizons_minutes": [
+        15,
+        30,
+        60,
+        120
+      ],
+      "prehistory_mode": "same_continuous_episode_no_reset",
+      "initialization_semantics": "Repeated first-hour algebraic initialization is not actual prehistory",
+      "state_inheritance": "Actual uninterrupted GT ages, fuel, temperatures, source/contact ledgers and command queues",
+      "stage": 1,
+      "event_class": "L1",
+      "analysis_class": "L1",
+      "enable_propagation": false,
+      "faults": {
+        "GRID": 0.0,
+        "GT_1": 0.0,
+        "GT_2": 0.0
+      },
+      "shock": {},
+      "shock_by_priority": {},
+      "exogenous_events": [
+        {
+          "origin": "exogenous",
+          "kind": "device_fault",
+          "device": "GRID",
+          "availability": 0.0,
+          "start_minute": 32.5,
+          "end_minute": 812.5
+        },
+        {
+          "origin": "exogenous",
+          "kind": "device_fault",
+          "device": "GT_1",
+          "availability": 0.0,
+          "start_minute": 32.5,
+          "end_minute": 812.5
+        },
+        {
+          "origin": "exogenous",
+          "kind": "device_fault",
+          "device": "GT_2",
+          "availability": 0.0,
+          "start_minute": 32.5,
+          "end_minute": 812.5
+        }
+      ],
+      "first_event_minute": 32.5,
+      "normal_history_minutes": 32.5,
+      "initial_binding_status": "not_observed; classify from actual prefix, never from success",
+      "actual_p0_load_multiplier": {
+        "e": 1.0,
+        "h": 1.0,
+        "c": 1.0
+      },
+      "experiment_role": "confirmation",
+      "selection_allowed": false,
+      "requires_policy_freeze": true,
+      "fit_allowed": false,
+      "is_final_blind": false,
+      "purpose": "v16_frozen_loaded_diesel",
+      "sampling_cohort": "v17_long_development04",
+      "analysis_cohort": "v17_long_development04",
+      "sampling_role": "registered_engineering_development",
+      "new_independent_background": false,
+      "old_results_read_only": true,
+      "demand_background": "same_hospital_annual_source_no_unseen_background_claim",
+      "fault_start_minute": 32.5,
+      "fault_duration_minutes": 780.0,
+      "shock_start_minute": 32.5,
+      "shock_duration_minutes": 420.0,
+      "diesel_design": "one_GT_retained",
+      "core_four_class_denominator": false,
+      "coordinate_design_version": "state_coordinated.v17.explicit_coordinates.v1",
+      "source_outcomes_used_for_selection": false,
+      "original_final12_evaluated": false,
+      "full_source_support": {
+        "raw_start_minute": 57600,
+        "raw_end_minute": 58680,
+        "actual_trajectory_interval_minutes": [
+          57600,
+          58665.0
+        ],
+        "initialization_source_hours": [
+          961
+        ],
+        "initialization_historical_minutes": 0,
+        "algebraic_initialization_iterations": 6,
+        "historical_observation_interval_minutes": [
+          0.0,
+          60.0
+        ],
+        "score_interval_minutes": [
+          60.0,
+          420.0
+        ],
+        "label_tail_interval_minutes": [
+          420.0,
+          600.0
+        ],
+        "endpoint_source_hour_reserved": true,
+        "source_semantics": "hourly rows; reset repeats first row; final boundary hour conservatively included"
+      },
+      "time_block_id": "v17_support:75d732aaf5f30335ffa7d796",
+      "exogenous_stream_id": "v17_exogenous:b7dde6a71ac7524e675a258d",
+      "physical_scenario_signature": "364cb27b77f01ef9531e5050a871f8024a3a88f795b25e933ba2ada2853c4c71",
+      "id": "v17_L1_0995567ca7ec6a68eb33cb68",
+      "matched_group_id": "v17_cell:9c3fa950321a078f3b27324b",
+      "design_cell_id": "v17_cell:9c3fa950321a078f3b27324b",
+      "canonical_class": "L1",
+      "legacy_class": "L1",
+      "design_variant": "long_outage_v17_v16_L1_41c5adf85d2f969afc1c474d",
+      "development_background": true,
+      "background_status": "previously_exposed_calendar",
+      "historical_exposure_status": "known_v16_exposed",
+      "long_outage_mechanism": "multiple_exogenous_faults_no_demand_shock",
+      "exogenous_multi_fault_is_endogenous_propagation": false,
+      "continuous_recovery_tail_minutes": 240.0,
+      "source_scenario_id": "v16_L1_41c5adf85d2f969afc1c474d",
+      "source_coordinate_design_version": "v16_diesel_20261017_v1",
+      "v18_source_scene_id": "v17_L1_0995567ca7ec6a68eb33cb68",
+      "v18_seen_regression": true,
+      "v19_source_scene_id": "v17_L1_0995567ca7ec6a68eb33cb68",
+      "v19_seen_regression": true
+    },
+    {
+      "start_hour": 1681,
+      "source_day_index": 70,
+      "season_quarter": 1,
+      "duration_steps": 71,
+      "step_minutes": 15.0,
+      "pre_event_warmup_steps": 6,
+      "initialization_seed": 20261017,
+      "automatic_fast_shedding": false,
+      "grid_limit_kW": 850.0,
+      "pre_event_grid_limit_kW": 850.0,
+      "response_delay_minutes": 15.0,
+      "root_family_id": "v16_diesel_calendar:70",
+      "family_id": "v15_dev_root:36e2fcbeb9fe9ba65fa3a45a",
+      "parent_template_id": "v15_dev_root:36e2fcbeb9fe9ba65fa3a45a",
+      "parent_instance_id": "v15_dev_root:36e2fcbeb9fe9ba65fa3a45a",
+      "design_family": "v15_dev_root:36e2fcbeb9fe9ba65fa3a45a",
+      "base_state_id": "v15_initial:06c92f7434630c801f00e2ecce6c1afbc58b19ece2fea916f532c1bae90fee7e",
+      "event_schema_version": "p2a.events.v1",
+      "sample_schema_version": "hospital_ies.state_coordinated_metadata.v17.v1",
+      "distribution_id": "operating_response.v15.finite_mechanism_coverage.q_design",
+      "sampling_method": "calendar_identity_and_disjoint_support_only",
+      "sampling_weight_is_failure_probability": false,
+      "p_reference": null,
+      "q_design_density": null,
+      "importance_weight": null,
+      "history_interval_minutes": [
+        0.0,
+        60.0
+      ],
+      "score_interval_minutes": [
+        60.0,
+        420.0
+      ],
+      "tail_interval_minutes": [
+        420.0,
+        600.0
+      ],
+      "label_horizons_minutes": [
+        15,
+        30,
+        60,
+        120
+      ],
+      "prehistory_mode": "same_continuous_episode_no_reset",
+      "initialization_semantics": "Repeated first-hour algebraic initialization is not actual prehistory",
+      "state_inheritance": "Actual uninterrupted GT ages, fuel, temperatures, source/contact ledgers and command queues",
+      "stage": 4,
+      "event_class": "L4b",
+      "analysis_class": "L4b",
+      "enable_propagation": true,
+      "faults": {
+        "GRID": 0.0,
+        "GT_1": 0.0,
+        "GT_2": 0.0,
+        "GT_3": 0.0
+      },
+      "shock": {
+        "e": 0.5,
+        "c": 0.25
+      },
+      "shock_by_priority": {},
+      "exogenous_events": [
+        {
+          "origin": "exogenous",
+          "kind": "device_fault",
+          "device": "GRID",
+          "availability": 0.0,
+          "start_minute": 32.5,
+          "end_minute": 812.5
+        },
+        {
+          "origin": "exogenous",
+          "kind": "device_fault",
+          "device": "GT_1",
+          "availability": 0.0,
+          "start_minute": 32.5,
+          "end_minute": 812.5
+        },
+        {
+          "origin": "exogenous",
+          "kind": "device_fault",
+          "device": "GT_2",
+          "availability": 0.0,
+          "start_minute": 32.5,
+          "end_minute": 812.5
+        },
+        {
+          "origin": "exogenous",
+          "kind": "device_fault",
+          "device": "GT_3",
+          "availability": 0.0,
+          "start_minute": 32.5,
+          "end_minute": 812.5
+        },
+        {
+          "origin": "exogenous",
+          "kind": "demand_shock",
+          "shock": {
+            "e": 0.5,
+            "c": 0.25
+          },
+          "start_minute": 32.5,
+          "end_minute": 452.5
+        }
+      ],
+      "first_event_minute": 32.5,
+      "normal_history_minutes": 32.5,
+      "initial_binding_status": "not_observed; classify from actual prefix, never from success",
+      "actual_p0_load_multiplier": {
+        "e": 1.5,
+        "h": 1.0,
+        "c": 1.25
+      },
+      "experiment_role": "confirmation",
+      "selection_allowed": false,
+      "requires_policy_freeze": true,
+      "fit_allowed": false,
+      "is_final_blind": false,
+      "purpose": "v16_frozen_loaded_diesel",
+      "sampling_cohort": "v17_long_development04",
+      "analysis_cohort": "v17_long_development04",
+      "sampling_role": "registered_engineering_development",
+      "new_independent_background": false,
+      "old_results_read_only": true,
+      "demand_background": "same_hospital_annual_source_no_unseen_background_claim",
+      "fault_start_minute": 32.5,
+      "fault_duration_minutes": 780.0,
+      "shock_start_minute": 32.5,
+      "shock_duration_minutes": 420.0,
+      "diesel_design": "all_GT_lost",
+      "core_four_class_denominator": false,
+      "coordinate_design_version": "state_coordinated.v17.explicit_coordinates.v1",
+      "source_outcomes_used_for_selection": false,
+      "original_final12_evaluated": false,
+      "full_source_support": {
+        "raw_start_minute": 100800,
+        "raw_end_minute": 101880,
+        "actual_trajectory_interval_minutes": [
+          100800,
+          101865.0
+        ],
+        "initialization_source_hours": [
+          1681
+        ],
+        "initialization_historical_minutes": 0,
+        "algebraic_initialization_iterations": 6,
+        "historical_observation_interval_minutes": [
+          0.0,
+          60.0
+        ],
+        "score_interval_minutes": [
+          60.0,
+          420.0
+        ],
+        "label_tail_interval_minutes": [
+          420.0,
+          600.0
+        ],
+        "endpoint_source_hour_reserved": true,
+        "source_semantics": "hourly rows; reset repeats first row; final boundary hour conservatively included"
+      },
+      "time_block_id": "v17_support:4609f9d352aa8d3e146e3733",
+      "exogenous_stream_id": "v17_exogenous:d90f5e73ecd284c18e7bc5e3",
+      "physical_scenario_signature": "06cc4a8c8d6dd787ddd544386ca1353fe7e2695a4c01e850afe8352a426a8dae",
+      "id": "v17_L4_9c15f066a87ebf45f0acc31d",
+      "matched_group_id": "v17_cell:a2fa3f5e71eeb4ed23cec7cb",
+      "design_cell_id": "v17_cell:a2fa3f5e71eeb4ed23cec7cb",
+      "canonical_class": "L4",
+      "legacy_class": "L4b",
+      "design_variant": "long_outage_v17_v16_L4b_f73f727bf3e61a0466498324",
+      "development_background": true,
+      "background_status": "previously_exposed_calendar",
+      "historical_exposure_status": "known_v16_exposed",
+      "long_outage_mechanism": "multiple_exogenous_faults_plus_demand_shock",
+      "exogenous_multi_fault_is_endogenous_propagation": false,
+      "continuous_recovery_tail_minutes": 240.0,
+      "source_scenario_id": "v16_L4b_f73f727bf3e61a0466498324",
+      "source_coordinate_design_version": "v16_diesel_20261017_v1",
+      "v18_source_scene_id": "v17_L4_9c15f066a87ebf45f0acc31d",
+      "v18_seen_regression": true,
+      "v19_source_scene_id": "v17_L4_9c15f066a87ebf45f0acc31d",
+      "v19_seen_regression": true
+    },
+    {
+      "start_hour": 1681,
+      "source_day_index": 70,
+      "season_quarter": 1,
+      "duration_steps": 71,
+      "step_minutes": 15.0,
+      "pre_event_warmup_steps": 6,
+      "initialization_seed": 20261017,
+      "automatic_fast_shedding": false,
+      "grid_limit_kW": 850.0,
+      "pre_event_grid_limit_kW": 850.0,
+      "response_delay_minutes": 15.0,
+      "root_family_id": "v16_diesel_calendar:70",
+      "family_id": "v15_dev_root:36e2fcbeb9fe9ba65fa3a45a",
+      "parent_template_id": "v15_dev_root:36e2fcbeb9fe9ba65fa3a45a",
+      "parent_instance_id": "v15_dev_root:36e2fcbeb9fe9ba65fa3a45a",
+      "design_family": "v15_dev_root:36e2fcbeb9fe9ba65fa3a45a",
+      "base_state_id": "v15_initial:06c92f7434630c801f00e2ecce6c1afbc58b19ece2fea916f532c1bae90fee7e",
+      "event_schema_version": "p2a.events.v1",
+      "sample_schema_version": "hospital_ies.state_coordinated_metadata.v17.v1",
+      "distribution_id": "operating_response.v15.finite_mechanism_coverage.q_design",
+      "sampling_method": "calendar_identity_and_disjoint_support_only",
+      "sampling_weight_is_failure_probability": false,
+      "p_reference": null,
+      "q_design_density": null,
+      "importance_weight": null,
+      "history_interval_minutes": [
+        0.0,
+        60.0
+      ],
+      "score_interval_minutes": [
+        60.0,
+        420.0
+      ],
+      "tail_interval_minutes": [
+        420.0,
+        600.0
+      ],
+      "label_horizons_minutes": [
+        15,
+        30,
+        60,
+        120
+      ],
+      "prehistory_mode": "same_continuous_episode_no_reset",
+      "initialization_semantics": "Repeated first-hour algebraic initialization is not actual prehistory",
+      "state_inheritance": "Actual uninterrupted GT ages, fuel, temperatures, source/contact ledgers and command queues",
+      "stage": 4,
+      "event_class": "L4b",
+      "analysis_class": "L4b",
+      "enable_propagation": true,
+      "faults": {
+        "GRID": 0.0,
+        "GT_1": 0.0,
+        "GT_2": 0.0
+      },
+      "shock": {
+        "e": 0.5,
+        "c": 0.25
+      },
+      "shock_by_priority": {},
+      "exogenous_events": [
+        {
+          "origin": "exogenous",
+          "kind": "device_fault",
+          "device": "GRID",
+          "availability": 0.0,
+          "start_minute": 32.5,
+          "end_minute": 812.5
+        },
+        {
+          "origin": "exogenous",
+          "kind": "device_fault",
+          "device": "GT_1",
+          "availability": 0.0,
+          "start_minute": 32.5,
+          "end_minute": 812.5
+        },
+        {
+          "origin": "exogenous",
+          "kind": "device_fault",
+          "device": "GT_2",
+          "availability": 0.0,
+          "start_minute": 32.5,
+          "end_minute": 812.5
+        },
+        {
+          "origin": "exogenous",
+          "kind": "demand_shock",
+          "shock": {
+            "e": 0.5,
+            "c": 0.25
+          },
+          "start_minute": 32.5,
+          "end_minute": 452.5
+        }
+      ],
+      "first_event_minute": 32.5,
+      "normal_history_minutes": 32.5,
+      "initial_binding_status": "not_observed; classify from actual prefix, never from success",
+      "actual_p0_load_multiplier": {
+        "e": 1.5,
+        "h": 1.0,
+        "c": 1.25
+      },
+      "experiment_role": "confirmation",
+      "selection_allowed": false,
+      "requires_policy_freeze": true,
+      "fit_allowed": false,
+      "is_final_blind": false,
+      "purpose": "v16_frozen_loaded_diesel",
+      "sampling_cohort": "v17_long_development04",
+      "analysis_cohort": "v17_long_development04",
+      "sampling_role": "registered_engineering_development",
+      "new_independent_background": false,
+      "old_results_read_only": true,
+      "demand_background": "same_hospital_annual_source_no_unseen_background_claim",
+      "fault_start_minute": 32.5,
+      "fault_duration_minutes": 780.0,
+      "shock_start_minute": 32.5,
+      "shock_duration_minutes": 420.0,
+      "diesel_design": "one_GT_retained",
+      "core_four_class_denominator": false,
+      "coordinate_design_version": "state_coordinated.v17.explicit_coordinates.v1",
+      "source_outcomes_used_for_selection": false,
+      "original_final12_evaluated": false,
+      "full_source_support": {
+        "raw_start_minute": 100800,
+        "raw_end_minute": 101880,
+        "actual_trajectory_interval_minutes": [
+          100800,
+          101865.0
+        ],
+        "initialization_source_hours": [
+          1681
+        ],
+        "initialization_historical_minutes": 0,
+        "algebraic_initialization_iterations": 6,
+        "historical_observation_interval_minutes": [
+          0.0,
+          60.0
+        ],
+        "score_interval_minutes": [
+          60.0,
+          420.0
+        ],
+        "label_tail_interval_minutes": [
+          420.0,
+          600.0
+        ],
+        "endpoint_source_hour_reserved": true,
+        "source_semantics": "hourly rows; reset repeats first row; final boundary hour conservatively included"
+      },
+      "time_block_id": "v17_support:4609f9d352aa8d3e146e3733",
+      "exogenous_stream_id": "v17_exogenous:87e060ce91296e0ac2a27f8b",
+      "physical_scenario_signature": "b64cb9eb0a43cfaccf2b97ed96f675a33c0e678dc0f099f09244d669efcb1bd3",
+      "id": "v17_L4_43a206ad03d1a5ec334e4cae",
+      "matched_group_id": "v17_cell:099d6f8349f1e2a452798eb3",
+      "design_cell_id": "v17_cell:099d6f8349f1e2a452798eb3",
+      "canonical_class": "L4",
+      "legacy_class": "L4b",
+      "design_variant": "long_outage_v17_v16_L4b_a50f24512aca83ef6ee5a2c1",
+      "development_background": true,
+      "background_status": "previously_exposed_calendar",
+      "historical_exposure_status": "known_v16_exposed",
+      "long_outage_mechanism": "multiple_exogenous_faults_plus_demand_shock",
+      "exogenous_multi_fault_is_endogenous_propagation": false,
+      "continuous_recovery_tail_minutes": 240.0,
+      "source_scenario_id": "v16_L4b_a50f24512aca83ef6ee5a2c1",
+      "source_coordinate_design_version": "v16_diesel_20261017_v1",
+      "v18_source_scene_id": "v17_L4_43a206ad03d1a5ec334e4cae",
+      "v18_seen_regression": true,
+      "v19_source_scene_id": "v17_L4_43a206ad03d1a5ec334e4cae",
+      "v19_seen_regression": true
+    },
+    {
+      "start_hour": 2401,
+      "source_day_index": 100,
+      "season_quarter": 2,
+      "duration_steps": 71,
+      "step_minutes": 15.0,
+      "pre_event_warmup_steps": 6,
+      "initialization_seed": 20261017,
+      "automatic_fast_shedding": false,
+      "grid_limit_kW": 850.0,
+      "pre_event_grid_limit_kW": 850.0,
+      "response_delay_minutes": 15.0,
+      "root_family_id": "v16_diesel_calendar:100",
+      "family_id": "v15_dev_root:4a966db177344bbcc93c8b99",
+      "parent_template_id": "v15_dev_root:4a966db177344bbcc93c8b99",
+      "parent_instance_id": "v15_dev_root:4a966db177344bbcc93c8b99",
+      "design_family": "v15_dev_root:4a966db177344bbcc93c8b99",
+      "base_state_id": "v15_initial:9ad307ccd4b1db8c70ccd1f7ab5abd6eed3270067ea5143002d3c94e6b44bf41",
+      "event_schema_version": "p2a.events.v1",
+      "sample_schema_version": "hospital_ies.state_coordinated_metadata.v17.v1",
+      "distribution_id": "operating_response.v15.finite_mechanism_coverage.q_design",
+      "sampling_method": "calendar_identity_and_disjoint_support_only",
+      "sampling_weight_is_failure_probability": false,
+      "p_reference": null,
+      "q_design_density": null,
+      "importance_weight": null,
+      "history_interval_minutes": [
+        0.0,
+        60.0
+      ],
+      "score_interval_minutes": [
+        60.0,
+        420.0
+      ],
+      "tail_interval_minutes": [
+        420.0,
+        600.0
+      ],
+      "label_horizons_minutes": [
+        15,
+        30,
+        60,
+        120
+      ],
+      "prehistory_mode": "same_continuous_episode_no_reset",
+      "initialization_semantics": "Repeated first-hour algebraic initialization is not actual prehistory",
+      "state_inheritance": "Actual uninterrupted GT ages, fuel, temperatures, source/contact ledgers and command queues",
+      "stage": 4,
+      "event_class": "L4b",
+      "analysis_class": "L4b",
+      "enable_propagation": true,
+      "faults": {
+        "GRID": 0.0,
+        "GT_1": 0.0,
+        "GT_2": 0.0,
+        "GT_3": 0.0
+      },
+      "shock": {
+        "e": 0.9,
+        "c": 0.25
+      },
+      "shock_by_priority": {},
+      "exogenous_events": [
+        {
+          "origin": "exogenous",
+          "kind": "device_fault",
+          "device": "GRID",
+          "availability": 0.0,
+          "start_minute": 32.5,
+          "end_minute": 812.5
+        },
+        {
+          "origin": "exogenous",
+          "kind": "device_fault",
+          "device": "GT_1",
+          "availability": 0.0,
+          "start_minute": 32.5,
+          "end_minute": 812.5
+        },
+        {
+          "origin": "exogenous",
+          "kind": "device_fault",
+          "device": "GT_2",
+          "availability": 0.0,
+          "start_minute": 32.5,
+          "end_minute": 812.5
+        },
+        {
+          "origin": "exogenous",
+          "kind": "device_fault",
+          "device": "GT_3",
+          "availability": 0.0,
+          "start_minute": 32.5,
+          "end_minute": 812.5
+        },
+        {
+          "origin": "exogenous",
+          "kind": "demand_shock",
+          "shock": {
+            "e": 0.9,
+            "c": 0.25
+          },
+          "start_minute": 32.5,
+          "end_minute": 452.5
+        }
+      ],
+      "first_event_minute": 32.5,
+      "normal_history_minutes": 32.5,
+      "initial_binding_status": "not_observed; classify from actual prefix, never from success",
+      "actual_p0_load_multiplier": {
+        "e": 1.9,
+        "h": 1.0,
+        "c": 1.25
+      },
+      "experiment_role": "confirmation",
+      "selection_allowed": false,
+      "requires_policy_freeze": true,
+      "fit_allowed": false,
+      "is_final_blind": false,
+      "purpose": "v16_frozen_loaded_diesel",
+      "sampling_cohort": "v17_long_development04",
+      "analysis_cohort": "v17_long_development04",
+      "sampling_role": "registered_engineering_development",
+      "new_independent_background": false,
+      "old_results_read_only": true,
+      "demand_background": "same_hospital_annual_source_no_unseen_background_claim",
+      "fault_start_minute": 32.5,
+      "fault_duration_minutes": 780.0,
+      "shock_start_minute": 32.5,
+      "shock_duration_minutes": 420.0,
+      "diesel_design": "all_GT_lost",
+      "core_four_class_denominator": false,
+      "coordinate_design_version": "state_coordinated.v17.explicit_coordinates.v1",
+      "source_outcomes_used_for_selection": false,
+      "original_final12_evaluated": false,
+      "full_source_support": {
+        "raw_start_minute": 144000,
+        "raw_end_minute": 145080,
+        "actual_trajectory_interval_minutes": [
+          144000,
+          145065.0
+        ],
+        "initialization_source_hours": [
+          2401
+        ],
+        "initialization_historical_minutes": 0,
+        "algebraic_initialization_iterations": 6,
+        "historical_observation_interval_minutes": [
+          0.0,
+          60.0
+        ],
+        "score_interval_minutes": [
+          60.0,
+          420.0
+        ],
+        "label_tail_interval_minutes": [
+          420.0,
+          600.0
+        ],
+        "endpoint_source_hour_reserved": true,
+        "source_semantics": "hourly rows; reset repeats first row; final boundary hour conservatively included"
+      },
+      "time_block_id": "v17_support:6a48a0a07529fa6d75cf84d8",
+      "exogenous_stream_id": "v17_exogenous:a92b123884cb90c6b012cf09",
+      "physical_scenario_signature": "1bf433acaedc826a7802b54ba26243d14a4deeaac4e70ff02be6efd36889ac01",
+      "id": "v17_L4_0cc5382dc74b2c88db5f224b",
+      "matched_group_id": "v17_cell:2f58fd135eaebbc1f1b929b7",
+      "design_cell_id": "v17_cell:2f58fd135eaebbc1f1b929b7",
+      "canonical_class": "L4",
+      "legacy_class": "L4b",
+      "design_variant": "long_outage_v17_v16_L4b_ee60c61098cad5a39b4c1108",
+      "development_background": true,
+      "background_status": "previously_exposed_calendar",
+      "historical_exposure_status": "known_v16_exposed",
+      "long_outage_mechanism": "multiple_exogenous_faults_plus_demand_shock",
+      "exogenous_multi_fault_is_endogenous_propagation": false,
+      "continuous_recovery_tail_minutes": 240.0,
+      "source_scenario_id": "v16_L4b_ee60c61098cad5a39b4c1108",
+      "source_coordinate_design_version": "v16_diesel_20261017_v1",
+      "v18_source_scene_id": "v17_L4_0cc5382dc74b2c88db5f224b",
+      "v18_seen_regression": true,
+      "v19_source_scene_id": "v17_L4_0cc5382dc74b2c88db5f224b",
+      "v19_seen_regression": true
+    },
+    {
+      "start_hour": 2401,
+      "source_day_index": 100,
+      "season_quarter": 2,
+      "duration_steps": 71,
+      "step_minutes": 15.0,
+      "pre_event_warmup_steps": 6,
+      "initialization_seed": 20261017,
+      "automatic_fast_shedding": false,
+      "grid_limit_kW": 850.0,
+      "pre_event_grid_limit_kW": 850.0,
+      "response_delay_minutes": 15.0,
+      "root_family_id": "v16_diesel_calendar:100",
+      "family_id": "v15_dev_root:4a966db177344bbcc93c8b99",
+      "parent_template_id": "v15_dev_root:4a966db177344bbcc93c8b99",
+      "parent_instance_id": "v15_dev_root:4a966db177344bbcc93c8b99",
+      "design_family": "v15_dev_root:4a966db177344bbcc93c8b99",
+      "base_state_id": "v15_initial:9ad307ccd4b1db8c70ccd1f7ab5abd6eed3270067ea5143002d3c94e6b44bf41",
+      "event_schema_version": "p2a.events.v1",
+      "sample_schema_version": "hospital_ies.state_coordinated_metadata.v17.v1",
+      "distribution_id": "operating_response.v15.finite_mechanism_coverage.q_design",
+      "sampling_method": "calendar_identity_and_disjoint_support_only",
+      "sampling_weight_is_failure_probability": false,
+      "p_reference": null,
+      "q_design_density": null,
+      "importance_weight": null,
+      "history_interval_minutes": [
+        0.0,
+        60.0
+      ],
+      "score_interval_minutes": [
+        60.0,
+        420.0
+      ],
+      "tail_interval_minutes": [
+        420.0,
+        600.0
+      ],
+      "label_horizons_minutes": [
+        15,
+        30,
+        60,
+        120
+      ],
+      "prehistory_mode": "same_continuous_episode_no_reset",
+      "initialization_semantics": "Repeated first-hour algebraic initialization is not actual prehistory",
+      "state_inheritance": "Actual uninterrupted GT ages, fuel, temperatures, source/contact ledgers and command queues",
+      "stage": 4,
+      "event_class": "L4b",
+      "analysis_class": "L4b",
+      "enable_propagation": true,
+      "faults": {
+        "GRID": 0.0,
+        "GT_1": 0.0,
+        "GT_2": 0.0
+      },
+      "shock": {
+        "e": 0.9,
+        "c": 0.25
+      },
+      "shock_by_priority": {},
+      "exogenous_events": [
+        {
+          "origin": "exogenous",
+          "kind": "device_fault",
+          "device": "GRID",
+          "availability": 0.0,
+          "start_minute": 32.5,
+          "end_minute": 812.5
+        },
+        {
+          "origin": "exogenous",
+          "kind": "device_fault",
+          "device": "GT_1",
+          "availability": 0.0,
+          "start_minute": 32.5,
+          "end_minute": 812.5
+        },
+        {
+          "origin": "exogenous",
+          "kind": "device_fault",
+          "device": "GT_2",
+          "availability": 0.0,
+          "start_minute": 32.5,
+          "end_minute": 812.5
+        },
+        {
+          "origin": "exogenous",
+          "kind": "demand_shock",
+          "shock": {
+            "e": 0.9,
+            "c": 0.25
+          },
+          "start_minute": 32.5,
+          "end_minute": 452.5
+        }
+      ],
+      "first_event_minute": 32.5,
+      "normal_history_minutes": 32.5,
+      "initial_binding_status": "not_observed; classify from actual prefix, never from success",
+      "actual_p0_load_multiplier": {
+        "e": 1.9,
+        "h": 1.0,
+        "c": 1.25
+      },
+      "experiment_role": "confirmation",
+      "selection_allowed": false,
+      "requires_policy_freeze": true,
+      "fit_allowed": false,
+      "is_final_blind": false,
+      "purpose": "v16_frozen_loaded_diesel",
+      "sampling_cohort": "v17_long_development04",
+      "analysis_cohort": "v17_long_development04",
+      "sampling_role": "registered_engineering_development",
+      "new_independent_background": false,
+      "old_results_read_only": true,
+      "demand_background": "same_hospital_annual_source_no_unseen_background_claim",
+      "fault_start_minute": 32.5,
+      "fault_duration_minutes": 780.0,
+      "shock_start_minute": 32.5,
+      "shock_duration_minutes": 420.0,
+      "diesel_design": "one_GT_retained",
+      "core_four_class_denominator": false,
+      "coordinate_design_version": "state_coordinated.v17.explicit_coordinates.v1",
+      "source_outcomes_used_for_selection": false,
+      "original_final12_evaluated": false,
+      "full_source_support": {
+        "raw_start_minute": 144000,
+        "raw_end_minute": 145080,
+        "actual_trajectory_interval_minutes": [
+          144000,
+          145065.0
+        ],
+        "initialization_source_hours": [
+          2401
+        ],
+        "initialization_historical_minutes": 0,
+        "algebraic_initialization_iterations": 6,
+        "historical_observation_interval_minutes": [
+          0.0,
+          60.0
+        ],
+        "score_interval_minutes": [
+          60.0,
+          420.0
+        ],
+        "label_tail_interval_minutes": [
+          420.0,
+          600.0
+        ],
+        "endpoint_source_hour_reserved": true,
+        "source_semantics": "hourly rows; reset repeats first row; final boundary hour conservatively included"
+      },
+      "time_block_id": "v17_support:6a48a0a07529fa6d75cf84d8",
+      "exogenous_stream_id": "v17_exogenous:9ad6511e792134ded7b2f40a",
+      "physical_scenario_signature": "655a2084f77b501e9d4d30a3a7d33cd7d297edc8afcd6d7c357238cf5cf5deb6",
+      "id": "v17_L4_389265c703efac3494a1ce02",
+      "matched_group_id": "v17_cell:da12d8accce2e82cfbd4d020",
+      "design_cell_id": "v17_cell:da12d8accce2e82cfbd4d020",
+      "canonical_class": "L4",
+      "legacy_class": "L4b",
+      "design_variant": "long_outage_v17_v16_L4b_bbe594c9adb1f1f9eaa51c78",
+      "development_background": true,
+      "background_status": "previously_exposed_calendar",
+      "historical_exposure_status": "known_v16_exposed",
+      "long_outage_mechanism": "multiple_exogenous_faults_plus_demand_shock",
+      "exogenous_multi_fault_is_endogenous_propagation": false,
+      "continuous_recovery_tail_minutes": 240.0,
+      "source_scenario_id": "v16_L4b_bbe594c9adb1f1f9eaa51c78",
+      "source_coordinate_design_version": "v16_diesel_20261017_v1",
+      "v18_source_scene_id": "v17_L4_389265c703efac3494a1ce02",
+      "v18_seen_regression": true,
+      "v19_source_scene_id": "v17_L4_389265c703efac3494a1ce02",
+      "v19_seen_regression": true
+    },
+    {
+      "start_hour": 3841,
+      "source_day_index": 160,
+      "season_quarter": 2,
+      "duration_steps": 71,
+      "step_minutes": 15.0,
+      "pre_event_warmup_steps": 6,
+      "initialization_seed": 20261017,
+      "automatic_fast_shedding": false,
+      "grid_limit_kW": 850.0,
+      "pre_event_grid_limit_kW": 850.0,
+      "response_delay_minutes": 15.0,
+      "root_family_id": "v16_diesel_calendar:160",
+      "family_id": "v15_dev_root:399b344254a8a6fd9dc4d839",
+      "parent_template_id": "v15_dev_root:399b344254a8a6fd9dc4d839",
+      "parent_instance_id": "v15_dev_root:399b344254a8a6fd9dc4d839",
+      "design_family": "v15_dev_root:399b344254a8a6fd9dc4d839",
+      "base_state_id": "v15_initial:f8f52195ecbc34d17271aa5edc34db816e09e7f571f54c23c4b6c70a24c7a5b3",
+      "event_schema_version": "p2a.events.v1",
+      "sample_schema_version": "hospital_ies.state_coordinated_metadata.v17.v1",
+      "distribution_id": "operating_response.v15.finite_mechanism_coverage.q_design",
+      "sampling_method": "calendar_identity_and_disjoint_support_only",
+      "sampling_weight_is_failure_probability": false,
+      "p_reference": null,
+      "q_design_density": null,
+      "importance_weight": null,
+      "history_interval_minutes": [
+        0.0,
+        60.0
+      ],
+      "score_interval_minutes": [
+        60.0,
+        420.0
+      ],
+      "tail_interval_minutes": [
+        420.0,
+        600.0
+      ],
+      "label_horizons_minutes": [
+        15,
+        30,
+        60,
+        120
+      ],
+      "prehistory_mode": "same_continuous_episode_no_reset",
+      "initialization_semantics": "Repeated first-hour algebraic initialization is not actual prehistory",
+      "state_inheritance": "Actual uninterrupted GT ages, fuel, temperatures, source/contact ledgers and command queues",
+      "stage": 4,
+      "event_class": "L4b",
+      "analysis_class": "L4b",
+      "enable_propagation": true,
+      "faults": {
+        "GRID": 0.0,
+        "GT_1": 0.0,
+        "GT_2": 0.0,
+        "GT_3": 0.0
+      },
+      "shock": {
+        "e": 0.35,
+        "c": 0.25
+      },
+      "shock_by_priority": {},
+      "exogenous_events": [
+        {
+          "origin": "exogenous",
+          "kind": "device_fault",
+          "device": "GRID",
+          "availability": 0.0,
+          "start_minute": 32.5,
+          "end_minute": 812.5
+        },
+        {
+          "origin": "exogenous",
+          "kind": "device_fault",
+          "device": "GT_1",
+          "availability": 0.0,
+          "start_minute": 32.5,
+          "end_minute": 812.5
+        },
+        {
+          "origin": "exogenous",
+          "kind": "device_fault",
+          "device": "GT_2",
+          "availability": 0.0,
+          "start_minute": 32.5,
+          "end_minute": 812.5
+        },
+        {
+          "origin": "exogenous",
+          "kind": "device_fault",
+          "device": "GT_3",
+          "availability": 0.0,
+          "start_minute": 32.5,
+          "end_minute": 812.5
+        },
+        {
+          "origin": "exogenous",
+          "kind": "demand_shock",
+          "shock": {
+            "e": 0.35,
+            "c": 0.25
+          },
+          "start_minute": 32.5,
+          "end_minute": 152.5
+        }
+      ],
+      "first_event_minute": 32.5,
+      "normal_history_minutes": 32.5,
+      "initial_binding_status": "not_observed; classify from actual prefix, never from success",
+      "actual_p0_load_multiplier": {
+        "e": 1.35,
+        "h": 1.0,
+        "c": 1.25
+      },
+      "experiment_role": "confirmation",
+      "selection_allowed": false,
+      "requires_policy_freeze": true,
+      "fit_allowed": false,
+      "is_final_blind": false,
+      "purpose": "v16_frozen_loaded_diesel",
+      "sampling_cohort": "v17_long_development04",
+      "analysis_cohort": "v17_long_development04",
+      "sampling_role": "registered_engineering_development",
+      "new_independent_background": false,
+      "old_results_read_only": true,
+      "demand_background": "same_hospital_annual_source_no_unseen_background_claim",
+      "fault_start_minute": 32.5,
+      "fault_duration_minutes": 780.0,
+      "shock_start_minute": 32.5,
+      "shock_duration_minutes": 120.0,
+      "diesel_design": "all_GT_lost",
+      "core_four_class_denominator": false,
+      "coordinate_design_version": "state_coordinated.v17.explicit_coordinates.v1",
+      "source_outcomes_used_for_selection": false,
+      "original_final12_evaluated": false,
+      "full_source_support": {
+        "raw_start_minute": 230400,
+        "raw_end_minute": 231480,
+        "actual_trajectory_interval_minutes": [
+          230400,
+          231465.0
+        ],
+        "initialization_source_hours": [
+          3841
+        ],
+        "initialization_historical_minutes": 0,
+        "algebraic_initialization_iterations": 6,
+        "historical_observation_interval_minutes": [
+          0.0,
+          60.0
+        ],
+        "score_interval_minutes": [
+          60.0,
+          420.0
+        ],
+        "label_tail_interval_minutes": [
+          420.0,
+          600.0
+        ],
+        "endpoint_source_hour_reserved": true,
+        "source_semantics": "hourly rows; reset repeats first row; final boundary hour conservatively included"
+      },
+      "time_block_id": "v17_support:d600121357f076ea52a5c088",
+      "exogenous_stream_id": "v17_exogenous:2d90adab0382e25b5338013e",
+      "physical_scenario_signature": "66c37ed6f80983212f2826bc7627c8a93a5f5cfaaaaadd1881aa64171770cca0",
+      "id": "v17_L4_2e117d129f125a3a6d573eb4",
+      "matched_group_id": "v17_cell:12cc507fbece481c76d2d390",
+      "design_cell_id": "v17_cell:12cc507fbece481c76d2d390",
+      "canonical_class": "L4",
+      "legacy_class": "L4b",
+      "design_variant": "long_outage_v17_v16_L4b_250c5e5993819a71474c6931",
+      "development_background": true,
+      "background_status": "previously_exposed_calendar",
+      "historical_exposure_status": "known_v16_exposed",
+      "long_outage_mechanism": "multiple_exogenous_faults_plus_demand_shock",
+      "exogenous_multi_fault_is_endogenous_propagation": false,
+      "continuous_recovery_tail_minutes": 240.0,
+      "source_scenario_id": "v16_L4b_250c5e5993819a71474c6931",
+      "source_coordinate_design_version": "v16_diesel_20261017_v1",
+      "v18_source_scene_id": "v17_L4_2e117d129f125a3a6d573eb4",
+      "v18_seen_regression": true,
+      "v19_source_scene_id": "v17_L4_2e117d129f125a3a6d573eb4",
+      "v19_seen_regression": true
+    },
+    {
+      "start_hour": 3841,
+      "source_day_index": 160,
+      "season_quarter": 2,
+      "duration_steps": 71,
+      "step_minutes": 15.0,
+      "pre_event_warmup_steps": 6,
+      "initialization_seed": 20261017,
+      "automatic_fast_shedding": false,
+      "grid_limit_kW": 850.0,
+      "pre_event_grid_limit_kW": 850.0,
+      "response_delay_minutes": 15.0,
+      "root_family_id": "v16_diesel_calendar:160",
+      "family_id": "v15_dev_root:399b344254a8a6fd9dc4d839",
+      "parent_template_id": "v15_dev_root:399b344254a8a6fd9dc4d839",
+      "parent_instance_id": "v15_dev_root:399b344254a8a6fd9dc4d839",
+      "design_family": "v15_dev_root:399b344254a8a6fd9dc4d839",
+      "base_state_id": "v15_initial:f8f52195ecbc34d17271aa5edc34db816e09e7f571f54c23c4b6c70a24c7a5b3",
+      "event_schema_version": "p2a.events.v1",
+      "sample_schema_version": "hospital_ies.state_coordinated_metadata.v17.v1",
+      "distribution_id": "operating_response.v15.finite_mechanism_coverage.q_design",
+      "sampling_method": "calendar_identity_and_disjoint_support_only",
+      "sampling_weight_is_failure_probability": false,
+      "p_reference": null,
+      "q_design_density": null,
+      "importance_weight": null,
+      "history_interval_minutes": [
+        0.0,
+        60.0
+      ],
+      "score_interval_minutes": [
+        60.0,
+        420.0
+      ],
+      "tail_interval_minutes": [
+        420.0,
+        600.0
+      ],
+      "label_horizons_minutes": [
+        15,
+        30,
+        60,
+        120
+      ],
+      "prehistory_mode": "same_continuous_episode_no_reset",
+      "initialization_semantics": "Repeated first-hour algebraic initialization is not actual prehistory",
+      "state_inheritance": "Actual uninterrupted GT ages, fuel, temperatures, source/contact ledgers and command queues",
+      "stage": 4,
+      "event_class": "L4b",
+      "analysis_class": "L4b",
+      "enable_propagation": true,
+      "faults": {
+        "GRID": 0.0,
+        "GT_1": 0.0,
+        "GT_2": 0.0
+      },
+      "shock": {
+        "e": 0.35,
+        "c": 0.25
+      },
+      "shock_by_priority": {},
+      "exogenous_events": [
+        {
+          "origin": "exogenous",
+          "kind": "device_fault",
+          "device": "GRID",
+          "availability": 0.0,
+          "start_minute": 32.5,
+          "end_minute": 812.5
+        },
+        {
+          "origin": "exogenous",
+          "kind": "device_fault",
+          "device": "GT_1",
+          "availability": 0.0,
+          "start_minute": 32.5,
+          "end_minute": 812.5
+        },
+        {
+          "origin": "exogenous",
+          "kind": "device_fault",
+          "device": "GT_2",
+          "availability": 0.0,
+          "start_minute": 32.5,
+          "end_minute": 812.5
+        },
+        {
+          "origin": "exogenous",
+          "kind": "demand_shock",
+          "shock": {
+            "e": 0.35,
+            "c": 0.25
+          },
+          "start_minute": 32.5,
+          "end_minute": 152.5
+        }
+      ],
+      "first_event_minute": 32.5,
+      "normal_history_minutes": 32.5,
+      "initial_binding_status": "not_observed; classify from actual prefix, never from success",
+      "actual_p0_load_multiplier": {
+        "e": 1.35,
+        "h": 1.0,
+        "c": 1.25
+      },
+      "experiment_role": "confirmation",
+      "selection_allowed": false,
+      "requires_policy_freeze": true,
+      "fit_allowed": false,
+      "is_final_blind": false,
+      "purpose": "v16_frozen_loaded_diesel",
+      "sampling_cohort": "v17_long_development04",
+      "analysis_cohort": "v17_long_development04",
+      "sampling_role": "registered_engineering_development",
+      "new_independent_background": false,
+      "old_results_read_only": true,
+      "demand_background": "same_hospital_annual_source_no_unseen_background_claim",
+      "fault_start_minute": 32.5,
+      "fault_duration_minutes": 780.0,
+      "shock_start_minute": 32.5,
+      "shock_duration_minutes": 120.0,
+      "diesel_design": "one_GT_retained",
+      "core_four_class_denominator": false,
+      "coordinate_design_version": "state_coordinated.v17.explicit_coordinates.v1",
+      "source_outcomes_used_for_selection": false,
+      "original_final12_evaluated": false,
+      "full_source_support": {
+        "raw_start_minute": 230400,
+        "raw_end_minute": 231480,
+        "actual_trajectory_interval_minutes": [
+          230400,
+          231465.0
+        ],
+        "initialization_source_hours": [
+          3841
+        ],
+        "initialization_historical_minutes": 0,
+        "algebraic_initialization_iterations": 6,
+        "historical_observation_interval_minutes": [
+          0.0,
+          60.0
+        ],
+        "score_interval_minutes": [
+          60.0,
+          420.0
+        ],
+        "label_tail_interval_minutes": [
+          420.0,
+          600.0
+        ],
+        "endpoint_source_hour_reserved": true,
+        "source_semantics": "hourly rows; reset repeats first row; final boundary hour conservatively included"
+      },
+      "time_block_id": "v17_support:d600121357f076ea52a5c088",
+      "exogenous_stream_id": "v17_exogenous:c3023c3801297d6f2249f507",
+      "physical_scenario_signature": "b02e856d6f572891b78c8bad5631b19bc1ce30021ad31cd8474aa528c82221d4",
+      "id": "v17_L4_649e27ae52a573ef10e673bd",
+      "matched_group_id": "v17_cell:cdd4959b3098c3d8a04138dd",
+      "design_cell_id": "v17_cell:cdd4959b3098c3d8a04138dd",
+      "canonical_class": "L4",
+      "legacy_class": "L4b",
+      "design_variant": "long_outage_v17_v16_L4b_d0b9f356e2d29856d93de319",
+      "development_background": true,
+      "background_status": "previously_exposed_calendar",
+      "historical_exposure_status": "known_v16_exposed",
+      "long_outage_mechanism": "multiple_exogenous_faults_plus_demand_shock",
+      "exogenous_multi_fault_is_endogenous_propagation": false,
+      "continuous_recovery_tail_minutes": 240.0,
+      "source_scenario_id": "v16_L4b_d0b9f356e2d29856d93de319",
+      "source_coordinate_design_version": "v16_diesel_20261017_v1",
+      "v18_source_scene_id": "v17_L4_649e27ae52a573ef10e673bd",
+      "v18_seen_regression": true,
+      "v19_source_scene_id": "v17_L4_649e27ae52a573ef10e673bd",
+      "v19_seen_regression": true
+    }
+  ],
+  "roots": [
+    {
+      "root_family_id": "v16_diesel_calendar:100",
+      "start_hour": 2401,
+      "source_day_index": 100,
+      "season_quarter": 2,
+      "raw_start_minute": 144000,
+      "raw_end_minute": 145080,
+      "embargo_start_minute": 143940,
+      "embargo_end_minute": 145140,
+      "new_independent_background": false
+    },
+    {
+      "root_family_id": "v16_diesel_calendar:160",
+      "start_hour": 3841,
+      "source_day_index": 160,
+      "season_quarter": 2,
+      "raw_start_minute": 230400,
+      "raw_end_minute": 231480,
+      "embargo_start_minute": 230340,
+      "embargo_end_minute": 231540,
+      "new_independent_background": false
+    },
+    {
+      "root_family_id": "v16_diesel_calendar:40",
+      "start_hour": 961,
+      "source_day_index": 40,
+      "season_quarter": 1,
+      "raw_start_minute": 57600,
+      "raw_end_minute": 58680,
+      "embargo_start_minute": 57540,
+      "embargo_end_minute": 58740,
+      "new_independent_background": false
+    },
+    {
+      "root_family_id": "v16_diesel_calendar:70",
+      "start_hour": 1681,
+      "source_day_index": 70,
+      "season_quarter": 1,
+      "raw_start_minute": 100800,
+      "raw_end_minute": 101880,
+      "embargo_start_minute": 100740,
+      "embargo_end_minute": 101940,
+      "new_independent_background": false
+    }
+  ],
+  "analysis_class_counts": {
+    "L1": 2,
+    "L4b": 6
+  },
+  "source_metadata_bindings": {
+    "outputs/v18_execution_recovery_20261018_run01/design/LONG_FINAL_R1_PROPOSAL.json": {
+      "sha256": "4c5ef87c24c4e8000bf8b54c663801178de8516b61a78090381cc392b34e3e48",
+      "signature": "31b731c3dbe7be9f2d54df95127021c51a761bfd723e153b10cea04edb1b4373"
+    }
+  },
+  "freeze_signature": "2e4535b1b8a02b3950ef90ee33dbdfd49eeef07c605e1bf7b7c6fcf1f8f5a339",
+  "incident_denominator_classes": [
+    "L1",
+    "L2",
+    "L3",
+    "L4b"
+  ],
+  "separately_reported_classes": [
+    "N2",
+    "L4a"
+  ],
+  "scoring_windows": {
+    "primary": [
+      60.0,
+      420.0
+    ],
+    "full": [
+      0.0,
+      600.0
+    ]
+  },
+  "additional_scoring_windows": "registered_full [0,actual requested end); prefix and explicitly named event windows",
+  "independence": "New roots/coordinates on one hospital-year; no iid or never-seen demand claim",
+  "coordinate_design_version": "state_coordinated.v17.explicit_coordinates.v1",
+  "coordinate_recipe": {
+    "growth_cycle": [
+      0.25,
+      0.75,
+      1.2
+    ],
+    "fault_duration_cycle_minutes": [
+      30.0,
+      60.0,
+      180.0,
+      300.0
+    ],
+    "shock_duration_cycle_minutes": [
+      30.0,
+      60.0,
+      90.0,
+      270.0
+    ],
+    "growth_period": 3,
+    "duration_period": 4,
+    "growth_is_not_bound_to_quarter": true,
+    "fault_and_shock_are_separate_registered_axes": true,
+    "complete_duration_factorial_claim": false,
+    "selection_uses_outcomes": false,
+    "hold_declarations_are_not_service_guarantees": true,
+    "current_static_copy_support_hours": 2.0
+  },
+  "schema": "hospital_ies.model_closeout_metadata.v19.v1",
+  "study_name": "hospital_ies_model_closeout_v19",
+  "strict_final_gate": "not_verified",
+  "original_final12_evaluated": false,
+  "original_final_release_authorized": false,
+  "sealed_final_days": [
+    21,
+    26,
+    59,
+    77,
+    92,
+    127,
+    140,
+    196,
+    264,
+    284,
+    344,
+    359
+  ],
+  "new_independent_background_count": 0,
+  "hospital_count": 1,
+  "source_year_count": 1,
+  "statistical_iid_claim": false,
+  "source_load_values_read": false,
+  "raw_or_result_files_read": false,
+  "physical_episodes_started": 0,
+  "resource_limits": {
+    "max_actual_attempts": 700,
+    "max_experiment_wall_hours": 48,
+    "max_registered_pairs": 700,
+    "max_main_dispatch_configurations": 4,
+    "ceilings_not_quotas": true,
+    "internally_predeclared_engineering_bounds": true,
+    "user_authorized_budget_claim": false,
+    "revision_requires_recorded_evidence": true
+  },
+  "study_contract_id": "hospital_ies.model_closeout_study.v19.v1",
+  "evaluation_role": "seen_regression",
+  "historical_unseen_claim": false,
+  "old80_role": "seen_regression",
+  "confirmation_background_count": 0,
+  "canonical_class_counts": {
+    "L1": 2,
+    "L4": 6
+  },
+  "confirmation_isolation_registration": null,
+  "final_archive_hard_limit_bytes": 200000000,
+  "signature": "a77310b674a844e55eca95ce34db453a79cdec9c25921064b81b4397f0012ecb"
+}

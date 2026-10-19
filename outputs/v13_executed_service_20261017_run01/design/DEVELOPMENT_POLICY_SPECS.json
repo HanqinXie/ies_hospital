@@ -1,0 +1,33 @@
+[
+  {
+    "policy_id": "fixed_standby_constant_v12b",
+    "kind": "coordinated",
+    "config": {
+      "coordination_mode": "fixed",
+      "fixed_preference": "standby_first",
+      "budget_feedback": false
+    }
+  },
+  {
+    "policy_id": "executed_loss_feedback_v13",
+    "kind": "executed_service",
+    "config": {
+      "coordination_mode": "fixed",
+      "fixed_preference": "standby_first",
+      "budget_feedback": false
+    }
+  },
+  {
+    "policy_id": "static_zero_v13",
+    "kind": "coordinated",
+    "config": {
+      "coordination_mode": "fixed",
+      "fixed_preference": "standby_first",
+      "budget_feedback": false,
+      "service_budget_fractions": [
+        0.0,
+        0.0
+      ]
+    }
+  }
+]

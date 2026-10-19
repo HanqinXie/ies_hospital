@@ -1,0 +1,71 @@
+{
+  "schema": "hospital_ies.v19.portable_scientific_reproduction.v1.commands",
+  "status": "configured_pending_actual_staged_execution",
+  "note": "Exact original final reference configured. All commands must execute in one fresh external D/E stage; no original raw or workspace may substitute.",
+  "commands": [
+    {
+      "kind": "independent_regression",
+      "argv": [
+        "python",
+        "-m",
+        "pytest",
+        "-q",
+        "--basetemp",
+        "outputs\\v19_model_closeout_20261018_run01\\test_tmp\\independent_stage_gate01",
+        "tests/test_model_closeout_analysis.py",
+        "tests/test_model_closeout_contact_semantics.py",
+        "tests/test_model_closeout_contacts_review.py",
+        "tests/test_model_closeout_emissions.py",
+        "tests/test_model_closeout_environment.py",
+        "tests/test_model_closeout_execution.py",
+        "tests/test_model_closeout_numerics.py",
+        "tests/test_model_closeout_numerics_guards.py",
+        "tests/test_model_closeout_registration.py",
+        "tests/test_model_closeout_reserve.py",
+        "tests/test_execution_recovery_numerics.py",
+        "tests/test_execution_recovery_runner.py",
+        "tests/test_execution_recovery_freeze.py"
+      ]
+    },
+    {
+      "kind": "preparation",
+      "argv": [
+        "python",
+        "-B",
+        "outputs/v19_model_closeout_20261018_run01/scripts/portable_reproduce.py",
+        "prepare"
+      ]
+    },
+    {
+      "kind": "scientific_reproduction",
+      "cwd": "SCIENCE_ROOT",
+      "argv": [
+        "python",
+        "-B",
+        "-m",
+        "tools.model_closeout.runner",
+        "run",
+        "--directory",
+        "outputs/v19_model_closeout_20261018_run01/experiments/standalone_replay01"
+      ],
+      "proof_json": "SCIENCE_ROOT/outputs/v19_model_closeout_20261018_run01/experiments/standalone_replay01/BATCH_RESULT.json",
+      "expected_fields": {
+        "registered_pairs": 1,
+        "actual_attempts": 1,
+        "complete_full": 1,
+        "unknown_full": 0,
+        "analysis_failure_or_unavailable_count": 0,
+        "source_unchanged": true
+      }
+    },
+    {
+      "kind": "reference_comparison",
+      "argv": [
+        "python",
+        "-B",
+        "outputs/v19_model_closeout_20261018_run01/scripts/portable_reproduce.py",
+        "verify"
+      ]
+    }
+  ]
+}
