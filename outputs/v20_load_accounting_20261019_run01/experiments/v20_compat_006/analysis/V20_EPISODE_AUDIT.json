@@ -1,0 +1,55 @@
+[
+  {
+    "scenario_id": "v17_L4_389265c703efac3494a1ce02",
+    "policy_id": "C18_service_rich_M20compat_v1",
+    "model_id": "M20_load_accounting",
+    "audit": {
+      "schema": "hospital_ies.v18.saved_raw_audit.v1",
+      "issues": [],
+      "segment_count": 106,
+      "observed_until_minute": 1065.0,
+      "requested_end_minute": 1065.0,
+      "complete_registered_interval": true,
+      "unknown_tail_minutes": null,
+      "max_recomputed_electric_balance_kW": 1.5543122344752192e-13,
+      "max_recomputed_cooling_balance_kW": 1.1368683772161603e-13,
+      "max_recomputed_auxiliary_difference_kW": 0.0,
+      "minimum_steam_surplus_after_load_and_ABS_lbph": -4.547473508864641e-12,
+      "independent_steam_equality_identified": false,
+      "heat_check": "Recorded steam/equivalent equality plus independently recomputed source adequacy; unused-steam variable not saved",
+      "max_recorded_energy_residual_kW": 1.2960299500264226e-12,
+      "max_recorded_steam_residual_lbph": 4.547473508864641e-12,
+      "DG_receipt_segment_count": 106,
+      "DG_totals": {
+        "mechanical_work_kWh": 2399.9999999999995,
+        "electrical_work_kWh": 2216.0312114645208,
+        "loss_work_kWh": 183.9687885354789,
+        "rotor_delta_kWh": 5.115822322280072e-17,
+        "fuel_budget_debit_kWh_equivalent": 2399.9999999999995
+      },
+      "DG_max_residuals": {
+        "electric": 1.5543122344752192e-13,
+        "cooling": 1.1368683772161603e-13,
+        "auxiliary": 0.0,
+        "recorded": 1.2960299500264226e-12,
+        "recorded_steam": 4.547473508864641e-12,
+        "DG_energy": 1.7633302225779736e-14,
+        "DG_rotor": 0.0,
+        "DG_electrical": 2.842170943040401e-14,
+        "DG_budget": 2.1804780203638074e-13
+      },
+      "numerical_fuel_settlements": [
+        {
+          "time_minute": 652.4573570845636,
+          "budget_roundoff_remainder_kWh": 0.0
+        }
+      ],
+      "power_audit_tolerance_kW": 0.0001,
+      "work_audit_tolerance_kWh": 1e-08,
+      "time_audit_tolerance_minutes": 1e-07,
+      "original_service_and_failure_thresholds_changed": false,
+      "no_tail_imputation": true,
+      "status": "passed"
+    }
+  }
+]

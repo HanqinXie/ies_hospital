@@ -1,0 +1,52 @@
+{
+  "schema": "hospital_ies.v20.normal008_cadence_diagnosis.v1",
+  "utc": "2026-10-19T11:28:49.568131+00:00",
+  "original_runtime_source_sha256": "68701e844ffca923e91f82fff52116d4b18a4357f1239d5c4a416135c8ed95a3",
+  "actual_readonly_per_function_timings_seconds": [
+    {
+      "active_science": 1.9687348001170903,
+      "recheck_rows": 0.007078999886289239,
+      "windows_memory": 0.009198500076308846
+    },
+    {
+      "active_science": 2.258159500081092,
+      "recheck_rows": 0.007172599900513887,
+      "windows_memory": 0.010660799918696284
+    },
+    {
+      "active_science": 1.8723990998696536,
+      "recheck_rows": 0.006436700001358986,
+      "windows_memory": 0.01872000005096197
+    }
+  ],
+  "function_timing_basis": "Actual read-only perf_counter measurements returned by tool before ROOT stopped idle62496; not simulated work durations",
+  "original_sample_count": 49,
+  "actual_gap_min_seconds": 3.8910000000614673,
+  "actual_gap_max_seconds": 4.672000000020489,
+  "original_runtime_stop": {
+    "path": "L72_RUN01/IDLE_STOP_OUTCOME.json",
+    "sha256": "e54d4eafd3cb1c63011fa14c768097f7c822cc88f312eea6a056201d71637878"
+  },
+  "actual_capture_exit15_receipt": {
+    "path": "D:\\hospital_ies_v20_20261019\\outputs\\v20_load_accounting_20261019_run01\\logs\\normal008_lightweight_run01.command.json",
+    "sha256": "c3ada8d70ce48e631b6f3bf6072e264a453f7c121ad1121c99f403f10b694591"
+  },
+  "current_source_sha256": "cce231bf254b00a0af0021f04273ad54134005340f5b9706ce4578cec4823ca7",
+  "tests_sha256": "3d0cc0bf93f2ceb34f1c84f1e8106b4d96fed557384c8f09c6c6c2742b6d595b",
+  "actual_regression": {
+    "red": "cadence_red01.log",
+    "result": "4 failed,33 passed",
+    "green": "cadence_green02.log",
+    "green_result": "37 passed",
+    "green_exit_code": 0
+  },
+  "unchanged_gates": {
+    "growth_factor": 1.1,
+    "minimum_reserve_GiB": 2,
+    "preferred_reserve_GiB": 3,
+    "minimum_observed_seconds": 30,
+    "minimum_observations": 16,
+    "maximum_gap_seconds": 3
+  },
+  "actual_science_runs_started_by_agent": 0
+}

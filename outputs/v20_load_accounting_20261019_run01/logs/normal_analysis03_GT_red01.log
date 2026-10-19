@@ -1,0 +1,173 @@
+..........................................FFFFFFFFF                      [100%]
+================================== FAILURES ===================================
+____ test_GT_energy_uses_actual_linear_source_endpoints_not_arrived_action ____
+
+    def test_GT_energy_uses_actual_linear_source_endpoints_not_arrived_action():
+        rows=gt_rows();rows[0]['action']='{"gt_electric_kW":[999,999,999]}'
+>       value=module().integrate_actual_gt(rows,60.,'s','p','a'*64)
+E       AttributeError: module '_normal03_successor_tested' has no attribute 'integrate_actual_gt'
+
+outputs\v20_load_accounting_20261019_run01\review\normal_window_analysis03\test_successor_contract.py:148: AttributeError
+_____ test_saved_GT_csv_cannot_fill_unknown_or_foreign_actual_power[gap] ______
+
+mutation = 'gap'
+
+    @pytest.mark.parametrize('mutation',['gap','overlap','tail_unknown','missing_endpoint','wrong_policy','wrong_raw','negative_GT','not_three_units'])
+    def test_saved_GT_csv_cannot_fill_unknown_or_foreign_actual_power(mutation):
+        rows=gt_rows()
+        if mutation=='gap':rows[1]['start_minute']='31'
+        elif mutation=='overlap':rows[1]['start_minute']='29'
+        elif mutation=='tail_unknown':rows[1]['end_minute']='59'
+        elif mutation=='missing_endpoint':rows[0]['source_end_gt_kW']=''
+        elif mutation=='wrong_policy':rows[1]['policy_id']='foreign'
+        elif mutation=='wrong_raw':rows[1]['raw_sha256']='b'*64
+        elif mutation=='negative_GT':rows[0]['source_start_gt_kW']='[-1,0,0]'
+        elif mutation=='not_three_units':rows[0]['source_start_gt_kW']='[1,2]'
+>       with pytest.raises(ValueError):module().integrate_actual_gt(rows,60.,'s','p','a'*64)
+E       AttributeError: module '_normal03_successor_tested' has no attribute 'integrate_actual_gt'
+
+outputs\v20_load_accounting_20261019_run01\review\normal_window_analysis03\test_successor_contract.py:163: AttributeError
+___ test_saved_GT_csv_cannot_fill_unknown_or_foreign_actual_power[overlap] ____
+
+mutation = 'overlap'
+
+    @pytest.mark.parametrize('mutation',['gap','overlap','tail_unknown','missing_endpoint','wrong_policy','wrong_raw','negative_GT','not_three_units'])
+    def test_saved_GT_csv_cannot_fill_unknown_or_foreign_actual_power(mutation):
+        rows=gt_rows()
+        if mutation=='gap':rows[1]['start_minute']='31'
+        elif mutation=='overlap':rows[1]['start_minute']='29'
+        elif mutation=='tail_unknown':rows[1]['end_minute']='59'
+        elif mutation=='missing_endpoint':rows[0]['source_end_gt_kW']=''
+        elif mutation=='wrong_policy':rows[1]['policy_id']='foreign'
+        elif mutation=='wrong_raw':rows[1]['raw_sha256']='b'*64
+        elif mutation=='negative_GT':rows[0]['source_start_gt_kW']='[-1,0,0]'
+        elif mutation=='not_three_units':rows[0]['source_start_gt_kW']='[1,2]'
+>       with pytest.raises(ValueError):module().integrate_actual_gt(rows,60.,'s','p','a'*64)
+E       AttributeError: module '_normal03_successor_tested' has no attribute 'integrate_actual_gt'
+
+outputs\v20_load_accounting_20261019_run01\review\normal_window_analysis03\test_successor_contract.py:163: AttributeError
+_ test_saved_GT_csv_cannot_fill_unknown_or_foreign_actual_power[tail_unknown] _
+
+mutation = 'tail_unknown'
+
+    @pytest.mark.parametrize('mutation',['gap','overlap','tail_unknown','missing_endpoint','wrong_policy','wrong_raw','negative_GT','not_three_units'])
+    def test_saved_GT_csv_cannot_fill_unknown_or_foreign_actual_power(mutation):
+        rows=gt_rows()
+        if mutation=='gap':rows[1]['start_minute']='31'
+        elif mutation=='overlap':rows[1]['start_minute']='29'
+        elif mutation=='tail_unknown':rows[1]['end_minute']='59'
+        elif mutation=='missing_endpoint':rows[0]['source_end_gt_kW']=''
+        elif mutation=='wrong_policy':rows[1]['policy_id']='foreign'
+        elif mutation=='wrong_raw':rows[1]['raw_sha256']='b'*64
+        elif mutation=='negative_GT':rows[0]['source_start_gt_kW']='[-1,0,0]'
+        elif mutation=='not_three_units':rows[0]['source_start_gt_kW']='[1,2]'
+>       with pytest.raises(ValueError):module().integrate_actual_gt(rows,60.,'s','p','a'*64)
+E       AttributeError: module '_normal03_successor_tested' has no attribute 'integrate_actual_gt'
+
+outputs\v20_load_accounting_20261019_run01\review\normal_window_analysis03\test_successor_contract.py:163: AttributeError
+_ test_saved_GT_csv_cannot_fill_unknown_or_foreign_actual_power[missing_endpoint] _
+
+mutation = 'missing_endpoint'
+
+    @pytest.mark.parametrize('mutation',['gap','overlap','tail_unknown','missing_endpoint','wrong_policy','wrong_raw','negative_GT','not_three_units'])
+    def test_saved_GT_csv_cannot_fill_unknown_or_foreign_actual_power(mutation):
+        rows=gt_rows()
+        if mutation=='gap':rows[1]['start_minute']='31'
+        elif mutation=='overlap':rows[1]['start_minute']='29'
+        elif mutation=='tail_unknown':rows[1]['end_minute']='59'
+        elif mutation=='missing_endpoint':rows[0]['source_end_gt_kW']=''
+        elif mutation=='wrong_policy':rows[1]['policy_id']='foreign'
+        elif mutation=='wrong_raw':rows[1]['raw_sha256']='b'*64
+        elif mutation=='negative_GT':rows[0]['source_start_gt_kW']='[-1,0,0]'
+        elif mutation=='not_three_units':rows[0]['source_start_gt_kW']='[1,2]'
+>       with pytest.raises(ValueError):module().integrate_actual_gt(rows,60.,'s','p','a'*64)
+E       AttributeError: module '_normal03_successor_tested' has no attribute 'integrate_actual_gt'
+
+outputs\v20_load_accounting_20261019_run01\review\normal_window_analysis03\test_successor_contract.py:163: AttributeError
+_ test_saved_GT_csv_cannot_fill_unknown_or_foreign_actual_power[wrong_policy] _
+
+mutation = 'wrong_policy'
+
+    @pytest.mark.parametrize('mutation',['gap','overlap','tail_unknown','missing_endpoint','wrong_policy','wrong_raw','negative_GT','not_three_units'])
+    def test_saved_GT_csv_cannot_fill_unknown_or_foreign_actual_power(mutation):
+        rows=gt_rows()
+        if mutation=='gap':rows[1]['start_minute']='31'
+        elif mutation=='overlap':rows[1]['start_minute']='29'
+        elif mutation=='tail_unknown':rows[1]['end_minute']='59'
+        elif mutation=='missing_endpoint':rows[0]['source_end_gt_kW']=''
+        elif mutation=='wrong_policy':rows[1]['policy_id']='foreign'
+        elif mutation=='wrong_raw':rows[1]['raw_sha256']='b'*64
+        elif mutation=='negative_GT':rows[0]['source_start_gt_kW']='[-1,0,0]'
+        elif mutation=='not_three_units':rows[0]['source_start_gt_kW']='[1,2]'
+>       with pytest.raises(ValueError):module().integrate_actual_gt(rows,60.,'s','p','a'*64)
+E       AttributeError: module '_normal03_successor_tested' has no attribute 'integrate_actual_gt'
+
+outputs\v20_load_accounting_20261019_run01\review\normal_window_analysis03\test_successor_contract.py:163: AttributeError
+__ test_saved_GT_csv_cannot_fill_unknown_or_foreign_actual_power[wrong_raw] ___
+
+mutation = 'wrong_raw'
+
+    @pytest.mark.parametrize('mutation',['gap','overlap','tail_unknown','missing_endpoint','wrong_policy','wrong_raw','negative_GT','not_three_units'])
+    def test_saved_GT_csv_cannot_fill_unknown_or_foreign_actual_power(mutation):
+        rows=gt_rows()
+        if mutation=='gap':rows[1]['start_minute']='31'
+        elif mutation=='overlap':rows[1]['start_minute']='29'
+        elif mutation=='tail_unknown':rows[1]['end_minute']='59'
+        elif mutation=='missing_endpoint':rows[0]['source_end_gt_kW']=''
+        elif mutation=='wrong_policy':rows[1]['policy_id']='foreign'
+        elif mutation=='wrong_raw':rows[1]['raw_sha256']='b'*64
+        elif mutation=='negative_GT':rows[0]['source_start_gt_kW']='[-1,0,0]'
+        elif mutation=='not_three_units':rows[0]['source_start_gt_kW']='[1,2]'
+>       with pytest.raises(ValueError):module().integrate_actual_gt(rows,60.,'s','p','a'*64)
+E       AttributeError: module '_normal03_successor_tested' has no attribute 'integrate_actual_gt'
+
+outputs\v20_load_accounting_20261019_run01\review\normal_window_analysis03\test_successor_contract.py:163: AttributeError
+_ test_saved_GT_csv_cannot_fill_unknown_or_foreign_actual_power[negative_GT] __
+
+mutation = 'negative_GT'
+
+    @pytest.mark.parametrize('mutation',['gap','overlap','tail_unknown','missing_endpoint','wrong_policy','wrong_raw','negative_GT','not_three_units'])
+    def test_saved_GT_csv_cannot_fill_unknown_or_foreign_actual_power(mutation):
+        rows=gt_rows()
+        if mutation=='gap':rows[1]['start_minute']='31'
+        elif mutation=='overlap':rows[1]['start_minute']='29'
+        elif mutation=='tail_unknown':rows[1]['end_minute']='59'
+        elif mutation=='missing_endpoint':rows[0]['source_end_gt_kW']=''
+        elif mutation=='wrong_policy':rows[1]['policy_id']='foreign'
+        elif mutation=='wrong_raw':rows[1]['raw_sha256']='b'*64
+        elif mutation=='negative_GT':rows[0]['source_start_gt_kW']='[-1,0,0]'
+        elif mutation=='not_three_units':rows[0]['source_start_gt_kW']='[1,2]'
+>       with pytest.raises(ValueError):module().integrate_actual_gt(rows,60.,'s','p','a'*64)
+E       AttributeError: module '_normal03_successor_tested' has no attribute 'integrate_actual_gt'
+
+outputs\v20_load_accounting_20261019_run01\review\normal_window_analysis03\test_successor_contract.py:163: AttributeError
+_ test_saved_GT_csv_cannot_fill_unknown_or_foreign_actual_power[not_three_units] _
+
+mutation = 'not_three_units'
+
+    @pytest.mark.parametrize('mutation',['gap','overlap','tail_unknown','missing_endpoint','wrong_policy','wrong_raw','negative_GT','not_three_units'])
+    def test_saved_GT_csv_cannot_fill_unknown_or_foreign_actual_power(mutation):
+        rows=gt_rows()
+        if mutation=='gap':rows[1]['start_minute']='31'
+        elif mutation=='overlap':rows[1]['start_minute']='29'
+        elif mutation=='tail_unknown':rows[1]['end_minute']='59'
+        elif mutation=='missing_endpoint':rows[0]['source_end_gt_kW']=''
+        elif mutation=='wrong_policy':rows[1]['policy_id']='foreign'
+        elif mutation=='wrong_raw':rows[1]['raw_sha256']='b'*64
+        elif mutation=='negative_GT':rows[0]['source_start_gt_kW']='[-1,0,0]'
+        elif mutation=='not_three_units':rows[0]['source_start_gt_kW']='[1,2]'
+>       with pytest.raises(ValueError):module().integrate_actual_gt(rows,60.,'s','p','a'*64)
+E       AttributeError: module '_normal03_successor_tested' has no attribute 'integrate_actual_gt'
+
+outputs\v20_load_accounting_20261019_run01\review\normal_window_analysis03\test_successor_contract.py:163: AttributeError
+=========================== short test summary info ===========================
+FAILED outputs/v20_load_accounting_20261019_run01/review/normal_window_analysis03/test_successor_contract.py::test_GT_energy_uses_actual_linear_source_endpoints_not_arrived_action
+FAILED outputs/v20_load_accounting_20261019_run01/review/normal_window_analysis03/test_successor_contract.py::test_saved_GT_csv_cannot_fill_unknown_or_foreign_actual_power[gap]
+FAILED outputs/v20_load_accounting_20261019_run01/review/normal_window_analysis03/test_successor_contract.py::test_saved_GT_csv_cannot_fill_unknown_or_foreign_actual_power[overlap]
+FAILED outputs/v20_load_accounting_20261019_run01/review/normal_window_analysis03/test_successor_contract.py::test_saved_GT_csv_cannot_fill_unknown_or_foreign_actual_power[tail_unknown]
+FAILED outputs/v20_load_accounting_20261019_run01/review/normal_window_analysis03/test_successor_contract.py::test_saved_GT_csv_cannot_fill_unknown_or_foreign_actual_power[missing_endpoint]
+FAILED outputs/v20_load_accounting_20261019_run01/review/normal_window_analysis03/test_successor_contract.py::test_saved_GT_csv_cannot_fill_unknown_or_foreign_actual_power[wrong_policy]
+FAILED outputs/v20_load_accounting_20261019_run01/review/normal_window_analysis03/test_successor_contract.py::test_saved_GT_csv_cannot_fill_unknown_or_foreign_actual_power[wrong_raw]
+FAILED outputs/v20_load_accounting_20261019_run01/review/normal_window_analysis03/test_successor_contract.py::test_saved_GT_csv_cannot_fill_unknown_or_foreign_actual_power[negative_GT]
+FAILED outputs/v20_load_accounting_20261019_run01/review/normal_window_analysis03/test_successor_contract.py::test_saved_GT_csv_cannot_fill_unknown_or_foreign_actual_power[not_three_units]
+9 failed, 42 passed in 0.15s

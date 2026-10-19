@@ -1,0 +1,82 @@
+{
+  "utc": "2026-10-19T10:23:48.998408+00:00",
+  "action": "Terminate only owned readonly analysis waiter82524; let capture19424 finish naturally",
+  "reason": "Release unnecessary committed memory; invoke the same prepared collect() once after S3 succeeds",
+  "identity": {
+    "pid": 82524,
+    "create_time": 1792404054.6227684,
+    "exe": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\python.exe",
+    "command": [
+      "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\python.exe",
+      "-B",
+      "outputs/v20_load_accounting_20261019_run01/review/normal_window_analysis02/normal_window_analysis.py",
+      "--wait",
+      "--poll-seconds",
+      "30",
+      "--max-wait-hours",
+      "48"
+    ],
+    "cwd": "D:\\hospital_ies_v20_20261019",
+    "parent_pid": 19424,
+    "parent_create_time": 1792404054.5880444,
+    "children": [],
+    "private_bytes": 1677828096,
+    "normal_terminal_count": 7
+  },
+  "before_memory": {
+    "utc": "2026-10-19T10:23:48.960936+00:00",
+    "total_physical_bytes": 50870132736,
+    "available_physical_bytes": 26932248576,
+    "committed_bytes": 43743391744,
+    "commit_limit_bytes": 61780164608,
+    "commit_headroom_bytes": 18036772864,
+    "counter_basis": "GlobalMemoryStatusEx physical; GetPerformanceInfo commit pages times page size"
+  },
+  "snapshot_files": [
+    {
+      "source": "outputs/v20_load_accounting_20261019_run01/review/normal_window_analysis02/READONLY_OWNER.json",
+      "snapshot": "BEFORE_READONLY_OWNER.json",
+      "bytes": 389,
+      "sha256": "308b09ab1fb14a9e62e2e04955c7268612f13557a8ee96c38c94d73820d71d8b",
+      "snapshot_of_mutable_wait_metadata": true
+    },
+    {
+      "source": "outputs/v20_load_accounting_20261019_run01/review/normal_window_analysis02/PREPARATION.json",
+      "snapshot": "BEFORE_PREPARATION.json",
+      "bytes": 9138,
+      "sha256": "757a1e76a460a507bc33f12f92d9693793f3f83656704da6cb615d979821f8bd",
+      "snapshot_of_mutable_wait_metadata": true
+    },
+    {
+      "source": "outputs/v20_load_accounting_20261019_run01/review/normal_window_analysis02/PREPARATION_VALIDATION_RECEIPT01.json",
+      "snapshot": "BEFORE_PREPARATION_VALIDATION_RECEIPT01.json",
+      "bytes": 6384,
+      "sha256": "d946e1aa402629f7b3702e2bb78eb887df34000be54c863b31e76c27d976e097",
+      "snapshot_of_mutable_wait_metadata": true
+    },
+    {
+      "source": "outputs/v20_load_accounting_20261019_run01/review/normal_window_analysis02/STATE_CURRENT.json",
+      "snapshot": "BEFORE_STATE_CURRENT.json",
+      "bytes": 6240,
+      "sha256": "edf87046d5d14a6ad98ccc400d51126792e6da9179c26b183b17e7c3e766a414",
+      "snapshot_of_mutable_wait_metadata": true
+    },
+    {
+      "source": "outputs/v20_load_accounting_20261019_run01/review/normal_window_analysis02/EVENTS.jsonl",
+      "snapshot": "BEFORE_EVENTS.jsonl",
+      "bytes": 160223,
+      "sha256": "43c3f88b82c626e8686b9edf1119d6eda78d1aaaf1e9f1e85ab91f80aa752a11",
+      "snapshot_of_mutable_wait_metadata": true
+    },
+    {
+      "source": "outputs/v20_load_accounting_20261019_run01/logs/normal_analysis_wait02.log",
+      "snapshot": "BEFORE_normal_analysis_wait02.log",
+      "bytes": 149873,
+      "sha256": "4620ed1025db349e3b4f57676f623e2d14ab8d22f817a0cf7ed17c285be08edc",
+      "snapshot_of_mutable_wait_metadata": true
+    }
+  ],
+  "implementation_sha256": "c8b2cfd94c3a2ba98fb0f2de16832e574d95a7034a6bb1e5868d9b1235c19802",
+  "scientific_or_user_app_termination": false,
+  "old_owner_and_evidence_preserved": true
+}

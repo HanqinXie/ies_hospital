@@ -1,0 +1,52 @@
+{
+  "schema": "hospital_ies.execution_recovery_saved_analysis.v18.v1.receipt",
+  "registered_trajectory_count": 3,
+  "unknown_full_trajectory_count": 0,
+  "unknown_registered_full_trajectory_count": 0,
+  "table_row_counts": {
+    "TRAJECTORY_WINDOWS": 24,
+    "GT_RUNS": 3,
+    "GT_TRANSITIONS": 0,
+    "COMMAND_LIFECYCLE": 135,
+    "COMMAND_EXECUTION_INTERVALS": 135,
+    "EVENT_TIMELINE": 643,
+    "ENGINEERING_INTERVALS": 147,
+    "DIESEL_LOCAL_RESPONSE": 147,
+    "THERMAL_COVERAGE": 3,
+    "MODEL_DOMAIN": 3
+  },
+  "output_sha256": {
+    "TRAJECTORY_WINDOWS.csv": "675af2c1a361d352f35ed50724e8dff152552d9cbe4e9e292d8a752fe8722e16",
+    "GT_RUNS.csv": "6d3244a521f32ed4b4203b289eceb097bb1dbac1fbb64ae29f17d0fee973e805",
+    "GT_TRANSITIONS.csv": "f01a374e9c81e3db89b3a42940c4d6a5447684986a1296e42bf13f196eed6295",
+    "COMMAND_LIFECYCLE.csv": "32136bdeb7c4de86d66b53a42feaba5ec4d924d1f9d29a90d9f9481253a96d3e",
+    "COMMAND_EXECUTION_INTERVALS.csv": "9fdca25328f192d684974867a6202f5ddffdcd52d1e19986146d91fd1f24f804",
+    "EVENT_TIMELINE.csv": "e3924be467ea5d72a3feae04cd0068d2f6a4b156f96d0d2ddb8ab8f2f4a5c043",
+    "ENGINEERING_INTERVALS.csv": "546532d15220790a74ad4d6f08a27a60d5c0f34704595dd7230232a888c29a5f",
+    "DIESEL_LOCAL_RESPONSE.csv": "ff9119bae3072585c2fd440c5e071d85594b094bbe471227d0ad0f0c7d0980aa",
+    "THERMAL_COVERAGE.csv": "ceaf82e90b9ed46c0279e181499826e5bb6f60a8c4a85f1624a0b5381a5270c0",
+    "MODEL_DOMAIN.csv": "10b18d5f415146cb8b7986dab17c5ebc85031ddc17d4fbc5919e64e055870edf",
+    "RESULTS.json": "0402f7b2d5a9f816918b2a871e84a242a6fb8067941afe36801ef10e9b9b65a8"
+  },
+  "analysis_program_sha256": "66e2d69f47be5663cf6646ea381521b861c31ee3cdcb8a1b26b8472c67e13967",
+  "exporter_sha256": "d94a2ac84a58059bb3a46ef0c5ae1a39f138b20c67a2a7d72d6d6e0c46a6b9f4",
+  "physical_episodes_started": 0,
+  "additional_raw_opens": 0,
+  "old_scores_unchanged": true,
+  "full_raw_retained": true,
+  "duplicate_timeline_json_written": false,
+  "v18_table_row_counts": {
+    "V18_CARRIER_SERVICE": 288,
+    "V18_TEMPERATURE": 96,
+    "V18_ECONOMICS": 24,
+    "V18_RECOVERY_STAGES": 342
+  },
+  "v18_output_sha256": {
+    "V18_CARRIER_SERVICE.csv": "4d66a556028aa1e84be11c51f6eb139b296768f3ec9bad102fbe60cc64db9d9e",
+    "V18_TEMPERATURE.csv": "8c41ab4ead1c92c0d556bf9b6a40c57c7140e143775de3a3b718ee28fb69e5db",
+    "V18_ECONOMICS.csv": "e41140781659b9e2cfcbbac1311f353d7b33549b4bb87824fbbf6ca141f808c1",
+    "V18_RECOVERY_STAGES.csv": "feaba03aa8fbeca9ffb78f427a2b3ca6b2fc6f8c7e3b63c7f2191e3241a6b169"
+  },
+  "v18_analysis_program_sha256": "ef72d0aca48d40c1184dcd462c6bb183299a78780e8ce105acd892a559d1aab1",
+  "different_length_total_costs_pooled": false
+}

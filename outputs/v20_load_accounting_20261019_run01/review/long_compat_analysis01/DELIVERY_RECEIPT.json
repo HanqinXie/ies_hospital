@@ -1,0 +1,84 @@
+{
+  "schema": "hospital_ies.v20.long_compat_delivery.v1",
+  "document_path": "docs/v20/LONG_WINDOW_AND_COMPAT_ANALYSIS.md",
+  "document_sha256": "c2686ea2be9fd2f77d668df77b10383449ce2339d76673ce1c32869ad0b7e1aa",
+  "document_bytes": 18492,
+  "interval_notation": "half-open; no numerical or model changes",
+  "interval_notation_corrections": 20,
+  "independent_review": "v19_model_spec: no blocking/important; half-open interval notation correction applied",
+  "actual_target_pairs": 31,
+  "long_pairs": 24,
+  "compat_pairs": 7,
+  "compat_exact_full_matches": 7,
+  "additional_main_C19_context_rows": 5,
+  "analysis_proof_sha256": "5be2ac7c136e01bf8ab0b9a84de6cd8145514c78ee950c1825b939c6cecce967",
+  "aggregate_proof_sha256": "d342c0cc7485b7a6aa7c94ee6febcd2463202285635de63ea683880767f9a110",
+  "freeze_sha256": "48baed7a128d2f921d36323330ae4d22e2e6dc83214e8a505b6ba89273439b7b",
+  "frozen_counts": {
+    "source": 366,
+    "tests": 241,
+    "runtime_inputs": 28
+  },
+  "commands": [
+    {
+      "name": "long_compat_readback01",
+      "exit_code": 0,
+      "command": [
+        "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\python.exe",
+        "-B",
+        "scripts/v20_report.py",
+        "--label",
+        "LONG_COMPAT_VERIFIED01",
+        "--baseline-root",
+        "D:\\云大文件\\论文\\医院ies\\code_4_2"
+      ],
+      "command_record_sha256": "5968a6798659bd2dd1f71b70b79b4de81757f61decf496e90490f3fb704c655a"
+    },
+    {
+      "name": "long_compat_analysis01",
+      "exit_code": 1,
+      "command": [
+        "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\python.exe",
+        "-B",
+        "outputs/v20_load_accounting_20261019_run01/review/long_compat_analysis01/analyze.py"
+      ],
+      "command_record_sha256": "09d688842c9e9414e981a42b63ce4fdf84cdef34f1cded3919f7228f602d6f6d"
+    },
+    {
+      "name": "long_compat_analysis02",
+      "exit_code": 1,
+      "command": [
+        "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\python.exe",
+        "-B",
+        "outputs/v20_load_accounting_20261019_run01/review/long_compat_analysis01/analyze.py"
+      ],
+      "command_record_sha256": "ea6ee56a8c2987dd04f9d57c4fdbdb7cf0f5ebcbee327794bf48601f54fc210d"
+    },
+    {
+      "name": "long_compat_analysis03",
+      "exit_code": 0,
+      "command": [
+        "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\python.exe",
+        "-B",
+        "outputs/v20_load_accounting_20261019_run01/review/long_compat_analysis01/analyze.py"
+      ],
+      "command_record_sha256": "907ba24bdb5dbdcd4de4b2f3aebde49fdc71e927860b13f251e1ad63548fd2ea"
+    },
+    {
+      "name": "long_compat_aggregate01",
+      "exit_code": 0,
+      "command": [
+        "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\python.exe",
+        "-B",
+        "outputs/v20_load_accounting_20261019_run01/review/long_compat_analysis01/aggregate.py"
+      ],
+      "command_record_sha256": "679b7530c078f78a4287e4de779458ae4d5322f6e0effb3ea8fa0dcf6625e170"
+    }
+  ],
+  "trajectory_raw_opened": false,
+  "annual_values_parsed": false,
+  "runtime_inventory_validation": "SHA-only byte binding; no annual values parsed",
+  "new_physics_started": 0,
+  "failed_derived_attempts_preserved": true,
+  "no_frozen_publication_strategy_changes": true
+}

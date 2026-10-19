@@ -1,0 +1,22 @@
+{
+  "name": "reporting_eligibility_green01",
+  "command": [
+    "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\python.exe",
+    "-B",
+    "-m",
+    "pytest",
+    "-q",
+    "tests/test_v20_reporting.py",
+    "--basetemp",
+    "D:/hospital_ies_v20_20261019/outputs/v20_load_accounting_20261019_run01/review/test_tmp/reporting_eligibility_green01"
+  ],
+  "cwd": "D:\\hospital_ies_v20_20261019",
+  "started_utc": "2026-10-19T04:25:56.251815+00:00",
+  "finished_utc": "2026-10-19T04:25:56.699477+00:00",
+  "elapsed_seconds": 0.4478255999274552,
+  "exit_code": 0,
+  "environment_overrides": {
+    "PYTHONDONTWRITEBYTECODE": "1",
+    "PYTHONIOENCODING": "utf-8"
+  }
+}

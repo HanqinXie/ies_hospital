@@ -1,0 +1,106 @@
+{
+  "schema": "hospital_ies.v20.archive_publication_validation.v1",
+  "utc": "2026-10-19T05:17:34.813566+00:00",
+  "owned_files": {
+    "publication/build_delivery_archive.py": {
+      "bytes": 19744,
+      "sha256": "005624fc0e0e0510668a7e7848365c1eba8015c5c63d01e1b0cca3c299bc81a7"
+    },
+    "publication/test_delivery_archive.py": {
+      "bytes": 10776,
+      "sha256": "986e6c0b247d1189b718e8a294f2b7507ce440b39187b52123e8cee759a8501a"
+    }
+  },
+  "commands": [
+    {
+      "command": "python -B publication/test_delivery_archive.py",
+      "log": "outputs/v20_load_accounting_20261019_run01/provenance/publication_layer/archive_wrapper_red01.log",
+      "bytes": 40460,
+      "sha256": "e297b009db1cc6b63f7eab9c71630c9693ff809c66da740ffc9a4f697286d99e",
+      "exit_code": 1,
+      "tests": 16,
+      "failures_including_subtests": 22,
+      "note": "Preserved original builder; missing strict gates, including subtest failures",
+      "scientific_attempts_started": 0,
+      "archives_created": 0
+    },
+    {
+      "command": "python -B publication/test_delivery_archive.py",
+      "log": "outputs/v20_load_accounting_20261019_run01/provenance/publication_layer/archive_wrapper_green01.log",
+      "bytes": 3712,
+      "sha256": "47a77c00a07540142c15b0e80cdd10dc5c8faeb22e85d6566890039cf3141114",
+      "exit_code": 0,
+      "tests": 16,
+      "failures_including_subtests": 0,
+      "note": "Intermediate UTF8/BOM encoding before normalization; same implemented gates",
+      "scientific_attempts_started": 0,
+      "archives_created": 0
+    },
+    {
+      "command": "python -B publication/test_delivery_archive.py",
+      "log": "outputs/v20_load_accounting_20261019_run01/provenance/publication_layer/archive_wrapper_green02.log",
+      "bytes": 3392,
+      "sha256": "b68a2ea6376c4c280c8a07949ae9e871869aa8b8c9309a0559c3ff8bd597c4da",
+      "exit_code": 0,
+      "tests": 16,
+      "failures_including_subtests": 0,
+      "note": "Final implementation and current test script; expected duplicate warning explicitly asserted",
+      "scientific_attempts_started": 0,
+      "archives_created": 0
+    },
+    {
+      "command": "python -B - [bounded read-only inline adapter program]",
+      "log": "outputs/v20_load_accounting_20261019_run01/provenance/publication_layer/archive_actual_candidate_refusal01.log",
+      "bytes": 496,
+      "sha256": "38d34c930e28099734676f3c789cadbfc77528dadefaf1c1b06f0111da1e9df7",
+      "exit_code": 0,
+      "tests": null,
+      "failures_including_subtests": null,
+      "note": "Actual candidate rejected before any subprocess/archive; expected negative guard",
+      "scientific_attempts_started": 0,
+      "archives_created": 0
+    },
+    {
+      "command": "python -B - [bounded read-only inline adapter program]",
+      "log": "outputs/v20_load_accounting_20261019_run01/provenance/publication_layer/archive_actual_saved_adapter_fixture01.log",
+      "bytes": 2694,
+      "sha256": "3358bef5eb82c4c916dc61fd088a0504758f2030c34f79d25895ed75ab386829",
+      "exit_code": 1,
+      "tests": null,
+      "failures_including_subtests": null,
+      "note": "Read-only interface attempt from original cwd correctly failed project import origin guard; retained",
+      "scientific_attempts_started": 0,
+      "archives_created": 0
+    },
+    {
+      "command": "python -B - [bounded read-only inline adapter program]",
+      "log": "outputs/v20_load_accounting_20261019_run01/provenance/publication_layer/archive_actual_saved_adapter_fixture02.log",
+      "bytes": 1374,
+      "sha256": "699bf458b90649555f31534d7e1c1da9ffecb0b243a87b791ef17030ee455e4a",
+      "exit_code": 0,
+      "tests": null,
+      "failures_including_subtests": null,
+      "note": "Read-only actual candidate interface fixture from candidate cwd; two candidate/final enum labels projected only in memory; not final/postpush proof",
+      "scientific_attempts_started": 0,
+      "archives_created": 0
+    }
+  ],
+  "frozen_closure": {
+    "production": {
+      "files": 366,
+      "sha256_equal": true
+    },
+    "tests": {
+      "files": 241,
+      "sha256_equal": true
+    },
+    "runtime_inputs": {
+      "files": 28,
+      "sha256_equal": true
+    }
+  },
+  "scientific_attempts_started": 0,
+  "final_or_fixture_archive_files_created": 0,
+  "synthetic_zip_storage": "BytesIO only",
+  "scope": "No final GitHub clone/proof or delivery archive was created by this implementation. Actual final evidence must pass prepare at delivery time."
+}

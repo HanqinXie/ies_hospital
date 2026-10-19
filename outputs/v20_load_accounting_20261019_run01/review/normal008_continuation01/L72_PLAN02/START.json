@@ -1,0 +1,146 @@
+{
+  "schema": "hospital_ies.v20.normal008_continuation_start.v1",
+  "utc": "2026-10-19T11:28:52.985836+00:00",
+  "pid": 24380,
+  "command": [
+    "publication/continue_normal008.py",
+    "--check-only",
+    "--name",
+    "L72_PLAN02",
+    "--baseline-root",
+    "D:\\云大文件\\论文\\医院ies\\code_4_2",
+    "--stop-sha256",
+    "a1e8b0ee5ea21b7bd633595f916a21dc46006b22bdd59b941a2fb94611403101",
+    "--plan-sha256",
+    "701d6325924202b5aef60bcc6c6ec224956ec86f24a6efcb760b2c7c4e8bb9bd",
+    "--counter-probe-seconds",
+    "30",
+    "--max-wait-seconds",
+    "180"
+  ],
+  "cwd": "D:\\hospital_ies_v20_20261019",
+  "scientific_root": "D:\\hospital_ies_v20_20261019",
+  "script_sha256": "cce231bf254b00a0af0021f04273ad54134005340f5b9706ce4578cec4823ca7",
+  "mode": "check_only_no_physics",
+  "target": "v20_normal_008",
+  "parent_footprint": {
+    "utc": "2026-10-19T11:28:52.995836+00:00",
+    "pid": 24380,
+    "actual_cwd": "D:\\hospital_ies_v20_20261019",
+    "heavy_modules": [],
+    "private_bytes": 12013568,
+    "working_set_bytes": 20971520,
+    "OS_lifetime_peak_working_set_bytes": 20971520,
+    "project_modules_imported": false,
+    "physical_episodes_started_by_observation": 0
+  },
+  "predecessor": {
+    "qualified": true,
+    "normal03_intentional_exit_code": 125,
+    "S3_original_status": "failed_unknown",
+    "old_measured_resource_batches": [
+      "v20_normal_000",
+      "v20_normal_001",
+      "v20_normal_002",
+      "v20_normal_003",
+      "v20_normal_004",
+      "v20_normal_005",
+      "v20_normal_006",
+      "v20_normal_007",
+      "v20_normal_010",
+      "v20_normal_011"
+    ],
+    "normal009_resource_peak": "unknown",
+    "only_remaining": "v20_normal_008",
+    "evidence_files": [
+      {
+        "path": "outputs/v20_load_accounting_20261019_run01/provenance/normal_resource_profile/STOP_NORMAL_SERIAL.json",
+        "bytes": 1790,
+        "sha256": "a1e8b0ee5ea21b7bd633595f916a21dc46006b22bdd59b941a2fb94611403101"
+      },
+      {
+        "path": "docs/v20/RESOURCE_CONTINUATION_PLAN.md",
+        "bytes": 4456,
+        "sha256": "701d6325924202b5aef60bcc6c6ec224956ec86f24a6efcb760b2c7c4e8bb9bd"
+      },
+      {
+        "path": "outputs/v20_load_accounting_20261019_run01/provenance/normal_resource_profile/supervision_canonical02/SUMMARY.json",
+        "bytes": 15653,
+        "sha256": "0af8b40800c96880f28974015b471197728dc3e80ed6115ae18d124091f5607e"
+      },
+      {
+        "path": "outputs/v20_load_accounting_20261019_run01/logs/normal03.command.json",
+        "bytes": 923,
+        "sha256": "77d46963117cab006162b0d428e19fb3b5b67fba989af9b45bb18c4d4623d525"
+      },
+      {
+        "path": "outputs/v20_load_accounting_20261019_run01/review/supervision03/RESULT.json",
+        "bytes": 446,
+        "sha256": "5b2b5e25db50ebcea0dbf9607e1000b2efb570a6f149bd785cf0811f538d18c6"
+      },
+      {
+        "path": "outputs/v20_load_accounting_20261019_run01/review/supervision03/SUPERVISOR_IMPLEMENTATION.py",
+        "bytes": 5967,
+        "sha256": "7cdc0eb91c2d52b1996f478478cf6b9762c73861bee6035257e6529b178bc117"
+      },
+      {
+        "path": "publication/run_normal_serial.py",
+        "bytes": 39882,
+        "sha256": "50ab72194abf63dda9c1893595629f57d0b3ceb488eb2e64ff709fe273f8701b"
+      },
+      {
+        "path": "publication/release_gate.py",
+        "bytes": 35592,
+        "sha256": "0ae4b1d026367a9e91c1cb75104d53fdd55e684e5ca62a23c7611b56a91bf22c"
+      },
+      {
+        "path": "publication/continue_normal008.py",
+        "bytes": 34713,
+        "sha256": "cce231bf254b00a0af0021f04273ad54134005340f5b9706ce4578cec4823ca7"
+      },
+      {
+        "path": "outputs/v20_load_accounting_20261019_run01/MODEL_FREEZE_ACCOUNTING01.json",
+        "bytes": 205730,
+        "sha256": "48baed7a128d2f921d36323330ae4d22e2e6dc83214e8a505b6ba89273439b7b"
+      },
+      {
+        "path": "outputs/v20_load_accounting_20261019_run01/provenance/normal_resource_profile/V19_R2_PROFILE.json",
+        "bytes": 10188,
+        "sha256": "bc87800015895bedfc17127847f6495216576972fa772b62994d1c327d6ee91a"
+      },
+      {
+        "path": "outputs/v20_load_accounting_20261019_run01/provenance/normal_resource_profile/V19_R2_SOURCE_SUMMARY.json",
+        "bytes": 92112,
+        "sha256": "193d9ad2bbe8a67359e07200a64530d761f181eaf62b9fb16b5423a9a8734c77"
+      }
+    ]
+  },
+  "historical_profile": {
+    "alias": "C19",
+    "source_model_id": "M19_model_closeout",
+    "is_M20_measurement": false,
+    "original_batch": "normal_C19_final_r1_002",
+    "scenario_id": "v17_N2_d7ae489a9d9b2341333e4104",
+    "source_day_index": 202,
+    "duration_minutes": 4320.0,
+    "physical_scenario_signature": "129d70df8e634233a94ac5034644c0c2e5d4607bb5443d55adac25b9f2be9f78",
+    "samples": 131,
+    "OS_lifetime_peak_working_set_bytes": 24352612352,
+    "sampled_working_set_peak_bytes": 24317726720,
+    "sampled_private_peak_bytes": 26497581056,
+    "first_sample_utc": "2026-10-18T19:58:23.429372+00:00",
+    "last_sample_utc": "2026-10-18T20:15:48.593949+00:00",
+    "original_manifest_sha256": "73af5bd7e2dd3e5640e2b129b22b0f2590063327c96f0164117c35bb2b96c945"
+  },
+  "growth_factor": 1.1,
+  "minimum_reserve_gib": 2,
+  "prefer_three_gib": true,
+  "required_observed_window_seconds": 30.0,
+  "max_wait_seconds": 180.0,
+  "counter_probe_seconds": 30.0,
+  "sampling_target_seconds": 2.0,
+  "sampling_schedule": "deadline_minus_work",
+  "no_old_STOP_deleted": true,
+  "no_frozen_science_modified": true,
+  "pressure_policy": "record only; no forced termination"
+}

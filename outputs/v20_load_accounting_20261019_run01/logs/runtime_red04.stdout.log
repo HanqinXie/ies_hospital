@@ -1,0 +1,47 @@
+......F.                                                                 [100%]
+================================== FAILURES ===================================
+___________ test_single_scene_registration_rebinds_subset_proposal ____________
+
+tmp_path = WindowsPath('D:/hospital_ies_v20_20261019/outputs/v20_load_accounting_20261019_run01/review/test_tmp/runtime_red04/test_single_scene_registration0')
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x0000028498B75600>
+
+    def test_single_scene_registration_rebinds_subset_proposal(tmp_path, monkeypatch):
+        binding = r.source_binding()
+        monkeypatch.setattr(r, "source_binding", lambda: binding)
+        monkeypatch.setattr(r, "RUN", tmp_path / "v20")
+        monkeypatch.setattr(r, "check_output_path", lambda value: Path(value).resolve())
+        monkeypatch.setattr(r, "_snapshot", lambda binding: tmp_path / "source_snapshot")
+        original = original_proposal()
+        proposal = d.panel("two", original["scenarios"][:2], evaluation_role="development")
+        config = json.loads((V19 / "M19_MODEL_CONFIG.json").read_text(encoding="utf8"))
+>       plan = r.register(proposal, r.RUN / "experiments" / "one", [r.policy_specs()["E"]],
+                          model_id=r.MODEL_ID, model_config=config,
+                          scenario_ids=[proposal["scenarios"][1]["id"]])
+
+tests\test_v20_runtime.py:121: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+tools\load_accounting\runner.py:238: in register
+    manifest = build_manifest(proposal, binding, model_id, resolved, root=ROOT, policies=ids)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+proposal = {'panel': 'two', 'scenarios': [{'start_hour': 121, 'source_day_index': 5, 'season_quarter': 1, 'duration_steps': 40, ....'start_hour': 121, 'source_day_index': 5, 'season_quarter': 1, ...}], 'analysis_class_counts': {'L1': 1, 'L3': 1}, ...}
+source_sha256 = {'configs/extension_assumptions.json': '6eea6e33bb4051c6ec0061030dd578384ee843e2cbb2d0ba346f877b5b95c0ee', 'configs/fo...56c9f', 'configs/p1b_execution_research.json': '67a91ba04117ef9ca6b7050e4c8c65b6bc557134e4d5e7edb0bcb963b6e703a7', ...}
+model_id = 'M20_load_accounting'
+model_config = {'gt_dynamics': {'gt_start_delay_minutes': 10.0, 'minimum_up_minutes': 60.0, 'minimum_down_minutes': 30.0, 'interlock_...s': 0.05, ...}, 'hrsg_thermal_readiness': {'warmup_delay_minutes': 0.0}, 'gt_floor_correction': {'enabled': True}, ...}
+root = WindowsPath('D:/hospital_ies_v20_20261019')
+policies = ['endurance_restore_p0_ready_M20_v1']
+
+    def build_manifest(proposal, source_sha256, model_id, model_config, root=ROOT, policies=None):
+        from .environment import model_contract
+        from .runner import policy_specs
+        contract, resolved = model_contract(model_id, model_config)
+        if digest(resolved) != digest(model_config):
+            raise ValueError('Registration requires fully resolved M20 configuration')
+        if proposal.get('signature') != digest({k:v for k,v in proposal.items() if k!='signature'}):
+>           raise ValueError('Proposal signature differs')
+E           ValueError: Proposal signature differs
+
+tools\load_accounting\data_design.py:83: ValueError
+=========================== short test summary info ===========================
+FAILED tests/test_v20_runtime.py::test_single_scene_registration_rebinds_subset_proposal
+1 failed, 7 passed in 3.94s

@@ -1,0 +1,71 @@
+{
+  "schema": "hospital_ies.v20.prepush_script_readonly_peer_review.v1",
+  "reviewed_utc": "2026-10-19T11:42:20.430735+00:00",
+  "status": "limited_important_findings_reported",
+  "scope": "Read-only source review; script, Git, staging, packaging and physics not executed",
+  "source": {
+    "path": "outputs/v20_load_accounting_20261019_run01/review/publication_preflight01/review_staged_tree01.py",
+    "bytes": 4051,
+    "sha256": "eeb6f663776b71d892b13c864d13f28c7f3ce8ae9717355b7e640f26c90c8c1e"
+  },
+  "context": [
+    {
+      "path": ".gitattributes",
+      "bytes": 70,
+      "sha256": "1047ddb4023d02620563fd0fea4d7b59fe10229e5b6c092c67d157c26e7d37ec"
+    },
+    {
+      "path": "publication/build_v20_release.py",
+      "bytes": 8668,
+      "sha256": "adb6f25abe8f60ee7aee66a846af5a1fb262bb429c4747d714beaa5ae179352e"
+    }
+  ],
+  "correct_features": [
+    "SHA1 uses exact Git blob header and original working bytes",
+    "Selection self excluded by builder and added exactly once to audit expected map",
+    "Full cached A/M/D name status and numstat saved, no rename simplification",
+    "Exclusive100MiB cap and archive/raw/license/PDF/XLSX suffix guard",
+    "Credential hits contain kind/path/line only; explicit bounded-not-universal disclaimer",
+    "Audit writes only new publication_checks files and does not modify selected source"
+  ],
+  "findings": [
+    {
+      "id": "P1",
+      "severity": "important",
+      "lines": [
+        19,
+        23,
+        31,
+        32
+      ],
+      "finding": "Symlink check is performed after resolve, so a link identity is discarded; index mode is not validated",
+      "minimal_fix": "Check unresolved paths/ancestors for forbidden links/reparse before resolve; reject nonregular Git modes and nonzero stages"
+    },
+    {
+      "id": "P2",
+      "severity": "important",
+      "lines": [
+        35,
+        36
+      ],
+      "finding": "Current index byte identity does not prove byte-preserving future checkout; effective cached text attribute not validated",
+      "minimal_fix": "Validate selected cached text attributes unset, or pin and verify explicit .gitattributes * -text contract"
+    },
+    {
+      "id": "P3",
+      "severity": "nonblocking_defense",
+      "lines": [
+        12,
+        14
+      ],
+      "finding": "No explicit final selection/release-marker identity; a consistent candidate can be audited as passed",
+      "minimal_fix": "Require known schemas, candidate false, marker final, unique manifest paths, and record audit-source SHA"
+    }
+  ],
+  "limits": [
+    "No final staged tree exists and no actual final tree/index was examined",
+    "Current repository .gitattributes actually contains * -text; no current byte corruption observed",
+    "Later archive/reproduction gates also check final marker; P3 is an earlier-caller defense, not a proven delivery bypass"
+  ],
+  "reviewer_writes_limited_to": "D:\\hospital_ies_v20_20261019\\outputs\\v20_load_accounting_20261019_run01\\review\\normal008_resource_review01"
+}

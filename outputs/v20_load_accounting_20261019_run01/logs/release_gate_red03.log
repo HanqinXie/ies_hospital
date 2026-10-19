@@ -1,0 +1,76 @@
+...................FFFF..................                                [100%]
+================================== FAILURES ===================================
+_ test_complete_service_flag_does_not_hide_unknown_source_or_budget_accounting[unknown_source] _
+
+mutation = 'unknown_source'
+
+    @pytest.mark.parametrize('mutation', ['unknown_source', 'short_source', 'source_unit', 'unknown_DG_budget'])
+    def test_complete_service_flag_does_not_hide_unknown_source_or_budget_accounting(mutation):
+        record = copy.deepcopy(saved_main()['record'])
+        ledger = record['analysis']['v20']['service_ledgers']['registered_full']
+        source = ledger['actual_source_integrals']['GRID_electric_kWh']
+        if mutation == 'unknown_source': source['value'] = None
+        if mutation == 'short_source': source['covered_minutes'] = 599.
+        if mutation == 'source_unit': source['unit'] = 'kW'
+        if mutation == 'unknown_DG_budget': ledger['DG_budget_finish_kWh_equivalent'] = None
+>       with pytest.raises(ValueError): gate().qualify_complete_window(record, 600.)
+E       Failed: DID NOT RAISE ValueError
+
+publication\test_release_gate.py:134: Failed
+_ test_complete_service_flag_does_not_hide_unknown_source_or_budget_accounting[short_source] _
+
+mutation = 'short_source'
+
+    @pytest.mark.parametrize('mutation', ['unknown_source', 'short_source', 'source_unit', 'unknown_DG_budget'])
+    def test_complete_service_flag_does_not_hide_unknown_source_or_budget_accounting(mutation):
+        record = copy.deepcopy(saved_main()['record'])
+        ledger = record['analysis']['v20']['service_ledgers']['registered_full']
+        source = ledger['actual_source_integrals']['GRID_electric_kWh']
+        if mutation == 'unknown_source': source['value'] = None
+        if mutation == 'short_source': source['covered_minutes'] = 599.
+        if mutation == 'source_unit': source['unit'] = 'kW'
+        if mutation == 'unknown_DG_budget': ledger['DG_budget_finish_kWh_equivalent'] = None
+>       with pytest.raises(ValueError): gate().qualify_complete_window(record, 600.)
+E       Failed: DID NOT RAISE ValueError
+
+publication\test_release_gate.py:134: Failed
+_ test_complete_service_flag_does_not_hide_unknown_source_or_budget_accounting[source_unit] _
+
+mutation = 'source_unit'
+
+    @pytest.mark.parametrize('mutation', ['unknown_source', 'short_source', 'source_unit', 'unknown_DG_budget'])
+    def test_complete_service_flag_does_not_hide_unknown_source_or_budget_accounting(mutation):
+        record = copy.deepcopy(saved_main()['record'])
+        ledger = record['analysis']['v20']['service_ledgers']['registered_full']
+        source = ledger['actual_source_integrals']['GRID_electric_kWh']
+        if mutation == 'unknown_source': source['value'] = None
+        if mutation == 'short_source': source['covered_minutes'] = 599.
+        if mutation == 'source_unit': source['unit'] = 'kW'
+        if mutation == 'unknown_DG_budget': ledger['DG_budget_finish_kWh_equivalent'] = None
+>       with pytest.raises(ValueError): gate().qualify_complete_window(record, 600.)
+E       Failed: DID NOT RAISE ValueError
+
+publication\test_release_gate.py:134: Failed
+_ test_complete_service_flag_does_not_hide_unknown_source_or_budget_accounting[unknown_DG_budget] _
+
+mutation = 'unknown_DG_budget'
+
+    @pytest.mark.parametrize('mutation', ['unknown_source', 'short_source', 'source_unit', 'unknown_DG_budget'])
+    def test_complete_service_flag_does_not_hide_unknown_source_or_budget_accounting(mutation):
+        record = copy.deepcopy(saved_main()['record'])
+        ledger = record['analysis']['v20']['service_ledgers']['registered_full']
+        source = ledger['actual_source_integrals']['GRID_electric_kWh']
+        if mutation == 'unknown_source': source['value'] = None
+        if mutation == 'short_source': source['covered_minutes'] = 599.
+        if mutation == 'source_unit': source['unit'] = 'kW'
+        if mutation == 'unknown_DG_budget': ledger['DG_budget_finish_kWh_equivalent'] = None
+>       with pytest.raises(ValueError): gate().qualify_complete_window(record, 600.)
+E       Failed: DID NOT RAISE ValueError
+
+publication\test_release_gate.py:134: Failed
+=========================== short test summary info ===========================
+FAILED publication/test_release_gate.py::test_complete_service_flag_does_not_hide_unknown_source_or_budget_accounting[unknown_source]
+FAILED publication/test_release_gate.py::test_complete_service_flag_does_not_hide_unknown_source_or_budget_accounting[short_source]
+FAILED publication/test_release_gate.py::test_complete_service_flag_does_not_hide_unknown_source_or_budget_accounting[source_unit]
+FAILED publication/test_release_gate.py::test_complete_service_flag_does_not_hide_unknown_source_or_budget_accounting[unknown_DG_budget]
+4 failed, 37 passed in 1.59s

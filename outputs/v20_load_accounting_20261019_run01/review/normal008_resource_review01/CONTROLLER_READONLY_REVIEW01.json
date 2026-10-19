@@ -1,0 +1,112 @@
+{
+  "schema": "hospital_ies.v20.normal008.controller_readonly_review.v1",
+  "utc": "2026-10-19T11:22:24.300529+00:00",
+  "review_status": "closed_no_blocking_or_important_findings",
+  "controller_sha256": "68701e844ffca923e91f82fff52116d4b18a4357f1239d5c4a416135c8ed95a3",
+  "test_sha256": "9ece2a483c1e2089e35bde6fb22c3a33b6c0b9cc97a5c0539a03f67606e58ff8",
+  "blocking": [],
+  "important": [],
+  "actual_observed_test_gate": {
+    "command_receipt": "outputs/v20_load_accounting_20261019_run01/logs/publication_gates06.command.json",
+    "exit_code": 0,
+    "passed_tests": 148,
+    "passed_subtests": 7
+  },
+  "actual_check_only_evidence": {
+    "status": "check_only_no_physics",
+    "exit_code": 0,
+    "scientific_children_started": 0,
+    "parent_after_qualifier": {
+      "utc": "2026-10-19T11:20:34.493295+00:00",
+      "pid": 13480,
+      "actual_cwd": "D:\\hospital_ies_v20_20261019",
+      "heavy_modules": [],
+      "private_bytes": 16007168,
+      "working_set_bytes": 25120768,
+      "OS_lifetime_peak_working_set_bytes": 27062272,
+      "project_modules_imported": false,
+      "physical_episodes_started_by_observation": 0
+    },
+    "scope": "Historical L72_PLAN01 check-only; not the later actual008 scientific run"
+  },
+  "checked_properties": [
+    "Same Windows byte lease as original normal supervisor",
+    "Pinned actual normal03 exit125 and S3 failed_unknown at405 preserved",
+    "No scientific source/test/runtime/config/solver change by controller",
+    "Only exact original registered normal008 C19; rejects prior attempts/pairs/terminal",
+    "Heavy405/406 qualification subprocess exits before persistent resource monitoring or after science exits",
+    "Persistent parent standard library+psutil and actual heavy_modules empty",
+    "30-second sampled stability;16+ observations;positive strict monotonic time;gap<=3s;both physical/commit;prefer3GiB if all samples support it",
+    "Last launch counter/source/process/008 state recheck",
+    "One scientific Popen, no automatic retry; all successful Popen paths finallywait/drain",
+    "No kill/terminate call; runtime pressure record-only",
+    "Failure/timeout/unknown evidence retained, no fabricated406 success",
+    "Final report and406 requalification only after actual child exit0 and strict postflight"
+  ],
+  "known_limits": [
+    "Sampled admission is not a continuous mathematical memory bound",
+    "Pressure recording does not guarantee avoidance of native-allocation or host-OOM risk",
+    "No assertion that the subsequently launched008 completed; actual result must be read later"
+  ],
+  "evidence_files": [
+    {
+      "path": "publication/continue_normal008.py",
+      "bytes": 33079,
+      "sha256": "68701e844ffca923e91f82fff52116d4b18a4357f1239d5c4a416135c8ed95a3"
+    },
+    {
+      "path": "publication/test_continue_normal008.py",
+      "bytes": 10744,
+      "sha256": "9ece2a483c1e2089e35bde6fb22c3a33b6c0b9cc97a5c0539a03f67606e58ff8"
+    },
+    {
+      "path": "outputs/v20_load_accounting_20261019_run01/logs/publication_gates06.command.json",
+      "bytes": 852,
+      "sha256": "97153a9ab582c06f082fc269736abb7b738c635227f4311a4eb900ea5ec58ec4"
+    },
+    {
+      "path": "outputs/v20_load_accounting_20261019_run01/logs/publication_gates06.log",
+      "bytes": 276,
+      "sha256": "30719c46401b75864d514e7c16ebf00906b4892c6dd1bd66ed58bd82c78fec6c"
+    },
+    {
+      "path": "outputs/v20_load_accounting_20261019_run01/review/normal008_continuation01/L72_PLAN01/SUMMARY.json",
+      "bytes": 1361,
+      "sha256": "dafab5372a487cd7b581edb636db6860f6426442c6c7d0a9ade14317d039c535"
+    },
+    {
+      "path": "outputs/v20_load_accounting_20261019_run01/review/normal008_continuation01/L72_PLAN01/PARENT_AFTER_PREFLIGHT.json",
+      "bytes": 334,
+      "sha256": "ea315393c357a469f2c73627cc3720884b3e6dccc1a43e697b1d85837cc98090"
+    },
+    {
+      "path": "outputs/v20_load_accounting_20261019_run01/review/normal008_continuation01/L72_PLAN01/preflight.command.json",
+      "bytes": 1112,
+      "sha256": "40d1a2409667e86140ece5952952790df461d27ccd8242213cef7211339ba3ad"
+    },
+    {
+      "path": "outputs/v20_load_accounting_20261019_run01/provenance/normal_resource_profile/supervision_canonical02/SUMMARY.json",
+      "bytes": 15653,
+      "sha256": "0af8b40800c96880f28974015b471197728dc3e80ed6115ae18d124091f5607e"
+    },
+    {
+      "path": "outputs/v20_load_accounting_20261019_run01/logs/normal03.command.json",
+      "bytes": 923,
+      "sha256": "77d46963117cab006162b0d428e19fb3b5b67fba989af9b45bb18c4d4623d525"
+    },
+    {
+      "path": "outputs/v20_load_accounting_20261019_run01/review/supervision03/RESULT.json",
+      "bytes": 446,
+      "sha256": "5b2b5e25db50ebcea0dbf9607e1000b2efb570a6f149bd785cf0811f538d18c6"
+    },
+    {
+      "path": "outputs/v20_load_accounting_20261019_run01/MODEL_FREEZE_ACCOUNTING01.json",
+      "bytes": 205730,
+      "sha256": "48baed7a128d2f921d36323330ae4d22e2e6dc83214e8a505b6ba89273439b7b"
+    }
+  ],
+  "controller_or_qualifier_invoked_by_reviewer": false,
+  "scientific_processes_started_or_stopped_by_reviewer": 0,
+  "raw_opened": 0,
+  "annual_values_parsed": 0
+}

@@ -1,0 +1,103 @@
+{
+  "schema": "hospital_ies.v20.normal008_counter_probe_independent_review.v1",
+  "reviewed_utc": "2026-10-19T11:34:33.650433+00:00",
+  "status": "cadence_predicate_passed_resources_not_admitted",
+  "probe_name": "L72_PLAN02",
+  "actual_probe_exit_code": 3,
+  "actual_probe_status": "waiting_resources_not_started",
+  "cadence_temporal_predicate_passed": true,
+  "combined_counter_probe_passed": false,
+  "resource_admitted": false,
+  "physical_episodes_started": 0,
+  "actual405_preflight_passed": true,
+  "parent_heavy_modules": [],
+  "parent_private_bytes": 15466496,
+  "parent_working_set_bytes": 24588288,
+  "actual_recomputed_metrics": {
+    "total_samples": 71,
+    "last_window_samples": 16,
+    "span_seconds": 37.15599999995902,
+    "maximum_gap_seconds": 2.6410000000614673,
+    "all71_strictly_increasing": true,
+    "all71_maximum_gap_seconds": 3.3280000002123415,
+    "minimum_available_physical_bytes": 29103415296,
+    "minimum_commit_headroom_bytes": 27089981440,
+    "required_physical_bytes": 28935357236,
+    "required_commit_headroom_bytes": 31294822810
+  },
+  "minimum_available_physical_GiB": 27.10466766357422,
+  "minimum_commit_headroom_GiB": 25.229511260986328,
+  "required_physical_GiB": 26.948151398450136,
+  "required_commit_headroom_GiB": 29.145574951544404,
+  "findings": [],
+  "evidence": [
+    {
+      "path": "outputs/v20_load_accounting_20261019_run01/review/normal008_continuation01/L72_PLAN02/START.json",
+      "bytes": 5517,
+      "sha256": "52f424ecf6bf7fc931a834bef1380c9e1482d3ab1eac1a29e73dd2b363e00156"
+    },
+    {
+      "path": "outputs/v20_load_accounting_20261019_run01/review/normal008_continuation01/L72_PLAN02/SUMMARY.json",
+      "bytes": 677,
+      "sha256": "8f949068c0b69105fb18539b9d1b70975718acdf2a8df1ebeafced5d780b79d6"
+    },
+    {
+      "path": "outputs/v20_load_accounting_20261019_run01/review/normal008_continuation01/L72_PLAN02/ADMISSION_SAMPLES.jsonl",
+      "bytes": 25048,
+      "sha256": "fea62ad619302a5827b99ad949e3b40524ebcd9d3aa9e2deb170a760dbd74237"
+    },
+    {
+      "path": "outputs/v20_load_accounting_20261019_run01/review/normal008_continuation01/L72_PLAN02/PARENT_AFTER_PREFLIGHT.json",
+      "bytes": 334,
+      "sha256": "2e2e0dd47f509ee704f2a9942fe8de495c5d07d60da2fea7ab5e031b8613bea6"
+    },
+    {
+      "path": "outputs/v20_load_accounting_20261019_run01/review/normal008_continuation01/L72_PLAN02/preflight.json",
+      "bytes": 1389535,
+      "sha256": "1676cbbb5650c964168395c7207aead74cc56dbc992c8f76c3344ea3dced7f38"
+    },
+    {
+      "path": "outputs/v20_load_accounting_20261019_run01/review/normal008_continuation01/L72_PLAN02/preflight.command.json",
+      "bytes": 1112,
+      "sha256": "710568b844f95c25455c4b9eb85ce9ab6d9c26574595edd55ec8d39d40da59d6"
+    },
+    {
+      "path": "outputs/v20_load_accounting_20261019_run01/logs/normal008_lightweight_probe02.command.json",
+      "bytes": 1273,
+      "sha256": "52bc385b1c0c04da7b2c55666386582d3d40dc67de1ef2df44afdbd3375b5e04"
+    },
+    {
+      "path": "outputs/v20_load_accounting_20261019_run01/logs/normal008_lightweight_probe02.log",
+      "bytes": 644,
+      "sha256": "5ee423bfb7e99022478ef3d4d91f9fe4ff17148120c47007fc0594ce72f3ed36"
+    },
+    {
+      "path": "publication/continue_normal008.py",
+      "bytes": 34713,
+      "sha256": "cce231bf254b00a0af0021f04273ad54134005340f5b9706ce4578cec4823ca7"
+    },
+    {
+      "path": "docs/v20/RESOURCE_CONTINUATION_PLAN.md",
+      "bytes": 4456,
+      "sha256": "701d6325924202b5aef60bcc6c6ec224956ec86f24a6efcb760b2c7c4e8bb9bd"
+    },
+    {
+      "path": "outputs/v20_load_accounting_20261019_run01/MODEL_FREEZE_ACCOUNTING01.json",
+      "bytes": 205730,
+      "sha256": "48baed7a128d2f921d36323330ae4d22e2e6dc83214e8a505b6ba89273439b7b"
+    }
+  ],
+  "counter_probe_pass_receipt_exists": false,
+  "scope": "Independent stdlib-only readback of closed actual counter probe; no helper/main/qualification/science/process operation invoked",
+  "interpretation": [
+    "The deadline cadence fix met the registered sampled temporal predicate on the real host",
+    "Memory headroom did not meet the unchanged combined resource gate; exit3 and no passed COUNTER_PROBE are preserved",
+    "A later formal waiting run may observe a fresh qualifying window; this readback authorizes no scientific launch and does not substitute for that run admission",
+    "Historical peaks remain empirical estimates; admission is not a guarantee against future memory pressure"
+  ],
+  "science_and_system_boundaries": [
+    "Source366/test241/runtime28 freeze unchanged by this reviewer",
+    "No current Code/user program/system/pagefile modification",
+    "No threshold relaxation, automated retry or synthetic memory value"
+  ]
+}

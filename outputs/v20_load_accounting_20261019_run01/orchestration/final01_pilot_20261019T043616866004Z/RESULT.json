@@ -1,0 +1,32 @@
+{
+  "schema": "hospital_ies.v20.orchestration.v1",
+  "started_utc": "2026-10-19T04:36:16.866004+00:00",
+  "finished_utc": "2026-10-19T04:40:06.891273+00:00",
+  "phase": "pilot",
+  "configured_workers": 1,
+  "reserve_gib": 6.0,
+  "job_reserve_gib": 8.0,
+  "completed": [
+    {
+      "batch": "v20_main_000",
+      "exit_code": 0,
+      "passed": true,
+      "elapsed_seconds": 230.02639689994976,
+      "terminal": {
+        "registered_pairs": 3,
+        "actual_attempts": 3,
+        "complete_full": 3,
+        "unknown_full": 0,
+        "status_counts": {
+          "completed": 3
+        }
+      },
+      "validation_issues": []
+    }
+  ],
+  "skipped_terminal_batches": [],
+  "failures": [],
+  "pending_retained": [],
+  "exit_code": 0,
+  "no_existing_attempts_overwritten": true
+}

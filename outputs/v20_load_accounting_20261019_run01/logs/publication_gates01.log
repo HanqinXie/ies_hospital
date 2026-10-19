@@ -1,0 +1,45 @@
+test_accepts_actual_bound_clone_receipt (test_delivery_archive.ArchiveTests) ... ok
+test_accepts_recomputed_strict_proof (test_delivery_archive.ArchiveTests) ... ok
+test_core_does_not_accept_failed_summary_with_pass_substring (test_delivery_archive.ArchiveTests) ... ok
+test_core_requires_exact_command_root_and_env (test_delivery_archive.ArchiveTests) ... ok
+test_git_requires_head_index_working_bytes_match (test_delivery_archive.ArchiveTests) ... ok
+test_hard_limit_is_strictly_less_than_200million (test_delivery_archive.ArchiveTests) ... ok
+test_rejects_changed_actual_metrics_or_qualification (test_delivery_archive.ArchiveTests) ... ok
+test_rejects_child_wrong_token_sha_root_or_import (test_delivery_archive.ArchiveTests) ... ok
+test_rejects_clone_overwrite_or_wrong_command (test_delivery_archive.ArchiveTests) ... ok
+test_rejects_false_matching_or_parent_violation (test_delivery_archive.ArchiveTests) ... ok
+test_rejects_prepush_stage_as_clone (test_delivery_archive.ArchiveTests) ... ok
+test_rejects_stale_marker_selection_or_wrapper (test_delivery_archive.ArchiveTests) ... ok
+test_rejects_unexpected_second_launch (test_delivery_archive.ArchiveTests) ... ok
+test_rejects_wrong_origin_commit_or_launcher (test_delivery_archive.ArchiveTests) ... ok
+test_zip_rejects_extra_or_duplicate_members (test_delivery_archive.ArchiveTests) ... ok
+test_zip_verifies_manifest_sha_and_payload_crc (test_delivery_archive.ArchiveTests) ... ok
+test_guard_blocks_original_read_and_records_import_path (test_reproduce_v20.WrapperTests) ... ok
+test_guard_detects_project_import_outside_clone (test_reproduce_v20.WrapperTests) ... ok
+test_guard_passes_clean_child (test_reproduce_v20.WrapperTests) ... ok
+test_pair_matching_rejects_different_evaluation_role (test_reproduce_v20.WrapperTests) ... ok
+test_pair_matching_rejects_same_E_injection_difference (test_reproduce_v20.WrapperTests) ... ok
+test_pair_matching_rejects_true_reset_difference (test_reproduce_v20.WrapperTests) ... ok
+test_pair_matching_retains_panel_difference (test_reproduce_v20.WrapperTests) ... ok
+test_parent_guard_blocks_original_read_and_then_deactivates (test_reproduce_v20.WrapperTests) ... ok
+test_rejects_applied_stream_not_matching_registered_physics (test_reproduce_v20.WrapperTests) ... ok
+test_rejects_broken_journal (test_reproduce_v20.WrapperTests) ... ok
+test_rejects_changed_input_inventory (test_reproduce_v20.WrapperTests) ... ok
+test_rejects_duplicate_attempt (test_reproduce_v20.WrapperTests) ... ok
+test_rejects_failed_attempt_qualification (test_reproduce_v20.WrapperTests) ... ok
+test_rejects_ledger_incomplete (test_reproduce_v20.WrapperTests) ... ok
+test_rejects_missing_actual_E_injection_fingerprint (test_reproduce_v20.WrapperTests) ... ok
+test_rejects_missing_or_false_actual_matching (test_reproduce_v20.WrapperTests) ... ok
+test_rejects_unbound_terminal (test_reproduce_v20.WrapperTests) ... ok
+test_rejects_unknown_metrics (test_reproduce_v20.WrapperTests) ... ok
+test_rejects_wrong_window (test_reproduce_v20.WrapperTests) ... ok
+test_release_refuses_original_or_nested_root (test_reproduce_v20.WrapperTests) ... ok
+test_release_requires_marker_and_selection (test_reproduce_v20.WrapperTests) ... ok
+test_release_requires_original_research_root (test_reproduce_v20.WrapperTests) ... ok
+test_release_verifies_self_marker_and_all_selected_bytes (test_reproduce_v20.WrapperTests) ... ok
+test_valid_full_qualified_pair (test_reproduce_v20.WrapperTests) ... ok
+
+----------------------------------------------------------------------
+Ran 40 tests in 0.159s
+
+OK

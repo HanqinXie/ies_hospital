@@ -1,0 +1,363 @@
+{
+  "schema": "hospital_ies.v20.publication_release_gate_validation.v1",
+  "utc": "2026-10-19T07:26:10.737534+00:00",
+  "status": "passed_for_publication_gate_implementation_only",
+  "scientific_root": "D:\\hospital_ies_v20_20261019",
+  "owned_files": [
+    {
+      "path": "publication/release_gate.py",
+      "bytes": 35592,
+      "sha256": "0ae4b1d026367a9e91c1cb75104d53fdd55e684e5ca62a23c7611b56a91bf22c"
+    },
+    {
+      "path": "publication/test_release_gate.py",
+      "bytes": 13692,
+      "sha256": "369280aa7a8904a684f8331f18b3630f12cd8252a52adaaf6a959029b2f5796f"
+    }
+  ],
+  "final_validated_source": {
+    "gate_sha256": "0ae4b1d026367a9e91c1cb75104d53fdd55e684e5ca62a23c7611b56a91bf22c",
+    "test_sha256": "369280aa7a8904a684f8331f18b3630f12cd8252a52adaaf6a959029b2f5796f",
+    "actual_green_command": "release_gate_green04",
+    "joint_actual_green_command": "publication_gates03",
+    "sha_observation": "Owner verified final bytes after these commands; external command capture does not independently instrument source hashes"
+  },
+  "red_green_version_evidence": [
+    {
+      "red": "release_gate_red01",
+      "green": "release_gate_green01",
+      "actual_failed_tests": 28,
+      "actual_passed_tests": 28,
+      "red_implementation_state": "release_gate.py absent",
+      "historical_test_sha256": null,
+      "historical_sha_not_recorded": true
+    },
+    {
+      "red": "release_gate_red02",
+      "green": "release_gate_green02",
+      "actual_failed_tests": 8,
+      "previous_passing_tests": 28,
+      "actual_passed_tests": 36,
+      "added_scope": "Normal/compatibility cross-panel actual matching and nine terminal-bound compact exports",
+      "historical_sha_not_recorded_by_command_capture": true
+    },
+    {
+      "red": "release_gate_red03",
+      "green": "release_gate_green04",
+      "actual_failed_tests": 4,
+      "previous_passing_tests": 37,
+      "actual_passed_tests": 41,
+      "red_gate_owner_observed_sha256": "52d7166a6e8f638e2f2f6517b84293dc162a697f1514af0897cdc10ac94d38d5",
+      "red_green_test_sha256": "369280aa7a8904a684f8331f18b3630f12cd8252a52adaaf6a959029b2f5796f",
+      "green_gate_sha256": "0ae4b1d026367a9e91c1cb75104d53fdd55e684e5ca62a23c7611b56a91bf22c",
+      "added_scope": "Eight actual source integrals finite/unit/coverage and complete DG budget endpoints; same frozen 1e-8 minute arithmetic coverage epsilon"
+    }
+  ],
+  "commands": [
+    {
+      "name": "release_gate_red01",
+      "actual_command": [
+        "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\python.exe",
+        "-B",
+        "-m",
+        "pytest",
+        "-q",
+        "publication/test_release_gate.py"
+      ],
+      "cwd": "D:\\hospital_ies_v20_20261019",
+      "exit_code": 1,
+      "started_utc": "2026-10-19T07:15:28.860757+00:00",
+      "finished_utc": "2026-10-19T07:15:29.532148+00:00",
+      "observed_test_counts": {
+        "failed": 28
+      },
+      "command_receipt": {
+        "path": "outputs/v20_load_accounting_20261019_run01/logs/release_gate_red01.command.json",
+        "bytes": 870,
+        "sha256": "0fc1f62d62b832b6755e6338dfe1aca4d86f2391fd104ab8abad43036de34bcf"
+      },
+      "raw_log": {
+        "path": "outputs/v20_load_accounting_20261019_run01/logs/release_gate_red01.log",
+        "bytes": 49851,
+        "sha256": "ecc957afc27896339420e03cb0a89703cf14690a30a4562ae27667ecb9152402"
+      }
+    },
+    {
+      "name": "release_gate_green01",
+      "actual_command": [
+        "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\python.exe",
+        "-B",
+        "-m",
+        "pytest",
+        "-q",
+        "publication/test_release_gate.py"
+      ],
+      "cwd": "D:\\hospital_ies_v20_20261019",
+      "exit_code": 0,
+      "started_utc": "2026-10-19T07:18:18.121233+00:00",
+      "finished_utc": "2026-10-19T07:18:19.819878+00:00",
+      "observed_test_counts": {
+        "passed": 28
+      },
+      "command_receipt": {
+        "path": "outputs/v20_load_accounting_20261019_run01/logs/release_gate_green01.command.json",
+        "bytes": 877,
+        "sha256": "2eb5e547940b95ab00ecc40d90d729200e98ef3ff4d0a62bf7f988b2f96af821"
+      },
+      "raw_log": {
+        "path": "outputs/v20_load_accounting_20261019_run01/logs/release_gate_green01.log",
+        "bytes": 101,
+        "sha256": "effe5c45fbeafabb7b3d9d47d842efa640b24a7f6e4c9480b855358ce72e1e5a"
+      }
+    },
+    {
+      "name": "release_gate_red02",
+      "actual_command": [
+        "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\python.exe",
+        "-B",
+        "-m",
+        "pytest",
+        "-q",
+        "publication/test_release_gate.py"
+      ],
+      "cwd": "D:\\hospital_ies_v20_20261019",
+      "exit_code": 1,
+      "started_utc": "2026-10-19T07:19:59.904470+00:00",
+      "finished_utc": "2026-10-19T07:20:01.791849+00:00",
+      "observed_test_counts": {
+        "failed": 8,
+        "passed": 28
+      },
+      "command_receipt": {
+        "path": "outputs/v20_load_accounting_20261019_run01/logs/release_gate_red02.command.json",
+        "bytes": 870,
+        "sha256": "4497206ddbad77dd130feb1256d323a548250af43d700f521467717477ab758b"
+      },
+      "raw_log": {
+        "path": "outputs/v20_load_accounting_20261019_run01/logs/release_gate_red02.log",
+        "bytes": 8861,
+        "sha256": "fce9639bcd7a2853efca5c4e4df95a6c3017e434dadcf8603b4a8de92c4e860b"
+      }
+    },
+    {
+      "name": "release_gate_green02",
+      "actual_command": [
+        "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\python.exe",
+        "-B",
+        "-m",
+        "pytest",
+        "-q",
+        "publication/test_release_gate.py"
+      ],
+      "cwd": "D:\\hospital_ies_v20_20261019",
+      "exit_code": 0,
+      "started_utc": "2026-10-19T07:20:53.935476+00:00",
+      "finished_utc": "2026-10-19T07:20:55.546398+00:00",
+      "observed_test_counts": {
+        "passed": 36
+      },
+      "command_receipt": {
+        "path": "outputs/v20_load_accounting_20261019_run01/logs/release_gate_green02.command.json",
+        "bytes": 877,
+        "sha256": "dd35f9123612a8d1d23d494dcddb513f0d140a72d517d112f788923968177b50"
+      },
+      "raw_log": {
+        "path": "outputs/v20_load_accounting_20261019_run01/logs/release_gate_green02.log",
+        "bytes": 101,
+        "sha256": "17b0dc25cbe054155a9d58d18a10848b1bfaf2e66d4408d3d2ee4fc4137ed405"
+      }
+    },
+    {
+      "name": "release_gate_green03",
+      "actual_command": [
+        "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\python.exe",
+        "-B",
+        "-m",
+        "pytest",
+        "-q",
+        "publication/test_release_gate.py"
+      ],
+      "cwd": "D:\\hospital_ies_v20_20261019",
+      "exit_code": 0,
+      "started_utc": "2026-10-19T07:21:38.319373+00:00",
+      "finished_utc": "2026-10-19T07:21:40.179367+00:00",
+      "observed_test_counts": {
+        "passed": 37
+      },
+      "command_receipt": {
+        "path": "outputs/v20_load_accounting_20261019_run01/logs/release_gate_green03.command.json",
+        "bytes": 877,
+        "sha256": "c1461db9f68af0780f41628ca1d8d714069ba25e38bdcf4609060af21d3d469e"
+      },
+      "raw_log": {
+        "path": "outputs/v20_load_accounting_20261019_run01/logs/release_gate_green03.log",
+        "bytes": 101,
+        "sha256": "05edc759bebe0cd320fa11c6578c94872b5162ff0a58bbf838a9afdcc4dd9c0e"
+      }
+    },
+    {
+      "name": "release_gate_red03",
+      "actual_command": [
+        "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\python.exe",
+        "-B",
+        "-m",
+        "pytest",
+        "-q",
+        "publication/test_release_gate.py"
+      ],
+      "cwd": "D:\\hospital_ies_v20_20261019",
+      "exit_code": 1,
+      "started_utc": "2026-10-19T07:22:53.595424+00:00",
+      "finished_utc": "2026-10-19T07:22:55.652997+00:00",
+      "observed_test_counts": {
+        "failed": 4,
+        "passed": 37
+      },
+      "command_receipt": {
+        "path": "outputs/v20_load_accounting_20261019_run01/logs/release_gate_red03.command.json",
+        "bytes": 871,
+        "sha256": "10ca10592fb5c5d302051350033ef4fe02ea8399f2742bd8ae0b10605733572d"
+      },
+      "raw_log": {
+        "path": "outputs/v20_load_accounting_20261019_run01/logs/release_gate_red03.log",
+        "bytes": 4895,
+        "sha256": "0294334707097c76a7545d241cc4ffa75890829ca7e916eb12843a073a32a7f5"
+      }
+    },
+    {
+      "name": "release_gate_green04",
+      "actual_command": [
+        "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\python.exe",
+        "-B",
+        "-m",
+        "pytest",
+        "-q",
+        "publication/test_release_gate.py"
+      ],
+      "cwd": "D:\\hospital_ies_v20_20261019",
+      "exit_code": 0,
+      "started_utc": "2026-10-19T07:23:28.697251+00:00",
+      "finished_utc": "2026-10-19T07:23:30.750073+00:00",
+      "observed_test_counts": {
+        "passed": 41
+      },
+      "command_receipt": {
+        "path": "outputs/v20_load_accounting_20261019_run01/logs/release_gate_green04.command.json",
+        "bytes": 877,
+        "sha256": "e496980ac750d104032eaa43fc2d4ce6a9c748553fe50eeda04090fb7eaf1ed4"
+      },
+      "raw_log": {
+        "path": "outputs/v20_load_accounting_20261019_run01/logs/release_gate_green04.log",
+        "bytes": 101,
+        "sha256": "18942efdffb5651a76c6821d9dee1565cd944a5709fef63fefb34c4244682896"
+      }
+    },
+    {
+      "name": "publication_gates03",
+      "actual_command": [
+        "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\python.exe",
+        "-B",
+        "-m",
+        "pytest",
+        "-q",
+        "publication"
+      ],
+      "cwd": "D:\\hospital_ies_v20_20261019",
+      "exit_code": 0,
+      "started_utc": "2026-10-19T07:23:50.015439+00:00",
+      "finished_utc": "2026-10-19T07:23:52.439261+00:00",
+      "observed_test_counts": {
+        "passed": 110,
+        "subtests passed": 7
+      },
+      "command_receipt": {
+        "path": "outputs/v20_load_accounting_20261019_run01/logs/publication_gates03.command.json",
+        "bytes": 853,
+        "sha256": "d8d6a223a42d13b610fbc1c285dc7bf5f7bfdb485f94ec7ab18fa4b87e4158d3"
+      },
+      "raw_log": {
+        "path": "outputs/v20_load_accounting_20261019_run01/logs/publication_gates03.log",
+        "bytes": 195,
+        "sha256": "98214a0ab3e6801f32845a3faf8b7bd6bb6e3434587235593e237065e79c58a4"
+      }
+    },
+    {
+      "name": "release_incomplete_refusal01",
+      "actual_command": [
+        "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\python.exe",
+        "-B",
+        "publication/build_v20_release.py",
+        "--destination",
+        "D:\\hospital_ies_v20_incomplete_refusal_20261019"
+      ],
+      "cwd": "D:\\hospital_ies_v20_20261019",
+      "exit_code": 1,
+      "started_utc": "2026-10-19T07:24:38.457978+00:00",
+      "finished_utc": "2026-10-19T07:24:42.299114+00:00",
+      "observed_test_counts": {},
+      "command_receipt": {
+        "path": "outputs/v20_load_accounting_20261019_run01/logs/release_incomplete_refusal01.command.json",
+        "bytes": 942,
+        "sha256": "66fae984a5b35443c3d22509cda299d25361ac831e88883b36e4da41d8ee68d5"
+      },
+      "raw_log": {
+        "path": "outputs/v20_load_accounting_20261019_run01/logs/release_incomplete_refusal01.log",
+        "bytes": 1958,
+        "sha256": "1f589880e576d5290b9daebab1e020dafb4af65cf4e343a9c0f3ad081c68e9b6"
+      }
+    }
+  ],
+  "current_frozen_closure": {
+    "freeze_path": "outputs/v20_load_accounting_20261019_run01/MODEL_FREEZE_ACCOUNTING01.json",
+    "freeze_sha256": "48baed7a128d2f921d36323330ae4d22e2e6dc83214e8a505b6ba89273439b7b",
+    "production_files": 366,
+    "test_files": 241,
+    "runtime_input_files": 28,
+    "all_current_sha_bindings_match": true,
+    "source_binding_sha256": "a532b63dbaf465ecf401904ba29ad21e1e228a4d9637d5a250645e672ca6a9dc",
+    "test_binding_sha256": "39c05865928abc310a613a78ac7d5d6c86f15db952d730889c63634ba2ce57b1",
+    "runtime_inputs_sha256": "b3b38861fe16074665b86f5538c4bddddfbcf36fa27ad7eb256ce547df2aab13"
+  },
+  "test_evidence_scope": {
+    "actual_reference": "v20_main_000: three completed policy RESULTs, unique terminal attempts and full 600-minute accounting",
+    "other_actual_results_read_by_owned_tests": false,
+    "canonical_plan_arithmetic": "Synthetic 148/406 fixture plus real frozen metadata preflight, sentinel stops before any other actual batch",
+    "no_synthetic_406_execution_proof_returned": true,
+    "complete_406_actual_campaign_claim": false,
+    "physical_episodes_started": 0,
+    "raw_trajectories_opened": 0,
+    "annual_values_parsed": 0
+  },
+  "actual_incomplete_release_refusal": {
+    "command": "release_incomplete_refusal01",
+    "exit_code": 1,
+    "first_missing_batch": "v20_main_071",
+    "missing_file": "BATCH_RESULT.json",
+    "copy_started": false,
+    "destination": "D:/hospital_ies_v20_incomplete_refusal_20261019",
+    "destination_exists_at_receipt": false,
+    "meaning": "Expected fail-closed incomplete-campaign refusal; not a complete-campaign result"
+  },
+  "independent_review": {
+    "reviewer": "/root/v19_model_spec",
+    "reviewed_gate_sha256": "0ae4b1d026367a9e91c1cb75104d53fdd55e684e5ca62a23c7611b56a91bf22c",
+    "reviewed_test_sha256": "369280aa7a8904a684f8331f18b3630f12cd8252a52adaaf6a959029b2f5796f",
+    "blocking": [],
+    "important": [],
+    "scope": "Read-only source/AST and existing CHECKPOINT02 compact readback; reviewer did not run gate/tests or physics",
+    "reported_conclusion": "No identified false pass or inevitable rejection of legitimate complete registered windows"
+  },
+  "scientific_boundaries": {
+    "only_registered_full_for_gate": true,
+    "partial_legacy_full600_not_substituted": true,
+    "negative_rotor_allowed": true,
+    "exact_diesel_chemical_co2_unknown_preserved": true,
+    "zero_ENS_or_policy_superiority_not_required": true,
+    "normal_injection_None_not_fabricated": true,
+    "sealed_final12_unopened": true
+  },
+  "final_publication_gate_not_executed_to_success": true,
+  "postpush_validation_not_claimed": true,
+  "new_archive_not_built": true,
+  "signature": "d9d51923117dff764cd24c84070a92f078d81b5a25b270fddb8892cb0f5e146f"
+}

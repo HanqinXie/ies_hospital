@@ -1,0 +1,99 @@
+.....................FFFFFFFF.                                           [100%]
+================================== FAILURES ===================================
+_ test_absent_sampling_evidence_stays_unknown_without_blocking_scientific_service_tables _
+
+    def test_absent_sampling_evidence_stays_unknown_without_blocking_scientific_service_tables():
+>       row = module().unknown_resource('v20_normal_000', {'source_model_id': 'M19_model_closeout', 'sampled_private_peak_bytes': 100}, 'no saved new sampling result')
+E       AttributeError: module '_normal_window_analysis_tested' has no attribute 'unknown_resource'
+
+outputs\v20_load_accounting_20261019_run01\review\normal_window_analysis01\test_normal_window_analysis.py:111: AttributeError
+___________ test_report_row_is_bound_to_the_actual_qualified_RESULT ___________
+
+    def test_report_row_is_bound_to_the_actual_qualified_RESULT():
+        row, job, proof = row_binding_fixture()
+>       assert module().qualified_result_path(row, job, proof, 'synthetic_E').name == 'RESULT.json'
+E       AttributeError: module '_normal_window_analysis_tested' has no attribute 'qualified_result_path'
+
+outputs\v20_load_accounting_20261019_run01\review\normal_window_analysis01\test_normal_window_analysis.py:131: AttributeError
+___ test_report_cannot_redirect_to_an_unqualified_saved_record[result_path] ___
+
+field = 'result_path'
+
+    @pytest.mark.parametrize('field', ['result_path', 'result_sha256', 'policy_id', 'actual_initial_state_sha256', 'actual_exogenous_sha256', 'source_binding_sha256'])
+    def test_report_cannot_redirect_to_an_unqualified_saved_record(field):
+        row, job, proof = row_binding_fixture()
+        row[field] = str(module().ROOT / 'other/RESULT.json') if field == 'result_path' else '0' * 64
+>       with pytest.raises(ValueError): module().qualified_result_path(row, job, proof, 'synthetic_E')
+E       AttributeError: module '_normal_window_analysis_tested' has no attribute 'qualified_result_path'
+
+outputs\v20_load_accounting_20261019_run01\review\normal_window_analysis01\test_normal_window_analysis.py:138: AttributeError
+__ test_report_cannot_redirect_to_an_unqualified_saved_record[result_sha256] __
+
+field = 'result_sha256'
+
+    @pytest.mark.parametrize('field', ['result_path', 'result_sha256', 'policy_id', 'actual_initial_state_sha256', 'actual_exogenous_sha256', 'source_binding_sha256'])
+    def test_report_cannot_redirect_to_an_unqualified_saved_record(field):
+        row, job, proof = row_binding_fixture()
+        row[field] = str(module().ROOT / 'other/RESULT.json') if field == 'result_path' else '0' * 64
+>       with pytest.raises(ValueError): module().qualified_result_path(row, job, proof, 'synthetic_E')
+E       AttributeError: module '_normal_window_analysis_tested' has no attribute 'qualified_result_path'
+
+outputs\v20_load_accounting_20261019_run01\review\normal_window_analysis01\test_normal_window_analysis.py:138: AttributeError
+____ test_report_cannot_redirect_to_an_unqualified_saved_record[policy_id] ____
+
+field = 'policy_id'
+
+    @pytest.mark.parametrize('field', ['result_path', 'result_sha256', 'policy_id', 'actual_initial_state_sha256', 'actual_exogenous_sha256', 'source_binding_sha256'])
+    def test_report_cannot_redirect_to_an_unqualified_saved_record(field):
+        row, job, proof = row_binding_fixture()
+        row[field] = str(module().ROOT / 'other/RESULT.json') if field == 'result_path' else '0' * 64
+>       with pytest.raises(ValueError): module().qualified_result_path(row, job, proof, 'synthetic_E')
+E       AttributeError: module '_normal_window_analysis_tested' has no attribute 'qualified_result_path'
+
+outputs\v20_load_accounting_20261019_run01\review\normal_window_analysis01\test_normal_window_analysis.py:138: AttributeError
+_ test_report_cannot_redirect_to_an_unqualified_saved_record[actual_initial_state_sha256] _
+
+field = 'actual_initial_state_sha256'
+
+    @pytest.mark.parametrize('field', ['result_path', 'result_sha256', 'policy_id', 'actual_initial_state_sha256', 'actual_exogenous_sha256', 'source_binding_sha256'])
+    def test_report_cannot_redirect_to_an_unqualified_saved_record(field):
+        row, job, proof = row_binding_fixture()
+        row[field] = str(module().ROOT / 'other/RESULT.json') if field == 'result_path' else '0' * 64
+>       with pytest.raises(ValueError): module().qualified_result_path(row, job, proof, 'synthetic_E')
+E       AttributeError: module '_normal_window_analysis_tested' has no attribute 'qualified_result_path'
+
+outputs\v20_load_accounting_20261019_run01\review\normal_window_analysis01\test_normal_window_analysis.py:138: AttributeError
+_ test_report_cannot_redirect_to_an_unqualified_saved_record[actual_exogenous_sha256] _
+
+field = 'actual_exogenous_sha256'
+
+    @pytest.mark.parametrize('field', ['result_path', 'result_sha256', 'policy_id', 'actual_initial_state_sha256', 'actual_exogenous_sha256', 'source_binding_sha256'])
+    def test_report_cannot_redirect_to_an_unqualified_saved_record(field):
+        row, job, proof = row_binding_fixture()
+        row[field] = str(module().ROOT / 'other/RESULT.json') if field == 'result_path' else '0' * 64
+>       with pytest.raises(ValueError): module().qualified_result_path(row, job, proof, 'synthetic_E')
+E       AttributeError: module '_normal_window_analysis_tested' has no attribute 'qualified_result_path'
+
+outputs\v20_load_accounting_20261019_run01\review\normal_window_analysis01\test_normal_window_analysis.py:138: AttributeError
+_ test_report_cannot_redirect_to_an_unqualified_saved_record[source_binding_sha256] _
+
+field = 'source_binding_sha256'
+
+    @pytest.mark.parametrize('field', ['result_path', 'result_sha256', 'policy_id', 'actual_initial_state_sha256', 'actual_exogenous_sha256', 'source_binding_sha256'])
+    def test_report_cannot_redirect_to_an_unqualified_saved_record(field):
+        row, job, proof = row_binding_fixture()
+        row[field] = str(module().ROOT / 'other/RESULT.json') if field == 'result_path' else '0' * 64
+>       with pytest.raises(ValueError): module().qualified_result_path(row, job, proof, 'synthetic_E')
+E       AttributeError: module '_normal_window_analysis_tested' has no attribute 'qualified_result_path'
+
+outputs\v20_load_accounting_20261019_run01\review\normal_window_analysis01\test_normal_window_analysis.py:138: AttributeError
+=========================== short test summary info ===========================
+FAILED outputs/v20_load_accounting_20261019_run01/review/normal_window_analysis01/test_normal_window_analysis.py::test_absent_sampling_evidence_stays_unknown_without_blocking_scientific_service_tables
+FAILED outputs/v20_load_accounting_20261019_run01/review/normal_window_analysis01/test_normal_window_analysis.py::test_report_row_is_bound_to_the_actual_qualified_RESULT
+FAILED outputs/v20_load_accounting_20261019_run01/review/normal_window_analysis01/test_normal_window_analysis.py::test_report_cannot_redirect_to_an_unqualified_saved_record[result_path]
+FAILED outputs/v20_load_accounting_20261019_run01/review/normal_window_analysis01/test_normal_window_analysis.py::test_report_cannot_redirect_to_an_unqualified_saved_record[result_sha256]
+FAILED outputs/v20_load_accounting_20261019_run01/review/normal_window_analysis01/test_normal_window_analysis.py::test_report_cannot_redirect_to_an_unqualified_saved_record[policy_id]
+FAILED outputs/v20_load_accounting_20261019_run01/review/normal_window_analysis01/test_normal_window_analysis.py::test_report_cannot_redirect_to_an_unqualified_saved_record[actual_initial_state_sha256]
+FAILED outputs/v20_load_accounting_20261019_run01/review/normal_window_analysis01/test_normal_window_analysis.py::test_report_cannot_redirect_to_an_unqualified_saved_record[actual_exogenous_sha256]
+FAILED outputs/v20_load_accounting_20261019_run01/review/normal_window_analysis01/test_normal_window_analysis.py::test_report_cannot_redirect_to_an_unqualified_saved_record[source_binding_sha256]
+8 failed, 22 passed in 1.24s

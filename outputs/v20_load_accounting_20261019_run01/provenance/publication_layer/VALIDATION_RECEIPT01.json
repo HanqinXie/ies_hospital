@@ -1,0 +1,102 @@
+{
+  "schema": "hospital_ies.v20.publication_wrapper_validation.v1",
+  "utc": "2026-10-19T04:50:25.425007+00:00",
+  "scripts": {
+    "publication/reproduce_v20.py": {
+      "bytes": 28797,
+      "sha256": "495db22279be769a8bc0784f9a174c3856667f7c244a3edc921acb52c454ef45"
+    },
+    "publication/test_reproduce_v20.py": {
+      "bytes": 13212,
+      "sha256": "4e13cad9e9edeb690bf056df2073680ca9cf2561b3eaa77ea5c00be87efcf7ea"
+    }
+  },
+  "commands": [
+    {
+      "command": "python -B publication/test_reproduce_v20.py",
+      "log": "outputs/v20_load_accounting_20261019_run01/provenance/publication_layer/reproduce_wrapper_red01.log",
+      "bytes": 19416,
+      "sha256": "7a2548b8340a93ee101d4f9931c8ea7b1a98b00c679bf854cc2ab0be8f8378b0",
+      "exit_code": 1,
+      "tests": 16,
+      "failures": 16,
+      "physical_episodes_started": 0
+    },
+    {
+      "command": "python -B publication/test_reproduce_v20.py",
+      "log": "outputs/v20_load_accounting_20261019_run01/provenance/publication_layer/reproduce_wrapper_green01.log",
+      "bytes": 3142,
+      "sha256": "91904a4f05cc2ce934deb8b7f56c13393158be3f4dfcd3dd0b6d0a566cf3e2fe",
+      "exit_code": 0,
+      "tests": 16,
+      "failures": 0,
+      "physical_episodes_started": 0
+    },
+    {
+      "command": "python -B publication/test_reproduce_v20.py",
+      "log": "outputs/v20_load_accounting_20261019_run01/provenance/publication_layer/reproduce_wrapper_red02.log",
+      "bytes": 7292,
+      "sha256": "1199562d5450b4e968bb59c213f368528ac8e045bce0dbe39454955d49d3daca",
+      "exit_code": 1,
+      "tests": 22,
+      "failures": 3,
+      "physical_episodes_started": 0
+    },
+    {
+      "command": "python -B publication/test_reproduce_v20.py",
+      "log": "outputs/v20_load_accounting_20261019_run01/provenance/publication_layer/reproduce_wrapper_green02.log",
+      "bytes": 4142,
+      "sha256": "31d21669d2a620ae9c3640b916bcc9c425ca694369bb7c21f2d5ef9026a92490",
+      "exit_code": 0,
+      "tests": 22,
+      "failures": 0,
+      "physical_episodes_started": 0
+    },
+    {
+      "command": "python -B publication/test_reproduce_v20.py",
+      "log": "outputs/v20_load_accounting_20261019_run01/provenance/publication_layer/reproduce_wrapper_red03.log",
+      "bytes": 6678,
+      "sha256": "5e7d307e2a785f848c42bf2617ac06d86506fbebc07c1700877ba16d04b78f82",
+      "exit_code": 1,
+      "tests": 24,
+      "failures": 2,
+      "physical_episodes_started": 0
+    },
+    {
+      "command": "python -B publication/test_reproduce_v20.py",
+      "log": "outputs/v20_load_accounting_20261019_run01/provenance/publication_layer/reproduce_wrapper_green03.log",
+      "bytes": 4480,
+      "sha256": "0a81fb44a9edabb9c8d568555049985703c2d5036faab262860f452b18d6396c",
+      "exit_code": 0,
+      "tests": 24,
+      "failures": 0,
+      "physical_episodes_started": 0
+    },
+    {
+      "command": "python -B - [inline import frozen qualification helpers, load_bundle main000 E, qualify_evidence; stdout saved]",
+      "log": "outputs/v20_load_accounting_20261019_run01/provenance/publication_layer/reproduce_actual_reference01.log",
+      "bytes": 4586,
+      "sha256": "a9dd5140576215ed89638bcee97dec57245bc0bd1806ac4a46c91cda1da13d69",
+      "exit_code": 0,
+      "mode": "read_only_actual_reference_qualification",
+      "physical_episodes_started": 0
+    }
+  ],
+  "frozen_closure": {
+    "production": {
+      "files": 366,
+      "sha256_equal": true
+    },
+    "tests": {
+      "files": 241,
+      "sha256_equal": true
+    },
+    "runtime_inputs": {
+      "files": 28,
+      "sha256_equal": true
+    }
+  },
+  "source_input_test_files_modified": false,
+  "actual_scientific_replays_started": 0,
+  "limits": "Synthetic guards and actual saved reference only; a fresh release replay has not been run by this validation."
+}

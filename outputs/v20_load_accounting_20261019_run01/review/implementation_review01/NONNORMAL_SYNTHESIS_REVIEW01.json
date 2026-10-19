@@ -1,0 +1,61 @@
+{
+  "status": "394_nonnormal_analysis_review_closed",
+  "utc": "2026-10-19T10:11:09.755837+00:00",
+  "cohorts": {
+    "main": 240,
+    "long": 24,
+    "compat": 7,
+    "fixed8": 96,
+    "propagation": 18,
+    "open1": 6,
+    "contact025": 3
+  },
+  "normal": "pending; not included in this count",
+  "review_scope": "same-window carriers, union minutes, source/cost/conditional-carbon, preservation of bad outcomes and all denominators",
+  "root_summary": "docs/v20/ENGINEERING_RESULTS_REPORT.md",
+  "root_summary_sha256": "0694c0da5e21fda2dd75744a7f8ae9c13e5e5c7a425d1797f684c25c38ab850e",
+  "independent_findings": {
+    "blocking": [],
+    "important": [],
+    "time_wording_corrected": "contact event452.5 precedes825 RETURN_PREP and825.5 GRID"
+  },
+  "evidence": [
+    {
+      "path": "outputs/v20_load_accounting_20261019_run01/review/main_service_analysis01/ANALYSIS.json",
+      "bytes": 360844,
+      "sha256": "20913936ddb02b0494b86708678e7e373bdbd17c312d7ba4b0544facd53854c1"
+    },
+    {
+      "path": "outputs/v20_load_accounting_20261019_run01/review/main_service_analysis01/VALIDATION.json",
+      "bytes": 6723,
+      "sha256": "18cfdb434658b745670d3f52b14dbb99efc832d7b9daf93c37173c1a49f60aa1"
+    },
+    {
+      "path": "outputs/v20_load_accounting_20261019_run01/review/long_compat_analysis01/PROOF.json",
+      "bytes": 999,
+      "sha256": "5be2ac7c136e01bf8ab0b9a84de6cd8145514c78ee950c1825b939c6cecce967"
+    },
+    {
+      "path": "outputs/v20_load_accounting_20261019_run01/review/long_compat_analysis01/ANALYSIS.json",
+      "bytes": 3017238,
+      "sha256": "8371e2b07f684aa0ca62823591e1b161fb855038e1fc8760d4ec31f37c133336"
+    },
+    {
+      "path": "outputs/v20_load_accounting_20261019_run01/review/fixed_sensitivity_analysis01/PROOF.json",
+      "bytes": 1716,
+      "sha256": "3ef5d62696a83bc9e4afa5c8f581d5c4764e184fc5476eed42893dd41ab3d418"
+    },
+    {
+      "path": "outputs/v20_load_accounting_20261019_run01/review/fixed_sensitivity_analysis01/ANALYSIS.json",
+      "bytes": 1014112,
+      "sha256": "18bc2c742152facfbed5c88fe5cf7aa24e85c7194c2108218513a63a8c803005"
+    },
+    {
+      "path": "outputs/v20_load_accounting_20261019_run01/review/fixed_sensitivity_analysis01/FINAL_DOCUMENT_RECEIPT.json",
+      "bytes": 1455,
+      "sha256": "ad4f718ee84add381a5ee62919a0a9c51199cd95de7a36313aa5b2dcf7d7a3d4"
+    }
+  ],
+  "physics_started_by_this_review": 0,
+  "raw_trajectories_opened": 0
+}

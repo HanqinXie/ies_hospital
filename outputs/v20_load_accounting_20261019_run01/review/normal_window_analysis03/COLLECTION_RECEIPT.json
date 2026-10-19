@@ -1,0 +1,2279 @@
+{
+  "schema": "hospital_ies.v20.normal_window_analysis.v3",
+  "status": "passed",
+  "utc": "2026-10-19T12:00:08.200005+00:00",
+  "source_script_sha256": "526834c9b51418a0b09b8922045439c095fa9de1fb4e2be4be147d5cc0babe81",
+  "continuation_chain": {
+    "normal03_exit_code": 125,
+    "supervision03_status": "failed_unknown",
+    "canonical02_measured_batches": 10,
+    "pending_new008": [
+      "v20_normal_008"
+    ],
+    "normal_009_resource_status": "unknown",
+    "prior_failure_not_erased": true
+  },
+  "resource_continuation": {
+    "new008_actual_child_count": 1,
+    "actual_complete_pairs": 406,
+    "actual_complete_batches": 148,
+    "canonical02_measured_batches": 10,
+    "new008_measured_batches": 1,
+    "normal_009_resource_status": "unknown",
+    "qualification_is_not406_new_replays": true
+  },
+  "consumed_report": "FINAL01",
+  "report_receipt_sha256": "e272fec06141a1b6f6415b522f0eefc4ee2ab3cca42ec8c8ddb0e9929b20cce8",
+  "normal_batches": 12,
+  "scene_windows": 4,
+  "actual_qualified_trajectories": 12,
+  "policy_pair_comparisons": 12,
+  "requested_delivered_service_rows": 144,
+  "factor_rows": 48,
+  "no_cross_window_total_or_ranking": true,
+  "inputs": [
+    {
+      "path": "D:\\hospital_ies_v20_20261019\\outputs\\v20_load_accounting_20261019_run01\\logs\\normal02.command.json",
+      "bytes": 921,
+      "sha256": "ded720a6c7c5a1b0298d60120353f22a95ee0968e472030acacd58e586d9f502",
+      "kind": "actual_readiness_terminal_receipt"
+    },
+    {
+      "path": "D:\\hospital_ies_v20_20261019\\outputs\\v20_load_accounting_20261019_run01\\logs\\normal02.log",
+      "bytes": 1601,
+      "sha256": "8b119953908ffe8c1b6531398f4a77aa90e258917f65b166bcf4e3cb8427ffa6",
+      "kind": "actual_readiness_terminal_receipt"
+    },
+    {
+      "path": "D:\\hospital_ies_v20_20261019\\outputs\\v20_load_accounting_20261019_run01\\review\\supervision02\\RESULT.json",
+      "bytes": 447,
+      "sha256": "44b6948d7f9fd936621b7330deac6661aeb33eeaf58c1bc568446f385da880a2",
+      "kind": "actual_readiness_terminal_receipt"
+    },
+    {
+      "path": "D:\\hospital_ies_v20_20261019\\outputs\\v20_load_accounting_20261019_run01\\provenance\\normal_resource_profile\\supervision_canonical01\\SUMMARY.json",
+      "bytes": 1686,
+      "sha256": "743e97267faf090da87921ba43d11e721b177489c2c7c1c15c8ad4fb25e7ed7c",
+      "kind": "actual_readiness_terminal_receipt"
+    },
+    {
+      "path": "D:\\hospital_ies_v20_20261019\\outputs\\v20_load_accounting_20261019_run01\\provenance\\normal_resource_profile\\supervision_canonical01\\v20_normal_009.interrupted.json",
+      "bytes": 423,
+      "sha256": "5cc617de3ab4a437822c50b0f4e68c6e3e66d0abd7f12e610b8f6d947db55fef",
+      "kind": "actual_readiness_terminal_receipt"
+    },
+    {
+      "path": "D:\\hospital_ies_v20_20261019\\outputs\\v20_load_accounting_20261019_run01\\provenance\\normal_resource_profile\\supervision_canonical01\\SAMPLES.jsonl",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "kind": "actual_readiness_terminal_receipt"
+    },
+    {
+      "path": "D:\\hospital_ies_v20_20261019\\outputs\\v20_load_accounting_20261019_run01\\review\\normal_window_analysis01\\RESULT.json",
+      "bytes": 246,
+      "sha256": "6a59121bb87b0cfa9e83f7ae983e9de93522c77551b48fbf8a8cfc795d51d074",
+      "kind": "actual_readiness_terminal_receipt"
+    },
+    {
+      "path": "D:\\hospital_ies_v20_20261019\\outputs\\v20_load_accounting_20261019_run01\\logs\\normal_analysis_wait01.command.json",
+      "bytes": 998,
+      "sha256": "ca80efed03a41da65edb8dd95f7478d3fb63e3cdaf1244872855a6c2871a4330",
+      "kind": "actual_readiness_terminal_receipt"
+    },
+    {
+      "path": "D:\\hospital_ies_v20_20261019\\outputs\\v20_load_accounting_20261019_run01\\review\\supervision03\\START_COMMAND.json",
+      "bytes": 619,
+      "sha256": "581a93cd998a56cc9748c0e9e76c5f4ebc09de92d0fa23f81a617c64ffbc9222",
+      "kind": "actual_readiness_terminal_receipt"
+    },
+    {
+      "path": "D:\\hospital_ies_v20_20261019\\outputs\\v20_load_accounting_20261019_run01\\review\\supervision03\\SUPERVISOR_IMPLEMENTATION.py",
+      "bytes": 5967,
+      "sha256": "7cdc0eb91c2d52b1996f478478cf6b9762c73861bee6035257e6529b178bc117",
+      "kind": "actual_successor_preserved_predecessor"
+    },
+    {
+      "path": "D:\\hospital_ies_v20_20261019\\outputs\\v20_load_accounting_20261019_run01\\review\\NORMAL_CONTINUATION_PREFLIGHT03.json",
+      "bytes": 7116,
+      "sha256": "ff35edb29111074292051c2a37a6c7d46ef3b8429566264877b9f84caa50d77b",
+      "kind": "actual_readiness_terminal_receipt"
+    },
+    {
+      "path": "D:\\hospital_ies_v20_20261019\\outputs\\v20_load_accounting_20261019_run01\\provenance\\normal_resource_profile\\supervision_canonical02\\START.json",
+      "bytes": 478,
+      "sha256": "3470cd00b346d9cc1c260d12f2f741004693bd825b4e861b86ac638b86929244",
+      "kind": "actual_readiness_terminal_receipt"
+    },
+    {
+      "path": "D:\\hospital_ies_v20_20261019\\outputs\\v20_load_accounting_20261019_run01\\provenance\\normal_resource_profile\\STOP_NORMAL_SERIAL.json",
+      "bytes": 1790,
+      "sha256": "a1e8b0ee5ea21b7bd633595f916a21dc46006b22bdd59b941a2fb94611403101",
+      "kind": "actual_successor_preserved_predecessor"
+    },
+    {
+      "path": "D:\\hospital_ies_v20_20261019\\outputs\\v20_load_accounting_20261019_run01\\logs\\normal03.command.json",
+      "bytes": 923,
+      "sha256": "77d46963117cab006162b0d428e19fb3b5b67fba989af9b45bb18c4d4623d525",
+      "kind": "actual_successor_preserved_predecessor"
+    },
+    {
+      "path": "D:\\hospital_ies_v20_20261019\\outputs\\v20_load_accounting_20261019_run01\\logs\\normal03.log",
+      "bytes": 12858,
+      "sha256": "3ede22c3dd4ddd423795992720022beae36e086e0b5b37c5256509c22f5564e1",
+      "kind": "actual_readiness_terminal_receipt"
+    },
+    {
+      "path": "D:\\hospital_ies_v20_20261019\\outputs\\v20_load_accounting_20261019_run01\\review\\supervision03\\RESULT.json",
+      "bytes": 446,
+      "sha256": "5b2b5e25db50ebcea0dbf9607e1000b2efb570a6f149bd785cf0811f538d18c6",
+      "kind": "actual_successor_preserved_predecessor"
+    },
+    {
+      "path": "D:\\hospital_ies_v20_20261019\\outputs\\v20_load_accounting_20261019_run01\\provenance\\normal_resource_profile\\supervision_canonical02\\SUMMARY.json",
+      "bytes": 15653,
+      "sha256": "0af8b40800c96880f28974015b471197728dc3e80ed6115ae18d124091f5607e",
+      "kind": "actual_M20_normal_resource_supervisor"
+    },
+    {
+      "path": "D:\\hospital_ies_v20_20261019\\outputs\\v20_load_accounting_20261019_run01\\review\\normal_wait02_stop01\\INTENT.json",
+      "bytes": 3593,
+      "sha256": "a9dc47db2f3fdc5035129253e4a2eec0710f31ceffc6c124f034a889e05b3a1c",
+      "kind": "actual_readiness_terminal_receipt"
+    },
+    {
+      "path": "D:\\hospital_ies_v20_20261019\\outputs\\v20_load_accounting_20261019_run01\\review\\normal_wait02_stop01\\RESULT.json",
+      "bytes": 3086,
+      "sha256": "66c4d778324e6d9f1db933ce79d221ad1376c6d91c7e4e2d62fd881091ec6de4",
+      "kind": "actual_readiness_terminal_receipt"
+    },
+    {
+      "path": "D:\\hospital_ies_v20_20261019\\outputs\\v20_load_accounting_20261019_run01\\logs\\normal_analysis_wait02.command.json",
+      "bytes": 999,
+      "sha256": "542e93b98e8bac2227bf90b1da5b976b60e535621f3ccc8ed6f04c8afe16cf1a",
+      "kind": "actual_readiness_terminal_receipt"
+    },
+    {
+      "path": "D:\\hospital_ies_v20_20261019\\outputs\\v20_load_accounting_20261019_run01\\review\\normal_window_analysis02\\PREPARATION.json",
+      "bytes": 9138,
+      "sha256": "757a1e76a460a507bc33f12f92d9693793f3f83656704da6cb615d979821f8bd",
+      "kind": "actual_readiness_terminal_receipt"
+    },
+    {
+      "path": "D:\\hospital_ies_v20_20261019\\outputs\\v20_load_accounting_20261019_run01\\review\\normal_window_analysis02\\READONLY_OWNER.json",
+      "bytes": 389,
+      "sha256": "308b09ab1fb14a9e62e2e04955c7268612f13557a8ee96c38c94d73820d71d8b",
+      "kind": "actual_readiness_terminal_receipt"
+    },
+    {
+      "path": "D:\\hospital_ies_v20_20261019\\outputs\\v20_load_accounting_20261019_run01\\review\\normal_window_analysis02\\normal_window_analysis.py",
+      "bytes": 65592,
+      "sha256": "ff04ccf7c5d93ce98bfeac6455c43e140ce3447cf1e84d5b61b9dadf53cd2b62",
+      "kind": "actual_readiness_terminal_receipt"
+    },
+    {
+      "path": "D:\\hospital_ies_v20_20261019\\outputs\\v20_load_accounting_20261019_run01\\review\\normal_window_analysis02\\collect_normal_once02.py",
+      "bytes": 13790,
+      "sha256": "8c0798d79db5b977828a08778713ce666bf61b41b160e3df0ec1718b3a89ba7d",
+      "kind": "actual_readiness_terminal_receipt"
+    },
+    {
+      "path": "D:\\hospital_ies_v20_20261019\\outputs\\v20_load_accounting_20261019_run01\\review\\normal008_continuation01\\PRE_STOP_405_PROOF01.json",
+      "bytes": 1389535,
+      "sha256": "09fcc9b35fa61fae097e29240bd98d096decd37c6a6bd34eead69c6290891812",
+      "kind": "actual_readiness_terminal_receipt"
+    },
+    {
+      "path": "D:\\hospital_ies_v20_20261019\\outputs\\v20_load_accounting_20261019_run01\\review\\normal008_continuation01\\PRE405_IMPLEMENTATION.py",
+      "bytes": 7451,
+      "sha256": "afa6116d54dac40d1f75a37a2c0c429ddff7e3910420106ff3c00c276aadcf46",
+      "kind": "actual_readiness_terminal_receipt"
+    },
+    {
+      "path": "D:\\hospital_ies_v20_20261019\\outputs\\v20_load_accounting_20261019_run01\\logs\\normal008_prestop405_01.command.json",
+      "bytes": 998,
+      "sha256": "f9e9d3b4b5331d47bbc86732bd29c325ce160169044c74801eb0d7a7b210ec2a",
+      "kind": "actual_readiness_terminal_receipt"
+    },
+    {
+      "path": "D:\\hospital_ies_v20_20261019\\outputs\\v20_load_accounting_20261019_run01\\logs\\normal008_prestop405_01.log",
+      "bytes": 1679,
+      "sha256": "9fe22a54f26cacc3c4ea17feaa049f4d5c85ffc6fbd20f5fda32c97223cdfe36",
+      "kind": "actual_readiness_terminal_receipt"
+    },
+    {
+      "path": "D:\\hospital_ies_v20_20261019\\outputs\\v20_load_accounting_20261019_run01\\review\\normal008_continuation01\\CADENCE_DIAGNOSIS01.json",
+      "bytes": 2088,
+      "sha256": "ae79040e57d6398ba17b230f06ba6c5c7f5ad28ae27d3c05864d46beff49f372",
+      "kind": "actual_readiness_terminal_receipt"
+    },
+    {
+      "path": "D:\\hospital_ies_v20_20261019\\outputs\\v20_load_accounting_20261019_run01\\review\\normal008_continuation01\\IMPLEMENTATION_VALIDATION02.json",
+      "bytes": 5139,
+      "sha256": "e75845c9ded868b587498c5098205f5cc00219b73abd625b2ac1ad5717c78001",
+      "kind": "actual_readiness_terminal_receipt"
+    },
+    {
+      "path": "D:\\hospital_ies_v20_20261019\\outputs\\v20_load_accounting_20261019_run01\\logs\\normal008_lightweight_run01.command.json",
+      "bytes": 1218,
+      "sha256": "c3ada8d70ce48e631b6f3bf6072e264a453f7c121ad1121c99f403f10b694591",
+      "kind": "actual_readiness_terminal_receipt"
+    },
+    {
+      "path": "D:\\hospital_ies_v20_20261019\\outputs\\v20_load_accounting_20261019_run01\\logs\\normal008_lightweight_run01.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "kind": "actual_readiness_terminal_receipt"
+    },
+    {
+      "path": "D:\\hospital_ies_v20_20261019\\outputs\\v20_load_accounting_20261019_run01\\logs\\normal008_lightweight_probe02.command.json",
+      "bytes": 1273,
+      "sha256": "52bc385b1c0c04da7b2c55666386582d3d40dc67de1ef2df44afdbd3375b5e04",
+      "kind": "actual_readiness_terminal_receipt"
+    },
+    {
+      "path": "D:\\hospital_ies_v20_20261019\\outputs\\v20_load_accounting_20261019_run01\\logs\\normal008_lightweight_probe02.log",
+      "bytes": 644,
+      "sha256": "5ee423bfb7e99022478ef3d4d91f9fe4ff17148120c47007fc0594ce72f3ed36",
+      "kind": "actual_readiness_terminal_receipt"
+    },
+    {
+      "path": "D:\\hospital_ies_v20_20261019\\docs\\v20\\RESOURCE_CONTINUATION_PLAN.md",
+      "bytes": 4456,
+      "sha256": "701d6325924202b5aef60bcc6c6ec224956ec86f24a6efcb760b2c7c4e8bb9bd",
+      "kind": "actual_successor_preserved_predecessor"
+    },
+    {
+      "path": "D:\\hospital_ies_v20_20261019\\publication\\continue_normal008.py",
+      "bytes": 34713,
+      "sha256": "cce231bf254b00a0af0021f04273ad54134005340f5b9706ce4578cec4823ca7",
+      "kind": "actual_successor_preserved_predecessor"
+    },
+    {
+      "path": "D:\\hospital_ies_v20_20261019\\publication\\test_continue_normal008.py",
+      "bytes": 14355,
+      "sha256": "3d0cc0bf93f2ceb34f1c84f1e8106b4d96fed557384c8f09c6c6c2742b6d595b",
+      "kind": "actual_readiness_terminal_receipt"
+    },
+    {
+      "path": "D:\\hospital_ies_v20_20261019\\outputs\\v20_load_accounting_20261019_run01\\review\\normal008_continuation01\\L72_RUN01\\START.json",
+      "bytes": 5356,
+      "sha256": "282556a8ad3655788bb3566cd74aaac71c9537289e7663815bd47f8b240a3fbd",
+      "kind": "actual_readiness_terminal_receipt"
+    },
+    {
+      "path": "D:\\hospital_ies_v20_20261019\\outputs\\v20_load_accounting_20261019_run01\\review\\normal008_continuation01\\L72_RUN01\\IDLE_STOP_INTENT.json",
+      "bytes": 1240,
+      "sha256": "547a68f62d33e8e30ac269942f4ce7eb90b63fc2aa160a55c12436c61507dd74",
+      "kind": "actual_readiness_terminal_receipt"
+    },
+    {
+      "path": "D:\\hospital_ies_v20_20261019\\outputs\\v20_load_accounting_20261019_run01\\review\\normal008_continuation01\\L72_RUN01\\IDLE_STOP_OUTCOME.json",
+      "bytes": 1611,
+      "sha256": "e54d4eafd3cb1c63011fa14c768097f7c822cc88f312eea6a056201d71637878",
+      "kind": "actual_readiness_terminal_receipt"
+    },
+    {
+      "path": "D:\\hospital_ies_v20_20261019\\outputs\\v20_load_accounting_20261019_run01\\review\\normal008_continuation01\\L72_RUN01\\IMPLEMENTATION_AT_RUN01.py",
+      "bytes": 33079,
+      "sha256": "68701e844ffca923e91f82fff52116d4b18a4357f1239d5c4a416135c8ed95a3",
+      "kind": "actual_readiness_terminal_receipt"
+    },
+    {
+      "path": "D:\\hospital_ies_v20_20261019\\outputs\\v20_load_accounting_20261019_run01\\review\\normal008_continuation01\\L72_RUN01\\TESTS_AT_RUN01.py",
+      "bytes": 10744,
+      "sha256": "9ece2a483c1e2089e35bde6fb22c3a33b6c0b9cc97a5c0539a03f67606e58ff8",
+      "kind": "actual_readiness_terminal_receipt"
+    },
+    {
+      "path": "D:\\hospital_ies_v20_20261019\\outputs\\v20_load_accounting_20261019_run01\\review\\normal008_continuation01\\L72_RUN01\\ADMISSION_SAMPLES.jsonl",
+      "bytes": 17291,
+      "sha256": "43ceb56aa237aa69ebaba102571ec3df74aa0939c478aee4fd977557b58c1d92",
+      "kind": "actual_readiness_terminal_receipt"
+    },
+    {
+      "path": "D:\\hospital_ies_v20_20261019\\outputs\\v20_load_accounting_20261019_run01\\review\\normal008_continuation01\\L72_RUN01\\preflight.json",
+      "bytes": 1389535,
+      "sha256": "33b6f5970bac1c9377ecf7b7983187f653c0e2190c4efe596d8169f379087393",
+      "kind": "actual_readiness_terminal_receipt"
+    },
+    {
+      "path": "D:\\hospital_ies_v20_20261019\\outputs\\v20_load_accounting_20261019_run01\\review\\normal008_continuation01\\L72_RUN01\\preflight.command.json",
+      "bytes": 1097,
+      "sha256": "c7f7af29369737df32de5986285ceb69ffdcfab48a3b5631174a76a629818aa3",
+      "kind": "actual_readiness_terminal_receipt"
+    },
+    {
+      "path": "D:\\hospital_ies_v20_20261019\\outputs\\v20_load_accounting_20261019_run01\\review\\normal008_continuation01\\L72_RUN01\\PARENT_AFTER_PREFLIGHT.json",
+      "bytes": 334,
+      "sha256": "d40d6c5213d0e0d588a5fa250960985849535a4241fc4e0c1fa7f6c8862eef70",
+      "kind": "actual_readiness_terminal_receipt"
+    },
+    {
+      "path": "D:\\hospital_ies_v20_20261019\\outputs\\v20_load_accounting_20261019_run01\\review\\normal008_continuation01\\L72_PLAN02\\START.json",
+      "bytes": 5517,
+      "sha256": "52f424ecf6bf7fc931a834bef1380c9e1482d3ab1eac1a29e73dd2b363e00156",
+      "kind": "actual_readiness_terminal_receipt"
+    },
+    {
+      "path": "D:\\hospital_ies_v20_20261019\\outputs\\v20_load_accounting_20261019_run01\\review\\normal008_continuation01\\L72_PLAN02\\SUMMARY.json",
+      "bytes": 677,
+      "sha256": "8f949068c0b69105fb18539b9d1b70975718acdf2a8df1ebeafced5d780b79d6",
+      "kind": "actual_readiness_terminal_receipt"
+    },
+    {
+      "path": "D:\\hospital_ies_v20_20261019\\outputs\\v20_load_accounting_20261019_run01\\review\\normal008_continuation01\\L72_PLAN02\\ADMISSION_SAMPLES.jsonl",
+      "bytes": 25048,
+      "sha256": "fea62ad619302a5827b99ad949e3b40524ebcd9d3aa9e2deb170a760dbd74237",
+      "kind": "actual_readiness_terminal_receipt"
+    },
+    {
+      "path": "D:\\hospital_ies_v20_20261019\\outputs\\v20_load_accounting_20261019_run01\\review\\normal008_continuation01\\L72_PLAN02\\preflight.json",
+      "bytes": 1389535,
+      "sha256": "1676cbbb5650c964168395c7207aead74cc56dbc992c8f76c3344ea3dced7f38",
+      "kind": "actual_readiness_terminal_receipt"
+    },
+    {
+      "path": "D:\\hospital_ies_v20_20261019\\outputs\\v20_load_accounting_20261019_run01\\review\\normal008_continuation01\\L72_PLAN02\\preflight.command.json",
+      "bytes": 1112,
+      "sha256": "710568b844f95c25455c4b9eb85ce9ab6d9c26574595edd55ec8d39d40da59d6",
+      "kind": "actual_readiness_terminal_receipt"
+    },
+    {
+      "path": "D:\\hospital_ies_v20_20261019\\outputs\\v20_load_accounting_20261019_run01\\review\\normal008_continuation01\\L72_PLAN02\\PARENT_AFTER_PREFLIGHT.json",
+      "bytes": 334,
+      "sha256": "2e2e0dd47f509ee704f2a9942fe8de495c5d07d60da2fea7ab5e031b8613bea6",
+      "kind": "actual_readiness_terminal_receipt"
+    },
+    {
+      "path": "D:\\hospital_ies_v20_20261019\\outputs\\v20_load_accounting_20261019_run01\\review\\normal008_continuation01\\IMPLEMENTATION_VALIDATION02_TEMPORAL_ADDENDUM.json",
+      "bytes": 1581,
+      "sha256": "7ed1ae3bb38f68e9dd0835b41f145429f7233e3349081145615b2c7e91cd49a0",
+      "kind": "actual_readiness_terminal_receipt"
+    },
+    {
+      "path": "D:\\hospital_ies_v20_20261019\\outputs\\v20_load_accounting_20261019_run01\\review\\normal008_resource_review01\\COUNTER_PROBE_INDEPENDENT_REVIEW03.json",
+      "bytes": 4817,
+      "sha256": "092de98e74975ff54172c0bc91a63763e0c0a2102166c55d53bb50e816716e27",
+      "kind": "actual_readiness_terminal_receipt"
+    },
+    {
+      "path": "D:\\hospital_ies_v20_20261019\\outputs\\v20_load_accounting_20261019_run01\\review\\normal_window_analysis03\\SUCCESSOR_CONTRACT.json",
+      "bytes": 12587,
+      "sha256": "4c71781ddf449c42e35bf93bb77bc58f2f55bd70f55d80cdb6113e70bb99cee3",
+      "kind": "actual_readiness_terminal_receipt"
+    },
+    {
+      "path": "D:\\hospital_ies_v20_20261019\\outputs\\v20_load_accounting_20261019_run01\\logs\\final_readback01.command.json",
+      "bytes": 921,
+      "sha256": "98c9203d6f4b37a31b94744e0b508f6868871cc40e4313a4f94e3abfe40db088",
+      "kind": "actual_successor_final_report"
+    },
+    {
+      "path": "D:\\hospital_ies_v20_20261019\\outputs\\v20_load_accounting_20261019_run01\\review\\normal008_continuation01\\L72_RUN02\\SUMMARY.json",
+      "bytes": 6333,
+      "sha256": "0d75b0b406eb2ce4165b2585b1b7173a8b7b6d9be1ce5fb0149592e7199cc6fc",
+      "kind": "actual_successor_runtime_metadata"
+    },
+    {
+      "path": "D:\\hospital_ies_v20_20261019\\outputs\\v20_load_accounting_20261019_run01\\review\\normal008_continuation01\\L72_RUN02\\FINAL_406_PROOF.json",
+      "bytes": 799935,
+      "sha256": "9e2df2ecd43aca27046115d6633c4bd8086ef44a70b1346f55ccdf50c50831ae",
+      "kind": "actual_successor_final_406_proof"
+    },
+    {
+      "path": "D:\\hospital_ies_v20_20261019\\outputs\\v20_load_accounting_20261019_run01\\logs\\normal008_lightweight_run02.command.json",
+      "bytes": 1217,
+      "sha256": "6415d45299936da0053da00af36af798f01c77c890b847fb35d573d79582d8f4",
+      "kind": "actual_successor_outer_exit"
+    },
+    {
+      "path": "D:\\hospital_ies_v20_20261019\\outputs\\v20_load_accounting_20261019_run01\\review\\normal008_continuation01\\L72_RUN02\\preflight.json",
+      "bytes": 1389535,
+      "sha256": "d5096466146abb7072313ff6cbb3a87c57d520d497c43e255476662ac96b2065",
+      "kind": "actual_successor_preflight"
+    },
+    {
+      "path": "D:\\hospital_ies_v20_20261019\\outputs\\v20_load_accounting_20261019_run01\\review\\normal008_continuation01\\L72_RUN02\\postflight.json",
+      "bytes": 799935,
+      "sha256": "f620cf03a690d91a37681f9fb06ecae9184dfd8f00bb42facedd885b32c2804f",
+      "kind": "actual_successor_postflight"
+    },
+    {
+      "path": "D:\\hospital_ies_v20_20261019\\outputs\\v20_load_accounting_20261019_run01\\review\\normal008_continuation01\\L72_RUN02\\v20_normal_008.result.json",
+      "bytes": 3744,
+      "sha256": "0670d0590e8480ddcb1b773fe2633c7483bf0dd16fad02aa940b539b2f72f789",
+      "kind": "actual_M20_resource_result"
+    },
+    {
+      "path": "D:\\hospital_ies_v20_20261019\\outputs\\v20_load_accounting_20261019_run01\\review\\normal008_continuation01\\L72_RUN02\\ADMISSION.json",
+      "bytes": 2123,
+      "sha256": "04279294c3525ac05a058153205d57793da2a67b2f1d946269bf7fa38ad94eef",
+      "kind": "actual_successor_admission"
+    },
+    {
+      "path": "D:\\hospital_ies_v20_20261019\\publication\\run_normal_serial.py",
+      "bytes": 39882,
+      "sha256": "50ab72194abf63dda9c1893595629f57d0b3ceb488eb2e64ff709fe273f8701b",
+      "kind": "actual_successor_preserved_predecessor"
+    },
+    {
+      "path": "D:\\hospital_ies_v20_20261019\\publication\\release_gate.py",
+      "bytes": 35592,
+      "sha256": "0ae4b1d026367a9e91c1cb75104d53fdd55e684e5ca62a23c7611b56a91bf22c",
+      "kind": "actual_successor_preserved_predecessor"
+    },
+    {
+      "path": "D:\\hospital_ies_v20_20261019\\outputs\\v20_load_accounting_20261019_run01\\MODEL_FREEZE_ACCOUNTING01.json",
+      "bytes": 205730,
+      "sha256": "48baed7a128d2f921d36323330ae4d22e2e6dc83214e8a505b6ba89273439b7b",
+      "kind": "actual_successor_preserved_predecessor"
+    },
+    {
+      "path": "D:\\hospital_ies_v20_20261019\\outputs\\v20_load_accounting_20261019_run01\\provenance\\normal_resource_profile\\V19_R2_PROFILE.json",
+      "bytes": 10188,
+      "sha256": "bc87800015895bedfc17127847f6495216576972fa772b62994d1c327d6ee91a",
+      "kind": "old_M19_resource_profile"
+    },
+    {
+      "path": "D:\\hospital_ies_v20_20261019\\outputs\\v20_load_accounting_20261019_run01\\provenance\\normal_resource_profile\\V19_R2_SOURCE_SUMMARY.json",
+      "bytes": 92112,
+      "sha256": "193d9ad2bbe8a67359e07200a64530d761f181eaf62b9fb16b5423a9a8734c77",
+      "kind": "actual_historical_R2_source_receipt"
+    },
+    {
+      "path": "D:\\hospital_ies_v20_20261019\\outputs\\v20_load_accounting_20261019_run01\\review\\normal008_continuation01\\L72_RUN02\\START.json",
+      "bytes": 5468,
+      "sha256": "01ff0d56aab0a313f029db055ea4e1f45edd1a0ee0422b66865ccf998d348f11",
+      "kind": "actual_successor_runtime_metadata"
+    },
+    {
+      "path": "D:\\hospital_ies_v20_20261019\\outputs\\v20_load_accounting_20261019_run01\\review\\normal008_continuation01\\L72_RUN02\\preflight.command.json",
+      "bytes": 1109,
+      "sha256": "a09d5b9eeebcd1c4781f3dd78cff488c0f4565dae533d7cca1474a22bafaf10c",
+      "kind": "actual_successor_runtime_metadata"
+    },
+    {
+      "path": "D:\\hospital_ies_v20_20261019\\outputs\\v20_load_accounting_20261019_run01\\review\\normal008_continuation01\\L72_RUN02\\postflight.command.json",
+      "bytes": 1113,
+      "sha256": "06d2b9b95cce83c44538538031d7a2fad08fb000ff15981c456049c00b0773cb",
+      "kind": "actual_successor_runtime_metadata"
+    },
+    {
+      "path": "D:\\hospital_ies_v20_20261019\\outputs\\v20_load_accounting_20261019_run01\\review\\normal008_continuation01\\L72_RUN02\\final_qualification.command.json",
+      "bytes": 1145,
+      "sha256": "dc02d6989b76face370eff8200c72aa8b74f6c769498c6c823c5a4dbe453a98b",
+      "kind": "actual_successor_runtime_metadata"
+    },
+    {
+      "path": "D:\\hospital_ies_v20_20261019\\outputs\\v20_load_accounting_20261019_run01\\review\\normal008_continuation01\\L72_RUN02\\ADMISSION_SAMPLES.jsonl",
+      "bytes": 70204,
+      "sha256": "b6ec2f0d1a4b07b67a57858dcd2affee75e2e664adf366b1c22f5c5a35c36488",
+      "kind": "actual_successor_runtime_metadata"
+    },
+    {
+      "path": "D:\\hospital_ies_v20_20261019\\outputs\\v20_load_accounting_20261019_run01\\review\\normal008_continuation01\\L72_RUN02\\SAMPLES.jsonl",
+      "bytes": 233976,
+      "sha256": "26f76f987cdd9a077698396a7f634e53b9ce611d0892404e4a5f51263157d4e2",
+      "kind": "actual_successor_runtime_metadata"
+    },
+    {
+      "path": "D:\\hospital_ies_v20_20261019\\outputs\\v20_load_accounting_20261019_run01\\review\\normal008_continuation01\\L72_RUN02\\v20_normal_008.command.json",
+      "bytes": 3132,
+      "sha256": "74aea7723f2a183c2f1df8327bfebd57b311378878d560895f0c8dff892dcee3",
+      "kind": "actual_resource_scientific_command"
+    },
+    {
+      "path": "D:\\hospital_ies_v20_20261019\\outputs\\v20_load_accounting_20261019_run01\\paper_results\\FINAL01\\RECEIPT.json",
+      "bytes": 1504,
+      "sha256": "e272fec06141a1b6f6415b522f0eefc4ee2ab3cca42ec8c8ddb0e9929b20cce8",
+      "kind": "FINAL01_report_receipt"
+    },
+    {
+      "path": "D:\\hospital_ies_v20_20261019\\outputs\\v20_load_accounting_20261019_run01\\paper_results\\FINAL01\\ACTUAL_SOURCES.csv",
+      "bytes": 7336711,
+      "sha256": "8fd930eae75203e0c7460cb8f21117c7535a958c32af27bcdd9754e1276aaa15",
+      "kind": "FINAL01_output"
+    },
+    {
+      "path": "D:\\hospital_ies_v20_20261019\\outputs\\v20_load_accounting_20261019_run01\\paper_results\\FINAL01\\AGGREGATES.csv",
+      "bytes": 221246,
+      "sha256": "3daf0c5d0bd9b90202550384d54d4967e072a8425044b7d726b5f405b512b860",
+      "kind": "FINAL01_output"
+    },
+    {
+      "path": "D:\\hospital_ies_v20_20261019\\outputs\\v20_load_accounting_20261019_run01\\paper_results\\FINAL01\\EMISSIONS.csv",
+      "bytes": 17177135,
+      "sha256": "00c30c06b69d0be61369d630a17242460a66e286a851cdb4f2cc60c8872163ca",
+      "kind": "FINAL01_output"
+    },
+    {
+      "path": "D:\\hospital_ies_v20_20261019\\outputs\\v20_load_accounting_20261019_run01\\paper_results\\FINAL01\\INPUT_INDEX.json",
+      "bytes": 608281,
+      "sha256": "5159c84d128aae1a6c20d67c024968f1824c0aaf391721615fe2c4814eeb04e9",
+      "kind": "FINAL01_output"
+    },
+    {
+      "path": "D:\\hospital_ies_v20_20261019\\outputs\\v20_load_accounting_20261019_run01\\paper_results\\FINAL01\\SERVICE.csv",
+      "bytes": 11617975,
+      "sha256": "f389dfc182b0926b5a8c59ca114037f705f6c5efe8b707be5144d4117e56efc8",
+      "kind": "FINAL01_output"
+    },
+    {
+      "path": "D:\\hospital_ies_v20_20261019\\outputs\\v20_load_accounting_20261019_run01\\paper_results\\FINAL01\\STATUS.csv",
+      "bytes": 409167,
+      "sha256": "0bf33ec9381ae62af38e93d8e294396ada305024cbd839c18b5b1d454e1ab0a7",
+      "kind": "FINAL01_output"
+    },
+    {
+      "path": "D:\\hospital_ies_v20_20261019\\outputs\\v20_load_accounting_20261019_run01\\paper_results\\FINAL01\\STRATEGY_COMPARISONS.csv",
+      "bytes": 1271437,
+      "sha256": "e60c2c0280a558c4a41c073ed14749b6884d977920e4ee6cc94cb6078a00cfa1",
+      "kind": "FINAL01_output"
+    },
+    {
+      "path": "D:\\hospital_ies_v20_20261019\\outputs\\v20_load_accounting_20261019_run01\\paper_results\\FINAL01\\SUMMARY.json",
+      "bytes": 2031,
+      "sha256": "dec65907a987fde0869326048dc0070e15962278ec3c24c781bfbbe313d956ca",
+      "kind": "FINAL01_output"
+    },
+    {
+      "path": "D:\\hospital_ies_v20_20261019\\outputs\\v20_load_accounting_20261019_run01\\paper_results\\FINAL01\\V19_V20_COMPARISON.csv",
+      "bytes": 3005528,
+      "sha256": "a5f5f99f56c00aa8bb19f8b49febf964a2883b5ac70a7cb41aa20af93ecef97f",
+      "kind": "FINAL01_output"
+    },
+    {
+      "path": "D:\\hospital_ies_v20_20261019\\outputs\\v20_load_accounting_20261019_run01\\paper_results\\FINAL01\\V19_V20_EMISSIONS.csv",
+      "bytes": 1482903,
+      "sha256": "5a5fb33673915386aac86cd4c2602e03e3ee558ee30164c1aae963e54691d746",
+      "kind": "FINAL01_output"
+    },
+    {
+      "path": "D:\\hospital_ies_v20_20261019\\outputs\\v20_load_accounting_20261019_run01\\paper_results\\FINAL01\\WINDOWS.csv",
+      "bytes": 3995518,
+      "sha256": "ee5cc4e3ee6dc500d7ba91f9c66184cddb57505bae545ca19d83a6665cd0b7c4",
+      "kind": "FINAL01_output"
+    },
+    {
+      "path": "D:\\hospital_ies_v20_20261019\\outputs\\v20_load_accounting_20261019_run01\\references\\EMISSIONS_FACTOR_REGISTRY.json",
+      "bytes": 13555,
+      "sha256": "67ad5404000040d9665f016ee4b9c540783b26a9ad8038550f148881cefc6ab0",
+      "kind": "frozen_factor_registry"
+    },
+    {
+      "path": "D:\\hospital_ies_v20_20261019\\outputs\\v20_load_accounting_20261019_run01\\experiments\\v20_normal_000\\plan.json",
+      "bytes": 44155,
+      "sha256": "710206e5c8a716e656bcbf958ad55fcba58832f112e407fc727a13610542d0cc",
+      "kind": "normal_version_binding"
+    },
+    {
+      "path": "D:\\hospital_ies_v20_20261019\\outputs\\v20_load_accounting_20261019_run01\\experiments\\v20_normal_000\\manifest.json",
+      "bytes": 65794,
+      "sha256": "c4683d647a96dfdf0b2d6b9eb08d5ba1c658ab2215355564fdb8363d79e20332",
+      "kind": "normal_version_binding"
+    },
+    {
+      "path": "D:\\hospital_ies_v20_20261019\\outputs\\v20_load_accounting_20261019_run01\\experiments\\v20_normal_000\\BATCH_RESULT.json",
+      "bytes": 6936,
+      "sha256": "3dbcb6bc565882e721d2e1e024cede5c5f27397832f8c27c5bbc3f402c96a7b5",
+      "kind": "normal_version_binding"
+    },
+    {
+      "path": "D:\\hospital_ies_v20_20261019\\outputs\\v20_load_accounting_20261019_run01\\experiments\\v20_normal_000\\ATTEMPTS.jsonl",
+      "bytes": 648,
+      "sha256": "e70243e7002e2fbd617c996d3c555920c37dc814fa2b45714beec5684ccb8f62",
+      "kind": "normal_version_binding"
+    },
+    {
+      "path": "D:\\hospital_ies_v20_20261019\\outputs\\v20_load_accounting_20261019_run01\\experiments\\v20_normal_000\\pairs\\v17_N2_b4ceb5196ab287f531271081__endurance_restore_p0_ready_M20_v1\\RESULT.json",
+      "bytes": 367781,
+      "sha256": "855f732d7edd2d86f167b59b0b17b9653246d4a6d5e38c8d55822440111041d3",
+      "kind": "normal_actual_RESULT"
+    },
+    {
+      "path": "D:\\hospital_ies_v20_20261019\\outputs\\v20_load_accounting_20261019_run01\\experiments\\v20_normal_000\\analysis\\V20_RESOURCES.csv",
+      "bytes": 3334,
+      "sha256": "258f9cb44eba001786bd489adc1479b94800f1dcd32b9b75c8627be2ffdbe242",
+      "kind": "strict_normal_evidence"
+    },
+    {
+      "path": "D:\\hospital_ies_v20_20261019\\outputs\\v20_load_accounting_20261019_run01\\experiments\\v20_normal_000\\analysis\\V20_EMISSIONS.csv",
+      "bytes": 18457,
+      "sha256": "886f5d8f780e7640758051725d05a6cae53dcd1e3a96854e8176366b149dde22",
+      "kind": "strict_normal_evidence"
+    },
+    {
+      "path": "D:\\hospital_ies_v20_20261019\\outputs\\v20_load_accounting_20261019_run01\\experiments\\v20_normal_000\\analysis\\V20_EPISODE_AUDIT.json",
+      "bytes": 1946,
+      "sha256": "43a41b7c0760fa39882deb7bced0f337574548df41b5a8d154eb32fc699f2ab3",
+      "kind": "strict_normal_evidence"
+    },
+    {
+      "path": "D:\\hospital_ies_v20_20261019\\outputs\\v20_load_accounting_20261019_run01\\experiments\\v20_normal_000\\analysis\\V18_CARRIER_SERVICE.csv",
+      "bytes": 74041,
+      "sha256": "70c5d7962ea227dd361a2b534df678b4fd2b59cc25383f8ed997fd395927d496",
+      "kind": "strict_normal_evidence"
+    },
+    {
+      "path": "D:\\hospital_ies_v20_20261019\\outputs\\v20_load_accounting_20261019_run01\\experiments\\v20_normal_000\\analysis\\V18_ECONOMICS.csv",
+      "bytes": 10078,
+      "sha256": "442c9ea2ad04ae536cb3c242df9584d148f13962e70502b24da9b4c8be8ad3f8",
+      "kind": "strict_normal_evidence"
+    },
+    {
+      "path": "D:\\hospital_ies_v20_20261019\\outputs\\v20_load_accounting_20261019_run01\\experiments\\v20_normal_000\\analysis\\GT_RUNS.csv",
+      "bytes": 2182,
+      "sha256": "6cf9124563624bfbc070e11e6fdcf1c50c2b462b9a83705e04d110baaca6bf20",
+      "kind": "strict_normal_evidence"
+    },
+    {
+      "path": "D:\\hospital_ies_v20_20261019\\outputs\\v20_load_accounting_20261019_run01\\experiments\\v20_normal_000\\analysis\\GT_TRANSITIONS.csv",
+      "bytes": 5,
+      "sha256": "f01a374e9c81e3db89b3a42940c4d6a5447684986a1296e42bf13f196eed6295",
+      "kind": "strict_normal_evidence"
+    },
+    {
+      "path": "D:\\hospital_ies_v20_20261019\\outputs\\v20_load_accounting_20261019_run01\\experiments\\v20_normal_000\\analysis\\MODEL_DOMAIN.csv",
+      "bytes": 2251,
+      "sha256": "00ebab5eddba0f6c43b1f6ec950811a428c4f4a69d831079214d30029695f740",
+      "kind": "strict_normal_evidence"
+    },
+    {
+      "path": "D:\\hospital_ies_v20_20261019\\outputs\\v20_load_accounting_20261019_run01\\experiments\\v20_normal_000\\analysis\\THERMAL_COVERAGE.csv",
+      "bytes": 2233,
+      "sha256": "9424d286a5505cbcad872bd8dc15c4f95c446143080b52b43a2a1ebc6db97c01",
+      "kind": "strict_normal_evidence"
+    },
+    {
+      "path": "D:\\hospital_ies_v20_20261019\\outputs\\v20_load_accounting_20261019_run01\\experiments\\v20_normal_001\\plan.json",
+      "bytes": 43989,
+      "sha256": "dc8e4f90f45909a860445ea02fd01a528c109fbf379fa3fb4349fc5e7f931730",
+      "kind": "normal_version_binding"
+    },
+    {
+      "path": "D:\\hospital_ies_v20_20261019\\outputs\\v20_load_accounting_20261019_run01\\experiments\\v20_normal_001\\manifest.json",
+      "bytes": 65780,
+      "sha256": "19ca934e0adf74615d4bd3402230362e8b6928fe5eb07c8ec9d201fb253472f9",
+      "kind": "normal_version_binding"
+    },
+    {
+      "path": "D:\\hospital_ies_v20_20261019\\outputs\\v20_load_accounting_20261019_run01\\experiments\\v20_normal_001\\BATCH_RESULT.json",
+      "bytes": 6925,
+      "sha256": "343b95974ad0c41ef94ca89f3c8dd93c3348ef4a9d49e175179a8dbbba1cf48c",
+      "kind": "normal_version_binding"
+    },
+    {
+      "path": "D:\\hospital_ies_v20_20261019\\outputs\\v20_load_accounting_20261019_run01\\experiments\\v20_normal_001\\ATTEMPTS.jsonl",
+      "bytes": 637,
+      "sha256": "e36e63dc7ad2bcd73b8f284934e55a4d6ede2bc510a058e8182752e1092ec72a",
+      "kind": "normal_version_binding"
+    },
+    {
+      "path": "D:\\hospital_ies_v20_20261019\\outputs\\v20_load_accounting_20261019_run01\\experiments\\v20_normal_001\\pairs\\v17_N2_b4ceb5196ab287f531271081__readiness_handoff_K1_M20_v1\\RESULT.json",
+      "bytes": 367750,
+      "sha256": "2f50f354411c9504fdf6adb2e9bd033aa261c86d67dbf37db9c81a5155ecd68b",
+      "kind": "normal_actual_RESULT"
+    },
+    {
+      "path": "D:\\hospital_ies_v20_20261019\\outputs\\v20_load_accounting_20261019_run01\\experiments\\v20_normal_001\\analysis\\V20_RESOURCES.csv",
+      "bytes": 3294,
+      "sha256": "54833a836203c2f4101d489dbf304681fb81773c577a361be276fbec22aec125",
+      "kind": "strict_normal_evidence"
+    },
+    {
+      "path": "D:\\hospital_ies_v20_20261019\\outputs\\v20_load_accounting_20261019_run01\\experiments\\v20_normal_001\\analysis\\V20_EMISSIONS.csv",
+      "bytes": 18284,
+      "sha256": "bab199723bd9b5657429762fa6232f1d6266bf83595b433fe64afd5f64debabb",
+      "kind": "strict_normal_evidence"
+    },
+    {
+      "path": "D:\\hospital_ies_v20_20261019\\outputs\\v20_load_accounting_20261019_run01\\experiments\\v20_normal_001\\analysis\\V20_EPISODE_AUDIT.json",
+      "bytes": 1940,
+      "sha256": "ca84b8e790e385002f7a674eb9c7e89b95912520a98614b56bfbc4673551dca6",
+      "kind": "strict_normal_evidence"
+    },
+    {
+      "path": "D:\\hospital_ies_v20_20261019\\outputs\\v20_load_accounting_20261019_run01\\experiments\\v20_normal_001\\analysis\\V18_CARRIER_SERVICE.csv",
+      "bytes": 73322,
+      "sha256": "03b057de84c508ffccf267d01217991fcd7da9ffd48da59c1304757ca65c75c6",
+      "kind": "strict_normal_evidence"
+    },
+    {
+      "path": "D:\\hospital_ies_v20_20261019\\outputs\\v20_load_accounting_20261019_run01\\experiments\\v20_normal_001\\analysis\\V18_ECONOMICS.csv",
+      "bytes": 10008,
+      "sha256": "78e401c6257d4ba61db3f7e8ae7385ba8febd1841b09ea04d5179d04ec4d04fa",
+      "kind": "strict_normal_evidence"
+    },
+    {
+      "path": "D:\\hospital_ies_v20_20261019\\outputs\\v20_load_accounting_20261019_run01\\experiments\\v20_normal_001\\analysis\\GT_RUNS.csv",
+      "bytes": 2165,
+      "sha256": "8b1a416e7be771d1dfa9e6a9504cadda9b2b07c642e777831c787607f03423b9",
+      "kind": "strict_normal_evidence"
+    },
+    {
+      "path": "D:\\hospital_ies_v20_20261019\\outputs\\v20_load_accounting_20261019_run01\\experiments\\v20_normal_001\\analysis\\GT_TRANSITIONS.csv",
+      "bytes": 5,
+      "sha256": "f01a374e9c81e3db89b3a42940c4d6a5447684986a1296e42bf13f196eed6295",
+      "kind": "strict_normal_evidence"
+    },
+    {
+      "path": "D:\\hospital_ies_v20_20261019\\outputs\\v20_load_accounting_20261019_run01\\experiments\\v20_normal_001\\analysis\\MODEL_DOMAIN.csv",
+      "bytes": 2234,
+      "sha256": "111ab5e2a56b01edd32cd94700919d4dedeaeb13fbc08a4023bfe7c12bdb9f0f",
+      "kind": "strict_normal_evidence"
+    },
+    {
+      "path": "D:\\hospital_ies_v20_20261019\\outputs\\v20_load_accounting_20261019_run01\\experiments\\v20_normal_001\\analysis\\THERMAL_COVERAGE.csv",
+      "bytes": 2216,
+      "sha256": "65c79580d1d75abc4bb34d773101cf34777907113833a84bcf2c42aee3977d05",
+      "kind": "strict_normal_evidence"
+    },
+    {
+      "path": "D:\\hospital_ies_v20_20261019\\outputs\\v20_load_accounting_20261019_run01\\experiments\\v20_normal_002\\plan.json",
+      "bytes": 44139,
+      "sha256": "ab6ee4a581382fbb6f919a66f3ee9eed990dc4cd92c615f117d3d5baed2d291d",
+      "kind": "normal_version_binding"
+    },
+    {
+      "path": "D:\\hospital_ies_v20_20261019\\outputs\\v20_load_accounting_20261019_run01\\experiments\\v20_normal_002\\manifest.json",
+      "bytes": 65788,
+      "sha256": "c3382aaca7e65d5d79f29604f9738f041be033c22815d1b3be9b86f840307c65",
+      "kind": "normal_version_binding"
+    },
+    {
+      "path": "D:\\hospital_ies_v20_20261019\\outputs\\v20_load_accounting_20261019_run01\\experiments\\v20_normal_002\\BATCH_RESULT.json",
+      "bytes": 6923,
+      "sha256": "86cbaa24677672937e1cca5d955b1d3e29c321899d052dadbbb631f46e503252",
+      "kind": "normal_version_binding"
+    },
+    {
+      "path": "D:\\hospital_ies_v20_20261019\\outputs\\v20_load_accounting_20261019_run01\\experiments\\v20_normal_002\\ATTEMPTS.jsonl",
+      "bytes": 636,
+      "sha256": "e148f2881de1969e1712fc7356184a77df1958e7b392c9e5e87d48e83c70b38c",
+      "kind": "normal_version_binding"
+    },
+    {
+      "path": "D:\\hospital_ies_v20_20261019\\outputs\\v20_load_accounting_20261019_run01\\experiments\\v20_normal_002\\pairs\\v17_N2_b4ceb5196ab287f531271081__C19_critical_reserve_M20_v1\\RESULT.json",
+      "bytes": 367772,
+      "sha256": "2af16dbe0d3bda65b5eabb1e1f85599b688832bc36eb116b3eaf47bbb51f467d",
+      "kind": "normal_actual_RESULT"
+    },
+    {
+      "path": "D:\\hospital_ies_v20_20261019\\outputs\\v20_load_accounting_20261019_run01\\experiments\\v20_normal_002\\analysis\\V20_RESOURCES.csv",
+      "bytes": 3291,
+      "sha256": "9f4e81e7f1027ecb2c1cc7afdc0657a444770b07194ed3d41613f94a2bef3de8",
+      "kind": "strict_normal_evidence"
+    },
+    {
+      "path": "D:\\hospital_ies_v20_20261019\\outputs\\v20_load_accounting_20261019_run01\\experiments\\v20_normal_002\\analysis\\V20_EMISSIONS.csv",
+      "bytes": 18240,
+      "sha256": "bf814d175cd8bf5e2fecfa15e563c94cc59b3d94b39c8f9ae2a96c1c7bcd9d46",
+      "kind": "strict_normal_evidence"
+    },
+    {
+      "path": "D:\\hospital_ies_v20_20261019\\outputs\\v20_load_accounting_20261019_run01\\experiments\\v20_normal_002\\analysis\\V20_EPISODE_AUDIT.json",
+      "bytes": 1962,
+      "sha256": "b8417e2251ea1021f00e7932eb16c7edf9eea0092b00fb7e001fcf34184521b9",
+      "kind": "strict_normal_evidence"
+    },
+    {
+      "path": "D:\\hospital_ies_v20_20261019\\outputs\\v20_load_accounting_20261019_run01\\experiments\\v20_normal_002\\analysis\\V18_CARRIER_SERVICE.csv",
+      "bytes": 73321,
+      "sha256": "e5188a02b6c6d1d451c977551fd8b7d34c9fdae22d63ca1f19f5c044d0e8d0ca",
+      "kind": "strict_normal_evidence"
+    },
+    {
+      "path": "D:\\hospital_ies_v20_20261019\\outputs\\v20_load_accounting_20261019_run01\\experiments\\v20_normal_002\\analysis\\V18_ECONOMICS.csv",
+      "bytes": 10005,
+      "sha256": "2a765efd915e32b645d33142df929d7214149d3d3d3e1a69b0d1334065c49793",
+      "kind": "strict_normal_evidence"
+    },
+    {
+      "path": "D:\\hospital_ies_v20_20261019\\outputs\\v20_load_accounting_20261019_run01\\experiments\\v20_normal_002\\analysis\\GT_RUNS.csv",
+      "bytes": 2164,
+      "sha256": "c4ec9a98e07ce4b84db0d9ba097fbdbb5360aa2015db7b5f4ea1444af1baba9f",
+      "kind": "strict_normal_evidence"
+    },
+    {
+      "path": "D:\\hospital_ies_v20_20261019\\outputs\\v20_load_accounting_20261019_run01\\experiments\\v20_normal_002\\analysis\\GT_TRANSITIONS.csv",
+      "bytes": 5,
+      "sha256": "f01a374e9c81e3db89b3a42940c4d6a5447684986a1296e42bf13f196eed6295",
+      "kind": "strict_normal_evidence"
+    },
+    {
+      "path": "D:\\hospital_ies_v20_20261019\\outputs\\v20_load_accounting_20261019_run01\\experiments\\v20_normal_002\\analysis\\MODEL_DOMAIN.csv",
+      "bytes": 2233,
+      "sha256": "a9adfca4b2a24aa86966c5f5f5295eb6814e35719e651f52539dea3ca7f90d9d",
+      "kind": "strict_normal_evidence"
+    },
+    {
+      "path": "D:\\hospital_ies_v20_20261019\\outputs\\v20_load_accounting_20261019_run01\\experiments\\v20_normal_002\\analysis\\THERMAL_COVERAGE.csv",
+      "bytes": 2215,
+      "sha256": "63360ed501f096a74172dcc80488ac013466b94d21fbca114edc272b950e98e9",
+      "kind": "strict_normal_evidence"
+    },
+    {
+      "path": "D:\\hospital_ies_v20_20261019\\outputs\\v20_load_accounting_20261019_run01\\experiments\\v20_normal_003\\plan.json",
+      "bytes": 44155,
+      "sha256": "172c3db3145967e34f49b28714c75d343a76f7a509d3109cede9604ad4bc696e",
+      "kind": "normal_version_binding"
+    },
+    {
+      "path": "D:\\hospital_ies_v20_20261019\\outputs\\v20_load_accounting_20261019_run01\\experiments\\v20_normal_003\\manifest.json",
+      "bytes": 65807,
+      "sha256": "71bc889bdd3c3601de4c91834d3baea0b919f5bd94c83a062d2908cb0aad82ae",
+      "kind": "normal_version_binding"
+    },
+    {
+      "path": "D:\\hospital_ies_v20_20261019\\outputs\\v20_load_accounting_20261019_run01\\experiments\\v20_normal_003\\BATCH_RESULT.json",
+      "bytes": 6942,
+      "sha256": "d24208110855360cb6c2ad5df5c31eb3de5b87fa24824e1142028491472266d0",
+      "kind": "normal_version_binding"
+    },
+    {
+      "path": "D:\\hospital_ies_v20_20261019\\outputs\\v20_load_accounting_20261019_run01\\experiments\\v20_normal_003\\ATTEMPTS.jsonl",
+      "bytes": 649,
+      "sha256": "a49b6799dcd80591bc798626b432a0cb338e26f29f7989c0d24e1cf7072ca6e7",
+      "kind": "normal_version_binding"
+    },
+    {
+      "path": "D:\\hospital_ies_v20_20261019\\outputs\\v20_load_accounting_20261019_run01\\experiments\\v20_normal_003\\pairs\\v17_N2_e0d9a833029c50478833febd__endurance_restore_p0_ready_M20_v1\\RESULT.json",
+      "bytes": 369622,
+      "sha256": "42bf633af8c3296223a924b5b412ad3176b977ff837697c8b8a7b949f37023f0",
+      "kind": "normal_actual_RESULT"
+    },
+    {
+      "path": "D:\\hospital_ies_v20_20261019\\outputs\\v20_load_accounting_20261019_run01\\experiments\\v20_normal_003\\analysis\\V20_RESOURCES.csv",
+      "bytes": 3335,
+      "sha256": "3e367aa0036709386c12ed3dda7adf750941068468d4e067d16665ab2dba8657",
+      "kind": "strict_normal_evidence"
+    },
+    {
+      "path": "D:\\hospital_ies_v20_20261019\\outputs\\v20_load_accounting_20261019_run01\\experiments\\v20_normal_003\\analysis\\V20_EMISSIONS.csv",
+      "bytes": 18439,
+      "sha256": "2750783f1a3fba03f6dc4d88440198265869080597551eeb3a260252ba03ea0b",
+      "kind": "strict_normal_evidence"
+    },
+    {
+      "path": "D:\\hospital_ies_v20_20261019\\outputs\\v20_load_accounting_20261019_run01\\experiments\\v20_normal_003\\analysis\\V20_EPISODE_AUDIT.json",
+      "bytes": 1964,
+      "sha256": "52f13b248ff58b3dd2b29c282f9b1f6b63b689f2069ab3836dca8eb285c90f8c",
+      "kind": "strict_normal_evidence"
+    },
+    {
+      "path": "D:\\hospital_ies_v20_20261019\\outputs\\v20_load_accounting_20261019_run01\\experiments\\v20_normal_003\\analysis\\V18_CARRIER_SERVICE.csv",
+      "bytes": 74368,
+      "sha256": "6009196a1575e0b44547331f5b2e04643184179d75a952bd83d7bb5e0761fa54",
+      "kind": "strict_normal_evidence"
+    },
+    {
+      "path": "D:\\hospital_ies_v20_20261019\\outputs\\v20_load_accounting_20261019_run01\\experiments\\v20_normal_003\\analysis\\V18_ECONOMICS.csv",
+      "bytes": 10089,
+      "sha256": "32793c47a64aec4a42173d537d320283b678129ac17ce74a378bcdb04c274272",
+      "kind": "strict_normal_evidence"
+    },
+    {
+      "path": "D:\\hospital_ies_v20_20261019\\outputs\\v20_load_accounting_20261019_run01\\experiments\\v20_normal_003\\analysis\\GT_RUNS.csv",
+      "bytes": 2186,
+      "sha256": "4d511ef3dcc88d79085c1c9c9afcd5bc79bef63737b7614082e3569dd879d04b",
+      "kind": "strict_normal_evidence"
+    },
+    {
+      "path": "D:\\hospital_ies_v20_20261019\\outputs\\v20_load_accounting_20261019_run01\\experiments\\v20_normal_003\\analysis\\GT_TRANSITIONS.csv",
+      "bytes": 5,
+      "sha256": "f01a374e9c81e3db89b3a42940c4d6a5447684986a1296e42bf13f196eed6295",
+      "kind": "strict_normal_evidence"
+    },
+    {
+      "path": "D:\\hospital_ies_v20_20261019\\outputs\\v20_load_accounting_20261019_run01\\experiments\\v20_normal_003\\analysis\\MODEL_DOMAIN.csv",
+      "bytes": 2255,
+      "sha256": "28b8cea4b6978079930c1dc8d4c3d9a49a753283fba23e939adc3e945687ab2d",
+      "kind": "strict_normal_evidence"
+    },
+    {
+      "path": "D:\\hospital_ies_v20_20261019\\outputs\\v20_load_accounting_20261019_run01\\experiments\\v20_normal_003\\analysis\\THERMAL_COVERAGE.csv",
+      "bytes": 2237,
+      "sha256": "ecf8e3d480eed41f189d1ca839aef68a79f0e1898f5c728e88742a05ff854a31",
+      "kind": "strict_normal_evidence"
+    },
+    {
+      "path": "D:\\hospital_ies_v20_20261019\\outputs\\v20_load_accounting_20261019_run01\\experiments\\v20_normal_004\\plan.json",
+      "bytes": 43989,
+      "sha256": "a0882a3b9fa78ce5067fe842135cff15d1aa8b0ba22b3a9834a113723c6056cd",
+      "kind": "normal_version_binding"
+    },
+    {
+      "path": "D:\\hospital_ies_v20_20261019\\outputs\\v20_load_accounting_20261019_run01\\experiments\\v20_normal_004\\manifest.json",
+      "bytes": 65793,
+      "sha256": "f34b37baf49d9ae32068239b04cf94206b348acaf6dada87d4a1e363a816159d",
+      "kind": "normal_version_binding"
+    },
+    {
+      "path": "D:\\hospital_ies_v20_20261019\\outputs\\v20_load_accounting_20261019_run01\\experiments\\v20_normal_004\\BATCH_RESULT.json",
+      "bytes": 6927,
+      "sha256": "abd62163ee29e0bac6d2fd3b5870c336b0c20b15b30b936151659bb410a4f47e",
+      "kind": "normal_version_binding"
+    },
+    {
+      "path": "D:\\hospital_ies_v20_20261019\\outputs\\v20_load_accounting_20261019_run01\\experiments\\v20_normal_004\\ATTEMPTS.jsonl",
+      "bytes": 635,
+      "sha256": "e7f34ad8b366e8cd163df8aba198b2787f1b484ac69c6ba8dd7f8dc792774aa1",
+      "kind": "normal_version_binding"
+    },
+    {
+      "path": "D:\\hospital_ies_v20_20261019\\outputs\\v20_load_accounting_20261019_run01\\experiments\\v20_normal_004\\pairs\\v17_N2_e0d9a833029c50478833febd__readiness_handoff_K1_M20_v1\\RESULT.json",
+      "bytes": 367871,
+      "sha256": "1d12dbe823ffd9d1d045b7a08385dd92aa60f734e51c624e801f95be7f2554c5",
+      "kind": "normal_actual_RESULT"
+    },
+    {
+      "path": "D:\\hospital_ies_v20_20261019\\outputs\\v20_load_accounting_20261019_run01\\experiments\\v20_normal_004\\analysis\\V20_RESOURCES.csv",
+      "bytes": 3299,
+      "sha256": "e48e4af607d9388204ea3fd86af049cb32c04e0667a0305c34e6256e192d078a",
+      "kind": "strict_normal_evidence"
+    },
+    {
+      "path": "D:\\hospital_ies_v20_20261019\\outputs\\v20_load_accounting_20261019_run01\\experiments\\v20_normal_004\\analysis\\V20_EMISSIONS.csv",
+      "bytes": 18295,
+      "sha256": "f295dbcbd4d57a7abb044900202843efbffcede8a14c47571610714460eb550c",
+      "kind": "strict_normal_evidence"
+    },
+    {
+      "path": "D:\\hospital_ies_v20_20261019\\outputs\\v20_load_accounting_20261019_run01\\experiments\\v20_normal_004\\analysis\\V20_EPISODE_AUDIT.json",
+      "bytes": 1962,
+      "sha256": "bec9004f5b38c2453d07e6c4f96800ac47af4ce88c765f7eb7a1a5b6f66c7318",
+      "kind": "strict_normal_evidence"
+    },
+    {
+      "path": "D:\\hospital_ies_v20_20261019\\outputs\\v20_load_accounting_20261019_run01\\experiments\\v20_normal_004\\analysis\\V18_CARRIER_SERVICE.csv",
+      "bytes": 73497,
+      "sha256": "bec58242980c3b3cf16870dfa1573eadb0d74f858305dce4bccb171605598946",
+      "kind": "strict_normal_evidence"
+    },
+    {
+      "path": "D:\\hospital_ies_v20_20261019\\outputs\\v20_load_accounting_20261019_run01\\experiments\\v20_normal_004\\analysis\\V18_ECONOMICS.csv",
+      "bytes": 10023,
+      "sha256": "85ee58c40668c3b5187c941eaa5de6893b35f2d1d617d535a47df12b02095773",
+      "kind": "strict_normal_evidence"
+    },
+    {
+      "path": "D:\\hospital_ies_v20_20261019\\outputs\\v20_load_accounting_20261019_run01\\experiments\\v20_normal_004\\analysis\\GT_RUNS.csv",
+      "bytes": 2166,
+      "sha256": "13e60f5805990618acf910330e490ff3263a604a49278dfee77847da962d4124",
+      "kind": "strict_normal_evidence"
+    },
+    {
+      "path": "D:\\hospital_ies_v20_20261019\\outputs\\v20_load_accounting_20261019_run01\\experiments\\v20_normal_004\\analysis\\GT_TRANSITIONS.csv",
+      "bytes": 5,
+      "sha256": "f01a374e9c81e3db89b3a42940c4d6a5447684986a1296e42bf13f196eed6295",
+      "kind": "strict_normal_evidence"
+    },
+    {
+      "path": "D:\\hospital_ies_v20_20261019\\outputs\\v20_load_accounting_20261019_run01\\experiments\\v20_normal_004\\analysis\\MODEL_DOMAIN.csv",
+      "bytes": 2235,
+      "sha256": "2a97647c041a4d13f5bce239ea0e55d8a91aa992b61dbe9f779784f7c2cd9f7d",
+      "kind": "strict_normal_evidence"
+    },
+    {
+      "path": "D:\\hospital_ies_v20_20261019\\outputs\\v20_load_accounting_20261019_run01\\experiments\\v20_normal_004\\analysis\\THERMAL_COVERAGE.csv",
+      "bytes": 2217,
+      "sha256": "d2f92b59f8108c556d804b4c496bd64b34af895ed1508fe09b0fd1b998c35ca4",
+      "kind": "strict_normal_evidence"
+    },
+    {
+      "path": "D:\\hospital_ies_v20_20261019\\outputs\\v20_load_accounting_20261019_run01\\experiments\\v20_normal_005\\plan.json",
+      "bytes": 44139,
+      "sha256": "9d1261f5407aa655aeee11b1af6ee8738a10ae1b6d50999737c81ebe35f88d15",
+      "kind": "normal_version_binding"
+    },
+    {
+      "path": "D:\\hospital_ies_v20_20261019\\outputs\\v20_load_accounting_20261019_run01\\experiments\\v20_normal_005\\manifest.json",
+      "bytes": 65801,
+      "sha256": "769370dd99e363759868a8b23d58b1d2960d16fd52092d8e631a3289744d48e2",
+      "kind": "normal_version_binding"
+    },
+    {
+      "path": "D:\\hospital_ies_v20_20261019\\outputs\\v20_load_accounting_20261019_run01\\experiments\\v20_normal_005\\BATCH_RESULT.json",
+      "bytes": 6928,
+      "sha256": "a9e3e6a6a6e3b40c2324f812ae71a1c013f2159d99fe08efcdbfa9e050629db9",
+      "kind": "normal_version_binding"
+    },
+    {
+      "path": "D:\\hospital_ies_v20_20261019\\outputs\\v20_load_accounting_20261019_run01\\experiments\\v20_normal_005\\ATTEMPTS.jsonl",
+      "bytes": 636,
+      "sha256": "7753db71a7a0d3aa189d2db37a8f0084a4635e8682915dd416ad53b1eba13745",
+      "kind": "normal_version_binding"
+    },
+    {
+      "path": "D:\\hospital_ies_v20_20261019\\outputs\\v20_load_accounting_20261019_run01\\experiments\\v20_normal_005\\pairs\\v17_N2_e0d9a833029c50478833febd__C19_critical_reserve_M20_v1\\RESULT.json",
+      "bytes": 367858,
+      "sha256": "1efb0b62b4896a66660618c0acced9bae05934cb68fcdac034f76181afa84a74",
+      "kind": "normal_actual_RESULT"
+    },
+    {
+      "path": "D:\\hospital_ies_v20_20261019\\outputs\\v20_load_accounting_20261019_run01\\experiments\\v20_normal_005\\analysis\\V20_RESOURCES.csv",
+      "bytes": 3300,
+      "sha256": "e29dbd9ff0edb99b76f67337abbe7de4554ef748f32dcf2b84113b118b8400f4",
+      "kind": "strict_normal_evidence"
+    },
+    {
+      "path": "D:\\hospital_ies_v20_20261019\\outputs\\v20_load_accounting_20261019_run01\\experiments\\v20_normal_005\\analysis\\V20_EMISSIONS.csv",
+      "bytes": 18302,
+      "sha256": "7c497d527949b75140c05b9a446e14e5f0c490ae656026abf1d12315d35c396b",
+      "kind": "strict_normal_evidence"
+    },
+    {
+      "path": "D:\\hospital_ies_v20_20261019\\outputs\\v20_load_accounting_20261019_run01\\experiments\\v20_normal_005\\analysis\\V20_EPISODE_AUDIT.json",
+      "bytes": 1958,
+      "sha256": "5282d18156ce7ad3a60c76b4850a68b8bad16eb2ad86a7863f80c375a5b13e9b",
+      "kind": "strict_normal_evidence"
+    },
+    {
+      "path": "D:\\hospital_ies_v20_20261019\\outputs\\v20_load_accounting_20261019_run01\\experiments\\v20_normal_005\\analysis\\V18_CARRIER_SERVICE.csv",
+      "bytes": 73497,
+      "sha256": "216b111167fdf060a466bae0fbde54bd066c92f2fda33819a1f2066b3966d825",
+      "kind": "strict_normal_evidence"
+    },
+    {
+      "path": "D:\\hospital_ies_v20_20261019\\outputs\\v20_load_accounting_20261019_run01\\experiments\\v20_normal_005\\analysis\\V18_ECONOMICS.csv",
+      "bytes": 10024,
+      "sha256": "25af01d0a49d022d9609ee701d662c8c20d8c4563804c1506b5020cf60570319",
+      "kind": "strict_normal_evidence"
+    },
+    {
+      "path": "D:\\hospital_ies_v20_20261019\\outputs\\v20_load_accounting_20261019_run01\\experiments\\v20_normal_005\\analysis\\GT_RUNS.csv",
+      "bytes": 2167,
+      "sha256": "327b5851774ae998f9974de39a3ec8dd16deb3e9f3562f32facdd06d4ffa7e78",
+      "kind": "strict_normal_evidence"
+    },
+    {
+      "path": "D:\\hospital_ies_v20_20261019\\outputs\\v20_load_accounting_20261019_run01\\experiments\\v20_normal_005\\analysis\\GT_TRANSITIONS.csv",
+      "bytes": 5,
+      "sha256": "f01a374e9c81e3db89b3a42940c4d6a5447684986a1296e42bf13f196eed6295",
+      "kind": "strict_normal_evidence"
+    },
+    {
+      "path": "D:\\hospital_ies_v20_20261019\\outputs\\v20_load_accounting_20261019_run01\\experiments\\v20_normal_005\\analysis\\MODEL_DOMAIN.csv",
+      "bytes": 2236,
+      "sha256": "03021a0b9c9ef26e9012e526d45036c65e4543c312ab57ad21d1c29e3b8ce0f2",
+      "kind": "strict_normal_evidence"
+    },
+    {
+      "path": "D:\\hospital_ies_v20_20261019\\outputs\\v20_load_accounting_20261019_run01\\experiments\\v20_normal_005\\analysis\\THERMAL_COVERAGE.csv",
+      "bytes": 2218,
+      "sha256": "7607b342a4be1e4cee6f3f99546826cb64b4e0e5d4f75868104e0e8344456c34",
+      "kind": "strict_normal_evidence"
+    },
+    {
+      "path": "D:\\hospital_ies_v20_20261019\\outputs\\v20_load_accounting_20261019_run01\\experiments\\v20_normal_006\\plan.json",
+      "bytes": 44155,
+      "sha256": "dce1719875af23273215bbea698474b6a2d595f329ec30a120732ba00d66a625",
+      "kind": "normal_version_binding"
+    },
+    {
+      "path": "D:\\hospital_ies_v20_20261019\\outputs\\v20_load_accounting_20261019_run01\\experiments\\v20_normal_006\\manifest.json",
+      "bytes": 65807,
+      "sha256": "029ecbb74fe7480d06cd7a5e3515f4de2c5dd544f3655189c3553a5a9a1e4d77",
+      "kind": "normal_version_binding"
+    },
+    {
+      "path": "D:\\hospital_ies_v20_20261019\\outputs\\v20_load_accounting_20261019_run01\\experiments\\v20_normal_006\\BATCH_RESULT.json",
+      "bytes": 6942,
+      "sha256": "6a360301486f4a75af447a96a060e4952f6c40ba5e0ab3de2862cce878778a70",
+      "kind": "normal_version_binding"
+    },
+    {
+      "path": "D:\\hospital_ies_v20_20261019\\outputs\\v20_load_accounting_20261019_run01\\experiments\\v20_normal_006\\ATTEMPTS.jsonl",
+      "bytes": 649,
+      "sha256": "cc3d0bb5b3cb6a9d9bcf072b8432c07693f75bd3c7cbc49a1701f0b6414834f6",
+      "kind": "normal_version_binding"
+    },
+    {
+      "path": "D:\\hospital_ies_v20_20261019\\outputs\\v20_load_accounting_20261019_run01\\experiments\\v20_normal_006\\pairs\\v17_N2_d7ae489a9d9b2341333e4104__endurance_restore_p0_ready_M20_v1\\RESULT.json",
+      "bytes": 373477,
+      "sha256": "b85bb1e5fc76805f62c36c793cb9ced07d5627ae33daab07c9a79d73c4bc4154",
+      "kind": "normal_actual_RESULT"
+    },
+    {
+      "path": "D:\\hospital_ies_v20_20261019\\outputs\\v20_load_accounting_20261019_run01\\experiments\\v20_normal_006\\analysis\\V20_RESOURCES.csv",
+      "bytes": 3337,
+      "sha256": "544366877ea70ceb3aeef5458b0b34b77ccc1db4172a20e748597df997958df0",
+      "kind": "strict_normal_evidence"
+    },
+    {
+      "path": "D:\\hospital_ies_v20_20261019\\outputs\\v20_load_accounting_20261019_run01\\experiments\\v20_normal_006\\analysis\\V20_EMISSIONS.csv",
+      "bytes": 18435,
+      "sha256": "c7df7cb031ca1ade59e2ce89af915ef075637e1d58b44eb6b2ce94fbd4053507",
+      "kind": "strict_normal_evidence"
+    },
+    {
+      "path": "D:\\hospital_ies_v20_20261019\\outputs\\v20_load_accounting_20261019_run01\\experiments\\v20_normal_006\\analysis\\V20_EPISODE_AUDIT.json",
+      "bytes": 1970,
+      "sha256": "d2b2ab2bf5087ad531cd8bd39d5b86f5414f272fd0abc59cca68dd28ebcfff4e",
+      "kind": "strict_normal_evidence"
+    },
+    {
+      "path": "D:\\hospital_ies_v20_20261019\\outputs\\v20_load_accounting_20261019_run01\\experiments\\v20_normal_006\\analysis\\V18_CARRIER_SERVICE.csv",
+      "bytes": 74736,
+      "sha256": "fc6cd23a4e770414114ad3a98efc200dafcc64be59bb756fad2cc76a1f7d1337",
+      "kind": "strict_normal_evidence"
+    },
+    {
+      "path": "D:\\hospital_ies_v20_20261019\\outputs\\v20_load_accounting_20261019_run01\\experiments\\v20_normal_006\\analysis\\V18_ECONOMICS.csv",
+      "bytes": 10040,
+      "sha256": "fbc199ad06d5d523f06d467803c8e8230dc157884d05819cebc86d37547974a2",
+      "kind": "strict_normal_evidence"
+    },
+    {
+      "path": "D:\\hospital_ies_v20_20261019\\outputs\\v20_load_accounting_20261019_run01\\experiments\\v20_normal_006\\analysis\\GT_RUNS.csv",
+      "bytes": 2186,
+      "sha256": "073140e7479e26de993da00a778a6d8e3dbd8e342929cdb517da81d22531e783",
+      "kind": "strict_normal_evidence"
+    },
+    {
+      "path": "D:\\hospital_ies_v20_20261019\\outputs\\v20_load_accounting_20261019_run01\\experiments\\v20_normal_006\\analysis\\GT_TRANSITIONS.csv",
+      "bytes": 5,
+      "sha256": "f01a374e9c81e3db89b3a42940c4d6a5447684986a1296e42bf13f196eed6295",
+      "kind": "strict_normal_evidence"
+    },
+    {
+      "path": "D:\\hospital_ies_v20_20261019\\outputs\\v20_load_accounting_20261019_run01\\experiments\\v20_normal_006\\analysis\\MODEL_DOMAIN.csv",
+      "bytes": 2255,
+      "sha256": "766f6e3be0e9d80e6f8520a3643426f00946c7f96f2f9576194293acfe79b5ab",
+      "kind": "strict_normal_evidence"
+    },
+    {
+      "path": "D:\\hospital_ies_v20_20261019\\outputs\\v20_load_accounting_20261019_run01\\experiments\\v20_normal_006\\analysis\\THERMAL_COVERAGE.csv",
+      "bytes": 2237,
+      "sha256": "f0f0a7f26cffee014844da5ef77342a64a4cfa7551613d46128076b0ab9f32ce",
+      "kind": "strict_normal_evidence"
+    },
+    {
+      "path": "D:\\hospital_ies_v20_20261019\\outputs\\v20_load_accounting_20261019_run01\\experiments\\v20_normal_007\\plan.json",
+      "bytes": 43989,
+      "sha256": "94febb0f78a21eb4edd3dbc49f804022b4d7e8deec162a9496ae9806e10e96bb",
+      "kind": "normal_version_binding"
+    },
+    {
+      "path": "D:\\hospital_ies_v20_20261019\\outputs\\v20_load_accounting_20261019_run01\\experiments\\v20_normal_007\\manifest.json",
+      "bytes": 65793,
+      "sha256": "e02d00b4900323411da8ecc877b381af9ede350ca5c336b0777fbdb39dec98eb",
+      "kind": "normal_version_binding"
+    },
+    {
+      "path": "D:\\hospital_ies_v20_20261019\\outputs\\v20_load_accounting_20261019_run01\\experiments\\v20_normal_007\\BATCH_RESULT.json",
+      "bytes": 6929,
+      "sha256": "9facbd283e2e9988286206e60ca2255ec805bd7386113bb91bec860bd6ea790d",
+      "kind": "normal_version_binding"
+    },
+    {
+      "path": "D:\\hospital_ies_v20_20261019\\outputs\\v20_load_accounting_20261019_run01\\experiments\\v20_normal_007\\ATTEMPTS.jsonl",
+      "bytes": 636,
+      "sha256": "e3d45088784f4cb9778d2ac1f2d9228a87a5519b1f56bd59724893e10a2bc8af",
+      "kind": "normal_version_binding"
+    },
+    {
+      "path": "D:\\hospital_ies_v20_20261019\\outputs\\v20_load_accounting_20261019_run01\\experiments\\v20_normal_007\\pairs\\v17_N2_d7ae489a9d9b2341333e4104__readiness_handoff_K1_M20_v1\\RESULT.json",
+      "bytes": 367474,
+      "sha256": "163c78cc301b699e1627c5366ee482874070131801bbc0c27fb6fa2612abc445",
+      "kind": "normal_actual_RESULT"
+    },
+    {
+      "path": "D:\\hospital_ies_v20_20261019\\outputs\\v20_load_accounting_20261019_run01\\experiments\\v20_normal_007\\analysis\\V20_RESOURCES.csv",
+      "bytes": 3300,
+      "sha256": "c790b92df78f79b570c99e09b7bc961d06742f8a2eb92b07bc6fdfe81e6c807f",
+      "kind": "strict_normal_evidence"
+    },
+    {
+      "path": "D:\\hospital_ies_v20_20261019\\outputs\\v20_load_accounting_20261019_run01\\experiments\\v20_normal_007\\analysis\\V20_EMISSIONS.csv",
+      "bytes": 18273,
+      "sha256": "0da93127bc9236648f644369f2229d74d8d741d603a85bbbc7ac6b820d1fc488",
+      "kind": "strict_normal_evidence"
+    },
+    {
+      "path": "D:\\hospital_ies_v20_20261019\\outputs\\v20_load_accounting_20261019_run01\\experiments\\v20_normal_007\\analysis\\V20_EPISODE_AUDIT.json",
+      "bytes": 1964,
+      "sha256": "4943d782f0908cb2f725ea33eba26f661122504c7577afdbfb6666a22e43b4b2",
+      "kind": "strict_normal_evidence"
+    },
+    {
+      "path": "D:\\hospital_ies_v20_20261019\\outputs\\v20_load_accounting_20261019_run01\\experiments\\v20_normal_007\\analysis\\V18_CARRIER_SERVICE.csv",
+      "bytes": 73496,
+      "sha256": "66e515d8db35187709c5f0c9481ff8c853e393f4fb89f9b84295c76a669795b6",
+      "kind": "strict_normal_evidence"
+    },
+    {
+      "path": "D:\\hospital_ies_v20_20261019\\outputs\\v20_load_accounting_20261019_run01\\experiments\\v20_normal_007\\analysis\\V18_ECONOMICS.csv",
+      "bytes": 9973,
+      "sha256": "3861d2a90cd5223d8be0e92280594fc2036ce1b8158910192b88e6920320875c",
+      "kind": "strict_normal_evidence"
+    },
+    {
+      "path": "D:\\hospital_ies_v20_20261019\\outputs\\v20_load_accounting_20261019_run01\\experiments\\v20_normal_007\\analysis\\GT_RUNS.csv",
+      "bytes": 2167,
+      "sha256": "47f31d18450fb803cd044cea197f427b73f2b785f9473abeda9c43e38ec4c835",
+      "kind": "strict_normal_evidence"
+    },
+    {
+      "path": "D:\\hospital_ies_v20_20261019\\outputs\\v20_load_accounting_20261019_run01\\experiments\\v20_normal_007\\analysis\\GT_TRANSITIONS.csv",
+      "bytes": 5,
+      "sha256": "f01a374e9c81e3db89b3a42940c4d6a5447684986a1296e42bf13f196eed6295",
+      "kind": "strict_normal_evidence"
+    },
+    {
+      "path": "D:\\hospital_ies_v20_20261019\\outputs\\v20_load_accounting_20261019_run01\\experiments\\v20_normal_007\\analysis\\MODEL_DOMAIN.csv",
+      "bytes": 2236,
+      "sha256": "65e4e30fe2fb62008400f0d42b540f3f03d2361f51ba814d42d106926bfdc011",
+      "kind": "strict_normal_evidence"
+    },
+    {
+      "path": "D:\\hospital_ies_v20_20261019\\outputs\\v20_load_accounting_20261019_run01\\experiments\\v20_normal_007\\analysis\\THERMAL_COVERAGE.csv",
+      "bytes": 2218,
+      "sha256": "f82b8d0ab698f3021e21afc91d56c2d05a992b483900799ab42daf83f6f8e91c",
+      "kind": "strict_normal_evidence"
+    },
+    {
+      "path": "D:\\hospital_ies_v20_20261019\\outputs\\v20_load_accounting_20261019_run01\\experiments\\v20_normal_008\\plan.json",
+      "bytes": 44139,
+      "sha256": "9dbbace5d1ab1b017faab9ef874b6246a4a71d97533381143aa6548dbe7881fa",
+      "kind": "normal_version_binding"
+    },
+    {
+      "path": "D:\\hospital_ies_v20_20261019\\outputs\\v20_load_accounting_20261019_run01\\experiments\\v20_normal_008\\manifest.json",
+      "bytes": 65801,
+      "sha256": "748696442185225ffc116da7d3c14a327f78793070623eadedb53748a59c2893",
+      "kind": "normal_version_binding"
+    },
+    {
+      "path": "D:\\hospital_ies_v20_20261019\\outputs\\v20_load_accounting_20261019_run01\\experiments\\v20_normal_008\\BATCH_RESULT.json",
+      "bytes": 6925,
+      "sha256": "3107c24c929807582ea2415c396b7cd4f5cbd4619c0263ecdd57ceafcd5fe2c7",
+      "kind": "normal_version_binding"
+    },
+    {
+      "path": "D:\\hospital_ies_v20_20261019\\outputs\\v20_load_accounting_20261019_run01\\experiments\\v20_normal_008\\ATTEMPTS.jsonl",
+      "bytes": 636,
+      "sha256": "d781426edb29b85e3c7df585d12e0704ba904c4bcee42fd8aceb72a5ada3d423",
+      "kind": "normal_version_binding"
+    },
+    {
+      "path": "D:\\hospital_ies_v20_20261019\\outputs\\v20_load_accounting_20261019_run01\\experiments\\v20_normal_008\\pairs\\v17_N2_d7ae489a9d9b2341333e4104__C19_critical_reserve_M20_v1\\RESULT.json",
+      "bytes": 367473,
+      "sha256": "14e2eafb6aa8aa72e2769c973df94cdfbdaab036456ab03d652219336da1aa64",
+      "kind": "normal_actual_RESULT"
+    },
+    {
+      "path": "D:\\hospital_ies_v20_20261019\\outputs\\v20_load_accounting_20261019_run01\\experiments\\v20_normal_008\\analysis\\V20_RESOURCES.csv",
+      "bytes": 3301,
+      "sha256": "5b65b25f5c108ac9f3aba4b66bdc83a046c4169a7223d61ddc86969a09f0df19",
+      "kind": "strict_normal_evidence"
+    },
+    {
+      "path": "D:\\hospital_ies_v20_20261019\\outputs\\v20_load_accounting_20261019_run01\\experiments\\v20_normal_008\\analysis\\V20_EMISSIONS.csv",
+      "bytes": 18297,
+      "sha256": "4666393ec727a436961e547ba8a672af9a83951535963e9a869eada6eebba4db",
+      "kind": "strict_normal_evidence"
+    },
+    {
+      "path": "D:\\hospital_ies_v20_20261019\\outputs\\v20_load_accounting_20261019_run01\\experiments\\v20_normal_008\\analysis\\V20_EPISODE_AUDIT.json",
+      "bytes": 1964,
+      "sha256": "8fdd6abb53bb0fa505d2bd6f535b11b452e7e92a42455261d16d4f9774d2f3e9",
+      "kind": "strict_normal_evidence"
+    },
+    {
+      "path": "D:\\hospital_ies_v20_20261019\\outputs\\v20_load_accounting_20261019_run01\\experiments\\v20_normal_008\\analysis\\V18_CARRIER_SERVICE.csv",
+      "bytes": 73492,
+      "sha256": "128759809faa6610291bfc2778edbecb468decbd69aed690c28c41d5f728fcd8",
+      "kind": "strict_normal_evidence"
+    },
+    {
+      "path": "D:\\hospital_ies_v20_20261019\\outputs\\v20_load_accounting_20261019_run01\\experiments\\v20_normal_008\\analysis\\V18_ECONOMICS.csv",
+      "bytes": 9974,
+      "sha256": "98ded7921f231ea7a5269d748b3193ccec96f6c87174f1f13766dc28bffa1a5a",
+      "kind": "strict_normal_evidence"
+    },
+    {
+      "path": "D:\\hospital_ies_v20_20261019\\outputs\\v20_load_accounting_20261019_run01\\experiments\\v20_normal_008\\analysis\\GT_RUNS.csv",
+      "bytes": 2167,
+      "sha256": "1573bbeb79e67f2f34578d40862072aa6afd59307b8d6c5addbef12b6b8ffa4b",
+      "kind": "strict_normal_evidence"
+    },
+    {
+      "path": "D:\\hospital_ies_v20_20261019\\outputs\\v20_load_accounting_20261019_run01\\experiments\\v20_normal_008\\analysis\\GT_TRANSITIONS.csv",
+      "bytes": 5,
+      "sha256": "f01a374e9c81e3db89b3a42940c4d6a5447684986a1296e42bf13f196eed6295",
+      "kind": "strict_normal_evidence"
+    },
+    {
+      "path": "D:\\hospital_ies_v20_20261019\\outputs\\v20_load_accounting_20261019_run01\\experiments\\v20_normal_008\\analysis\\MODEL_DOMAIN.csv",
+      "bytes": 2236,
+      "sha256": "047c1e4fcce4e44e4515eb5fe124c4b889c2323fe136f7275856e31176555b30",
+      "kind": "strict_normal_evidence"
+    },
+    {
+      "path": "D:\\hospital_ies_v20_20261019\\outputs\\v20_load_accounting_20261019_run01\\experiments\\v20_normal_008\\analysis\\THERMAL_COVERAGE.csv",
+      "bytes": 2218,
+      "sha256": "80c9e18baa46458762cb4810b136d3b96267f77a150e3c11ff9fbfa4db4083bb",
+      "kind": "strict_normal_evidence"
+    },
+    {
+      "path": "D:\\hospital_ies_v20_20261019\\outputs\\v20_load_accounting_20261019_run01\\experiments\\v20_normal_009\\plan.json",
+      "bytes": 44155,
+      "sha256": "e95cbb7041313b7deccd05cf654a7955870bdb7c525eed70e5f9d9c79e60389e",
+      "kind": "normal_version_binding"
+    },
+    {
+      "path": "D:\\hospital_ies_v20_20261019\\outputs\\v20_load_accounting_20261019_run01\\experiments\\v20_normal_009\\manifest.json",
+      "bytes": 65806,
+      "sha256": "9fe99eea14d7b1b54100bb3c63c2e957b6b50a8822aae00bc2bf0863eadca738",
+      "kind": "normal_version_binding"
+    },
+    {
+      "path": "D:\\hospital_ies_v20_20261019\\outputs\\v20_load_accounting_20261019_run01\\experiments\\v20_normal_009\\BATCH_RESULT.json",
+      "bytes": 6936,
+      "sha256": "cbda2222e3281cfeecbc4cd9a2d488dea45f1dc852383c0143029f29122e1633",
+      "kind": "normal_version_binding"
+    },
+    {
+      "path": "D:\\hospital_ies_v20_20261019\\outputs\\v20_load_accounting_20261019_run01\\experiments\\v20_normal_009\\ATTEMPTS.jsonl",
+      "bytes": 648,
+      "sha256": "a21d77e57d0294ba8bb962d45cbcbdfa5b6715010176273251c2ed738a9d6306",
+      "kind": "normal_version_binding"
+    },
+    {
+      "path": "D:\\hospital_ies_v20_20261019\\outputs\\v20_load_accounting_20261019_run01\\experiments\\v20_normal_009\\pairs\\v17_N2_68c28ce356bdd0d883b76642__endurance_restore_p0_ready_M20_v1\\RESULT.json",
+      "bytes": 371982,
+      "sha256": "e4c9ed4a90a730b863a83c21db70533aed17797e2ebc1bae6cfb9b75ab084bf6",
+      "kind": "normal_actual_RESULT"
+    },
+    {
+      "path": "D:\\hospital_ies_v20_20261019\\outputs\\v20_load_accounting_20261019_run01\\experiments\\v20_normal_009\\analysis\\V20_RESOURCES.csv",
+      "bytes": 3335,
+      "sha256": "1a0866e33bfc53ca93cf932a025bd8cfbf878cedb3e4e8d8ba86d6e7c4ad1155",
+      "kind": "strict_normal_evidence"
+    },
+    {
+      "path": "D:\\hospital_ies_v20_20261019\\outputs\\v20_load_accounting_20261019_run01\\experiments\\v20_normal_009\\analysis\\V20_EMISSIONS.csv",
+      "bytes": 18430,
+      "sha256": "029ef3c0003347e905e8412aca8a31d40c7c18f6efea36e5c993d4d20c2040c6",
+      "kind": "strict_normal_evidence"
+    },
+    {
+      "path": "D:\\hospital_ies_v20_20261019\\outputs\\v20_load_accounting_20261019_run01\\experiments\\v20_normal_009\\analysis\\V20_EPISODE_AUDIT.json",
+      "bytes": 1944,
+      "sha256": "e063425348824d2a61c569f6ba41a9c4a21ad0a1908020848b5342270ccf68b8",
+      "kind": "strict_normal_evidence"
+    },
+    {
+      "path": "D:\\hospital_ies_v20_20261019\\outputs\\v20_load_accounting_20261019_run01\\experiments\\v20_normal_009\\analysis\\V18_CARRIER_SERVICE.csv",
+      "bytes": 74553,
+      "sha256": "fdbb591402796f587c9c75b80ad4bc3239cb16ff4b08693c45a4d764e41ec46c",
+      "kind": "strict_normal_evidence"
+    },
+    {
+      "path": "D:\\hospital_ies_v20_20261019\\outputs\\v20_load_accounting_20261019_run01\\experiments\\v20_normal_009\\analysis\\V18_ECONOMICS.csv",
+      "bytes": 10089,
+      "sha256": "19c306bce6667a96051fc302f4acf80754c1c3df489b23b9eb970611baaca932",
+      "kind": "strict_normal_evidence"
+    },
+    {
+      "path": "D:\\hospital_ies_v20_20261019\\outputs\\v20_load_accounting_20261019_run01\\experiments\\v20_normal_009\\analysis\\GT_RUNS.csv",
+      "bytes": 2185,
+      "sha256": "b5f204cae8eb42b306934a43df81e4f00e29c87288f5268fbf08aee79311d119",
+      "kind": "strict_normal_evidence"
+    },
+    {
+      "path": "D:\\hospital_ies_v20_20261019\\outputs\\v20_load_accounting_20261019_run01\\experiments\\v20_normal_009\\analysis\\GT_TRANSITIONS.csv",
+      "bytes": 5,
+      "sha256": "f01a374e9c81e3db89b3a42940c4d6a5447684986a1296e42bf13f196eed6295",
+      "kind": "strict_normal_evidence"
+    },
+    {
+      "path": "D:\\hospital_ies_v20_20261019\\outputs\\v20_load_accounting_20261019_run01\\experiments\\v20_normal_009\\analysis\\MODEL_DOMAIN.csv",
+      "bytes": 2254,
+      "sha256": "75f035f80648cc712ac5b11bd9c1c3d5f147e768026ea301d0447253b3651da8",
+      "kind": "strict_normal_evidence"
+    },
+    {
+      "path": "D:\\hospital_ies_v20_20261019\\outputs\\v20_load_accounting_20261019_run01\\experiments\\v20_normal_009\\analysis\\THERMAL_COVERAGE.csv",
+      "bytes": 2538,
+      "sha256": "9081b63f59f89a0babdff720ed838d23afc765420932e592af46a180c31978a1",
+      "kind": "strict_normal_evidence"
+    },
+    {
+      "path": "D:\\hospital_ies_v20_20261019\\outputs\\v20_load_accounting_20261019_run01\\experiments\\v20_normal_010\\plan.json",
+      "bytes": 43989,
+      "sha256": "b5c5b45cd694b06289a64e23cb9a84e9ad2e43accad82422164f570b33d5cc4e",
+      "kind": "normal_version_binding"
+    },
+    {
+      "path": "D:\\hospital_ies_v20_20261019\\outputs\\v20_load_accounting_20261019_run01\\experiments\\v20_normal_010\\manifest.json",
+      "bytes": 65792,
+      "sha256": "f45bf3ef0b3435d65bc74aa55caafec22b4c7d472d5b84f34e0db975e5d26ff3",
+      "kind": "normal_version_binding"
+    },
+    {
+      "path": "D:\\hospital_ies_v20_20261019\\outputs\\v20_load_accounting_20261019_run01\\experiments\\v20_normal_010\\BATCH_RESULT.json",
+      "bytes": 6924,
+      "sha256": "dffdc82894dbe3fe286301078934b826160da1edb4ef2debc5042b2d529cea11",
+      "kind": "normal_version_binding"
+    },
+    {
+      "path": "D:\\hospital_ies_v20_20261019\\outputs\\v20_load_accounting_20261019_run01\\experiments\\v20_normal_010\\ATTEMPTS.jsonl",
+      "bytes": 636,
+      "sha256": "599e2f61b124c71e24cfd13e652f06667f94308b70347dc71ed296bc42f7c09d",
+      "kind": "normal_version_binding"
+    },
+    {
+      "path": "D:\\hospital_ies_v20_20261019\\outputs\\v20_load_accounting_20261019_run01\\experiments\\v20_normal_010\\pairs\\v17_N2_68c28ce356bdd0d883b76642__readiness_handoff_K1_M20_v1\\RESULT.json",
+      "bytes": 368074,
+      "sha256": "243bb24bd333a6b68c0c510a7a26a3ce68258437b3bf3f075dab2145edfeb3dc",
+      "kind": "normal_actual_RESULT"
+    },
+    {
+      "path": "D:\\hospital_ies_v20_20261019\\outputs\\v20_load_accounting_20261019_run01\\experiments\\v20_normal_010\\analysis\\V20_RESOURCES.csv",
+      "bytes": 3307,
+      "sha256": "ccf7027a22ec88f29619307b94dbfdade07d78dc3861cab0cb01d9e6577c1a26",
+      "kind": "strict_normal_evidence"
+    },
+    {
+      "path": "D:\\hospital_ies_v20_20261019\\outputs\\v20_load_accounting_20261019_run01\\experiments\\v20_normal_010\\analysis\\V20_EMISSIONS.csv",
+      "bytes": 18320,
+      "sha256": "8138796b22ca2b4f9181fdb6b5c30d77801499c43f494022972ad9c48a119278",
+      "kind": "strict_normal_evidence"
+    },
+    {
+      "path": "D:\\hospital_ies_v20_20261019\\outputs\\v20_load_accounting_20261019_run01\\experiments\\v20_normal_010\\analysis\\V20_EPISODE_AUDIT.json",
+      "bytes": 1960,
+      "sha256": "fc02e85cf9250890bbc90a19c1f121174e2aec1e0a2bc55fdf8a6fb4343cca95",
+      "kind": "strict_normal_evidence"
+    },
+    {
+      "path": "D:\\hospital_ies_v20_20261019\\outputs\\v20_load_accounting_20261019_run01\\experiments\\v20_normal_010\\analysis\\V18_CARRIER_SERVICE.csv",
+      "bytes": 73493,
+      "sha256": "62b8b07e87896df723239241d8caf7fdf5a8212e334bfb508cff22dde5143846",
+      "kind": "strict_normal_evidence"
+    },
+    {
+      "path": "D:\\hospital_ies_v20_20261019\\outputs\\v20_load_accounting_20261019_run01\\experiments\\v20_normal_010\\analysis\\V18_ECONOMICS.csv",
+      "bytes": 10031,
+      "sha256": "a2356edcbf70edd50e217cef1f4d45e248276ad0f249d6adc2e1d4318a82d306",
+      "kind": "strict_normal_evidence"
+    },
+    {
+      "path": "D:\\hospital_ies_v20_20261019\\outputs\\v20_load_accounting_20261019_run01\\experiments\\v20_normal_010\\analysis\\GT_RUNS.csv",
+      "bytes": 2167,
+      "sha256": "833a09281033c353bb72c22f670c452eff0d8eb0d57ee6fbb6b7eb42987d8b0a",
+      "kind": "strict_normal_evidence"
+    },
+    {
+      "path": "D:\\hospital_ies_v20_20261019\\outputs\\v20_load_accounting_20261019_run01\\experiments\\v20_normal_010\\analysis\\GT_TRANSITIONS.csv",
+      "bytes": 5,
+      "sha256": "f01a374e9c81e3db89b3a42940c4d6a5447684986a1296e42bf13f196eed6295",
+      "kind": "strict_normal_evidence"
+    },
+    {
+      "path": "D:\\hospital_ies_v20_20261019\\outputs\\v20_load_accounting_20261019_run01\\experiments\\v20_normal_010\\analysis\\MODEL_DOMAIN.csv",
+      "bytes": 2236,
+      "sha256": "122f5c2ce1683b96c9383c815541e4dd070009dc11f68dbc3e5800e4bcf1a984",
+      "kind": "strict_normal_evidence"
+    },
+    {
+      "path": "D:\\hospital_ies_v20_20261019\\outputs\\v20_load_accounting_20261019_run01\\experiments\\v20_normal_010\\analysis\\THERMAL_COVERAGE.csv",
+      "bytes": 2520,
+      "sha256": "1ee4ab2f46c24fbcb2cf14a76f3e766f560a7a598008ff63a5319f791dddff2a",
+      "kind": "strict_normal_evidence"
+    },
+    {
+      "path": "D:\\hospital_ies_v20_20261019\\outputs\\v20_load_accounting_20261019_run01\\experiments\\v20_normal_011\\plan.json",
+      "bytes": 44139,
+      "sha256": "b738ca96e341d9db2775e88de56ac5691a8c808cf3a66cf1d1dfb91f11e55719",
+      "kind": "normal_version_binding"
+    },
+    {
+      "path": "D:\\hospital_ies_v20_20261019\\outputs\\v20_load_accounting_20261019_run01\\experiments\\v20_normal_011\\manifest.json",
+      "bytes": 65800,
+      "sha256": "527796a8ba96075ffca70ad64808e71d001e85a795f52ed79c459e53c761b370",
+      "kind": "normal_version_binding"
+    },
+    {
+      "path": "D:\\hospital_ies_v20_20261019\\outputs\\v20_load_accounting_20261019_run01\\experiments\\v20_normal_011\\BATCH_RESULT.json",
+      "bytes": 6926,
+      "sha256": "1b645dcd22b1c9c17a4a493ff37041fedb00c883ac66cbae33efb3e7c1390b87",
+      "kind": "normal_version_binding"
+    },
+    {
+      "path": "D:\\hospital_ies_v20_20261019\\outputs\\v20_load_accounting_20261019_run01\\experiments\\v20_normal_011\\ATTEMPTS.jsonl",
+      "bytes": 637,
+      "sha256": "7fdca4aba5da40a8d03621ab97883c6255ebcbe21eb1f0230188bc2abc511d2a",
+      "kind": "normal_version_binding"
+    },
+    {
+      "path": "D:\\hospital_ies_v20_20261019\\outputs\\v20_load_accounting_20261019_run01\\experiments\\v20_normal_011\\pairs\\v17_N2_68c28ce356bdd0d883b76642__C19_critical_reserve_M20_v1\\RESULT.json",
+      "bytes": 367937,
+      "sha256": "153c5128d898ac42ae3a00aacdc1132f297b4fc9a0ebf924b04a7f827e60bfac",
+      "kind": "normal_actual_RESULT"
+    },
+    {
+      "path": "D:\\hospital_ies_v20_20261019\\outputs\\v20_load_accounting_20261019_run01\\experiments\\v20_normal_011\\analysis\\V20_RESOURCES.csv",
+      "bytes": 3301,
+      "sha256": "c9caafb23c21be38def02e9172ffa18bbc41709929149d78e0639d1f9dceb012",
+      "kind": "strict_normal_evidence"
+    },
+    {
+      "path": "D:\\hospital_ies_v20_20261019\\outputs\\v20_load_accounting_20261019_run01\\experiments\\v20_normal_011\\analysis\\V20_EMISSIONS.csv",
+      "bytes": 18297,
+      "sha256": "9889930341caa21468ab07c5fffb892a41065d2f3d08d26cfdece2275739ead9",
+      "kind": "strict_normal_evidence"
+    },
+    {
+      "path": "D:\\hospital_ies_v20_20261019\\outputs\\v20_load_accounting_20261019_run01\\experiments\\v20_normal_011\\analysis\\V20_EPISODE_AUDIT.json",
+      "bytes": 1960,
+      "sha256": "fe65554d9bac1f29d3e440868ebb4d89e987f6f71499d525218b1c740de426f2",
+      "kind": "strict_normal_evidence"
+    },
+    {
+      "path": "D:\\hospital_ies_v20_20261019\\outputs\\v20_load_accounting_20261019_run01\\experiments\\v20_normal_011\\analysis\\V18_CARRIER_SERVICE.csv",
+      "bytes": 73489,
+      "sha256": "54cb56cc6ffb88d4b81e422c3b26c5e3353206cdaf19edcc5361390879ce59d4",
+      "kind": "strict_normal_evidence"
+    },
+    {
+      "path": "D:\\hospital_ies_v20_20261019\\outputs\\v20_load_accounting_20261019_run01\\experiments\\v20_normal_011\\analysis\\V18_ECONOMICS.csv",
+      "bytes": 10025,
+      "sha256": "64badb261eb05bb99ad95eea1baff0b4fd2cf3bde2e6afafe35dc79111d9aa89",
+      "kind": "strict_normal_evidence"
+    },
+    {
+      "path": "D:\\hospital_ies_v20_20261019\\outputs\\v20_load_accounting_20261019_run01\\experiments\\v20_normal_011\\analysis\\GT_RUNS.csv",
+      "bytes": 2168,
+      "sha256": "5b31facbcddfd838e5d3812919d505e0940994f846bd13f2321f6c57e9d3d623",
+      "kind": "strict_normal_evidence"
+    },
+    {
+      "path": "D:\\hospital_ies_v20_20261019\\outputs\\v20_load_accounting_20261019_run01\\experiments\\v20_normal_011\\analysis\\GT_TRANSITIONS.csv",
+      "bytes": 5,
+      "sha256": "f01a374e9c81e3db89b3a42940c4d6a5447684986a1296e42bf13f196eed6295",
+      "kind": "strict_normal_evidence"
+    },
+    {
+      "path": "D:\\hospital_ies_v20_20261019\\outputs\\v20_load_accounting_20261019_run01\\experiments\\v20_normal_011\\analysis\\MODEL_DOMAIN.csv",
+      "bytes": 2237,
+      "sha256": "3eaa275f7043e29f02fbc8a54ec6272403a5421d442710d2bbf59e9c785f0b6d",
+      "kind": "strict_normal_evidence"
+    },
+    {
+      "path": "D:\\hospital_ies_v20_20261019\\outputs\\v20_load_accounting_20261019_run01\\experiments\\v20_normal_011\\analysis\\THERMAL_COVERAGE.csv",
+      "bytes": 2521,
+      "sha256": "a5dcc7a8689f866b331dc2bc2bb137b3d9487629f100f5329221475b729cf923",
+      "kind": "strict_normal_evidence"
+    },
+    {
+      "path": "D:\\云大文件\\论文\\医院ies\\code_4_2\\outputs\\v19_model_closeout_20261018_run01\\MODEL_FREEZE_CLOSEOUT01.json",
+      "bytes": 184601,
+      "sha256": "80815ef85196a05e496b48b3340a843a00079a7c0de425cbffd13c949e52e2f7",
+      "kind": "V19_final_freeze"
+    },
+    {
+      "path": "D:\\hospital_ies_v20_20261019\\outputs\\v20_load_accounting_20261019_run01\\provenance\\normal_resource_profile\\supervision_canonical02\\SAMPLES.jsonl",
+      "bytes": 326610,
+      "sha256": "f2e295b347340d4866ebc5d6e789c23de14488e9e76eb768722d7a58a7c608b6",
+      "kind": "actual_M20_resource_samples"
+    },
+    {
+      "path": "D:\\云大文件\\论文\\医院ies\\code_4_2\\outputs\\v19_model_closeout_20261018_run01\\experiments\\normal_E_final_r1_000\\pairs\\v17_N2_b4ceb5196ab287f531271081__endurance_restore_p0_ready_v14r6\\RESULT.json",
+      "bytes": 317595,
+      "sha256": "d2b76159fe2c1e5b5f861d0655efd04dd62fc6372499155951c1c450ca14845f",
+      "kind": "old_normal_RESULT"
+    },
+    {
+      "path": "D:\\云大文件\\论文\\医院ies\\code_4_2\\outputs\\v19_model_closeout_20261018_run01\\experiments\\normal_E_final_r1_000\\plan.json",
+      "bytes": 41676,
+      "sha256": "ad90a40292c7ff5eec4dd6704658e852950e93f1b03ef2cec2f58bf8bd53a5e0",
+      "kind": "normal_version_binding"
+    },
+    {
+      "path": "D:\\云大文件\\论文\\医院ies\\code_4_2\\outputs\\v19_model_closeout_20261018_run01\\experiments\\normal_E_final_r1_000\\manifest.json",
+      "bytes": 73375,
+      "sha256": "ecbf49deeca127eced989776c1eedb95516b33e23ab068b8483141cb64466f4e",
+      "kind": "normal_version_binding"
+    },
+    {
+      "path": "D:\\云大文件\\论文\\医院ies\\code_4_2\\outputs\\v19_model_closeout_20261018_run01\\experiments\\normal_E_final_r1_000\\BATCH_RESULT.json",
+      "bytes": 7010,
+      "sha256": "55a7f035b9adbec118c81e15c8dd21b8c4ecc1dd8461fba703aa55e4037e821a",
+      "kind": "normal_version_binding"
+    },
+    {
+      "path": "D:\\云大文件\\论文\\医院ies\\code_4_2\\outputs\\v19_model_closeout_20261018_run01\\experiments\\normal_E_final_r1_000\\ATTEMPTS.jsonl",
+      "bytes": 645,
+      "sha256": "e33dcb0237eaf29b6f3cb7f6cbbed4d7f02c4b9b6b6c1935dc8aa33d2c24f8fa",
+      "kind": "normal_version_binding"
+    },
+    {
+      "path": "D:\\云大文件\\论文\\医院ies\\code_4_2\\outputs\\v19_model_closeout_20261018_run01\\experiments\\normal_E_final_r1_000\\analysis\\ENGINEERING_INTERVALS.csv",
+      "bytes": 960955,
+      "sha256": "76bf7abad68e8e0ae7d736e14a66b23ce6655853ea0f94d2fefd6067ecbca897",
+      "kind": "old_actual_GT_saved_intervals"
+    },
+    {
+      "path": "D:\\hospital_ies_v20_20261019\\outputs\\v20_load_accounting_20261019_run01\\experiments\\v20_normal_000\\analysis\\ENGINEERING_INTERVALS.csv",
+      "bytes": 944806,
+      "sha256": "5e5408f9aacbeb82950d17c2287e0188e002878288d8942a4d4adbfa4813ec7c",
+      "kind": "new_actual_GT_saved_intervals"
+    },
+    {
+      "path": "D:\\hospital_ies_v20_20261019\\outputs\\v20_load_accounting_20261019_run01\\provenance\\normal_resource_profile\\supervision_canonical02\\v20_normal_000.result.json",
+      "bytes": 1185,
+      "sha256": "f0f5bae631a13e3654183c724fafbb1b23fe6759b099ddc7cb0a7fbe0ec96916",
+      "kind": "actual_M20_resource_result"
+    },
+    {
+      "path": "D:\\hospital_ies_v20_20261019\\outputs\\v20_load_accounting_20261019_run01\\provenance\\normal_resource_profile\\supervision_canonical02\\v20_normal_000.command.json",
+      "bytes": 1874,
+      "sha256": "0718ee37b658232d246ad67c1b716ef312eefff9620aed02e26949d4485c313a",
+      "kind": "actual_resource_scientific_command"
+    },
+    {
+      "path": "D:\\云大文件\\论文\\医院ies\\code_4_2\\outputs\\v19_model_closeout_20261018_run01\\experiments\\normal_K1_final_r1_000\\pairs\\v17_N2_b4ceb5196ab287f531271081__readiness_handoff_K1_v15\\RESULT.json",
+      "bytes": 317510,
+      "sha256": "6cccfcb144a4eeb7eb5c91d67d96a9e6f4223a85efb753afd9bfa4795cf06ab4",
+      "kind": "old_normal_RESULT"
+    },
+    {
+      "path": "D:\\云大文件\\论文\\医院ies\\code_4_2\\outputs\\v19_model_closeout_20261018_run01\\experiments\\normal_K1_final_r1_000\\plan.json",
+      "bytes": 41516,
+      "sha256": "6d1e2fed92a3bc180b26bba8b4b58235073df0289de2a80f7d8d8b186ac5d3b0",
+      "kind": "normal_version_binding"
+    },
+    {
+      "path": "D:\\云大文件\\论文\\医院ies\\code_4_2\\outputs\\v19_model_closeout_20261018_run01\\experiments\\normal_K1_final_r1_000\\manifest.json",
+      "bytes": 73365,
+      "sha256": "e02825bcff5439eae99cdf1ba33a7ff97bb3ed521631b1dac9362be5d1dedb12",
+      "kind": "normal_version_binding"
+    },
+    {
+      "path": "D:\\云大文件\\论文\\医院ies\\code_4_2\\outputs\\v19_model_closeout_20261018_run01\\experiments\\normal_K1_final_r1_000\\BATCH_RESULT.json",
+      "bytes": 6988,
+      "sha256": "211cafa88c7703bb54e6395ed865df3130126a208801d46cdb203e5a7a387116",
+      "kind": "normal_version_binding"
+    },
+    {
+      "path": "D:\\云大文件\\论文\\医院ies\\code_4_2\\outputs\\v19_model_closeout_20261018_run01\\experiments\\normal_K1_final_r1_000\\ATTEMPTS.jsonl",
+      "bytes": 629,
+      "sha256": "c57c25ed17f934e41c9740abc029845577948d35f530f1028a855a2492b8bb2d",
+      "kind": "normal_version_binding"
+    },
+    {
+      "path": "D:\\云大文件\\论文\\医院ies\\code_4_2\\outputs\\v19_model_closeout_20261018_run01\\experiments\\normal_K1_final_r1_000\\analysis\\ENGINEERING_INTERVALS.csv",
+      "bytes": 959560,
+      "sha256": "355eef4ebcec9cdc20e6cda979af43defdff84d0cd07dc87918453ce1ef6e086",
+      "kind": "old_actual_GT_saved_intervals"
+    },
+    {
+      "path": "D:\\hospital_ies_v20_20261019\\outputs\\v20_load_accounting_20261019_run01\\experiments\\v20_normal_001\\analysis\\ENGINEERING_INTERVALS.csv",
+      "bytes": 941361,
+      "sha256": "7d05123404e58f417572da2b216911c2706dbb8cc0c5003bd864671892ae2404",
+      "kind": "new_actual_GT_saved_intervals"
+    },
+    {
+      "path": "D:\\hospital_ies_v20_20261019\\outputs\\v20_load_accounting_20261019_run01\\provenance\\normal_resource_profile\\supervision_canonical02\\v20_normal_001.result.json",
+      "bytes": 1179,
+      "sha256": "82fa14904ab03ef92bd9396f8b788933db37ee2ff7d472e2e4ad0f1a9b6973f2",
+      "kind": "actual_M20_resource_result"
+    },
+    {
+      "path": "D:\\hospital_ies_v20_20261019\\outputs\\v20_load_accounting_20261019_run01\\provenance\\normal_resource_profile\\supervision_canonical02\\v20_normal_001.command.json",
+      "bytes": 1878,
+      "sha256": "b8f96b1cc2fe19431a428855ffc675c5d7325be566c79f04cd95b0c610a923a6",
+      "kind": "actual_resource_scientific_command"
+    },
+    {
+      "path": "D:\\云大文件\\论文\\医院ies\\code_4_2\\outputs\\v19_model_closeout_20261018_run01\\experiments\\normal_C19_final_r1_000\\pairs\\v17_N2_b4ceb5196ab287f531271081__C19_critical_reserve_v19r1\\RESULT.json",
+      "bytes": 317527,
+      "sha256": "c5c8cb4546a1bb4278bc8302a077690d412ce38548836569cc0f04286735271b",
+      "kind": "old_normal_RESULT"
+    },
+    {
+      "path": "D:\\云大文件\\论文\\医院ies\\code_4_2\\outputs\\v19_model_closeout_20261018_run01\\experiments\\normal_C19_final_r1_000\\plan.json",
+      "bytes": 41666,
+      "sha256": "b1a89f883ec6b4ec5a384763068e638fdc261de005198d50785c77e285696de1",
+      "kind": "normal_version_binding"
+    },
+    {
+      "path": "D:\\云大文件\\论文\\医院ies\\code_4_2\\outputs\\v19_model_closeout_20261018_run01\\experiments\\normal_C19_final_r1_000\\manifest.json",
+      "bytes": 73375,
+      "sha256": "b46dfe04cf0e0efe3e9333e2012191f78920f23a26f0d241e25da02850024150",
+      "kind": "normal_version_binding"
+    },
+    {
+      "path": "D:\\云大文件\\论文\\医院ies\\code_4_2\\outputs\\v19_model_closeout_20261018_run01\\experiments\\normal_C19_final_r1_000\\BATCH_RESULT.json",
+      "bytes": 7007,
+      "sha256": "a28aae58fb7c234211b83187ed234d79b19a167ef5e3f9f65840c9ba56915449",
+      "kind": "normal_version_binding"
+    },
+    {
+      "path": "D:\\云大文件\\论文\\医院ies\\code_4_2\\outputs\\v19_model_closeout_20261018_run01\\experiments\\normal_C19_final_r1_000\\ATTEMPTS.jsonl",
+      "bytes": 634,
+      "sha256": "077a0aecfb832ef2f6700401fe9d871a6f45448e89951147ae5d1f9268678282",
+      "kind": "normal_version_binding"
+    },
+    {
+      "path": "D:\\云大文件\\论文\\医院ies\\code_4_2\\outputs\\v19_model_closeout_20261018_run01\\experiments\\normal_C19_final_r1_000\\analysis\\ENGINEERING_INTERVALS.csv",
+      "bytes": 12368220,
+      "sha256": "966672d78931e45949485738235e64590f7e49cb4075fc5ab1125112ba1adc4c",
+      "kind": "old_actual_GT_saved_intervals"
+    },
+    {
+      "path": "D:\\hospital_ies_v20_20261019\\outputs\\v20_load_accounting_20261019_run01\\experiments\\v20_normal_002\\analysis\\ENGINEERING_INTERVALS.csv",
+      "bytes": 939463,
+      "sha256": "02fc56a431d46fff60783d06d8323bb33d605df95653d10cf140e8e3c025c0a2",
+      "kind": "new_actual_GT_saved_intervals"
+    },
+    {
+      "path": "D:\\hospital_ies_v20_20261019\\outputs\\v20_load_accounting_20261019_run01\\provenance\\normal_resource_profile\\supervision_canonical02\\v20_normal_002.result.json",
+      "bytes": 1179,
+      "sha256": "172bb012a018ba77d0e87c37ebfba7be1927fec3b18cff863e21f808cbcaedda",
+      "kind": "actual_M20_resource_result"
+    },
+    {
+      "path": "D:\\hospital_ies_v20_20261019\\outputs\\v20_load_accounting_20261019_run01\\provenance\\normal_resource_profile\\supervision_canonical02\\v20_normal_002.command.json",
+      "bytes": 1878,
+      "sha256": "ce69e3fd592f1aaee48cc2357ab2375b7610a7e52005277c6e94a6fa4e9c558a",
+      "kind": "actual_resource_scientific_command"
+    },
+    {
+      "path": "D:\\云大文件\\论文\\医院ies\\code_4_2\\outputs\\v19_model_closeout_20261018_run01\\experiments\\normal_E_final_r1_001\\pairs\\v17_N2_e0d9a833029c50478833febd__endurance_restore_p0_ready_v14r6\\RESULT.json",
+      "bytes": 318343,
+      "sha256": "c0e9f5fb3c2b0b9124bcdec6322077fec9e18cae8c8dfb7e25127c356f892e0e",
+      "kind": "old_normal_RESULT"
+    },
+    {
+      "path": "D:\\云大文件\\论文\\医院ies\\code_4_2\\outputs\\v19_model_closeout_20261018_run01\\experiments\\normal_E_final_r1_001\\plan.json",
+      "bytes": 41676,
+      "sha256": "fda8ea0713c68c6eac29fb14877e75d35902ac9805d5ab44f2028e77a4d496b2",
+      "kind": "normal_version_binding"
+    },
+    {
+      "path": "D:\\云大文件\\论文\\医院ies\\code_4_2\\outputs\\v19_model_closeout_20261018_run01\\experiments\\normal_E_final_r1_001\\manifest.json",
+      "bytes": 73383,
+      "sha256": "9504161d730b3219a589e50e2910e03227782a5da305acd688f3a28150bfaa0a",
+      "kind": "normal_version_binding"
+    },
+    {
+      "path": "D:\\云大文件\\论文\\医院ies\\code_4_2\\outputs\\v19_model_closeout_20261018_run01\\experiments\\normal_E_final_r1_001\\BATCH_RESULT.json",
+      "bytes": 7015,
+      "sha256": "fe69344ec0769797fd66b38fe09b7d7c02d1c5dd39c6ae5b1f89e246208fa33e",
+      "kind": "normal_version_binding"
+    },
+    {
+      "path": "D:\\云大文件\\论文\\医院ies\\code_4_2\\outputs\\v19_model_closeout_20261018_run01\\experiments\\normal_E_final_r1_001\\ATTEMPTS.jsonl",
+      "bytes": 646,
+      "sha256": "b1b1930945d61bf6cc8f20209c763567b477f6fd5085a0eb788f49e7bd191088",
+      "kind": "normal_version_binding"
+    },
+    {
+      "path": "D:\\云大文件\\论文\\医院ies\\code_4_2\\outputs\\v19_model_closeout_20261018_run01\\experiments\\normal_E_final_r1_001\\analysis\\ENGINEERING_INTERVALS.csv",
+      "bytes": 1949279,
+      "sha256": "78309ff9a2bc398d0aa60fd525578c39212b41c89dc99d948b1a696bd553a688",
+      "kind": "old_actual_GT_saved_intervals"
+    },
+    {
+      "path": "D:\\hospital_ies_v20_20261019\\outputs\\v20_load_accounting_20261019_run01\\experiments\\v20_normal_003\\analysis\\ENGINEERING_INTERVALS.csv",
+      "bytes": 1915998,
+      "sha256": "b3781a9e5a94bcd9c4fdc82b5ff9c0a8cea5bdb8eb409c5c4da697f3e1540d1a",
+      "kind": "new_actual_GT_saved_intervals"
+    },
+    {
+      "path": "D:\\hospital_ies_v20_20261019\\outputs\\v20_load_accounting_20261019_run01\\provenance\\normal_resource_profile\\supervision_canonical02\\v20_normal_003.result.json",
+      "bytes": 1185,
+      "sha256": "d6e3c7016ed398ced4fdadc75c66751690eb7285f1464a7ee4dc0fde7f1d2672",
+      "kind": "actual_M20_resource_result"
+    },
+    {
+      "path": "D:\\hospital_ies_v20_20261019\\outputs\\v20_load_accounting_20261019_run01\\provenance\\normal_resource_profile\\supervision_canonical02\\v20_normal_003.command.json",
+      "bytes": 1876,
+      "sha256": "3c378f5e44ac154c12465bb89650283c3e0df06fc64d8bf18d52fa350617a1c7",
+      "kind": "actual_resource_scientific_command"
+    },
+    {
+      "path": "D:\\云大文件\\论文\\医院ies\\code_4_2\\outputs\\v19_model_closeout_20261018_run01\\experiments\\normal_K1_final_r1_001\\pairs\\v17_N2_e0d9a833029c50478833febd__readiness_handoff_K1_v15\\RESULT.json",
+      "bytes": 317581,
+      "sha256": "728c157496a65ac694ec7461f38c8d1d4f6a4f6fef84777ef0548907c65650be",
+      "kind": "old_normal_RESULT"
+    },
+    {
+      "path": "D:\\云大文件\\论文\\医院ies\\code_4_2\\outputs\\v19_model_closeout_20261018_run01\\experiments\\normal_K1_final_r1_001\\plan.json",
+      "bytes": 41516,
+      "sha256": "14639b156080187e726bb1b28ecda8e1e287e09bcf6d9c1165977b2b9a7f7d0a",
+      "kind": "normal_version_binding"
+    },
+    {
+      "path": "D:\\云大文件\\论文\\医院ies\\code_4_2\\outputs\\v19_model_closeout_20261018_run01\\experiments\\normal_K1_final_r1_001\\manifest.json",
+      "bytes": 73373,
+      "sha256": "af7945db3f298903146fd191147065d63579f3bfaac3ffb731e7595ffec2d6b6",
+      "kind": "normal_version_binding"
+    },
+    {
+      "path": "D:\\云大文件\\论文\\医院ies\\code_4_2\\outputs\\v19_model_closeout_20261018_run01\\experiments\\normal_K1_final_r1_001\\BATCH_RESULT.json",
+      "bytes": 7000,
+      "sha256": "93178a629c07dbe759a4691e980765939a026af92f212c1507ff5e4ffe6064c1",
+      "kind": "normal_version_binding"
+    },
+    {
+      "path": "D:\\云大文件\\论文\\医院ies\\code_4_2\\outputs\\v19_model_closeout_20261018_run01\\experiments\\normal_K1_final_r1_001\\ATTEMPTS.jsonl",
+      "bytes": 629,
+      "sha256": "577e8cb93d963b95f776591c2667327f0378cbf1ec723edf3210e488c0505ef8",
+      "kind": "normal_version_binding"
+    },
+    {
+      "path": "D:\\云大文件\\论文\\医院ies\\code_4_2\\outputs\\v19_model_closeout_20261018_run01\\experiments\\normal_K1_final_r1_001\\analysis\\ENGINEERING_INTERVALS.csv",
+      "bytes": 1917806,
+      "sha256": "8cba455167689f2bd4582f9d30c7d77efdedda36e6ad8d0ad8506022e3d52e2c",
+      "kind": "old_actual_GT_saved_intervals"
+    },
+    {
+      "path": "D:\\hospital_ies_v20_20261019\\outputs\\v20_load_accounting_20261019_run01\\experiments\\v20_normal_004\\analysis\\ENGINEERING_INTERVALS.csv",
+      "bytes": 1885627,
+      "sha256": "abdb4df5644fd23548f7bda56417a69c480249eae9054f6e6981849d70f4a799",
+      "kind": "new_actual_GT_saved_intervals"
+    },
+    {
+      "path": "D:\\hospital_ies_v20_20261019\\outputs\\v20_load_accounting_20261019_run01\\provenance\\normal_resource_profile\\supervision_canonical02\\v20_normal_004.result.json",
+      "bytes": 1179,
+      "sha256": "5d7ace0e7255084f2f1eea16b32661dee616df93979a2d0e016f49bf29c85ffc",
+      "kind": "actual_M20_resource_result"
+    },
+    {
+      "path": "D:\\hospital_ies_v20_20261019\\outputs\\v20_load_accounting_20261019_run01\\provenance\\normal_resource_profile\\supervision_canonical02\\v20_normal_004.command.json",
+      "bytes": 1878,
+      "sha256": "b94b9686d6a9c1460f6d4a164fe63e127b93cc727b4d8741c50c18aa84f5759a",
+      "kind": "actual_resource_scientific_command"
+    },
+    {
+      "path": "D:\\云大文件\\论文\\医院ies\\code_4_2\\outputs\\v19_model_closeout_20261018_run01\\experiments\\normal_C19_final_r1_001\\pairs\\v17_N2_e0d9a833029c50478833febd__C19_critical_reserve_v19r1\\RESULT.json",
+      "bytes": 317537,
+      "sha256": "0291e932a473b5b61c1cfc6102628bb207346455bf5cb1541da9c47fcb6cc595",
+      "kind": "old_normal_RESULT"
+    },
+    {
+      "path": "D:\\云大文件\\论文\\医院ies\\code_4_2\\outputs\\v19_model_closeout_20261018_run01\\experiments\\normal_C19_final_r1_001\\plan.json",
+      "bytes": 41666,
+      "sha256": "5d04294dbd8aca3fc7fbed1b8a22f6a548575973902e57743615fc0c9abf264b",
+      "kind": "normal_version_binding"
+    },
+    {
+      "path": "D:\\云大文件\\论文\\医院ies\\code_4_2\\outputs\\v19_model_closeout_20261018_run01\\experiments\\normal_C19_final_r1_001\\manifest.json",
+      "bytes": 73383,
+      "sha256": "8eaa1866f69dc0468589a8cb8be259808319bbc9018fb356ab82dccf7f26ca1d",
+      "kind": "normal_version_binding"
+    },
+    {
+      "path": "D:\\云大文件\\论文\\医院ies\\code_4_2\\outputs\\v19_model_closeout_20261018_run01\\experiments\\normal_C19_final_r1_001\\BATCH_RESULT.json",
+      "bytes": 7008,
+      "sha256": "d95794aa97ff5b47545f5291f22002d372058fa44f09bc3e2ff1486ed757866e",
+      "kind": "normal_version_binding"
+    },
+    {
+      "path": "D:\\云大文件\\论文\\医院ies\\code_4_2\\outputs\\v19_model_closeout_20261018_run01\\experiments\\normal_C19_final_r1_001\\ATTEMPTS.jsonl",
+      "bytes": 633,
+      "sha256": "469799be67ddc81d2821e24d4b21b1b1d034f66d2322cfad8175f868253dac65",
+      "kind": "normal_version_binding"
+    },
+    {
+      "path": "D:\\云大文件\\论文\\医院ies\\code_4_2\\outputs\\v19_model_closeout_20261018_run01\\experiments\\normal_C19_final_r1_001\\analysis\\ENGINEERING_INTERVALS.csv",
+      "bytes": 25304304,
+      "sha256": "e0d41973d24c6b3819ebbf2b159a63b790f9d76a060f09d045538088f9a03c4f",
+      "kind": "old_actual_GT_saved_intervals"
+    },
+    {
+      "path": "D:\\hospital_ies_v20_20261019\\outputs\\v20_load_accounting_20261019_run01\\experiments\\v20_normal_005\\analysis\\ENGINEERING_INTERVALS.csv",
+      "bytes": 1879024,
+      "sha256": "df160da72aed05dc7562cea5b0ee003c0173bf2aa8adc35c43185784ccf9ce8e",
+      "kind": "new_actual_GT_saved_intervals"
+    },
+    {
+      "path": "D:\\hospital_ies_v20_20261019\\outputs\\v20_load_accounting_20261019_run01\\provenance\\normal_resource_profile\\supervision_canonical02\\v20_normal_005.result.json",
+      "bytes": 1183,
+      "sha256": "96d696b25344388f645176de8c0ebc8fbd1654d5a0f95928def6d80abfe2fb19",
+      "kind": "actual_M20_resource_result"
+    },
+    {
+      "path": "D:\\hospital_ies_v20_20261019\\outputs\\v20_load_accounting_20261019_run01\\provenance\\normal_resource_profile\\supervision_canonical02\\v20_normal_005.command.json",
+      "bytes": 1878,
+      "sha256": "99474c6934618033d4f24344061cb451737987a6e3b7d30e5d1ace66328b4000",
+      "kind": "actual_resource_scientific_command"
+    },
+    {
+      "path": "D:\\云大文件\\论文\\医院ies\\code_4_2\\outputs\\v19_model_closeout_20261018_run01\\experiments\\normal_E_final_r1_002\\pairs\\v17_N2_d7ae489a9d9b2341333e4104__endurance_restore_p0_ready_v14r6\\RESULT.json",
+      "bytes": 319283,
+      "sha256": "519caf780c0065143fe2d30e0bc57a0e39b01d7a1d426bc9c6bf5c32b1df5757",
+      "kind": "old_normal_RESULT"
+    },
+    {
+      "path": "D:\\云大文件\\论文\\医院ies\\code_4_2\\outputs\\v19_model_closeout_20261018_run01\\experiments\\normal_E_final_r1_002\\plan.json",
+      "bytes": 41676,
+      "sha256": "9dfbe2492eb26c2ba40e22db6abe3deac397bac95f2bf190f6650f3423e8298a",
+      "kind": "normal_version_binding"
+    },
+    {
+      "path": "D:\\云大文件\\论文\\医院ies\\code_4_2\\outputs\\v19_model_closeout_20261018_run01\\experiments\\normal_E_final_r1_002\\manifest.json",
+      "bytes": 73383,
+      "sha256": "46c3a6635fefd2f57e4a93ffdc8835316bb5d8f9222479d5ff03b93eea94fa7f",
+      "kind": "normal_version_binding"
+    },
+    {
+      "path": "D:\\云大文件\\论文\\医院ies\\code_4_2\\outputs\\v19_model_closeout_20261018_run01\\experiments\\normal_E_final_r1_002\\BATCH_RESULT.json",
+      "bytes": 7017,
+      "sha256": "7b45860b8b2593f6eb8b98c20ae89456b24001444a61865f55a4b7301e43dea3",
+      "kind": "normal_version_binding"
+    },
+    {
+      "path": "D:\\云大文件\\论文\\医院ies\\code_4_2\\outputs\\v19_model_closeout_20261018_run01\\experiments\\normal_E_final_r1_002\\ATTEMPTS.jsonl",
+      "bytes": 646,
+      "sha256": "9bf55c62edee8b396129a3a6c3a23f06d47dcad5df503a75faf415b79b6241d7",
+      "kind": "normal_version_binding"
+    },
+    {
+      "path": "D:\\云大文件\\论文\\医院ies\\code_4_2\\outputs\\v19_model_closeout_20261018_run01\\experiments\\normal_E_final_r1_002\\analysis\\ENGINEERING_INTERVALS.csv",
+      "bytes": 3010316,
+      "sha256": "f7230e1fe4e584f421181a1c8bc9a71c6e9e472a6b1de4b45a7480e25235659f",
+      "kind": "old_actual_GT_saved_intervals"
+    },
+    {
+      "path": "D:\\hospital_ies_v20_20261019\\outputs\\v20_load_accounting_20261019_run01\\experiments\\v20_normal_006\\analysis\\ENGINEERING_INTERVALS.csv",
+      "bytes": 2963099,
+      "sha256": "ca6f6a83c318748303eecf77c0f10400b48d3463783727078f1d7adb6e472fdb",
+      "kind": "new_actual_GT_saved_intervals"
+    },
+    {
+      "path": "D:\\hospital_ies_v20_20261019\\outputs\\v20_load_accounting_20261019_run01\\provenance\\normal_resource_profile\\supervision_canonical02\\v20_normal_006.result.json",
+      "bytes": 1174,
+      "sha256": "60a42564bd44112cf536c575fab9e943e5f625f6669c0e02c7afb7a13af9833f",
+      "kind": "actual_M20_resource_result"
+    },
+    {
+      "path": "D:\\hospital_ies_v20_20261019\\outputs\\v20_load_accounting_20261019_run01\\provenance\\normal_resource_profile\\supervision_canonical02\\v20_normal_006.command.json",
+      "bytes": 1878,
+      "sha256": "be6134f7d0c5245f9f67818d84dcb4dc65933724d0d9047d964056610e765528",
+      "kind": "actual_resource_scientific_command"
+    },
+    {
+      "path": "D:\\云大文件\\论文\\医院ies\\code_4_2\\outputs\\v19_model_closeout_20261018_run01\\experiments\\normal_K1_final_r1_002\\pairs\\v17_N2_d7ae489a9d9b2341333e4104__readiness_handoff_K1_v15\\RESULT.json",
+      "bytes": 317209,
+      "sha256": "e5e78db6d0de896fc1d3c4ec2f0baffaff227368ef82fc2647a505412dda2eeb",
+      "kind": "old_normal_RESULT"
+    },
+    {
+      "path": "D:\\云大文件\\论文\\医院ies\\code_4_2\\outputs\\v19_model_closeout_20261018_run01\\experiments\\normal_K1_final_r1_002\\plan.json",
+      "bytes": 41516,
+      "sha256": "46ae7451bb9fb428853c49c4767d5b4423dbcb0fab815fec0bb8f9a172246f10",
+      "kind": "normal_version_binding"
+    },
+    {
+      "path": "D:\\云大文件\\论文\\医院ies\\code_4_2\\outputs\\v19_model_closeout_20261018_run01\\experiments\\normal_K1_final_r1_002\\manifest.json",
+      "bytes": 73373,
+      "sha256": "6d74708e104e2ee97bd975bd59aaec5fadb44316972b2298adfe54a442acee21",
+      "kind": "normal_version_binding"
+    },
+    {
+      "path": "D:\\云大文件\\论文\\医院ies\\code_4_2\\outputs\\v19_model_closeout_20261018_run01\\experiments\\normal_K1_final_r1_002\\BATCH_RESULT.json",
+      "bytes": 7000,
+      "sha256": "5eaa28b023337f27a03385689fbbf47830af0eb162383fb1d01c4484ab642b34",
+      "kind": "normal_version_binding"
+    },
+    {
+      "path": "D:\\云大文件\\论文\\医院ies\\code_4_2\\outputs\\v19_model_closeout_20261018_run01\\experiments\\normal_K1_final_r1_002\\ATTEMPTS.jsonl",
+      "bytes": 629,
+      "sha256": "647ce641ea6ee61789e2669163962ec95a288d1abe7f1b89d9416edbe90b3773",
+      "kind": "normal_version_binding"
+    },
+    {
+      "path": "D:\\云大文件\\论文\\医院ies\\code_4_2\\outputs\\v19_model_closeout_20261018_run01\\experiments\\normal_K1_final_r1_002\\analysis\\ENGINEERING_INTERVALS.csv",
+      "bytes": 2879819,
+      "sha256": "b576d8df4c117f677ad030f05e608706160bc82b6cdb4b9acedde4fa1f48268a",
+      "kind": "old_actual_GT_saved_intervals"
+    },
+    {
+      "path": "D:\\hospital_ies_v20_20261019\\outputs\\v20_load_accounting_20261019_run01\\experiments\\v20_normal_007\\analysis\\ENGINEERING_INTERVALS.csv",
+      "bytes": 2831120,
+      "sha256": "25eb43e0eb36aa38aa1bd8f2cb87e66292c33f02f7ddebdfd4f927c5e01fcd86",
+      "kind": "new_actual_GT_saved_intervals"
+    },
+    {
+      "path": "D:\\hospital_ies_v20_20261019\\outputs\\v20_load_accounting_20261019_run01\\provenance\\normal_resource_profile\\supervision_canonical02\\v20_normal_007.result.json",
+      "bytes": 1181,
+      "sha256": "b22b59b6c92956efa7195c3eba7b75fe375a82b5a875df8f5488e5c26e25f845",
+      "kind": "actual_M20_resource_result"
+    },
+    {
+      "path": "D:\\hospital_ies_v20_20261019\\outputs\\v20_load_accounting_20261019_run01\\provenance\\normal_resource_profile\\supervision_canonical02\\v20_normal_007.command.json",
+      "bytes": 1878,
+      "sha256": "6534d75a8f1da506e9474f9206c3af53fbe01362b9788ea9d0fcad12158287bd",
+      "kind": "actual_resource_scientific_command"
+    },
+    {
+      "path": "D:\\云大文件\\论文\\医院ies\\code_4_2\\outputs\\v19_model_closeout_20261018_run01\\experiments\\normal_C19_final_r1_002\\pairs\\v17_N2_d7ae489a9d9b2341333e4104__C19_critical_reserve_v19r1\\RESULT.json",
+      "bytes": 317199,
+      "sha256": "03be043d7bb7cd65aa7c0ea50f0abab6c9928a32856ac46b57eb4bce322ae39d",
+      "kind": "old_normal_RESULT"
+    },
+    {
+      "path": "D:\\云大文件\\论文\\医院ies\\code_4_2\\outputs\\v19_model_closeout_20261018_run01\\experiments\\normal_C19_final_r1_002\\plan.json",
+      "bytes": 41666,
+      "sha256": "7d0ed3a4abe3f30c6c21ef0064387d895f2f80ea6fc8b441baa1c292415528f3",
+      "kind": "normal_version_binding"
+    },
+    {
+      "path": "D:\\云大文件\\论文\\医院ies\\code_4_2\\outputs\\v19_model_closeout_20261018_run01\\experiments\\normal_C19_final_r1_002\\manifest.json",
+      "bytes": 73383,
+      "sha256": "73af5bd7e2dd3e5640e2b129b22b0f2590063327c96f0164117c35bb2b96c945",
+      "kind": "normal_version_binding"
+    },
+    {
+      "path": "D:\\云大文件\\论文\\医院ies\\code_4_2\\outputs\\v19_model_closeout_20261018_run01\\experiments\\normal_C19_final_r1_002\\BATCH_RESULT.json",
+      "bytes": 7009,
+      "sha256": "ce9d32368054941dfdf3b67a84bf40139dd9cc029a01fc1c612cc4f0c04e0e1b",
+      "kind": "normal_version_binding"
+    },
+    {
+      "path": "D:\\云大文件\\论文\\医院ies\\code_4_2\\outputs\\v19_model_closeout_20261018_run01\\experiments\\normal_C19_final_r1_002\\ATTEMPTS.jsonl",
+      "bytes": 634,
+      "sha256": "8568be485a1e225ce0d7b51dd8347d602b88865a84a0d2ab364017ead155d17c",
+      "kind": "normal_version_binding"
+    },
+    {
+      "path": "D:\\云大文件\\论文\\医院ies\\code_4_2\\outputs\\v19_model_closeout_20261018_run01\\experiments\\normal_C19_final_r1_002\\analysis\\ENGINEERING_INTERVALS.csv",
+      "bytes": 21505937,
+      "sha256": "8b7798ac2b336d44855514b941502b8558d93a6465db4f71f6cf552ccc366bba",
+      "kind": "old_actual_GT_saved_intervals"
+    },
+    {
+      "path": "D:\\hospital_ies_v20_20261019\\outputs\\v20_load_accounting_20261019_run01\\experiments\\v20_normal_008\\analysis\\ENGINEERING_INTERVALS.csv",
+      "bytes": 2825445,
+      "sha256": "063ecf600c4ecc883b0780bcfdd7a55fa5f9c1e6b4414237e0b87fbc2872bc85",
+      "kind": "new_actual_GT_saved_intervals"
+    },
+    {
+      "path": "D:\\云大文件\\论文\\医院ies\\code_4_2\\outputs\\v19_model_closeout_20261018_run01\\experiments\\normal_E_final_r1_003\\pairs\\v17_N2_68c28ce356bdd0d883b76642__endurance_restore_p0_ready_v14r6\\RESULT.json",
+      "bytes": 320462,
+      "sha256": "6662de05187ba22a7c230afcf40d3ce4131e86f4a874d0629dd96338b3b144df",
+      "kind": "old_normal_RESULT"
+    },
+    {
+      "path": "D:\\云大文件\\论文\\医院ies\\code_4_2\\outputs\\v19_model_closeout_20261018_run01\\experiments\\normal_E_final_r1_003\\plan.json",
+      "bytes": 41676,
+      "sha256": "b19631a25442bcdde2693f18aa2930dd7367ca9429d8216a642d1daf83698039",
+      "kind": "normal_version_binding"
+    },
+    {
+      "path": "D:\\云大文件\\论文\\医院ies\\code_4_2\\outputs\\v19_model_closeout_20261018_run01\\experiments\\normal_E_final_r1_003\\manifest.json",
+      "bytes": 73382,
+      "sha256": "3d2fbca511126dd32ff31c87870cf48031cbe0a164e6379afe1287e6742f437b",
+      "kind": "normal_version_binding"
+    },
+    {
+      "path": "D:\\云大文件\\论文\\医院ies\\code_4_2\\outputs\\v19_model_closeout_20261018_run01\\experiments\\normal_E_final_r1_003\\BATCH_RESULT.json",
+      "bytes": 7010,
+      "sha256": "69e57945250cecc5a4696fcef6ddb30439afcec9ffcc9c093becd5e4a30a8cb4",
+      "kind": "normal_version_binding"
+    },
+    {
+      "path": "D:\\云大文件\\论文\\医院ies\\code_4_2\\outputs\\v19_model_closeout_20261018_run01\\experiments\\normal_E_final_r1_003\\ATTEMPTS.jsonl",
+      "bytes": 645,
+      "sha256": "6c92540968ff4ced942cdb51554d85e11f14fd7d9ba4425a07eef8f1395ec5d7",
+      "kind": "normal_version_binding"
+    },
+    {
+      "path": "D:\\云大文件\\论文\\医院ies\\code_4_2\\outputs\\v19_model_closeout_20261018_run01\\experiments\\normal_E_final_r1_003\\analysis\\ENGINEERING_INTERVALS.csv",
+      "bytes": 988196,
+      "sha256": "b4dc9d7a5ecfadcb613a119d2148a4423b461e78e0c1ae53007f06daa3b48cc1",
+      "kind": "old_actual_GT_saved_intervals"
+    },
+    {
+      "path": "D:\\hospital_ies_v20_20261019\\outputs\\v20_load_accounting_20261019_run01\\experiments\\v20_normal_009\\analysis\\ENGINEERING_INTERVALS.csv",
+      "bytes": 969022,
+      "sha256": "5ca8b9d4ff344b9637b31aa651c94e7a27c83fbea25028c54d880a9da92ae705",
+      "kind": "new_actual_GT_saved_intervals"
+    },
+    {
+      "path": "D:\\云大文件\\论文\\医院ies\\code_4_2\\outputs\\v19_model_closeout_20261018_run01\\experiments\\normal_K1_final_r1_003\\pairs\\v17_N2_68c28ce356bdd0d883b76642__readiness_handoff_K1_v15\\RESULT.json",
+      "bytes": 317796,
+      "sha256": "56eebd483615d46b1e6bc9c8251cc5c4aac9183b3e37089d44b4319c6a7a932b",
+      "kind": "old_normal_RESULT"
+    },
+    {
+      "path": "D:\\云大文件\\论文\\医院ies\\code_4_2\\outputs\\v19_model_closeout_20261018_run01\\experiments\\normal_K1_final_r1_003\\plan.json",
+      "bytes": 41516,
+      "sha256": "e4451b48630f99d6973665dd13561af4a8a751449ec9a0b7f6c3b4f7d6494af7",
+      "kind": "normal_version_binding"
+    },
+    {
+      "path": "D:\\云大文件\\论文\\医院ies\\code_4_2\\outputs\\v19_model_closeout_20261018_run01\\experiments\\normal_K1_final_r1_003\\manifest.json",
+      "bytes": 73372,
+      "sha256": "367795e571151c82ce52971b851775f311e679dec308f97a6ab70dc88568fe1b",
+      "kind": "normal_version_binding"
+    },
+    {
+      "path": "D:\\云大文件\\论文\\医院ies\\code_4_2\\outputs\\v19_model_closeout_20261018_run01\\experiments\\normal_K1_final_r1_003\\BATCH_RESULT.json",
+      "bytes": 6991,
+      "sha256": "f2705c9767a640245ba2d3e932317bf8b3e42d3a14fc0c791f7b89b671cc61c3",
+      "kind": "normal_version_binding"
+    },
+    {
+      "path": "D:\\云大文件\\论文\\医院ies\\code_4_2\\outputs\\v19_model_closeout_20261018_run01\\experiments\\normal_K1_final_r1_003\\ATTEMPTS.jsonl",
+      "bytes": 630,
+      "sha256": "94b2e35a17417dd8da7ddf0559561931a8eb77e60283e142f2b9c75bbb967474",
+      "kind": "normal_version_binding"
+    },
+    {
+      "path": "D:\\云大文件\\论文\\医院ies\\code_4_2\\outputs\\v19_model_closeout_20261018_run01\\experiments\\normal_K1_final_r1_003\\analysis\\ENGINEERING_INTERVALS.csv",
+      "bytes": 957750,
+      "sha256": "0a64206a36f78fcb6970e9ee17c344ecadd35e861462d62574641d137c98c307",
+      "kind": "old_actual_GT_saved_intervals"
+    },
+    {
+      "path": "D:\\hospital_ies_v20_20261019\\outputs\\v20_load_accounting_20261019_run01\\experiments\\v20_normal_010\\analysis\\ENGINEERING_INTERVALS.csv",
+      "bytes": 941154,
+      "sha256": "af13b2825679c7efd7e9cbfc17931b2a28d4b53f57af599759ee60db158c78f1",
+      "kind": "new_actual_GT_saved_intervals"
+    },
+    {
+      "path": "D:\\hospital_ies_v20_20261019\\outputs\\v20_load_accounting_20261019_run01\\provenance\\normal_resource_profile\\supervision_canonical02\\v20_normal_010.result.json",
+      "bytes": 1180,
+      "sha256": "d4e25982448202748d408f949287282f1c32f976aae36320254d9f7ed41ef21e",
+      "kind": "actual_M20_resource_result"
+    },
+    {
+      "path": "D:\\hospital_ies_v20_20261019\\outputs\\v20_load_accounting_20261019_run01\\provenance\\normal_resource_profile\\supervision_canonical02\\v20_normal_010.command.json",
+      "bytes": 1878,
+      "sha256": "2d8da913bd5ddbd8aeaa0655f4a80084281e683771adca946f2112a76f34d3f3",
+      "kind": "actual_resource_scientific_command"
+    },
+    {
+      "path": "D:\\云大文件\\论文\\医院ies\\code_4_2\\outputs\\v19_model_closeout_20261018_run01\\experiments\\normal_C19_final_r1_003\\pairs\\v17_N2_68c28ce356bdd0d883b76642__C19_critical_reserve_v19r1\\RESULT.json",
+      "bytes": 317885,
+      "sha256": "73d4a681fb50c6f43addfc5a0dc358a3eca5003a1eb92673ebacd0a9b2eb634a",
+      "kind": "old_normal_RESULT"
+    },
+    {
+      "path": "D:\\云大文件\\论文\\医院ies\\code_4_2\\outputs\\v19_model_closeout_20261018_run01\\experiments\\normal_C19_final_r1_003\\plan.json",
+      "bytes": 41666,
+      "sha256": "522eecf90ec4700f4b792a96358eb7ecb4a8be106d58519b1b3f4b2f63803d9b",
+      "kind": "normal_version_binding"
+    },
+    {
+      "path": "D:\\云大文件\\论文\\医院ies\\code_4_2\\outputs\\v19_model_closeout_20261018_run01\\experiments\\normal_C19_final_r1_003\\manifest.json",
+      "bytes": 73382,
+      "sha256": "6ffeca13d062478241a6d0d52e39707bd3141c20d6ddaf1ebd274204c719d6c0",
+      "kind": "normal_version_binding"
+    },
+    {
+      "path": "D:\\云大文件\\论文\\医院ies\\code_4_2\\outputs\\v19_model_closeout_20261018_run01\\experiments\\normal_C19_final_r1_003\\BATCH_RESULT.json",
+      "bytes": 7007,
+      "sha256": "9ce1a5def439df12e63321f85fdb53f69e7f4c5500c6b80657d72e402b16cdea",
+      "kind": "normal_version_binding"
+    },
+    {
+      "path": "D:\\云大文件\\论文\\医院ies\\code_4_2\\outputs\\v19_model_closeout_20261018_run01\\experiments\\normal_C19_final_r1_003\\ATTEMPTS.jsonl",
+      "bytes": 634,
+      "sha256": "dd6e7ebf6ec8f272ef0ff5645576a51ba0d8078314014e558c271dcec1207347",
+      "kind": "normal_version_binding"
+    },
+    {
+      "path": "D:\\云大文件\\论文\\医院ies\\code_4_2\\outputs\\v19_model_closeout_20261018_run01\\experiments\\normal_C19_final_r1_003\\analysis\\ENGINEERING_INTERVALS.csv",
+      "bytes": 12223779,
+      "sha256": "83d6d52013164ba3d6734be0b030469339da43cbcfd8a4085e3f16e013acbee6",
+      "kind": "old_actual_GT_saved_intervals"
+    },
+    {
+      "path": "D:\\hospital_ies_v20_20261019\\outputs\\v20_load_accounting_20261019_run01\\experiments\\v20_normal_011\\analysis\\ENGINEERING_INTERVALS.csv",
+      "bytes": 937747,
+      "sha256": "afeed03be1830442481eb9a75744da8d1093edc05e643c83a9c16689081bff37",
+      "kind": "new_actual_GT_saved_intervals"
+    },
+    {
+      "path": "D:\\hospital_ies_v20_20261019\\outputs\\v20_load_accounting_20261019_run01\\provenance\\normal_resource_profile\\supervision_canonical02\\v20_normal_011.result.json",
+      "bytes": 1180,
+      "sha256": "051bf79b32590e855a0854ffd520bc09c4a79c9153b4f85694308b95189de721",
+      "kind": "actual_M20_resource_result"
+    },
+    {
+      "path": "D:\\hospital_ies_v20_20261019\\outputs\\v20_load_accounting_20261019_run01\\provenance\\normal_resource_profile\\supervision_canonical02\\v20_normal_011.command.json",
+      "bytes": 1878,
+      "sha256": "3b9dcef19895b3d138b9fab1649e544a97f909dbaf4978cf4e202dfed73d92f8",
+      "kind": "actual_resource_scientific_command"
+    }
+  ],
+  "outputs": [
+    {
+      "path": "outputs/v20_load_accounting_20261019_run01/review/normal_window_analysis03/NORMAL_SOURCES_COST_CO2.csv",
+      "bytes": 18311,
+      "sha256": "6c123fbbf0c5aab7f05903b536c91073003fd1fd1b393f368158d86b6e7a1da8",
+      "rows": 12
+    },
+    {
+      "path": "outputs/v20_load_accounting_20261019_run01/review/normal_window_analysis03/SERVICE_PRIORITY_CARRIER.csv",
+      "bytes": 28942,
+      "sha256": "d538541948bc766ef00ace37b17ccc63b0648cb114cda94e750f032424202b79",
+      "rows": 144
+    },
+    {
+      "path": "outputs/v20_load_accounting_20261019_run01/review/normal_window_analysis03/FACTOR_SENSITIVITY.csv",
+      "bytes": 20340,
+      "sha256": "f910ec34e0c55e586417e58e709e7a858e4dd4ac55e2fd99a95a8b9cefaf498e",
+      "rows": 48
+    },
+    {
+      "path": "outputs/v20_load_accounting_20261019_run01/review/normal_window_analysis03/V19_VERSION_COMPARISON.csv",
+      "bytes": 21661,
+      "sha256": "008105289bb5ee5a800bf5f0a783dd3e5b92eb4b1dd3bfd14622b1bcd1e71625",
+      "rows": 12
+    },
+    {
+      "path": "outputs/v20_load_accounting_20261019_run01/review/normal_window_analysis03/MATCHED_POLICY_PAIRS.csv",
+      "bytes": 51823,
+      "sha256": "c9794ddbeb9fddf5d3a29d7e842807b2304b6cfa04f16fd12422d05ba91148cb",
+      "rows": 12
+    },
+    {
+      "path": "outputs/v20_load_accounting_20261019_run01/review/normal_window_analysis03/RESOURCE_MEASUREMENTS.csv",
+      "bytes": 4011,
+      "sha256": "d67c2118cb9772f2f039a6971e9b24ec4f197b2663ff7bce5e09dd6c51f622e4",
+      "rows": 12
+    },
+    {
+      "path": "outputs/v20_load_accounting_20261019_run01/review/normal_window_analysis03/MATCH_PROOFS.json",
+      "bytes": 91921,
+      "sha256": "b244c83741a55f053a7abbadd43e11e2330b236e8b341ab95962d62822d0787a"
+    },
+    {
+      "path": "docs/v20/NORMAL_WINDOW_ANALYSIS.md",
+      "bytes": 16221,
+      "sha256": "dd872169cb918851740a0614bbe8c2edde1ea6ee507906ef98e599ba94f40e39"
+    }
+  ],
+  "maximum_numeric_reconciliation_errors": {
+    "window_economics": 0.0,
+    "grid_source_economics": 0.0,
+    "DG_source_economics": 0.0,
+    "fee_components": 4.547473508864641e-13,
+    "DG_budget_delta": 0.0,
+    "new_report_service_readback": 0.0,
+    "service_ledger_classifier": 0.0,
+    "old_report_service_readback": 0.0,
+    "new_actual_GT_CSV_vs_source_ledger": 1.000444171950221e-11,
+    "old_saved_economics": 0.0,
+    "new_factor_recalculation": 0.0,
+    "old_factor_recalculation": 0.0
+  },
+  "actual_M20_resources_distinct_from_old_M19_profile": true,
+  "admission_margin_modified": true,
+  "resource_admission_change_scope": "new008 external1.1 plus selected2or3GiB; canonical02 retains1.2 plus6GiB; frozen science unchanged",
+  "old_request_delivery_remains_unknown": true,
+  "diesel_exact_chemical_CO2_unknown": true,
+  "physical_episodes_started": 0,
+  "raw_files_opened": 0,
+  "annual_values_parsed": 0,
+  "signature": "94165c7235a4a30d9a41e0779bcb33c02e44a2634fb8c0d7f0355f1c4e6185bb"
+}

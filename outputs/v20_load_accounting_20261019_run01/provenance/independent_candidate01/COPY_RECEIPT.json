@@ -1,0 +1,107 @@
+{
+  "schema": "hospital_ies.v20.independent_candidate_evidence.v1",
+  "utc": "2026-10-19T04:52:58.916359+00:00",
+  "candidate_root": "D:\\hospital_ies_v20_candidate_20261019",
+  "status": "passed",
+  "core_tests": 463,
+  "core_exit_code": 0,
+  "replay_minutes": 600,
+  "scalar_count": 94,
+  "maximum_absolute_scalar_difference": 0.0,
+  "replay_exit_code": 0,
+  "part_of_canonical_406": false,
+  "post_push_fresh_clone_status": "not_yet_executed",
+  "raw_left_in_candidate": true,
+  "files": [
+    {
+      "source_path": "D:\\hospital_ies_v20_candidate_20261019\\publication_checks\\core01\\COMMAND.json",
+      "copied_path": "outputs/v20_load_accounting_20261019_run01/provenance/independent_candidate01/publication_checks/core01/COMMAND.json",
+      "bytes": 794,
+      "sha256": "c246183fe317cee9680b56bd4e897547838c7729c8d6f8204ebe473bd32976a4"
+    },
+    {
+      "source_path": "D:\\hospital_ies_v20_candidate_20261019\\publication_checks\\core01\\command.log",
+      "copied_path": "outputs/v20_load_accounting_20261019_run01/provenance/independent_candidate01/publication_checks/core01/command.log",
+      "bytes": 600,
+      "sha256": "581fdc2e803e1e1df4c8cf2f1b5cbf37349aa9e79c09c7c8de7470a0a26104fb"
+    },
+    {
+      "source_path": "D:\\hospital_ies_v20_candidate_20261019\\publication_checks\\preflight01\\COMMAND.json",
+      "copied_path": "outputs/v20_load_accounting_20261019_run01/provenance/independent_candidate01/publication_checks/preflight01/COMMAND.json",
+      "bytes": 865,
+      "sha256": "b2910e305a51e1cc373067314001f3887555ef1ccc93df6b8edaf31118456498"
+    },
+    {
+      "source_path": "D:\\hospital_ies_v20_candidate_20261019\\publication_checks\\preflight01\\command.log",
+      "copied_path": "outputs/v20_load_accounting_20261019_run01/provenance/independent_candidate01/publication_checks/preflight01/command.log",
+      "bytes": 6388,
+      "sha256": "ae3218f97f7a25af9a191bfaa799875bc6e7e5c726ee17e34ceabdaadefb255c"
+    },
+    {
+      "source_path": "D:\\hospital_ies_v20_candidate_20261019\\publication_checks\\replay01\\COMMAND.json",
+      "copied_path": "outputs/v20_load_accounting_20261019_run01/provenance/independent_candidate01/publication_checks/replay01/COMMAND.json",
+      "bytes": 834,
+      "sha256": "04131961fc28434a194124a8a7871644e5f6a4b5e3713d1a2f6a9f73c658da22"
+    },
+    {
+      "source_path": "D:\\hospital_ies_v20_candidate_20261019\\publication_checks\\replay01\\command.log",
+      "copied_path": "outputs/v20_load_accounting_20261019_run01/provenance/independent_candidate01/publication_checks/replay01/command.log",
+      "bytes": 1271,
+      "sha256": "91a690f50bb1e9a2d3f0feb1fb3df6e4b5d094c215c8614ebab0aeaf8f036f3e"
+    },
+    {
+      "source_path": "D:\\hospital_ies_v20_candidate_20261019\\outputs\\v20_load_accounting_20261019_run01\\review\\independent_repository_candidate01\\CHILD_GUARD.json",
+      "copied_path": "outputs/v20_load_accounting_20261019_run01/provenance/independent_candidate01/outputs/v20_load_accounting_20261019_run01/review/independent_repository_candidate01/CHILD_GUARD.json",
+      "bytes": 39616,
+      "sha256": "568e909acc1ec7e5f2040450885894c5a1d804b03249d729c497a8375f774b93"
+    },
+    {
+      "source_path": "D:\\hospital_ies_v20_candidate_20261019\\outputs\\v20_load_accounting_20261019_run01\\review\\independent_repository_candidate01\\INDEPENDENT_REPRODUCTION_PROOF.json",
+      "copied_path": "outputs/v20_load_accounting_20261019_run01/provenance/independent_candidate01/outputs/v20_load_accounting_20261019_run01/review/independent_repository_candidate01/INDEPENDENT_REPRODUCTION_PROOF.json",
+      "bytes": 73332,
+      "sha256": "92a681354249cd3717025b1693a61b1faf0047a24e511e1c553f3f3335fc18e4"
+    },
+    {
+      "source_path": "D:\\hospital_ies_v20_candidate_20261019\\outputs\\v20_load_accounting_20261019_run01\\review\\independent_repository_candidate01\\PREREGISTRATION.json",
+      "copied_path": "outputs/v20_load_accounting_20261019_run01/provenance/independent_candidate01/outputs/v20_load_accounting_20261019_run01/review/independent_repository_candidate01/PREREGISTRATION.json",
+      "bytes": 47713,
+      "sha256": "3d4079243ae780d6f6efe6eb10d4873584d5b31444a467875eb1ace78d263776"
+    },
+    {
+      "source_path": "D:\\hospital_ies_v20_candidate_20261019\\outputs\\v20_load_accounting_20261019_run01\\review\\independent_repository_candidate01\\child_guard\\guard_config.json",
+      "copied_path": "outputs/v20_load_accounting_20261019_run01/provenance/independent_candidate01/outputs/v20_load_accounting_20261019_run01/review/independent_repository_candidate01/child_guard/guard_config.json",
+      "bytes": 383,
+      "sha256": "f8052daab7424badcac8e152955d217d164eaf9d301810bf6100e05a114e29a0"
+    },
+    {
+      "source_path": "D:\\hospital_ies_v20_candidate_20261019\\outputs\\v20_load_accounting_20261019_run01\\review\\independent_repository_candidate01\\child_guard\\sitecustomize.py",
+      "copied_path": "outputs/v20_load_accounting_20261019_run01/provenance/independent_candidate01/outputs/v20_load_accounting_20261019_run01/review/independent_repository_candidate01/child_guard/sitecustomize.py",
+      "bytes": 1954,
+      "sha256": "2ad552319f4f42fbe0ebac338e7105b56b32bcc764caeb08877206c2f23e45dc"
+    },
+    {
+      "source_path": "D:\\hospital_ies_v20_candidate_20261019\\outputs\\v20_load_accounting_20261019_run01\\review\\reproduce_candidate01\\PREREGISTRATION.json",
+      "copied_path": "outputs/v20_load_accounting_20261019_run01/provenance/independent_candidate01/outputs/v20_load_accounting_20261019_run01/review/reproduce_candidate01/PREREGISTRATION.json",
+      "bytes": 5015,
+      "sha256": "c46e400ad38c83139482d4eab62053de24a59d14cb62e02a7c8b76c5bb439d7e"
+    },
+    {
+      "source_path": "D:\\hospital_ies_v20_candidate_20261019\\outputs\\v20_load_accounting_20261019_run01\\review\\reproduce_candidate01\\REPRODUCTION_PROOF.json",
+      "copied_path": "outputs/v20_load_accounting_20261019_run01/provenance/independent_candidate01/outputs/v20_load_accounting_20261019_run01/review/reproduce_candidate01/REPRODUCTION_PROOF.json",
+      "bytes": 19599,
+      "sha256": "7675aa798dc518302a5c5095fc03320f1883447f469a9f55c18c12d38ad5473e"
+    },
+    {
+      "source_path": "D:\\hospital_ies_v20_candidate_20261019\\outputs\\v20_load_accounting_20261019_run01\\review\\reproduce_candidate01\\runner.log",
+      "copied_path": "outputs/v20_load_accounting_20261019_run01/provenance/independent_candidate01/outputs/v20_load_accounting_20261019_run01/review/reproduce_candidate01/runner.log",
+      "bytes": 333,
+      "sha256": "11bd9ee76b9f0e9cb60225e7d56cd67598afb9fd8cecbc3e40db5bf6edae9ed9"
+    },
+    {
+      "source_path": "D:\\hospital_v20_release_check_20261019.py",
+      "copied_path": "outputs/v20_load_accounting_20261019_run01/provenance/independent_candidate01/release_check_capture.py",
+      "bytes": 1818,
+      "sha256": "30fdd1bba7e7d15a56f85403a05a3e91379170b3155ca317109ba96d3841b192"
+    }
+  ]
+}

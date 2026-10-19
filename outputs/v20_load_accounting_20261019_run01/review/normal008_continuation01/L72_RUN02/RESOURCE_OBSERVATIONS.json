@@ -1,0 +1,23 @@
+{
+  "batch": "v20_normal_008",
+  "exit_code": 0,
+  "elapsed_seconds": 1024.061999999918,
+  "resource_samples": 430,
+  "unknown_process_samples": 0,
+  "sampled_private_peak_bytes": 24820436992,
+  "sampled_working_set_peak_bytes": 22700052480,
+  "observed_OS_lifetime_peak_working_set_bytes": 22719717376,
+  "minimum_observed_available_physical_bytes": 9726619648,
+  "minimum_observed_commit_headroom_bytes": 6988812288,
+  "measurements_are_M20": true,
+  "original_V19_admission_profile_not_overwritten": true,
+  "last_child": {
+    "batch": "v20_normal_008",
+    "pid": 32152,
+    "successful_Popen": true,
+    "owned_child_drained": true,
+    "exit_code": 0
+  },
+  "pressure_policy": "record only; never terminate science",
+  "qualification": null
+}

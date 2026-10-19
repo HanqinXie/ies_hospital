@@ -1,0 +1,31 @@
+..............................F.F                                        [100%]
+================================== FAILURES ===================================
+_________ test_no_hidden_heavy_module_can_reside_in_persistent_parent _________
+
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x000002B391C2B3D0>
+
+    def test_no_hidden_heavy_module_can_reside_in_persistent_parent(monkeypatch):
+        m=module();monkeypatch.setitem(sys.modules,'tools.synthetic_heavy_validator',object())
+        with pytest.raises(ValueError,match='Heavy'):
+>           m.parent_footprint()
+E           AttributeError: module '_continue008_test' has no attribute 'parent_footprint'
+
+publication\test_continue_normal008.py:153: AttributeError
+____________ test_preflight_failure_prevents_any_scientific_launch ____________
+
+tmp_path = WindowsPath('D:/hospital_ies_v20_20261019/outputs/v20_load_accounting_20261019_run01/review/normal008_continuation01/test_tmp/resident_red01/test_preflight_failure_prevent0')
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x000002B391C57130>
+
+    def test_preflight_failure_prevents_any_scientific_launch(tmp_path,monkeypatch):
+        from contextlib import nullcontext
+        m=module();monkeypatch.setattr(m,'HERE',tmp_path/'new_runs')
+        monkeypatch.setattr(m,'stop_evidence',lambda *a:dict(evidence_files=[]));monkeypatch.setattr(m,'historical_profile',profile)
+        monkeypatch.setattr(m,'serial_lease',nullcontext);monkeypatch.setattr(m,'active_science',lambda:([],[]))
+>       monkeypatch.setattr(m,'parent_footprint',lambda:dict(heavy_modules=[]))
+E       AttributeError: <module '_continue008_test' from 'D:\\hospital_ies_v20_20261019\\publication\\continue_normal008.py'> has no attribute 'parent_footprint'
+
+publication\test_continue_normal008.py:172: AttributeError
+=========================== short test summary info ===========================
+FAILED publication/test_continue_normal008.py::test_no_hidden_heavy_module_can_reside_in_persistent_parent
+FAILED publication/test_continue_normal008.py::test_preflight_failure_prevents_any_scientific_launch
+2 failed, 31 passed in 0.30s

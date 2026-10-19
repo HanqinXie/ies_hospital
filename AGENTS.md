@@ -1,13 +1,14 @@
-# Hospital IES V19 repository collaboration
+# 医院 IES V20 协作规则
 
-Read README.md, docs/REPOSITORY_REPRODUCTION.md and docs/v19/PAPER_MODEL_SPECIFICATION.md first.
-This is a curated V19 source publication; historical absolute paths in signed records are provenance.
+先读 `docs/v20/IMPLEMENTATION_PLAN.md`、`docs/v20/USER_TASK_20261019.txt`、字段合同和README。用户已授权连续完成修正、验证、固定比较、整理和推送，不沿用旧阶段停止点。
 
-- Preserve the original 345-file production binding, 235-file test binding, input bytes, frozen configuration and historical evidence. Future model changes need a new named version and validation record.
-- No MPC, future fault scripts, hidden execution permissions, capacity/load/threshold changes to make a policy win, or final-12 background access.
-- Separate faults, commands, delivery, actual execution, protection and evaluation. Retain solver failures, fallback, unknown outcomes and full denominators.
-- Keep the small historical files at their original relative paths. Run `python scripts/repository_assets.py verify` before and after changes.
-- Put large local artifacts and temporary outputs on D/E. Never add raw trajectories, training data, portable stages, archives, third-party literature PDFs, credentials or solver licenses to Git.
-- `python scripts/test_v19.py` runs the supported 13-file V19 targeted gate. `python -m pytest -q` is the historical full-suite entry point; it has not been certified for this compact publication profile.
-- Changes to the same physical state transition must be serial. Reproduce a defect and add a meaningful regression before a minimum necessary fix; do not weaken assertions or hide a core defect with xfail.
-- Record actual commands, exit codes, raw logs, passed/failed/unexecuted checks, assumptions and limitations. Do not copy prior results as a new run.
+- V19通过 `v19-model-closeout` 标签追溯。原始输入及旧结果不可改写为新结果；新版本建立独立源、输入、测试、模型、策略、配置与冻结。
+- 不增加MPC、未来故障/修复信息、物理容量或动作权限；不调整保护/服务阈值、冲击或评价容差制造优势。最终12背景封存；原八背景仅作已见复核。
+- 逐字段处理倍率，不统一修改CSV。保留压缩前代理和、超量、比例与P3余量；温度使用代表单区量。
+- 故障、命令生成/到达、实际执行、接点、保护及评价分开。保留失败、回退、未知尾段和未开始分母。
+- 先复现和有效红绿回归，再最小修复；同一物理核心串行改动。禁止删除断言、扩大容差或用xfail隐藏核心问题。
+- 默认 `python -m pytest -q` 的文件范围由 `pytest.ini` 明确，不冒充全部历史研究测试。结论必须有本次实际命令、退出码和原日志。
+- 冻结后不得更改被绑定生产/输入/测试继续混跑。修复需新冻结与新批次，不覆写旧attempt。
+- 大产物及TEMP/TMP放D/E。正常长窗单策略单进程全局串行；并发扣除在途子进程预留，不关闭用户程序。
+- 使用 `scripts/v20_repository.py verify` 校验科学闭包；`python publication/build_v20_release.py --destination <新D/E绝对目录>`按完整白名单发布并补齐冻结后发现的小型回归fixture。独立复现用 `python publication/reproduce_v20.py --name <新名称>`。raw、SQL、论文原件、许可证、凭据和缓存不入Git。
+- 替换main使用普通提交，保留地址、历史、标签及访问设置；推送前检查增改删清单，推送后独立克隆并运行核心门槛和完整代表案例。

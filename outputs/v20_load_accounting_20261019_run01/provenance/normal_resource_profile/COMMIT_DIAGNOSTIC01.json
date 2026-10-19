@@ -1,0 +1,7045 @@
+{
+  "schema": "hospital_ies.v20.commit_diagnostic.v1",
+  "started_utc": "2026-10-19T05:48:49.609580+00:00",
+  "finished_utc": "2026-10-19T05:48:56.788634+00:00",
+  "system_before": {
+    "utc": "2026-10-19T05:48:49.626357+00:00",
+    "total_physical_bytes": 50870132736,
+    "available_physical_bytes": 24407326720,
+    "committed_bytes": 51165061120,
+    "commit_limit_bytes": 61780164608,
+    "commit_headroom_bytes": 10615103488,
+    "counter_basis": "GlobalMemoryStatusEx physical; GetPerformanceInfo commit pages times page size"
+  },
+  "system_after": {
+    "utc": "2026-10-19T05:48:56.788634+00:00",
+    "total_physical_bytes": 50870132736,
+    "available_physical_bytes": 24074981376,
+    "committed_bytes": 51662041088,
+    "commit_limit_bytes": 61780164608,
+    "commit_headroom_bytes": 10118123520,
+    "counter_basis": "GlobalMemoryStatusEx physical; GetPerformanceInfo commit pages times page size"
+  },
+  "GetPerformanceInfo_bytes": {
+    "cb": 104,
+    "CommitTotal": 51165126656,
+    "CommitLimit": 61780164608,
+    "CommitPeak": 94171807744,
+    "PhysicalTotal": 50870132736,
+    "PhysicalAvailable": 24406056960,
+    "SystemCache": 18949455872,
+    "KernelTotal": 3691487232,
+    "KernelPaged": 1898942464,
+    "KernelNonpaged": 1792544768,
+    "PageSize": 4096,
+    "HandleCount": 331944,
+    "ProcessCount": 505,
+    "ThreadCount": 12540
+  },
+  "process_private_sum_bytes": 41633296384,
+  "process_count_read": 504,
+  "process_errors": [
+    {
+      "pid": 77480,
+      "error_type": "NoSuchProcess",
+      "error": "process PID not found (pid=77480)"
+    }
+  ],
+  "process_rows": [
+    {
+      "pid": 80504,
+      "name": "python.exe",
+      "private_bytes": 2974519296,
+      "working_set_bytes": 1414209536,
+      "peak_working_set_bytes": 1712541696,
+      "paged_pool_bytes": 640376,
+      "nonpaged_pool_bytes": 138984,
+      "is_M20_child": true,
+      "registered_directory": "outputs/v20_load_accounting_20261019_run01/experiments/v20_main_031"
+    },
+    {
+      "pid": 13908,
+      "name": "python.exe",
+      "private_bytes": 2528186368,
+      "working_set_bytes": 971624448,
+      "peak_working_set_bytes": 1868607488,
+      "paged_pool_bytes": 640376,
+      "nonpaged_pool_bytes": 126200,
+      "is_M20_child": true,
+      "registered_directory": "outputs/v20_load_accounting_20261019_run01/experiments/v20_main_032"
+    },
+    {
+      "pid": 38352,
+      "name": "Code.exe",
+      "private_bytes": 2238001152,
+      "working_set_bytes": 198316032,
+      "peak_working_set_bytes": 4516139008,
+      "paged_pool_bytes": 657928,
+      "nonpaged_pool_bytes": 71576,
+      "is_M20_child": false
+    },
+    {
+      "pid": 63684,
+      "name": "Code.exe",
+      "private_bytes": 1793826816,
+      "working_set_bytes": 1249099776,
+      "peak_working_set_bytes": 2519949312,
+      "paged_pool_bytes": 757568,
+      "nonpaged_pool_bytes": 45672,
+      "is_M20_child": false
+    },
+    {
+      "pid": 12700,
+      "name": "codex.exe",
+      "private_bytes": 1429102592,
+      "working_set_bytes": 481099776,
+      "peak_working_set_bytes": 888745984,
+      "paged_pool_bytes": 907656,
+      "nonpaged_pool_bytes": 411440,
+      "is_M20_child": false
+    },
+    {
+      "pid": 74648,
+      "name": "QQMusic.exe",
+      "private_bytes": 1080496128,
+      "working_set_bytes": 247312384,
+      "peak_working_set_bytes": 536051712,
+      "paged_pool_bytes": 1502360,
+      "nonpaged_pool_bytes": 6270952,
+      "is_M20_child": false
+    },
+    {
+      "pid": 62056,
+      "name": "chrome.exe",
+      "private_bytes": 994795520,
+      "working_set_bytes": 182833152,
+      "peak_working_set_bytes": 603103232,
+      "paged_pool_bytes": 1634848,
+      "nonpaged_pool_bytes": 115304,
+      "is_M20_child": false
+    },
+    {
+      "pid": 16568,
+      "name": "explorer.exe",
+      "private_bytes": 922038272,
+      "working_set_bytes": 344735744,
+      "peak_working_set_bytes": 761188352,
+      "paged_pool_bytes": 4837904,
+      "nonpaged_pool_bytes": 745656,
+      "is_M20_child": false
+    },
+    {
+      "pid": 31948,
+      "name": "Weixin.exe",
+      "private_bytes": 811835392,
+      "working_set_bytes": 441483264,
+      "peak_working_set_bytes": 1014439936,
+      "paged_pool_bytes": 1689368,
+      "nonpaged_pool_bytes": 176248,
+      "is_M20_child": false
+    },
+    {
+      "pid": 25248,
+      "name": "Code.exe",
+      "private_bytes": 806445056,
+      "working_set_bytes": 493826048,
+      "peak_working_set_bytes": 728731648,
+      "paged_pool_bytes": 974832,
+      "nonpaged_pool_bytes": 86456,
+      "is_M20_child": false
+    },
+    {
+      "pid": 63872,
+      "name": "Code.exe",
+      "private_bytes": 805675008,
+      "working_set_bytes": 461275136,
+      "peak_working_set_bytes": 913494016,
+      "paged_pool_bytes": 709640,
+      "nonpaged_pool_bytes": 35736,
+      "is_M20_child": false
+    },
+    {
+      "pid": 75148,
+      "name": "chrome.exe",
+      "private_bytes": 714981376,
+      "working_set_bytes": 530571264,
+      "peak_working_set_bytes": 1675530240,
+      "paged_pool_bytes": 988512,
+      "nonpaged_pool_bytes": 49520,
+      "is_M20_child": false
+    },
+    {
+      "pid": 54640,
+      "name": "Code.exe",
+      "private_bytes": 691638272,
+      "working_set_bytes": 95997952,
+      "peak_working_set_bytes": 274219008,
+      "paged_pool_bytes": 1288624,
+      "nonpaged_pool_bytes": 63088,
+      "is_M20_child": false
+    },
+    {
+      "pid": 2300,
+      "name": "dwm.exe",
+      "private_bytes": 635191296,
+      "working_set_bytes": 112963584,
+      "peak_working_set_bytes": 479473664,
+      "paged_pool_bytes": 2593464,
+      "nonpaged_pool_bytes": 141072,
+      "is_M20_child": false
+    },
+    {
+      "pid": 32928,
+      "name": "chrome.exe",
+      "private_bytes": 624009216,
+      "working_set_bytes": 560394240,
+      "peak_working_set_bytes": 1051066368,
+      "paged_pool_bytes": 960400,
+      "nonpaged_pool_bytes": 42344,
+      "is_M20_child": false
+    },
+    {
+      "pid": 75160,
+      "name": "steamwebhelper.exe",
+      "private_bytes": 564891648,
+      "working_set_bytes": 293572608,
+      "peak_working_set_bytes": 686469120,
+      "paged_pool_bytes": 875904,
+      "nonpaged_pool_bytes": 75152,
+      "is_M20_child": false
+    },
+    {
+      "pid": 31068,
+      "name": "QQ.exe",
+      "private_bytes": 561958912,
+      "working_set_bytes": 389697536,
+      "peak_working_set_bytes": 1516544000,
+      "paged_pool_bytes": 1958232,
+      "nonpaged_pool_bytes": 224624,
+      "is_M20_child": false
+    },
+    {
+      "pid": 33332,
+      "name": "QQ.exe",
+      "private_bytes": 513589248,
+      "working_set_bytes": 231063552,
+      "peak_working_set_bytes": 436723712,
+      "paged_pool_bytes": 1372840,
+      "nonpaged_pool_bytes": 53360,
+      "is_M20_child": false
+    },
+    {
+      "pid": 2476,
+      "name": "QQ.exe",
+      "private_bytes": 443797504,
+      "working_set_bytes": 51900416,
+      "peak_working_set_bytes": 316919808,
+      "paged_pool_bytes": 1251984,
+      "nonpaged_pool_bytes": 59456,
+      "is_M20_child": false
+    },
+    {
+      "pid": 16596,
+      "name": "svchost.exe",
+      "private_bytes": 437571584,
+      "working_set_bytes": 23724032,
+      "peak_working_set_bytes": 375853056,
+      "paged_pool_bytes": 276240,
+      "nonpaged_pool_bytes": 22992,
+      "is_M20_child": false
+    },
+    {
+      "pid": 5828,
+      "name": "TextInputHost.exe",
+      "private_bytes": 435920896,
+      "working_set_bytes": 105566208,
+      "peak_working_set_bytes": 434962432,
+      "paged_pool_bytes": 1723816,
+      "nonpaged_pool_bytes": 153432,
+      "is_M20_child": false
+    },
+    {
+      "pid": 58852,
+      "name": "Code.exe",
+      "private_bytes": 435752960,
+      "working_set_bytes": 289959936,
+      "peak_working_set_bytes": 786857984,
+      "paged_pool_bytes": 922512,
+      "nonpaged_pool_bytes": 49248,
+      "is_M20_child": false
+    },
+    {
+      "pid": 20440,
+      "name": "claude.exe",
+      "private_bytes": 432574464,
+      "working_set_bytes": 44474368,
+      "peak_working_set_bytes": 303964160,
+      "paged_pool_bytes": 627696,
+      "nonpaged_pool_bytes": 16968,
+      "is_M20_child": false
+    },
+    {
+      "pid": 80628,
+      "name": "chrome.exe",
+      "private_bytes": 421666816,
+      "working_set_bytes": 494268416,
+      "peak_working_set_bytes": 523653120,
+      "paged_pool_bytes": 1201896,
+      "nonpaged_pool_bytes": 49728,
+      "is_M20_child": false
+    },
+    {
+      "pid": 69660,
+      "name": "steamwebhelper.exe",
+      "private_bytes": 372568064,
+      "working_set_bytes": 78495744,
+      "peak_working_set_bytes": 264032256,
+      "paged_pool_bytes": 1345072,
+      "nonpaged_pool_bytes": 137368,
+      "is_M20_child": false
+    },
+    {
+      "pid": 34640,
+      "name": "WeChatAppEx.exe",
+      "private_bytes": 369786880,
+      "working_set_bytes": 119619584,
+      "peak_working_set_bytes": 321118208,
+      "paged_pool_bytes": 1361480,
+      "nonpaged_pool_bytes": 70480,
+      "is_M20_child": false
+    },
+    {
+      "pid": 29304,
+      "name": "everything.exe",
+      "private_bytes": 358551552,
+      "working_set_bytes": 266178560,
+      "peak_working_set_bytes": 462856192,
+      "paged_pool_bytes": 384544,
+      "nonpaged_pool_bytes": 30792,
+      "is_M20_child": false
+    },
+    {
+      "pid": 39600,
+      "name": "WeChatAppEx.exe",
+      "private_bytes": 340848640,
+      "working_set_bytes": 71659520,
+      "peak_working_set_bytes": 206741504,
+      "paged_pool_bytes": 748528,
+      "nonpaged_pool_bytes": 70848,
+      "is_M20_child": false
+    },
+    {
+      "pid": 35468,
+      "name": "QQEX.exe",
+      "private_bytes": 315555840,
+      "working_set_bytes": 74563584,
+      "peak_working_set_bytes": 216272896,
+      "paged_pool_bytes": 1159648,
+      "nonpaged_pool_bytes": 95576,
+      "is_M20_child": false
+    },
+    {
+      "pid": 60344,
+      "name": "qmbrowser.exe",
+      "private_bytes": 312078336,
+      "working_set_bytes": 249937920,
+      "peak_working_set_bytes": 488570880,
+      "paged_pool_bytes": 1284200,
+      "nonpaged_pool_bytes": 85880,
+      "is_M20_child": false
+    },
+    {
+      "pid": 52932,
+      "name": "Rterm.exe",
+      "private_bytes": 296169472,
+      "working_set_bytes": 159604736,
+      "peak_working_set_bytes": 272216064,
+      "paged_pool_bytes": 413360,
+      "nonpaged_pool_bytes": 19592,
+      "is_M20_child": false
+    },
+    {
+      "pid": 33716,
+      "name": "QQ.exe",
+      "private_bytes": 262594560,
+      "working_set_bytes": 56737792,
+      "peak_working_set_bytes": 259305472,
+      "paged_pool_bytes": 944064,
+      "nonpaged_pool_bytes": 38128,
+      "is_M20_child": false
+    },
+    {
+      "pid": 24644,
+      "name": "steam.exe",
+      "private_bytes": 255377408,
+      "working_set_bytes": 155095040,
+      "peak_working_set_bytes": 925519872,
+      "paged_pool_bytes": 715560,
+      "nonpaged_pool_bytes": 553240,
+      "is_M20_child": false
+    },
+    {
+      "pid": 50304,
+      "name": "audiodg.exe",
+      "private_bytes": 253796352,
+      "working_set_bytes": 168648704,
+      "peak_working_set_bytes": 492150784,
+      "paged_pool_bytes": 646880,
+      "nonpaged_pool_bytes": 49136,
+      "is_M20_child": false
+    },
+    {
+      "pid": 17440,
+      "name": "NVIDIA Overlay.exe",
+      "private_bytes": 245825536,
+      "working_set_bytes": 70823936,
+      "peak_working_set_bytes": 292601856,
+      "paged_pool_bytes": 1714808,
+      "nonpaged_pool_bytes": 75408,
+      "is_M20_child": false
+    },
+    {
+      "pid": 28260,
+      "name": "Code.exe",
+      "private_bytes": 245198848,
+      "working_set_bytes": 21766144,
+      "peak_working_set_bytes": 193986560,
+      "paged_pool_bytes": 682472,
+      "nonpaged_pool_bytes": 31224,
+      "is_M20_child": false
+    },
+    {
+      "pid": 72604,
+      "name": "QQ.exe",
+      "private_bytes": 223551488,
+      "working_set_bytes": 36585472,
+      "peak_working_set_bytes": 157343744,
+      "paged_pool_bytes": 1329488,
+      "nonpaged_pool_bytes": 71032,
+      "is_M20_child": false
+    },
+    {
+      "pid": 16408,
+      "name": "chrome.exe",
+      "private_bytes": 222195712,
+      "working_set_bytes": 276045824,
+      "peak_working_set_bytes": 514060288,
+      "paged_pool_bytes": 2284616,
+      "nonpaged_pool_bytes": 120576,
+      "is_M20_child": false
+    },
+    {
+      "pid": 34848,
+      "name": "QQEX.exe",
+      "private_bytes": 213250048,
+      "working_set_bytes": 22528000,
+      "peak_working_set_bytes": 219942912,
+      "paged_pool_bytes": 1669784,
+      "nonpaged_pool_bytes": 58712,
+      "is_M20_child": false
+    },
+    {
+      "pid": 60000,
+      "name": "msedgewebview2.exe",
+      "private_bytes": 210812928,
+      "working_set_bytes": 557056,
+      "peak_working_set_bytes": 314241024,
+      "paged_pool_bytes": 1013624,
+      "nonpaged_pool_bytes": 36456,
+      "is_M20_child": false
+    },
+    {
+      "pid": 51092,
+      "name": "msedgewebview2.exe",
+      "private_bytes": 208515072,
+      "working_set_bytes": 187453440,
+      "peak_working_set_bytes": 246886400,
+      "paged_pool_bytes": 1134720,
+      "nonpaged_pool_bytes": 30528,
+      "is_M20_child": false
+    },
+    {
+      "pid": 19348,
+      "name": "NVIDIA Overlay.exe",
+      "private_bytes": 196452352,
+      "working_set_bytes": 20254720,
+      "peak_working_set_bytes": 159952896,
+      "paged_pool_bytes": 1125032,
+      "nonpaged_pool_bytes": 42688,
+      "is_M20_child": false
+    },
+    {
+      "pid": 66776,
+      "name": "OneDrive.Sync.Service.exe",
+      "private_bytes": 190570496,
+      "working_set_bytes": 16224256,
+      "peak_working_set_bytes": 383406080,
+      "paged_pool_bytes": 492048,
+      "nonpaged_pool_bytes": 39392,
+      "is_M20_child": false
+    },
+    {
+      "pid": 43768,
+      "name": "SnippingTool.exe",
+      "private_bytes": 190201856,
+      "working_set_bytes": 91385856,
+      "peak_working_set_bytes": 250851328,
+      "paged_pool_bytes": 1132880,
+      "nonpaged_pool_bytes": 46360,
+      "is_M20_child": false
+    },
+    {
+      "pid": 67192,
+      "name": "chrome.exe",
+      "private_bytes": 190124032,
+      "working_set_bytes": 188903424,
+      "peak_working_set_bytes": 498102272,
+      "paged_pool_bytes": 889152,
+      "nonpaged_pool_bytes": 44296,
+      "is_M20_child": false
+    },
+    {
+      "pid": 67912,
+      "name": "msedgewebview2.exe",
+      "private_bytes": 188612608,
+      "working_set_bytes": 42348544,
+      "peak_working_set_bytes": 113827840,
+      "paged_pool_bytes": 1467128,
+      "nonpaged_pool_bytes": 54968,
+      "is_M20_child": false
+    },
+    {
+      "pid": 64020,
+      "name": "Code.exe",
+      "private_bytes": 180711424,
+      "working_set_bytes": 40931328,
+      "peak_working_set_bytes": 224735232,
+      "paged_pool_bytes": 700784,
+      "nonpaged_pool_bytes": 55944,
+      "is_M20_child": false
+    },
+    {
+      "pid": 24744,
+      "name": "Weixin.exe",
+      "private_bytes": 171671552,
+      "working_set_bytes": 69492736,
+      "peak_working_set_bytes": 322695168,
+      "paged_pool_bytes": 263032,
+      "nonpaged_pool_bytes": 90856,
+      "is_M20_child": false
+    },
+    {
+      "pid": 19132,
+      "name": "WeChatAppEx.exe",
+      "private_bytes": 171368448,
+      "working_set_bytes": 141824000,
+      "peak_working_set_bytes": 299716608,
+      "paged_pool_bytes": 1437088,
+      "nonpaged_pool_bytes": 74096,
+      "is_M20_child": false
+    },
+    {
+      "pid": 26652,
+      "name": "Code.exe",
+      "private_bytes": 168366080,
+      "working_set_bytes": 113676288,
+      "peak_working_set_bytes": 322490368,
+      "paged_pool_bytes": 1192656,
+      "nonpaged_pool_bytes": 70256,
+      "is_M20_child": false
+    },
+    {
+      "pid": 71688,
+      "name": "msedgewebview2.exe",
+      "private_bytes": 166981632,
+      "working_set_bytes": 5586944,
+      "peak_working_set_bytes": 132186112,
+      "paged_pool_bytes": 1368880,
+      "nonpaged_pool_bytes": 50976,
+      "is_M20_child": false
+    },
+    {
+      "pid": 56128,
+      "name": "verge-mihomo.exe",
+      "private_bytes": 166940672,
+      "working_set_bytes": 86798336,
+      "peak_working_set_bytes": 152932352,
+      "paged_pool_bytes": 375152,
+      "nonpaged_pool_bytes": 175164,
+      "is_M20_child": false
+    },
+    {
+      "pid": 4200,
+      "name": "NVDisplay.Container.exe",
+      "private_bytes": 163139584,
+      "working_set_bytes": 33185792,
+      "peak_working_set_bytes": 272908288,
+      "paged_pool_bytes": 396192,
+      "nonpaged_pool_bytes": 32968,
+      "is_M20_child": false
+    },
+    {
+      "pid": 39064,
+      "name": "chrome.exe",
+      "private_bytes": 161787904,
+      "working_set_bytes": 190672896,
+      "peak_working_set_bytes": 281665536,
+      "paged_pool_bytes": 937520,
+      "nonpaged_pool_bytes": 37600,
+      "is_M20_child": false
+    },
+    {
+      "pid": 18284,
+      "name": "SearchHost.exe",
+      "private_bytes": 159973376,
+      "working_set_bytes": 57589760,
+      "peak_working_set_bytes": 258453504,
+      "paged_pool_bytes": 2225656,
+      "nonpaged_pool_bytes": 103128,
+      "is_M20_child": false
+    },
+    {
+      "pid": 23836,
+      "name": "steamwebhelper.exe",
+      "private_bytes": 152928256,
+      "working_set_bytes": 84283392,
+      "peak_working_set_bytes": 262725632,
+      "paged_pool_bytes": 952064,
+      "nonpaged_pool_bytes": 70608,
+      "is_M20_child": false
+    },
+    {
+      "pid": 67340,
+      "name": "QQ.exe",
+      "private_bytes": 150028288,
+      "working_set_bytes": 97615872,
+      "peak_working_set_bytes": 113295360,
+      "paged_pool_bytes": 1014560,
+      "nonpaged_pool_bytes": 27824,
+      "is_M20_child": false
+    },
+    {
+      "pid": 83336,
+      "name": "QQ.exe",
+      "private_bytes": 149139456,
+      "working_set_bytes": 65581056,
+      "peak_working_set_bytes": 108142592,
+      "paged_pool_bytes": 872704,
+      "nonpaged_pool_bytes": 27736,
+      "is_M20_child": false
+    },
+    {
+      "pid": 35556,
+      "name": "QQEX.exe",
+      "private_bytes": 146210816,
+      "working_set_bytes": 14438400,
+      "peak_working_set_bytes": 90783744,
+      "paged_pool_bytes": 897264,
+      "nonpaged_pool_bytes": 31232,
+      "is_M20_child": false
+    },
+    {
+      "pid": 22224,
+      "name": "ctfmon.exe",
+      "private_bytes": 143708160,
+      "working_set_bytes": 83357696,
+      "peak_working_set_bytes": 132239360,
+      "paged_pool_bytes": 678864,
+      "nonpaged_pool_bytes": 60720,
+      "is_M20_child": false
+    },
+    {
+      "pid": 71348,
+      "name": "QQEX.exe",
+      "private_bytes": 137056256,
+      "working_set_bytes": 4214784,
+      "peak_working_set_bytes": 89874432,
+      "paged_pool_bytes": 830760,
+      "nonpaged_pool_bytes": 26736,
+      "is_M20_child": false
+    },
+    {
+      "pid": 69436,
+      "name": "chrome.exe",
+      "private_bytes": 128684032,
+      "working_set_bytes": 178307072,
+      "peak_working_set_bytes": 254468096,
+      "paged_pool_bytes": 940352,
+      "nonpaged_pool_bytes": 31664,
+      "is_M20_child": false
+    },
+    {
+      "pid": 38532,
+      "name": "QQEX.exe",
+      "private_bytes": 126447616,
+      "working_set_bytes": 4038656,
+      "peak_working_set_bytes": 67387392,
+      "paged_pool_bytes": 820960,
+      "nonpaged_pool_bytes": 24240,
+      "is_M20_child": false
+    },
+    {
+      "pid": 67420,
+      "name": "uu.exe",
+      "private_bytes": 124743680,
+      "working_set_bytes": 82731008,
+      "peak_working_set_bytes": 139333632,
+      "paged_pool_bytes": 535832,
+      "nonpaged_pool_bytes": 170376,
+      "is_M20_child": false
+    },
+    {
+      "pid": 52876,
+      "name": "QQ.exe",
+      "private_bytes": 121991168,
+      "working_set_bytes": 6361088,
+      "peak_working_set_bytes": 63602688,
+      "paged_pool_bytes": 766792,
+      "nonpaged_pool_bytes": 24512,
+      "is_M20_child": false
+    },
+    {
+      "pid": 12392,
+      "name": "MCHOSE HUB.exe",
+      "private_bytes": 117440512,
+      "working_set_bytes": 8069120,
+      "peak_working_set_bytes": 114335744,
+      "paged_pool_bytes": 1094168,
+      "nonpaged_pool_bytes": 40512,
+      "is_M20_child": false
+    },
+    {
+      "pid": 68620,
+      "name": "msedgewebview2.exe",
+      "private_bytes": 116965376,
+      "working_set_bytes": 61198336,
+      "peak_working_set_bytes": 113238016,
+      "paged_pool_bytes": 1389584,
+      "nonpaged_pool_bytes": 53448,
+      "is_M20_child": false
+    },
+    {
+      "pid": 25148,
+      "name": "MCHOSE HUB.exe",
+      "private_bytes": 116260864,
+      "working_set_bytes": 13103104,
+      "peak_working_set_bytes": 111284224,
+      "paged_pool_bytes": 905864,
+      "nonpaged_pool_bytes": 44488,
+      "is_M20_child": false
+    },
+    {
+      "pid": 22944,
+      "name": "WeChatAppEx.exe",
+      "private_bytes": 115302400,
+      "working_set_bytes": 154591232,
+      "peak_working_set_bytes": 191762432,
+      "paged_pool_bytes": 922280,
+      "nonpaged_pool_bytes": 45528,
+      "is_M20_child": false
+    },
+    {
+      "pid": 83668,
+      "name": "steamwebhelper.exe",
+      "private_bytes": 114573312,
+      "working_set_bytes": 156454912,
+      "peak_working_set_bytes": 258043904,
+      "paged_pool_bytes": 1142744,
+      "nonpaged_pool_bytes": 131184,
+      "is_M20_child": false
+    },
+    {
+      "pid": 77364,
+      "name": "SystemSettings.exe",
+      "private_bytes": 112259072,
+      "working_set_bytes": 1286144,
+      "peak_working_set_bytes": 202543104,
+      "paged_pool_bytes": 1972488,
+      "nonpaged_pool_bytes": 72080,
+      "is_M20_child": false
+    },
+    {
+      "pid": 58416,
+      "name": "msedge.exe",
+      "private_bytes": 108920832,
+      "working_set_bytes": 11673600,
+      "peak_working_set_bytes": 199782400,
+      "paged_pool_bytes": 1023600,
+      "nonpaged_pool_bytes": 31848,
+      "is_M20_child": false
+    },
+    {
+      "pid": 4920,
+      "name": "chrome.exe",
+      "private_bytes": 108417024,
+      "working_set_bytes": 126033920,
+      "peak_working_set_bytes": 303775744,
+      "paged_pool_bytes": 938480,
+      "nonpaged_pool_bytes": 33696,
+      "is_M20_child": false
+    },
+    {
+      "pid": 40000,
+      "name": "WeChatAppEx.exe",
+      "private_bytes": 108285952,
+      "working_set_bytes": 113868800,
+      "peak_working_set_bytes": 361541632,
+      "paged_pool_bytes": 973792,
+      "nonpaged_pool_bytes": 34336,
+      "is_M20_child": false
+    },
+    {
+      "pid": 4124,
+      "name": "svchost.exe",
+      "private_bytes": 106930176,
+      "working_set_bytes": 34459648,
+      "peak_working_set_bytes": 87785472,
+      "paged_pool_bytes": 93912,
+      "nonpaged_pool_bytes": 11840,
+      "is_M20_child": false
+    },
+    {
+      "pid": 75924,
+      "name": "Rterm.exe",
+      "private_bytes": 106377216,
+      "working_set_bytes": 25432064,
+      "peak_working_set_bytes": 83824640,
+      "paged_pool_bytes": 329464,
+      "nonpaged_pool_bytes": 13560,
+      "is_M20_child": false
+    },
+    {
+      "pid": 18316,
+      "name": "StartMenuExperienceHost.exe",
+      "private_bytes": 104558592,
+      "working_set_bytes": 47890432,
+      "peak_working_set_bytes": 147349504,
+      "paged_pool_bytes": 1208232,
+      "nonpaged_pool_bytes": 45680,
+      "is_M20_child": false
+    },
+    {
+      "pid": 60216,
+      "name": "CHXSmartScreen.exe",
+      "private_bytes": 103239680,
+      "working_set_bytes": 1613824,
+      "peak_working_set_bytes": 132456448,
+      "paged_pool_bytes": 1106920,
+      "nonpaged_pool_bytes": 66592,
+      "is_M20_child": false
+    },
+    {
+      "pid": 27384,
+      "name": "svchost.exe",
+      "private_bytes": 100339712,
+      "working_set_bytes": 20516864,
+      "peak_working_set_bytes": 101998592,
+      "paged_pool_bytes": 1060888,
+      "nonpaged_pool_bytes": 27288,
+      "is_M20_child": false
+    },
+    {
+      "pid": 65596,
+      "name": "QQEX.exe",
+      "private_bytes": 100237312,
+      "working_set_bytes": 5103616,
+      "peak_working_set_bytes": 99504128,
+      "paged_pool_bytes": 724672,
+      "nonpaged_pool_bytes": 24144,
+      "is_M20_child": false
+    },
+    {
+      "pid": 5460,
+      "name": "WUDFHost.exe",
+      "private_bytes": 99708928,
+      "working_set_bytes": 8560640,
+      "peak_working_set_bytes": 50012160,
+      "paged_pool_bytes": 184296,
+      "nonpaged_pool_bytes": 33712,
+      "is_M20_child": false
+    },
+    {
+      "pid": 75544,
+      "name": "PhoneExperienceHost.exe",
+      "private_bytes": 97837056,
+      "working_set_bytes": 154238976,
+      "peak_working_set_bytes": 190595072,
+      "paged_pool_bytes": 1385344,
+      "nonpaged_pool_bytes": 113872,
+      "is_M20_child": false
+    },
+    {
+      "pid": 69732,
+      "name": "Code.exe",
+      "private_bytes": 97357824,
+      "working_set_bytes": 52649984,
+      "peak_working_set_bytes": 327307264,
+      "paged_pool_bytes": 680912,
+      "nonpaged_pool_bytes": 26576,
+      "is_M20_child": false
+    },
+    {
+      "pid": 78656,
+      "name": "powershell.exe",
+      "private_bytes": 96043008,
+      "working_set_bytes": 112234496,
+      "peak_working_set_bytes": 154730496,
+      "paged_pool_bytes": 578376,
+      "nonpaged_pool_bytes": 41304,
+      "is_M20_child": false
+    },
+    {
+      "pid": 8952,
+      "name": "AdskAccessUIHost.exe",
+      "private_bytes": 94740480,
+      "working_set_bytes": 31371264,
+      "peak_working_set_bytes": 126054400,
+      "paged_pool_bytes": 1007840,
+      "nonpaged_pool_bytes": 48952,
+      "is_M20_child": false
+    },
+    {
+      "pid": 47016,
+      "name": "MathWorksServiceHost.exe",
+      "private_bytes": 93761536,
+      "working_set_bytes": 38215680,
+      "peak_working_set_bytes": 185368576,
+      "paged_pool_bytes": 1452464,
+      "nonpaged_pool_bytes": 141848,
+      "is_M20_child": false
+    },
+    {
+      "pid": 26576,
+      "name": "AdskAccessCore.exe",
+      "private_bytes": 92684288,
+      "working_set_bytes": 34181120,
+      "peak_working_set_bytes": 216256512,
+      "paged_pool_bytes": 939344,
+      "nonpaged_pool_bytes": 32240,
+      "is_M20_child": false
+    },
+    {
+      "pid": 14792,
+      "name": "nvcontainer.exe",
+      "private_bytes": 89194496,
+      "working_set_bytes": 54390784,
+      "peak_working_set_bytes": 131817472,
+      "paged_pool_bytes": 435880,
+      "nonpaged_pool_bytes": 119268,
+      "is_M20_child": false
+    },
+    {
+      "pid": 70244,
+      "name": "Code.exe",
+      "private_bytes": 88182784,
+      "working_set_bytes": 10510336,
+      "peak_working_set_bytes": 143568896,
+      "paged_pool_bytes": 696400,
+      "nonpaged_pool_bytes": 31912,
+      "is_M20_child": false
+    },
+    {
+      "pid": 7328,
+      "name": "Weixin.exe",
+      "private_bytes": 87265280,
+      "working_set_bytes": 38522880,
+      "peak_working_set_bytes": 292511744,
+      "paged_pool_bytes": 413536,
+      "nonpaged_pool_bytes": 36976,
+      "is_M20_child": false
+    },
+    {
+      "pid": 54728,
+      "name": "ArmouryCrate.Service.exe",
+      "private_bytes": 86491136,
+      "working_set_bytes": 53305344,
+      "peak_working_set_bytes": 152326144,
+      "paged_pool_bytes": 629808,
+      "nonpaged_pool_bytes": 93992,
+      "is_M20_child": false
+    },
+    {
+      "pid": 82140,
+      "name": "msedge.exe",
+      "private_bytes": 85245952,
+      "working_set_bytes": 163278848,
+      "peak_working_set_bytes": 245993472,
+      "paged_pool_bytes": 1408576,
+      "nonpaged_pool_bytes": 64960,
+      "is_M20_child": false
+    },
+    {
+      "pid": 33564,
+      "name": "Weixin.exe",
+      "private_bytes": 84922368,
+      "working_set_bytes": 2031616,
+      "peak_working_set_bytes": 168894464,
+      "paged_pool_bytes": 262160,
+      "nonpaged_pool_bytes": 14152,
+      "is_M20_child": false
+    },
+    {
+      "pid": 7080,
+      "name": "WmiPrvSE.exe",
+      "private_bytes": 84451328,
+      "working_set_bytes": 60067840,
+      "peak_working_set_bytes": 78286848,
+      "paged_pool_bytes": 204320,
+      "nonpaged_pool_bytes": 32256,
+      "is_M20_child": false
+    },
+    {
+      "pid": 21312,
+      "name": "MathWorksServiceHost-Monitor.exe",
+      "private_bytes": 83963904,
+      "working_set_bytes": 27508736,
+      "peak_working_set_bytes": 93888512,
+      "paged_pool_bytes": 473144,
+      "nonpaged_pool_bytes": 54480,
+      "is_M20_child": false
+    },
+    {
+      "pid": 64644,
+      "name": "chrome.exe",
+      "private_bytes": 83329024,
+      "working_set_bytes": 72548352,
+      "peak_working_set_bytes": 197476352,
+      "paged_pool_bytes": 897264,
+      "nonpaged_pool_bytes": 30320,
+      "is_M20_child": false
+    },
+    {
+      "pid": 25296,
+      "name": "ShellExperienceHost.exe",
+      "private_bytes": 83030016,
+      "working_set_bytes": 32342016,
+      "peak_working_set_bytes": 124317696,
+      "paged_pool_bytes": 2524600,
+      "nonpaged_pool_bytes": 43096,
+      "is_M20_child": false
+    },
+    {
+      "pid": 71700,
+      "name": "clash-verge.exe",
+      "private_bytes": 82800640,
+      "working_set_bytes": 38891520,
+      "peak_working_set_bytes": 82022400,
+      "paged_pool_bytes": 471016,
+      "nonpaged_pool_bytes": 29856,
+      "is_M20_child": false
+    },
+    {
+      "pid": 10432,
+      "name": "MSPCManagerService.exe",
+      "private_bytes": 82771968,
+      "working_set_bytes": 33615872,
+      "peak_working_set_bytes": 101117952,
+      "paged_pool_bytes": 494928,
+      "nonpaged_pool_bytes": 63680,
+      "is_M20_child": false
+    },
+    {
+      "pid": 38084,
+      "name": "QQ.exe",
+      "private_bytes": 81833984,
+      "working_set_bytes": 11976704,
+      "peak_working_set_bytes": 92774400,
+      "paged_pool_bytes": 1091408,
+      "nonpaged_pool_bytes": 36976,
+      "is_M20_child": false
+    },
+    {
+      "pid": 58616,
+      "name": "powershell.exe",
+      "private_bytes": 77000704,
+      "working_set_bytes": 5476352,
+      "peak_working_set_bytes": 96538624,
+      "paged_pool_bytes": 483440,
+      "nonpaged_pool_bytes": 30232,
+      "is_M20_child": false
+    },
+    {
+      "pid": 68828,
+      "name": "Code.exe",
+      "private_bytes": 76263424,
+      "working_set_bytes": 24137728,
+      "peak_working_set_bytes": 140644352,
+      "paged_pool_bytes": 645272,
+      "nonpaged_pool_bytes": 19584,
+      "is_M20_child": false
+    },
+    {
+      "pid": 26268,
+      "name": "ApplicationFrameHost.exe",
+      "private_bytes": 74833920,
+      "working_set_bytes": 11694080,
+      "peak_working_set_bytes": 85143552,
+      "paged_pool_bytes": 776288,
+      "nonpaged_pool_bytes": 36936,
+      "is_M20_child": false
+    },
+    {
+      "pid": 12548,
+      "name": "ArmouryCrate.exe",
+      "private_bytes": 73277440,
+      "working_set_bytes": 815104,
+      "peak_working_set_bytes": 87801856,
+      "paged_pool_bytes": 991040,
+      "nonpaged_pool_bytes": 42776,
+      "is_M20_child": false
+    },
+    {
+      "pid": 66620,
+      "name": "WeChatAppEx.exe",
+      "private_bytes": 71643136,
+      "working_set_bytes": 10407936,
+      "peak_working_set_bytes": 63700992,
+      "paged_pool_bytes": 1153520,
+      "nonpaged_pool_bytes": 35696,
+      "is_M20_child": false
+    },
+    {
+      "pid": 64616,
+      "name": "chrome.exe",
+      "private_bytes": 70787072,
+      "working_set_bytes": 30367744,
+      "peak_working_set_bytes": 67203072,
+      "paged_pool_bytes": 1357472,
+      "nonpaged_pool_bytes": 39432,
+      "is_M20_child": false
+    },
+    {
+      "pid": 13452,
+      "name": "Code.exe",
+      "private_bytes": 70660096,
+      "working_set_bytes": 10297344,
+      "peak_working_set_bytes": 117272576,
+      "paged_pool_bytes": 645176,
+      "nonpaged_pool_bytes": 19720,
+      "is_M20_child": false
+    },
+    {
+      "pid": 17912,
+      "name": "AdskAccessUIHost.exe",
+      "private_bytes": 70520832,
+      "working_set_bytes": 9740288,
+      "peak_working_set_bytes": 88621056,
+      "paged_pool_bytes": 1155848,
+      "nonpaged_pool_bytes": 29024,
+      "is_M20_child": false
+    },
+    {
+      "pid": 3564,
+      "name": "NVDisplay.Container.exe",
+      "private_bytes": 68399104,
+      "working_set_bytes": 34971648,
+      "peak_working_set_bytes": 112467968,
+      "paged_pool_bytes": 292072,
+      "nonpaged_pool_bytes": 33000,
+      "is_M20_child": false
+    },
+    {
+      "pid": 81168,
+      "name": "powershell.exe",
+      "private_bytes": 67727360,
+      "working_set_bytes": 80310272,
+      "peak_working_set_bytes": 80351232,
+      "paged_pool_bytes": 489784,
+      "nonpaged_pool_bytes": 30800,
+      "is_M20_child": false
+    },
+    {
+      "pid": 82348,
+      "name": "chrome.exe",
+      "private_bytes": 67665920,
+      "working_set_bytes": 92995584,
+      "peak_working_set_bytes": 101011456,
+      "paged_pool_bytes": 826144,
+      "nonpaged_pool_bytes": 32384,
+      "is_M20_child": false
+    },
+    {
+      "pid": 77328,
+      "name": "LightingService.exe",
+      "private_bytes": 66891776,
+      "working_set_bytes": 47476736,
+      "peak_working_set_bytes": 61808640,
+      "paged_pool_bytes": 379472,
+      "nonpaged_pool_bytes": 203368,
+      "is_M20_child": false
+    },
+    {
+      "pid": 2380,
+      "name": "powershell.exe",
+      "private_bytes": 66301952,
+      "working_set_bytes": 49115136,
+      "peak_working_set_bytes": 79478784,
+      "paged_pool_bytes": 480720,
+      "nonpaged_pool_bytes": 27456,
+      "is_M20_child": false
+    },
+    {
+      "pid": 10884,
+      "name": "powershell.exe",
+      "private_bytes": 66174976,
+      "working_set_bytes": 78667776,
+      "peak_working_set_bytes": 79245312,
+      "paged_pool_bytes": 487104,
+      "nonpaged_pool_bytes": 27592,
+      "is_M20_child": false
+    },
+    {
+      "pid": 70320,
+      "name": "Code.exe",
+      "private_bytes": 66146304,
+      "working_set_bytes": 35860480,
+      "peak_working_set_bytes": 226074624,
+      "paged_pool_bytes": 672608,
+      "nonpaged_pool_bytes": 26928,
+      "is_M20_child": false
+    },
+    {
+      "pid": 2800,
+      "name": "WUDFCompanionHost.exe",
+      "private_bytes": 66023424,
+      "working_set_bytes": 1544192,
+      "peak_working_set_bytes": 11079680,
+      "paged_pool_bytes": 27008,
+      "nonpaged_pool_bytes": 1074400,
+      "is_M20_child": false
+    },
+    {
+      "pid": 6092,
+      "name": "svchost.exe",
+      "private_bytes": 65544192,
+      "working_set_bytes": 63950848,
+      "peak_working_set_bytes": 133218304,
+      "paged_pool_bytes": 150336,
+      "nonpaged_pool_bytes": 19896,
+      "is_M20_child": false
+    },
+    {
+      "pid": 76936,
+      "name": "LockApp.exe",
+      "private_bytes": 64028672,
+      "working_set_bytes": 69918720,
+      "peak_working_set_bytes": 96813056,
+      "paged_pool_bytes": 873608,
+      "nonpaged_pool_bytes": 33184,
+      "is_M20_child": false
+    },
+    {
+      "pid": 30156,
+      "name": "MoUsoCoreWorker.exe",
+      "private_bytes": 63922176,
+      "working_set_bytes": 56111104,
+      "peak_working_set_bytes": 97779712,
+      "paged_pool_bytes": 423184,
+      "nonpaged_pool_bytes": 24600,
+      "is_M20_child": false
+    },
+    {
+      "pid": 21068,
+      "name": "NVIDIA Overlay.exe",
+      "private_bytes": 63827968,
+      "working_set_bytes": 36057088,
+      "peak_working_set_bytes": 123924480,
+      "paged_pool_bytes": 822808,
+      "nonpaged_pool_bytes": 33776,
+      "is_M20_child": false
+    },
+    {
+      "pid": 27128,
+      "name": "MCHOSE HUB.exe",
+      "private_bytes": 62590976,
+      "working_set_bytes": 1409024,
+      "peak_working_set_bytes": 121196544,
+      "paged_pool_bytes": 607744,
+      "nonpaged_pool_bytes": 26384,
+      "is_M20_child": false
+    },
+    {
+      "pid": 34308,
+      "name": "RtkUWP.exe",
+      "private_bytes": 62545920,
+      "working_set_bytes": 14655488,
+      "peak_working_set_bytes": 89329664,
+      "paged_pool_bytes": 851056,
+      "nonpaged_pool_bytes": 33872,
+      "is_M20_child": false
+    },
+    {
+      "pid": 1932,
+      "name": "svchost.exe",
+      "private_bytes": 62279680,
+      "working_set_bytes": 68272128,
+      "peak_working_set_bytes": 115224576,
+      "paged_pool_bytes": 674352,
+      "nonpaged_pool_bytes": 31448,
+      "is_M20_child": false
+    },
+    {
+      "pid": 71560,
+      "name": "msedge.exe",
+      "private_bytes": 60502016,
+      "working_set_bytes": 44871680,
+      "peak_working_set_bytes": 56872960,
+      "paged_pool_bytes": 1336120,
+      "nonpaged_pool_bytes": 31976,
+      "is_M20_child": false
+    },
+    {
+      "pid": 37672,
+      "name": "ArmouryCrate.UserSessionHelper.exe",
+      "private_bytes": 60026880,
+      "working_set_bytes": 47509504,
+      "peak_working_set_bytes": 95629312,
+      "paged_pool_bytes": 655688,
+      "nonpaged_pool_bytes": 79240,
+      "is_M20_child": false
+    },
+    {
+      "pid": 11968,
+      "name": "AdskAccessUIHost.exe",
+      "private_bytes": 59715584,
+      "working_set_bytes": 15585280,
+      "peak_working_set_bytes": 120008704,
+      "paged_pool_bytes": 781704,
+      "nonpaged_pool_bytes": 28320,
+      "is_M20_child": false
+    },
+    {
+      "pid": 49080,
+      "name": "chrome.exe",
+      "private_bytes": 59310080,
+      "working_set_bytes": 58753024,
+      "peak_working_set_bytes": 115081216,
+      "paged_pool_bytes": 819664,
+      "nonpaged_pool_bytes": 27984,
+      "is_M20_child": false
+    },
+    {
+      "pid": 5900,
+      "name": "AdskLicensingService.exe",
+      "private_bytes": 59080704,
+      "working_set_bytes": 12210176,
+      "peak_working_set_bytes": 28364800,
+      "paged_pool_bytes": 163904,
+      "nonpaged_pool_bytes": 18640,
+      "is_M20_child": false
+    },
+    {
+      "pid": 5996,
+      "name": "svchost.exe",
+      "private_bytes": 57143296,
+      "working_set_bytes": 45281280,
+      "peak_working_set_bytes": 611602432,
+      "paged_pool_bytes": 246960,
+      "nonpaged_pool_bytes": 28840,
+      "is_M20_child": false
+    },
+    {
+      "pid": 27852,
+      "name": "node.exe",
+      "private_bytes": 55681024,
+      "working_set_bytes": 23760896,
+      "peak_working_set_bytes": 38817792,
+      "paged_pool_bytes": 345720,
+      "nonpaged_pool_bytes": 18536,
+      "is_M20_child": false
+    },
+    {
+      "pid": 82044,
+      "name": "node.exe",
+      "private_bytes": 55672832,
+      "working_set_bytes": 1069056,
+      "peak_working_set_bytes": 38981632,
+      "paged_pool_bytes": 345720,
+      "nonpaged_pool_bytes": 18536,
+      "is_M20_child": false
+    },
+    {
+      "pid": 74284,
+      "name": "node.exe",
+      "private_bytes": 55664640,
+      "working_set_bytes": 1089536,
+      "peak_working_set_bytes": 39510016,
+      "paged_pool_bytes": 345720,
+      "nonpaged_pool_bytes": 18536,
+      "is_M20_child": false
+    },
+    {
+      "pid": 75216,
+      "name": "node.exe",
+      "private_bytes": 55627776,
+      "working_set_bytes": 23760896,
+      "peak_working_set_bytes": 38916096,
+      "paged_pool_bytes": 345720,
+      "nonpaged_pool_bytes": 18536,
+      "is_M20_child": false
+    },
+    {
+      "pid": 30068,
+      "name": "node.exe",
+      "private_bytes": 55545856,
+      "working_set_bytes": 23855104,
+      "peak_working_set_bytes": 38961152,
+      "paged_pool_bytes": 345944,
+      "nonpaged_pool_bytes": 18536,
+      "is_M20_child": false
+    },
+    {
+      "pid": 66128,
+      "name": "node.exe",
+      "private_bytes": 55525376,
+      "working_set_bytes": 7237632,
+      "peak_working_set_bytes": 38760448,
+      "paged_pool_bytes": 345720,
+      "nonpaged_pool_bytes": 18536,
+      "is_M20_child": false
+    },
+    {
+      "pid": 44920,
+      "name": "node.exe",
+      "private_bytes": 55484416,
+      "working_set_bytes": 1081344,
+      "peak_working_set_bytes": 39403520,
+      "paged_pool_bytes": 345720,
+      "nonpaged_pool_bytes": 18536,
+      "is_M20_child": false
+    },
+    {
+      "pid": 27132,
+      "name": "MCHOSE HUB.exe",
+      "private_bytes": 55480320,
+      "working_set_bytes": 2088960,
+      "peak_working_set_bytes": 172802048,
+      "paged_pool_bytes": 520288,
+      "nonpaged_pool_bytes": 25232,
+      "is_M20_child": false
+    },
+    {
+      "pid": 64108,
+      "name": "ShellHost.exe",
+      "private_bytes": 54587392,
+      "working_set_bytes": 51335168,
+      "peak_working_set_bytes": 63746048,
+      "paged_pool_bytes": 765472,
+      "nonpaged_pool_bytes": 26872,
+      "is_M20_child": false
+    },
+    {
+      "pid": 66412,
+      "name": "steamwebhelper.exe",
+      "private_bytes": 53432320,
+      "working_set_bytes": 29949952,
+      "peak_working_set_bytes": 38514688,
+      "paged_pool_bytes": 673824,
+      "nonpaged_pool_bytes": 45184,
+      "is_M20_child": false
+    },
+    {
+      "pid": 83116,
+      "name": "AcPowerNotification.exe",
+      "private_bytes": 53309440,
+      "working_set_bytes": 23334912,
+      "peak_working_set_bytes": 61689856,
+      "paged_pool_bytes": 777864,
+      "nonpaged_pool_bytes": 36144,
+      "is_M20_child": false
+    },
+    {
+      "pid": 53812,
+      "name": "copilot-runtime.exe",
+      "private_bytes": 53039104,
+      "working_set_bytes": 10911744,
+      "peak_working_set_bytes": 33660928,
+      "paged_pool_bytes": 370608,
+      "nonpaged_pool_bytes": 16784,
+      "is_M20_child": false
+    },
+    {
+      "pid": 31508,
+      "name": "AsusSurvey.exe",
+      "private_bytes": 52350976,
+      "working_set_bytes": 7598080,
+      "peak_working_set_bytes": 62746624,
+      "paged_pool_bytes": 567688,
+      "nonpaged_pool_bytes": 32832,
+      "is_M20_child": false
+    },
+    {
+      "pid": 60268,
+      "name": "chrome.exe",
+      "private_bytes": 51343360,
+      "working_set_bytes": 56131584,
+      "peak_working_set_bytes": 101232640,
+      "paged_pool_bytes": 859800,
+      "nonpaged_pool_bytes": 24480,
+      "is_M20_child": false
+    },
+    {
+      "pid": 1812,
+      "name": "lsass.exe",
+      "private_bytes": 50573312,
+      "working_set_bytes": 22667264,
+      "peak_working_set_bytes": 113164288,
+      "paged_pool_bytes": 329048,
+      "nonpaged_pool_bytes": 49896,
+      "is_M20_child": false
+    },
+    {
+      "pid": 10172,
+      "name": "nvcontainer.exe",
+      "private_bytes": 49160192,
+      "working_set_bytes": 30433280,
+      "peak_working_set_bytes": 96116736,
+      "paged_pool_bytes": 405656,
+      "nonpaged_pool_bytes": 26336,
+      "is_M20_child": false
+    },
+    {
+      "pid": 79932,
+      "name": "chrome.exe",
+      "private_bytes": 47550464,
+      "working_set_bytes": 57458688,
+      "peak_working_set_bytes": 208318464,
+      "paged_pool_bytes": 912584,
+      "nonpaged_pool_bytes": 26960,
+      "is_M20_child": false
+    },
+    {
+      "pid": 3456,
+      "name": "AsusSoftwareManagerAgent.exe",
+      "private_bytes": 46387200,
+      "working_set_bytes": 14589952,
+      "peak_working_set_bytes": 61976576,
+      "paged_pool_bytes": 524336,
+      "nonpaged_pool_bytes": 36048,
+      "is_M20_child": false
+    },
+    {
+      "pid": 75716,
+      "name": "OfficeClickToRun.exe",
+      "private_bytes": 44711936,
+      "working_set_bytes": 56971264,
+      "peak_working_set_bytes": 99819520,
+      "paged_pool_bytes": 382280,
+      "nonpaged_pool_bytes": 30408,
+      "is_M20_child": false
+    },
+    {
+      "pid": 26668,
+      "name": "RtkAudUService64.exe",
+      "private_bytes": 43610112,
+      "working_set_bytes": 16646144,
+      "peak_working_set_bytes": 30822400,
+      "paged_pool_bytes": 315000,
+      "nonpaged_pool_bytes": 19840,
+      "is_M20_child": false
+    },
+    {
+      "pid": 34408,
+      "name": "msedgewebview2.exe",
+      "private_bytes": 43327488,
+      "working_set_bytes": 57561088,
+      "peak_working_set_bytes": 139837440,
+      "paged_pool_bytes": 1404104,
+      "nonpaged_pool_bytes": 55560,
+      "is_M20_child": false
+    },
+    {
+      "pid": 13500,
+      "name": "MCHOSE HUB.exe",
+      "private_bytes": 43032576,
+      "working_set_bytes": 3956736,
+      "peak_working_set_bytes": 54722560,
+      "paged_pool_bytes": 575616,
+      "nonpaged_pool_bytes": 20408,
+      "is_M20_child": false
+    },
+    {
+      "pid": 45428,
+      "name": "msedgewebview2.exe",
+      "private_bytes": 42872832,
+      "working_set_bytes": 10276864,
+      "peak_working_set_bytes": 112041984,
+      "paged_pool_bytes": 1366424,
+      "nonpaged_pool_bytes": 57520,
+      "is_M20_child": false
+    },
+    {
+      "pid": 7112,
+      "name": "msedgewebview2.exe",
+      "private_bytes": 41340928,
+      "working_set_bytes": 105889792,
+      "peak_working_set_bytes": 130744320,
+      "paged_pool_bytes": 1338344,
+      "nonpaged_pool_bytes": 62568,
+      "is_M20_child": false
+    },
+    {
+      "pid": 6116,
+      "name": "IntelAudioService.exe",
+      "private_bytes": 40775680,
+      "working_set_bytes": 10354688,
+      "peak_working_set_bytes": 52211712,
+      "paged_pool_bytes": 375768,
+      "nonpaged_pool_bytes": 27336,
+      "is_M20_child": false
+    },
+    {
+      "pid": 6172,
+      "name": "MSOfficePLUSService.exe",
+      "private_bytes": 40427520,
+      "working_set_bytes": 16797696,
+      "peak_working_set_bytes": 71200768,
+      "paged_pool_bytes": 360944,
+      "nonpaged_pool_bytes": 41632,
+      "is_M20_child": false
+    },
+    {
+      "pid": 19244,
+      "name": "GenuineService.exe",
+      "private_bytes": 40251392,
+      "working_set_bytes": 9658368,
+      "peak_working_set_bytes": 80670720,
+      "paged_pool_bytes": 226296,
+      "nonpaged_pool_bytes": 21728,
+      "is_M20_child": false
+    },
+    {
+      "pid": 13560,
+      "name": "msedge.exe",
+      "private_bytes": 38125568,
+      "working_set_bytes": 53989376,
+      "peak_working_set_bytes": 96837632,
+      "paged_pool_bytes": 922464,
+      "nonpaged_pool_bytes": 24224,
+      "is_M20_child": false
+    },
+    {
+      "pid": 39632,
+      "name": "WeChatAppEx.exe",
+      "private_bytes": 37711872,
+      "working_set_bytes": 6017024,
+      "peak_working_set_bytes": 91885568,
+      "paged_pool_bytes": 897376,
+      "nonpaged_pool_bytes": 34216,
+      "is_M20_child": false
+    },
+    {
+      "pid": 57236,
+      "name": "WeChatAppEx.exe",
+      "private_bytes": 37650432,
+      "working_set_bytes": 6295552,
+      "peak_working_set_bytes": 98832384,
+      "paged_pool_bytes": 754336,
+      "nonpaged_pool_bytes": 29776,
+      "is_M20_child": false
+    },
+    {
+      "pid": 63636,
+      "name": "chrome.exe",
+      "private_bytes": 37347328,
+      "working_set_bytes": 48558080,
+      "peak_working_set_bytes": 96636928,
+      "paged_pool_bytes": 879752,
+      "nonpaged_pool_bytes": 49880,
+      "is_M20_child": false
+    },
+    {
+      "pid": 12916,
+      "name": "Code.exe",
+      "private_bytes": 37122048,
+      "working_set_bytes": 5799936,
+      "peak_working_set_bytes": 120315904,
+      "paged_pool_bytes": 636944,
+      "nonpaged_pool_bytes": 33472,
+      "is_M20_child": false
+    },
+    {
+      "pid": 5980,
+      "name": "cer_service.exe",
+      "private_bytes": 36810752,
+      "working_set_bytes": 20885504,
+      "peak_working_set_bytes": 41988096,
+      "paged_pool_bytes": 219152,
+      "nonpaged_pool_bytes": 24232,
+      "is_M20_child": false
+    },
+    {
+      "pid": 36496,
+      "name": "steamwebhelper.exe",
+      "private_bytes": 36614144,
+      "working_set_bytes": 18747392,
+      "peak_working_set_bytes": 23166976,
+      "paged_pool_bytes": 617392,
+      "nonpaged_pool_bytes": 32104,
+      "is_M20_child": false
+    },
+    {
+      "pid": 70052,
+      "name": "SearchIndexer.exe",
+      "private_bytes": 34545664,
+      "working_set_bytes": 35782656,
+      "peak_working_set_bytes": 55582720,
+      "paged_pool_bytes": 208584,
+      "nonpaged_pool_bytes": 20104,
+      "is_M20_child": false
+    },
+    {
+      "pid": 6148,
+      "name": "RtkAudUService64.exe",
+      "private_bytes": 34422784,
+      "working_set_bytes": 8146944,
+      "peak_working_set_bytes": 20348928,
+      "paged_pool_bytes": 230088,
+      "nonpaged_pool_bytes": 18480,
+      "is_M20_child": false
+    },
+    {
+      "pid": 5952,
+      "name": "AuraWallpaperService.exe",
+      "private_bytes": 34017280,
+      "working_set_bytes": 14512128,
+      "peak_working_set_bytes": 54587392,
+      "paged_pool_bytes": 328968,
+      "nonpaged_pool_bytes": 25608,
+      "is_M20_child": false
+    },
+    {
+      "pid": 4956,
+      "name": "spoolsv.exe",
+      "private_bytes": 33849344,
+      "working_set_bytes": 28598272,
+      "peak_working_set_bytes": 85565440,
+      "paged_pool_bytes": 292528,
+      "nonpaged_pool_bytes": 41752,
+      "is_M20_child": false
+    },
+    {
+      "pid": 37756,
+      "name": "WeChatAppEx.exe",
+      "private_bytes": 32866304,
+      "working_set_bytes": 26955776,
+      "peak_working_set_bytes": 58019840,
+      "paged_pool_bytes": 802216,
+      "nonpaged_pool_bytes": 36368,
+      "is_M20_child": false
+    },
+    {
+      "pid": 15644,
+      "name": "svchost.exe",
+      "private_bytes": 31838208,
+      "working_set_bytes": 20410368,
+      "peak_working_set_bytes": 47370240,
+      "paged_pool_bytes": 217568,
+      "nonpaged_pool_bytes": 18736,
+      "is_M20_child": false
+    },
+    {
+      "pid": 62564,
+      "name": "msedgewebview2.exe",
+      "private_bytes": 31260672,
+      "working_set_bytes": 53243904,
+      "peak_working_set_bytes": 76857344,
+      "paged_pool_bytes": 957704,
+      "nonpaged_pool_bytes": 23224,
+      "is_M20_child": false
+    },
+    {
+      "pid": 83952,
+      "name": "WeChatAppEx.exe",
+      "private_bytes": 30228480,
+      "working_set_bytes": 13766656,
+      "peak_working_set_bytes": 49872896,
+      "paged_pool_bytes": 796456,
+      "nonpaged_pool_bytes": 32880,
+      "is_M20_child": false
+    },
+    {
+      "pid": 16228,
+      "name": "RtkAudUService64.exe",
+      "private_bytes": 29990912,
+      "working_set_bytes": 7835648,
+      "peak_working_set_bytes": 20389888,
+      "paged_pool_bytes": 256800,
+      "nonpaged_pool_bytes": 16712,
+      "is_M20_child": false
+    },
+    {
+      "pid": 8520,
+      "name": "msedgewebview2.exe",
+      "private_bytes": 29708288,
+      "working_set_bytes": 52051968,
+      "peak_working_set_bytes": 71143424,
+      "paged_pool_bytes": 955400,
+      "nonpaged_pool_bytes": 22816,
+      "is_M20_child": false
+    },
+    {
+      "pid": 9860,
+      "name": "RtkAudUService64.exe",
+      "private_bytes": 29556736,
+      "working_set_bytes": 7860224,
+      "peak_working_set_bytes": 19697664,
+      "paged_pool_bytes": 213816,
+      "nonpaged_pool_bytes": 16432,
+      "is_M20_child": false
+    },
+    {
+      "pid": 77000,
+      "name": "steamwebhelper.exe",
+      "private_bytes": 29159424,
+      "working_set_bytes": 12627968,
+      "peak_working_set_bytes": 15986688,
+      "paged_pool_bytes": 612152,
+      "nonpaged_pool_bytes": 26392,
+      "is_M20_child": false
+    },
+    {
+      "pid": 13144,
+      "name": "pythonw.exe",
+      "private_bytes": 29126656,
+      "working_set_bytes": 16027648,
+      "peak_working_set_bytes": 72638464,
+      "paged_pool_bytes": 130048,
+      "nonpaged_pool_bytes": 12384,
+      "is_M20_child": false
+    },
+    {
+      "pid": 77672,
+      "name": "CodeSetup-stable-6d62b1d5dace93a33b3a6d3eca1317bd5e15bcb1.tmp",
+      "private_bytes": 28303360,
+      "working_set_bytes": 3973120,
+      "peak_working_set_bytes": 49426432,
+      "paged_pool_bytes": 266560,
+      "nonpaged_pool_bytes": 24808,
+      "is_M20_child": false
+    },
+    {
+      "pid": 72464,
+      "name": "codex-code-mode-host.exe",
+      "private_bytes": 27852800,
+      "working_set_bytes": 25812992,
+      "peak_working_set_bytes": 34988032,
+      "paged_pool_bytes": 294896,
+      "nonpaged_pool_bytes": 20344,
+      "is_M20_child": false
+    },
+    {
+      "pid": 6228,
+      "name": "AdskAccessServiceHost.exe",
+      "private_bytes": 26558464,
+      "working_set_bytes": 9531392,
+      "peak_working_set_bytes": 60567552,
+      "paged_pool_bytes": 295592,
+      "nonpaged_pool_bytes": 335808,
+      "is_M20_child": false
+    },
+    {
+      "pid": 84672,
+      "name": "uu_ball.exe",
+      "private_bytes": 26103808,
+      "working_set_bytes": 41766912,
+      "peak_working_set_bytes": 61448192,
+      "paged_pool_bytes": 291392,
+      "nonpaged_pool_bytes": 26408,
+      "is_M20_child": false
+    },
+    {
+      "pid": 24484,
+      "name": "AdskAccessService.exe",
+      "private_bytes": 25849856,
+      "working_set_bytes": 5959680,
+      "peak_working_set_bytes": 64278528,
+      "paged_pool_bytes": 426960,
+      "nonpaged_pool_bytes": 21168,
+      "is_M20_child": false
+    },
+    {
+      "pid": 59388,
+      "name": "WeChatAppEx.exe",
+      "private_bytes": 25628672,
+      "working_set_bytes": 6017024,
+      "peak_working_set_bytes": 32096256,
+      "paged_pool_bytes": 721456,
+      "nonpaged_pool_bytes": 23152,
+      "is_M20_child": false
+    },
+    {
+      "pid": 5988,
+      "name": "DAX3API.exe",
+      "private_bytes": 25341952,
+      "working_set_bytes": 25473024,
+      "peak_working_set_bytes": 35115008,
+      "paged_pool_bytes": 197384,
+      "nonpaged_pool_bytes": 20672,
+      "is_M20_child": false
+    },
+    {
+      "pid": 6508,
+      "name": "dllhost.exe",
+      "private_bytes": 24875008,
+      "working_set_bytes": 10674176,
+      "peak_working_set_bytes": 184033280,
+      "paged_pool_bytes": 254944,
+      "nonpaged_pool_bytes": 18360,
+      "is_M20_child": false
+    },
+    {
+      "pid": 13496,
+      "name": "AdskAccessService.exe",
+      "private_bytes": 24690688,
+      "working_set_bytes": 5222400,
+      "peak_working_set_bytes": 76836864,
+      "paged_pool_bytes": 395008,
+      "nonpaged_pool_bytes": 22104,
+      "is_M20_child": false
+    },
+    {
+      "pid": 65368,
+      "name": "SDXHelper.exe",
+      "private_bytes": 23281664,
+      "working_set_bytes": 32022528,
+      "peak_working_set_bytes": 39690240,
+      "paged_pool_bytes": 369784,
+      "nonpaged_pool_bytes": 25592,
+      "is_M20_child": false
+    },
+    {
+      "pid": 83084,
+      "name": "ROGLiveService.exe",
+      "private_bytes": 22777856,
+      "working_set_bytes": 19263488,
+      "peak_working_set_bytes": 47452160,
+      "paged_pool_bytes": 257512,
+      "nonpaged_pool_bytes": 29224,
+      "is_M20_child": false
+    },
+    {
+      "pid": 57036,
+      "name": "backgroundTaskHost.exe",
+      "private_bytes": 22450176,
+      "working_set_bytes": 618496,
+      "peak_working_set_bytes": 68714496,
+      "paged_pool_bytes": 388240,
+      "nonpaged_pool_bytes": 39120,
+      "is_M20_child": false
+    },
+    {
+      "pid": 4260,
+      "name": "svchost.exe",
+      "private_bytes": 22196224,
+      "working_set_bytes": 24072192,
+      "peak_working_set_bytes": 111796224,
+      "paged_pool_bytes": 135320,
+      "nonpaged_pool_bytes": 21440,
+      "is_M20_child": false
+    },
+    {
+      "pid": 77256,
+      "name": "backgroundTaskHost.exe",
+      "private_bytes": 22167552,
+      "working_set_bytes": 626688,
+      "peak_working_set_bytes": 68739072,
+      "paged_pool_bytes": 388240,
+      "nonpaged_pool_bytes": 39488,
+      "is_M20_child": false
+    },
+    {
+      "pid": 67880,
+      "name": "backgroundTaskHost.exe",
+      "private_bytes": 22138880,
+      "working_set_bytes": 614400,
+      "peak_working_set_bytes": 68718592,
+      "paged_pool_bytes": 388240,
+      "nonpaged_pool_bytes": 39352,
+      "is_M20_child": false
+    },
+    {
+      "pid": 26068,
+      "name": "backgroundTaskHost.exe",
+      "private_bytes": 22122496,
+      "working_set_bytes": 618496,
+      "peak_working_set_bytes": 68861952,
+      "paged_pool_bytes": 388240,
+      "nonpaged_pool_bytes": 39352,
+      "is_M20_child": false
+    },
+    {
+      "pid": 27580,
+      "name": "backgroundTaskHost.exe",
+      "private_bytes": 22069248,
+      "working_set_bytes": 614400,
+      "peak_working_set_bytes": 68640768,
+      "paged_pool_bytes": 388240,
+      "nonpaged_pool_bytes": 39352,
+      "is_M20_child": false
+    },
+    {
+      "pid": 32796,
+      "name": "backgroundTaskHost.exe",
+      "private_bytes": 21991424,
+      "working_set_bytes": 610304,
+      "peak_working_set_bytes": 68571136,
+      "paged_pool_bytes": 388240,
+      "nonpaged_pool_bytes": 39120,
+      "is_M20_child": false
+    },
+    {
+      "pid": 28356,
+      "name": "uu_cloudsyn.exe",
+      "private_bytes": 21983232,
+      "working_set_bytes": 23367680,
+      "peak_working_set_bytes": 44990464,
+      "paged_pool_bytes": 201592,
+      "nonpaged_pool_bytes": 21544,
+      "is_M20_child": false
+    },
+    {
+      "pid": 67288,
+      "name": "backgroundTaskHost.exe",
+      "private_bytes": 21983232,
+      "working_set_bytes": 602112,
+      "peak_working_set_bytes": 68612096,
+      "paged_pool_bytes": 388240,
+      "nonpaged_pool_bytes": 39216,
+      "is_M20_child": false
+    },
+    {
+      "pid": 32596,
+      "name": "WeChatAppEx.exe",
+      "private_bytes": 21815296,
+      "working_set_bytes": 15081472,
+      "peak_working_set_bytes": 31870976,
+      "paged_pool_bytes": 823576,
+      "nonpaged_pool_bytes": 25664,
+      "is_M20_child": false
+    },
+    {
+      "pid": 9876,
+      "name": "WUDFHost.exe",
+      "private_bytes": 21327872,
+      "working_set_bytes": 2879488,
+      "peak_working_set_bytes": 27164672,
+      "paged_pool_bytes": 70800,
+      "nonpaged_pool_bytes": 13192,
+      "is_M20_child": false
+    },
+    {
+      "pid": 2552,
+      "name": "svchost.exe",
+      "private_bytes": 20836352,
+      "working_set_bytes": 16171008,
+      "peak_working_set_bytes": 54571008,
+      "paged_pool_bytes": 188648,
+      "nonpaged_pool_bytes": 23928,
+      "is_M20_child": false
+    },
+    {
+      "pid": 53520,
+      "name": "WeChatAppEx.exe",
+      "private_bytes": 20152320,
+      "working_set_bytes": 36106240,
+      "peak_working_set_bytes": 36204544,
+      "paged_pool_bytes": 762552,
+      "nonpaged_pool_bytes": 25168,
+      "is_M20_child": false
+    },
+    {
+      "pid": 1072,
+      "name": "svchost.exe",
+      "private_bytes": 20017152,
+      "working_set_bytes": 23363584,
+      "peak_working_set_bytes": 44220416,
+      "paged_pool_bytes": 249728,
+      "nonpaged_pool_bytes": 20824,
+      "is_M20_child": false
+    },
+    {
+      "pid": 10004,
+      "name": "ArmourySwAgent.exe",
+      "private_bytes": 19783680,
+      "working_set_bytes": 4403200,
+      "peak_working_set_bytes": 26828800,
+      "paged_pool_bytes": 400520,
+      "nonpaged_pool_bytes": 21896,
+      "is_M20_child": false
+    },
+    {
+      "pid": 84664,
+      "name": "msedgewebview2.exe",
+      "private_bytes": 19701760,
+      "working_set_bytes": 38158336,
+      "peak_working_set_bytes": 48185344,
+      "paged_pool_bytes": 907496,
+      "nonpaged_pool_bytes": 20096,
+      "is_M20_child": false
+    },
+    {
+      "pid": 3632,
+      "name": "svchost.exe",
+      "private_bytes": 19587072,
+      "working_set_bytes": 15298560,
+      "peak_working_set_bytes": 34091008,
+      "paged_pool_bytes": 96048,
+      "nonpaged_pool_bytes": 15176,
+      "is_M20_child": false
+    },
+    {
+      "pid": 22680,
+      "name": "svchost.exe",
+      "private_bytes": 19574784,
+      "working_set_bytes": 17231872,
+      "peak_working_set_bytes": 27922432,
+      "paged_pool_bytes": 622944,
+      "nonpaged_pool_bytes": 18136,
+      "is_M20_child": false
+    },
+    {
+      "pid": 30384,
+      "name": "QQ.exe",
+      "private_bytes": 19480576,
+      "working_set_bytes": 21663744,
+      "peak_working_set_bytes": 42823680,
+      "paged_pool_bytes": 639000,
+      "nonpaged_pool_bytes": 24720,
+      "is_M20_child": false
+    },
+    {
+      "pid": 5072,
+      "name": "svchost.exe",
+      "private_bytes": 19161088,
+      "working_set_bytes": 17547264,
+      "peak_working_set_bytes": 67788800,
+      "paged_pool_bytes": 179128,
+      "nonpaged_pool_bytes": 36408,
+      "is_M20_child": false
+    },
+    {
+      "pid": 46376,
+      "name": "msedgewebview2.exe",
+      "private_bytes": 18808832,
+      "working_set_bytes": 38162432,
+      "peak_working_set_bytes": 48271360,
+      "paged_pool_bytes": 903400,
+      "nonpaged_pool_bytes": 20464,
+      "is_M20_child": false
+    },
+    {
+      "pid": 27092,
+      "name": "msedgewebview2.exe",
+      "private_bytes": 18804736,
+      "working_set_bytes": 38133760,
+      "peak_working_set_bytes": 48250880,
+      "paged_pool_bytes": 907496,
+      "nonpaged_pool_bytes": 20368,
+      "is_M20_child": false
+    },
+    {
+      "pid": 84740,
+      "name": "msedgewebview2.exe",
+      "private_bytes": 18685952,
+      "working_set_bytes": 38408192,
+      "peak_working_set_bytes": 48218112,
+      "paged_pool_bytes": 907496,
+      "nonpaged_pool_bytes": 19960,
+      "is_M20_child": false
+    },
+    {
+      "pid": 4972,
+      "name": "nvcontainer.exe",
+      "private_bytes": 18636800,
+      "working_set_bytes": 19210240,
+      "peak_working_set_bytes": 54140928,
+      "paged_pool_bytes": 289544,
+      "nonpaged_pool_bytes": 36096,
+      "is_M20_child": false
+    },
+    {
+      "pid": 6196,
+      "name": "svchost.exe",
+      "private_bytes": 18472960,
+      "working_set_bytes": 8642560,
+      "peak_working_set_bytes": 27369472,
+      "paged_pool_bytes": 176608,
+      "nonpaged_pool_bytes": 40096,
+      "is_M20_child": false
+    },
+    {
+      "pid": 4244,
+      "name": "svchost.exe",
+      "private_bytes": 18468864,
+      "working_set_bytes": 10891264,
+      "peak_working_set_bytes": 56524800,
+      "paged_pool_bytes": 185152,
+      "nonpaged_pool_bytes": 25024,
+      "is_M20_child": false
+    },
+    {
+      "pid": 17388,
+      "name": "svchost.exe",
+      "private_bytes": 18436096,
+      "working_set_bytes": 31559680,
+      "peak_working_set_bytes": 68014080,
+      "paged_pool_bytes": 222032,
+      "nonpaged_pool_bytes": 21808,
+      "is_M20_child": false
+    },
+    {
+      "pid": 16352,
+      "name": "AsHotplugCtrl.exe",
+      "private_bytes": 18345984,
+      "working_set_bytes": 1093632,
+      "peak_working_set_bytes": 7680000,
+      "paged_pool_bytes": 146720,
+      "nonpaged_pool_bytes": 8440,
+      "is_M20_child": false
+    },
+    {
+      "pid": 52404,
+      "name": "taskhostw.exe",
+      "private_bytes": 17965056,
+      "working_set_bytes": 13316096,
+      "peak_working_set_bytes": 45723648,
+      "paged_pool_bytes": 324464,
+      "nonpaged_pool_bytes": 28064,
+      "is_M20_child": false
+    },
+    {
+      "pid": 6068,
+      "name": "MsMpEng.exe",
+      "private_bytes": 17842176,
+      "working_set_bytes": 18223104,
+      "peak_working_set_bytes": 43806720,
+      "paged_pool_bytes": 211640,
+      "nonpaged_pool_bytes": 22576,
+      "is_M20_child": false
+    },
+    {
+      "pid": 62156,
+      "name": "backgroundTaskHost.exe",
+      "private_bytes": 17821696,
+      "working_set_bytes": 606208,
+      "peak_working_set_bytes": 50319360,
+      "paged_pool_bytes": 384480,
+      "nonpaged_pool_bytes": 36664,
+      "is_M20_child": false
+    },
+    {
+      "pid": 84184,
+      "name": "msedge.exe",
+      "private_bytes": 17821696,
+      "working_set_bytes": 27054080,
+      "peak_working_set_bytes": 35020800,
+      "paged_pool_bytes": 923216,
+      "nonpaged_pool_bytes": 18096,
+      "is_M20_child": false
+    },
+    {
+      "pid": 2176,
+      "name": "svchost.exe",
+      "private_bytes": 17817600,
+      "working_set_bytes": 5595136,
+      "peak_working_set_bytes": 27889664,
+      "paged_pool_bytes": 96360,
+      "nonpaged_pool_bytes": 13776,
+      "is_M20_child": false
+    },
+    {
+      "pid": 52744,
+      "name": "backgroundTaskHost.exe",
+      "private_bytes": 17793024,
+      "working_set_bytes": 598016,
+      "peak_working_set_bytes": 50192384,
+      "paged_pool_bytes": 384480,
+      "nonpaged_pool_bytes": 36528,
+      "is_M20_child": false
+    },
+    {
+      "pid": 26056,
+      "name": "backgroundTaskHost.exe",
+      "private_bytes": 17502208,
+      "working_set_bytes": 602112,
+      "peak_working_set_bytes": 49819648,
+      "paged_pool_bytes": 384480,
+      "nonpaged_pool_bytes": 36664,
+      "is_M20_child": false
+    },
+    {
+      "pid": 67888,
+      "name": "Widgets.exe",
+      "private_bytes": 17371136,
+      "working_set_bytes": 40062976,
+      "peak_working_set_bytes": 80150528,
+      "paged_pool_bytes": 459392,
+      "nonpaged_pool_bytes": 36984,
+      "is_M20_child": false
+    },
+    {
+      "pid": 48268,
+      "name": "msedge.exe",
+      "private_bytes": 17334272,
+      "working_set_bytes": 40185856,
+      "peak_working_set_bytes": 48386048,
+      "paged_pool_bytes": 969648,
+      "nonpaged_pool_bytes": 21528,
+      "is_M20_child": false
+    },
+    {
+      "pid": 14816,
+      "name": "backgroundTaskHost.exe",
+      "private_bytes": 17330176,
+      "working_set_bytes": 606208,
+      "peak_working_set_bytes": 49606656,
+      "paged_pool_bytes": 384480,
+      "nonpaged_pool_bytes": 36664,
+      "is_M20_child": false
+    },
+    {
+      "pid": 69128,
+      "name": "backgroundTaskHost.exe",
+      "private_bytes": 17092608,
+      "working_set_bytes": 589824,
+      "peak_working_set_bytes": 49500160,
+      "paged_pool_bytes": 384480,
+      "nonpaged_pool_bytes": 36392,
+      "is_M20_child": false
+    },
+    {
+      "pid": 78524,
+      "name": "backgroundTaskHost.exe",
+      "private_bytes": 17076224,
+      "working_set_bytes": 585728,
+      "peak_working_set_bytes": 49422336,
+      "paged_pool_bytes": 384480,
+      "nonpaged_pool_bytes": 36392,
+      "is_M20_child": false
+    },
+    {
+      "pid": 21392,
+      "name": "backgroundTaskHost.exe",
+      "private_bytes": 16850944,
+      "working_set_bytes": 610304,
+      "peak_working_set_bytes": 48762880,
+      "paged_pool_bytes": 389536,
+      "nonpaged_pool_bytes": 36304,
+      "is_M20_child": false
+    },
+    {
+      "pid": 10388,
+      "name": "Code.exe",
+      "private_bytes": 16760832,
+      "working_set_bytes": 19955712,
+      "peak_working_set_bytes": 62504960,
+      "paged_pool_bytes": 673976,
+      "nonpaged_pool_bytes": 22480,
+      "is_M20_child": false
+    },
+    {
+      "pid": 14168,
+      "name": "AdskIdentityManager.exe",
+      "private_bytes": 16580608,
+      "working_set_bytes": 13266944,
+      "peak_working_set_bytes": 49082368,
+      "paged_pool_bytes": 308912,
+      "nonpaged_pool_bytes": 27120,
+      "is_M20_child": false
+    },
+    {
+      "pid": 81500,
+      "name": "chrome.exe",
+      "private_bytes": 15130624,
+      "working_set_bytes": 32174080,
+      "peak_working_set_bytes": 32501760,
+      "paged_pool_bytes": 823064,
+      "nonpaged_pool_bytes": 17736,
+      "is_M20_child": false
+    },
+    {
+      "pid": 18312,
+      "name": "RuntimeBroker.exe",
+      "private_bytes": 14868480,
+      "working_set_bytes": 21176320,
+      "peak_working_set_bytes": 66502656,
+      "paged_pool_bytes": 415152,
+      "nonpaged_pool_bytes": 33024,
+      "is_M20_child": false
+    },
+    {
+      "pid": 35172,
+      "name": "QQEX.exe",
+      "private_bytes": 14802944,
+      "working_set_bytes": 15425536,
+      "peak_working_set_bytes": 43728896,
+      "paged_pool_bytes": 637152,
+      "nonpaged_pool_bytes": 23264,
+      "is_M20_child": false
+    },
+    {
+      "pid": 19392,
+      "name": "NVIDIA Overlay.exe",
+      "private_bytes": 14761984,
+      "working_set_bytes": 18866176,
+      "peak_working_set_bytes": 37961728,
+      "paged_pool_bytes": 735232,
+      "nonpaged_pool_bytes": 23024,
+      "is_M20_child": false
+    },
+    {
+      "pid": 29332,
+      "name": "AacAmbientLighting.exe",
+      "private_bytes": 13914112,
+      "working_set_bytes": 19873792,
+      "peak_working_set_bytes": 67809280,
+      "paged_pool_bytes": 445656,
+      "nonpaged_pool_bytes": 46472,
+      "is_M20_child": false
+    },
+    {
+      "pid": 14252,
+      "name": "AdskAccessUIHost.exe",
+      "private_bytes": 13897728,
+      "working_set_bytes": 7012352,
+      "peak_working_set_bytes": 51892224,
+      "paged_pool_bytes": 634176,
+      "nonpaged_pool_bytes": 18696,
+      "is_M20_child": false
+    },
+    {
+      "pid": 376,
+      "name": "Registry",
+      "private_bytes": 13754368,
+      "working_set_bytes": 60207104,
+      "peak_working_set_bytes": 301948928,
+      "paged_pool_bytes": 318712,
+      "nonpaged_pool_bytes": 25432,
+      "is_M20_child": false
+    },
+    {
+      "pid": 21868,
+      "name": "svchost.exe",
+      "private_bytes": 13754368,
+      "working_set_bytes": 20512768,
+      "peak_working_set_bytes": 58351616,
+      "paged_pool_bytes": 198680,
+      "nonpaged_pool_bytes": 19416,
+      "is_M20_child": false
+    },
+    {
+      "pid": 54748,
+      "name": "backgroundTaskHost.exe",
+      "private_bytes": 13746176,
+      "working_set_bytes": 544768,
+      "peak_working_set_bytes": 44978176,
+      "paged_pool_bytes": 399648,
+      "nonpaged_pool_bytes": 34112,
+      "is_M20_child": false
+    },
+    {
+      "pid": 29732,
+      "name": "backgroundTaskHost.exe",
+      "private_bytes": 13742080,
+      "working_set_bytes": 1458176,
+      "peak_working_set_bytes": 44883968,
+      "paged_pool_bytes": 399648,
+      "nonpaged_pool_bytes": 34112,
+      "is_M20_child": false
+    },
+    {
+      "pid": 83852,
+      "name": "backgroundTaskHost.exe",
+      "private_bytes": 13725696,
+      "working_set_bytes": 552960,
+      "peak_working_set_bytes": 44978176,
+      "paged_pool_bytes": 399648,
+      "nonpaged_pool_bytes": 34112,
+      "is_M20_child": false
+    },
+    {
+      "pid": 15888,
+      "name": "backgroundTaskHost.exe",
+      "private_bytes": 13709312,
+      "working_set_bytes": 544768,
+      "peak_working_set_bytes": 44945408,
+      "paged_pool_bytes": 399648,
+      "nonpaged_pool_bytes": 34112,
+      "is_M20_child": false
+    },
+    {
+      "pid": 63024,
+      "name": "backgroundTaskHost.exe",
+      "private_bytes": 13705216,
+      "working_set_bytes": 540672,
+      "peak_working_set_bytes": 44949504,
+      "paged_pool_bytes": 399648,
+      "nonpaged_pool_bytes": 34112,
+      "is_M20_child": false
+    },
+    {
+      "pid": 14108,
+      "name": "backgroundTaskHost.exe",
+      "private_bytes": 13697024,
+      "working_set_bytes": 552960,
+      "peak_working_set_bytes": 44953600,
+      "paged_pool_bytes": 399648,
+      "nonpaged_pool_bytes": 34112,
+      "is_M20_child": false
+    },
+    {
+      "pid": 67860,
+      "name": "msedgewebview2.exe",
+      "private_bytes": 13549568,
+      "working_set_bytes": 5353472,
+      "peak_working_set_bytes": 43343872,
+      "paged_pool_bytes": 970704,
+      "nonpaged_pool_bytes": 21664,
+      "is_M20_child": false
+    },
+    {
+      "pid": 14760,
+      "name": "nvcontainer.exe",
+      "private_bytes": 13488128,
+      "working_set_bytes": 8847360,
+      "peak_working_set_bytes": 55386112,
+      "paged_pool_bytes": 282176,
+      "nonpaged_pool_bytes": 21576,
+      "is_M20_child": false
+    },
+    {
+      "pid": 2428,
+      "name": "crashpad_handler.exe",
+      "private_bytes": 12963840,
+      "working_set_bytes": 8761344,
+      "peak_working_set_bytes": 18661376,
+      "paged_pool_bytes": 209856,
+      "nonpaged_pool_bytes": 16232,
+      "is_M20_child": false
+    },
+    {
+      "pid": 2128,
+      "name": "fontdrvhost.exe",
+      "private_bytes": 12943360,
+      "working_set_bytes": 10174464,
+      "peak_working_set_bytes": 138457088,
+      "paged_pool_bytes": 351144,
+      "nonpaged_pool_bytes": 11160,
+      "is_M20_child": false
+    },
+    {
+      "pid": 62640,
+      "name": "QQ.exe",
+      "private_bytes": 12910592,
+      "working_set_bytes": 7987200,
+      "peak_working_set_bytes": 35258368,
+      "paged_pool_bytes": 630888,
+      "nonpaged_pool_bytes": 19416,
+      "is_M20_child": false
+    },
+    {
+      "pid": 68152,
+      "name": "msedgewebview2.exe",
+      "private_bytes": 12849152,
+      "working_set_bytes": 36167680,
+      "peak_working_set_bytes": 41234432,
+      "paged_pool_bytes": 967624,
+      "nonpaged_pool_bytes": 22160,
+      "is_M20_child": false
+    },
+    {
+      "pid": 56888,
+      "name": "python.exe",
+      "private_bytes": 12779520,
+      "working_set_bytes": 17854464,
+      "peak_working_set_bytes": 22413312,
+      "paged_pool_bytes": 136848,
+      "nonpaged_pool_bytes": 11840,
+      "is_M20_child": false
+    },
+    {
+      "pid": 3852,
+      "name": "MemCompression",
+      "private_bytes": 12726272,
+      "working_set_bytes": 3673739264,
+      "peak_working_set_bytes": 7078301696,
+      "paged_pool_bytes": 4224,
+      "nonpaged_pool_bytes": 0,
+      "is_M20_child": false
+    },
+    {
+      "pid": 5080,
+      "name": "svchost.exe",
+      "private_bytes": 12562432,
+      "working_set_bytes": 16306176,
+      "peak_working_set_bytes": 93081600,
+      "paged_pool_bytes": 173328,
+      "nonpaged_pool_bytes": 33848,
+      "is_M20_child": false
+    },
+    {
+      "pid": 72204,
+      "name": "claude-152-wrapper.exe",
+      "private_bytes": 12460032,
+      "working_set_bytes": 1814528,
+      "peak_working_set_bytes": 15249408,
+      "paged_pool_bytes": 230136,
+      "nonpaged_pool_bytes": 13024,
+      "is_M20_child": false
+    },
+    {
+      "pid": 65840,
+      "name": "msedgewebview2.exe",
+      "private_bytes": 12136448,
+      "working_set_bytes": 17264640,
+      "peak_working_set_bytes": 42205184,
+      "paged_pool_bytes": 969584,
+      "nonpaged_pool_bytes": 20944,
+      "is_M20_child": false
+    },
+    {
+      "pid": 4644,
+      "name": "svchost.exe",
+      "private_bytes": 12115968,
+      "working_set_bytes": 20701184,
+      "peak_working_set_bytes": 80175104,
+      "paged_pool_bytes": 226640,
+      "nonpaged_pool_bytes": 21264,
+      "is_M20_child": false
+    },
+    {
+      "pid": 29832,
+      "name": "msedgewebview2.exe",
+      "private_bytes": 12099584,
+      "working_set_bytes": 0,
+      "peak_working_set_bytes": 35844096,
+      "paged_pool_bytes": 887192,
+      "nonpaged_pool_bytes": 12792,
+      "is_M20_child": false
+    },
+    {
+      "pid": 2404,
+      "name": "svchost.exe",
+      "private_bytes": 11960320,
+      "working_set_bytes": 5181440,
+      "peak_working_set_bytes": 26734592,
+      "paged_pool_bytes": 62224,
+      "nonpaged_pool_bytes": 42528,
+      "is_M20_child": false
+    },
+    {
+      "pid": 16336,
+      "name": "taskhostw.exe",
+      "private_bytes": 11943936,
+      "working_set_bytes": 13811712,
+      "peak_working_set_bytes": 23764992,
+      "paged_pool_bytes": 191736,
+      "nonpaged_pool_bytes": 31824,
+      "is_M20_child": false
+    },
+    {
+      "pid": 67904,
+      "name": "IntelGraphicsSoftware.Service.exe",
+      "private_bytes": 11689984,
+      "working_set_bytes": 2686976,
+      "peak_working_set_bytes": 48603136,
+      "paged_pool_bytes": 293144,
+      "nonpaged_pool_bytes": 42688,
+      "is_M20_child": false
+    },
+    {
+      "pid": 14780,
+      "name": "svchost.exe",
+      "private_bytes": 11673600,
+      "working_set_bytes": 27336704,
+      "peak_working_set_bytes": 27475968,
+      "paged_pool_bytes": 183688,
+      "nonpaged_pool_bytes": 32048,
+      "is_M20_child": false
+    },
+    {
+      "pid": 79396,
+      "name": "IntelGraphicsSoftware.Service.Graphics.exe",
+      "private_bytes": 11542528,
+      "working_set_bytes": 11350016,
+      "peak_working_set_bytes": 48861184,
+      "paged_pool_bytes": 280624,
+      "nonpaged_pool_bytes": 42696,
+      "is_M20_child": false
+    },
+    {
+      "pid": 29520,
+      "name": "chrome.exe",
+      "private_bytes": 11218944,
+      "working_set_bytes": 8814592,
+      "peak_working_set_bytes": 45289472,
+      "paged_pool_bytes": 764520,
+      "nonpaged_pool_bytes": 15104,
+      "is_M20_child": false
+    },
+    {
+      "pid": 43444,
+      "name": "chrome.exe",
+      "private_bytes": 11206656,
+      "working_set_bytes": 12587008,
+      "peak_working_set_bytes": 23670784,
+      "paged_pool_bytes": 817344,
+      "nonpaged_pool_bytes": 18880,
+      "is_M20_child": false
+    },
+    {
+      "pid": 32820,
+      "name": "QQ.exe",
+      "private_bytes": 11157504,
+      "working_set_bytes": 5828608,
+      "peak_working_set_bytes": 23040000,
+      "paged_pool_bytes": 606336,
+      "nonpaged_pool_bytes": 16712,
+      "is_M20_child": false
+    },
+    {
+      "pid": 8376,
+      "name": "dasHost.exe",
+      "private_bytes": 10919936,
+      "working_set_bytes": 12558336,
+      "peak_working_set_bytes": 21344256,
+      "paged_pool_bytes": 125336,
+      "nonpaged_pool_bytes": 20880,
+      "is_M20_child": false
+    },
+    {
+      "pid": 5812,
+      "name": "AsusScreenXpertHostService.exe",
+      "private_bytes": 10530816,
+      "working_set_bytes": 16265216,
+      "peak_working_set_bytes": 42795008,
+      "paged_pool_bytes": 271544,
+      "nonpaged_pool_bytes": 18632,
+      "is_M20_child": false
+    },
+    {
+      "pid": 15412,
+      "name": "sihost.exe",
+      "private_bytes": 10526720,
+      "working_set_bytes": 32686080,
+      "peak_working_set_bytes": 44883968,
+      "paged_pool_bytes": 357432,
+      "nonpaged_pool_bytes": 22656,
+      "is_M20_child": false
+    },
+    {
+      "pid": 83120,
+      "name": "python.exe",
+      "private_bytes": 10457088,
+      "working_set_bytes": 17141760,
+      "peak_working_set_bytes": 17158144,
+      "paged_pool_bytes": 151664,
+      "nonpaged_pool_bytes": 11432,
+      "is_M20_child": false
+    },
+    {
+      "pid": 26428,
+      "name": "UPSecurityInput.exe",
+      "private_bytes": 10452992,
+      "working_set_bytes": 6238208,
+      "peak_working_set_bytes": 25645056,
+      "paged_pool_bytes": 201480,
+      "nonpaged_pool_bytes": 24480,
+      "is_M20_child": false
+    },
+    {
+      "pid": 21968,
+      "name": "PresentMonService.exe",
+      "private_bytes": 10244096,
+      "working_set_bytes": 1544192,
+      "peak_working_set_bytes": 21360640,
+      "paged_pool_bytes": 100376,
+      "nonpaged_pool_bytes": 12248,
+      "is_M20_child": false
+    },
+    {
+      "pid": 5932,
+      "name": "AsusSoftwareManager.exe",
+      "private_bytes": 10145792,
+      "working_set_bytes": 17928192,
+      "peak_working_set_bytes": 37355520,
+      "paged_pool_bytes": 187624,
+      "nonpaged_pool_bytes": 17792,
+      "is_M20_child": false
+    },
+    {
+      "pid": 82356,
+      "name": "python.exe",
+      "private_bytes": 10096640,
+      "working_set_bytes": 19582976,
+      "peak_working_set_bytes": 21008384,
+      "paged_pool_bytes": 169936,
+      "nonpaged_pool_bytes": 13592,
+      "is_M20_child": false
+    },
+    {
+      "pid": 16132,
+      "name": "svchost.exe",
+      "private_bytes": 10055680,
+      "working_set_bytes": 22192128,
+      "peak_working_set_bytes": 28696576,
+      "paged_pool_bytes": 159856,
+      "nonpaged_pool_bytes": 13064,
+      "is_M20_child": false
+    },
+    {
+      "pid": 55020,
+      "name": "Code.exe",
+      "private_bytes": 9613312,
+      "working_set_bytes": 2838528,
+      "peak_working_set_bytes": 34873344,
+      "paged_pool_bytes": 619608,
+      "nonpaged_pool_bytes": 10936,
+      "is_M20_child": false
+    },
+    {
+      "pid": 18592,
+      "name": "NVIDIA Overlay.exe",
+      "private_bytes": 9515008,
+      "working_set_bytes": 4587520,
+      "peak_working_set_bytes": 24391680,
+      "paged_pool_bytes": 719512,
+      "nonpaged_pool_bytes": 16872,
+      "is_M20_child": false
+    },
+    {
+      "pid": 16324,
+      "name": "steamservice.exe",
+      "private_bytes": 9240576,
+      "working_set_bytes": 12464128,
+      "peak_working_set_bytes": 20901888,
+      "paged_pool_bytes": 145240,
+      "nonpaged_pool_bytes": 15272,
+      "is_M20_child": false
+    },
+    {
+      "pid": 7180,
+      "name": "WUDFHost.exe",
+      "private_bytes": 8949760,
+      "working_set_bytes": 7757824,
+      "peak_working_set_bytes": 23678976,
+      "paged_pool_bytes": 143120,
+      "nonpaged_pool_bytes": 17504,
+      "is_M20_child": false
+    },
+    {
+      "pid": 16156,
+      "name": "svchost.exe",
+      "private_bytes": 8847360,
+      "working_set_bytes": 18366464,
+      "peak_working_set_bytes": 38547456,
+      "paged_pool_bytes": 263696,
+      "nonpaged_pool_bytes": 17584,
+      "is_M20_child": false
+    },
+    {
+      "pid": 21704,
+      "name": "RuntimeBroker.exe",
+      "private_bytes": 8814592,
+      "working_set_bytes": 15736832,
+      "peak_working_set_bytes": 33034240,
+      "paged_pool_bytes": 238496,
+      "nonpaged_pool_bytes": 13128,
+      "is_M20_child": false
+    },
+    {
+      "pid": 42296,
+      "name": "msedge.exe",
+      "private_bytes": 8658944,
+      "working_set_bytes": 23003136,
+      "peak_working_set_bytes": 24752128,
+      "paged_pool_bytes": 939416,
+      "nonpaged_pool_bytes": 17520,
+      "is_M20_child": false
+    },
+    {
+      "pid": 73748,
+      "name": "msedge.exe",
+      "private_bytes": 8601600,
+      "working_set_bytes": 20316160,
+      "peak_working_set_bytes": 22790144,
+      "paged_pool_bytes": 892288,
+      "nonpaged_pool_bytes": 12928,
+      "is_M20_child": false
+    },
+    {
+      "pid": 1784,
+      "name": "services.exe",
+      "private_bytes": 8531968,
+      "working_set_bytes": 9949184,
+      "peak_working_set_bytes": 22798336,
+      "paged_pool_bytes": 259816,
+      "nonpaged_pool_bytes": 18224,
+      "is_M20_child": false
+    },
+    {
+      "pid": 36192,
+      "name": "svchost.exe",
+      "private_bytes": 8499200,
+      "working_set_bytes": 4403200,
+      "peak_working_set_bytes": 15319040,
+      "paged_pool_bytes": 103520,
+      "nonpaged_pool_bytes": 15784,
+      "is_M20_child": false
+    },
+    {
+      "pid": 26736,
+      "name": "GlideXService.exe",
+      "private_bytes": 8376320,
+      "working_set_bytes": 7204864,
+      "peak_working_set_bytes": 22507520,
+      "paged_pool_bytes": 193712,
+      "nonpaged_pool_bytes": 32840,
+      "is_M20_child": false
+    },
+    {
+      "pid": 4044,
+      "name": "svchost.exe",
+      "private_bytes": 8359936,
+      "working_set_bytes": 15048704,
+      "peak_working_set_bytes": 37924864,
+      "paged_pool_bytes": 155072,
+      "nonpaged_pool_bytes": 16712,
+      "is_M20_child": false
+    },
+    {
+      "pid": 20636,
+      "name": "SecurityHealthService.exe",
+      "private_bytes": 8278016,
+      "working_set_bytes": 11640832,
+      "peak_working_set_bytes": 36732928,
+      "paged_pool_bytes": 196864,
+      "nonpaged_pool_bytes": 26712,
+      "is_M20_child": false
+    },
+    {
+      "pid": 8580,
+      "name": "svchost.exe",
+      "private_bytes": 8257536,
+      "working_set_bytes": 11796480,
+      "peak_working_set_bytes": 54784000,
+      "paged_pool_bytes": 202792,
+      "nonpaged_pool_bytes": 18368,
+      "is_M20_child": false
+    },
+    {
+      "pid": 50712,
+      "name": "RuntimeBroker.exe",
+      "private_bytes": 8163328,
+      "working_set_bytes": 39837696,
+      "peak_working_set_bytes": 48283648,
+      "paged_pool_bytes": 289488,
+      "nonpaged_pool_bytes": 21272,
+      "is_M20_child": false
+    },
+    {
+      "pid": 5844,
+      "name": "AsusAppService.exe",
+      "private_bytes": 7880704,
+      "working_set_bytes": 16154624,
+      "peak_working_set_bytes": 36163584,
+      "paged_pool_bytes": 282064,
+      "nonpaged_pool_bytes": 23120,
+      "is_M20_child": false
+    },
+    {
+      "pid": 2516,
+      "name": "svchost.exe",
+      "private_bytes": 7872512,
+      "working_set_bytes": 8134656,
+      "peak_working_set_bytes": 28663808,
+      "paged_pool_bytes": 113936,
+      "nonpaged_pool_bytes": 25696,
+      "is_M20_child": false
+    },
+    {
+      "pid": 53832,
+      "name": "msedgewebview2.exe",
+      "private_bytes": 7692288,
+      "working_set_bytes": 4911104,
+      "peak_working_set_bytes": 21090304,
+      "paged_pool_bytes": 886968,
+      "nonpaged_pool_bytes": 12520,
+      "is_M20_child": false
+    },
+    {
+      "pid": 2544,
+      "name": "svchost.exe",
+      "private_bytes": 7688192,
+      "working_set_bytes": 11476992,
+      "peak_working_set_bytes": 26853376,
+      "paged_pool_bytes": 270752,
+      "nonpaged_pool_bytes": 21112,
+      "is_M20_child": false
+    },
+    {
+      "pid": 43856,
+      "name": "msedgewebview2.exe",
+      "private_bytes": 7671808,
+      "working_set_bytes": 18784256,
+      "peak_working_set_bytes": 21209088,
+      "paged_pool_bytes": 887128,
+      "nonpaged_pool_bytes": 12656,
+      "is_M20_child": false
+    },
+    {
+      "pid": 65060,
+      "name": "CodeSetup-stable-6d62b1d5dace93a33b3a6d3eca1317bd5e15bcb1.exe",
+      "private_bytes": 7516160,
+      "working_set_bytes": 1613824,
+      "peak_working_set_bytes": 18194432,
+      "paged_pool_bytes": 164760,
+      "nonpaged_pool_bytes": 11360,
+      "is_M20_child": false
+    },
+    {
+      "pid": 81280,
+      "name": "python.exe",
+      "private_bytes": 7458816,
+      "working_set_bytes": 7028736,
+      "peak_working_set_bytes": 13418496,
+      "paged_pool_bytes": 73384,
+      "nonpaged_pool_bytes": 8440,
+      "is_M20_child": false
+    },
+    {
+      "pid": 19536,
+      "name": "dllhost.exe",
+      "private_bytes": 7352320,
+      "working_set_bytes": 5009408,
+      "peak_working_set_bytes": 18894848,
+      "paged_pool_bytes": 171328,
+      "nonpaged_pool_bytes": 25576,
+      "is_M20_child": false
+    },
+    {
+      "pid": 6136,
+      "name": "ipf_uf.exe",
+      "private_bytes": 7331840,
+      "working_set_bytes": 4476928,
+      "peak_working_set_bytes": 22978560,
+      "paged_pool_bytes": 182728,
+      "nonpaged_pool_bytes": 16184,
+      "is_M20_child": false
+    },
+    {
+      "pid": 6204,
+      "name": "svchost.exe",
+      "private_bytes": 7106560,
+      "working_set_bytes": 12050432,
+      "peak_working_set_bytes": 27271168,
+      "paged_pool_bytes": 209672,
+      "nonpaged_pool_bytes": 21208,
+      "is_M20_child": false
+    },
+    {
+      "pid": 4832,
+      "name": "wlanext.exe",
+      "private_bytes": 7102464,
+      "working_set_bytes": 3989504,
+      "peak_working_set_bytes": 45264896,
+      "paged_pool_bytes": 141008,
+      "nonpaged_pool_bytes": 12856,
+      "is_M20_child": false
+    },
+    {
+      "pid": 37708,
+      "name": "clouddrive_desktop_widget.exe",
+      "private_bytes": 7094272,
+      "working_set_bytes": 6549504,
+      "peak_working_set_bytes": 22507520,
+      "paged_pool_bytes": 210696,
+      "nonpaged_pool_bytes": 18552,
+      "is_M20_child": false
+    },
+    {
+      "pid": 4116,
+      "name": "WmiPrvSE.exe",
+      "private_bytes": 6930432,
+      "working_set_bytes": 16740352,
+      "peak_working_set_bytes": 22118400,
+      "paged_pool_bytes": 93688,
+      "nonpaged_pool_bytes": 13112,
+      "is_M20_child": false
+    },
+    {
+      "pid": 19144,
+      "name": "RuntimeBroker.exe",
+      "private_bytes": 6680576,
+      "working_set_bytes": 16183296,
+      "peak_working_set_bytes": 40882176,
+      "paged_pool_bytes": 251488,
+      "nonpaged_pool_bytes": 19320,
+      "is_M20_child": false
+    },
+    {
+      "pid": 5616,
+      "name": "NgcIso.exe",
+      "private_bytes": 6356992,
+      "working_set_bytes": 2498560,
+      "peak_working_set_bytes": 5173248,
+      "paged_pool_bytes": 27192,
+      "nonpaged_pool_bytes": 84600,
+      "is_M20_child": false
+    },
+    {
+      "pid": 45992,
+      "name": "RuntimeBroker.exe",
+      "private_bytes": 6184960,
+      "working_set_bytes": 14712832,
+      "peak_working_set_bytes": 34172928,
+      "paged_pool_bytes": 231288,
+      "nonpaged_pool_bytes": 17688,
+      "is_M20_child": false
+    },
+    {
+      "pid": 1824,
+      "name": "YunDetectService.exe",
+      "private_bytes": 6123520,
+      "working_set_bytes": 3125248,
+      "peak_working_set_bytes": 16642048,
+      "paged_pool_bytes": 197552,
+      "nonpaged_pool_bytes": 19232,
+      "is_M20_child": false
+    },
+    {
+      "pid": 5940,
+      "name": "AsusSystemAnalysis.exe",
+      "private_bytes": 6070272,
+      "working_set_bytes": 11100160,
+      "peak_working_set_bytes": 22470656,
+      "paged_pool_bytes": 200152,
+      "nonpaged_pool_bytes": 14864,
+      "is_M20_child": false
+    },
+    {
+      "pid": 35100,
+      "name": "RuntimeBroker.exe",
+      "private_bytes": 6066176,
+      "working_set_bytes": 9875456,
+      "peak_working_set_bytes": 36057088,
+      "paged_pool_bytes": 229456,
+      "nonpaged_pool_bytes": 14696,
+      "is_M20_child": false
+    },
+    {
+      "pid": 3156,
+      "name": "Weixin.exe",
+      "private_bytes": 6062080,
+      "working_set_bytes": 4501504,
+      "peak_working_set_bytes": 20209664,
+      "paged_pool_bytes": 214808,
+      "nonpaged_pool_bytes": 12248,
+      "is_M20_child": false
+    },
+    {
+      "pid": 3440,
+      "name": "svchost.exe",
+      "private_bytes": 6037504,
+      "working_set_bytes": 12414976,
+      "peak_working_set_bytes": 24416256,
+      "paged_pool_bytes": 153280,
+      "nonpaged_pool_bytes": 23208,
+      "is_M20_child": false
+    },
+    {
+      "pid": 2980,
+      "name": "svchost.exe",
+      "private_bytes": 5877760,
+      "working_set_bytes": 4038656,
+      "peak_working_set_bytes": 26603520,
+      "paged_pool_bytes": 117912,
+      "nonpaged_pool_bytes": 15800,
+      "is_M20_child": false
+    },
+    {
+      "pid": 84136,
+      "name": "XboxPcAppFT.exe",
+      "private_bytes": 5750784,
+      "working_set_bytes": 21020672,
+      "peak_working_set_bytes": 24866816,
+      "paged_pool_bytes": 217544,
+      "nonpaged_pool_bytes": 15920,
+      "is_M20_child": false
+    },
+    {
+      "pid": 18728,
+      "name": "WidgetService.exe",
+      "private_bytes": 5656576,
+      "working_set_bytes": 16179200,
+      "peak_working_set_bytes": 34418688,
+      "paged_pool_bytes": 218120,
+      "nonpaged_pool_bytes": 19752,
+      "is_M20_child": false
+    },
+    {
+      "pid": 50252,
+      "name": "WmiPrvSE.exe",
+      "private_bytes": 5521408,
+      "working_set_bytes": 15757312,
+      "peak_working_set_bytes": 17219584,
+      "paged_pool_bytes": 91448,
+      "nonpaged_pool_bytes": 14016,
+      "is_M20_child": false
+    },
+    {
+      "pid": 31584,
+      "name": "svchost.exe",
+      "private_bytes": 5447680,
+      "working_set_bytes": 9637888,
+      "peak_working_set_bytes": 21131264,
+      "paged_pool_bytes": 205016,
+      "nonpaged_pool_bytes": 23712,
+      "is_M20_child": false
+    },
+    {
+      "pid": 7476,
+      "name": "UPService.exe",
+      "private_bytes": 5378048,
+      "working_set_bytes": 6774784,
+      "peak_working_set_bytes": 19460096,
+      "paged_pool_bytes": 82288,
+      "nonpaged_pool_bytes": 12152,
+      "is_M20_child": false
+    },
+    {
+      "pid": 10956,
+      "name": "MathWorksCrashReporter.exe",
+      "private_bytes": 5230592,
+      "working_set_bytes": 2895872,
+      "peak_working_set_bytes": 22724608,
+      "paged_pool_bytes": 351440,
+      "nonpaged_pool_bytes": 23704,
+      "is_M20_child": false
+    },
+    {
+      "pid": 1720,
+      "name": "csrss.exe",
+      "private_bytes": 5165056,
+      "working_set_bytes": 5144576,
+      "peak_working_set_bytes": 42242048,
+      "paged_pool_bytes": 596880,
+      "nonpaged_pool_bytes": 74008,
+      "is_M20_child": false
+    },
+    {
+      "pid": 21924,
+      "name": "backgroundTaskHost.exe",
+      "private_bytes": 4993024,
+      "working_set_bytes": 1986560,
+      "peak_working_set_bytes": 32956416,
+      "paged_pool_bytes": 314320,
+      "nonpaged_pool_bytes": 18856,
+      "is_M20_child": false
+    },
+    {
+      "pid": 14488,
+      "name": "svchost.exe",
+      "private_bytes": 4796416,
+      "working_set_bytes": 11829248,
+      "peak_working_set_bytes": 22749184,
+      "paged_pool_bytes": 132584,
+      "nonpaged_pool_bytes": 13200,
+      "is_M20_child": false
+    },
+    {
+      "pid": 20472,
+      "name": "svchost.exe",
+      "private_bytes": 4587520,
+      "working_set_bytes": 13967360,
+      "peak_working_set_bytes": 29667328,
+      "paged_pool_bytes": 131168,
+      "nonpaged_pool_bytes": 16432,
+      "is_M20_child": false
+    },
+    {
+      "pid": 15716,
+      "name": "svchost.exe",
+      "private_bytes": 4493312,
+      "working_set_bytes": 3715072,
+      "peak_working_set_bytes": 17018880,
+      "paged_pool_bytes": 139328,
+      "nonpaged_pool_bytes": 24344,
+      "is_M20_child": false
+    },
+    {
+      "pid": 1948,
+      "name": "fontdrvhost.exe",
+      "private_bytes": 4374528,
+      "working_set_bytes": 892928,
+      "peak_working_set_bytes": 41078784,
+      "paged_pool_bytes": 236752,
+      "nonpaged_pool_bytes": 8712,
+      "is_M20_child": false
+    },
+    {
+      "pid": 4488,
+      "name": "GlideXRemoteService.exe",
+      "private_bytes": 4358144,
+      "working_set_bytes": 3076096,
+      "peak_working_set_bytes": 20443136,
+      "paged_pool_bytes": 132688,
+      "nonpaged_pool_bytes": 11832,
+      "is_M20_child": false
+    },
+    {
+      "pid": 17652,
+      "name": "AsusScreenXpertUI.exe",
+      "private_bytes": 4296704,
+      "working_set_bytes": 3092480,
+      "peak_working_set_bytes": 17977344,
+      "paged_pool_bytes": 307576,
+      "nonpaged_pool_bytes": 13800,
+      "is_M20_child": false
+    },
+    {
+      "pid": 57320,
+      "name": "pet.exe",
+      "private_bytes": 4259840,
+      "working_set_bytes": 692224,
+      "peak_working_set_bytes": 9117696,
+      "paged_pool_bytes": 63584,
+      "nonpaged_pool_bytes": 12248,
+      "is_M20_child": false
+    },
+    {
+      "pid": 5780,
+      "name": "ArmouryCrateControlInterface.exe",
+      "private_bytes": 4243456,
+      "working_set_bytes": 7802880,
+      "peak_working_set_bytes": 30838784,
+      "paged_pool_bytes": 124560,
+      "nonpaged_pool_bytes": 12608,
+      "is_M20_child": false
+    },
+    {
+      "pid": 6024,
+      "name": "FNPLicensingService64.exe",
+      "private_bytes": 4169728,
+      "working_set_bytes": 7217152,
+      "peak_working_set_bytes": 13758464,
+      "paged_pool_bytes": 97536,
+      "nonpaged_pool_bytes": 11912,
+      "is_M20_child": false
+    },
+    {
+      "pid": 6540,
+      "name": "crashpad_handler.exe",
+      "private_bytes": 4161536,
+      "working_set_bytes": 8380416,
+      "peak_working_set_bytes": 9293824,
+      "paged_pool_bytes": 128568,
+      "nonpaged_pool_bytes": 12040,
+      "is_M20_child": false
+    },
+    {
+      "pid": 71628,
+      "name": "crashpad_handler.exe",
+      "private_bytes": 4161536,
+      "working_set_bytes": 8388608,
+      "peak_working_set_bytes": 9310208,
+      "paged_pool_bytes": 128568,
+      "nonpaged_pool_bytes": 12040,
+      "is_M20_child": false
+    },
+    {
+      "pid": 1596,
+      "name": "svchost.exe",
+      "private_bytes": 4100096,
+      "working_set_bytes": 5525504,
+      "peak_working_set_bytes": 20852736,
+      "paged_pool_bytes": 130640,
+      "nonpaged_pool_bytes": 11832,
+      "is_M20_child": false
+    },
+    {
+      "pid": 2844,
+      "name": "svchost.exe",
+      "private_bytes": 4026368,
+      "working_set_bytes": 8945664,
+      "peak_working_set_bytes": 39006208,
+      "paged_pool_bytes": 151024,
+      "nonpaged_pool_bytes": 12928,
+      "is_M20_child": false
+    },
+    {
+      "pid": 27844,
+      "name": "updater.exe",
+      "private_bytes": 3964928,
+      "working_set_bytes": 17793024,
+      "peak_working_set_bytes": 17793024,
+      "paged_pool_bytes": 162904,
+      "nonpaged_pool_bytes": 17176,
+      "is_M20_child": false
+    },
+    {
+      "pid": 2588,
+      "name": "svchost.exe",
+      "private_bytes": 3952640,
+      "working_set_bytes": 4993024,
+      "peak_working_set_bytes": 19431424,
+      "paged_pool_bytes": 87392,
+      "nonpaged_pool_bytes": 12816,
+      "is_M20_child": false
+    },
+    {
+      "pid": 78420,
+      "name": "svchost.exe",
+      "private_bytes": 3895296,
+      "working_set_bytes": 13766656,
+      "peak_working_set_bytes": 13832192,
+      "paged_pool_bytes": 82480,
+      "nonpaged_pool_bytes": 10344,
+      "is_M20_child": false
+    },
+    {
+      "pid": 4308,
+      "name": "svchost.exe",
+      "private_bytes": 3862528,
+      "working_set_bytes": 4800512,
+      "peak_working_set_bytes": 26230784,
+      "paged_pool_bytes": 140024,
+      "nonpaged_pool_bytes": 26968,
+      "is_M20_child": false
+    },
+    {
+      "pid": 5960,
+      "name": "svchost.exe",
+      "private_bytes": 3862528,
+      "working_set_bytes": 3551232,
+      "peak_working_set_bytes": 8445952,
+      "paged_pool_bytes": 76152,
+      "nonpaged_pool_bytes": 7488,
+      "is_M20_child": false
+    },
+    {
+      "pid": 23948,
+      "name": "svchost.exe",
+      "private_bytes": 3842048,
+      "working_set_bytes": 10285056,
+      "peak_working_set_bytes": 27324416,
+      "paged_pool_bytes": 117048,
+      "nonpaged_pool_bytes": 15280,
+      "is_M20_child": false
+    },
+    {
+      "pid": 2636,
+      "name": "svchost.exe",
+      "private_bytes": 3731456,
+      "working_set_bytes": 5193728,
+      "peak_working_set_bytes": 23719936,
+      "paged_pool_bytes": 108768,
+      "nonpaged_pool_bytes": 13648,
+      "is_M20_child": false
+    },
+    {
+      "pid": 36596,
+      "name": "GlideXServiceExt.exe",
+      "private_bytes": 3727360,
+      "working_set_bytes": 11128832,
+      "peak_working_set_bytes": 20140032,
+      "paged_pool_bytes": 151784,
+      "nonpaged_pool_bytes": 12784,
+      "is_M20_child": false
+    },
+    {
+      "pid": 1792,
+      "name": "LsaIso.exe",
+      "private_bytes": 3694592,
+      "working_set_bytes": 1298432,
+      "peak_working_set_bytes": 4296704,
+      "paged_pool_bytes": 30800,
+      "nonpaged_pool_bytes": 46384,
+      "is_M20_child": false
+    },
+    {
+      "pid": 6212,
+      "name": "svchost.exe",
+      "private_bytes": 3670016,
+      "working_set_bytes": 5214208,
+      "peak_working_set_bytes": 11943936,
+      "paged_pool_bytes": 114128,
+      "nonpaged_pool_bytes": 13384,
+      "is_M20_child": false
+    },
+    {
+      "pid": 16824,
+      "name": "nvsphelper64.exe",
+      "private_bytes": 3592192,
+      "working_set_bytes": 2547712,
+      "peak_working_set_bytes": 17899520,
+      "paged_pool_bytes": 193424,
+      "nonpaged_pool_bytes": 13944,
+      "is_M20_child": false
+    },
+    {
+      "pid": 3828,
+      "name": "RuntimeBroker.exe",
+      "private_bytes": 3530752,
+      "working_set_bytes": 7221248,
+      "peak_working_set_bytes": 24653824,
+      "paged_pool_bytes": 137992,
+      "nonpaged_pool_bytes": 10616,
+      "is_M20_child": false
+    },
+    {
+      "pid": 12296,
+      "name": "svchost.exe",
+      "private_bytes": 3506176,
+      "working_set_bytes": 3096576,
+      "peak_working_set_bytes": 8945664,
+      "paged_pool_bytes": 116328,
+      "nonpaged_pool_bytes": 8032,
+      "is_M20_child": false
+    },
+    {
+      "pid": 3712,
+      "name": "svchost.exe",
+      "private_bytes": 3477504,
+      "working_set_bytes": 7487488,
+      "peak_working_set_bytes": 84389888,
+      "paged_pool_bytes": 128672,
+      "nonpaged_pool_bytes": 13672,
+      "is_M20_child": false
+    },
+    {
+      "pid": 79364,
+      "name": "ledcontrolservice3.exe",
+      "private_bytes": 3473408,
+      "working_set_bytes": 3674112,
+      "peak_working_set_bytes": 18661376,
+      "paged_pool_bytes": 192920,
+      "nonpaged_pool_bytes": 18192,
+      "is_M20_child": false
+    },
+    {
+      "pid": 11244,
+      "name": "WUDFCompanionHost.exe",
+      "private_bytes": 3469312,
+      "working_set_bytes": 1425408,
+      "peak_working_set_bytes": 4763648,
+      "paged_pool_bytes": 28072,
+      "nonpaged_pool_bytes": 2541296,
+      "is_M20_child": false
+    },
+    {
+      "pid": 10368,
+      "name": "unsecapp.exe",
+      "private_bytes": 3461120,
+      "working_set_bytes": 3170304,
+      "peak_working_set_bytes": 12226560,
+      "paged_pool_bytes": 77936,
+      "nonpaged_pool_bytes": 9800,
+      "is_M20_child": false
+    },
+    {
+      "pid": 53252,
+      "name": "everything.exe",
+      "private_bytes": 3461120,
+      "working_set_bytes": 1769472,
+      "peak_working_set_bytes": 24244224,
+      "paged_pool_bytes": 224328,
+      "nonpaged_pool_bytes": 15424,
+      "is_M20_child": false
+    },
+    {
+      "pid": 83856,
+      "name": "node_repl.exe",
+      "private_bytes": 3440640,
+      "working_set_bytes": 9146368,
+      "peak_working_set_bytes": 10551296,
+      "paged_pool_bytes": 112032,
+      "nonpaged_pool_bytes": 10408,
+      "is_M20_child": false
+    },
+    {
+      "pid": 43680,
+      "name": "node_repl.exe",
+      "private_bytes": 3432448,
+      "working_set_bytes": 9158656,
+      "peak_working_set_bytes": 10530816,
+      "paged_pool_bytes": 112032,
+      "nonpaged_pool_bytes": 10408,
+      "is_M20_child": false
+    },
+    {
+      "pid": 4316,
+      "name": "AsusOptimization.exe",
+      "private_bytes": 3424256,
+      "working_set_bytes": 4751360,
+      "peak_working_set_bytes": 28315648,
+      "paged_pool_bytes": 122944,
+      "nonpaged_pool_bytes": 14968,
+      "is_M20_child": false
+    },
+    {
+      "pid": 7460,
+      "name": "node_repl.exe",
+      "private_bytes": 3424256,
+      "working_set_bytes": 995328,
+      "peak_working_set_bytes": 10620928,
+      "paged_pool_bytes": 112032,
+      "nonpaged_pool_bytes": 10408,
+      "is_M20_child": false
+    },
+    {
+      "pid": 14628,
+      "name": "AsusOptimizationStartupTask.exe",
+      "private_bytes": 3424256,
+      "working_set_bytes": 3432448,
+      "peak_working_set_bytes": 21196800,
+      "paged_pool_bytes": 203896,
+      "nonpaged_pool_bytes": 15392,
+      "is_M20_child": false
+    },
+    {
+      "pid": 31484,
+      "name": "svchost.exe",
+      "private_bytes": 3424256,
+      "working_set_bytes": 5525504,
+      "peak_working_set_bytes": 13926400,
+      "paged_pool_bytes": 85992,
+      "nonpaged_pool_bytes": 13240,
+      "is_M20_child": false
+    },
+    {
+      "pid": 19200,
+      "name": "node_repl.exe",
+      "private_bytes": 3411968,
+      "working_set_bytes": 9039872,
+      "peak_working_set_bytes": 10526720,
+      "paged_pool_bytes": 110048,
+      "nonpaged_pool_bytes": 10544,
+      "is_M20_child": false
+    },
+    {
+      "pid": 79776,
+      "name": "SearchProtocolHost.exe",
+      "private_bytes": 3350528,
+      "working_set_bytes": 12484608,
+      "peak_working_set_bytes": 18788352,
+      "paged_pool_bytes": 126496,
+      "nonpaged_pool_bytes": 13064,
+      "is_M20_child": false
+    },
+    {
+      "pid": 83092,
+      "name": "node_repl.exe",
+      "private_bytes": 3346432,
+      "working_set_bytes": 1011712,
+      "peak_working_set_bytes": 10448896,
+      "paged_pool_bytes": 112032,
+      "nonpaged_pool_bytes": 10408,
+      "is_M20_child": false
+    },
+    {
+      "pid": 24680,
+      "name": "node_repl.exe",
+      "private_bytes": 3321856,
+      "working_set_bytes": 999424,
+      "peak_working_set_bytes": 10526720,
+      "paged_pool_bytes": 112032,
+      "nonpaged_pool_bytes": 10408,
+      "is_M20_child": false
+    },
+    {
+      "pid": 5600,
+      "name": "node_repl.exe",
+      "private_bytes": 3301376,
+      "working_set_bytes": 3948544,
+      "peak_working_set_bytes": 10330112,
+      "paged_pool_bytes": 112032,
+      "nonpaged_pool_bytes": 10408,
+      "is_M20_child": false
+    },
+    {
+      "pid": 66832,
+      "name": "node_repl.exe",
+      "private_bytes": 3289088,
+      "working_set_bytes": 1024000,
+      "peak_working_set_bytes": 10559488,
+      "paged_pool_bytes": 110048,
+      "nonpaged_pool_bytes": 10544,
+      "is_M20_child": false
+    },
+    {
+      "pid": 40964,
+      "name": "node_repl.exe",
+      "private_bytes": 3276800,
+      "working_set_bytes": 9129984,
+      "peak_working_set_bytes": 10620928,
+      "paged_pool_bytes": 112032,
+      "nonpaged_pool_bytes": 10408,
+      "is_M20_child": false
+    },
+    {
+      "pid": 44528,
+      "name": "node_repl.exe",
+      "private_bytes": 3276800,
+      "working_set_bytes": 9093120,
+      "peak_working_set_bytes": 10452992,
+      "paged_pool_bytes": 110048,
+      "nonpaged_pool_bytes": 10544,
+      "is_M20_child": false
+    },
+    {
+      "pid": 65936,
+      "name": "node_repl.exe",
+      "private_bytes": 3272704,
+      "working_set_bytes": 978944,
+      "peak_working_set_bytes": 10522624,
+      "paged_pool_bytes": 110048,
+      "nonpaged_pool_bytes": 10544,
+      "is_M20_child": false
+    },
+    {
+      "pid": 84060,
+      "name": "node_repl.exe",
+      "private_bytes": 3272704,
+      "working_set_bytes": 983040,
+      "peak_working_set_bytes": 10555392,
+      "paged_pool_bytes": 110048,
+      "nonpaged_pool_bytes": 10544,
+      "is_M20_child": false
+    },
+    {
+      "pid": 16628,
+      "name": "node_repl.exe",
+      "private_bytes": 3252224,
+      "working_set_bytes": 4186112,
+      "peak_working_set_bytes": 10432512,
+      "paged_pool_bytes": 110048,
+      "nonpaged_pool_bytes": 10544,
+      "is_M20_child": false
+    },
+    {
+      "pid": 36452,
+      "name": "node_repl.exe",
+      "private_bytes": 3235840,
+      "working_set_bytes": 9125888,
+      "peak_working_set_bytes": 10579968,
+      "paged_pool_bytes": 110048,
+      "nonpaged_pool_bytes": 10544,
+      "is_M20_child": false
+    },
+    {
+      "pid": 28536,
+      "name": "AsusOSD.exe",
+      "private_bytes": 3219456,
+      "working_set_bytes": 2043904,
+      "peak_working_set_bytes": 18034688,
+      "paged_pool_bytes": 235424,
+      "nonpaged_pool_bytes": 14488,
+      "is_M20_child": false
+    },
+    {
+      "pid": 6084,
+      "name": "svchost.exe",
+      "private_bytes": 3186688,
+      "working_set_bytes": 3948544,
+      "peak_working_set_bytes": 15200256,
+      "paged_pool_bytes": 110616,
+      "nonpaged_pool_bytes": 17880,
+      "is_M20_child": false
+    },
+    {
+      "pid": 5336,
+      "name": "svchost.exe",
+      "private_bytes": 3170304,
+      "working_set_bytes": 4591616,
+      "peak_working_set_bytes": 23973888,
+      "paged_pool_bytes": 111920,
+      "nonpaged_pool_bytes": 14152,
+      "is_M20_child": false
+    },
+    {
+      "pid": 3944,
+      "name": "svchost.exe",
+      "private_bytes": 3145728,
+      "working_set_bytes": 5931008,
+      "peak_working_set_bytes": 20799488,
+      "paged_pool_bytes": 97160,
+      "nonpaged_pool_bytes": 11680,
+      "is_M20_child": false
+    },
+    {
+      "pid": 25852,
+      "name": "E1YATIBZE.EXE",
+      "private_bytes": 3141632,
+      "working_set_bytes": 5644288,
+      "peak_working_set_bytes": 12402688,
+      "paged_pool_bytes": 156784,
+      "nonpaged_pool_bytes": 11432,
+      "is_M20_child": false
+    },
+    {
+      "pid": 6180,
+      "name": "WMIRegistrationService.exe",
+      "private_bytes": 3121152,
+      "working_set_bytes": 1589248,
+      "peak_working_set_bytes": 16859136,
+      "paged_pool_bytes": 133248,
+      "nonpaged_pool_bytes": 14616,
+      "is_M20_child": false
+    },
+    {
+      "pid": 64024,
+      "name": "clash-verge-service.exe",
+      "private_bytes": 3108864,
+      "working_set_bytes": 3792896,
+      "peak_working_set_bytes": 13922304,
+      "paged_pool_bytes": 112144,
+      "nonpaged_pool_bytes": 10096,
+      "is_M20_child": false
+    },
+    {
+      "pid": 28764,
+      "name": "E1YATIBZE.EXE",
+      "private_bytes": 3059712,
+      "working_set_bytes": 5332992,
+      "peak_working_set_bytes": 12419072,
+      "paged_pool_bytes": 156792,
+      "nonpaged_pool_bytes": 11568,
+      "is_M20_child": false
+    },
+    {
+      "pid": 13132,
+      "name": "svchost.exe",
+      "private_bytes": 2994176,
+      "working_set_bytes": 5332992,
+      "peak_working_set_bytes": 11751424,
+      "paged_pool_bytes": 92064,
+      "nonpaged_pool_bytes": 11744,
+      "is_M20_child": false
+    },
+    {
+      "pid": 71192,
+      "name": "msedgewebview2.exe",
+      "private_bytes": 2985984,
+      "working_set_bytes": 2129920,
+      "peak_working_set_bytes": 19783680,
+      "paged_pool_bytes": 142208,
+      "nonpaged_pool_bytes": 11568,
+      "is_M20_child": false
+    },
+    {
+      "pid": 63820,
+      "name": "msedge.exe",
+      "private_bytes": 2973696,
+      "working_set_bytes": 11071488,
+      "peak_working_set_bytes": 18251776,
+      "paged_pool_bytes": 147832,
+      "nonpaged_pool_bytes": 11432,
+      "is_M20_child": false
+    },
+    {
+      "pid": 15724,
+      "name": "svchost.exe",
+      "private_bytes": 2965504,
+      "working_set_bytes": 8712192,
+      "peak_working_set_bytes": 16416768,
+      "paged_pool_bytes": 133712,
+      "nonpaged_pool_bytes": 13272,
+      "is_M20_child": false
+    },
+    {
+      "pid": 9384,
+      "name": "msedgewebview2.exe",
+      "private_bytes": 2940928,
+      "working_set_bytes": 11014144,
+      "peak_working_set_bytes": 18100224,
+      "paged_pool_bytes": 131960,
+      "nonpaged_pool_bytes": 11296,
+      "is_M20_child": false
+    },
+    {
+      "pid": 13792,
+      "name": "msedgewebview2.exe",
+      "private_bytes": 2928640,
+      "working_set_bytes": 2109440,
+      "peak_working_set_bytes": 18382848,
+      "paged_pool_bytes": 131960,
+      "nonpaged_pool_bytes": 11296,
+      "is_M20_child": false
+    },
+    {
+      "pid": 3960,
+      "name": "svchost.exe",
+      "private_bytes": 2916352,
+      "working_set_bytes": 8654848,
+      "peak_working_set_bytes": 50810880,
+      "paged_pool_bytes": 163584,
+      "nonpaged_pool_bytes": 16272,
+      "is_M20_child": false
+    },
+    {
+      "pid": 3356,
+      "name": "updater.exe",
+      "private_bytes": 2908160,
+      "working_set_bytes": 13422592,
+      "peak_working_set_bytes": 13422592,
+      "paged_pool_bytes": 139528,
+      "nonpaged_pool_bytes": 12928,
+      "is_M20_child": false
+    },
+    {
+      "pid": 1592,
+      "name": "csrss.exe",
+      "private_bytes": 2899968,
+      "working_set_bytes": 3592192,
+      "peak_working_set_bytes": 7282688,
+      "paged_pool_bytes": 314600,
+      "nonpaged_pool_bytes": 35424,
+      "is_M20_child": false
+    },
+    {
+      "pid": 75508,
+      "name": "svchost.exe",
+      "private_bytes": 2899968,
+      "working_set_bytes": 2228224,
+      "peak_working_set_bytes": 13529088,
+      "paged_pool_bytes": 102456,
+      "nonpaged_pool_bytes": 11752,
+      "is_M20_child": false
+    },
+    {
+      "pid": 2652,
+      "name": "svchost.exe",
+      "private_bytes": 2891776,
+      "working_set_bytes": 5865472,
+      "peak_working_set_bytes": 33693696,
+      "paged_pool_bytes": 118168,
+      "nonpaged_pool_bytes": 11024,
+      "is_M20_child": false
+    },
+    {
+      "pid": 5544,
+      "name": "svchost.exe",
+      "private_bytes": 2887680,
+      "working_set_bytes": 5378048,
+      "peak_working_set_bytes": 25055232,
+      "paged_pool_bytes": 100672,
+      "nonpaged_pool_bytes": 12472,
+      "is_M20_child": false
+    },
+    {
+      "pid": 14636,
+      "name": "updater.exe",
+      "private_bytes": 2883584,
+      "working_set_bytes": 13361152,
+      "peak_working_set_bytes": 13361152,
+      "paged_pool_bytes": 139528,
+      "nonpaged_pool_bytes": 12928,
+      "is_M20_child": false
+    },
+    {
+      "pid": 1868,
+      "name": "winlogon.exe",
+      "private_bytes": 2834432,
+      "working_set_bytes": 6025216,
+      "peak_working_set_bytes": 60960768,
+      "paged_pool_bytes": 171056,
+      "nonpaged_pool_bytes": 13536,
+      "is_M20_child": false
+    },
+    {
+      "pid": 19116,
+      "name": "svchost.exe",
+      "private_bytes": 2813952,
+      "working_set_bytes": 5369856,
+      "peak_working_set_bytes": 18227200,
+      "paged_pool_bytes": 165528,
+      "nonpaged_pool_bytes": 11840,
+      "is_M20_child": false
+    },
+    {
+      "pid": 40096,
+      "name": "svchost.exe",
+      "private_bytes": 2785280,
+      "working_set_bytes": 2654208,
+      "peak_working_set_bytes": 9912320,
+      "paged_pool_bytes": 74152,
+      "nonpaged_pool_bytes": 278280,
+      "is_M20_child": false
+    },
+    {
+      "pid": 3576,
+      "name": "svchost.exe",
+      "private_bytes": 2781184,
+      "working_set_bytes": 6447104,
+      "peak_working_set_bytes": 31899648,
+      "paged_pool_bytes": 97216,
+      "nonpaged_pool_bytes": 11400,
+      "is_M20_child": false
+    },
+    {
+      "pid": 29892,
+      "name": "svchost.exe",
+      "private_bytes": 2777088,
+      "working_set_bytes": 4304896,
+      "peak_working_set_bytes": 10506240,
+      "paged_pool_bytes": 95520,
+      "nonpaged_pool_bytes": 18432,
+      "is_M20_child": false
+    },
+    {
+      "pid": 3716,
+      "name": "svchost.exe",
+      "private_bytes": 2772992,
+      "working_set_bytes": 5378048,
+      "peak_working_set_bytes": 18472960,
+      "paged_pool_bytes": 81072,
+      "nonpaged_pool_bytes": 10944,
+      "is_M20_child": false
+    },
+    {
+      "pid": 33676,
+      "name": "svchost.exe",
+      "private_bytes": 2756608,
+      "working_set_bytes": 6361088,
+      "peak_working_set_bytes": 16498688,
+      "paged_pool_bytes": 146984,
+      "nonpaged_pool_bytes": 10344,
+      "is_M20_child": false
+    },
+    {
+      "pid": 45048,
+      "name": "adb.exe",
+      "private_bytes": 2748416,
+      "working_set_bytes": 2580480,
+      "peak_working_set_bytes": 12488704,
+      "paged_pool_bytes": 136456,
+      "nonpaged_pool_bytes": 18320,
+      "is_M20_child": false
+    },
+    {
+      "pid": 5372,
+      "name": "svchost.exe",
+      "private_bytes": 2654208,
+      "working_set_bytes": 4562944,
+      "peak_working_set_bytes": 24223744,
+      "paged_pool_bytes": 94264,
+      "nonpaged_pool_bytes": 12192,
+      "is_M20_child": false
+    },
+    {
+      "pid": 5916,
+      "name": "AsusSystemDiagnosis.exe",
+      "private_bytes": 2641920,
+      "working_set_bytes": 2134016,
+      "peak_working_set_bytes": 14557184,
+      "paged_pool_bytes": 124936,
+      "nonpaged_pool_bytes": 11768,
+      "is_M20_child": false
+    },
+    {
+      "pid": 82708,
+      "name": "svchost.exe",
+      "private_bytes": 2641920,
+      "working_set_bytes": 12222464,
+      "peak_working_set_bytes": 13656064,
+      "paged_pool_bytes": 108992,
+      "nonpaged_pool_bytes": 11976,
+      "is_M20_child": false
+    },
+    {
+      "pid": 4940,
+      "name": "Intel_PIE_Service.exe",
+      "private_bytes": 2637824,
+      "working_set_bytes": 2277376,
+      "peak_working_set_bytes": 34062336,
+      "paged_pool_bytes": 124472,
+      "nonpaged_pool_bytes": 11832,
+      "is_M20_child": false
+    },
+    {
+      "pid": 38156,
+      "name": "RuntimeBroker.exe",
+      "private_bytes": 2609152,
+      "working_set_bytes": 14798848,
+      "peak_working_set_bytes": 21463040,
+      "paged_pool_bytes": 147152,
+      "nonpaged_pool_bytes": 10344,
+      "is_M20_child": false
+    },
+    {
+      "pid": 5856,
+      "name": "rundll32.exe",
+      "private_bytes": 2600960,
+      "working_set_bytes": 5726208,
+      "peak_working_set_bytes": 18096128,
+      "paged_pool_bytes": 183016,
+      "nonpaged_pool_bytes": 11432,
+      "is_M20_child": false
+    },
+    {
+      "pid": 3460,
+      "name": "svchost.exe",
+      "private_bytes": 2588672,
+      "working_set_bytes": 3575808,
+      "peak_working_set_bytes": 19361792,
+      "paged_pool_bytes": 86584,
+      "nonpaged_pool_bytes": 10648,
+      "is_M20_child": false
+    },
+    {
+      "pid": 3600,
+      "name": "RstMwService.exe",
+      "private_bytes": 2555904,
+      "working_set_bytes": 892928,
+      "peak_working_set_bytes": 11644928,
+      "paged_pool_bytes": 92608,
+      "nonpaged_pool_bytes": 11088,
+      "is_M20_child": false
+    },
+    {
+      "pid": 6008,
+      "name": "FMService_USB64.exe",
+      "private_bytes": 2535424,
+      "working_set_bytes": 3887104,
+      "peak_working_set_bytes": 11091968,
+      "paged_pool_bytes": 113648,
+      "nonpaged_pool_bytes": 10680,
+      "is_M20_child": false
+    },
+    {
+      "pid": 2836,
+      "name": "svchost.exe",
+      "private_bytes": 2531328,
+      "working_set_bytes": 4771840,
+      "peak_working_set_bytes": 22642688,
+      "paged_pool_bytes": 93128,
+      "nonpaged_pool_bytes": 10656,
+      "is_M20_child": false
+    },
+    {
+      "pid": 15336,
+      "name": "svchost.exe",
+      "private_bytes": 2498560,
+      "working_set_bytes": 2756608,
+      "peak_working_set_bytes": 13754368,
+      "paged_pool_bytes": 108632,
+      "nonpaged_pool_bytes": 12728,
+      "is_M20_child": false
+    },
+    {
+      "pid": 80208,
+      "name": "svchost.exe",
+      "private_bytes": 2494464,
+      "working_set_bytes": 1945600,
+      "peak_working_set_bytes": 14397440,
+      "paged_pool_bytes": 101056,
+      "nonpaged_pool_bytes": 10856,
+      "is_M20_child": false
+    },
+    {
+      "pid": 3892,
+      "name": "svchost.exe",
+      "private_bytes": 2469888,
+      "working_set_bytes": 6070272,
+      "peak_working_set_bytes": 24387584,
+      "paged_pool_bytes": 97328,
+      "nonpaged_pool_bytes": 14608,
+      "is_M20_child": false
+    },
+    {
+      "pid": 48588,
+      "name": "chrome.exe",
+      "private_bytes": 2433024,
+      "working_set_bytes": 2416640,
+      "peak_working_set_bytes": 9728000,
+      "paged_pool_bytes": 140064,
+      "nonpaged_pool_bytes": 11160,
+      "is_M20_child": false
+    },
+    {
+      "pid": 2644,
+      "name": "svchost.exe",
+      "private_bytes": 2383872,
+      "working_set_bytes": 5562368,
+      "peak_working_set_bytes": 21168128,
+      "paged_pool_bytes": 122368,
+      "nonpaged_pool_bytes": 9664,
+      "is_M20_child": false
+    },
+    {
+      "pid": 71968,
+      "name": "OpenConsole.exe",
+      "private_bytes": 2383872,
+      "working_set_bytes": 1622016,
+      "peak_working_set_bytes": 11902976,
+      "paged_pool_bytes": 210920,
+      "nonpaged_pool_bytes": 10608,
+      "is_M20_child": false
+    },
+    {
+      "pid": 11904,
+      "name": "AggregatorHost.exe",
+      "private_bytes": 2334720,
+      "working_set_bytes": 3399680,
+      "peak_working_set_bytes": 10334208,
+      "paged_pool_bytes": 62864,
+      "nonpaged_pool_bytes": 8168,
+      "is_M20_child": false
+    },
+    {
+      "pid": 39096,
+      "name": "svchost.exe",
+      "private_bytes": 2330624,
+      "working_set_bytes": 1806336,
+      "peak_working_set_bytes": 10756096,
+      "paged_pool_bytes": 76192,
+      "nonpaged_pool_bytes": 10472,
+      "is_M20_child": false
+    },
+    {
+      "pid": 6060,
+      "name": "ipfsvc.exe",
+      "private_bytes": 2265088,
+      "working_set_bytes": 2617344,
+      "peak_working_set_bytes": 10190848,
+      "paged_pool_bytes": 105272,
+      "nonpaged_pool_bytes": 14584,
+      "is_M20_child": false
+    },
+    {
+      "pid": 14656,
+      "name": "ipf_helper.exe",
+      "private_bytes": 2252800,
+      "working_set_bytes": 6004736,
+      "peak_working_set_bytes": 13570048,
+      "paged_pool_bytes": 136232,
+      "nonpaged_pool_bytes": 11456,
+      "is_M20_child": false
+    },
+    {
+      "pid": 5792,
+      "name": "AsusNumPadService.exe",
+      "private_bytes": 2244608,
+      "working_set_bytes": 3657728,
+      "peak_working_set_bytes": 18067456,
+      "paged_pool_bytes": 95032,
+      "nonpaged_pool_bytes": 13504,
+      "is_M20_child": false
+    },
+    {
+      "pid": 2004,
+      "name": "WUDFHost.exe",
+      "private_bytes": 2240512,
+      "working_set_bytes": 1626112,
+      "peak_working_set_bytes": 26587136,
+      "paged_pool_bytes": 120128,
+      "nonpaged_pool_bytes": 11960,
+      "is_M20_child": false
+    },
+    {
+      "pid": 29552,
+      "name": "svchost.exe",
+      "private_bytes": 2224128,
+      "working_set_bytes": 1388544,
+      "peak_working_set_bytes": 12513280,
+      "paged_pool_bytes": 99144,
+      "nonpaged_pool_bytes": 9800,
+      "is_M20_child": false
+    },
+    {
+      "pid": 63420,
+      "name": "svchost.exe",
+      "private_bytes": 2224128,
+      "working_set_bytes": 9895936,
+      "peak_working_set_bytes": 10604544,
+      "paged_pool_bytes": 66736,
+      "nonpaged_pool_bytes": 9080,
+      "is_M20_child": false
+    },
+    {
+      "pid": 5580,
+      "name": "svchost.exe",
+      "private_bytes": 2162688,
+      "working_set_bytes": 3051520,
+      "peak_working_set_bytes": 18591744,
+      "paged_pool_bytes": 88912,
+      "nonpaged_pool_bytes": 11240,
+      "is_M20_child": false
+    },
+    {
+      "pid": 18456,
+      "name": "UserOOBEBroker.exe",
+      "private_bytes": 2150400,
+      "working_set_bytes": 2048000,
+      "peak_working_set_bytes": 11157504,
+      "paged_pool_bytes": 122872,
+      "nonpaged_pool_bytes": 10072,
+      "is_M20_child": false
+    },
+    {
+      "pid": 32196,
+      "name": "crashpad_handler.exe",
+      "private_bytes": 2142208,
+      "working_set_bytes": 2641920,
+      "peak_working_set_bytes": 10117120,
+      "paged_pool_bytes": 161120,
+      "nonpaged_pool_bytes": 10752,
+      "is_M20_child": false
+    },
+    {
+      "pid": 6016,
+      "name": "svchost.exe",
+      "private_bytes": 2109440,
+      "working_set_bytes": 3825664,
+      "peak_working_set_bytes": 9363456,
+      "paged_pool_bytes": 65272,
+      "nonpaged_pool_bytes": 8304,
+      "is_M20_child": false
+    },
+    {
+      "pid": 31700,
+      "name": "svchost.exe",
+      "private_bytes": 2105344,
+      "working_set_bytes": 2576384,
+      "peak_working_set_bytes": 9908224,
+      "paged_pool_bytes": 76616,
+      "nonpaged_pool_bytes": 12448,
+      "is_M20_child": false
+    },
+    {
+      "pid": 32656,
+      "name": "cmd.exe",
+      "private_bytes": 2101248,
+      "working_set_bytes": 851968,
+      "peak_working_set_bytes": 5050368,
+      "paged_pool_bytes": 54736,
+      "nonpaged_pool_bytes": 4904,
+      "is_M20_child": false
+    },
+    {
+      "pid": 5924,
+      "name": "AsusSwitch.exe",
+      "private_bytes": 2097152,
+      "working_set_bytes": 1974272,
+      "peak_working_set_bytes": 10469376,
+      "paged_pool_bytes": 112616,
+      "nonpaged_pool_bytes": 10176,
+      "is_M20_child": false
+    },
+    {
+      "pid": 6164,
+      "name": "sslvpn-service.exe",
+      "private_bytes": 2088960,
+      "working_set_bytes": 2183168,
+      "peak_working_set_bytes": 11653120,
+      "paged_pool_bytes": 119008,
+      "nonpaged_pool_bytes": 14792,
+      "is_M20_child": false
+    },
+    {
+      "pid": 9580,
+      "name": "svchost.exe",
+      "private_bytes": 2080768,
+      "working_set_bytes": 9469952,
+      "peak_working_set_bytes": 9490432,
+      "paged_pool_bytes": 76376,
+      "nonpaged_pool_bytes": 8912,
+      "is_M20_child": false
+    },
+    {
+      "pid": 63632,
+      "name": "cmd.exe",
+      "private_bytes": 2056192,
+      "working_set_bytes": 806912,
+      "peak_working_set_bytes": 5029888,
+      "paged_pool_bytes": 54736,
+      "nonpaged_pool_bytes": 4904,
+      "is_M20_child": false
+    },
+    {
+      "pid": 12768,
+      "name": "cmd.exe",
+      "private_bytes": 2023424,
+      "working_set_bytes": 823296,
+      "peak_working_set_bytes": 4771840,
+      "paged_pool_bytes": 53424,
+      "nonpaged_pool_bytes": 4768,
+      "is_M20_child": false
+    },
+    {
+      "pid": 8628,
+      "name": "cmd.exe",
+      "private_bytes": 2011136,
+      "working_set_bytes": 806912,
+      "peak_working_set_bytes": 4775936,
+      "paged_pool_bytes": 53424,
+      "nonpaged_pool_bytes": 4768,
+      "is_M20_child": false
+    },
+    {
+      "pid": 69780,
+      "name": "AppVShNotify.exe",
+      "private_bytes": 1990656,
+      "working_set_bytes": 9252864,
+      "peak_working_set_bytes": 10838016,
+      "paged_pool_bytes": 148704,
+      "nonpaged_pool_bytes": 9584,
+      "is_M20_child": false
+    },
+    {
+      "pid": 6036,
+      "name": "GameSDK.exe",
+      "private_bytes": 1986560,
+      "working_set_bytes": 1232896,
+      "peak_working_set_bytes": 9633792,
+      "paged_pool_bytes": 81112,
+      "nonpaged_pool_bytes": 11504,
+      "is_M20_child": false
+    },
+    {
+      "pid": 41776,
+      "name": "svchost.exe",
+      "private_bytes": 1966080,
+      "working_set_bytes": 1794048,
+      "peak_working_set_bytes": 14659584,
+      "paged_pool_bytes": 131664,
+      "nonpaged_pool_bytes": 9392,
+      "is_M20_child": false
+    },
+    {
+      "pid": 51396,
+      "name": "svchost.exe",
+      "private_bytes": 1961984,
+      "working_set_bytes": 1724416,
+      "peak_working_set_bytes": 9072640,
+      "paged_pool_bytes": 68536,
+      "nonpaged_pool_bytes": 8032,
+      "is_M20_child": false
+    },
+    {
+      "pid": 9372,
+      "name": "svchost.exe",
+      "private_bytes": 1941504,
+      "working_set_bytes": 2277376,
+      "peak_working_set_bytes": 8183808,
+      "paged_pool_bytes": 78216,
+      "nonpaged_pool_bytes": 16776,
+      "is_M20_child": false
+    },
+    {
+      "pid": 29672,
+      "name": "acrotray.exe",
+      "private_bytes": 1933312,
+      "working_set_bytes": 1736704,
+      "peak_working_set_bytes": 10731520,
+      "paged_pool_bytes": 156256,
+      "nonpaged_pool_bytes": 13392,
+      "is_M20_child": false
+    },
+    {
+      "pid": 53056,
+      "name": "conhost.exe",
+      "private_bytes": 1921024,
+      "working_set_bytes": 1376256,
+      "peak_working_set_bytes": 8646656,
+      "paged_pool_bytes": 115792,
+      "nonpaged_pool_bytes": 8976,
+      "is_M20_child": false
+    },
+    {
+      "pid": 5760,
+      "name": "AsMsControl.exe",
+      "private_bytes": 1916928,
+      "working_set_bytes": 3330048,
+      "peak_working_set_bytes": 16789504,
+      "paged_pool_bytes": 76856,
+      "nonpaged_pool_bytes": 8688,
+      "is_M20_child": false
+    },
+    {
+      "pid": 12652,
+      "name": "svchost.exe",
+      "private_bytes": 1896448,
+      "working_set_bytes": 1449984,
+      "peak_working_set_bytes": 9420800,
+      "paged_pool_bytes": 78616,
+      "nonpaged_pool_bytes": 42744,
+      "is_M20_child": false
+    },
+    {
+      "pid": 11624,
+      "name": "ChsIME.exe",
+      "private_bytes": 1888256,
+      "working_set_bytes": 1409024,
+      "peak_working_set_bytes": 10403840,
+      "paged_pool_bytes": 131264,
+      "nonpaged_pool_bytes": 9104,
+      "is_M20_child": false
+    },
+    {
+      "pid": 44764,
+      "name": "svchost.exe",
+      "private_bytes": 1802240,
+      "working_set_bytes": 1318912,
+      "peak_working_set_bytes": 8110080,
+      "paged_pool_bytes": 65584,
+      "nonpaged_pool_bytes": 8888,
+      "is_M20_child": false
+    },
+    {
+      "pid": 49652,
+      "name": "dllhost.exe",
+      "private_bytes": 1785856,
+      "working_set_bytes": 1404928,
+      "peak_working_set_bytes": 9379840,
+      "paged_pool_bytes": 105392,
+      "nonpaged_pool_bytes": 8304,
+      "is_M20_child": false
+    },
+    {
+      "pid": 49256,
+      "name": "RuntimeBroker.exe",
+      "private_bytes": 1732608,
+      "working_set_bytes": 1507328,
+      "peak_working_set_bytes": 8945664,
+      "paged_pool_bytes": 103112,
+      "nonpaged_pool_bytes": 7488,
+      "is_M20_child": false
+    },
+    {
+      "pid": 4080,
+      "name": "svchost.exe",
+      "private_bytes": 1691648,
+      "working_set_bytes": 3289088,
+      "peak_working_set_bytes": 15802368,
+      "paged_pool_bytes": 70560,
+      "nonpaged_pool_bytes": 9248,
+      "is_M20_child": false
+    },
+    {
+      "pid": 30560,
+      "name": "svchost.exe",
+      "private_bytes": 1667072,
+      "working_set_bytes": 2760704,
+      "peak_working_set_bytes": 7905280,
+      "paged_pool_bytes": 66272,
+      "nonpaged_pool_bytes": 8032,
+      "is_M20_child": false
+    },
+    {
+      "pid": 5976,
+      "name": "conhost.exe",
+      "private_bytes": 1662976,
+      "working_set_bytes": 1478656,
+      "peak_working_set_bytes": 10502144,
+      "paged_pool_bytes": 93408,
+      "nonpaged_pool_bytes": 10608,
+      "is_M20_child": false
+    },
+    {
+      "pid": 2164,
+      "name": "WUDFHost.exe",
+      "private_bytes": 1593344,
+      "working_set_bytes": 1867776,
+      "peak_working_set_bytes": 15585280,
+      "paged_pool_bytes": 60096,
+      "nonpaged_pool_bytes": 7880,
+      "is_M20_child": false
+    },
+    {
+      "pid": 3732,
+      "name": "svchost.exe",
+      "private_bytes": 1576960,
+      "working_set_bytes": 1630208,
+      "peak_working_set_bytes": 13881344,
+      "paged_pool_bytes": 82216,
+      "nonpaged_pool_bytes": 8168,
+      "is_M20_child": false
+    },
+    {
+      "pid": 2396,
+      "name": "svchost.exe",
+      "private_bytes": 1536000,
+      "working_set_bytes": 1376256,
+      "peak_working_set_bytes": 13467648,
+      "paged_pool_bytes": 61672,
+      "nonpaged_pool_bytes": 14152,
+      "is_M20_child": false
+    },
+    {
+      "pid": 73280,
+      "name": "uu_neths_helper.exe",
+      "private_bytes": 1503232,
+      "working_set_bytes": 7274496,
+      "peak_working_set_bytes": 8208384,
+      "paged_pool_bytes": 126848,
+      "nonpaged_pool_bytes": 14056,
+      "is_M20_child": false
+    },
+    {
+      "pid": 3624,
+      "name": "AsusCertService.exe",
+      "private_bytes": 1486848,
+      "working_set_bytes": 987136,
+      "peak_working_set_bytes": 27136000,
+      "paged_pool_bytes": 100200,
+      "nonpaged_pool_bytes": 8344,
+      "is_M20_child": false
+    },
+    {
+      "pid": 16372,
+      "name": "AsMonitorControl.exe",
+      "private_bytes": 1478656,
+      "working_set_bytes": 1118208,
+      "peak_working_set_bytes": 7913472,
+      "paged_pool_bytes": 147728,
+      "nonpaged_pool_bytes": 8024,
+      "is_M20_child": false
+    },
+    {
+      "pid": 5888,
+      "name": "svchost.exe",
+      "private_bytes": 1454080,
+      "working_set_bytes": 1146880,
+      "peak_working_set_bytes": 7213056,
+      "paged_pool_bytes": 62976,
+      "nonpaged_pool_bytes": 8016,
+      "is_M20_child": false
+    },
+    {
+      "pid": 16864,
+      "name": "AsusInputlocaleMonitor.exe",
+      "private_bytes": 1454080,
+      "working_set_bytes": 1724416,
+      "peak_working_set_bytes": 8880128,
+      "paged_pool_bytes": 154712,
+      "nonpaged_pool_bytes": 8840,
+      "is_M20_child": false
+    },
+    {
+      "pid": 10788,
+      "name": "dasHost.exe",
+      "private_bytes": 1449984,
+      "working_set_bytes": 872448,
+      "peak_working_set_bytes": 7782400,
+      "paged_pool_bytes": 53600,
+      "nonpaged_pool_bytes": 7216,
+      "is_M20_child": false
+    },
+    {
+      "pid": 1712,
+      "name": "wininit.exe",
+      "private_bytes": 1441792,
+      "working_set_bytes": 888832,
+      "peak_working_set_bytes": 8364032,
+      "paged_pool_bytes": 73840,
+      "nonpaged_pool_bytes": 11064,
+      "is_M20_child": false
+    },
+    {
+      "pid": 15136,
+      "name": "AsusHotkey.exe",
+      "private_bytes": 1437696,
+      "working_set_bytes": 1241088,
+      "peak_working_set_bytes": 8339456,
+      "paged_pool_bytes": 143776,
+      "nonpaged_pool_bytes": 8440,
+      "is_M20_child": false
+    },
+    {
+      "pid": 26708,
+      "name": "conhost.exe",
+      "private_bytes": 1433600,
+      "working_set_bytes": 1134592,
+      "peak_working_set_bytes": 7200768,
+      "paged_pool_bytes": 110824,
+      "nonpaged_pool_bytes": 8024,
+      "is_M20_child": false
+    },
+    {
+      "pid": 6220,
+      "name": "svchost.exe",
+      "private_bytes": 1417216,
+      "working_set_bytes": 1093632,
+      "peak_working_set_bytes": 7446528,
+      "paged_pool_bytes": 64968,
+      "nonpaged_pool_bytes": 11568,
+      "is_M20_child": false
+    },
+    {
+      "pid": 10864,
+      "name": "WUDFCompanionHost.exe",
+      "private_bytes": 1413120,
+      "working_set_bytes": 360448,
+      "peak_working_set_bytes": 4222976,
+      "paged_pool_bytes": 26824,
+      "nonpaged_pool_bytes": 4896,
+      "is_M20_child": false
+    },
+    {
+      "pid": 26988,
+      "name": "MCHOSE HUB Agent.exe",
+      "private_bytes": 1400832,
+      "working_set_bytes": 659456,
+      "peak_working_set_bytes": 9056256,
+      "paged_pool_bytes": 161472,
+      "nonpaged_pool_bytes": 8440,
+      "is_M20_child": false
+    },
+    {
+      "pid": 16000,
+      "name": "svchost.exe",
+      "private_bytes": 1380352,
+      "working_set_bytes": 1183744,
+      "peak_working_set_bytes": 7413760,
+      "paged_pool_bytes": 108456,
+      "nonpaged_pool_bytes": 7216,
+      "is_M20_child": false
+    },
+    {
+      "pid": 15548,
+      "name": "R.exe",
+      "private_bytes": 1376256,
+      "working_set_bytes": 1048576,
+      "peak_working_set_bytes": 7409664,
+      "paged_pool_bytes": 136472,
+      "nonpaged_pool_bytes": 6400,
+      "is_M20_child": false
+    },
+    {
+      "pid": 83444,
+      "name": "R.exe",
+      "private_bytes": 1363968,
+      "working_set_bytes": 1040384,
+      "peak_working_set_bytes": 7393280,
+      "paged_pool_bytes": 136800,
+      "nonpaged_pool_bytes": 6400,
+      "is_M20_child": false
+    },
+    {
+      "pid": 26796,
+      "name": "MCHOSE HUB Notifier.exe",
+      "private_bytes": 1339392,
+      "working_set_bytes": 847872,
+      "peak_working_set_bytes": 8269824,
+      "paged_pool_bytes": 132080,
+      "nonpaged_pool_bytes": 8512,
+      "is_M20_child": false
+    },
+    {
+      "pid": 54704,
+      "name": "R.exe",
+      "private_bytes": 1339392,
+      "working_set_bytes": 1036288,
+      "peak_working_set_bytes": 6696960,
+      "paged_pool_bytes": 135160,
+      "nonpaged_pool_bytes": 6264,
+      "is_M20_child": false
+    },
+    {
+      "pid": 82216,
+      "name": "conhost.exe",
+      "private_bytes": 1335296,
+      "working_set_bytes": 946176,
+      "peak_working_set_bytes": 7933952,
+      "paged_pool_bytes": 76536,
+      "nonpaged_pool_bytes": 8568,
+      "is_M20_child": false
+    },
+    {
+      "pid": 16844,
+      "name": "R.exe",
+      "private_bytes": 1327104,
+      "working_set_bytes": 1032192,
+      "peak_working_set_bytes": 6688768,
+      "paged_pool_bytes": 135488,
+      "nonpaged_pool_bytes": 6264,
+      "is_M20_child": false
+    },
+    {
+      "pid": 49372,
+      "name": "conhost.exe",
+      "private_bytes": 1220608,
+      "working_set_bytes": 974848,
+      "peak_working_set_bytes": 7110656,
+      "paged_pool_bytes": 115544,
+      "nonpaged_pool_bytes": 8024,
+      "is_M20_child": false
+    },
+    {
+      "pid": 42928,
+      "name": "conhost.exe",
+      "private_bytes": 1216512,
+      "working_set_bytes": 909312,
+      "peak_working_set_bytes": 6955008,
+      "paged_pool_bytes": 110936,
+      "nonpaged_pool_bytes": 7752,
+      "is_M20_child": false
+    },
+    {
+      "pid": 84412,
+      "name": "conhost.exe",
+      "private_bytes": 1216512,
+      "working_set_bytes": 7061504,
+      "peak_working_set_bytes": 7061504,
+      "paged_pool_bytes": 111160,
+      "nonpaged_pool_bytes": 8296,
+      "is_M20_child": false
+    },
+    {
+      "pid": 52372,
+      "name": "conhost.exe",
+      "private_bytes": 1212416,
+      "working_set_bytes": 978944,
+      "peak_working_set_bytes": 7032832,
+      "paged_pool_bytes": 110936,
+      "nonpaged_pool_bytes": 7752,
+      "is_M20_child": false
+    },
+    {
+      "pid": 13008,
+      "name": "conhost.exe",
+      "private_bytes": 1208320,
+      "working_set_bytes": 2400256,
+      "peak_working_set_bytes": 7036928,
+      "paged_pool_bytes": 112088,
+      "nonpaged_pool_bytes": 8024,
+      "is_M20_child": false
+    },
+    {
+      "pid": 69516,
+      "name": "conhost.exe",
+      "private_bytes": 1208320,
+      "working_set_bytes": 7069696,
+      "peak_working_set_bytes": 7069696,
+      "paged_pool_bytes": 112312,
+      "nonpaged_pool_bytes": 8296,
+      "is_M20_child": false
+    },
+    {
+      "pid": 46944,
+      "name": "conhost.exe",
+      "private_bytes": 1204224,
+      "working_set_bytes": 970752,
+      "peak_working_set_bytes": 7110656,
+      "paged_pool_bytes": 115544,
+      "nonpaged_pool_bytes": 8024,
+      "is_M20_child": false
+    },
+    {
+      "pid": 57800,
+      "name": "conhost.exe",
+      "private_bytes": 1204224,
+      "working_set_bytes": 974848,
+      "peak_working_set_bytes": 7020544,
+      "paged_pool_bytes": 110936,
+      "nonpaged_pool_bytes": 7752,
+      "is_M20_child": false
+    },
+    {
+      "pid": 79696,
+      "name": "conhost.exe",
+      "private_bytes": 1204224,
+      "working_set_bytes": 905216,
+      "peak_working_set_bytes": 7036928,
+      "paged_pool_bytes": 110936,
+      "nonpaged_pool_bytes": 7752,
+      "is_M20_child": false
+    },
+    {
+      "pid": 12960,
+      "name": "conhost.exe",
+      "private_bytes": 1200128,
+      "working_set_bytes": 917504,
+      "peak_working_set_bytes": 7024640,
+      "paged_pool_bytes": 110936,
+      "nonpaged_pool_bytes": 7752,
+      "is_M20_child": false
+    },
+    {
+      "pid": 12984,
+      "name": "conhost.exe",
+      "private_bytes": 1200128,
+      "working_set_bytes": 2170880,
+      "peak_working_set_bytes": 6832128,
+      "paged_pool_bytes": 110936,
+      "nonpaged_pool_bytes": 7752,
+      "is_M20_child": false
+    },
+    {
+      "pid": 10352,
+      "name": "conhost.exe",
+      "private_bytes": 1196032,
+      "working_set_bytes": 6262784,
+      "peak_working_set_bytes": 7016448,
+      "paged_pool_bytes": 112088,
+      "nonpaged_pool_bytes": 8024,
+      "is_M20_child": false
+    },
+    {
+      "pid": 16600,
+      "name": "conhost.exe",
+      "private_bytes": 1196032,
+      "working_set_bytes": 913408,
+      "peak_working_set_bytes": 6950912,
+      "paged_pool_bytes": 110936,
+      "nonpaged_pool_bytes": 7752,
+      "is_M20_child": false
+    },
+    {
+      "pid": 27068,
+      "name": "conhost.exe",
+      "private_bytes": 1196032,
+      "working_set_bytes": 6512640,
+      "peak_working_set_bytes": 7094272,
+      "paged_pool_bytes": 115768,
+      "nonpaged_pool_bytes": 8024,
+      "is_M20_child": false
+    },
+    {
+      "pid": 15556,
+      "name": "conhost.exe",
+      "private_bytes": 1191936,
+      "working_set_bytes": 913408,
+      "peak_working_set_bytes": 7147520,
+      "paged_pool_bytes": 112088,
+      "nonpaged_pool_bytes": 8024,
+      "is_M20_child": false
+    },
+    {
+      "pid": 50836,
+      "name": "conhost.exe",
+      "private_bytes": 1191936,
+      "working_set_bytes": 6361088,
+      "peak_working_set_bytes": 7098368,
+      "paged_pool_bytes": 112312,
+      "nonpaged_pool_bytes": 8024,
+      "is_M20_child": false
+    },
+    {
+      "pid": 8368,
+      "name": "conhost.exe",
+      "private_bytes": 1187840,
+      "working_set_bytes": 913408,
+      "peak_working_set_bytes": 6922240,
+      "paged_pool_bytes": 110936,
+      "nonpaged_pool_bytes": 7752,
+      "is_M20_child": false
+    },
+    {
+      "pid": 24852,
+      "name": "conhost.exe",
+      "private_bytes": 1187840,
+      "working_set_bytes": 909312,
+      "peak_working_set_bytes": 7151616,
+      "paged_pool_bytes": 112088,
+      "nonpaged_pool_bytes": 8024,
+      "is_M20_child": false
+    },
+    {
+      "pid": 34700,
+      "name": "conhost.exe",
+      "private_bytes": 1187840,
+      "working_set_bytes": 913408,
+      "peak_working_set_bytes": 7114752,
+      "paged_pool_bytes": 112088,
+      "nonpaged_pool_bytes": 8024,
+      "is_M20_child": false
+    },
+    {
+      "pid": 66156,
+      "name": "conhost.exe",
+      "private_bytes": 1187840,
+      "working_set_bytes": 966656,
+      "peak_working_set_bytes": 7389184,
+      "paged_pool_bytes": 110936,
+      "nonpaged_pool_bytes": 8024,
+      "is_M20_child": false
+    },
+    {
+      "pid": 73880,
+      "name": "conhost.exe",
+      "private_bytes": 1187840,
+      "working_set_bytes": 6270976,
+      "peak_working_set_bytes": 7020544,
+      "paged_pool_bytes": 112088,
+      "nonpaged_pool_bytes": 8024,
+      "is_M20_child": false
+    },
+    {
+      "pid": 78312,
+      "name": "conhost.exe",
+      "private_bytes": 1187840,
+      "working_set_bytes": 7081984,
+      "peak_working_set_bytes": 7102464,
+      "paged_pool_bytes": 112312,
+      "nonpaged_pool_bytes": 8024,
+      "is_M20_child": false
+    },
+    {
+      "pid": 25268,
+      "name": "conhost.exe",
+      "private_bytes": 1183744,
+      "working_set_bytes": 6070272,
+      "peak_working_set_bytes": 6815744,
+      "paged_pool_bytes": 110936,
+      "nonpaged_pool_bytes": 7752,
+      "is_M20_child": false
+    },
+    {
+      "pid": 36324,
+      "name": "conhost.exe",
+      "private_bytes": 1179648,
+      "working_set_bytes": 6086656,
+      "peak_working_set_bytes": 6885376,
+      "paged_pool_bytes": 110824,
+      "nonpaged_pool_bytes": 7752,
+      "is_M20_child": false
+    },
+    {
+      "pid": 77312,
+      "name": "conhost.exe",
+      "private_bytes": 1179648,
+      "working_set_bytes": 6168576,
+      "peak_working_set_bytes": 6897664,
+      "paged_pool_bytes": 111160,
+      "nonpaged_pool_bytes": 7752,
+      "is_M20_child": false
+    },
+    {
+      "pid": 39296,
+      "name": "conhost.exe",
+      "private_bytes": 1175552,
+      "working_set_bytes": 6066176,
+      "peak_working_set_bytes": 6807552,
+      "paged_pool_bytes": 110936,
+      "nonpaged_pool_bytes": 7752,
+      "is_M20_child": false
+    },
+    {
+      "pid": 960,
+      "name": "smss.exe",
+      "private_bytes": 1167360,
+      "working_set_bytes": 266240,
+      "peak_working_set_bytes": 1675264,
+      "paged_pool_bytes": 15088,
+      "nonpaged_pool_bytes": 4328,
+      "is_M20_child": false
+    },
+    {
+      "pid": 84376,
+      "name": "conhost.exe",
+      "private_bytes": 1126400,
+      "working_set_bytes": 1105920,
+      "peak_working_set_bytes": 6418432,
+      "paged_pool_bytes": 63904,
+      "nonpaged_pool_bytes": 7344,
+      "is_M20_child": false
+    },
+    {
+      "pid": 66688,
+      "name": "core-service.exe",
+      "private_bytes": 1118208,
+      "working_set_bytes": 1064960,
+      "peak_working_set_bytes": 7614464,
+      "paged_pool_bytes": 41624,
+      "nonpaged_pool_bytes": 7384,
+      "is_M20_child": false
+    },
+    {
+      "pid": 59096,
+      "name": "dasHost.exe",
+      "private_bytes": 1069056,
+      "working_set_bytes": 1052672,
+      "peak_working_set_bytes": 6610944,
+      "paged_pool_bytes": 46120,
+      "nonpaged_pool_bytes": 6808,
+      "is_M20_child": false
+    },
+    {
+      "pid": 332,
+      "name": "",
+      "private_bytes": 176128,
+      "working_set_bytes": 519000064,
+      "peak_working_set_bytes": 245760,
+      "paged_pool_bytes": 9480,
+      "nonpaged_pool_bytes": 272,
+      "is_M20_child": false
+    },
+    {
+      "pid": 4,
+      "name": "System",
+      "private_bytes": 77824,
+      "working_set_bytes": 8413184,
+      "peak_working_set_bytes": 364384256,
+      "paged_pool_bytes": 0,
+      "nonpaged_pool_bytes": 272,
+      "is_M20_child": false
+    },
+    {
+      "pid": 0,
+      "name": "System Idle Process",
+      "private_bytes": 61440,
+      "working_set_bytes": 8192,
+      "peak_working_set_bytes": 8192,
+      "paged_pool_bytes": 0,
+      "nonpaged_pool_bytes": 272,
+      "is_M20_child": false
+    }
+  ],
+  "aggregated_names": [
+    {
+      "name": "Code.exe",
+      "count": 17,
+      "private_bytes": 7827722240,
+      "working_set_bytes_sum": 3126898688,
+      "pids": [
+        10388,
+        12916,
+        13452,
+        25248,
+        26652,
+        28260,
+        38352,
+        54640,
+        55020,
+        58852,
+        63684,
+        63872,
+        64020,
+        68828,
+        69732,
+        70244,
+        70320
+      ]
+    },
+    {
+      "name": "python.exe",
+      "count": 6,
+      "private_bytes": 5543497728,
+      "working_set_bytes_sum": 2447441920,
+      "pids": [
+        13908,
+        56888,
+        80504,
+        81280,
+        82356,
+        83120
+      ]
+    },
+    {
+      "name": "chrome.exe",
+      "count": 20,
+      "private_bytes": 4023984128,
+      "working_set_bytes_sum": 3200835584,
+      "pids": [
+        4920,
+        16408,
+        29520,
+        32928,
+        39064,
+        43444,
+        48588,
+        49080,
+        60268,
+        62056,
+        63636,
+        64616,
+        64644,
+        67192,
+        69436,
+        75148,
+        79932,
+        80628,
+        81500,
+        82348
+      ]
+    },
+    {
+      "name": "QQ.exe",
+      "count": 12,
+      "private_bytes": 2552033280,
+      "working_set_bytes_sum": 982999040,
+      "pids": [
+        2476,
+        30384,
+        31068,
+        32820,
+        33332,
+        33716,
+        38084,
+        52876,
+        62640,
+        67340,
+        72604,
+        83336
+      ]
+    },
+    {
+      "name": "codex.exe",
+      "count": 1,
+      "private_bytes": 1429102592,
+      "working_set_bytes_sum": 481099776,
+      "pids": [
+        12700
+      ]
+    },
+    {
+      "name": "WeChatAppEx.exe",
+      "count": 13,
+      "private_bytes": 1383288832,
+      "working_set_bytes_sum": 722210816,
+      "pids": [
+        19132,
+        22944,
+        32596,
+        34640,
+        37756,
+        39600,
+        39632,
+        40000,
+        53520,
+        57236,
+        59388,
+        66620,
+        83952
+      ]
+    },
+    {
+      "name": "svchost.exe",
+      "count": 90,
+      "private_bytes": 1361096704,
+      "working_set_bytes_sum": 950169600,
+      "pids": [
+        1072,
+        1596,
+        1932,
+        2176,
+        2396,
+        2404,
+        2516,
+        2544,
+        2552,
+        2588,
+        2636,
+        2644,
+        2652,
+        2836,
+        2844,
+        2980,
+        3440,
+        3460,
+        3576,
+        3632,
+        3712,
+        3716,
+        3732,
+        3892,
+        3944,
+        3960,
+        4044,
+        4080,
+        4124,
+        4244,
+        4260,
+        4308,
+        4644,
+        5072,
+        5080,
+        5336,
+        5372,
+        5544,
+        5580,
+        5888,
+        5960,
+        5996,
+        6016,
+        6084,
+        6092,
+        6196,
+        6204,
+        6212,
+        6220,
+        8580,
+        9372,
+        9580,
+        12296,
+        12652,
+        13132,
+        14488,
+        14780,
+        15336,
+        15644,
+        15716,
+        15724,
+        16000,
+        16132,
+        16156,
+        16596,
+        17388,
+        19116,
+        20472,
+        21868,
+        22680,
+        23948,
+        27384,
+        29552,
+        29892,
+        30560,
+        31484,
+        31584,
+        31700,
+        33676,
+        36192,
+        39096,
+        40096,
+        41776,
+        44764,
+        51396,
+        63420,
+        75508,
+        78420,
+        80208,
+        82708
+      ]
+    },
+    {
+      "name": "steamwebhelper.exe",
+      "count": 7,
+      "private_bytes": 1324167168,
+      "working_set_bytes_sum": 674131968,
+      "pids": [
+        23836,
+        36496,
+        66412,
+        69660,
+        75160,
+        77000,
+        83668
+      ]
+    },
+    {
+      "name": "msedgewebview2.exe",
+      "count": 23,
+      "private_bytes": 1231253504,
+      "working_set_bytes_sum": 826765312,
+      "pids": [
+        7112,
+        8520,
+        9384,
+        13792,
+        27092,
+        29832,
+        34408,
+        43856,
+        45428,
+        46376,
+        51092,
+        53832,
+        60000,
+        62564,
+        65840,
+        67860,
+        67912,
+        68152,
+        68620,
+        71192,
+        71688,
+        84664,
+        84740
+      ]
+    },
+    {
+      "name": "Weixin.exe",
+      "count": 5,
+      "private_bytes": 1161756672,
+      "working_set_bytes_sum": 556032000,
+      "pids": [
+        3156,
+        7328,
+        24744,
+        31948,
+        33564
+      ]
+    },
+    {
+      "name": "QQMusic.exe",
+      "count": 1,
+      "private_bytes": 1080496128,
+      "working_set_bytes_sum": 247312384,
+      "pids": [
+        74648
+      ]
+    },
+    {
+      "name": "QQEX.exe",
+      "count": 7,
+      "private_bytes": 1053560832,
+      "working_set_bytes_sum": 140312576,
+      "pids": [
+        34848,
+        35172,
+        35468,
+        35556,
+        38532,
+        65596,
+        71348
+      ]
+    },
+    {
+      "name": "explorer.exe",
+      "count": 1,
+      "private_bytes": 922038272,
+      "working_set_bytes_sum": 344735744,
+      "pids": [
+        16568
+      ]
+    },
+    {
+      "name": "dwm.exe",
+      "count": 1,
+      "private_bytes": 635191296,
+      "working_set_bytes_sum": 112963584,
+      "pids": [
+        2300
+      ]
+    },
+    {
+      "name": "NVIDIA Overlay.exe",
+      "count": 5,
+      "private_bytes": 530382848,
+      "working_set_bytes_sum": 150589440,
+      "pids": [
+        17440,
+        18592,
+        19348,
+        19392,
+        21068
+      ]
+    },
+    {
+      "name": "TextInputHost.exe",
+      "count": 1,
+      "private_bytes": 435920896,
+      "working_set_bytes_sum": 105566208,
+      "pids": [
+        5828
+      ]
+    },
+    {
+      "name": "claude.exe",
+      "count": 1,
+      "private_bytes": 432574464,
+      "working_set_bytes_sum": 44474368,
+      "pids": [
+        20440
+      ]
+    },
+    {
+      "name": "Rterm.exe",
+      "count": 2,
+      "private_bytes": 402546688,
+      "working_set_bytes_sum": 185036800,
+      "pids": [
+        52932,
+        75924
+      ]
+    },
+    {
+      "name": "MCHOSE HUB.exe",
+      "count": 5,
+      "private_bytes": 394805248,
+      "working_set_bytes_sum": 28626944,
+      "pids": [
+        12392,
+        13500,
+        25148,
+        27128,
+        27132
+      ]
+    },
+    {
+      "name": "node.exe",
+      "count": 7,
+      "private_bytes": 389201920,
+      "working_set_bytes_sum": 81854464,
+      "pids": [
+        27852,
+        30068,
+        44920,
+        66128,
+        74284,
+        75216,
+        82044
+      ]
+    },
+    {
+      "name": "powershell.exe",
+      "count": 5,
+      "private_bytes": 373248000,
+      "working_set_bytes_sum": 325804032,
+      "pids": [
+        2380,
+        10884,
+        58616,
+        78656,
+        81168
+      ]
+    },
+    {
+      "name": "backgroundTaskHost.exe",
+      "count": 21,
+      "private_bytes": 363708416,
+      "working_set_bytes_sum": 14684160,
+      "pids": [
+        14108,
+        14816,
+        15888,
+        21392,
+        21924,
+        26056,
+        26068,
+        27580,
+        29732,
+        32796,
+        52744,
+        54748,
+        57036,
+        62156,
+        63024,
+        67288,
+        67880,
+        69128,
+        77256,
+        78524,
+        83852
+      ]
+    },
+    {
+      "name": "everything.exe",
+      "count": 2,
+      "private_bytes": 362012672,
+      "working_set_bytes_sum": 267948032,
+      "pids": [
+        29304,
+        53252
+      ]
+    },
+    {
+      "name": "msedge.exe",
+      "count": 9,
+      "private_bytes": 348184576,
+      "working_set_bytes_sum": 395444224,
+      "pids": [
+        13560,
+        42296,
+        48268,
+        58416,
+        63820,
+        71560,
+        73748,
+        82140,
+        84184
+      ]
+    },
+    {
+      "name": "qmbrowser.exe",
+      "count": 1,
+      "private_bytes": 312078336,
+      "working_set_bytes_sum": 249937920,
+      "pids": [
+        60344
+      ]
+    },
+    {
+      "name": "steam.exe",
+      "count": 1,
+      "private_bytes": 255377408,
+      "working_set_bytes_sum": 155095040,
+      "pids": [
+        24644
+      ]
+    },
+    {
+      "name": "audiodg.exe",
+      "count": 1,
+      "private_bytes": 253796352,
+      "working_set_bytes_sum": 168648704,
+      "pids": [
+        50304
+      ]
+    },
+    {
+      "name": "AdskAccessUIHost.exe",
+      "count": 4,
+      "private_bytes": 238874624,
+      "working_set_bytes_sum": 63709184,
+      "pids": [
+        8952,
+        11968,
+        14252,
+        17912
+      ]
+    },
+    {
+      "name": "NVDisplay.Container.exe",
+      "count": 2,
+      "private_bytes": 231538688,
+      "working_set_bytes_sum": 68157440,
+      "pids": [
+        3564,
+        4200
+      ]
+    },
+    {
+      "name": "OneDrive.Sync.Service.exe",
+      "count": 1,
+      "private_bytes": 190570496,
+      "working_set_bytes_sum": 16224256,
+      "pids": [
+        66776
+      ]
+    },
+    {
+      "name": "SnippingTool.exe",
+      "count": 1,
+      "private_bytes": 190201856,
+      "working_set_bytes_sum": 91385856,
+      "pids": [
+        43768
+      ]
+    },
+    {
+      "name": "nvcontainer.exe",
+      "count": 4,
+      "private_bytes": 170479616,
+      "working_set_bytes_sum": 112881664,
+      "pids": [
+        4972,
+        10172,
+        14760,
+        14792
+      ]
+    },
+    {
+      "name": "verge-mihomo.exe",
+      "count": 1,
+      "private_bytes": 166940672,
+      "working_set_bytes_sum": 86798336,
+      "pids": [
+        56128
+      ]
+    },
+    {
+      "name": "SearchHost.exe",
+      "count": 1,
+      "private_bytes": 159973376,
+      "working_set_bytes_sum": 57589760,
+      "pids": [
+        18284
+      ]
+    },
+    {
+      "name": "ctfmon.exe",
+      "count": 1,
+      "private_bytes": 143708160,
+      "working_set_bytes_sum": 83357696,
+      "pids": [
+        22224
+      ]
+    },
+    {
+      "name": "RtkAudUService64.exe",
+      "count": 4,
+      "private_bytes": 137580544,
+      "working_set_bytes_sum": 40488960,
+      "pids": [
+        6148,
+        9860,
+        16228,
+        26668
+      ]
+    },
+    {
+      "name": "WUDFHost.exe",
+      "count": 5,
+      "private_bytes": 133820416,
+      "working_set_bytes_sum": 22691840,
+      "pids": [
+        2004,
+        2164,
+        5460,
+        7180,
+        9876
+      ]
+    },
+    {
+      "name": "uu.exe",
+      "count": 1,
+      "private_bytes": 124743680,
+      "working_set_bytes_sum": 82731008,
+      "pids": [
+        67420
+      ]
+    },
+    {
+      "name": "SystemSettings.exe",
+      "count": 1,
+      "private_bytes": 112259072,
+      "working_set_bytes_sum": 1286144,
+      "pids": [
+        77364
+      ]
+    },
+    {
+      "name": "StartMenuExperienceHost.exe",
+      "count": 1,
+      "private_bytes": 104558592,
+      "working_set_bytes_sum": 47890432,
+      "pids": [
+        18316
+      ]
+    },
+    {
+      "name": "CHXSmartScreen.exe",
+      "count": 1,
+      "private_bytes": 103239680,
+      "working_set_bytes_sum": 1613824,
+      "pids": [
+        60216
+      ]
+    },
+    {
+      "name": "PhoneExperienceHost.exe",
+      "count": 1,
+      "private_bytes": 97837056,
+      "working_set_bytes_sum": 154238976,
+      "pids": [
+        75544
+      ]
+    },
+    {
+      "name": "WmiPrvSE.exe",
+      "count": 3,
+      "private_bytes": 96903168,
+      "working_set_bytes_sum": 92565504,
+      "pids": [
+        4116,
+        7080,
+        50252
+      ]
+    },
+    {
+      "name": "MathWorksServiceHost.exe",
+      "count": 1,
+      "private_bytes": 93761536,
+      "working_set_bytes_sum": 38215680,
+      "pids": [
+        47016
+      ]
+    },
+    {
+      "name": "AdskAccessCore.exe",
+      "count": 1,
+      "private_bytes": 92684288,
+      "working_set_bytes_sum": 34181120,
+      "pids": [
+        26576
+      ]
+    },
+    {
+      "name": "ArmouryCrate.Service.exe",
+      "count": 1,
+      "private_bytes": 86491136,
+      "working_set_bytes_sum": 53305344,
+      "pids": [
+        54728
+      ]
+    },
+    {
+      "name": "MathWorksServiceHost-Monitor.exe",
+      "count": 1,
+      "private_bytes": 83963904,
+      "working_set_bytes_sum": 27508736,
+      "pids": [
+        21312
+      ]
+    },
+    {
+      "name": "ShellExperienceHost.exe",
+      "count": 1,
+      "private_bytes": 83030016,
+      "working_set_bytes_sum": 32342016,
+      "pids": [
+        25296
+      ]
+    },
+    {
+      "name": "clash-verge.exe",
+      "count": 1,
+      "private_bytes": 82800640,
+      "working_set_bytes_sum": 38891520,
+      "pids": [
+        71700
+      ]
+    },
+    {
+      "name": "MSPCManagerService.exe",
+      "count": 1,
+      "private_bytes": 82771968,
+      "working_set_bytes_sum": 33615872,
+      "pids": [
+        10432
+      ]
+    },
+    {
+      "name": "ApplicationFrameHost.exe",
+      "count": 1,
+      "private_bytes": 74833920,
+      "working_set_bytes_sum": 11694080,
+      "pids": [
+        26268
+      ]
+    },
+    {
+      "name": "ArmouryCrate.exe",
+      "count": 1,
+      "private_bytes": 73277440,
+      "working_set_bytes_sum": 815104,
+      "pids": [
+        12548
+      ]
+    },
+    {
+      "name": "WUDFCompanionHost.exe",
+      "count": 3,
+      "private_bytes": 70905856,
+      "working_set_bytes_sum": 3330048,
+      "pids": [
+        2800,
+        10864,
+        11244
+      ]
+    },
+    {
+      "name": "LightingService.exe",
+      "count": 1,
+      "private_bytes": 66891776,
+      "working_set_bytes_sum": 47476736,
+      "pids": [
+        77328
+      ]
+    },
+    {
+      "name": "LockApp.exe",
+      "count": 1,
+      "private_bytes": 64028672,
+      "working_set_bytes_sum": 69918720,
+      "pids": [
+        76936
+      ]
+    },
+    {
+      "name": "MoUsoCoreWorker.exe",
+      "count": 1,
+      "private_bytes": 63922176,
+      "working_set_bytes_sum": 56111104,
+      "pids": [
+        30156
+      ]
+    },
+    {
+      "name": "RtkUWP.exe",
+      "count": 1,
+      "private_bytes": 62545920,
+      "working_set_bytes_sum": 14655488,
+      "pids": [
+        34308
+      ]
+    },
+    {
+      "name": "ArmouryCrate.UserSessionHelper.exe",
+      "count": 1,
+      "private_bytes": 60026880,
+      "working_set_bytes_sum": 47509504,
+      "pids": [
+        37672
+      ]
+    },
+    {
+      "name": "AdskLicensingService.exe",
+      "count": 1,
+      "private_bytes": 59080704,
+      "working_set_bytes_sum": 12210176,
+      "pids": [
+        5900
+      ]
+    },
+    {
+      "name": "RuntimeBroker.exe",
+      "count": 9,
+      "private_bytes": 58650624,
+      "working_set_bytes_sum": 141049856,
+      "pids": [
+        3828,
+        18312,
+        19144,
+        21704,
+        35100,
+        38156,
+        45992,
+        49256,
+        50712
+      ]
+    },
+    {
+      "name": "ShellHost.exe",
+      "count": 1,
+      "private_bytes": 54587392,
+      "working_set_bytes_sum": 51335168,
+      "pids": [
+        64108
+      ]
+    },
+    {
+      "name": "AcPowerNotification.exe",
+      "count": 1,
+      "private_bytes": 53309440,
+      "working_set_bytes_sum": 23334912,
+      "pids": [
+        83116
+      ]
+    },
+    {
+      "name": "copilot-runtime.exe",
+      "count": 1,
+      "private_bytes": 53039104,
+      "working_set_bytes_sum": 10911744,
+      "pids": [
+        53812
+      ]
+    },
+    {
+      "name": "AsusSurvey.exe",
+      "count": 1,
+      "private_bytes": 52350976,
+      "working_set_bytes_sum": 7598080,
+      "pids": [
+        31508
+      ]
+    },
+    {
+      "name": "lsass.exe",
+      "count": 1,
+      "private_bytes": 50573312,
+      "working_set_bytes_sum": 22667264,
+      "pids": [
+        1812
+      ]
+    },
+    {
+      "name": "AdskAccessService.exe",
+      "count": 2,
+      "private_bytes": 50540544,
+      "working_set_bytes_sum": 11182080,
+      "pids": [
+        13496,
+        24484
+      ]
+    },
+    {
+      "name": "node_repl.exe",
+      "count": 14,
+      "private_bytes": 46555136,
+      "working_set_bytes_sum": 68820992,
+      "pids": [
+        5600,
+        7460,
+        16628,
+        19200,
+        24680,
+        36452,
+        40964,
+        43680,
+        44528,
+        65936,
+        66832,
+        83092,
+        83856,
+        84060
+      ]
+    },
+    {
+      "name": "AsusSoftwareManagerAgent.exe",
+      "count": 1,
+      "private_bytes": 46387200,
+      "working_set_bytes_sum": 14589952,
+      "pids": [
+        3456
+      ]
+    },
+    {
+      "name": "OfficeClickToRun.exe",
+      "count": 1,
+      "private_bytes": 44711936,
+      "working_set_bytes_sum": 56971264,
+      "pids": [
+        75716
+      ]
+    },
+    {
+      "name": "IntelAudioService.exe",
+      "count": 1,
+      "private_bytes": 40775680,
+      "working_set_bytes_sum": 10354688,
+      "pids": [
+        6116
+      ]
+    },
+    {
+      "name": "MSOfficePLUSService.exe",
+      "count": 1,
+      "private_bytes": 40427520,
+      "working_set_bytes_sum": 16797696,
+      "pids": [
+        6172
+      ]
+    },
+    {
+      "name": "GenuineService.exe",
+      "count": 1,
+      "private_bytes": 40251392,
+      "working_set_bytes_sum": 9658368,
+      "pids": [
+        19244
+      ]
+    },
+    {
+      "name": "conhost.exe",
+      "count": 31,
+      "private_bytes": 38592512,
+      "working_set_bytes_sum": 93786112,
+      "pids": [
+        5976,
+        8368,
+        10352,
+        12960,
+        12984,
+        13008,
+        15556,
+        16600,
+        24852,
+        25268,
+        26708,
+        27068,
+        34700,
+        36324,
+        39296,
+        42928,
+        46944,
+        49372,
+        50836,
+        52372,
+        53056,
+        57800,
+        66156,
+        69516,
+        73880,
+        77312,
+        78312,
+        79696,
+        82216,
+        84376,
+        84412
+      ]
+    },
+    {
+      "name": "cer_service.exe",
+      "count": 1,
+      "private_bytes": 36810752,
+      "working_set_bytes_sum": 20885504,
+      "pids": [
+        5980
+      ]
+    },
+    {
+      "name": "SearchIndexer.exe",
+      "count": 1,
+      "private_bytes": 34545664,
+      "working_set_bytes_sum": 35782656,
+      "pids": [
+        70052
+      ]
+    },
+    {
+      "name": "AuraWallpaperService.exe",
+      "count": 1,
+      "private_bytes": 34017280,
+      "working_set_bytes_sum": 14512128,
+      "pids": [
+        5952
+      ]
+    },
+    {
+      "name": "dllhost.exe",
+      "count": 3,
+      "private_bytes": 34013184,
+      "working_set_bytes_sum": 17088512,
+      "pids": [
+        6508,
+        19536,
+        49652
+      ]
+    },
+    {
+      "name": "spoolsv.exe",
+      "count": 1,
+      "private_bytes": 33849344,
+      "working_set_bytes_sum": 28598272,
+      "pids": [
+        4956
+      ]
+    },
+    {
+      "name": "taskhostw.exe",
+      "count": 2,
+      "private_bytes": 29908992,
+      "working_set_bytes_sum": 27127808,
+      "pids": [
+        16336,
+        52404
+      ]
+    },
+    {
+      "name": "pythonw.exe",
+      "count": 1,
+      "private_bytes": 29126656,
+      "working_set_bytes_sum": 16027648,
+      "pids": [
+        13144
+      ]
+    },
+    {
+      "name": "CodeSetup-stable-6d62b1d5dace93a33b3a6d3eca1317bd5e15bcb1.tmp",
+      "count": 1,
+      "private_bytes": 28303360,
+      "working_set_bytes_sum": 3973120,
+      "pids": [
+        77672
+      ]
+    },
+    {
+      "name": "codex-code-mode-host.exe",
+      "count": 1,
+      "private_bytes": 27852800,
+      "working_set_bytes_sum": 25812992,
+      "pids": [
+        72464
+      ]
+    },
+    {
+      "name": "AdskAccessServiceHost.exe",
+      "count": 1,
+      "private_bytes": 26558464,
+      "working_set_bytes_sum": 9531392,
+      "pids": [
+        6228
+      ]
+    },
+    {
+      "name": "uu_ball.exe",
+      "count": 1,
+      "private_bytes": 26103808,
+      "working_set_bytes_sum": 41766912,
+      "pids": [
+        84672
+      ]
+    },
+    {
+      "name": "DAX3API.exe",
+      "count": 1,
+      "private_bytes": 25341952,
+      "working_set_bytes_sum": 25473024,
+      "pids": [
+        5988
+      ]
+    },
+    {
+      "name": "crashpad_handler.exe",
+      "count": 4,
+      "private_bytes": 23429120,
+      "working_set_bytes_sum": 28172288,
+      "pids": [
+        2428,
+        6540,
+        32196,
+        71628
+      ]
+    },
+    {
+      "name": "SDXHelper.exe",
+      "count": 1,
+      "private_bytes": 23281664,
+      "working_set_bytes_sum": 32022528,
+      "pids": [
+        65368
+      ]
+    },
+    {
+      "name": "ROGLiveService.exe",
+      "count": 1,
+      "private_bytes": 22777856,
+      "working_set_bytes_sum": 19263488,
+      "pids": [
+        83084
+      ]
+    },
+    {
+      "name": "uu_cloudsyn.exe",
+      "count": 1,
+      "private_bytes": 21983232,
+      "working_set_bytes_sum": 23367680,
+      "pids": [
+        28356
+      ]
+    },
+    {
+      "name": "ArmourySwAgent.exe",
+      "count": 1,
+      "private_bytes": 19783680,
+      "working_set_bytes_sum": 4403200,
+      "pids": [
+        10004
+      ]
+    },
+    {
+      "name": "AsHotplugCtrl.exe",
+      "count": 1,
+      "private_bytes": 18345984,
+      "working_set_bytes_sum": 1093632,
+      "pids": [
+        16352
+      ]
+    },
+    {
+      "name": "MsMpEng.exe",
+      "count": 1,
+      "private_bytes": 17842176,
+      "working_set_bytes_sum": 18223104,
+      "pids": [
+        6068
+      ]
+    },
+    {
+      "name": "Widgets.exe",
+      "count": 1,
+      "private_bytes": 17371136,
+      "working_set_bytes_sum": 40062976,
+      "pids": [
+        67888
+      ]
+    },
+    {
+      "name": "fontdrvhost.exe",
+      "count": 2,
+      "private_bytes": 17317888,
+      "working_set_bytes_sum": 11067392,
+      "pids": [
+        1948,
+        2128
+      ]
+    },
+    {
+      "name": "AdskIdentityManager.exe",
+      "count": 1,
+      "private_bytes": 16580608,
+      "working_set_bytes_sum": 13266944,
+      "pids": [
+        14168
+      ]
+    },
+    {
+      "name": "AacAmbientLighting.exe",
+      "count": 1,
+      "private_bytes": 13914112,
+      "working_set_bytes_sum": 19873792,
+      "pids": [
+        29332
+      ]
+    },
+    {
+      "name": "Registry",
+      "count": 1,
+      "private_bytes": 13754368,
+      "working_set_bytes_sum": 60207104,
+      "pids": [
+        376
+      ]
+    },
+    {
+      "name": "dasHost.exe",
+      "count": 3,
+      "private_bytes": 13438976,
+      "working_set_bytes_sum": 14483456,
+      "pids": [
+        8376,
+        10788,
+        59096
+      ]
+    },
+    {
+      "name": "MemCompression",
+      "count": 1,
+      "private_bytes": 12726272,
+      "working_set_bytes_sum": 3673739264,
+      "pids": [
+        3852
+      ]
+    },
+    {
+      "name": "claude-152-wrapper.exe",
+      "count": 1,
+      "private_bytes": 12460032,
+      "working_set_bytes_sum": 1814528,
+      "pids": [
+        72204
+      ]
+    },
+    {
+      "name": "IntelGraphicsSoftware.Service.exe",
+      "count": 1,
+      "private_bytes": 11689984,
+      "working_set_bytes_sum": 2686976,
+      "pids": [
+        67904
+      ]
+    },
+    {
+      "name": "IntelGraphicsSoftware.Service.Graphics.exe",
+      "count": 1,
+      "private_bytes": 11542528,
+      "working_set_bytes_sum": 11350016,
+      "pids": [
+        79396
+      ]
+    },
+    {
+      "name": "AsusScreenXpertHostService.exe",
+      "count": 1,
+      "private_bytes": 10530816,
+      "working_set_bytes_sum": 16265216,
+      "pids": [
+        5812
+      ]
+    },
+    {
+      "name": "sihost.exe",
+      "count": 1,
+      "private_bytes": 10526720,
+      "working_set_bytes_sum": 32686080,
+      "pids": [
+        15412
+      ]
+    },
+    {
+      "name": "UPSecurityInput.exe",
+      "count": 1,
+      "private_bytes": 10452992,
+      "working_set_bytes_sum": 6238208,
+      "pids": [
+        26428
+      ]
+    },
+    {
+      "name": "PresentMonService.exe",
+      "count": 1,
+      "private_bytes": 10244096,
+      "working_set_bytes_sum": 1544192,
+      "pids": [
+        21968
+      ]
+    },
+    {
+      "name": "AsusSoftwareManager.exe",
+      "count": 1,
+      "private_bytes": 10145792,
+      "working_set_bytes_sum": 17928192,
+      "pids": [
+        5932
+      ]
+    },
+    {
+      "name": "updater.exe",
+      "count": 3,
+      "private_bytes": 9756672,
+      "working_set_bytes_sum": 44576768,
+      "pids": [
+        3356,
+        14636,
+        27844
+      ]
+    },
+    {
+      "name": "steamservice.exe",
+      "count": 1,
+      "private_bytes": 9240576,
+      "working_set_bytes_sum": 12464128,
+      "pids": [
+        16324
+      ]
+    },
+    {
+      "name": "services.exe",
+      "count": 1,
+      "private_bytes": 8531968,
+      "working_set_bytes_sum": 9949184,
+      "pids": [
+        1784
+      ]
+    },
+    {
+      "name": "GlideXService.exe",
+      "count": 1,
+      "private_bytes": 8376320,
+      "working_set_bytes_sum": 7204864,
+      "pids": [
+        26736
+      ]
+    },
+    {
+      "name": "SecurityHealthService.exe",
+      "count": 1,
+      "private_bytes": 8278016,
+      "working_set_bytes_sum": 11640832,
+      "pids": [
+        20636
+      ]
+    },
+    {
+      "name": "cmd.exe",
+      "count": 4,
+      "private_bytes": 8192000,
+      "working_set_bytes_sum": 3289088,
+      "pids": [
+        8628,
+        12768,
+        32656,
+        63632
+      ]
+    },
+    {
+      "name": "csrss.exe",
+      "count": 2,
+      "private_bytes": 8065024,
+      "working_set_bytes_sum": 8736768,
+      "pids": [
+        1592,
+        1720
+      ]
+    },
+    {
+      "name": "AsusAppService.exe",
+      "count": 1,
+      "private_bytes": 7880704,
+      "working_set_bytes_sum": 16154624,
+      "pids": [
+        5844
+      ]
+    },
+    {
+      "name": "CodeSetup-stable-6d62b1d5dace93a33b3a6d3eca1317bd5e15bcb1.exe",
+      "count": 1,
+      "private_bytes": 7516160,
+      "working_set_bytes_sum": 1613824,
+      "pids": [
+        65060
+      ]
+    },
+    {
+      "name": "ipf_uf.exe",
+      "count": 1,
+      "private_bytes": 7331840,
+      "working_set_bytes_sum": 4476928,
+      "pids": [
+        6136
+      ]
+    },
+    {
+      "name": "wlanext.exe",
+      "count": 1,
+      "private_bytes": 7102464,
+      "working_set_bytes_sum": 3989504,
+      "pids": [
+        4832
+      ]
+    },
+    {
+      "name": "clouddrive_desktop_widget.exe",
+      "count": 1,
+      "private_bytes": 7094272,
+      "working_set_bytes_sum": 6549504,
+      "pids": [
+        37708
+      ]
+    },
+    {
+      "name": "NgcIso.exe",
+      "count": 1,
+      "private_bytes": 6356992,
+      "working_set_bytes_sum": 2498560,
+      "pids": [
+        5616
+      ]
+    },
+    {
+      "name": "E1YATIBZE.EXE",
+      "count": 2,
+      "private_bytes": 6201344,
+      "working_set_bytes_sum": 10977280,
+      "pids": [
+        25852,
+        28764
+      ]
+    },
+    {
+      "name": "YunDetectService.exe",
+      "count": 1,
+      "private_bytes": 6123520,
+      "working_set_bytes_sum": 3125248,
+      "pids": [
+        1824
+      ]
+    },
+    {
+      "name": "AsusSystemAnalysis.exe",
+      "count": 1,
+      "private_bytes": 6070272,
+      "working_set_bytes_sum": 11100160,
+      "pids": [
+        5940
+      ]
+    },
+    {
+      "name": "XboxPcAppFT.exe",
+      "count": 1,
+      "private_bytes": 5750784,
+      "working_set_bytes_sum": 21020672,
+      "pids": [
+        84136
+      ]
+    },
+    {
+      "name": "WidgetService.exe",
+      "count": 1,
+      "private_bytes": 5656576,
+      "working_set_bytes_sum": 16179200,
+      "pids": [
+        18728
+      ]
+    },
+    {
+      "name": "R.exe",
+      "count": 4,
+      "private_bytes": 5406720,
+      "working_set_bytes_sum": 4157440,
+      "pids": [
+        15548,
+        16844,
+        54704,
+        83444
+      ]
+    },
+    {
+      "name": "UPService.exe",
+      "count": 1,
+      "private_bytes": 5378048,
+      "working_set_bytes_sum": 6774784,
+      "pids": [
+        7476
+      ]
+    },
+    {
+      "name": "MathWorksCrashReporter.exe",
+      "count": 1,
+      "private_bytes": 5230592,
+      "working_set_bytes_sum": 2895872,
+      "pids": [
+        10956
+      ]
+    },
+    {
+      "name": "GlideXRemoteService.exe",
+      "count": 1,
+      "private_bytes": 4358144,
+      "working_set_bytes_sum": 3076096,
+      "pids": [
+        4488
+      ]
+    },
+    {
+      "name": "AsusScreenXpertUI.exe",
+      "count": 1,
+      "private_bytes": 4296704,
+      "working_set_bytes_sum": 3092480,
+      "pids": [
+        17652
+      ]
+    },
+    {
+      "name": "pet.exe",
+      "count": 1,
+      "private_bytes": 4259840,
+      "working_set_bytes_sum": 692224,
+      "pids": [
+        57320
+      ]
+    },
+    {
+      "name": "ArmouryCrateControlInterface.exe",
+      "count": 1,
+      "private_bytes": 4243456,
+      "working_set_bytes_sum": 7802880,
+      "pids": [
+        5780
+      ]
+    },
+    {
+      "name": "FNPLicensingService64.exe",
+      "count": 1,
+      "private_bytes": 4169728,
+      "working_set_bytes_sum": 7217152,
+      "pids": [
+        6024
+      ]
+    },
+    {
+      "name": "GlideXServiceExt.exe",
+      "count": 1,
+      "private_bytes": 3727360,
+      "working_set_bytes_sum": 11128832,
+      "pids": [
+        36596
+      ]
+    },
+    {
+      "name": "LsaIso.exe",
+      "count": 1,
+      "private_bytes": 3694592,
+      "working_set_bytes_sum": 1298432,
+      "pids": [
+        1792
+      ]
+    },
+    {
+      "name": "nvsphelper64.exe",
+      "count": 1,
+      "private_bytes": 3592192,
+      "working_set_bytes_sum": 2547712,
+      "pids": [
+        16824
+      ]
+    },
+    {
+      "name": "ledcontrolservice3.exe",
+      "count": 1,
+      "private_bytes": 3473408,
+      "working_set_bytes_sum": 3674112,
+      "pids": [
+        79364
+      ]
+    },
+    {
+      "name": "unsecapp.exe",
+      "count": 1,
+      "private_bytes": 3461120,
+      "working_set_bytes_sum": 3170304,
+      "pids": [
+        10368
+      ]
+    },
+    {
+      "name": "AsusOptimization.exe",
+      "count": 1,
+      "private_bytes": 3424256,
+      "working_set_bytes_sum": 4751360,
+      "pids": [
+        4316
+      ]
+    },
+    {
+      "name": "AsusOptimizationStartupTask.exe",
+      "count": 1,
+      "private_bytes": 3424256,
+      "working_set_bytes_sum": 3432448,
+      "pids": [
+        14628
+      ]
+    },
+    {
+      "name": "SearchProtocolHost.exe",
+      "count": 1,
+      "private_bytes": 3350528,
+      "working_set_bytes_sum": 12484608,
+      "pids": [
+        79776
+      ]
+    },
+    {
+      "name": "AsusOSD.exe",
+      "count": 1,
+      "private_bytes": 3219456,
+      "working_set_bytes_sum": 2043904,
+      "pids": [
+        28536
+      ]
+    },
+    {
+      "name": "WMIRegistrationService.exe",
+      "count": 1,
+      "private_bytes": 3121152,
+      "working_set_bytes_sum": 1589248,
+      "pids": [
+        6180
+      ]
+    },
+    {
+      "name": "clash-verge-service.exe",
+      "count": 1,
+      "private_bytes": 3108864,
+      "working_set_bytes_sum": 3792896,
+      "pids": [
+        64024
+      ]
+    },
+    {
+      "name": "winlogon.exe",
+      "count": 1,
+      "private_bytes": 2834432,
+      "working_set_bytes_sum": 6025216,
+      "pids": [
+        1868
+      ]
+    },
+    {
+      "name": "adb.exe",
+      "count": 1,
+      "private_bytes": 2748416,
+      "working_set_bytes_sum": 2580480,
+      "pids": [
+        45048
+      ]
+    },
+    {
+      "name": "AsusSystemDiagnosis.exe",
+      "count": 1,
+      "private_bytes": 2641920,
+      "working_set_bytes_sum": 2134016,
+      "pids": [
+        5916
+      ]
+    },
+    {
+      "name": "Intel_PIE_Service.exe",
+      "count": 1,
+      "private_bytes": 2637824,
+      "working_set_bytes_sum": 2277376,
+      "pids": [
+        4940
+      ]
+    },
+    {
+      "name": "rundll32.exe",
+      "count": 1,
+      "private_bytes": 2600960,
+      "working_set_bytes_sum": 5726208,
+      "pids": [
+        5856
+      ]
+    },
+    {
+      "name": "RstMwService.exe",
+      "count": 1,
+      "private_bytes": 2555904,
+      "working_set_bytes_sum": 892928,
+      "pids": [
+        3600
+      ]
+    },
+    {
+      "name": "FMService_USB64.exe",
+      "count": 1,
+      "private_bytes": 2535424,
+      "working_set_bytes_sum": 3887104,
+      "pids": [
+        6008
+      ]
+    },
+    {
+      "name": "OpenConsole.exe",
+      "count": 1,
+      "private_bytes": 2383872,
+      "working_set_bytes_sum": 1622016,
+      "pids": [
+        71968
+      ]
+    },
+    {
+      "name": "AggregatorHost.exe",
+      "count": 1,
+      "private_bytes": 2334720,
+      "working_set_bytes_sum": 3399680,
+      "pids": [
+        11904
+      ]
+    },
+    {
+      "name": "ipfsvc.exe",
+      "count": 1,
+      "private_bytes": 2265088,
+      "working_set_bytes_sum": 2617344,
+      "pids": [
+        6060
+      ]
+    },
+    {
+      "name": "ipf_helper.exe",
+      "count": 1,
+      "private_bytes": 2252800,
+      "working_set_bytes_sum": 6004736,
+      "pids": [
+        14656
+      ]
+    },
+    {
+      "name": "AsusNumPadService.exe",
+      "count": 1,
+      "private_bytes": 2244608,
+      "working_set_bytes_sum": 3657728,
+      "pids": [
+        5792
+      ]
+    },
+    {
+      "name": "UserOOBEBroker.exe",
+      "count": 1,
+      "private_bytes": 2150400,
+      "working_set_bytes_sum": 2048000,
+      "pids": [
+        18456
+      ]
+    },
+    {
+      "name": "AsusSwitch.exe",
+      "count": 1,
+      "private_bytes": 2097152,
+      "working_set_bytes_sum": 1974272,
+      "pids": [
+        5924
+      ]
+    },
+    {
+      "name": "sslvpn-service.exe",
+      "count": 1,
+      "private_bytes": 2088960,
+      "working_set_bytes_sum": 2183168,
+      "pids": [
+        6164
+      ]
+    },
+    {
+      "name": "AppVShNotify.exe",
+      "count": 1,
+      "private_bytes": 1990656,
+      "working_set_bytes_sum": 9252864,
+      "pids": [
+        69780
+      ]
+    },
+    {
+      "name": "GameSDK.exe",
+      "count": 1,
+      "private_bytes": 1986560,
+      "working_set_bytes_sum": 1232896,
+      "pids": [
+        6036
+      ]
+    },
+    {
+      "name": "acrotray.exe",
+      "count": 1,
+      "private_bytes": 1933312,
+      "working_set_bytes_sum": 1736704,
+      "pids": [
+        29672
+      ]
+    },
+    {
+      "name": "AsMsControl.exe",
+      "count": 1,
+      "private_bytes": 1916928,
+      "working_set_bytes_sum": 3330048,
+      "pids": [
+        5760
+      ]
+    },
+    {
+      "name": "ChsIME.exe",
+      "count": 1,
+      "private_bytes": 1888256,
+      "working_set_bytes_sum": 1409024,
+      "pids": [
+        11624
+      ]
+    },
+    {
+      "name": "uu_neths_helper.exe",
+      "count": 1,
+      "private_bytes": 1503232,
+      "working_set_bytes_sum": 7274496,
+      "pids": [
+        73280
+      ]
+    },
+    {
+      "name": "AsusCertService.exe",
+      "count": 1,
+      "private_bytes": 1486848,
+      "working_set_bytes_sum": 987136,
+      "pids": [
+        3624
+      ]
+    },
+    {
+      "name": "AsMonitorControl.exe",
+      "count": 1,
+      "private_bytes": 1478656,
+      "working_set_bytes_sum": 1118208,
+      "pids": [
+        16372
+      ]
+    },
+    {
+      "name": "AsusInputlocaleMonitor.exe",
+      "count": 1,
+      "private_bytes": 1454080,
+      "working_set_bytes_sum": 1724416,
+      "pids": [
+        16864
+      ]
+    },
+    {
+      "name": "wininit.exe",
+      "count": 1,
+      "private_bytes": 1441792,
+      "working_set_bytes_sum": 888832,
+      "pids": [
+        1712
+      ]
+    },
+    {
+      "name": "AsusHotkey.exe",
+      "count": 1,
+      "private_bytes": 1437696,
+      "working_set_bytes_sum": 1241088,
+      "pids": [
+        15136
+      ]
+    },
+    {
+      "name": "MCHOSE HUB Agent.exe",
+      "count": 1,
+      "private_bytes": 1400832,
+      "working_set_bytes_sum": 659456,
+      "pids": [
+        26988
+      ]
+    },
+    {
+      "name": "MCHOSE HUB Notifier.exe",
+      "count": 1,
+      "private_bytes": 1339392,
+      "working_set_bytes_sum": 847872,
+      "pids": [
+        26796
+      ]
+    },
+    {
+      "name": "smss.exe",
+      "count": 1,
+      "private_bytes": 1167360,
+      "working_set_bytes_sum": 266240,
+      "pids": [
+        960
+      ]
+    },
+    {
+      "name": "core-service.exe",
+      "count": 1,
+      "private_bytes": 1118208,
+      "working_set_bytes_sum": 1064960,
+      "pids": [
+        66688
+      ]
+    },
+    {
+      "name": "",
+      "count": 1,
+      "private_bytes": 176128,
+      "working_set_bytes_sum": 519000064,
+      "pids": [
+        332
+      ]
+    },
+    {
+      "name": "System",
+      "count": 1,
+      "private_bytes": 77824,
+      "working_set_bytes_sum": 8413184,
+      "pids": [
+        4
+      ]
+    },
+    {
+      "name": "System Idle Process",
+      "count": 1,
+      "private_bytes": 61440,
+      "working_set_bytes_sum": 8192,
+      "pids": [
+        0
+      ]
+    }
+  ],
+  "M20_children": [
+    {
+      "pid": 13908,
+      "name": "python.exe",
+      "private_bytes": 2528186368,
+      "working_set_bytes": 971624448,
+      "peak_working_set_bytes": 1868607488,
+      "paged_pool_bytes": 640376,
+      "nonpaged_pool_bytes": 126200,
+      "is_M20_child": true,
+      "registered_directory": "outputs/v20_load_accounting_20261019_run01/experiments/v20_main_032"
+    },
+    {
+      "pid": 80504,
+      "name": "python.exe",
+      "private_bytes": 2974519296,
+      "working_set_bytes": 1414209536,
+      "peak_working_set_bytes": 1712541696,
+      "paged_pool_bytes": 640376,
+      "nonpaged_pool_bytes": 138984,
+      "is_M20_child": true,
+      "registered_directory": "outputs/v20_load_accounting_20261019_run01/experiments/v20_main_031"
+    }
+  ],
+  "M20_private_sum_bytes": 5502705664,
+  "M20_working_set_sum_bytes": 2385833984,
+  "commit_minus_private_sum_bytes_before": 9531764736,
+  "commit_minus_private_sum_bytes_after": 10028744704,
+  "read_only": true,
+  "process_cmdline_scope": "Python classification only; ordinary process command lines not read",
+  "credentials_not_read": true
+}

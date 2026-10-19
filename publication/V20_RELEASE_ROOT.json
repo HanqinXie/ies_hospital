@@ -1,0 +1,75 @@
+{
+  "schema": "hospital_ies.v20.release_root.v1",
+  "utc": "2026-10-19T12:06:31.645780+00:00",
+  "source_root": "D:\\hospital_ies_v20_20261019",
+  "original_scientific_root": "D:\\hospital_ies_v20_20261019",
+  "original_research_root": "D:\\云大文件\\论文\\医院ies\\code_4_2",
+  "staged_root": "D:\\hospital_ies_v20_release_20261019",
+  "status": "final",
+  "freeze_sha256": "48baed7a128d2f921d36323330ae4d22e2e6dc83214e8a505b6ba89273439b7b",
+  "wrapper_sha256": "adb6f25abe8f60ee7aee66a846af5a1fb262bb429c4747d714beaa5ae179352e",
+  "reproduction_wrapper_sha256": "495db22279be769a8bc0784f9a174c3856667f7c244a3edc921acb52c454ef45",
+  "campaign_qualification": {
+    "status": "passed",
+    "path": "publication/V20_FINAL_CAMPAIGN_PROOF.json",
+    "sha256": "3303600572c64313aa3455d346d65119c9312f38414dbda44c176e53b39c7b63",
+    "signature": "65e25c4fb32bff237e179fc893c46823babd421f0b3a397ce4aff90cd8a76dcf",
+    "gate_sha256": "0ae4b1d026367a9e91c1cb75104d53fdd55e684e5ca62a23c7611b56a91bf22c",
+    "actual_complete_batches": 148,
+    "actual_complete_pairs": 406
+  },
+  "supplemental_closure": [
+    {
+      "path": "outputs/v19_model_closeout_20261018_run01/design/LONG_FINAL_R1_PROPOSAL.json",
+      "bytes": 56175,
+      "sha256": "054b9f167960a0dd88ffb41517c18b6e1305c3ac81a3c6a32b4412b298815696",
+      "evidence": "outputs/v20_load_accounting_20261019_run01/provenance/v19_design/LONG_FINAL_R1_PROPOSAL.json",
+      "purpose": "Original-path fixture required by default V20 campaign regression"
+    },
+    {
+      "path": "outputs/v19_model_closeout_20261018_run01/design/COMPAT_FINAL_R1_PROPOSAL.json",
+      "bytes": 33806,
+      "sha256": "9df1eb5b0e8617fc9448bb6f00be770828223689e31f6f37e396ceb4a8a2b324",
+      "evidence": "outputs/v20_load_accounting_20261019_run01/provenance/v19_design/COMPAT_FINAL_R1_PROPOSAL.json",
+      "purpose": "Original-path fixture required by default V20 campaign regression"
+    },
+    {
+      "path": "outputs/v19_model_closeout_20261018_run01/design/COMPAT_LONG_FINAL_R1_PROPOSAL.json",
+      "bytes": 16639,
+      "sha256": "609380fff30a7fb558417d1a3fe593a30e607522e23e30dd7e56f6b2cccbeefe",
+      "evidence": "outputs/v20_load_accounting_20261019_run01/provenance/v19_design/COMPAT_LONG_FINAL_R1_PROPOSAL.json",
+      "purpose": "Original-path fixture required by default V20 campaign regression"
+    },
+    {
+      "path": "outputs/v19_model_closeout_20261018_run01/design/PROPAGATION_FINAL_R1_PROPOSAL.json",
+      "bytes": 38713,
+      "sha256": "286a1d8d57266f1d27ce844a491207dd3e684aeb6655a441d7537db64c997253",
+      "evidence": "outputs/v20_load_accounting_20261019_run01/provenance/v19_design/PROPAGATION_FINAL_R1_PROPOSAL.json",
+      "purpose": "Original-path fixture required by default V20 campaign regression"
+    },
+    {
+      "path": "outputs/v19_model_closeout_20261018_run01/design/NORMAL_E_FINAL_R1_PROPOSAL.json",
+      "bytes": 24651,
+      "sha256": "9454ae0c4a7c5cb02aff155c3339c89d566b2ed157948f282c220af9d467f2ab",
+      "evidence": "outputs/v20_load_accounting_20261019_run01/provenance/v19_design/NORMAL_E_FINAL_R1_PROPOSAL.json",
+      "purpose": "Original-path fixture required by default V20 campaign regression"
+    },
+    {
+      "path": "outputs/v19_model_closeout_20261018_run01/design/SENSITIVITY_OPEN1_R1_PROPOSAL.json",
+      "bytes": 58156,
+      "sha256": "2d3375f44af0daa84d94dfa7664baf6efc78499ffe0c76fb5b6e0ac0edfc91de",
+      "evidence": "outputs/v20_load_accounting_20261019_run01/provenance/v19_design/SENSITIVITY_OPEN1_R1_PROPOSAL.json",
+      "purpose": "Original-path fixture required by default V20 campaign regression"
+    },
+    {
+      "path": "outputs/v19_model_closeout_20261018_run01/design/SENSITIVITY_CONTACT025_R1_PROPOSAL.json",
+      "bytes": 52423,
+      "sha256": "e1ca4276e56ec014158233f30c7cf03704236d5b2d99f1e8871d7a8ab732e425",
+      "evidence": "outputs/v20_load_accounting_20261019_run01/provenance/v19_design/SENSITIVITY_CONTACT025_R1_PROPOSAL.json",
+      "purpose": "Original-path fixture required by default V20 campaign regression"
+    }
+  ],
+  "candidate_omits_inflight_results": false,
+  "scientific_source_modified": false,
+  "per_file_limit_bytes_exclusive": 104857600
+}

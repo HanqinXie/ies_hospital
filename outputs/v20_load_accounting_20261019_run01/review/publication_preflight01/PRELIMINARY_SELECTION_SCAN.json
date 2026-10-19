@@ -1,0 +1,63 @@
+{
+  "status": "preliminary_readonly_selection_scan",
+  "utc": "2026-10-19T10:00:44.070209+00:00",
+  "files": 4265,
+  "bytes_at_scan": 731903905,
+  "final_campaign_gate_invoked": false,
+  "publication_or_archive_created": false,
+  "normal_results_still_growing": true,
+  "forbidden_file_paths": [],
+  "redacted_pattern_hits": [],
+  "scanner_scope": "selected file bytes only; regex screening plus final manual review, not a universal secret-detection guarantee",
+  "supplemental_fixtures": [
+    {
+      "path": "outputs/v19_model_closeout_20261018_run01/design/LONG_FINAL_R1_PROPOSAL.json",
+      "bytes": 56175,
+      "sha256": "054b9f167960a0dd88ffb41517c18b6e1305c3ac81a3c6a32b4412b298815696",
+      "evidence": "outputs/v20_load_accounting_20261019_run01/provenance/v19_design/LONG_FINAL_R1_PROPOSAL.json",
+      "purpose": "Original-path fixture required by default V20 campaign regression"
+    },
+    {
+      "path": "outputs/v19_model_closeout_20261018_run01/design/COMPAT_FINAL_R1_PROPOSAL.json",
+      "bytes": 33806,
+      "sha256": "9df1eb5b0e8617fc9448bb6f00be770828223689e31f6f37e396ceb4a8a2b324",
+      "evidence": "outputs/v20_load_accounting_20261019_run01/provenance/v19_design/COMPAT_FINAL_R1_PROPOSAL.json",
+      "purpose": "Original-path fixture required by default V20 campaign regression"
+    },
+    {
+      "path": "outputs/v19_model_closeout_20261018_run01/design/COMPAT_LONG_FINAL_R1_PROPOSAL.json",
+      "bytes": 16639,
+      "sha256": "609380fff30a7fb558417d1a3fe593a30e607522e23e30dd7e56f6b2cccbeefe",
+      "evidence": "outputs/v20_load_accounting_20261019_run01/provenance/v19_design/COMPAT_LONG_FINAL_R1_PROPOSAL.json",
+      "purpose": "Original-path fixture required by default V20 campaign regression"
+    },
+    {
+      "path": "outputs/v19_model_closeout_20261018_run01/design/PROPAGATION_FINAL_R1_PROPOSAL.json",
+      "bytes": 38713,
+      "sha256": "286a1d8d57266f1d27ce844a491207dd3e684aeb6655a441d7537db64c997253",
+      "evidence": "outputs/v20_load_accounting_20261019_run01/provenance/v19_design/PROPAGATION_FINAL_R1_PROPOSAL.json",
+      "purpose": "Original-path fixture required by default V20 campaign regression"
+    },
+    {
+      "path": "outputs/v19_model_closeout_20261018_run01/design/NORMAL_E_FINAL_R1_PROPOSAL.json",
+      "bytes": 24651,
+      "sha256": "9454ae0c4a7c5cb02aff155c3339c89d566b2ed157948f282c220af9d467f2ab",
+      "evidence": "outputs/v20_load_accounting_20261019_run01/provenance/v19_design/NORMAL_E_FINAL_R1_PROPOSAL.json",
+      "purpose": "Original-path fixture required by default V20 campaign regression"
+    },
+    {
+      "path": "outputs/v19_model_closeout_20261018_run01/design/SENSITIVITY_OPEN1_R1_PROPOSAL.json",
+      "bytes": 58156,
+      "sha256": "2d3375f44af0daa84d94dfa7664baf6efc78499ffe0c76fb5b6e0ac0edfc91de",
+      "evidence": "outputs/v20_load_accounting_20261019_run01/provenance/v19_design/SENSITIVITY_OPEN1_R1_PROPOSAL.json",
+      "purpose": "Original-path fixture required by default V20 campaign regression"
+    },
+    {
+      "path": "outputs/v19_model_closeout_20261018_run01/design/SENSITIVITY_CONTACT025_R1_PROPOSAL.json",
+      "bytes": 52423,
+      "sha256": "e1ca4276e56ec014158233f30c7cf03704236d5b2d99f1e8871d7a8ab732e425",
+      "evidence": "outputs/v20_load_accounting_20261019_run01/provenance/v19_design/SENSITIVITY_CONTACT025_R1_PROPOSAL.json",
+      "purpose": "Original-path fixture required by default V20 campaign regression"
+    }
+  ]
+}

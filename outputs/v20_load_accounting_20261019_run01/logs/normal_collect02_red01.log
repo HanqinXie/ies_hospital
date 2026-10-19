@@ -1,0 +1,687 @@
+FFFFFFFFFFFFFFFFFFFFFFF                                                  [100%]
+================================== FAILURES ===================================
+_________ test_full_stage_records_authorize_only_readonly_validation __________
+
+    def test_full_stage_records_authorize_only_readonly_validation():
+>       assert module().validate_ready_records(*ready_fixture()) is None
+
+outputs\v20_load_accounting_20261019_run01\review\normal_window_analysis02\test_collect_normal_once02.py:30: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+    def module():
+        p=HERE/'collect_normal_once02.py'
+>       assert p.is_file(), 'A standard-library gate must precede the frozen collector import'
+E       AssertionError: A standard-library gate must precede the frozen collector import
+E       assert False
+E        +  where False = is_file()
+E        +    where is_file = WindowsPath('D:/hospital_ies_v20_20261019/outputs/v20_load_accounting_20261019_run01/review/normal_window_analysis02/collect_normal_once02.py').is_file
+
+outputs\v20_load_accounting_20261019_run01\review\normal_window_analysis02\test_collect_normal_once02.py:14: AssertionError
+_ test_stage_status_or_scalar_success_cannot_override_terminal_denominator[s3_failed] _
+
+mutation = 's3_failed'
+
+    @pytest.mark.parametrize('mutation',['s3_failed','405','active','strict147','normal02','normal_nonzero','report_nonzero','not_FINAL01','summary405','unknown','source_changed','009_falsely_measured'])
+    def test_stage_status_or_scalar_success_cannot_override_terminal_denominator(mutation):
+        s,n,r,q=ready_fixture()
+        if mutation=='s3_failed':s['status']='failed_unknown'
+        elif mutation=='405':s['checkpoint']['actual_finished']=405
+        elif mutation=='active':s['checkpoint']['active']=1
+        elif mutation=='strict147':s['strict_batches']=147
+        elif mutation=='normal02':s['normal_capture_name']='normal02'
+        elif mutation=='normal_nonzero':n['exit_code']=2
+        elif mutation=='report_nonzero':r['exit_code']=1
+        elif mutation=='not_FINAL01':r['name']='other'
+        elif mutation=='summary405':q['eligible_terminal_pairs']=405
+        elif mutation=='unknown':q['unknown_full_pairs']=1
+        elif mutation=='source_changed':s['source_modified']=True
+        elif mutation=='009_falsely_measured':s['normal_009_resource_peak_unknown']=False
+>       with pytest.raises(ValueError):module().validate_ready_records(s,n,r,q)
+
+outputs\v20_load_accounting_20261019_run01\review\normal_window_analysis02\test_collect_normal_once02.py:48: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+    def module():
+        p=HERE/'collect_normal_once02.py'
+>       assert p.is_file(), 'A standard-library gate must precede the frozen collector import'
+E       AssertionError: A standard-library gate must precede the frozen collector import
+E       assert False
+E        +  where False = is_file()
+E        +    where is_file = WindowsPath('D:/hospital_ies_v20_20261019/outputs/v20_load_accounting_20261019_run01/review/normal_window_analysis02/collect_normal_once02.py').is_file
+
+outputs\v20_load_accounting_20261019_run01\review\normal_window_analysis02\test_collect_normal_once02.py:14: AssertionError
+_ test_stage_status_or_scalar_success_cannot_override_terminal_denominator[405] _
+
+mutation = '405'
+
+    @pytest.mark.parametrize('mutation',['s3_failed','405','active','strict147','normal02','normal_nonzero','report_nonzero','not_FINAL01','summary405','unknown','source_changed','009_falsely_measured'])
+    def test_stage_status_or_scalar_success_cannot_override_terminal_denominator(mutation):
+        s,n,r,q=ready_fixture()
+        if mutation=='s3_failed':s['status']='failed_unknown'
+        elif mutation=='405':s['checkpoint']['actual_finished']=405
+        elif mutation=='active':s['checkpoint']['active']=1
+        elif mutation=='strict147':s['strict_batches']=147
+        elif mutation=='normal02':s['normal_capture_name']='normal02'
+        elif mutation=='normal_nonzero':n['exit_code']=2
+        elif mutation=='report_nonzero':r['exit_code']=1
+        elif mutation=='not_FINAL01':r['name']='other'
+        elif mutation=='summary405':q['eligible_terminal_pairs']=405
+        elif mutation=='unknown':q['unknown_full_pairs']=1
+        elif mutation=='source_changed':s['source_modified']=True
+        elif mutation=='009_falsely_measured':s['normal_009_resource_peak_unknown']=False
+>       with pytest.raises(ValueError):module().validate_ready_records(s,n,r,q)
+
+outputs\v20_load_accounting_20261019_run01\review\normal_window_analysis02\test_collect_normal_once02.py:48: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+    def module():
+        p=HERE/'collect_normal_once02.py'
+>       assert p.is_file(), 'A standard-library gate must precede the frozen collector import'
+E       AssertionError: A standard-library gate must precede the frozen collector import
+E       assert False
+E        +  where False = is_file()
+E        +    where is_file = WindowsPath('D:/hospital_ies_v20_20261019/outputs/v20_load_accounting_20261019_run01/review/normal_window_analysis02/collect_normal_once02.py').is_file
+
+outputs\v20_load_accounting_20261019_run01\review\normal_window_analysis02\test_collect_normal_once02.py:14: AssertionError
+_ test_stage_status_or_scalar_success_cannot_override_terminal_denominator[active] _
+
+mutation = 'active'
+
+    @pytest.mark.parametrize('mutation',['s3_failed','405','active','strict147','normal02','normal_nonzero','report_nonzero','not_FINAL01','summary405','unknown','source_changed','009_falsely_measured'])
+    def test_stage_status_or_scalar_success_cannot_override_terminal_denominator(mutation):
+        s,n,r,q=ready_fixture()
+        if mutation=='s3_failed':s['status']='failed_unknown'
+        elif mutation=='405':s['checkpoint']['actual_finished']=405
+        elif mutation=='active':s['checkpoint']['active']=1
+        elif mutation=='strict147':s['strict_batches']=147
+        elif mutation=='normal02':s['normal_capture_name']='normal02'
+        elif mutation=='normal_nonzero':n['exit_code']=2
+        elif mutation=='report_nonzero':r['exit_code']=1
+        elif mutation=='not_FINAL01':r['name']='other'
+        elif mutation=='summary405':q['eligible_terminal_pairs']=405
+        elif mutation=='unknown':q['unknown_full_pairs']=1
+        elif mutation=='source_changed':s['source_modified']=True
+        elif mutation=='009_falsely_measured':s['normal_009_resource_peak_unknown']=False
+>       with pytest.raises(ValueError):module().validate_ready_records(s,n,r,q)
+
+outputs\v20_load_accounting_20261019_run01\review\normal_window_analysis02\test_collect_normal_once02.py:48: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+    def module():
+        p=HERE/'collect_normal_once02.py'
+>       assert p.is_file(), 'A standard-library gate must precede the frozen collector import'
+E       AssertionError: A standard-library gate must precede the frozen collector import
+E       assert False
+E        +  where False = is_file()
+E        +    where is_file = WindowsPath('D:/hospital_ies_v20_20261019/outputs/v20_load_accounting_20261019_run01/review/normal_window_analysis02/collect_normal_once02.py').is_file
+
+outputs\v20_load_accounting_20261019_run01\review\normal_window_analysis02\test_collect_normal_once02.py:14: AssertionError
+_ test_stage_status_or_scalar_success_cannot_override_terminal_denominator[strict147] _
+
+mutation = 'strict147'
+
+    @pytest.mark.parametrize('mutation',['s3_failed','405','active','strict147','normal02','normal_nonzero','report_nonzero','not_FINAL01','summary405','unknown','source_changed','009_falsely_measured'])
+    def test_stage_status_or_scalar_success_cannot_override_terminal_denominator(mutation):
+        s,n,r,q=ready_fixture()
+        if mutation=='s3_failed':s['status']='failed_unknown'
+        elif mutation=='405':s['checkpoint']['actual_finished']=405
+        elif mutation=='active':s['checkpoint']['active']=1
+        elif mutation=='strict147':s['strict_batches']=147
+        elif mutation=='normal02':s['normal_capture_name']='normal02'
+        elif mutation=='normal_nonzero':n['exit_code']=2
+        elif mutation=='report_nonzero':r['exit_code']=1
+        elif mutation=='not_FINAL01':r['name']='other'
+        elif mutation=='summary405':q['eligible_terminal_pairs']=405
+        elif mutation=='unknown':q['unknown_full_pairs']=1
+        elif mutation=='source_changed':s['source_modified']=True
+        elif mutation=='009_falsely_measured':s['normal_009_resource_peak_unknown']=False
+>       with pytest.raises(ValueError):module().validate_ready_records(s,n,r,q)
+
+outputs\v20_load_accounting_20261019_run01\review\normal_window_analysis02\test_collect_normal_once02.py:48: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+    def module():
+        p=HERE/'collect_normal_once02.py'
+>       assert p.is_file(), 'A standard-library gate must precede the frozen collector import'
+E       AssertionError: A standard-library gate must precede the frozen collector import
+E       assert False
+E        +  where False = is_file()
+E        +    where is_file = WindowsPath('D:/hospital_ies_v20_20261019/outputs/v20_load_accounting_20261019_run01/review/normal_window_analysis02/collect_normal_once02.py').is_file
+
+outputs\v20_load_accounting_20261019_run01\review\normal_window_analysis02\test_collect_normal_once02.py:14: AssertionError
+_ test_stage_status_or_scalar_success_cannot_override_terminal_denominator[normal02] _
+
+mutation = 'normal02'
+
+    @pytest.mark.parametrize('mutation',['s3_failed','405','active','strict147','normal02','normal_nonzero','report_nonzero','not_FINAL01','summary405','unknown','source_changed','009_falsely_measured'])
+    def test_stage_status_or_scalar_success_cannot_override_terminal_denominator(mutation):
+        s,n,r,q=ready_fixture()
+        if mutation=='s3_failed':s['status']='failed_unknown'
+        elif mutation=='405':s['checkpoint']['actual_finished']=405
+        elif mutation=='active':s['checkpoint']['active']=1
+        elif mutation=='strict147':s['strict_batches']=147
+        elif mutation=='normal02':s['normal_capture_name']='normal02'
+        elif mutation=='normal_nonzero':n['exit_code']=2
+        elif mutation=='report_nonzero':r['exit_code']=1
+        elif mutation=='not_FINAL01':r['name']='other'
+        elif mutation=='summary405':q['eligible_terminal_pairs']=405
+        elif mutation=='unknown':q['unknown_full_pairs']=1
+        elif mutation=='source_changed':s['source_modified']=True
+        elif mutation=='009_falsely_measured':s['normal_009_resource_peak_unknown']=False
+>       with pytest.raises(ValueError):module().validate_ready_records(s,n,r,q)
+
+outputs\v20_load_accounting_20261019_run01\review\normal_window_analysis02\test_collect_normal_once02.py:48: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+    def module():
+        p=HERE/'collect_normal_once02.py'
+>       assert p.is_file(), 'A standard-library gate must precede the frozen collector import'
+E       AssertionError: A standard-library gate must precede the frozen collector import
+E       assert False
+E        +  where False = is_file()
+E        +    where is_file = WindowsPath('D:/hospital_ies_v20_20261019/outputs/v20_load_accounting_20261019_run01/review/normal_window_analysis02/collect_normal_once02.py').is_file
+
+outputs\v20_load_accounting_20261019_run01\review\normal_window_analysis02\test_collect_normal_once02.py:14: AssertionError
+_ test_stage_status_or_scalar_success_cannot_override_terminal_denominator[normal_nonzero] _
+
+mutation = 'normal_nonzero'
+
+    @pytest.mark.parametrize('mutation',['s3_failed','405','active','strict147','normal02','normal_nonzero','report_nonzero','not_FINAL01','summary405','unknown','source_changed','009_falsely_measured'])
+    def test_stage_status_or_scalar_success_cannot_override_terminal_denominator(mutation):
+        s,n,r,q=ready_fixture()
+        if mutation=='s3_failed':s['status']='failed_unknown'
+        elif mutation=='405':s['checkpoint']['actual_finished']=405
+        elif mutation=='active':s['checkpoint']['active']=1
+        elif mutation=='strict147':s['strict_batches']=147
+        elif mutation=='normal02':s['normal_capture_name']='normal02'
+        elif mutation=='normal_nonzero':n['exit_code']=2
+        elif mutation=='report_nonzero':r['exit_code']=1
+        elif mutation=='not_FINAL01':r['name']='other'
+        elif mutation=='summary405':q['eligible_terminal_pairs']=405
+        elif mutation=='unknown':q['unknown_full_pairs']=1
+        elif mutation=='source_changed':s['source_modified']=True
+        elif mutation=='009_falsely_measured':s['normal_009_resource_peak_unknown']=False
+>       with pytest.raises(ValueError):module().validate_ready_records(s,n,r,q)
+
+outputs\v20_load_accounting_20261019_run01\review\normal_window_analysis02\test_collect_normal_once02.py:48: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+    def module():
+        p=HERE/'collect_normal_once02.py'
+>       assert p.is_file(), 'A standard-library gate must precede the frozen collector import'
+E       AssertionError: A standard-library gate must precede the frozen collector import
+E       assert False
+E        +  where False = is_file()
+E        +    where is_file = WindowsPath('D:/hospital_ies_v20_20261019/outputs/v20_load_accounting_20261019_run01/review/normal_window_analysis02/collect_normal_once02.py').is_file
+
+outputs\v20_load_accounting_20261019_run01\review\normal_window_analysis02\test_collect_normal_once02.py:14: AssertionError
+_ test_stage_status_or_scalar_success_cannot_override_terminal_denominator[report_nonzero] _
+
+mutation = 'report_nonzero'
+
+    @pytest.mark.parametrize('mutation',['s3_failed','405','active','strict147','normal02','normal_nonzero','report_nonzero','not_FINAL01','summary405','unknown','source_changed','009_falsely_measured'])
+    def test_stage_status_or_scalar_success_cannot_override_terminal_denominator(mutation):
+        s,n,r,q=ready_fixture()
+        if mutation=='s3_failed':s['status']='failed_unknown'
+        elif mutation=='405':s['checkpoint']['actual_finished']=405
+        elif mutation=='active':s['checkpoint']['active']=1
+        elif mutation=='strict147':s['strict_batches']=147
+        elif mutation=='normal02':s['normal_capture_name']='normal02'
+        elif mutation=='normal_nonzero':n['exit_code']=2
+        elif mutation=='report_nonzero':r['exit_code']=1
+        elif mutation=='not_FINAL01':r['name']='other'
+        elif mutation=='summary405':q['eligible_terminal_pairs']=405
+        elif mutation=='unknown':q['unknown_full_pairs']=1
+        elif mutation=='source_changed':s['source_modified']=True
+        elif mutation=='009_falsely_measured':s['normal_009_resource_peak_unknown']=False
+>       with pytest.raises(ValueError):module().validate_ready_records(s,n,r,q)
+
+outputs\v20_load_accounting_20261019_run01\review\normal_window_analysis02\test_collect_normal_once02.py:48: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+    def module():
+        p=HERE/'collect_normal_once02.py'
+>       assert p.is_file(), 'A standard-library gate must precede the frozen collector import'
+E       AssertionError: A standard-library gate must precede the frozen collector import
+E       assert False
+E        +  where False = is_file()
+E        +    where is_file = WindowsPath('D:/hospital_ies_v20_20261019/outputs/v20_load_accounting_20261019_run01/review/normal_window_analysis02/collect_normal_once02.py').is_file
+
+outputs\v20_load_accounting_20261019_run01\review\normal_window_analysis02\test_collect_normal_once02.py:14: AssertionError
+_ test_stage_status_or_scalar_success_cannot_override_terminal_denominator[not_FINAL01] _
+
+mutation = 'not_FINAL01'
+
+    @pytest.mark.parametrize('mutation',['s3_failed','405','active','strict147','normal02','normal_nonzero','report_nonzero','not_FINAL01','summary405','unknown','source_changed','009_falsely_measured'])
+    def test_stage_status_or_scalar_success_cannot_override_terminal_denominator(mutation):
+        s,n,r,q=ready_fixture()
+        if mutation=='s3_failed':s['status']='failed_unknown'
+        elif mutation=='405':s['checkpoint']['actual_finished']=405
+        elif mutation=='active':s['checkpoint']['active']=1
+        elif mutation=='strict147':s['strict_batches']=147
+        elif mutation=='normal02':s['normal_capture_name']='normal02'
+        elif mutation=='normal_nonzero':n['exit_code']=2
+        elif mutation=='report_nonzero':r['exit_code']=1
+        elif mutation=='not_FINAL01':r['name']='other'
+        elif mutation=='summary405':q['eligible_terminal_pairs']=405
+        elif mutation=='unknown':q['unknown_full_pairs']=1
+        elif mutation=='source_changed':s['source_modified']=True
+        elif mutation=='009_falsely_measured':s['normal_009_resource_peak_unknown']=False
+>       with pytest.raises(ValueError):module().validate_ready_records(s,n,r,q)
+
+outputs\v20_load_accounting_20261019_run01\review\normal_window_analysis02\test_collect_normal_once02.py:48: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+    def module():
+        p=HERE/'collect_normal_once02.py'
+>       assert p.is_file(), 'A standard-library gate must precede the frozen collector import'
+E       AssertionError: A standard-library gate must precede the frozen collector import
+E       assert False
+E        +  where False = is_file()
+E        +    where is_file = WindowsPath('D:/hospital_ies_v20_20261019/outputs/v20_load_accounting_20261019_run01/review/normal_window_analysis02/collect_normal_once02.py').is_file
+
+outputs\v20_load_accounting_20261019_run01\review\normal_window_analysis02\test_collect_normal_once02.py:14: AssertionError
+_ test_stage_status_or_scalar_success_cannot_override_terminal_denominator[summary405] _
+
+mutation = 'summary405'
+
+    @pytest.mark.parametrize('mutation',['s3_failed','405','active','strict147','normal02','normal_nonzero','report_nonzero','not_FINAL01','summary405','unknown','source_changed','009_falsely_measured'])
+    def test_stage_status_or_scalar_success_cannot_override_terminal_denominator(mutation):
+        s,n,r,q=ready_fixture()
+        if mutation=='s3_failed':s['status']='failed_unknown'
+        elif mutation=='405':s['checkpoint']['actual_finished']=405
+        elif mutation=='active':s['checkpoint']['active']=1
+        elif mutation=='strict147':s['strict_batches']=147
+        elif mutation=='normal02':s['normal_capture_name']='normal02'
+        elif mutation=='normal_nonzero':n['exit_code']=2
+        elif mutation=='report_nonzero':r['exit_code']=1
+        elif mutation=='not_FINAL01':r['name']='other'
+        elif mutation=='summary405':q['eligible_terminal_pairs']=405
+        elif mutation=='unknown':q['unknown_full_pairs']=1
+        elif mutation=='source_changed':s['source_modified']=True
+        elif mutation=='009_falsely_measured':s['normal_009_resource_peak_unknown']=False
+>       with pytest.raises(ValueError):module().validate_ready_records(s,n,r,q)
+
+outputs\v20_load_accounting_20261019_run01\review\normal_window_analysis02\test_collect_normal_once02.py:48: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+    def module():
+        p=HERE/'collect_normal_once02.py'
+>       assert p.is_file(), 'A standard-library gate must precede the frozen collector import'
+E       AssertionError: A standard-library gate must precede the frozen collector import
+E       assert False
+E        +  where False = is_file()
+E        +    where is_file = WindowsPath('D:/hospital_ies_v20_20261019/outputs/v20_load_accounting_20261019_run01/review/normal_window_analysis02/collect_normal_once02.py').is_file
+
+outputs\v20_load_accounting_20261019_run01\review\normal_window_analysis02\test_collect_normal_once02.py:14: AssertionError
+_ test_stage_status_or_scalar_success_cannot_override_terminal_denominator[unknown] _
+
+mutation = 'unknown'
+
+    @pytest.mark.parametrize('mutation',['s3_failed','405','active','strict147','normal02','normal_nonzero','report_nonzero','not_FINAL01','summary405','unknown','source_changed','009_falsely_measured'])
+    def test_stage_status_or_scalar_success_cannot_override_terminal_denominator(mutation):
+        s,n,r,q=ready_fixture()
+        if mutation=='s3_failed':s['status']='failed_unknown'
+        elif mutation=='405':s['checkpoint']['actual_finished']=405
+        elif mutation=='active':s['checkpoint']['active']=1
+        elif mutation=='strict147':s['strict_batches']=147
+        elif mutation=='normal02':s['normal_capture_name']='normal02'
+        elif mutation=='normal_nonzero':n['exit_code']=2
+        elif mutation=='report_nonzero':r['exit_code']=1
+        elif mutation=='not_FINAL01':r['name']='other'
+        elif mutation=='summary405':q['eligible_terminal_pairs']=405
+        elif mutation=='unknown':q['unknown_full_pairs']=1
+        elif mutation=='source_changed':s['source_modified']=True
+        elif mutation=='009_falsely_measured':s['normal_009_resource_peak_unknown']=False
+>       with pytest.raises(ValueError):module().validate_ready_records(s,n,r,q)
+
+outputs\v20_load_accounting_20261019_run01\review\normal_window_analysis02\test_collect_normal_once02.py:48: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+    def module():
+        p=HERE/'collect_normal_once02.py'
+>       assert p.is_file(), 'A standard-library gate must precede the frozen collector import'
+E       AssertionError: A standard-library gate must precede the frozen collector import
+E       assert False
+E        +  where False = is_file()
+E        +    where is_file = WindowsPath('D:/hospital_ies_v20_20261019/outputs/v20_load_accounting_20261019_run01/review/normal_window_analysis02/collect_normal_once02.py').is_file
+
+outputs\v20_load_accounting_20261019_run01\review\normal_window_analysis02\test_collect_normal_once02.py:14: AssertionError
+_ test_stage_status_or_scalar_success_cannot_override_terminal_denominator[source_changed] _
+
+mutation = 'source_changed'
+
+    @pytest.mark.parametrize('mutation',['s3_failed','405','active','strict147','normal02','normal_nonzero','report_nonzero','not_FINAL01','summary405','unknown','source_changed','009_falsely_measured'])
+    def test_stage_status_or_scalar_success_cannot_override_terminal_denominator(mutation):
+        s,n,r,q=ready_fixture()
+        if mutation=='s3_failed':s['status']='failed_unknown'
+        elif mutation=='405':s['checkpoint']['actual_finished']=405
+        elif mutation=='active':s['checkpoint']['active']=1
+        elif mutation=='strict147':s['strict_batches']=147
+        elif mutation=='normal02':s['normal_capture_name']='normal02'
+        elif mutation=='normal_nonzero':n['exit_code']=2
+        elif mutation=='report_nonzero':r['exit_code']=1
+        elif mutation=='not_FINAL01':r['name']='other'
+        elif mutation=='summary405':q['eligible_terminal_pairs']=405
+        elif mutation=='unknown':q['unknown_full_pairs']=1
+        elif mutation=='source_changed':s['source_modified']=True
+        elif mutation=='009_falsely_measured':s['normal_009_resource_peak_unknown']=False
+>       with pytest.raises(ValueError):module().validate_ready_records(s,n,r,q)
+
+outputs\v20_load_accounting_20261019_run01\review\normal_window_analysis02\test_collect_normal_once02.py:48: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+    def module():
+        p=HERE/'collect_normal_once02.py'
+>       assert p.is_file(), 'A standard-library gate must precede the frozen collector import'
+E       AssertionError: A standard-library gate must precede the frozen collector import
+E       assert False
+E        +  where False = is_file()
+E        +    where is_file = WindowsPath('D:/hospital_ies_v20_20261019/outputs/v20_load_accounting_20261019_run01/review/normal_window_analysis02/collect_normal_once02.py').is_file
+
+outputs\v20_load_accounting_20261019_run01\review\normal_window_analysis02\test_collect_normal_once02.py:14: AssertionError
+_ test_stage_status_or_scalar_success_cannot_override_terminal_denominator[009_falsely_measured] _
+
+mutation = '009_falsely_measured'
+
+    @pytest.mark.parametrize('mutation',['s3_failed','405','active','strict147','normal02','normal_nonzero','report_nonzero','not_FINAL01','summary405','unknown','source_changed','009_falsely_measured'])
+    def test_stage_status_or_scalar_success_cannot_override_terminal_denominator(mutation):
+        s,n,r,q=ready_fixture()
+        if mutation=='s3_failed':s['status']='failed_unknown'
+        elif mutation=='405':s['checkpoint']['actual_finished']=405
+        elif mutation=='active':s['checkpoint']['active']=1
+        elif mutation=='strict147':s['strict_batches']=147
+        elif mutation=='normal02':s['normal_capture_name']='normal02'
+        elif mutation=='normal_nonzero':n['exit_code']=2
+        elif mutation=='report_nonzero':r['exit_code']=1
+        elif mutation=='not_FINAL01':r['name']='other'
+        elif mutation=='summary405':q['eligible_terminal_pairs']=405
+        elif mutation=='unknown':q['unknown_full_pairs']=1
+        elif mutation=='source_changed':s['source_modified']=True
+        elif mutation=='009_falsely_measured':s['normal_009_resource_peak_unknown']=False
+>       with pytest.raises(ValueError):module().validate_ready_records(s,n,r,q)
+
+outputs\v20_load_accounting_20261019_run01\review\normal_window_analysis02\test_collect_normal_once02.py:48: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+    def module():
+        p=HERE/'collect_normal_once02.py'
+>       assert p.is_file(), 'A standard-library gate must precede the frozen collector import'
+E       AssertionError: A standard-library gate must precede the frozen collector import
+E       assert False
+E        +  where False = is_file()
+E        +    where is_file = WindowsPath('D:/hospital_ies_v20_20261019/outputs/v20_load_accounting_20261019_run01/review/normal_window_analysis02/collect_normal_once02.py').is_file
+
+outputs\v20_load_accounting_20261019_run01\review\normal_window_analysis02\test_collect_normal_once02.py:14: AssertionError
+________ test_waiter_exit15_stays_distinct_from_successful_collection _________
+
+    def test_waiter_exit15_stays_distinct_from_successful_collection():
+>       module().validate_stop_records(*stop_fixture())
+
+outputs\v20_load_accounting_20261019_run01\review\normal_window_analysis02\test_collect_normal_once02.py:58: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+    def module():
+        p=HERE/'collect_normal_once02.py'
+>       assert p.is_file(), 'A standard-library gate must precede the frozen collector import'
+E       AssertionError: A standard-library gate must precede the frozen collector import
+E       assert False
+E        +  where False = is_file()
+E        +    where is_file = WindowsPath('D:/hospital_ies_v20_20261019/outputs/v20_load_accounting_20261019_run01/review/normal_window_analysis02/collect_normal_once02.py').is_file
+
+outputs\v20_load_accounting_20261019_run01\review\normal_window_analysis02\test_collect_normal_once02.py:14: AssertionError
+_ test_stopping_receipt_cannot_be_rewritten_as_success_or_science_stop[erased_exit] _
+
+mutation = 'erased_exit'
+
+    @pytest.mark.parametrize('mutation',['erased_exit','wrong_pid','rewritten_capture','claimed_numeric','owner_deleted','child_tree'])
+    def test_stopping_receipt_cannot_be_rewritten_as_success_or_science_stop(mutation):
+        s,c=stop_fixture()
+        if mutation=='erased_exit':s['observed_OS_process_exit_code']=0
+        elif mutation=='wrong_pid':s['actual_terminated_pid']=9504
+        elif mutation=='rewritten_capture':s['capture_record']['exit_code']=0
+        elif mutation=='claimed_numeric':s['numeric_analysis_generated']=True
+        elif mutation=='owner_deleted':s['READONLY_OWNER_preserved']=False
+        elif mutation=='child_tree':s['identity_rechecked']['children']=[dict(pid=1)]
+>       with pytest.raises(ValueError):module().validate_stop_records(s,c)
+
+outputs\v20_load_accounting_20261019_run01\review\normal_window_analysis02\test_collect_normal_once02.py:70: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+    def module():
+        p=HERE/'collect_normal_once02.py'
+>       assert p.is_file(), 'A standard-library gate must precede the frozen collector import'
+E       AssertionError: A standard-library gate must precede the frozen collector import
+E       assert False
+E        +  where False = is_file()
+E        +    where is_file = WindowsPath('D:/hospital_ies_v20_20261019/outputs/v20_load_accounting_20261019_run01/review/normal_window_analysis02/collect_normal_once02.py').is_file
+
+outputs\v20_load_accounting_20261019_run01\review\normal_window_analysis02\test_collect_normal_once02.py:14: AssertionError
+_ test_stopping_receipt_cannot_be_rewritten_as_success_or_science_stop[wrong_pid] _
+
+mutation = 'wrong_pid'
+
+    @pytest.mark.parametrize('mutation',['erased_exit','wrong_pid','rewritten_capture','claimed_numeric','owner_deleted','child_tree'])
+    def test_stopping_receipt_cannot_be_rewritten_as_success_or_science_stop(mutation):
+        s,c=stop_fixture()
+        if mutation=='erased_exit':s['observed_OS_process_exit_code']=0
+        elif mutation=='wrong_pid':s['actual_terminated_pid']=9504
+        elif mutation=='rewritten_capture':s['capture_record']['exit_code']=0
+        elif mutation=='claimed_numeric':s['numeric_analysis_generated']=True
+        elif mutation=='owner_deleted':s['READONLY_OWNER_preserved']=False
+        elif mutation=='child_tree':s['identity_rechecked']['children']=[dict(pid=1)]
+>       with pytest.raises(ValueError):module().validate_stop_records(s,c)
+
+outputs\v20_load_accounting_20261019_run01\review\normal_window_analysis02\test_collect_normal_once02.py:70: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+    def module():
+        p=HERE/'collect_normal_once02.py'
+>       assert p.is_file(), 'A standard-library gate must precede the frozen collector import'
+E       AssertionError: A standard-library gate must precede the frozen collector import
+E       assert False
+E        +  where False = is_file()
+E        +    where is_file = WindowsPath('D:/hospital_ies_v20_20261019/outputs/v20_load_accounting_20261019_run01/review/normal_window_analysis02/collect_normal_once02.py').is_file
+
+outputs\v20_load_accounting_20261019_run01\review\normal_window_analysis02\test_collect_normal_once02.py:14: AssertionError
+_ test_stopping_receipt_cannot_be_rewritten_as_success_or_science_stop[rewritten_capture] _
+
+mutation = 'rewritten_capture'
+
+    @pytest.mark.parametrize('mutation',['erased_exit','wrong_pid','rewritten_capture','claimed_numeric','owner_deleted','child_tree'])
+    def test_stopping_receipt_cannot_be_rewritten_as_success_or_science_stop(mutation):
+        s,c=stop_fixture()
+        if mutation=='erased_exit':s['observed_OS_process_exit_code']=0
+        elif mutation=='wrong_pid':s['actual_terminated_pid']=9504
+        elif mutation=='rewritten_capture':s['capture_record']['exit_code']=0
+        elif mutation=='claimed_numeric':s['numeric_analysis_generated']=True
+        elif mutation=='owner_deleted':s['READONLY_OWNER_preserved']=False
+        elif mutation=='child_tree':s['identity_rechecked']['children']=[dict(pid=1)]
+>       with pytest.raises(ValueError):module().validate_stop_records(s,c)
+
+outputs\v20_load_accounting_20261019_run01\review\normal_window_analysis02\test_collect_normal_once02.py:70: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+    def module():
+        p=HERE/'collect_normal_once02.py'
+>       assert p.is_file(), 'A standard-library gate must precede the frozen collector import'
+E       AssertionError: A standard-library gate must precede the frozen collector import
+E       assert False
+E        +  where False = is_file()
+E        +    where is_file = WindowsPath('D:/hospital_ies_v20_20261019/outputs/v20_load_accounting_20261019_run01/review/normal_window_analysis02/collect_normal_once02.py').is_file
+
+outputs\v20_load_accounting_20261019_run01\review\normal_window_analysis02\test_collect_normal_once02.py:14: AssertionError
+_ test_stopping_receipt_cannot_be_rewritten_as_success_or_science_stop[claimed_numeric] _
+
+mutation = 'claimed_numeric'
+
+    @pytest.mark.parametrize('mutation',['erased_exit','wrong_pid','rewritten_capture','claimed_numeric','owner_deleted','child_tree'])
+    def test_stopping_receipt_cannot_be_rewritten_as_success_or_science_stop(mutation):
+        s,c=stop_fixture()
+        if mutation=='erased_exit':s['observed_OS_process_exit_code']=0
+        elif mutation=='wrong_pid':s['actual_terminated_pid']=9504
+        elif mutation=='rewritten_capture':s['capture_record']['exit_code']=0
+        elif mutation=='claimed_numeric':s['numeric_analysis_generated']=True
+        elif mutation=='owner_deleted':s['READONLY_OWNER_preserved']=False
+        elif mutation=='child_tree':s['identity_rechecked']['children']=[dict(pid=1)]
+>       with pytest.raises(ValueError):module().validate_stop_records(s,c)
+
+outputs\v20_load_accounting_20261019_run01\review\normal_window_analysis02\test_collect_normal_once02.py:70: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+    def module():
+        p=HERE/'collect_normal_once02.py'
+>       assert p.is_file(), 'A standard-library gate must precede the frozen collector import'
+E       AssertionError: A standard-library gate must precede the frozen collector import
+E       assert False
+E        +  where False = is_file()
+E        +    where is_file = WindowsPath('D:/hospital_ies_v20_20261019/outputs/v20_load_accounting_20261019_run01/review/normal_window_analysis02/collect_normal_once02.py').is_file
+
+outputs\v20_load_accounting_20261019_run01\review\normal_window_analysis02\test_collect_normal_once02.py:14: AssertionError
+_ test_stopping_receipt_cannot_be_rewritten_as_success_or_science_stop[owner_deleted] _
+
+mutation = 'owner_deleted'
+
+    @pytest.mark.parametrize('mutation',['erased_exit','wrong_pid','rewritten_capture','claimed_numeric','owner_deleted','child_tree'])
+    def test_stopping_receipt_cannot_be_rewritten_as_success_or_science_stop(mutation):
+        s,c=stop_fixture()
+        if mutation=='erased_exit':s['observed_OS_process_exit_code']=0
+        elif mutation=='wrong_pid':s['actual_terminated_pid']=9504
+        elif mutation=='rewritten_capture':s['capture_record']['exit_code']=0
+        elif mutation=='claimed_numeric':s['numeric_analysis_generated']=True
+        elif mutation=='owner_deleted':s['READONLY_OWNER_preserved']=False
+        elif mutation=='child_tree':s['identity_rechecked']['children']=[dict(pid=1)]
+>       with pytest.raises(ValueError):module().validate_stop_records(s,c)
+
+outputs\v20_load_accounting_20261019_run01\review\normal_window_analysis02\test_collect_normal_once02.py:70: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+    def module():
+        p=HERE/'collect_normal_once02.py'
+>       assert p.is_file(), 'A standard-library gate must precede the frozen collector import'
+E       AssertionError: A standard-library gate must precede the frozen collector import
+E       assert False
+E        +  where False = is_file()
+E        +    where is_file = WindowsPath('D:/hospital_ies_v20_20261019/outputs/v20_load_accounting_20261019_run01/review/normal_window_analysis02/collect_normal_once02.py').is_file
+
+outputs\v20_load_accounting_20261019_run01\review\normal_window_analysis02\test_collect_normal_once02.py:14: AssertionError
+_ test_stopping_receipt_cannot_be_rewritten_as_success_or_science_stop[child_tree] _
+
+mutation = 'child_tree'
+
+    @pytest.mark.parametrize('mutation',['erased_exit','wrong_pid','rewritten_capture','claimed_numeric','owner_deleted','child_tree'])
+    def test_stopping_receipt_cannot_be_rewritten_as_success_or_science_stop(mutation):
+        s,c=stop_fixture()
+        if mutation=='erased_exit':s['observed_OS_process_exit_code']=0
+        elif mutation=='wrong_pid':s['actual_terminated_pid']=9504
+        elif mutation=='rewritten_capture':s['capture_record']['exit_code']=0
+        elif mutation=='claimed_numeric':s['numeric_analysis_generated']=True
+        elif mutation=='owner_deleted':s['READONLY_OWNER_preserved']=False
+        elif mutation=='child_tree':s['identity_rechecked']['children']=[dict(pid=1)]
+>       with pytest.raises(ValueError):module().validate_stop_records(s,c)
+
+outputs\v20_load_accounting_20261019_run01\review\normal_window_analysis02\test_collect_normal_once02.py:70: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+    def module():
+        p=HERE/'collect_normal_once02.py'
+>       assert p.is_file(), 'A standard-library gate must precede the frozen collector import'
+E       AssertionError: A standard-library gate must precede the frozen collector import
+E       assert False
+E        +  where False = is_file()
+E        +    where is_file = WindowsPath('D:/hospital_ies_v20_20261019/outputs/v20_load_accounting_20261019_run01/review/normal_window_analysis02/collect_normal_once02.py').is_file
+
+outputs\v20_load_accounting_20261019_run01\review\normal_window_analysis02\test_collect_normal_once02.py:14: AssertionError
+_____________ test_missing_S3_does_not_even_import_frozen_helper ______________
+
+tmp_path = WindowsPath('D:/hospital_ies_v20_20261019/outputs/v20_load_accounting_20261019_run01/temp/normal_collect02_red01/pytest-of-HanqinXie/pytest-0/test_missing_S3_does_not_even_0')
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x000001882E71E650>
+
+    def test_missing_S3_does_not_even_import_frozen_helper(tmp_path,monkeypatch):
+>       m=module();calls=[]
+
+outputs\v20_load_accounting_20261019_run01\review\normal_window_analysis02\test_collect_normal_once02.py:74: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+    def module():
+        p=HERE/'collect_normal_once02.py'
+>       assert p.is_file(), 'A standard-library gate must precede the frozen collector import'
+E       AssertionError: A standard-library gate must precede the frozen collector import
+E       assert False
+E        +  where False = is_file()
+E        +    where is_file = WindowsPath('D:/hospital_ies_v20_20261019/outputs/v20_load_accounting_20261019_run01/review/normal_window_analysis02/collect_normal_once02.py').is_file
+
+outputs\v20_load_accounting_20261019_run01\review\normal_window_analysis02\test_collect_normal_once02.py:14: AssertionError
+_ test_document_fix_changes_only_eight_link_prefixes_and_preserves_generated_bytes _
+
+tmp_path = WindowsPath('D:/hospital_ies_v20_20261019/outputs/v20_load_accounting_20261019_run01/temp/normal_collect02_red01/pytest-of-HanqinXie/pytest-0/test_document_fix_changes_only0')
+
+    def test_document_fix_changes_only_eight_link_prefixes_and_preserves_generated_bytes(tmp_path):
+>       root,out,doc,table,receipt,text=document_fixture(tmp_path);original_receipt=receipt.read_bytes();original_table=table.read_bytes()
+
+outputs\v20_load_accounting_20261019_run01\review\normal_window_analysis02\test_collect_normal_once02.py:90: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+outputs\v20_load_accounting_20261019_run01\review\normal_window_analysis02\test_collect_normal_once02.py:83: in document_fixture
+    text='value 123.456 kg; fee -7.2 USD\n'+'\n'.join('['+str(i)+']('+module().OLD_PREFIX+'table'+str(i)+'.csv)' for i in range(8))+'\n'
+outputs\v20_load_accounting_20261019_run01\review\normal_window_analysis02\test_collect_normal_once02.py:83: in <genexpr>
+    text='value 123.456 kg; fee -7.2 USD\n'+'\n'.join('['+str(i)+']('+module().OLD_PREFIX+'table'+str(i)+'.csv)' for i in range(8))+'\n'
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+    def module():
+        p=HERE/'collect_normal_once02.py'
+>       assert p.is_file(), 'A standard-library gate must precede the frozen collector import'
+E       AssertionError: A standard-library gate must precede the frozen collector import
+E       assert False
+E        +  where False = is_file()
+E        +    where is_file = WindowsPath('D:/hospital_ies_v20_20261019/outputs/v20_load_accounting_20261019_run01/review/normal_window_analysis02/collect_normal_once02.py').is_file
+
+outputs\v20_load_accounting_20261019_run01\review\normal_window_analysis02\test_collect_normal_once02.py:14: AssertionError
+___________ test_wrong_document_or_receipt_sha_refuses_link_rewrite ___________
+
+tmp_path = WindowsPath('D:/hospital_ies_v20_20261019/outputs/v20_load_accounting_20261019_run01/temp/normal_collect02_red01/pytest-of-HanqinXie/pytest-0/test_wrong_document_or_receipt0')
+
+    def test_wrong_document_or_receipt_sha_refuses_link_rewrite(tmp_path):
+>       root,out,doc,table,receipt,text=document_fixture(tmp_path)
+
+outputs\v20_load_accounting_20261019_run01\review\normal_window_analysis02\test_collect_normal_once02.py:100: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+outputs\v20_load_accounting_20261019_run01\review\normal_window_analysis02\test_collect_normal_once02.py:83: in document_fixture
+    text='value 123.456 kg; fee -7.2 USD\n'+'\n'.join('['+str(i)+']('+module().OLD_PREFIX+'table'+str(i)+'.csv)' for i in range(8))+'\n'
+outputs\v20_load_accounting_20261019_run01\review\normal_window_analysis02\test_collect_normal_once02.py:83: in <genexpr>
+    text='value 123.456 kg; fee -7.2 USD\n'+'\n'.join('['+str(i)+']('+module().OLD_PREFIX+'table'+str(i)+'.csv)' for i in range(8))+'\n'
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+    def module():
+        p=HERE/'collect_normal_once02.py'
+>       assert p.is_file(), 'A standard-library gate must precede the frozen collector import'
+E       AssertionError: A standard-library gate must precede the frozen collector import
+E       assert False
+E        +  where False = is_file()
+E        +    where is_file = WindowsPath('D:/hospital_ies_v20_20261019/outputs/v20_load_accounting_20261019_run01/review/normal_window_analysis02/collect_normal_once02.py').is_file
+
+outputs\v20_load_accounting_20261019_run01\review\normal_window_analysis02\test_collect_normal_once02.py:14: AssertionError
+=========================== short test summary info ===========================
+FAILED outputs/v20_load_accounting_20261019_run01/review/normal_window_analysis02/test_collect_normal_once02.py::test_full_stage_records_authorize_only_readonly_validation
+FAILED outputs/v20_load_accounting_20261019_run01/review/normal_window_analysis02/test_collect_normal_once02.py::test_stage_status_or_scalar_success_cannot_override_terminal_denominator[s3_failed]
+FAILED outputs/v20_load_accounting_20261019_run01/review/normal_window_analysis02/test_collect_normal_once02.py::test_stage_status_or_scalar_success_cannot_override_terminal_denominator[405]
+FAILED outputs/v20_load_accounting_20261019_run01/review/normal_window_analysis02/test_collect_normal_once02.py::test_stage_status_or_scalar_success_cannot_override_terminal_denominator[active]
+FAILED outputs/v20_load_accounting_20261019_run01/review/normal_window_analysis02/test_collect_normal_once02.py::test_stage_status_or_scalar_success_cannot_override_terminal_denominator[strict147]
+FAILED outputs/v20_load_accounting_20261019_run01/review/normal_window_analysis02/test_collect_normal_once02.py::test_stage_status_or_scalar_success_cannot_override_terminal_denominator[normal02]
+FAILED outputs/v20_load_accounting_20261019_run01/review/normal_window_analysis02/test_collect_normal_once02.py::test_stage_status_or_scalar_success_cannot_override_terminal_denominator[normal_nonzero]
+FAILED outputs/v20_load_accounting_20261019_run01/review/normal_window_analysis02/test_collect_normal_once02.py::test_stage_status_or_scalar_success_cannot_override_terminal_denominator[report_nonzero]
+FAILED outputs/v20_load_accounting_20261019_run01/review/normal_window_analysis02/test_collect_normal_once02.py::test_stage_status_or_scalar_success_cannot_override_terminal_denominator[not_FINAL01]
+FAILED outputs/v20_load_accounting_20261019_run01/review/normal_window_analysis02/test_collect_normal_once02.py::test_stage_status_or_scalar_success_cannot_override_terminal_denominator[summary405]
+FAILED outputs/v20_load_accounting_20261019_run01/review/normal_window_analysis02/test_collect_normal_once02.py::test_stage_status_or_scalar_success_cannot_override_terminal_denominator[unknown]
+FAILED outputs/v20_load_accounting_20261019_run01/review/normal_window_analysis02/test_collect_normal_once02.py::test_stage_status_or_scalar_success_cannot_override_terminal_denominator[source_changed]
+FAILED outputs/v20_load_accounting_20261019_run01/review/normal_window_analysis02/test_collect_normal_once02.py::test_stage_status_or_scalar_success_cannot_override_terminal_denominator[009_falsely_measured]
+FAILED outputs/v20_load_accounting_20261019_run01/review/normal_window_analysis02/test_collect_normal_once02.py::test_waiter_exit15_stays_distinct_from_successful_collection
+FAILED outputs/v20_load_accounting_20261019_run01/review/normal_window_analysis02/test_collect_normal_once02.py::test_stopping_receipt_cannot_be_rewritten_as_success_or_science_stop[erased_exit]
+FAILED outputs/v20_load_accounting_20261019_run01/review/normal_window_analysis02/test_collect_normal_once02.py::test_stopping_receipt_cannot_be_rewritten_as_success_or_science_stop[wrong_pid]
+FAILED outputs/v20_load_accounting_20261019_run01/review/normal_window_analysis02/test_collect_normal_once02.py::test_stopping_receipt_cannot_be_rewritten_as_success_or_science_stop[rewritten_capture]
+FAILED outputs/v20_load_accounting_20261019_run01/review/normal_window_analysis02/test_collect_normal_once02.py::test_stopping_receipt_cannot_be_rewritten_as_success_or_science_stop[claimed_numeric]
+FAILED outputs/v20_load_accounting_20261019_run01/review/normal_window_analysis02/test_collect_normal_once02.py::test_stopping_receipt_cannot_be_rewritten_as_success_or_science_stop[owner_deleted]
+FAILED outputs/v20_load_accounting_20261019_run01/review/normal_window_analysis02/test_collect_normal_once02.py::test_stopping_receipt_cannot_be_rewritten_as_success_or_science_stop[child_tree]
+FAILED outputs/v20_load_accounting_20261019_run01/review/normal_window_analysis02/test_collect_normal_once02.py::test_missing_S3_does_not_even_import_frozen_helper
+FAILED outputs/v20_load_accounting_20261019_run01/review/normal_window_analysis02/test_collect_normal_once02.py::test_document_fix_changes_only_eight_link_prefixes_and_preserves_generated_bytes
+FAILED outputs/v20_load_accounting_20261019_run01/review/normal_window_analysis02/test_collect_normal_once02.py::test_wrong_document_or_receipt_sha_refuses_link_rewrite
+23 failed in 0.16s

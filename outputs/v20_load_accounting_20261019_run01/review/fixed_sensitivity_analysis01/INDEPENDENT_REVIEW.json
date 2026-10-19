@@ -1,0 +1,14 @@
+{
+  "schema": "hospital_ies.v20.external_analysis_readonly_review.v1",
+  "reviewer": "fixed_collector_readonly",
+  "status": "closed_no_remaining_blocking_or_false_pass_found",
+  "analyze_sha256": "0626fffb8a72796134b9bcf391b55e783d0cf766fe119f23d94597be30149f4e",
+  "guards_sha256": "53c7c4668fb5ee252e3bb98a79753b326bababa39a9a5f1984651ad34d4908b3",
+  "waiter_sha256": "32a5b04d3575e0a9a1d82027533fb7aefd8523c31ba253bf2c0df5b68a0a19ce",
+  "finding_closed": "Actual no_export_interlock and minimum_output_interlock kinds were initially skipped by both CSV filter and cause counter. Two concrete synthetic tests observed RED; only external filter/counters changed; all23 observed GREEN. Actual protection_trip and interlock isolation remain distinct.",
+  "reviewed_contracts": ["primary/full600 versus contact and long base registered1065", "actual clock and propagation matching", "receipt and stable input index", "current/old RESULT SHA", "source integrals and conditional CO2", "missing required event export fails rather than becoming zero"],
+  "formal_123_qualification": "pending all41 terminal and actual collector",
+  "reviewer_executed_collector": false,
+  "reviewer_read_raw_or_annual": false,
+  "reviewer_modified_files": false
+}

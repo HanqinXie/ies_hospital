@@ -1,0 +1,386 @@
+........................................................................ [ 15%]
+........................................................................ [ 31%]
+................................................E....................... [ 47%]
+........................................................................ [ 63%]
+...........................E.........EE.EE.EEE.......................... [ 79%]
+..................................EE.......................E..E......... [ 95%]
+.....EE.EE.EEEEEEEE.                                                     [100%]
+=================================== ERRORS ====================================
+_ ERROR at setup of test_single_pass_gzip_export_preserves_unknown_missing_fields_and_long_windows _
+
+self = WindowsPath('D:/hospital_ies_v20_20261019/outputs/v20_load_accounting_20261019_run01/test_tmp/core_gate01')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+>           self._accessor.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'D:\\hospital_ies_v20_20261019\\outputs\\v20_load_accounting_20261019_run01\\test_tmp\\core_gate01'
+
+C:\Users\HanqinXie\AppData\Local\Programs\Python\Python310\lib\pathlib.py:1175: FileNotFoundError
+_____ ERROR at setup of test_path_gate_rejects_old_outputs_and_own_parent _____
+
+self = WindowsPath('D:/hospital_ies_v20_20261019/outputs/v20_load_accounting_20261019_run01/test_tmp/core_gate01')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+>           self._accessor.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'D:\\hospital_ies_v20_20261019\\outputs\\v20_load_accounting_20261019_run01\\test_tmp\\core_gate01'
+
+C:\Users\HanqinXie\AppData\Local\Programs\Python\Python310\lib\pathlib.py:1175: FileNotFoundError
+_ ERROR at setup of test_unhandled_attempt_is_retained_with_unknown_tail_and_no_zero_substitute _
+
+self = WindowsPath('D:/hospital_ies_v20_20261019/outputs/v20_load_accounting_20261019_run01/test_tmp/core_gate01')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+>           self._accessor.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'D:\\hospital_ies_v20_20261019\\outputs\\v20_load_accounting_20261019_run01\\test_tmp\\core_gate01'
+
+C:\Users\HanqinXie\AppData\Local\Programs\Python\Python310\lib\pathlib.py:1175: FileNotFoundError
+_ ERROR at setup of test_baseline_never_rehashes_old_full_trajectory_payloads _
+
+self = WindowsPath('D:/hospital_ies_v20_20261019/outputs/v20_load_accounting_20261019_run01/test_tmp/core_gate01')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+>           self._accessor.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'D:\\hospital_ies_v20_20261019\\outputs\\v20_load_accounting_20261019_run01\\test_tmp\\core_gate01'
+
+C:\Users\HanqinXie\AppData\Local\Programs\Python\Python310\lib\pathlib.py:1175: FileNotFoundError
+_ ERROR at setup of test_changed_or_missing_final_artifact_rejected_before_environment_creation _
+
+self = WindowsPath('D:/hospital_ies_v20_20261019/outputs/v20_load_accounting_20261019_run01/test_tmp/core_gate01')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+>           self._accessor.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'D:\\hospital_ies_v20_20261019\\outputs\\v20_load_accounting_20261019_run01\\test_tmp\\core_gate01'
+
+C:\Users\HanqinXie\AppData\Local\Programs\Python\Python310\lib\pathlib.py:1175: FileNotFoundError
+_ ERROR at setup of test_normal_campaign_refuses_parallel_workers_before_launch _
+
+self = WindowsPath('D:/hospital_ies_v20_20261019/outputs/v20_load_accounting_20261019_run01/test_tmp/core_gate01')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+>           self._accessor.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'D:\\hospital_ies_v20_20261019\\outputs\\v20_load_accounting_20261019_run01\\test_tmp\\core_gate01'
+
+C:\Users\HanqinXie\AppData\Local\Programs\Python\Python310\lib\pathlib.py:1175: FileNotFoundError
+_ ERROR at setup of test_gate_actual_subprocess_success_does_not_hide_source_drift _
+
+self = WindowsPath('D:/hospital_ies_v20_20261019/outputs/v20_load_accounting_20261019_run01/test_tmp/core_gate01')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+>           self._accessor.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'D:\\hospital_ies_v20_20261019\\outputs\\v20_load_accounting_20261019_run01\\test_tmp\\core_gate01'
+
+C:\Users\HanqinXie\AppData\Local\Programs\Python\Python310\lib\pathlib.py:1175: FileNotFoundError
+_ ERROR at setup of test_budget_counts_started_failures_and_unfinished_attempts_separately_from_slots _
+
+self = WindowsPath('D:/hospital_ies_v20_20261019/outputs/v20_load_accounting_20261019_run01/test_tmp/core_gate01')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+>           self._accessor.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'D:\\hospital_ies_v20_20261019\\outputs\\v20_load_accounting_20261019_run01\\test_tmp\\core_gate01'
+
+C:\Users\HanqinXie\AppData\Local\Programs\Python\Python310\lib\pathlib.py:1175: FileNotFoundError
+_ ERROR at setup of test_freeze_refuses_source_change_during_protected_baseline_check _
+
+self = WindowsPath('D:/hospital_ies_v20_20261019/outputs/v20_load_accounting_20261019_run01/test_tmp/core_gate01')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+>           self._accessor.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'D:\\hospital_ies_v20_20261019\\outputs\\v20_load_accounting_20261019_run01\\test_tmp\\core_gate01'
+
+C:\Users\HanqinXie\AppData\Local\Programs\Python\Python310\lib\pathlib.py:1175: FileNotFoundError
+_ ERROR at setup of test_registration_path_cannot_target_old_outputs_or_parent _
+
+self = WindowsPath('D:/hospital_ies_v20_20261019/outputs/v20_load_accounting_20261019_run01/test_tmp/core_gate01')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+>           self._accessor.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'D:\\hospital_ies_v20_20261019\\outputs\\v20_load_accounting_20261019_run01\\test_tmp\\core_gate01'
+
+C:\Users\HanqinXie\AppData\Local\Programs\Python\Python310\lib\pathlib.py:1175: FileNotFoundError
+_ ERROR at setup of test_streamed_raw_roundtrip_and_existing_evidence_is_immutable _
+
+self = WindowsPath('D:/hospital_ies_v20_20261019/outputs/v20_load_accounting_20261019_run01/test_tmp/core_gate01')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+>           self._accessor.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'D:\\hospital_ies_v20_20261019\\outputs\\v20_load_accounting_20261019_run01\\test_tmp\\core_gate01'
+
+C:\Users\HanqinXie\AppData\Local\Programs\Python\Python310\lib\pathlib.py:1175: FileNotFoundError
+__ ERROR at setup of test_single_scene_registration_rebinds_subset_proposal ___
+
+self = WindowsPath('D:/hospital_ies_v20_20261019/outputs/v20_load_accounting_20261019_run01/test_tmp/core_gate01')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+>           self._accessor.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'D:\\hospital_ies_v20_20261019\\outputs\\v20_load_accounting_20261019_run01\\test_tmp\\core_gate01'
+
+C:\Users\HanqinXie\AppData\Local\Programs\Python\Python310\lib\pathlib.py:1175: FileNotFoundError
+_ ERROR at setup of test_failed_registered_attempt_is_preserved_without_zero_service _
+
+self = WindowsPath('D:/hospital_ies_v20_20261019/outputs/v20_load_accounting_20261019_run01/test_tmp/core_gate01')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+>           self._accessor.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'D:\\hospital_ies_v20_20261019\\outputs\\v20_load_accounting_20261019_run01\\test_tmp\\core_gate01'
+
+C:\Users\HanqinXie\AppData\Local\Programs\Python\Python310\lib\pathlib.py:1175: FileNotFoundError
+_ ERROR at setup of test_orchestrator_retains_pending_after_failure_while_other_child_finishes _
+
+self = WindowsPath('D:/hospital_ies_v20_20261019/outputs/v20_load_accounting_20261019_run01/test_tmp/core_gate01')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+>           self._accessor.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'D:\\hospital_ies_v20_20261019\\outputs\\v20_load_accounting_20261019_run01\\test_tmp\\core_gate01'
+
+C:\Users\HanqinXie\AppData\Local\Programs\Python\Python310\lib\pathlib.py:1175: FileNotFoundError
+__ ERROR at setup of test_failed_terminal_batch_cannot_be_skipped_as_success __
+
+self = WindowsPath('D:/hospital_ies_v20_20261019/outputs/v20_load_accounting_20261019_run01/test_tmp/core_gate01')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+>           self._accessor.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'D:\\hospital_ies_v20_20261019\\outputs\\v20_load_accounting_20261019_run01\\test_tmp\\core_gate01'
+
+C:\Users\HanqinXie\AppData\Local\Programs\Python\Python310\lib\pathlib.py:1175: FileNotFoundError
+_ ERROR at setup of test_declared_batch_counts_without_actual_records_are_not_verified _
+
+self = WindowsPath('D:/hospital_ies_v20_20261019/outputs/v20_load_accounting_20261019_run01/test_tmp/core_gate01')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+>           self._accessor.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'D:\\hospital_ies_v20_20261019\\outputs\\v20_load_accounting_20261019_run01\\test_tmp\\core_gate01'
+
+C:\Users\HanqinXie\AppData\Local\Programs\Python\Python310\lib\pathlib.py:1175: FileNotFoundError
+_ ERROR at setup of test_malformed_child_terminal_is_retained_as_failure_not_uncaught _
+
+self = WindowsPath('D:/hospital_ies_v20_20261019/outputs/v20_load_accounting_20261019_run01/test_tmp/core_gate01')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+>           self._accessor.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'D:\\hospital_ies_v20_20261019\\outputs\\v20_load_accounting_20261019_run01\\test_tmp\\core_gate01'
+
+C:\Users\HanqinXie\AppData\Local\Programs\Python\Python310\lib\pathlib.py:1175: FileNotFoundError
+_ ERROR at setup of test_checkpoint_keeps_not_registered_and_not_started_denominator _
+
+self = WindowsPath('D:/hospital_ies_v20_20261019/outputs/v20_load_accounting_20261019_run01/test_tmp/core_gate01')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+>           self._accessor.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'D:\\hospital_ies_v20_20261019\\outputs\\v20_load_accounting_20261019_run01\\test_tmp\\core_gate01'
+
+C:\Users\HanqinXie\AppData\Local\Programs\Python\Python310\lib\pathlib.py:1175: FileNotFoundError
+_ ERROR at setup of test_partial_saved_service_is_not_full_window_zero_or_estimate _
+
+self = WindowsPath('D:/hospital_ies_v20_20261019/outputs/v20_load_accounting_20261019_run01/test_tmp/core_gate01')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+>           self._accessor.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'D:\\hospital_ies_v20_20261019\\outputs\\v20_load_accounting_20261019_run01\\test_tmp\\core_gate01'
+
+C:\Users\HanqinXie\AppData\Local\Programs\Python\Python310\lib\pathlib.py:1175: FileNotFoundError
+_ ERROR at setup of test_old_compact_request_and_delivery_are_unknown_not_reconstructed _
+
+self = WindowsPath('D:/hospital_ies_v20_20261019/outputs/v20_load_accounting_20261019_run01/test_tmp/core_gate01')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+>           self._accessor.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'D:\\hospital_ies_v20_20261019\\outputs\\v20_load_accounting_20261019_run01\\test_tmp\\core_gate01'
+
+C:\Users\HanqinXie\AppData\Local\Programs\Python\Python310\lib\pathlib.py:1175: FileNotFoundError
+_ ERROR at setup of test_saved_full_window_needs_exact_bounds_and_ledger_completion _
+
+self = WindowsPath('D:/hospital_ies_v20_20261019/outputs/v20_load_accounting_20261019_run01/test_tmp/core_gate01')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+>           self._accessor.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'D:\\hospital_ies_v20_20261019\\outputs\\v20_load_accounting_20261019_run01\\test_tmp\\core_gate01'
+
+C:\Users\HanqinXie\AppData\Local\Programs\Python\Python310\lib\pathlib.py:1175: FileNotFoundError
+_ ERROR at setup of test_manifest_drift_and_ambiguous_old_matches_cannot_be_compared _
+
+self = WindowsPath('D:/hospital_ies_v20_20261019/outputs/v20_load_accounting_20261019_run01/test_tmp/core_gate01')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+>           self._accessor.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'D:\\hospital_ies_v20_20261019\\outputs\\v20_load_accounting_20261019_run01\\test_tmp\\core_gate01'
+
+C:\Users\HanqinXie\AppData\Local\Programs\Python\Python310\lib\pathlib.py:1175: FileNotFoundError
+_ ERROR at setup of test_baseline_comparison_keeps_m19_identity_and_rejects_duplicate_matches _
+
+self = WindowsPath('D:/hospital_ies_v20_20261019/outputs/v20_load_accounting_20261019_run01/test_tmp/core_gate01')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+>           self._accessor.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'D:\\hospital_ies_v20_20261019\\outputs\\v20_load_accounting_20261019_run01\\test_tmp\\core_gate01'
+
+C:\Users\HanqinXie\AppData\Local\Programs\Python\Python310\lib\pathlib.py:1175: FileNotFoundError
+_ ERROR at setup of test_asset_verification_detects_missing_and_changed_bytes _
+
+self = WindowsPath('D:/hospital_ies_v20_20261019/outputs/v20_load_accounting_20261019_run01/test_tmp/core_gate01')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+>           self._accessor.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'D:\\hospital_ies_v20_20261019\\outputs\\v20_load_accounting_20261019_run01\\test_tmp\\core_gate01'
+
+C:\Users\HanqinXie\AppData\Local\Programs\Python\Python310\lib\pathlib.py:1175: FileNotFoundError
+___________ ERROR at setup of test_verification_refuses_path_escape ___________
+
+self = WindowsPath('D:/hospital_ies_v20_20261019/outputs/v20_load_accounting_20261019_run01/test_tmp/core_gate01')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+>           self._accessor.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'D:\\hospital_ies_v20_20261019\\outputs\\v20_load_accounting_20261019_run01\\test_tmp\\core_gate01'
+
+C:\Users\HanqinXie\AppData\Local\Programs\Python\Python310\lib\pathlib.py:1175: FileNotFoundError
+=========================== short test summary info ===========================
+ERROR tests/test_engineering_thermal_prefix.py::test_single_pass_gzip_export_preserves_unknown_missing_fields_and_long_windows
+ERROR tests/test_model_closeout_registration.py::test_path_gate_rejects_old_outputs_and_own_parent
+ERROR tests/test_model_closeout_registration.py::test_unhandled_attempt_is_retained_with_unknown_tail_and_no_zero_substitute
+ERROR tests/test_model_closeout_registration.py::test_baseline_never_rehashes_old_full_trajectory_payloads
+ERROR tests/test_model_closeout_registration.py::test_changed_or_missing_final_artifact_rejected_before_environment_creation
+ERROR tests/test_model_closeout_registration.py::test_normal_campaign_refuses_parallel_workers_before_launch
+ERROR tests/test_model_closeout_registration.py::test_gate_actual_subprocess_success_does_not_hide_source_drift
+ERROR tests/test_model_closeout_registration.py::test_budget_counts_started_failures_and_unfinished_attempts_separately_from_slots
+ERROR tests/test_model_closeout_registration.py::test_freeze_refuses_source_change_during_protected_baseline_check
+ERROR tests/test_execution_recovery_runner.py::test_registration_path_cannot_target_old_outputs_or_parent
+ERROR tests/test_execution_recovery_runner.py::test_streamed_raw_roundtrip_and_existing_evidence_is_immutable
+ERROR tests/test_v20_runtime.py::test_single_scene_registration_rebinds_subset_proposal
+ERROR tests/test_v20_runtime.py::test_failed_registered_attempt_is_preserved_without_zero_service
+ERROR tests/test_v20_campaign.py::test_orchestrator_retains_pending_after_failure_while_other_child_finishes
+ERROR tests/test_v20_campaign.py::test_failed_terminal_batch_cannot_be_skipped_as_success
+ERROR tests/test_v20_campaign.py::test_declared_batch_counts_without_actual_records_are_not_verified
+ERROR tests/test_v20_campaign.py::test_malformed_child_terminal_is_retained_as_failure_not_uncaught
+ERROR tests/test_v20_reporting.py::test_checkpoint_keeps_not_registered_and_not_started_denominator
+ERROR tests/test_v20_reporting.py::test_partial_saved_service_is_not_full_window_zero_or_estimate
+ERROR tests/test_v20_reporting.py::test_old_compact_request_and_delivery_are_unknown_not_reconstructed
+ERROR tests/test_v20_reporting.py::test_saved_full_window_needs_exact_bounds_and_ledger_completion
+ERROR tests/test_v20_reporting.py::test_manifest_drift_and_ambiguous_old_matches_cannot_be_compared
+ERROR tests/test_v20_reporting.py::test_baseline_comparison_keeps_m19_identity_and_rejects_duplicate_matches
+ERROR tests/test_v20_repository.py::test_asset_verification_detects_missing_and_changed_bytes
+ERROR tests/test_v20_repository.py::test_verification_refuses_path_escape - F...
+427 passed, 25 errors in 153.01s (0:02:33)
+{"gate": "core_gate01", "passed": false, "exit_code": 1, "source_files": 366}

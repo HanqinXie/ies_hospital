@@ -1,0 +1,38 @@
+{
+  "schema": "hospital_ies.essential_csv_receipt.v16.v1",
+  "registered_trajectory_count": 1,
+  "unknown_full_trajectory_count": 0,
+  "unknown_registered_full_trajectory_count": 0,
+  "table_row_counts": {
+    "TRAJECTORY_WINDOWS": 5,
+    "GT_RUNS": 1,
+    "GT_TRANSITIONS": 0,
+    "COMMAND_LIFECYCLE": 96,
+    "COMMAND_EXECUTION_INTERVALS": 96,
+    "EVENT_TIMELINE": 436,
+    "ENGINEERING_INTERVALS": 96,
+    "DIESEL_LOCAL_RESPONSE": 96,
+    "THERMAL_COVERAGE": 1,
+    "MODEL_DOMAIN": 1
+  },
+  "output_sha256": {
+    "TRAJECTORY_WINDOWS.csv": "00db06d6840e0d314e60148e46ef26c89062557b658b6fd494dc1a54375828d9",
+    "GT_RUNS.csv": "5b31facbcddfd838e5d3812919d505e0940994f846bd13f2321f6c57e9d3d623",
+    "GT_TRANSITIONS.csv": "f01a374e9c81e3db89b3a42940c4d6a5447684986a1296e42bf13f196eed6295",
+    "COMMAND_LIFECYCLE.csv": "db5606eef1a0decdfa9d5c06dc5c69f8510727ce024030de950329f504e02875",
+    "COMMAND_EXECUTION_INTERVALS.csv": "11d811203d3f8fa8a95761d1a9bf8ac429afc589a8b4af4ec2a24747c57538c6",
+    "EVENT_TIMELINE.csv": "701b02fb522c830dfd562dd063689744bb0c903bec61f01fa054e741ceb8c505",
+    "ENGINEERING_INTERVALS.csv": "afeed03be1830442481eb9a75744da8d1093edc05e643c83a9c16689081bff37",
+    "DIESEL_LOCAL_RESPONSE.csv": "58b34d4b98441f771f1a973bab026bc1d5d598cf37a4928477e428bf87101b5e",
+    "THERMAL_COVERAGE.csv": "a5dcc7a8689f866b331dc2bc2bb137b3d9487629f100f5329221475b729cf923",
+    "MODEL_DOMAIN.csv": "3eaa275f7043e29f02fbc8a54ec6272403a5421d442710d2bbf59e9c785f0b6d",
+    "RESULTS.json": "25d0cecb7d601696e0f829adb329e0ce23ae33b003e651e8a4bd70681eb2437d"
+  },
+  "analysis_program_sha256": "66e2d69f47be5663cf6646ea381521b861c31ee3cdcb8a1b26b8472c67e13967",
+  "exporter_sha256": "d94a2ac84a58059bb3a46ef0c5ae1a39f138b20c67a2a7d72d6d6e0c46a6b9f4",
+  "physical_episodes_started": 0,
+  "additional_raw_opens": 0,
+  "old_scores_unchanged": true,
+  "full_raw_retained": true,
+  "duplicate_timeline_json_written": false
+}

@@ -1,0 +1,48 @@
+{
+  "copy_status": "passed",
+  "original_evidence_root": "D:\\hospital_ies_v20_evidence_20261019",
+  "destination": "D:\\hospital_ies_v20_20261019\\outputs\\v20_load_accounting_20261019_run01\\provenance\\thermal",
+  "copied_files": 9,
+  "copied_bytes": 1880477,
+  "copied_SQL_files": 0,
+  "copied_PDF_files": 0,
+  "source_bytes_preserved": true,
+  "files": {
+    "audit_thermal_fields.py": {
+      "bytes": 14843,
+      "sha256": "d172f25a91cb307b54c366931b641f0d4fab768a253cf85130adbd9774bd5542"
+    },
+    "THERMAL_FIELD_FINDINGS.md": {
+      "bytes": 10293,
+      "sha256": "a03fe979d645d0e4a3769a9b11ccdfb6c88cbb29709e638067f179883adc99f6"
+    },
+    "THERMAL_AUDIT_COMMAND.json": {
+      "bytes": 1038,
+      "sha256": "06dd01ec1a5d6b209a29b1f5bfe627be009a723168cd474bb5e6b574ff6e997f"
+    },
+    "thermal_fields_r1.stdout.log": {
+      "bytes": 4016,
+      "sha256": "dd98896d453900379a1735ddf4d2a1b9ca7e152dc2cbbac14f7bce5944908443"
+    },
+    "thermal_fields_r1/ZONE_COIL_KEY_MAPPING.csv": {
+      "bytes": 3996,
+      "sha256": "03dfe1e8440072f1ce5a0fc0508b31746d4782c4878e35c6d33bf2bc6bc26f6f"
+    },
+    "thermal_fields_r1/HOURLY_BOUNDARY_MATCH.csv": {
+      "bytes": 1790688,
+      "sha256": "d875a83de43fbc1d3c8fbb4d780c350524ecde42ef7d89c2d13e01080531dadf"
+    },
+    "thermal_fields_r1/THERMAL_EVIDENCE.json": {
+      "bytes": 53664,
+      "sha256": "1897bf16269a0ee4e8c301987d593cd1c626db93869a7c2687fcf83890bc4801"
+    },
+    "thermal_fields_r1/OUTPUT_SHA256.json": {
+      "bytes": 431,
+      "sha256": "dd54c66935bb9022cf2bd30dc5e8ab912f99509919d5b922b72a727ea3961e71"
+    },
+    "THERMAL_DELIVERY_RECEIPT.json": {
+      "bytes": 1508,
+      "sha256": "0383183df5cdd9a635980097e78471ffcdfcf8cf6330b7986269f3143e51c0a2"
+    }
+  }
+}

@@ -1,0 +1,776 @@
+{
+  "status": "passed",
+  "command": [
+    "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\python.exe",
+    "-B",
+    "-m",
+    "tools.load_accounting.runner",
+    "run",
+    "--directory",
+    "outputs/v20_load_accounting_20261019_run01/experiments/reproduce_candidate01"
+  ],
+  "exit_code": 0,
+  "current_root": "D:\\hospital_ies_v20_candidate_20261019",
+  "reference_root": "D:\\hospital_ies_v20_candidate_20261019\\outputs\\v20_load_accounting_20261019_run01\\experiments\\v20_main_000",
+  "actual_registration_directory": "D:\\hospital_ies_v20_candidate_20261019\\outputs\\v20_load_accounting_20261019_run01\\experiments\\reproduce_candidate01",
+  "metric_count": 94,
+  "comparisons": [
+    {
+      "metric": "energy.P0.e.requested_kWh",
+      "actual": 345.06610817483215,
+      "reference": 345.06610817483215,
+      "difference": 0.0,
+      "budget": 1.3450661081748322e-05,
+      "passed": true
+    },
+    {
+      "metric": "energy.P0.e.delivered_kWh",
+      "actual": 345.0656129505249,
+      "reference": 345.0656129505249,
+      "difference": 0.0,
+      "budget": 1.345065612950525e-05,
+      "passed": true
+    },
+    {
+      "metric": "energy.P0.e.ENS_kWh",
+      "actual": 0.0004952243072614096,
+      "reference": 0.0004952243072614096,
+      "difference": 0.0,
+      "budget": 1.0000004952243074e-05,
+      "passed": true
+    },
+    {
+      "metric": "energy.P0.e.disconnected_ENS_kWh",
+      "actual": 0.0,
+      "reference": 0.0,
+      "difference": 0.0,
+      "budget": 1e-05,
+      "passed": true
+    },
+    {
+      "metric": "energy.P0.e.connected_unserved_ENS_kWh",
+      "actual": 0.0004952243072614096,
+      "reference": 0.0004952243072614096,
+      "difference": 0.0,
+      "budget": 1.0000004952243074e-05,
+      "passed": true
+    },
+    {
+      "metric": "time.P0.e.material_minutes",
+      "actual": 0,
+      "reference": 0,
+      "difference": 0,
+      "budget": 1e-06,
+      "passed": true
+    },
+    {
+      "metric": "time.P0.e.longest_material_minutes",
+      "actual": 0.0,
+      "reference": 0.0,
+      "difference": 0.0,
+      "budget": 1e-06,
+      "passed": true
+    },
+    {
+      "metric": "energy.P0.h.requested_kWh",
+      "actual": 531.1089346953185,
+      "reference": 531.1089346953185,
+      "difference": 0.0,
+      "budget": 1.5311089346953186e-05,
+      "passed": true
+    },
+    {
+      "metric": "energy.P0.h.delivered_kWh",
+      "actual": 531.1089346953185,
+      "reference": 531.1089346953185,
+      "difference": 0.0,
+      "budget": 1.5311089346953186e-05,
+      "passed": true
+    },
+    {
+      "metric": "energy.P0.h.ENS_kWh",
+      "actual": 0.0,
+      "reference": 0.0,
+      "difference": 0.0,
+      "budget": 1e-05,
+      "passed": true
+    },
+    {
+      "metric": "energy.P0.h.disconnected_ENS_kWh",
+      "actual": 0.0,
+      "reference": 0.0,
+      "difference": 0.0,
+      "budget": 1e-05,
+      "passed": true
+    },
+    {
+      "metric": "energy.P0.h.connected_unserved_ENS_kWh",
+      "actual": 0.0,
+      "reference": 0.0,
+      "difference": 0.0,
+      "budget": 1e-05,
+      "passed": true
+    },
+    {
+      "metric": "time.P0.h.material_minutes",
+      "actual": 0,
+      "reference": 0,
+      "difference": 0,
+      "budget": 1e-06,
+      "passed": true
+    },
+    {
+      "metric": "time.P0.h.longest_material_minutes",
+      "actual": 0.0,
+      "reference": 0.0,
+      "difference": 0.0,
+      "budget": 1e-06,
+      "passed": true
+    },
+    {
+      "metric": "energy.P0.c.requested_kWh",
+      "actual": 338.3910972433614,
+      "reference": 338.3910972433614,
+      "difference": 0.0,
+      "budget": 1.3383910972433615e-05,
+      "passed": true
+    },
+    {
+      "metric": "energy.P0.c.delivered_kWh",
+      "actual": 338.39109622280495,
+      "reference": 338.39109622280495,
+      "difference": 0.0,
+      "budget": 1.338391096222805e-05,
+      "passed": true
+    },
+    {
+      "metric": "energy.P0.c.ENS_kWh",
+      "actual": 1.0205564304559847e-06,
+      "reference": 1.0205564304559847e-06,
+      "difference": 0.0,
+      "budget": 1.0000000010205565e-05,
+      "passed": true
+    },
+    {
+      "metric": "energy.P0.c.disconnected_ENS_kWh",
+      "actual": 0.0,
+      "reference": 0.0,
+      "difference": 0.0,
+      "budget": 1e-05,
+      "passed": true
+    },
+    {
+      "metric": "energy.P0.c.connected_unserved_ENS_kWh",
+      "actual": 1.0205564304559847e-06,
+      "reference": 1.0205564304559847e-06,
+      "difference": 0.0,
+      "budget": 1.0000000010205565e-05,
+      "passed": true
+    },
+    {
+      "metric": "time.P0.c.material_minutes",
+      "actual": 0,
+      "reference": 0,
+      "difference": 0,
+      "budget": 1e-06,
+      "passed": true
+    },
+    {
+      "metric": "time.P0.c.longest_material_minutes",
+      "actual": 0.0,
+      "reference": 0.0,
+      "difference": 0.0,
+      "budget": 1e-06,
+      "passed": true
+    },
+    {
+      "metric": "energy.P1.e.requested_kWh",
+      "actual": 227.91256581116414,
+      "reference": 227.91256581116414,
+      "difference": 0.0,
+      "budget": 1.2279125658111643e-05,
+      "passed": true
+    },
+    {
+      "metric": "energy.P1.e.delivered_kWh",
+      "actual": 227.91207058685688,
+      "reference": 227.91207058685688,
+      "difference": 0.0,
+      "budget": 1.227912070586857e-05,
+      "passed": true
+    },
+    {
+      "metric": "energy.P1.e.ENS_kWh",
+      "actual": 0.0004952243072614096,
+      "reference": 0.0004952243072614096,
+      "difference": 0.0,
+      "budget": 1.0000004952243074e-05,
+      "passed": true
+    },
+    {
+      "metric": "energy.P1.e.disconnected_ENS_kWh",
+      "actual": 0.0,
+      "reference": 0.0,
+      "difference": 0.0,
+      "budget": 1e-05,
+      "passed": true
+    },
+    {
+      "metric": "energy.P1.e.connected_unserved_ENS_kWh",
+      "actual": 0.0004952243072614096,
+      "reference": 0.0004952243072614096,
+      "difference": 0.0,
+      "budget": 1.0000004952243074e-05,
+      "passed": true
+    },
+    {
+      "metric": "time.P1.e.material_minutes",
+      "actual": 0,
+      "reference": 0,
+      "difference": 0,
+      "budget": 1e-06,
+      "passed": true
+    },
+    {
+      "metric": "time.P1.e.longest_material_minutes",
+      "actual": 0.0,
+      "reference": 0.0,
+      "difference": 0.0,
+      "budget": 1e-06,
+      "passed": true
+    },
+    {
+      "metric": "energy.P1.h.requested_kWh",
+      "actual": 379.7890892022329,
+      "reference": 379.7890892022329,
+      "difference": 0.0,
+      "budget": 1.379789089202233e-05,
+      "passed": true
+    },
+    {
+      "metric": "energy.P1.h.delivered_kWh",
+      "actual": 379.7890892022329,
+      "reference": 379.7890892022329,
+      "difference": 0.0,
+      "budget": 1.379789089202233e-05,
+      "passed": true
+    },
+    {
+      "metric": "energy.P1.h.ENS_kWh",
+      "actual": 0.0,
+      "reference": 0.0,
+      "difference": 0.0,
+      "budget": 1e-05,
+      "passed": true
+    },
+    {
+      "metric": "energy.P1.h.disconnected_ENS_kWh",
+      "actual": 0.0,
+      "reference": 0.0,
+      "difference": 0.0,
+      "budget": 1e-05,
+      "passed": true
+    },
+    {
+      "metric": "energy.P1.h.connected_unserved_ENS_kWh",
+      "actual": 0.0,
+      "reference": 0.0,
+      "difference": 0.0,
+      "budget": 1e-05,
+      "passed": true
+    },
+    {
+      "metric": "time.P1.h.material_minutes",
+      "actual": 0,
+      "reference": 0,
+      "difference": 0,
+      "budget": 1e-06,
+      "passed": true
+    },
+    {
+      "metric": "time.P1.h.longest_material_minutes",
+      "actual": 0.0,
+      "reference": 0.0,
+      "difference": 0.0,
+      "budget": 1e-06,
+      "passed": true
+    },
+    {
+      "metric": "energy.P1.c.requested_kWh",
+      "actual": 234.19252630965417,
+      "reference": 234.19252630965417,
+      "difference": 0.0,
+      "budget": 1.2341925263096542e-05,
+      "passed": true
+    },
+    {
+      "metric": "energy.P1.c.delivered_kWh",
+      "actual": 234.19252528909774,
+      "reference": 234.19252528909774,
+      "difference": 0.0,
+      "budget": 1.2341925252890978e-05,
+      "passed": true
+    },
+    {
+      "metric": "energy.P1.c.ENS_kWh",
+      "actual": 1.0205564304559847e-06,
+      "reference": 1.0205564304559847e-06,
+      "difference": 0.0,
+      "budget": 1.0000000010205565e-05,
+      "passed": true
+    },
+    {
+      "metric": "energy.P1.c.disconnected_ENS_kWh",
+      "actual": 0.0,
+      "reference": 0.0,
+      "difference": 0.0,
+      "budget": 1e-05,
+      "passed": true
+    },
+    {
+      "metric": "energy.P1.c.connected_unserved_ENS_kWh",
+      "actual": 1.0205564304559847e-06,
+      "reference": 1.0205564304559847e-06,
+      "difference": 0.0,
+      "budget": 1.0000000010205565e-05,
+      "passed": true
+    },
+    {
+      "metric": "time.P1.c.material_minutes",
+      "actual": 0,
+      "reference": 0,
+      "difference": 0,
+      "budget": 1e-06,
+      "passed": true
+    },
+    {
+      "metric": "time.P1.c.longest_material_minutes",
+      "actual": 0.0,
+      "reference": 0.0,
+      "difference": 0.0,
+      "budget": 1e-06,
+      "passed": true
+    },
+    {
+      "metric": "energy.P2.e.requested_kWh",
+      "actual": 270.9982904441123,
+      "reference": 270.9982904441123,
+      "difference": 0.0,
+      "budget": 1.2709982904441123e-05,
+      "passed": true
+    },
+    {
+      "metric": "energy.P2.e.delivered_kWh",
+      "actual": 270.997795219805,
+      "reference": 270.997795219805,
+      "difference": 0.0,
+      "budget": 1.2709977952198051e-05,
+      "passed": true
+    },
+    {
+      "metric": "energy.P2.e.ENS_kWh",
+      "actual": 0.0004952243072614096,
+      "reference": 0.0004952243072614096,
+      "difference": 0.0,
+      "budget": 1.0000004952243074e-05,
+      "passed": true
+    },
+    {
+      "metric": "energy.P2.e.disconnected_ENS_kWh",
+      "actual": 0.0,
+      "reference": 0.0,
+      "difference": 0.0,
+      "budget": 1e-05,
+      "passed": true
+    },
+    {
+      "metric": "energy.P2.e.connected_unserved_ENS_kWh",
+      "actual": 0.0004952243072614096,
+      "reference": 0.0004952243072614096,
+      "difference": 0.0,
+      "budget": 1.0000004952243074e-05,
+      "passed": true
+    },
+    {
+      "metric": "time.P2.e.material_minutes",
+      "actual": 0,
+      "reference": 0,
+      "difference": 0,
+      "budget": 1e-06,
+      "passed": true
+    },
+    {
+      "metric": "time.P2.e.longest_material_minutes",
+      "actual": 0.0,
+      "reference": 0.0,
+      "difference": 0.0,
+      "budget": 1e-06,
+      "passed": true
+    },
+    {
+      "metric": "energy.P2.h.requested_kWh",
+      "actual": 0.0,
+      "reference": 0.0,
+      "difference": 0.0,
+      "budget": 1e-05,
+      "passed": true
+    },
+    {
+      "metric": "energy.P2.h.delivered_kWh",
+      "actual": 0.0,
+      "reference": 0.0,
+      "difference": 0.0,
+      "budget": 1e-05,
+      "passed": true
+    },
+    {
+      "metric": "energy.P2.h.ENS_kWh",
+      "actual": 0.0,
+      "reference": 0.0,
+      "difference": 0.0,
+      "budget": 1e-05,
+      "passed": true
+    },
+    {
+      "metric": "energy.P2.h.disconnected_ENS_kWh",
+      "actual": 0.0,
+      "reference": 0.0,
+      "difference": 0.0,
+      "budget": 1e-05,
+      "passed": true
+    },
+    {
+      "metric": "energy.P2.h.connected_unserved_ENS_kWh",
+      "actual": 0.0,
+      "reference": 0.0,
+      "difference": 0.0,
+      "budget": 1e-05,
+      "passed": true
+    },
+    {
+      "metric": "time.P2.h.material_minutes",
+      "actual": 0,
+      "reference": 0,
+      "difference": 0,
+      "budget": 1e-06,
+      "passed": true
+    },
+    {
+      "metric": "time.P2.h.longest_material_minutes",
+      "actual": 0.0,
+      "reference": 0.0,
+      "difference": 0.0,
+      "budget": 1e-06,
+      "passed": true
+    },
+    {
+      "metric": "energy.P2.c.requested_kWh",
+      "actual": 258.96794230551865,
+      "reference": 258.96794230551865,
+      "difference": 0.0,
+      "budget": 1.2589679423055188e-05,
+      "passed": true
+    },
+    {
+      "metric": "energy.P2.c.delivered_kWh",
+      "actual": 258.9679412849622,
+      "reference": 258.9679412849622,
+      "difference": 0.0,
+      "budget": 1.2589679412849623e-05,
+      "passed": true
+    },
+    {
+      "metric": "energy.P2.c.ENS_kWh",
+      "actual": 1.0205564304559847e-06,
+      "reference": 1.0205564304559847e-06,
+      "difference": 0.0,
+      "budget": 1.0000000010205565e-05,
+      "passed": true
+    },
+    {
+      "metric": "energy.P2.c.disconnected_ENS_kWh",
+      "actual": 0.0,
+      "reference": 0.0,
+      "difference": 0.0,
+      "budget": 1e-05,
+      "passed": true
+    },
+    {
+      "metric": "energy.P2.c.connected_unserved_ENS_kWh",
+      "actual": 1.0205564304559847e-06,
+      "reference": 1.0205564304559847e-06,
+      "difference": 0.0,
+      "budget": 1.0000000010205565e-05,
+      "passed": true
+    },
+    {
+      "metric": "time.P2.c.material_minutes",
+      "actual": 0,
+      "reference": 0,
+      "difference": 0,
+      "budget": 1e-06,
+      "passed": true
+    },
+    {
+      "metric": "time.P2.c.longest_material_minutes",
+      "actual": 0.0,
+      "reference": 0.0,
+      "difference": 0.0,
+      "budget": 1e-06,
+      "passed": true
+    },
+    {
+      "metric": "energy.P3.e.requested_kWh",
+      "actual": 4200.633046642152,
+      "reference": 4200.633046642152,
+      "difference": 0.0,
+      "budget": 5.2006330466421524e-05,
+      "passed": true
+    },
+    {
+      "metric": "energy.P3.e.delivered_kWh",
+      "actual": 4120.667130872809,
+      "reference": 4120.667130872809,
+      "difference": 0.0,
+      "budget": 5.120667130872809e-05,
+      "passed": true
+    },
+    {
+      "metric": "energy.P3.e.ENS_kWh",
+      "actual": 79.96591576934337,
+      "reference": 79.96591576934337,
+      "difference": 0.0,
+      "budget": 1.0799659157693434e-05,
+      "passed": true
+    },
+    {
+      "metric": "energy.P3.e.disconnected_ENS_kWh",
+      "actual": 0.0,
+      "reference": 0.0,
+      "difference": 0.0,
+      "budget": 1e-05,
+      "passed": true
+    },
+    {
+      "metric": "energy.P3.e.connected_unserved_ENS_kWh",
+      "actual": 79.96591576934337,
+      "reference": 79.96591576934337,
+      "difference": 0.0,
+      "budget": 1.0799659157693434e-05,
+      "passed": true
+    },
+    {
+      "metric": "time.P3.e.material_minutes",
+      "actual": 22.75,
+      "reference": 22.75,
+      "difference": 0.0,
+      "budget": 1e-06,
+      "passed": true
+    },
+    {
+      "metric": "time.P3.e.longest_material_minutes",
+      "actual": 22.5,
+      "reference": 22.5,
+      "difference": 0.0,
+      "budget": 1e-06,
+      "passed": true
+    },
+    {
+      "metric": "energy.P3.h.requested_kWh",
+      "actual": 776.9923831641833,
+      "reference": 776.9923831641833,
+      "difference": 0.0,
+      "budget": 1.7769923831641834e-05,
+      "passed": true
+    },
+    {
+      "metric": "energy.P3.h.delivered_kWh",
+      "actual": 776.9923831641833,
+      "reference": 776.9923831641833,
+      "difference": 0.0,
+      "budget": 1.7769923831641834e-05,
+      "passed": true
+    },
+    {
+      "metric": "energy.P3.h.ENS_kWh",
+      "actual": 0.0,
+      "reference": 0.0,
+      "difference": 0.0,
+      "budget": 1e-05,
+      "passed": true
+    },
+    {
+      "metric": "energy.P3.h.disconnected_ENS_kWh",
+      "actual": 0.0,
+      "reference": 0.0,
+      "difference": 0.0,
+      "budget": 1e-05,
+      "passed": true
+    },
+    {
+      "metric": "energy.P3.h.connected_unserved_ENS_kWh",
+      "actual": 0.0,
+      "reference": 0.0,
+      "difference": 0.0,
+      "budget": 1e-05,
+      "passed": true
+    },
+    {
+      "metric": "time.P3.h.material_minutes",
+      "actual": 0,
+      "reference": 0,
+      "difference": 0,
+      "budget": 1e-06,
+      "passed": true
+    },
+    {
+      "metric": "time.P3.h.longest_material_minutes",
+      "actual": 0.0,
+      "reference": 0.0,
+      "difference": 0.0,
+      "budget": 1e-06,
+      "passed": true
+    },
+    {
+      "metric": "energy.P3.c.requested_kWh",
+      "actual": 333.4680235799144,
+      "reference": 333.4680235799144,
+      "difference": 0.0,
+      "budget": 1.3334680235799144e-05,
+      "passed": true
+    },
+    {
+      "metric": "energy.P3.c.delivered_kWh",
+      "actual": 333.4679194850773,
+      "reference": 333.4679194850773,
+      "difference": 0.0,
+      "budget": 1.3334679194850774e-05,
+      "passed": true
+    },
+    {
+      "metric": "energy.P3.c.ENS_kWh",
+      "actual": 0.0001040948371250315,
+      "reference": 0.0001040948371250315,
+      "difference": 0.0,
+      "budget": 1.0000001040948371e-05,
+      "passed": true
+    },
+    {
+      "metric": "energy.P3.c.disconnected_ENS_kWh",
+      "actual": 0.0,
+      "reference": 0.0,
+      "difference": 0.0,
+      "budget": 1e-05,
+      "passed": true
+    },
+    {
+      "metric": "energy.P3.c.connected_unserved_ENS_kWh",
+      "actual": 0.0001040948371250315,
+      "reference": 0.0001040948371250315,
+      "difference": 0.0,
+      "budget": 1.0000001040948371e-05,
+      "passed": true
+    },
+    {
+      "metric": "time.P3.c.material_minutes",
+      "actual": 0,
+      "reference": 0,
+      "difference": 0,
+      "budget": 1e-06,
+      "passed": true
+    },
+    {
+      "metric": "time.P3.c.longest_material_minutes",
+      "actual": 0.0,
+      "reference": 0.0,
+      "difference": 0.0,
+      "budget": 1e-06,
+      "passed": true
+    },
+    {
+      "metric": "energy.GT_gas_MMBtu",
+      "actual": 39.73553090579417,
+      "reference": 39.73553090579417,
+      "difference": 0.0,
+      "budget": 1.0397355309057943e-05,
+      "passed": true
+    },
+    {
+      "metric": "energy.boiler_gas_MMBtu",
+      "actual": 5.448073895510658,
+      "reference": 5.448073895510658,
+      "difference": 0.0,
+      "budget": 1.0054480738955108e-05,
+      "passed": true
+    },
+    {
+      "metric": "energy.grid_purchase_kWh",
+      "actual": 2637.9488927509924,
+      "reference": 2637.9488927509924,
+      "difference": 0.0,
+      "budget": 3.637948892750993e-05,
+      "passed": true
+    },
+    {
+      "metric": "energy.DG_electric_work_kWh",
+      "actual": 21.036035861560986,
+      "reference": 21.036035861560986,
+      "difference": 0.0,
+      "budget": 1.021036035861561e-05,
+      "passed": true
+    },
+    {
+      "metric": "energy.DG_shaft_work_kWh",
+      "actual": 30.416575879773163,
+      "reference": 30.416575879773163,
+      "difference": 0.0,
+      "budget": 1.0304165758797733e-05,
+      "passed": true
+    },
+    {
+      "metric": "energy.DG_fuel_budget_debit_kWh_equivalent",
+      "actual": 30.416575879773163,
+      "reference": 30.416575879773163,
+      "difference": 0.0,
+      "budget": 1.0304165758797733e-05,
+      "passed": true
+    },
+    {
+      "metric": "fee.actual_energy_fee_USD",
+      "actual": 397.42992899357296,
+      "reference": 397.42992899357296,
+      "difference": 0.0,
+      "budget": 1.397429928993573e-05,
+      "passed": true
+    },
+    {
+      "metric": "fee.grid_fee_USD",
+      "actual": 172.4304709967893,
+      "reference": 172.4304709967893,
+      "difference": 0.0,
+      "budget": 1.1724304709967893e-05,
+      "passed": true
+    },
+    {
+      "metric": "fee.GT_gas_fee_USD",
+      "actual": 192.31996958404378,
+      "reference": 192.31996958404378,
+      "difference": 0.0,
+      "budget": 1.1923199695840438e-05,
+      "passed": true
+    },
+    {
+      "metric": "fee.boiler_gas_fee_USD",
+      "actual": 26.368677654271583,
+      "reference": 26.368677654271583,
+      "difference": 0.0,
+      "budget": 1.0263686776542716e-05,
+      "passed": true
+    }
+  ],
+  "error": null,
+  "original_working_tree_imports_allowed": false,
+  "registered_duration_minutes": 600.0,
+  "all_failed_and_unknown_records_retained": true,
+  "original_final12_unopened": true
+}

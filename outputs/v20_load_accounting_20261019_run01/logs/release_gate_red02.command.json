@@ -1,0 +1,23 @@
+{
+  "name": "release_gate_red02",
+  "command": [
+    "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\python.exe",
+    "-B",
+    "-m",
+    "pytest",
+    "-q",
+    "publication/test_release_gate.py"
+  ],
+  "cwd": "D:\\hospital_ies_v20_20261019",
+  "started_utc": "2026-10-19T07:19:59.904470+00:00",
+  "finished_utc": "2026-10-19T07:20:01.791849+00:00",
+  "elapsed_seconds": 1.887192899826914,
+  "exit_code": 1,
+  "environment_overrides": {
+    "PYTHONDONTWRITEBYTECODE": "1",
+    "PYTHONIOENCODING": "utf-8",
+    "PYTHONPATH": "D:\\hospital_ies_v20_20261019\\src;D:\\hospital_ies_v20_20261019",
+    "TEMP": "D:\\hospital_ies_v20_20261019\\outputs\\v20_load_accounting_20261019_run01\\temp\\release_gate_red02",
+    "TMP": "D:\\hospital_ies_v20_20261019\\outputs\\v20_load_accounting_20261019_run01\\temp\\release_gate_red02"
+  }
+}

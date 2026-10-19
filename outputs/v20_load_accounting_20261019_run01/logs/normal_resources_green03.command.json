@@ -1,0 +1,22 @@
+{
+  "name": "normal_resources_green03",
+  "command": [
+    "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\python.exe",
+    "-B",
+    "-m",
+    "pytest",
+    "-q",
+    "publication/test_normal_resources.py",
+    "--basetemp",
+    "D:/hospital_ies_v20_20261019/outputs/v20_load_accounting_20261019_run01/review/test_tmp/normal_resources_green03"
+  ],
+  "cwd": "D:\\hospital_ies_v20_20261019",
+  "started_utc": "2026-10-19T05:17:22.443432+00:00",
+  "finished_utc": "2026-10-19T05:17:22.753692+00:00",
+  "elapsed_seconds": 0.3098418000154197,
+  "exit_code": 0,
+  "environment_overrides": {
+    "PYTHONDONTWRITEBYTECODE": "1",
+    "PYTHONIOENCODING": "utf-8"
+  }
+}

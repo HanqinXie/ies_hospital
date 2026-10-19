@@ -1,0 +1,42 @@
+.......................F                                                 [100%]
+================================== FAILURES ===================================
+_ test_new_pid_owner_is_saved_before_import_and_original_wait_exit_is_not_overwritten _
+
+tmp_path = WindowsPath('D:/hospital_ies_v20_20261019/outputs/v20_load_accounting_20261019_run01/temp/normal_collect02_actualcwd_red01/pytest-of-HanqinXie/pytest-0/test_new_pid_owner_is_saved_be0')
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x000002647F4A7A60>
+
+    def test_new_pid_owner_is_saved_before_import_and_original_wait_exit_is_not_overwritten(tmp_path,monkeypatch):
+        import os
+        m=module();out=tmp_path/m.RUN_REL/'review/normal_window_analysis02';out.mkdir(parents=True)
+        old=out/'READONLY_OWNER.json';old.write_text('{"pid":82524}',encoding='utf-8')
+        monkeypatch.setattr(m,'readiness',lambda root:dict(ready=True,original_waiter_exit_code=15))
+        def load(path):
+            owner=m.read(out/'ONESHOT_OWNER01.json')
+            assert owner['pid']==os.getpid() and owner['command']==sys.argv
+            assert owner['cwd']==str(Path.cwd())
+            assert owner['original_waiter_exit_code']==15 and owner['helper_sha256']==m.HELPER_SHA
+            raise RuntimeError('synthetic loader stop; no prepared helper imported')
+        monkeypatch.setattr(m,'_load_helper',load)
+>       with pytest.raises(RuntimeError,match='synthetic loader stop'):m.collect_once(tmp_path)
+
+outputs\v20_load_accounting_20261019_run01\review\normal_window_analysis02\test_collect_normal_once02.py:119: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+outputs\v20_load_accounting_20261019_run01\review\normal_window_analysis02\collect_normal_once02.py:188: in collect_once
+    helper = _load_helper(out / 'normal_window_analysis.py')
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+path = WindowsPath('D:/hospital_ies_v20_20261019/outputs/v20_load_accounting_20261019_run01/temp/normal_collect02_actualcwd_r...ner_is_saved_be0/outputs/v20_load_accounting_20261019_run01/review/normal_window_analysis02/normal_window_analysis.py')
+
+    def load(path):
+        owner=m.read(out/'ONESHOT_OWNER01.json')
+        assert owner['pid']==os.getpid() and owner['command']==sys.argv
+>       assert owner['cwd']==str(Path.cwd())
+E       AssertionError: assert 'D:\\hospital..._is_saved_be0' == 'D:\\hospital..._v20_20261019'
+E         
+E         - D:\hospital_ies_v20_20261019
+E         + D:\hospital_ies_v20_20261019\outputs\v20_load_accounting_20261019_run01\temp\normal_collect02_actualcwd_red01\pytest-of-HanqinXie\pytest-0\test_new_pid_owner_is_saved_be0
+
+outputs\v20_load_accounting_20261019_run01\review\normal_window_analysis02\test_collect_normal_once02.py:115: AssertionError
+=========================== short test summary info ===========================
+FAILED outputs/v20_load_accounting_20261019_run01/review/normal_window_analysis02/test_collect_normal_once02.py::test_new_pid_owner_is_saved_before_import_and_original_wait_exit_is_not_overwritten
+1 failed, 23 passed in 0.11s

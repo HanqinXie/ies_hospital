@@ -1,0 +1,19 @@
+{
+  "utc": "2026-10-19T09:44:25.857115+00:00",
+  "command": [
+    "publication/run_normal_serial.py",
+    "--run",
+    "--name",
+    "canonical01",
+    "--poll-seconds",
+    "15",
+    "--sample-seconds",
+    "2"
+  ],
+  "mode": "run_existing_registered_normals",
+  "supervisor_sha256": "2a3f0d882ab242afec3574397c4d6d37d6328aff9e6a8da6d8da108618c64cec",
+  "growth_factor": 1.2,
+  "host_reserve_bytes": 6442450944,
+  "max_wait_seconds": 0.0,
+  "original_final12_unopened": true
+}

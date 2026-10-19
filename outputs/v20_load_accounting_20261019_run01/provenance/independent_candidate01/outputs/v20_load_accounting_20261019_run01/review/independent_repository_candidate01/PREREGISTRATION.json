@@ -1,0 +1,1191 @@
+{
+  "schema": "hospital_ies.v20.independent_reproduction_preregistration.v1",
+  "utc": "2026-10-19T04:51:20.306595+00:00",
+  "current_root": "D:\\hospital_ies_v20_candidate_20261019",
+  "release": {
+    "marker": {
+      "schema": "hospital_ies.v20.release_root.v1",
+      "utc": "2026-10-19T04:50:44.178463+00:00",
+      "source_root": "D:\\hospital_ies_v20_20261019",
+      "original_scientific_root": "D:\\hospital_ies_v20_20261019",
+      "original_research_root": "D:\\云大文件\\论文\\医院ies\\code_4_2",
+      "staged_root": "D:\\hospital_ies_v20_candidate_20261019",
+      "status": "candidate",
+      "freeze_sha256": "48baed7a128d2f921d36323330ae4d22e2e6dc83214e8a505b6ba89273439b7b",
+      "wrapper_sha256": "d4abb6db2a1fca402d94f60abf17b49fe8c63596c7c576ac8c5578847383f50d",
+      "reproduction_wrapper_sha256": "495db22279be769a8bc0784f9a174c3856667f7c244a3edc921acb52c454ef45",
+      "supplemental_closure": [
+        {
+          "path": "outputs/v19_model_closeout_20261018_run01/design/LONG_FINAL_R1_PROPOSAL.json",
+          "bytes": 56175,
+          "sha256": "054b9f167960a0dd88ffb41517c18b6e1305c3ac81a3c6a32b4412b298815696",
+          "evidence": "outputs/v20_load_accounting_20261019_run01/provenance/v19_design/LONG_FINAL_R1_PROPOSAL.json",
+          "purpose": "Original-path fixture required by default V20 campaign regression"
+        },
+        {
+          "path": "outputs/v19_model_closeout_20261018_run01/design/COMPAT_FINAL_R1_PROPOSAL.json",
+          "bytes": 33806,
+          "sha256": "9df1eb5b0e8617fc9448bb6f00be770828223689e31f6f37e396ceb4a8a2b324",
+          "evidence": "outputs/v20_load_accounting_20261019_run01/provenance/v19_design/COMPAT_FINAL_R1_PROPOSAL.json",
+          "purpose": "Original-path fixture required by default V20 campaign regression"
+        },
+        {
+          "path": "outputs/v19_model_closeout_20261018_run01/design/COMPAT_LONG_FINAL_R1_PROPOSAL.json",
+          "bytes": 16639,
+          "sha256": "609380fff30a7fb558417d1a3fe593a30e607522e23e30dd7e56f6b2cccbeefe",
+          "evidence": "outputs/v20_load_accounting_20261019_run01/provenance/v19_design/COMPAT_LONG_FINAL_R1_PROPOSAL.json",
+          "purpose": "Original-path fixture required by default V20 campaign regression"
+        },
+        {
+          "path": "outputs/v19_model_closeout_20261018_run01/design/PROPAGATION_FINAL_R1_PROPOSAL.json",
+          "bytes": 38713,
+          "sha256": "286a1d8d57266f1d27ce844a491207dd3e684aeb6655a441d7537db64c997253",
+          "evidence": "outputs/v20_load_accounting_20261019_run01/provenance/v19_design/PROPAGATION_FINAL_R1_PROPOSAL.json",
+          "purpose": "Original-path fixture required by default V20 campaign regression"
+        },
+        {
+          "path": "outputs/v19_model_closeout_20261018_run01/design/NORMAL_E_FINAL_R1_PROPOSAL.json",
+          "bytes": 24651,
+          "sha256": "9454ae0c4a7c5cb02aff155c3339c89d566b2ed157948f282c220af9d467f2ab",
+          "evidence": "outputs/v20_load_accounting_20261019_run01/provenance/v19_design/NORMAL_E_FINAL_R1_PROPOSAL.json",
+          "purpose": "Original-path fixture required by default V20 campaign regression"
+        },
+        {
+          "path": "outputs/v19_model_closeout_20261018_run01/design/SENSITIVITY_OPEN1_R1_PROPOSAL.json",
+          "bytes": 58156,
+          "sha256": "2d3375f44af0daa84d94dfa7664baf6efc78499ffe0c76fb5b6e0ac0edfc91de",
+          "evidence": "outputs/v20_load_accounting_20261019_run01/provenance/v19_design/SENSITIVITY_OPEN1_R1_PROPOSAL.json",
+          "purpose": "Original-path fixture required by default V20 campaign regression"
+        },
+        {
+          "path": "outputs/v19_model_closeout_20261018_run01/design/SENSITIVITY_CONTACT025_R1_PROPOSAL.json",
+          "bytes": 52423,
+          "sha256": "e1ca4276e56ec014158233f30c7cf03704236d5b2d99f1e8871d7a8ab732e425",
+          "evidence": "outputs/v20_load_accounting_20261019_run01/provenance/v19_design/SENSITIVITY_CONTACT025_R1_PROPOSAL.json",
+          "purpose": "Original-path fixture required by default V20 campaign regression"
+        }
+      ],
+      "candidate_omits_inflight_results": true,
+      "scientific_source_modified": false,
+      "per_file_limit_bytes_exclusive": 104857600
+    },
+    "forbidden_roots": [
+      "D:\\hospital_ies_v20_20261019",
+      "D:\\云大文件\\论文\\医院ies\\code_4_2"
+    ],
+    "marker_sha256": "05d57734b85355af5ffd6c8d50d499993ad0f151bf6bd60c4f93b0f61bbf9ede",
+    "selection_sha256": "8be65d3e1ead7cee16be851799723f9360f26198f674b23806352898ddfd853a",
+    "reproduction_wrapper_sha256": "495db22279be769a8bc0784f9a174c3856667f7c244a3edc921acb52c454ef45",
+    "selected_files": 819
+  },
+  "reference": {
+    "scenario_id": "v17_L1_05d91fa94a2b551ad7ab17ff",
+    "policy_id": "endurance_restore_p0_ready_M20_v1",
+    "window_minutes": [
+      0.0,
+      600.0
+    ],
+    "actual_initial_state_sha256": "89d3afc75dc3aa25b0f066de6f904b406dd2a620016d362b362cec648e36051e",
+    "actual_exogenous_sha256": "a1cc1aa6ac46567cfdedf3845030f54440a5440556b74801370e022f27a22c90",
+    "actual_injection_state_sha256": "8731f4beb294c24e6fc464222119be04ad11824aaabf1482870567859c8c7548",
+    "source_binding_sha256": "a532b63dbaf465ecf401904ba29ad21e1e228a4d9637d5a250645e672ca6a9dc",
+    "model_config_sha256": "910e921dd6fb01ea1c99eaa5c643659310df1c626b398a6da35bc82c6a498d61",
+    "runtime_inputs_sha256": "b3b38861fe16074665b86f5538c4bddddfbcf36fa27ad7eb256ce547df2aab13",
+    "registered_scene_sha256": "60cef81ae04c0c3cfd2729f43c0e3465c5f10b21a510d0dbf42e2740e0956de8",
+    "policy_sha256": "cb9989ab7a4769a354ecbc0c9b3a9b5b97b6d78659043e5bed6f8b06550b186d",
+    "policy_panel_sha256": "fc5dd91580cbac5c84add7eb638889b6557b631457b0fc2a08163e2e8748c5da",
+    "metric_fields_sha256": "a1b9bb5e5bedfd1e60c7911659210a143ba88362b1f190eb757d465981b9e7a3",
+    "evaluation_role": "seen_regression",
+    "metric_count": 94,
+    "file_sha256": {
+      "plan.json": "44a760880fe239ce9ea8f290310d3bcd881d2bdb6888cfc81e631e6f84954d06",
+      "manifest.json": "b90b5623a77e7c760ce4b1e9612aaffac751c696f6d24faa09acde7390a37d86",
+      "BATCH_RESULT.json": "e6b9e010478dd49f480f1596d709ea94cb6c076713ff42d4926f0a5c02bd1920",
+      "ATTEMPTS.jsonl": "cc80776a37145b2bcc36c20eb8a45da308abe81ddf12e15985fba42699250131",
+      "RESULT.json": "012ef2e3386e939109ae94aaf23f029cc6f38ef2aa3d7112c537ca051410bec4"
+    },
+    "actual_raw_sha256": "3839fa6b5d1b0a591d1a5a484d6dff31e9bf76701bd0a07b916c9b9778d1a0be",
+    "execution_qualified": true,
+    "metrics": {
+      "energy.P0.e.requested_kWh": 345.06610817483215,
+      "energy.P0.e.delivered_kWh": 345.0656129505249,
+      "energy.P0.e.ENS_kWh": 0.0004952243072614096,
+      "energy.P0.e.disconnected_ENS_kWh": 0.0,
+      "energy.P0.e.connected_unserved_ENS_kWh": 0.0004952243072614096,
+      "time.P0.e.material_minutes": 0,
+      "time.P0.e.longest_material_minutes": 0.0,
+      "energy.P0.h.requested_kWh": 531.1089346953185,
+      "energy.P0.h.delivered_kWh": 531.1089346953185,
+      "energy.P0.h.ENS_kWh": 0.0,
+      "energy.P0.h.disconnected_ENS_kWh": 0.0,
+      "energy.P0.h.connected_unserved_ENS_kWh": 0.0,
+      "time.P0.h.material_minutes": 0,
+      "time.P0.h.longest_material_minutes": 0.0,
+      "energy.P0.c.requested_kWh": 338.3910972433614,
+      "energy.P0.c.delivered_kWh": 338.39109622280495,
+      "energy.P0.c.ENS_kWh": 1.0205564304559847e-06,
+      "energy.P0.c.disconnected_ENS_kWh": 0.0,
+      "energy.P0.c.connected_unserved_ENS_kWh": 1.0205564304559847e-06,
+      "time.P0.c.material_minutes": 0,
+      "time.P0.c.longest_material_minutes": 0.0,
+      "energy.P1.e.requested_kWh": 227.91256581116414,
+      "energy.P1.e.delivered_kWh": 227.91207058685688,
+      "energy.P1.e.ENS_kWh": 0.0004952243072614096,
+      "energy.P1.e.disconnected_ENS_kWh": 0.0,
+      "energy.P1.e.connected_unserved_ENS_kWh": 0.0004952243072614096,
+      "time.P1.e.material_minutes": 0,
+      "time.P1.e.longest_material_minutes": 0.0,
+      "energy.P1.h.requested_kWh": 379.7890892022329,
+      "energy.P1.h.delivered_kWh": 379.7890892022329,
+      "energy.P1.h.ENS_kWh": 0.0,
+      "energy.P1.h.disconnected_ENS_kWh": 0.0,
+      "energy.P1.h.connected_unserved_ENS_kWh": 0.0,
+      "time.P1.h.material_minutes": 0,
+      "time.P1.h.longest_material_minutes": 0.0,
+      "energy.P1.c.requested_kWh": 234.19252630965417,
+      "energy.P1.c.delivered_kWh": 234.19252528909774,
+      "energy.P1.c.ENS_kWh": 1.0205564304559847e-06,
+      "energy.P1.c.disconnected_ENS_kWh": 0.0,
+      "energy.P1.c.connected_unserved_ENS_kWh": 1.0205564304559847e-06,
+      "time.P1.c.material_minutes": 0,
+      "time.P1.c.longest_material_minutes": 0.0,
+      "energy.P2.e.requested_kWh": 270.9982904441123,
+      "energy.P2.e.delivered_kWh": 270.997795219805,
+      "energy.P2.e.ENS_kWh": 0.0004952243072614096,
+      "energy.P2.e.disconnected_ENS_kWh": 0.0,
+      "energy.P2.e.connected_unserved_ENS_kWh": 0.0004952243072614096,
+      "time.P2.e.material_minutes": 0,
+      "time.P2.e.longest_material_minutes": 0.0,
+      "energy.P2.h.requested_kWh": 0.0,
+      "energy.P2.h.delivered_kWh": 0.0,
+      "energy.P2.h.ENS_kWh": 0.0,
+      "energy.P2.h.disconnected_ENS_kWh": 0.0,
+      "energy.P2.h.connected_unserved_ENS_kWh": 0.0,
+      "time.P2.h.material_minutes": 0,
+      "time.P2.h.longest_material_minutes": 0.0,
+      "energy.P2.c.requested_kWh": 258.96794230551865,
+      "energy.P2.c.delivered_kWh": 258.9679412849622,
+      "energy.P2.c.ENS_kWh": 1.0205564304559847e-06,
+      "energy.P2.c.disconnected_ENS_kWh": 0.0,
+      "energy.P2.c.connected_unserved_ENS_kWh": 1.0205564304559847e-06,
+      "time.P2.c.material_minutes": 0,
+      "time.P2.c.longest_material_minutes": 0.0,
+      "energy.P3.e.requested_kWh": 4200.633046642152,
+      "energy.P3.e.delivered_kWh": 4120.667130872809,
+      "energy.P3.e.ENS_kWh": 79.96591576934337,
+      "energy.P3.e.disconnected_ENS_kWh": 0.0,
+      "energy.P3.e.connected_unserved_ENS_kWh": 79.96591576934337,
+      "time.P3.e.material_minutes": 22.75,
+      "time.P3.e.longest_material_minutes": 22.5,
+      "energy.P3.h.requested_kWh": 776.9923831641833,
+      "energy.P3.h.delivered_kWh": 776.9923831641833,
+      "energy.P3.h.ENS_kWh": 0.0,
+      "energy.P3.h.disconnected_ENS_kWh": 0.0,
+      "energy.P3.h.connected_unserved_ENS_kWh": 0.0,
+      "time.P3.h.material_minutes": 0,
+      "time.P3.h.longest_material_minutes": 0.0,
+      "energy.P3.c.requested_kWh": 333.4680235799144,
+      "energy.P3.c.delivered_kWh": 333.4679194850773,
+      "energy.P3.c.ENS_kWh": 0.0001040948371250315,
+      "energy.P3.c.disconnected_ENS_kWh": 0.0,
+      "energy.P3.c.connected_unserved_ENS_kWh": 0.0001040948371250315,
+      "time.P3.c.material_minutes": 0,
+      "time.P3.c.longest_material_minutes": 0.0,
+      "energy.GT_gas_MMBtu": 39.73553090579417,
+      "energy.boiler_gas_MMBtu": 5.448073895510658,
+      "energy.grid_purchase_kWh": 2637.9488927509924,
+      "energy.DG_electric_work_kWh": 21.036035861560986,
+      "energy.DG_shaft_work_kWh": 30.416575879773163,
+      "energy.DG_fuel_budget_debit_kWh_equivalent": 30.416575879773163,
+      "fee.actual_energy_fee_USD": 397.42992899357296,
+      "fee.grid_fee_USD": 172.4304709967893,
+      "fee.GT_gas_fee_USD": 192.31996958404378,
+      "fee.boiler_gas_fee_USD": 26.368677654271583
+    }
+  },
+  "frozen_scalar_helper_sha256": "64fbf32dd88745c636052b3d8f204e1cd10ae2b594625f9e3edae64fa1343b88",
+  "intended_actual_attempts": 1,
+  "original_final12_unopened": true,
+  "preflight_project_imports": [
+    {
+      "module": "tools",
+      "path": "D:\\hospital_ies_v20_candidate_20261019\\tools"
+    },
+    {
+      "module": "tools",
+      "path": "D:\\hospital_ies_v20_candidate_20261019\\tools"
+    },
+    {
+      "module": "tools",
+      "path": "D:\\hospital_ies_v20_candidate_20261019\\tools"
+    },
+    {
+      "module": "tools",
+      "path": "D:\\hospital_ies_v20_candidate_20261019\\tools"
+    },
+    {
+      "module": "tools",
+      "path": "D:\\hospital_ies_v20_candidate_20261019\\tools"
+    },
+    {
+      "module": "tools",
+      "path": "D:\\hospital_ies_v20_candidate_20261019\\tools"
+    },
+    {
+      "module": "tools",
+      "path": "D:\\hospital_ies_v20_candidate_20261019\\tools"
+    },
+    {
+      "module": "tools",
+      "path": "D:\\hospital_ies_v20_candidate_20261019\\tools"
+    },
+    {
+      "module": "tools",
+      "path": "D:\\hospital_ies_v20_candidate_20261019\\tools"
+    },
+    {
+      "module": "tools",
+      "path": "D:\\hospital_ies_v20_candidate_20261019\\tools"
+    },
+    {
+      "module": "tools",
+      "path": "D:\\hospital_ies_v20_candidate_20261019\\tools"
+    },
+    {
+      "module": "tools",
+      "path": "D:\\hospital_ies_v20_candidate_20261019\\tools"
+    },
+    {
+      "module": "tools",
+      "path": "D:\\hospital_ies_v20_candidate_20261019\\tools"
+    },
+    {
+      "module": "tools.load_accounting",
+      "path": "D:\\hospital_ies_v20_candidate_20261019\\tools\\load_accounting\\__init__.py"
+    },
+    {
+      "module": "tools.load_accounting",
+      "path": "D:\\hospital_ies_v20_candidate_20261019\\tools\\load_accounting"
+    },
+    {
+      "module": "tools.operating_response",
+      "path": "D:\\hospital_ies_v20_candidate_20261019\\tools\\operating_response\\__init__.py"
+    },
+    {
+      "module": "tools.operating_response",
+      "path": "D:\\hospital_ies_v20_candidate_20261019\\tools\\operating_response"
+    },
+    {
+      "module": "tools.engineering_model",
+      "path": "D:\\hospital_ies_v20_candidate_20261019\\tools\\engineering_model\\__init__.py"
+    },
+    {
+      "module": "tools.engineering_model",
+      "path": "D:\\hospital_ies_v20_candidate_20261019\\tools\\engineering_model"
+    },
+    {
+      "module": "tools.executed_service",
+      "path": "D:\\hospital_ies_v20_candidate_20261019\\tools\\executed_service"
+    },
+    {
+      "module": "tools.executed_service",
+      "path": "D:\\hospital_ies_v20_candidate_20261019\\tools\\executed_service"
+    },
+    {
+      "module": "tools.executed_service",
+      "path": "D:\\hospital_ies_v20_candidate_20261019\\tools\\executed_service"
+    },
+    {
+      "module": "tools.executed_service",
+      "path": "D:\\hospital_ies_v20_candidate_20261019\\tools\\executed_service"
+    },
+    {
+      "module": "tools.executed_service",
+      "path": "D:\\hospital_ies_v20_candidate_20261019\\tools\\executed_service"
+    },
+    {
+      "module": "tools.executed_service",
+      "path": "D:\\hospital_ies_v20_candidate_20261019\\tools\\executed_service"
+    },
+    {
+      "module": "tools.executed_service",
+      "path": "D:\\hospital_ies_v20_candidate_20261019\\tools\\executed_service"
+    },
+    {
+      "module": "tools.executed_service",
+      "path": "D:\\hospital_ies_v20_candidate_20261019\\tools\\executed_service"
+    },
+    {
+      "module": "tools.executed_service",
+      "path": "D:\\hospital_ies_v20_candidate_20261019\\tools\\executed_service"
+    },
+    {
+      "module": "tools.executed_service",
+      "path": "D:\\hospital_ies_v20_candidate_20261019\\tools\\executed_service"
+    },
+    {
+      "module": "tools.executed_service",
+      "path": "D:\\hospital_ies_v20_candidate_20261019\\tools\\executed_service"
+    },
+    {
+      "module": "tools.executed_service",
+      "path": "D:\\hospital_ies_v20_candidate_20261019\\tools\\executed_service"
+    },
+    {
+      "module": "tools.executed_service",
+      "path": "D:\\hospital_ies_v20_candidate_20261019\\tools\\executed_service"
+    },
+    {
+      "module": "tools.coordinated_dispatch",
+      "path": "D:\\hospital_ies_v20_candidate_20261019\\tools\\coordinated_dispatch\\__init__.py"
+    },
+    {
+      "module": "tools.coordinated_dispatch",
+      "path": "D:\\hospital_ies_v20_candidate_20261019\\tools\\coordinated_dispatch"
+    },
+    {
+      "module": "tools.autonomous_dispatch",
+      "path": "D:\\hospital_ies_v20_candidate_20261019\\tools\\autonomous_dispatch"
+    },
+    {
+      "module": "tools.autonomous_dispatch",
+      "path": "D:\\hospital_ies_v20_candidate_20261019\\tools\\autonomous_dispatch"
+    },
+    {
+      "module": "tools.autonomous_dispatch",
+      "path": "D:\\hospital_ies_v20_candidate_20261019\\tools\\autonomous_dispatch"
+    },
+    {
+      "module": "tools.autonomous_dispatch",
+      "path": "D:\\hospital_ies_v20_candidate_20261019\\tools\\autonomous_dispatch"
+    },
+    {
+      "module": "tools.autonomous_dispatch",
+      "path": "D:\\hospital_ies_v20_candidate_20261019\\tools\\autonomous_dispatch"
+    },
+    {
+      "module": "tools.autonomous_dispatch",
+      "path": "D:\\hospital_ies_v20_candidate_20261019\\tools\\autonomous_dispatch"
+    },
+    {
+      "module": "tools.autonomous_dispatch",
+      "path": "D:\\hospital_ies_v20_candidate_20261019\\tools\\autonomous_dispatch"
+    },
+    {
+      "module": "tools.autonomous_dispatch",
+      "path": "D:\\hospital_ies_v20_candidate_20261019\\tools\\autonomous_dispatch"
+    },
+    {
+      "module": "tools.autonomous_dispatch",
+      "path": "D:\\hospital_ies_v20_candidate_20261019\\tools\\autonomous_dispatch"
+    },
+    {
+      "module": "tools.autonomous_dispatch",
+      "path": "D:\\hospital_ies_v20_candidate_20261019\\tools\\autonomous_dispatch"
+    },
+    {
+      "module": "tools.autonomous_dispatch",
+      "path": "D:\\hospital_ies_v20_candidate_20261019\\tools\\autonomous_dispatch"
+    },
+    {
+      "module": "tools.autonomous_dispatch",
+      "path": "D:\\hospital_ies_v20_candidate_20261019\\tools\\autonomous_dispatch"
+    },
+    {
+      "module": "tools.autonomous_dispatch",
+      "path": "D:\\hospital_ies_v20_candidate_20261019\\tools\\autonomous_dispatch"
+    },
+    {
+      "module": "tools.dispatch_closeout",
+      "path": "D:\\hospital_ies_v20_candidate_20261019\\tools\\dispatch_closeout"
+    },
+    {
+      "module": "tools.dispatch_closeout",
+      "path": "D:\\hospital_ies_v20_candidate_20261019\\tools\\dispatch_closeout"
+    },
+    {
+      "module": "tools.dispatch_closeout",
+      "path": "D:\\hospital_ies_v20_candidate_20261019\\tools\\dispatch_closeout"
+    },
+    {
+      "module": "tools.dispatch_closeout",
+      "path": "D:\\hospital_ies_v20_candidate_20261019\\tools\\dispatch_closeout"
+    },
+    {
+      "module": "tools.dispatch_closeout",
+      "path": "D:\\hospital_ies_v20_candidate_20261019\\tools\\dispatch_closeout"
+    },
+    {
+      "module": "tools.dispatch_closeout",
+      "path": "D:\\hospital_ies_v20_candidate_20261019\\tools\\dispatch_closeout"
+    },
+    {
+      "module": "tools.dispatch_closeout",
+      "path": "D:\\hospital_ies_v20_candidate_20261019\\tools\\dispatch_closeout"
+    },
+    {
+      "module": "tools.dispatch_closeout",
+      "path": "D:\\hospital_ies_v20_candidate_20261019\\tools\\dispatch_closeout"
+    },
+    {
+      "module": "tools.dispatch_closeout",
+      "path": "D:\\hospital_ies_v20_candidate_20261019\\tools\\dispatch_closeout"
+    },
+    {
+      "module": "tools.dispatch_closeout",
+      "path": "D:\\hospital_ies_v20_candidate_20261019\\tools\\dispatch_closeout"
+    },
+    {
+      "module": "tools.dispatch_closeout",
+      "path": "D:\\hospital_ies_v20_candidate_20261019\\tools\\dispatch_closeout"
+    },
+    {
+      "module": "tools.dispatch_closeout",
+      "path": "D:\\hospital_ies_v20_candidate_20261019\\tools\\dispatch_closeout"
+    },
+    {
+      "module": "tools.dispatch_closeout",
+      "path": "D:\\hospital_ies_v20_candidate_20261019\\tools\\dispatch_closeout"
+    },
+    {
+      "module": "tools.state_dispatch",
+      "path": "D:\\hospital_ies_v20_candidate_20261019\\tools\\state_dispatch"
+    },
+    {
+      "module": "tools.state_dispatch",
+      "path": "D:\\hospital_ies_v20_candidate_20261019\\tools\\state_dispatch"
+    },
+    {
+      "module": "tools.state_dispatch",
+      "path": "D:\\hospital_ies_v20_candidate_20261019\\tools\\state_dispatch"
+    },
+    {
+      "module": "tools.state_dispatch",
+      "path": "D:\\hospital_ies_v20_candidate_20261019\\tools\\state_dispatch"
+    },
+    {
+      "module": "tools.state_dispatch",
+      "path": "D:\\hospital_ies_v20_candidate_20261019\\tools\\state_dispatch"
+    },
+    {
+      "module": "tools.state_dispatch",
+      "path": "D:\\hospital_ies_v20_candidate_20261019\\tools\\state_dispatch"
+    },
+    {
+      "module": "tools.state_dispatch",
+      "path": "D:\\hospital_ies_v20_candidate_20261019\\tools\\state_dispatch"
+    },
+    {
+      "module": "tools.state_dispatch",
+      "path": "D:\\hospital_ies_v20_candidate_20261019\\tools\\state_dispatch"
+    },
+    {
+      "module": "tools.state_dispatch",
+      "path": "D:\\hospital_ies_v20_candidate_20261019\\tools\\state_dispatch"
+    },
+    {
+      "module": "tools.state_dispatch",
+      "path": "D:\\hospital_ies_v20_candidate_20261019\\tools\\state_dispatch"
+    },
+    {
+      "module": "tools.state_dispatch",
+      "path": "D:\\hospital_ies_v20_candidate_20261019\\tools\\state_dispatch"
+    },
+    {
+      "module": "tools.state_dispatch",
+      "path": "D:\\hospital_ies_v20_candidate_20261019\\tools\\state_dispatch"
+    },
+    {
+      "module": "tools.state_dispatch",
+      "path": "D:\\hospital_ies_v20_candidate_20261019\\tools\\state_dispatch"
+    },
+    {
+      "module": "tools.integrated_learning",
+      "path": "D:\\hospital_ies_v20_candidate_20261019\\tools\\integrated_learning\\__init__.py"
+    },
+    {
+      "module": "tools.integrated_learning",
+      "path": "D:\\hospital_ies_v20_candidate_20261019\\tools\\integrated_learning"
+    },
+    {
+      "module": "tools.integrated_learning.policies",
+      "path": "D:\\hospital_ies_v20_candidate_20261019\\tools\\integrated_learning\\policies.py"
+    },
+    {
+      "module": "tools.policy_redesign",
+      "path": "D:\\hospital_ies_v20_candidate_20261019\\tools\\policy_redesign\\__init__.py"
+    },
+    {
+      "module": "tools.policy_redesign",
+      "path": "D:\\hospital_ies_v20_candidate_20261019\\tools\\policy_redesign"
+    },
+    {
+      "module": "hospital_ies",
+      "path": "D:\\hospital_ies_v20_candidate_20261019\\src\\hospital_ies\\__init__.py"
+    },
+    {
+      "module": "hospital_ies",
+      "path": "D:\\hospital_ies_v20_candidate_20261019\\src\\hospital_ies"
+    },
+    {
+      "module": "hospital_ies.model",
+      "path": "D:\\hospital_ies_v20_candidate_20261019\\src\\hospital_ies\\model.py"
+    },
+    {
+      "module": "hospital_ies.demand_extensions",
+      "path": "D:\\hospital_ies_v20_candidate_20261019\\src\\hospital_ies\\demand_extensions.py"
+    },
+    {
+      "module": "hospital_ies.idf_parameters",
+      "path": "D:\\hospital_ies_v20_candidate_20261019\\src\\hospital_ies\\idf_parameters.py"
+    },
+    {
+      "module": "hospital_ies.thermal_inertia",
+      "path": "D:\\hospital_ies_v20_candidate_20261019\\src\\hospital_ies\\thermal_inertia.py"
+    },
+    {
+      "module": "hospital_ies.pipeline",
+      "path": "D:\\hospital_ies_v20_candidate_20261019\\src\\hospital_ies\\pipeline.py"
+    },
+    {
+      "module": "hospital_ies.solver_backend",
+      "path": "D:\\hospital_ies_v20_candidate_20261019\\src\\hospital_ies\\solver_backend.py"
+    },
+    {
+      "module": "hospital_ies.resilience",
+      "path": "D:\\hospital_ies_v20_candidate_20261019\\src\\hospital_ies\\resilience.py"
+    },
+    {
+      "module": "hospital_ies.execution",
+      "path": "D:\\hospital_ies_v20_candidate_20261019\\src\\hospital_ies\\execution.py"
+    },
+    {
+      "module": "hospital_ies.state_transition",
+      "path": "D:\\hospital_ies_v20_candidate_20261019\\src\\hospital_ies\\state_transition.py"
+    },
+    {
+      "module": "hospital_ies.control_env",
+      "path": "D:\\hospital_ies_v20_candidate_20261019\\src\\hospital_ies\\control_env.py"
+    },
+    {
+      "module": "hospital_ies.dataset_manifest",
+      "path": "D:\\hospital_ies_v20_candidate_20261019\\src\\hospital_ies\\dataset_manifest.py"
+    },
+    {
+      "module": "tools.control_improvement",
+      "path": "D:\\hospital_ies_v20_candidate_20261019\\tools\\control_improvement\\__init__.py"
+    },
+    {
+      "module": "tools.control_improvement",
+      "path": "D:\\hospital_ies_v20_candidate_20261019\\tools\\control_improvement"
+    },
+    {
+      "module": "hospital_ies.data_contract",
+      "path": "D:\\hospital_ies_v20_candidate_20261019\\src\\hospital_ies\\data_contract.py"
+    },
+    {
+      "module": "tools.integrated_learning.snapshot",
+      "path": "D:\\hospital_ies_v20_candidate_20261019\\tools\\integrated_learning\\snapshot.py"
+    },
+    {
+      "module": "tools.integrated_learning.branches",
+      "path": "D:\\hospital_ies_v20_candidate_20261019\\tools\\integrated_learning\\branches.py"
+    },
+    {
+      "module": "hospital_ies.training_schema",
+      "path": "D:\\hospital_ies_v20_candidate_20261019\\src\\hospital_ies\\training_schema.py"
+    },
+    {
+      "module": "hospital_ies.method_registry",
+      "path": "D:\\hospital_ies_v20_candidate_20261019\\src\\hospital_ies\\method_registry.py"
+    },
+    {
+      "module": "hospital_ies.dataset_export",
+      "path": "D:\\hospital_ies_v20_candidate_20261019\\src\\hospital_ies\\dataset_export.py"
+    },
+    {
+      "module": "tools.integrated_learning.episode",
+      "path": "D:\\hospital_ies_v20_candidate_20261019\\tools\\integrated_learning\\episode.py"
+    },
+    {
+      "module": "tools.p2b_learning",
+      "path": "D:\\hospital_ies_v20_candidate_20261019\\tools\\p2b_learning\\__init__.py"
+    },
+    {
+      "module": "tools.p2b_learning",
+      "path": "D:\\hospital_ies_v20_candidate_20261019\\tools\\p2b_learning"
+    },
+    {
+      "module": "tools.p2b_methods.basis",
+      "path": "D:\\hospital_ies_v20_candidate_20261019\\tools\\p2b_methods\\basis.py"
+    },
+    {
+      "module": "tools.p2b_methods.dmorph",
+      "path": "D:\\hospital_ies_v20_candidate_20261019\\tools\\p2b_methods\\dmorph.py"
+    },
+    {
+      "module": "tools.p2b_methods.models",
+      "path": "D:\\hospital_ies_v20_candidate_20261019\\tools\\p2b_methods\\models.py"
+    },
+    {
+      "module": "tools.p2b_methods",
+      "path": "D:\\hospital_ies_v20_candidate_20261019\\tools\\p2b_methods\\__init__.py"
+    },
+    {
+      "module": "tools.p2b_methods",
+      "path": "D:\\hospital_ies_v20_candidate_20261019\\tools\\p2b_methods"
+    },
+    {
+      "module": "tools.p2b_learning.provenance",
+      "path": "D:\\hospital_ies_v20_candidate_20261019\\tools\\p2b_learning\\provenance.py"
+    },
+    {
+      "module": "tools.p2b_learning.regression",
+      "path": "D:\\hospital_ies_v20_candidate_20261019\\tools\\p2b_learning\\regression.py"
+    },
+    {
+      "module": "tools.p2b_learning.risk",
+      "path": "D:\\hospital_ies_v20_candidate_20261019\\tools\\p2b_learning\\risk.py"
+    },
+    {
+      "module": "tools.integrated_learning.bc",
+      "path": "D:\\hospital_ies_v20_candidate_20261019\\tools\\integrated_learning\\bc.py"
+    },
+    {
+      "module": "tools.integrated_learning.models",
+      "path": "D:\\hospital_ies_v20_candidate_20261019\\tools\\integrated_learning\\models.py"
+    },
+    {
+      "module": "tools.integrated_learning.truth",
+      "path": "D:\\hospital_ies_v20_candidate_20261019\\tools\\integrated_learning\\truth.py"
+    },
+    {
+      "module": "tools.control_improvement.candidates",
+      "path": "D:\\hospital_ies_v20_candidate_20261019\\tools\\control_improvement\\candidates.py"
+    },
+    {
+      "module": "tools.control_improvement.ranking",
+      "path": "D:\\hospital_ies_v20_candidate_20261019\\tools\\control_improvement\\ranking.py"
+    },
+    {
+      "module": "tools.control_improvement.runtime",
+      "path": "D:\\hospital_ies_v20_candidate_20261019\\tools\\control_improvement\\runtime.py"
+    },
+    {
+      "module": "tools.control_improvement.episode",
+      "path": "D:\\hospital_ies_v20_candidate_20261019\\tools\\control_improvement\\episode.py"
+    },
+    {
+      "module": "tools.control_improvement.models",
+      "path": "D:\\hospital_ies_v20_candidate_20261019\\tools\\control_improvement\\models.py"
+    },
+    {
+      "module": "tools.control_improvement.branches",
+      "path": "D:\\hospital_ies_v20_candidate_20261019\\tools\\control_improvement\\branches.py"
+    },
+    {
+      "module": "tools.policy_redesign.action_effect",
+      "path": "D:\\hospital_ies_v20_candidate_20261019\\tools\\policy_redesign\\action_effect.py"
+    },
+    {
+      "module": "tools.policy_redesign.policy",
+      "path": "D:\\hospital_ies_v20_candidate_20261019\\tools\\policy_redesign\\policy.py"
+    },
+    {
+      "module": "tools.reliability_first",
+      "path": "D:\\hospital_ies_v20_candidate_20261019\\tools\\reliability_first"
+    },
+    {
+      "module": "tools.reliability_first",
+      "path": "D:\\hospital_ies_v20_candidate_20261019\\tools\\reliability_first"
+    },
+    {
+      "module": "tools.reliability_first",
+      "path": "D:\\hospital_ies_v20_candidate_20261019\\tools\\reliability_first"
+    },
+    {
+      "module": "tools.reliability_first",
+      "path": "D:\\hospital_ies_v20_candidate_20261019\\tools\\reliability_first"
+    },
+    {
+      "module": "tools.reliability_first",
+      "path": "D:\\hospital_ies_v20_candidate_20261019\\tools\\reliability_first"
+    },
+    {
+      "module": "tools.reliability_first",
+      "path": "D:\\hospital_ies_v20_candidate_20261019\\tools\\reliability_first"
+    },
+    {
+      "module": "tools.reliability_first",
+      "path": "D:\\hospital_ies_v20_candidate_20261019\\tools\\reliability_first"
+    },
+    {
+      "module": "tools.reliability_first",
+      "path": "D:\\hospital_ies_v20_candidate_20261019\\tools\\reliability_first"
+    },
+    {
+      "module": "tools.reliability_first",
+      "path": "D:\\hospital_ies_v20_candidate_20261019\\tools\\reliability_first"
+    },
+    {
+      "module": "tools.reliability_first",
+      "path": "D:\\hospital_ies_v20_candidate_20261019\\tools\\reliability_first"
+    },
+    {
+      "module": "tools.reliability_first",
+      "path": "D:\\hospital_ies_v20_candidate_20261019\\tools\\reliability_first"
+    },
+    {
+      "module": "tools.reliability_first",
+      "path": "D:\\hospital_ies_v20_candidate_20261019\\tools\\reliability_first"
+    },
+    {
+      "module": "tools.reliability_first",
+      "path": "D:\\hospital_ies_v20_candidate_20261019\\tools\\reliability_first"
+    },
+    {
+      "module": "tools.p2b_experiment",
+      "path": "D:\\hospital_ies_v20_candidate_20261019\\tools\\p2b_experiment"
+    },
+    {
+      "module": "tools.p2b_experiment",
+      "path": "D:\\hospital_ies_v20_candidate_20261019\\tools\\p2b_experiment"
+    },
+    {
+      "module": "tools.p2b_experiment",
+      "path": "D:\\hospital_ies_v20_candidate_20261019\\tools\\p2b_experiment"
+    },
+    {
+      "module": "tools.p2b_experiment",
+      "path": "D:\\hospital_ies_v20_candidate_20261019\\tools\\p2b_experiment"
+    },
+    {
+      "module": "tools.p2b_experiment",
+      "path": "D:\\hospital_ies_v20_candidate_20261019\\tools\\p2b_experiment"
+    },
+    {
+      "module": "tools.p2b_experiment",
+      "path": "D:\\hospital_ies_v20_candidate_20261019\\tools\\p2b_experiment"
+    },
+    {
+      "module": "tools.p2b_experiment",
+      "path": "D:\\hospital_ies_v20_candidate_20261019\\tools\\p2b_experiment"
+    },
+    {
+      "module": "tools.p2b_experiment",
+      "path": "D:\\hospital_ies_v20_candidate_20261019\\tools\\p2b_experiment"
+    },
+    {
+      "module": "tools.p2b_experiment",
+      "path": "D:\\hospital_ies_v20_candidate_20261019\\tools\\p2b_experiment"
+    },
+    {
+      "module": "tools.p2b_experiment",
+      "path": "D:\\hospital_ies_v20_candidate_20261019\\tools\\p2b_experiment"
+    },
+    {
+      "module": "tools.p2b_experiment",
+      "path": "D:\\hospital_ies_v20_candidate_20261019\\tools\\p2b_experiment"
+    },
+    {
+      "module": "tools.p2b_experiment",
+      "path": "D:\\hospital_ies_v20_candidate_20261019\\tools\\p2b_experiment"
+    },
+    {
+      "module": "tools.p2b_experiment",
+      "path": "D:\\hospital_ies_v20_candidate_20261019\\tools\\p2b_experiment"
+    },
+    {
+      "module": "tools.p2b_experiment.runner",
+      "path": "D:\\hospital_ies_v20_candidate_20261019\\tools\\p2b_experiment\\runner.py"
+    },
+    {
+      "module": "tools.integrated_experiment",
+      "path": "D:\\hospital_ies_v20_candidate_20261019\\tools\\integrated_experiment\\__init__.py"
+    },
+    {
+      "module": "tools.integrated_experiment",
+      "path": "D:\\hospital_ies_v20_candidate_20261019\\tools\\integrated_experiment"
+    },
+    {
+      "module": "tools.integrated_experiment.dependency",
+      "path": "D:\\hospital_ies_v20_candidate_20261019\\tools\\integrated_experiment\\dependency.py"
+    },
+    {
+      "module": "tools.p2b_experiment.design",
+      "path": "D:\\hospital_ies_v20_candidate_20261019\\tools\\p2b_experiment\\design.py"
+    },
+    {
+      "module": "tools.integrated_experiment.data_design",
+      "path": "D:\\hospital_ies_v20_candidate_20261019\\tools\\integrated_experiment\\data_design.py"
+    },
+    {
+      "module": "tools.control_improvement.data_design",
+      "path": "D:\\hospital_ies_v20_candidate_20261019\\tools\\control_improvement\\data_design.py"
+    },
+    {
+      "module": "tools.control_improvement.data_runner",
+      "path": "D:\\hospital_ies_v20_candidate_20261019\\tools\\control_improvement\\data_runner.py"
+    },
+    {
+      "module": "tools.reliability_first.policy",
+      "path": "D:\\hospital_ies_v20_candidate_20261019\\tools\\reliability_first\\policy.py"
+    },
+    {
+      "module": "tools.reliability_first.closed_loop",
+      "path": "D:\\hospital_ies_v20_candidate_20261019\\tools\\reliability_first\\closed_loop.py"
+    },
+    {
+      "module": "tools.reliability_first.selection",
+      "path": "D:\\hospital_ies_v20_candidate_20261019\\tools\\reliability_first\\selection.py"
+    },
+    {
+      "module": "tools.policy_redesign.closed_loop",
+      "path": "D:\\hospital_ies_v20_candidate_20261019\\tools\\policy_redesign\\closed_loop.py"
+    },
+    {
+      "module": "tools.policy_search",
+      "path": "D:\\hospital_ies_v20_candidate_20261019\\tools\\policy_search\\__init__.py"
+    },
+    {
+      "module": "tools.policy_search",
+      "path": "D:\\hospital_ies_v20_candidate_20261019\\tools\\policy_search"
+    },
+    {
+      "module": "tools.policy_search.preference",
+      "path": "D:\\hospital_ies_v20_candidate_20261019\\tools\\policy_search\\preference.py"
+    },
+    {
+      "module": "tools.policy_search.score_recheck",
+      "path": "D:\\hospital_ies_v20_candidate_20261019\\tools\\policy_search\\score_recheck.py"
+    },
+    {
+      "module": "tools.policy_redesign.audit",
+      "path": "D:\\hospital_ies_v20_candidate_20261019\\tools\\policy_redesign\\audit.py"
+    },
+    {
+      "module": "tools.policy_redesign.regime_policy",
+      "path": "D:\\hospital_ies_v20_candidate_20261019\\tools\\policy_redesign\\regime_policy.py"
+    },
+    {
+      "module": "tools.policy_redesign.regime_closed_loop",
+      "path": "D:\\hospital_ies_v20_candidate_20261019\\tools\\policy_redesign\\regime_closed_loop.py"
+    },
+    {
+      "module": "tools.state_dispatch.closed_loop",
+      "path": "D:\\hospital_ies_v20_candidate_20261019\\tools\\state_dispatch\\closed_loop.py"
+    },
+    {
+      "module": "tools.state_dispatch.closed_loop_v2",
+      "path": "D:\\hospital_ies_v20_candidate_20261019\\tools\\state_dispatch\\closed_loop_v2.py"
+    },
+    {
+      "module": "tools.dispatch_closeout.closed_loop",
+      "path": "D:\\hospital_ies_v20_candidate_20261019\\tools\\dispatch_closeout\\closed_loop.py"
+    },
+    {
+      "module": "tools.autonomous_dispatch.contracts",
+      "path": "D:\\hospital_ies_v20_candidate_20261019\\tools\\autonomous_dispatch\\contracts.py"
+    },
+    {
+      "module": "tools.autonomous_dispatch.environment",
+      "path": "D:\\hospital_ies_v20_candidate_20261019\\tools\\autonomous_dispatch\\environment.py"
+    },
+    {
+      "module": "tools.autonomous_dispatch.episode",
+      "path": "D:\\hospital_ies_v20_candidate_20261019\\tools\\autonomous_dispatch\\episode.py"
+    },
+    {
+      "module": "tools.autonomous_dispatch.closed_loop",
+      "path": "D:\\hospital_ies_v20_candidate_20261019\\tools\\autonomous_dispatch\\closed_loop.py"
+    },
+    {
+      "module": "tools.autonomous_dispatch.connections",
+      "path": "D:\\hospital_ies_v20_candidate_20261019\\tools\\autonomous_dispatch\\connections.py"
+    },
+    {
+      "module": "tools.autonomous_dispatch.closed_loop_v2",
+      "path": "D:\\hospital_ies_v20_candidate_20261019\\tools\\autonomous_dispatch\\closed_loop_v2.py"
+    },
+    {
+      "module": "hospital_ies.solver_diagnostics",
+      "path": "D:\\hospital_ies_v20_candidate_20261019\\src\\hospital_ies\\solver_diagnostics.py"
+    },
+    {
+      "module": "tools.autonomous_dispatch.planner",
+      "path": "D:\\hospital_ies_v20_candidate_20261019\\tools\\autonomous_dispatch\\planner.py"
+    },
+    {
+      "module": "tools.autonomous_dispatch.planner_connections",
+      "path": "D:\\hospital_ies_v20_candidate_20261019\\tools\\autonomous_dispatch\\planner_connections.py"
+    },
+    {
+      "module": "tools.autonomous_dispatch.planner_margin",
+      "path": "D:\\hospital_ies_v20_candidate_20261019\\tools\\autonomous_dispatch\\planner_margin.py"
+    },
+    {
+      "module": "tools.autonomous_dispatch.margin",
+      "path": "D:\\hospital_ies_v20_candidate_20261019\\tools\\autonomous_dispatch\\margin.py"
+    },
+    {
+      "module": "tools.autonomous_dispatch.closed_loop_v3",
+      "path": "D:\\hospital_ies_v20_candidate_20261019\\tools\\autonomous_dispatch\\closed_loop_v3.py"
+    },
+    {
+      "module": "tools.autonomous_dispatch.numerics",
+      "path": "D:\\hospital_ies_v20_candidate_20261019\\tools\\autonomous_dispatch\\numerics.py"
+    },
+    {
+      "module": "tools.autonomous_dispatch.numerical_route",
+      "path": "D:\\hospital_ies_v20_candidate_20261019\\tools\\autonomous_dispatch\\numerical_route.py"
+    },
+    {
+      "module": "tools.autonomous_dispatch.closed_loop_v4",
+      "path": "D:\\hospital_ies_v20_candidate_20261019\\tools\\autonomous_dispatch\\closed_loop_v4.py"
+    },
+    {
+      "module": "tools.autonomous_dispatch.planner_standby",
+      "path": "D:\\hospital_ies_v20_candidate_20261019\\tools\\autonomous_dispatch\\planner_standby.py"
+    },
+    {
+      "module": "tools.autonomous_dispatch.standby",
+      "path": "D:\\hospital_ies_v20_candidate_20261019\\tools\\autonomous_dispatch\\standby.py"
+    },
+    {
+      "module": "tools.autonomous_dispatch.closed_loop_v5",
+      "path": "D:\\hospital_ies_v20_candidate_20261019\\tools\\autonomous_dispatch\\closed_loop_v5.py"
+    },
+    {
+      "module": "tools.coordinated_dispatch.planner",
+      "path": "D:\\hospital_ies_v20_candidate_20261019\\tools\\coordinated_dispatch\\planner.py"
+    },
+    {
+      "module": "tools.coordinated_dispatch.interface",
+      "path": "D:\\hospital_ies_v20_candidate_20261019\\tools\\coordinated_dispatch\\interface.py"
+    },
+    {
+      "module": "tools.coordinated_dispatch.policy",
+      "path": "D:\\hospital_ies_v20_candidate_20261019\\tools\\coordinated_dispatch\\policy.py"
+    },
+    {
+      "module": "tools.coordinated_dispatch.closed_loop",
+      "path": "D:\\hospital_ies_v20_candidate_20261019\\tools\\coordinated_dispatch\\closed_loop.py"
+    },
+    {
+      "module": "tools.coordinated_dispatch.policy_adaptive",
+      "path": "D:\\hospital_ies_v20_candidate_20261019\\tools\\coordinated_dispatch\\policy_adaptive.py"
+    },
+    {
+      "module": "tools.coordinated_dispatch.closed_loop_adaptive",
+      "path": "D:\\hospital_ies_v20_candidate_20261019\\tools\\coordinated_dispatch\\closed_loop_adaptive.py"
+    },
+    {
+      "module": "tools.executed_service.history",
+      "path": "D:\\hospital_ies_v20_candidate_20261019\\tools\\executed_service\\history.py"
+    },
+    {
+      "module": "tools.executed_service.policy",
+      "path": "D:\\hospital_ies_v20_candidate_20261019\\tools\\executed_service\\policy.py"
+    },
+    {
+      "module": "tools.executed_service.closed_loop",
+      "path": "D:\\hospital_ies_v20_candidate_20261019\\tools\\executed_service\\closed_loop.py"
+    },
+    {
+      "module": "tools.engineering_model.execution",
+      "path": "D:\\hospital_ies_v20_candidate_20261019\\tools\\engineering_model\\execution.py"
+    },
+    {
+      "module": "tools.engineering_model.planner",
+      "path": "D:\\hospital_ies_v20_candidate_20261019\\tools\\engineering_model\\planner.py"
+    },
+    {
+      "module": "tools.engineering_model.policy",
+      "path": "D:\\hospital_ies_v20_candidate_20261019\\tools\\engineering_model\\policy.py"
+    },
+    {
+      "module": "tools.engineering_model.environment",
+      "path": "D:\\hospital_ies_v20_candidate_20261019\\tools\\engineering_model\\environment.py"
+    },
+    {
+      "module": "tools.autonomous_dispatch.data_design",
+      "path": "D:\\hospital_ies_v20_candidate_20261019\\tools\\autonomous_dispatch\\data_design.py"
+    },
+    {
+      "module": "tools.coordinated_dispatch.data_design",
+      "path": "D:\\hospital_ies_v20_candidate_20261019\\tools\\coordinated_dispatch\\data_design.py"
+    },
+    {
+      "module": "tools.engineering_model.data_design",
+      "path": "D:\\hospital_ies_v20_candidate_20261019\\tools\\engineering_model\\data_design.py"
+    },
+    {
+      "module": "tools.executed_service.timeline",
+      "path": "D:\\hospital_ies_v20_candidate_20261019\\tools\\executed_service\\timeline.py"
+    },
+    {
+      "module": "tools.coordinated_dispatch.recovery",
+      "path": "D:\\hospital_ies_v20_candidate_20261019\\tools\\coordinated_dispatch\\recovery.py"
+    },
+    {
+      "module": "tools.engineering_model.analysis",
+      "path": "D:\\hospital_ies_v20_candidate_20261019\\tools\\engineering_model\\analysis.py"
+    },
+    {
+      "module": "tools.engineering_model.runner",
+      "path": "D:\\hospital_ies_v20_candidate_20261019\\tools\\engineering_model\\runner.py"
+    },
+    {
+      "module": "tools.operating_response.diesel",
+      "path": "D:\\hospital_ies_v20_candidate_20261019\\tools\\operating_response\\diesel.py"
+    },
+    {
+      "module": "tools.operating_response.physical_balance",
+      "path": "D:\\hospital_ies_v20_candidate_20261019\\tools\\operating_response\\physical_balance.py"
+    },
+    {
+      "module": "tools.operating_response.thermal_readiness",
+      "path": "D:\\hospital_ies_v20_candidate_20261019\\tools\\operating_response\\thermal_readiness.py"
+    },
+    {
+      "module": "tools.operating_response.execution",
+      "path": "D:\\hospital_ies_v20_candidate_20261019\\tools\\operating_response\\execution.py"
+    },
+    {
+      "module": "tools.operating_response.readiness",
+      "path": "D:\\hospital_ies_v20_candidate_20261019\\tools\\operating_response\\readiness.py"
+    },
+    {
+      "module": "tools.operating_response.policy",
+      "path": "D:\\hospital_ies_v20_candidate_20261019\\tools\\operating_response\\policy.py"
+    },
+    {
+      "module": "tools.operating_response.planner",
+      "path": "D:\\hospital_ies_v20_candidate_20261019\\tools\\operating_response\\planner.py"
+    },
+    {
+      "module": "tools.operating_response.environment",
+      "path": "D:\\hospital_ies_v20_candidate_20261019\\tools\\operating_response\\environment.py"
+    },
+    {
+      "module": "tools.operating_response.data_design",
+      "path": "D:\\hospital_ies_v20_candidate_20261019\\tools\\operating_response\\data_design.py"
+    },
+    {
+      "module": "tools.operating_response.analysis",
+      "path": "D:\\hospital_ies_v20_candidate_20261019\\tools\\operating_response\\analysis.py"
+    },
+    {
+      "module": "tools.operating_response.runner",
+      "path": "D:\\hospital_ies_v20_candidate_20261019\\tools\\operating_response\\runner.py"
+    },
+    {
+      "module": "tools.state_coordinated",
+      "path": "D:\\hospital_ies_v20_candidate_20261019\\tools\\state_coordinated\\__init__.py"
+    },
+    {
+      "module": "tools.state_coordinated",
+      "path": "D:\\hospital_ies_v20_candidate_20261019\\tools\\state_coordinated"
+    },
+    {
+      "module": "tools.essential_fixes",
+      "path": "D:\\hospital_ies_v20_candidate_20261019\\tools\\essential_fixes\\__init__.py"
+    },
+    {
+      "module": "tools.essential_fixes",
+      "path": "D:\\hospital_ies_v20_candidate_20261019\\tools\\essential_fixes"
+    },
+    {
+      "module": "tools.essential_fixes.data_design",
+      "path": "D:\\hospital_ies_v20_candidate_20261019\\tools\\essential_fixes\\data_design.py"
+    },
+    {
+      "module": "tools.state_coordinated.data_design",
+      "path": "D:\\hospital_ies_v20_candidate_20261019\\tools\\state_coordinated\\data_design.py"
+    },
+    {
+      "module": "tools.model_closeout",
+      "path": "D:\\hospital_ies_v20_candidate_20261019\\tools\\model_closeout\\__init__.py"
+    },
+    {
+      "module": "tools.model_closeout",
+      "path": "D:\\hospital_ies_v20_candidate_20261019\\tools\\model_closeout"
+    },
+    {
+      "module": "tools.essential_fixes.diesel",
+      "path": "D:\\hospital_ies_v20_candidate_20261019\\tools\\essential_fixes\\diesel.py"
+    },
+    {
+      "module": "tools.essential_fixes.execution",
+      "path": "D:\\hospital_ies_v20_candidate_20261019\\tools\\essential_fixes\\execution.py"
+    },
+    {
+      "module": "tools.essential_fixes.environment",
+      "path": "D:\\hospital_ies_v20_candidate_20261019\\tools\\essential_fixes\\environment.py"
+    },
+    {
+      "module": "tools.state_coordinated.readiness",
+      "path": "D:\\hospital_ies_v20_candidate_20261019\\tools\\state_coordinated\\readiness.py"
+    },
+    {
+      "module": "tools.state_coordinated.planner",
+      "path": "D:\\hospital_ies_v20_candidate_20261019\\tools\\state_coordinated\\planner.py"
+    },
+    {
+      "module": "tools.state_coordinated.policy",
+      "path": "D:\\hospital_ies_v20_candidate_20261019\\tools\\state_coordinated\\policy.py"
+    },
+    {
+      "module": "tools.state_coordinated.environment",
+      "path": "D:\\hospital_ies_v20_candidate_20261019\\tools\\state_coordinated\\environment.py"
+    },
+    {
+      "module": "tools.execution_recovery",
+      "path": "D:\\hospital_ies_v20_candidate_20261019\\tools\\execution_recovery\\__init__.py"
+    },
+    {
+      "module": "tools.execution_recovery",
+      "path": "D:\\hospital_ies_v20_candidate_20261019\\tools\\execution_recovery"
+    },
+    {
+      "module": "tools.execution_recovery.execution",
+      "path": "D:\\hospital_ies_v20_candidate_20261019\\tools\\execution_recovery\\execution.py"
+    },
+    {
+      "module": "tools.model_closeout.execution",
+      "path": "D:\\hospital_ies_v20_candidate_20261019\\tools\\model_closeout\\execution.py"
+    },
+    {
+      "module": "tools.model_closeout.environment",
+      "path": "D:\\hospital_ies_v20_candidate_20261019\\tools\\model_closeout\\environment.py"
+    },
+    {
+      "module": "tools.load_accounting.execution",
+      "path": "D:\\hospital_ies_v20_candidate_20261019\\tools\\load_accounting\\execution.py"
+    },
+    {
+      "module": "tools.load_accounting.data_design",
+      "path": "D:\\hospital_ies_v20_candidate_20261019\\tools\\load_accounting\\data_design.py"
+    },
+    {
+      "module": "tools.load_accounting.runner",
+      "path": "D:\\hospital_ies_v20_candidate_20261019\\tools\\load_accounting\\runner.py"
+    },
+    {
+      "module": "tools.load_accounting.gate",
+      "path": "D:\\hospital_ies_v20_candidate_20261019\\tools\\load_accounting\\gate.py"
+    },
+    {
+      "module": "tools.execution_recovery.readiness",
+      "path": "D:\\hospital_ies_v20_candidate_20261019\\tools\\execution_recovery\\readiness.py"
+    },
+    {
+      "module": "tools.model_closeout.readiness",
+      "path": "D:\\hospital_ies_v20_candidate_20261019\\tools\\model_closeout\\readiness.py"
+    },
+    {
+      "module": "tools.model_closeout.policy",
+      "path": "D:\\hospital_ies_v20_candidate_20261019\\tools\\model_closeout\\policy.py"
+    }
+  ]
+}

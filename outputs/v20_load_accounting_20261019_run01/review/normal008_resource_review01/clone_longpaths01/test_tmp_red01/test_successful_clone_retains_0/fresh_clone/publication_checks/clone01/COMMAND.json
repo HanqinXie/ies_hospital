@@ -1,0 +1,29 @@
+{
+  "command": [
+    "git",
+    "clone",
+    "--branch",
+    "main",
+    "--single-branch",
+    "https://github.com/HanqinXie/ies_hospital.git",
+    "D:\\hospital_ies_v20_20261019\\outputs\\v20_load_accounting_20261019_run01\\review\\normal008_resource_review01\\clone_longpaths01\\test_tmp_red01\\test_successful_clone_retains_0\\fresh_clone"
+  ],
+  "cwd": "D:\\hospital_ies_v20_20261019\\outputs\\v20_load_accounting_20261019_run01\\review\\normal008_resource_review01\\clone_longpaths01\\test_tmp_red01\\test_successful_clone_retains_0",
+  "started_utc": "2026-10-19T11:56:31.649548+00:00",
+  "finished_utc": "2026-10-19T11:56:31.649548+00:00",
+  "exit_code": 0,
+  "starting_destination_existed": false,
+  "clone_destination": "D:\\hospital_ies_v20_20261019\\outputs\\v20_load_accounting_20261019_run01\\review\\normal008_resource_review01\\clone_longpaths01\\test_tmp_red01\\test_successful_clone_retains_0\\fresh_clone",
+  "source_launcher_root": "D:\\hospital_ies_v20_20261019\\outputs\\v20_load_accounting_20261019_run01\\review\\normal008_resource_review01\\clone_longpaths01\\test_tmp_red01\\test_successful_clone_retains_0\\launcher",
+  "source_launcher_sha256": "82c36c7271589a03ba5b65af9a36a5c37d4f0b2bcdfa1e38bd3dcdb9c0a9e964",
+  "source_launcher_commit": null,
+  "command_log_sha256": "87e8f2234347714be1ee891fec339858769f5b5b55405032f0c7779b0b4fea6b",
+  "git_commit": null,
+  "origin_url": null,
+  "branch": null,
+  "helper_validation_status": "failed_unknown",
+  "validation_error": {
+    "type": "CalledProcessError",
+    "message": "Command '['git', 'rev-parse', 'HEAD']' returned non-zero exit status 128."
+  }
+}

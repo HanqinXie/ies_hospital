@@ -1,0 +1,94 @@
+{
+  "schema": "hospital_ies.v20.normal008_deadline_readonly_review.v1",
+  "reviewed_utc": "2026-10-19T11:31:24.082438+00:00",
+  "status": "source_review_no_blocking_or_important",
+  "scope": "Read-only source/diff/test-log review; no main/check/run/qualification/model invoked",
+  "evidence": [
+    {
+      "path": "publication\\continue_normal008.py",
+      "bytes": 34713,
+      "sha256": "cce231bf254b00a0af0021f04273ad54134005340f5b9706ce4578cec4823ca7"
+    },
+    {
+      "path": "publication\\test_continue_normal008.py",
+      "bytes": 14355,
+      "sha256": "3d0cc0bf93f2ceb34f1c84f1e8106b4d96fed557384c8f09c6c6c2742b6d595b"
+    },
+    {
+      "path": "outputs\\v20_load_accounting_20261019_run01\\review\\normal008_continuation01\\L72_RUN01\\IMPLEMENTATION_AT_RUN01.py",
+      "bytes": 33079,
+      "sha256": "68701e844ffca923e91f82fff52116d4b18a4357f1239d5c4a416135c8ed95a3"
+    },
+    {
+      "path": "outputs\\v20_load_accounting_20261019_run01\\review\\normal008_continuation01\\cadence_red01.command.json",
+      "bytes": 470,
+      "sha256": "0e4f54fe9f03ee446cb9f54fe8b602f33596b3676b2fb1875c163e9360b39349"
+    },
+    {
+      "path": "outputs\\v20_load_accounting_20261019_run01\\review\\normal008_continuation01\\cadence_red01.log",
+      "bytes": 7496,
+      "sha256": "041dd1e6a5f7efa179840c019dbadd1eaa84fb4cc06697ee67febfb373a2fe62"
+    },
+    {
+      "path": "outputs\\v20_load_accounting_20261019_run01\\review\\normal008_continuation01\\cadence_green01.command.json",
+      "bytes": 472,
+      "sha256": "0ae33ea2cb3e52063d18640a464aad8dbedbdd7970975a9bb82482f47175f3dd"
+    },
+    {
+      "path": "outputs\\v20_load_accounting_20261019_run01\\review\\normal008_continuation01\\cadence_green01.log",
+      "bytes": 5201,
+      "sha256": "e6c7b5d87f16b63b7782bef3e6b5a584261c7a419041de918c932c88d23913d5"
+    },
+    {
+      "path": "outputs\\v20_load_accounting_20261019_run01\\review\\normal008_continuation01\\cadence_green02.command.json",
+      "bytes": 472,
+      "sha256": "0bb0d23cddd1dfe06a77c78658e528bb9958a6d528702a4d17d301bae79365a9"
+    },
+    {
+      "path": "outputs\\v20_load_accounting_20261019_run01\\review\\normal008_continuation01\\cadence_green02.log",
+      "bytes": 101,
+      "sha256": "351668e61e882e79d3d951c962033dbc0a6134d6df9ecd022ccf9d619f258f2f"
+    },
+    {
+      "path": "outputs\\v20_load_accounting_20261019_run01\\review\\normal008_continuation01\\L72_RUN01\\IDLE_STOP_OUTCOME.json",
+      "bytes": 1611,
+      "sha256": "e54d4eafd3cb1c63011fa14c768097f7c822cc88f312eea6a056201d71637878"
+    },
+    {
+      "path": "docs\\v20\\RESOURCE_CONTINUATION_PLAN.md",
+      "bytes": 4456,
+      "sha256": "701d6325924202b5aef60bcc6c6ec224956ec86f24a6efcb760b2c7c4e8bb9bd"
+    },
+    {
+      "path": "outputs\\v20_load_accounting_20261019_run01\\MODEL_FREEZE_ACCOUNTING01.json",
+      "bytes": 205730,
+      "sha256": "48baed7a128d2f921d36323330ae4d22e2e6dc83214e8a505b6ba89273439b7b"
+    }
+  ],
+  "findings": [],
+  "confirmed": [
+    "deadline_minus_work used in admission and scientific sampling loops",
+    "At least last16 points may extend the observation window; >=30s, >=16 points and <=3s maximum gap preserved",
+    "All observations and final counter recheck retain original1.1 exactsame72 peaks plus2GiB minimum/prefer3GiB",
+    "Check-only counter probe uses same loop and final guard with no scientific launch",
+    "Unique008 and source/test/runtime pins, old125 chain, serial lease, unconditional drain, no forced child termination/retry unchanged",
+    "Actual37tests passed, producer exit0; RED and intermediate failed GREEN probe logs preserved"
+  ],
+  "pending": [
+    "Root actual L72_PLAN02 >=30sec counter probe and its monotonic samples/minimum counters/parent footprint/0science proof",
+    "Any008 physical attempt and strict406 remain unstarted/unconfirmed by this review"
+  ],
+  "conditional_risks": [
+    "Empirical historical peaks are not upper bounds; admission does not guarantee no OS memory pressure",
+    "Controller records runtime pressure without forced termination; one eventual scientific child must drain"
+  ],
+  "writes_limited_to": "D:\\hospital_ies_v20_20261019\\outputs\\v20_load_accounting_20261019_run01\\review\\normal008_resource_review01",
+  "review_artifact_attempts": [
+    {
+      "action": "initial receipt generation",
+      "exit_code": 1,
+      "reason": "Incorrect freeze path under design; no output created",
+      "correction": "located existing RUN/MODEL_FREEZE_ACCOUNTING01.json with rg --files --no-ignore"
+    }
+  ]
+}

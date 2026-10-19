@@ -1,0 +1,52 @@
+.......................F                                                 [100%]
+================================== FAILURES ===================================
+_ test_new_pid_owner_is_saved_before_import_and_original_wait_exit_is_not_overwritten _
+
+tmp_path = WindowsPath('D:/hospital_ies_v20_20261019/outputs/v20_load_accounting_20261019_run01/temp/normal_collect02_owner_red01/pytest-of-HanqinXie/pytest-0/test_new_pid_owner_is_saved_be0')
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x000001F4A2688580>
+
+    def test_new_pid_owner_is_saved_before_import_and_original_wait_exit_is_not_overwritten(tmp_path,monkeypatch):
+        import os
+        m=module();out=tmp_path/m.RUN_REL/'review/normal_window_analysis02';out.mkdir(parents=True)
+        old=out/'READONLY_OWNER.json';old.write_text('{"pid":82524}',encoding='utf-8')
+        monkeypatch.setattr(m,'readiness',lambda root:dict(ready=True,original_waiter_exit_code=15))
+        def load(path):
+            owner=m.read(out/'ONESHOT_OWNER01.json')
+            assert owner['pid']==os.getpid() and owner['command']==sys.argv
+            assert owner['original_waiter_exit_code']==15 and owner['helper_sha256']==m.HELPER_SHA
+            raise RuntimeError('synthetic loader stop; no prepared helper imported')
+        monkeypatch.setattr(m,'_load_helper',load)
+>       with pytest.raises(RuntimeError,match='synthetic loader stop'):m.collect_once(tmp_path)
+
+outputs\v20_load_accounting_20261019_run01\review\normal_window_analysis02\test_collect_normal_once02.py:118: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+outputs\v20_load_accounting_20261019_run01\review\normal_window_analysis02\collect_normal_once02.py:188: in collect_once
+    helper = _load_helper(out / 'normal_window_analysis.py')
+outputs\v20_load_accounting_20261019_run01\review\normal_window_analysis02\test_collect_normal_once02.py:113: in load
+    owner=m.read(out/'ONESHOT_OWNER01.json')
+outputs\v20_load_accounting_20261019_run01\review\normal_window_analysis02\collect_normal_once02.py:34: in read
+    return json.loads(Path(path).read_text(encoding='utf-8-sig'))
+C:\Users\HanqinXie\AppData\Local\Programs\Python\Python310\lib\pathlib.py:1134: in read_text
+    with self.open(mode='r', encoding=encoding, errors=errors) as f:
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = WindowsPath('D:/hospital_ies_v20_20261019/outputs/v20_load_accounting_20261019_run01/temp/normal_collect02_owner_red01...id_owner_is_saved_be0/outputs/v20_load_accounting_20261019_run01/review/normal_window_analysis02/ONESHOT_OWNER01.json')
+mode = 'r', buffering = -1, encoding = 'utf-8-sig', errors = None
+newline = None
+
+    def open(self, mode='r', buffering=-1, encoding=None,
+             errors=None, newline=None):
+        """
+        Open the file pointed by this path and return a file object, as
+        the built-in open() function does.
+        """
+        if "b" not in mode:
+            encoding = io.text_encoding(encoding)
+>       return self._accessor.open(self, mode, buffering, encoding, errors,
+                                   newline)
+E       FileNotFoundError: [Errno 2] No such file or directory: 'D:\\hospital_ies_v20_20261019\\outputs\\v20_load_accounting_20261019_run01\\temp\\normal_collect02_owner_red01\\pytest-of-HanqinXie\\pytest-0\\test_new_pid_owner_is_saved_be0\\outputs\\v20_load_accounting_20261019_run01\\review\\normal_window_analysis02\\ONESHOT_OWNER01.json'
+
+C:\Users\HanqinXie\AppData\Local\Programs\Python\Python310\lib\pathlib.py:1119: FileNotFoundError
+=========================== short test summary info ===========================
+FAILED outputs/v20_load_accounting_20261019_run01/review/normal_window_analysis02/test_collect_normal_once02.py::test_new_pid_owner_is_saved_before_import_and_original_wait_exit_is_not_overwritten
+1 failed, 23 passed in 0.13s

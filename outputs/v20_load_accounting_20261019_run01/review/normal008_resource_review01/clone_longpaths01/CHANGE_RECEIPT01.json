@@ -1,0 +1,139 @@
+{
+  "schema": "hospital_ies.v20.clone_longpaths_change_receipt.v1",
+  "created_utc": "2026-10-19T11:58:42.174432+00:00",
+  "status": "targeted_tests_passed_peer_review_pending",
+  "authorized_files": [
+    "publication/clone_release.py",
+    "publication/test_clone_release.py"
+  ],
+  "before": [
+    {
+      "path": "publication/clone_release.py",
+      "bytes": 5253,
+      "sha256": "82c36c7271589a03ba5b65af9a36a5c37d4f0b2bcdfa1e38bd3dcdb9c0a9e964"
+    },
+    {
+      "path": "publication/test_clone_release.py",
+      "bytes": 5320,
+      "sha256": "fd9116e3d7658601aa378154a625459245b2a6889616fe88d44d8d99188c222c"
+    }
+  ],
+  "after": [
+    {
+      "path": "publication/clone_release.py",
+      "bytes": 7421,
+      "sha256": "2af6c2a1ca4964637335f9ae791c47cbcf3e4b763032d90f7ead40dd4ea9a159"
+    },
+    {
+      "path": "publication/test_clone_release.py",
+      "bytes": 9282,
+      "sha256": "10fff8109e05108e70632614ff8a56475fb6e9dd6582d9a0d72359e5fb6a44a8"
+    }
+  ],
+  "saved_source_and_diff": [
+    {
+      "path": "outputs/v20_load_accounting_20261019_run01/review/normal008_resource_review01/clone_longpaths01/IMPLEMENTATION_AFTER.py",
+      "bytes": 7421,
+      "sha256": "2af6c2a1ca4964637335f9ae791c47cbcf3e4b763032d90f7ead40dd4ea9a159"
+    },
+    {
+      "path": "outputs/v20_load_accounting_20261019_run01/review/normal008_resource_review01/clone_longpaths01/IMPLEMENTATION_AFTER.py.diff",
+      "bytes": 4995,
+      "sha256": "ec357647ed7203d4f75224ac08abc11e9fd2f06739b7d5a41325b2c72036a30d"
+    },
+    {
+      "path": "outputs/v20_load_accounting_20261019_run01/review/normal008_resource_review01/clone_longpaths01/IMPLEMENTATION_BEFORE.py",
+      "bytes": 5253,
+      "sha256": "82c36c7271589a03ba5b65af9a36a5c37d4f0b2bcdfa1e38bd3dcdb9c0a9e964"
+    },
+    {
+      "path": "outputs/v20_load_accounting_20261019_run01/review/normal008_resource_review01/clone_longpaths01/SOURCE_BEFORE.json",
+      "bytes": 326,
+      "sha256": "a634062f2d0f3822f41d6737bc8c040aab11d3f9308447e40617e6a31bd454be"
+    },
+    {
+      "path": "outputs/v20_load_accounting_20261019_run01/review/normal008_resource_review01/clone_longpaths01/TESTS_AFTER.py",
+      "bytes": 9282,
+      "sha256": "10fff8109e05108e70632614ff8a56475fb6e9dd6582d9a0d72359e5fb6a44a8"
+    },
+    {
+      "path": "outputs/v20_load_accounting_20261019_run01/review/normal008_resource_review01/clone_longpaths01/TESTS_AFTER.py.diff",
+      "bytes": 5767,
+      "sha256": "4deb7560b3cbbb4d182e34b8dcb2c5250ba10adf05546e79896a03a8939bb35e"
+    },
+    {
+      "path": "outputs/v20_load_accounting_20261019_run01/review/normal008_resource_review01/clone_longpaths01/TESTS_BEFORE.py",
+      "bytes": 5320,
+      "sha256": "fd9116e3d7658601aa378154a625459245b2a6889616fe88d44d8d99188c222c"
+    }
+  ],
+  "actual_commands_and_logs": [
+    {
+      "path": "outputs/v20_load_accounting_20261019_run01/logs/clone_longpaths_red01.command.json",
+      "bytes": 1019,
+      "sha256": "0d03e01822fb27e827ccaeaed1411b64aa55bc66e102fc2c9d7c99ef4601ff49"
+    },
+    {
+      "path": "outputs/v20_load_accounting_20261019_run01/logs/clone_longpaths_red01.log",
+      "bytes": 15372,
+      "sha256": "c455c1c3cd54e1c793383c341e55d26c6bd90bac3d6d6d4fe0e810e5f83d9123"
+    },
+    {
+      "path": "outputs/v20_load_accounting_20261019_run01/logs/clone_longpaths_green01.command.json",
+      "bytes": 1072,
+      "sha256": "c1cfd69dd7b2ac140e5e52dc8f7dd7547a0b1747df1c18d31fc4415f8f7fa6a5"
+    },
+    {
+      "path": "outputs/v20_load_accounting_20261019_run01/logs/clone_longpaths_green01.log",
+      "bytes": 113,
+      "sha256": "959a50270629eb467c1b2a7be0295f9a9193e1997df4de5419b0a9bfec644ab4"
+    }
+  ],
+  "red": {
+    "exit_code": 1,
+    "new_failures": 7,
+    "old_passed": 9,
+    "reason": "Missing command-scoped longpaths override, local configuration/receipts, inherited-config validation"
+  },
+  "green": {
+    "exit_code": 0,
+    "tests_passed": 32,
+    "subtests_passed": 7,
+    "scope": "Only publication/test_clone_release.py plus publication/test_delivery_archive.py, synthetic subprocess boundaries"
+  },
+  "behavior": [
+    "Original exact git clone argv preserved for archive005",
+    "Append core.longpaths=true after inherited GIT_CONFIG_COUNT pairs without mutating parent environment",
+    "Receipts contain only the known new override and numeric count; inherited values never enumerated",
+    "After actual clone success run git config --local core.longpaths true and record real local exit/error/log SHA",
+    "Local failure preserves clone exit0/helperreturn2; launch failure localexitNone; query and selection failure receipts preserved",
+    "Copy local_config.log into fresh publication_checks/clone01 with terminal COMMAND SHA binding"
+  ],
+  "unchanged_pins": [
+    {
+      "path": "publication/build_delivery_archive.py",
+      "bytes": 19744,
+      "sha256": "005624fc0e0e0510668a7e7848365c1eba8015c5c63d01e1b0cca3c299bc81a7"
+    },
+    {
+      "path": "publication/continue_normal008.py",
+      "bytes": 34713,
+      "sha256": "cce231bf254b00a0af0021f04273ad54134005340f5b9706ce4578cec4823ca7"
+    },
+    {
+      "path": "outputs/v20_load_accounting_20261019_run01/MODEL_FREEZE_ACCOUNTING01.json",
+      "bytes": 205730,
+      "sha256": "48baed7a128d2f921d36323330ae4d22e2e6dc83214e8a505b6ba89273439b7b"
+    }
+  ],
+  "no_actual_clone": true,
+  "no_actual_git_command": true,
+  "no_physics": true,
+  "no_global_or_system_configuration": true,
+  "no_full_publication_suite": true,
+  "limitations": [
+    "Synthetic command-boundary evidence does not prove an actual future remote clone succeeds",
+    "Actual final staged tree, clone and archive remain separately gated",
+    "Frozen-source file content was not changed; this receipt hashes the freeze manifest and protected publication helpers, not a new full scientific qualification"
+  ]
+}

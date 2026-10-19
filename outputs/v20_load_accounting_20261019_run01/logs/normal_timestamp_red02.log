@@ -1,0 +1,72 @@
+F.............F...                                                       [100%]
+================================== FAILURES ===================================
+________ test_resource_sample_journal_preserves_observation_timestamp _________
+
+tmp_path = WindowsPath('D:/hospital_ies_v20_20261019/outputs/v20_load_accounting_20261019_run01/temp/normal_timestamp_red02/pytest-of-HanqinXie/pytest-0/test_resource_sample_journal_p0')
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x000002076403EF20>
+
+    def test_resource_sample_journal_preserves_observation_timestamp(tmp_path, monkeypatch):
+        from types import SimpleNamespace
+        observed = '2026-10-19T09:44:39.000000+00:00'
+        monkeypatch.setattr(normal, 'windows_memory', lambda: dict(utc=observed,
+            available_physical_bytes=30*normal.GIB, commit_headroom_bytes=30*normal.GIB))
+        info = SimpleNamespace(rss=2*normal.GIB, private=3*normal.GIB, peak_wset=2*normal.GIB)
+        fake_psutil = SimpleNamespace(Process=lambda pid: SimpleNamespace(memory_info=lambda: info), Error=RuntimeError)
+        sample = normal._process_sample(SimpleNamespace(pid=17), fake_psutil)
+        sample['batch'] = 'v20_normal_009'
+        path = tmp_path / 'SAMPLES.jsonl'
+>       normal.journal(path, **sample)
+
+publication\test_normal_resources.py:22: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+path = WindowsPath('D:/hospital_ies_v20_20261019/outputs/v20_load_accounting_20261019_run01/temp/normal_timestamp_red02/pytest-of-HanqinXie/pytest-0/test_resource_sample_journal_p0/SAMPLES.jsonl')
+value = {'utc': '2026-10-19T09:44:39.000000+00:00', 'available_physical_bytes': 32212254720, 'commit_headroom_bytes': 32212254720, 'pid': 17, ...}
+
+    def journal(path,**value):
+        with Path(path).open('a',encoding='utf8') as stream:
+>           stream.write(json.dumps(dict(utc=now(),**value),ensure_ascii=False,allow_nan=False)+'\n');stream.flush()
+E           TypeError: dict() got multiple values for keyword argument 'utc'
+
+publication\run_normal_serial.py:56: TypeError
+______ test_successful_fake_child_sampling_uses_the_real_journal_writer _______
+
+tmp_path = WindowsPath('D:/hospital_ies_v20_20261019/outputs/v20_load_accounting_20261019_run01/temp/normal_timestamp_red02/pytest-of-HanqinXie/pytest-0/test_successful_fake_child_sam0')
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x0000020764041270>
+
+    def test_successful_fake_child_sampling_uses_the_real_journal_writer(tmp_path, monkeypatch):
+        process, job = fake_launch_ready(monkeypatch)
+        polls = []
+        def poll():
+            polls.append(True)
+            return None if len(polls) == 1 else 0
+        process.poll = poll
+        stamp = '2026-10-19T09:44:39.000000+00:00'
+        sample = dict(utc=stamp, pid=process.pid, available_physical_bytes=30*normal.GIB,
+                      commit_headroom_bytes=30*normal.GIB, private_bytes=3*normal.GIB,
+                      working_set_bytes=2*normal.GIB, OS_lifetime_peak_working_set_bytes=2*normal.GIB,
+                      process_sample_status='measured')
+        monkeypatch.setattr(normal, '_process_sample', lambda *a: dict(sample))
+        monkeypatch.setattr(normal.time, 'sleep', lambda seconds: None)
+        monkeypatch.setattr(normal, 'qualify_complete', lambda *a: {'qualified': True})
+>       result = normal.run_one(job, tmp_path, {}, 'f'*64, {'admitted': True}, 2.)
+
+publication\test_normal_resources.py:220: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+publication\run_normal_serial.py:387: in run_one
+    journal(out/'SAMPLES.jsonl',**sample)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+path = WindowsPath('D:/hospital_ies_v20_20261019/outputs/v20_load_accounting_20261019_run01/temp/normal_timestamp_red02/pytest-of-HanqinXie/pytest-0/test_successful_fake_child_sam0/SAMPLES.jsonl')
+value = {'utc': '2026-10-19T09:44:39.000000+00:00', 'pid': 987654, 'available_physical_bytes': 32212254720, 'commit_headroom_bytes': 32212254720, ...}
+
+    def journal(path,**value):
+        with Path(path).open('a',encoding='utf8') as stream:
+>           stream.write(json.dumps(dict(utc=now(),**value),ensure_ascii=False,allow_nan=False)+'\n');stream.flush()
+E           TypeError: dict() got multiple values for keyword argument 'utc'
+
+publication\run_normal_serial.py:56: TypeError
+=========================== short test summary info ===========================
+FAILED publication/test_normal_resources.py::test_resource_sample_journal_preserves_observation_timestamp
+FAILED publication/test_normal_resources.py::test_successful_fake_child_sampling_uses_the_real_journal_writer
+2 failed, 16 passed in 0.16s

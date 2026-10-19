@@ -1,0 +1,111 @@
+--- preserved687
++++ deadline_candidate
+@@ -133,6 +133,13 @@
+     row=dict(value);row.setdefault('utc',now())
+     with Path(path).open('a',encoding='utf8') as f:f.write(json.dumps(row,ensure_ascii=False,allow_nan=False)+'\n');f.flush()
+ 
++def wait_next_sample(deadline):
++    """Target2s including work; overruns do not add another fixed2s wait."""
++    deadline+=2.
++    remaining=deadline-time.monotonic()
++    if remaining>0:time.sleep(remaining)
++    return deadline
++
+ def resource_admission(profile,memory,reserve_gib=2):
+     require(reserve_gib in (2,3),'Only preregistered2/3GiB reserve allowed')
+     require(profile.get('source_model_id')=='M19_model_closeout' and profile.get('is_M20_measurement') is False
+@@ -159,6 +166,9 @@
+     boundary=times[-1]-window_seconds
+     start=next((i for i,t in enumerate(times) if t>=boundary),len(times)-1)
+     if start and times[start]>boundary:start-=1
++    # Preserve both original guards: >=30s and >=16 observations. A legitimate
++    # 2.25s overrun needs33.75s for16 points; truncating to30s made it impossible.
++    start=min(start,max(0,len(samples)-16))
+     rows=samples[start:]
+     if rows[-1]['monotonic']-rows[0]['monotonic']<window_seconds or len(rows)<16:return failed
+     if any(b['monotonic']-a['monotonic']>3. for a,b in zip(rows,rows[1:])):return failed
+@@ -236,13 +246,14 @@
+         fact.update(successful_Popen=True,pid=process.pid)
+         try:
+             journal(out/'EVENTS.jsonl',event='scientific_child_started',**fact,command=command)
++            deadline=time.monotonic()
+             while process.poll() is None:
+                 row=process_sample(process);samples.append(row);journal(out/'SAMPLES.jsonl',**row)
+                 # Resource pressure is observed only; it never triggers child termination.
+                 others,issues=active_science();others=[p for p in others if p['pid']!=process.pid]
+                 if others or issues:
+                     raise ValueError('Unexpected science/enumeration uncertainty; drain owned child without retry')
+-                time.sleep(2.)
++                deadline=wait_next_sample(deadline)
+         except BaseException as e:
+             error=dict(type=type(e).__name__,message=str(e))
+             try:journal(out/'EVENTS.jsonl',event='monitor_failed_drain_owned_child',error=error)
+@@ -358,9 +369,11 @@
+     for n,s in receipt['output_files'].items():require(sha(folder/n)==s,'FINAL01 output receipt SHA differs')
+     return dict(command_receipt=fingerprint(RUN/'logs'/f'{name}.command.json'),report_receipt=fingerprint(folder/'RECEIPT.json'),summary=fingerprint(folder/'SUMMARY.json'))
+ 
+-def continuation(name,*,run,baseline_root,stop_sha,plan_sha,window_seconds=30.,reserve_gib=2,max_wait_seconds=0.):
++def continuation(name,*,run,baseline_root,stop_sha,plan_sha,window_seconds=30.,reserve_gib=2,max_wait_seconds=0.,counter_probe_seconds=0.):
+     require(re.fullmatch('[A-Za-z0-9_]+',name or '') is not None,'New simple continuation name required')
+     require(window_seconds>=30 and reserve_gib in (2,3) and max_wait_seconds>=0,'Registered bounded resource admission required')
++    require(counter_probe_seconds==0 or (not run and counter_probe_seconds==window_seconds),
++        'Counter probe is check-only and uses the unchanged registered resource window')
+     out=HERE/name;new_run_directory(out);launches=[];resource=None;pins=None;final=None
+     try:
+         pins=stop_evidence(stop_sha,plan_sha);profile=historical_profile()
+@@ -370,6 +383,7 @@
+             parent_footprint=parent_footprint(),
+             predecessor=pins,historical_profile=profile,growth_factor=1.1,minimum_reserve_gib=reserve_gib,prefer_three_gib=True,
+             required_observed_window_seconds=window_seconds,max_wait_seconds=max_wait_seconds,
++            counter_probe_seconds=counter_probe_seconds,sampling_target_seconds=2.,sampling_schedule='deadline_minus_work',
+             no_old_STOP_deleted=True,no_frozen_science_modified=True,pressure_policy='record only; no forced termination'))
+         with serial_lease():
+             require_no_science(*active_science());pre=short_qualification(out,'preflight')
+@@ -379,11 +393,11 @@
+             # parent has not imported any project/numpy/pandas/torch module.
+             recheck_rows(pre['evidence_files']);recheck_rows(pins['evidence_files'])
+             write_new(out/'PARENT_AFTER_PREFLIGHT.json',parent_footprint())
+-            if not run:
++            if not run and not counter_probe_seconds:
+                 memory=windows_memory();final=dict(status='check_only_no_physics',exit_code=0,
+                     resource_decision=resource_admission(profile,memory,reserve_gib),memory=memory)
+             else:
+-                rows=[];began=time.monotonic();admission=None
++                rows=[];began=time.monotonic();deadline=began;admission=None
+                 while admission is None:
+                     require_no_science(*active_science());recheck_rows(pins['evidence_files'])
+                     row=windows_memory();rows.append(row);rows=rows[-100:]
+@@ -400,8 +414,15 @@
+                     if admission is None:
+                         if time.monotonic()-began>=max_wait_seconds:
+                             final=dict(status='waiting_resources_not_started',exit_code=3,only_not_started=TARGET);break
+-                        time.sleep(2.)
+-                if admission is not None:
++                        deadline=wait_next_sample(deadline)
++                if admission is not None and not run:
++                    probe=dict(status='passed_no_physics',observed_admission=admission,
++                        samples=fingerprint(out/'ADMISSION_SAMPLES.jsonl'),parent_footprint=parent_footprint(),
++                        sampling_target_seconds=2.,sampling_schedule='deadline_minus_work',physical_episodes_started=0)
++                    write_new(out/'COUNTER_PROBE.json',probe)
++                    final=dict(status='check_only_stable_resources',exit_code=0,
++                        counter_probe=fingerprint(out/'COUNTER_PROBE.json'),resource_decision=admission)
++                if admission is not None and run:
+                     admission.update(historical_profile=profile,empirical_resource_budget_not_scientific_threshold=True,
+                         admission_samples=fingerprint(out/'ADMISSION_SAMPLES.jsonl'))
+                     write_new(out/'ADMISSION.json',admission)
+@@ -447,6 +468,7 @@
+     p.add_argument('--receipt',type=Path);p.add_argument('--name');p.add_argument('--baseline-root',type=Path)
+     p.add_argument('--stop-sha256');p.add_argument('--plan-sha256');p.add_argument('--resource-window-seconds',type=float,default=30.)
+     p.add_argument('--reserve-gib',type=int,choices=(2,3),default=2);p.add_argument('--max-wait-seconds',type=float,default=0.)
++    p.add_argument('--counter-probe-seconds',type=float,default=0.)
+     a=p.parse_args(argv)
+     if a.qualify405 or a.qualify406:
+         require(a.receipt is not None,'Exclusive qualification receipt path required')
+@@ -458,6 +480,6 @@
+             raise
+     require(a.name and a.baseline_root is not None,'Continuation name and complete V19 baseline root required')
+     return continuation(a.name,run=a.run,baseline_root=a.baseline_root,stop_sha=a.stop_sha256,plan_sha=a.plan_sha256,
+-        window_seconds=a.resource_window_seconds,reserve_gib=a.reserve_gib,max_wait_seconds=a.max_wait_seconds)
++        window_seconds=a.resource_window_seconds,reserve_gib=a.reserve_gib,max_wait_seconds=a.max_wait_seconds,counter_probe_seconds=a.counter_probe_seconds)
+ 
+ if __name__=='__main__':raise SystemExit(main())

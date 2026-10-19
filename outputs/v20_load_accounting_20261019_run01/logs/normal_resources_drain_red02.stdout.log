@@ -1,0 +1,91 @@
+............FFF                                                          [100%]
+================================== FAILURES ===================================
+_____ test_start_journal_failure_still_drains_successfully_launched_child _____
+
+tmp_path = WindowsPath('D:/hospital_ies_v20_20261019/review/test_tmp/normal_resources_drain_red02/test_start_journal_failure_sti0')
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x0000020C9F8F6B30>
+
+    def test_start_journal_failure_still_drains_successfully_launched_child(tmp_path,monkeypatch):
+        process,job=fake_launch_ready(monkeypatch)
+        def broken_journal(*a,**k):raise OSError('simulated first journal failure')
+        monkeypatch.setattr(normal,'journal',broken_journal)
+        with pytest.raises(OSError,match='first journal'):
+            normal.run_one(job,tmp_path,{},'f'*64,{'admitted':True},2.)
+>       assert process.wait_calls==1
+E       assert 0 == 1
+E        +  where 0 = <test_normal_resources.FakeScientificProcess object at 0x0000020C9F8F6950>.wait_calls
+
+publication\test_normal_resources.py:188: AssertionError
+_ test_exception_journal_failure_cannot_skip_drain_or_replace_original_error __
+
+a = (<test_normal_resources.FakeScientificProcess object at 0x0000020C9F8E1030>, <module 'psutil' from 'C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\psutil\\__init__.py'>)
+k = {}
+
+>   def sample_error(*a,**k):raise RuntimeError('simulated sample failure')
+E   RuntimeError: simulated sample failure
+
+publication\test_normal_resources.py:196: RuntimeError
+
+During handling of the above exception, another exception occurred:
+
+tmp_path = WindowsPath('D:/hospital_ies_v20_20261019/review/test_tmp/normal_resources_drain_red02/test_exception_journal_failure0')
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x0000020C9F8E0E50>
+
+    def test_exception_journal_failure_cannot_skip_drain_or_replace_original_error(tmp_path,monkeypatch):
+        process,job=fake_launch_ready(monkeypatch)
+        def sample_error(*a,**k):raise RuntimeError('simulated sample failure')
+        def journal_error(path,**value):
+            if value['event']!='scientific_child_started':raise OSError('simulated interruption journal failure')
+        monkeypatch.setattr(normal,'_process_sample',sample_error)
+        monkeypatch.setattr(normal,'journal',journal_error)
+        with pytest.raises(RuntimeError,match='sample failure'):
+>           normal.run_one(job,tmp_path,{},'f'*64,{'admitted':True},2.)
+
+publication\test_normal_resources.py:202: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+publication\run_normal_serial.py:387: in run_one
+    journal(out/'EVENTS.jsonl',event='supervisor_interrupted',batch=job['name'],error_type=type(exc).__name__,
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+path = WindowsPath('D:/hospital_ies_v20_20261019/review/test_tmp/normal_resources_drain_red02/test_exception_journal_failure0/EVENTS.jsonl')
+value = {'event': 'supervisor_interrupted', 'batch': 'v20_normal_000', 'error_type': 'RuntimeError', 'action': 'drain owned scientific process; never terminate or overwrite its evidence'}
+
+    def journal_error(path,**value):
+>       if value['event']!='scientific_child_started':raise OSError('simulated interruption journal failure')
+E       OSError: simulated interruption journal failure
+
+publication\test_normal_resources.py:198: OSError
+____ test_missing_start_journal_never_reports_zero_launches_or_not_started ____
+
+tmp_path = WindowsPath('D:/hospital_ies_v20_20261019/review/test_tmp/normal_resources_drain_red02/test_missing_start_journal_nev0')
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x0000020C9F8DA500>
+
+    def test_missing_start_journal_never_reports_zero_launches_or_not_started(tmp_path,monkeypatch):
+        process,job=fake_launch_ready(monkeypatch)
+        monkeypatch.setattr(normal,'PROFILE_DIR',tmp_path)
+        monkeypatch.setattr(normal,'PROFILE_PATH',tmp_path/'profile.json');write(normal.PROFILE_PATH,{})
+        monkeypatch.setattr(normal,'load_profile',lambda:{})
+        monkeypatch.setattr(normal,'verify_frozen_project',lambda:({},'f'*64))
+        monkeypatch.setattr(normal,'normal_jobs',lambda profile:[job])
+        monkeypatch.setattr(normal,'comparison_gate',lambda:dict(qualified=True,failed=[]))
+        monkeypatch.setattr(normal,'serial_lease',nullcontext)
+        original_journal=normal.journal
+        def fail_start_journal(path,**value):
+            if value['event']=='scientific_child_started':raise OSError('simulated start event failure')
+            original_journal(path,**value)
+        monkeypatch.setattr(normal,'journal',fail_start_journal)
+        # run=True exercises supervision only; every Popen is a fake above.
+        assert normal.supervise('FAKE_START_IO',run=True)==2
+        summary=normal.read(tmp_path/'supervision_FAKE_START_IO/SUMMARY.json')
+>       assert process.wait_calls==1
+E       assert 0 == 1
+E        +  where 0 = <test_normal_resources.FakeScientificProcess object at 0x0000020C9F8DB640>.wait_calls
+
+publication\test_normal_resources.py:225: AssertionError
+---------------------------- Captured stdout call -----------------------------
+{"output_directory": "D:\\hospital_ies_v20_20261019\\review\\test_tmp\\normal_resources_drain_red02\\test_missing_start_journal_nev0\\supervision_FAKE_START_IO", "mode": "run", "exit_code": 2, "state": "blocked_preserve_evidence", "error_type": "OSError", "error": "simulated start event failure", "no_partial_evidence_overwritten": true, "completed": [], "existing_qualified_skipped": [], "pending_not_started": ["v20_normal_000"], "actual_scientific_children_started": 0, "finished_utc": "2026-10-19T05:22:15.281086+00:00", "original_final12_unopened": true}
+=========================== short test summary info ===========================
+FAILED publication/test_normal_resources.py::test_start_journal_failure_still_drains_successfully_launched_child
+FAILED publication/test_normal_resources.py::test_exception_journal_failure_cannot_skip_drain_or_replace_original_error
+FAILED publication/test_normal_resources.py::test_missing_start_journal_never_reports_zero_launches_or_not_started
+3 failed, 12 passed in 0.19s

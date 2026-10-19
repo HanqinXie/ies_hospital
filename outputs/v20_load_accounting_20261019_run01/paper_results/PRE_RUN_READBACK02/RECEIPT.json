@@ -1,0 +1,30 @@
+{
+  "schema": "hospital_ies.v20.report_receipt.v1",
+  "script_sha256": "49a18f29d514dc7878004ca2203ac460c7434179391bb3c0c31d5beb9c94cd14",
+  "output_files": {
+    "ACTUAL_SOURCES.csv": "c00a27568928a92b385659eef1b8ca6909b6b1db07689cc2c496e0eaea8b02a5",
+    "AGGREGATES.csv": "fdbebd0433baece4fe4c852a54ade38fae3e4bd7ead041b9181ac8d5732bcd43",
+    "EMISSIONS.csv": "149d44d4881304235e029ceec49ee2dea1f924def1e4b40157d9b728ca2646f1",
+    "INPUT_INDEX.json": "1a81a4eeb45a3b4b4ce479fcf0321d803edf6a9b1ca2af462c3c282bd493a8f3",
+    "SERVICE.csv": "6146d8c0217f634b7e2ee2b31228470110efabb84bd381df93161a38c884ab46",
+    "STATUS.csv": "786f2d55ec1441525f02375382fe32c65b8e6ad77b99864cc23ab8e06bab2ef5",
+    "STRATEGY_COMPARISONS.csv": "be3e87739fadb339b182f012480716f4c98323b30eced483054d8db3d5558263",
+    "SUMMARY.json": "7786a861d484c99da31cb953544b71ed4aea6b8a0bb51dea0e4073693523a4de",
+    "V19_V20_COMPARISON.csv": "b04751a5c6d6959cc508a6c577933cca989deeb78cf98004abfc4af94e37c9ae",
+    "V19_V20_EMISSIONS.csv": "017ef927925a459612fe7b84eec892745a0a72d8b1db79a278de32ae22f8358e",
+    "WINDOWS.csv": "77990c7d6f7718c5657e76ccd3df308e778709c300ac01731f52cb25ca4f773f"
+  },
+  "row_counts": {
+    "STATUS": 406,
+    "WINDOWS": 812,
+    "SERVICE": 9744,
+    "ACTUAL_SOURCES": 0,
+    "V19_V20_COMPARISON": 812,
+    "V19_V20_EMISSIONS": 3248,
+    "STRATEGY_COMPARISONS": 812,
+    "AGGREGATES": 83,
+    "EMISSIONS": 3248
+  },
+  "raw_opened": false,
+  "annual_values_read": false
+}

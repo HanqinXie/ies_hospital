@@ -1,0 +1,50 @@
+{
+  "admitted": true,
+  "required_physical_bytes": 28935357236,
+  "required_commit_headroom_bytes": 31294822810,
+  "growth_factor": 1.1,
+  "host_reserve_bytes": 2147483648,
+  "reserve_gib": 2,
+  "is_M20_peak_measurement": false,
+  "historical_peaks_are_empirical_not_upper_bounds": true,
+  "selected_reserve_gib": 2,
+  "stable_observed_seconds": 31.313000000081956,
+  "observations": 17,
+  "maximum_observation_gap_seconds": 2.125,
+  "minimum_available_physical_bytes": 31890313216,
+  "minimum_commit_headroom_bytes": 31615967232,
+  "resource_window_is_sampled_not_continuous_mathematical_bound": true,
+  "last_counter_recheck": {
+    "utc": "2026-10-19T11:41:48.030450+00:00",
+    "monotonic": 1839539.328,
+    "total_physical_bytes": 50870132736,
+    "available_physical_bytes": 31917801472,
+    "committed_bytes": 30121971712,
+    "commit_limit_bytes": 61780164608,
+    "commit_headroom_bytes": 31658192896,
+    "counter_basis": "GlobalMemoryStatusEx physical; GetPerformanceInfo commit pages times page size"
+  },
+  "historical_profile": {
+    "alias": "C19",
+    "source_model_id": "M19_model_closeout",
+    "is_M20_measurement": false,
+    "original_batch": "normal_C19_final_r1_002",
+    "scenario_id": "v17_N2_d7ae489a9d9b2341333e4104",
+    "source_day_index": 202,
+    "duration_minutes": 4320.0,
+    "physical_scenario_signature": "129d70df8e634233a94ac5034644c0c2e5d4607bb5443d55adac25b9f2be9f78",
+    "samples": 131,
+    "OS_lifetime_peak_working_set_bytes": 24352612352,
+    "sampled_working_set_peak_bytes": 24317726720,
+    "sampled_private_peak_bytes": 26497581056,
+    "first_sample_utc": "2026-10-18T19:58:23.429372+00:00",
+    "last_sample_utc": "2026-10-18T20:15:48.593949+00:00",
+    "original_manifest_sha256": "73af5bd7e2dd3e5640e2b129b22b0f2590063327c96f0164117c35bb2b96c945"
+  },
+  "empirical_resource_budget_not_scientific_threshold": true,
+  "admission_samples": {
+    "path": "outputs/v20_load_accounting_20261019_run01/review/normal008_continuation01/L72_RUN02/ADMISSION_SAMPLES.jsonl",
+    "bytes": 70204,
+    "sha256": "b6ec2f0d1a4b07b67a57858dcd2affee75e2e664adf366b1c22f5c5a35c36488"
+  }
+}

@@ -1,0 +1,286 @@
+{
+  "schema": "hospital_ies.v20.load_accounting_arithmetic_audit.v1",
+  "created_utc": "2026-10-19T04:07:59.643478+00:00",
+  "status": "passed",
+  "before_model": "M19_model_closeout",
+  "after_load_contract": "hospital_ies.load_accounting.v20.v1",
+  "evaluation_scope": "Annual data grouping arithmetic only; no dispatch/strategy/ENS result is inferred.",
+  "source_year_read_for_field_audit": true,
+  "original_final12_used_for_control_or_evaluation": false,
+  "original_csv_bytes_unchanged": true,
+  "inputs": [
+    {
+      "path": "inputs/loads/hospital_ies_demand_8760.csv",
+      "bytes": 2122259,
+      "before_sha256": "0adc2c3f2cd82d600cd17b38e634eae7701710fff0a146e588482dd3cd0a0627",
+      "after_sha256": "0adc2c3f2cd82d600cd17b38e634eae7701710fff0a146e588482dd3cd0a0627"
+    },
+    {
+      "path": "inputs/loads/critical_zones_8760.csv",
+      "bytes": 22560317,
+      "before_sha256": "6577fa5bed87c5b53dae2a814231e8fbd98d34bf486ddb351224bedde60d88d6",
+      "after_sha256": "6577fa5bed87c5b53dae2a814231e8fbd98d34bf486ddb351224bedde60d88d6"
+    },
+    {
+      "path": "inputs/loads/electricity_boundary_8760.csv",
+      "bytes": 3659712,
+      "before_sha256": "f6c3a165363f617f20b63553974a727ae0489095d7c38224a773943d95914599",
+      "after_sha256": "f6c3a165363f617f20b63553974a727ae0489095d7c38224a773943d95914599"
+    },
+    {
+      "path": "inputs/loads/thermal_boundary_8760.csv",
+      "bytes": 1381517,
+      "before_sha256": "f937d23a03357a3eb363a97410ee667fd53be20fd3531e3b22af69747b7b4741",
+      "after_sha256": "f937d23a03357a3eb363a97410ee667fd53be20fd3531e3b22af69747b7b4741"
+    }
+  ],
+  "sources": [
+    {
+      "path": "D:\\云大文件\\论文\\医院ies\\code_4_2\\src\\hospital_ies\\resilience.py",
+      "bytes": 36741,
+      "sha256": "56c56b369bfc0ac6a8491ec847499c960ba1edd91bdd9162279c6a9ada3c7463"
+    },
+    {
+      "path": "D:\\hospital_ies_v20_20261019\\src\\hospital_ies\\resilience.py",
+      "bytes": 38365,
+      "sha256": "3a57bfd91c1fc75e7c80d2c48d96c4ca92c17a6670b0a37dc5c23ccc00e6dc62"
+    },
+    {
+      "path": "D:\\云大文件\\论文\\医院ies\\Hospital_SanDiego_Starter\\scripts\\energyplus_boundary_export.py",
+      "bytes": 15894,
+      "sha256": "746042d6643109bc5522adaac62987b59040ebeeea53803f73d33463fb3fe451"
+    },
+    {
+      "path": "D:\\云大文件\\论文\\医院ies\\code_4_2\\inputs\\reference\\export_summary.json",
+      "bytes": 1772,
+      "sha256": "b2c2ac8a862b3cb5036a0949cc4ec63219ea08ca5e66f816ea45cb3ce51ee321"
+    },
+    {
+      "path": "D:\\hospital_ies_v20_20261019\\tests\\test_v20_load_accounting.py",
+      "bytes": 8563,
+      "sha256": "db8794f9631dfb11a84a77f3bf096393bb1ebf7ab5d2089ae775a1badcfcc422"
+    }
+  ],
+  "compression_hours": {
+    "e": {
+      "before": 0,
+      "after": 0,
+      "before_max_excess_kW": 0.0,
+      "after_max_excess_kW": 0.0
+    },
+    "h": {
+      "before": 8760,
+      "after": 0,
+      "before_max_excess_kW": 222.94066099779135,
+      "after_max_excess_kW": 0.0
+    },
+    "c": {
+      "before": 137,
+      "after": 137,
+      "before_max_excess_kW": 33.9421275873959,
+      "after_max_excess_kW": 33.9421275873959
+    }
+  },
+  "annual_priority_comparison": [
+    {
+      "priority": "P0",
+      "carrier": "e",
+      "before_kWh": 641037.3708065258,
+      "after_kWh": 334156.2537845974,
+      "delta_kWh": -306881.1170219285,
+      "before_share": 0.159894287268303,
+      "after_share": 0.08334876946083727,
+      "before_peak_kW": 131.37931308318713,
+      "after_peak_kW": 64.90974788399872,
+      "before_peak_hour": 33,
+      "after_peak_hour": 33
+    },
+    {
+      "priority": "P1",
+      "carrier": "e",
+      "before_kWh": 580677.1430818109,
+      "after_kWh": 219038.0949537675,
+      "delta_kWh": -361639.0481280434,
+      "before_share": 0.14483860404151552,
+      "after_share": 0.05463478678813243,
+      "before_peak_kW": 99.21589261164966,
+      "after_peak_kW": 37.40723394224962,
+      "before_peak_hour": 33,
+      "after_peak_hour": 33
+    },
+    {
+      "priority": "P2",
+      "carrier": "e",
+      "before_kWh": 260297.55134263076,
+      "after_kWh": 260297.55134263076,
+      "delta_kWh": 0.0,
+      "before_share": 0.06492615461287356,
+      "after_share": 0.06492615461287356,
+      "before_peak_kW": 50.46299148406898,
+      "after_peak_kW": 50.46299148406898,
+      "before_peak_hour": 33,
+      "after_peak_hour": 33
+    },
+    {
+      "priority": "P3",
+      "carrier": "e",
+      "before_kWh": 2527120.3544336795,
+      "after_kWh": 3195640.519583652,
+      "delta_kWh": 668520.165149972,
+      "before_share": 0.6303409540773078,
+      "after_share": 0.7970902891381567,
+      "before_peak_kW": 588.0563936857773,
+      "after_peak_kW": 716.3346175543656,
+      "before_peak_hour": 807,
+      "after_peak_hour": 807
+    },
+    {
+      "priority": "P0",
+      "carrier": "h",
+      "before_kWh": 524670.9290484489,
+      "after_kWh": 508728.9754460869,
+      "delta_kWh": -15941.953602362013,
+      "before_share": 0.4045415001491405,
+      "after_share": 0.3922496397304513,
+      "before_peak_kW": 142.36409102800815,
+      "after_peak_kW": 118.01815962404348,
+      "before_peak_hour": 1333,
+      "after_peak_hour": 2506
+    },
+    {
+      "priority": "P1",
+      "carrier": "h",
+      "before_kWh": 772281.1237199837,
+      "after_kWh": 297537.85883101175,
+      "delta_kWh": -474743.264888972,
+      "before_share": 0.5954584998508596,
+      "after_share": 0.22941315231808063,
+      "before_peak_kW": 160.06838547119162,
+      "after_peak_kW": 43.75507331698245,
+      "before_peak_hour": 199,
+      "after_peak_hour": 2118
+    },
+    {
+      "priority": "P2",
+      "carrier": "h",
+      "before_kWh": 0.0,
+      "after_kWh": 0.0,
+      "delta_kWh": 0.0,
+      "before_share": 0.0,
+      "after_share": 0.0,
+      "before_peak_kW": 0.0,
+      "after_peak_kW": 0.0,
+      "before_peak_hour": 1,
+      "after_peak_hour": 1
+    },
+    {
+      "priority": "P3",
+      "carrier": "h",
+      "before_kWh": 2.930278242274653e-11,
+      "after_kWh": 490685.218491334,
+      "delta_kWh": 490685.218491334,
+      "before_share": 2.259357418818818e-17,
+      "after_share": 0.3783372079514682,
+      "before_peak_kW": 5.684341886080802e-14,
+      "after_peak_kW": 167.8745658269112,
+      "before_peak_hour": 8335,
+      "after_peak_hour": 199
+    },
+    {
+      "priority": "P0",
+      "carrier": "c",
+      "before_kWh": 355692.72442831716,
+      "after_kWh": 355692.72442831716,
+      "delta_kWh": 0.0,
+      "before_share": 0.10698367376465219,
+      "after_share": 0.10698367376465219,
+      "before_peak_kW": 69.88932873206556,
+      "after_peak_kW": 69.88932873206556,
+      "before_peak_hour": 6519,
+      "after_peak_hour": 6519
+    },
+    {
+      "priority": "P1",
+      "carrier": "c",
+      "before_kWh": 254633.1030483909,
+      "after_kWh": 254633.1030483909,
+      "delta_kWh": 0.0,
+      "before_share": 0.07658741086142211,
+      "after_share": 0.07658741086142211,
+      "before_peak_kW": 48.22241261285104,
+      "after_peak_kW": 48.22241261285104,
+      "before_peak_hour": 6927,
+      "after_peak_hour": 6927
+    },
+    {
+      "priority": "P2",
+      "carrier": "c",
+      "before_kWh": 246047.8515198664,
+      "after_kWh": 246047.8515198664,
+      "delta_kWh": 0.0,
+      "before_share": 0.07400517713653677,
+      "after_share": 0.07400517713653677,
+      "before_peak_kW": 45.101382187118325,
+      "after_peak_kW": 45.101382187118325,
+      "before_peak_hour": 2943,
+      "after_peak_hour": 2943
+    },
+    {
+      "priority": "P3",
+      "carrier": "c",
+      "before_kWh": 2468364.6844549086,
+      "after_kWh": 2468364.6844549086,
+      "delta_kWh": 0.0,
+      "before_share": 0.7424237382373887,
+      "after_share": 0.7424237382373887,
+      "before_peak_kW": 1385.3597432591002,
+      "after_peak_kW": 1385.3597432591002,
+      "before_peak_hour": 6347,
+      "after_peak_hour": 6347
+    }
+  ],
+  "building_annual_kWh": {
+    "e": 4009132.4196646474,
+    "h": 1296952.0527684325,
+    "c": 3324738.3634514837
+  },
+  "cold_grouping_max_abs_change_kW": 0.0,
+  "conservation_max_abs_residual_kW": 2.2737367544323206e-13,
+  "unchanged_function_and_class_AST": {
+    "RuntimeState": true,
+    "loads_for_step": true,
+    "empty_faults": true,
+    "validate_scenario": true,
+    "scenario_faults": true,
+    "lex_lock_tolerance": true,
+    "p0_failure_classification": true,
+    "_solve_milp": true,
+    "thermal_data": true,
+    "update_thermal": true,
+    "pre_control_cascade": true,
+    "simulate_scenario": true
+  },
+  "source_sqlite": {
+    "path": "D:\\云大文件\\论文\\医院ies\\Hospital_SanDiego_Starter\\simulation\\engineering_audit_20261010\\eplusout.sql",
+    "bytes": 115511296,
+    "open_mode": "read-only query_only",
+    "sha256_recomputed": false,
+    "declared_provenance_sha256": "12771fb55683c2f08df7008ed8358a8912c41f0d14e9c1b9c47f317769838ef9"
+  },
+  "source_negative_value_counts": {
+    "interior_equipment_kW": 0,
+    "interior_lighting_kW": 0,
+    "associated_reheat_coil_heating_kW": 0,
+    "zone_sensible_cooling_kW": 0
+  },
+  "boundary_notes": [
+    "Electricity uses already-multiplied hourly zone meter J/3600000 once.",
+    "Reheat uses actual component Heating Coil Heating Rate W/1000 once; 14 distinct components are a subset of building coil load; DHW remains in residual demand.",
+    "Cooling uses representative zone sensible W/1000 times zone multiplier once for aggregation; temperature still uses per-zone q, C and UA without count multiplication.",
+    "137 cooling proxy compression hours remain a declared sensible/total/coverage allocation boundary, not evidence of meter corruption or a new load cut.",
+    "The existing proportional compression/nonnegative proxy algorithm remains; no new clipping or service threshold is added."
+  ],
+  "physical_episodes_started": 0,
+  "solver_calls": 0,
+  "old_outputs_modified": false
+}

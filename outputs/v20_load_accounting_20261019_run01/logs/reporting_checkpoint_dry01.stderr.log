@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "D:\hospital_ies_v20_20261019\scripts\v20_report.py", line 464, in <module>
+    if __name__=='__main__':raise SystemExit(main())
+  File "D:\hospital_ies_v20_20261019\scripts\v20_report.py", line 442, in main
+    results=collect_campaign(a.run_dir,baseline_root=a.baseline_root)
+  File "D:\hospital_ies_v20_20261019\scripts\v20_report.py", line 228, in collect_campaign
+    raise ValueError('V20 planned denominator must be 140 batches / 406 pairs')
+ValueError: V20 planned denominator must be 140 batches / 406 pairs

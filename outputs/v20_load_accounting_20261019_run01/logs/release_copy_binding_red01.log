@@ -1,0 +1,72 @@
+.....FF                                                                  [100%]
+================================== FAILURES ===================================
+______ test_final_copy_must_match_qualified_evidence_bytes[not_selected] ______
+
+tmp_path = WindowsPath('D:/hospital_ies_v20_20261019/outputs/v20_load_accounting_20261019_run01/temp/release_copy_binding_red01/pytest-of-HanqinXie/pytest-0/test_final_copy_must_match_qua0')
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x0000012AFB36C670>
+mutation = 'not_selected'
+
+    @pytest.mark.parametrize('mutation', ['not_selected', 'changed_after_qualification'])
+    def test_final_copy_must_match_qualified_evidence_bytes(tmp_path, monkeypatch, mutation):
+        from publication import release_gate
+        import hashlib
+        builder = load_builder()
+        evidence = dict(path='qualified/RESULT.json', bytes=3,
+                        sha256=hashlib.sha256(b'old').hexdigest())
+        proof = dict(status='passed', actual_complete_pairs=406, actual_complete_batches=148,
+                     signature='f' * 64, gate_sha256='a' * 64, evidence_files=[evidence])
+        monkeypatch.setattr(release_gate, 'qualify_final_campaign', lambda root: proof)
+        names = [] if mutation == 'not_selected' else [evidence['path']]
+        monkeypatch.setattr(builder, 'select', lambda candidate: (names, []))
+        def changed_stage(destination):
+            target = Path(destination)
+            (target / 'publication').mkdir(parents=True)
+            (target / '.gitignore').write_text('fixture\n', encoding='utf-8')
+            (target / 'publication/V20_FILE_SELECTION.json').write_text('{}', encoding='utf-8')
+            path = target / evidence['path']
+            path.parent.mkdir(parents=True)
+            path.write_bytes(b'new')
+        monkeypatch.setattr(builder.base, 'stage', changed_stage)
+>       with pytest.raises(ValueError, match='[Ee]vidence'):
+E       Failed: DID NOT RAISE ValueError
+
+publication\test_release_selection.py:122: Failed
+---------------------------- Captured stdout call -----------------------------
+{"status": "staged", "destination": "D:\\hospital_ies_v20_20261019\\outputs\\v20_load_accounting_20261019_run01\\temp\\release_copy_binding_red01\\pytest-of-HanqinXie\\pytest-0\\test_final_copy_must_match_qua0\\final", "files": 4, "selected_bytes": 2026, "candidate": false}
+_ test_final_copy_must_match_qualified_evidence_bytes[changed_after_qualification] _
+
+tmp_path = WindowsPath('D:/hospital_ies_v20_20261019/outputs/v20_load_accounting_20261019_run01/temp/release_copy_binding_red01/pytest-of-HanqinXie/pytest-0/test_final_copy_must_match_qua1')
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x0000012AFB2A9D80>
+mutation = 'changed_after_qualification'
+
+    @pytest.mark.parametrize('mutation', ['not_selected', 'changed_after_qualification'])
+    def test_final_copy_must_match_qualified_evidence_bytes(tmp_path, monkeypatch, mutation):
+        from publication import release_gate
+        import hashlib
+        builder = load_builder()
+        evidence = dict(path='qualified/RESULT.json', bytes=3,
+                        sha256=hashlib.sha256(b'old').hexdigest())
+        proof = dict(status='passed', actual_complete_pairs=406, actual_complete_batches=148,
+                     signature='f' * 64, gate_sha256='a' * 64, evidence_files=[evidence])
+        monkeypatch.setattr(release_gate, 'qualify_final_campaign', lambda root: proof)
+        names = [] if mutation == 'not_selected' else [evidence['path']]
+        monkeypatch.setattr(builder, 'select', lambda candidate: (names, []))
+        def changed_stage(destination):
+            target = Path(destination)
+            (target / 'publication').mkdir(parents=True)
+            (target / '.gitignore').write_text('fixture\n', encoding='utf-8')
+            (target / 'publication/V20_FILE_SELECTION.json').write_text('{}', encoding='utf-8')
+            path = target / evidence['path']
+            path.parent.mkdir(parents=True)
+            path.write_bytes(b'new')
+        monkeypatch.setattr(builder.base, 'stage', changed_stage)
+>       with pytest.raises(ValueError, match='[Ee]vidence'):
+E       Failed: DID NOT RAISE ValueError
+
+publication\test_release_selection.py:122: Failed
+---------------------------- Captured stdout call -----------------------------
+{"status": "staged", "destination": "D:\\hospital_ies_v20_20261019\\outputs\\v20_load_accounting_20261019_run01\\temp\\release_copy_binding_red01\\pytest-of-HanqinXie\\pytest-0\\test_final_copy_must_match_qua1\\final", "files": 4, "selected_bytes": 2026, "candidate": false}
+=========================== short test summary info ===========================
+FAILED publication/test_release_selection.py::test_final_copy_must_match_qualified_evidence_bytes[not_selected]
+FAILED publication/test_release_selection.py::test_final_copy_must_match_qualified_evidence_bytes[changed_after_qualification]
+2 failed, 5 passed in 0.18s

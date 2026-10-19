@@ -1,0 +1,38 @@
+................FFF...........                                           [100%]
+================================== FAILURES ===================================
+_ test_real_sampling_jitter_can_complete_window_without_assuming_exact_clocks _
+
+    def test_real_sampling_jitter_can_complete_window_without_assuming_exact_clocks():
+        m=module();rows=samples(m)
+        for i,r in enumerate(rows):r['monotonic']+=i*.001
+        result=m.stable_admission(rows,profile(),30,2)
+>       assert result['admitted'] and result['stable_observed_seconds']>=30
+E       assert (False)
+
+publication\test_continue_normal008.py:93: AssertionError
+_____ test_admission_rechecks_partial_and_other_child_after_stable_window _____
+
+tmp_path = WindowsPath('D:/hospital_ies_v20_20261019/outputs/v20_load_accounting_20261019_run01/review/normal008_continuation01/test_tmp/monitor_green_probe01/test_admission_rechecks_partia0')
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x00000172324CF040>
+
+    def test_admission_rechecks_partial_and_other_child_after_stable_window(tmp_path,monkeypatch):
+        m=module();monkeypatch.setattr(m,'active_science',lambda:([dict(pid=17)],[]))
+>       with pytest.raises(ValueError):m.final_launch_guard(tmp_path,profile(),dict(selected_reserve_gib=2),dict())
+E       AttributeError: module '_continue008_test' has no attribute 'final_launch_guard'
+
+publication\test_continue_normal008.py:97: AttributeError
+__________ test_prior_result_is_not_an_authorization_to_doublelaunch __________
+
+tmp_path = WindowsPath('D:/hospital_ies_v20_20261019/outputs/v20_load_accounting_20261019_run01/review/normal008_continuation01/test_tmp/monitor_green_probe01/test_prior_result_is_not_an_au0')
+
+    def test_prior_result_is_not_an_authorization_to_doublelaunch(tmp_path):
+        m=module();(tmp_path/'SUMMARY.json').write_text('{}',encoding='utf8')
+>       with pytest.raises((ValueError,FileExistsError)):m.new_run_directory(tmp_path)
+E       AttributeError: module '_continue008_test' has no attribute 'new_run_directory'
+
+publication\test_continue_normal008.py:101: AttributeError
+=========================== short test summary info ===========================
+FAILED publication/test_continue_normal008.py::test_real_sampling_jitter_can_complete_window_without_assuming_exact_clocks
+FAILED publication/test_continue_normal008.py::test_admission_rechecks_partial_and_other_child_after_stable_window
+FAILED publication/test_continue_normal008.py::test_prior_result_is_not_an_authorization_to_doublelaunch
+3 failed, 27 passed in 0.21s

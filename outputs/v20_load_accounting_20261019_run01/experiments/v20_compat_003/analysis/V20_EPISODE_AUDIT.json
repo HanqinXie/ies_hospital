@@ -1,0 +1,50 @@
+[
+  {
+    "scenario_id": "v17_L4_dd6008ccc4bd2acacb5b3870",
+    "policy_id": "C18_service_rich_M20compat_v1",
+    "model_id": "M20_load_accounting",
+    "audit": {
+      "schema": "hospital_ies.v18.saved_raw_audit.v1",
+      "issues": [],
+      "segment_count": 103,
+      "observed_until_minute": 675.0,
+      "requested_end_minute": 675.0,
+      "complete_registered_interval": true,
+      "unknown_tail_minutes": null,
+      "max_recomputed_electric_balance_kW": 2.8421709430404007e-13,
+      "max_recomputed_cooling_balance_kW": 2.2737367544323206e-13,
+      "max_recomputed_auxiliary_difference_kW": 0.0,
+      "minimum_steam_surplus_after_load_and_ABS_lbph": -4.547473508864641e-13,
+      "independent_steam_equality_identified": false,
+      "heat_check": "Recorded steam/equivalent equality plus independently recomputed source adequacy; unused-steam variable not saved",
+      "max_recorded_energy_residual_kW": 2.2737367544323206e-13,
+      "max_recorded_steam_residual_lbph": 6.821210263296962e-13,
+      "DG_receipt_segment_count": 103,
+      "DG_totals": {
+        "mechanical_work_kWh": 253.36363669369481,
+        "electrical_work_kWh": 162.9835065362525,
+        "loss_work_kWh": 90.38013015744224,
+        "rotor_delta_kWh": 4.262925280547764e-18,
+        "fuel_budget_debit_kWh_equivalent": 253.36363669369481
+      },
+      "DG_max_residuals": {
+        "electric": 2.8421709430404007e-13,
+        "cooling": 2.2737367544323206e-13,
+        "auxiliary": 0.0,
+        "recorded": 2.2737367544323206e-13,
+        "recorded_steam": 6.821210263296962e-13,
+        "DG_energy": 3.27244404397046e-15,
+        "DG_rotor": 0.0,
+        "DG_electrical": 3.552713678800501e-15,
+        "DG_budget": 2.255973186038318e-13
+      },
+      "numerical_fuel_settlements": [],
+      "power_audit_tolerance_kW": 0.0001,
+      "work_audit_tolerance_kWh": 1e-08,
+      "time_audit_tolerance_minutes": 1e-07,
+      "original_service_and_failure_thresholds_changed": false,
+      "no_tail_imputation": true,
+      "status": "passed"
+    }
+  }
+]

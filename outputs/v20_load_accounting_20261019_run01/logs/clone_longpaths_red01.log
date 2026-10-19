@@ -1,0 +1,130 @@
+.........FFFFFFF                                                         [100%]
+================================== FAILURES ===================================
+_ test_clone_enables_long_paths_without_changing_argv_or_inherited_git_config[0] _
+
+git_fixture = namespace(target=WindowsPath('D:/hospital_ies_v20_20261019/outputs/v20_load_accounting_20261019_run01/review/normal008...rror=None, selection_missing=False, selection_mismatch=False, remote_commit='bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb')
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x000001E0AB1887C0>
+inherited_count = 0
+
+    @pytest.mark.parametrize('inherited_count',[0,2])
+    def test_clone_enables_long_paths_without_changing_argv_or_inherited_git_config(git_fixture,monkeypatch,inherited_count):
+        import json
+        state=git_fixture
+        monkeypatch.setenv('GIT_CONFIG_COUNT',str(inherited_count))
+        inherited={}
+        if inherited_count:
+            inherited={'GIT_CONFIG_KEY_0':'http.extraHeader','GIT_CONFIG_VALUE_0':'fixture-sensitive-value-do-not-log',
+                       'GIT_CONFIG_KEY_1':'core.longpaths','GIT_CONFIG_VALUE_1':'false'}
+            for key,value in inherited.items():monkeypatch.setenv(key,value)
+        original=dict(clone_tool.os.environ)
+        assert clone_tool.clone(state.target)==0
+        env=state.clone_environments[0]
+>       assert env['GIT_CONFIG_COUNT']==str(inherited_count+1)
+E       AssertionError: assert '0' == '1'
+E         
+E         - 1
+E         + 0
+
+publication\test_clone_release.py:126: AssertionError
+---------------------------- Captured stdout call -----------------------------
+{"command": ["git", "clone", "--branch", "main", "--single-branch", "https://github.com/HanqinXie/ies_hospital.git", "D:\\hospital_ies_v20_20261019\\outputs\\v20_load_accounting_20261019_run01\\review\\normal008_resource_review01\\clone_longpaths01\\test_tmp_red01\\test_clone_enables_long_paths_0\\fresh_clone"], "cwd": "D:\\hospital_ies_v20_20261019\\outputs\\v20_load_accounting_20261019_run01\\review\\normal008_resource_review01\\clone_longpaths01\\test_tmp_red01\\test_clone_enables_long_paths_0", "started_utc": "2026-10-19T11:56:31.706915+00:00", "finished_utc": "2026-10-19T11:56:31.706915+00:00", "exit_code": 0, "starting_destination_existed": false, "clone_destination": "D:\\hospital_ies_v20_20261019\\outputs\\v20_load_accounting_20261019_run01\\review\\normal008_resource_review01\\clone_longpaths01\\test_tmp_red01\\test_clone_enables_long_paths_0\\fresh_clone", "source_launcher_root": "D:\\hospital_ies_v20_20261019\\outputs\\v20_load_accounting_20261019_run01\\review\\normal008_resource_review01\\clone_longpaths01\\test_tmp_red01\\test_clone_enables_long_paths_0\\launcher", "source_launcher_sha256": "82c36c7271589a03ba5b65af9a36a5c37d4f0b2bcdfa1e38bd3dcdb9c0a9e964", "source_launcher_commit": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb", "command_log_sha256": "87e8f2234347714be1ee891fec339858769f5b5b55405032f0c7779b0b4fea6b", "git_commit": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb", "origin_url": "https://github.com/HanqinXie/ies_hospital.git", "branch": "main", "helper_validation_status": "passed", "validation_error": null}
+_ test_clone_enables_long_paths_without_changing_argv_or_inherited_git_config[2] _
+
+git_fixture = namespace(target=WindowsPath('D:/hospital_ies_v20_20261019/outputs/v20_load_accounting_20261019_run01/review/normal008...rror=None, selection_missing=False, selection_mismatch=False, remote_commit='bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb')
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x000001E0AB076D10>
+inherited_count = 2
+
+    @pytest.mark.parametrize('inherited_count',[0,2])
+    def test_clone_enables_long_paths_without_changing_argv_or_inherited_git_config(git_fixture,monkeypatch,inherited_count):
+        import json
+        state=git_fixture
+        monkeypatch.setenv('GIT_CONFIG_COUNT',str(inherited_count))
+        inherited={}
+        if inherited_count:
+            inherited={'GIT_CONFIG_KEY_0':'http.extraHeader','GIT_CONFIG_VALUE_0':'fixture-sensitive-value-do-not-log',
+                       'GIT_CONFIG_KEY_1':'core.longpaths','GIT_CONFIG_VALUE_1':'false'}
+            for key,value in inherited.items():monkeypatch.setenv(key,value)
+        original=dict(clone_tool.os.environ)
+        assert clone_tool.clone(state.target)==0
+        env=state.clone_environments[0]
+>       assert env['GIT_CONFIG_COUNT']==str(inherited_count+1)
+E       AssertionError: assert '2' == '3'
+E         
+E         - 3
+E         + 2
+
+publication\test_clone_release.py:126: AssertionError
+---------------------------- Captured stdout call -----------------------------
+{"command": ["git", "clone", "--branch", "main", "--single-branch", "https://github.com/HanqinXie/ies_hospital.git", "D:\\hospital_ies_v20_20261019\\outputs\\v20_load_accounting_20261019_run01\\review\\normal008_resource_review01\\clone_longpaths01\\test_tmp_red01\\test_clone_enables_long_paths_1\\fresh_clone"], "cwd": "D:\\hospital_ies_v20_20261019\\outputs\\v20_load_accounting_20261019_run01\\review\\normal008_resource_review01\\clone_longpaths01\\test_tmp_red01\\test_clone_enables_long_paths_1", "started_utc": "2026-10-19T11:56:31.756752+00:00", "finished_utc": "2026-10-19T11:56:31.757753+00:00", "exit_code": 0, "starting_destination_existed": false, "clone_destination": "D:\\hospital_ies_v20_20261019\\outputs\\v20_load_accounting_20261019_run01\\review\\normal008_resource_review01\\clone_longpaths01\\test_tmp_red01\\test_clone_enables_long_paths_1\\fresh_clone", "source_launcher_root": "D:\\hospital_ies_v20_20261019\\outputs\\v20_load_accounting_20261019_run01\\review\\normal008_resource_review01\\clone_longpaths01\\test_tmp_red01\\test_clone_enables_long_paths_1\\launcher", "source_launcher_sha256": "82c36c7271589a03ba5b65af9a36a5c37d4f0b2bcdfa1e38bd3dcdb9c0a9e964", "source_launcher_commit": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb", "command_log_sha256": "87e8f2234347714be1ee891fec339858769f5b5b55405032f0c7779b0b4fea6b", "git_commit": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb", "origin_url": "https://github.com/HanqinXie/ies_hospital.git", "branch": "main", "helper_validation_status": "passed", "validation_error": null}
+_ test_local_longpaths_failure_preserves_successful_clone_exit_and_real_config_exit _
+
+git_fixture = namespace(target=WindowsPath('D:/hospital_ies_v20_20261019/outputs/v20_load_accounting_20261019_run01/review/normal008...rror=None, selection_missing=False, selection_mismatch=False, remote_commit='bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb')
+
+    def test_local_longpaths_failure_preserves_successful_clone_exit_and_real_config_exit(git_fixture):
+        state=git_fixture;state.local_config_exit=23
+>       assert clone_tool.clone(state.target)==2
+E       AssertionError: assert 0 == 2
+E        +  where 0 = <function clone at 0x000001E0AB03B0A0>(WindowsPath('D:/hospital_ies_v20_20261019/outputs/v20_load_accounting_20261019_run01/review/normal008_resource_review01/clone_longpaths01/test_tmp_red01/test_local_longpaths_failure_p0/fresh_clone'))
+E        +    where <function clone at 0x000001E0AB03B0A0> = clone_tool.clone
+E        +    and   WindowsPath('D:/hospital_ies_v20_20261019/outputs/v20_load_accounting_20261019_run01/review/normal008_resource_review01/clone_longpaths01/test_tmp_red01/test_local_longpaths_failure_p0/fresh_clone') = namespace(target=WindowsPath('D:/hospital_ies_v20_20261019/outputs/v20_load_accounting_20261019_run01/review/normal008...rror=None, selection_missing=False, selection_mismatch=False, remote_commit='bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb').target
+
+publication\test_clone_release.py:145: AssertionError
+---------------------------- Captured stdout call -----------------------------
+{"command": ["git", "clone", "--branch", "main", "--single-branch", "https://github.com/HanqinXie/ies_hospital.git", "D:\\hospital_ies_v20_20261019\\outputs\\v20_load_accounting_20261019_run01\\review\\normal008_resource_review01\\clone_longpaths01\\test_tmp_red01\\test_local_longpaths_failure_p0\\fresh_clone"], "cwd": "D:\\hospital_ies_v20_20261019\\outputs\\v20_load_accounting_20261019_run01\\review\\normal008_resource_review01\\clone_longpaths01\\test_tmp_red01\\test_local_longpaths_failure_p0", "started_utc": "2026-10-19T11:56:31.768260+00:00", "finished_utc": "2026-10-19T11:56:31.768260+00:00", "exit_code": 0, "starting_destination_existed": false, "clone_destination": "D:\\hospital_ies_v20_20261019\\outputs\\v20_load_accounting_20261019_run01\\review\\normal008_resource_review01\\clone_longpaths01\\test_tmp_red01\\test_local_longpaths_failure_p0\\fresh_clone", "source_launcher_root": "D:\\hospital_ies_v20_20261019\\outputs\\v20_load_accounting_20261019_run01\\review\\normal008_resource_review01\\clone_longpaths01\\test_tmp_red01\\test_local_longpaths_failure_p0\\launcher", "source_launcher_sha256": "82c36c7271589a03ba5b65af9a36a5c37d4f0b2bcdfa1e38bd3dcdb9c0a9e964", "source_launcher_commit": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb", "command_log_sha256": "87e8f2234347714be1ee891fec339858769f5b5b55405032f0c7779b0b4fea6b", "git_commit": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb", "origin_url": "https://github.com/HanqinXie/ies_hospital.git", "branch": "main", "helper_validation_status": "passed", "validation_error": null}
+_________ test_local_longpaths_launch_error_remains_unknown_not_zero __________
+
+git_fixture = namespace(target=WindowsPath('D:/hospital_ies_v20_20261019/outputs/v20_load_accounting_20261019_run01/review/normal008... failed'), selection_missing=False, selection_mismatch=False, remote_commit='bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb')
+
+    def test_local_longpaths_launch_error_remains_unknown_not_zero(git_fixture):
+        state=git_fixture;state.local_config_error=OSError('fixture local configuration launch failed')
+>       assert clone_tool.clone(state.target)==2
+E       AssertionError: assert 0 == 2
+E        +  where 0 = <function clone at 0x000001E0AB03B0A0>(WindowsPath('D:/hospital_ies_v20_20261019/outputs/v20_load_accounting_20261019_run01/review/normal008_resource_review01/clone_longpaths01/test_tmp_red01/test_local_longpaths_launch_er0/fresh_clone'))
+E        +    where <function clone at 0x000001E0AB03B0A0> = clone_tool.clone
+E        +    and   WindowsPath('D:/hospital_ies_v20_20261019/outputs/v20_load_accounting_20261019_run01/review/normal008_resource_review01/clone_longpaths01/test_tmp_red01/test_local_longpaths_launch_er0/fresh_clone') = namespace(target=WindowsPath('D:/hospital_ies_v20_20261019/outputs/v20_load_accounting_20261019_run01/review/normal008... failed'), selection_missing=False, selection_mismatch=False, remote_commit='bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb').target
+
+publication\test_clone_release.py:154: AssertionError
+---------------------------- Captured stdout call -----------------------------
+{"command": ["git", "clone", "--branch", "main", "--single-branch", "https://github.com/HanqinXie/ies_hospital.git", "D:\\hospital_ies_v20_20261019\\outputs\\v20_load_accounting_20261019_run01\\review\\normal008_resource_review01\\clone_longpaths01\\test_tmp_red01\\test_local_longpaths_launch_er0\\fresh_clone"], "cwd": "D:\\hospital_ies_v20_20261019\\outputs\\v20_load_accounting_20261019_run01\\review\\normal008_resource_review01\\clone_longpaths01\\test_tmp_red01\\test_local_longpaths_launch_er0", "started_utc": "2026-10-19T11:56:31.775260+00:00", "finished_utc": "2026-10-19T11:56:31.776260+00:00", "exit_code": 0, "starting_destination_existed": false, "clone_destination": "D:\\hospital_ies_v20_20261019\\outputs\\v20_load_accounting_20261019_run01\\review\\normal008_resource_review01\\clone_longpaths01\\test_tmp_red01\\test_local_longpaths_launch_er0\\fresh_clone", "source_launcher_root": "D:\\hospital_ies_v20_20261019\\outputs\\v20_load_accounting_20261019_run01\\review\\normal008_resource_review01\\clone_longpaths01\\test_tmp_red01\\test_local_longpaths_launch_er0\\launcher", "source_launcher_sha256": "82c36c7271589a03ba5b65af9a36a5c37d4f0b2bcdfa1e38bd3dcdb9c0a9e964", "source_launcher_commit": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb", "command_log_sha256": "87e8f2234347714be1ee891fec339858769f5b5b55405032f0c7779b0b4fea6b", "git_commit": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb", "origin_url": "https://github.com/HanqinXie/ies_hospital.git", "branch": "main", "helper_validation_status": "passed", "validation_error": null}
+_ test_invalid_inherited_git_configuration_is_not_silently_replaced[environment0] _
+
+environment = {'GIT_CONFIG_COUNT': 'bad'}
+
+    @pytest.mark.parametrize('environment',[{'GIT_CONFIG_COUNT':'bad'}, {'GIT_CONFIG_COUNT':'-1'},
+        {'GIT_CONFIG_COUNT':'1','GIT_CONFIG_KEY_0':'core.longpaths'}])
+    def test_invalid_inherited_git_configuration_is_not_silently_replaced(environment):
+>       with pytest.raises(ValueError):clone_tool.clone_environment(environment)
+E       AttributeError: module 'publication.clone_release' has no attribute 'clone_environment'
+
+publication\test_clone_release.py:165: AttributeError
+_ test_invalid_inherited_git_configuration_is_not_silently_replaced[environment1] _
+
+environment = {'GIT_CONFIG_COUNT': '-1'}
+
+    @pytest.mark.parametrize('environment',[{'GIT_CONFIG_COUNT':'bad'}, {'GIT_CONFIG_COUNT':'-1'},
+        {'GIT_CONFIG_COUNT':'1','GIT_CONFIG_KEY_0':'core.longpaths'}])
+    def test_invalid_inherited_git_configuration_is_not_silently_replaced(environment):
+>       with pytest.raises(ValueError):clone_tool.clone_environment(environment)
+E       AttributeError: module 'publication.clone_release' has no attribute 'clone_environment'
+
+publication\test_clone_release.py:165: AttributeError
+_ test_invalid_inherited_git_configuration_is_not_silently_replaced[environment2] _
+
+environment = {'GIT_CONFIG_COUNT': '1', 'GIT_CONFIG_KEY_0': 'core.longpaths'}
+
+    @pytest.mark.parametrize('environment',[{'GIT_CONFIG_COUNT':'bad'}, {'GIT_CONFIG_COUNT':'-1'},
+        {'GIT_CONFIG_COUNT':'1','GIT_CONFIG_KEY_0':'core.longpaths'}])
+    def test_invalid_inherited_git_configuration_is_not_silently_replaced(environment):
+>       with pytest.raises(ValueError):clone_tool.clone_environment(environment)
+E       AttributeError: module 'publication.clone_release' has no attribute 'clone_environment'
+
+publication\test_clone_release.py:165: AttributeError
+=========================== short test summary info ===========================
+FAILED publication/test_clone_release.py::test_clone_enables_long_paths_without_changing_argv_or_inherited_git_config[0]
+FAILED publication/test_clone_release.py::test_clone_enables_long_paths_without_changing_argv_or_inherited_git_config[2]
+FAILED publication/test_clone_release.py::test_local_longpaths_failure_preserves_successful_clone_exit_and_real_config_exit
+FAILED publication/test_clone_release.py::test_local_longpaths_launch_error_remains_unknown_not_zero
+FAILED publication/test_clone_release.py::test_invalid_inherited_git_configuration_is_not_silently_replaced[environment0]
+FAILED publication/test_clone_release.py::test_invalid_inherited_git_configuration_is_not_silently_replaced[environment1]
+FAILED publication/test_clone_release.py::test_invalid_inherited_git_configuration_is_not_silently_replaced[environment2]
+7 failed, 9 passed in 0.18s

@@ -1,0 +1,289 @@
+.......................FFFFFFFFFFFFF                                     [100%]
+================================== FAILURES ===================================
+_ test_new_pid_owner_is_saved_before_import_and_original_wait_exit_is_not_overwritten _
+
+tmp_path = WindowsPath('D:/hospital_ies_v20_20261019/outputs/v20_load_accounting_20261019_run01/temp/normal_oneshot03_red01/pytest-of-HanqinXie/pytest-0/test_new_pid_owner_is_saved_be0')
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x0000017C95209CC0>
+
+    def test_new_pid_owner_is_saved_before_import_and_original_wait_exit_is_not_overwritten(tmp_path,monkeypatch):
+        import os
+        m=module();out=tmp_path/m.RUN_REL/'review/normal_window_analysis03';out.mkdir(parents=True)
+        old=out/'READONLY_OWNER.json';old.write_text('{"pid":82524}',encoding='utf-8')
+        monkeypatch.setattr(m,'readiness',lambda root:dict(ready=True,original_waiter_exit_code=15))
+        def load(path):
+            owner=m.read(out/'ONESHOT_OWNER01.json')
+            assert owner['pid']==os.getpid() and owner['command']==sys.argv
+            assert owner['cwd']==str(Path.cwd())
+            assert owner['original_waiter_exit_code']==15 and owner['helper_sha256']==m.HELPER_SHA
+            raise RuntimeError('synthetic loader stop; no prepared helper imported')
+        monkeypatch.setattr(m,'_load_helper',load)
+>       with pytest.raises(RuntimeError,match='synthetic loader stop'):m.collect_once(tmp_path)
+
+outputs\v20_load_accounting_20261019_run01\review\normal_window_analysis03\test_collect_normal_once03.py:119: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+outputs\v20_load_accounting_20261019_run01\review\normal_window_analysis03\collect_normal_once03.py:186: in collect_once
+    write_new(out / 'ONESHOT_OWNER01.json', intent)
+outputs\v20_load_accounting_20261019_run01\review\normal_window_analysis03\collect_normal_once03.py:46: in write_new
+    with Path(path).open('x', encoding='utf-8', newline='\n') as stream:
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = WindowsPath('D:/hospital_ies_v20_20261019/outputs/v20_load_accounting_20261019_run01/temp/normal_oneshot03_red01/pytes...id_owner_is_saved_be0/outputs/v20_load_accounting_20261019_run01/review/normal_window_analysis02/ONESHOT_OWNER01.json')
+mode = 'x', buffering = -1, encoding = 'utf-8', errors = None, newline = '\n'
+
+    def open(self, mode='r', buffering=-1, encoding=None,
+             errors=None, newline=None):
+        """
+        Open the file pointed by this path and return a file object, as
+        the built-in open() function does.
+        """
+        if "b" not in mode:
+            encoding = io.text_encoding(encoding)
+>       return self._accessor.open(self, mode, buffering, encoding, errors,
+                                   newline)
+E       FileNotFoundError: [Errno 2] No such file or directory: 'D:\\hospital_ies_v20_20261019\\outputs\\v20_load_accounting_20261019_run01\\temp\\normal_oneshot03_red01\\pytest-of-HanqinXie\\pytest-0\\test_new_pid_owner_is_saved_be0\\outputs\\v20_load_accounting_20261019_run01\\review\\normal_window_analysis02\\ONESHOT_OWNER01.json'
+
+C:\Users\HanqinXie\AppData\Local\Programs\Python\Python310\lib\pathlib.py:1119: FileNotFoundError
+___ test_successor_gate_requires_trueRUN02_not_failed_or_idle_predecessors ____
+
+    def test_successor_gate_requires_trueRUN02_not_failed_or_idle_predecessors():
+>       module().validate_successor_ready_records(*successor_fixture())
+E       AttributeError: module '_collect_normal_once03_tested' has no attribute 'validate_successor_ready_records'
+
+outputs\v20_load_accounting_20261019_run01\review\normal_window_analysis03\test_collect_normal_once03.py:141: AttributeError
+___ test_successor_bootstrap_never_imports_from_scalar_success_only[RUN01] ____
+
+mutation = 'RUN01'
+
+    @pytest.mark.parametrize('mutation',['RUN01','outer15','not406','two_children','old11','009measured','bad_ledger','bad_stream','new_qualification_physics','report_failed'])
+    def test_successor_bootstrap_never_imports_from_scalar_success_only(mutation):
+        s,q,c,r,z=successor_fixture()
+        if mutation=='RUN01':c['name']='normal008_lightweight_run01'
+        elif mutation=='outer15':c['exit_code']=15
+        elif mutation=='not406':q['actual_complete_pairs']=405
+        elif mutation=='two_children':s['actual_scientific_children_started']=2
+        elif mutation=='old11':s['old_measured_resource_batches']=11
+        elif mutation=='009measured':s['normal009_resource_peak_unknown']=False
+        elif mutation=='bad_ledger':q['exact_registered_duration_and_service_ledger']=False
+        elif mutation=='bad_stream':q['actual_applied_streams_recomputed']=False
+        elif mutation=='new_qualification_physics':q['physical_episodes_started']=406
+        elif mutation=='report_failed':r['exit_code']=1
+>       with pytest.raises(ValueError):module().validate_successor_ready_records(s,q,c,r,z)
+E       AttributeError: module '_collect_normal_once03_tested' has no attribute 'validate_successor_ready_records'
+
+outputs\v20_load_accounting_20261019_run01\review\normal_window_analysis03\test_collect_normal_once03.py:157: AttributeError
+__ test_successor_bootstrap_never_imports_from_scalar_success_only[outer15] ___
+
+mutation = 'outer15'
+
+    @pytest.mark.parametrize('mutation',['RUN01','outer15','not406','two_children','old11','009measured','bad_ledger','bad_stream','new_qualification_physics','report_failed'])
+    def test_successor_bootstrap_never_imports_from_scalar_success_only(mutation):
+        s,q,c,r,z=successor_fixture()
+        if mutation=='RUN01':c['name']='normal008_lightweight_run01'
+        elif mutation=='outer15':c['exit_code']=15
+        elif mutation=='not406':q['actual_complete_pairs']=405
+        elif mutation=='two_children':s['actual_scientific_children_started']=2
+        elif mutation=='old11':s['old_measured_resource_batches']=11
+        elif mutation=='009measured':s['normal009_resource_peak_unknown']=False
+        elif mutation=='bad_ledger':q['exact_registered_duration_and_service_ledger']=False
+        elif mutation=='bad_stream':q['actual_applied_streams_recomputed']=False
+        elif mutation=='new_qualification_physics':q['physical_episodes_started']=406
+        elif mutation=='report_failed':r['exit_code']=1
+>       with pytest.raises(ValueError):module().validate_successor_ready_records(s,q,c,r,z)
+E       AttributeError: module '_collect_normal_once03_tested' has no attribute 'validate_successor_ready_records'
+
+outputs\v20_load_accounting_20261019_run01\review\normal_window_analysis03\test_collect_normal_once03.py:157: AttributeError
+___ test_successor_bootstrap_never_imports_from_scalar_success_only[not406] ___
+
+mutation = 'not406'
+
+    @pytest.mark.parametrize('mutation',['RUN01','outer15','not406','two_children','old11','009measured','bad_ledger','bad_stream','new_qualification_physics','report_failed'])
+    def test_successor_bootstrap_never_imports_from_scalar_success_only(mutation):
+        s,q,c,r,z=successor_fixture()
+        if mutation=='RUN01':c['name']='normal008_lightweight_run01'
+        elif mutation=='outer15':c['exit_code']=15
+        elif mutation=='not406':q['actual_complete_pairs']=405
+        elif mutation=='two_children':s['actual_scientific_children_started']=2
+        elif mutation=='old11':s['old_measured_resource_batches']=11
+        elif mutation=='009measured':s['normal009_resource_peak_unknown']=False
+        elif mutation=='bad_ledger':q['exact_registered_duration_and_service_ledger']=False
+        elif mutation=='bad_stream':q['actual_applied_streams_recomputed']=False
+        elif mutation=='new_qualification_physics':q['physical_episodes_started']=406
+        elif mutation=='report_failed':r['exit_code']=1
+>       with pytest.raises(ValueError):module().validate_successor_ready_records(s,q,c,r,z)
+E       AttributeError: module '_collect_normal_once03_tested' has no attribute 'validate_successor_ready_records'
+
+outputs\v20_load_accounting_20261019_run01\review\normal_window_analysis03\test_collect_normal_once03.py:157: AttributeError
+_ test_successor_bootstrap_never_imports_from_scalar_success_only[two_children] _
+
+mutation = 'two_children'
+
+    @pytest.mark.parametrize('mutation',['RUN01','outer15','not406','two_children','old11','009measured','bad_ledger','bad_stream','new_qualification_physics','report_failed'])
+    def test_successor_bootstrap_never_imports_from_scalar_success_only(mutation):
+        s,q,c,r,z=successor_fixture()
+        if mutation=='RUN01':c['name']='normal008_lightweight_run01'
+        elif mutation=='outer15':c['exit_code']=15
+        elif mutation=='not406':q['actual_complete_pairs']=405
+        elif mutation=='two_children':s['actual_scientific_children_started']=2
+        elif mutation=='old11':s['old_measured_resource_batches']=11
+        elif mutation=='009measured':s['normal009_resource_peak_unknown']=False
+        elif mutation=='bad_ledger':q['exact_registered_duration_and_service_ledger']=False
+        elif mutation=='bad_stream':q['actual_applied_streams_recomputed']=False
+        elif mutation=='new_qualification_physics':q['physical_episodes_started']=406
+        elif mutation=='report_failed':r['exit_code']=1
+>       with pytest.raises(ValueError):module().validate_successor_ready_records(s,q,c,r,z)
+E       AttributeError: module '_collect_normal_once03_tested' has no attribute 'validate_successor_ready_records'
+
+outputs\v20_load_accounting_20261019_run01\review\normal_window_analysis03\test_collect_normal_once03.py:157: AttributeError
+___ test_successor_bootstrap_never_imports_from_scalar_success_only[old11] ____
+
+mutation = 'old11'
+
+    @pytest.mark.parametrize('mutation',['RUN01','outer15','not406','two_children','old11','009measured','bad_ledger','bad_stream','new_qualification_physics','report_failed'])
+    def test_successor_bootstrap_never_imports_from_scalar_success_only(mutation):
+        s,q,c,r,z=successor_fixture()
+        if mutation=='RUN01':c['name']='normal008_lightweight_run01'
+        elif mutation=='outer15':c['exit_code']=15
+        elif mutation=='not406':q['actual_complete_pairs']=405
+        elif mutation=='two_children':s['actual_scientific_children_started']=2
+        elif mutation=='old11':s['old_measured_resource_batches']=11
+        elif mutation=='009measured':s['normal009_resource_peak_unknown']=False
+        elif mutation=='bad_ledger':q['exact_registered_duration_and_service_ledger']=False
+        elif mutation=='bad_stream':q['actual_applied_streams_recomputed']=False
+        elif mutation=='new_qualification_physics':q['physical_episodes_started']=406
+        elif mutation=='report_failed':r['exit_code']=1
+>       with pytest.raises(ValueError):module().validate_successor_ready_records(s,q,c,r,z)
+E       AttributeError: module '_collect_normal_once03_tested' has no attribute 'validate_successor_ready_records'
+
+outputs\v20_load_accounting_20261019_run01\review\normal_window_analysis03\test_collect_normal_once03.py:157: AttributeError
+_ test_successor_bootstrap_never_imports_from_scalar_success_only[009measured] _
+
+mutation = '009measured'
+
+    @pytest.mark.parametrize('mutation',['RUN01','outer15','not406','two_children','old11','009measured','bad_ledger','bad_stream','new_qualification_physics','report_failed'])
+    def test_successor_bootstrap_never_imports_from_scalar_success_only(mutation):
+        s,q,c,r,z=successor_fixture()
+        if mutation=='RUN01':c['name']='normal008_lightweight_run01'
+        elif mutation=='outer15':c['exit_code']=15
+        elif mutation=='not406':q['actual_complete_pairs']=405
+        elif mutation=='two_children':s['actual_scientific_children_started']=2
+        elif mutation=='old11':s['old_measured_resource_batches']=11
+        elif mutation=='009measured':s['normal009_resource_peak_unknown']=False
+        elif mutation=='bad_ledger':q['exact_registered_duration_and_service_ledger']=False
+        elif mutation=='bad_stream':q['actual_applied_streams_recomputed']=False
+        elif mutation=='new_qualification_physics':q['physical_episodes_started']=406
+        elif mutation=='report_failed':r['exit_code']=1
+>       with pytest.raises(ValueError):module().validate_successor_ready_records(s,q,c,r,z)
+E       AttributeError: module '_collect_normal_once03_tested' has no attribute 'validate_successor_ready_records'
+
+outputs\v20_load_accounting_20261019_run01\review\normal_window_analysis03\test_collect_normal_once03.py:157: AttributeError
+_ test_successor_bootstrap_never_imports_from_scalar_success_only[bad_ledger] _
+
+mutation = 'bad_ledger'
+
+    @pytest.mark.parametrize('mutation',['RUN01','outer15','not406','two_children','old11','009measured','bad_ledger','bad_stream','new_qualification_physics','report_failed'])
+    def test_successor_bootstrap_never_imports_from_scalar_success_only(mutation):
+        s,q,c,r,z=successor_fixture()
+        if mutation=='RUN01':c['name']='normal008_lightweight_run01'
+        elif mutation=='outer15':c['exit_code']=15
+        elif mutation=='not406':q['actual_complete_pairs']=405
+        elif mutation=='two_children':s['actual_scientific_children_started']=2
+        elif mutation=='old11':s['old_measured_resource_batches']=11
+        elif mutation=='009measured':s['normal009_resource_peak_unknown']=False
+        elif mutation=='bad_ledger':q['exact_registered_duration_and_service_ledger']=False
+        elif mutation=='bad_stream':q['actual_applied_streams_recomputed']=False
+        elif mutation=='new_qualification_physics':q['physical_episodes_started']=406
+        elif mutation=='report_failed':r['exit_code']=1
+>       with pytest.raises(ValueError):module().validate_successor_ready_records(s,q,c,r,z)
+E       AttributeError: module '_collect_normal_once03_tested' has no attribute 'validate_successor_ready_records'
+
+outputs\v20_load_accounting_20261019_run01\review\normal_window_analysis03\test_collect_normal_once03.py:157: AttributeError
+_ test_successor_bootstrap_never_imports_from_scalar_success_only[bad_stream] _
+
+mutation = 'bad_stream'
+
+    @pytest.mark.parametrize('mutation',['RUN01','outer15','not406','two_children','old11','009measured','bad_ledger','bad_stream','new_qualification_physics','report_failed'])
+    def test_successor_bootstrap_never_imports_from_scalar_success_only(mutation):
+        s,q,c,r,z=successor_fixture()
+        if mutation=='RUN01':c['name']='normal008_lightweight_run01'
+        elif mutation=='outer15':c['exit_code']=15
+        elif mutation=='not406':q['actual_complete_pairs']=405
+        elif mutation=='two_children':s['actual_scientific_children_started']=2
+        elif mutation=='old11':s['old_measured_resource_batches']=11
+        elif mutation=='009measured':s['normal009_resource_peak_unknown']=False
+        elif mutation=='bad_ledger':q['exact_registered_duration_and_service_ledger']=False
+        elif mutation=='bad_stream':q['actual_applied_streams_recomputed']=False
+        elif mutation=='new_qualification_physics':q['physical_episodes_started']=406
+        elif mutation=='report_failed':r['exit_code']=1
+>       with pytest.raises(ValueError):module().validate_successor_ready_records(s,q,c,r,z)
+E       AttributeError: module '_collect_normal_once03_tested' has no attribute 'validate_successor_ready_records'
+
+outputs\v20_load_accounting_20261019_run01\review\normal_window_analysis03\test_collect_normal_once03.py:157: AttributeError
+_ test_successor_bootstrap_never_imports_from_scalar_success_only[new_qualification_physics] _
+
+mutation = 'new_qualification_physics'
+
+    @pytest.mark.parametrize('mutation',['RUN01','outer15','not406','two_children','old11','009measured','bad_ledger','bad_stream','new_qualification_physics','report_failed'])
+    def test_successor_bootstrap_never_imports_from_scalar_success_only(mutation):
+        s,q,c,r,z=successor_fixture()
+        if mutation=='RUN01':c['name']='normal008_lightweight_run01'
+        elif mutation=='outer15':c['exit_code']=15
+        elif mutation=='not406':q['actual_complete_pairs']=405
+        elif mutation=='two_children':s['actual_scientific_children_started']=2
+        elif mutation=='old11':s['old_measured_resource_batches']=11
+        elif mutation=='009measured':s['normal009_resource_peak_unknown']=False
+        elif mutation=='bad_ledger':q['exact_registered_duration_and_service_ledger']=False
+        elif mutation=='bad_stream':q['actual_applied_streams_recomputed']=False
+        elif mutation=='new_qualification_physics':q['physical_episodes_started']=406
+        elif mutation=='report_failed':r['exit_code']=1
+>       with pytest.raises(ValueError):module().validate_successor_ready_records(s,q,c,r,z)
+E       AttributeError: module '_collect_normal_once03_tested' has no attribute 'validate_successor_ready_records'
+
+outputs\v20_load_accounting_20261019_run01\review\normal_window_analysis03\test_collect_normal_once03.py:157: AttributeError
+_ test_successor_bootstrap_never_imports_from_scalar_success_only[report_failed] _
+
+mutation = 'report_failed'
+
+    @pytest.mark.parametrize('mutation',['RUN01','outer15','not406','two_children','old11','009measured','bad_ledger','bad_stream','new_qualification_physics','report_failed'])
+    def test_successor_bootstrap_never_imports_from_scalar_success_only(mutation):
+        s,q,c,r,z=successor_fixture()
+        if mutation=='RUN01':c['name']='normal008_lightweight_run01'
+        elif mutation=='outer15':c['exit_code']=15
+        elif mutation=='not406':q['actual_complete_pairs']=405
+        elif mutation=='two_children':s['actual_scientific_children_started']=2
+        elif mutation=='old11':s['old_measured_resource_batches']=11
+        elif mutation=='009measured':s['normal009_resource_peak_unknown']=False
+        elif mutation=='bad_ledger':q['exact_registered_duration_and_service_ledger']=False
+        elif mutation=='bad_stream':q['actual_applied_streams_recomputed']=False
+        elif mutation=='new_qualification_physics':q['physical_episodes_started']=406
+        elif mutation=='report_failed':r['exit_code']=1
+>       with pytest.raises(ValueError):module().validate_successor_ready_records(s,q,c,r,z)
+E       AttributeError: module '_collect_normal_once03_tested' has no attribute 'validate_successor_ready_records'
+
+outputs\v20_load_accounting_20261019_run01\review\normal_window_analysis03\test_collect_normal_once03.py:157: AttributeError
+_ test_new03_document_links_are_verified_without_modifying_generated_document _
+
+tmp_path = WindowsPath('D:/hospital_ies_v20_20261019/outputs/v20_load_accounting_20261019_run01/temp/normal_oneshot03_red01/pytest-of-HanqinXie/pytest-0/test_new03_document_links_are_0')
+
+    def test_new03_document_links_are_verified_without_modifying_generated_document(tmp_path):
+        m=module();root,out,doc,table,receipt,text=document_fixture(tmp_path)
+        corrected=text.replace(m.OLD_PREFIX,m.NEW_PREFIX);doc.write_text(corrected,encoding='utf-8')
+        data=m.read(receipt);data['outputs'][0]['sha256']=m.sha(doc);receipt.write_text(json.dumps(data),encoding='utf-8')
+>       before=doc.read_bytes();proof=m.verify_document_links(root,out,doc,receipt)
+E       AttributeError: module '_collect_normal_once03_tested' has no attribute 'verify_document_links'. Did you mean: 'correct_document_links'?
+
+outputs\v20_load_accounting_20261019_run01\review\normal_window_analysis03\test_collect_normal_once03.py:164: AttributeError
+=========================== short test summary info ===========================
+FAILED outputs/v20_load_accounting_20261019_run01/review/normal_window_analysis03/test_collect_normal_once03.py::test_new_pid_owner_is_saved_before_import_and_original_wait_exit_is_not_overwritten
+FAILED outputs/v20_load_accounting_20261019_run01/review/normal_window_analysis03/test_collect_normal_once03.py::test_successor_gate_requires_trueRUN02_not_failed_or_idle_predecessors
+FAILED outputs/v20_load_accounting_20261019_run01/review/normal_window_analysis03/test_collect_normal_once03.py::test_successor_bootstrap_never_imports_from_scalar_success_only[RUN01]
+FAILED outputs/v20_load_accounting_20261019_run01/review/normal_window_analysis03/test_collect_normal_once03.py::test_successor_bootstrap_never_imports_from_scalar_success_only[outer15]
+FAILED outputs/v20_load_accounting_20261019_run01/review/normal_window_analysis03/test_collect_normal_once03.py::test_successor_bootstrap_never_imports_from_scalar_success_only[not406]
+FAILED outputs/v20_load_accounting_20261019_run01/review/normal_window_analysis03/test_collect_normal_once03.py::test_successor_bootstrap_never_imports_from_scalar_success_only[two_children]
+FAILED outputs/v20_load_accounting_20261019_run01/review/normal_window_analysis03/test_collect_normal_once03.py::test_successor_bootstrap_never_imports_from_scalar_success_only[old11]
+FAILED outputs/v20_load_accounting_20261019_run01/review/normal_window_analysis03/test_collect_normal_once03.py::test_successor_bootstrap_never_imports_from_scalar_success_only[009measured]
+FAILED outputs/v20_load_accounting_20261019_run01/review/normal_window_analysis03/test_collect_normal_once03.py::test_successor_bootstrap_never_imports_from_scalar_success_only[bad_ledger]
+FAILED outputs/v20_load_accounting_20261019_run01/review/normal_window_analysis03/test_collect_normal_once03.py::test_successor_bootstrap_never_imports_from_scalar_success_only[bad_stream]
+FAILED outputs/v20_load_accounting_20261019_run01/review/normal_window_analysis03/test_collect_normal_once03.py::test_successor_bootstrap_never_imports_from_scalar_success_only[new_qualification_physics]
+FAILED outputs/v20_load_accounting_20261019_run01/review/normal_window_analysis03/test_collect_normal_once03.py::test_successor_bootstrap_never_imports_from_scalar_success_only[report_failed]
+FAILED outputs/v20_load_accounting_20261019_run01/review/normal_window_analysis03/test_collect_normal_once03.py::test_new03_document_links_are_verified_without_modifying_generated_document
+13 failed, 23 passed in 0.18s

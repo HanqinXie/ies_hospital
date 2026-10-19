@@ -1,0 +1,158 @@
+{
+  "schema": "hospital_ies.v20.publication_copy_binding_validation.v1",
+  "utc": "2026-10-19T07:27:36.795437+00:00",
+  "status": "passed",
+  "prior_receipt_preserved": {
+    "path": "outputs/v20_load_accounting_20261019_run01/provenance/publication_layer/RELEASE_GATE_VALIDATION_RECEIPT02.json",
+    "sha256": "ec811b8f3c79a4f7d49163270e150a8f6c15a2a0b4f1acfe26516a5ae869f2aa"
+  },
+  "current_reviewed_files": [
+    {
+      "path": "publication/build_v20_release.py",
+      "bytes": 8668,
+      "sha256": "adb6f25abe8f60ee7aee66a846af5a1fb262bb429c4747d714beaa5ae179352e"
+    },
+    {
+      "path": "publication/test_release_selection.py",
+      "bytes": 6571,
+      "sha256": "6061176f930dcbc05dd4129175fb9b7cbd56514d9cf7effa237e95e9462012e8"
+    },
+    {
+      "path": "docs/v20/REPRODUCTION.md",
+      "bytes": 6891,
+      "sha256": "92e8433709d7c508ffa2b96b64a868d6bd83faf0320fb789530721ccc3aafc78"
+    },
+    {
+      "path": "docs/v20/PUBLICATION_SCOPE.md",
+      "bytes": 5686,
+      "sha256": "8ec1a635d54daf4fecd8c73051928c1dbdcaccbc046f93709c4abd75d560d7c8"
+    },
+    {
+      "path": "docs/v20/EXTERNAL_ASSETS.json",
+      "bytes": 8663,
+      "sha256": "c8583567c880003c917b6b376aa921b086a7e052a183f74b7564644dfe319ced"
+    }
+  ],
+  "finding": {
+    "issue": "The original stage verified its own newly generated copy inventory, without requiring copied bytes to equal the earlier successful campaign qualification. A changed/omitted RESULT or journal could thus be copied after qualification.",
+    "severity": "important",
+    "owner": "root owns build_v20_release.py; reviewer did not edit it",
+    "resolution": "Before copy, every qualified evidence path must occur in selection; after copy, verify_rows(target, qualification.evidence_files) must be empty before writing final proof and marker.",
+    "regressions": [
+      "not_selected",
+      "changed_after_qualification"
+    ],
+    "actual_red": "2 failed, 5 passed",
+    "actual_green": "7 passed",
+    "review_status": "closed_by_read_only_source_check_and_actual_log_readback"
+  },
+  "commands": [
+    {
+      "name": "release_copy_binding_red01",
+      "actual_command": [
+        "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\python.exe",
+        "-B",
+        "-m",
+        "pytest",
+        "-q",
+        "publication/test_release_selection.py"
+      ],
+      "cwd": "D:\\hospital_ies_v20_20261019",
+      "exit_code": 1,
+      "started_utc": "2026-10-19T07:25:49.536660+00:00",
+      "finished_utc": "2026-10-19T07:25:50.017590+00:00",
+      "expected_observed_result": "2 failed, 5 passed",
+      "command_receipt": {
+        "path": "outputs/v20_load_accounting_20261019_run01/logs/release_copy_binding_red01.command.json",
+        "bytes": 901,
+        "sha256": "79355592bb3534e8594429cb0d19fbe6842c75b026b9ab063a632b0dbcec84b0"
+      },
+      "raw_log": {
+        "path": "outputs/v20_load_accounting_20261019_run01/logs/release_copy_binding_red01.log",
+        "bytes": 5047,
+        "sha256": "e5db8f2caa10f572ed2f6cd318f4e1c7bb5f5ce7ba9d6b57ed551e2fe215c261"
+      }
+    },
+    {
+      "name": "release_copy_binding_green01",
+      "actual_command": [
+        "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\python.exe",
+        "-B",
+        "-m",
+        "pytest",
+        "-q",
+        "publication/test_release_selection.py"
+      ],
+      "cwd": "D:\\hospital_ies_v20_20261019",
+      "exit_code": 0,
+      "started_utc": "2026-10-19T07:26:03.510379+00:00",
+      "finished_utc": "2026-10-19T07:26:03.894039+00:00",
+      "expected_observed_result": "7 passed",
+      "command_receipt": {
+        "path": "outputs/v20_load_accounting_20261019_run01/logs/release_copy_binding_green01.command.json",
+        "bytes": 906,
+        "sha256": "d723c58507665d8cfe876efd6d328e235c8ae36b06dc7a31596a7262db808d06"
+      },
+      "raw_log": {
+        "path": "outputs/v20_load_accounting_20261019_run01/logs/release_copy_binding_green01.log",
+        "bytes": 100,
+        "sha256": "e78593cffe1242f1889a4617228646fe7b3fb664ad36de85750923aaf4cb2091"
+      }
+    },
+    {
+      "name": "publication_gates04",
+      "actual_command": [
+        "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\python.exe",
+        "-B",
+        "-m",
+        "pytest",
+        "-q",
+        "publication"
+      ],
+      "cwd": "D:\\hospital_ies_v20_20261019",
+      "exit_code": 0,
+      "started_utc": "2026-10-19T07:26:03.942414+00:00",
+      "finished_utc": "2026-10-19T07:26:06.290490+00:00",
+      "expected_observed_result": "112 passed, 7 subtests passed",
+      "command_receipt": {
+        "path": "outputs/v20_load_accounting_20261019_run01/logs/publication_gates04.command.json",
+        "bytes": 853,
+        "sha256": "9ba3e0879155bc1fc8ec6c6703e2a13edaf04a2ce17f6aadbb1d7e651392a8b4"
+      },
+      "raw_log": {
+        "path": "outputs/v20_load_accounting_20261019_run01/logs/publication_gates04.log",
+        "bytes": 195,
+        "sha256": "59deeecc5738cbc42e2e4e61a96b52cd3b011e6c68d9de313f75452f709053f5"
+      }
+    }
+  ],
+  "latest_combined_gate": {
+    "command": "publication_gates04",
+    "passed_tests": 112,
+    "passed_subtests": 7,
+    "exit_code": 0,
+    "elapsed_seconds_as_reported": 1.9
+  },
+  "read_only_review": {
+    "blocking": [],
+    "important": [],
+    "wrapper_qualified_evidence_subset_checked_before_copy": true,
+    "copied_evidence_sha_verified_before_finalproof_and_marker": true,
+    "docs_distinguish_candidate_463_and_94_from_future_postpush": true,
+    "docs_do_not_claim_406_completed": true,
+    "docs_explain_postpush_evidence_appended_to_zip_not_backfilled_commit": true,
+    "docs_list_eight_compact_exports_and_external14": true,
+    "selection_dry_current_files": 2788,
+    "seven_required_supplemental_fixtures_present": true,
+    "largest_current_selected_file_bytes": 22560317,
+    "no_selected_pdf_xlsx_raw_sql_archive_license": true,
+    "selection_snapshot_is_not_a_final_result": true
+  },
+  "physical_episodes_started": 0,
+  "raw_files_opened": 0,
+  "annual_values_parsed": 0,
+  "new_archive_built": false,
+  "final_406_pass_or_postpush_not_claimed": true,
+  "writer_stopped": true,
+  "signature": "ba5741e6d08a2bd12b99f5faf98611345bb852296c2472cccf79c62dda73ee2f"
+}

@@ -1,0 +1,86 @@
+diff --git a/src/hospital_ies/resilience.py b/src/hospital_ies/resilience.py
+index adedfd2..756e1e5 100644
+--- a/src/hospital_ies/resilience.py
++++ b/src/hospital_ies/resilience.py
+@@ -28,6 +28,7 @@ ZONE_PRIORITY = {
+ }
+ GROUPS=('P0','P1','P2','P3')
+ CARRIERS=('e','h','c')
++LOAD_ACCOUNTING_CONTRACT_ID='hospital_ies.load_accounting.v20.v1'
+ 
+ 
+ @dataclass
+@@ -48,13 +49,8 @@ class RuntimeState:
+     topology_mode: str = 'legacy_explicit_permission'
+ 
+ 
+-def build_zone_groups(zone_df:pd.DataFrame, hourly:pd.DataFrame)->pd.DataFrame:
+-    """Vectorized and conservative priority decomposition of v2 8760h totals.
+-
+-    The zone data are proxies, not actual metered critical circuits. Values
+-    are never added on top of the DOE energy totals; any excess zone proxy
+-    is rescaled, and residual demand goes to P3.
+-    """
++def _zone_group_arrays(zone_df:pd.DataFrame, hourly:pd.DataFrame):
++    """Shared field accounting before the unchanged proxy allocation boundary."""
+     d=zone_df.copy()
+     d['zone_name']=d.zone_name.str.upper()
+     names=set(d.zone_name.unique())
+@@ -62,8 +58,10 @@ def build_zone_groups(zone_df:pd.DataFrame, hourly:pd.DataFrame)->pd.DataFrame:
+         raise ValueError(f'Critical-zone mapping mismatch: {set(ZONE_PRIORITY)^names}')
+     d['priority']=d.zone_name.map(ZONE_PRIORITY)
+     mult=d.zone_multiplier.to_numpy(dtype=float)
+-    d['e_raw']=(d.interior_equipment_kW+d.interior_lighting_kW).to_numpy()*mult
+-    d['h_raw']=d.associated_reheat_coil_heating_kW.clip(lower=0).to_numpy()*mult
++    # Zone electricity meters and actual reheat component rates already include
++    # repeated zones. Sensible cooling is one representative zone's variable.
++    d['e_raw']=(d.interior_equipment_kW+d.interior_lighting_kW).to_numpy()
++    d['h_raw']=d.associated_reheat_coil_heating_kW.clip(lower=0).to_numpy()
+     d['c_raw']=d.zone_sensible_cooling_kW.clip(lower=0).to_numpy()*mult
+     grouped=d.groupby(['hour_of_year','priority'],sort=False)[['e_raw','h_raw','c_raw']].sum()
+     keys=pd.MultiIndex.from_product([hourly.hour_of_year.to_numpy(),[0,1,2]],names=['hour_of_year','priority'])
+@@ -77,12 +75,44 @@ def build_zone_groups(zone_df:pd.DataFrame, hourly:pd.DataFrame)->pd.DataFrame:
+     values[:,:3,:]=data*scale[:,None,:]
+     values[:,3,:]=np.maximum(0.,total-values[:,:3,:].sum(axis=1))
+     if not np.allclose(values.sum(axis=1),total,atol=1e-6):raise ValueError('Priority load decomposition not conservative')
++    return data,total,summed,scale,values
++
++
++def build_zone_groups(zone_df:pd.DataFrame, hourly:pd.DataFrame)->pd.DataFrame:
++    """Conservative V20 field-specific priority decomposition of original totals.
++
++    Zone proxies are not added to building totals. The existing thermal clipping,
++    proportional compression algorithm and P3 residual algorithm are retained;
++    grouping_diagnostics exposes every carrier's values before compression.
++    """
++    _,_,_,_,values=_zone_group_arrays(zone_df,hourly)
+     out=pd.DataFrame({'hour_of_year':hourly.hour_of_year.to_numpy()})
+     for i,g in enumerate(GROUPS):
+         for j,k in enumerate(CARRIERS):out[f'{g}_{k}_kW']=values[:,i,j]
+     return out
+ 
+ 
++def grouping_diagnostics(zone_df:pd.DataFrame, hourly:pd.DataFrame)->pd.DataFrame:
++    """Per-hour proxy accounting; no dispatch, extra clipping or load changes.
++
++    ``*_raw_kW`` means the existing nonnegative thermal proxy before any
++    proportional compression, not a new whole-building measurement. A positive
++    excess is retained even when allocation subsequently conserves the total.
++    """
++    data,total,summed,scale,values=_zone_group_arrays(zone_df,hourly)
++    out=pd.DataFrame({'hour_of_year':hourly.hour_of_year.to_numpy()})
++    for j,carrier in enumerate(CARRIERS):
++        for i in range(3):out[f'P{i}_{carrier}_raw_kW']=data[:,i,j]
++        out[f'{carrier}_proxy_sum_kW']=summed[:,j]
++        out[f'{carrier}_building_total_kW']=total[:,j]
++        out[f'{carrier}_compression_scale']=scale[:,j]
++        out[f'{carrier}_proxy_excess_kW']=np.maximum(0.,summed[:,j]-total[:,j])
++        out[f'{carrier}_compression_applied']=scale[:,j]<1.
++        out[f'{carrier}_P3_residual_kW']=values[:,3,j]
++    out.attrs['load_accounting_contract_id']=LOAD_ACCOUNTING_CONTRACT_ID
++    return out
++
++
+ def loads_for_step(base:dict,shock:dict[str,float],priority_shocks:dict|None=None)->np.ndarray:
+     a=np.array([[float(base[f'{g}_{k}_kW']) for k in CARRIERS] for g in GROUPS])
+     for j,k in enumerate(CARRIERS):

@@ -1,0 +1,68 @@
+..FF.                                                                    [100%]
+================================== FAILURES ===================================
+_________ test_final_build_refuses_incomplete_campaign_before_copying _________
+
+tmp_path = WindowsPath('D:/hospital_ies_v20_20261019/outputs/v20_load_accounting_20261019_run01/temp/release_build_gate_red01/pytest-of-HanqinXie/pytest-0/test_final_build_refuses_incom0')
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x000002610D6BB640>
+
+    def test_final_build_refuses_incomplete_campaign_before_copying(tmp_path, monkeypatch):
+        from publication import release_gate
+        builder = load_builder()
+        monkeypatch.setattr(builder, 'select', lambda candidate: ([], []))
+        def incomplete(root):
+            raise ValueError('Final campaign is not qualified: remaining pending pairs')
+        monkeypatch.setattr(release_gate, 'qualify_final_campaign', incomplete)
+        def forbidden_stage(destination):
+            raise AssertionError('Copy started without final campaign qualification')
+        monkeypatch.setattr(builder.base, 'stage', forbidden_stage)
+        with pytest.raises(ValueError, match='not qualified'):
+>           builder.build(tmp_path / 'final')
+
+publication\test_release_selection.py:57: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+publication\build_v20_release.py:94: in build
+    base.stage(str(target))
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+destination = 'D:\\hospital_ies_v20_20261019\\outputs\\v20_load_accounting_20261019_run01\\temp\\release_build_gate_red01\\pytest-of-HanqinXie\\pytest-0\\test_final_build_refuses_incom0\\final'
+
+    def forbidden_stage(destination):
+>       raise AssertionError('Copy started without final campaign qualification')
+E       AssertionError: Copy started without final campaign qualification
+
+publication\test_release_selection.py:54: AssertionError
+__________ test_final_build_saves_actual_gate_proof_in_selected_tree __________
+
+tmp_path = WindowsPath('D:/hospital_ies_v20_20261019/outputs/v20_load_accounting_20261019_run01/temp/release_build_gate_red01/pytest-of-HanqinXie/pytest-0/test_final_build_saves_actual_0')
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x000002610D6585E0>
+
+    def test_final_build_saves_actual_gate_proof_in_selected_tree(tmp_path, monkeypatch):
+        from publication import release_gate
+        import json
+        builder = load_builder()
+        proof = dict(status='passed', actual_complete_pairs=406, actual_complete_batches=148,
+                     signature='f' * 64, gate_sha256='a' * 64)
+        calls = []
+        monkeypatch.setattr(release_gate, 'qualify_final_campaign', lambda root: calls.append(root) or proof)
+        monkeypatch.setattr(builder, 'select', lambda candidate: ([], []))
+        def empty_stage(destination):
+            target = Path(destination)
+            (target / 'publication').mkdir(parents=True)
+            (target / '.gitignore').write_text('fixture\n', encoding='utf-8')
+            (target / 'publication/V20_FILE_SELECTION.json').write_text('{}', encoding='utf-8')
+        monkeypatch.setattr(builder.base, 'stage', empty_stage)
+        target = tmp_path / 'final'
+        assert builder.build(target) == 0
+>       assert calls == [builder.ROOT]
+E       AssertionError: assert [] == [WindowsPath(...20_20261019')]
+E         
+E         Right contains one more item: WindowsPath('D:/hospital_ies_v20_20261019')
+E         Use -v to get more diff
+
+publication\test_release_selection.py:77: AssertionError
+---------------------------- Captured stdout call -----------------------------
+{"status": "staged", "destination": "D:\\hospital_ies_v20_20261019\\outputs\\v20_load_accounting_20261019_run01\\temp\\release_build_gate_red01\\pytest-of-HanqinXie\\pytest-0\\test_final_build_saves_actual_0\\final", "files": 2, "selected_bytes": 1144, "candidate": false}
+=========================== short test summary info ===========================
+FAILED publication/test_release_selection.py::test_final_build_refuses_incomplete_campaign_before_copying
+FAILED publication/test_release_selection.py::test_final_build_saves_actual_gate_proof_in_selected_tree
+2 failed, 3 passed in 0.15s

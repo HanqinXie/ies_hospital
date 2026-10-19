@@ -1,0 +1,330 @@
+........FFFFFFFFFFFFFFFFFFF                                              [100%]
+================================== FAILURES ===================================
+____ test_resource_budget_uses_exact_same72_observations_and_two_counters _____
+
+    def test_resource_budget_uses_exact_same72_observations_and_two_counters():
+>       m=module();decision=m.resource_admission(profile(),samples(m)[0],2)
+E       AttributeError: module '_continue008_test' has no attribute 'resource_admission'
+
+publication\test_continue_normal008.py:66: AttributeError
+____ test_stable_window_cannot_average_or_skip_unknown_pressure[too_short] ____
+
+mutation = 'too_short'
+
+    @pytest.mark.parametrize('mutation',['too_short','gap','unknown','low_then_recovered','nonfinite','nonmonotonic'])
+    def test_stable_window_cannot_average_or_skip_unknown_pressure(mutation):
+        m=module();rows=samples(m)
+        if mutation=='too_short':rows=rows[:10]
+        elif mutation=='gap':rows[6]['monotonic']+=1.5
+        elif mutation=='unknown':rows[5]['commit_headroom_bytes']=None
+        elif mutation=='low_then_recovered':rows[5]['commit_headroom_bytes']=1
+        elif mutation=='nonfinite':rows[5]['commit_headroom_bytes']=float('nan')
+        elif mutation=='nonmonotonic':rows[5]['monotonic']=rows[4]['monotonic']
+>       assert m.stable_admission(rows,profile(),30,2)['admitted'] is False
+E       AttributeError: module '_continue008_test' has no attribute 'stable_admission'
+
+publication\test_continue_normal008.py:81: AttributeError
+_______ test_stable_window_cannot_average_or_skip_unknown_pressure[gap] _______
+
+mutation = 'gap'
+
+    @pytest.mark.parametrize('mutation',['too_short','gap','unknown','low_then_recovered','nonfinite','nonmonotonic'])
+    def test_stable_window_cannot_average_or_skip_unknown_pressure(mutation):
+        m=module();rows=samples(m)
+        if mutation=='too_short':rows=rows[:10]
+        elif mutation=='gap':rows[6]['monotonic']+=1.5
+        elif mutation=='unknown':rows[5]['commit_headroom_bytes']=None
+        elif mutation=='low_then_recovered':rows[5]['commit_headroom_bytes']=1
+        elif mutation=='nonfinite':rows[5]['commit_headroom_bytes']=float('nan')
+        elif mutation=='nonmonotonic':rows[5]['monotonic']=rows[4]['monotonic']
+>       assert m.stable_admission(rows,profile(),30,2)['admitted'] is False
+E       AttributeError: module '_continue008_test' has no attribute 'stable_admission'
+
+publication\test_continue_normal008.py:81: AttributeError
+_____ test_stable_window_cannot_average_or_skip_unknown_pressure[unknown] _____
+
+mutation = 'unknown'
+
+    @pytest.mark.parametrize('mutation',['too_short','gap','unknown','low_then_recovered','nonfinite','nonmonotonic'])
+    def test_stable_window_cannot_average_or_skip_unknown_pressure(mutation):
+        m=module();rows=samples(m)
+        if mutation=='too_short':rows=rows[:10]
+        elif mutation=='gap':rows[6]['monotonic']+=1.5
+        elif mutation=='unknown':rows[5]['commit_headroom_bytes']=None
+        elif mutation=='low_then_recovered':rows[5]['commit_headroom_bytes']=1
+        elif mutation=='nonfinite':rows[5]['commit_headroom_bytes']=float('nan')
+        elif mutation=='nonmonotonic':rows[5]['monotonic']=rows[4]['monotonic']
+>       assert m.stable_admission(rows,profile(),30,2)['admitted'] is False
+E       AttributeError: module '_continue008_test' has no attribute 'stable_admission'
+
+publication\test_continue_normal008.py:81: AttributeError
+_ test_stable_window_cannot_average_or_skip_unknown_pressure[low_then_recovered] _
+
+mutation = 'low_then_recovered'
+
+    @pytest.mark.parametrize('mutation',['too_short','gap','unknown','low_then_recovered','nonfinite','nonmonotonic'])
+    def test_stable_window_cannot_average_or_skip_unknown_pressure(mutation):
+        m=module();rows=samples(m)
+        if mutation=='too_short':rows=rows[:10]
+        elif mutation=='gap':rows[6]['monotonic']+=1.5
+        elif mutation=='unknown':rows[5]['commit_headroom_bytes']=None
+        elif mutation=='low_then_recovered':rows[5]['commit_headroom_bytes']=1
+        elif mutation=='nonfinite':rows[5]['commit_headroom_bytes']=float('nan')
+        elif mutation=='nonmonotonic':rows[5]['monotonic']=rows[4]['monotonic']
+>       assert m.stable_admission(rows,profile(),30,2)['admitted'] is False
+E       AttributeError: module '_continue008_test' has no attribute 'stable_admission'
+
+publication\test_continue_normal008.py:81: AttributeError
+____ test_stable_window_cannot_average_or_skip_unknown_pressure[nonfinite] ____
+
+mutation = 'nonfinite'
+
+    @pytest.mark.parametrize('mutation',['too_short','gap','unknown','low_then_recovered','nonfinite','nonmonotonic'])
+    def test_stable_window_cannot_average_or_skip_unknown_pressure(mutation):
+        m=module();rows=samples(m)
+        if mutation=='too_short':rows=rows[:10]
+        elif mutation=='gap':rows[6]['monotonic']+=1.5
+        elif mutation=='unknown':rows[5]['commit_headroom_bytes']=None
+        elif mutation=='low_then_recovered':rows[5]['commit_headroom_bytes']=1
+        elif mutation=='nonfinite':rows[5]['commit_headroom_bytes']=float('nan')
+        elif mutation=='nonmonotonic':rows[5]['monotonic']=rows[4]['monotonic']
+>       assert m.stable_admission(rows,profile(),30,2)['admitted'] is False
+E       AttributeError: module '_continue008_test' has no attribute 'stable_admission'
+
+publication\test_continue_normal008.py:81: AttributeError
+__ test_stable_window_cannot_average_or_skip_unknown_pressure[nonmonotonic] ___
+
+mutation = 'nonmonotonic'
+
+    @pytest.mark.parametrize('mutation',['too_short','gap','unknown','low_then_recovered','nonfinite','nonmonotonic'])
+    def test_stable_window_cannot_average_or_skip_unknown_pressure(mutation):
+        m=module();rows=samples(m)
+        if mutation=='too_short':rows=rows[:10]
+        elif mutation=='gap':rows[6]['monotonic']+=1.5
+        elif mutation=='unknown':rows[5]['commit_headroom_bytes']=None
+        elif mutation=='low_then_recovered':rows[5]['commit_headroom_bytes']=1
+        elif mutation=='nonfinite':rows[5]['commit_headroom_bytes']=float('nan')
+        elif mutation=='nonmonotonic':rows[5]['monotonic']=rows[4]['monotonic']
+>       assert m.stable_admission(rows,profile(),30,2)['admitted'] is False
+E       AttributeError: module '_continue008_test' has no attribute 'stable_admission'
+
+publication\test_continue_normal008.py:81: AttributeError
+_ test_stable_window_prefers_threeGiB_only_when_every_observation_supports_it _
+
+    def test_stable_window_prefers_threeGiB_only_when_every_observation_supports_it():
+>       m=module();r=m.stable_admission(samples(m),profile(),30,2)
+E       AttributeError: module '_continue008_test' has no attribute 'stable_admission'
+
+publication\test_continue_normal008.py:84: AttributeError
+_ test_stopped_chain_preserves_actual125_and_ten_measured_plus009_unknown[ok] _
+
+mutation = 'ok'
+
+    @pytest.mark.parametrize('mutation',['ok','false_success','pending_other','active','summary0','fake_complete','009_measured'])
+    def test_stopped_chain_preserves_actual125_and_ten_measured_plus009_unknown(mutation):
+        m=module();s,c,t=stop_records()
+        if mutation=='false_success':t['status']='passed'
+        elif mutation=='pending_other':s['pending_not_started']=['v20_normal_007']
+        elif mutation=='active':t['checkpoint']['active']=1
+        elif mutation=='summary0':s['exit_code']=0
+        elif mutation=='fake_complete':s['completed'][0]['passed']=False
+        elif mutation=='009_measured':s['completed'][0]['batch']='v20_normal_009'
+>       if mutation=='ok':assert m.validate_stop_chain(s,c,t)['qualified'] is True
+E       AttributeError: module '_continue008_test' has no attribute 'validate_stop_chain'
+
+publication\test_continue_normal008.py:107: AttributeError
+_ test_stopped_chain_preserves_actual125_and_ten_measured_plus009_unknown[false_success] _
+
+mutation = 'false_success'
+
+    @pytest.mark.parametrize('mutation',['ok','false_success','pending_other','active','summary0','fake_complete','009_measured'])
+    def test_stopped_chain_preserves_actual125_and_ten_measured_plus009_unknown(mutation):
+        m=module();s,c,t=stop_records()
+        if mutation=='false_success':t['status']='passed'
+        elif mutation=='pending_other':s['pending_not_started']=['v20_normal_007']
+        elif mutation=='active':t['checkpoint']['active']=1
+        elif mutation=='summary0':s['exit_code']=0
+        elif mutation=='fake_complete':s['completed'][0]['passed']=False
+        elif mutation=='009_measured':s['completed'][0]['batch']='v20_normal_009'
+        if mutation=='ok':assert m.validate_stop_chain(s,c,t)['qualified'] is True
+        else:
+>           with pytest.raises(ValueError):m.validate_stop_chain(s,c,t)
+E           AttributeError: module '_continue008_test' has no attribute 'validate_stop_chain'
+
+publication\test_continue_normal008.py:109: AttributeError
+_ test_stopped_chain_preserves_actual125_and_ten_measured_plus009_unknown[pending_other] _
+
+mutation = 'pending_other'
+
+    @pytest.mark.parametrize('mutation',['ok','false_success','pending_other','active','summary0','fake_complete','009_measured'])
+    def test_stopped_chain_preserves_actual125_and_ten_measured_plus009_unknown(mutation):
+        m=module();s,c,t=stop_records()
+        if mutation=='false_success':t['status']='passed'
+        elif mutation=='pending_other':s['pending_not_started']=['v20_normal_007']
+        elif mutation=='active':t['checkpoint']['active']=1
+        elif mutation=='summary0':s['exit_code']=0
+        elif mutation=='fake_complete':s['completed'][0]['passed']=False
+        elif mutation=='009_measured':s['completed'][0]['batch']='v20_normal_009'
+        if mutation=='ok':assert m.validate_stop_chain(s,c,t)['qualified'] is True
+        else:
+>           with pytest.raises(ValueError):m.validate_stop_chain(s,c,t)
+E           AttributeError: module '_continue008_test' has no attribute 'validate_stop_chain'
+
+publication\test_continue_normal008.py:109: AttributeError
+_ test_stopped_chain_preserves_actual125_and_ten_measured_plus009_unknown[active] _
+
+mutation = 'active'
+
+    @pytest.mark.parametrize('mutation',['ok','false_success','pending_other','active','summary0','fake_complete','009_measured'])
+    def test_stopped_chain_preserves_actual125_and_ten_measured_plus009_unknown(mutation):
+        m=module();s,c,t=stop_records()
+        if mutation=='false_success':t['status']='passed'
+        elif mutation=='pending_other':s['pending_not_started']=['v20_normal_007']
+        elif mutation=='active':t['checkpoint']['active']=1
+        elif mutation=='summary0':s['exit_code']=0
+        elif mutation=='fake_complete':s['completed'][0]['passed']=False
+        elif mutation=='009_measured':s['completed'][0]['batch']='v20_normal_009'
+        if mutation=='ok':assert m.validate_stop_chain(s,c,t)['qualified'] is True
+        else:
+>           with pytest.raises(ValueError):m.validate_stop_chain(s,c,t)
+E           AttributeError: module '_continue008_test' has no attribute 'validate_stop_chain'
+
+publication\test_continue_normal008.py:109: AttributeError
+_ test_stopped_chain_preserves_actual125_and_ten_measured_plus009_unknown[summary0] _
+
+mutation = 'summary0'
+
+    @pytest.mark.parametrize('mutation',['ok','false_success','pending_other','active','summary0','fake_complete','009_measured'])
+    def test_stopped_chain_preserves_actual125_and_ten_measured_plus009_unknown(mutation):
+        m=module();s,c,t=stop_records()
+        if mutation=='false_success':t['status']='passed'
+        elif mutation=='pending_other':s['pending_not_started']=['v20_normal_007']
+        elif mutation=='active':t['checkpoint']['active']=1
+        elif mutation=='summary0':s['exit_code']=0
+        elif mutation=='fake_complete':s['completed'][0]['passed']=False
+        elif mutation=='009_measured':s['completed'][0]['batch']='v20_normal_009'
+        if mutation=='ok':assert m.validate_stop_chain(s,c,t)['qualified'] is True
+        else:
+>           with pytest.raises(ValueError):m.validate_stop_chain(s,c,t)
+E           AttributeError: module '_continue008_test' has no attribute 'validate_stop_chain'
+
+publication\test_continue_normal008.py:109: AttributeError
+_ test_stopped_chain_preserves_actual125_and_ten_measured_plus009_unknown[fake_complete] _
+
+mutation = 'fake_complete'
+
+    @pytest.mark.parametrize('mutation',['ok','false_success','pending_other','active','summary0','fake_complete','009_measured'])
+    def test_stopped_chain_preserves_actual125_and_ten_measured_plus009_unknown(mutation):
+        m=module();s,c,t=stop_records()
+        if mutation=='false_success':t['status']='passed'
+        elif mutation=='pending_other':s['pending_not_started']=['v20_normal_007']
+        elif mutation=='active':t['checkpoint']['active']=1
+        elif mutation=='summary0':s['exit_code']=0
+        elif mutation=='fake_complete':s['completed'][0]['passed']=False
+        elif mutation=='009_measured':s['completed'][0]['batch']='v20_normal_009'
+        if mutation=='ok':assert m.validate_stop_chain(s,c,t)['qualified'] is True
+        else:
+>           with pytest.raises(ValueError):m.validate_stop_chain(s,c,t)
+E           AttributeError: module '_continue008_test' has no attribute 'validate_stop_chain'
+
+publication\test_continue_normal008.py:109: AttributeError
+_ test_stopped_chain_preserves_actual125_and_ten_measured_plus009_unknown[009_measured] _
+
+mutation = '009_measured'
+
+    @pytest.mark.parametrize('mutation',['ok','false_success','pending_other','active','summary0','fake_complete','009_measured'])
+    def test_stopped_chain_preserves_actual125_and_ten_measured_plus009_unknown(mutation):
+        m=module();s,c,t=stop_records()
+        if mutation=='false_success':t['status']='passed'
+        elif mutation=='pending_other':s['pending_not_started']=['v20_normal_007']
+        elif mutation=='active':t['checkpoint']['active']=1
+        elif mutation=='summary0':s['exit_code']=0
+        elif mutation=='fake_complete':s['completed'][0]['passed']=False
+        elif mutation=='009_measured':s['completed'][0]['batch']='v20_normal_009'
+        if mutation=='ok':assert m.validate_stop_chain(s,c,t)['qualified'] is True
+        else:
+>           with pytest.raises(ValueError):m.validate_stop_chain(s,c,t)
+E           AttributeError: module '_continue008_test' has no attribute 'validate_stop_chain'
+
+publication\test_continue_normal008.py:109: AttributeError
+_ test_owned_child_is_always_drained_despite_diagnostic_failure[first_journal] _
+
+tmp_path = WindowsPath('D:/hospital_ies_v20_20261019/outputs/v20_load_accounting_20261019_run01/review/normal008_continuation01/test_tmp/monitor_red01/test_owned_child_is_always_dra0')
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x0000020605D91930>
+failure = 'first_journal'
+
+    @pytest.mark.parametrize('failure',['first_journal','sample','exception_journal'])
+    def test_owned_child_is_always_drained_despite_diagnostic_failure(tmp_path,monkeypatch,failure):
+        m=module();proc=FakeProcess();calls=[]
+        monkeypatch.setattr(m.subprocess,'Popen',lambda *a,**k:proc)
+        def journal(*a,**k):
+            if failure in ('first_journal','exception_journal'):raise OSError('synthetic journal failure')
+>       monkeypatch.setattr(m,'journal',journal)
+E       AttributeError: <module '_continue008_test' from 'D:\\hospital_ies_v20_20261019\\publication\\continue_normal008.py'> has no attribute 'journal'
+
+publication\test_continue_normal008.py:123: AttributeError
+____ test_owned_child_is_always_drained_despite_diagnostic_failure[sample] ____
+
+tmp_path = WindowsPath('D:/hospital_ies_v20_20261019/outputs/v20_load_accounting_20261019_run01/review/normal008_continuation01/test_tmp/monitor_red01/test_owned_child_is_always_dra1')
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x0000020605CF0250>
+failure = 'sample'
+
+    @pytest.mark.parametrize('failure',['first_journal','sample','exception_journal'])
+    def test_owned_child_is_always_drained_despite_diagnostic_failure(tmp_path,monkeypatch,failure):
+        m=module();proc=FakeProcess();calls=[]
+        monkeypatch.setattr(m.subprocess,'Popen',lambda *a,**k:proc)
+        def journal(*a,**k):
+            if failure in ('first_journal','exception_journal'):raise OSError('synthetic journal failure')
+>       monkeypatch.setattr(m,'journal',journal)
+E       AttributeError: <module '_continue008_test' from 'D:\\hospital_ies_v20_20261019\\publication\\continue_normal008.py'> has no attribute 'journal'
+
+publication\test_continue_normal008.py:123: AttributeError
+_ test_owned_child_is_always_drained_despite_diagnostic_failure[exception_journal] _
+
+tmp_path = WindowsPath('D:/hospital_ies_v20_20261019/outputs/v20_load_accounting_20261019_run01/review/normal008_continuation01/test_tmp/monitor_red01/test_owned_child_is_always_dra2')
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x0000020605DAC370>
+failure = 'exception_journal'
+
+    @pytest.mark.parametrize('failure',['first_journal','sample','exception_journal'])
+    def test_owned_child_is_always_drained_despite_diagnostic_failure(tmp_path,monkeypatch,failure):
+        m=module();proc=FakeProcess();calls=[]
+        monkeypatch.setattr(m.subprocess,'Popen',lambda *a,**k:proc)
+        def journal(*a,**k):
+            if failure in ('first_journal','exception_journal'):raise OSError('synthetic journal failure')
+>       monkeypatch.setattr(m,'journal',journal)
+E       AttributeError: <module '_continue008_test' from 'D:\\hospital_ies_v20_20261019\\publication\\continue_normal008.py'> has no attribute 'journal'
+
+publication\test_continue_normal008.py:123: AttributeError
+__________ test_short_lived_qualifier_failure_cannot_return_success ___________
+
+tmp_path = WindowsPath('D:/hospital_ies_v20_20261019/outputs/v20_load_accounting_20261019_run01/review/normal008_continuation01/test_tmp/monitor_red01/test_short_lived_qualifier_fai0')
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x0000020605D696F0>
+
+    def test_short_lived_qualifier_failure_cannot_return_success(tmp_path,monkeypatch):
+        m=module();monkeypatch.setattr(m.subprocess,'run',lambda *a,**k:__import__('types').SimpleNamespace(returncode=7))
+        with pytest.raises(ValueError,match='qualification|child'):
+>           m.short_qualification(tmp_path,'preflight')
+E           AttributeError: module '_continue008_test' has no attribute 'short_qualification'
+
+publication\test_continue_normal008.py:134: AttributeError
+=========================== short test summary info ===========================
+FAILED publication/test_continue_normal008.py::test_resource_budget_uses_exact_same72_observations_and_two_counters
+FAILED publication/test_continue_normal008.py::test_stable_window_cannot_average_or_skip_unknown_pressure[too_short]
+FAILED publication/test_continue_normal008.py::test_stable_window_cannot_average_or_skip_unknown_pressure[gap]
+FAILED publication/test_continue_normal008.py::test_stable_window_cannot_average_or_skip_unknown_pressure[unknown]
+FAILED publication/test_continue_normal008.py::test_stable_window_cannot_average_or_skip_unknown_pressure[low_then_recovered]
+FAILED publication/test_continue_normal008.py::test_stable_window_cannot_average_or_skip_unknown_pressure[nonfinite]
+FAILED publication/test_continue_normal008.py::test_stable_window_cannot_average_or_skip_unknown_pressure[nonmonotonic]
+FAILED publication/test_continue_normal008.py::test_stable_window_prefers_threeGiB_only_when_every_observation_supports_it
+FAILED publication/test_continue_normal008.py::test_stopped_chain_preserves_actual125_and_ten_measured_plus009_unknown[ok]
+FAILED publication/test_continue_normal008.py::test_stopped_chain_preserves_actual125_and_ten_measured_plus009_unknown[false_success]
+FAILED publication/test_continue_normal008.py::test_stopped_chain_preserves_actual125_and_ten_measured_plus009_unknown[pending_other]
+FAILED publication/test_continue_normal008.py::test_stopped_chain_preserves_actual125_and_ten_measured_plus009_unknown[active]
+FAILED publication/test_continue_normal008.py::test_stopped_chain_preserves_actual125_and_ten_measured_plus009_unknown[summary0]
+FAILED publication/test_continue_normal008.py::test_stopped_chain_preserves_actual125_and_ten_measured_plus009_unknown[fake_complete]
+FAILED publication/test_continue_normal008.py::test_stopped_chain_preserves_actual125_and_ten_measured_plus009_unknown[009_measured]
+FAILED publication/test_continue_normal008.py::test_owned_child_is_always_drained_despite_diagnostic_failure[first_journal]
+FAILED publication/test_continue_normal008.py::test_owned_child_is_always_drained_despite_diagnostic_failure[sample]
+FAILED publication/test_continue_normal008.py::test_owned_child_is_always_drained_despite_diagnostic_failure[exception_journal]
+FAILED publication/test_continue_normal008.py::test_short_lived_qualifier_failure_cannot_return_success
+19 failed, 8 passed in 0.20s

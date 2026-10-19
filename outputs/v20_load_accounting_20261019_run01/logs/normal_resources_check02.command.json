@@ -1,0 +1,22 @@
+{
+  "name": "normal_resources_check02",
+  "command": [
+    "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\python.exe",
+    "-B",
+    "publication/run_normal_serial.py",
+    "--check-only",
+    "--name",
+    "PLAN02",
+    "--baseline-root",
+    "D:\\云大文件\\论文\\医院ies\\code_4_2"
+  ],
+  "cwd": "D:\\hospital_ies_v20_20261019",
+  "started_utc": "2026-10-19T05:17:30.626210+00:00",
+  "finished_utc": "2026-10-19T05:17:35.590686+00:00",
+  "elapsed_seconds": 4.964767599944025,
+  "exit_code": 0,
+  "environment_overrides": {
+    "PYTHONDONTWRITEBYTECODE": "1",
+    "PYTHONIOENCODING": "utf-8"
+  }
+}

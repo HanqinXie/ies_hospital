@@ -1,0 +1,100 @@
+........FFF                                                              [100%]
+================================== FAILURES ===================================
+______ test_real_normal_without_fault_injection_can_be_strictly_skipped _______
+
+directory = WindowsPath('D:/hospital_ies_v20_20261019/outputs/v20_load_accounting_20261019_run01/review/test_tmp/normal_resources_race_red01/test_real_normal_without_fault0/experiments/v20_normal_000')
+job = {'name': 'v20_normal_000', 'cohort': 'normal', 'policies': ['E'], 'source_proposal': 'NORMAL_E_FINAL_R1_PROPOSAL.json', ...}
+freeze = {'model_id': 'M20_load_accounting', 'source_sha256': {'source.py': 'aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa...[{'path': 'input.csv', 'sha256': 'bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb', 'bytes': 1}], ...}
+freeze_sha256 = 'ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff'
+
+    def existing_state(directory,job,freeze,freeze_sha256):
+        validate_registration(directory,job,freeze,freeze_sha256)
+        if (directory/'BATCH_RESULT.json').exists():
+>           try:return dict(state='skip_strictly_qualified_complete',proof=qualify_complete(directory,job,freeze,freeze_sha256))
+
+publication\run_normal_serial.py:171: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+publication\run_normal_serial.py:162: in qualify_complete
+    require(isinstance(evidence.get(field),list) and len(evidence[field])==1 and is_sha(evidence[field][0]),'Actual terminal matching fingerprint unavailable')
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+value = False, message = 'Actual terminal matching fingerprint unavailable'
+
+    def require(value,message):
+>       if not value:raise ValueError(message)
+E       ValueError: Actual terminal matching fingerprint unavailable
+
+publication\run_normal_serial.py:47: ValueError
+
+The above exception was the direct cause of the following exception:
+
+tmp_path = WindowsPath('D:/hospital_ies_v20_20261019/outputs/v20_load_accounting_20261019_run01/review/test_tmp/normal_resources_race_red01/test_real_normal_without_fault0')
+
+    def test_real_normal_without_fault_injection_can_be_strictly_skipped(tmp_path):
+        directory,job,plan,manifest,freeze=registration(tmp_path)
+        complete_evidence(directory,job,plan,manifest,freeze)
+>       assert normal.existing_state(directory,job,freeze,'f'*64)['state']=='skip_strictly_qualified_complete'
+
+publication\test_normal_resources.py:124: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+directory = WindowsPath('D:/hospital_ies_v20_20261019/outputs/v20_load_accounting_20261019_run01/review/test_tmp/normal_resources_race_red01/test_real_normal_without_fault0/experiments/v20_normal_000')
+job = {'name': 'v20_normal_000', 'cohort': 'normal', 'policies': ['E'], 'source_proposal': 'NORMAL_E_FINAL_R1_PROPOSAL.json', ...}
+freeze = {'model_id': 'M20_load_accounting', 'source_sha256': {'source.py': 'aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa...[{'path': 'input.csv', 'sha256': 'bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb', 'bytes': 1}], ...}
+freeze_sha256 = 'ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff'
+
+    def existing_state(directory,job,freeze,freeze_sha256):
+        validate_registration(directory,job,freeze,freeze_sha256)
+        if (directory/'BATCH_RESULT.json').exists():
+            try:return dict(state='skip_strictly_qualified_complete',proof=qualify_complete(directory,job,freeze,freeze_sha256))
+>           except Exception as exc:raise ValueError('Prior terminal is not strictly qualified; never overwrite: '+str(exc)) from exc
+E           ValueError: Prior terminal is not strictly qualified; never overwrite: Actual terminal matching fingerprint unavailable
+
+publication\run_normal_serial.py:172: ValueError
+_______ test_last_moment_commit_drop_defers_without_starting_or_failing _______
+
+tmp_path = WindowsPath('D:/hospital_ies_v20_20261019/outputs/v20_load_accounting_20261019_run01/review/test_tmp/normal_resources_race_red01/test_last_moment_commit_drop_d0')
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x000002EB07F07370>
+
+    def test_last_moment_commit_drop_defers_without_starting_or_failing(tmp_path,monkeypatch):
+        monkeypatch.setattr(normal,'existing_state',lambda *a,**k:{'state':'not_started'})
+        monkeypatch.setattr(normal,'active_scientific_children',lambda:([],[]))
+        monkeypatch.setattr(normal,'windows_memory',lambda:dict(available_physical_bytes=100*normal.GIB,commit_headroom_bytes=0))
+        def forbidden(*args,**kwargs):raise AssertionError('Physics must not start after lost resource admission')
+        monkeypatch.setattr(normal.subprocess,'Popen',forbidden)
+        job=dict(name='v20_normal_000',profile=dict(source_model_id='M19_model_closeout',
+            OS_lifetime_peak_working_set_bytes=normal.GIB,sampled_private_peak_bytes=2*normal.GIB))
+>       result=normal.run_one(job,tmp_path,{},'f'*64,{'admitted':True},2.)
+
+publication\test_normal_resources.py:135: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+publication\run_normal_serial.py:335: in run_one
+    process=subprocess.Popen(command,cwd=ROOT,env=env,stdout=log,stderr=subprocess.STDOUT)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+args = (['C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\python.exe', '-B', '-m', 'tools.load_accounting.runner', 'run', '--directory', ...],)
+kwargs = {'cwd': WindowsPath('D:/hospital_ies_v20_20261019'), 'env': {'ANTHROPIC_AUTH_TOKEN': 'sk-76bef46b8865462badd0f3ce66235...01\\review\\test_tmp\\normal_resources_race_red01\\test_last_moment_commit_drop_d0\\v20_normal_000.log'>, 'stderr': -2}
+
+>   def forbidden(*args,**kwargs):raise AssertionError('Physics must not start after lost resource admission')
+E   AssertionError: Physics must not start after lost resource admission
+
+publication\test_normal_resources.py:131: AssertionError
+_____ test_rehashed_invented_historical_profile_is_not_observed_evidence ______
+
+tmp_path = WindowsPath('D:/hospital_ies_v20_20261019/outputs/v20_load_accounting_20261019_run01/review/test_tmp/normal_resources_race_red01/test_rehashed_invented_histori0')
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x000002EB07E6E140>
+
+    def test_rehashed_invented_historical_profile_is_not_observed_evidence(tmp_path,monkeypatch):
+        path=tmp_path/'profile.json';monkeypatch.setattr(normal,'PROFILE_PATH',path)
+        profile=dict(source_model_id='M19_model_closeout',is_M20_measurement=False,growth_factor=1.2,
+            host_reserve_bytes=6*normal.GIB,profiles=[{'sampled_private_peak_bytes':1} for _ in range(12)])
+        profile['signature']=normal.digest(profile);write(path,profile)
+>       with pytest.raises(ValueError,match='Historical'):
+E       Failed: DID NOT RAISE ValueError
+
+publication\test_normal_resources.py:146: Failed
+=========================== short test summary info ===========================
+FAILED publication/test_normal_resources.py::test_real_normal_without_fault_injection_can_be_strictly_skipped
+FAILED publication/test_normal_resources.py::test_last_moment_commit_drop_defers_without_starting_or_failing
+FAILED publication/test_normal_resources.py::test_rehashed_invented_historical_profile_is_not_observed_evidence
+3 failed, 8 passed in 0.18s

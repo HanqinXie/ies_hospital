@@ -1,0 +1,108 @@
+{
+  "schema": "hospital_ies.v20.normal_oneshot_owner.v1",
+  "utc": "2026-10-19T12:00:05.272119+00:00",
+  "pid": 12096,
+  "command": [
+    "outputs/v20_load_accounting_20261019_run01/review/normal_window_analysis03/collect_normal_once03.py",
+    "--collect"
+  ],
+  "cwd": "D:\\hospital_ies_v20_20261019",
+  "scientific_root": "D:\\hospital_ies_v20_20261019",
+  "readiness": {
+    "ready": true,
+    "status": "ready_true_successor_validation",
+    "project_helper_imported": false,
+    "helper_sha256": "526834c9b51418a0b09b8922045439c095fa9de1fb4e2be4be147d5cc0babe81",
+    "original_waiter_exit_code": 15,
+    "normal03_intentional_exit_code": 125,
+    "idleRUN01_exit_code": 15,
+    "evidence_files": [
+      {
+        "path": "outputs/v20_load_accounting_20261019_run01/review/normal008_continuation01/L72_RUN02/SUMMARY.json",
+        "bytes": 6333,
+        "sha256": "0d75b0b406eb2ce4165b2585b1b7173a8b7b6d9be1ce5fb0149592e7199cc6fc"
+      },
+      {
+        "path": "outputs/v20_load_accounting_20261019_run01/review/normal008_continuation01/L72_RUN02/FINAL_406_PROOF.json",
+        "bytes": 799935,
+        "sha256": "9e2df2ecd43aca27046115d6633c4bd8086ef44a70b1346f55ccdf50c50831ae"
+      },
+      {
+        "path": "outputs/v20_load_accounting_20261019_run01/logs/normal008_lightweight_run02.command.json",
+        "bytes": 1217,
+        "sha256": "6415d45299936da0053da00af36af798f01c77c890b847fb35d573d79582d8f4"
+      },
+      {
+        "path": "outputs/v20_load_accounting_20261019_run01/logs/final_readback01.command.json",
+        "bytes": 921,
+        "sha256": "98c9203d6f4b37a31b94744e0b508f6868871cc40e4313a4f94e3abfe40db088"
+      },
+      {
+        "path": "outputs/v20_load_accounting_20261019_run01/paper_results/FINAL01/SUMMARY.json",
+        "bytes": 2031,
+        "sha256": "dec65907a987fde0869326048dc0070e15962278ec3c24c781bfbbe313d956ca"
+      },
+      {
+        "path": "outputs/v20_load_accounting_20261019_run01/paper_results/FINAL01/RECEIPT.json",
+        "bytes": 1504,
+        "sha256": "e272fec06141a1b6f6415b522f0eefc4ee2ab3cca42ec8c8ddb0e9929b20cce8"
+      },
+      {
+        "path": "outputs/v20_load_accounting_20261019_run01/paper_results/FINAL01/INPUT_INDEX.json",
+        "bytes": 608281,
+        "sha256": "5159c84d128aae1a6c20d67c024968f1824c0aaf391721615fe2c4814eeb04e9"
+      },
+      {
+        "path": "outputs/v20_load_accounting_20261019_run01/review/normal_window_analysis03/SUCCESSOR_CONTRACT.json",
+        "bytes": 12587,
+        "sha256": "4c71781ddf449c42e35bf93bb77bc58f2f55bd70f55d80cdb6113e70bb99cee3"
+      },
+      {
+        "path": "outputs/v20_load_accounting_20261019_run01/review/normal_window_analysis03/PREPARATION.json",
+        "bytes": 20570,
+        "sha256": "183fac3fc6a647e9e99d913d2b33bdb79feaaac030ebf7e8477cf2ed872fc41c"
+      },
+      {
+        "path": "outputs/v20_load_accounting_20261019_run01/review/normal_wait02_stop01/RESULT.json",
+        "bytes": 3086,
+        "sha256": "66c4d778324e6d9f1db933ce79d221ad1376c6d91c7e4e2d62fd881091ec6de4"
+      },
+      {
+        "path": "outputs/v20_load_accounting_20261019_run01/logs/normal_analysis_wait02.command.json",
+        "bytes": 999,
+        "sha256": "542e93b98e8bac2227bf90b1da5b976b60e535621f3ccc8ed6f04c8afe16cf1a"
+      },
+      {
+        "path": "outputs/v20_load_accounting_20261019_run01/review/normal008_continuation01/L72_RUN01/IDLE_STOP_OUTCOME.json",
+        "bytes": 1611,
+        "sha256": "e54d4eafd3cb1c63011fa14c768097f7c822cc88f312eea6a056201d71637878"
+      },
+      {
+        "path": "outputs/v20_load_accounting_20261019_run01/logs/normal008_lightweight_run01.command.json",
+        "bytes": 1218,
+        "sha256": "c3ada8d70ce48e631b6f3bf6072e264a453f7c121ad1121c99f403f10b694591"
+      },
+      {
+        "path": "outputs/v20_load_accounting_20261019_run01/review/normal_window_analysis03/normal_window_analysis.py",
+        "bytes": 84236,
+        "sha256": "526834c9b51418a0b09b8922045439c095fa9de1fb4e2be4be147d5cc0babe81"
+      },
+      {
+        "path": "publication/continue_normal008.py",
+        "bytes": 34713,
+        "sha256": "cce231bf254b00a0af0021f04273ad54134005340f5b9706ce4578cec4823ca7"
+      },
+      {
+        "path": "outputs/v20_load_accounting_20261019_run01/MODEL_FREEZE_ACCOUNTING01.json",
+        "bytes": 205730,
+        "sha256": "48baed7a128d2f921d36323330ae4d22e2e6dc83214e8a505b6ba89273439b7b"
+      }
+    ]
+  },
+  "launcher_sha256": "b4cd327264f0cfcea8f3ac8caf9dac3e453434fc72abc7714f9a3bc1c91b0611",
+  "helper_sha256": "526834c9b51418a0b09b8922045439c095fa9de1fb4e2be4be147d5cc0babe81",
+  "original_waiter_exit_code": 15,
+  "original_waiter_exit_is_not_collection_status": true,
+  "no_wait_loop": true,
+  "physical_episodes_started": 0
+}

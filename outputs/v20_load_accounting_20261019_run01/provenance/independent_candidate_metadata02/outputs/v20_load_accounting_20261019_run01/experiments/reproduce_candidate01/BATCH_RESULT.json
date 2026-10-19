@@ -1,0 +1,139 @@
+{
+  "schema": "hospital_ies.execution_recovery_batch_result.v20.v1",
+  "registered_pairs": 1,
+  "actual_attempts": 1,
+  "complete_full": 1,
+  "unknown_full": 0,
+  "complete_legacy_full600": 1,
+  "unknown_legacy_full600": 0,
+  "analysis_failure_or_unavailable_count": 0,
+  "status_counts": {
+    "completed": 1
+  },
+  "elapsed_seconds": 29.695812500081956,
+  "source_unchanged": true,
+  "matching_evidence": {
+    "v17_L1_05d91fa94a2b551ad7ab17ff": {
+      "initial_state_sha256": [
+        "89d3afc75dc3aa25b0f066de6f904b406dd2a620016d362b362cec648e36051e"
+      ],
+      "applied_exogenous_definition_sha256": [
+        "a1cc1aa6ac46567cfdedf3845030f54440a5440556b74801370e022f27a22c90"
+      ],
+      "same_initial_state": true,
+      "same_exogenous_definition": true,
+      "injection_state_sha256": [
+        "8731f4beb294c24e6fc464222119be04ad11824aaabf1482870567859c8c7548"
+      ],
+      "same_injection_state": true,
+      "policy_dependent_prefix_states_possible": true,
+      "injection_state_coverage_known": true,
+      "meaning": "Reset matching and applied streams; genuine policy-dependent normal prefixes may create different injection states; no iid claim"
+    }
+  },
+  "same_initial_state_policy_matching": true,
+  "same_exogenous_stream_policy_matching": true,
+  "policy_dependent_continuous_prefix_injection_states_are_not_required_equal": true,
+  "plan_sha256": "d041643f1bc938fce685434935b857272ecd6fde645f2520f7067c5f7efff485",
+  "manifest_sha256": "5f121a2f1f7ea58c7153a294da89b0cc7ec84f71e0f3ebf8a1b458f9a2e907c0",
+  "analysis_receipt": {
+    "schema": "hospital_ies.load_accounting_saved_analysis.v20.v1.receipt",
+    "registered_trajectory_count": 1,
+    "compatibility_export_receipt": {
+      "schema": "hospital_ies.execution_recovery_saved_analysis.v18.v1.receipt",
+      "registered_trajectory_count": 1,
+      "unknown_full_trajectory_count": 0,
+      "unknown_registered_full_trajectory_count": 0,
+      "table_row_counts": {
+        "TRAJECTORY_WINDOWS": 8,
+        "GT_RUNS": 2,
+        "GT_TRANSITIONS": 1,
+        "COMMAND_LIFECYCLE": 40,
+        "COMMAND_EXECUTION_INTERVALS": 40,
+        "EVENT_TIMELINE": 232,
+        "ENGINEERING_INTERVALS": 59,
+        "DIESEL_LOCAL_RESPONSE": 59,
+        "THERMAL_COVERAGE": 1,
+        "MODEL_DOMAIN": 1
+      },
+      "output_sha256": {
+        "TRAJECTORY_WINDOWS.csv": "868676b6f438bbacc727ed009f32604e1692212bc0c07c5d01f336c1d2524991",
+        "GT_RUNS.csv": "c1ac021cd7ed39f28f2482d597609aca8cba5abf2dae3e3148a196dc7bcd7731",
+        "GT_TRANSITIONS.csv": "dfaf38294e18a28c86c07dc0f6a893f682565e3608ebeaaf0f50eb0aaf97665b",
+        "COMMAND_LIFECYCLE.csv": "d5a534188c91e66d8774181645099dc16cf37dcb8a281297645902b3abc7c22d",
+        "COMMAND_EXECUTION_INTERVALS.csv": "db305cf273710ec1c18b5455d6f5a107eb84548ae561ed2cfd102b95af3d79bf",
+        "EVENT_TIMELINE.csv": "af77d665665d2d36c5b11c437d7284972bc255cbcc8b6f02e396481f70002f0b",
+        "ENGINEERING_INTERVALS.csv": "fd2388612dad41a87b84773b6e5ab73581e037f467579773ec12e1fe3543018b",
+        "DIESEL_LOCAL_RESPONSE.csv": "1455dba85ebf929e1bd09d41cad476dc2146b45243dfb59dec03a4183cc28332",
+        "THERMAL_COVERAGE.csv": "ba6ee786740cd6d6f14482f89cb2f40b3ea2d7aac5c75583a3d0e52bd59adad3",
+        "MODEL_DOMAIN.csv": "1f9377560d19bd3c3f06d1ec2e4bc14b12526c12686dc5dc7c3ae94a09385c98",
+        "RESULTS.json": "1236a2b7e3af61e3b8f1a450860c6c54346169975935f21a4e5f19d963f9a1ea"
+      },
+      "analysis_program_sha256": "66e2d69f47be5663cf6646ea381521b861c31ee3cdcb8a1b26b8472c67e13967",
+      "exporter_sha256": "d94a2ac84a58059bb3a46ef0c5ae1a39f138b20c67a2a7d72d6d6e0c46a6b9f4",
+      "physical_episodes_started": 0,
+      "additional_raw_opens": 0,
+      "old_scores_unchanged": true,
+      "full_raw_retained": true,
+      "duplicate_timeline_json_written": false,
+      "v18_table_row_counts": {
+        "V18_CARRIER_SERVICE": 96,
+        "V18_TEMPERATURE": 32,
+        "V18_ECONOMICS": 8,
+        "V18_RECOVERY_STAGES": 120
+      },
+      "v18_output_sha256": {
+        "V18_CARRIER_SERVICE.csv": "1d9e93baf38d0dca6fbc4285b873f78204e20f0e7cc701cdaf6a23792d536816",
+        "V18_TEMPERATURE.csv": "9d7dfb7e7b8428207cc69603f9513198d0545df0d8d3bc335e9e0ada0c761ac2",
+        "V18_ECONOMICS.csv": "85d7b2a8630f878a8fff8660246e6bf85588f76aba0a0d6b78a7a63789a49426",
+        "V18_RECOVERY_STAGES.csv": "7414d24b2b74736114dc410111abc4be27e7d634231a099761e0be9eb5d88b6f"
+      },
+      "v18_analysis_program_sha256": "ef72d0aca48d40c1184dcd462c6bb183299a78780e8ce105acd892a559d1aab1",
+      "different_length_total_costs_pooled": false
+    },
+    "compatibility_filenames_are_new_M20_data": true,
+    "output_sha256": {
+      "V20_RESOURCES.csv": "81c6519027cd6faf37d1c1e8d678c3846677e5be268343c5e08a0941e592a6a1",
+      "V20_EMISSIONS.csv": "4fed4b3af447830ef8bd56aa830bfe84b56eaf17704e190ec2a806c52176785c",
+      "V20_EPISODE_AUDIT.json": "f7313418c6132dc36b0e6cffda5dc3e24d97d050be17ae188ce71cf9f88f4387"
+    },
+    "emissions_registry_path": "D:\\hospital_ies_v20_candidate_20261019\\outputs\\v20_load_accounting_20261019_run01\\references\\EMISSIONS_FACTOR_REGISTRY.json",
+    "emissions_registry_sha256": "67ad5404000040d9665f016ee4b9c540783b26a9ad8038550f148881cefc6ab0",
+    "analysis_program_sha256": "6fa6ac6426f15e076cb32fbf7c84456151196018a478208d321432ae01067780",
+    "physical_episodes_started": 0,
+    "additional_raw_opens": 0,
+    "annual_inputs_loaded": 0,
+    "old_outputs_modified": false
+  },
+  "all_registered_outcomes_retained": true,
+  "physical_replay_certification": false,
+  "completion_semantics": "complete_full is entire registered [0,end); legacy full600 is separate",
+  "pair_index": [
+    {
+      "scenario_id": "v17_L1_05d91fa94a2b551ad7ab17ff",
+      "analysis_class": "L1",
+      "model_id": "M20_load_accounting",
+      "policy_id": "endurance_restore_p0_ready_M20_v1",
+      "status": "completed",
+      "source_day_index": 5,
+      "raw_path": "D:\\hospital_ies_v20_candidate_20261019\\outputs\\v20_load_accounting_20261019_run01\\experiments\\reproduce_candidate01\\pairs\\v17_L1_05d91fa94a2b551ad7ab17ff__endurance_restore_p0_ready_M20_v1\\trajectory.json.gz",
+      "raw_sha256": "648f2478f9412f2eead901d99611fbdf03e57898bbacc3ed64367845a96e9542",
+      "elapsed_seconds": 28.26780300005339,
+      "manifest_signature": "997f07cb2c4a2df7e2e75e7604c133c6172ca4c62402e350e4972151c74174b5",
+      "model_config_signature": "910e921dd6fb01ea1c99eaa5c643659310df1c626b398a6da35bc82c6a498d61",
+      "error": null,
+      "analysis_error": null
+    }
+  ],
+  "run_attempt_accounting": {
+    "registered_pairs": 4,
+    "actual_started_attempts": 4,
+    "terminal_attempts": 4,
+    "started_without_terminal_record": 0,
+    "terminal_status_counts": {
+      "completed": 4
+    },
+    "first_actual_started_utc": "2026-10-19T04:36:18.481008+00:00",
+    "actual_experiment_wall_hours": 0.25977007333333335
+  }
+}

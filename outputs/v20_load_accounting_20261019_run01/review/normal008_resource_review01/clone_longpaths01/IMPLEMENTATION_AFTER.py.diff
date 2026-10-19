@@ -1,0 +1,82 @@
+--- before/publication/clone_release.py
++++ after/publication/clone_release.py
+@@ -21,6 +21,21 @@
+ def git_value(directory,*args):
+     return subprocess.check_output(['git',*args],cwd=directory).decode('utf8').strip()
+ 
++def clone_environment(inherited):
++    """Append one command-scoped override; never disclose inherited Git values."""
++    env=dict(inherited);raw=env.get('GIT_CONFIG_COUNT','0')
++    if not isinstance(raw,str) or not raw.isascii() or not raw.isdecimal():
++        raise ValueError('Inherited Git config count is invalid')
++    count=int(raw)
++    if count>len(env)//2 or any('GIT_CONFIG_'+part+'_'+str(i) not in env
++            for i in range(count) for part in ('KEY','VALUE')):
++        raise ValueError('Inherited Git config pairs are incomplete')
++    env.update(GIT_TERMINAL_PROMPT='0',GIT_CONFIG_COUNT=str(count+1))
++    env['GIT_CONFIG_KEY_'+str(count)]='core.longpaths'
++    env['GIT_CONFIG_VALUE_'+str(count)]='true'
++    return env,dict(name='core.longpaths',value='true',inherited_count=count,
++        appended_index=count,preserved_existing_pairs=True)
++
+ def clone(destination):
+     target=Path(destination)
+     if not target.is_absolute():raise ValueError('Use a new absolute D/E clone destination')
+@@ -36,6 +51,7 @@
+         original=Path(marker[name]).resolve()
+         if target.is_relative_to(original) or original.is_relative_to(target):
+             raise ValueError('Clone overlaps an original scientific root')
++    env,scoped_config=clone_environment(os.environ)
+     target.parent.mkdir(parents=True,exist_ok=True)
+     evidence=target.parent/(target.name+'.clone_evidence')
+     evidence.mkdir(exist_ok=False)
+@@ -43,8 +59,8 @@
+     started=datetime.now(timezone.utc).isoformat()
+     write_new(evidence/'START.json',dict(command=command,cwd=str(target.parent),
+         started_utc=started,starting_destination_existed=False,clone_destination=str(target),
+-        source_launcher_root=str(ROOT),source_launcher_sha256=sha(Path(__file__))))
+-    env=os.environ.copy();env['GIT_TERMINAL_PROMPT']='0'
++        source_launcher_root=str(ROOT),source_launcher_sha256=sha(Path(__file__)),
++        clone_scoped_git_config=scoped_config))
+     with (evidence/'command.log').open('xb') as log:
+         done=subprocess.run(command,cwd=target.parent,env=env,stdout=log,stderr=subprocess.STDOUT,check=False)
+     record=dict(command=command,cwd=str(target.parent),started_utc=started,
+@@ -53,9 +69,26 @@
+         source_launcher_root=str(ROOT),source_launcher_sha256=sha(Path(__file__)),
+         source_launcher_commit=None,
+         command_log_sha256=sha(evidence/'command.log'),git_commit=None,origin_url=None,branch=None,
+-        helper_validation_status='failed_unknown',validation_error=None)
++        helper_validation_status='failed_unknown',validation_error=None,
++        clone_scoped_git_config=scoped_config,local_longpaths_config=None)
+     if done.returncode==0:
+         try:
++            local=dict(command=['git','config','--local','core.longpaths','true'],cwd=str(target),
++                started_utc=datetime.now(timezone.utc).isoformat(),finished_utc=None,
++                exit_code=None,command_log_sha256=None,error=None)
++            record['local_longpaths_config']=local
++            try:
++                with (evidence/'local_config.log').open('xb') as log:
++                    configured=subprocess.run(local['command'],cwd=target,env=env,
++                        stdout=log,stderr=subprocess.STDOUT,check=False)
++                local['exit_code']=configured.returncode
++            except Exception as exc:
++                local['error']=dict(type=type(exc).__name__,message=str(exc))
++                raise
++            finally:
++                local['finished_utc']=datetime.now(timezone.utc).isoformat()
++                if (evidence/'local_config.log').is_file():local['command_log_sha256']=sha(evidence/'local_config.log')
++            if local['exit_code']!=0:raise ValueError('Local Git longpaths configuration exited with code '+str(local['exit_code']))
+             # Query failures are helper-validation failures, not clone exits.
+             # Keep all successfully observed fields and a terminal COMMAND
+             # receipt even when a later Git query or selection check fails.
+@@ -76,7 +109,9 @@
+     write_new(evidence/'COMMAND.json',record)
+     if target.is_dir():
+         copied=target/'publication_checks/clone01';copied.mkdir(parents=True,exist_ok=False)
+-        for name in ('START.json','COMMAND.json','command.log'):
++        names=['START.json','COMMAND.json','command.log']
++        if (evidence/'local_config.log').is_file():names.append('local_config.log')
++        for name in names:
+             shutil.copyfile(evidence/name,copied/name)
+             if sha(evidence/name)!=sha(copied/name):raise ValueError('Clone command receipt copy differs')
+     print(json.dumps(record,ensure_ascii=True))

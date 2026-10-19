@@ -1,0 +1,10 @@
+{
+  "schema": "hospital_ies.v20.main_energy_extraction_attempt.v1",
+  "actual_exit_code": 1,
+  "error": "ValueError: Saved analysis does not cover complete registered duration",
+  "cause": "Temporary analysis assumed every main episode ended at minute600. In fact52 of80 registered episodes extend beyond600.",
+  "resolution": "Validate full registered qualification separately; extract only full600 primary ledger/economics; reject clipped DG receipts rather than interpolate.",
+  "data_files_written_before_failure": 0,
+  "physical_episodes_started": 0,
+  "raw_files_opened": 0
+}

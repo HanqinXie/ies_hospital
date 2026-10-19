@@ -1,0 +1,20 @@
+{
+  "status": "passed",
+  "analysis_sha256": "8371e2b07f684aa0ca62823591e1b161fb855038e1fc8760d4ec31f37c133336",
+  "script_sha256": "58cf48496bb4b7c88dca62ac416a6b593e43b90ee95808f278a478a3d1795897",
+  "comparison_scope": "Eight seen registered long cases per policy; scenario-minute sums, not outage probabilities",
+  "output_sha256": {
+    "LONG_AGGREGATE_SERVICE.csv": "5dcb380e6e834fbcec8c6efc71cf3fd249c6566cb3e57b618051d4c2c3106958",
+    "LONG_AGGREGATE_ENERGY.csv": "2ab04eff6b594755c3522b58776b699a656265e36338f51a31e0f6fe31843312",
+    "LONG_CASE_SUMMARY.csv": "643212140f78a78b148c13a135092024ac68e46fca056899dc211f5beec9350c",
+    "COMPAT_SUMMARY.csv": "5bd11ec75c4ed078b26c7239c523685070a5c4773bee0aff98521919f598e10c"
+  },
+  "row_counts": {
+    "LONG_AGGREGATE_SERVICE": 36,
+    "LONG_AGGREGATE_ENERGY": 3,
+    "LONG_CASE_SUMMARY": 24,
+    "COMPAT_SUMMARY": 7
+  },
+  "raw_opened": false,
+  "physical_episodes_started": 0
+}

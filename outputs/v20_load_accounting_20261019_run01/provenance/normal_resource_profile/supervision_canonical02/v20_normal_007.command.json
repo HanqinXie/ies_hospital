@@ -1,0 +1,48 @@
+{
+  "command": [
+    "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\python.exe",
+    "-B",
+    "-m",
+    "tools.load_accounting.runner",
+    "run",
+    "--directory",
+    "outputs/v20_load_accounting_20261019_run01/experiments/v20_normal_007"
+  ],
+  "cwd": "D:\\hospital_ies_v20_20261019",
+  "utc": "2026-10-19T10:34:24.499121+00:00",
+  "admission": {
+    "admitted": true,
+    "physical_ok": true,
+    "commit_ok": true,
+    "required_physical_bytes": 18413843252,
+    "required_commit_headroom_bytes": 20532849869,
+    "observed_available_physical_bytes": 31897522176,
+    "observed_commit_headroom_bytes": 29988114432,
+    "historical_model_id": "M19_model_closeout",
+    "is_new_M20_peak_measurement": false,
+    "growth_factor": 1.2,
+    "host_reserve_bytes": 6442450944
+  },
+  "prior_checkpoint_admission": {
+    "admitted": true,
+    "physical_ok": true,
+    "commit_ok": true,
+    "required_physical_bytes": 18413843252,
+    "required_commit_headroom_bytes": 20532849869,
+    "observed_available_physical_bytes": 31769821184,
+    "observed_commit_headroom_bytes": 29989269504,
+    "historical_model_id": "M19_model_closeout",
+    "is_new_M20_peak_measurement": false,
+    "growth_factor": 1.2,
+    "host_reserve_bytes": 6442450944
+  },
+  "environment_overrides": {
+    "TEMP": "D:\\hospital_ies_v20_20261019\\outputs\\v20_load_accounting_20261019_run01\\provenance\\normal_resource_profile\\supervision_canonical02\\temp\\v20_normal_007",
+    "TMP": "D:\\hospital_ies_v20_20261019\\outputs\\v20_load_accounting_20261019_run01\\provenance\\normal_resource_profile\\supervision_canonical02\\temp\\v20_normal_007",
+    "PYTHONDONTWRITEBYTECODE": "1",
+    "PYTHONIOENCODING": "utf-8",
+    "PYTHONPATH": "D:\\hospital_ies_v20_20261019\\src;D:\\hospital_ies_v20_20261019"
+  },
+  "prior_registration_unchanged": true,
+  "new_registration_created": false
+}

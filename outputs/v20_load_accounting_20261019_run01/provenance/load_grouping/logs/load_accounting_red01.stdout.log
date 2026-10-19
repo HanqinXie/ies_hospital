@@ -1,0 +1,250 @@
+.FFFFF.FFFF.F                                                            [100%]
+================================== FAILURES ===================================
+_ test_actual_zone_meter_is_used_once[ER_EXAM1_MULT4_FLR_1-4-179.93460000000002-209.99979677375987] _
+
+first = (          timestamp  hour_of_year  ...  Q_h_DHW_water_use_kW  outdoor_temperature_C
+0  2017-01-01 01:00             1...                         8.536515
+13  2017-01-01 01:00  ...                           0.000000
+
+[14 rows x 13 columns])
+zone = 'ER_EXAM1_MULT4_FLR_1', mult = 4, equipment_W = 179.93460000000002
+lights_W = 209.99979677375987
+
+    @pytest.mark.parametrize("zone,mult,equipment_W,lights_W", [
+        ("OR1_FLR_2", 1, 628.4544122950514, 67.79992323859203),
+        ("ER_EXAM1_MULT4_FLR_1", 4, 179.93460000000002, 209.99979677375987),
+        ("OR2_MULT5_FLR_2", 5, 628.4544122950514, 67.79992323859197),
+        ("IC_PATROOM3_MULT6_FLR_2", 6, 269.90192, 140.6248116530401),
+    ])
+    def test_actual_zone_meter_is_used_once(first, zone, mult, equipment_W, lights_W):
+        hourly, zones = first
+        selected = zones.loc[zones.zone_name == zone].iloc[0]
+        assert selected.zone_multiplier == mult
+        assert selected.interior_equipment_kW == pytest.approx(equipment_W * mult / 1000., abs=1e-12)
+        assert selected.interior_lighting_kW == pytest.approx(lights_W * mult / 1000., abs=1e-12)
+        # Isolate a real meter row without changing its data or the building total.
+        zones.loc[zones.zone_name != zone, ["interior_equipment_kW", "interior_lighting_kW"]] = 0.
+        grouped = api.build_zone_groups(zones, hourly).iloc[0]
+        expected = selected.interior_equipment_kW + selected.interior_lighting_kW
+>       assert grouped[f"P{api.ZONE_PRIORITY[zone]}_e_kW"] == pytest.approx(expected, abs=1e-12)
+E       assert np.float64(6.238950348380158) == 1.5597375870950394 ± 1.0e-12
+E         
+E         comparison failed
+E         Obtained: 6.238950348380158
+E         Expected: 1.5597375870950394 ± 1.0e-12
+
+tests\test_v20_load_accounting.py:49: AssertionError
+_ test_actual_zone_meter_is_used_once[OR2_MULT5_FLR_2-5-628.4544122950514-67.79992323859197] _
+
+first = (          timestamp  hour_of_year  ...  Q_h_DHW_water_use_kW  outdoor_temperature_C
+0  2017-01-01 01:00             1...                         8.536515
+13  2017-01-01 01:00  ...                           0.000000
+
+[14 rows x 13 columns])
+zone = 'OR2_MULT5_FLR_2', mult = 5, equipment_W = 628.4544122950514
+lights_W = 67.79992323859197
+
+    @pytest.mark.parametrize("zone,mult,equipment_W,lights_W", [
+        ("OR1_FLR_2", 1, 628.4544122950514, 67.79992323859203),
+        ("ER_EXAM1_MULT4_FLR_1", 4, 179.93460000000002, 209.99979677375987),
+        ("OR2_MULT5_FLR_2", 5, 628.4544122950514, 67.79992323859197),
+        ("IC_PATROOM3_MULT6_FLR_2", 6, 269.90192, 140.6248116530401),
+    ])
+    def test_actual_zone_meter_is_used_once(first, zone, mult, equipment_W, lights_W):
+        hourly, zones = first
+        selected = zones.loc[zones.zone_name == zone].iloc[0]
+        assert selected.zone_multiplier == mult
+        assert selected.interior_equipment_kW == pytest.approx(equipment_W * mult / 1000., abs=1e-12)
+        assert selected.interior_lighting_kW == pytest.approx(lights_W * mult / 1000., abs=1e-12)
+        # Isolate a real meter row without changing its data or the building total.
+        zones.loc[zones.zone_name != zone, ["interior_equipment_kW", "interior_lighting_kW"]] = 0.
+        grouped = api.build_zone_groups(zones, hourly).iloc[0]
+        expected = selected.interior_equipment_kW + selected.interior_lighting_kW
+>       assert grouped[f"P{api.ZONE_PRIORITY[zone]}_e_kW"] == pytest.approx(expected, abs=1e-12)
+E       assert np.float64(17.406358388341086) == 3.481271677668217 ± 1.0e-12
+E         
+E         comparison failed
+E         Obtained: 17.406358388341086
+E         Expected: 3.481271677668217 ± 1.0e-12
+
+tests\test_v20_load_accounting.py:49: AssertionError
+_ test_actual_zone_meter_is_used_once[IC_PATROOM3_MULT6_FLR_2-6-269.90192-140.6248116530401] _
+
+first = (          timestamp  hour_of_year  ...  Q_h_DHW_water_use_kW  outdoor_temperature_C
+0  2017-01-01 01:00             1...                         8.536515
+13  2017-01-01 01:00  ...                           0.000000
+
+[14 rows x 13 columns])
+zone = 'IC_PATROOM3_MULT6_FLR_2', mult = 6, equipment_W = 269.90192
+lights_W = 140.6248116530401
+
+    @pytest.mark.parametrize("zone,mult,equipment_W,lights_W", [
+        ("OR1_FLR_2", 1, 628.4544122950514, 67.79992323859203),
+        ("ER_EXAM1_MULT4_FLR_1", 4, 179.93460000000002, 209.99979677375987),
+        ("OR2_MULT5_FLR_2", 5, 628.4544122950514, 67.79992323859197),
+        ("IC_PATROOM3_MULT6_FLR_2", 6, 269.90192, 140.6248116530401),
+    ])
+    def test_actual_zone_meter_is_used_once(first, zone, mult, equipment_W, lights_W):
+        hourly, zones = first
+        selected = zones.loc[zones.zone_name == zone].iloc[0]
+        assert selected.zone_multiplier == mult
+        assert selected.interior_equipment_kW == pytest.approx(equipment_W * mult / 1000., abs=1e-12)
+        assert selected.interior_lighting_kW == pytest.approx(lights_W * mult / 1000., abs=1e-12)
+        # Isolate a real meter row without changing its data or the building total.
+        zones.loc[zones.zone_name != zone, ["interior_equipment_kW", "interior_lighting_kW"]] = 0.
+        grouped = api.build_zone_groups(zones, hourly).iloc[0]
+        expected = selected.interior_equipment_kW + selected.interior_lighting_kW
+>       assert grouped[f"P{api.ZONE_PRIORITY[zone]}_e_kW"] == pytest.approx(expected, abs=1e-12)
+E       assert np.float64(14.778962339509446) == 2.463160389918241 ± 1.0e-12
+E         
+E         comparison failed
+E         Obtained: 14.778962339509446
+E         Expected: 2.463160389918241 ± 1.0e-12
+
+tests\test_v20_load_accounting.py:49: AssertionError
+_________ test_actual_h1_priority_electricity_equals_zone_meter_sums __________
+
+first = (          timestamp  hour_of_year  ...  Q_h_DHW_water_use_kW  outdoor_temperature_C
+0  2017-01-01 01:00             1...                         8.536515
+13  2017-01-01 01:00  ...                           0.000000
+
+[14 rows x 13 columns])
+
+    def test_actual_h1_priority_electricity_equals_zone_meter_sums(first):
+        hourly, zones = first
+        grouped = api.build_zone_groups(zones, hourly).iloc[0]
+        meter = zones.interior_equipment_kW + zones.interior_lighting_kW
+        assert meter.sum() < hourly.iloc[0].P_e_nonplant_kW + hourly.iloc[0].P_e_unresolved_kW
+        priorities = zones.zone_name.map(api.ZONE_PRIORITY)
+        for priority in range(3):
+>           assert grouped[f"P{priority}_e_kW"] == pytest.approx(meter.loc[priorities == priority].sum(), abs=1e-12)
+E           assert np.float64(35.100008386234656) == 21.17492167556179 ± 1.0e-12
+E             
+E             comparison failed
+E             Obtained: 35.100008386234656
+E             Expected: 21.17492167556179 ± 1.0e-12
+
+tests\test_v20_load_accounting.py:59: AssertionError
+_ test_actual_h1_reheat_components_are_used_once_and_leave_other_coils_and_dhw _
+
+first = (          timestamp  hour_of_year  ...  Q_h_DHW_water_use_kW  outdoor_temperature_C
+0  2017-01-01 01:00             1...                         8.536515
+13  2017-01-01 01:00  ...                           0.000000
+
+[14 rows x 13 columns])
+
+    def test_actual_h1_reheat_components_are_used_once_and_leave_other_coils_and_dhw(first):
+        hourly, zones = first
+        grouped = api.build_zone_groups(zones, hourly).iloc[0]
+        coil = zones.associated_reheat_coil_heating_kW.clip(lower=0)
+        assert coil.sum() < hourly.iloc[0].Q_h_heating_coils_kW < hourly.iloc[0].Q_h_demand_kW
+        for priority in range(3):
+            expected = coil.loc[zones.zone_name.map(api.ZONE_PRIORITY) == priority].sum()
+>           assert grouped[f"P{priority}_h_kW"] == pytest.approx(expected, abs=1e-12)
+E           assert np.float64(82.12513882118095) == 62.9715010893886 ± 1.0e-12
+E             
+E             comparison failed
+E             Obtained: 82.12513882118095
+E             Expected: 62.9715010893886 ± 1.0e-12
+
+tests\test_v20_load_accounting.py:71: AssertionError
+___ test_grouping_diagnostics_exposes_uncompressed_fields_and_each_carrier ____
+
+first = (          timestamp  hour_of_year  ...  Q_h_DHW_water_use_kW  outdoor_temperature_C
+0  2017-01-01 01:00             1...                         8.536515
+13  2017-01-01 01:00  ...                           0.000000
+
+[14 rows x 13 columns])
+
+    def test_grouping_diagnostics_exposes_uncompressed_fields_and_each_carrier(first):
+        hourly, zones = first
+>       assert hasattr(api, "grouping_diagnostics"), "Per-hour pre-compression accounting is required"
+E       AssertionError: Per-hour pre-compression accounting is required
+E       assert False
+E        +  where False = hasattr(api, 'grouping_diagnostics')
+
+tests\test_v20_load_accounting.py:90: AssertionError
+_________ test_compression_retains_raw_excess_instead_of_hiding_it[e] _________
+
+first = (          timestamp  hour_of_year  ...  Q_h_DHW_water_use_kW  outdoor_temperature_C
+0  2017-01-01 01:00             1...                         8.536515
+13  2017-01-01 01:00  ...                           0.000000
+
+[14 rows x 13 columns])
+carrier = 'e'
+
+    @pytest.mark.parametrize("carrier", ["e", "h", "c"])
+    def test_compression_retains_raw_excess_instead_of_hiding_it(first, carrier):
+        hourly, zones = first
+>       assert hasattr(api, "grouping_diagnostics"), "Raw excess must be independently inspectable"
+E       AssertionError: Raw excess must be independently inspectable
+E       assert False
+E        +  where False = hasattr(api, 'grouping_diagnostics')
+
+tests\test_v20_load_accounting.py:106: AssertionError
+_________ test_compression_retains_raw_excess_instead_of_hiding_it[h] _________
+
+first = (          timestamp  hour_of_year  ...  Q_h_DHW_water_use_kW  outdoor_temperature_C
+0  2017-01-01 01:00             1...                         8.536515
+13  2017-01-01 01:00  ...                           0.000000
+
+[14 rows x 13 columns])
+carrier = 'h'
+
+    @pytest.mark.parametrize("carrier", ["e", "h", "c"])
+    def test_compression_retains_raw_excess_instead_of_hiding_it(first, carrier):
+        hourly, zones = first
+>       assert hasattr(api, "grouping_diagnostics"), "Raw excess must be independently inspectable"
+E       AssertionError: Raw excess must be independently inspectable
+E       assert False
+E        +  where False = hasattr(api, 'grouping_diagnostics')
+
+tests\test_v20_load_accounting.py:106: AssertionError
+_________ test_compression_retains_raw_excess_instead_of_hiding_it[c] _________
+
+first = (          timestamp  hour_of_year  ...  Q_h_DHW_water_use_kW  outdoor_temperature_C
+0  2017-01-01 01:00             1...                         8.536515
+13  2017-01-01 01:00  ...                           0.000000
+
+[14 rows x 13 columns])
+carrier = 'c'
+
+    @pytest.mark.parametrize("carrier", ["e", "h", "c"])
+    def test_compression_retains_raw_excess_instead_of_hiding_it(first, carrier):
+        hourly, zones = first
+>       assert hasattr(api, "grouping_diagnostics"), "Raw excess must be independently inspectable"
+E       AssertionError: Raw excess must be independently inspectable
+E       assert False
+E        +  where False = hasattr(api, 'grouping_diagnostics')
+
+tests\test_v20_load_accounting.py:106: AssertionError
+__ test_default_selective_input_route_uses_the_same_corrected_meter_boundary __
+
+    def test_default_selective_input_route_uses_the_same_corrected_meter_boundary():
+        from tools.autonomous_dispatch.selective_data import selective_inputs
+        authority = json.loads((ROOT / "outputs/v43_p2b_20261013_run01/experiment/global_manifest.json").read_text(encoding="utf-8"))
+        sealed = sorted(int(r["time_block_id"].rsplit("_", 1)[1]) for r in authority["p2b_time_blocks"] if r["reserved_only"])
+        _, zones, grouped, receipt = selective_inputs(ROOT, [1], sealed_days=sealed)
+        meter = zones.interior_equipment_kW + zones.interior_lighting_kW
+        for p in range(3):
+            expected = meter.loc[zones.zone_name.map(api.ZONE_PRIORITY) == p].sum()
+>           assert grouped.loc[1, f"P{p}_e_kW"] == pytest.approx(expected, abs=1e-12)
+E           assert np.float64(35.100008386234656) == 21.17492167556179 ± 1.0e-12
+E             
+E             comparison failed
+E             Obtained: 35.100008386234656
+E             Expected: 21.17492167556179 ± 1.0e-12
+
+tests\test_v20_load_accounting.py:153: AssertionError
+=========================== short test summary info ===========================
+FAILED tests/test_v20_load_accounting.py::test_actual_zone_meter_is_used_once[ER_EXAM1_MULT4_FLR_1-4-179.93460000000002-209.99979677375987]
+FAILED tests/test_v20_load_accounting.py::test_actual_zone_meter_is_used_once[OR2_MULT5_FLR_2-5-628.4544122950514-67.79992323859197]
+FAILED tests/test_v20_load_accounting.py::test_actual_zone_meter_is_used_once[IC_PATROOM3_MULT6_FLR_2-6-269.90192-140.6248116530401]
+FAILED tests/test_v20_load_accounting.py::test_actual_h1_priority_electricity_equals_zone_meter_sums
+FAILED tests/test_v20_load_accounting.py::test_actual_h1_reheat_components_are_used_once_and_leave_other_coils_and_dhw
+FAILED tests/test_v20_load_accounting.py::test_grouping_diagnostics_exposes_uncompressed_fields_and_each_carrier
+FAILED tests/test_v20_load_accounting.py::test_compression_retains_raw_excess_instead_of_hiding_it[e]
+FAILED tests/test_v20_load_accounting.py::test_compression_retains_raw_excess_instead_of_hiding_it[h]
+FAILED tests/test_v20_load_accounting.py::test_compression_retains_raw_excess_instead_of_hiding_it[c]
+FAILED tests/test_v20_load_accounting.py::test_default_selective_input_route_uses_the_same_corrected_meter_boundary
+10 failed, 3 passed in 3.71s

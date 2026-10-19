@@ -1,0 +1,76 @@
+FF                                                                       [100%]
+================================== FAILURES ===================================
+______ test_selection_keeps_compact_evidence_but_not_interval_csv[False] ______
+
+tmp_path = WindowsPath('D:/hospital_ies_v20_20261019/outputs/v20_load_accounting_20261019_run01/temp/release_selection_red01/pytest-of-HanqinXie/pytest-0/test_selection_keeps_compact_e0')
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x000001C2D94F3AC0>
+candidate = False
+
+    @pytest.mark.parametrize('candidate', [False, True])
+    def test_selection_keeps_compact_evidence_but_not_interval_csv(tmp_path, monkeypatch, candidate):
+        builder = load_builder()
+        monkeypatch.setattr(builder, 'ROOT', tmp_path)
+        monkeypatch.setattr(builder.base, 'RUN', tmp_path / builder.base.RUN_REL)
+        monkeypatch.setattr(builder.base, 'selected_paths', lambda: [])
+        monkeypatch.setattr(builder, 'supplemental_rows', lambda: [])
+        for name in ('inputs/energyplus/README_setup.txt', 'publication/requirements.txt'):
+            path = tmp_path / name
+            path.parent.mkdir(parents=True, exist_ok=True)
+            path.write_text('fixture\n', encoding='utf-8')
+        compact = ('V20_RESOURCES.csv', 'V20_EMISSIONS.csv', 'V18_CARRIER_SERVICE.csv',
+                   'V18_ECONOMICS.csv', 'GT_RUNS.csv', 'GT_TRANSITIONS.csv',
+                   'MODEL_DOMAIN.csv', 'THERMAL_COVERAGE.csv')
+        for batch in ('v20_main_000', 'v20_main_001'):
+            directory = builder.base.RUN / 'experiments' / batch / 'analysis'
+            directory.mkdir(parents=True)
+            for name in (*compact, 'ENGINEERING_INTERVALS.csv', 'EVENT_TIMELINE.csv'):
+                (directory / name).write_text('fixture\n', encoding='utf-8')
+        names, _ = builder.select(candidate)
+        expected_batches = ('v20_main_000',) if candidate else ('v20_main_000', 'v20_main_001')
+        for batch in expected_batches:
+            for name in compact:
+                expected = f'{builder.base.RUN_REL}/experiments/{batch}/analysis/{name}'
+>               assert expected in names, f'Compact evidence was omitted: {expected}'
+E               AssertionError: Compact evidence was omitted: outputs/v20_load_accounting_20261019_run01/experiments/v20_main_000/analysis/V20_RESOURCES.csv
+E               assert 'outputs/v20_load_accounting_20261019_run01/experiments/v20_main_000/analysis/V20_RESOURCES.csv' in ['inputs/energyplus/README_setup.txt', 'publication/requirements.txt']
+
+publication\test_release_selection.py:40: AssertionError
+______ test_selection_keeps_compact_evidence_but_not_interval_csv[True] _______
+
+tmp_path = WindowsPath('D:/hospital_ies_v20_20261019/outputs/v20_load_accounting_20261019_run01/temp/release_selection_red01/pytest-of-HanqinXie/pytest-0/test_selection_keeps_compact_e1')
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x000001C2D95ABBE0>
+candidate = True
+
+    @pytest.mark.parametrize('candidate', [False, True])
+    def test_selection_keeps_compact_evidence_but_not_interval_csv(tmp_path, monkeypatch, candidate):
+        builder = load_builder()
+        monkeypatch.setattr(builder, 'ROOT', tmp_path)
+        monkeypatch.setattr(builder.base, 'RUN', tmp_path / builder.base.RUN_REL)
+        monkeypatch.setattr(builder.base, 'selected_paths', lambda: [])
+        monkeypatch.setattr(builder, 'supplemental_rows', lambda: [])
+        for name in ('inputs/energyplus/README_setup.txt', 'publication/requirements.txt'):
+            path = tmp_path / name
+            path.parent.mkdir(parents=True, exist_ok=True)
+            path.write_text('fixture\n', encoding='utf-8')
+        compact = ('V20_RESOURCES.csv', 'V20_EMISSIONS.csv', 'V18_CARRIER_SERVICE.csv',
+                   'V18_ECONOMICS.csv', 'GT_RUNS.csv', 'GT_TRANSITIONS.csv',
+                   'MODEL_DOMAIN.csv', 'THERMAL_COVERAGE.csv')
+        for batch in ('v20_main_000', 'v20_main_001'):
+            directory = builder.base.RUN / 'experiments' / batch / 'analysis'
+            directory.mkdir(parents=True)
+            for name in (*compact, 'ENGINEERING_INTERVALS.csv', 'EVENT_TIMELINE.csv'):
+                (directory / name).write_text('fixture\n', encoding='utf-8')
+        names, _ = builder.select(candidate)
+        expected_batches = ('v20_main_000',) if candidate else ('v20_main_000', 'v20_main_001')
+        for batch in expected_batches:
+            for name in compact:
+                expected = f'{builder.base.RUN_REL}/experiments/{batch}/analysis/{name}'
+>               assert expected in names, f'Compact evidence was omitted: {expected}'
+E               AssertionError: Compact evidence was omitted: outputs/v20_load_accounting_20261019_run01/experiments/v20_main_000/analysis/V20_RESOURCES.csv
+E               assert 'outputs/v20_load_accounting_20261019_run01/experiments/v20_main_000/analysis/V20_RESOURCES.csv' in ['inputs/energyplus/README_setup.txt', 'publication/requirements.txt']
+
+publication\test_release_selection.py:40: AssertionError
+=========================== short test summary info ===========================
+FAILED publication/test_release_selection.py::test_selection_keeps_compact_evidence_but_not_interval_csv[False]
+FAILED publication/test_release_selection.py::test_selection_keeps_compact_evidence_but_not_interval_csv[True]
+2 failed in 0.08s

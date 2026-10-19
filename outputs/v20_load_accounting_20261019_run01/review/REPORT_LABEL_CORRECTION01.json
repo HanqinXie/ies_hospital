@@ -1,0 +1,16 @@
+{
+  "schema": "hospital_ies.v20.report_label_correction.v1",
+  "utc": "2026-10-19T07:45:38.618578+00:00",
+  "report": "paper_results/MAIN_COMPLETE01",
+  "summary_sha256": "2b5061ff38d8107e12046bd528179e2954985f598deeb6ba21079cda0a83896f",
+  "label_was_premature": true,
+  "observed_main_numeric_complete": 239,
+  "expected_main_pairs": 240,
+  "eligible_terminal_pairs_all_cohorts": 237,
+  "actual_classification": "Intermediate checkpoint; not a complete main-panel report",
+  "reason": "Overall completed count includes early long-window pairs; strict main cohort census was not yet full",
+  "original_report_preserved": true,
+  "do_not_use_label_as_completion_evidence": true,
+  "replacement_rule": "A new report label will only be generated after all 80 main batch terminals are present and qualified",
+  "physics_or_results_modified": false
+}

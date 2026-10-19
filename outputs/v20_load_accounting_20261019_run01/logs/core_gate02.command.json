@@ -1,0 +1,31 @@
+{
+  "name": "core_gate02",
+  "command": [
+    "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\python.exe",
+    "-B",
+    "-m",
+    "tools.load_accounting.gate",
+    "--name",
+    "core_gate02",
+    "--",
+    "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\python.exe",
+    "-B",
+    "-m",
+    "pytest",
+    "-q",
+    "--basetemp",
+    "D:\\hospital_ies_v20_20261019\\outputs\\v20_load_accounting_20261019_run01\\test_tmp\\core_gate02"
+  ],
+  "cwd": "D:\\hospital_ies_v20_20261019",
+  "started_utc": "2026-10-19T04:29:09.101285+00:00",
+  "finished_utc": "2026-10-19T04:30:49.267118+00:00",
+  "elapsed_seconds": 100.168720100075,
+  "exit_code": 0,
+  "environment_overrides": {
+    "PYTHONDONTWRITEBYTECODE": "1",
+    "PYTHONIOENCODING": "utf-8",
+    "PYTHONPATH": "D:\\hospital_ies_v20_20261019\\src;D:\\hospital_ies_v20_20261019",
+    "TEMP": "D:\\hospital_ies_v20_20261019\\outputs\\v20_load_accounting_20261019_run01\\temp\\core_gate02",
+    "TMP": "D:\\hospital_ies_v20_20261019\\outputs\\v20_load_accounting_20261019_run01\\temp\\core_gate02"
+  }
+}

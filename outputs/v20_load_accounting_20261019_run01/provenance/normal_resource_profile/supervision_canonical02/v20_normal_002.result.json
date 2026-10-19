@@ -1,0 +1,34 @@
+{
+  "batch": "v20_normal_002",
+  "exit_code": 0,
+  "elapsed_seconds": 306.3279999999795,
+  "qualification": {
+    "qualified": true,
+    "batch": "v20_normal_002",
+    "scenario_id": "v17_N2_b4ceb5196ab287f531271081",
+    "policy_id": "C19_critical_reserve_M20_v1",
+    "window_minutes": [
+      0.0,
+      1440.0
+    ],
+    "terminal_sha256": "86cbaa24677672937e1cca5d955b1d3e29c321899d052dadbbb631f46e503252",
+    "result_sha256": "2af16dbe0d3bda65b5eabb1e1f85599b688832bc36eb116b3eaf47bbb51f467d",
+    "raw_sha256": "378c03d9626b39f61b2df1a3e0325d4a22e96a5ae3c42a8dac528f168e65cc24",
+    "injection_state_sha256": [
+      null
+    ],
+    "fault_injection_not_applicable_to_normal": true
+  },
+  "error": null,
+  "passed": true,
+  "resource_samples": 66,
+  "unknown_process_samples": 0,
+  "sampled_private_peak_bytes": 9393631232,
+  "sampled_working_set_peak_bytes": 7661494272,
+  "observed_OS_lifetime_peak_working_set_bytes": 7694462976,
+  "minimum_observed_available_physical_bytes": 20715147264,
+  "minimum_observed_commit_headroom_bytes": 11788959744,
+  "measurements_are_M20": true,
+  "original_V19_admission_profile_not_overwritten": true,
+  "global_serial_issues": []
+}

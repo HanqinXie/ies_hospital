@@ -1,0 +1,66 @@
+{
+  "schema": "hospital_ies.v20.commit_diagnostic_receipt.v1",
+  "utc": "2026-10-19T05:51:33.197161+00:00",
+  "files": [
+    {
+      "path": "D:\\hospital_ies_v20_20261019\\outputs\\v20_load_accounting_20261019_run01\\provenance\\normal_resource_profile\\COMMIT_DIAGNOSTIC01.json",
+      "sha256": "b63f0d4950a192131b0019a77cbc49781e325ac2fcc740becb899ed10204950c",
+      "bytes": 177244
+    },
+    {
+      "path": "D:\\hospital_ies_v20_20261019\\outputs\\v20_load_accounting_20261019_run01\\provenance\\normal_resource_profile\\COMMIT_COUNTERS01.json",
+      "sha256": "a2275334ef6c975e96ce932207be6f7e537b83d22e096fc3c26ccf0e3f31404e",
+      "bytes": 11236
+    },
+    {
+      "path": "D:\\hospital_ies_v20_20261019\\outputs\\v20_load_accounting_20261019_run01\\provenance\\normal_resource_profile\\COMMIT_DIAGNOSTIC01.md",
+      "sha256": "bbef35941e774073d43ea0774d02fdaa8bb9638bb9fd68cc579e99c34f85c3af",
+      "bytes": 7135
+    }
+  ],
+  "read_only_system_inspection": true,
+  "processes_closed": 0,
+  "OS_changes": 0,
+  "new_scientific_runs_started": 0,
+  "methods": [
+    "ctypes GlobalMemoryStatusEx and GetPerformanceInfo",
+    "psutil.memory_info for all observable PIDs; ordinary process command lines not collected; Python runner classification only",
+    "Get-CimInstance Win32_PerfFormattedData_PerfOS_Memory; Get-Counter -ListSet Memory; GPU Adapter Memory counters; Win32_PageFileUsage"
+  ],
+  "process_errors": [
+    {
+      "pid": 77480,
+      "error_type": "NoSuchProcess",
+      "error": "process PID not found (pid=77480)"
+    }
+  ],
+  "limitations": [
+    "Process enumeration spans seconds and is not atomic",
+    "No exact allocated page table byte counter available; remains unknown",
+    "System commit minus summed process private is not all kernel and not all reclaimable cache",
+    "Named application private sizes are candidate accounting quantities, not a guarantee of safe or equal release",
+    "Normal dual admission thresholds unchanged"
+  ],
+  "freeze_byte_check_passed": true,
+  "freeze_sha256": "48baed7a128d2f921d36323330ae4d22e2e6dc83214e8a505b6ba89273439b7b",
+  "current_frozen_counts": {
+    "source": 366,
+    "tests": 241,
+    "inputs": 28
+  },
+  "final_memory_at_receipt": {
+    "utc": "2026-10-19T05:51:33.214166+00:00",
+    "total_physical_bytes": 50870132736,
+    "available_physical_bytes": 26021863424,
+    "committed_bytes": 51506585600,
+    "commit_limit_bytes": 61780164608,
+    "commit_headroom_bytes": 10273579008,
+    "counter_basis": "GlobalMemoryStatusEx physical; GetPerformanceInfo commit pages times page size"
+  },
+  "official_source_urls": [
+    "https://learn.microsoft.com/en-us/windows/win32/memory/memory-performance-information",
+    "https://learn.microsoft.com/en-us/windows/win32/api/psapi/ns-psapi-performance_information",
+    "https://learn.microsoft.com/en-us/windows/win32/api/psapi/ns-psapi-process_memory_counters_ex",
+    "https://learn.microsoft.com/en-us/troubleshoot/windows-client/performance/introduction-to-the-page-file"
+  ]
+}

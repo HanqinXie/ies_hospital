@@ -1,0 +1,503 @@
+FFFFFFFFFFFFFFFFFFF                                                      [100%]
+================================== FAILURES ===================================
+____ test_intentional125_and_failedS3_are_preserved_not_relabelled_success ____
+
+    def test_intentional125_and_failedS3_are_preserved_not_relabelled_success():
+>       proof=module().validate_predecessor_stop(*predecessor_fixture())
+E       AttributeError: module '_normal03_successor_tested' has no attribute 'validate_predecessor_stop'
+
+outputs\v20_load_accounting_20261019_run01\review\normal_window_analysis03\test_successor_contract.py:30: AttributeError
+_ test_predecessor_stop_never_erases_or_expands_real_attempts[normal_success] _
+
+mutation = 'normal_success'
+
+    @pytest.mark.parametrize('mutation',['normal_success','wrong_capture','S3_success','S3_active','S3_only404','S3_bad_journal',
+        'source_changed','old_success','wrong_stop_state','old_11','009_measured','008_already_ran','extra_pending','missing_completion','duplicate_launch','bad_pid'])
+    def test_predecessor_stop_never_erases_or_expands_real_attempts(mutation):
+        n,s,o=predecessor_fixture()
+        if mutation=='normal_success':n['exit_code']=0
+        elif mutation=='wrong_capture':n['name']='normal02'
+        elif mutation=='S3_success':s['status']='passed'
+        elif mutation=='S3_active':s['checkpoint']['active']=1
+        elif mutation=='S3_only404':s['checkpoint']['actual_finished']=404
+        elif mutation=='S3_bad_journal':s['checkpoint']['failed_terminal_journals']=['bad']
+        elif mutation=='source_changed':s['source_modified']=True
+        elif mutation=='old_success':o['exit_code']=0
+        elif mutation=='wrong_stop_state':o['state']='all_twelve_strictly_qualified'
+        elif mutation=='old_11':o['actual_scientific_children_started']=11
+        elif mutation=='009_measured':o['completed'][0]['batch']='v20_normal_009'
+        elif mutation=='008_already_ran':o['successful_Popen_proofs'][0]['batch']='v20_normal_008'
+        elif mutation=='extra_pending':o['pending_not_started'].append('v20_normal_007')
+        elif mutation=='missing_completion':o['completed'].pop()
+        elif mutation=='duplicate_launch':o['successful_Popen_proofs'][-1]=copy.deepcopy(o['successful_Popen_proofs'][0])
+        elif mutation=='bad_pid':o['successful_Popen_proofs'][0]['pid']=None
+>       with pytest.raises(ValueError):module().validate_predecessor_stop(n,s,o)
+E       AttributeError: module '_normal03_successor_tested' has no attribute 'validate_predecessor_stop'
+
+outputs\v20_load_accounting_20261019_run01\review\normal_window_analysis03\test_successor_contract.py:55: AttributeError
+_ test_predecessor_stop_never_erases_or_expands_real_attempts[wrong_capture] __
+
+mutation = 'wrong_capture'
+
+    @pytest.mark.parametrize('mutation',['normal_success','wrong_capture','S3_success','S3_active','S3_only404','S3_bad_journal',
+        'source_changed','old_success','wrong_stop_state','old_11','009_measured','008_already_ran','extra_pending','missing_completion','duplicate_launch','bad_pid'])
+    def test_predecessor_stop_never_erases_or_expands_real_attempts(mutation):
+        n,s,o=predecessor_fixture()
+        if mutation=='normal_success':n['exit_code']=0
+        elif mutation=='wrong_capture':n['name']='normal02'
+        elif mutation=='S3_success':s['status']='passed'
+        elif mutation=='S3_active':s['checkpoint']['active']=1
+        elif mutation=='S3_only404':s['checkpoint']['actual_finished']=404
+        elif mutation=='S3_bad_journal':s['checkpoint']['failed_terminal_journals']=['bad']
+        elif mutation=='source_changed':s['source_modified']=True
+        elif mutation=='old_success':o['exit_code']=0
+        elif mutation=='wrong_stop_state':o['state']='all_twelve_strictly_qualified'
+        elif mutation=='old_11':o['actual_scientific_children_started']=11
+        elif mutation=='009_measured':o['completed'][0]['batch']='v20_normal_009'
+        elif mutation=='008_already_ran':o['successful_Popen_proofs'][0]['batch']='v20_normal_008'
+        elif mutation=='extra_pending':o['pending_not_started'].append('v20_normal_007')
+        elif mutation=='missing_completion':o['completed'].pop()
+        elif mutation=='duplicate_launch':o['successful_Popen_proofs'][-1]=copy.deepcopy(o['successful_Popen_proofs'][0])
+        elif mutation=='bad_pid':o['successful_Popen_proofs'][0]['pid']=None
+>       with pytest.raises(ValueError):module().validate_predecessor_stop(n,s,o)
+E       AttributeError: module '_normal03_successor_tested' has no attribute 'validate_predecessor_stop'
+
+outputs\v20_load_accounting_20261019_run01\review\normal_window_analysis03\test_successor_contract.py:55: AttributeError
+___ test_predecessor_stop_never_erases_or_expands_real_attempts[S3_success] ___
+
+mutation = 'S3_success'
+
+    @pytest.mark.parametrize('mutation',['normal_success','wrong_capture','S3_success','S3_active','S3_only404','S3_bad_journal',
+        'source_changed','old_success','wrong_stop_state','old_11','009_measured','008_already_ran','extra_pending','missing_completion','duplicate_launch','bad_pid'])
+    def test_predecessor_stop_never_erases_or_expands_real_attempts(mutation):
+        n,s,o=predecessor_fixture()
+        if mutation=='normal_success':n['exit_code']=0
+        elif mutation=='wrong_capture':n['name']='normal02'
+        elif mutation=='S3_success':s['status']='passed'
+        elif mutation=='S3_active':s['checkpoint']['active']=1
+        elif mutation=='S3_only404':s['checkpoint']['actual_finished']=404
+        elif mutation=='S3_bad_journal':s['checkpoint']['failed_terminal_journals']=['bad']
+        elif mutation=='source_changed':s['source_modified']=True
+        elif mutation=='old_success':o['exit_code']=0
+        elif mutation=='wrong_stop_state':o['state']='all_twelve_strictly_qualified'
+        elif mutation=='old_11':o['actual_scientific_children_started']=11
+        elif mutation=='009_measured':o['completed'][0]['batch']='v20_normal_009'
+        elif mutation=='008_already_ran':o['successful_Popen_proofs'][0]['batch']='v20_normal_008'
+        elif mutation=='extra_pending':o['pending_not_started'].append('v20_normal_007')
+        elif mutation=='missing_completion':o['completed'].pop()
+        elif mutation=='duplicate_launch':o['successful_Popen_proofs'][-1]=copy.deepcopy(o['successful_Popen_proofs'][0])
+        elif mutation=='bad_pid':o['successful_Popen_proofs'][0]['pid']=None
+>       with pytest.raises(ValueError):module().validate_predecessor_stop(n,s,o)
+E       AttributeError: module '_normal03_successor_tested' has no attribute 'validate_predecessor_stop'
+
+outputs\v20_load_accounting_20261019_run01\review\normal_window_analysis03\test_successor_contract.py:55: AttributeError
+___ test_predecessor_stop_never_erases_or_expands_real_attempts[S3_active] ____
+
+mutation = 'S3_active'
+
+    @pytest.mark.parametrize('mutation',['normal_success','wrong_capture','S3_success','S3_active','S3_only404','S3_bad_journal',
+        'source_changed','old_success','wrong_stop_state','old_11','009_measured','008_already_ran','extra_pending','missing_completion','duplicate_launch','bad_pid'])
+    def test_predecessor_stop_never_erases_or_expands_real_attempts(mutation):
+        n,s,o=predecessor_fixture()
+        if mutation=='normal_success':n['exit_code']=0
+        elif mutation=='wrong_capture':n['name']='normal02'
+        elif mutation=='S3_success':s['status']='passed'
+        elif mutation=='S3_active':s['checkpoint']['active']=1
+        elif mutation=='S3_only404':s['checkpoint']['actual_finished']=404
+        elif mutation=='S3_bad_journal':s['checkpoint']['failed_terminal_journals']=['bad']
+        elif mutation=='source_changed':s['source_modified']=True
+        elif mutation=='old_success':o['exit_code']=0
+        elif mutation=='wrong_stop_state':o['state']='all_twelve_strictly_qualified'
+        elif mutation=='old_11':o['actual_scientific_children_started']=11
+        elif mutation=='009_measured':o['completed'][0]['batch']='v20_normal_009'
+        elif mutation=='008_already_ran':o['successful_Popen_proofs'][0]['batch']='v20_normal_008'
+        elif mutation=='extra_pending':o['pending_not_started'].append('v20_normal_007')
+        elif mutation=='missing_completion':o['completed'].pop()
+        elif mutation=='duplicate_launch':o['successful_Popen_proofs'][-1]=copy.deepcopy(o['successful_Popen_proofs'][0])
+        elif mutation=='bad_pid':o['successful_Popen_proofs'][0]['pid']=None
+>       with pytest.raises(ValueError):module().validate_predecessor_stop(n,s,o)
+E       AttributeError: module '_normal03_successor_tested' has no attribute 'validate_predecessor_stop'
+
+outputs\v20_load_accounting_20261019_run01\review\normal_window_analysis03\test_successor_contract.py:55: AttributeError
+___ test_predecessor_stop_never_erases_or_expands_real_attempts[S3_only404] ___
+
+mutation = 'S3_only404'
+
+    @pytest.mark.parametrize('mutation',['normal_success','wrong_capture','S3_success','S3_active','S3_only404','S3_bad_journal',
+        'source_changed','old_success','wrong_stop_state','old_11','009_measured','008_already_ran','extra_pending','missing_completion','duplicate_launch','bad_pid'])
+    def test_predecessor_stop_never_erases_or_expands_real_attempts(mutation):
+        n,s,o=predecessor_fixture()
+        if mutation=='normal_success':n['exit_code']=0
+        elif mutation=='wrong_capture':n['name']='normal02'
+        elif mutation=='S3_success':s['status']='passed'
+        elif mutation=='S3_active':s['checkpoint']['active']=1
+        elif mutation=='S3_only404':s['checkpoint']['actual_finished']=404
+        elif mutation=='S3_bad_journal':s['checkpoint']['failed_terminal_journals']=['bad']
+        elif mutation=='source_changed':s['source_modified']=True
+        elif mutation=='old_success':o['exit_code']=0
+        elif mutation=='wrong_stop_state':o['state']='all_twelve_strictly_qualified'
+        elif mutation=='old_11':o['actual_scientific_children_started']=11
+        elif mutation=='009_measured':o['completed'][0]['batch']='v20_normal_009'
+        elif mutation=='008_already_ran':o['successful_Popen_proofs'][0]['batch']='v20_normal_008'
+        elif mutation=='extra_pending':o['pending_not_started'].append('v20_normal_007')
+        elif mutation=='missing_completion':o['completed'].pop()
+        elif mutation=='duplicate_launch':o['successful_Popen_proofs'][-1]=copy.deepcopy(o['successful_Popen_proofs'][0])
+        elif mutation=='bad_pid':o['successful_Popen_proofs'][0]['pid']=None
+>       with pytest.raises(ValueError):module().validate_predecessor_stop(n,s,o)
+E       AttributeError: module '_normal03_successor_tested' has no attribute 'validate_predecessor_stop'
+
+outputs\v20_load_accounting_20261019_run01\review\normal_window_analysis03\test_successor_contract.py:55: AttributeError
+_ test_predecessor_stop_never_erases_or_expands_real_attempts[S3_bad_journal] _
+
+mutation = 'S3_bad_journal'
+
+    @pytest.mark.parametrize('mutation',['normal_success','wrong_capture','S3_success','S3_active','S3_only404','S3_bad_journal',
+        'source_changed','old_success','wrong_stop_state','old_11','009_measured','008_already_ran','extra_pending','missing_completion','duplicate_launch','bad_pid'])
+    def test_predecessor_stop_never_erases_or_expands_real_attempts(mutation):
+        n,s,o=predecessor_fixture()
+        if mutation=='normal_success':n['exit_code']=0
+        elif mutation=='wrong_capture':n['name']='normal02'
+        elif mutation=='S3_success':s['status']='passed'
+        elif mutation=='S3_active':s['checkpoint']['active']=1
+        elif mutation=='S3_only404':s['checkpoint']['actual_finished']=404
+        elif mutation=='S3_bad_journal':s['checkpoint']['failed_terminal_journals']=['bad']
+        elif mutation=='source_changed':s['source_modified']=True
+        elif mutation=='old_success':o['exit_code']=0
+        elif mutation=='wrong_stop_state':o['state']='all_twelve_strictly_qualified'
+        elif mutation=='old_11':o['actual_scientific_children_started']=11
+        elif mutation=='009_measured':o['completed'][0]['batch']='v20_normal_009'
+        elif mutation=='008_already_ran':o['successful_Popen_proofs'][0]['batch']='v20_normal_008'
+        elif mutation=='extra_pending':o['pending_not_started'].append('v20_normal_007')
+        elif mutation=='missing_completion':o['completed'].pop()
+        elif mutation=='duplicate_launch':o['successful_Popen_proofs'][-1]=copy.deepcopy(o['successful_Popen_proofs'][0])
+        elif mutation=='bad_pid':o['successful_Popen_proofs'][0]['pid']=None
+>       with pytest.raises(ValueError):module().validate_predecessor_stop(n,s,o)
+E       AttributeError: module '_normal03_successor_tested' has no attribute 'validate_predecessor_stop'
+
+outputs\v20_load_accounting_20261019_run01\review\normal_window_analysis03\test_successor_contract.py:55: AttributeError
+_ test_predecessor_stop_never_erases_or_expands_real_attempts[source_changed] _
+
+mutation = 'source_changed'
+
+    @pytest.mark.parametrize('mutation',['normal_success','wrong_capture','S3_success','S3_active','S3_only404','S3_bad_journal',
+        'source_changed','old_success','wrong_stop_state','old_11','009_measured','008_already_ran','extra_pending','missing_completion','duplicate_launch','bad_pid'])
+    def test_predecessor_stop_never_erases_or_expands_real_attempts(mutation):
+        n,s,o=predecessor_fixture()
+        if mutation=='normal_success':n['exit_code']=0
+        elif mutation=='wrong_capture':n['name']='normal02'
+        elif mutation=='S3_success':s['status']='passed'
+        elif mutation=='S3_active':s['checkpoint']['active']=1
+        elif mutation=='S3_only404':s['checkpoint']['actual_finished']=404
+        elif mutation=='S3_bad_journal':s['checkpoint']['failed_terminal_journals']=['bad']
+        elif mutation=='source_changed':s['source_modified']=True
+        elif mutation=='old_success':o['exit_code']=0
+        elif mutation=='wrong_stop_state':o['state']='all_twelve_strictly_qualified'
+        elif mutation=='old_11':o['actual_scientific_children_started']=11
+        elif mutation=='009_measured':o['completed'][0]['batch']='v20_normal_009'
+        elif mutation=='008_already_ran':o['successful_Popen_proofs'][0]['batch']='v20_normal_008'
+        elif mutation=='extra_pending':o['pending_not_started'].append('v20_normal_007')
+        elif mutation=='missing_completion':o['completed'].pop()
+        elif mutation=='duplicate_launch':o['successful_Popen_proofs'][-1]=copy.deepcopy(o['successful_Popen_proofs'][0])
+        elif mutation=='bad_pid':o['successful_Popen_proofs'][0]['pid']=None
+>       with pytest.raises(ValueError):module().validate_predecessor_stop(n,s,o)
+E       AttributeError: module '_normal03_successor_tested' has no attribute 'validate_predecessor_stop'
+
+outputs\v20_load_accounting_20261019_run01\review\normal_window_analysis03\test_successor_contract.py:55: AttributeError
+__ test_predecessor_stop_never_erases_or_expands_real_attempts[old_success] ___
+
+mutation = 'old_success'
+
+    @pytest.mark.parametrize('mutation',['normal_success','wrong_capture','S3_success','S3_active','S3_only404','S3_bad_journal',
+        'source_changed','old_success','wrong_stop_state','old_11','009_measured','008_already_ran','extra_pending','missing_completion','duplicate_launch','bad_pid'])
+    def test_predecessor_stop_never_erases_or_expands_real_attempts(mutation):
+        n,s,o=predecessor_fixture()
+        if mutation=='normal_success':n['exit_code']=0
+        elif mutation=='wrong_capture':n['name']='normal02'
+        elif mutation=='S3_success':s['status']='passed'
+        elif mutation=='S3_active':s['checkpoint']['active']=1
+        elif mutation=='S3_only404':s['checkpoint']['actual_finished']=404
+        elif mutation=='S3_bad_journal':s['checkpoint']['failed_terminal_journals']=['bad']
+        elif mutation=='source_changed':s['source_modified']=True
+        elif mutation=='old_success':o['exit_code']=0
+        elif mutation=='wrong_stop_state':o['state']='all_twelve_strictly_qualified'
+        elif mutation=='old_11':o['actual_scientific_children_started']=11
+        elif mutation=='009_measured':o['completed'][0]['batch']='v20_normal_009'
+        elif mutation=='008_already_ran':o['successful_Popen_proofs'][0]['batch']='v20_normal_008'
+        elif mutation=='extra_pending':o['pending_not_started'].append('v20_normal_007')
+        elif mutation=='missing_completion':o['completed'].pop()
+        elif mutation=='duplicate_launch':o['successful_Popen_proofs'][-1]=copy.deepcopy(o['successful_Popen_proofs'][0])
+        elif mutation=='bad_pid':o['successful_Popen_proofs'][0]['pid']=None
+>       with pytest.raises(ValueError):module().validate_predecessor_stop(n,s,o)
+E       AttributeError: module '_normal03_successor_tested' has no attribute 'validate_predecessor_stop'
+
+outputs\v20_load_accounting_20261019_run01\review\normal_window_analysis03\test_successor_contract.py:55: AttributeError
+_ test_predecessor_stop_never_erases_or_expands_real_attempts[wrong_stop_state] _
+
+mutation = 'wrong_stop_state'
+
+    @pytest.mark.parametrize('mutation',['normal_success','wrong_capture','S3_success','S3_active','S3_only404','S3_bad_journal',
+        'source_changed','old_success','wrong_stop_state','old_11','009_measured','008_already_ran','extra_pending','missing_completion','duplicate_launch','bad_pid'])
+    def test_predecessor_stop_never_erases_or_expands_real_attempts(mutation):
+        n,s,o=predecessor_fixture()
+        if mutation=='normal_success':n['exit_code']=0
+        elif mutation=='wrong_capture':n['name']='normal02'
+        elif mutation=='S3_success':s['status']='passed'
+        elif mutation=='S3_active':s['checkpoint']['active']=1
+        elif mutation=='S3_only404':s['checkpoint']['actual_finished']=404
+        elif mutation=='S3_bad_journal':s['checkpoint']['failed_terminal_journals']=['bad']
+        elif mutation=='source_changed':s['source_modified']=True
+        elif mutation=='old_success':o['exit_code']=0
+        elif mutation=='wrong_stop_state':o['state']='all_twelve_strictly_qualified'
+        elif mutation=='old_11':o['actual_scientific_children_started']=11
+        elif mutation=='009_measured':o['completed'][0]['batch']='v20_normal_009'
+        elif mutation=='008_already_ran':o['successful_Popen_proofs'][0]['batch']='v20_normal_008'
+        elif mutation=='extra_pending':o['pending_not_started'].append('v20_normal_007')
+        elif mutation=='missing_completion':o['completed'].pop()
+        elif mutation=='duplicate_launch':o['successful_Popen_proofs'][-1]=copy.deepcopy(o['successful_Popen_proofs'][0])
+        elif mutation=='bad_pid':o['successful_Popen_proofs'][0]['pid']=None
+>       with pytest.raises(ValueError):module().validate_predecessor_stop(n,s,o)
+E       AttributeError: module '_normal03_successor_tested' has no attribute 'validate_predecessor_stop'
+
+outputs\v20_load_accounting_20261019_run01\review\normal_window_analysis03\test_successor_contract.py:55: AttributeError
+_____ test_predecessor_stop_never_erases_or_expands_real_attempts[old_11] _____
+
+mutation = 'old_11'
+
+    @pytest.mark.parametrize('mutation',['normal_success','wrong_capture','S3_success','S3_active','S3_only404','S3_bad_journal',
+        'source_changed','old_success','wrong_stop_state','old_11','009_measured','008_already_ran','extra_pending','missing_completion','duplicate_launch','bad_pid'])
+    def test_predecessor_stop_never_erases_or_expands_real_attempts(mutation):
+        n,s,o=predecessor_fixture()
+        if mutation=='normal_success':n['exit_code']=0
+        elif mutation=='wrong_capture':n['name']='normal02'
+        elif mutation=='S3_success':s['status']='passed'
+        elif mutation=='S3_active':s['checkpoint']['active']=1
+        elif mutation=='S3_only404':s['checkpoint']['actual_finished']=404
+        elif mutation=='S3_bad_journal':s['checkpoint']['failed_terminal_journals']=['bad']
+        elif mutation=='source_changed':s['source_modified']=True
+        elif mutation=='old_success':o['exit_code']=0
+        elif mutation=='wrong_stop_state':o['state']='all_twelve_strictly_qualified'
+        elif mutation=='old_11':o['actual_scientific_children_started']=11
+        elif mutation=='009_measured':o['completed'][0]['batch']='v20_normal_009'
+        elif mutation=='008_already_ran':o['successful_Popen_proofs'][0]['batch']='v20_normal_008'
+        elif mutation=='extra_pending':o['pending_not_started'].append('v20_normal_007')
+        elif mutation=='missing_completion':o['completed'].pop()
+        elif mutation=='duplicate_launch':o['successful_Popen_proofs'][-1]=copy.deepcopy(o['successful_Popen_proofs'][0])
+        elif mutation=='bad_pid':o['successful_Popen_proofs'][0]['pid']=None
+>       with pytest.raises(ValueError):module().validate_predecessor_stop(n,s,o)
+E       AttributeError: module '_normal03_successor_tested' has no attribute 'validate_predecessor_stop'
+
+outputs\v20_load_accounting_20261019_run01\review\normal_window_analysis03\test_successor_contract.py:55: AttributeError
+__ test_predecessor_stop_never_erases_or_expands_real_attempts[009_measured] __
+
+mutation = '009_measured'
+
+    @pytest.mark.parametrize('mutation',['normal_success','wrong_capture','S3_success','S3_active','S3_only404','S3_bad_journal',
+        'source_changed','old_success','wrong_stop_state','old_11','009_measured','008_already_ran','extra_pending','missing_completion','duplicate_launch','bad_pid'])
+    def test_predecessor_stop_never_erases_or_expands_real_attempts(mutation):
+        n,s,o=predecessor_fixture()
+        if mutation=='normal_success':n['exit_code']=0
+        elif mutation=='wrong_capture':n['name']='normal02'
+        elif mutation=='S3_success':s['status']='passed'
+        elif mutation=='S3_active':s['checkpoint']['active']=1
+        elif mutation=='S3_only404':s['checkpoint']['actual_finished']=404
+        elif mutation=='S3_bad_journal':s['checkpoint']['failed_terminal_journals']=['bad']
+        elif mutation=='source_changed':s['source_modified']=True
+        elif mutation=='old_success':o['exit_code']=0
+        elif mutation=='wrong_stop_state':o['state']='all_twelve_strictly_qualified'
+        elif mutation=='old_11':o['actual_scientific_children_started']=11
+        elif mutation=='009_measured':o['completed'][0]['batch']='v20_normal_009'
+        elif mutation=='008_already_ran':o['successful_Popen_proofs'][0]['batch']='v20_normal_008'
+        elif mutation=='extra_pending':o['pending_not_started'].append('v20_normal_007')
+        elif mutation=='missing_completion':o['completed'].pop()
+        elif mutation=='duplicate_launch':o['successful_Popen_proofs'][-1]=copy.deepcopy(o['successful_Popen_proofs'][0])
+        elif mutation=='bad_pid':o['successful_Popen_proofs'][0]['pid']=None
+>       with pytest.raises(ValueError):module().validate_predecessor_stop(n,s,o)
+E       AttributeError: module '_normal03_successor_tested' has no attribute 'validate_predecessor_stop'
+
+outputs\v20_load_accounting_20261019_run01\review\normal_window_analysis03\test_successor_contract.py:55: AttributeError
+_ test_predecessor_stop_never_erases_or_expands_real_attempts[008_already_ran] _
+
+mutation = '008_already_ran'
+
+    @pytest.mark.parametrize('mutation',['normal_success','wrong_capture','S3_success','S3_active','S3_only404','S3_bad_journal',
+        'source_changed','old_success','wrong_stop_state','old_11','009_measured','008_already_ran','extra_pending','missing_completion','duplicate_launch','bad_pid'])
+    def test_predecessor_stop_never_erases_or_expands_real_attempts(mutation):
+        n,s,o=predecessor_fixture()
+        if mutation=='normal_success':n['exit_code']=0
+        elif mutation=='wrong_capture':n['name']='normal02'
+        elif mutation=='S3_success':s['status']='passed'
+        elif mutation=='S3_active':s['checkpoint']['active']=1
+        elif mutation=='S3_only404':s['checkpoint']['actual_finished']=404
+        elif mutation=='S3_bad_journal':s['checkpoint']['failed_terminal_journals']=['bad']
+        elif mutation=='source_changed':s['source_modified']=True
+        elif mutation=='old_success':o['exit_code']=0
+        elif mutation=='wrong_stop_state':o['state']='all_twelve_strictly_qualified'
+        elif mutation=='old_11':o['actual_scientific_children_started']=11
+        elif mutation=='009_measured':o['completed'][0]['batch']='v20_normal_009'
+        elif mutation=='008_already_ran':o['successful_Popen_proofs'][0]['batch']='v20_normal_008'
+        elif mutation=='extra_pending':o['pending_not_started'].append('v20_normal_007')
+        elif mutation=='missing_completion':o['completed'].pop()
+        elif mutation=='duplicate_launch':o['successful_Popen_proofs'][-1]=copy.deepcopy(o['successful_Popen_proofs'][0])
+        elif mutation=='bad_pid':o['successful_Popen_proofs'][0]['pid']=None
+>       with pytest.raises(ValueError):module().validate_predecessor_stop(n,s,o)
+E       AttributeError: module '_normal03_successor_tested' has no attribute 'validate_predecessor_stop'
+
+outputs\v20_load_accounting_20261019_run01\review\normal_window_analysis03\test_successor_contract.py:55: AttributeError
+_ test_predecessor_stop_never_erases_or_expands_real_attempts[extra_pending] __
+
+mutation = 'extra_pending'
+
+    @pytest.mark.parametrize('mutation',['normal_success','wrong_capture','S3_success','S3_active','S3_only404','S3_bad_journal',
+        'source_changed','old_success','wrong_stop_state','old_11','009_measured','008_already_ran','extra_pending','missing_completion','duplicate_launch','bad_pid'])
+    def test_predecessor_stop_never_erases_or_expands_real_attempts(mutation):
+        n,s,o=predecessor_fixture()
+        if mutation=='normal_success':n['exit_code']=0
+        elif mutation=='wrong_capture':n['name']='normal02'
+        elif mutation=='S3_success':s['status']='passed'
+        elif mutation=='S3_active':s['checkpoint']['active']=1
+        elif mutation=='S3_only404':s['checkpoint']['actual_finished']=404
+        elif mutation=='S3_bad_journal':s['checkpoint']['failed_terminal_journals']=['bad']
+        elif mutation=='source_changed':s['source_modified']=True
+        elif mutation=='old_success':o['exit_code']=0
+        elif mutation=='wrong_stop_state':o['state']='all_twelve_strictly_qualified'
+        elif mutation=='old_11':o['actual_scientific_children_started']=11
+        elif mutation=='009_measured':o['completed'][0]['batch']='v20_normal_009'
+        elif mutation=='008_already_ran':o['successful_Popen_proofs'][0]['batch']='v20_normal_008'
+        elif mutation=='extra_pending':o['pending_not_started'].append('v20_normal_007')
+        elif mutation=='missing_completion':o['completed'].pop()
+        elif mutation=='duplicate_launch':o['successful_Popen_proofs'][-1]=copy.deepcopy(o['successful_Popen_proofs'][0])
+        elif mutation=='bad_pid':o['successful_Popen_proofs'][0]['pid']=None
+>       with pytest.raises(ValueError):module().validate_predecessor_stop(n,s,o)
+E       AttributeError: module '_normal03_successor_tested' has no attribute 'validate_predecessor_stop'
+
+outputs\v20_load_accounting_20261019_run01\review\normal_window_analysis03\test_successor_contract.py:55: AttributeError
+_ test_predecessor_stop_never_erases_or_expands_real_attempts[missing_completion] _
+
+mutation = 'missing_completion'
+
+    @pytest.mark.parametrize('mutation',['normal_success','wrong_capture','S3_success','S3_active','S3_only404','S3_bad_journal',
+        'source_changed','old_success','wrong_stop_state','old_11','009_measured','008_already_ran','extra_pending','missing_completion','duplicate_launch','bad_pid'])
+    def test_predecessor_stop_never_erases_or_expands_real_attempts(mutation):
+        n,s,o=predecessor_fixture()
+        if mutation=='normal_success':n['exit_code']=0
+        elif mutation=='wrong_capture':n['name']='normal02'
+        elif mutation=='S3_success':s['status']='passed'
+        elif mutation=='S3_active':s['checkpoint']['active']=1
+        elif mutation=='S3_only404':s['checkpoint']['actual_finished']=404
+        elif mutation=='S3_bad_journal':s['checkpoint']['failed_terminal_journals']=['bad']
+        elif mutation=='source_changed':s['source_modified']=True
+        elif mutation=='old_success':o['exit_code']=0
+        elif mutation=='wrong_stop_state':o['state']='all_twelve_strictly_qualified'
+        elif mutation=='old_11':o['actual_scientific_children_started']=11
+        elif mutation=='009_measured':o['completed'][0]['batch']='v20_normal_009'
+        elif mutation=='008_already_ran':o['successful_Popen_proofs'][0]['batch']='v20_normal_008'
+        elif mutation=='extra_pending':o['pending_not_started'].append('v20_normal_007')
+        elif mutation=='missing_completion':o['completed'].pop()
+        elif mutation=='duplicate_launch':o['successful_Popen_proofs'][-1]=copy.deepcopy(o['successful_Popen_proofs'][0])
+        elif mutation=='bad_pid':o['successful_Popen_proofs'][0]['pid']=None
+>       with pytest.raises(ValueError):module().validate_predecessor_stop(n,s,o)
+E       AttributeError: module '_normal03_successor_tested' has no attribute 'validate_predecessor_stop'
+
+outputs\v20_load_accounting_20261019_run01\review\normal_window_analysis03\test_successor_contract.py:55: AttributeError
+_ test_predecessor_stop_never_erases_or_expands_real_attempts[duplicate_launch] _
+
+mutation = 'duplicate_launch'
+
+    @pytest.mark.parametrize('mutation',['normal_success','wrong_capture','S3_success','S3_active','S3_only404','S3_bad_journal',
+        'source_changed','old_success','wrong_stop_state','old_11','009_measured','008_already_ran','extra_pending','missing_completion','duplicate_launch','bad_pid'])
+    def test_predecessor_stop_never_erases_or_expands_real_attempts(mutation):
+        n,s,o=predecessor_fixture()
+        if mutation=='normal_success':n['exit_code']=0
+        elif mutation=='wrong_capture':n['name']='normal02'
+        elif mutation=='S3_success':s['status']='passed'
+        elif mutation=='S3_active':s['checkpoint']['active']=1
+        elif mutation=='S3_only404':s['checkpoint']['actual_finished']=404
+        elif mutation=='S3_bad_journal':s['checkpoint']['failed_terminal_journals']=['bad']
+        elif mutation=='source_changed':s['source_modified']=True
+        elif mutation=='old_success':o['exit_code']=0
+        elif mutation=='wrong_stop_state':o['state']='all_twelve_strictly_qualified'
+        elif mutation=='old_11':o['actual_scientific_children_started']=11
+        elif mutation=='009_measured':o['completed'][0]['batch']='v20_normal_009'
+        elif mutation=='008_already_ran':o['successful_Popen_proofs'][0]['batch']='v20_normal_008'
+        elif mutation=='extra_pending':o['pending_not_started'].append('v20_normal_007')
+        elif mutation=='missing_completion':o['completed'].pop()
+        elif mutation=='duplicate_launch':o['successful_Popen_proofs'][-1]=copy.deepcopy(o['successful_Popen_proofs'][0])
+        elif mutation=='bad_pid':o['successful_Popen_proofs'][0]['pid']=None
+>       with pytest.raises(ValueError):module().validate_predecessor_stop(n,s,o)
+E       AttributeError: module '_normal03_successor_tested' has no attribute 'validate_predecessor_stop'
+
+outputs\v20_load_accounting_20261019_run01\review\normal_window_analysis03\test_successor_contract.py:55: AttributeError
+____ test_predecessor_stop_never_erases_or_expands_real_attempts[bad_pid] _____
+
+mutation = 'bad_pid'
+
+    @pytest.mark.parametrize('mutation',['normal_success','wrong_capture','S3_success','S3_active','S3_only404','S3_bad_journal',
+        'source_changed','old_success','wrong_stop_state','old_11','009_measured','008_already_ran','extra_pending','missing_completion','duplicate_launch','bad_pid'])
+    def test_predecessor_stop_never_erases_or_expands_real_attempts(mutation):
+        n,s,o=predecessor_fixture()
+        if mutation=='normal_success':n['exit_code']=0
+        elif mutation=='wrong_capture':n['name']='normal02'
+        elif mutation=='S3_success':s['status']='passed'
+        elif mutation=='S3_active':s['checkpoint']['active']=1
+        elif mutation=='S3_only404':s['checkpoint']['actual_finished']=404
+        elif mutation=='S3_bad_journal':s['checkpoint']['failed_terminal_journals']=['bad']
+        elif mutation=='source_changed':s['source_modified']=True
+        elif mutation=='old_success':o['exit_code']=0
+        elif mutation=='wrong_stop_state':o['state']='all_twelve_strictly_qualified'
+        elif mutation=='old_11':o['actual_scientific_children_started']=11
+        elif mutation=='009_measured':o['completed'][0]['batch']='v20_normal_009'
+        elif mutation=='008_already_ran':o['successful_Popen_proofs'][0]['batch']='v20_normal_008'
+        elif mutation=='extra_pending':o['pending_not_started'].append('v20_normal_007')
+        elif mutation=='missing_completion':o['completed'].pop()
+        elif mutation=='duplicate_launch':o['successful_Popen_proofs'][-1]=copy.deepcopy(o['successful_Popen_proofs'][0])
+        elif mutation=='bad_pid':o['successful_Popen_proofs'][0]['pid']=None
+>       with pytest.raises(ValueError):module().validate_predecessor_stop(n,s,o)
+E       AttributeError: module '_normal03_successor_tested' has no attribute 'validate_predecessor_stop'
+
+outputs\v20_load_accounting_20261019_run01\review\normal_window_analysis03\test_successor_contract.py:55: AttributeError
+_____ test_no_S4_evidence_is_not_permission_to_import_numerical_collector _____
+
+    def test_no_S4_evidence_is_not_permission_to_import_numerical_collector():
+>       assert module().assess_successor_readiness(s4_exists=False,normal_terminals=12,report_exists=True)['ready'] is False
+E       AttributeError: module '_normal03_successor_tested' has no attribute 'assess_successor_readiness'
+
+outputs\v20_load_accounting_20261019_run01\review\normal_window_analysis03\test_successor_contract.py:59: AttributeError
+________________ test_no_persistent_wait_mode_exists_for_new03 ________________
+
+    def test_no_persistent_wait_mode_exists_for_new03():
+        text=(HERE/'normal_window_analysis.py').read_text(encoding='utf-8-sig')
+>       assert "mode.add_argument('--wait'" not in text, 'New03 must provide no heavy persistent wait path'
+E       AssertionError: New03 must provide no heavy persistent wait path
+E       assert "mode.add_argument('--wait'" not in '"""Wait for...it(main())\n'
+E         
+E         "mode.add_argument('--wait'" is contained here:
+E           e_true'); mode.add_argument('--wait', action='store_true')
+E               parser.add_argument('--poll-seconds', type=float, default=30.); parser.add_argument('--max-wait-hours', type=float, default=48.)
+E               args = parser.parse_args(argv); require(10 <= args.poll_seconds <= 60 and 0 < args.max_wait_hours <= 48, 'Finite read-only waiting bounds required')
+E               preparation = prepare(); _, _, _, jobs = dependencies(); state = probe(jobs)
+E               if args.check_only:...
+E         
+E         ...Full output truncated (20 lines hidden), use '-vv' to show
+
+outputs\v20_load_accounting_20261019_run01\review\normal_window_analysis03\test_successor_contract.py:64: AssertionError
+=========================== short test summary info ===========================
+FAILED outputs/v20_load_accounting_20261019_run01/review/normal_window_analysis03/test_successor_contract.py::test_intentional125_and_failedS3_are_preserved_not_relabelled_success
+FAILED outputs/v20_load_accounting_20261019_run01/review/normal_window_analysis03/test_successor_contract.py::test_predecessor_stop_never_erases_or_expands_real_attempts[normal_success]
+FAILED outputs/v20_load_accounting_20261019_run01/review/normal_window_analysis03/test_successor_contract.py::test_predecessor_stop_never_erases_or_expands_real_attempts[wrong_capture]
+FAILED outputs/v20_load_accounting_20261019_run01/review/normal_window_analysis03/test_successor_contract.py::test_predecessor_stop_never_erases_or_expands_real_attempts[S3_success]
+FAILED outputs/v20_load_accounting_20261019_run01/review/normal_window_analysis03/test_successor_contract.py::test_predecessor_stop_never_erases_or_expands_real_attempts[S3_active]
+FAILED outputs/v20_load_accounting_20261019_run01/review/normal_window_analysis03/test_successor_contract.py::test_predecessor_stop_never_erases_or_expands_real_attempts[S3_only404]
+FAILED outputs/v20_load_accounting_20261019_run01/review/normal_window_analysis03/test_successor_contract.py::test_predecessor_stop_never_erases_or_expands_real_attempts[S3_bad_journal]
+FAILED outputs/v20_load_accounting_20261019_run01/review/normal_window_analysis03/test_successor_contract.py::test_predecessor_stop_never_erases_or_expands_real_attempts[source_changed]
+FAILED outputs/v20_load_accounting_20261019_run01/review/normal_window_analysis03/test_successor_contract.py::test_predecessor_stop_never_erases_or_expands_real_attempts[old_success]
+FAILED outputs/v20_load_accounting_20261019_run01/review/normal_window_analysis03/test_successor_contract.py::test_predecessor_stop_never_erases_or_expands_real_attempts[wrong_stop_state]
+FAILED outputs/v20_load_accounting_20261019_run01/review/normal_window_analysis03/test_successor_contract.py::test_predecessor_stop_never_erases_or_expands_real_attempts[old_11]
+FAILED outputs/v20_load_accounting_20261019_run01/review/normal_window_analysis03/test_successor_contract.py::test_predecessor_stop_never_erases_or_expands_real_attempts[009_measured]
+FAILED outputs/v20_load_accounting_20261019_run01/review/normal_window_analysis03/test_successor_contract.py::test_predecessor_stop_never_erases_or_expands_real_attempts[008_already_ran]
+FAILED outputs/v20_load_accounting_20261019_run01/review/normal_window_analysis03/test_successor_contract.py::test_predecessor_stop_never_erases_or_expands_real_attempts[extra_pending]
+FAILED outputs/v20_load_accounting_20261019_run01/review/normal_window_analysis03/test_successor_contract.py::test_predecessor_stop_never_erases_or_expands_real_attempts[missing_completion]
+FAILED outputs/v20_load_accounting_20261019_run01/review/normal_window_analysis03/test_successor_contract.py::test_predecessor_stop_never_erases_or_expands_real_attempts[duplicate_launch]
+FAILED outputs/v20_load_accounting_20261019_run01/review/normal_window_analysis03/test_successor_contract.py::test_predecessor_stop_never_erases_or_expands_real_attempts[bad_pid]
+FAILED outputs/v20_load_accounting_20261019_run01/review/normal_window_analysis03/test_successor_contract.py::test_no_S4_evidence_is_not_permission_to_import_numerical_collector
+FAILED outputs/v20_load_accounting_20261019_run01/review/normal_window_analysis03/test_successor_contract.py::test_no_persistent_wait_mode_exists_for_new03
+19 failed in 0.16s

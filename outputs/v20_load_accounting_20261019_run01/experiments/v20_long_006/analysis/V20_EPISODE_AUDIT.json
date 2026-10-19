@@ -1,0 +1,156 @@
+[
+  {
+    "scenario_id": "v17_L4_2e117d129f125a3a6d573eb4",
+    "policy_id": "endurance_restore_p0_ready_M20_v1",
+    "model_id": "M20_load_accounting",
+    "audit": {
+      "schema": "hospital_ies.v18.saved_raw_audit.v1",
+      "issues": [],
+      "segment_count": 79,
+      "observed_until_minute": 1065.0,
+      "requested_end_minute": 1065.0,
+      "complete_registered_interval": true,
+      "unknown_tail_minutes": null,
+      "max_recomputed_electric_balance_kW": 1.2789769243681803e-13,
+      "max_recomputed_cooling_balance_kW": 2.3092638912203256e-13,
+      "max_recomputed_auxiliary_difference_kW": 0.0,
+      "minimum_steam_surplus_after_load_and_ABS_lbph": -1.1368683772161603e-13,
+      "independent_steam_equality_identified": false,
+      "heat_check": "Recorded steam/equivalent equality plus independently recomputed source adequacy; unused-steam variable not saved",
+      "max_recorded_energy_residual_kW": 3.5640823625726623e-13,
+      "max_recorded_steam_residual_lbph": 1.2505552149377763e-12,
+      "DG_receipt_segment_count": 79,
+      "DG_totals": {
+        "mechanical_work_kWh": 2399.999999999999,
+        "electrical_work_kWh": 2245.200219566967,
+        "loss_work_kWh": 154.7997804330312,
+        "rotor_delta_kWh": 1.02138462454434e-16,
+        "fuel_budget_debit_kWh_equivalent": 2399.999999999999
+      },
+      "DG_max_residuals": {
+        "electric": 1.2789769243681803e-13,
+        "cooling": 2.3092638912203256e-13,
+        "auxiliary": 0.0,
+        "recorded": 3.5640823625726623e-13,
+        "recorded_steam": 1.2505552149377763e-12,
+        "DG_energy": 2.212945875928401e-14,
+        "DG_rotor": 0.0,
+        "DG_electrical": 1.4210854715202004e-14,
+        "DG_budget": 2.2026824808563106e-13
+      },
+      "numerical_fuel_settlements": [
+        {
+          "time_minute": 555.2382913712838,
+          "budget_roundoff_remainder_kWh": 0.0
+        }
+      ],
+      "power_audit_tolerance_kW": 0.0001,
+      "work_audit_tolerance_kWh": 1e-08,
+      "time_audit_tolerance_minutes": 1e-07,
+      "original_service_and_failure_thresholds_changed": false,
+      "no_tail_imputation": true,
+      "status": "passed"
+    }
+  },
+  {
+    "scenario_id": "v17_L4_2e117d129f125a3a6d573eb4",
+    "policy_id": "readiness_handoff_K1_M20_v1",
+    "model_id": "M20_load_accounting",
+    "audit": {
+      "schema": "hospital_ies.v18.saved_raw_audit.v1",
+      "issues": [],
+      "segment_count": 79,
+      "observed_until_minute": 1065.0,
+      "requested_end_minute": 1065.0,
+      "complete_registered_interval": true,
+      "unknown_tail_minutes": null,
+      "max_recomputed_electric_balance_kW": 1.4210854715202004e-13,
+      "max_recomputed_cooling_balance_kW": 1.1368683772161603e-13,
+      "max_recomputed_auxiliary_difference_kW": 0.0,
+      "minimum_steam_surplus_after_load_and_ABS_lbph": -1.8189894035458565e-12,
+      "independent_steam_equality_identified": false,
+      "heat_check": "Recorded steam/equivalent equality plus independently recomputed source adequacy; unused-steam variable not saved",
+      "max_recorded_energy_residual_kW": 9.072209650184959e-13,
+      "max_recorded_steam_residual_lbph": 3.183231456205249e-12,
+      "DG_receipt_segment_count": 79,
+      "DG_totals": {
+        "mechanical_work_kWh": 2400.0000000000005,
+        "electrical_work_kWh": 2250.8468192057494,
+        "loss_work_kWh": 149.15318079425091,
+        "rotor_delta_kWh": 4.780799585311142e-17,
+        "fuel_budget_debit_kWh_equivalent": 2400.0000000000005
+      },
+      "DG_max_residuals": {
+        "electric": 1.4210854715202004e-13,
+        "cooling": 1.1368683772161603e-13,
+        "auxiliary": 0.0,
+        "recorded": 9.072209650184959e-13,
+        "recorded_steam": 3.183231456205249e-12,
+        "DG_energy": 2.0605739337042946e-14,
+        "DG_rotor": 0.0,
+        "DG_electrical": 5.861977570020827e-14,
+        "DG_budget": 2.2382096176443156e-13
+      },
+      "numerical_fuel_settlements": [
+        {
+          "time_minute": 536.4155712015086,
+          "budget_roundoff_remainder_kWh": 0.0
+        }
+      ],
+      "power_audit_tolerance_kW": 0.0001,
+      "work_audit_tolerance_kWh": 1e-08,
+      "time_audit_tolerance_minutes": 1e-07,
+      "original_service_and_failure_thresholds_changed": false,
+      "no_tail_imputation": true,
+      "status": "passed"
+    }
+  },
+  {
+    "scenario_id": "v17_L4_2e117d129f125a3a6d573eb4",
+    "policy_id": "C19_critical_reserve_M20_v1",
+    "model_id": "M20_load_accounting",
+    "audit": {
+      "schema": "hospital_ies.v18.saved_raw_audit.v1",
+      "issues": [],
+      "segment_count": 84,
+      "observed_until_minute": 1065.0,
+      "requested_end_minute": 1065.0,
+      "complete_registered_interval": true,
+      "unknown_tail_minutes": null,
+      "max_recomputed_electric_balance_kW": 1.2789769243681803e-13,
+      "max_recomputed_cooling_balance_kW": 1.4210854715202004e-13,
+      "max_recomputed_auxiliary_difference_kW": 0.0,
+      "minimum_steam_surplus_after_load_and_ABS_lbph": -6.991740519879386e-12,
+      "independent_steam_equality_identified": false,
+      "heat_check": "Recorded steam/equivalent equality plus independently recomputed source adequacy; unused-steam variable not saved",
+      "max_recorded_energy_residual_kW": 1.992646048165625e-12,
+      "max_recorded_steam_residual_lbph": 6.991740519879386e-12,
+      "DG_receipt_segment_count": 84,
+      "DG_totals": {
+        "mechanical_work_kWh": 1244.387806497969,
+        "electrical_work_kWh": 1004.5406508932759,
+        "loss_work_kWh": 239.8471556046931,
+        "rotor_delta_kWh": -3.6873312003416624e-17,
+        "fuel_budget_debit_kWh_equivalent": 1244.387806497969
+      },
+      "DG_max_residuals": {
+        "electric": 1.2789769243681803e-13,
+        "cooling": 1.4210854715202004e-13,
+        "auxiliary": 0.0,
+        "recorded": 1.992646048165625e-12,
+        "recorded_steam": 6.991740519879386e-12,
+        "DG_energy": 4.369837824924618e-15,
+        "DG_rotor": 0.0,
+        "DG_electrical": 3.552713678800501e-15,
+        "DG_budget": 2.1804780203638074e-13
+      },
+      "numerical_fuel_settlements": [],
+      "power_audit_tolerance_kW": 0.0001,
+      "work_audit_tolerance_kWh": 1e-08,
+      "time_audit_tolerance_minutes": 1e-07,
+      "original_service_and_failure_thresholds_changed": false,
+      "no_tail_imputation": true,
+      "status": "passed"
+    }
+  }
+]

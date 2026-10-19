@@ -1,0 +1,50 @@
+[
+  {
+    "scenario_id": "v17_L4_c2faf2e1d7f42b796ae27e04",
+    "policy_id": "C18_service_rich_M20compat_v1",
+    "model_id": "M20_load_accounting",
+    "audit": {
+      "schema": "hospital_ies.v18.saved_raw_audit.v1",
+      "issues": [],
+      "segment_count": 102,
+      "observed_until_minute": 600.0,
+      "requested_end_minute": 600.0,
+      "complete_registered_interval": true,
+      "unknown_tail_minutes": null,
+      "max_recomputed_electric_balance_kW": 1.794120407794253e-13,
+      "max_recomputed_cooling_balance_kW": 1.4210854715202004e-14,
+      "max_recomputed_auxiliary_difference_kW": 0.0,
+      "minimum_steam_surplus_after_load_and_ABS_lbph": 0.0,
+      "independent_steam_equality_identified": false,
+      "heat_check": "Recorded steam/equivalent equality plus independently recomputed source adequacy; unused-steam variable not saved",
+      "max_recorded_energy_residual_kW": 2.2737367544323206e-13,
+      "max_recorded_steam_residual_lbph": 7.958078640513122e-13,
+      "DG_receipt_segment_count": 102,
+      "DG_totals": {
+        "mechanical_work_kWh": 40.24028809497076,
+        "electrical_work_kWh": 30.859452868967704,
+        "loss_work_kWh": 9.380835226003043,
+        "rotor_delta_kWh": -3.178123048901258e-17,
+        "fuel_budget_debit_kWh_equivalent": 40.24028809497076
+      },
+      "DG_max_residuals": {
+        "electric": 1.794120407794253e-13,
+        "cooling": 1.4210854715202004e-14,
+        "auxiliary": 0.0,
+        "recorded": 2.2737367544323206e-13,
+        "recorded_steam": 7.958078640513122e-13,
+        "DG_energy": 8.526512837062136e-16,
+        "DG_rotor": 0.0,
+        "DG_electrical": 0.0,
+        "DG_budget": 2.1815882433884326e-13
+      },
+      "numerical_fuel_settlements": [],
+      "power_audit_tolerance_kW": 0.0001,
+      "work_audit_tolerance_kWh": 1e-08,
+      "time_audit_tolerance_minutes": 1e-07,
+      "original_service_and_failure_thresholds_changed": false,
+      "no_tail_imputation": true,
+      "status": "passed"
+    }
+  }
+]

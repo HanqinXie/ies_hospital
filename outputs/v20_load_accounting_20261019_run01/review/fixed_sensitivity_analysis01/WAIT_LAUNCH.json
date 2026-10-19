@@ -1,0 +1,12 @@
+{
+  "command": ["python", "-B", "outputs/v20_load_accounting_20261019_run01/review/fixed_sensitivity_analysis01/wait_and_analyze.py", "--max-hours", "3"],
+  "cwd": "D:/hospital_ies_v20_20261019",
+  "actual_exec_session_id": 76263,
+  "first_observed_utc": "2026-10-19T08:45:02.355000+00:00",
+  "first_observed_terminal_batches": 11,
+  "expected_terminal_batches": 41,
+  "first_observed_cohorts": {"fixed8": 11, "propagation": 0, "open1": 0, "contact025": 0},
+  "launch_status": "running_waiter_not_complete",
+  "physics_commands_in_waiter": 0,
+  "readback_capture_name": "fixed_sensitivity_readback01"
+}

@@ -1,0 +1,37 @@
+{
+  "status": "check_only_no_physics",
+  "exit_code": 0,
+  "resource_decision": {
+    "admitted": true,
+    "required_physical_bytes": 28935357236,
+    "required_commit_headroom_bytes": 31294822810,
+    "growth_factor": 1.1,
+    "host_reserve_bytes": 2147483648,
+    "reserve_gib": 2,
+    "is_M20_peak_measurement": false,
+    "historical_peaks_are_empirical_not_upper_bounds": true
+  },
+  "memory": {
+    "utc": "2026-10-19T11:20:34.510330+00:00",
+    "monotonic": 1838265.812,
+    "total_physical_bytes": 50870132736,
+    "available_physical_bytes": 32064929792,
+    "committed_bytes": 30025314304,
+    "commit_limit_bytes": 61780164608,
+    "commit_headroom_bytes": 31754850304,
+    "counter_basis": "GlobalMemoryStatusEx physical; GetPerformanceInfo commit pages times page size"
+  },
+  "schema": "hospital_ies.v20.normal008_continuation_result.v1",
+  "utc": "2026-10-19T11:20:34.510330+00:00",
+  "pid": 13480,
+  "cwd": "D:\\hospital_ies_v20_20261019",
+  "scientific_root": "D:\\hospital_ies_v20_20261019",
+  "script_sha256": "68701e844ffca923e91f82fff52116d4b18a4357f1239d5c4a416135c8ed95a3",
+  "actual_scientific_children_started": 0,
+  "successful_Popen_proofs": [],
+  "last_child": null,
+  "physical_attempt_status": "not_started_by_this_controller",
+  "old_STOP_preserved": true,
+  "no_frozen_science_modified": true,
+  "global_serial_science": true
+}

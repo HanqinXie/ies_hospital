@@ -1,0 +1,160 @@
+{
+  "schema": "hospital_ies.v20.final_five_documents_readonly_closure.v1",
+  "reviewed_utc": "2026-10-19T12:05:22.346655+00:00",
+  "status": "no_blocking_or_important",
+  "scope": "Read complete five documents, saved compact proof/report/analysis and closed logs only; no helper/qualification/science/Git/stage/archive executed",
+  "reviewed_document_bytes": [
+    {
+      "path": "README.md",
+      "bytes": 6101,
+      "sha256": "6f36ad6c78980b3078dc7590223dd1c6d2dab50c7c367ec9ae7d475b9caf6948"
+    },
+    {
+      "path": "docs/v20/ENGINEERING_RESULTS_REPORT.md",
+      "bytes": 27749,
+      "sha256": "b48456da4ec3d087b780409b73e02cce2f642a5320dcfab5301b7788b13467be"
+    },
+    {
+      "path": "docs/v20/IMPLEMENTATION_PLAN.md",
+      "bytes": 7034,
+      "sha256": "4e37d18658758d7bcc8499a36beda805b04ba46a87b3dc793ade75e170be1cdb"
+    },
+    {
+      "path": "docs/v20/REPRODUCTION.md",
+      "bytes": 10782,
+      "sha256": "2f1a3b466f6a36748f0f85ccff9e004c96c7405d24cc75577a78bf7c5d2111d7"
+    },
+    {
+      "path": "docs/v20/PUBLICATION_SCOPE.md",
+      "bytes": 6156,
+      "sha256": "ea669040503644e608a915b14bd80d7a6f89be00913b7365bba97c58133fd0ce"
+    }
+  ],
+  "evidence": [
+    {
+      "path": "outputs/v20_load_accounting_20261019_run01/review/normal008_continuation01/L72_RUN02/SUMMARY.json",
+      "bytes": 6333,
+      "sha256": "0d75b0b406eb2ce4165b2585b1b7173a8b7b6d9be1ce5fb0149592e7199cc6fc"
+    },
+    {
+      "path": "outputs/v20_load_accounting_20261019_run01/review/normal008_continuation01/L72_RUN02/FINAL_406_PROOF.json",
+      "bytes": 799935,
+      "sha256": "9e2df2ecd43aca27046115d6633c4bd8086ef44a70b1346f55ccdf50c50831ae"
+    },
+    {
+      "path": "outputs/v20_load_accounting_20261019_run01/paper_results/FINAL01/SUMMARY.json",
+      "bytes": 2031,
+      "sha256": "dec65907a987fde0869326048dc0070e15962278ec3c24c781bfbbe313d956ca"
+    },
+    {
+      "path": "outputs/v20_load_accounting_20261019_run01/paper_results/FINAL01/RECEIPT.json",
+      "bytes": 1504,
+      "sha256": "e272fec06141a1b6f6415b522f0eefc4ee2ab3cca42ec8c8ddb0e9929b20cce8"
+    },
+    {
+      "path": "outputs/v20_load_accounting_20261019_run01/review/normal_window_analysis03/ONESHOT_RESULT01.json",
+      "bytes": 1450,
+      "sha256": "98e4eb09723483d026caffa494937141d5882eb807d40bc1fd0a1e055e1465ca"
+    },
+    {
+      "path": "outputs/v20_load_accounting_20261019_run01/review/normal_window_analysis03/COLLECTION_RECEIPT.json",
+      "bytes": 118463,
+      "sha256": "3cb31e29f293df3d248272197b7d054c8abb357dfaacc510bdb78850c7d7159c"
+    },
+    {
+      "path": "outputs/v20_load_accounting_20261019_run01/review/normal_window_analysis03/MATCHED_POLICY_PAIRS.csv",
+      "bytes": 51823,
+      "sha256": "c9794ddbeb9fddf5d3a29d7e842807b2304b6cfa04f16fd12422d05ba91148cb"
+    },
+    {
+      "path": "outputs/v20_load_accounting_20261019_run01/review/normal_window_analysis03/RESOURCE_MEASUREMENTS.csv",
+      "bytes": 4011,
+      "sha256": "d67c2118cb9772f2f039a6971e9b24ec4f197b2663ff7bce5e09dd6c51f622e4"
+    },
+    {
+      "path": "outputs/v20_load_accounting_20261019_run01/logs/normal_analysis03_full_guard01.command.json",
+      "bytes": 1203,
+      "sha256": "a8af15bc3cc50f2530c2a015e61360bf43de9842d6ca3d93892ec6373088d1d9"
+    },
+    {
+      "path": "outputs/v20_load_accounting_20261019_run01/logs/normal_analysis03_full_guard01.log",
+      "bytes": 264,
+      "sha256": "7e09dbcf51a1b855bebd35f5451f409860119895c1cd4a60d70ed02409ca7b1a"
+    },
+    {
+      "path": "outputs/v20_load_accounting_20261019_run01/logs/normal_analysis_collect03.command.json",
+      "bytes": 940,
+      "sha256": "8752c4092b5b92e51ce602e17c61f903cb0bd6b6c7c973bad20f5e3f4ac37a98"
+    },
+    {
+      "path": "outputs/v20_load_accounting_20261019_run01/logs/normal_analysis_collect03.log",
+      "bytes": 1353,
+      "sha256": "0d45a98cbd14e991dc5c1dbe3d782898ba54d9ffb1d53ac21b44e3311a8da10e"
+    },
+    {
+      "path": "outputs/v20_load_accounting_20261019_run01/logs/publication_gates08.command.json",
+      "bytes": 853,
+      "sha256": "f2b5defec30b6a3ad1c92219a9271607e3f21dc44057903949ffc4a23a22a175"
+    },
+    {
+      "path": "outputs/v20_load_accounting_20261019_run01/logs/publication_gates08.log",
+      "bytes": 267,
+      "sha256": "0e82db8174a3658c2ec493758dc0af9e88b4f0cc1a90548f765aaf13fecac906"
+    },
+    {
+      "path": "docs/v20/NORMAL_WINDOW_ANALYSIS.md",
+      "bytes": 16221,
+      "sha256": "dd872169cb918851740a0614bbe8c2edde1ea6ee507906ef98e599ba94f40e39"
+    }
+  ],
+  "confirmed": {
+    "actual_scientific_batches": 148,
+    "actual_scientific_pairs": 406,
+    "eligible_pairs": 406,
+    "not_started": 0,
+    "unknown_full_tail": 0,
+    "numeric_complete_disqualified": 0,
+    "normal_analysed_pairs": 12,
+    "normal_guard_tests": 188,
+    "publication_tests": 159,
+    "publication_subtests": 7,
+    "normal009_resource_peak": "unknown",
+    "measured_normal_resource_batches": 11,
+    "old_canonical_measured": 10,
+    "new008_measured": 1
+  },
+  "normal72h_C19_minus_E": {
+    "scenario_id": "v17_N2_d7ae489a9d9b2341333e4104",
+    "window_minutes": [
+      0.0,
+      4320.0
+    ],
+    "left_batch": "v20_normal_006",
+    "right_batch": "v20_normal_008",
+    "actual_energy_fee_USD": 23.17122182452522,
+    "total_CO2_kg_conditional": 338.6921855347882,
+    "document_rounded_values": [
+      23.17,
+      338.69
+    ]
+  },
+  "preserved_boundaries": [
+    "Old analysis02 remains prepared/unexecuted; new03 actual unique collect exit0",
+    "Normal03 intentional125/S3failed_unknown/RUN01stop15/PLAN02resourcewaiting3 are history, not current science status",
+    "Main carrier17 worsening entries across8K1 specs,9lostadvantages,60min tower loss and fixed180min loss remain in the result narrative",
+    "P3 changed request denominator and P2/P3 sacrifices remain explicit",
+    "Conditional CO2, sampled resource peaks, bus-level DG simultaneity and no clinical/generalization guarantee remain explicit",
+    "README retains old named module/fixture dependency explanation",
+    "Windows longpaths scoped to clone child/local repository; no system/global change asserted"
+  ],
+  "actual_pending_at_review": [
+    "Formal final stage and exact index review",
+    "One ordinary replacement commit and successful push",
+    "Fresh GitHub clone core+600min strict replay",
+    "Actual single ZIP below200000000bytes with memberSHA/CRC and outer receipt"
+  ],
+  "publication_timing": "Five docs explicitly preserve pre-commit snapshot and deliver later post-push checks externally; no extra main commit merely to insert future proof",
+  "findings": [],
+  "writes_limited_to": "D:\\hospital_ies_v20_20261019\\outputs\\v20_load_accounting_20261019_run01\\review\\normal008_resource_review01",
+  "review_io_note": "Initial stdout GBK rendering failed on CO2 subscript; repeated bounded UTF8 source read succeeded, no document writes or scientific execution"
+}

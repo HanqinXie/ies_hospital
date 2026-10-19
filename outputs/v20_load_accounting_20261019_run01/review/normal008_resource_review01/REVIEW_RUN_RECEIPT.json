@@ -1,0 +1,28 @@
+{
+  "schema": "hospital_ies.v20.normal008.resource_review_run_receipt.v1",
+  "utc": "2026-10-19T11:14:28.721083+00:00",
+  "producer_command": [
+    "python",
+    "-B",
+    "outputs/v20_load_accounting_20261019_run01/review/normal008_resource_review01/create_review.py"
+  ],
+  "cwd": "D:\\hospital_ies_v20_20261019",
+  "observed_exit_code": 0,
+  "observed_wall_time_seconds": 0.4311916,
+  "execution_evidence_basis": "Actual exec_command result observed in this agent turn; not a new controller or physical run",
+  "producer_sha256": "61c621414325aaf412cc98975bb04e00d013897f81c0220ff0852833a2938514",
+  "artifacts": {
+    "RESOURCE_FEASIBILITY_REVIEW.json": "14407a7d04e9bcdbe483a69123e42d05f99af6b804b6a026151b18bf47269825",
+    "MATCHED_PEAK_RATIOS.csv": "d0ecff8e5a89042f72b6e65d322c004eaa815fd85a03084213ce33497076bb07",
+    "RESOURCE_FEASIBILITY_REVIEW.md": "aea03a997430bff0790a21e16d8893d09c2581649c8213ffcd284c66afd44766"
+  },
+  "additional_status_check": {
+    "normal008_ATTEMPTS_exists": false,
+    "normal008_BATCH_RESULT_exists": false,
+    "scope": "File existence only, no runner invocation"
+  },
+  "scientific_or_controller_processes_started_or_stopped": 0,
+  "scientific_freeze_sha256": "48baed7a128d2f921d36323330ae4d22e2e6dc83214e8a505b6ba89273439b7b",
+  "raw_opened": 0,
+  "annual_values_parsed": 0
+}

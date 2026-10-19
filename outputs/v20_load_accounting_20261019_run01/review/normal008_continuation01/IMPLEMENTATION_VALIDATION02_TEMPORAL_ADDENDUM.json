@@ -1,0 +1,33 @@
+{
+  "schema": "hospital_ies.v20.normal008_temporal_resource_separation.v1",
+  "utc": "2026-10-19T11:34:32.990750+00:00",
+  "base_implementation_validation02_sha256": "e75845c9ded868b587498c5098205f5cc00219b73abd625b2ac1ad5717c78001",
+  "temporal_predicate_passed": true,
+  "temporal_predicate_scope": "A complete actual final window, not every observation in the180s probe",
+  "actual_samples": 71,
+  "total_observed_span_seconds": 177.96900000004098,
+  "maximum_all_observation_gap_seconds": 3.3280000002123415,
+  "all_probe_gaps_within_three_seconds": false,
+  "whole_probe_overrun_count": 4,
+  "overrun_seconds": [
+    3.1409999998286366,
+    3.2660000000614673,
+    3.3119999999180436,
+    3.3280000002123415
+  ],
+  "overruns_do_not_qualify_until_they_leave_the_complete_required_window": true,
+  "final_window_observations": 16,
+  "final_window_span_seconds": 37.15599999995902,
+  "maximum_final_window_gap_seconds": 2.6410000000614673,
+  "resource_admitted": false,
+  "actual_capture_exit_code": 3,
+  "actual_status": "waiting_resources_not_started",
+  "scientific_children_started": 0,
+  "pending_existing_batch": "v20_normal_008",
+  "no_COUNTER_PROBE_passed_receipt_created": true,
+  "required_physical_bytes": 28935357236,
+  "required_commit_headroom_bytes": 31294822810,
+  "original_exit3_is_retained": true,
+  "original_scientific_admission_unchanged": true,
+  "qualification_scope": "Actual temporal sampling fix only; resource admission did not pass. RUN02 must independently recheck full30s/16/gap3 + physical/commit before science."
+}

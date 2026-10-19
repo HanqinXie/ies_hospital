@@ -1,0 +1,106 @@
+{
+  "schema": "hospital_ies.v20.normal_resource_publication_validation.v2",
+  "utc": "2026-10-19T05:23:41.868952+00:00",
+  "publication_script_sha256": "2a3f0d882ab242afec3574397c4d6d37d6328aff9e6a8da6d8da108618c64cec",
+  "publication_test_sha256": "70e6eb62a9fd2f80fda34871663b2135c8bd9b09ede5d8dfdd2b27ef0151009b",
+  "latest_actual_test_result": "15 passed in 0.09s",
+  "latest_test_command": "normal_resources_drain_green02",
+  "commands": [
+    {
+      "name": "normal_resources_drain_red01",
+      "command_record": "D:\\hospital_ies_v20_20261019\\outputs\\v20_load_accounting_20261019_run01\\logs\\normal_resources_drain_red01.command.json",
+      "command_record_sha256": "34bb66c001c3a961588e20bafffc0ad611245680b1819f3a6ca341b7aa2648b5",
+      "exit_code": 1,
+      "actual_command": [
+        "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\python.exe",
+        "-B",
+        "-m",
+        "pytest",
+        "-q",
+        "publication/test_normal_resources.py",
+        "--basetemp",
+        "D:/hospital_ies_v20_20261019/review/test_tmp/normal_resources_drain_red01"
+      ]
+    },
+    {
+      "name": "normal_resources_drain_red02",
+      "command_record": "D:\\hospital_ies_v20_20261019\\outputs\\v20_load_accounting_20261019_run01\\logs\\normal_resources_drain_red02.command.json",
+      "command_record_sha256": "a75aef1f479f710869f15f99398b6d28c13d0528d3d6bd8d2372070ced696801",
+      "exit_code": 1,
+      "actual_command": [
+        "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\python.exe",
+        "-B",
+        "-m",
+        "pytest",
+        "-q",
+        "publication/test_normal_resources.py",
+        "--basetemp",
+        "D:/hospital_ies_v20_20261019/review/test_tmp/normal_resources_drain_red02"
+      ]
+    },
+    {
+      "name": "normal_resources_drain_green01",
+      "command_record": "D:\\hospital_ies_v20_20261019\\outputs\\v20_load_accounting_20261019_run01\\logs\\normal_resources_drain_green01.command.json",
+      "command_record_sha256": "c68c01065561693a3e564c8ed3a52d8547cc0527f091abd7d5687f5fa4059d94",
+      "exit_code": 0,
+      "actual_command": [
+        "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\python.exe",
+        "-B",
+        "-m",
+        "pytest",
+        "-q",
+        "publication/test_normal_resources.py",
+        "--basetemp",
+        "D:/hospital_ies_v20_20261019/review/test_tmp/normal_resources_drain_green01"
+      ]
+    },
+    {
+      "name": "normal_resources_drain_green02",
+      "command_record": "D:\\hospital_ies_v20_20261019\\outputs\\v20_load_accounting_20261019_run01\\logs\\normal_resources_drain_green02.command.json",
+      "command_record_sha256": "29ad67b876b9fa1713fe3aa386063f5671b1a93f0ebb28b0dbcc9d7e222d8be9",
+      "exit_code": 0,
+      "actual_command": [
+        "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\python.exe",
+        "-B",
+        "-m",
+        "pytest",
+        "-q",
+        "publication/test_normal_resources.py",
+        "--basetemp",
+        "D:/hospital_ies_v20_20261019/review/test_tmp/normal_resources_drain_green02"
+      ]
+    },
+    {
+      "name": "normal_resources_check03",
+      "command_record": "D:\\hospital_ies_v20_20261019\\outputs\\v20_load_accounting_20261019_run01\\logs\\normal_resources_check03.command.json",
+      "command_record_sha256": "b3dbea95f531f81c6f9d4bdd5541c96f11c04be099946e25457a2310943fde23",
+      "exit_code": 0,
+      "actual_command": [
+        "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\python.exe",
+        "-B",
+        "publication/run_normal_serial.py",
+        "--check-only",
+        "--name",
+        "PLAN03",
+        "--baseline-root",
+        "D:\\云大文件\\论文\\医院ies\\code_4_2"
+      ]
+    }
+  ],
+  "check_only_summary_path": "D:\\hospital_ies_v20_20261019\\outputs\\v20_load_accounting_20261019_run01\\provenance\\normal_resource_profile\\supervision_PLAN03\\SUMMARY.json",
+  "check_only_summary_sha256": "4f32ef21d8ce10b6c1daa1219d9eef8bee1960867bd72dd13585ffd3aea981b0",
+  "current_frozen_source_count": 366,
+  "current_frozen_tests_count": 241,
+  "current_runtime_input_count": 28,
+  "frozen_byte_check_passed": true,
+  "freeze_sha256": "48baed7a128d2f921d36323330ae4d22e2e6dc83214e8a505b6ba89273439b7b",
+  "normal_attempt_journals": 0,
+  "scientific_children_started_by_these_validation_commands": 0,
+  "production_tests_inputs_modified": false,
+  "historical_V19_profile_sha256": "bc87800015895bedfc17127847f6495216576972fa772b62994d1c327d6ee91a",
+  "historical_V19_summary_sha256": "193d9ad2bbe8a67359e07200a64530d761f181eaf62b9fb16b5423a9a8734c77",
+  "failure_evidence_retained": true,
+  "real_scientific_run_mode_not_invoked": true,
+  "simulated_Popen_tests_only": true,
+  "blocking_repair": "Popen-success to final drain includes start journal and interruption diagnostic failures; counts use successful Popen facts independently of missing EVENTS"
+}

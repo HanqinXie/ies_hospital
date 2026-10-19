@@ -1,0 +1,142 @@
+FFFFF....                                                                [100%]
+================================== FAILURES ===================================
+_ test_successful_clone_retains_terminal_receipt_when_any_git_query_fails[0] __
+
+git_fixture = namespace(target=WindowsPath('D:/hospital_ies_v20_20261019/outputs/v20_load_accounting_20261019_run01/temp/clone_recei..._clone']], selection_missing=False, selection_mismatch=False, remote_commit='bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb')
+failed_query = 0
+
+    @pytest.mark.parametrize('failed_query',range(4))
+    def test_successful_clone_retains_terminal_receipt_when_any_git_query_fails(git_fixture,failed_query):
+        state=git_fixture;state.query_fail_at=failed_query
+>       assert clone_tool.clone(state.target)==2
+
+publication\test_clone_release.py:68: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+publication\clone_release.py:54: in clone
+    source_launcher_commit=git_value(ROOT,'rev-parse','HEAD'),
+publication\clone_release.py:22: in git_value
+    return subprocess.check_output(['git',*args],cwd=directory).decode('utf8').strip()
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+command = ['git', 'rev-parse', 'HEAD']
+kwargs = {'cwd': WindowsPath('D:/hospital_ies_v20_20261019/outputs/v20_load_accounting_20261019_run01/temp/clone_receipt_red01/pytest-of-HanqinXie/pytest-0/test_successful_clone_retains_0/launcher')}
+
+    def fake_git_query(command,**kwargs):
+        index=len(state.queries);state.queries.append(dict(command=command,cwd=str(kwargs['cwd'])))
+>       if index==state.query_fail_at:raise subprocess.CalledProcessError(128,command,output=b'fixture Git query failed')
+E       subprocess.CalledProcessError: Command '['git', 'rev-parse', 'HEAD']' returned non-zero exit status 128.
+
+publication\test_clone_release.py:39: CalledProcessError
+_ test_successful_clone_retains_terminal_receipt_when_any_git_query_fails[1] __
+
+git_fixture = namespace(target=WindowsPath('D:/hospital_ies_v20_20261019/outputs/v20_load_accounting_20261019_run01/temp/clone_recei..._clone']], selection_missing=False, selection_mismatch=False, remote_commit='bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb')
+failed_query = 1
+
+    @pytest.mark.parametrize('failed_query',range(4))
+    def test_successful_clone_retains_terminal_receipt_when_any_git_query_fails(git_fixture,failed_query):
+        state=git_fixture;state.query_fail_at=failed_query
+>       assert clone_tool.clone(state.target)==2
+
+publication\test_clone_release.py:68: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+publication\clone_release.py:58: in clone
+    record.update(git_commit=git_value(target,'rev-parse','HEAD'),
+publication\clone_release.py:22: in git_value
+    return subprocess.check_output(['git',*args],cwd=directory).decode('utf8').strip()
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+command = ['git', 'rev-parse', 'HEAD']
+kwargs = {'cwd': WindowsPath('D:/hospital_ies_v20_20261019/outputs/v20_load_accounting_20261019_run01/temp/clone_receipt_red01/pytest-of-HanqinXie/pytest-0/test_successful_clone_retains_1/fresh_clone')}
+
+    def fake_git_query(command,**kwargs):
+        index=len(state.queries);state.queries.append(dict(command=command,cwd=str(kwargs['cwd'])))
+>       if index==state.query_fail_at:raise subprocess.CalledProcessError(128,command,output=b'fixture Git query failed')
+E       subprocess.CalledProcessError: Command '['git', 'rev-parse', 'HEAD']' returned non-zero exit status 128.
+
+publication\test_clone_release.py:39: CalledProcessError
+_ test_successful_clone_retains_terminal_receipt_when_any_git_query_fails[2] __
+
+git_fixture = namespace(target=WindowsPath('D:/hospital_ies_v20_20261019/outputs/v20_load_accounting_20261019_run01/temp/clone_recei..._clone']], selection_missing=False, selection_mismatch=False, remote_commit='bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb')
+failed_query = 2
+
+    @pytest.mark.parametrize('failed_query',range(4))
+    def test_successful_clone_retains_terminal_receipt_when_any_git_query_fails(git_fixture,failed_query):
+        state=git_fixture;state.query_fail_at=failed_query
+>       assert clone_tool.clone(state.target)==2
+
+publication\test_clone_release.py:68: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+publication\clone_release.py:59: in clone
+    origin_url=git_value(target,'remote','get-url','origin'),
+publication\clone_release.py:22: in git_value
+    return subprocess.check_output(['git',*args],cwd=directory).decode('utf8').strip()
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+command = ['git', 'remote', 'get-url', 'origin']
+kwargs = {'cwd': WindowsPath('D:/hospital_ies_v20_20261019/outputs/v20_load_accounting_20261019_run01/temp/clone_receipt_red01/pytest-of-HanqinXie/pytest-0/test_successful_clone_retains_2/fresh_clone')}
+
+    def fake_git_query(command,**kwargs):
+        index=len(state.queries);state.queries.append(dict(command=command,cwd=str(kwargs['cwd'])))
+>       if index==state.query_fail_at:raise subprocess.CalledProcessError(128,command,output=b'fixture Git query failed')
+E       subprocess.CalledProcessError: Command '['git', 'remote', 'get-url', 'origin']' returned non-zero exit status 128.
+
+publication\test_clone_release.py:39: CalledProcessError
+_ test_successful_clone_retains_terminal_receipt_when_any_git_query_fails[3] __
+
+git_fixture = namespace(target=WindowsPath('D:/hospital_ies_v20_20261019/outputs/v20_load_accounting_20261019_run01/temp/clone_recei..._clone']], selection_missing=False, selection_mismatch=False, remote_commit='bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb')
+failed_query = 3
+
+    @pytest.mark.parametrize('failed_query',range(4))
+    def test_successful_clone_retains_terminal_receipt_when_any_git_query_fails(git_fixture,failed_query):
+        state=git_fixture;state.query_fail_at=failed_query
+>       assert clone_tool.clone(state.target)==2
+
+publication\test_clone_release.py:68: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+publication\clone_release.py:60: in clone
+    branch=git_value(target,'branch','--show-current'))
+publication\clone_release.py:22: in git_value
+    return subprocess.check_output(['git',*args],cwd=directory).decode('utf8').strip()
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+command = ['git', 'branch', '--show-current']
+kwargs = {'cwd': WindowsPath('D:/hospital_ies_v20_20261019/outputs/v20_load_accounting_20261019_run01/temp/clone_receipt_red01/pytest-of-HanqinXie/pytest-0/test_successful_clone_retains_3/fresh_clone')}
+
+    def fake_git_query(command,**kwargs):
+        index=len(state.queries);state.queries.append(dict(command=command,cwd=str(kwargs['cwd'])))
+>       if index==state.query_fail_at:raise subprocess.CalledProcessError(128,command,output=b'fixture Git query failed')
+E       subprocess.CalledProcessError: Command '['git', 'branch', '--show-current']' returned non-zero exit status 128.
+
+publication\test_clone_release.py:39: CalledProcessError
+__ test_nonzero_clone_retains_its_real_exit_code_without_needing_git_queries __
+
+git_fixture = namespace(target=WindowsPath('D:/hospital_ies_v20_20261019/outputs/v20_load_accounting_20261019_run01/temp/clone_recei..._clone']], selection_missing=False, selection_mismatch=False, remote_commit='bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb')
+
+    def test_nonzero_clone_retains_its_real_exit_code_without_needing_git_queries(git_fixture):
+        state=git_fixture;state.clone_exit=17;state.query_fail_at=0
+>       assert clone_tool.clone(state.target)==17
+
+publication\test_clone_release.py:77: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+publication\clone_release.py:54: in clone
+    source_launcher_commit=git_value(ROOT,'rev-parse','HEAD'),
+publication\clone_release.py:22: in git_value
+    return subprocess.check_output(['git',*args],cwd=directory).decode('utf8').strip()
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+command = ['git', 'rev-parse', 'HEAD']
+kwargs = {'cwd': WindowsPath('D:/hospital_ies_v20_20261019/outputs/v20_load_accounting_20261019_run01/temp/clone_receipt_red01/pytest-of-HanqinXie/pytest-0/test_nonzero_clone_retains_its0/launcher')}
+
+    def fake_git_query(command,**kwargs):
+        index=len(state.queries);state.queries.append(dict(command=command,cwd=str(kwargs['cwd'])))
+>       if index==state.query_fail_at:raise subprocess.CalledProcessError(128,command,output=b'fixture Git query failed')
+E       subprocess.CalledProcessError: Command '['git', 'rev-parse', 'HEAD']' returned non-zero exit status 128.
+
+publication\test_clone_release.py:39: CalledProcessError
+=========================== short test summary info ===========================
+FAILED publication/test_clone_release.py::test_successful_clone_retains_terminal_receipt_when_any_git_query_fails[0]
+FAILED publication/test_clone_release.py::test_successful_clone_retains_terminal_receipt_when_any_git_query_fails[1]
+FAILED publication/test_clone_release.py::test_successful_clone_retains_terminal_receipt_when_any_git_query_fails[2]
+FAILED publication/test_clone_release.py::test_successful_clone_retains_terminal_receipt_when_any_git_query_fails[3]
+FAILED publication/test_clone_release.py::test_nonzero_clone_retains_its_real_exit_code_without_needing_git_queries
+5 failed, 4 passed in 0.14s

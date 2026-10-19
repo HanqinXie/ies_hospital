@@ -1,0 +1,161 @@
+{
+  "status": "passed",
+  "exit_code": 0,
+  "strict_batches": 148,
+  "qualified_pairs": 406,
+  "predecessor": {
+    "qualified": true,
+    "normal03_intentional_exit_code": 125,
+    "S3_original_status": "failed_unknown",
+    "old_measured_resource_batches": [
+      "v20_normal_000",
+      "v20_normal_001",
+      "v20_normal_002",
+      "v20_normal_003",
+      "v20_normal_004",
+      "v20_normal_005",
+      "v20_normal_006",
+      "v20_normal_007",
+      "v20_normal_010",
+      "v20_normal_011"
+    ],
+    "normal009_resource_peak": "unknown",
+    "only_remaining": "v20_normal_008",
+    "evidence_files": [
+      {
+        "path": "outputs/v20_load_accounting_20261019_run01/provenance/normal_resource_profile/STOP_NORMAL_SERIAL.json",
+        "bytes": 1790,
+        "sha256": "a1e8b0ee5ea21b7bd633595f916a21dc46006b22bdd59b941a2fb94611403101"
+      },
+      {
+        "path": "docs/v20/RESOURCE_CONTINUATION_PLAN.md",
+        "bytes": 4456,
+        "sha256": "701d6325924202b5aef60bcc6c6ec224956ec86f24a6efcb760b2c7c4e8bb9bd"
+      },
+      {
+        "path": "outputs/v20_load_accounting_20261019_run01/provenance/normal_resource_profile/supervision_canonical02/SUMMARY.json",
+        "bytes": 15653,
+        "sha256": "0af8b40800c96880f28974015b471197728dc3e80ed6115ae18d124091f5607e"
+      },
+      {
+        "path": "outputs/v20_load_accounting_20261019_run01/logs/normal03.command.json",
+        "bytes": 923,
+        "sha256": "77d46963117cab006162b0d428e19fb3b5b67fba989af9b45bb18c4d4623d525"
+      },
+      {
+        "path": "outputs/v20_load_accounting_20261019_run01/review/supervision03/RESULT.json",
+        "bytes": 446,
+        "sha256": "5b2b5e25db50ebcea0dbf9607e1000b2efb570a6f149bd785cf0811f538d18c6"
+      },
+      {
+        "path": "outputs/v20_load_accounting_20261019_run01/review/supervision03/SUPERVISOR_IMPLEMENTATION.py",
+        "bytes": 5967,
+        "sha256": "7cdc0eb91c2d52b1996f478478cf6b9762c73861bee6035257e6529b178bc117"
+      },
+      {
+        "path": "publication/run_normal_serial.py",
+        "bytes": 39882,
+        "sha256": "50ab72194abf63dda9c1893595629f57d0b3ceb488eb2e64ff709fe273f8701b"
+      },
+      {
+        "path": "publication/release_gate.py",
+        "bytes": 35592,
+        "sha256": "0ae4b1d026367a9e91c1cb75104d53fdd55e684e5ca62a23c7611b56a91bf22c"
+      },
+      {
+        "path": "publication/continue_normal008.py",
+        "bytes": 34713,
+        "sha256": "cce231bf254b00a0af0021f04273ad54134005340f5b9706ce4578cec4823ca7"
+      },
+      {
+        "path": "outputs/v20_load_accounting_20261019_run01/MODEL_FREEZE_ACCOUNTING01.json",
+        "bytes": 205730,
+        "sha256": "48baed7a128d2f921d36323330ae4d22e2e6dc83214e8a505b6ba89273439b7b"
+      },
+      {
+        "path": "outputs/v20_load_accounting_20261019_run01/provenance/normal_resource_profile/V19_R2_PROFILE.json",
+        "bytes": 10188,
+        "sha256": "bc87800015895bedfc17127847f6495216576972fa772b62994d1c327d6ee91a"
+      },
+      {
+        "path": "outputs/v20_load_accounting_20261019_run01/provenance/normal_resource_profile/V19_R2_SOURCE_SUMMARY.json",
+        "bytes": 92112,
+        "sha256": "193d9ad2bbe8a67359e07200a64530d761f181eaf62b9fb16b5423a9a8734c77"
+      }
+    ]
+  },
+  "resource_result": {
+    "path": "outputs/v20_load_accounting_20261019_run01/review/normal008_continuation01/L72_RUN02/v20_normal_008.result.json",
+    "bytes": 3744,
+    "sha256": "0670d0590e8480ddcb1b773fe2633c7483bf0dd16fad02aa940b539b2f72f789"
+  },
+  "preflight": {
+    "path": "outputs/v20_load_accounting_20261019_run01/review/normal008_continuation01/L72_RUN02/preflight.json",
+    "bytes": 1389535,
+    "sha256": "d5096466146abb7072313ff6cbb3a87c57d520d497c43e255476662ac96b2065"
+  },
+  "postflight": {
+    "path": "outputs/v20_load_accounting_20261019_run01/review/normal008_continuation01/L72_RUN02/postflight.json",
+    "bytes": 799935,
+    "sha256": "f620cf03a690d91a37681f9fb06ecae9184dfd8f00bb42facedd885b32c2804f"
+  },
+  "final_406_proof": {
+    "path": "outputs/v20_load_accounting_20261019_run01/review/normal008_continuation01/L72_RUN02/FINAL_406_PROOF.json",
+    "bytes": 799935,
+    "sha256": "9e2df2ecd43aca27046115d6633c4bd8086ef44a70b1346f55ccdf50c50831ae"
+  },
+  "final_report": {
+    "command_receipt": {
+      "path": "outputs/v20_load_accounting_20261019_run01/logs/final_readback01.command.json",
+      "bytes": 921,
+      "sha256": "98c9203d6f4b37a31b94744e0b508f6868871cc40e4313a4f94e3abfe40db088"
+    },
+    "report_receipt": {
+      "path": "outputs/v20_load_accounting_20261019_run01/paper_results/FINAL01/RECEIPT.json",
+      "bytes": 1504,
+      "sha256": "e272fec06141a1b6f6415b522f0eefc4ee2ab3cca42ec8c8ddb0e9929b20cce8"
+    },
+    "summary": {
+      "path": "outputs/v20_load_accounting_20261019_run01/paper_results/FINAL01/SUMMARY.json",
+      "bytes": 2031,
+      "sha256": "dec65907a987fde0869326048dc0070e15962278ec3c24c781bfbbe313d956ca"
+    }
+  },
+  "admission": {
+    "path": "outputs/v20_load_accounting_20261019_run01/review/normal008_continuation01/L72_RUN02/ADMISSION.json",
+    "bytes": 2123,
+    "sha256": "04279294c3525ac05a058153205d57793da2a67b2f1d946269bf7fa38ad94eef"
+  },
+  "normal009_resource_peak_unknown": true,
+  "old_measured_resource_batches": 10,
+  "new_measured_resource_batches": 1,
+  "schema": "hospital_ies.v20.normal008_continuation_result.v1",
+  "utc": "2026-10-19T11:59:23.193908+00:00",
+  "pid": 68740,
+  "cwd": "D:\\hospital_ies_v20_20261019",
+  "scientific_root": "D:\\hospital_ies_v20_20261019",
+  "script_sha256": "cce231bf254b00a0af0021f04273ad54134005340f5b9706ce4578cec4823ca7",
+  "actual_scientific_children_started": 1,
+  "successful_Popen_proofs": [
+    {
+      "batch": "v20_normal_008",
+      "pid": 32152,
+      "successful_Popen": true,
+      "owned_child_drained": true,
+      "exit_code": 0,
+      "resource_result_sha": "0670d0590e8480ddcb1b773fe2633c7483bf0dd16fad02aa940b539b2f72f789"
+    }
+  ],
+  "last_child": {
+    "batch": "v20_normal_008",
+    "pid": 32152,
+    "successful_Popen": true,
+    "owned_child_drained": true,
+    "exit_code": 0,
+    "resource_result_sha": "0670d0590e8480ddcb1b773fe2633c7483bf0dd16fad02aa940b539b2f72f789"
+  },
+  "physical_attempt_status": "inspect actual immutable008 terminal",
+  "old_STOP_preserved": true,
+  "no_frozen_science_modified": true,
+  "global_serial_science": true
+}
