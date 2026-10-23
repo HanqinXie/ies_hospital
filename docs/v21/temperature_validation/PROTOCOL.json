@@ -1,0 +1,52 @@
+{
+  "source_sha256": {
+    "D:\\\u4e91\u5927\u6587\u4ef6\\\u8bba\u6587\\\u533b\u9662ies\\Hospital_SanDiego_Starter\\modified_idf\\Hospital_SanDiego_262_engineering_audit.idf": "7b8a6c95743529e8174a7912992674e469a991d3cc6f0f58ae5a83d1fcd8b0d1",
+    "D:\\\u4e91\u5927\u6587\u4ef6\\\u8bba\u6587\\\u533b\u9662ies\\Hospital_SanDiego_Starter\\Hospital_SanDiego.idf": "129bd06f9dccc1030d6461f284da788342569319c0d3d3fc933fa72ffcdcb8e2",
+    "D:\\\u4e91\u5927\u6587\u4ef6\\\u8bba\u6587\\\u533b\u9662ies\\Hospital_SanDiego_Starter\\SanDiego_BrownField_TMY3.epw": "0cb0f545b288a7c05fde482b3a2f6061783e120e470d810b36d0585a094db37d",
+    "C:\\EnergyPlusV26-2-0\\energyplus.exe": "71278a62c9c3871922b3f7ee28a3c7c9f658caa995a934fccb92e8f8965a3977"
+  },
+  "engine_version": "EnergyPlus, Version 26.2.0-4bd7a1f26f",
+  "cases": [
+    {
+      "case_id": "cal_summer_2h",
+      "split": "calibration",
+      "month": 6,
+      "day": 15,
+      "outage_hours": 2.0
+    },
+    {
+      "case_id": "cal_transition_4h",
+      "split": "calibration",
+      "month": 9,
+      "day": 15,
+      "outage_hours": 4.0
+    },
+    {
+      "case_id": "val_winter_2h",
+      "split": "validation",
+      "month": 1,
+      "day": 15,
+      "outage_hours": 2.0
+    },
+    {
+      "case_id": "val_summer_4h",
+      "split": "validation",
+      "month": 8,
+      "day": 15,
+      "outage_hours": 4.0
+    }
+  ],
+  "intervention": "Only VAV_OR water cooling coil availability; zone loads/fans/other coils unchanged",
+  "representative_zone": "OR1_FLR_2",
+  "complete_affected_zones": [
+    "OR1_FLR_2",
+    "OR2_MULT5_FLR_2",
+    "OR3_FLR_2",
+    "OR4_FLR_2"
+  ],
+  "clock": "SQL 26.2 timestep Hour+Minute in standard clock, then +Dst to match original schedule local time",
+  "calibration_fit_separated": true,
+  "production_core_parameters_changed": false,
+  "evaluation_margin_C": 2.0,
+  "margin_is_clinical_standard": false
+}

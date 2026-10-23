@@ -1,0 +1,178 @@
+[
+  {
+    "case_id": "cal_summer_2h",
+    "mode": "baseline",
+    "command": [
+      "C:\\EnergyPlusV26-2-0\\energyplus.exe",
+      "-w",
+      "D:\\\u4e91\u5927\u6587\u4ef6\\\u8bba\u6587\\\u533b\u9662ies\\Hospital_SanDiego_Starter\\SanDiego_BrownField_TMY3.epw",
+      "-d",
+      "E:\\hospital_ies_v21_20261023\\temperature_validation\\study02\\cal_summer_2h_baseline",
+      "E:\\hospital_ies_v21_20261023\\temperature_validation\\study02\\cal_summer_2h_baseline.idf"
+    ],
+    "exit_code": 0,
+    "elapsed_seconds": 5.14237349992618,
+    "peak_process_tree_rss_bytes": 311296000,
+    "idf_sha256": "4578a1ccba7a7f08f2b8ae3c1a967f68c6150607c9e443bfcec036501e86eaa0",
+    "severe_message_markers": 0,
+    "fatal_message_markers": 0,
+    "status": "completed",
+    "sql_path": "E:\\hospital_ies_v21_20261023\\temperature_validation\\study02\\cal_summer_2h_baseline\\eplusout.sql",
+    "reused_sql_from": "E:\\hospital_ies_v21_20261023\\temperature_validation\\study02\\cal_summer_2h_baseline",
+    "new_energyplus_run": false
+  },
+  {
+    "case_id": "cal_summer_2h",
+    "mode": "interruption",
+    "command": [
+      "C:\\EnergyPlusV26-2-0\\energyplus.exe",
+      "-w",
+      "D:\\\u4e91\u5927\u6587\u4ef6\\\u8bba\u6587\\\u533b\u9662ies\\Hospital_SanDiego_Starter\\SanDiego_BrownField_TMY3.epw",
+      "-d",
+      "E:\\hospital_ies_v21_20261023\\temperature_validation\\study02\\cal_summer_2h_interruption",
+      "E:\\hospital_ies_v21_20261023\\temperature_validation\\study02\\cal_summer_2h_interruption.idf"
+    ],
+    "exit_code": 0,
+    "elapsed_seconds": 5.150695899967104,
+    "peak_process_tree_rss_bytes": 313278464,
+    "idf_sha256": "0528ab8844d9a2d08c01a1d9e74eb284b7769bcaee86b5110117dd953b2127c6",
+    "severe_message_markers": 0,
+    "fatal_message_markers": 0,
+    "status": "completed",
+    "sql_path": "E:\\hospital_ies_v21_20261023\\temperature_validation\\study02\\cal_summer_2h_interruption\\eplusout.sql",
+    "reused_sql_from": "E:\\hospital_ies_v21_20261023\\temperature_validation\\study02\\cal_summer_2h_interruption",
+    "new_energyplus_run": false
+  },
+  {
+    "case_id": "cal_transition_4h",
+    "mode": "baseline",
+    "command": [
+      "C:\\EnergyPlusV26-2-0\\energyplus.exe",
+      "-w",
+      "D:\\\u4e91\u5927\u6587\u4ef6\\\u8bba\u6587\\\u533b\u9662ies\\Hospital_SanDiego_Starter\\SanDiego_BrownField_TMY3.epw",
+      "-d",
+      "E:\\hospital_ies_v21_20261023\\temperature_validation\\study02\\cal_transition_4h_baseline",
+      "E:\\hospital_ies_v21_20261023\\temperature_validation\\study02\\cal_transition_4h_baseline.idf"
+    ],
+    "exit_code": 0,
+    "elapsed_seconds": 4.371968699619174,
+    "peak_process_tree_rss_bytes": 310747136,
+    "idf_sha256": "0f76a90a85a6e125a65dd08faeac881685d3dc5000c3fb71022b81a72e13fcee",
+    "severe_message_markers": 0,
+    "fatal_message_markers": 0,
+    "status": "completed",
+    "sql_path": "E:\\hospital_ies_v21_20261023\\temperature_validation\\study02\\cal_transition_4h_baseline\\eplusout.sql",
+    "reused_sql_from": "E:\\hospital_ies_v21_20261023\\temperature_validation\\study02\\cal_transition_4h_baseline",
+    "new_energyplus_run": false
+  },
+  {
+    "case_id": "cal_transition_4h",
+    "mode": "interruption",
+    "command": [
+      "C:\\EnergyPlusV26-2-0\\energyplus.exe",
+      "-w",
+      "D:\\\u4e91\u5927\u6587\u4ef6\\\u8bba\u6587\\\u533b\u9662ies\\Hospital_SanDiego_Starter\\SanDiego_BrownField_TMY3.epw",
+      "-d",
+      "E:\\hospital_ies_v21_20261023\\temperature_validation\\study02\\cal_transition_4h_interruption",
+      "E:\\hospital_ies_v21_20261023\\temperature_validation\\study02\\cal_transition_4h_interruption.idf"
+    ],
+    "exit_code": 0,
+    "elapsed_seconds": 4.287679200060666,
+    "peak_process_tree_rss_bytes": 313659392,
+    "idf_sha256": "8ea14b223b33dd67fbbef3da08667e7d0f337156bca477e3a6ff59d49dd84a26",
+    "severe_message_markers": 0,
+    "fatal_message_markers": 0,
+    "status": "completed",
+    "sql_path": "E:\\hospital_ies_v21_20261023\\temperature_validation\\study02\\cal_transition_4h_interruption\\eplusout.sql",
+    "reused_sql_from": "E:\\hospital_ies_v21_20261023\\temperature_validation\\study02\\cal_transition_4h_interruption",
+    "new_energyplus_run": false
+  },
+  {
+    "case_id": "val_winter_2h",
+    "mode": "baseline",
+    "command": [
+      "C:\\EnergyPlusV26-2-0\\energyplus.exe",
+      "-w",
+      "D:\\\u4e91\u5927\u6587\u4ef6\\\u8bba\u6587\\\u533b\u9662ies\\Hospital_SanDiego_Starter\\SanDiego_BrownField_TMY3.epw",
+      "-d",
+      "E:\\hospital_ies_v21_20261023\\temperature_validation\\study02\\val_winter_2h_baseline",
+      "E:\\hospital_ies_v21_20261023\\temperature_validation\\study02\\val_winter_2h_baseline.idf"
+    ],
+    "exit_code": 0,
+    "elapsed_seconds": 4.522040500305593,
+    "peak_process_tree_rss_bytes": 311050240,
+    "idf_sha256": "5d8b3118c9084db980ff0b0b24a0a9ed44b527a89bdb6a64bd86ecddcb4c69a0",
+    "severe_message_markers": 0,
+    "fatal_message_markers": 0,
+    "status": "completed",
+    "sql_path": "E:\\hospital_ies_v21_20261023\\temperature_validation\\study02\\val_winter_2h_baseline\\eplusout.sql",
+    "reused_sql_from": "E:\\hospital_ies_v21_20261023\\temperature_validation\\study02\\val_winter_2h_baseline",
+    "new_energyplus_run": false
+  },
+  {
+    "case_id": "val_winter_2h",
+    "mode": "interruption",
+    "command": [
+      "C:\\EnergyPlusV26-2-0\\energyplus.exe",
+      "-w",
+      "D:\\\u4e91\u5927\u6587\u4ef6\\\u8bba\u6587\\\u533b\u9662ies\\Hospital_SanDiego_Starter\\SanDiego_BrownField_TMY3.epw",
+      "-d",
+      "E:\\hospital_ies_v21_20261023\\temperature_validation\\study02\\val_winter_2h_interruption",
+      "E:\\hospital_ies_v21_20261023\\temperature_validation\\study02\\val_winter_2h_interruption.idf"
+    ],
+    "exit_code": 0,
+    "elapsed_seconds": 4.525773999746889,
+    "peak_process_tree_rss_bytes": 314486784,
+    "idf_sha256": "81f0c73c888663543b04f9b9418f49db9f87de08b356c113f3333992a18e9ad1",
+    "severe_message_markers": 0,
+    "fatal_message_markers": 0,
+    "status": "completed",
+    "sql_path": "E:\\hospital_ies_v21_20261023\\temperature_validation\\study02\\val_winter_2h_interruption\\eplusout.sql",
+    "reused_sql_from": "E:\\hospital_ies_v21_20261023\\temperature_validation\\study02\\val_winter_2h_interruption",
+    "new_energyplus_run": false
+  },
+  {
+    "case_id": "val_summer_4h",
+    "mode": "baseline",
+    "command": [
+      "C:\\EnergyPlusV26-2-0\\energyplus.exe",
+      "-w",
+      "D:\\\u4e91\u5927\u6587\u4ef6\\\u8bba\u6587\\\u533b\u9662ies\\Hospital_SanDiego_Starter\\SanDiego_BrownField_TMY3.epw",
+      "-d",
+      "E:\\hospital_ies_v21_20261023\\temperature_validation\\study02\\val_summer_4h_baseline",
+      "E:\\hospital_ies_v21_20261023\\temperature_validation\\study02\\val_summer_4h_baseline.idf"
+    ],
+    "exit_code": 0,
+    "elapsed_seconds": 4.782767999917269,
+    "peak_process_tree_rss_bytes": 313470976,
+    "idf_sha256": "c7ad626765c441a2f1781a7293524c4ae0b8bea450e74c4c3cfecf14e91da2b7",
+    "severe_message_markers": 0,
+    "fatal_message_markers": 0,
+    "status": "completed",
+    "sql_path": "E:\\hospital_ies_v21_20261023\\temperature_validation\\study02\\val_summer_4h_baseline\\eplusout.sql",
+    "reused_sql_from": "E:\\hospital_ies_v21_20261023\\temperature_validation\\study02\\val_summer_4h_baseline",
+    "new_energyplus_run": false
+  },
+  {
+    "case_id": "val_summer_4h",
+    "mode": "interruption",
+    "command": [
+      "C:\\EnergyPlusV26-2-0\\energyplus.exe",
+      "-w",
+      "D:\\\u4e91\u5927\u6587\u4ef6\\\u8bba\u6587\\\u533b\u9662ies\\Hospital_SanDiego_Starter\\SanDiego_BrownField_TMY3.epw",
+      "-d",
+      "E:\\hospital_ies_v21_20261023\\temperature_validation\\study02\\val_summer_4h_interruption",
+      "E:\\hospital_ies_v21_20261023\\temperature_validation\\study02\\val_summer_4h_interruption.idf"
+    ],
+    "exit_code": 0,
+    "elapsed_seconds": 4.794419500045478,
+    "peak_process_tree_rss_bytes": 315936768,
+    "idf_sha256": "01a5eb9e5d8903a6780d51ebd553b719cb4bb14f35c2f1d93e96c7eff6bb4898",
+    "severe_message_markers": 0,
+    "fatal_message_markers": 0,
+    "status": "completed",
+    "sql_path": "E:\\hospital_ies_v21_20261023\\temperature_validation\\study02\\val_summer_4h_interruption\\eplusout.sql",
+    "reused_sql_from": "E:\\hospital_ies_v21_20261023\\temperature_validation\\study02\\val_summer_4h_interruption",
+    "new_energyplus_run": false
+  }
+]

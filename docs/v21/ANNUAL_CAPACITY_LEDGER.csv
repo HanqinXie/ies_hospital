@@ -1,0 +1,30 @@
+kind,carrier,scope,annual_energy_kWh,peak_power,unit,peak_hour_of_year,basis
+demand,e,P0,505135.0008534391,99.9851727181,kW_e,7191,same original 8760 input; fan/CHW reassigned and separate HeatSys pump added
+demand,e,P1,323485.44682542223,50.9339745728,kW_e,6519,same original 8760 input; fan/CHW reassigned and separate HeatSys pump added
+demand,e,P2,282740.9422961427,57.5658847829,kW_e,5487,same original 8760 input; fan/CHW reassigned and separate HeatSys pump added
+demand,e,P3,2897891.173440005,663.398109054,kW_e,807,same original 8760 input; fan/CHW reassigned and separate HeatSys pump added
+demand,e,critical_P0_P1,828620.4476788613,150.833081265,kW_e,6519,same original 8760 input; fan/CHW reassigned and separate HeatSys pump added
+demand,e,hospital_total,4009252.5634150095,869.127319386,kW_e,807,same original 8760 input; fan/CHW reassigned and separate HeatSys pump added
+demand,h,P0,508728.9754460869,118.018159624,kW_h,2506,same original 8760 input; fan/CHW reassigned and separate HeatSys pump added
+demand,h,P1,297537.85883101175,43.755073317,kW_h,2118,same original 8760 input; fan/CHW reassigned and separate HeatSys pump added
+demand,h,P2,0.0,0,kW_h,1,same original 8760 input; fan/CHW reassigned and separate HeatSys pump added
+demand,h,P3,490685.218491334,167.874565827,kW_h,199,same original 8760 input; fan/CHW reassigned and separate HeatSys pump added
+demand,h,critical_P0_P1,806266.8342770986,154.258758615,kW_h,2506,same original 8760 input; fan/CHW reassigned and separate HeatSys pump added
+demand,h,hospital_total,1296952.0527684325,285.13839701,kW_h,199,same original 8760 input; fan/CHW reassigned and separate HeatSys pump added
+demand,c,P0,355692.72442831716,69.8893287321,kW_c,6519,same original 8760 input; fan/CHW reassigned and separate HeatSys pump added
+demand,c,P1,254633.1030483909,48.2224126129,kW_c,6927,same original 8760 input; fan/CHW reassigned and separate HeatSys pump added
+demand,c,P2,246047.8515198664,45.1013821871,kW_c,2943,same original 8760 input; fan/CHW reassigned and separate HeatSys pump added
+demand,c,P3,2468364.6844549086,1385.35974326,kW_c,6347,same original 8760 input; fan/CHW reassigned and separate HeatSys pump added
+demand,c,critical_P0_P1,610325.8274767081,117.748826482,kW_c,6951,same original 8760 input; fan/CHW reassigned and separate HeatSys pump added
+demand,c,hospital_total,3324738.3634514837,1529.23389828,kW_c,6347,same original 8760 input; fan/CHW reassigned and separate HeatSys pump added
+capacity,,GT_nominal_electric,,960,kW_e,,nominal 3 x 320 kW; ambient derating applies
+capacity,,GT_annual_min_ambient_electric,,810.48768,kW_e,,same recorded outdoor temperatures; all 3 available
+capacity,,GT_annual_max_ambient_electric,,1051.91808,kW_e,,same recorded outdoor temperatures; all 3 available
+capacity,,DG_connected_electric,,900,kW_e,,finite shaft work reserve; not available before startup/contact
+capacity,,grid_import,,850,kW_e,,resilience_assumptions.json common limit; contact/availability separate
+capacity,,electric_chillers,,2461.796988,kW_c,,EC nominal capacity; power+common tower+CHW/fan path also needed
+capacity,,absorption_chiller,,703.370568,kW_c,,ABS nominal capacity; steam+electric auxiliaries+common tower+CHW/fan path needed
+capacity,,total_chillers_nameplate,,3165.167556,kW_c,,sum of nameplate capacities only; coupled resources can reduce actual
+capacity,,common_tower_rejection,,4220.223408,kW_rejection,,shared rejection not delivered cooling
+capacity,,boiler_building_heat_upper,,855,kW_h,,boiler alone; before ABS steam competition
+capacity,,HRSG_building_heat_upper,,2484.85021252,kW_h,,3 GT full fraction; before ABS steam and conversion competition

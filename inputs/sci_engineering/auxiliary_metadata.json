@@ -1,0 +1,814 @@
+{
+  "contract_id": "hospital_ies.auxiliary_source_accounting.v21.v1",
+  "critical_share_scale": 1.0,
+  "source_files": {
+    "D:\\云大文件\\论文\\医院ies\\Hospital_SanDiego_Starter\\simulation\\engineering_audit_20261010\\eplusout.sql": "12771fb55683c2f08df7008ed8358a8912c41f0d14e9c1b9c47f317769838ef9",
+    "D:\\云大文件\\论文\\医院ies\\Hospital_SanDiego_Starter\\Hospital_SanDiego.idf": "129bd06f9dccc1030d6461f284da788342569319c0d3d3fc933fa72ffcdcb8e2",
+    "D:\\hospital_ies_v21_20261023\\inputs\\loads\\hospital_ies_demand_8760.csv": "0adc2c3f2cd82d600cd17b38e634eae7701710fff0a146e588482dd3cd0a0627",
+    "D:\\hospital_ies_v21_20261023\\inputs\\loads\\critical_zones_8760.csv": "6577fa5bed87c5b53dae2a814231e8fbd98d34bf486ddb351224bedde60d88d6",
+    "D:\\hospital_ies_v21_20261023\\inputs\\loads\\electricity_boundary_8760.csv": "f6c3a165363f617f20b63553974a727ae0489095d7c38224a773943d95914599"
+  },
+  "root_input_sha256": {
+    "inputs/loads/hospital_ies_demand_8760.csv": "0adc2c3f2cd82d600cd17b38e634eae7701710fff0a146e588482dd3cd0a0627",
+    "inputs/loads/critical_zones_8760.csv": "6577fa5bed87c5b53dae2a814231e8fbd98d34bf486ddb351224bedde60d88d6",
+    "inputs/loads/electricity_boundary_8760.csv": "f6c3a165363f617f20b63553974a727ae0489095d7c38224a773943d95914599"
+  },
+  "source_engine_versions": [
+    [
+      "EnergyPlus, Version 26.2.0-4bd7a1f26f, YMD=2026.10.10 20:08"
+    ]
+  ],
+  "fan_mapping": [
+    {
+      "airloop": "VAV_1",
+      "fan": "VAV_1 FAN",
+      "priority_design_flows_m3_s": {
+        "P0": 0.0,
+        "P1": 1.7379534988078567,
+        "P2": 0.0,
+        "P3": 11.911576133153757
+      },
+      "priority_shares": {
+        "P0": 0.0,
+        "P1": 0.12732698823102892,
+        "P2": 0.0,
+        "P3": 0.8726730117689712
+      },
+      "zones": [
+        {
+          "zone": "BASEMENT",
+          "priority": "P3",
+          "terminal": "BASEMENT VAV BOX COMPONENT",
+          "design_max_airflow_m3_s": 4.500487611609722
+        },
+        {
+          "zone": "OFFICE1_MULT4_FLR_1",
+          "priority": "P3",
+          "terminal": "OFFICE1_MULT4_FLR_1 VAV BOX COMPONENT",
+          "design_max_airflow_m3_s": 0.2809629678842448
+        },
+        {
+          "zone": "LOBBY_RECORDS_FLR_1",
+          "priority": "P3",
+          "terminal": "LOBBY_RECORDS_FLR_1 VAV BOX COMPONENT",
+          "design_max_airflow_m3_s": 1.615807912452811
+        },
+        {
+          "zone": "CORRIDOR_FLR_1",
+          "priority": "P3",
+          "terminal": "CORRIDOR_FLR_1 VAV BOX COMPONENT",
+          "design_max_airflow_m3_s": 0.5527545883518882
+        },
+        {
+          "zone": "ER_NURSESTN_LOBBY_FLR_1",
+          "priority": "P3",
+          "terminal": "ER_NURSESTN_LOBBY_FLR_1 VAV BOX COMPONENT",
+          "design_max_airflow_m3_s": 2.511686154062732
+        },
+        {
+          "zone": "ICU_NURSESTN_LOBBY_FLR_2",
+          "priority": "P1",
+          "terminal": "ICU_NURSESTN_LOBBY_FLR_2 VAV BOX COMPONENT",
+          "design_max_airflow_m3_s": 1.7379534988078567
+        },
+        {
+          "zone": "CORRIDOR_FLR_2",
+          "priority": "P3",
+          "terminal": "CORRIDOR_FLR_2 VAV BOX COMPONENT",
+          "design_max_airflow_m3_s": 0.41896238168708333
+        },
+        {
+          "zone": "OR_NURSESTN_LOBBY_FLR_2",
+          "priority": "P3",
+          "terminal": "OR_NURSESTN_LOBBY_FLR_2 VAV BOX COMPONENT",
+          "design_max_airflow_m3_s": 2.030914517105275
+        }
+      ]
+    },
+    {
+      "airloop": "VAV_2",
+      "fan": "VAV_2 FAN",
+      "priority_design_flows_m3_s": {
+        "P0": 0.0,
+        "P1": 0.0,
+        "P2": 4.113733487529383,
+        "P3": 12.944591444944129
+      },
+      "priority_shares": {
+        "P0": 0.0,
+        "P1": 0.0,
+        "P2": 0.24115694265491275,
+        "P3": 0.7588430573450873
+      },
+      "zones": [
+        {
+          "zone": "PHYSTHERAPY_FLR_3",
+          "priority": "P3",
+          "terminal": "PHYSTHERAPY_FLR_3 VAV BOX COMPONENT",
+          "design_max_airflow_m3_s": 1.0296693552688656
+        },
+        {
+          "zone": "NURSESTN_LOBBY_FLR_3",
+          "priority": "P3",
+          "terminal": "NURSESTN_LOBBY_FLR_3 VAV BOX COMPONENT",
+          "design_max_airflow_m3_s": 1.5184101840856152
+        },
+        {
+          "zone": "CORRIDOR_SE_FLR_3",
+          "priority": "P3",
+          "terminal": "CORRIDOR_SE_FLR_3 VAV BOX COMPONENT",
+          "design_max_airflow_m3_s": 0.453922601438221
+        },
+        {
+          "zone": "CORRIDOR_NW_FLR_3",
+          "priority": "P3",
+          "terminal": "CORRIDOR_NW_FLR_3 VAV BOX COMPONENT",
+          "design_max_airflow_m3_s": 0.4562902459080058
+        },
+        {
+          "zone": "RADIOLOGY_FLR_4",
+          "priority": "P2",
+          "terminal": "RADIOLOGY_FLR_4 VAV BOX COMPONENT",
+          "design_max_airflow_m3_s": 4.113733487529383
+        },
+        {
+          "zone": "NURSESTN_LOBBY_FLR_4",
+          "priority": "P3",
+          "terminal": "NURSESTN_LOBBY_FLR_4 VAV BOX COMPONENT",
+          "design_max_airflow_m3_s": 1.6299212593069157
+        },
+        {
+          "zone": "CORRIDOR_SE_FLR_4",
+          "priority": "P3",
+          "terminal": "CORRIDOR_SE_FLR_4 VAV BOX COMPONENT",
+          "design_max_airflow_m3_s": 0.5126682049036378
+        },
+        {
+          "zone": "CORRIDOR_NW_FLR_4",
+          "priority": "P3",
+          "terminal": "CORRIDOR_NW_FLR_4 VAV BOX COMPONENT",
+          "design_max_airflow_m3_s": 0.5113189965387863
+        },
+        {
+          "zone": "DINING_FLR_5",
+          "priority": "P3",
+          "terminal": "DINING_FLR_5 VAV BOX COMPONENT",
+          "design_max_airflow_m3_s": 1.8557171808124218
+        },
+        {
+          "zone": "NURSESTN_LOBBY_FLR_5",
+          "priority": "P3",
+          "terminal": "NURSESTN_LOBBY_FLR_5 VAV BOX COMPONENT",
+          "design_max_airflow_m3_s": 2.316980992114483
+        },
+        {
+          "zone": "OFFICE1_FLR_5",
+          "priority": "P3",
+          "terminal": "OFFICE1_FLR_5 VAV BOX COMPONENT",
+          "design_max_airflow_m3_s": 0.2686443944176019
+        },
+        {
+          "zone": "OFFICE2_MULT5_FLR_5",
+          "priority": "P3",
+          "terminal": "OFFICE2_MULT5_FLR_5 VAV BOX COMPONENT",
+          "design_max_airflow_m3_s": 1.0214390477859205
+        },
+        {
+          "zone": "OFFICE3_FLR_5",
+          "priority": "P3",
+          "terminal": "OFFICE3_FLR_5 VAV BOX COMPONENT",
+          "design_max_airflow_m3_s": 0.3054369221243494
+        },
+        {
+          "zone": "OFFICE4_MULT6_FLR_5",
+          "priority": "P3",
+          "terminal": "OFFICE4_MULT6_FLR_5 VAV BOX COMPONENT",
+          "design_max_airflow_m3_s": 0.4024054478270464
+        },
+        {
+          "zone": "CORRIDOR_FLR_5",
+          "priority": "P3",
+          "terminal": "CORRIDOR_FLR_5 VAV BOX COMPONENT",
+          "design_max_airflow_m3_s": 0.6617666124122591
+        }
+      ]
+    },
+    {
+      "airloop": "VAV_ER",
+      "fan": "VAV_ER FAN",
+      "priority_design_flows_m3_s": {
+        "P0": 0.7927669041822285,
+        "P1": 3.1710676167289114,
+        "P2": 0.0,
+        "P3": 1.5855338083644557
+      },
+      "priority_shares": {
+        "P0": 0.14285714285714296,
+        "P1": 0.5714285714285714,
+        "P2": 0.0,
+        "P3": 0.2857142857142857
+      },
+      "zones": [
+        {
+          "zone": "ER_EXAM1_MULT4_FLR_1",
+          "priority": "P1",
+          "terminal": "ER_EXAM1_MULT4_FLR_1 VAV BOX COMPONENT",
+          "design_max_airflow_m3_s": 1.5855338083644546
+        },
+        {
+          "zone": "ER_TRAUMA1_FLR_1",
+          "priority": "P0",
+          "terminal": "ER_TRAUMA1_FLR_1 VAV BOX COMPONENT",
+          "design_max_airflow_m3_s": 0.3963834520911142
+        },
+        {
+          "zone": "ER_EXAM3_MULT4_FLR_1",
+          "priority": "P1",
+          "terminal": "ER_EXAM3_MULT4_FLR_1 VAV BOX COMPONENT",
+          "design_max_airflow_m3_s": 1.5855338083644568
+        },
+        {
+          "zone": "ER_TRAUMA2_FLR_1",
+          "priority": "P0",
+          "terminal": "ER_TRAUMA2_FLR_1 VAV BOX COMPONENT",
+          "design_max_airflow_m3_s": 0.39638345209111436
+        },
+        {
+          "zone": "ER_TRIAGE_MULT4_FLR_1",
+          "priority": "P3",
+          "terminal": "ER_TRIAGE_MULT4_FLR_1 VAV BOX COMPONENT",
+          "design_max_airflow_m3_s": 1.5855338083644557
+        }
+      ]
+    },
+    {
+      "airloop": "VAV_OR",
+      "fan": "VAV_OR FAN",
+      "priority_design_flows_m3_s": {
+        "P0": 10.900086772768326,
+        "P1": 0.0,
+        "P2": 0.0,
+        "P3": 0.0
+      },
+      "priority_shares": {
+        "P0": 1.0,
+        "P1": 0.0,
+        "P2": 0.0,
+        "P3": 0.0
+      },
+      "zones": [
+        {
+          "zone": "OR1_FLR_2",
+          "priority": "P0",
+          "terminal": "OR1_FLR_2 VAV BOX COMPONENT",
+          "design_max_airflow_m3_s": 0.9909169793425758
+        },
+        {
+          "zone": "OR2_MULT5_FLR_2",
+          "priority": "P0",
+          "terminal": "OR2_MULT5_FLR_2 VAV BOX COMPONENT",
+          "design_max_airflow_m3_s": 4.954584896712873
+        },
+        {
+          "zone": "OR3_FLR_2",
+          "priority": "P0",
+          "terminal": "OR3_FLR_2 VAV BOX COMPONENT",
+          "design_max_airflow_m3_s": 0.9909169793425758
+        },
+        {
+          "zone": "OR4_FLR_2",
+          "priority": "P0",
+          "terminal": "OR4_FLR_2 VAV BOX COMPONENT",
+          "design_max_airflow_m3_s": 3.9636679173703016
+        }
+      ]
+    },
+    {
+      "airloop": "VAV_ICU",
+      "fan": "VAV_ICU FAN",
+      "priority_design_flows_m3_s": {
+        "P0": 4.394415472336972,
+        "P1": 1.8332872546629853,
+        "P2": 0.0,
+        "P3": 0.0
+      },
+      "priority_shares": {
+        "P0": 0.7056238335341792,
+        "P1": 0.29437616646582077,
+        "P2": 0.0,
+        "P3": 0.0
+      },
+      "zones": [
+        {
+          "zone": "IC_PATROOM1_MULT5_FLR_2",
+          "priority": "P1",
+          "terminal": "IC_PATROOM1_MULT5_FLR_2 VAV BOX COMPONENT",
+          "design_max_airflow_m3_s": 0.7432245627012102
+        },
+        {
+          "zone": "IC_PATROOM2_FLR_2",
+          "priority": "P1",
+          "terminal": "IC_PATROOM2_FLR_2 VAV BOX COMPONENT",
+          "design_max_airflow_m3_s": 0.19819321672032275
+        },
+        {
+          "zone": "IC_PATROOM3_MULT6_FLR_2",
+          "priority": "P1",
+          "terminal": "IC_PATROOM3_MULT6_FLR_2 VAV BOX COMPONENT",
+          "design_max_airflow_m3_s": 0.8918694752414524
+        },
+        {
+          "zone": "ICU_FLR_2",
+          "priority": "P0",
+          "terminal": "ICU_FLR_2 VAV BOX COMPONENT",
+          "design_max_airflow_m3_s": 4.394415472336972
+        }
+      ]
+    },
+    {
+      "airloop": "VAV_PATRMS",
+      "fan": "VAV_PATRMS FAN",
+      "priority_design_flows_m3_s": {
+        "P0": 0.0,
+        "P1": 0.0,
+        "P2": 0.0,
+        "P3": 13.477658929151808
+      },
+      "priority_shares": {
+        "P0": 0.0,
+        "P1": 0.0,
+        "P2": 0.0,
+        "P3": 1.0
+      },
+      "zones": [
+        {
+          "zone": "PATROOM1_MULT10_FLR_3",
+          "priority": "P3",
+          "terminal": "PATROOM1_MULT10_FLR_3 VAV BOX COMPONENT",
+          "design_max_airflow_m3_s": 1.4864491254024184
+        },
+        {
+          "zone": "PATROOM2_FLR_3",
+          "priority": "P3",
+          "terminal": "PATROOM2_FLR_3 VAV BOX COMPONENT",
+          "design_max_airflow_m3_s": 0.24774152090040322
+        },
+        {
+          "zone": "PATROOM3_MULT10_FLR_3",
+          "priority": "P3",
+          "terminal": "PATROOM3_MULT10_FLR_3 VAV BOX COMPONENT",
+          "design_max_airflow_m3_s": 1.437030869264808
+        },
+        {
+          "zone": "PATROOM4_FLR_3",
+          "priority": "P3",
+          "terminal": "PATROOM4_FLR_3 VAV BOX COMPONENT",
+          "design_max_airflow_m3_s": 0.24774152090040336
+        },
+        {
+          "zone": "PATROOM5_MULT10_FLR_3",
+          "priority": "P3",
+          "terminal": "PATROOM5_MULT10_FLR_3 VAV BOX COMPONENT",
+          "design_max_airflow_m3_s": 1.486449125402419
+        },
+        {
+          "zone": "PATROOM6_FLR_3",
+          "priority": "P3",
+          "terminal": "PATROOM6_FLR_3 VAV BOX COMPONENT",
+          "design_max_airflow_m3_s": 0.1981932167203226
+        },
+        {
+          "zone": "PATROOM7_MULT10_FLR_3",
+          "priority": "P3",
+          "terminal": "PATROOM7_MULT10_FLR_3 VAV BOX COMPONENT",
+          "design_max_airflow_m3_s": 1.4370308692648064
+        },
+        {
+          "zone": "PATROOM8_FLR_3",
+          "priority": "P3",
+          "terminal": "PATROOM8_FLR_3 VAV BOX COMPONENT",
+          "design_max_airflow_m3_s": 0.19819321672032275
+        },
+        {
+          "zone": "PATROOM1_MULT10_FLR_4",
+          "priority": "P3",
+          "terminal": "PATROOM1_MULT10_FLR_4 VAV BOX COMPONENT",
+          "design_max_airflow_m3_s": 1.4864491254024184
+        },
+        {
+          "zone": "PATROOM2_FLR_4",
+          "priority": "P3",
+          "terminal": "PATROOM2_FLR_4 VAV BOX COMPONENT",
+          "design_max_airflow_m3_s": 0.24774152090040322
+        },
+        {
+          "zone": "PATROOM3_MULT10_FLR_4",
+          "priority": "P3",
+          "terminal": "PATROOM3_MULT10_FLR_4 VAV BOX COMPONENT",
+          "design_max_airflow_m3_s": 1.437030869264808
+        },
+        {
+          "zone": "PATROOM4_FLR_4",
+          "priority": "P3",
+          "terminal": "PATROOM4_FLR_4 VAV BOX COMPONENT",
+          "design_max_airflow_m3_s": 0.24774152090040336
+        },
+        {
+          "zone": "PATROOM5_MULT10_FLR_4",
+          "priority": "P3",
+          "terminal": "PATROOM5_MULT10_FLR_4 VAV BOX COMPONENT",
+          "design_max_airflow_m3_s": 1.486449125402419
+        },
+        {
+          "zone": "PATROOM6_FLR_4",
+          "priority": "P3",
+          "terminal": "PATROOM6_FLR_4 VAV BOX COMPONENT",
+          "design_max_airflow_m3_s": 0.1981932167203226
+        },
+        {
+          "zone": "PATROOM7_MULT10_FLR_4",
+          "priority": "P3",
+          "terminal": "PATROOM7_MULT10_FLR_4 VAV BOX COMPONENT",
+          "design_max_airflow_m3_s": 1.4370308692648064
+        },
+        {
+          "zone": "PATROOM8_FLR_4",
+          "priority": "P3",
+          "terminal": "PATROOM8_FLR_4 VAV BOX COMPONENT",
+          "design_max_airflow_m3_s": 0.19819321672032275
+        }
+      ]
+    },
+    {
+      "airloop": "VAV_LABS",
+      "fan": "VAV_LABS FAN",
+      "priority_design_flows_m3_s": {
+        "P0": 0.0,
+        "P1": 0.0,
+        "P2": 0.0,
+        "P3": 2.187958615170578
+      },
+      "priority_shares": {
+        "P0": 0.0,
+        "P1": 0.0,
+        "P2": 0.0,
+        "P3": 1.0
+      },
+      "zones": [
+        {
+          "zone": "LAB_FLR_3",
+          "priority": "P3",
+          "terminal": "LAB_FLR_3 VAV BOX COMPONENT",
+          "design_max_airflow_m3_s": 1.0913078979749073
+        },
+        {
+          "zone": "LAB_FLR_4",
+          "priority": "P3",
+          "terminal": "LAB_FLR_4 VAV BOX COMPONENT",
+          "design_max_airflow_m3_s": 1.0966507171956708
+        }
+      ]
+    },
+    {
+      "airloop": "CAV_KITCHEN",
+      "fan": "CAV_KITCHEN_ADDAQ_UNITARY_PACKAGE_FAN",
+      "priority_design_flows_m3_s": {
+        "P0": 0.0,
+        "P1": 0.0,
+        "P2": 0.0,
+        "P3": 1.0
+      },
+      "priority_shares": {
+        "P0": 0.0,
+        "P1": 0.0,
+        "P2": 0.0,
+        "P3": 1.0
+      },
+      "zones": []
+    },
+    {
+      "airloop": "CORRIDOR_FLR_5 EXHAUST FAN",
+      "fan": "CORRIDOR_FLR_5 EXHAUST FAN",
+      "priority_design_flows_m3_s": {
+        "P0": 0.0,
+        "P1": 0.0,
+        "P2": 0.0,
+        "P3": 1.0
+      },
+      "priority_shares": {
+        "P0": 0.0,
+        "P1": 0.0,
+        "P2": 0.0,
+        "P3": 1.0
+      },
+      "zones": [],
+      "scope": "remaining IDF exhaust fan, outside the registered critical zones"
+    },
+    {
+      "airloop": "DINING_FLR_5 EXHAUST FAN",
+      "fan": "DINING_FLR_5 EXHAUST FAN",
+      "priority_design_flows_m3_s": {
+        "P0": 0.0,
+        "P1": 0.0,
+        "P2": 0.0,
+        "P3": 1.0
+      },
+      "priority_shares": {
+        "P0": 0.0,
+        "P1": 0.0,
+        "P2": 0.0,
+        "P3": 1.0
+      },
+      "zones": [],
+      "scope": "remaining IDF exhaust fan, outside the registered critical zones"
+    },
+    {
+      "airloop": "KITCHEN_FLR_5 EXHAUST FAN",
+      "fan": "KITCHEN_FLR_5 EXHAUST FAN",
+      "priority_design_flows_m3_s": {
+        "P0": 0.0,
+        "P1": 0.0,
+        "P2": 0.0,
+        "P3": 1.0
+      },
+      "priority_shares": {
+        "P0": 0.0,
+        "P1": 0.0,
+        "P2": 0.0,
+        "P3": 1.0
+      },
+      "zones": [],
+      "scope": "remaining IDF exhaust fan, outside the registered critical zones"
+    },
+    {
+      "airloop": "NURSESTN_LOBBY_FLR_5 EXHAUST FAN",
+      "fan": "NURSESTN_LOBBY_FLR_5 EXHAUST FAN",
+      "priority_design_flows_m3_s": {
+        "P0": 0.0,
+        "P1": 0.0,
+        "P2": 0.0,
+        "P3": 1.0
+      },
+      "priority_shares": {
+        "P0": 0.0,
+        "P1": 0.0,
+        "P2": 0.0,
+        "P3": 1.0
+      },
+      "zones": [],
+      "scope": "remaining IDF exhaust fan, outside the registered critical zones"
+    },
+    {
+      "airloop": "OFFICE1_FLR_5 EXHAUST FAN",
+      "fan": "OFFICE1_FLR_5 EXHAUST FAN",
+      "priority_design_flows_m3_s": {
+        "P0": 0.0,
+        "P1": 0.0,
+        "P2": 0.0,
+        "P3": 1.0
+      },
+      "priority_shares": {
+        "P0": 0.0,
+        "P1": 0.0,
+        "P2": 0.0,
+        "P3": 1.0
+      },
+      "zones": [],
+      "scope": "remaining IDF exhaust fan, outside the registered critical zones"
+    },
+    {
+      "airloop": "OFFICE2_MULT5_FLR_5 EXHAUST FAN",
+      "fan": "OFFICE2_MULT5_FLR_5 EXHAUST FAN",
+      "priority_design_flows_m3_s": {
+        "P0": 0.0,
+        "P1": 0.0,
+        "P2": 0.0,
+        "P3": 1.0
+      },
+      "priority_shares": {
+        "P0": 0.0,
+        "P1": 0.0,
+        "P2": 0.0,
+        "P3": 1.0
+      },
+      "zones": [],
+      "scope": "remaining IDF exhaust fan, outside the registered critical zones"
+    },
+    {
+      "airloop": "OFFICE3_FLR_5 EXHAUST FAN",
+      "fan": "OFFICE3_FLR_5 EXHAUST FAN",
+      "priority_design_flows_m3_s": {
+        "P0": 0.0,
+        "P1": 0.0,
+        "P2": 0.0,
+        "P3": 1.0
+      },
+      "priority_shares": {
+        "P0": 0.0,
+        "P1": 0.0,
+        "P2": 0.0,
+        "P3": 1.0
+      },
+      "zones": [],
+      "scope": "remaining IDF exhaust fan, outside the registered critical zones"
+    },
+    {
+      "airloop": "OFFICE4_MULT6_FLR_5 EXHAUST FAN",
+      "fan": "OFFICE4_MULT6_FLR_5 EXHAUST FAN",
+      "priority_design_flows_m3_s": {
+        "P0": 0.0,
+        "P1": 0.0,
+        "P2": 0.0,
+        "P3": 1.0
+      },
+      "priority_shares": {
+        "P0": 0.0,
+        "P1": 0.0,
+        "P2": 0.0,
+        "P3": 1.0
+      },
+      "zones": [],
+      "scope": "remaining IDF exhaust fan, outside the registered critical zones"
+    }
+  ],
+  "fan_component_columns": {
+    "VAV_1": {
+      "power_column": "fan_component_VAV_1_kW",
+      "source_fan_key": "VAV_1 FAN",
+      "priority_shares": {
+        "P0": 0.0,
+        "P1": 0.12732698823102892,
+        "P2": 0.0,
+        "P3": 0.872673011768971
+      }
+    },
+    "VAV_2": {
+      "power_column": "fan_component_VAV_2_kW",
+      "source_fan_key": "VAV_2 FAN",
+      "priority_shares": {
+        "P0": 0.0,
+        "P1": 0.0,
+        "P2": 0.24115694265491275,
+        "P3": 0.7588430573450873
+      }
+    },
+    "VAV_ER": {
+      "power_column": "fan_component_VAV_ER_kW",
+      "source_fan_key": "VAV_ER FAN",
+      "priority_shares": {
+        "P0": 0.14285714285714296,
+        "P1": 0.5714285714285714,
+        "P2": 0.0,
+        "P3": 0.2857142857142856
+      }
+    },
+    "VAV_OR": {
+      "power_column": "fan_component_VAV_OR_kW",
+      "source_fan_key": "VAV_OR FAN",
+      "priority_shares": {
+        "P0": 1.0,
+        "P1": 0.0,
+        "P2": 0.0,
+        "P3": 0.0
+      }
+    },
+    "VAV_ICU": {
+      "power_column": "fan_component_VAV_ICU_kW",
+      "source_fan_key": "VAV_ICU FAN",
+      "priority_shares": {
+        "P0": 0.7056238335341792,
+        "P1": 0.29437616646582077,
+        "P2": 0.0,
+        "P3": 0.0
+      }
+    },
+    "VAV_PATRMS": {
+      "power_column": "fan_component_VAV_PATRMS_kW",
+      "source_fan_key": "VAV_PATRMS FAN",
+      "priority_shares": {
+        "P0": 0.0,
+        "P1": 0.0,
+        "P2": 0.0,
+        "P3": 1.0
+      }
+    },
+    "VAV_LABS": {
+      "power_column": "fan_component_VAV_LABS_kW",
+      "source_fan_key": "VAV_LABS FAN",
+      "priority_shares": {
+        "P0": 0.0,
+        "P1": 0.0,
+        "P2": 0.0,
+        "P3": 1.0
+      }
+    },
+    "CAV_KITCHEN": {
+      "power_column": "fan_component_CAV_KITCHEN_kW",
+      "source_fan_key": "CAV_KITCHEN_ADDAQ_UNITARY_PACKAGE_FAN",
+      "priority_shares": {
+        "P0": 0.0,
+        "P1": 0.0,
+        "P2": 0.0,
+        "P3": 1.0
+      }
+    },
+    "CORRIDOR_FLR_5 EXHAUST FAN": {
+      "power_column": "fan_component_CORRIDOR_FLR_5_EXHAUST_FAN_kW",
+      "source_fan_key": "CORRIDOR_FLR_5 EXHAUST FAN",
+      "priority_shares": {
+        "P0": 0.0,
+        "P1": 0.0,
+        "P2": 0.0,
+        "P3": 1.0
+      }
+    },
+    "DINING_FLR_5 EXHAUST FAN": {
+      "power_column": "fan_component_DINING_FLR_5_EXHAUST_FAN_kW",
+      "source_fan_key": "DINING_FLR_5 EXHAUST FAN",
+      "priority_shares": {
+        "P0": 0.0,
+        "P1": 0.0,
+        "P2": 0.0,
+        "P3": 1.0
+      }
+    },
+    "KITCHEN_FLR_5 EXHAUST FAN": {
+      "power_column": "fan_component_KITCHEN_FLR_5_EXHAUST_FAN_kW",
+      "source_fan_key": "KITCHEN_FLR_5 EXHAUST FAN",
+      "priority_shares": {
+        "P0": 0.0,
+        "P1": 0.0,
+        "P2": 0.0,
+        "P3": 1.0
+      }
+    },
+    "NURSESTN_LOBBY_FLR_5 EXHAUST FAN": {
+      "power_column": "fan_component_NURSESTN_LOBBY_FLR_5_EXHAUST_FAN_kW",
+      "source_fan_key": "NURSESTN_LOBBY_FLR_5 EXHAUST FAN",
+      "priority_shares": {
+        "P0": 0.0,
+        "P1": 0.0,
+        "P2": 0.0,
+        "P3": 1.0
+      }
+    },
+    "OFFICE1_FLR_5 EXHAUST FAN": {
+      "power_column": "fan_component_OFFICE1_FLR_5_EXHAUST_FAN_kW",
+      "source_fan_key": "OFFICE1_FLR_5 EXHAUST FAN",
+      "priority_shares": {
+        "P0": 0.0,
+        "P1": 0.0,
+        "P2": 0.0,
+        "P3": 1.0
+      }
+    },
+    "OFFICE2_MULT5_FLR_5 EXHAUST FAN": {
+      "power_column": "fan_component_OFFICE2_MULT5_FLR_5_EXHAUST_FAN_kW",
+      "source_fan_key": "OFFICE2_MULT5_FLR_5 EXHAUST FAN",
+      "priority_shares": {
+        "P0": 0.0,
+        "P1": 0.0,
+        "P2": 0.0,
+        "P3": 1.0
+      }
+    },
+    "OFFICE3_FLR_5 EXHAUST FAN": {
+      "power_column": "fan_component_OFFICE3_FLR_5_EXHAUST_FAN_kW",
+      "source_fan_key": "OFFICE3_FLR_5 EXHAUST FAN",
+      "priority_shares": {
+        "P0": 0.0,
+        "P1": 0.0,
+        "P2": 0.0,
+        "P3": 1.0
+      }
+    },
+    "OFFICE4_MULT6_FLR_5 EXHAUST FAN": {
+      "power_column": "fan_component_OFFICE4_MULT6_FLR_5_EXHAUST_FAN_kW",
+      "source_fan_key": "OFFICE4_MULT6_FLR_5 EXHAUST FAN",
+      "priority_shares": {
+        "P0": 0.0,
+        "P1": 0.0,
+        "P2": 0.0,
+        "P3": 1.0
+      }
+    }
+  },
+  "zone_multiplier_applied_to_component_flow": false,
+  "fan_allocation_basis": "IDF connected terminals, SQL ComponentSizes design maximum flow; research ownership assumption",
+  "chw_allocation_basis": "V20 current priority cooling request shares; original distribution electricity reassigned",
+  "heat_allocation_basis": "V20 current priority heat request shares; original DOE HeatSys1 pump added as separate circulation proxy",
+  "heat_pump_transfer_assumption": "DOE hot-water circulation electricity transferred to the scaled NMCSD-inspired heat delivery system; not a verified steam-network pump",
+  "zero_carrier_demand_allocation": "P3 retains measured idle pump electricity",
+  "fan_meter_max_abs_residual_kW": 8.526512829121202e-14,
+  "fan_annual_kWh": 799156.8080456634,
+  "chw_pump_annual_kWh": 5202.94444187192,
+  "added_heat_pump_annual_kWh": 120.14375036228721,
+  "all_other_existing_electricity": "remains in existing priority grouping, mostly P3; no parent/component double counting",
+  "excluded_duplicate_plant_electricity": "No extra condenser pump/tower fan power: existing EC .77 and ABS .14 kW/RT already include these",
+  "limitations": [
+    "No airflow/ACH/pressure/humidity compliance model",
+    "Power allocation is not independently switchable branch evidence",
+    "Recorded baseline pump power is a proxy; pump affinity and hydraulic laws are not modeled"
+  ],
+  "allocation_sha256": "f845d9d7c1dc131688951543381eb6e7c3020db8a8b088b38d01a1b64ab827b9"
+}

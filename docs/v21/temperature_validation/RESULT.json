@@ -1,0 +1,41 @@
+{
+  "status": "completed",
+  "pairs": 4,
+  "independent_source_dates": 4,
+  "sources_unchanged": true,
+  "original_parameters": {
+    "zone_name": "OR1_FLR_2",
+    "zone_multiplier": 1.0,
+    "volume_m3": 237.91,
+    "floor_area_from_volume_m2": 55.7388187334536,
+    "air_capacity_kWh_K": 0.07969984999999999,
+    "IDF_furniture_capacity_kWh_K": 3.03514101,
+    "effective_C_kWh_K": 1.5972703549999998,
+    "assumed_UA_kW_K": 0.0836082281001804,
+    "nominal_time_constant_h": 19.104224444107714,
+    "mass_participation": 0.5,
+    "effective_U_W_m2K": 1.5
+  },
+  "calibration_selected": {
+    "parameter": {
+      "zone_name": "OR1_FLR_2",
+      "zone_multiplier": 1.0,
+      "volume_m3": 237.91,
+      "floor_area_from_volume_m2": 55.7388187334536,
+      "air_capacity_kWh_K": 0.07969984999999999,
+      "IDF_furniture_capacity_kWh_K": 3.03514101,
+      "effective_C_kWh_K": 0.383213951,
+      "assumed_UA_kW_K": 0.278694093667268,
+      "nominal_time_constant_h": 1.375034346646463,
+      "mass_participation": 0.1,
+      "effective_U_W_m2K": 5.0
+    },
+    "calibration_mean_rmse_C": 1.0658233559258192
+  },
+  "production_core_parameters_changed": false,
+  "missing_scope": [
+    "No measured hospital temperatures",
+    "Same DOE building and TMY weather",
+    "One four-zone OR airloop; no clinical air quality or pressure certification"
+  ]
+}

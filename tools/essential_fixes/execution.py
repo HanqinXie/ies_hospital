@@ -350,6 +350,8 @@ class EssentialResponseMixin(LocalResponseMixin):
                 self.local_down=None
             self.segments[-1]['post_state']=clean(asdict(self.state))
             self.time=next_time
+            if hasattr(self,'_after_actual_segment'):
+                self._after_actual_segment(self.segments[-1],sol)
             if local_receipt.get('fuel_budget_exhausted'):
                 self._exhaust_diesel(local_receipt)
                 self.segments[-1]['post_state']=clean(asdict(self.state))

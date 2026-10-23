@@ -1,0 +1,67 @@
+{
+  "inputs_sha256": {
+    "inputs\\loads\\hospital_ies_demand_8760.csv": "0adc2c3f2cd82d600cd17b38e634eae7701710fff0a146e588482dd3cd0a0627",
+    "inputs\\loads\\critical_zones_8760.csv": "6577fa5bed87c5b53dae2a814231e8fbd98d34bf486ddb351224bedde60d88d6",
+    "inputs\\sci_engineering\\auxiliary_allocation_8760.csv": "f845d9d7c1dc131688951543381eb6e7c3020db8a8b088b38d01a1b64ab827b9",
+    "configs\\plant_configs.json": "cd45c357de1a54bb9d98477a082d4703a65e28b3109556fd1d6161fb1cd2f109"
+  },
+  "capacities": {
+    "GT_nominal_electric": [
+      960.0,
+      "kW_e",
+      "nominal 3 x 320 kW; ambient derating applies"
+    ],
+    "GT_annual_min_ambient_electric": [
+      810.48768,
+      "kW_e",
+      "same recorded outdoor temperatures; all 3 available"
+    ],
+    "GT_annual_max_ambient_electric": [
+      1051.91808,
+      "kW_e",
+      "same recorded outdoor temperatures; all 3 available"
+    ],
+    "DG_connected_electric": [
+      900.0,
+      "kW_e",
+      "finite shaft work reserve; not available before startup/contact"
+    ],
+    "grid_import": [
+      850.0,
+      "kW_e",
+      "resilience_assumptions.json common limit; contact/availability separate"
+    ],
+    "electric_chillers": [
+      2461.796988,
+      "kW_c",
+      "EC nominal capacity; power+common tower+CHW/fan path also needed"
+    ],
+    "absorption_chiller": [
+      703.3705679999999,
+      "kW_c",
+      "ABS nominal capacity; steam+electric auxiliaries+common tower+CHW/fan path needed"
+    ],
+    "total_chillers_nameplate": [
+      3165.167556,
+      "kW_c",
+      "sum of nameplate capacities only; coupled resources can reduce actual"
+    ],
+    "common_tower_rejection": [
+      4220.223408,
+      "kW_rejection",
+      "shared rejection not delivered cooling"
+    ],
+    "boiler_building_heat_upper": [
+      855.0,
+      "kW_h",
+      "boiler alone; before ABS steam competition"
+    ],
+    "HRSG_building_heat_upper": [
+      2484.850212518098,
+      "kW_h",
+      "3 GT full fraction; before ABS steam and conversion competition"
+    ]
+  },
+  "source": "annual static demand/capacity ledger; no scenario simulation",
+  "whole_hospital_all_EC_power_proxy_peak_kW": 1062.5437238648399
+}

@@ -41,7 +41,26 @@ def solve_physical(row,plant:Plant,loads:np.ndarray,availability:dict[str,float]
         if key not in accepted or not math.isfinite(float(value)) or float(value)<0:
             raise ValueError(f'Invalid v4 action target {key}={value}')
         targets[key]=(accepted[key],float(value)/(RT_TO_KW if key=='absorption_cooling_kW' else 1.))
+    sci_dependencies=bool((config or {}).get('sci_service_dependencies',False))
+    auxiliary_indices=None
     nvars=26+len(targets)
+    if sci_dependencies:
+        auxiliary_indices=np.arange(nvars,nvars+12).reshape(4,3)
+        nvars+=12
+    storage_ports=(config or {}).get('_sci_storage_ports')
+    storage_indices=None
+    if storage_ports is not None:
+        storage_names=('ups_discharge_kW','ups_charge_kW','cold_discharge_kW','cold_charge_kW')
+        allowed=set(storage_names)|{'cold_pump_kW_per_kW'}
+        if not isinstance(storage_ports,dict) or set(storage_ports)-allowed:
+            raise ValueError('Unknown finite storage port')
+        if any(not math.isfinite(float(v)) or float(v)<0. for v in storage_ports.values()):
+            raise ValueError('Invalid finite storage port')
+        storage_indices=dict(zip(storage_names,range(nvars,nvars+4)))
+        nvars+=4
+        if any(min(float(storage_ports.get(d,0.)),float(storage_ports.get(c,0.)))>1e-9
+               for d,c in (storage_names[:2],storage_names[2:])):
+            raise ValueError('Storage mode must exclude simultaneous charge/discharge')
     idx=lambda i,k:iu+i*3+k
     ppoints,spoints,fpoints=gt_level_properties(plant,float(row.outdoor_temperature_C))
     rated=float(ppoints[-1]);steam_per_kW=float(spoints[-1]/rated);fuel_per_kW=float(fpoints[-1]/rated)
@@ -70,6 +89,11 @@ def solve_physical(row,plant:Plant,loads:np.ndarray,availability:dict[str,float]
     for i in range(3):Aeq[1,i]=steam_per_kW*availability[f'HRSG_{i+1}']
     Aeq[1,ib]=1;Aeq[1,ia]=-plant.abs_steam_lb_per_rt;Aeq[1,iw]=-1
     Aeq[2,ia]=RT_TO_KW;Aeq[2,ie]=RT_TO_KW
+    if storage_indices is not None:
+        ud,uc,cd,cc=(storage_indices[name] for name in storage_names)
+        pump=float(storage_ports.get('cold_pump_kW_per_kW',0.))
+        Aeq[0,ud]=1.;Aeq[0,uc]=-1.;Aeq[0,cd]=Aeq[0,cc]=-pump
+        Aeq[2,cd]=1.;Aeq[2,cc]=-1.
     for i in range(4):
         Aeq[0,idx(i,0)]=1
         Aeq[1,idx(i,1)]=1/(plant.steam_kWh_per_lb*plant.exchanger_eff)
@@ -105,6 +129,12 @@ def solve_physical(row,plant:Plant,loads:np.ndarray,availability:dict[str,float]
         r=np.zeros(nvars);r[pindex]=1;r[26+k]=-1;cap(r,desired,name=f'tracking.{name}.positive',unit=unit,source='arrived action target preference')
         r=np.zeros(nvars);r[pindex]=-1;r[26+k]=-1;cap(r,-desired,name=f'tracking.{name}.negative',unit=unit,source='arrived action target preference')
     lows=np.zeros(nvars);highs=np.full(nvars,np.inf)
+    if storage_indices is not None:
+        for name,index in storage_indices.items():highs[index]=float(storage_ports.get(name,0.))
+        for port,carrier in ((ud,0),(cd,2)):
+            r=np.zeros(nvars);r[port]=1.
+            for g in (0,1):r[idx(g,carrier)]=1.
+            cap(r,float(loads[:2,carrier].sum()),name=f'storage.P0_P1_{carrier}_eligibility')
     for i in range(3):
         highs[i]=rated*availability[f'GT_{i+1}']
         highs[3+i]=1 if availability[f'GT_{i+1}']>0 else 0
@@ -142,6 +172,15 @@ def solve_physical(row,plant:Plant,loads:np.ndarray,availability:dict[str,float]
             highs[index]=min(highs[index],execution_action['electric_chiller_cooling_kW'][i]/RT_TO_KW)
     for i in range(4):
         for j in range(3):highs[idx(i,j)]=max(0,loads[i,j])
+    auxiliary_required=None
+    if sci_dependencies:
+        from tools.sci_engineering.service import add_dependency_constraints
+        def add_dependency(coefficients,lower,upper,name):
+            vector=np.zeros(nvars)
+            for index,value in coefficients.items():vector[index]=value
+            cap(vector,upper,lower,name=name,source='M21 necessary building auxiliary electricity')
+        auxiliary_required=add_dependency_constraints(row,loads,availability,auxiliary_indices,
+            np.arange(iu,iu+12).reshape(4,3),add_dependency,highs)
     integral=np.zeros(nvars,dtype=int);integral[go]=1
     constraints=[LinearConstraint(Aeq,beq,beq),LinearConstraint(np.asarray(A),np.asarray(low),np.asarray(high))]
     # Opt-in snapshots preserve exact solver arrays before any clipping. The
@@ -154,6 +193,12 @@ def solve_physical(row,plant:Plant,loads:np.ndarray,availability:dict[str,float]
         f'{g}.unserved.{carrier}' for g in GROUPS for carrier in CARRIERS]+[f'tracking.{name}.absolute_error' for name in targets]
     units=['kW']*3+['binary']*3+['RT']*4+['lb/h','kW','kW','lb/h']+['kW']*12+[
         'RT' if value[0]==ia else 'kW' for value in targets.values()]
+    if sci_dependencies:
+        from tools.sci_engineering.service import KINDS
+        variable_names += [f'P{i}.{kind}.actual_electric' for i in range(4) for kind in KINDS]
+        units += ['kW']*12
+    if storage_indices is not None:
+        variable_names += list(storage_names);units += ['kW']*4
     variables=[dict(index=i,name=name,unit=units[i]) for i,name in enumerate(variable_names)]
     diagnostic_input={}
     if active_collector() is not None:
@@ -164,8 +209,12 @@ def solve_physical(row,plant:Plant,loads:np.ndarray,availability:dict[str,float]
             security_gt_penalty_USD_per_kWh=security_weight,execution_action=execution_action,execution_contract=execution_contract)
     locks=[]
     lex_values=[];x=None;optimizer_warning='';backend_layers=[]
-    for group in range(5):
-        c=np.zeros(nvars) if group<4 else c_cost.copy()
+    charge_active=storage_indices is not None and (highs[uc]>0. or highs[cc]>0.)
+    for group in range(6 if charge_active else 5):
+        charging_layer=charge_active and group==4
+        c=np.zeros(nvars) if group<4 or charging_layer else c_cost.copy()
+        if charging_layer:
+            c[uc]=-1.;c[cc]=-1.
         if group<4:
             for k in range(3):c[idx(group,k)]=1/max(1.,float(loads[:,k].sum()))
         # Native backend retains explicit five layers and the unchanged locks.
@@ -184,13 +233,17 @@ def solve_physical(row,plant:Plant,loads:np.ndarray,availability:dict[str,float]
             failure.solver_backend_attempts=backend_layers
             raise failure
         x=res.x
-        if group<4:
+        if group<4 or charging_layer:
             val=float(c@x);lex_values.append(val)
-            tol=lex_lock_tolerance(group,val,config)
+            tol=1e-7 if charging_layer else lex_lock_tolerance(group,val,config)
             constraints.append(LinearConstraint(c,-np.inf,val+tol))
-            locks.append(dict(source_rank=group,objective=c.copy(),objective_constant=0.,incumbent_raw_objective=val,
-                              tolerance=tol,upper=val+tol,relation='<=',unit='normalized carrier ENS',source='raw incumbent c@x'))
-            row_metadata.append(dict(name=f'priority.{GROUPS[group]}.normalized_ENS.upper',unit='dimensionless',
+            if not charging_layer:
+                # This diagnostic list is specifically nonnegative ENS locks.
+                # The recharge lock remains an explicit constraint/metadata
+                # row, not an ENS implication for the backend preconditioner.
+                locks.append(dict(source_rank=group,objective=c.copy(),objective_constant=0.,incumbent_raw_objective=val,
+                                  tolerance=tol,upper=val+tol,relation='<=',unit='normalized carrier ENS',source='raw incumbent c@x'))
+            row_metadata.append(dict(name='storage.recharge_after_all_service' if charging_layer else f'priority.{GROUPS[group]}.normalized_ENS.upper',unit='dimensionless',
                                      source=f'raw rank {group} objective plus original tolerance',kind='priority_lock'))
     gts=np.maximum(0.,np.asarray(x[gp]))
     lost=np.maximum(0.,np.asarray([[x[idx(i,k)] for k in range(3)] for i in range(4)]))
@@ -202,6 +255,9 @@ def solve_physical(row,plant:Plant,loads:np.ndarray,availability:dict[str,float]
     served=loads-lost
     e_actual=float(gts.sum()+x[ig]+x[idg]-x[ia]*plant.abs_electric_kW_per_rt-x[ie].sum()*plant.ec_electric_kW_per_rt)
     c_actual=float((x[ia]+x[ie].sum())*RT_TO_KW)
+    if storage_indices is not None:
+        e_actual+=float(x[ud]-x[uc]-pump*(x[cd]+x[cc]))
+        c_actual+=float(x[cd]-x[cc])
     steam_actual=sum(gts[i]*steam_per_kW*availability[f'HRSG_{i+1}'] for i in range(3)) +x[ib]-x[ia]*plant.abs_steam_lb_per_rt-x[iw]
     steam_residual_lbph=steam_actual-float(served[:,1].sum())/(plant.steam_kWh_per_lb*plant.exchanger_eff)
     steam_residual_kW=steam_residual_lbph*plant.steam_kWh_per_lb*plant.exchanger_eff
@@ -214,15 +270,23 @@ def solve_physical(row,plant:Plant,loads:np.ndarray,availability:dict[str,float]
             'boiler_steam_lbph':float(x[ib]),
             'hrsg_steam_lbph':float(sum(gts[i]*steam_per_kW*availability[f'HRSG_{i+1}'] for i in range(3))),
             'tower_rejection_kW':float(tower@x),'gt_fuel_MMBtu_h':float(gts.sum()*fuel_per_kW)}
+    if storage_indices is not None:
+        action.update({name:float(x[index]) for name,index in storage_indices.items()})
+        action['cold_storage_pump_kW']=float(pump*(x[cd]+x[cc]))
     # Tracking deviations are artificial controller penalties, not actual
     # gas/electricity/diesel expenditure. Keep them separate for publications.
     security_penalty=float(security_weight*dt_h*gts.sum())
     operating_cost=float(c_cost[:26]@x[:26])-security_penalty
-    tracking_penalty=float(c_cost[26:]@x[26:])
+    tracking_penalty=float(c_cost[26:26+len(targets)]@x[26:26+len(targets)])
     return {'action':action,'lost':lost,'served':served,'lex_values':lex_values,
             'cost_USD_step':operating_cost,'tracking_penalty_USD_step':tracking_penalty,
             'optimization_objective_USD_step':operating_cost+tracking_penalty+security_penalty,
             'security_objective_penalty_USD_step':security_penalty,
             'energy_balance_residuals':residuals,
             'steam_balance_residual_lbph':steam_residual_lbph,'optimizer_warning':optimizer_warning,
-            'solver_backend_layers':backend_layers}
+            'solver_backend_layers':backend_layers,
+            **({'service_dependencies':dict(auxiliary_required_kW=auxiliary_required.tolist(),
+                auxiliary_delivered_kW=np.asarray(x[auxiliary_indices]).tolist(),
+                direct_electric_delivered_kW=(served[:,0]-np.sum(x[auxiliary_indices],axis=1)).tolist(),
+                semantics='aggregate fan and distribution power are necessary for actual thermal delivery; existing electricity reallocated')}
+                if sci_dependencies else {})}
