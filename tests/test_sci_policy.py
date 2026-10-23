@@ -94,7 +94,7 @@ def test_mechanism_switches_change_independent_solver_order(problem, reserve, pr
     readiness = context(p, diesel_connected=True, diesel_arrived_cap_kW=900.)
     result = api('planner').solve_joint(**p, readiness_context=readiness, coordination_options=cfg)
     order = result['joint_diagnostic']['objective_order']
-    service = order.index('current_P2')
+    service = order.index('arrived_current_P2')
     preparation = order.index('preparation_P0')
     assert (preparation < service) is prepare
     assert ('current_critical_energy_reserve' in order) is reserve
@@ -124,16 +124,30 @@ def test_fixed_hours_and_adaptive_release_are_transparent_and_finite():
 
 
 @pytest.mark.parametrize('grid,energy', [(0.,2400.),(1.,2400.),(0.,0.)])
-def test_C_migration_matches_upstream_C19_without_dependencies(problem, grid, energy):
+def test_C_migration_retains_C19_mechanisms_with_corrected_current_priority(problem, grid, energy):
     from tools.model_closeout import planner as original
     p = copy.deepcopy(problem)
     p['availability']['GRID'] = grid
     p['state'].diesel_energy_remaining_kWh = energy
     old = original.solve_joint(**p, readiness_context=context(p), coordination_options={'critical_reserve':True})
     new = api('planner').solve_joint(**p, readiness_context=context(p), coordination_options=api().policy_config('C'))
-    for key in old['action']:
-        np.testing.assert_allclose(old['action'][key], new['action'][key], rtol=0., atol=1e-7)
-    assert old['joint_diagnostic']['objective_order'] == new['joint_diagnostic']['objective_order']
+    # Exact old actions/order would preserve the proved target-before-ready
+    # defect. Keep the old implementation as a reference, but require the
+    # same strong mechanism goals and no loss of current critical priority.
+    before=old['joint_diagnostic'];after=new['joint_diagnostic']
+    assert set(before['objective_order'])==set(after['objective_order'])
+    assert set(before['risk_scenarios'])==set(after['risk_scenarios'])
+    order=after['objective_order']
+    assert order.index('arrived_current_P1')<order.index('current_P0')
+    options=after['coordination']['options']
+    assert all(options[key] for key in ('legacy_C19_order','reserve_enabled',
+        'critical_preparation_first','cooling_preparation','time_energy_preparation','execution_recovery'))
+    scale=np.maximum(1.,p['loads'].sum(axis=0))
+    a=np.asarray(before['risk_scenarios']['arrived_current']['unserved_kW'])/scale
+    b=np.asarray(after['risk_scenarios']['arrived_current']['unserved_kW'])/scale
+    assert b[0].sum()<=a[0].sum()+1e-7
+    if abs(b[0].sum()-a[0].sum())<=1e-7:
+        assert b[1].sum()<=a[1].sum()+1e-7
 
 
 def test_R_refuses_missing_immutable_plant_and_bad_direct_dispatch():

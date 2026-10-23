@@ -269,10 +269,7 @@ def solve_joint(row, plant, loads, availability, state, dt_h,
     Risk surplus is never returned as a real action or included in main balance.
     """
     coordination = validate_coordination_options(coordination_options)
-    if coordination['policy_mode'] == 'current':
-        return _solve_current(row, plant, loads, availability, state, dt_h, grid_import_limit_kW,
-            diesel_start_available, gt_ramp_kW_per_h, solver_time_limit_sec, config, tracking_targets,
-            security_gt_penalty_USD_per_kWh, execution_contract, coordination, execution_limits)
+    current_only = coordination['policy_mode'] == 'current'
     if type(grid_bridge_request) is not bool:raise ValueError('grid_bridge_request must be a current-state boolean')
     recovery = coordination['execution_recovery']
     execution_limits = None if execution_limits is None else validate_execution_limits(execution_limits)
@@ -295,6 +292,12 @@ def solve_joint(row, plant, loads, availability, state, dt_h,
     # C optimizes preparation before normal GT-count/continuity preferences.
     # Old E/K1 combination locks remain in their immutable planner route.
     engineering['execution_aware_commitment_preference'] = False
+    if current_only:
+        # M omits future preparation preferences, not observed execution limits.
+        # Keep the same compiler/readiness domain and separate queued targets.
+        engineering.update(mode='service_restore', continuity=False,
+            execution_aware_start_preference=False, grid_headroom_preference=False,
+            diagnose_full_supply=False, diagnose_hold_combination=False)
     context = _context(execution_context, state, loads)
     # Persistent arrived permissions survive outages. Held copies instead use
     # the current actuator settings/caps; sampled GT/DG outputs remain separate.
@@ -311,6 +314,8 @@ def solve_joint(row, plant, loads, availability, state, dt_h,
             raise ValueError('Conflicting connection modes')
         requested_options['connection_mode'] = connection_mode
     options = _options(requested_options)
+    if current_only:
+        options.update(handoff_enabled=False, preserve_one_gt_standby=False)
     options['critical_reserve_multiplier'] = profile['critical_multiplier']
     if not options['features_enabled']:
         raise ValueError('Engineering requests cannot disable their versioned contract')
@@ -475,6 +480,12 @@ def solve_joint(row, plant, loads, availability, state, dt_h,
             # A conditional target for the observed return process, without an
             # R-minute readiness promise. Real OPEN still waits for actual GT.
             cases.append(('grid_open_target',loads))
+    if current_only:
+        # Only service at observed execution stages. No hypothetical fault,
+        # registered response deadline, bridge reserve or future load copy.
+        cases = [('arrived_current', loads)]
+        if regulator_active:cases.append(('regulated_current', loads))
+        cases.append(('held_actual', loads))
     shared_response_gt=(np.array([allocate(f'phase.shared_response.GT_{i+1}.target','kW') for i in range(3)])
         if coordination['time_energy_preparation'] else None)
     shared_response_on=(np.array([allocate(f'phase.shared_response.GT_{i+1}.ready','binary') for i in range(3)])
@@ -954,7 +965,7 @@ def solve_joint(row, plant, loads, availability, state, dt_h,
                     backend=getattr(result,'backend','injected'),numerical_version=getattr(result,'numerical_version',None),
                     presentation='positive_row_scaling_same_original_domain',status=int(result.status),
                     attempts=getattr(result,'attempts',[])))
-        if name == 'current_P0' and result.status == 2 and np.any(lower[go] > 0.) and not safety_release:
+        if name == 'arrived_current_P0' and result.status == 2 and np.any(lower[go] > 0.) and not safety_release:
             # A minimum-run requirement can conflict with no-export balance.
             # Ask for a safety exit explicitly; execution still applies its
             # ordinary-stop hold or actual forced interlock. No supply is added.
@@ -1063,18 +1074,11 @@ def solve_joint(row, plant, loads, availability, state, dt_h,
         co = vector(); case = phase_copies[phase]
         for k in range(3):co[case['unmet']+group*3+k] = 1./max(1.,float(loads[:,k].sum()))
         return (f'{phase}_{GROUPS[group]}',co,'normalized conditional current carrier ENS at the named execution stage',None)
-    # Original normalized P0/P1 locks precede every new preference/guard.
-    run_layer(priority_objective(0)); run_layer(priority_objective(1))
-    if 'arrived_current' in phase_copies:
-        run_layer(phase_objective(0),tolerance_override=0.)
-        run_layer(phase_objective(1),tolerance_override=0.)
-    if 'regulated_current' in phase_copies:
-        run_layer(phase_objective(0,'regulated_current'),tolerance_override=0.)
-        run_layer(phase_objective(1,'regulated_current'),tolerance_override=0.)
-    # Request continuity is subordinate to the unchanged present P0/P1 service
-    # locks. A zero request cut is never credited as physical delivered energy.
-    # Keep these mandatory before any recoverable late soft solver stop.
+    # Executable current critical service is protected before any conditional
+    # command target, even a higher-grade target that needs a new GT startup.
+    # regulated_current is a local-down endpoint, not already-ready delivery.
     for group in (0, 1):
+        run_layer(phase_objective(group),tolerance_override=0.)
         request = vector()
         for carrier in range(3):
             request[contacts[group, carrier]] = 1. / max(1., float(loads[:, carrier].sum()))
@@ -1082,18 +1086,27 @@ def solve_joint(row, plant, loads, availability, state, dt_h,
                    'normalized explicitly disconnected carrier request', None), tolerance_override=0.)
     priority_constraints = list(constraints)
     priority_locks = copy.deepcopy(locks); priority_metadata = copy.deepcopy(metadata)
-    reference_values = list(lex_values)
-    for group in (2, 3):reference_values[group] = run_layer(priority_objective(group, 'reference'), reference=True)
-    run_layer(('reference_operating_cost', cost, 'USD per current step', None), reference=True)
+    conditional_critical=[];conditional_general=[]
+    for group in range(4):
+        target = conditional_critical if group<2 else conditional_general
+        target.append(priority_objective(group))
+        if 'regulated_current' in phase_copies:
+            target.append(phase_objective(group,'regulated_current'))
+    current_general=[phase_objective(group) for group in (2,3)]
+    reference_items=(current_general+
+        [priority_objective(group,'reference') for group in range(4)]+
+        [('reference_operating_cost', cost, 'USD per current step', None)])
+    for item in reference_items:
+        run_layer(item,reference=True,tolerance_override=0. if item[0].startswith('arrived_current_') else None)
     reference_x = x.copy()
+    reference_values=[float(priority_objective(group)[1]@reference_x) for group in range(4)]
     reference_unserved = reference_x[14:26].reshape(4, 3).copy()
-    for layer, item in zip(reference_layers, [priority_objective(2), priority_objective(3),
-                                            ('reference_operating_cost', cost, 'USD per current step', None)]):
+    for layer, item in zip(reference_layers, reference_items):
         layer['final_objective_value'] = float(item[1]@reference_x)
     if active_collector() is not None:active_collector().postprocess(reference_x.copy())
 
-    # Remove ONLY temporary P2/P3/cost locks. Physical rows and original P0/P1
-    # canonical locks are copied without changing any value or tolerance.
+    # Remove only temporary reference locks. Actual P0/P1 service and request
+    # locks, physical rows and all original tolerances remain unchanged.
     constraints[:] = priority_constraints
     locks[:] = priority_locks; metadata[:] = priority_metadata
     allowed_budget = np.zeros((2, 3))
@@ -1192,11 +1205,7 @@ def solve_joint(row, plant, loads, availability, state, dt_h,
         p0_preparation_before_commitment_requested=engineering['p0_preparation_before_commitment'],
         p0_preparation_before_commitment_active=bool(p0_preparation),
         p0_preparation_layers_before_commitment=[item[0] for item in p0_preparation])
-    service = [priority_objective(2), priority_objective(3)]
-    if 'arrived_current' in phase_copies:
-        service += [phase_objective(2),phase_objective(3)]
-    if 'regulated_current' in phase_copies:
-        service += [phase_objective(2,'regulated_current'),phase_objective(3,'regulated_current')]
+    service = current_general
     # Both registered critical preparation layers precede continuity. Current
     # healthy P0--P3 and pre-ready service remain ahead of preparation.
     command_support_preference = []
@@ -1236,14 +1245,18 @@ def solve_joint(row, plant, loads, availability, state, dt_h,
         preparation_first = (reserve_active if coordination['legacy_C19_order']
             else coordination['critical_preparation_first'])
         if preparation_first:
-            ordered=(common+bridge_preparation+critical_preparation+reserve_preference+service+
-                other_preparation+commitment_preference+third_GT+endpoint_DG_preference+online_count)
+            ordered=(common+conditional_critical+bridge_preparation+critical_preparation+reserve_preference+service+
+                conditional_general+other_preparation+commitment_preference+third_GT+endpoint_DG_preference+online_count)
         else:
-            ordered=(common+reserve_preference+service+bridge_preparation+preparation+
+            ordered=(common+reserve_preference+service+conditional_critical+conditional_general+bridge_preparation+preparation+
                 commitment_preference+third_GT+endpoint_DG_preference+online_count)
     else:
-        ordered = (preparation+command_support_preference+service+standby if endurance_active else
-            service+preparation+commitment_preference+standby)
+        ordered = (preparation+command_support_preference+service+conditional_critical+conditional_general+standby if endurance_active else
+            service+conditional_critical+conditional_general+preparation+commitment_preference+standby)
+    if current_only:
+        # The common present protection preference remains behind P0/P1.
+        # M adds neither reserve nor any post-incident preparation preference.
+        ordered = (protection_preference if recovery else [])+service+conditional_critical+conditional_general
     # A normalized P2/P3 lock allowance would become a real contact cut and
     # stack with the unchanged fixed-execution remainder. Preserve the new
     # current service optima exactly; original P0/P1/reference locks stay intact.
@@ -1607,6 +1620,16 @@ def solve_joint(row, plant, loads, availability, state, dt_h,
         original_auxiliary_kW_bound_validation=auxiliary_bound_validation,
         current_auxiliary_required_kW=current_required.tolist() if dependency_enabled else None,
         current_auxiliary_served_kW=(current_required*x[current_aux]).tolist() if dependency_enabled else None)
+    diagnostic['current_priority_contract']=dict(schema='sci_engineering.executable_before_conditional.v21.v1',
+        immediate_current_stage='arrived_current',immediate_critical_order=['P0','P1'],
+        all_immediate_critical_locks_precede_conditional_targets=True,
+        legacy_current_layer_names_mean='conditional command target with current demands, not measured delivery',
+        regulated_current_semantics='conditional local-down endpoint; may include unready command targets',
+        regulated_endpoint_is_immediate_supply=False,
+        M_all_immediate_grades_precede_conditional_targets=current_only,
+        general_service_order=['arrived_current_P2','arrived_current_P3'],
+        preparation_reserve_relative_general_order_unchanged=True,
+        common_C19_priority_migration=True,physical_constraints_and_tolerances_unchanged=True)
     diagnostic['model_closeout']=dict(critical_reserve_active=reserve_active,
         critical_reserve_rule=reserve_rule,critical_reserve_support=reserve_support,
         critical_reserve_excess_kWh=None if reserve_excess is None else float(x[reserve_excess]),
@@ -1712,6 +1735,16 @@ def solve_joint(row, plant, loads, availability, state, dt_h,
     readiness_phases['committed_ready']['preparation_scenarios']=diagnostic['coordination']['eventual_scenarios']
     readiness_phases['response_within_registered_bound']=dict(**response,
         preparation_scenarios=diagnostic['coordination']['response_scenarios'])
+    if current_only:
+        return _finish_current_plan(x=x, command_action=command_action, diagnostic=diagnostic,
+            copies=copies, risk_records=risk_records, loads=loads, hrsg=hrsg,
+            steam_per_kW=steam_per_kW, fuel_per_kW=fuel_per_kW, heat_factor=heat_factor,
+            operating=operating, cost=cost, security_coefficient=security_weight*dt_h,
+            command_disconnected=command_disconnected,
+            backend_layers=backend_layers, optimizer_warning=('Allowlisted late preference failed; '
+                'strictly validated prior command retained; failed preferences not optimized'
+                if late_preference_fallbacks else ''), execution_limits=execution_limits,
+            grid_import_limit_kW=grid_import_limit_kW, plant=plant, availability=availability)
     return dict(action=command_action, planned_current_action=current_action, lost=lost, served=served,
         command_disconnected=command_disconnected, planned_unserved=lost.copy(),
         lex_values=lex_values, cost_USD_step=float(operating@x), tracking_penalty_USD_step=tracking_penalty,
@@ -1721,36 +1754,66 @@ def solve_joint(row, plant, loads, availability, state, dt_h,
             if late_preference_fallbacks else ''), solver_backend_layers=backend_layers, joint_diagnostic=diagnostic)
 
 
-def _solve_current(row, plant, loads, availability, state, dt_h, grid_import_limit_kW,
-                   diesel_start_available, gt_ramp_kW_per_h, solver_time_limit_sec,
-                   config, tracking_targets, security_gt_penalty_USD_per_kWh,
-                   execution_contract, coordination, execution_limits=None):
-    """Current P0--P3 service and cost only, with no stress/preparation copies."""
-    from tools.operating_response.physical_balance import solve_physical
-    result=solve_physical(row,plant,np.asarray(loads,float),availability,state,dt_h,
-        grid_import_limit_kW,diesel_start_available,gt_ramp_kW_per_h,solver_time_limit_sec,
-        config,tracking_targets,security_gt_penalty_USD_per_kWh,
-        execution_contract=execution_contract)
-    result['planned_current_action']=copy.deepcopy(result['action'])
-    limits = validate_execution_limits(execution_limits) if execution_limits is not None else None
-    if limits is not None:
-        # The observed healthy upstream interface may be conditionally
-        # permitted while its local transfer gate still masks actual supply.
-        # This does not credit GRID in the solved current service balance.
-        result['action']=copy.deepcopy(result['action'])
-        result['action']['grid_import_kW']=grid_import_limit_kW*limits['hardware_grid_available_fraction']
-        if limits['grid_bus_state'] != 'GRID' and limits['diesel_conditionally_permitted']:
-            result['action']['diesel_kW']=plant.emergency_diesel_kW*availability['DIESEL']
-        elif limits['grid_bus_state'] == 'GRID':
-            result['action']['diesel_kW']=0.
-    result['command_disconnected']=np.zeros((4,3))
-    result['joint_diagnostic']=dict(schema='sci_engineering.current_only_command.v21.v1',
-        objective_order=['current_P0','current_P1','current_P2','current_P3','current_operating_cost'],
-        planned_unserved_kW=np.asarray(result['lost']).tolist(),risk_scenarios={},
-        sci=dict(policy_mode='current',reserve_enabled=False,critical_preparation_first=False,
-            reserve_rule='none',physical_model_shared=True,policy_identity_used_for_physics=False,
-            observed_hardware_conditional_permission=limits is not None,
-            permission_is_actual_supply=False),
-        engineering=dict(service_order=['P0','P1','P2','P3'],current_only=True),
-        coordination=dict(options=copy.deepcopy(coordination)),planning_is_not_execution=True)
-    return result
+def _finish_current_plan(*, x, command_action, diagnostic, copies, risk_records, loads,
+                         hrsg, steam_per_kW, fuel_per_kW, heat_factor, operating, cost, security_coefficient,
+                         command_disconnected, backend_layers, optimizer_warning,
+                         execution_limits, grid_import_limit_kW, plant, availability):
+    """Expose current-ready delivery separately from legal queued GT targets.
+
+    The shared master still permits a lawful OFF->STARTING request. Its
+    conditional target balance is not reported as current delivered service.
+    Actual dispatch remains subject to arrival, startup and protection gates.
+    """
+    case = next(case for case in copies if case['name'] == 'arrived_current')
+    ready = risk_records['arrived_current']
+    current = x.copy()
+    current[:3] = ready['gt_electric_kW']
+    current[6:10] = np.r_[ready['absorption_cooling_kW'],ready['electric_chiller_cooling_kW']]/RT_TO_KW
+    current[11] = ready['grid_import_kW']; current[12] = ready['diesel_kW']
+    current[13] = x[case['steam']]
+    lost = np.asarray(ready['unserved_kW'],float)
+    current[14:26] = lost.reshape(-1)
+    powers = current[:3]
+    current_action = dict(gt_electric_kW=powers.tolist(),grid_import_kW=float(current[11]),
+        diesel_kW=float(current[12]),boiler_steam_lbph=float(current[10]),
+        absorption_cooling_kW=float(current[6]*RT_TO_KW),
+        electric_chiller_cooling_kW=(current[7:10]*RT_TO_KW).tolist(),
+        hrsg_steam_lbph=float(powers@hrsg*steam_per_kW),
+        tower_rejection_kW=float(current[6]*(RT_TO_KW+plant.abs_steam_lb_per_rt*plant.steam_kWh_per_lb)
+            +current[7:10].sum()*(RT_TO_KW+plant.ec_electric_kW_per_rt)),
+        gt_fuel_MMBtu_h=float(powers.sum()*fuel_per_kW))
+    command = copy.deepcopy(command_action)
+    if execution_limits is not None:
+        command['grid_import_kW']=grid_import_limit_kW*execution_limits['hardware_grid_available_fraction']
+        if execution_limits['grid_bus_state'] != 'GRID' and execution_limits['diesel_conditionally_permitted']:
+            command['diesel_kW']=plant.emergency_diesel_kW*availability['DIESEL']
+        elif execution_limits['grid_bus_state'] == 'GRID':command['diesel_kW']=0.
+    # Keep current-phase evidence; no hypothetical scenarios are optimized.
+    diagnostic['conditional_target_unserved_kW']=diagnostic['planned_unserved_kW']
+    diagnostic.update(schema='sci_engineering.current_only_command.v21.v2',
+        planned_unserved_kW=lost.tolist(),risk_scenarios={},
+        current_service_phases=copy.deepcopy(risk_records),planning_is_not_execution=True,
+        standby_soft_preference_active=False,preserve_one_gt_standby=False,
+        handoff_enabled=False,coordination_preference='current_service_only')
+    diagnostic['sci'].update(observed_hardware_conditional_permission=execution_limits is not None,
+        permission_is_actual_supply=False,current_readiness_constraints_shared=True)
+    if diagnostic['sci']['dependency_enabled']:
+        diagnostic['conditional_target_auxiliary_served_kW']=diagnostic['sci']['current_auxiliary_served_kW']
+        diagnostic['sci']['current_auxiliary_served_kW']=(case['sci_required']*x[case['sci_aux']]).tolist()
+    diagnostic['engineering'].update(current_only=True,
+        connected_unserved_kW=np.maximum(0.,lost-command_disconnected).tolist(),
+        planned_current_supply_basis='observed_running_GT_same_ordinary_target_before_new_start_ready')
+    diagnostic['coordination']=dict(options=diagnostic['coordination']['options'],
+        reserve_active=False,preparation_scenarios={},response_constraints_active=False,
+        time_energy_constraints_active=False,cooling_constraints_active=False)
+    diagnostic['readiness_phases'].pop('response_within_registered_bound',None)
+    residual=case['balance']@x-case['rhs']
+    lex_values=[float(sum(lost[g,k]/max(1.,float(loads[:,k].sum())) for k in range(3))) for g in range(4)]
+    security=float(security_coefficient*powers.sum())
+    return dict(action=command,planned_current_action=current_action,lost=lost,served=loads-lost,
+        command_disconnected=command_disconnected,planned_unserved=lost.copy(),lex_values=lex_values,
+        cost_USD_step=float(operating@current),tracking_penalty_USD_step=float((cost-operating)@current)-security,
+        optimization_objective_USD_step=float(cost@x),security_objective_penalty_USD_step=security,
+        energy_balance_residuals=[float(residual[0]),float(residual[2]),float(residual[1]*heat_factor)],
+        steam_balance_residual_lbph=float(residual[1]),optimizer_warning=optimizer_warning,
+        solver_backend_layers=backend_layers,joint_diagnostic=diagnostic)

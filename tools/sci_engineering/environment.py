@@ -15,7 +15,7 @@ from tools.operating_response.physical_balance import solve_physical
 from tools.operating_response import environment as operating
 from . import MODEL_ID,CONTRACT_ID
 from .auxiliary import compute_auxiliary_allocation,apply_auxiliary_allocation
-from .service import dependency_requirements
+from .service import dependency_requirements,fan_independent_heat_bound
 from .storage import FiniteStore
 
 DEFAULT_ENGINEERING=dict(configuration_id='H0',ups={},cold_store={},cold_pump_kW_per_kW=.02,
@@ -79,6 +79,9 @@ class EngineeringCore(LoadAccountingCore):
 
     def _hardware_data_at(self,minute):
         h,row,loads,f=super()._hardware_data_at(minute)
+        if not hasattr(row,'Q_h_DHW_water_use_kW'):
+            raise ValueError('Actual M21 source row lacks Q_h_DHW_water_use_kW decomposition')
+        original_P3_heat=float(getattr(row,'P3_reference_h_kW',loads[3,1]))
         clinical=np.zeros((4,3));auxiliary_increment=np.zeros(4)
         shock_start,shock_end=event_window(self.env.scenario,'shock')
         if shock_start<=minute<shock_end and self.env.scenario.get('shock_by_zone'):
@@ -102,6 +105,12 @@ class EngineeringCore(LoadAccountingCore):
             row=SimpleNamespace(**data)
         if hasattr(row,'_asdict'):row=SimpleNamespace(**row._asdict())
         row.sci_clinical_increment_kW=clinical.tolist();row.sci_auxiliary_increment_kW=auxiliary_increment.tolist()
+        row.sci_heat_decomposition_required=True
+        row.sci_heat_decomposition_source=dict(path='inputs/loads/hospital_ies_demand_8760.csv',
+            sha256=self.env.auxiliary_metadata['root_input_sha256']['inputs/loads/hospital_ies_demand_8760.csv'],
+            hour_of_year=int(h),DHW_column='Q_h_DHW_water_use_kW',
+            source_DHW_kW=float(row.Q_h_DHW_water_use_kW),original_P3_h_kW=original_P3_heat)
+        fan_independent_heat_bound(row,loads) # reject invalid actual source trace before any solve
         f=dict(f);start,end=event_window(self.env.scenario,'fault')
         faults=self.env.scenario.get('auxiliary_faults',{}) if start<=minute<end else {}
         for g in range(4):
@@ -122,7 +131,8 @@ class EngineeringCore(LoadAccountingCore):
         auxiliary={k:v for k,v in f.items() if k.startswith('AUX_')}
         value['availability']={k:v for k,v in value['availability'].items() if not k.startswith('AUX_')}
         value['sci_auxiliary']=dict(observation_time_minute=self.time,available_time_minute=self.time,
-            availability=auxiliary,required_kW=dependency_requirements(row,loads).tolist())
+            availability=auxiliary,required_kW=dependency_requirements(row,loads).tolist(),
+            fan_independent_heat=fan_independent_heat_bound(row,loads))
         value['sci_storage']=dict(observation_time_minute=self.time,available_time_minute=self.time,
             ups=self.ups.observe(),cold_store=self.cold_store.observe())
         value['sci_model_id']=MODEL_ID

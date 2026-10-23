@@ -174,7 +174,7 @@ def solve_physical(row,plant:Plant,loads:np.ndarray,availability:dict[str,float]
         for j in range(3):highs[idx(i,j)]=max(0,loads[i,j])
     auxiliary_required=None
     if sci_dependencies:
-        from tools.sci_engineering.service import add_dependency_constraints
+        from tools.sci_engineering.service import add_dependency_constraints,fan_independent_heat_bound
         def add_dependency(coefficients,lower,upper,name):
             vector=np.zeros(nvars)
             for index,value in coefficients.items():vector[index]=value
@@ -302,7 +302,8 @@ def solve_physical(row,plant:Plant,loads:np.ndarray,availability:dict[str,float]
             'solver_backend_layers':backend_layers,
             **({'service_dependencies':dict(auxiliary_required_kW=auxiliary_required.tolist(),
                 auxiliary_bound_validation=auxiliary_bound_validation,
+                fan_independent_heat=fan_independent_heat_bound(row,loads),
                 auxiliary_delivered_kW=(auxiliary_required*np.asarray(x[auxiliary_indices])).tolist(),
                 direct_electric_delivered_kW=(served[:,0]-np.sum(auxiliary_required*x[auxiliary_indices],axis=1)).tolist(),
-                semantics='aggregate fan and distribution power are necessary for actual thermal delivery; existing electricity reallocated')}
+                semantics='aggregate air-served heat/cold need fan power; identified P3 non-air heat has a maximum fan-independent allowance, not a DHW delivery meter; all thermal delivery retains distribution/source constraints; existing electricity reallocated')}
                 if sci_dependencies else {})}

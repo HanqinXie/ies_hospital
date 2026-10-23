@@ -2,8 +2,10 @@
 
 Electric request already includes allocated building auxiliaries. Actual
 electric delivery is decomposed into direct use and fan/CHW/heat-pump ports.
-Each thermal delivery needs both its fan and its distribution pump. This is
-an aggregate proportional-flow assumption, not a ventilation compliance test.
+Air-served thermal delivery needs its fan and distribution pump. Identified
+P3 domestic hot water is independent of the air fan, while retaining the heat
+pump and source constraints. This aggregate bound is not a DHW delivery meter
+or a ventilation compliance test.
 """
 from __future__ import annotations
 import math
@@ -47,8 +49,51 @@ def dependency_requirements(row,loads):
             result[g,j]=value*factors[j]
     return result
 
+def fan_independent_heat_bound(row,loads):
+    """Maximum identifiable P3 non-air heat, never actual DHW delivery.
+
+    Connected P3 heat may retain at most the identified original DHW amount.
+    Aggregate contacts do not identify which subservice was disconnected, so
+    this is a permissive delivery bound, not a new intra-P3 priority rule.
+    Actual M21 rows require their original source trace; legacy mathematical
+    fixtures without the decomposition explicitly use a zero allowance.
+    """
+    loads=np.asarray(loads,float)
+    if loads.shape!=(4,3) or not np.isfinite(loads).all() or np.any(loads<0.):
+        raise ValueError('Invalid heat decomposition load request')
+    required=bool(getattr(row,'sci_heat_decomposition_required',False))
+    present=hasattr(row,'Q_h_DHW_water_use_kW')
+    if required and not present:raise ValueError('Actual M21 row lacks source DHW decomposition')
+    dhw=float(getattr(row,'Q_h_DHW_water_use_kW',0.))
+    original=float(getattr(row,'P3_reference_h_kW',loads[3,1]))
+    if any(not math.isfinite(v) or v<0. for v in (dhw,original)):
+        raise ValueError('Invalid nonnegative source DHW/heat decomposition')
+    trace=getattr(row,'sci_heat_decomposition_source',None)
+    if required:
+        if (not isinstance(trace,dict) or trace.get('path')!='inputs/loads/hospital_ies_demand_8760.csv'
+            or trace.get('DHW_column')!='Q_h_DHW_water_use_kW'
+            or not isinstance(trace.get('sha256'),str) or len(trace['sha256'])!=64
+            or any(c not in '0123456789abcdef' for c in trace['sha256'])
+            or isinstance(trace.get('hour_of_year'),bool) or not isinstance(trace.get('hour_of_year'),int)
+            or not 1<=trace['hour_of_year']<=8760 or 'original_P3_h_kW' not in trace
+            or trace.get('source_DHW_kW')!=dhw):
+            raise ValueError('Actual M21 row lacks valid source DHW decomposition trace')
+        original=float(trace['original_P3_h_kW'])
+        if not math.isfinite(original) or original<0.:raise ValueError('Invalid source P3 heat decomposition')
+    identified=min(original,dhw)
+    allowance=[0.,0.,0.,min(float(loads[3,1]),identified)]
+    return dict(maximum_fan_independent_heat_kW=allowance,
+        original_P3_identified_heat_kW=identified,source_DHW_kW=dhw,
+        original_P3_heat_request_kW=original,
+        source_trace=dict(trace) if isinstance(trace,dict) else None,
+        decomposition_status=('source_bound_original_DHW' if required else
+            'explicit_unbound_decomposition_fixture' if present else 'fixture_without_decomposition_assumed_zero'),
+        represents_actual_DHW_delivery=False,
+        semantics='Maximum identifiable non-air heat inside original P3 residual, clipped by connected heat; all heat still needs its distribution pump and source. DHW service and aggregate contact composition are not independently identified.')
+
 def add_dependency_constraints(row,loads,availability,indices,unmet_indices,add,upper,prefix='current'):
     loads=np.asarray(loads,float);required=dependency_requirements(row,loads)
+    independent=fan_independent_heat_bound(row,loads)['maximum_fan_independent_heat_kW']
     unmet=np.asarray(unmet_indices,int).reshape(4,3)
     for g in range(4):
         fan=float(availability.get(f'AUX_FAN_P{g}',1.))
@@ -68,6 +113,7 @@ def add_dependency_constraints(row,loads,availability,indices,unmet_indices,add,
         for carrier,ports in ((1,(0,2)),(2,(0,1))):
             for j in ports:
                 if required[g,j]>1e-9 and loads[g,carrier]>1e-9:
-                    add({int(unmet[g,carrier]):1.,int(indices[g,j]):loads[g,carrier]},
-                        loads[g,carrier],np.inf,f'{prefix}.P{g}.{("h","c")[carrier-1]}_needs_{KINDS[j]}')
+                    air_request=(loads[g,carrier]-independent[g] if carrier==1 and j==0 else loads[g,carrier])
+                    add({int(unmet[g,carrier]):1.,int(indices[g,j]):air_request},
+                        air_request,np.inf,f'{prefix}.P{g}.{("h","c")[carrier-1]}_needs_{KINDS[j]}')
     return required
