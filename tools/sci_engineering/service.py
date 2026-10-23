@@ -11,8 +11,24 @@ import numpy as np
 
 KINDS=('fan','chw_pump','heat_pump')
 
+def validate_auxiliary_kW_bounds(solution,indices,required,upper_fraction):
+    """Retain the backend's original 1e-7 kW bound check after mapping.
+
+    Fraction-space acceptance alone would allow A times the original kW
+    error. This check never clips a witness or changes a physical bound.
+    """
+    from hospital_ies.execution import SolverExecutionError
+    values=np.asarray(solution,float)[indices]*required
+    high=np.asarray(upper_fraction,float)[indices]*required
+    violation=np.maximum(0.,np.maximum(-values,values-high))
+    maximum=float(np.max(violation))
+    if not np.isfinite(values).all() or maximum>1e-7:
+        raise SolverExecutionError(f'Original auxiliary kW bounds violated after fraction mapping: {maximum}')
+    return dict(max_original_auxiliary_kW_bound_violation=maximum,tolerance_kW=1e-7,
+                original_kW_bounds_retained=True)
+
 def dependency_variables(allocate, prefix='current'):
-    return np.asarray([[allocate(f'{prefix}.P{g}.{kind}.electric','kW')
+    return np.asarray([[allocate(f'{prefix}.P{g}.{kind}.electric_fraction','fraction')
                         for kind in KINDS] for g in range(4)],dtype=int)
 
 def dependency_requirements(row,loads):
@@ -40,14 +56,18 @@ def add_dependency_constraints(row,loads,availability,indices,unmet_indices,add,
                    float(availability.get('AUX_HEAT_PUMP',1.)))
         for j in range(3):
             if not 0.<=available[j]<=1.:raise ValueError('Invalid auxiliary availability')
-            upper[indices[g,j]]=required[g,j]*available[j]
+            # x_aux = required * fraction is a diagonal variable change.
+            # Tiny heating-pump kW must not create D/required coefficients
+            # that amplify the solver's scaled feasibility error in kW.
+            upper[indices[g,j]]=available[j] if required[g,j]>0. else 0.
         # 0 <= delivered_e - sum(aux_e) <= direct_e_request.
         direct=max(0.,loads[g,0]-required[g].sum())
-        coefficients={int(unmet[g,0]):1.,**{int(i):1. for i in indices[g]}}
+        coefficients={int(unmet[g,0]):1.,
+            **{int(indices[g,j]):float(required[g,j]) for j in range(3)}}
         add(coefficients,loads[g,0]-direct,loads[g,0],f'{prefix}.P{g}.electric_components')
         for carrier,ports in ((1,(0,2)),(2,(0,1))):
             for j in ports:
                 if required[g,j]>1e-9 and loads[g,carrier]>1e-9:
-                    add({int(unmet[g,carrier]):1.,int(indices[g,j]):loads[g,carrier]/required[g,j]},
+                    add({int(unmet[g,carrier]):1.,int(indices[g,j]):loads[g,carrier]},
                         loads[g,carrier],np.inf,f'{prefix}.P{g}.{("h","c")[carrier-1]}_needs_{KINDS[j]}')
     return required

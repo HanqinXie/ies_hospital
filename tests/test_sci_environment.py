@@ -81,3 +81,10 @@ def test_reference_response_clock_is_a_shared_explicit_configuration():
     e=env(dict(sci_engineering=dict(diesel_start_delay_minutes=1./6.)))
     assert e.config['diesel_start_delay_minutes']==pytest.approx(1./6.)
     assert env().config['diesel_start_delay_minutes']==pytest.approx(15.)
+def test_protection_sensitivity_is_explicit_common_configuration():
+    from tools.sci_engineering.environment import model_contract
+    from tools.sci_engineering import MODEL_ID
+    _,resolved=model_contract(MODEL_ID,{'sci_engineering':{
+        'gt_protection_trip_multiple':1.10,'gt_overload_hold_minutes':7.5}})
+    assert resolved['sci_engineering']['gt_protection_trip_multiple']==1.10
+    assert resolved['sci_engineering']['gt_overload_hold_minutes']==7.5

@@ -19,7 +19,8 @@ from .service import dependency_requirements
 from .storage import FiniteStore
 
 DEFAULT_ENGINEERING=dict(configuration_id='H0',ups={},cold_store={},cold_pump_kW_per_kW=.02,
-    storage_max_segment_minutes=1.,auxiliary_share_scale=1.,diesel_start_delay_minutes=15.)
+    storage_max_segment_minutes=1.,auxiliary_share_scale=1.,diesel_start_delay_minutes=15.,
+    gt_protection_trip_multiple=1.05,gt_overload_hold_minutes=15.)
 
 def model_contract(model_id,model_config):
     if model_id!=MODEL_ID:raise ValueError('Explicit M21 model identity required')
@@ -27,10 +28,13 @@ def model_contract(model_id,model_config):
     if not isinstance(new,dict) or set(new)-set(DEFAULT_ENGINEERING):raise ValueError('Unknown M21 engineering configuration')
     engineering=copy.deepcopy(DEFAULT_ENGINEERING);engineering.update(new)
     for name in ('ups','cold_store'):FiniteStore(engineering[name])
-    for name in ('cold_pump_kW_per_kW','storage_max_segment_minutes','auxiliary_share_scale','diesel_start_delay_minutes'):
+    for name in ('cold_pump_kW_per_kW','storage_max_segment_minutes','auxiliary_share_scale','diesel_start_delay_minutes',
+                 'gt_protection_trip_multiple','gt_overload_hold_minutes'):
         v=engineering[name]
         if isinstance(v,bool) or not math.isfinite(float(v)) or float(v)<0.:raise ValueError('Invalid M21 engineering scalar')
     if engineering['storage_max_segment_minutes']<=0.:raise ValueError('Positive storage subinterval required')
+    if min(engineering['gt_protection_trip_multiple'],engineering['gt_overload_hold_minutes'])<=0.:
+        raise ValueError('Positive common protection threshold and duration required')
     contract,resolved=base.model_contract('M20_load_accounting',cfg)
     resolved['sci_engineering']=engineering
     contract.update(name=contract['name']+'_sci_services_v21',sci_contract_id=CONTRACT_ID)
@@ -66,6 +70,9 @@ class EngineeringCore(LoadAccountingCore):
     def __init__(self,env,initial_action):
         self.ups=FiniteStore(env.sci_config['ups']);self.cold_store=FiniteStore(env.sci_config['cold_store'])
         super().__init__(env,initial_action)
+        if getattr(env,'_solver_row_sidecar',None) is not None:
+            from .solver_log import SolverCallLog
+            self.solver_calls=SolverCallLog(self.solver_calls,writer=env._solver_row_sidecar)
         self.log('m21_storage_initial_inventory',initial_charged_input_kWh={
             'ups':self.ups.initial_charged_input_kWh,'cold_store':self.cold_store.initial_charged_input_kWh},
             initial_inventory_is_paid_preparation=True,free_reset_on_repair=False)
@@ -233,7 +240,10 @@ class EngineeringCore(LoadAccountingCore):
         return command
 
 class OperatingHospitalIESEnv(base.OperatingHospitalIESEnv):
-    def __init__(self,root,*,allowed_hours,sealed_days,model_id=MODEL_ID,model_config=None):
+    def __init__(self,root,*,allowed_hours,sealed_days,model_id=MODEL_ID,model_config=None,
+                 sci_final_release_receipt=None,solver_row_sidecar=None):
+        self.sci_final_release_receipt=copy.deepcopy(sci_final_release_receipt)
+        self._solver_row_sidecar=solver_row_sidecar
         contract,resolved=model_contract(model_id,model_config or {})
         self.sci_config=copy.deepcopy(resolved.pop('sci_engineering'))
         super().__init__(root,allowed_hours=allowed_hours,sealed_days=sealed_days,
@@ -244,6 +254,8 @@ class OperatingHospitalIESEnv(base.OperatingHospitalIESEnv):
         self.execution_contract={k:v for k,v in contract.items() if k not in ('diesel_dispatch_mode','load_accounting_contract_id','sci_contract_id')}
         self.config['sci_service_dependencies']=True
         self.config['diesel_start_delay_minutes']=float(self.sci_config['diesel_start_delay_minutes'])
+        for key in ('gt_protection_trip_multiple','gt_overload_hold_minutes'):
+            self.config[key]=float(self.sci_config[key])
         self.default_diesel_initial_energy_kWh=float(self.config['diesel_initial_energy_kWh'])
         auxiliary=compute_auxiliary_allocation(self.root,critical_share_scale=self.sci_config['auxiliary_share_scale'])
         self.auxiliary_metadata=copy.deepcopy(auxiliary.attrs['metadata'])
@@ -259,9 +271,15 @@ class OperatingHospitalIESEnv(base.OperatingHospitalIESEnv):
         self.input_access_receipt['sci_auxiliary_source_sha256']=self.auxiliary_metadata['allocation_sha256']
 
     def reset(self,*,scenario,seed=None):
-        first=int(scenario['start_hour']);last=first+math.floor(scenario['duration_steps']*scenario.get('step_minutes',15.)/60.)
-        if not set(range(first,last+1))<=self.allowed_hours:raise ValueError('Scenario outside registered complete support')
-        if any((h-1)//24 in self.sealed_days for h in range(first,last+1)):raise ValueError('Sealed final background')
+        from .design import allowed_hours
+        required=allowed_hours(dict(scenarios=[scenario]))
+        if not required<=self.allowed_hours:raise ValueError('Scenario outside registered complete support')
+        receipt=getattr(self,'sci_final_release_receipt',None)
+        if receipt is not None:
+            from .release import validate_scene_release
+            self.sci_final_reset_receipt=validate_scene_release(self.root,scenario,sorted(self.allowed_hours),
+                sorted(self.sealed_days),receipt)
+        elif any((h-1)//24 in self.sealed_days for h in required):raise ValueError('Sealed final background')
         initial=float(scenario.get('initial_reserve_kWh',self.default_diesel_initial_energy_kWh))
         if not math.isfinite(initial) or initial<0.:raise ValueError('Invalid initial shaft-equivalent reserve')
         self.config['diesel_initial_energy_kWh']=initial
@@ -286,4 +304,8 @@ def run_episode(env,scenario,controller,seed,manifest):
     payload=execute(env,scenario,controller,seed,manifest)
     payload.update(execution_model_id=MODEL_ID,study_contract_id=CONTRACT_ID,engineering_model_contract_id=CONTRACT_ID,
         m21_initial_storage={k:getattr(env.core,k).initial_charged_input_kWh for k in ('ups','cold_store')} if env.core else None)
+    from .contracts import observed_engineering_events
+    payload['events']=sorted(payload.get('events',[])+observed_engineering_events(
+        payload.get('scenario',scenario),payload.get('summary',{}).get('observed_until_minute',0.),
+        has_segments=bool(payload.get('segments'))),key=lambda e:(e['time_minute'],str(e.get('event_id',''))))
     return payload

@@ -195,8 +195,8 @@ def solve_physical(row,plant:Plant,loads:np.ndarray,availability:dict[str,float]
         'RT' if value[0]==ia else 'kW' for value in targets.values()]
     if sci_dependencies:
         from tools.sci_engineering.service import KINDS
-        variable_names += [f'P{i}.{kind}.actual_electric' for i in range(4) for kind in KINDS]
-        units += ['kW']*12
+        variable_names += [f'P{i}.{kind}.electric_fraction' for i in range(4) for kind in KINDS]
+        units += ['fraction']*12
     if storage_indices is not None:
         variable_names += list(storage_names);units += ['kW']*4
     variables=[dict(index=i,name=name,unit=units[i]) for i,name in enumerate(variable_names)]
@@ -233,6 +233,14 @@ def solve_physical(row,plant:Plant,loads:np.ndarray,availability:dict[str,float]
             failure.solver_backend_attempts=backend_layers
             raise failure
         x=res.x
+        if sci_dependencies:
+            from tools.sci_engineering.service import validate_auxiliary_kW_bounds
+            try:
+                backend_layers[-1]['original_auxiliary_kW_bound_validation']=validate_auxiliary_kW_bounds(
+                    x,auxiliary_indices,auxiliary_required,highs)
+            except Exception as failure:
+                failure.solver_backend_attempts=backend_layers
+                raise
         if group<4 or charging_layer:
             val=float(c@x);lex_values.append(val)
             tol=1e-7 if charging_layer else lex_lock_tolerance(group,val,config)
@@ -245,6 +253,13 @@ def solve_physical(row,plant:Plant,loads:np.ndarray,availability:dict[str,float]
                                   tolerance=tol,upper=val+tol,relation='<=',unit='normalized carrier ENS',source='raw incumbent c@x'))
             row_metadata.append(dict(name='storage.recharge_after_all_service' if charging_layer else f'priority.{GROUPS[group]}.normalized_ENS.upper',unit='dimensionless',
                                      source=f'raw rank {group} objective plus original tolerance',kind='priority_lock'))
+    auxiliary_bound_validation=None
+    if sci_dependencies:
+        from tools.sci_engineering.service import validate_auxiliary_kW_bounds
+        try:auxiliary_bound_validation=validate_auxiliary_kW_bounds(x,auxiliary_indices,auxiliary_required,highs)
+        except Exception as failure:
+            failure.solver_backend_attempts=backend_layers
+            raise
     gts=np.maximum(0.,np.asarray(x[gp]))
     lost=np.maximum(0.,np.asarray([[x[idx(i,k)] for k in range(3)] for i in range(4)]))
     if active_collector() is not None:
@@ -286,7 +301,8 @@ def solve_physical(row,plant:Plant,loads:np.ndarray,availability:dict[str,float]
             'steam_balance_residual_lbph':steam_residual_lbph,'optimizer_warning':optimizer_warning,
             'solver_backend_layers':backend_layers,
             **({'service_dependencies':dict(auxiliary_required_kW=auxiliary_required.tolist(),
-                auxiliary_delivered_kW=np.asarray(x[auxiliary_indices]).tolist(),
-                direct_electric_delivered_kW=(served[:,0]-np.sum(x[auxiliary_indices],axis=1)).tolist(),
+                auxiliary_bound_validation=auxiliary_bound_validation,
+                auxiliary_delivered_kW=(auxiliary_required*np.asarray(x[auxiliary_indices])).tolist(),
+                direct_electric_delivered_kW=(served[:,0]-np.sum(auxiliary_required*x[auxiliary_indices],axis=1)).tolist(),
                 semantics='aggregate fan and distribution power are necessary for actual thermal delivery; existing electricity reallocated')}
                 if sci_dependencies else {})}

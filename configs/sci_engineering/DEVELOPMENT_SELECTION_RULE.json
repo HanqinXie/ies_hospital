@@ -1,0 +1,81 @@
+{
+  "registered_utc": "2026-10-23T05:25:00.442847+00:00",
+  "rule": {
+    "schema": "hospital_ies.sci_development_selection.rule.v21.v1",
+    "allowed_phase": "development",
+    "required_scene_role": "development",
+    "configuration_id": "H0",
+    "candidates": {
+      "F": {
+        "parameter": "fixed_reserve_hours",
+        "values": [
+          0.5,
+          1.0,
+          2.0
+        ],
+        "default": 1.0
+      },
+      "A": {
+        "parameter": "release_after_minutes",
+        "values": [
+          120.0,
+          240.0
+        ],
+        "default": 120.0
+      }
+    },
+    "tiers": [
+      {
+        "name": "critical_reliability",
+        "metrics": [
+          "P0_e_ENS_kWh",
+          "P0_h_ENS_kWh",
+          "P0_c_ENS_kWh",
+          "P1_e_ENS_kWh",
+          "P1_h_ENS_kWh",
+          "P1_c_ENS_kWh",
+          "P0_union_material_minutes",
+          "P1_union_material_minutes"
+        ]
+      },
+      {
+        "name": "general_service",
+        "metrics": [
+          "P2_e_ENS_kWh",
+          "P2_h_ENS_kWh",
+          "P2_c_ENS_kWh",
+          "P3_e_ENS_kWh",
+          "P3_h_ENS_kWh",
+          "P3_c_ENS_kWh",
+          "P2_union_material_minutes",
+          "P3_union_material_minutes"
+        ]
+      },
+      {
+        "name": "same_window_cost",
+        "metrics": [
+          "energy_cost_USD"
+        ]
+      },
+      {
+        "name": "conditional_CO2",
+        "metrics": [
+          "total_CO2_kg_conditional"
+        ]
+      }
+    ],
+    "comparison_numerical_zero": 1e-08,
+    "criterion": "Per-scenario, per-metric Pareto over all registered matched scenarios; smaller is better",
+    "tier_transition": "Only when every survivor is equivalent at the current and previous tiers",
+    "tradeoff_rule": "Use default if undominated; else minimize absolute distance from default, then numerical parameter value",
+    "unknown_rule": "Refuse finalization for failed, pending, missing, unmatched or nonfinite candidate inputs",
+    "independent_unit": "Source block; variants and minutes are not new independent observations",
+    "no_weighted_carrier_sum": true,
+    "no_confirmation_results_read": true,
+    "no_universal_winner_required": true
+  },
+  "selector_source_sha256": "b8c0417f77b54760afe67a3aad331a630df2dc0d3d90cb3cd7381f27512d764e",
+  "registration_scope": "Before reading development or confirmation outcomes",
+  "rule_sha256": "98b518820ce85c44cc7885d512af171a6502d5d0d513d260d0730441002803c0",
+  "registration_sha256": "51ab867c03e412c4b61fe0da0fa5378d1f43622f4f6c16e2ba83acea01e9807b"
+}

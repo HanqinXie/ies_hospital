@@ -2,7 +2,7 @@
 
 Identity-column reads and byte hashes may cover the original annual files.
 Physical values outside the explicit hour grant never enter a DataFrame.  This
-module deliberately provides no final-background release implementation.
+module keeps legacy calls sealed; M21 releases only once-bound final support.
 """
 from __future__ import annotations
 
@@ -121,16 +121,19 @@ def selective_inputs(root, allowed_hours, *, sealed_days, release_receipt=None):
     """Return (8760 hourly, selected zones, indexed groups, audited grant).
 
     Raw file hashing and hour/zone identities cover the original files; only
-    explicitly granted physical rows are parsed.  Any proposed final release is
-    rejected in this implementation, including a caller-supplied fake receipt.
+    explicitly granted physical rows are parsed. Legacy calls keep final days
+    sealed; only the once-bound M21 final-blind receipt can release its exact
+    registered support. Caller-supplied fake receipts remain rejected.
     """
-    if release_receipt is not None:
-        raise ValueError("Final release is not implemented; release receipt rejected")
     allowed = _integers(allowed_hours, 1, 8760, "hours")
     sealed = _integers(sealed_days, 0, 364, "sealed days")
-    if any((hour - 1) // 24 in sealed for hour in allowed):
-        raise ValueError("Authorized hours intersect sealed final days")
     root = Path(root).resolve()
+    final_release = None
+    if release_receipt is not None:
+        from tools.sci_engineering.release import validate_input_release
+        final_release = validate_input_release(root, allowed, sealed, release_receipt)
+    elif any((hour - 1) // 24 in sealed for hour in allowed):
+        raise ValueError("Authorized hours intersect sealed final days")
     authority = root / SEALED_AUTHORITY
     if authority.exists():
         registered = json.loads(authority.read_text(encoding="utf-8"))
@@ -155,9 +158,13 @@ def selective_inputs(root, allowed_hours, *, sealed_days, release_receipt=None):
     hourly["hour_of_year"] = np.arange(1, 8761)
     hourly = hourly.reset_index(drop=True)
     metadata = dict(version=VERSION, allowed_hours=allowed, sealed_days=sealed,
-        sealed_numeric_rows_parsed=0, final_release_implemented=False,
+        sealed_numeric_rows_parsed=(sum(int(table.hour_of_year.map(lambda h: (int(h)-1)//24 in sealed).sum()) for table in selected) if final_release else 0),
+        final_release_implemented=final_release is not None,
         numeric_parsed_hours_by_file={name: item["numeric_parsed_hours"] for name, item in file_meta.items()},
         files=file_meta, unauthorized_physical_padding="NaN; identity hour retained",
         value_validation_scope="selected values only; original tolerances and build_zone_groups",
         identity_validation_scope="annual hour and zone identity only; original file bytes hashed")
+    if final_release is not None:
+        metadata["m21_final_release"] = final_release
+        metadata["sealed_numeric_rows_parsed_unit"] = "physical rows across four selected input tables"
     return hourly, zones, groups, metadata

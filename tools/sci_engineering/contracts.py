@@ -19,8 +19,32 @@ def normalize_study_scenario(scene):
     exogenous={k:v for k,v in scene.items() if k in ('start_hour','faults','auxiliary_faults','shock',
         'shock_by_priority','shock_by_zone','exogenous_events','enable_propagation','initial_reserve_kWh')
         or k.startswith(('fault_','shock_'))}
-    value['exogenous_stream_id']='m21_exogenous:'+digest(exogenous)
+    value['m21_physical_exogenous_sha256']=digest(exogenous)
+    value['exogenous_stream_id']=scene.get('exogenous_stream_id','m21_exogenous:'+digest(exogenous))
+    value['q_design']=scene.get('q_design',value['q_design'])
+    if scene.get('shock_by_zone'):
+        # A single legacy scalar ignores hourly zonal requests and must not
+        # falsely report a real M21 P0 increase of exactly one.
+        value.pop('actual_p0_load_multiplier',None)
+        value['m21_actual_demand_semantics']='hour-dependent original requests and zonal increments in segment ledger'
     return value
+
+def observed_engineering_events(scene,observed_until,*,has_segments):
+    """Export new event kinds only after their actual observation boundary."""
+    if not has_segments:return []
+    from hospital_ies.state_transition import event_window
+    events=[]
+    for field,clock,kind in (('auxiliary_faults','fault','auxiliary_availability'),
+                             ('shock_by_zone','shock','zonal_clinical_demand')):
+        if not scene.get(field):continue
+        start,end=event_window(scene,clock)
+        for edge,t in (('start',start),('end',end)):
+            if t>float(observed_until)+1e-9:continue
+            events.append(dict(event_id=f'm21_exo:{field}:{edge}',time_minute=t,
+                kind=f'm21_exogenous_{kind}_{edge}',origin='exogenous',cause_class=kind,
+                parent_event_id=None,details={field:copy.deepcopy(scene[field]),'active':edge=='start'},
+                provenance='Registered boundary applied by M21 common execution; no future boundary exported'))
+    return events
 
 def exporter_metadata(scenes):
     splits={s['id']:dict(group_id=s['source_block_id'],split=s.get('role','development'),

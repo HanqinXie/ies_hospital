@@ -33,7 +33,7 @@ from tools.model_closeout.readiness import (validate_context as validate_readine
     coordination_options as validate_coordination_options, response_envelope, diesel_support_budget,
     critical_reserve_rule)
 from .policy import coordination_options as validate_coordination_options, reserve_reference
-from .service import dependency_variables, add_dependency_constraints
+from .service import dependency_variables, add_dependency_constraints, validate_auxiliary_kW_bounds
 
 NUMERICAL_CONTRACT_ID = 'operating_response.original_domain_finite_presentation_recovery.v15'
 STANDBY_CONTRACT_ID = frozen.STANDBY_CONTRACT_ID
@@ -902,6 +902,14 @@ def solve_joint(row, plant, loads, availability, state, dt_h,
     incumbent_source = None
     soft_optimization_stopped=False
 
+    def original_auxiliary_bounds(value):
+        checks=[]
+        if dependency_enabled:
+            checks.append(validate_auxiliary_kW_bounds(value,current_aux,current_required,upper))
+            for case in copies:
+                checks.append(validate_auxiliary_kW_bounds(value,case['sci_aux'],case['sci_required'],upper))
+        return checks
+
     def run_layer(item, *, reference=False, lock=True, tolerance_override=None):
         nonlocal x, incumbent_source, soft_optimization_stopped
         name, co, unit, group = item
@@ -1017,6 +1025,11 @@ def solve_joint(row, plant, loads, availability, state, dt_h,
         if not reused_incumbent:
             x = np.asarray(result.x, dtype=float)
             incumbent_source = dict(layer=name,rank=rank)
+        try:
+            backend_layers[-1]['original_auxiliary_kW_bound_validation']=original_auxiliary_bounds(x)
+        except Exception as failure:
+            failure.solver_backend_attempts=backend_layers
+            raise
         value = float(co@x)
         layer = dict(rank=rank, name=name, objective_value=value, unit=unit)
         if refinement is not None and refinement.get('accepted'):
@@ -1346,6 +1359,13 @@ def solve_joint(row, plant, loads, availability, state, dt_h,
     x,command_action,command_finalization=finalize_command_vector(x,constraints=constraints,lower=lower,upper=upper,
         integrality=integrality,rows=metadata,variables=variables,emitted_coordinates=emitted,build_command=build_command,
         objectives=[(item[0],item[1]) for item in final_objectives])
+    auxiliary_bound_validation=[]
+    if dependency_enabled:
+        try:
+            auxiliary_bound_validation=original_auxiliary_bounds(x)
+        except Exception as failure:
+            failure.solver_backend_attempts=backend_layers
+            raise
     gts=x[gp].copy();lost=np.maximum(0.,x[14:26].reshape(4,3));served=loads-lost
     residual=main_balance@x-main_rhs;residuals=[float(residual[0]),float(residual[2]),float(residual[1]*heat_factor)]
     current_action=dict(gt_electric_kW=gts.tolist(),grid_import_kW=float(x[ig]),diesel_kW=float(x[idg]),
@@ -1584,8 +1604,9 @@ def solve_joint(row, plant, loads, availability, state, dt_h,
         upstream_C19_sha256='1ca5e59416979b5bb7ad4e0d95343d11033faae541f75d5e3d34b1f58c5f97fe',
         physical_model_shared=True,policy_identity_used_for_physics=False,
         dependency_enabled=dependency_enabled,
+        original_auxiliary_kW_bound_validation=auxiliary_bound_validation,
         current_auxiliary_required_kW=current_required.tolist() if dependency_enabled else None,
-        current_auxiliary_served_kW=x[current_aux].tolist() if dependency_enabled else None)
+        current_auxiliary_served_kW=(current_required*x[current_aux]).tolist() if dependency_enabled else None)
     diagnostic['model_closeout']=dict(critical_reserve_active=reserve_active,
         critical_reserve_rule=reserve_rule,critical_reserve_support=reserve_support,
         critical_reserve_excess_kWh=None if reserve_excess is None else float(x[reserve_excess]),

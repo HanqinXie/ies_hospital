@@ -86,7 +86,8 @@ class SelectiveHospitalIESEnv(OriginalEnvironment):
         self.sealed_days = frozenset(int(d) for d in sealed_days)
         self.model_id = model_id
         self.hourly, self.zones, self.groups, self.input_access_receipt = selective_inputs(
-            self.root, sorted(self.allowed_hours), sealed_days=sorted(self.sealed_days))
+            self.root, sorted(self.allowed_hours), sealed_days=sorted(self.sealed_days),
+            release_receipt=getattr(self, 'sci_final_release_receipt', None))
         self.plant = load_plant(self.root / 'configs/plant_configs.json', 'doe_capacity_matched_exploratory')
         self.config = (json.loads((self.root / 'configs/resilience_assumptions.json').read_text(encoding='utf-8'))
                        if config is None else copy.deepcopy(config))

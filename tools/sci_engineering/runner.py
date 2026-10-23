@@ -123,17 +123,23 @@ def _scientific_path(path):
     return path
 
 
+def normalize_panel(panel):
+    """Freeze exporter identities before any final grant; idempotent and pure."""
+    from .contracts import normalize_study_scenario
+    value=copy.deepcopy(panel)
+    value['scenarios']=[normalize_study_scenario(s) for s in value['scenarios']]
+    return _signed(value)
+
+
 def register_campaign(root, directory, panel, policy_specs, configurations, freeze_path,
-        *, phase='pilot', raw_root=None, pilot_proof=None):
+        *, phase='pilot', raw_root=None, pilot_proof=None, final_release_grant=None):
     root = Path(root).resolve(); directory = _scientific_path(directory)
     raw_root = _scientific_path(raw_root if raw_root is not None else directory/'raw')
     freeze_path = Path(freeze_path).resolve(); freeze = read(freeze_path)
     verify_freeze(root,freeze)
-    from .contracts import normalize_study_scenario,exporter_metadata
-    panel=copy.deepcopy(panel)
-    panel['scenarios']=[normalize_study_scenario(s) for s in panel['scenarios']]
-    panel.pop('signature',None);panel['signature']=digest(panel)
-    if phase not in ('pilot','development','formal','mechanism','boundary','hardware','sensitivity','reproduction'):
+    from .contracts import exporter_metadata
+    panel=normalize_panel(panel)
+    if phase not in ('pilot','development','formal','mechanism','boundary','hardware','sensitivity','reproduction','final_blind'):
         raise ValueError('Explicit registered experiment phase required')
     if directory.exists():
         raise FileExistsError('Registration exists; never overwrite old attempts')
@@ -145,8 +151,16 @@ def register_campaign(root, directory, panel, policy_specs, configurations, free
     if any(key not in freeze['configurations'] or digest(value)!=digest(freeze['configurations'][key])
            for key,value in configurations.items()):
         raise ValueError('Hardware/model configuration differs from frozen identity')
+    final_grant=None
+    if phase=='final_blind':
+        from .release import validate_final_registration,EXECUTION_AUTHORITY
+        if final_release_grant is None:raise ValueError('Final-blind registration requires its bound release grant')
+        if (root/EXECUTION_AUTHORITY).exists():raise FileExistsError('The once-only final-blind execution is already bound')
+        final_grant=validate_final_registration(root,final_release_grant,phase,panel,policy_specs,configurations)
+    elif final_release_grant is not None:
+        raise ValueError('A final release grant cannot be supplied to another experiment phase')
     proof_sha = None
-    if phase=='formal':
+    if phase in ('formal','final_blind'):
         if pilot_proof is None or not Path(pilot_proof).is_file():
             raise ValueError('Formal registration requires an actual passed pilot proof')
         proof = read(pilot_proof)
@@ -157,7 +171,7 @@ def register_campaign(root, directory, panel, policy_specs, configurations, free
         proof_sha = sha(pilot_proof)
     for scene in panel['scenarios']:
         support = source_support(scene)
-        if any(support['raw_start_minute']<(day+1)*1440 and day*1440<support['raw_end_minute'] for day in SEALED_DAYS):
+        if phase!='final_blind' and any(support['raw_start_minute']<(day+1)*1440 and day*1440<support['raw_end_minute'] for day in SEALED_DAYS):
             raise ValueError('Old sealed final backgrounds remain excluded from this registration')
         if phase=='formal' and scene.get('role')!='confirmation':
             raise ValueError('Formal outcomes must use the frozen confirmation role')
@@ -177,10 +191,14 @@ def register_campaign(root, directory, panel, policy_specs, configurations, free
         panel=copy.deepcopy(panel),policy_specs=copy.deepcopy(list(policy_specs)),
         configurations=copy.deepcopy(configurations),pilot_proof=str(pilot_proof) if pilot_proof else None,
         pilot_proof_sha256=proof_sha,budget_scope=str(freeze_path.parent),
-        action_information_boundary='Current and historical legal observation only; no future event scripts to policies'))
+        action_information_boundary='Current and historical legal observation only; no future event scripts to policies',
+        final_release_grant_signature=final_grant['signature'] if final_grant else None))
     directory.mkdir(parents=True)
     write_new(directory/'MANIFEST.json',manifest); write_new(directory/'PLAN.json',plan)
     write_new(directory/'FREEZE_REFERENCE.json',dict(path=str(freeze_path),sha256=sha(freeze_path),signature=freeze['signature']))
+    if final_grant is not None:
+        from .release import bind_execution
+        bind_execution(root,final_grant,directory/'PLAN.json',directory/'MANIFEST.json')
     return plan
 
 
@@ -299,6 +317,18 @@ def compact_metrics(payload, *, env=None, factor_registry=None):
     summary=payload.get('summary',{})
     calls=payload.get('solver_calls',[])
     times=[float(x['elapsed_seconds']) for x in calls if isinstance(x,dict) and isinstance(x.get('elapsed_seconds'),(int,float))]
+    upper={}
+    for call in calls:
+        if call.get('phase')=='sci_upper_planning' and isinstance(call.get('elapsed_seconds'),(int,float)):
+            t=float(call['time_minute']);upper[t]=upper.get(t,0.)+float(call['elapsed_seconds'])
+    for diagnostic in payload.get('policy_diagnostics',[]):
+        if isinstance(diagnostic.get('inference_ms'),(int,float)):
+            t=float(diagnostic['decision_time_min']);upper[t]=upper.get(t,0.)+float(diagnostic['inference_ms'])/1000.
+    step_times=[float(d['decision_ms'])/1000. for d in payload.get('decisions',[])
+        if isinstance(d.get('decision_ms'),(int,float))]
+    event_counts=dict(Counter(event.get('kind','unknown') for event in payload.get('events',[])))
+    attempts=[attempt for call in calls for layer in call.get('solver_backend_layers',[])
+        for attempt in layer.get('attempts',[])]
     costs=[seg.get('cost_USD_step') for seg in segments]
     cost_sum=sum(map(float,costs)) if costs and all(isinstance(x,(int,float)) for x in costs) else None
     shaft=energy.get('DG_mechanical_work_kWh');electric=energy.get('DG_electrical_work_kWh')
@@ -345,6 +375,15 @@ def compact_metrics(payload, *, env=None, factor_registry=None):
         complete=not gap and abs(observed-requested)<1e-7,unknown_tail_minutes=max(0.,requested-observed),
         segment_count=len(segments),online_solver_seconds=sum(times),online_solver_max_seconds=max(times,default=None),
         solver_call_count=len(calls),strategy_fallback_steps=summary.get('strategy_fallback_steps'),
+        online_upper_decision_count=len(upper),online_upper_seconds=sum(upper.values()),
+        online_upper_max_seconds=max(upper.values(),default=None),
+        online_full_step_seconds=sum(step_times),online_full_step_max_seconds=max(step_times,default=None),
+        scheduling_period_seconds=float(scene.get('step_minutes',15.))*60.,
+        online_upper_period_exceedance_count=sum(v>float(scene.get('step_minutes',15.))*60. for v in upper.values()),
+        solver_backend_attempt_count=len(attempts),
+        solver_backend_rejected_attempt_count=sum(a.get('accepted') is False for a in attempts),
+        solver_timeout_attempt_count=sum(a.get('status')==1 or a.get('native_status')==9 for a in attempts),
+        event_counts=event_counts,
         projection_fallback_steps=summary.get('projection_fallback_steps'),
         projection_changed_steps=summary.get('projection_changed_steps'),
         temperatures_are_exploratory_and_do_not_cancel_cooling_ENS=True)
@@ -378,8 +417,12 @@ def _save_raw(path,payload):
     path.parent.mkdir(parents=True,exist_ok=True)
     with path.open('xb') as binary:
         with gzip.GzipFile(fileobj=binary,mode='wb',mtime=0) as compressed:
+            chunks=[];size=0
             for fragment in json.JSONEncoder(ensure_ascii=False,allow_nan=False,separators=(',',':')).iterencode(payload):
-                compressed.write(fragment.encode('utf-8'))
+                chunks.append(fragment);size+=len(fragment)
+                if size>=1024*1024:
+                    compressed.write(''.join(chunks).encode('utf-8'));chunks=[];size=0
+            if chunks:compressed.write(''.join(chunks).encode('utf-8'))
     return sha(path)
 
 
@@ -408,6 +451,24 @@ def _latest(directory):
             _path=str(path))
     result=read(path);result['_path']=str(path);return result
 
+def _verify_terminal_evidence(directory,pair):
+    """Failures are immutable evidence too, including before an explicit retry."""
+    files=sorted(pair.glob('attempt_*/RESULT.json'))
+    if not files:return
+    journal=directory/'ATTEMPTS.jsonl'
+    rows=[json.loads(line) for line in journal.read_text(encoding='utf8').splitlines()] if journal.is_file() else []
+    for path in files:
+        terminals=[row for row in rows if row.get('event')=='finished' and row.get('result_path')==str(path)]
+        if len(terminals)!=1 or sha(path)!=terminals[0].get('result_sha256'):
+            raise ValueError('Terminal result evidence drift or missing immutable finished journal')
+        record=read(path)
+        if record.get('raw_sha256') and (not Path(record['raw_path']).is_file() or sha(record['raw_path'])!=record['raw_sha256']):
+            raise ValueError('Terminal raw evidence drift')
+        evidence=record.get('solver_row_evidence')
+        if evidence and evidence.get('gzip_sha256') and (not Path(evidence['path']).is_file()
+                or sha(evidence['path'])!=evidence['gzip_sha256']):
+            raise ValueError('Terminal solver-row evidence drift')
+
 
 def run_registered(root,directory,*,env_factory=None,policy_factory=None,episode_fn=None,
                    analyze_fn=None,retry_failed=False,max_pairs=None):
@@ -418,6 +479,13 @@ def run_registered(root,directory,*,env_factory=None,policy_factory=None,episode
     if sha(plan['freeze_path'])!=plan['freeze_sha256'] or manifest['signature']!=plan['manifest_signature']:
         raise ValueError('Freeze/manifest drift')
     verify_freeze(root,freeze)
+    final_receipt=None
+    if plan['phase']=='final_blind':
+        from .release import EXECUTION_AUTHORITY,validate_input_release
+        final_receipt=read(root/EXECUTION_AUTHORITY)
+        if Path(final_receipt['plan_binding']['path']).resolve()!=(directory/'PLAN.json').resolve():
+            raise ValueError('Final release execution directory differs from its once-only binding')
+        validate_input_release(root,sorted(allowed_hours(plan['panel'])),SEALED_DAYS,final_receipt)
     use_default_policy=policy_factory is None
     env_factory=env_factory or _default_env;policy_factory=policy_factory or _default_policy;episode_fn=episode_fn or _default_episode
     completed=failed=pending=attempted=0;began=time.perf_counter()
@@ -426,15 +494,15 @@ def run_registered(root,directory,*,env_factory=None,policy_factory=None,episode
             for config_id,config in plan['configurations'].items():
                 key=scene['id']+'__'+policy['policy_id']+'__'+config_id
                 if any(x in key for x in ('/','\\',':')):raise ValueError('Unsafe pair identity')
-                pair=directory/'pairs'/key;previous=_latest(pair)
+                pair=directory/'pairs'/key
+                _verify_terminal_evidence(directory,pair)
+                previous=_latest(pair)
                 if previous is not None and previous['status']=='completed':
-                    journals=[json.loads(line) for line in (directory/'ATTEMPTS.jsonl').read_text(encoding='utf8').splitlines()]
-                    terminals=[row for row in journals if row.get('event')=='finished'
-                        and row.get('result_path')==previous['_path']]
-                    if len(terminals)!=1 or sha(previous['_path'])!=terminals[0].get('result_sha256'):
-                        raise ValueError('Completed result evidence drift or missing immutable terminal journal')
-                    if not Path(previous['raw_path']).is_file() or sha(previous['raw_path'])!=previous['raw_sha256']:
-                        raise ValueError('Completed raw evidence drift')
+                    if not previous.get('raw_path') or not previous.get('raw_sha256'):
+                        raise ValueError('Completed raw evidence drift or missing hash')
+                    rows=previous.get('solver_row_evidence')
+                    if rows and (not rows.get('closed') or rows.get('status')!='completed' or not rows.get('gzip_sha256')):
+                        raise ValueError('Completed solver-row evidence drift or incomplete sidecar')
                     completed+=1;continue
                 if previous is not None and not retry_failed:
                     failed+=1;continue
@@ -452,20 +520,29 @@ def run_registered(root,directory,*,env_factory=None,policy_factory=None,episode
                 target=pair/attempt_id;target.mkdir(parents=True,exist_ok=False)
                 append(directory/'ATTEMPTS.jsonl',dict(event='started',utc=now(),**identity))
                 attempted+=1;t0=time.perf_counter();payload=metrics=analysis=error=raw_sha=raw_path=None
-                actual_manifest=None
+                actual_manifest=None;rows_writer=None;row_receipt=None
                 status='failed_unknown';source_unchanged=True
                 with _Resources() as resources:
                     try:
-                        env=env_factory(root,allowed_hours=allowed_hours(dict(scenarios=[scene])),sealed_days=SEALED_DAYS,
-                            model_id=MODEL_ID,model_config=copy.deepcopy(config))
-                        actual_manifest=copy.deepcopy(manifest)
-                        actual_manifest['model_config_signature']=digest(config)
-                        actual_manifest['configuration_id']=config_id
-                        actual_manifest=_signed(actual_manifest)
-                        controller=(policy_factory(copy.deepcopy(policy),plant=getattr(env,'plant',None))
-                            if use_default_policy else policy_factory(copy.deepcopy(policy)))
-                        payload=episode_fn(env,copy.deepcopy(scene),controller,identity['seed'],actual_manifest)
                         raw_path=Path(plan['raw_root'])/directory.name/key/attempt_id/'trajectory.json.gz'
+                        from .solver_log import SolverRowSidecar
+                        rows_writer=SolverRowSidecar(raw_path.with_name('solver_rows.jsonl.gz'))
+                        with rows_writer:
+                            envelope=dict(sci_final_release_receipt=copy.deepcopy(final_receipt)) if final_receipt else {}
+                            env=env_factory(root,allowed_hours=allowed_hours(dict(scenarios=[scene])),sealed_days=SEALED_DAYS,
+                                model_id=MODEL_ID,model_config=copy.deepcopy(config),solver_row_sidecar=rows_writer,**envelope)
+                            actual_manifest=copy.deepcopy(manifest)
+                            actual_manifest['model_config_signature']=digest(config)
+                            actual_manifest['configuration_id']=config_id
+                            actual_manifest['original_final12_evaluated']=final_receipt is not None
+                            actual_manifest['final_blind_release_signature']=final_receipt['signature'] if final_receipt else None
+                            actual_manifest=_signed(actual_manifest)
+                            controller=(policy_factory(copy.deepcopy(policy),plant=getattr(env,'plant',None))
+                                if use_default_policy else policy_factory(copy.deepcopy(policy)))
+                            payload=episode_fn(env,copy.deepcopy(scene),controller,identity['seed'],actual_manifest)
+                        row_receipt=rows_writer.receipt()
+                        if row_receipt['status']!='completed':raise IOError('Solver-row sidecar did not complete')
+                        payload['solver_row_evidence']=row_receipt
                         raw_sha=_save_raw(raw_path,payload)
                         if payload.get('execution_model_id')!=MODEL_ID:
                             raise ValueError('Actual episode model identity differs from M21 registration')
@@ -477,6 +554,29 @@ def run_registered(root,directory,*,env_factory=None,policy_factory=None,episode
                             status='completed'
                     except Exception as exc:
                         error=dict(type=type(exc).__name__,message=str(exc),traceback=traceback.format_exc())
+                        # A log/close failure must not erase a physical prefix
+                        # already returned by the failure-preserving exporter.
+                        if payload is not None:
+                            error['physical_error']=copy.deepcopy(payload.get('error'))
+                            if rows_writer is not None:
+                                row_receipt=rows_writer.receipt()
+                                payload['solver_row_evidence']=row_receipt
+                            if metrics is None:
+                                try:
+                                    factors=freeze.get('emissions_factor_binding')
+                                    metrics=compact_metrics(payload,env=env,factor_registry=factors['registry'] if factors else None)
+                                except Exception as metric_error:
+                                    error['prefix_metric_error']=dict(type=type(metric_error).__name__,message=str(metric_error))
+                            if raw_sha is None and raw_path is not None:
+                                recovery_path=raw_path
+                                if raw_path.exists():
+                                    error['incomplete_raw_path']=str(raw_path)
+                                    recovery_path=raw_path.with_name('trajectory.recovered_payload.json.gz')
+                                try:
+                                    raw_sha=_save_raw(recovery_path,payload);raw_path=recovery_path
+                                except Exception as save_error:
+                                    error['prefix_preservation_error']=dict(type=type(save_error).__name__,message=str(save_error))
+                    if rows_writer is not None:row_receipt=rows_writer.receipt()
                     try:verify_freeze(root,freeze)
                     except ValueError as exc:
                         source_unchanged=False;status='failed_unknown'
@@ -486,12 +586,17 @@ def run_registered(root,directory,*,env_factory=None,policy_factory=None,episode
                     canonical_class=scene.get('canonical_class'),season_quarter=scene.get('season_quarter'),
                     raw_path=str(raw_path) if raw_path else None,raw_sha256=raw_sha,
                     raw_bytes=raw_path.stat().st_size if raw_path and raw_path.exists() else None,
+                    solver_row_evidence=row_receipt,
+                    raw_total_bytes=((raw_path.stat().st_size if raw_path and raw_path.exists() else 0)
+                        +(row_receipt.get('gzip_bytes') or 0) if row_receipt else None),
                     elapsed_seconds=time.perf_counter()-t0,metrics=metrics,analysis=analysis,error=error,
                     unknown_tail_minutes=metrics['unknown_tail_minutes'] if metrics else requested,
                     source_unchanged=source_unchanged,source_binding_sha256=digest(freeze['source_sha256']),
                     scenario_sha256=digest(scene),policy_sha256=digest(policy),configuration_sha256=digest(config),
                     manifest_signature=actual_manifest['signature'] if actual_manifest is not None else None,
-                    resource_measurement=resources.receipt(),no_zero_substitute_for_failure=True)
+                    resource_measurement=resources.receipt(),no_zero_substitute_for_failure=True,
+                    final_blind_release_signature=final_receipt['signature'] if final_receipt else None,
+                    final_blind_attempt=final_receipt is not None)
                 write_new(target/'RESULT.json',record)
                 append(directory/'ATTEMPTS.jsonl',dict(event='finished',utc=now(),status=status,
                     result_path=str(target/'RESULT.json'),result_sha256=sha(target/'RESULT.json'),
@@ -512,7 +617,10 @@ def run_registered(root,directory,*,env_factory=None,policy_factory=None,episode
         actual_attempts_this_invocation=attempted,completed=completed,failed=failed,pending=pending,
         elapsed_seconds=time.perf_counter()-began,
         pilot_qualified=plan['phase']=='pilot' and completed>0 and failed==0 and pending==0,
-        original_final12_evaluated=False,all_failed_unknown_attempts_retained=True)
+        original_final12_evaluated=plan['phase']=='final_blind' and (attempted+completed+failed)>0,
+        original_final12_flag_semantics='At least one final-blind physical attempt started; failed/unknown attempts count as exposure',
+        final_blind_release_signature=final_receipt['signature'] if final_receipt else None,
+        all_failed_unknown_attempts_retained=True)
     invocation=len(list(directory.glob('CAMPAIGN_RESULT_*.json')))+1
     write_new(directory/('CAMPAIGN_RESULT_'+str(invocation).zfill(4)+'.json'),summary)
     return summary

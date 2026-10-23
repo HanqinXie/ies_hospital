@@ -13,6 +13,56 @@ sys.path[:0]=[str(ROOT),str(ROOT/'src')]
 def runner():
     return importlib.import_module('tools.sci_engineering.runner')
 
+def test_sidecar_close_failure_preserves_already_returned_physical_prefix(tmp_path,monkeypatch):
+    from types import SimpleNamespace
+    from tools.sci_engineering.solver_log import SolverRowSidecar
+    r,root,directory,_=fixture(tmp_path)
+    def fail_flush(self,data):raise OSError('synthetic sidecar disk failure')
+    monkeypatch.setattr(SolverRowSidecar,'_flush_block',fail_flush)
+    def make_env(*args,**kwargs):return SimpleNamespace(writer=kwargs['solver_row_sidecar'])
+    def episode(env,scene,controller,seed,manifest):
+        env.writer.store([{'index':0,'violation':0.}],location=[0])
+        value=payload(scene,controller)
+        value['segments'][0]['end_minute']=30.
+        value['summary'].update(status='solver_error',observed_until_minute=30.,requested_end_minute=60.)
+        value['error']={'type':'SyntheticPhysicalFailure','message':'physical prefix retained'}
+        return value
+    r.run_registered(root,directory,env_factory=make_env,policy_factory=lambda s:s['policy_id'],
+        episode_fn=episode,max_pairs=1)
+    record=r.read(next(directory.glob('pairs/*/attempt_*/RESULT.json')))
+    assert record['status']=='failed_unknown'
+    assert record['metrics']['observed_until_minute']==30.
+    assert record['unknown_tail_minutes']==30.
+    assert record['error']['physical_error']['type']=='SyntheticPhysicalFailure'
+    assert Path(record['raw_path']).is_file()
+    import gzip
+    raw=json.loads(gzip.decompress(Path(record['raw_path']).read_bytes()))
+    assert raw['segments'][0]['end_minute']==30.
+    assert raw['error']['type']=='SyntheticPhysicalFailure'
+    assert record['solver_row_evidence']['status']=='failed'
+
+@pytest.mark.parametrize('artifact',['result','raw','sidecar'])
+def test_retry_refuses_tampered_failed_terminal_evidence(tmp_path,artifact):
+    r,root,directory,_=fixture(tmp_path)
+    def fail(env,scene,controller,seed,manifest):
+        value=payload(scene,controller)
+        value['error']={'type':'SyntheticFailure','message':'retained failure fixture'}
+        value['summary']['status']='solver_error'
+        return value
+    r.run_registered(root,directory,env_factory=env_factory,policy_factory=lambda s:s['policy_id'],
+        episode_fn=fail,max_pairs=1)
+    path=next(directory.glob('pairs/*/attempt_*/RESULT.json'))
+    record=r.read(path)
+    if artifact=='result':
+        record['unknown_tail_minutes']=42.
+        path.write_text(json.dumps(record),encoding='utf8')
+    else:
+        target=Path(record['raw_path'] if artifact=='raw' else record['solver_row_evidence']['path'])
+        with target.open('ab') as stream:stream.write(b'SYNTHETIC_DRIFT')
+    with pytest.raises(ValueError,match='evidence drift'):
+        r.run_registered(root,directory,env_factory=env_factory,policy_factory=lambda s:s['policy_id'],
+            episode_fn=fail,retry_failed=True,max_pairs=1)
+
 def test_real_registered_episode_has_complete_legacy_export_identity_and_actual_m21_ledger(tmp_path):
     from scripts.sci_campaign import pilot_proposal
     from tools.sci_engineering.policy import policy_specs

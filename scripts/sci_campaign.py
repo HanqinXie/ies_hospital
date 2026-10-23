@@ -37,6 +37,11 @@ def _policy_subset(pool,names):
 def main(argv=None):
     parser=argparse.ArgumentParser(description=__doc__)
     sub=parser.add_subparsers(dest='command',required=True)
+    normalized=sub.add_parser('normalize-panel',help='Fix exporter identities before the final grant')
+    normalized.add_argument('--panel',type=Path,required=True);normalized.add_argument('--output',type=Path,required=True)
+    grant=sub.add_parser('grant-final',help='Issue the once-only final-blind grant after development closes')
+    grant.add_argument('--freeze',type=Path,required=True);grant.add_argument('--selection-record',type=Path,required=True)
+    grant.add_argument('--panel',type=Path,required=True);grant.add_argument('--exposure-registry',type=Path,required=True)
     scan=sub.add_parser('scan')
     scan.add_argument('--historical-root',type=Path,required=True);scan.add_argument('--output',type=Path,required=True)
     planned=sub.add_parser('design')
@@ -60,11 +65,20 @@ def main(argv=None):
     registered.add_argument('--policies',default='R,M,F,C,A');registered.add_argument('--configurations',default='H0')
     registered.add_argument('--phase',default='pilot');registered.add_argument('--role',choices=('development','confirmation'))
     registered.add_argument('--pilot-proof',type=Path)
+    registered.add_argument('--final-release-grant',type=Path)
     run=sub.add_parser('run')
     run.add_argument('--directory',type=Path,required=True);run.add_argument('--retry-failed',action='store_true')
     run.add_argument('--max-pairs',type=int)
     args=parser.parse_args(argv)
-    if args.command=='scan':
+    if args.command=='normalize-panel':
+        value=runner.normalize_panel(runner.read(args.panel));runner.write_new(args.output,value)
+        print(json.dumps(dict(signature=value['signature'],scenarios=len(value['scenarios']),physical_episodes_started=0)))
+    elif args.command=='grant-final':
+        from tools.sci_engineering.release import issue_grant
+        value=issue_grant(ROOT,args.freeze,args.selection_record,args.panel,args.exposure_registry)
+        print(json.dumps(dict(signature=value['signature'],phase=value['phase'],grant_count_this_round=1,
+            metadata_only_nonexposure_audit=value['metadata_only_nonexposure_audit'],physical_episodes_started=0)))
+    elif args.command=='scan':
         value=design.scan_historical_support(args.historical_root)
         runner.write_new(args.output,value)
         print(json.dumps(dict(metadata=value['candidate_metadata_files'],actual_scene_ids=len({r['scenario_id'] for r in value['actual_support']}),
@@ -107,7 +121,8 @@ def main(argv=None):
         specs=_policy_subset(freeze['policy_specs'],args.policies)
         configs={key:freeze['configurations'][key] for key in args.configurations.split(',')}
         value=runner.register_campaign(ROOT,args.directory,panel,specs,configs,args.freeze,phase=args.phase,
-            raw_root=args.raw_root,pilot_proof=args.pilot_proof)
+            raw_root=args.raw_root,pilot_proof=args.pilot_proof,
+            final_release_grant=runner.read(args.final_release_grant) if args.final_release_grant else None)
         print(json.dumps(dict(registered_pairs=value['registered_pairs'],phase=args.phase,physical_episodes_started=0)))
     else:
         value=runner.run_registered(ROOT,args.directory,retry_failed=args.retry_failed,max_pairs=args.max_pairs)
