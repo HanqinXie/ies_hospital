@@ -13,6 +13,26 @@ sys.path[:0]=[str(ROOT),str(ROOT/'src')]
 def runner():
     return importlib.import_module('tools.sci_engineering.runner')
 
+def test_real_registered_episode_has_complete_legacy_export_identity_and_actual_m21_ledger(tmp_path):
+    from scripts.sci_campaign import pilot_proposal
+    from tools.sci_engineering.policy import policy_specs
+    from tools.sci_engineering.environment import model_contract
+    r=runner();panel=pilot_proposal(duration_minutes=45.,warmup_minutes=15.,fault_duration_minutes=15.)
+    panel['scenarios']=panel['scenarios'][:1]
+    specs=[policy_specs()['M']]
+    configs={'H0':model_contract('M21_sci_engineering',{})[1]}
+    freeze=tmp_path/'freeze/FREEZE.json'
+    r.create_freeze(ROOT,freeze,specs,configs,dict(max_actual_attempts=2,max_experiment_wall_hours=1))
+    directory=tmp_path/'real_episode'
+    r.register_campaign(ROOT,directory,panel,specs,configs,freeze,phase='pilot',raw_root=tmp_path/'raw')
+    result=r.run_registered(ROOT,directory)
+    records=[json.loads(p.read_text(encoding='utf8')) for p in directory.glob('pairs/*/attempt_*/RESULT.json')]
+    assert len(records)==1
+    assert records[0]['error'] is None, records[0]['error']
+    assert result['completed']==1 and result['failed']==0
+    assert records[0]['metrics']['complete'] is True
+    assert records[0]['metrics']['observed_until_minute']==45.
+
 
 def fixture(tmp_path):
     r=runner()
@@ -23,7 +43,7 @@ def fixture(tmp_path):
     freeze_path=tmp_path/'run/FREEZE.json'
     r.create_freeze(root,freeze_path,policies,configurations,
         budget=dict(max_actual_attempts=10,max_experiment_wall_hours=2))
-    scene=dict(id='s',source_block_id='block',start_hour=1,duration_steps=4,step_minutes=15.,
+    scene=dict(id='s',source_block_id='block',stage=1,start_hour=1,duration_steps=4,step_minutes=15.,
         canonical_class='L1',initialization_seed=7,first_event_minute=15.,fault_duration_minutes=15.,
         recovery_start_minute=30.,role='development',full_source_support=dict(raw_start_minute=0.,raw_end_minute=120.))
     panel=dict(scenarios=[scene],source_blocks=[dict(source_block_id='block',role='development',

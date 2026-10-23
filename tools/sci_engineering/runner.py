@@ -129,6 +129,10 @@ def register_campaign(root, directory, panel, policy_specs, configurations, free
     raw_root = _scientific_path(raw_root if raw_root is not None else directory/'raw')
     freeze_path = Path(freeze_path).resolve(); freeze = read(freeze_path)
     verify_freeze(root,freeze)
+    from .contracts import normalize_study_scenario,exporter_metadata
+    panel=copy.deepcopy(panel)
+    panel['scenarios']=[normalize_study_scenario(s) for s in panel['scenarios']]
+    panel.pop('signature',None);panel['signature']=digest(panel)
     if phase not in ('pilot','development','formal','mechanism','boundary','hardware','sensitivity','reproduction'):
         raise ValueError('Explicit registered experiment phase required')
     if directory.exists():
@@ -166,7 +170,7 @@ def register_campaign(root, directory, panel, policy_specs, configurations, free
         files=freeze['runtime_inputs'],freeze_signature=freeze['signature'],
         scenarios=copy.deepcopy(panel['scenarios']),source_blocks=copy.deepcopy(panel.get('source_blocks',[])),
         policy_specs_sha256=digest(policy_specs),configuration_signatures={k:digest(v) for k,v in configurations.items()},
-        phase=phase,original_final12_evaluated=False))
+        phase=phase,original_final12_evaluated=False,**exporter_metadata(panel['scenarios'])))
     plan = _signed(dict(schema=SCHEMA+'.plan',registered_utc=now(),model_id=MODEL_ID,
         phase=phase,root=str(root),raw_root=str(raw_root),freeze_path=str(freeze_path),freeze_sha256=sha(freeze_path),
         freeze_signature=freeze['signature'],manifest_signature=manifest['signature'],registered_pairs=pairs,
