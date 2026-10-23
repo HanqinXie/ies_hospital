@@ -69,23 +69,36 @@ class LocalResponseMixin:
         minimum_diesel=copy.deepcopy(dispatch);minimum_diesel['diesel_kW']=0.
         return super()._rearm_allowed(i,minimum_diesel,f)
 
+    def _physical_solver_config(self,dt_h,f):
+        """Default current held-port proof uses the original model config."""
+        return self.env.config
+
+    def _electric_sink_upper(self,loads,f,row):
+        """Common no-export bound; never create consumption in the balance."""
+        auxiliary=maximum_auxiliary_sink(self.env.plant,row,loads,f,self.executed)
+        return dict(upper_kW=float(loads[:,0].sum())+auxiliary,
+            maximum_converter_electric_kW=auxiliary,
+            connected_request_electric_kW=float(loads[:,0].sum()),
+            semantics='Optimistic held-converter/current real-load sink; diagnostic only')
+
     def _surplus_interlock(self,loads,f,row):
         """Only noncurtailable GT is isolated; DG Pe has its own finite-energy test."""
         c=self.env.execution_contract
         if c['surplus_interlock']=='none':return
         while True:
             began=clock.perf_counter()
-            try:aux=maximum_auxiliary_sink(self.env.plant,row,loads,f,self.executed)
+            try:sink=self._electric_sink_upper(loads,f,row)
             except Exception as exc:self._record_error(exc,loads,f,0.,'surplus_diagnostic',self.active_command,began)
             supply=sum(self.executed['gt_electric_kW'])
             if c['grid_import_mode']=='fixed':supply+=self.executed['grid_import_kW']
-            surplus=supply-float(loads[:,0].sum())-aux
+            surplus=supply-sink['upper_kW']
             if surplus<=1e-4:break
             if c['surplus_interlock_delay_minutes']>0:return
             i=int(np.argmax(self.executed['gt_electric_kW']))
             if self.executed['gt_electric_kW'][i]<=EPS:return
             self._latch_gt(i,f,'no_export_interlock',power_surplus_kW=surplus,
-                connected_electric_kW=float(loads[:,0].sum()),maximum_real_auxiliary_kW=aux,
+                connected_electric_kW=float(loads[:,0].sum()),
+                maximum_real_auxiliary_kW=sink['maximum_converter_electric_kW'],electric_sink_bound=sink,
                 diesel_minimum_electric_kW=0.,diesel_arrived_ceiling_kW=self.executed['diesel_kW'])
         floor=.4*float(gt_level_properties(self.env.plant,float(row.outdoor_temperature_C))[0][-1])
         if c['surplus_interlock_delay_minutes']==0:

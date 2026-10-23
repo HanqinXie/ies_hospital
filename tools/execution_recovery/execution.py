@@ -285,18 +285,19 @@ class ExecutionRecoveryCore(StateCoordinatedCore):
         fixed_supply = float(sum(self.executed['gt_electric_kW']))
         if self.env.execution_contract['grid_import_mode'] == 'fixed':
             fixed_supply += float(self.executed['grid_import_kW'])
-        if fixed_supply <= float(connected[:, 0].sum())+1e-4 or float(cuts[:, 0].sum()) <= EPS:
+        if float(cuts[:, 0].sum()) <= EPS:
             self.pending_contact_restore = None
             return False
-        auxiliary = maximum_auxiliary_sink(self.env.plant, row, connected, f, self.executed)
-        required = max(0., fixed_supply-float(connected[:, 0].sum())-auxiliary)
+        sink = self._electric_sink_upper(connected, f, row)
+        auxiliary = sink['maximum_converter_electric_kW']
+        required = max(0., fixed_supply-sink['upper_kW'])
         if required <= 1e-4:
             self.pending_contact_restore = None
             return False
         available = np.minimum(cuts[:, 0], total[:, 0])
         if float(available.sum())+1e-4 < required:
             self.log('local_real_load_restore_rejected', reason='insufficient_existing_disconnected_electric_load',
-                required_kW=required, available_kW=available.tolist())
+                required_kW=required, available_kW=available.tolist(),electric_sink_bound=sink)
             return False
         delay = self.env.recovery_config['local_contact_restore_delay_minutes']
         if delay > 0.:
@@ -319,7 +320,7 @@ class ExecutionRecoveryCore(StateCoordinatedCore):
             proof = solve_physical(row, self.env.plant, candidate_connected, f, self.state,
                 self.env.dt_h, float(self.env.scenario.get('grid_limit_kW', self.env.config['grid_import_limit_kW'])),
                 self.diesel_available(self.time, f), float(self.env.config['gt_ramp_kW_per_hour']),
-                float(self.env.config['solver_time_limit_sec']), self.env.config,
+                float(self.env.config['solver_time_limit_sec']), self._physical_solver_config(self.env.dt_h,f),
                 execution_action=self.executed, execution_contract=self.env.operating_execution_contract)
         except ModelConstraintInfeasible as exc:
             self.solver_calls.append(dict(time_minute=self.time, phase='real_contact_restore_probe',
@@ -334,7 +335,7 @@ class ExecutionRecoveryCore(StateCoordinatedCore):
             solver_backend_layers=copy.deepcopy(proof.get('solver_backend_layers', []))))
         if float(np.asarray(proof['lost'])[:, 0].sum()) > 1e-4:
             self.log('local_real_load_restore_rejected', reason='restored_electric_contact_not_fully_serviceable',
-                candidate_restored_kW=restored.tolist(), proof_unserved_kW=proof['lost'])
+                candidate_restored_kW=restored.tolist(), proof_unserved_kW=proof['lost'],electric_sink_bound=sink)
             return False
         # Preserve already delivered critical heat/cold. If there is no
         # completed meter yet, accept only a fully served critical h/c proof.
@@ -367,7 +368,7 @@ class ExecutionRecoveryCore(StateCoordinatedCore):
         self.log('local_real_load_restored', restored_kW=restored.tolist(), before_disconnected_kW=before,
             after_disconnected_kW=candidate_cuts, priority_order=['P0', 'P1', 'P2', 'P3'],
             local_contact_delay_minutes=delay, zero_delay_aggregate_contact_assumption=delay == 0.,
-            fixed_source_kW=fixed_supply, maximum_real_auxiliary_kW=auxiliary,
+            fixed_source_kW=fixed_supply, maximum_real_auxiliary_kW=auxiliary,electric_sink_bound=sink,
             proof_actual_action=proof['action'], proof_unserved_kW=proof['lost'],
             critical_heat_cold_baseline=baseline_kind,
             allowed_critical_heat_cold_deficit_kW=allowed_deficit,

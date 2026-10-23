@@ -157,10 +157,56 @@ class EngineeringCore(LoadAccountingCore):
             cold_discharge_kW=cold['discharge_kW'],cold_charge_kW=cold['charge_kW'],
             cold_pump_kW_per_kW=self.env.sci_config['cold_pump_kW_per_kW'])
 
+    def _physical_solver_config(self,dt_h,f):
+        # A feasibility proof and actual accounting see the same currently
+        # registered ports. Neither a proof nor this helper commits inventory.
+        return dict(self.env.config,_sci_storage_ports=self._storage_ports(dt_h,f))
+
+    def _electric_sink_upper(self,loads,f,row):
+        """Bound real M21 consumption for the existing common no-export path.
+
+        Failed auxiliary service remains in the original request/ENS, but its
+        unexecuted electricity cannot absorb fixed GT production. All bounds
+        are optimistic and diagnostic; the unchanged physical solve still
+        determines delivery. Registered charging paths retain their ceilings.
+        """
+        from hospital_ies.execution import maximum_auxiliary_sink
+        required=dependency_requirements(row,loads)
+        fractions=np.asarray([[f.get(f'AUX_FAN_P{g}',1.),f.get('AUX_CHW_PUMP',1.),
+            f.get('AUX_HEAT_PUMP',1.)] for g in range(4)],float)
+        if not np.isfinite(fractions).all() or np.any((fractions<0.)|(fractions>1.)):
+            raise ValueError('Invalid auxiliary availability for no-export bound')
+        direct=np.maximum(0.,loads[:,0]-required.sum(axis=1))
+        electric=np.minimum(loads[:,0],direct+(required*fractions).sum(axis=1))
+        cold=np.asarray(loads[:,2],float).copy()
+        for g in range(4):
+            cold[g]*=min(fractions[g,j] if required[g,j]>1e-9 else 1. for j in (0,1))
+        ports=self._storage_ports(self.env.dt_h,f)
+        ups_charge=ports['ups_charge_kW'];cold_charge=ports['cold_charge_kW']
+        # Useful cold discharge is limited to actually connectable P0/P1
+        # cold, as in the unchanged storage eligibility/dependency rows.
+        cold_discharge=min(ports['cold_discharge_kW'],float(cold[:2].sum()))
+        bound_loads=np.asarray(loads,float).copy();bound_loads[:,2]=cold
+        # Stored cold charging is an additional real converter load, not a
+        # clinical room requiring its air fan. Its own pump electricity is
+        # included separately; this is an upper bound, never fake delivery.
+        bound_loads[3,2]+=cold_charge
+        converter=maximum_auxiliary_sink(self.env.plant,row,bound_loads,f,self.executed)
+        pump=ports['cold_pump_kW_per_kW']*(cold_charge+cold_discharge)
+        return dict(upper_kW=float(electric.sum())+converter+ups_charge+pump,
+            maximum_converter_electric_kW=converter,
+            connected_request_electric_kW=float(loads[:,0].sum()),
+            maximum_building_electric_service_by_priority_kW=electric.tolist(),
+            maximum_building_cooling_service_by_priority_kW=cold.tolist(),
+            maximum_ups_charge_kW=ups_charge,maximum_cold_charge_kW=cold_charge,
+            maximum_eligible_cold_discharge_kW=cold_discharge,
+            maximum_storage_circulation_pump_kW=pump,
+            semantics='Optimistic current hardware/held-converter/registered charge sink; original request unchanged, not actual consumption')
+
     def _solve(self,loads,f,dt_h,phase,action,**kwargs):
         import time
         began=time.perf_counter();e=self.env;_,row,_,_=self.data_at(self.time)
-        cfg=dict(e.config,_sci_storage_ports=self._storage_ports(dt_h,f))
+        cfg=self._physical_solver_config(dt_h,f)
         try:
             result=solve_physical(row,e.plant,loads,f,self.state,dt_h,
                 float(e.scenario.get('grid_limit_kW',e.config['grid_import_limit_kW'])),
