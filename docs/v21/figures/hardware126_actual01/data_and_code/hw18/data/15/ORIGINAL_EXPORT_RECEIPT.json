@@ -1,0 +1,87 @@
+{
+  "schema": "hospital_ies.v21.event_timeline_export.v1",
+  "status": "completed",
+  "source_binding_sha256": "4dfe62ae105d2696b7782dc36c83ec63c6551e2cded601d6f15c0d4083058add",
+  "source_files_checked": 643,
+  "runtime_inputs_checked": 28,
+  "source_and_inputs_unchanged_after_export": true,
+  "result_path": "E:\\hospital_ies_v21_20261023\\hardware03\\experiments\\039_hardware_m21_hardware_compound_5478464ed043b4fef98f_H2\\pairs\\m21_hardware_compound_5478464ed043b4fef98f__A_sci_v21__H2\\attempt_0001\\RESULT.json",
+  "result_sha256": "27512e9452fab07e6c7f3fb06d9cedc4f8550811f27d3d48af73a468ace6f1c2",
+  "freeze_path": "E:\\hospital_ies_v21_20261023\\hardware03\\HARDWARE_FREEZE.json",
+  "freeze_sha256": "6a2a2d9f447a10a70b5affab686079253b281c4cb56afff1d6aedf20175efe93",
+  "raw_path": "E:\\hospital_ies_v21_20261023\\raw\\hardware03\\039_hardware_m21_hardware_compound_5478464ed043b4fef98f_H2\\m21_hardware_compound_5478464ed043b4fef98f__A_sci_v21__H2\\attempt_0001\\trajectory.json.gz",
+  "raw_sha256": "04ada57ef4899d1437b66529cfad68f51ffa5f2817bd13e9e4114db16f6e3e73",
+  "sidecar_sha256": "62042d5deb28fb6ddebbbaa4e42e89a4ae8415603604801515d18ac89bd90ab9",
+  "scenario_id": "m21_hardware_compound_5478464ed043b4fef98f",
+  "policy_id": "A_sci_v21",
+  "canonical_class": "X_GRID_ALL_GT0",
+  "configuration_id": "H2",
+  "native_process_receipt": {
+    "raw_path": "E:\\hospital_ies_v21_20261023\\raw\\hardware03\\039_hardware_m21_hardware_compound_5478464ed043b4fef98f_H2\\m21_hardware_compound_5478464ed043b4fef98f__A_sci_v21__H2\\attempt_0001\\trajectory.json.gz",
+    "raw_sha256": "04ada57ef4899d1437b66529cfad68f51ffa5f2817bd13e9e4114db16f6e3e73",
+    "execution_model_id": "M21_sci_engineering",
+    "scenario_id": "m21_hardware_compound_5478464ed043b4fef98f",
+    "policy_id": "A_sci_v21",
+    "native_intervals": 577,
+    "resampled": false,
+    "observed_start_minute": 0.0,
+    "observed_end_minute": 360.0,
+    "process_csv_sha256": "153a0e31c5b149778909669bb039941f9581dbfdeae469689a7043175daf3951",
+    "scientific_figures_generated": 0
+  },
+  "row_counts": {
+    "EVENTS": 252,
+    "SEGMENT_STATES": 577,
+    "DECISION_READINESS": 24,
+    "COMMAND_TIMELINE": 677
+  },
+  "unknown_fields": "Blank CSV cell, preserved native JSON null/absence; never forward filled",
+  "command_semantics": "Event command_executed dispatch is revalidated command permission, not delivered power; only native segment.action is actual supply",
+  "readiness_semantics": "Decision-time observed readiness is separate from segment pre/post fields; missing segment readiness remains unknown",
+  "native_order_retained": true,
+  "interpolation": false,
+  "physical_attempts_started": 0,
+  "scientific_figures_generated": 0,
+  "artifacts": [
+    {
+      "path": "COMMAND_TIMELINE.csv",
+      "bytes": 11999310,
+      "sha256": "3802e58ce34105156c3b3d73b26eb059f330c9e709a98937591150b7fb304b93"
+    },
+    {
+      "path": "DECISION_READINESS.csv",
+      "bytes": 7167037,
+      "sha256": "7a7ba6f80af0c6527c7cf886ed68600b8d62b06ad97c634564fa4e1824674933"
+    },
+    {
+      "path": "EVENTS.csv",
+      "bytes": 5415899,
+      "sha256": "0da44fcb58b208b8a3d3467c0c14b9e3886fc10df58d94c20d62855708716d1a"
+    },
+    {
+      "path": "INITIAL_STATE.json",
+      "bytes": 1348,
+      "sha256": "0cd6ceb791f2c4dc7a7802eecc47d0a5b6a2ea438f378b9dedf534ccc7186a54"
+    },
+    {
+      "path": "native_process\\PROCESS.csv",
+      "bytes": 686610,
+      "sha256": "153a0e31c5b149778909669bb039941f9581dbfdeae469689a7043175daf3951"
+    },
+    {
+      "path": "native_process\\PROCESS.mat",
+      "bytes": 22337,
+      "sha256": "90dfbe59a0592dbcd73c396f2a4960157bc810a5a7d4f96856e288c94dad5c3c"
+    },
+    {
+      "path": "native_process\\PROCESS_RECEIPT.json",
+      "bytes": 695,
+      "sha256": "f16ac33096089e398f3e98f4a711ab7c9456afe3ee3dee03347cbc6abd94a5bc"
+    },
+    {
+      "path": "SEGMENT_STATES.csv",
+      "bytes": 13441490,
+      "sha256": "b1a7ae5817f91c5e52988adb74f74182a9f8f25cbdc0cf559869f32f4dad1472"
+    }
+  ]
+}

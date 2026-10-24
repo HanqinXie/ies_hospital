@@ -1,0 +1,360 @@
+{
+  "schema": "hospital_ies.fixed067_state_preparation_delivery.v1",
+  "status": "PREPARATION_COMPLETED_MATLAB_WAITING",
+  "created_utc": "2026-10-24T09:13:53.041728+00:00",
+  "source_binding_sha256": "4dfe62ae105d2696b7782dc36c83ec63c6551e2cded601d6f15c0d4083058add",
+  "data_manifest": {
+    "path": "E:\\hospital_ies_v21_20261023\\reviews\\fixed067_state_figure01\\data01\\MANIFEST.json",
+    "bytes": 6794,
+    "sha256": "25a8d2097832cc42e3271cf392e57397305a4551e95599c7d2a4308ee52cfce7"
+  },
+  "source_CSV_overlay": {
+    "path": "E:\\hospital_ies_v21_20261023\\reviews\\fixed067_state_figure01\\EXACT_SOURCE_OVERLAY01.json",
+    "bytes": 3697,
+    "sha256": "e2cf8753f708c7b66d40ad4b3a8ab95bf6895766fe8aaaaf4836bda0d4584bb8"
+  },
+  "MATLAB_static_only": {
+    "path": "E:\\hospital_ies_v21_20261023\\reviews\\fixed067_state_figure01\\MATLAB_STATIC_CONTRACT01.json",
+    "bytes": 535,
+    "sha256": "153b999a9ae654839f0238053c380d175ffa6a736086e0894947198fede5ccdf"
+  },
+  "actual_commands": [
+    {
+      "metadata": {
+        "path": "E:\\hospital_ies_v21_20261023\\reviews\\fixed067_state_figure01_audit\\logs\\state_mapping_red01.command.json",
+        "bytes": 744,
+        "sha256": "2c2748a33c69e819ca4122967878ad2cb53ab6f59b4baab35587e6325215feb5"
+      },
+      "record": {
+        "name": "state_mapping_red01",
+        "command": [
+          "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\python.exe",
+          "-B",
+          "-m",
+          "pytest",
+          "E:\\hospital_ies_v21_20261023\\reviews\\fixed067_state_figure01\\tests\\test_prepare_state.py",
+          "-q",
+          "--basetemp",
+          "E:\\hospital_ies_v21_20261023\\reviews\\fixed067_state_figure01_audit\\pytest_tmp\\red01"
+        ],
+        "cwd": "D:\\云大文件\\论文\\医院ies\\code_4_2",
+        "started_utc": "2026-10-24T08:58:47.810212+00:00",
+        "finished_utc": "2026-10-24T08:58:48.197688+00:00",
+        "elapsed_seconds": 0.388336599804461,
+        "exit_code": 1,
+        "environment_overrides": {
+          "PYTHONDONTWRITEBYTECODE": "1",
+          "PYTHONIOENCODING": "utf-8"
+        }
+      },
+      "stdout": {
+        "path": "E:\\hospital_ies_v21_20261023\\reviews\\fixed067_state_figure01_audit\\logs\\state_mapping_red01.stdout.log",
+        "bytes": 12257,
+        "sha256": "28f80ff8d9e7e1024d193d7beb6d4b2417a90dc7d27ebe5528db004f45825f9c"
+      },
+      "stderr": {
+        "path": "E:\\hospital_ies_v21_20261023\\reviews\\fixed067_state_figure01_audit\\logs\\state_mapping_red01.stderr.log",
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    },
+    {
+      "metadata": {
+        "path": "E:\\hospital_ies_v21_20261023\\reviews\\fixed067_state_figure01_audit\\logs\\state_mapping_green01.command.json",
+        "bytes": 750,
+        "sha256": "461110ef99624a7cc8d3c7a9ceb218de79957c9dddeb6eaad29e73f64b45545e"
+      },
+      "record": {
+        "name": "state_mapping_green01",
+        "command": [
+          "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\python.exe",
+          "-B",
+          "-m",
+          "pytest",
+          "E:\\hospital_ies_v21_20261023\\reviews\\fixed067_state_figure01\\tests\\test_prepare_state.py",
+          "-q",
+          "--basetemp",
+          "E:\\hospital_ies_v21_20261023\\reviews\\fixed067_state_figure01_audit\\pytest_tmp\\green01"
+        ],
+        "cwd": "D:\\云大文件\\论文\\医院ies\\code_4_2",
+        "started_utc": "2026-10-24T09:01:08.033999+00:00",
+        "finished_utc": "2026-10-24T09:01:08.400076+00:00",
+        "elapsed_seconds": 0.36675640009343624,
+        "exit_code": 0,
+        "environment_overrides": {
+          "PYTHONDONTWRITEBYTECODE": "1",
+          "PYTHONIOENCODING": "utf-8"
+        }
+      },
+      "stdout": {
+        "path": "E:\\hospital_ies_v21_20261023\\reviews\\fixed067_state_figure01_audit\\logs\\state_mapping_green01.stdout.log",
+        "bytes": 101,
+        "sha256": "b91a90f2627628c3e5e0115bb0432d5ea4745da6abb2267d4558ad27d957e24b"
+      },
+      "stderr": {
+        "path": "E:\\hospital_ies_v21_20261023\\reviews\\fixed067_state_figure01_audit\\logs\\state_mapping_green01.stderr.log",
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    },
+    {
+      "metadata": {
+        "path": "E:\\hospital_ies_v21_20261023\\reviews\\fixed067_state_figure01_audit\\logs\\actual_state_data_prepare01.command.json",
+        "bytes": 1136,
+        "sha256": "c5b6289a6ab07e3300ed3f945f5825a9b7a4334ff105b55a46a590a387a46e56"
+      },
+      "record": {
+        "name": "actual_state_data_prepare01",
+        "command": [
+          "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\python.exe",
+          "-B",
+          "E:\\hospital_ies_v21_20261023\\reviews\\fixed067_state_figure01\\prepare_state.py",
+          "--export-receipt",
+          "E:\\hospital_ies_v21_20261023\\reviews\\fixed_process_actual252_01\\commands02\\exports\\02\\EXPORT_RECEIPT.json",
+          "--export-sha",
+          "7c4b46aded034089278ac8cef0561f616012e2ab323cf7089a4daf1ae48b50df",
+          "--contract-receipt",
+          "E:\\hospital_ies_v21_20261023\\reviews\\fixed067_state_contract01\\RECEIPT.json",
+          "--contract-sha",
+          "ae4a9f2a360169bfbf8a59f88eac632025feb5a6df6002dcff639af038a36409",
+          "--output",
+          "E:\\hospital_ies_v21_20261023\\reviews\\fixed067_state_figure01\\data01"
+        ],
+        "cwd": "D:\\云大文件\\论文\\医院ies\\code_4_2",
+        "started_utc": "2026-10-24T09:01:34.495503+00:00",
+        "finished_utc": "2026-10-24T09:01:34.937413+00:00",
+        "elapsed_seconds": 0.4411510997451842,
+        "exit_code": 0,
+        "environment_overrides": {
+          "PYTHONDONTWRITEBYTECODE": "1",
+          "PYTHONIOENCODING": "utf-8"
+        }
+      },
+      "stdout": {
+        "path": "E:\\hospital_ies_v21_20261023\\reviews\\fixed067_state_figure01_audit\\logs\\actual_state_data_prepare01.stdout.log",
+        "bytes": 270,
+        "sha256": "2499622e9a794cab76be3b06c400a094373270932d1d870f718417c2495a3d0b"
+      },
+      "stderr": {
+        "path": "E:\\hospital_ies_v21_20261023\\reviews\\fixed067_state_figure01_audit\\logs\\actual_state_data_prepare01.stderr.log",
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    },
+    {
+      "metadata": {
+        "path": "E:\\hospital_ies_v21_20261023\\reviews\\fixed067_state_figure01_audit\\logs\\actual_state_data_overlay01.command.json",
+        "bytes": 921,
+        "sha256": "6977eaf5478e861bc58cf3f6b2647c7160a04baf6c98aba2fd6b9d3561178fff"
+      },
+      "record": {
+        "name": "actual_state_data_overlay01",
+        "command": [
+          "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\python.exe",
+          "-B",
+          "E:\\hospital_ies_v21_20261023\\reviews\\fixed067_state_figure01\\verify_prepared_state.py",
+          "--manifest",
+          "E:\\hospital_ies_v21_20261023\\reviews\\fixed067_state_figure01\\data01\\MANIFEST.json",
+          "--known-sha",
+          "25a8d2097832cc42e3271cf392e57397305a4551e95599c7d2a4308ee52cfce7",
+          "--output",
+          "E:\\hospital_ies_v21_20261023\\reviews\\fixed067_state_figure01\\EXACT_SOURCE_OVERLAY01.json"
+        ],
+        "cwd": "D:\\云大文件\\论文\\医院ies\\code_4_2",
+        "started_utc": "2026-10-24T09:05:26.042714+00:00",
+        "finished_utc": "2026-10-24T09:05:26.435087+00:00",
+        "elapsed_seconds": 0.3934198999777436,
+        "exit_code": 0,
+        "environment_overrides": {
+          "PYTHONDONTWRITEBYTECODE": "1",
+          "PYTHONIOENCODING": "utf-8"
+        }
+      },
+      "stdout": {
+        "path": "E:\\hospital_ies_v21_20261023\\reviews\\fixed067_state_figure01_audit\\logs\\actual_state_data_overlay01.stdout.log",
+        "bytes": 238,
+        "sha256": "1afa008a54de05a683e689c3742b5329bbd8e4f198a7210529269dce0026f7a7"
+      },
+      "stderr": {
+        "path": "E:\\hospital_ies_v21_20261023\\reviews\\fixed067_state_figure01_audit\\logs\\actual_state_data_overlay01.stderr.log",
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    },
+    {
+      "metadata": {
+        "path": "E:\\hospital_ies_v21_20261023\\reviews\\fixed067_state_figure01_audit\\logs\\state_matlab_static_contract01.command.json",
+        "bytes": 609,
+        "sha256": "d679de69c9790d9a1c2bbbb8880a150d25b14367cd617b3b8f6441fbb4f98baa"
+      },
+      "record": {
+        "name": "state_matlab_static_contract01",
+        "command": [
+          "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\python.exe",
+          "-B",
+          "E:\\hospital_ies_v21_20261023\\reviews\\fixed067_state_figure01\\verify_matlab_source_contract.py"
+        ],
+        "cwd": "D:\\云大文件\\论文\\医院ies\\code_4_2",
+        "started_utc": "2026-10-24T09:10:44.502241+00:00",
+        "finished_utc": "2026-10-24T09:10:44.539357+00:00",
+        "elapsed_seconds": 0.036570699885487556,
+        "exit_code": 0,
+        "environment_overrides": {
+          "PYTHONDONTWRITEBYTECODE": "1",
+          "PYTHONIOENCODING": "utf-8"
+        }
+      },
+      "stdout": {
+        "path": "E:\\hospital_ies_v21_20261023\\reviews\\fixed067_state_figure01_audit\\logs\\state_matlab_static_contract01.stdout.log",
+        "bytes": 247,
+        "sha256": "7eb7f01c20618e5ff08a62b1cd31b94bfe1f7c6dc5684d0ac4f83ac25da62209"
+      },
+      "stderr": {
+        "path": "E:\\hospital_ies_v21_20261023\\reviews\\fixed067_state_figure01_audit\\logs\\state_matlab_static_contract01.stderr.log",
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    }
+  ],
+  "actual_tdd": {
+    "red": "10 failed",
+    "green": "10 passed"
+  },
+  "MATLAB_PARSE": "NOT_RUN",
+  "MATLAB_FIGURE": "NOT_RUN",
+  "MATLAB_NATIVE_OBJECT_QA": "NOT_RUN",
+  "artifact_structure_QA": "NOT_RUN",
+  "visual_QA": "NOT_RUN",
+  "physical_attempts": 0,
+  "new_raw_exports": 0,
+  "raw_or_sidecar_reads": 0,
+  "scientific_gate": false,
+  "later_runtime_requires_root_true_governor_terminal": true,
+  "members": [
+    {
+      "path": "close_preparation.py",
+      "bytes": 3019,
+      "sha256": "24215aae6fb64102fbdfce9dc69a7180adc42840c7d56260ba1324198fc4296a"
+    },
+    {
+      "path": "data01/GT_OBSERVATION_VALUES.csv",
+      "bytes": 4630,
+      "sha256": "d2e83f07e25474883a2b87ad201f501a733ae66fd42a235b733530d340e25311"
+    },
+    {
+      "path": "data01/MANIFEST.json",
+      "bytes": 6794,
+      "sha256": "25a8d2097832cc42e3271cf392e57397305a4551e95599c7d2a4308ee52cfce7"
+    },
+    {
+      "path": "data01/originals/DECISION_READINESS.csv",
+      "bytes": 20628440,
+      "sha256": "857b70f99512ab1741704a0b8e426d0eb9875984787101b0f9edaf496401b0c6"
+    },
+    {
+      "path": "data01/originals/EXPORT_RECEIPT.json",
+      "bytes": 4047,
+      "sha256": "7c4b46aded034089278ac8cef0561f616012e2ab323cf7089a4daf1ae48b50df"
+    },
+    {
+      "path": "data01/originals/native_process/PROCESS.csv",
+      "bytes": 84323,
+      "sha256": "c2877bb42c52769dd10b8df2e16a88fa001f4398cf9e378cf152e842a3c7cfdc"
+    },
+    {
+      "path": "data01/originals/native_process/PROCESS.mat",
+      "bytes": 7650,
+      "sha256": "e9791bce5359fa5f55b3e025b3a24e18da9ec44113e9280487bd5503c1b9e08b"
+    },
+    {
+      "path": "data01/originals/SEGMENT_STATES.csv",
+      "bytes": 1725131,
+      "sha256": "806e42a7e54f9d69b59ff6ff5b8723804a19932c9763d64c43352d7134dec1ca"
+    },
+    {
+      "path": "data01/originals/STATE_CONTRACT_RECEIPT.json",
+      "bytes": 4855,
+      "sha256": "ae4a9f2a360169bfbf8a59f88eac632025feb5a6df6002dcff639af038a36409"
+    },
+    {
+      "path": "data01/SEGMENT_STATE_VALUES.csv",
+      "bytes": 8185,
+      "sha256": "da6e48e4b3453fb3f0d07526e66998656e22a1936bad9acad205664deec4dff6"
+    },
+    {
+      "path": "data01/STATE_DATA.mat",
+      "bytes": 1398,
+      "sha256": "0e1f9ba10a2478b7e26d0424a6c3dd1901d09835bc4afaa64bcbf8a58903fe4c"
+    },
+    {
+      "path": "DESIGN_AND_EXECUTION_SCOPE.md",
+      "bytes": 2549,
+      "sha256": "a97b91454bc573a5bc477d50af953007bc1b8ac852782d77230a12036148eb53"
+    },
+    {
+      "path": "EXACT_SOURCE_OVERLAY01.json",
+      "bytes": 3697,
+      "sha256": "e2cf8753f708c7b66d40ad4b3a8ab95bf6895766fe8aaaaf4836bda0d4584bb8"
+    },
+    {
+      "path": "FIGURE_CAPTION_PREPARED.md",
+      "bytes": 997,
+      "sha256": "56c70495960f151aeaec11d9bd377a16ee5402f4a1925e9a9f1ad5cb7caab9c1"
+    },
+    {
+      "path": "MATLAB_STATIC_CONTRACT01.json",
+      "bytes": 535,
+      "sha256": "153b999a9ae654839f0238053c380d175ffa6a736086e0894947198fede5ccdf"
+    },
+    {
+      "path": "plot_state_figure.m",
+      "bytes": 9711,
+      "sha256": "03570b8606a962228c5c5fc3d470ef4ff87ac45371ca38a94a0d211899841eb5"
+    },
+    {
+      "path": "prepare_state.py",
+      "bytes": 12660,
+      "sha256": "2f54ea28f2feac5277c94b2e354f0335904df60eae4bcc1287008c36fd1bf07b"
+    },
+    {
+      "path": "qa_state_figure.m",
+      "bytes": 19187,
+      "sha256": "2f454dc7f576bfa0d3ed9aad2d7ce44c36117b6412ceac7b1a28a378acf80d0b"
+    },
+    {
+      "path": "README_PREPARATION.md",
+      "bytes": 4834,
+      "sha256": "4fd25b7d9f86d0a832c2bfdc6d55c9b1b3ec9a624f31d06cd7b12cf834531569"
+    },
+    {
+      "path": "replay_state_local.m",
+      "bytes": 1212,
+      "sha256": "3604838d0a21849a407332250c492555bc35a6bc3916e8ffd473e7cebb705671"
+    },
+    {
+      "path": "run_state_actual01.m",
+      "bytes": 859,
+      "sha256": "31d8c3224ea38f117d482ec8a879d858790c187e88e9abdb602c202169023e6b"
+    },
+    {
+      "path": "test_state_object_refusals.m",
+      "bytes": 2185,
+      "sha256": "0b5d5337370d8c21c61fa7a033477c7868f161b2a8aa53f860f84b493007fc75"
+    },
+    {
+      "path": "tests/test_prepare_state.py",
+      "bytes": 3928,
+      "sha256": "1c7d1d4afc542f853e7289633d2bd0b2b3df0cf95fec69ef007615035ff9540a"
+    },
+    {
+      "path": "verify_matlab_source_contract.py",
+      "bytes": 2096,
+      "sha256": "e1a17acf62c6b67bc686f3a1c4dc1475a0b259787712cb0e34047cb3ac996d3e"
+    },
+    {
+      "path": "verify_prepared_state.py",
+      "bytes": 5321,
+      "sha256": "2b1172a9a9e5b77f5079b71faaa5cee43cff310c7ffaa12cc16ba30b52363361"
+    }
+  ]
+}

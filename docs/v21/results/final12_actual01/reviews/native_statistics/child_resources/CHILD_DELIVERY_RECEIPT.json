@@ -1,0 +1,122 @@
+{
+  "schema": "hospital_ies.final240_child_resource_event_review_delivery.v1",
+  "utc": "2026-10-24T19:14:53.898123+00:00",
+  "NOT_GATE": true,
+  "scientific_gate": false,
+  "whole_physical_audit": false,
+  "primary_review": {
+    "path": "actual01/RESOURCE_AND_EVENT_REVIEW.json",
+    "bytes": 153265,
+    "sha256": "ef6a057cda71bcb3d7b3421b85e690da345b4a6f9b6854b806687179c4ca4fba"
+  },
+  "actual_command": {
+    "name": "actual_resources01",
+    "command": [
+      "C:/Users/HanqinXie/AppData/Local/Programs/Python/Python310/python.exe",
+      "E:/hospital_ies_v21_20261023/reviews/final12_native_statistical_review01/child_resources/audit_resources.py"
+    ],
+    "cwd": "D:\\hospital_ies_v21_20261023",
+    "started_utc": "2026-10-24T19:13:53.797299+00:00",
+    "finished_utc": "2026-10-24T19:13:54.229557+00:00",
+    "elapsed_seconds": 0.43188299983739853,
+    "exit_code": 0,
+    "environment_overrides": {
+      "PYTHONDONTWRITEBYTECODE": "1",
+      "PYTHONIOENCODING": "utf-8"
+    }
+  },
+  "members": [
+    {
+      "path": "actual01/CASE_EVENTS_AND_RESOURCES.csv",
+      "bytes": 118253,
+      "sha256": "8843c51e89328236799af12971efe0f0fe8c81411fa79717339ccb013183d692"
+    },
+    {
+      "path": "actual01/EVENT_COUNT_SUMMARY.csv",
+      "bytes": 17183,
+      "sha256": "72f9ac0799535ed0223e6c28c09642ec331fcdb90de061e372508f235a9b09d4"
+    },
+    {
+      "path": "actual01/FIELD_INVENTORY.json",
+      "bytes": 2764,
+      "sha256": "4edfb55afd448dcffdcba802b9d3fec5b57d2af5dbb5b457df27ac96ab9f8133"
+    },
+    {
+      "path": "actual01/PROTECTION_TRIP_POSITIVE_CASES.csv",
+      "bytes": 4697,
+      "sha256": "ec759134d0741fc8416f12bbd3c113c1e951582d118002b6f0c171f801637221"
+    },
+    {
+      "path": "actual01/RESOURCE_AND_EVENT_REVIEW.json",
+      "bytes": 153265,
+      "sha256": "ef6a057cda71bcb3d7b3421b85e690da345b4a6f9b6854b806687179c4ca4fba"
+    },
+    {
+      "path": "actual01/RESULT_RESOURCE_SCALAR_CROSSCHECK.csv",
+      "bytes": 310153,
+      "sha256": "1d6d1598771dbe03fa9c0c09a5c8d725f63775cdb645cd41dd58590ee520ccc7"
+    },
+    {
+      "path": "actual01/TIMING_SUMMARY.csv",
+      "bytes": 43402,
+      "sha256": "921702166b12ce6fb3e833cafd7eac3e9cf68585db12321f5333dd668eea49c9"
+    },
+    {
+      "path": "audit_resources.py",
+      "bytes": 14931,
+      "sha256": "57e328e1a318ea982b629094d13c603698c4379074bd9781f93e189b8dacf5a1"
+    },
+    {
+      "path": "commands_and_exit_codes.txt",
+      "bytes": 516,
+      "sha256": "042ffbac6ba6bee7b6c0da5ee92410af67e0d8883ac4faea7a1817e9dd437d5a"
+    },
+    {
+      "path": "logs/actual_resources01.command.json",
+      "bytes": 571,
+      "sha256": "6807bc378eaa66a9d9dfa9cfda066525a587460f89cb1fd3f71d30c47434af06"
+    },
+    {
+      "path": "logs/actual_resources01.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "logs/actual_resources01.stdout.log",
+      "bytes": 1568,
+      "sha256": "12ae587cf2b61b23114e7279d6fb4d88b30c63ffa323ac0ad0e7b06b224dfdc9"
+    }
+  ],
+  "member_count": 12,
+  "member_bytes": 667303,
+  "source_files_checked_before_after": 247,
+  "source_drift_count": 0,
+  "original_parent_sha256": "994a42eb6b9382e5a2645c470e2af0655a6d06227b2a0d22aa9045fc4c92dc59",
+  "original_TABLES_sha256": "f70141272d4f62a20bd82d51991d36b33aa86cdeee201e3c05a02c7f877facd9",
+  "small_RESULTs_SHA_checked": 240,
+  "canonical_CASE_RESOURCE_CSV_exact": true,
+  "RESULT_RESOURCE_scalar_crosscheck": {
+    "rows": 2400,
+    "both_known": 2400,
+    "unknown": 0,
+    "mismatches": 0
+  },
+  "actual_protection_trip_counter_total": 8,
+  "actual_protection_trip_positive_cases": 8,
+  "interpretation": "Actual recorded protection_trip event counters, not L2 class incidence; no per-device event trace reconstructed",
+  "unknowns_not_zero_filled": true,
+  "scope": "Authorized final native canonical/small RESULT summaries only; no raw/sidecar/model import",
+  "raw_or_sidecar_reads": 0,
+  "physics_started": 0,
+  "solver_calls_started": 0,
+  "cohort_or_native_analysis_runs": 0,
+  "MATLAB_runs": 0,
+  "pytest_runs": 0,
+  "limitations": [
+    "Per-case timing maxima/totals are host measurements, not a per-step distribution or hardware real-time guarantee",
+    "Protection/interlock event counts are model events, not natural incident probabilities or hospital service-failure counts",
+    "Physical and scientific acceptance are separate and remain parent/root responsibility"
+  ],
+  "completion": "COMPLETE_AND_STOP_WRITING",
+  "membership": "Completed child members before this receipt, excluding this receipt itself"
+}

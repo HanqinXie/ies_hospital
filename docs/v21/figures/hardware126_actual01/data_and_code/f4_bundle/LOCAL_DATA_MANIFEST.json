@@ -1,0 +1,209 @@
+{
+  "schema": "hospital_ies.local_matlab_data_mirror.v1",
+  "stage": "hardware126",
+  "source_binding_sha256": "4dfe62ae105d2696b7782dc36c83ec63c6551e2cded601d6f15c0d4083058add",
+  "original_receipt_path": "E:\\hospital_ies_v21_20261023\\hardware126_analysis01\\PARALLEL_ANALYSIS_RECEIPT.json",
+  "original_receipt_sha256": "14bb55011f3e47aa86e45de58ab013808dbdb6854457271c4fee1401a39c6084",
+  "original_jobs_sha256": "2f4ae1fecca9db43ae5413f8a4dbd2f7344cb05e84735c247b398cfec40c9944",
+  "source_table_mapping": [
+    {
+      "original_path": "E:\\hospital_ies_v21_20261023\\hardware126_analysis01\\tables\\ATTEMPT_STATUS.csv",
+      "local_path": "E:\\hospital_ies_v21_20261023\\reviews\\hardware_figures_actual126_01\\f4_prepared01\\bundle\\data\\hardware126\\tables\\ATTEMPT_STATUS.csv",
+      "relative": "ATTEMPT_STATUS.csv",
+      "sha256": "8d397cda255e6096eab8a229af11671198e6209e448977f7184e660f8e4a301c",
+      "bytes": 150310
+    },
+    {
+      "original_path": "E:\\hospital_ies_v21_20261023\\hardware126_analysis01\\tables\\CASE_METRICS.csv",
+      "local_path": "E:\\hospital_ies_v21_20261023\\reviews\\hardware_figures_actual126_01\\f4_prepared01\\bundle\\data\\hardware126\\tables\\CASE_METRICS.csv",
+      "relative": "CASE_METRICS.csv",
+      "sha256": "8a96964436aacdc528f33b217915fa47d608244091fd455d011e9ddf38c5ef15",
+      "bytes": 490443
+    },
+    {
+      "original_path": "E:\\hospital_ies_v21_20261023\\hardware126_analysis01\\tables\\CARRIER_SERVICE.csv",
+      "local_path": "E:\\hospital_ies_v21_20261023\\reviews\\hardware_figures_actual126_01\\f4_prepared01\\bundle\\data\\hardware126\\tables\\CARRIER_SERVICE.csv",
+      "relative": "CARRIER_SERVICE.csv",
+      "sha256": "92056f6abdc5fe4ee77db1313c627ca6461081d9b4bbe5a8722cd54c5e117c3c",
+      "bytes": 279478
+    },
+    {
+      "original_path": "E:\\hospital_ies_v21_20261023\\hardware126_analysis01\\tables\\PAIRED_DIFFERENCES.csv",
+      "local_path": "E:\\hospital_ies_v21_20261023\\reviews\\hardware_figures_actual126_01\\f4_prepared01\\bundle\\data\\hardware126\\tables\\PAIRED_DIFFERENCES.csv",
+      "relative": "PAIRED_DIFFERENCES.csv",
+      "sha256": "64e7cab4a0f175fde637e823ec8c9c31e53dffa39f9f9c08929c6f361b5f88d5",
+      "bytes": 2331747
+    },
+    {
+      "original_path": "E:\\hospital_ies_v21_20261023\\hardware126_analysis01\\tables\\RESOURCE_MEASUREMENTS.csv",
+      "local_path": "E:\\hospital_ies_v21_20261023\\reviews\\hardware_figures_actual126_01\\f4_prepared01\\bundle\\data\\hardware126\\tables\\RESOURCE_MEASUREMENTS.csv",
+      "relative": "RESOURCE_MEASUREMENTS.csv",
+      "sha256": "9649b4d4af577357cdfb6115d6b835a933859112f720c4bdf75f341872b13b11",
+      "bytes": 64685
+    },
+    {
+      "original_path": "E:\\hospital_ies_v21_20261023\\hardware126_analysis01\\tables\\EVIDENCE_INTEGRITY_SUMMARY.csv",
+      "local_path": "E:\\hospital_ies_v21_20261023\\reviews\\hardware_figures_actual126_01\\f4_prepared01\\bundle\\data\\hardware126\\tables\\EVIDENCE_INTEGRITY_SUMMARY.csv",
+      "relative": "EVIDENCE_INTEGRITY_SUMMARY.csv",
+      "sha256": "22245eb836dd2109d5699dd01b23d84ffdadb5b0367d6bc672f76fb5b5c0cc4e",
+      "bytes": 407
+    },
+    {
+      "original_path": "E:\\hospital_ies_v21_20261023\\hardware126_analysis01\\tables\\PAIRED_SUMMARY.csv",
+      "local_path": "E:\\hospital_ies_v21_20261023\\reviews\\hardware_figures_actual126_01\\f4_prepared01\\bundle\\data\\hardware126\\tables\\PAIRED_SUMMARY.csv",
+      "relative": "PAIRED_SUMMARY.csv",
+      "sha256": "3cd3410c95e8f660fc556b3821308af153a905f8800a646fdbf6d6315124e0eb",
+      "bytes": 1851922
+    },
+    {
+      "original_path": "E:\\hospital_ies_v21_20261023\\hardware126_analysis01\\tables\\MECHANISM_EFFECTS.csv",
+      "local_path": "E:\\hospital_ies_v21_20261023\\reviews\\hardware_figures_actual126_01\\f4_prepared01\\bundle\\data\\hardware126\\tables\\MECHANISM_EFFECTS.csv",
+      "relative": "MECHANISM_EFFECTS.csv",
+      "sha256": "f01a374e9c81e3db89b3a42940c4d6a5447684986a1296e42bf13f196eed6295",
+      "bytes": 5
+    },
+    {
+      "original_path": "E:\\hospital_ies_v21_20261023\\hardware126_analysis01\\tables\\HARDWARE_DIFFERENCES.csv",
+      "local_path": "E:\\hospital_ies_v21_20261023\\reviews\\hardware_figures_actual126_01\\f4_prepared01\\bundle\\data\\hardware126\\tables\\HARDWARE_DIFFERENCES.csv",
+      "relative": "HARDWARE_DIFFERENCES.csv",
+      "sha256": "2062d88162737fe54116708f2423da7830d35683a5a9b2d5e6e7cf162c783009",
+      "bytes": 1650696
+    },
+    {
+      "original_path": "E:\\hospital_ies_v21_20261023\\hardware126_analysis01\\tables\\DISTURBANCE_INTERACTIONS.csv",
+      "local_path": "E:\\hospital_ies_v21_20261023\\reviews\\hardware_figures_actual126_01\\f4_prepared01\\bundle\\data\\hardware126\\tables\\DISTURBANCE_INTERACTIONS.csv",
+      "relative": "DISTURBANCE_INTERACTIONS.csv",
+      "sha256": "f01a374e9c81e3db89b3a42940c4d6a5447684986a1296e42bf13f196eed6295",
+      "bytes": 5
+    },
+    {
+      "original_path": "E:\\hospital_ies_v21_20261023\\hardware126_analysis01\\tables\\NECESSARY_BOUNDARY_CONDITIONS.csv",
+      "local_path": "E:\\hospital_ies_v21_20261023\\reviews\\hardware_figures_actual126_01\\f4_prepared01\\bundle\\data\\hardware126\\tables\\NECESSARY_BOUNDARY_CONDITIONS.csv",
+      "relative": "NECESSARY_BOUNDARY_CONDITIONS.csv",
+      "sha256": "f01a374e9c81e3db89b3a42940c4d6a5447684986a1296e42bf13f196eed6295",
+      "bytes": 5
+    },
+    {
+      "original_path": "E:\\hospital_ies_v21_20261023\\hardware126_analysis01\\tables\\SCI_TABLES.mat",
+      "local_path": "E:\\hospital_ies_v21_20261023\\reviews\\hardware_figures_actual126_01\\f4_prepared01\\bundle\\data\\hardware126\\tables\\SCI_TABLES.mat",
+      "relative": "SCI_TABLES.mat",
+      "sha256": "7fe9f026cb54357503658f2b51e4c23fdc1707db2ed350a4b64f5ab6186be8b5",
+      "bytes": 158090
+    },
+    {
+      "original_path": "E:\\hospital_ies_v21_20261023\\hardware126_analysis01\\tables\\ANALYSIS_RECEIPT.json",
+      "local_path": "E:\\hospital_ies_v21_20261023\\reviews\\hardware_figures_actual126_01\\f4_prepared01\\bundle\\data\\hardware126\\tables\\ANALYSIS_RECEIPT.json",
+      "relative": "ANALYSIS_RECEIPT.json",
+      "sha256": "ea9d66f44741b65521c1111d0beabc6f39b371f80a223c9b8aebdd95777b4710",
+      "bytes": 2514
+    }
+  ],
+  "all_native_tables_preserved": true,
+  "M_rows_removed": false,
+  "original_receipts_rewritten": false,
+  "raw_copied": false,
+  "scientific_gate": false,
+  "matlab_run": "NOT_RUN",
+  "members": [
+    {
+      "path": "code/plot_sci_engineering_publication.m",
+      "sha256": "e4d95dfef43b1b5b9bb19446098a1cc6e05f6e1a4df5af55bae2320e9deeb0c7",
+      "bytes": 30869
+    },
+    {
+      "path": "code/qa_native/artifact_scan.py",
+      "sha256": "6968f56762087ef4b9d82f666f8fc92ce02c10232161237a839f39ef9fb8bfd1",
+      "bytes": 9302
+    },
+    {
+      "path": "code/qa_native/qa_expected.py",
+      "sha256": "6ce7ee6ad422d0acda61d3332754e7ca0fd731feba82719291907e90c3514302",
+      "bytes": 26666
+    },
+    {
+      "path": "code/qa_native/qa_sci_artifacts.m",
+      "sha256": "055a45e2557df742022b0fcfbe1c55adba6c86388c119309f0cc52681b39fe60",
+      "bytes": 16789
+    },
+    {
+      "path": "data/hardware126/tables/ANALYSIS_RECEIPT.json",
+      "sha256": "ea9d66f44741b65521c1111d0beabc6f39b371f80a223c9b8aebdd95777b4710",
+      "bytes": 2514
+    },
+    {
+      "path": "data/hardware126/tables/ATTEMPT_STATUS.csv",
+      "sha256": "8d397cda255e6096eab8a229af11671198e6209e448977f7184e660f8e4a301c",
+      "bytes": 150310
+    },
+    {
+      "path": "data/hardware126/tables/CARRIER_SERVICE.csv",
+      "sha256": "92056f6abdc5fe4ee77db1313c627ca6461081d9b4bbe5a8722cd54c5e117c3c",
+      "bytes": 279478
+    },
+    {
+      "path": "data/hardware126/tables/CASE_METRICS.csv",
+      "sha256": "8a96964436aacdc528f33b217915fa47d608244091fd455d011e9ddf38c5ef15",
+      "bytes": 490443
+    },
+    {
+      "path": "data/hardware126/tables/DISTURBANCE_INTERACTIONS.csv",
+      "sha256": "f01a374e9c81e3db89b3a42940c4d6a5447684986a1296e42bf13f196eed6295",
+      "bytes": 5
+    },
+    {
+      "path": "data/hardware126/tables/EVIDENCE_INTEGRITY_SUMMARY.csv",
+      "sha256": "22245eb836dd2109d5699dd01b23d84ffdadb5b0367d6bc672f76fb5b5c0cc4e",
+      "bytes": 407
+    },
+    {
+      "path": "data/hardware126/tables/HARDWARE_DIFFERENCES.csv",
+      "sha256": "2062d88162737fe54116708f2423da7830d35683a5a9b2d5e6e7cf162c783009",
+      "bytes": 1650696
+    },
+    {
+      "path": "data/hardware126/tables/MECHANISM_EFFECTS.csv",
+      "sha256": "f01a374e9c81e3db89b3a42940c4d6a5447684986a1296e42bf13f196eed6295",
+      "bytes": 5
+    },
+    {
+      "path": "data/hardware126/tables/NECESSARY_BOUNDARY_CONDITIONS.csv",
+      "sha256": "f01a374e9c81e3db89b3a42940c4d6a5447684986a1296e42bf13f196eed6295",
+      "bytes": 5
+    },
+    {
+      "path": "data/hardware126/tables/PAIRED_DIFFERENCES.csv",
+      "sha256": "64e7cab4a0f175fde637e823ec8c9c31e53dffa39f9f9c08929c6f361b5f88d5",
+      "bytes": 2331747
+    },
+    {
+      "path": "data/hardware126/tables/PAIRED_SUMMARY.csv",
+      "sha256": "3cd3410c95e8f660fc556b3821308af153a905f8800a646fdbf6d6315124e0eb",
+      "bytes": 1851922
+    },
+    {
+      "path": "data/hardware126/tables/RESOURCE_MEASUREMENTS.csv",
+      "sha256": "9649b4d4af577357cdfb6115d6b835a933859112f720c4bdf75f341872b13b11",
+      "bytes": 64685
+    },
+    {
+      "path": "data/hardware126/tables/SCI_TABLES.mat",
+      "sha256": "7fe9f026cb54357503658f2b51e4c23fdc1707db2ed350a4b64f5ab6186be8b5",
+      "bytes": 158090
+    },
+    {
+      "path": "evidence/ORIGINAL_JOBS.json",
+      "sha256": "2f4ae1fecca9db43ae5413f8a4dbd2f7344cb05e84735c247b398cfec40c9944",
+      "bytes": 5837
+    },
+    {
+      "path": "evidence/ORIGINAL_PARALLEL_ANALYSIS_RECEIPT.json",
+      "sha256": "14bb55011f3e47aa86e45de58ab013808dbdb6854457271c4fee1401a39c6084",
+      "bytes": 18018
+    },
+    {
+      "path": "replay_remaining_figures.m",
+      "sha256": "3d33f72dd5fc8ebc25e05825d5eb6ec0f440e43b435ff728a5451b052418a0f5",
+      "bytes": 2449
+    }
+  ]
+}

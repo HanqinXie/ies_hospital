@@ -1,0 +1,251 @@
+{
+  "schema": "hospital_ies.fixed3_native_data_QA.v1",
+  "cases": [
+    {
+      "scenario_id": "m21_normal_69f6a40aaa99e6c7b6ec",
+      "policy_id": "C_sci_v21",
+      "configuration_id": "H0",
+      "kind": "normal",
+      "source_block_id": "m21_block_1706edd2c32b2937",
+      "window_minutes": 720.0,
+      "native_intervals": 48,
+      "continuous_half_open_coverage": true,
+      "csv_path": "E:\\hospital_ies_v21_20261023\\reviews\\fixed_process_actual252_01\\assembled01\\tables\\process_fixed_01\\PROCESS.csv",
+      "csv_sha256": "8d2b555360c48ba35deaf6dbab34d5ae7365f840a43fd7b5f97bc8e2c2167cfd",
+      "result_path": "E:\\hospital_ies_v21_20261023\\followup02\\experiments\\033_normal_m21_normal_69f6a40aaa99e6c7b6ec_H0\\pairs\\m21_normal_69f6a40aaa99e6c7b6ec__C_sci_v21__H0\\attempt_0001\\RESULT.json",
+      "result_sha256": "99ed073a53b0e12e98b425da0f1e4ca6fd77a61ad6d07f9efdbe076aeae883aa",
+      "raw_sha256": "59cfe6899020f8a220ad06f1695372f5c2c66abe56668f75c74b447338231839",
+      "registered_event_start_minute": null,
+      "registered_recovery_start_minute": null,
+      "normal_analysis_slots_are_not_actual_faults": true,
+      "H0_zero_storage_fields_verified": [
+        "ups_charge_kW",
+        "ups_discharge_kW",
+        "cold_charge_kW",
+        "cold_discharge_kW",
+        "cold_storage_pump_kW",
+        "ups_initial_kWh",
+        "ups_final_kWh",
+        "cold_store_initial_kWh",
+        "cold_store_final_kWh"
+      ],
+      "DG_shaft_initial_kWh": 2400.0,
+      "DG_shaft_final_kWh": 2400.0,
+      "DG_shaft_min_recorded_kWh": 2400.0,
+      "first_positive_actual_DG_source_interval_start_minute": null,
+      "first_recorded_zero_DG_inventory_interval_end_minute": null,
+      "power_time_is_not_a_ready_state_or_command_time": true,
+      "carrier_integrals": {
+        "P0_e_ENS_kWh": {
+          "native_requested_kWh": 510.6188207818474,
+          "native_delivered_kWh": 510.6183266400133,
+          "native_unserved_kWh": 0.0004941418341098652,
+          "original_CASE_ENS_kWh": 0.0004941418341098652,
+          "numeric_difference": 0.0
+        },
+        "P0_h_ENS_kWh": {
+          "native_requested_kWh": 609.6609046718966,
+          "native_delivered_kWh": 609.6609046718966,
+          "native_unserved_kWh": 0.0,
+          "original_CASE_ENS_kWh": 0.0,
+          "numeric_difference": 0.0
+        },
+        "P0_c_ENS_kWh": {
+          "native_requested_kWh": 378.94880723911706,
+          "native_delivered_kWh": 378.94880723911706,
+          "native_unserved_kWh": 0.0,
+          "original_CASE_ENS_kWh": 0.0,
+          "numeric_difference": 0.0
+        },
+        "P1_e_ENS_kWh": {
+          "native_requested_kWh": 383.1234154984619,
+          "native_delivered_kWh": 383.12292135662756,
+          "native_unserved_kWh": 0.0004941418341098652,
+          "original_CASE_ENS_kWh": 0.0004941418341098652,
+          "numeric_difference": 0.0
+        },
+        "P1_h_ENS_kWh": {
+          "native_requested_kWh": 469.7313882993751,
+          "native_delivered_kWh": 469.7313882993751,
+          "native_unserved_kWh": 0.0,
+          "original_CASE_ENS_kWh": 0.0,
+          "numeric_difference": 0.0
+        },
+        "P1_c_ENS_kWh": {
+          "native_requested_kWh": 261.27814492596787,
+          "native_delivered_kWh": 261.27814492596787,
+          "native_unserved_kWh": 0.0,
+          "original_CASE_ENS_kWh": 0.0,
+          "numeric_difference": 0.0
+        }
+      }
+    },
+    {
+      "scenario_id": "m21_boundary_a_5c16d21d8dff33fef94e",
+      "policy_id": "C_sci_v21",
+      "configuration_id": "H0",
+      "kind": "boundary",
+      "source_block_id": "m21_seen_boundary_4001_days166_167",
+      "window_minutes": 900.0,
+      "native_intervals": 75,
+      "continuous_half_open_coverage": true,
+      "csv_path": "E:\\hospital_ies_v21_20261023\\reviews\\fixed_process_actual252_01\\assembled01\\tables\\process_fixed_02\\PROCESS.csv",
+      "csv_sha256": "c2877bb42c52769dd10b8df2e16a88fa001f4398cf9e378cf152e842a3c7cfdc",
+      "result_path": "E:\\hospital_ies_v21_20261023\\followup02\\experiments\\067_boundary_a_m21_boundary_a_5c16d21d8dff33fef94e_H0\\pairs\\m21_boundary_a_5c16d21d8dff33fef94e__C_sci_v21__H0\\attempt_0001\\RESULT.json",
+      "result_sha256": "134370b3a6918b9361f77c8da308a0b74eb0ee8deecdea2ddf170e222735322a",
+      "raw_sha256": "52d52f69b5ec63c2a5305793607f596618fdbb22aafcd11ec7b2d035064a57be",
+      "registered_event_start_minute": 60.0,
+      "registered_recovery_start_minute": 780.0,
+      "normal_analysis_slots_are_not_actual_faults": false,
+      "H0_zero_storage_fields_verified": [
+        "ups_charge_kW",
+        "ups_discharge_kW",
+        "cold_charge_kW",
+        "cold_discharge_kW",
+        "cold_storage_pump_kW",
+        "ups_initial_kWh",
+        "ups_final_kWh",
+        "cold_store_initial_kWh",
+        "cold_store_final_kWh"
+      ],
+      "DG_shaft_initial_kWh": 600.0,
+      "DG_shaft_final_kWh": 0.0,
+      "DG_shaft_min_recorded_kWh": 0.0,
+      "first_positive_actual_DG_source_interval_start_minute": 75.0,
+      "first_recorded_zero_DG_inventory_interval_end_minute": 386.6666720726607,
+      "power_time_is_not_a_ready_state_or_command_time": true,
+      "carrier_integrals": {
+        "P0_e_ENS_kWh": {
+          "native_requested_kWh": 664.9527579580687,
+          "native_delivered_kWh": 409.3304707635827,
+          "native_unserved_kWh": 255.62228719448612,
+          "original_CASE_ENS_kWh": 255.62228719448612,
+          "numeric_difference": 0.0
+        },
+        "P0_h_ENS_kWh": {
+          "native_requested_kWh": 633.2220779279626,
+          "native_delivered_kWh": 347.67552124165104,
+          "native_unserved_kWh": 285.5465566863105,
+          "original_CASE_ENS_kWh": 285.5465566863105,
+          "numeric_difference": 0.0
+        },
+        "P0_c_ENS_kWh": {
+          "native_requested_kWh": 549.1605924228504,
+          "native_delivered_kWh": 330.9621360132778,
+          "native_unserved_kWh": 218.19845640957266,
+          "original_CASE_ENS_kWh": 218.19845640957266,
+          "numeric_difference": 0.0
+        },
+        "P1_e_ENS_kWh": {
+          "native_requested_kWh": 482.4322980105061,
+          "native_delivered_kWh": 277.20721660565704,
+          "native_unserved_kWh": 205.22508140484842,
+          "original_CASE_ENS_kWh": 205.22508140484842,
+          "numeric_difference": 0.0
+        },
+        "P1_h_ENS_kWh": {
+          "native_requested_kWh": 560.1664283216244,
+          "native_delivered_kWh": 289.728854049663,
+          "native_unserved_kWh": 270.43757427196124,
+          "original_CASE_ENS_kWh": 270.43757427196124,
+          "numeric_difference": 0.0
+        },
+        "P1_c_ENS_kWh": {
+          "native_requested_kWh": 375.34941970874945,
+          "native_delivered_kWh": 221.30341845334868,
+          "native_unserved_kWh": 154.0460012554006,
+          "original_CASE_ENS_kWh": 154.0460012554006,
+          "numeric_difference": 0.0
+        }
+      }
+    },
+    {
+      "scenario_id": "m21_boundary_a_5c16d21d8dff33fef94e",
+      "policy_id": "A_sci_v21",
+      "configuration_id": "H0",
+      "kind": "boundary",
+      "source_block_id": "m21_seen_boundary_4001_days166_167",
+      "window_minutes": 900.0,
+      "native_intervals": 75,
+      "continuous_half_open_coverage": true,
+      "csv_path": "E:\\hospital_ies_v21_20261023\\reviews\\fixed_process_actual252_01\\assembled01\\tables\\process_fixed_03\\PROCESS.csv",
+      "csv_sha256": "c2877bb42c52769dd10b8df2e16a88fa001f4398cf9e378cf152e842a3c7cfdc",
+      "result_path": "E:\\hospital_ies_v21_20261023\\followup02\\experiments\\067_boundary_a_m21_boundary_a_5c16d21d8dff33fef94e_H0\\pairs\\m21_boundary_a_5c16d21d8dff33fef94e__A_sci_v21__H0\\attempt_0001\\RESULT.json",
+      "result_sha256": "7aaa6dce26c0ffa4df519d16efc24ed2be2d6089d3decb3096b936d7b676a035",
+      "raw_sha256": "2db690cdf314ca8b0aeb8ac091a146e58be7bb4881a08081fe8f16fa044fea22",
+      "registered_event_start_minute": 60.0,
+      "registered_recovery_start_minute": 780.0,
+      "normal_analysis_slots_are_not_actual_faults": false,
+      "H0_zero_storage_fields_verified": [
+        "ups_charge_kW",
+        "ups_discharge_kW",
+        "cold_charge_kW",
+        "cold_discharge_kW",
+        "cold_storage_pump_kW",
+        "ups_initial_kWh",
+        "ups_final_kWh",
+        "cold_store_initial_kWh",
+        "cold_store_final_kWh"
+      ],
+      "DG_shaft_initial_kWh": 600.0,
+      "DG_shaft_final_kWh": 0.0,
+      "DG_shaft_min_recorded_kWh": 0.0,
+      "first_positive_actual_DG_source_interval_start_minute": 75.0,
+      "first_recorded_zero_DG_inventory_interval_end_minute": 386.6666720726607,
+      "power_time_is_not_a_ready_state_or_command_time": true,
+      "carrier_integrals": {
+        "P0_e_ENS_kWh": {
+          "native_requested_kWh": 664.9527579580687,
+          "native_delivered_kWh": 409.3304707635827,
+          "native_unserved_kWh": 255.62228719448612,
+          "original_CASE_ENS_kWh": 255.62228719448612,
+          "numeric_difference": 0.0
+        },
+        "P0_h_ENS_kWh": {
+          "native_requested_kWh": 633.2220779279626,
+          "native_delivered_kWh": 347.67552124165104,
+          "native_unserved_kWh": 285.5465566863105,
+          "original_CASE_ENS_kWh": 285.5465566863105,
+          "numeric_difference": 0.0
+        },
+        "P0_c_ENS_kWh": {
+          "native_requested_kWh": 549.1605924228504,
+          "native_delivered_kWh": 330.9621360132778,
+          "native_unserved_kWh": 218.19845640957266,
+          "original_CASE_ENS_kWh": 218.19845640957266,
+          "numeric_difference": 0.0
+        },
+        "P1_e_ENS_kWh": {
+          "native_requested_kWh": 482.4322980105061,
+          "native_delivered_kWh": 277.20721660565704,
+          "native_unserved_kWh": 205.22508140484842,
+          "original_CASE_ENS_kWh": 205.22508140484842,
+          "numeric_difference": 0.0
+        },
+        "P1_h_ENS_kWh": {
+          "native_requested_kWh": 560.1664283216244,
+          "native_delivered_kWh": 289.728854049663,
+          "native_unserved_kWh": 270.43757427196124,
+          "original_CASE_ENS_kWh": 270.43757427196124,
+          "numeric_difference": 0.0
+        },
+        "P1_c_ENS_kWh": {
+          "native_requested_kWh": 375.34941970874945,
+          "native_delivered_kWh": 221.30341845334868,
+          "native_unserved_kWh": 154.0460012554006,
+          "original_CASE_ENS_kWh": 154.0460012554006,
+          "numeric_difference": 0.0
+        }
+      }
+    }
+  ],
+  "complete_native_CASE_count": 252,
+  "original_registered_CASE_count": 256,
+  "known_constructor_failures_retained": 4,
+  "CASE_csv_sha256": "5004dda4fb0cb17208def82f47f66b7e1231c2b37fc860e68fc6371efd29d925",
+  "native_interpolation_or_zero_fill": false,
+  "physical_tolerances_changed": false,
+  "no_electric_heat_cooling_summation": true,
+  "actual_physics_started": 0,
+  "scientific_gate": false
+}

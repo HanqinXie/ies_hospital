@@ -1,0 +1,114 @@
+{
+  "index": 94,
+  "case_identity": {
+    "phase": "final_blind",
+    "scenario_id": "m21_L3_86e7139cda0f0a7361af",
+    "policy_id": "A_sci_v21",
+    "configuration_id": "H0",
+    "attempt_id": "attempt_0001",
+    "source_block_id": "m21_final12_a09fb6a77849da39"
+  },
+  "pid": 55960,
+  "auditor_sha256": "a516d84d286e39f17be10e9624e3c681b1b5e73d8ab03789107437aa1d55d084",
+  "generic_sha256": "a4abf08e94dfe872cef5f1eaa4aecd94744be137566c82345b21b141eaa5e727",
+  "status": "audit_pass",
+  "physical": {
+    "segment_count": 356,
+    "observed_until_minute": 720.0,
+    "storage": {
+      "ups": {
+        "initial_inventory_kWh": 0.0,
+        "initial_paid_input_kWh": 0.0,
+        "charged_input_kWh": 0.0,
+        "discharged_kWh": 0.0,
+        "standing_loss_kWh": 0.0,
+        "conversion_loss_kWh": 0.0,
+        "event_discharged_kWh": 0.0,
+        "recovery_charged_input_kWh": 0.0,
+        "depleted_at_native_end_minute": null,
+        "final_inventory_kWh": 0.0,
+        "full_recharge_observed_by_horizon": true,
+        "recharge_status": "not_observed_in_available_tail",
+        "depletion_status": "not_observed"
+      },
+      "cold_store": {
+        "initial_inventory_kWh": 0.0,
+        "initial_paid_input_kWh": 0.0,
+        "charged_input_kWh": 0.0,
+        "discharged_kWh": 0.0,
+        "standing_loss_kWh": 0.0,
+        "conversion_loss_kWh": 0.0,
+        "event_discharged_kWh": 0.0,
+        "recovery_charged_input_kWh": 0.0,
+        "depleted_at_native_end_minute": null,
+        "final_inventory_kWh": 0.0,
+        "full_recharge_observed_by_horizon": true,
+        "recharge_status": "not_observed_in_available_tail",
+        "depletion_status": "not_observed"
+      }
+    },
+    "carrier_ENS_kWh": [
+      [
+        0.0007485608545815446,
+        0.0,
+        0.0
+      ],
+      [
+        0.0007485608545815446,
+        0.0,
+        0.0
+      ],
+      [
+        0.0007485608545815445,
+        0.0,
+        0.0
+      ],
+      [
+        0.07485608545815475,
+        0.0,
+        0.0
+      ]
+    ],
+    "fan_zero_P3_heat_kWh": 0.0,
+    "fan_source_trace_count": 0,
+    "maximum_electric_cold_residual_kW": 3.410605131648481e-13,
+    "maximum_auxiliary_dependency_excess_kW": 0.0,
+    "cold_store_pump_electric_kWh": 0.0,
+    "DG_shaft_work_kWh": 0.0,
+    "event_P0_P1_e_ENS_kWh": 0.00028426286688113596,
+    "status": "pass",
+    "result_path": "E:\\hospital_ies_v21_20261023\\final_blind01\\experiments\\final_blind48_all5_H0\\pairs\\m21_L3_86e7139cda0f0a7361af__A_sci_v21__H0\\attempt_0001\\RESULT.json",
+    "result_sha256": "f9d1de2b90cd617124863a194a51d32d832ee5123fac0066c4b60b3c6deed218",
+    "raw_path": "E:\\hospital_ies_v21_20261023\\raw\\final_blind01\\final_blind48_all5_H0\\m21_L3_86e7139cda0f0a7361af__A_sci_v21__H0\\attempt_0001\\trajectory.json.gz",
+    "raw_sha256": "7d253d35130e757ec54655b36e365a5ed8077fd6fabef98e1ca757a54a7db7de",
+    "solver_sidecar": {
+      "entry_count": 5096,
+      "row_count": 1955008,
+      "maximum_original_row_violation": 5.938009195460836e-09,
+      "gzip_sha256": "27a0484f65a8e869d604a5fd5bb6a413e8e07c57d9b800795a1b944f679126ed"
+    },
+    "scenario_id": "m21_L3_86e7139cda0f0a7361af",
+    "policy_id": "A_sci_v21",
+    "configuration_id": "H0"
+  },
+  "original_pilot_result": null,
+  "every_original_field_equal": null,
+  "current_artifact_stats": [
+    {
+      "path": "E:\\hospital_ies_v21_20261023\\raw\\final_blind01\\final_blind48_all5_H0\\m21_L3_86e7139cda0f0a7361af__A_sci_v21__H0\\attempt_0001\\trajectory.json.gz",
+      "bytes": 3365938,
+      "mtime_ns": 1792850424293379600
+    },
+    {
+      "path": "E:\\hospital_ies_v21_20261023\\raw\\final_blind01\\final_blind48_all5_H0\\m21_L3_86e7139cda0f0a7361af__A_sci_v21__H0\\attempt_0001\\solver_rows.jsonl.gz",
+      "bytes": 23211247,
+      "mtime_ns": 1792850419370842000
+    }
+  ],
+  "elapsed_seconds": 11.32477239985019,
+  "cpu_seconds": 11.1875,
+  "memory": {
+    "os_peak_working_set_bytes": 457912320,
+    "private_bytes_at_end": 77213696
+  }
+}

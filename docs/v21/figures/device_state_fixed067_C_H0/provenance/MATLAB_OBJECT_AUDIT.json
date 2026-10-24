@@ -1,0 +1,60 @@
+{
+  "schema": "hospital_ies.matlab_object_audit.v2",
+  "audit_kind": "custom_state_audit",
+  "expected_count": 1,
+  "matches": 1,
+  "expected_figure_count": 1,
+  "matched_figure_count": 1,
+  "object_checks_passed": true,
+  "all_expected_matched": true,
+  "failures": [],
+  "details": [
+    {
+      "file": "E:\\hospital_ies_v21_20261023\\reviews\\fixed067_state_figure01\\figures01\\STATE_fixed067_C_H0.fig",
+      "status": "passed",
+      "formats": {
+        "fig": {
+          "path": "E:\\hospital_ies_v21_20261023\\reviews\\fixed067_state_figure01\\figures01\\STATE_fixed067_C_H0.fig",
+          "sha": "3a2b640bb330ecd69fef474fa8ba42d80cb4b6492448187c286f963397b49b21",
+          "sha256": "3a2b640bb330ecd69fef474fa8ba42d80cb4b6492448187c286f963397b49b21",
+          "bytes": 70191
+        },
+        "svg": {
+          "path": "E:\\hospital_ies_v21_20261023\\reviews\\fixed067_state_figure01\\figures01\\STATE_fixed067_C_H0.svg",
+          "sha": "4bfb803e1478f0cb7638f80f52408d06ad1c541c84d5159318f762a46a9a436c",
+          "sha256": "4bfb803e1478f0cb7638f80f52408d06ad1c541c84d5159318f762a46a9a436c",
+          "bytes": 703022
+        },
+        "pdf": {
+          "path": "E:\\hospital_ies_v21_20261023\\reviews\\fixed067_state_figure01\\figures01\\STATE_fixed067_C_H0.pdf",
+          "sha": "53e63c92c25c90e8a9a7bdfddfe36094186c7b9174a588770e2edad0d3619851",
+          "sha256": "53e63c92c25c90e8a9a7bdfddfe36094186c7b9174a588770e2edad0d3619851",
+          "bytes": 70616
+        },
+        "png": {
+          "path": "E:\\hospital_ies_v21_20261023\\reviews\\fixed067_state_figure01\\figures01\\STATE_fixed067_C_H0.png",
+          "sha": "9e4817239fb67c01f4c107ba1900134672fd08d9f5ec8dbed4101cb649e171b2",
+          "sha256": "9e4817239fb67c01f4c107ba1900134672fd08d9f5ec8dbed4101cb649e171b2",
+          "bytes": 730065
+        }
+      },
+      "figure_size_cm": [
+        18,
+        20
+      ],
+      "axes_count": 3,
+      "segment_patch_count": 150,
+      "scatter_count": 4,
+      "image_count": 0,
+      "font_object_count": 19,
+      "source_binding_sha256": "4dfe62ae105d2696b7782dc36c83ec63c6551e2cded601d6f15c0d4083058add",
+      "manifest_sha256": "25a8d2097832cc42e3271cf392e57397305a4551e95599c7d2a4308ee52cfce7",
+      "coordinate_check": "EXACT_NATIVE_X_Y_CDATA",
+      "semantics": "DG_PRE_START_LABEL_DG_POST_ENDPOINT_GT_OBSERVATION_POINTS_ONLY"
+    }
+  ],
+  "physics_attempts_started": 0,
+  "scientific_gate": false,
+  "scientific_gate_status": "NOT_RUN",
+  "matlab_object_audit_status": "PASS"
+}

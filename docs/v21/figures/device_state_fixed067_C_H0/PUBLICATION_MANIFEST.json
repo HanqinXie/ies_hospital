@@ -1,0 +1,447 @@
+{
+  "schema": "hospital_ies.root_state_figure_publication.v1",
+  "created_utc": "2026-10-24T10:03:55.386687+00:00",
+  "source_author_receipt": {
+    "path": "E:\\hospital_ies_v21_20261023\\reviews\\fixed067_state_figure01\\runtime01\\ACTUAL_DELIVERY_RECEIPT01.json",
+    "bytes": 56834,
+    "sha256": "461b630ac90d571b4f46974dc3470cec7077a08c0c3d0f3bee6f1b376ceca8ba"
+  },
+  "root_visual_receipt": {
+    "path": "E:\\hospital_ies_v21_20261023\\reviews\\state067_root_visual01\\ROOT_VISUAL_BYTE_BINDINGS.json",
+    "bytes": 2847,
+    "sha256": "24de59314b3698ccaa145b46074053f98a0c4ff8d9c60301a884725903b23dc3"
+  },
+  "destination": "D:\\hospital_ies_v21_20261023\\docs\\v21\\figures\\device_state_fixed067_C_H0",
+  "copied_files": [
+    {
+      "original_path": "E:\\hospital_ies_v21_20261023\\reviews\\fixed067_state_figure01\\data01\\GT_OBSERVATION_VALUES.csv",
+      "local_relative_path": "data/GT_OBSERVATION_VALUES.csv",
+      "bytes": 4630,
+      "sha256": "d2e83f07e25474883a2b87ad201f501a733ae66fd42a235b733530d340e25311"
+    },
+    {
+      "original_path": "E:\\hospital_ies_v21_20261023\\reviews\\fixed067_state_figure01\\data01\\MANIFEST.json",
+      "local_relative_path": "data/MANIFEST.json",
+      "bytes": 6794,
+      "sha256": "25a8d2097832cc42e3271cf392e57397305a4551e95599c7d2a4308ee52cfce7"
+    },
+    {
+      "original_path": "E:\\hospital_ies_v21_20261023\\reviews\\fixed067_state_figure01\\data01\\SEGMENT_STATE_VALUES.csv",
+      "local_relative_path": "data/SEGMENT_STATE_VALUES.csv",
+      "bytes": 8185,
+      "sha256": "da6e48e4b3453fb3f0d07526e66998656e22a1936bad9acad205664deec4dff6"
+    },
+    {
+      "original_path": "E:\\hospital_ies_v21_20261023\\reviews\\fixed067_state_figure01\\data01\\STATE_DATA.mat",
+      "local_relative_path": "data/STATE_DATA.mat",
+      "bytes": 1398,
+      "sha256": "0e1f9ba10a2478b7e26d0424a6c3dd1901d09835bc4afaa64bcbf8a58903fe4c"
+    },
+    {
+      "original_path": "E:\\hospital_ies_v21_20261023\\reviews\\fixed067_state_figure01\\data01\\originals\\DECISION_READINESS.csv",
+      "local_relative_path": "data/originals/DECISION_READINESS.csv",
+      "bytes": 20628440,
+      "sha256": "857b70f99512ab1741704a0b8e426d0eb9875984787101b0f9edaf496401b0c6"
+    },
+    {
+      "original_path": "E:\\hospital_ies_v21_20261023\\reviews\\fixed067_state_figure01\\data01\\originals\\EXPORT_RECEIPT.json",
+      "local_relative_path": "data/originals/EXPORT_RECEIPT.json",
+      "bytes": 4047,
+      "sha256": "7c4b46aded034089278ac8cef0561f616012e2ab323cf7089a4daf1ae48b50df"
+    },
+    {
+      "original_path": "E:\\hospital_ies_v21_20261023\\reviews\\fixed067_state_figure01\\data01\\originals\\SEGMENT_STATES.csv",
+      "local_relative_path": "data/originals/SEGMENT_STATES.csv",
+      "bytes": 1725131,
+      "sha256": "806e42a7e54f9d69b59ff6ff5b8723804a19932c9763d64c43352d7134dec1ca"
+    },
+    {
+      "original_path": "E:\\hospital_ies_v21_20261023\\reviews\\fixed067_state_figure01\\data01\\originals\\STATE_CONTRACT_RECEIPT.json",
+      "local_relative_path": "data/originals/STATE_CONTRACT_RECEIPT.json",
+      "bytes": 4855,
+      "sha256": "ae4a9f2a360169bfbf8a59f88eac632025feb5a6df6002dcff639af038a36409"
+    },
+    {
+      "original_path": "E:\\hospital_ies_v21_20261023\\reviews\\fixed067_state_figure01\\data01\\originals\\native_process\\PROCESS.csv",
+      "local_relative_path": "data/originals/native_process/PROCESS.csv",
+      "bytes": 84323,
+      "sha256": "c2877bb42c52769dd10b8df2e16a88fa001f4398cf9e378cf152e842a3c7cfdc"
+    },
+    {
+      "original_path": "E:\\hospital_ies_v21_20261023\\reviews\\fixed067_state_figure01\\data01\\originals\\native_process\\PROCESS.mat",
+      "local_relative_path": "data/originals/native_process/PROCESS.mat",
+      "bytes": 7650,
+      "sha256": "e9791bce5359fa5f55b3e025b3a24e18da9ec44113e9280487bd5503c1b9e08b"
+    },
+    {
+      "original_path": "E:\\hospital_ies_v21_20261023\\reviews\\fixed067_state_figure01\\plot_state_figure.m",
+      "local_relative_path": "code/plot_state_figure.m",
+      "bytes": 9711,
+      "sha256": "03570b8606a962228c5c5fc3d470ef4ff87ac45371ca38a94a0d211899841eb5"
+    },
+    {
+      "original_path": "E:\\hospital_ies_v21_20261023\\reviews\\fixed067_state_figure01\\qa_state_figure.m",
+      "local_relative_path": "code/qa_state_figure.m",
+      "bytes": 19187,
+      "sha256": "2f454dc7f576bfa0d3ed9aad2d7ce44c36117b6412ceac7b1a28a378acf80d0b"
+    },
+    {
+      "original_path": "E:\\hospital_ies_v21_20261023\\reviews\\fixed067_state_figure01\\replay_state_local.m",
+      "local_relative_path": "code/replay_state_local.m",
+      "bytes": 1212,
+      "sha256": "3604838d0a21849a407332250c492555bc35a6bc3916e8ffd473e7cebb705671"
+    },
+    {
+      "original_path": "E:\\hospital_ies_v21_20261023\\reviews\\fixed067_state_figure01\\test_state_object_refusals.m",
+      "local_relative_path": "code/test_state_object_refusals.m",
+      "bytes": 2185,
+      "sha256": "0b5d5337370d8c21c61fa7a033477c7868f161b2a8aa53f860f84b493007fc75"
+    },
+    {
+      "original_path": "E:\\hospital_ies_v21_20261023\\reviews\\fixed067_state_figure01\\figures01\\STATE_fixed067_C_H0.fig",
+      "local_relative_path": "figures/STATE_fixed067_C_H0.fig",
+      "bytes": 70191,
+      "sha256": "3a2b640bb330ecd69fef474fa8ba42d80cb4b6492448187c286f963397b49b21"
+    },
+    {
+      "original_path": "E:\\hospital_ies_v21_20261023\\reviews\\fixed067_state_figure01\\figures01\\STATE_fixed067_C_H0.svg",
+      "local_relative_path": "figures/STATE_fixed067_C_H0.svg",
+      "bytes": 703022,
+      "sha256": "4bfb803e1478f0cb7638f80f52408d06ad1c541c84d5159318f762a46a9a436c"
+    },
+    {
+      "original_path": "E:\\hospital_ies_v21_20261023\\reviews\\fixed067_state_figure01\\figures01\\STATE_fixed067_C_H0.pdf",
+      "local_relative_path": "figures/STATE_fixed067_C_H0.pdf",
+      "bytes": 70616,
+      "sha256": "53e63c92c25c90e8a9a7bdfddfe36094186c7b9174a588770e2edad0d3619851"
+    },
+    {
+      "original_path": "E:\\hospital_ies_v21_20261023\\reviews\\fixed067_state_figure01\\figures01\\STATE_fixed067_C_H0.png",
+      "local_relative_path": "figures/STATE_fixed067_C_H0.png",
+      "bytes": 730065,
+      "sha256": "9e4817239fb67c01f4c107ba1900134672fd08d9f5ec8dbed4101cb649e171b2"
+    },
+    {
+      "original_path": "E:\\hospital_ies_v21_20261023\\reviews\\fixed067_state_figure01\\runtime01\\ACTUAL_DELIVERY_RECEIPT01.json",
+      "local_relative_path": "provenance/ACTUAL_DELIVERY_RECEIPT01.json",
+      "bytes": 56834,
+      "sha256": "461b630ac90d571b4f46974dc3470cec7077a08c0c3d0f3bee6f1b376ceca8ba"
+    },
+    {
+      "original_path": "E:\\hospital_ies_v21_20261023\\reviews\\fixed067_state_figure01\\PREPARATION_RECEIPT.json",
+      "local_relative_path": "provenance/PREPARATION_RECEIPT.json",
+      "bytes": 14723,
+      "sha256": "689610992dcf0ec1c87bb1b7529b075b04f33acc6c6535bad3da6ef5da40b0a3"
+    },
+    {
+      "original_path": "E:\\hospital_ies_v21_20261023\\reviews\\fixed067_state_figure01\\EXACT_SOURCE_OVERLAY01.json",
+      "local_relative_path": "provenance/EXACT_SOURCE_OVERLAY01.json",
+      "bytes": 3697,
+      "sha256": "e2cf8753f708c7b66d40ad4b3a8ab95bf6895766fe8aaaaf4836bda0d4584bb8"
+    },
+    {
+      "original_path": "E:\\hospital_ies_v21_20261023\\reviews\\fixed067_state_figure01\\objects01\\MATLAB_OBJECT_AUDIT.json",
+      "local_relative_path": "provenance/MATLAB_OBJECT_AUDIT.json",
+      "bytes": 2528,
+      "sha256": "8010c5d6762c2d949a336d147c23c7452918afa4ea3af7587111b6d2f18dd33b"
+    },
+    {
+      "original_path": "E:\\hospital_ies_v21_20261023\\reviews\\fixed067_state_figure01\\runtime01\\structure01\\ARTIFACT_STRUCTURE_QA.json",
+      "local_relative_path": "provenance/ARTIFACT_STRUCTURE_QA.json",
+      "bytes": 10176,
+      "sha256": "1893862fbaf9e28b605cc8c3f6f5506eb96d787f80eca9149941af093ab24e9d"
+    },
+    {
+      "original_path": "E:\\hospital_ies_v21_20261023\\reviews\\fixed067_state_figure01\\runtime01\\RUNTIME_RECONCILIATION01.json",
+      "local_relative_path": "provenance/RUNTIME_RECONCILIATION01.json",
+      "bytes": 10366,
+      "sha256": "95d6caa75facaddb85b7176d5600cab23d0715c335bd30283950f4c53295cd37"
+    },
+    {
+      "original_path": "E:\\hospital_ies_v21_20261023\\reviews\\fixed067_state_figure01\\runtime01\\AUTHOR_VISUAL_REVIEW01.json",
+      "local_relative_path": "provenance/AUTHOR_VISUAL_REVIEW01.json",
+      "bytes": 1586,
+      "sha256": "103e4216201ed7649a9c3e9b23a7b8905a417389fbe00296cd6b20943901425d"
+    },
+    {
+      "original_path": "E:\\hospital_ies_v21_20261023\\reviews\\fixed067_state_figure01\\runtime01\\ROOT_VISUAL_REVIEW01.json",
+      "local_relative_path": "provenance/ROOT_VISUAL_REVIEW01.json",
+      "bytes": 1622,
+      "sha256": "8b08218ea139c493dd6de39e60a4e76afea1c112430205998782dca5a3ca87c9"
+    },
+    {
+      "original_path": "E:\\hospital_ies_v21_20261023\\reviews\\fixed067_state_figure01\\runtime01\\FINAL_DELIVERY_EXACT01.json",
+      "local_relative_path": "provenance/FINAL_DELIVERY_EXACT01.json",
+      "bytes": 495,
+      "sha256": "d8fbb7a4184a22973ca3678c0d9502ad00ebd7b64f085a757c3eb46c9a10a2ef"
+    },
+    {
+      "original_path": "E:\\hospital_ies_v21_20261023\\reviews\\fixed067_state_figure01\\negative_object_tests01\\NATIVE_OBJECT_REFUSALS.json",
+      "local_relative_path": "provenance/NATIVE_OBJECT_REFUSALS.json",
+      "bytes": 1282,
+      "sha256": "647a360c947be6f0d7af4354bae649c20aa82f3ec723964719d22244b77eb0b9"
+    },
+    {
+      "original_path": "E:\\hospital_ies_v21_20261023\\reviews\\fixed067_state_figure01\\CHECKCODE_ACTUAL01.json",
+      "local_relative_path": "provenance/CHECKCODE_ACTUAL01.json",
+      "bytes": 2537,
+      "sha256": "81f80ec736ab9f586e0d208b235e8e83b7100bc884ab7ef3a53dea357dc4ba3f"
+    },
+    {
+      "original_path": "E:\\hospital_ies_v21_20261023\\reviews\\state067_root_visual01\\ROOT_VISUAL_BYTE_BINDINGS.json",
+      "local_relative_path": "provenance/ROOT_VISUAL_BYTE_BINDINGS.json",
+      "bytes": 2847,
+      "sha256": "24de59314b3698ccaa145b46074053f98a0c4ff8d9c60301a884725903b23dc3"
+    },
+    {
+      "original_path": "E:\\hospital_ies_v21_20261023\\reviews\\fixed067_state_figure01\\runtime01\\FIGURE_CAPTION_ACTUAL01.md",
+      "local_relative_path": "FIGURE_CAPTION.md",
+      "bytes": 1333,
+      "sha256": "e7045ba16aa78e3ab9ac384568bcc4ad203e621d906536deaf4ba2853f7f793d"
+    },
+    {
+      "original_path": "E:\\hospital_ies_v21_20261023\\reviews\\fixed067_state_figure01\\runtime01\\README_ACTUAL_DELIVERY01.md",
+      "local_relative_path": "provenance/ORIGINAL_ACTUAL_DELIVERY_README.md",
+      "bytes": 3210,
+      "sha256": "27b56b2ee90ce6bb935ef2606c8ef9e95b7bef63cb7c67e1073470c32bb0bdb1"
+    },
+    {
+      "original_path": "E:\\hospital_ies_v21_20261023\\reviews\\fixed067_state_figure01_audit\\logs\\actual_matlab_state01.command.json",
+      "local_relative_path": "provenance/audit/logs/actual_matlab_state01.command.json",
+      "bytes": 587,
+      "sha256": "19c0aab8868e9541ae5b77f7df5270fb9ef40e11ef22ff053ad818f2aa884bf5"
+    },
+    {
+      "original_path": "E:\\hospital_ies_v21_20261023\\reviews\\fixed067_state_figure01_audit\\logs\\actual_matlab_state01.stderr.log",
+      "local_relative_path": "provenance/audit/logs/actual_matlab_state01.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "original_path": "E:\\hospital_ies_v21_20261023\\reviews\\fixed067_state_figure01_audit\\logs\\actual_matlab_state01.stdout.log",
+      "local_relative_path": "provenance/audit/logs/actual_matlab_state01.stdout.log",
+      "bytes": 52,
+      "sha256": "3d4ef39fa38d1a98cf0de814d62e82cf82d1ce119ec23d2efc68b3622f924599"
+    },
+    {
+      "original_path": "E:\\hospital_ies_v21_20261023\\reviews\\fixed067_state_figure01_audit\\logs\\actual_state_data_overlay01.command.json",
+      "local_relative_path": "provenance/audit/logs/actual_state_data_overlay01.command.json",
+      "bytes": 921,
+      "sha256": "6977eaf5478e861bc58cf3f6b2647c7160a04baf6c98aba2fd6b9d3561178fff"
+    },
+    {
+      "original_path": "E:\\hospital_ies_v21_20261023\\reviews\\fixed067_state_figure01_audit\\logs\\actual_state_data_overlay01.stderr.log",
+      "local_relative_path": "provenance/audit/logs/actual_state_data_overlay01.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "original_path": "E:\\hospital_ies_v21_20261023\\reviews\\fixed067_state_figure01_audit\\logs\\actual_state_data_overlay01.stdout.log",
+      "local_relative_path": "provenance/audit/logs/actual_state_data_overlay01.stdout.log",
+      "bytes": 238,
+      "sha256": "1afa008a54de05a683e689c3742b5329bbd8e4f198a7210529269dce0026f7a7"
+    },
+    {
+      "original_path": "E:\\hospital_ies_v21_20261023\\reviews\\fixed067_state_figure01_audit\\logs\\actual_state_data_prepare01.command.json",
+      "local_relative_path": "provenance/audit/logs/actual_state_data_prepare01.command.json",
+      "bytes": 1136,
+      "sha256": "c5b6289a6ab07e3300ed3f945f5825a9b7a4334ff105b55a46a590a387a46e56"
+    },
+    {
+      "original_path": "E:\\hospital_ies_v21_20261023\\reviews\\fixed067_state_figure01_audit\\logs\\actual_state_data_prepare01.stderr.log",
+      "local_relative_path": "provenance/audit/logs/actual_state_data_prepare01.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "original_path": "E:\\hospital_ies_v21_20261023\\reviews\\fixed067_state_figure01_audit\\logs\\actual_state_data_prepare01.stdout.log",
+      "local_relative_path": "provenance/audit/logs/actual_state_data_prepare01.stdout.log",
+      "bytes": 270,
+      "sha256": "2499622e9a794cab76be3b06c400a094373270932d1d870f718417c2495a3d0b"
+    },
+    {
+      "original_path": "E:\\hospital_ies_v21_20261023\\reviews\\fixed067_state_figure01_audit\\logs\\close_state_preparation01.command.json",
+      "local_relative_path": "provenance/audit/logs/close_state_preparation01.command.json",
+      "bytes": 590,
+      "sha256": "d8a4b757fb8f419ddad106bd8fd9c25966d3a7a53350df90cfe1b1b00ee0af32"
+    },
+    {
+      "original_path": "E:\\hospital_ies_v21_20261023\\reviews\\fixed067_state_figure01_audit\\logs\\close_state_preparation01.stderr.log",
+      "local_relative_path": "provenance/audit/logs/close_state_preparation01.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "original_path": "E:\\hospital_ies_v21_20261023\\reviews\\fixed067_state_figure01_audit\\logs\\close_state_preparation01.stdout.log",
+      "local_relative_path": "provenance/audit/logs/close_state_preparation01.stdout.log",
+      "bytes": 279,
+      "sha256": "71e219bca58b41b40362f9788e801603fe63275d74467512624d26eca44fcac3"
+    },
+    {
+      "original_path": "E:\\hospital_ies_v21_20261023\\reviews\\fixed067_state_figure01_audit\\logs\\state_after_exact01.command.json",
+      "local_relative_path": "provenance/audit/logs/state_after_exact01.command.json",
+      "bytes": 703,
+      "sha256": "270a64adeddbc676a93ea95e8a434357a4d631e452247d768e37e364efdf238c"
+    },
+    {
+      "original_path": "E:\\hospital_ies_v21_20261023\\reviews\\fixed067_state_figure01_audit\\logs\\state_after_exact01.stderr.log",
+      "local_relative_path": "provenance/audit/logs/state_after_exact01.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "original_path": "E:\\hospital_ies_v21_20261023\\reviews\\fixed067_state_figure01_audit\\logs\\state_after_exact01.stdout.log",
+      "local_relative_path": "provenance/audit/logs/state_after_exact01.stdout.log",
+      "bytes": 251,
+      "sha256": "c12ae23bfe9d6f8b1c754b9480423a71fb8af7b1d4e2b46aebab5493fd0adb97"
+    },
+    {
+      "original_path": "E:\\hospital_ies_v21_20261023\\reviews\\fixed067_state_figure01_audit\\logs\\state_artifact_structure01.command.json",
+      "local_relative_path": "provenance/audit/logs/state_artifact_structure01.command.json",
+      "bytes": 903,
+      "sha256": "18fcb97a723afc9cf06eab5d600e1a81c0b69b8898a4897c4a9787e9fd096f63"
+    },
+    {
+      "original_path": "E:\\hospital_ies_v21_20261023\\reviews\\fixed067_state_figure01_audit\\logs\\state_artifact_structure01.stderr.log",
+      "local_relative_path": "provenance/audit/logs/state_artifact_structure01.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "original_path": "E:\\hospital_ies_v21_20261023\\reviews\\fixed067_state_figure01_audit\\logs\\state_artifact_structure01.stdout.log",
+      "local_relative_path": "provenance/audit/logs/state_artifact_structure01.stdout.log",
+      "bytes": 206,
+      "sha256": "a03025748af1975a7f9c2f2611730cc70209841e289b856526ead1444d2740e2"
+    },
+    {
+      "original_path": "E:\\hospital_ies_v21_20261023\\reviews\\fixed067_state_figure01_audit\\logs\\state_complete_proofs01.command.json",
+      "local_relative_path": "provenance/audit/logs/state_complete_proofs01.command.json",
+      "bytes": 583,
+      "sha256": "137fec793cda72ff974b660e932af04e3eb5ba74e5b6f6f978e13e9021d48ec8"
+    },
+    {
+      "original_path": "E:\\hospital_ies_v21_20261023\\reviews\\fixed067_state_figure01_audit\\logs\\state_complete_proofs01.stderr.log",
+      "local_relative_path": "provenance/audit/logs/state_complete_proofs01.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "original_path": "E:\\hospital_ies_v21_20261023\\reviews\\fixed067_state_figure01_audit\\logs\\state_complete_proofs01.stdout.log",
+      "local_relative_path": "provenance/audit/logs/state_complete_proofs01.stdout.log",
+      "bytes": 1343,
+      "sha256": "726e4eabbf21bc1006d382e60d1e44d125f08057274e4719bcde38c9419df556"
+    },
+    {
+      "original_path": "E:\\hospital_ies_v21_20261023\\reviews\\fixed067_state_figure01_audit\\logs\\state_mapping_green01.command.json",
+      "local_relative_path": "provenance/audit/logs/state_mapping_green01.command.json",
+      "bytes": 750,
+      "sha256": "461110ef99624a7cc8d3c7a9ceb218de79957c9dddeb6eaad29e73f64b45545e"
+    },
+    {
+      "original_path": "E:\\hospital_ies_v21_20261023\\reviews\\fixed067_state_figure01_audit\\logs\\state_mapping_green01.stderr.log",
+      "local_relative_path": "provenance/audit/logs/state_mapping_green01.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "original_path": "E:\\hospital_ies_v21_20261023\\reviews\\fixed067_state_figure01_audit\\logs\\state_mapping_green01.stdout.log",
+      "local_relative_path": "provenance/audit/logs/state_mapping_green01.stdout.log",
+      "bytes": 101,
+      "sha256": "b91a90f2627628c3e5e0115bb0432d5ea4745da6abb2267d4558ad27d957e24b"
+    },
+    {
+      "original_path": "E:\\hospital_ies_v21_20261023\\reviews\\fixed067_state_figure01_audit\\logs\\state_mapping_red01.command.json",
+      "local_relative_path": "provenance/audit/logs/state_mapping_red01.command.json",
+      "bytes": 744,
+      "sha256": "2c2748a33c69e819ca4122967878ad2cb53ab6f59b4baab35587e6325215feb5"
+    },
+    {
+      "original_path": "E:\\hospital_ies_v21_20261023\\reviews\\fixed067_state_figure01_audit\\logs\\state_mapping_red01.stderr.log",
+      "local_relative_path": "provenance/audit/logs/state_mapping_red01.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "original_path": "E:\\hospital_ies_v21_20261023\\reviews\\fixed067_state_figure01_audit\\logs\\state_mapping_red01.stdout.log",
+      "local_relative_path": "provenance/audit/logs/state_mapping_red01.stdout.log",
+      "bytes": 12257,
+      "sha256": "28f80ff8d9e7e1024d193d7beb6d4b2417a90dc7d27ebe5528db004f45825f9c"
+    },
+    {
+      "original_path": "E:\\hospital_ies_v21_20261023\\reviews\\fixed067_state_figure01_audit\\logs\\state_matlab_static_contract01.command.json",
+      "local_relative_path": "provenance/audit/logs/state_matlab_static_contract01.command.json",
+      "bytes": 609,
+      "sha256": "d679de69c9790d9a1c2bbbb8880a150d25b14367cd617b3b8f6441fbb4f98baa"
+    },
+    {
+      "original_path": "E:\\hospital_ies_v21_20261023\\reviews\\fixed067_state_figure01_audit\\logs\\state_matlab_static_contract01.stderr.log",
+      "local_relative_path": "provenance/audit/logs/state_matlab_static_contract01.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "original_path": "E:\\hospital_ies_v21_20261023\\reviews\\fixed067_state_figure01_audit\\logs\\state_matlab_static_contract01.stdout.log",
+      "local_relative_path": "provenance/audit/logs/state_matlab_static_contract01.stdout.log",
+      "bytes": 247,
+      "sha256": "7eb7f01c20618e5ff08a62b1cd31b94bfe1f7c6dc5684d0ac4f83ac25da62209"
+    },
+    {
+      "original_path": "E:\\hospital_ies_v21_20261023\\reviews\\fixed067_state_figure01_audit\\logs\\state_monitored_launch01.command.json",
+      "local_relative_path": "provenance/audit/logs/state_monitored_launch01.command.json",
+      "bytes": 1012,
+      "sha256": "c769e4c24e2571675bbc52384741965c139de4b1c742dcff4caf26a1fbb7a029"
+    },
+    {
+      "original_path": "E:\\hospital_ies_v21_20261023\\reviews\\fixed067_state_figure01_audit\\logs\\state_monitored_launch01.stderr.log",
+      "local_relative_path": "provenance/audit/logs/state_monitored_launch01.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "original_path": "E:\\hospital_ies_v21_20261023\\reviews\\fixed067_state_figure01_audit\\logs\\state_monitored_launch01.stdout.log",
+      "local_relative_path": "provenance/audit/logs/state_monitored_launch01.stdout.log",
+      "bytes": 777,
+      "sha256": "51647cbc43579c58757f87105e72724c5d73624bee769197cb0fb3a3c9aa550a"
+    },
+    {
+      "original_path": "E:\\hospital_ies_v21_20261023\\reviews\\fixed067_state_figure01_audit\\logs\\state_preflight_exact01.command.json",
+      "local_relative_path": "provenance/audit/logs/state_preflight_exact01.command.json",
+      "bytes": 726,
+      "sha256": "7ba7e400b40e6f698a160eb05ec26247ce44661fbd99a8f4b7067646c5512bf1"
+    },
+    {
+      "original_path": "E:\\hospital_ies_v21_20261023\\reviews\\fixed067_state_figure01_audit\\logs\\state_preflight_exact01.stderr.log",
+      "local_relative_path": "provenance/audit/logs/state_preflight_exact01.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "original_path": "E:\\hospital_ies_v21_20261023\\reviews\\fixed067_state_figure01_audit\\logs\\state_preflight_exact01.stdout.log",
+      "local_relative_path": "provenance/audit/logs/state_preflight_exact01.stdout.log",
+      "bytes": 252,
+      "sha256": "e2d7e89265d96a33c5521ca2f95d2806de010807d68bf23d228cee8f2f2b9c7d"
+    },
+    {
+      "original_path": "E:\\hospital_ies_v21_20261023\\reviews\\fixed067_state_figure01_audit\\logs\\state_runtime_reconciliation01.command.json",
+      "local_relative_path": "provenance/audit/logs/state_runtime_reconciliation01.command.json",
+      "bytes": 724,
+      "sha256": "714008f61fcd22284d82f503cf0c5b513fe98e0cd0f6c41328d25dc3d93a078e"
+    },
+    {
+      "original_path": "E:\\hospital_ies_v21_20261023\\reviews\\fixed067_state_figure01_audit\\logs\\state_runtime_reconciliation01.stderr.log",
+      "local_relative_path": "provenance/audit/logs/state_runtime_reconciliation01.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "original_path": "E:\\hospital_ies_v21_20261023\\reviews\\fixed067_state_figure01_audit\\logs\\state_runtime_reconciliation01.stdout.log",
+      "local_relative_path": "provenance/audit/logs/state_runtime_reconciliation01.stdout.log",
+      "bytes": 304,
+      "sha256": "30ba90c77b075632295d6853b3a7d3ba61ad7867f0693e86adf92655b1efe194"
+    }
+  ],
+  "relative_replay_execution": "NOT_REEXECUTED",
+  "new_physical_attempts": 0,
+  "new_cases": 0,
+  "scientific_gate": false
+}

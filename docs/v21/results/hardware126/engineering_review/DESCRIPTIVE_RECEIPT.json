@@ -1,0 +1,58 @@
+{
+  "schema": "hospital_ies.hardware126_descriptive_projection.v1",
+  "status": "completed",
+  "created_utc": "2026-10-24T10:03:32.484649+00:00",
+  "source_receipt": "E:\\hospital_ies_v21_20261023\\hardware126_engineering_supplement02\\SUPPLEMENT_RECEIPT.json",
+  "source_receipt_sha256": "67f433c4ae46dee1debbdf6ca038f489bd2032fcc01b1ed95de261564ac5e981",
+  "script_sha256": "edf019aaa642d621ec4b0a5a6ecc96071bbd9b5555eb31086f77934acda1ad32",
+  "raw_reads": 0,
+  "physics_attempts": 0,
+  "bootstrap_recomputed": false,
+  "scientific_gate_signed": false,
+  "elapsed_seconds": 0.07501649996265769,
+  "table_row_counts": {
+    "NUMERIC_DIFFERENCE_SUMMARY": 1320,
+    "ALL_PAIRS_ENGINEERING_FLAGS": 84,
+    "TOWER_CRITICAL_COLD": 12,
+    "COMPOUND_ELECTRIC_SERVICE": 12,
+    "RESOURCE_CASE_SUMMARY": 126,
+    "STORAGE_CASES": 126
+  },
+  "artifacts": [
+    {
+      "path": "ALL_PAIRS_ENGINEERING_FLAGS.csv",
+      "sha256": "efdc2480705a20fc20f9a937d9008b1af7b04ec875b3c94e29ff723e7d962bf0",
+      "bytes": 33492
+    },
+    {
+      "path": "COMPOUND_ELECTRIC_SERVICE.csv",
+      "sha256": "a7da4b9ff1384bc8079f775e3f824ec64758547aada8882161b84dcaa12ddac5",
+      "bytes": 9807
+    },
+    {
+      "path": "DESCRIPTIVE_COUNTS.json",
+      "sha256": "1edc4dbedcdd45dd909496acf362027926d81155c661ffc765cc47c4ad48c27c",
+      "bytes": 3022
+    },
+    {
+      "path": "NUMERIC_DIFFERENCE_SUMMARY.csv",
+      "sha256": "c77d26695974ce84fdf76e597a5c6260e83097b4b019cc54f3cf1a933172aaf8",
+      "bytes": 260945
+    },
+    {
+      "path": "RESOURCE_CASE_SUMMARY.csv",
+      "sha256": "e644cad6c98b96e5c6d591e7ea4750fd64cefc5be07816b49d72a81c83ba01b3",
+      "bytes": 145636
+    },
+    {
+      "path": "STORAGE_CASES.csv",
+      "sha256": "ae7bc83930bfae44ee4487eee9c7e475ee578b7639cd15cbd472719d33eb6024",
+      "bytes": 27954
+    },
+    {
+      "path": "TOWER_CRITICAL_COLD.csv",
+      "sha256": "355147e101c63abd5ab391098219d52690c8aeda06e51f443f040b1abdb1238a",
+      "bytes": 10682
+    }
+  ]
+}

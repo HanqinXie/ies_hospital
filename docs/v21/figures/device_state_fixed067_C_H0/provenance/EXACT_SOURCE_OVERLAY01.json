@@ -1,0 +1,102 @@
+{
+  "schema": "hospital_ies.fixed067_state_exact_source_overlay.v1",
+  "status": "passed",
+  "manifest": "E:\\hospital_ies_v21_20261023\\reviews\\fixed067_state_figure01\\data01\\MANIFEST.json",
+  "manifest_sha256": "25a8d2097832cc42e3271cf392e57397305a4551e95599c7d2a4308ee52cfce7",
+  "native_segment_rows": 75,
+  "native_observation_rows": 60,
+  "compactCSV_all_native_records_exact": true,
+  "numeric_fields": [
+    {
+      "field": "segment_start_min",
+      "shape": [
+        75,
+        1
+      ],
+      "scalar_values": 75,
+      "exact": true
+    },
+    {
+      "field": "segment_end_min",
+      "shape": [
+        75,
+        1
+      ],
+      "scalar_values": 75,
+      "exact": true
+    },
+    {
+      "field": "bus_code",
+      "shape": [
+        75,
+        1
+      ],
+      "scalar_values": 75,
+      "exact": true
+    },
+    {
+      "field": "dg_pre_code",
+      "shape": [
+        75,
+        1
+      ],
+      "scalar_values": 75,
+      "exact": true
+    },
+    {
+      "field": "dg_post_code",
+      "shape": [
+        75,
+        1
+      ],
+      "scalar_values": 75,
+      "exact": true
+    },
+    {
+      "field": "observation_min",
+      "shape": [
+        60,
+        1
+      ],
+      "scalar_values": 60,
+      "exact": true
+    },
+    {
+      "field": "gt_status_code",
+      "shape": [
+        60,
+        3
+      ],
+      "scalar_values": 180,
+      "exact": true
+    },
+    {
+      "field": "gt_hardware_fraction",
+      "shape": [
+        75,
+        3
+      ],
+      "scalar_values": 225,
+      "exact": true
+    }
+  ],
+  "all_read_bytes_unchanged": true,
+  "matlab": "NOT_RUN",
+  "raw_reads": 0,
+  "sidecar_reads": 0,
+  "physics_attempts": 0,
+  "scientific_gate": false,
+  "verifier_source_sha256": "2b1172a9a9e5b77f5079b71faaa5cee43cff310c7ffaa12cc16ba30b52363361",
+  "read_bindings": {
+    "E:\\hospital_ies_v21_20261023\\reviews\\fixed067_state_figure01\\data01\\MANIFEST.json": "25a8d2097832cc42e3271cf392e57397305a4551e95599c7d2a4308ee52cfce7",
+    "E:\\hospital_ies_v21_20261023\\reviews\\fixed067_state_figure01\\data01\\GT_OBSERVATION_VALUES.csv": "d2e83f07e25474883a2b87ad201f501a733ae66fd42a235b733530d340e25311",
+    "E:\\hospital_ies_v21_20261023\\reviews\\fixed067_state_figure01\\data01\\originals\\DECISION_READINESS.csv": "857b70f99512ab1741704a0b8e426d0eb9875984787101b0f9edaf496401b0c6",
+    "E:\\hospital_ies_v21_20261023\\reviews\\fixed067_state_figure01\\data01\\originals\\EXPORT_RECEIPT.json": "7c4b46aded034089278ac8cef0561f616012e2ab323cf7089a4daf1ae48b50df",
+    "E:\\hospital_ies_v21_20261023\\reviews\\fixed067_state_figure01\\data01\\originals\\native_process\\PROCESS.csv": "c2877bb42c52769dd10b8df2e16a88fa001f4398cf9e378cf152e842a3c7cfdc",
+    "E:\\hospital_ies_v21_20261023\\reviews\\fixed067_state_figure01\\data01\\originals\\native_process\\PROCESS.mat": "e9791bce5359fa5f55b3e025b3a24e18da9ec44113e9280487bd5503c1b9e08b",
+    "E:\\hospital_ies_v21_20261023\\reviews\\fixed067_state_figure01\\data01\\originals\\SEGMENT_STATES.csv": "806e42a7e54f9d69b59ff6ff5b8723804a19932c9763d64c43352d7134dec1ca",
+    "E:\\hospital_ies_v21_20261023\\reviews\\fixed067_state_figure01\\data01\\originals\\STATE_CONTRACT_RECEIPT.json": "ae4a9f2a360169bfbf8a59f88eac632025feb5a6df6002dcff639af038a36409",
+    "E:\\hospital_ies_v21_20261023\\reviews\\fixed067_state_figure01\\data01\\SEGMENT_STATE_VALUES.csv": "da6e48e4b3453fb3f0d07526e66998656e22a1936bad9acad205664deec4dff6",
+    "E:\\hospital_ies_v21_20261023\\reviews\\fixed067_state_figure01\\data01\\STATE_DATA.mat": "0e1f9ba10a2478b7e26d0424a6c3dd1901d09835bc4afaa64bcbf8a58903fe4c"
+  }
+}

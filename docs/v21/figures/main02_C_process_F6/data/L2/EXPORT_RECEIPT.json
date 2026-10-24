@@ -1,0 +1,87 @@
+{
+  "schema": "hospital_ies.v21.event_timeline_export.v1",
+  "status": "completed",
+  "source_binding_sha256": "4dfe62ae105d2696b7782dc36c83ec63c6551e2cded601d6f15c0d4083058add",
+  "source_files_checked": 643,
+  "runtime_inputs_checked": 28,
+  "source_and_inputs_unchanged_after_export": true,
+  "result_path": "E:\\hospital_ies_v21_20261023\\main02\\experiments\\082_main_m21_L2_77ce6e24b72d0d1163b1_H0\\pairs\\m21_L2_77ce6e24b72d0d1163b1__C_sci_v21__H0\\attempt_0001\\RESULT.json",
+  "result_sha256": "bca46923b4387c04dcc1b9ea852bf6588c168071d969e39f822583999e8b33a0",
+  "freeze_path": "E:\\hospital_ies_v21_20261023\\main02\\FINAL_MAIN_FREEZE.json",
+  "freeze_sha256": "a868f610fa593b4e8b0184ef72f35e1ca76b16693da44cfd516ab9c8e0f22e43",
+  "raw_path": "E:\\hospital_ies_v21_20261023\\raw\\main02\\082_main_m21_L2_77ce6e24b72d0d1163b1_H0\\m21_L2_77ce6e24b72d0d1163b1__C_sci_v21__H0\\attempt_0001\\trajectory.json.gz",
+  "raw_sha256": "ddcf90c8fc4a5217e130bd227d3bf9b01b2b9bc1b3ea9e37ba7de3973fb53a29",
+  "sidecar_sha256": "51a2f866cf64ec094d4210b2bb49f9381b3b7fde0765c917fe31ff119d3cd2eb",
+  "scenario_id": "m21_L2_77ce6e24b72d0d1163b1",
+  "policy_id": "C_sci_v21",
+  "canonical_class": "L2",
+  "configuration_id": "H0",
+  "native_process_receipt": {
+    "raw_path": "E:\\hospital_ies_v21_20261023\\raw\\main02\\082_main_m21_L2_77ce6e24b72d0d1163b1_H0\\m21_L2_77ce6e24b72d0d1163b1__C_sci_v21__H0\\attempt_0001\\trajectory.json.gz",
+    "raw_sha256": "ddcf90c8fc4a5217e130bd227d3bf9b01b2b9bc1b3ea9e37ba7de3973fb53a29",
+    "execution_model_id": "M21_sci_engineering",
+    "scenario_id": "m21_L2_77ce6e24b72d0d1163b1",
+    "policy_id": "C_sci_v21",
+    "native_intervals": 48,
+    "resampled": false,
+    "observed_start_minute": 0.0,
+    "observed_end_minute": 720.0,
+    "process_csv_sha256": "034dd27513fe703445b25d6ab08e243e9962fbb11c563eb9b284f6d5092743d6",
+    "scientific_figures_generated": 0
+  },
+  "row_counts": {
+    "EVENTS": 227,
+    "SEGMENT_STATES": 48,
+    "DECISION_READINESS": 48,
+    "COMMAND_TIMELINE": 241
+  },
+  "unknown_fields": "Blank CSV cell, preserved native JSON null/absence; never forward filled",
+  "command_semantics": "Event command_executed dispatch is revalidated command permission, not delivered power; only native segment.action is actual supply",
+  "readiness_semantics": "Decision-time observed readiness is separate from segment pre/post fields; missing segment readiness remains unknown",
+  "native_order_retained": true,
+  "interpolation": false,
+  "physical_attempts_started": 0,
+  "scientific_figures_generated": 0,
+  "artifacts": [
+    {
+      "path": "COMMAND_TIMELINE.csv",
+      "bytes": 6017101,
+      "sha256": "05381320a1e7f8f2bd747d55bc510c2af4c2d94ea54faf9d0057c0667608dad2"
+    },
+    {
+      "path": "DECISION_READINESS.csv",
+      "bytes": 14210226,
+      "sha256": "2981f40296bcb948bfe66da2dda953d3162f2f6b5f63eaa1c43f9b7ff6ce84cd"
+    },
+    {
+      "path": "EVENTS.csv",
+      "bytes": 10416552,
+      "sha256": "e581821e8a7a546cf2481e07eb8d857b4bc71351b75dd7beab5bcde6d47a9b7d"
+    },
+    {
+      "path": "INITIAL_STATE.json",
+      "bytes": 1384,
+      "sha256": "d9653d4b73737fcfa382d340d83391068bd9f22a2231c424d93ea95b00641f56"
+    },
+    {
+      "path": "native_process\\PROCESS.csv",
+      "bytes": 55798,
+      "sha256": "034dd27513fe703445b25d6ab08e243e9962fbb11c563eb9b284f6d5092743d6"
+    },
+    {
+      "path": "native_process\\PROCESS.mat",
+      "bytes": 4287,
+      "sha256": "125e18cceee3de364c127c18a375d7883877727d9cabc059c5eefaaa95c3fdc4"
+    },
+    {
+      "path": "native_process\\PROCESS_RECEIPT.json",
+      "bytes": 641,
+      "sha256": "6c9e21a42e00ea50f0b369485fd948c522f6f47d86428bd85f1d72ea093d6561"
+    },
+    {
+      "path": "SEGMENT_STATES.csv",
+      "bytes": 1092559,
+      "sha256": "8922c4ff0bb895d35e3d25970241a61c2502dbca26b45a312b8b0387c483da45"
+    }
+  ]
+}

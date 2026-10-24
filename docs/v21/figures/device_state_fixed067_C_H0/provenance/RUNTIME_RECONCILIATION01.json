@@ -1,0 +1,236 @@
+{
+  "schema": "hospital_ies.fixed067_state_actual_runtime_reconciliation.v1",
+  "utc": "2026-10-24T09:58:11.530324+00:00",
+  "actual_commands": [
+    {
+      "metadata": {
+        "path": "E:\\hospital_ies_v21_20261023\\reviews\\fixed067_state_figure01_audit\\logs\\state_preflight_exact01.command.json",
+        "bytes": 726,
+        "sha256": "7ba7e400b40e6f698a160eb05ec26247ce44661fbd99a8f4b7067646c5512bf1"
+      },
+      "record": {
+        "name": "state_preflight_exact01",
+        "command": [
+          "C:/Users/HanqinXie/AppData/Local/Programs/Python/Python310/python.exe",
+          "-B",
+          "E:/hospital_ies_v21_20261023/reviews/fixed067_state_figure01/runtime01/check_prepared_members.py",
+          "--admission",
+          "--output",
+          "E:/hospital_ies_v21_20261023/reviews/fixed067_state_figure01/runtime01/BEFORE_EXACT01.json"
+        ],
+        "cwd": "D:\\云大文件\\论文\\医院ies\\code_4_2",
+        "started_utc": "2026-10-24T09:53:44.723855+00:00",
+        "finished_utc": "2026-10-24T09:53:53.591221+00:00",
+        "elapsed_seconds": 8.867330900393426,
+        "exit_code": 0,
+        "environment_overrides": {
+          "PYTHONDONTWRITEBYTECODE": "1",
+          "PYTHONIOENCODING": "utf-8"
+        }
+      },
+      "stdout": {
+        "path": "E:\\hospital_ies_v21_20261023\\reviews\\fixed067_state_figure01_audit\\logs\\state_preflight_exact01.stdout.log",
+        "bytes": 252,
+        "sha256": "e2d7e89265d96a33c5521ca2f95d2806de010807d68bf23d228cee8f2f2b9c7d"
+      },
+      "stderr": {
+        "path": "E:\\hospital_ies_v21_20261023\\reviews\\fixed067_state_figure01_audit\\logs\\state_preflight_exact01.stderr.log",
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    },
+    {
+      "metadata": {
+        "path": "E:\\hospital_ies_v21_20261023\\reviews\\fixed067_state_figure01_audit\\logs\\state_monitored_launch01.command.json",
+        "bytes": 1012,
+        "sha256": "c769e4c24e2571675bbc52384741965c139de4b1c742dcff4caf26a1fbb7a029"
+      },
+      "record": {
+        "name": "state_monitored_launch01",
+        "command": [
+          "C:/Users/HanqinXie/AppData/Local/Programs/Python/Python310/python.exe",
+          "-B",
+          "E:/hospital_ies_v21_20261023/reviews/fixed_process_actual252_01/monitor_matlab.py",
+          "--output",
+          "E:/hospital_ies_v21_20261023/reviews/fixed067_state_figure01/monitor01",
+          "--run-dir",
+          "E:/hospital_ies_v21_20261023/reviews/fixed067_state_figure01_audit",
+          "--name",
+          "actual_matlab_state01",
+          "--script",
+          "E:/hospital_ies_v21_20261023/reviews/fixed067_state_figure01/run_state_actual01.m",
+          "--script-sha",
+          "31d8c3224ea38f117d482ec8a879d858790c187e88e9abdb602c202169023e6b"
+        ],
+        "cwd": "D:\\云大文件\\论文\\医院ies\\code_4_2",
+        "started_utc": "2026-10-24T09:53:59.899097+00:00",
+        "finished_utc": "2026-10-24T09:54:28.390542+00:00",
+        "elapsed_seconds": 28.491576199885458,
+        "exit_code": 0,
+        "environment_overrides": {
+          "PYTHONDONTWRITEBYTECODE": "1",
+          "PYTHONIOENCODING": "utf-8"
+        }
+      },
+      "stdout": {
+        "path": "E:\\hospital_ies_v21_20261023\\reviews\\fixed067_state_figure01_audit\\logs\\state_monitored_launch01.stdout.log",
+        "bytes": 777,
+        "sha256": "51647cbc43579c58757f87105e72724c5d73624bee769197cb0fb3a3c9aa550a"
+      },
+      "stderr": {
+        "path": "E:\\hospital_ies_v21_20261023\\reviews\\fixed067_state_figure01_audit\\logs\\state_monitored_launch01.stderr.log",
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    },
+    {
+      "metadata": {
+        "path": "E:\\hospital_ies_v21_20261023\\reviews\\fixed067_state_figure01_audit\\logs\\actual_matlab_state01.command.json",
+        "bytes": 587,
+        "sha256": "19c0aab8868e9541ae5b77f7df5270fb9ef40e11ef22ff053ad818f2aa884bf5"
+      },
+      "record": {
+        "name": "actual_matlab_state01",
+        "command": [
+          "C:/Program Files/MATLAB/R2024b/bin/matlab.exe",
+          "-singleCompThread",
+          "-batch",
+          "run('E:/hospital_ies_v21_20261023/reviews/fixed067_state_figure01/run_state_actual01.m');"
+        ],
+        "cwd": "D:\\云大文件\\论文\\医院ies\\code_4_2",
+        "started_utc": "2026-10-24T09:54:03.092560+00:00",
+        "finished_utc": "2026-10-24T09:54:28.342021+00:00",
+        "elapsed_seconds": 25.24907199991867,
+        "exit_code": 0,
+        "environment_overrides": {
+          "PYTHONDONTWRITEBYTECODE": "1",
+          "PYTHONIOENCODING": "utf-8"
+        }
+      },
+      "stdout": {
+        "path": "E:\\hospital_ies_v21_20261023\\reviews\\fixed067_state_figure01_audit\\logs\\actual_matlab_state01.stdout.log",
+        "bytes": 52,
+        "sha256": "3d4ef39fa38d1a98cf0de814d62e82cf82d1ce119ec23d2efc68b3622f924599"
+      },
+      "stderr": {
+        "path": "E:\\hospital_ies_v21_20261023\\reviews\\fixed067_state_figure01_audit\\logs\\actual_matlab_state01.stderr.log",
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    },
+    {
+      "metadata": {
+        "path": "E:\\hospital_ies_v21_20261023\\reviews\\fixed067_state_figure01_audit\\logs\\state_artifact_structure01.command.json",
+        "bytes": 903,
+        "sha256": "18fcb97a723afc9cf06eab5d600e1a81c0b69b8898a4897c4a9787e9fd096f63"
+      },
+      "record": {
+        "name": "state_artifact_structure01",
+        "command": [
+          "C:/Users/HanqinXie/AppData/Local/Programs/Python/Python310/python.exe",
+          "-B",
+          "E:/hospital_ies_v21_20261023/reviews/matlab_artifact_qa03/artifact_scan.py",
+          "--matlab-receipt",
+          "E:/hospital_ies_v21_20261023/reviews/fixed067_state_figure01/objects01/MATLAB_OBJECT_AUDIT.json",
+          "--matlab-sha",
+          "8010c5d6762c2d949a336d147c23c7452918afa4ea3af7587111b6d2f18dd33b",
+          "--output",
+          "E:/hospital_ies_v21_20261023/reviews/fixed067_state_figure01/runtime01/structure01"
+        ],
+        "cwd": "D:\\云大文件\\论文\\医院ies\\code_4_2",
+        "started_utc": "2026-10-24T09:55:11.111142+00:00",
+        "finished_utc": "2026-10-24T09:55:11.246742+00:00",
+        "elapsed_seconds": 0.1357124000787735,
+        "exit_code": 0,
+        "environment_overrides": {
+          "PYTHONDONTWRITEBYTECODE": "1",
+          "PYTHONIOENCODING": "utf-8"
+        }
+      },
+      "stdout": {
+        "path": "E:\\hospital_ies_v21_20261023\\reviews\\fixed067_state_figure01_audit\\logs\\state_artifact_structure01.stdout.log",
+        "bytes": 206,
+        "sha256": "a03025748af1975a7f9c2f2611730cc70209841e289b856526ead1444d2740e2"
+      },
+      "stderr": {
+        "path": "E:\\hospital_ies_v21_20261023\\reviews\\fixed067_state_figure01_audit\\logs\\state_artifact_structure01.stderr.log",
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    },
+    {
+      "metadata": {
+        "path": "E:\\hospital_ies_v21_20261023\\reviews\\fixed067_state_figure01_audit\\logs\\state_complete_proofs01.command.json",
+        "bytes": 583,
+        "sha256": "137fec793cda72ff974b660e932af04e3eb5ba74e5b6f6f978e13e9021d48ec8"
+      },
+      "record": {
+        "name": "state_complete_proofs01",
+        "command": [
+          "C:/Users/HanqinXie/AppData/Local/Programs/Python/Python310/python.exe",
+          "-B",
+          "E:/hospital_ies_v21_20261023/reviews/fixed067_state_figure01/runtime01/render_proofs.py"
+        ],
+        "cwd": "D:\\云大文件\\论文\\医院ies\\code_4_2",
+        "started_utc": "2026-10-24T09:56:05.974443+00:00",
+        "finished_utc": "2026-10-24T09:56:06.408403+00:00",
+        "elapsed_seconds": 0.43423340003937483,
+        "exit_code": 0,
+        "environment_overrides": {
+          "PYTHONDONTWRITEBYTECODE": "1",
+          "PYTHONIOENCODING": "utf-8"
+        }
+      },
+      "stdout": {
+        "path": "E:\\hospital_ies_v21_20261023\\reviews\\fixed067_state_figure01_audit\\logs\\state_complete_proofs01.stdout.log",
+        "bytes": 1343,
+        "sha256": "726e4eabbf21bc1006d382e60d1e44d125f08057274e4719bcde38c9419df556"
+      },
+      "stderr": {
+        "path": "E:\\hospital_ies_v21_20261023\\reviews\\fixed067_state_figure01_audit\\logs\\state_complete_proofs01.stderr.log",
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    }
+  ],
+  "all_actual_commands_exit_zero": true,
+  "prepared_members_and_originals_before_after_exact": true,
+  "preparation_members": 25,
+  "original_read_bindings": 7,
+  "full643_core_and28_original_input_scan": "NOT_REEXECUTED_IN_THIS_FIGURE_TASK",
+  "MATLAB_native_object_audit": "PASS_1_OF_1",
+  "negative_object_tests": "4_OF_4_INTENDED_REFUSALS",
+  "artifact_structure": "PASS",
+  "checkcode_message_count": 11,
+  "checkcode_message_ids": [
+    "ISCL",
+    "MSNU",
+    "PRTPT"
+  ],
+  "checkcode_zero_messages": false,
+  "actual_monitor_receipt": {
+    "path": "E:\\hospital_ies_v21_20261023\\reviews\\fixed067_state_figure01\\monitor01\\MONITORED_MATLAB_RECEIPT.json",
+    "bytes": 3973,
+    "sha256": "5a30674debe9ba7860ce72d9202b8e58151a8c7e5e73475cec31177b9d087250"
+  },
+  "MATLAB_fresh_terminal_query_utc": "2026-10-24T09:58:11.530324+00:00",
+  "MATLAB_fresh_terminal_processes": [],
+  "monitor_two_executable_names": "One recorded -batch invocation; monitor observes both bin/matlab.exe launcher and bin/win64/MATLAB.exe with the same script. Counts are retained unchanged, and do not establish two independent tasks.",
+  "monitor_process_query_unknown_retained": [
+    {
+      "pid": 60600,
+      "name": "matlab.exe",
+      "error": "NoSuchProcess"
+    },
+    {
+      "pid": 81168,
+      "name": "python.exe",
+      "error": "NoSuchProcess"
+    }
+  ],
+  "relative_MATLAB_replay": "NOT_REEXECUTED",
+  "physical_attempts": 0,
+  "raw_or_sidecar_reads": 0,
+  "scientific_gate": false,
+  "scientific_gate_status": "NOT_RUN"
+}

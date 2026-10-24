@@ -1,0 +1,114 @@
+{
+  "index": 223,
+  "case_identity": {
+    "phase": "final_blind",
+    "scenario_id": "m21_L1_7a5b420465338ab48f15",
+    "policy_id": "C_sci_v21",
+    "configuration_id": "H0",
+    "attempt_id": "attempt_0001",
+    "source_block_id": "m21_final12_62f12db0fd633b0f"
+  },
+  "pid": 55960,
+  "auditor_sha256": "a516d84d286e39f17be10e9624e3c681b1b5e73d8ab03789107437aa1d55d084",
+  "generic_sha256": "a4abf08e94dfe872cef5f1eaa4aecd94744be137566c82345b21b141eaa5e727",
+  "status": "audit_pass",
+  "physical": {
+    "segment_count": 325,
+    "observed_until_minute": 720.0,
+    "storage": {
+      "ups": {
+        "initial_inventory_kWh": 0.0,
+        "initial_paid_input_kWh": 0.0,
+        "charged_input_kWh": 0.0,
+        "discharged_kWh": 0.0,
+        "standing_loss_kWh": 0.0,
+        "conversion_loss_kWh": 0.0,
+        "event_discharged_kWh": 0.0,
+        "recovery_charged_input_kWh": 0.0,
+        "depleted_at_native_end_minute": null,
+        "final_inventory_kWh": 0.0,
+        "full_recharge_observed_by_horizon": true,
+        "recharge_status": "not_observed_in_available_tail",
+        "depletion_status": "not_observed"
+      },
+      "cold_store": {
+        "initial_inventory_kWh": 0.0,
+        "initial_paid_input_kWh": 0.0,
+        "charged_input_kWh": 0.0,
+        "discharged_kWh": 0.0,
+        "standing_loss_kWh": 0.0,
+        "conversion_loss_kWh": 0.0,
+        "event_discharged_kWh": 0.0,
+        "recovery_charged_input_kWh": 0.0,
+        "depleted_at_native_end_minute": null,
+        "final_inventory_kWh": 0.0,
+        "full_recharge_observed_by_horizon": true,
+        "recharge_status": "not_observed_in_available_tail",
+        "depletion_status": "not_observed"
+      }
+    },
+    "carrier_ENS_kWh": [
+      [
+        0.0008640769644285164,
+        0.0,
+        0.0
+      ],
+      [
+        0.0008640769644285164,
+        0.0,
+        0.0
+      ],
+      [
+        0.0008640769644285164,
+        0.0,
+        0.0
+      ],
+      [
+        0.08640769644285123,
+        0.0,
+        0.0
+      ]
+    ],
+    "fan_zero_P3_heat_kWh": 0.0,
+    "fan_source_trace_count": 0,
+    "maximum_electric_cold_residual_kW": 2.2737367544323206e-13,
+    "maximum_auxiliary_dependency_excess_kW": 0.0,
+    "cold_store_pump_electric_kWh": 0.0,
+    "DG_shaft_work_kWh": 0.0,
+    "event_P0_P1_e_ENS_kWh": 0.00032223816705292637,
+    "status": "pass",
+    "result_path": "E:\\hospital_ies_v21_20261023\\final_blind01\\experiments\\final_blind48_all5_H0\\pairs\\m21_L1_7a5b420465338ab48f15__C_sci_v21__H0\\attempt_0001\\RESULT.json",
+    "result_sha256": "33a9519343912b2b986c83adde52b29cf2e58643a1155599ad938366e5c94c65",
+    "raw_path": "E:\\hospital_ies_v21_20261023\\raw\\final_blind01\\final_blind48_all5_H0\\m21_L1_7a5b420465338ab48f15__C_sci_v21__H0\\attempt_0001\\trajectory.json.gz",
+    "raw_sha256": "be6f38e9a76cbb32d20d07668933990be4c4653dbc08099c2b2ac2243d96c704",
+    "solver_sidecar": {
+      "entry_count": 4786,
+      "row_count": 1944792,
+      "maximum_original_row_violation": 3.3259297538279498e-09,
+      "gzip_sha256": "e37378be8134c7ee1527d85dc9a9b1e7d21d99896c97804332e78329d9d65fef"
+    },
+    "scenario_id": "m21_L1_7a5b420465338ab48f15",
+    "policy_id": "C_sci_v21",
+    "configuration_id": "H0"
+  },
+  "original_pilot_result": null,
+  "every_original_field_equal": null,
+  "current_artifact_stats": [
+    {
+      "path": "E:\\hospital_ies_v21_20261023\\raw\\final_blind01\\final_blind48_all5_H0\\m21_L1_7a5b420465338ab48f15__C_sci_v21__H0\\attempt_0001\\trajectory.json.gz",
+      "bytes": 3371800,
+      "mtime_ns": 1792865613768802100
+    },
+    {
+      "path": "E:\\hospital_ies_v21_20261023\\raw\\final_blind01\\final_blind48_all5_H0\\m21_L1_7a5b420465338ab48f15__C_sci_v21__H0\\attempt_0001\\solver_rows.jsonl.gz",
+      "bytes": 23594586,
+      "mtime_ns": 1792865608484603400
+    }
+  ],
+  "elapsed_seconds": 11.227054399903864,
+  "cpu_seconds": 11.109375,
+  "memory": {
+    "os_peak_working_set_bytes": 471764992,
+    "private_bytes_at_end": 97873920
+  }
+}

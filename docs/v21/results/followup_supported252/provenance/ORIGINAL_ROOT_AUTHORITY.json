@@ -1,0 +1,58 @@
+{
+  "schema": "hospital_ies.root_actual_scientific_stage_acceptance.v1",
+  "created_utc": "2026-10-24T06:46:38.559993+00:00",
+  "reviewer": "root",
+  "stage": "secondary",
+  "stage_accepted": true,
+  "completed": 252,
+  "failed": 0,
+  "pending": 0,
+  "in_flight": 0,
+  "source_binding_sha256": "4dfe62ae105d2696b7782dc36c83ec63c6551e2cded601d6f15c0d4083058add",
+  "input_binding_sha256": "659ecc488bda87c9338afde283cbb74135ca2ebdf2769ce463d0e61f0c6288d8",
+  "jobfile_sha256": "4db2e6fccf112b1bca5c5039287578a6a4b616bcc78d669b703ffdf2ce72c2d3",
+  "original_master_registered": 256,
+  "original_master_failed_unknown": 4,
+  "original_master_all_passed": false,
+  "acceptance_scope": "Complete supported252 observed engineering outcomes; original256 failure ledger retained",
+  "necessary112_acceptance": false,
+  "universal_physical_failure_proven": false,
+  "candidate_parameters_reselected": false,
+  "clinical_certification": false,
+  "all_study_work_complete": false,
+  "downstream_physics_started_by_this_command": 0,
+  "evidence": [
+    {
+      "path": "E:\\hospital_ies_v21_20261023\\reviews\\followup_recovery_root01\\ACTUAL_CONSUMER_INPUTS01.json",
+      "sha256": "6dd2ad932a46bdea018e8cee17ccf11e04ef9801df5c2ee1f70bac07f2737df7"
+    },
+    {
+      "path": "E:\\hospital_ies_v21_20261023\\reviews\\followup02_engineering_results01\\RECEIPT.json",
+      "sha256": "d6806ca71fe21a1d1c8424804941a61598f77ea911e268fe795f03b71f77f26c"
+    },
+    {
+      "path": "E:\\hospital_ies_v21_20261023\\reviews\\followup02_boundary_engineering01\\RECEIPT.json",
+      "sha256": "9ad7fdcc77ff18af8d78dd29a90f80ba282740a1ce1cd8643f7db0128220a800"
+    },
+    {
+      "path": "E:\\hospital_ies_v21_20261023\\reviews\\followup_supported252_physical_root_delegated01\\RECEIPT.json",
+      "sha256": "41d2a77aa792fb81da3c98a0abf4bc225f8dd4503e88777b3dd3e0555ae257b3"
+    },
+    {
+      "path": "E:\\hospital_ies_v21_20261023\\reviews\\followup_recovery_root01\\MASTER256_UNKNOWN_EXPORT_VERIFICATION01.json",
+      "sha256": "9d904dbc1c25b365db8d1c411d9f1d427a56465a6dadf6f589ec0375701fae54"
+    },
+    {
+      "path": "E:\\hospital_ies_v21_20261023\\followup_supported252\\boundary_necessary_audit01\\BATCH_NECESSARY_RECEIPT.json",
+      "sha256": "5543904b321db4cc3643b7b7c963c2346cc4f38a2cdb8e11fde8925c78d5a2c1"
+    },
+    {
+      "path": "E:\\hospital_ies_v21_20261023\\followup_supported252\\root_acceptance01\\ROOT_SCIENTIFIC_REVIEW.md",
+      "sha256": "4f36af647925f18a71ea75b84a61bdb9cea2307d42aede0f61f5282fd6f03941"
+    },
+    {
+      "path": "E:\\hospital_ies_v21_20261023\\followup_supported252\\root_acceptance01\\ROOT_TECHNICAL_VALIDATION.json",
+      "sha256": "e25221b5082ccc5c83cc636a6dc10587f43973c49276ec9f5331905bf96c3ef5"
+    }
+  ]
+}

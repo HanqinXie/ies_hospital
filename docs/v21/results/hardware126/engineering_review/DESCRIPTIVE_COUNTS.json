@@ -1,0 +1,122 @@
+{
+  "case_count": 126,
+  "all_eligible": true,
+  "strict_pairs": 84,
+  "exact_requested_aggregates_equal": 0,
+  "max_abs_request_delta_kWh": 1.8417267710901797e-11,
+  "original_numeric_join_epsilon_kWh": 1e-08,
+  "flags": {
+    "critical_numeric_ENS_worse": {
+      "False": 60,
+      "True": 24
+    },
+    "critical_material_gap_worse": {
+      "False": 84
+    },
+    "general_numeric_ENS_worse": {
+      "False": 59,
+      "True": 25
+    },
+    "general_material_gap_worse": {
+      "False": 82,
+      "True": 2
+    },
+    "lower_fee_and_numeric_less_service": {
+      "False": 78,
+      "True": 6
+    },
+    "lower_fee_and_material_gap_worse": {
+      "False": 82,
+      "True": 2
+    }
+  },
+  "counters": {
+    "resource_solver_backend_attempt_count": {
+      "known": 126,
+      "total": 386096,
+      "min": 845,
+      "max": 7041,
+      "nonzero_cases": 126
+    },
+    "resource_solver_backend_rejected_attempt_count": {
+      "known": 126,
+      "total": 582,
+      "min": 0,
+      "max": 59,
+      "nonzero_cases": 12
+    },
+    "resource_solver_call_count": {
+      "known": 126,
+      "total": 56115,
+      "min": 49,
+      "max": 1110,
+      "nonzero_cases": 126
+    },
+    "resource_solver_timeout_attempt_count": {
+      "known": 126,
+      "total": 0,
+      "min": 0,
+      "max": 0,
+      "nonzero_cases": 0
+    },
+    "resource_online_upper_period_exceedance_count": {
+      "known": 126,
+      "total": 0,
+      "min": 0,
+      "max": 0,
+      "nonzero_cases": 0
+    },
+    "result_metrics_strategy_fallback_steps": {
+      "known": 126,
+      "total": 0,
+      "min": 0,
+      "max": 0,
+      "nonzero_cases": 0
+    },
+    "result_metrics_projection_fallback_steps": {
+      "known": 126,
+      "total": 0,
+      "min": 0,
+      "max": 0,
+      "nonzero_cases": 0
+    },
+    "result_metrics_projection_changed_steps": {
+      "known": 126,
+      "total": 0,
+      "min": 0,
+      "max": 0,
+      "nonzero_cases": 0
+    }
+  },
+  "runtime_ranges": {
+    "resource_online_full_step_max_seconds": {
+      "min": 0.9973777001723647,
+      "max": 7.095044299960136
+    },
+    "resource_online_full_step_seconds": {
+      "min": 13.83262079814449,
+      "max": 111.90314380079508
+    },
+    "resource_online_solver_seconds": {
+      "min": 7.403100402094424,
+      "max": 71.07403940148652
+    },
+    "resource_online_solver_max_seconds": {
+      "min": 0.28670910000801086,
+      "max": 2.5384614001959562
+    },
+    "resource_online_upper_seconds": {
+      "min": 6.080678000580519,
+      "max": 53.84602139890194
+    },
+    "resource_online_upper_max_seconds": {
+      "min": 0.31832569977268577,
+      "max": 2.566700200550258
+    },
+    "resource_scheduling_period_seconds": {
+      "min": 900.0,
+      "max": 900.0
+    }
+  },
+  "epistemic_scope": "Small bound RESULT/CASE descriptive values only; separate root wholephysical/currentbyte gate pending; no bootstrap or extra physics"
+}

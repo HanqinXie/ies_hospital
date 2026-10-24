@@ -1,0 +1,84 @@
+{
+  "schema": "hospital_ies.F6_actual_visual_review.v1",
+  "recorded_utc": "2026-10-24T03:04:49.959809+00:00",
+  "visual_checks_passed": true,
+  "F6_figures": [
+    {
+      "figure": "F6_process_1",
+      "full_PDF_preview_viewed": true,
+      "actual_PNG_viewed": true,
+      "PDF_preview_path": "E:\\hospital_ies_v21_20261023\\main02\\f6_qa01\\previews08\\F6_process_1_PDF_FULL.png",
+      "PDF_preview_sha256": "204cd0b268f9d61f35a08f5f72c1890cbb0c1d6cbb029a0e1fc79946891fda0a",
+      "PNG_path": "E:\\hospital_ies_v21_20261023\\main02\\f6_qa01\\styled_figures08\\F6_process_1.png",
+      "PNG_sha256": "2835d03a76ebf9945b3132ccba9645becb60c2a2f00eab87dfed4f7a263809a6",
+      "visual_passed": true
+    },
+    {
+      "figure": "F6_process_2",
+      "full_PDF_preview_viewed": true,
+      "actual_PNG_viewed": true,
+      "PDF_preview_path": "E:\\hospital_ies_v21_20261023\\main02\\f6_qa01\\previews08\\F6_process_2_PDF_FULL.png",
+      "PDF_preview_sha256": "204cd0b268f9d61f35a08f5f72c1890cbb0c1d6cbb029a0e1fc79946891fda0a",
+      "PNG_path": "E:\\hospital_ies_v21_20261023\\main02\\f6_qa01\\styled_figures08\\F6_process_2.png",
+      "PNG_sha256": "af8b76c50a59eed26315ed50016c9bc27c232ebd070a71a8c52ad654eda3933f",
+      "visual_passed": true
+    },
+    {
+      "figure": "F6_process_3",
+      "full_PDF_preview_viewed": true,
+      "actual_PNG_viewed": true,
+      "PDF_preview_path": "E:\\hospital_ies_v21_20261023\\main02\\f6_qa01\\previews08\\F6_process_3_PDF_FULL.png",
+      "PDF_preview_sha256": "bffd6efb022e8b1f649cb38e69d6fd3e0592e2f0a743813e99e30f9b684ef3b2",
+      "PNG_path": "E:\\hospital_ies_v21_20261023\\main02\\f6_qa01\\styled_figures08\\F6_process_3.png",
+      "PNG_sha256": "7df6699cd7a336cc55902919bb179653c4aee8ed5434bce4cef295f0ed13e33c",
+      "visual_passed": true
+    },
+    {
+      "figure": "F6_process_4",
+      "full_PDF_preview_viewed": true,
+      "actual_PNG_viewed": true,
+      "PDF_preview_path": "E:\\hospital_ies_v21_20261023\\main02\\f6_qa01\\previews08\\F6_process_4_PDF_FULL.png",
+      "PDF_preview_sha256": "bffd6efb022e8b1f649cb38e69d6fd3e0592e2f0a743813e99e30f9b684ef3b2",
+      "PNG_path": "E:\\hospital_ies_v21_20261023\\main02\\f6_qa01\\styled_figures08\\F6_process_4.png",
+      "PNG_sha256": "437c4b9bca71318b7057d89f00e5646051160bfd3b7381a06a395abce4419b00",
+      "visual_passed": true
+    }
+  ],
+  "science_values_and_UserData_exact": true,
+  "object_checks_passed": true,
+  "format_checks_passed": true,
+  "full_page_bounds_passed": true,
+  "local_high_resolution_region_viewed": true,
+  "PDF_and_PNG_font_appearance_consistent": true,
+  "physics_attempts": 0,
+  "scientific_gate": false,
+  "status": "passed_actual_full_PDF_PNG_and_known_collision_region_review",
+  "root_independent_review": {
+    "reported_actual_four_full_PNGs_and_local_crop_viewed": true,
+    "known_collision_resolved": true,
+    "source_PNGs": [
+      {
+        "path": "E:\\hospital_ies_v21_20261023\\main02\\f6_qa01\\styled_figures08\\F6_process_1.png",
+        "sha256": "2835d03a76ebf9945b3132ccba9645becb60c2a2f00eab87dfed4f7a263809a6"
+      },
+      {
+        "path": "E:\\hospital_ies_v21_20261023\\main02\\f6_qa01\\styled_figures08\\F6_process_2.png",
+        "sha256": "af8b76c50a59eed26315ed50016c9bc27c232ebd070a71a8c52ad654eda3933f"
+      },
+      {
+        "path": "E:\\hospital_ies_v21_20261023\\main02\\f6_qa01\\styled_figures08\\F6_process_3.png",
+        "sha256": "7df6699cd7a336cc55902919bb179653c4aee8ed5434bce4cef295f0ed13e33c"
+      },
+      {
+        "path": "E:\\hospital_ies_v21_20261023\\main02\\f6_qa01\\styled_figures08\\F6_process_4.png",
+        "sha256": "437c4b9bca71318b7057d89f00e5646051160bfd3b7381a06a395abce4419b00"
+      }
+    ],
+    "report": "root message confirmed four full PNGs plus LABEL_NEIGHBOR_CHECK08; recorded time is receipt creation, not a fabricated independently timed view timestamp"
+  },
+  "local_crop": {
+    "path": "E:\\hospital_ies_v21_20261023\\main02\\f6_qa01\\LABEL_NEIGHBOR_CHECK08.png",
+    "sha256": "f0b1d4c3e6165a30de86688a310610258c5fc2bf8dc1ed017f22cd0b22865fef"
+  },
+  "limits": "Actual saved FIG renderer opengl/auto is recorded separately; PNG command has no explicit renderer switch. No independent internal print-renderer trace is claimed."
+}

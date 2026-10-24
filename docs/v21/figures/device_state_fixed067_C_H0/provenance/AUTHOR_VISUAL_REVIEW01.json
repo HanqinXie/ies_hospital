@@ -1,0 +1,30 @@
+{
+  "schema": "hospital_ies.fixed067_state_author_visual_review.v1",
+  "reviewer": "state_delivery author agent",
+  "review_method": "Actual view_image inspection of the entire final 600dpi PNG and complete one-page PDF rendered at240dpi",
+  "reviewed_files": [
+    {
+      "path": "E:/hospital_ies_v21_20261023/reviews/fixed067_state_figure01/figures01/STATE_fixed067_C_H0.png",
+      "sha256": "9e4817239fb67c01f4c107ba1900134672fd08d9f5ec8dbed4101cb649e171b2",
+      "all_page_content_seen": true
+    },
+    {
+      "path": "E:/hospital_ies_v21_20261023/reviews/fixed067_state_figure01/runtime01/proofs01/PDF_complete_page_01_240dpi.png",
+      "source_pdf_path": "E:/hospital_ies_v21_20261023/reviews/fixed067_state_figure01/figures01/STATE_fixed067_C_H0.pdf",
+      "source_pdf_sha256": "53e63c92c25c90e8a9a7bdfddfe36094186c7b9174a588770e2edad0d3619851",
+      "all_page_content_seen": true
+    }
+  ],
+  "status": "PASS",
+  "findings": [
+    "Main title, three axes, category ticks and all time-axis values are visible and legible.",
+    "DG start-label blocks and actual segment-end diamonds remain visually distinct.",
+    "All three GT rows are isolated observation points with no connecting lines.",
+    "Three observed GT category labels and all six semantic notes are complete and clear.",
+    "No text clipping, missing glyphs or overlap between panels, legend and notes was observed.",
+    "PNG and complete PDF have the same intended layout and recorded-state semantics."
+  ],
+  "layout_revision_needed": false,
+  "scientific_gate": false,
+  "actual_physics_started": 0
+}

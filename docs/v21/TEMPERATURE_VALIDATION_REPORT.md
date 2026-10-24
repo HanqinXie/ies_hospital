@@ -39,6 +39,12 @@
 - 红绿原日志：`E:\hospital_ies_v21_20261023\temperature_validation\evidence`。当前四项针对性回归实际通过；它们覆盖仅改目标对象、保留恢复热状态、SQL/DST 时钟以及“事件窗目标盘管仍供冷即拒绝验收”。
 - 这些检验没有现场实测校准、临床温度阈值认证、湿度、压差、感染控制或跨医院验证。生产结果中的温度仅作探索性辅助分析。
 
+## MATLAB 独立验证图
+
+最终图为 `figures/temperature_validation/temperature_validation.fig`，同目录提供 SVG、PDF、PNG、实际绘图样本和逐字节绑定的源 CSV；脚本为 `figures/plot_temperature_validation.m`。真实 MATLAB R2024b 执行与 FIG 重开均退出 0，FIG 含 4 个轴、10 条曲线、4 个区间色块、0 张位图，SVG 也不含嵌入位图，PNG 已目视检查。命令、输出 SHA 和对象 QA 见该目录 `MATLAB_VERIFICATION_RECEIPT.json`。
+
+图使用已修正时钟的 `analysis03_clock_corrected` 两个独立季节原生 10 min CSV，与 `analysis04_final` 所用温度曲线相同；后者增加恢复分阶段指标。没有使用 `study02` 中旧的错误分析曲线。图明确标记定量验证未通过，+2°C 仅为研究判据，不作为临床安全阈值。
+
 ## 复现
 
 在仓库根目录，设置当前进程 `PYTHONPATH=src`，执行：

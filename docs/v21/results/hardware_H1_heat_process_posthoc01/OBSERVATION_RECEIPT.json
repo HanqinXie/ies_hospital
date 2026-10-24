@@ -1,0 +1,1520 @@
+{
+  "schema": "hospital_ies.posthoc_H1_heat_observation.v1",
+  "utc": "2026-10-24T12:45:55.177633+00:00",
+  "scope": "First already predeclared winter compound C/A/M H0/H1; posthoc effect explanation only",
+  "source_bindings": [
+    {
+      "path": "E:\\hospital_ies_v21_20261023\\reviews\\hardware_figures_actual126_01\\hw18_source01\\HW18_ACTUAL_MANIFEST.json",
+      "bytes": 10203228,
+      "sha256": "8fa4872d98493c137f4abe4dabe3f1dacc694ff392aefa7632b5c5c24b1875a0"
+    },
+    {
+      "path": "E:\\hospital_ies_v21_20261023\\reviews\\hardware_figures_actual126_01\\hw18_commands01\\exports\\10\\EXPORT_RECEIPT.json",
+      "bytes": 4095,
+      "sha256": "1969babdd47a005004911534cbff712f42f9504cfb65a62ca677ec45e5f85b92"
+    },
+    {
+      "path": "E:\\hospital_ies_v21_20261023\\reviews\\hardware_figures_actual126_01\\hw18_commands01\\exports\\10\\SEGMENT_STATES.csv",
+      "bytes": 1296217,
+      "sha256": "097b35e3436f7e48535e8514d1b1798803b89496092a3af6d9a5de6832a2b57e"
+    },
+    {
+      "path": "E:\\hospital_ies_v21_20261023\\reviews\\hardware_figures_actual126_01\\hw18_source01\\data\\10\\PROCESS.csv",
+      "bytes": 62891,
+      "sha256": "83e7b7944d59d58102bbc45fea71852651c40788504222134a6fdb822eee7444"
+    },
+    {
+      "path": "E:\\hospital_ies_v21_20261023\\reviews\\hardware_figures_actual126_01\\hw18_commands01\\exports\\11\\EXPORT_RECEIPT.json",
+      "bytes": 4099,
+      "sha256": "d132f240991bffb0a00cd1c938299d66013aeaac2676853bf4f3e52fee59c327"
+    },
+    {
+      "path": "E:\\hospital_ies_v21_20261023\\reviews\\hardware_figures_actual126_01\\hw18_commands01\\exports\\11\\SEGMENT_STATES.csv",
+      "bytes": 8966866,
+      "sha256": "5694edb9ee2f4ce69c95450b274968078b10a7a996ec2dbc49a2d3d7f5533a1f"
+    },
+    {
+      "path": "E:\\hospital_ies_v21_20261023\\reviews\\hardware_figures_actual126_01\\hw18_source01\\data\\11\\PROCESS.csv",
+      "bytes": 441254,
+      "sha256": "6152811734726e52848c31b808bff03dd23152835ac5249f1c98345e69b24f9f"
+    },
+    {
+      "path": "E:\\hospital_ies_v21_20261023\\reviews\\hardware_figures_actual126_01\\hw18_commands01\\exports\\13\\EXPORT_RECEIPT.json",
+      "bytes": 4095,
+      "sha256": "03d019b00c74e6e9befefaf38079587442ddeb892f4449db2d97044bc5dd1f61"
+    },
+    {
+      "path": "E:\\hospital_ies_v21_20261023\\reviews\\hardware_figures_actual126_01\\hw18_commands01\\exports\\13\\SEGMENT_STATES.csv",
+      "bytes": 1296217,
+      "sha256": "097b35e3436f7e48535e8514d1b1798803b89496092a3af6d9a5de6832a2b57e"
+    },
+    {
+      "path": "E:\\hospital_ies_v21_20261023\\reviews\\hardware_figures_actual126_01\\hw18_source01\\data\\13\\PROCESS.csv",
+      "bytes": 62891,
+      "sha256": "83e7b7944d59d58102bbc45fea71852651c40788504222134a6fdb822eee7444"
+    },
+    {
+      "path": "E:\\hospital_ies_v21_20261023\\reviews\\hardware_figures_actual126_01\\hw18_commands01\\exports\\14\\EXPORT_RECEIPT.json",
+      "bytes": 4099,
+      "sha256": "d42bf483a32387fa16f80c0353eef20b8b6ba513fb4564ac8a88677428bb8d8e"
+    },
+    {
+      "path": "E:\\hospital_ies_v21_20261023\\reviews\\hardware_figures_actual126_01\\hw18_commands01\\exports\\14\\SEGMENT_STATES.csv",
+      "bytes": 8966866,
+      "sha256": "5694edb9ee2f4ce69c95450b274968078b10a7a996ec2dbc49a2d3d7f5533a1f"
+    },
+    {
+      "path": "E:\\hospital_ies_v21_20261023\\reviews\\hardware_figures_actual126_01\\hw18_source01\\data\\14\\PROCESS.csv",
+      "bytes": 441254,
+      "sha256": "6152811734726e52848c31b808bff03dd23152835ac5249f1c98345e69b24f9f"
+    },
+    {
+      "path": "E:\\hospital_ies_v21_20261023\\reviews\\hardware_figures_actual126_01\\hw18_commands01\\exports\\16\\EXPORT_RECEIPT.json",
+      "bytes": 4098,
+      "sha256": "6f54067cb9234a9fcc26814c6c95f23534cb3a475410c469c69caaa36c88f225"
+    },
+    {
+      "path": "E:\\hospital_ies_v21_20261023\\reviews\\hardware_figures_actual126_01\\hw18_commands01\\exports\\16\\SEGMENT_STATES.csv",
+      "bytes": 2287459,
+      "sha256": "476c5da5369f870351a6112950c18ef147f02a2dd91e57c6593804a84e569a80"
+    },
+    {
+      "path": "E:\\hospital_ies_v21_20261023\\reviews\\hardware_figures_actual126_01\\hw18_source01\\data\\16\\PROCESS.csv",
+      "bytes": 110923,
+      "sha256": "ebd137d000c7361fd170ae5615eee80832bde3ca77235d6d505a2030b08588f1"
+    },
+    {
+      "path": "E:\\hospital_ies_v21_20261023\\reviews\\hardware_figures_actual126_01\\hw18_commands01\\exports\\17\\EXPORT_RECEIPT.json",
+      "bytes": 4099,
+      "sha256": "768d35f54bb90139c177264ceef2c39fd3931723bd938ae92d4de4803a09ef68"
+    },
+    {
+      "path": "E:\\hospital_ies_v21_20261023\\reviews\\hardware_figures_actual126_01\\hw18_commands01\\exports\\17\\SEGMENT_STATES.csv",
+      "bytes": 9681368,
+      "sha256": "b5fc3b2bbe8277e613598b12dd578a12d156cac89948ac3a6f91c18081a73c8c"
+    },
+    {
+      "path": "E:\\hospital_ies_v21_20261023\\reviews\\hardware_figures_actual126_01\\hw18_source01\\data\\17\\PROCESS.csv",
+      "bytes": 482740,
+      "sha256": "03e0394db4d0930b79b0006bd683ad2acc2038c4903c1d9e91bbce4633340881"
+    }
+  ],
+  "all_source_SHA_unchanged_after": true,
+  "rows": 410,
+  "summaries": [
+    {
+      "entry": 10,
+      "policy_id": "C_sci_v21",
+      "configuration_id": "H0",
+      "interval": [
+        60,
+        75
+      ],
+      "segments": 1,
+      "observed_numeric_ranges": {
+        "start_minute": {
+          "min": 60.0,
+          "max": 60.0
+        },
+        "end_minute": {
+          "min": 75.0,
+          "max": 75.0
+        },
+        "arrived_boiler_permission_lbph": {
+          "min": 376.36736880584994,
+          "max": 376.36736880584994
+        },
+        "effective_boiler_limit_lbph": {
+          "min": 376.36736880584994,
+          "max": 376.36736880584994
+        },
+        "actual_boiler_steam_lbph": {
+          "min": 376.36736880584994,
+          "max": 376.36736880584994
+        },
+        "actual_hrsg_steam_lbph": {
+          "min": 0.0,
+          "max": 0.0
+        },
+        "actual_grid_kW": {
+          "min": 0.0,
+          "max": 0.0
+        },
+        "actual_GT_kW": {
+          "min": 0.0,
+          "max": 0.0
+        },
+        "actual_DG_kW": {
+          "min": 0.0,
+          "max": 0.0
+        },
+        "actual_UPS_discharge_kW": {
+          "min": 0.0,
+          "max": 0.0
+        },
+        "actual_absorption_cooling_kW": {
+          "min": 0.0,
+          "max": 0.0
+        },
+        "saved_steam_balance_residual_lbph": {
+          "min": 1.3024305189901497e-08,
+          "max": 1.3024305189901497e-08
+        },
+        "P0_e_requested_kW": {
+          "min": 50.660383360578635,
+          "max": 50.660383360578635
+        },
+        "P0_e_delivered_kW": {
+          "min": 7.105427357601002e-15,
+          "max": 7.105427357601002e-15
+        },
+        "P0_h_requested_kW": {
+          "min": 35.95526794164616,
+          "max": 35.95526794164616
+        },
+        "P0_h_delivered_kW": {
+          "min": 0.0,
+          "max": 0.0
+        },
+        "P0_c_requested_kW": {
+          "min": 41.00826538668368,
+          "max": 41.00826538668368
+        },
+        "P0_c_delivered_kW": {
+          "min": 0.0,
+          "max": 0.0
+        },
+        "P0_fan_delivered_kW": {
+          "min": 0.0,
+          "max": 0.0
+        },
+        "P0_CHW_pump_delivered_kW": {
+          "min": 0.0,
+          "max": 0.0
+        },
+        "P0_heat_pump_delivered_kW": {
+          "min": 0.0,
+          "max": 0.0
+        },
+        "P0_direct_electric_delivered_kW": {
+          "min": 7.105427357601002e-15,
+          "max": 7.105427357601002e-15
+        },
+        "P1_e_requested_kW": {
+          "min": 35.12535055317202,
+          "max": 35.12535055317202
+        },
+        "P1_e_delivered_kW": {
+          "min": 0.0,
+          "max": 0.0
+        },
+        "P1_h_requested_kW": {
+          "min": 36.343342010276565,
+          "max": 36.343342010276565
+        },
+        "P1_h_delivered_kW": {
+          "min": 0.0,
+          "max": 0.0
+        },
+        "P1_c_requested_kW": {
+          "min": 27.23732627036426,
+          "max": 27.23732627036426
+        },
+        "P1_c_delivered_kW": {
+          "min": 0.0,
+          "max": 0.0
+        },
+        "P1_fan_delivered_kW": {
+          "min": 0.0,
+          "max": 0.0
+        },
+        "P1_CHW_pump_delivered_kW": {
+          "min": 0.0,
+          "max": 0.0
+        },
+        "P1_heat_pump_delivered_kW": {
+          "min": 0.0,
+          "max": 0.0
+        },
+        "P1_direct_electric_delivered_kW": {
+          "min": 0.0,
+          "max": 0.0
+        },
+        "P2_e_requested_kW": {
+          "min": 34.3004018638936,
+          "max": 34.3004018638936
+        },
+        "P2_e_delivered_kW": {
+          "min": 0.0,
+          "max": 0.0
+        },
+        "P2_h_requested_kW": {
+          "min": 0.0,
+          "max": 0.0
+        },
+        "P2_h_delivered_kW": {
+          "min": 0.0,
+          "max": 0.0
+        },
+        "P2_c_requested_kW": {
+          "min": 31.20928126086928,
+          "max": 31.20928126086928
+        },
+        "P2_c_delivered_kW": {
+          "min": 0.0,
+          "max": 0.0
+        },
+        "P2_fan_delivered_kW": {
+          "min": 0.0,
+          "max": 0.0
+        },
+        "P2_CHW_pump_delivered_kW": {
+          "min": 0.0,
+          "max": 0.0
+        },
+        "P2_heat_pump_delivered_kW": {
+          "min": 0.0,
+          "max": 0.0
+        },
+        "P2_direct_electric_delivered_kW": {
+          "min": 0.0,
+          "max": 0.0
+        },
+        "P3_e_requested_kW": {
+          "min": 320.0079352207124,
+          "max": 320.0079352207124
+        },
+        "P3_e_delivered_kW": {
+          "min": 0.0,
+          "max": 0.0
+        },
+        "P3_h_requested_kW": {
+          "min": 59.81775642774484,
+          "max": 59.81775642774484
+        },
+        "P3_h_delivered_kW": {
+          "min": 0.0,
+          "max": 0.0
+        },
+        "P3_c_requested_kW": {
+          "min": 8.841999461146187,
+          "max": 8.841999461146187
+        },
+        "P3_c_delivered_kW": {
+          "min": 0.0,
+          "max": 0.0
+        },
+        "P3_fan_delivered_kW": {
+          "min": 0.0,
+          "max": 0.0
+        },
+        "P3_CHW_pump_delivered_kW": {
+          "min": 0.0,
+          "max": 0.0
+        },
+        "P3_heat_pump_delivered_kW": {
+          "min": 0.0,
+          "max": 0.0
+        },
+        "P3_direct_electric_delivered_kW": {
+          "min": 0.0,
+          "max": 0.0
+        }
+      },
+      "command_ids": [
+        "4"
+      ],
+      "source_process": {
+        "path": "E:\\hospital_ies_v21_20261023\\reviews\\hardware_figures_actual126_01\\hw18_source01\\data\\10\\PROCESS.csv",
+        "bytes": 62891,
+        "sha256": "83e7b7944d59d58102bbc45fea71852651c40788504222134a6fdb822eee7444"
+      },
+      "source_segment_states": {
+        "path": "E:\\hospital_ies_v21_20261023\\reviews\\hardware_figures_actual126_01\\hw18_commands01\\exports\\10\\SEGMENT_STATES.csv",
+        "bytes": 1296217,
+        "sha256": "097b35e3436f7e48535e8514d1b1798803b89496092a3af6d9a5de6832a2b57e"
+      }
+    },
+    {
+      "entry": 11,
+      "policy_id": "C_sci_v21",
+      "configuration_id": "H1",
+      "interval": [
+        60,
+        75
+      ],
+      "segments": 15,
+      "observed_numeric_ranges": {
+        "start_minute": {
+          "min": 60.0,
+          "max": 74.0
+        },
+        "end_minute": {
+          "min": 61.0,
+          "max": 75.0
+        },
+        "arrived_boiler_permission_lbph": {
+          "min": 376.36736880584994,
+          "max": 376.36736880584994
+        },
+        "effective_boiler_limit_lbph": {
+          "min": 376.36736880584994,
+          "max": 376.36736880584994
+        },
+        "actual_boiler_steam_lbph": {
+          "min": 376.36736880584994,
+          "max": 376.36736880584994
+        },
+        "actual_hrsg_steam_lbph": {
+          "min": 0.0,
+          "max": 0.0
+        },
+        "actual_grid_kW": {
+          "min": 0.0,
+          "max": 0.0
+        },
+        "actual_GT_kW": {
+          "min": 0.0,
+          "max": 0.0
+        },
+        "actual_DG_kW": {
+          "min": 0.0,
+          "max": 0.0
+        },
+        "actual_UPS_discharge_kW": {
+          "min": 85.78573391375065,
+          "max": 85.78573391375065
+        },
+        "actual_absorption_cooling_kW": {
+          "min": 0.0,
+          "max": 0.0
+        },
+        "saved_steam_balance_residual_lbph": {
+          "min": 0.0,
+          "max": 0.0
+        },
+        "P0_e_requested_kW": {
+          "min": 50.660383360578635,
+          "max": 50.660383360578635
+        },
+        "P0_e_delivered_kW": {
+          "min": 50.660383360578635,
+          "max": 50.660383360578635
+        },
+        "P0_h_requested_kW": {
+          "min": 35.95526794164616,
+          "max": 35.95526794164616
+        },
+        "P0_h_delivered_kW": {
+          "min": 35.95526794164616,
+          "max": 35.95526794164616
+        },
+        "P0_c_requested_kW": {
+          "min": 41.00826538668368,
+          "max": 41.00826538668368
+        },
+        "P0_c_delivered_kW": {
+          "min": 0.0,
+          "max": 0.0
+        },
+        "P0_fan_delivered_kW": {
+          "min": 12.7538661301053,
+          "max": 12.7538661301053
+        },
+        "P0_CHW_pump_delivered_kW": {
+          "min": 0.0205375720245205,
+          "max": 0.0205375720245205
+        },
+        "P0_heat_pump_delivered_kW": {
+          "min": 0.0030724211350804,
+          "max": 0.0030724211350804
+        },
+        "P0_direct_electric_delivered_kW": {
+          "min": 37.88290723731373,
+          "max": 37.88290723731373
+        },
+        "P1_e_requested_kW": {
+          "min": 35.12535055317202,
+          "max": 35.12535055317202
+        },
+        "P1_e_delivered_kW": {
+          "min": 35.12535055317202,
+          "max": 35.12535055317202
+        },
+        "P1_h_requested_kW": {
+          "min": 36.343342010276565,
+          "max": 36.343342010276565
+        },
+        "P1_h_delivered_kW": {
+          "min": 36.343342010276565,
+          "max": 36.343342010276565
+        },
+        "P1_c_requested_kW": {
+          "min": 27.23732627036426,
+          "max": 27.23732627036426
+        },
+        "P1_c_delivered_kW": {
+          "min": 0.0,
+          "max": 0.0
+        },
+        "P1_fan_delivered_kW": {
+          "min": 11.6955524328128,
+          "max": 11.6955524328128
+        },
+        "P1_CHW_pump_delivered_kW": {
+          "min": 0.0136408732424614,
+          "max": 0.0136408732424614
+        },
+        "P1_heat_pump_delivered_kW": {
+          "min": 0.0031055825336374,
+          "max": 0.0031055825336374
+        },
+        "P1_direct_electric_delivered_kW": {
+          "min": 23.413051664583122,
+          "max": 23.413051664583122
+        },
+        "P2_e_requested_kW": {
+          "min": 34.3004018638936,
+          "max": 34.3004018638936
+        },
+        "P2_e_delivered_kW": {
+          "min": 0.0,
+          "max": 0.0
+        },
+        "P2_h_requested_kW": {
+          "min": 0.0,
+          "max": 0.0
+        },
+        "P2_h_delivered_kW": {
+          "min": 0.0,
+          "max": 0.0
+        },
+        "P2_c_requested_kW": {
+          "min": 31.20928126086928,
+          "max": 31.20928126086928
+        },
+        "P2_c_delivered_kW": {
+          "min": 0.0,
+          "max": 0.0
+        },
+        "P2_fan_delivered_kW": {
+          "min": 0.0,
+          "max": 0.0
+        },
+        "P2_CHW_pump_delivered_kW": {
+          "min": 0.0,
+          "max": 0.0
+        },
+        "P2_heat_pump_delivered_kW": {
+          "min": 0.0,
+          "max": 0.0
+        },
+        "P2_direct_electric_delivered_kW": {
+          "min": 0.0,
+          "max": 0.0
+        },
+        "P3_e_requested_kW": {
+          "min": 320.0079352207124,
+          "max": 320.0079352207124
+        },
+        "P3_e_delivered_kW": {
+          "min": 0.0,
+          "max": 0.0
+        },
+        "P3_h_requested_kW": {
+          "min": 59.81775642774484,
+          "max": 59.81775642774484
+        },
+        "P3_h_delivered_kW": {
+          "min": 0.0,
+          "max": 0.0
+        },
+        "P3_c_requested_kW": {
+          "min": 8.841999461146187,
+          "max": 8.841999461146187
+        },
+        "P3_c_delivered_kW": {
+          "min": 0.0,
+          "max": 0.0
+        },
+        "P3_fan_delivered_kW": {
+          "min": 0.0,
+          "max": 0.0
+        },
+        "P3_CHW_pump_delivered_kW": {
+          "min": 0.0,
+          "max": 0.0
+        },
+        "P3_heat_pump_delivered_kW": {
+          "min": 0.0,
+          "max": 0.0
+        },
+        "P3_direct_electric_delivered_kW": {
+          "min": 0.0,
+          "max": 0.0
+        }
+      },
+      "command_ids": [
+        "4"
+      ],
+      "source_process": {
+        "path": "E:\\hospital_ies_v21_20261023\\reviews\\hardware_figures_actual126_01\\hw18_source01\\data\\11\\PROCESS.csv",
+        "bytes": 441254,
+        "sha256": "6152811734726e52848c31b808bff03dd23152835ac5249f1c98345e69b24f9f"
+      },
+      "source_segment_states": {
+        "path": "E:\\hospital_ies_v21_20261023\\reviews\\hardware_figures_actual126_01\\hw18_commands01\\exports\\11\\SEGMENT_STATES.csv",
+        "bytes": 8966866,
+        "sha256": "5694edb9ee2f4ce69c95450b274968078b10a7a996ec2dbc49a2d3d7f5533a1f"
+      }
+    },
+    {
+      "entry": 13,
+      "policy_id": "A_sci_v21",
+      "configuration_id": "H0",
+      "interval": [
+        60,
+        75
+      ],
+      "segments": 1,
+      "observed_numeric_ranges": {
+        "start_minute": {
+          "min": 60.0,
+          "max": 60.0
+        },
+        "end_minute": {
+          "min": 75.0,
+          "max": 75.0
+        },
+        "arrived_boiler_permission_lbph": {
+          "min": 376.36736880584994,
+          "max": 376.36736880584994
+        },
+        "effective_boiler_limit_lbph": {
+          "min": 376.36736880584994,
+          "max": 376.36736880584994
+        },
+        "actual_boiler_steam_lbph": {
+          "min": 376.36736880584994,
+          "max": 376.36736880584994
+        },
+        "actual_hrsg_steam_lbph": {
+          "min": 0.0,
+          "max": 0.0
+        },
+        "actual_grid_kW": {
+          "min": 0.0,
+          "max": 0.0
+        },
+        "actual_GT_kW": {
+          "min": 0.0,
+          "max": 0.0
+        },
+        "actual_DG_kW": {
+          "min": 0.0,
+          "max": 0.0
+        },
+        "actual_UPS_discharge_kW": {
+          "min": 0.0,
+          "max": 0.0
+        },
+        "actual_absorption_cooling_kW": {
+          "min": 0.0,
+          "max": 0.0
+        },
+        "saved_steam_balance_residual_lbph": {
+          "min": 1.3024305189901497e-08,
+          "max": 1.3024305189901497e-08
+        },
+        "P0_e_requested_kW": {
+          "min": 50.660383360578635,
+          "max": 50.660383360578635
+        },
+        "P0_e_delivered_kW": {
+          "min": 7.105427357601002e-15,
+          "max": 7.105427357601002e-15
+        },
+        "P0_h_requested_kW": {
+          "min": 35.95526794164616,
+          "max": 35.95526794164616
+        },
+        "P0_h_delivered_kW": {
+          "min": 0.0,
+          "max": 0.0
+        },
+        "P0_c_requested_kW": {
+          "min": 41.00826538668368,
+          "max": 41.00826538668368
+        },
+        "P0_c_delivered_kW": {
+          "min": 0.0,
+          "max": 0.0
+        },
+        "P0_fan_delivered_kW": {
+          "min": 0.0,
+          "max": 0.0
+        },
+        "P0_CHW_pump_delivered_kW": {
+          "min": 0.0,
+          "max": 0.0
+        },
+        "P0_heat_pump_delivered_kW": {
+          "min": 0.0,
+          "max": 0.0
+        },
+        "P0_direct_electric_delivered_kW": {
+          "min": 7.105427357601002e-15,
+          "max": 7.105427357601002e-15
+        },
+        "P1_e_requested_kW": {
+          "min": 35.12535055317202,
+          "max": 35.12535055317202
+        },
+        "P1_e_delivered_kW": {
+          "min": 0.0,
+          "max": 0.0
+        },
+        "P1_h_requested_kW": {
+          "min": 36.343342010276565,
+          "max": 36.343342010276565
+        },
+        "P1_h_delivered_kW": {
+          "min": 0.0,
+          "max": 0.0
+        },
+        "P1_c_requested_kW": {
+          "min": 27.23732627036426,
+          "max": 27.23732627036426
+        },
+        "P1_c_delivered_kW": {
+          "min": 0.0,
+          "max": 0.0
+        },
+        "P1_fan_delivered_kW": {
+          "min": 0.0,
+          "max": 0.0
+        },
+        "P1_CHW_pump_delivered_kW": {
+          "min": 0.0,
+          "max": 0.0
+        },
+        "P1_heat_pump_delivered_kW": {
+          "min": 0.0,
+          "max": 0.0
+        },
+        "P1_direct_electric_delivered_kW": {
+          "min": 0.0,
+          "max": 0.0
+        },
+        "P2_e_requested_kW": {
+          "min": 34.3004018638936,
+          "max": 34.3004018638936
+        },
+        "P2_e_delivered_kW": {
+          "min": 0.0,
+          "max": 0.0
+        },
+        "P2_h_requested_kW": {
+          "min": 0.0,
+          "max": 0.0
+        },
+        "P2_h_delivered_kW": {
+          "min": 0.0,
+          "max": 0.0
+        },
+        "P2_c_requested_kW": {
+          "min": 31.20928126086928,
+          "max": 31.20928126086928
+        },
+        "P2_c_delivered_kW": {
+          "min": 0.0,
+          "max": 0.0
+        },
+        "P2_fan_delivered_kW": {
+          "min": 0.0,
+          "max": 0.0
+        },
+        "P2_CHW_pump_delivered_kW": {
+          "min": 0.0,
+          "max": 0.0
+        },
+        "P2_heat_pump_delivered_kW": {
+          "min": 0.0,
+          "max": 0.0
+        },
+        "P2_direct_electric_delivered_kW": {
+          "min": 0.0,
+          "max": 0.0
+        },
+        "P3_e_requested_kW": {
+          "min": 320.0079352207124,
+          "max": 320.0079352207124
+        },
+        "P3_e_delivered_kW": {
+          "min": 0.0,
+          "max": 0.0
+        },
+        "P3_h_requested_kW": {
+          "min": 59.81775642774484,
+          "max": 59.81775642774484
+        },
+        "P3_h_delivered_kW": {
+          "min": 0.0,
+          "max": 0.0
+        },
+        "P3_c_requested_kW": {
+          "min": 8.841999461146187,
+          "max": 8.841999461146187
+        },
+        "P3_c_delivered_kW": {
+          "min": 0.0,
+          "max": 0.0
+        },
+        "P3_fan_delivered_kW": {
+          "min": 0.0,
+          "max": 0.0
+        },
+        "P3_CHW_pump_delivered_kW": {
+          "min": 0.0,
+          "max": 0.0
+        },
+        "P3_heat_pump_delivered_kW": {
+          "min": 0.0,
+          "max": 0.0
+        },
+        "P3_direct_electric_delivered_kW": {
+          "min": 0.0,
+          "max": 0.0
+        }
+      },
+      "command_ids": [
+        "4"
+      ],
+      "source_process": {
+        "path": "E:\\hospital_ies_v21_20261023\\reviews\\hardware_figures_actual126_01\\hw18_source01\\data\\13\\PROCESS.csv",
+        "bytes": 62891,
+        "sha256": "83e7b7944d59d58102bbc45fea71852651c40788504222134a6fdb822eee7444"
+      },
+      "source_segment_states": {
+        "path": "E:\\hospital_ies_v21_20261023\\reviews\\hardware_figures_actual126_01\\hw18_commands01\\exports\\13\\SEGMENT_STATES.csv",
+        "bytes": 1296217,
+        "sha256": "097b35e3436f7e48535e8514d1b1798803b89496092a3af6d9a5de6832a2b57e"
+      }
+    },
+    {
+      "entry": 14,
+      "policy_id": "A_sci_v21",
+      "configuration_id": "H1",
+      "interval": [
+        60,
+        75
+      ],
+      "segments": 15,
+      "observed_numeric_ranges": {
+        "start_minute": {
+          "min": 60.0,
+          "max": 74.0
+        },
+        "end_minute": {
+          "min": 61.0,
+          "max": 75.0
+        },
+        "arrived_boiler_permission_lbph": {
+          "min": 376.36736880584994,
+          "max": 376.36736880584994
+        },
+        "effective_boiler_limit_lbph": {
+          "min": 376.36736880584994,
+          "max": 376.36736880584994
+        },
+        "actual_boiler_steam_lbph": {
+          "min": 376.36736880584994,
+          "max": 376.36736880584994
+        },
+        "actual_hrsg_steam_lbph": {
+          "min": 0.0,
+          "max": 0.0
+        },
+        "actual_grid_kW": {
+          "min": 0.0,
+          "max": 0.0
+        },
+        "actual_GT_kW": {
+          "min": 0.0,
+          "max": 0.0
+        },
+        "actual_DG_kW": {
+          "min": 0.0,
+          "max": 0.0
+        },
+        "actual_UPS_discharge_kW": {
+          "min": 85.78573391375065,
+          "max": 85.78573391375065
+        },
+        "actual_absorption_cooling_kW": {
+          "min": 0.0,
+          "max": 0.0
+        },
+        "saved_steam_balance_residual_lbph": {
+          "min": 0.0,
+          "max": 0.0
+        },
+        "P0_e_requested_kW": {
+          "min": 50.660383360578635,
+          "max": 50.660383360578635
+        },
+        "P0_e_delivered_kW": {
+          "min": 50.660383360578635,
+          "max": 50.660383360578635
+        },
+        "P0_h_requested_kW": {
+          "min": 35.95526794164616,
+          "max": 35.95526794164616
+        },
+        "P0_h_delivered_kW": {
+          "min": 35.95526794164616,
+          "max": 35.95526794164616
+        },
+        "P0_c_requested_kW": {
+          "min": 41.00826538668368,
+          "max": 41.00826538668368
+        },
+        "P0_c_delivered_kW": {
+          "min": 0.0,
+          "max": 0.0
+        },
+        "P0_fan_delivered_kW": {
+          "min": 12.7538661301053,
+          "max": 12.7538661301053
+        },
+        "P0_CHW_pump_delivered_kW": {
+          "min": 0.0205375720245205,
+          "max": 0.0205375720245205
+        },
+        "P0_heat_pump_delivered_kW": {
+          "min": 0.0030724211350804,
+          "max": 0.0030724211350804
+        },
+        "P0_direct_electric_delivered_kW": {
+          "min": 37.88290723731373,
+          "max": 37.88290723731373
+        },
+        "P1_e_requested_kW": {
+          "min": 35.12535055317202,
+          "max": 35.12535055317202
+        },
+        "P1_e_delivered_kW": {
+          "min": 35.12535055317202,
+          "max": 35.12535055317202
+        },
+        "P1_h_requested_kW": {
+          "min": 36.343342010276565,
+          "max": 36.343342010276565
+        },
+        "P1_h_delivered_kW": {
+          "min": 36.343342010276565,
+          "max": 36.343342010276565
+        },
+        "P1_c_requested_kW": {
+          "min": 27.23732627036426,
+          "max": 27.23732627036426
+        },
+        "P1_c_delivered_kW": {
+          "min": 0.0,
+          "max": 0.0
+        },
+        "P1_fan_delivered_kW": {
+          "min": 11.6955524328128,
+          "max": 11.6955524328128
+        },
+        "P1_CHW_pump_delivered_kW": {
+          "min": 0.0136408732424614,
+          "max": 0.0136408732424614
+        },
+        "P1_heat_pump_delivered_kW": {
+          "min": 0.0031055825336374,
+          "max": 0.0031055825336374
+        },
+        "P1_direct_electric_delivered_kW": {
+          "min": 23.413051664583122,
+          "max": 23.413051664583122
+        },
+        "P2_e_requested_kW": {
+          "min": 34.3004018638936,
+          "max": 34.3004018638936
+        },
+        "P2_e_delivered_kW": {
+          "min": 0.0,
+          "max": 0.0
+        },
+        "P2_h_requested_kW": {
+          "min": 0.0,
+          "max": 0.0
+        },
+        "P2_h_delivered_kW": {
+          "min": 0.0,
+          "max": 0.0
+        },
+        "P2_c_requested_kW": {
+          "min": 31.20928126086928,
+          "max": 31.20928126086928
+        },
+        "P2_c_delivered_kW": {
+          "min": 0.0,
+          "max": 0.0
+        },
+        "P2_fan_delivered_kW": {
+          "min": 0.0,
+          "max": 0.0
+        },
+        "P2_CHW_pump_delivered_kW": {
+          "min": 0.0,
+          "max": 0.0
+        },
+        "P2_heat_pump_delivered_kW": {
+          "min": 0.0,
+          "max": 0.0
+        },
+        "P2_direct_electric_delivered_kW": {
+          "min": 0.0,
+          "max": 0.0
+        },
+        "P3_e_requested_kW": {
+          "min": 320.0079352207124,
+          "max": 320.0079352207124
+        },
+        "P3_e_delivered_kW": {
+          "min": 0.0,
+          "max": 0.0
+        },
+        "P3_h_requested_kW": {
+          "min": 59.81775642774484,
+          "max": 59.81775642774484
+        },
+        "P3_h_delivered_kW": {
+          "min": 0.0,
+          "max": 0.0
+        },
+        "P3_c_requested_kW": {
+          "min": 8.841999461146187,
+          "max": 8.841999461146187
+        },
+        "P3_c_delivered_kW": {
+          "min": 0.0,
+          "max": 0.0
+        },
+        "P3_fan_delivered_kW": {
+          "min": 0.0,
+          "max": 0.0
+        },
+        "P3_CHW_pump_delivered_kW": {
+          "min": 0.0,
+          "max": 0.0
+        },
+        "P3_heat_pump_delivered_kW": {
+          "min": 0.0,
+          "max": 0.0
+        },
+        "P3_direct_electric_delivered_kW": {
+          "min": 0.0,
+          "max": 0.0
+        }
+      },
+      "command_ids": [
+        "4"
+      ],
+      "source_process": {
+        "path": "E:\\hospital_ies_v21_20261023\\reviews\\hardware_figures_actual126_01\\hw18_source01\\data\\14\\PROCESS.csv",
+        "bytes": 441254,
+        "sha256": "6152811734726e52848c31b808bff03dd23152835ac5249f1c98345e69b24f9f"
+      },
+      "source_segment_states": {
+        "path": "E:\\hospital_ies_v21_20261023\\reviews\\hardware_figures_actual126_01\\hw18_commands01\\exports\\14\\SEGMENT_STATES.csv",
+        "bytes": 8966866,
+        "sha256": "5694edb9ee2f4ce69c95450b274968078b10a7a996ec2dbc49a2d3d7f5533a1f"
+      }
+    },
+    {
+      "entry": 16,
+      "policy_id": "M_sci_v21",
+      "configuration_id": "H0",
+      "interval": [
+        60,
+        75
+      ],
+      "segments": 60,
+      "observed_numeric_ranges": {
+        "start_minute": {
+          "min": 60.0,
+          "max": 74.75
+        },
+        "end_minute": {
+          "min": 60.25,
+          "max": 75.0
+        },
+        "arrived_boiler_permission_lbph": {
+          "min": 0.0,
+          "max": 0.0
+        },
+        "effective_boiler_limit_lbph": {
+          "min": 0.0,
+          "max": 0.0
+        },
+        "actual_boiler_steam_lbph": {
+          "min": 0.0,
+          "max": 0.0
+        },
+        "actual_hrsg_steam_lbph": {
+          "min": 0.0,
+          "max": 0.0
+        },
+        "actual_grid_kW": {
+          "min": 0.0,
+          "max": 0.0
+        },
+        "actual_GT_kW": {
+          "min": 0.0,
+          "max": 0.0
+        },
+        "actual_DG_kW": {
+          "min": 0.0,
+          "max": 0.0
+        },
+        "actual_UPS_discharge_kW": {
+          "min": 0.0,
+          "max": 0.0
+        },
+        "actual_absorption_cooling_kW": {
+          "min": 0.0,
+          "max": 0.0
+        },
+        "saved_steam_balance_residual_lbph": {
+          "min": 0.0,
+          "max": 0.0
+        },
+        "P0_e_requested_kW": {
+          "min": 50.660383360578635,
+          "max": 50.660383360578635
+        },
+        "P0_e_delivered_kW": {
+          "min": 0.0,
+          "max": 0.0
+        },
+        "P0_h_requested_kW": {
+          "min": 35.95526794164616,
+          "max": 35.95526794164616
+        },
+        "P0_h_delivered_kW": {
+          "min": 0.0,
+          "max": 0.0
+        },
+        "P0_c_requested_kW": {
+          "min": 41.00826538668368,
+          "max": 41.00826538668368
+        },
+        "P0_c_delivered_kW": {
+          "min": 0.0,
+          "max": 0.0
+        },
+        "P0_fan_delivered_kW": {
+          "min": 0.0,
+          "max": 0.0
+        },
+        "P0_CHW_pump_delivered_kW": {
+          "min": 0.0,
+          "max": 0.0
+        },
+        "P0_heat_pump_delivered_kW": {
+          "min": 0.0,
+          "max": 0.0
+        },
+        "P0_direct_electric_delivered_kW": {
+          "min": 0.0,
+          "max": 0.0
+        },
+        "P1_e_requested_kW": {
+          "min": 35.12535055317202,
+          "max": 35.12535055317202
+        },
+        "P1_e_delivered_kW": {
+          "min": 0.0,
+          "max": 0.0
+        },
+        "P1_h_requested_kW": {
+          "min": 36.343342010276565,
+          "max": 36.343342010276565
+        },
+        "P1_h_delivered_kW": {
+          "min": 0.0,
+          "max": 0.0
+        },
+        "P1_c_requested_kW": {
+          "min": 27.23732627036426,
+          "max": 27.23732627036426
+        },
+        "P1_c_delivered_kW": {
+          "min": 0.0,
+          "max": 0.0
+        },
+        "P1_fan_delivered_kW": {
+          "min": 0.0,
+          "max": 0.0
+        },
+        "P1_CHW_pump_delivered_kW": {
+          "min": 0.0,
+          "max": 0.0
+        },
+        "P1_heat_pump_delivered_kW": {
+          "min": 0.0,
+          "max": 0.0
+        },
+        "P1_direct_electric_delivered_kW": {
+          "min": 0.0,
+          "max": 0.0
+        },
+        "P2_e_requested_kW": {
+          "min": 34.3004018638936,
+          "max": 34.3004018638936
+        },
+        "P2_e_delivered_kW": {
+          "min": 0.0,
+          "max": 0.0
+        },
+        "P2_h_requested_kW": {
+          "min": 0.0,
+          "max": 0.0
+        },
+        "P2_h_delivered_kW": {
+          "min": 0.0,
+          "max": 0.0
+        },
+        "P2_c_requested_kW": {
+          "min": 31.20928126086928,
+          "max": 31.20928126086928
+        },
+        "P2_c_delivered_kW": {
+          "min": 0.0,
+          "max": 0.0
+        },
+        "P2_fan_delivered_kW": {
+          "min": 0.0,
+          "max": 0.0
+        },
+        "P2_CHW_pump_delivered_kW": {
+          "min": 0.0,
+          "max": 0.0
+        },
+        "P2_heat_pump_delivered_kW": {
+          "min": 0.0,
+          "max": 0.0
+        },
+        "P2_direct_electric_delivered_kW": {
+          "min": 0.0,
+          "max": 0.0
+        },
+        "P3_e_requested_kW": {
+          "min": 320.0079352207124,
+          "max": 320.0079352207124
+        },
+        "P3_e_delivered_kW": {
+          "min": 0.0,
+          "max": 0.0
+        },
+        "P3_h_requested_kW": {
+          "min": 59.81775642774484,
+          "max": 59.81775642774484
+        },
+        "P3_h_delivered_kW": {
+          "min": 0.0,
+          "max": 0.0
+        },
+        "P3_c_requested_kW": {
+          "min": 8.841999461146187,
+          "max": 8.841999461146187
+        },
+        "P3_c_delivered_kW": {
+          "min": 0.0,
+          "max": 0.0
+        },
+        "P3_fan_delivered_kW": {
+          "min": 0.0,
+          "max": 0.0
+        },
+        "P3_CHW_pump_delivered_kW": {
+          "min": 0.0,
+          "max": 0.0
+        },
+        "P3_heat_pump_delivered_kW": {
+          "min": 0.0,
+          "max": 0.0
+        },
+        "P3_direct_electric_delivered_kW": {
+          "min": 0.0,
+          "max": 0.0
+        }
+      },
+      "command_ids": [
+        "4"
+      ],
+      "source_process": {
+        "path": "E:\\hospital_ies_v21_20261023\\reviews\\hardware_figures_actual126_01\\hw18_source01\\data\\16\\PROCESS.csv",
+        "bytes": 110923,
+        "sha256": "ebd137d000c7361fd170ae5615eee80832bde3ca77235d6d505a2030b08588f1"
+      },
+      "source_segment_states": {
+        "path": "E:\\hospital_ies_v21_20261023\\reviews\\hardware_figures_actual126_01\\hw18_commands01\\exports\\16\\SEGMENT_STATES.csv",
+        "bytes": 2287459,
+        "sha256": "476c5da5369f870351a6112950c18ef147f02a2dd91e57c6593804a84e569a80"
+      }
+    },
+    {
+      "entry": 17,
+      "policy_id": "M_sci_v21",
+      "configuration_id": "H1",
+      "interval": [
+        60,
+        75
+      ],
+      "segments": 60,
+      "observed_numeric_ranges": {
+        "start_minute": {
+          "min": 60.0,
+          "max": 74.75
+        },
+        "end_minute": {
+          "min": 60.25,
+          "max": 75.0
+        },
+        "arrived_boiler_permission_lbph": {
+          "min": 0.0,
+          "max": 0.0
+        },
+        "effective_boiler_limit_lbph": {
+          "min": 0.0,
+          "max": 0.0
+        },
+        "actual_boiler_steam_lbph": {
+          "min": 0.0,
+          "max": 0.0
+        },
+        "actual_hrsg_steam_lbph": {
+          "min": 0.0,
+          "max": 0.0
+        },
+        "actual_grid_kW": {
+          "min": 0.0,
+          "max": 0.0
+        },
+        "actual_GT_kW": {
+          "min": 0.0,
+          "max": 0.0
+        },
+        "actual_DG_kW": {
+          "min": 0.0,
+          "max": 0.0
+        },
+        "actual_UPS_discharge_kW": {
+          "min": 85.78564589493637,
+          "max": 85.78564589493637
+        },
+        "actual_absorption_cooling_kW": {
+          "min": 0.0,
+          "max": 0.0
+        },
+        "saved_steam_balance_residual_lbph": {
+          "min": 0.0,
+          "max": 0.0
+        },
+        "P0_e_requested_kW": {
+          "min": 50.660383360578635,
+          "max": 50.660383360578635
+        },
+        "P0_e_delivered_kW": {
+          "min": 50.660339351171494,
+          "max": 50.660339351171494
+        },
+        "P0_h_requested_kW": {
+          "min": 35.95526794164616,
+          "max": 35.95526794164616
+        },
+        "P0_h_delivered_kW": {
+          "min": 0.0,
+          "max": 0.0
+        },
+        "P0_c_requested_kW": {
+          "min": 41.00826538668368,
+          "max": 41.00826538668368
+        },
+        "P0_c_delivered_kW": {
+          "min": 0.0,
+          "max": 0.0
+        },
+        "P0_fan_delivered_kW": {
+          "min": 12.7538661301053,
+          "max": 12.7538661301053
+        },
+        "P0_CHW_pump_delivered_kW": {
+          "min": 0.020493562617381368,
+          "max": 0.020493562617381368
+        },
+        "P0_heat_pump_delivered_kW": {
+          "min": 0.0030724211350804,
+          "max": 0.0030724211350804
+        },
+        "P0_direct_electric_delivered_kW": {
+          "min": 37.88290723731373,
+          "max": 37.88290723731373
+        },
+        "P1_e_requested_kW": {
+          "min": 35.12535055317202,
+          "max": 35.12535055317202
+        },
+        "P1_e_delivered_kW": {
+          "min": 35.12530654376489,
+          "max": 35.12530654376489
+        },
+        "P1_h_requested_kW": {
+          "min": 36.343342010276565,
+          "max": 36.343342010276565
+        },
+        "P1_h_delivered_kW": {
+          "min": 0.0,
+          "max": 0.0
+        },
+        "P1_c_requested_kW": {
+          "min": 27.23732627036426,
+          "max": 27.23732627036426
+        },
+        "P1_c_delivered_kW": {
+          "min": 0.0,
+          "max": 0.0
+        },
+        "P1_fan_delivered_kW": {
+          "min": 11.6955524328128,
+          "max": 11.6955524328128
+        },
+        "P1_CHW_pump_delivered_kW": {
+          "min": 0.013596863835331489,
+          "max": 0.013596863835331489
+        },
+        "P1_heat_pump_delivered_kW": {
+          "min": 0.0031055825336374,
+          "max": 0.0031055825336374
+        },
+        "P1_direct_electric_delivered_kW": {
+          "min": 23.413051664583122,
+          "max": 23.413051664583122
+        },
+        "P2_e_requested_kW": {
+          "min": 34.3004018638936,
+          "max": 34.3004018638936
+        },
+        "P2_e_delivered_kW": {
+          "min": 0.0,
+          "max": 0.0
+        },
+        "P2_h_requested_kW": {
+          "min": 0.0,
+          "max": 0.0
+        },
+        "P2_h_delivered_kW": {
+          "min": 0.0,
+          "max": 0.0
+        },
+        "P2_c_requested_kW": {
+          "min": 31.20928126086928,
+          "max": 31.20928126086928
+        },
+        "P2_c_delivered_kW": {
+          "min": 0.0,
+          "max": 0.0
+        },
+        "P2_fan_delivered_kW": {
+          "min": 0.0,
+          "max": 0.0
+        },
+        "P2_CHW_pump_delivered_kW": {
+          "min": 0.0,
+          "max": 0.0
+        },
+        "P2_heat_pump_delivered_kW": {
+          "min": 0.0,
+          "max": 0.0
+        },
+        "P2_direct_electric_delivered_kW": {
+          "min": 0.0,
+          "max": 0.0
+        },
+        "P3_e_requested_kW": {
+          "min": 320.0079352207124,
+          "max": 320.0079352207124
+        },
+        "P3_e_delivered_kW": {
+          "min": 0.0,
+          "max": 0.0
+        },
+        "P3_h_requested_kW": {
+          "min": 59.81775642774484,
+          "max": 59.81775642774484
+        },
+        "P3_h_delivered_kW": {
+          "min": 0.0,
+          "max": 0.0
+        },
+        "P3_c_requested_kW": {
+          "min": 8.841999461146187,
+          "max": 8.841999461146187
+        },
+        "P3_c_delivered_kW": {
+          "min": 0.0,
+          "max": 0.0
+        },
+        "P3_fan_delivered_kW": {
+          "min": 0.0,
+          "max": 0.0
+        },
+        "P3_CHW_pump_delivered_kW": {
+          "min": 0.0,
+          "max": 0.0
+        },
+        "P3_heat_pump_delivered_kW": {
+          "min": 0.0,
+          "max": 0.0
+        },
+        "P3_direct_electric_delivered_kW": {
+          "min": 0.0,
+          "max": 0.0
+        }
+      },
+      "command_ids": [
+        "4"
+      ],
+      "source_process": {
+        "path": "E:\\hospital_ies_v21_20261023\\reviews\\hardware_figures_actual126_01\\hw18_source01\\data\\17\\PROCESS.csv",
+        "bytes": 482740,
+        "sha256": "03e0394db4d0930b79b0006bd683ad2acc2038c4903c1d9e91bbce4633340881"
+      },
+      "source_segment_states": {
+        "path": "E:\\hospital_ies_v21_20261023\\reviews\\hardware_figures_actual126_01\\hw18_commands01\\exports\\17\\SEGMENT_STATES.csv",
+        "bytes": 9681368,
+        "sha256": "b5fc3b2bbe8277e613598b12dd578a12d156cac89948ac3a6f91c18081a73c8c"
+      }
+    }
+  ],
+  "raw_or_sidecar_reads": 0,
+  "new_physical_attempts": 0,
+  "project_modules_imported": false,
+  "final_scientific_values_read": false,
+  "native_clock_and_process_row_exact": true,
+  "individual_UPS_to_fan_or_pump_source_allocation": "UNKNOWN_NOT_RECORDED",
+  "controls_single_factor_preparation_causality": "NOT_IDENTIFIED_BY_C_VS_M_COMPARISON",
+  "new_independent_backgrounds": 0,
+  "original_representative_priorities_changed": false,
+  "files": [
+    {
+      "path": "E:\\hospital_ies_v21_20261023\\reviews\\hardware_H1_heat_process_root02\\OBSERVED_NATIVE_SEGMENTS_0_TO90.csv",
+      "bytes": 300516,
+      "sha256": "c885e821983e03d8c2ac46835e75f81663905b9c2e147c80b1ace13b02f28d4d"
+    }
+  ]
+}

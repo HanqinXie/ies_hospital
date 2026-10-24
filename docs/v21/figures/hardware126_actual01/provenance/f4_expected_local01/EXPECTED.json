@@ -1,0 +1,1908 @@
+{
+  "schema": "hospital_ies.matlab_expected.v2",
+  "created_utc": "2026-10-24T10:16:57.381869+00:00",
+  "source_binding_sha256": "4dfe62ae105d2696b7782dc36c83ec63c6551e2cded601d6f15c0d4083058add",
+  "plotter_sha256": "e4d95dfef43b1b5b9bb19446098a1cc6e05f6e1a4df5af55bae2320e9deeb0c7",
+  "plotter_role": "publication_single_line_class_labels_and_default_bar_fonts",
+  "data_directory": "E:\\hospital_ies_v21_20261023\\reviews\\hardware_figures_actual126_01\\f4_prepared01\\bundle\\data\\hardware126\\tables",
+  "authority": {
+    "kind": "native_parallel",
+    "receipt_path": "E:\\hospital_ies_v21_20261023\\reviews\\hardware_figures_actual126_01\\f4_prepared01\\bundle\\evidence\\ORIGINAL_PARALLEL_ANALYSIS_RECEIPT.json",
+    "receipt_sha256": "14bb55011f3e47aa86e45de58ab013808dbdb6854457271c4fee1401a39c6084"
+  },
+  "bound_inputs": {
+    "E:\\hospital_ies_v21_20261023\\reviews\\hardware_figures_actual126_01\\f4_prepared01\\bundle\\code\\plot_sci_engineering_publication.m": {
+      "sha256": "e4d95dfef43b1b5b9bb19446098a1cc6e05f6e1a4df5af55bae2320e9deeb0c7",
+      "bytes": 30869
+    },
+    "E:\\hospital_ies_v21_20261023\\reviews\\hardware_figures_actual126_01\\f4_prepared01\\bundle\\evidence\\ORIGINAL_PARALLEL_ANALYSIS_RECEIPT.json": {
+      "sha256": "14bb55011f3e47aa86e45de58ab013808dbdb6854457271c4fee1401a39c6084",
+      "bytes": 18018
+    },
+    "E:\\hospital_ies_v21_20261023\\reviews\\hardware_figures_actual126_01\\f4_prepared01\\bundle\\data\\hardware126\\tables\\ANALYSIS_RECEIPT.json": {
+      "sha256": "ea9d66f44741b65521c1111d0beabc6f39b371f80a223c9b8aebdd95777b4710",
+      "bytes": 2514
+    },
+    "E:\\hospital_ies_v21_20261023\\reviews\\hardware_figures_actual126_01\\f4_prepared01\\bundle\\data\\hardware126\\tables\\ATTEMPT_STATUS.csv": {
+      "sha256": "8d397cda255e6096eab8a229af11671198e6209e448977f7184e660f8e4a301c",
+      "bytes": 150310
+    },
+    "E:\\hospital_ies_v21_20261023\\reviews\\hardware_figures_actual126_01\\f4_prepared01\\bundle\\data\\hardware126\\tables\\CASE_METRICS.csv": {
+      "sha256": "8a96964436aacdc528f33b217915fa47d608244091fd455d011e9ddf38c5ef15",
+      "bytes": 490443
+    },
+    "E:\\hospital_ies_v21_20261023\\reviews\\hardware_figures_actual126_01\\f4_prepared01\\bundle\\data\\hardware126\\tables\\CARRIER_SERVICE.csv": {
+      "sha256": "92056f6abdc5fe4ee77db1313c627ca6461081d9b4bbe5a8722cd54c5e117c3c",
+      "bytes": 279478
+    },
+    "E:\\hospital_ies_v21_20261023\\reviews\\hardware_figures_actual126_01\\f4_prepared01\\bundle\\data\\hardware126\\tables\\PAIRED_DIFFERENCES.csv": {
+      "sha256": "64e7cab4a0f175fde637e823ec8c9c31e53dffa39f9f9c08929c6f361b5f88d5",
+      "bytes": 2331747
+    },
+    "E:\\hospital_ies_v21_20261023\\reviews\\hardware_figures_actual126_01\\f4_prepared01\\bundle\\data\\hardware126\\tables\\RESOURCE_MEASUREMENTS.csv": {
+      "sha256": "9649b4d4af577357cdfb6115d6b835a933859112f720c4bdf75f341872b13b11",
+      "bytes": 64685
+    },
+    "E:\\hospital_ies_v21_20261023\\reviews\\hardware_figures_actual126_01\\f4_prepared01\\bundle\\data\\hardware126\\tables\\EVIDENCE_INTEGRITY_SUMMARY.csv": {
+      "sha256": "22245eb836dd2109d5699dd01b23d84ffdadb5b0367d6bc672f76fb5b5c0cc4e",
+      "bytes": 407
+    },
+    "E:\\hospital_ies_v21_20261023\\reviews\\hardware_figures_actual126_01\\f4_prepared01\\bundle\\data\\hardware126\\tables\\PAIRED_SUMMARY.csv": {
+      "sha256": "3cd3410c95e8f660fc556b3821308af153a905f8800a646fdbf6d6315124e0eb",
+      "bytes": 1851922
+    },
+    "E:\\hospital_ies_v21_20261023\\reviews\\hardware_figures_actual126_01\\f4_prepared01\\bundle\\data\\hardware126\\tables\\MECHANISM_EFFECTS.csv": {
+      "sha256": "f01a374e9c81e3db89b3a42940c4d6a5447684986a1296e42bf13f196eed6295",
+      "bytes": 5
+    },
+    "E:\\hospital_ies_v21_20261023\\reviews\\hardware_figures_actual126_01\\f4_prepared01\\bundle\\data\\hardware126\\tables\\HARDWARE_DIFFERENCES.csv": {
+      "sha256": "2062d88162737fe54116708f2423da7830d35683a5a9b2d5e6e7cf162c783009",
+      "bytes": 1650696
+    },
+    "E:\\hospital_ies_v21_20261023\\reviews\\hardware_figures_actual126_01\\f4_prepared01\\bundle\\data\\hardware126\\tables\\DISTURBANCE_INTERACTIONS.csv": {
+      "sha256": "f01a374e9c81e3db89b3a42940c4d6a5447684986a1296e42bf13f196eed6295",
+      "bytes": 5
+    },
+    "E:\\hospital_ies_v21_20261023\\reviews\\hardware_figures_actual126_01\\f4_prepared01\\bundle\\data\\hardware126\\tables\\NECESSARY_BOUNDARY_CONDITIONS.csv": {
+      "sha256": "f01a374e9c81e3db89b3a42940c4d6a5447684986a1296e42bf13f196eed6295",
+      "bytes": 5
+    },
+    "E:\\hospital_ies_v21_20261023\\reviews\\hardware_figures_actual126_01\\f4_prepared01\\bundle\\data\\hardware126\\tables\\SCI_TABLES.mat": {
+      "sha256": "7fe9f026cb54357503658f2b51e4c23fdc1707db2ed350a4b64f5ab6186be8b5",
+      "bytes": 158090
+    }
+  },
+  "input_files": [
+    {
+      "path": "E:\\hospital_ies_v21_20261023\\reviews\\hardware_figures_actual126_01\\f4_prepared01\\bundle\\code\\plot_sci_engineering_publication.m",
+      "sha256": "e4d95dfef43b1b5b9bb19446098a1cc6e05f6e1a4df5af55bae2320e9deeb0c7",
+      "bytes": 30869
+    },
+    {
+      "path": "E:\\hospital_ies_v21_20261023\\reviews\\hardware_figures_actual126_01\\f4_prepared01\\bundle\\evidence\\ORIGINAL_PARALLEL_ANALYSIS_RECEIPT.json",
+      "sha256": "14bb55011f3e47aa86e45de58ab013808dbdb6854457271c4fee1401a39c6084",
+      "bytes": 18018
+    },
+    {
+      "path": "E:\\hospital_ies_v21_20261023\\reviews\\hardware_figures_actual126_01\\f4_prepared01\\bundle\\data\\hardware126\\tables\\ANALYSIS_RECEIPT.json",
+      "sha256": "ea9d66f44741b65521c1111d0beabc6f39b371f80a223c9b8aebdd95777b4710",
+      "bytes": 2514
+    },
+    {
+      "path": "E:\\hospital_ies_v21_20261023\\reviews\\hardware_figures_actual126_01\\f4_prepared01\\bundle\\data\\hardware126\\tables\\ATTEMPT_STATUS.csv",
+      "sha256": "8d397cda255e6096eab8a229af11671198e6209e448977f7184e660f8e4a301c",
+      "bytes": 150310
+    },
+    {
+      "path": "E:\\hospital_ies_v21_20261023\\reviews\\hardware_figures_actual126_01\\f4_prepared01\\bundle\\data\\hardware126\\tables\\CASE_METRICS.csv",
+      "sha256": "8a96964436aacdc528f33b217915fa47d608244091fd455d011e9ddf38c5ef15",
+      "bytes": 490443
+    },
+    {
+      "path": "E:\\hospital_ies_v21_20261023\\reviews\\hardware_figures_actual126_01\\f4_prepared01\\bundle\\data\\hardware126\\tables\\CARRIER_SERVICE.csv",
+      "sha256": "92056f6abdc5fe4ee77db1313c627ca6461081d9b4bbe5a8722cd54c5e117c3c",
+      "bytes": 279478
+    },
+    {
+      "path": "E:\\hospital_ies_v21_20261023\\reviews\\hardware_figures_actual126_01\\f4_prepared01\\bundle\\data\\hardware126\\tables\\PAIRED_DIFFERENCES.csv",
+      "sha256": "64e7cab4a0f175fde637e823ec8c9c31e53dffa39f9f9c08929c6f361b5f88d5",
+      "bytes": 2331747
+    },
+    {
+      "path": "E:\\hospital_ies_v21_20261023\\reviews\\hardware_figures_actual126_01\\f4_prepared01\\bundle\\data\\hardware126\\tables\\RESOURCE_MEASUREMENTS.csv",
+      "sha256": "9649b4d4af577357cdfb6115d6b835a933859112f720c4bdf75f341872b13b11",
+      "bytes": 64685
+    },
+    {
+      "path": "E:\\hospital_ies_v21_20261023\\reviews\\hardware_figures_actual126_01\\f4_prepared01\\bundle\\data\\hardware126\\tables\\EVIDENCE_INTEGRITY_SUMMARY.csv",
+      "sha256": "22245eb836dd2109d5699dd01b23d84ffdadb5b0367d6bc672f76fb5b5c0cc4e",
+      "bytes": 407
+    },
+    {
+      "path": "E:\\hospital_ies_v21_20261023\\reviews\\hardware_figures_actual126_01\\f4_prepared01\\bundle\\data\\hardware126\\tables\\PAIRED_SUMMARY.csv",
+      "sha256": "3cd3410c95e8f660fc556b3821308af153a905f8800a646fdbf6d6315124e0eb",
+      "bytes": 1851922
+    },
+    {
+      "path": "E:\\hospital_ies_v21_20261023\\reviews\\hardware_figures_actual126_01\\f4_prepared01\\bundle\\data\\hardware126\\tables\\MECHANISM_EFFECTS.csv",
+      "sha256": "f01a374e9c81e3db89b3a42940c4d6a5447684986a1296e42bf13f196eed6295",
+      "bytes": 5
+    },
+    {
+      "path": "E:\\hospital_ies_v21_20261023\\reviews\\hardware_figures_actual126_01\\f4_prepared01\\bundle\\data\\hardware126\\tables\\HARDWARE_DIFFERENCES.csv",
+      "sha256": "2062d88162737fe54116708f2423da7830d35683a5a9b2d5e6e7cf162c783009",
+      "bytes": 1650696
+    },
+    {
+      "path": "E:\\hospital_ies_v21_20261023\\reviews\\hardware_figures_actual126_01\\f4_prepared01\\bundle\\data\\hardware126\\tables\\DISTURBANCE_INTERACTIONS.csv",
+      "sha256": "f01a374e9c81e3db89b3a42940c4d6a5447684986a1296e42bf13f196eed6295",
+      "bytes": 5
+    },
+    {
+      "path": "E:\\hospital_ies_v21_20261023\\reviews\\hardware_figures_actual126_01\\f4_prepared01\\bundle\\data\\hardware126\\tables\\NECESSARY_BOUNDARY_CONDITIONS.csv",
+      "sha256": "f01a374e9c81e3db89b3a42940c4d6a5447684986a1296e42bf13f196eed6295",
+      "bytes": 5
+    },
+    {
+      "path": "E:\\hospital_ies_v21_20261023\\reviews\\hardware_figures_actual126_01\\f4_prepared01\\bundle\\data\\hardware126\\tables\\SCI_TABLES.mat",
+      "sha256": "7fe9f026cb54357503658f2b51e4c23fdc1707db2ed350a4b64f5ab6186be8b5",
+      "bytes": 158090
+    }
+  ],
+  "case_count": 126,
+  "numeric_columns_checked": {
+    "ATTEMPT_STATUS": 3,
+    "CASE_METRICS": 262,
+    "CARRIER_SERVICE": 12,
+    "PAIRED_DIFFERENCES": 6,
+    "RESOURCE_MEASUREMENTS": 34,
+    "EVIDENCE_INTEGRITY_SUMMARY": 7,
+    "PAIRED_SUMMARY": 22,
+    "MECHANISM_EFFECTS": 0,
+    "HARDWARE_DIFFERENCES": 7,
+    "DISTURBANCE_INTERACTIONS": 0,
+    "NECESSARY_BOUNDARY_CONDITIONS": 0
+  },
+  "figures": [
+    {
+      "name": "F4_hardware_AUX_CHW_PUMP_w360",
+      "family": "F4",
+      "axes": [
+        {
+          "tile": 1,
+          "metric": "critical_initial_handoff_gap_minutes",
+          "values": [
+            [
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0
+            ]
+          ],
+          "colors": [
+            [
+              0.13,
+              0.52,
+              0.39
+            ],
+            [
+              0.82,
+              0.37,
+              0.12
+            ]
+          ]
+        },
+        {
+          "tile": 2,
+          "metric": "critical_e_ENS_kWh",
+          "values": [
+            [
+              -4.510281037539698e-16,
+              -4.510281037539698e-16
+            ],
+            [
+              -5.898059818321144e-16,
+              -5.898059818321144e-16
+            ]
+          ],
+          "colors": [
+            [
+              0.13,
+              0.52,
+              0.39
+            ],
+            [
+              0.82,
+              0.37,
+              0.12
+            ]
+          ]
+        },
+        {
+          "tile": 3,
+          "metric": "critical_c_ENS_kWh",
+          "values": [
+            [
+              -7.815970093361102e-14,
+              -7.815970093361102e-14
+            ],
+            [
+              -9.237055564881302e-14,
+              -9.237055564881302e-14
+            ]
+          ],
+          "colors": [
+            [
+              0.13,
+              0.52,
+              0.39
+            ],
+            [
+              0.82,
+              0.37,
+              0.12
+            ]
+          ]
+        },
+        {
+          "tile": 4,
+          "metric": "P3_e_ENS_kWh",
+          "values": [
+            [
+              -5.117434254131581e-16,
+              -5.117434254131581e-16
+            ],
+            [
+              -8.101158632811689e-16,
+              -8.101158632811689e-16
+            ]
+          ],
+          "colors": [
+            [
+              0.13,
+              0.52,
+              0.39
+            ],
+            [
+              0.82,
+              0.37,
+              0.12
+            ]
+          ]
+        },
+        {
+          "tile": 5,
+          "metric": "energy_cost_USD",
+          "values": [
+            [
+              3.099123124527317,
+              3.099123124527317
+            ],
+            [
+              1.143985823085238,
+              1.143985823085238
+            ]
+          ],
+          "colors": [
+            [
+              0.13,
+              0.52,
+              0.39
+            ],
+            [
+              0.82,
+              0.37,
+              0.12
+            ]
+          ]
+        },
+        {
+          "tile": 6,
+          "metric": "total_CO2_kg_conditional",
+          "values": [
+            [
+              8.18307373556621,
+              8.18307373556621
+            ],
+            [
+              3.0280501352835927,
+              3.0280501352835927
+            ]
+          ],
+          "colors": [
+            [
+              0.13,
+              0.52,
+              0.39
+            ],
+            [
+              0.82,
+              0.37,
+              0.12
+            ]
+          ]
+        }
+      ],
+      "axes_count": 6,
+      "fault_target": "AUX_CHW_PUMP",
+      "window_minutes": 360.0,
+      "source_blocks": [
+        "m21_block_1706edd2c32b2937",
+        "m21_block_4d99796601b9e5b8",
+        "m21_block_e3ef87e62c6ff1f7",
+        "m21_block_fd548b20a5cafc64"
+      ],
+      "paired_scenarios": [
+        "m21_extra_011ab1890729d1ab1015",
+        "m21_extra_3a54b7a84a8f1b6b772e",
+        "m21_extra_aa15e14f48af243cc5f5",
+        "m21_extra_ec43b8bbd10700b3d543"
+      ],
+      "paired_values": [
+        {
+          "source_block_id": "m21_block_fd548b20a5cafc64",
+          "scenario_id": "m21_extra_011ab1890729d1ab1015",
+          "policy_id": "C_sci_v21",
+          "policy_alias": "C",
+          "policy_sha256": "5984d44b6e5ac5c6f077470e703e16efaebb522b3ae17af21c5e6f5059cd602d",
+          "configuration_id": "H1",
+          "window_minutes": 360.0,
+          "fault_target": "AUX_CHW_PUMP",
+          "source_binding_sha256": "4dfe62ae105d2696b7782dc36c83ec63c6551e2cded601d6f15c0d4083058add",
+          "scenario_sha256": "646a0f0cf3a0fb121927a6879e3136324844164b94f4b4d5cb8c857f6399efe4",
+          "critical_initial_handoff_gap_minutes": 0.0,
+          "critical_e_ENS_kWh": -2.498001805406602e-16,
+          "critical_c_ENS_kWh": 1.1368683772161603e-13,
+          "P3_e_ENS_kWh": -1.1102230246251565e-15,
+          "energy_cost_USD": 3.0988217529745157,
+          "total_CO2_kg_conditional": 8.18307373556695
+        },
+        {
+          "source_block_id": "m21_block_fd548b20a5cafc64",
+          "scenario_id": "m21_extra_011ab1890729d1ab1015",
+          "policy_id": "C_sci_v21",
+          "policy_alias": "C",
+          "policy_sha256": "5984d44b6e5ac5c6f077470e703e16efaebb522b3ae17af21c5e6f5059cd602d",
+          "configuration_id": "H2",
+          "window_minutes": 360.0,
+          "fault_target": "AUX_CHW_PUMP",
+          "source_binding_sha256": "4dfe62ae105d2696b7782dc36c83ec63c6551e2cded601d6f15c0d4083058add",
+          "scenario_sha256": "646a0f0cf3a0fb121927a6879e3136324844164b94f4b4d5cb8c857f6399efe4",
+          "critical_initial_handoff_gap_minutes": 0.0,
+          "critical_e_ENS_kWh": -4.163336342344337e-16,
+          "critical_c_ENS_kWh": 2.2737367544323206e-13,
+          "P3_e_ENS_kWh": -1.1102230246251565e-15,
+          "energy_cost_USD": 1.151257100668488,
+          "total_CO2_kg_conditional": 3.0474261620438483
+        },
+        {
+          "source_block_id": "m21_block_fd548b20a5cafc64",
+          "scenario_id": "m21_extra_011ab1890729d1ab1015",
+          "policy_id": "A_sci_v21",
+          "policy_alias": "A",
+          "policy_sha256": "12ccbdc7ae3e809a7278840f047b94938abee0be30f0bcb48487d5d94bad7367",
+          "configuration_id": "H1",
+          "window_minutes": 360.0,
+          "fault_target": "AUX_CHW_PUMP",
+          "source_binding_sha256": "4dfe62ae105d2696b7782dc36c83ec63c6551e2cded601d6f15c0d4083058add",
+          "scenario_sha256": "646a0f0cf3a0fb121927a6879e3136324844164b94f4b4d5cb8c857f6399efe4",
+          "critical_initial_handoff_gap_minutes": 0.0,
+          "critical_e_ENS_kWh": -2.498001805406602e-16,
+          "critical_c_ENS_kWh": 1.1368683772161603e-13,
+          "P3_e_ENS_kWh": -1.1102230246251565e-15,
+          "energy_cost_USD": 3.0988217529745157,
+          "total_CO2_kg_conditional": 8.18307373556695
+        },
+        {
+          "source_block_id": "m21_block_fd548b20a5cafc64",
+          "scenario_id": "m21_extra_011ab1890729d1ab1015",
+          "policy_id": "A_sci_v21",
+          "policy_alias": "A",
+          "policy_sha256": "12ccbdc7ae3e809a7278840f047b94938abee0be30f0bcb48487d5d94bad7367",
+          "configuration_id": "H2",
+          "window_minutes": 360.0,
+          "fault_target": "AUX_CHW_PUMP",
+          "source_binding_sha256": "4dfe62ae105d2696b7782dc36c83ec63c6551e2cded601d6f15c0d4083058add",
+          "scenario_sha256": "646a0f0cf3a0fb121927a6879e3136324844164b94f4b4d5cb8c857f6399efe4",
+          "critical_initial_handoff_gap_minutes": 0.0,
+          "critical_e_ENS_kWh": -4.163336342344337e-16,
+          "critical_c_ENS_kWh": 2.2737367544323206e-13,
+          "P3_e_ENS_kWh": -1.1102230246251565e-15,
+          "energy_cost_USD": 1.151257100668488,
+          "total_CO2_kg_conditional": 3.0474261620438483
+        },
+        {
+          "source_block_id": "m21_block_4d99796601b9e5b8",
+          "scenario_id": "m21_extra_3a54b7a84a8f1b6b772e",
+          "policy_id": "C_sci_v21",
+          "policy_alias": "C",
+          "policy_sha256": "5984d44b6e5ac5c6f077470e703e16efaebb522b3ae17af21c5e6f5059cd602d",
+          "configuration_id": "H1",
+          "window_minutes": 360.0,
+          "fault_target": "AUX_CHW_PUMP",
+          "source_binding_sha256": "4dfe62ae105d2696b7782dc36c83ec63c6551e2cded601d6f15c0d4083058add",
+          "scenario_sha256": "1b865699dbb2f0fdb33e434046065839cad4e5c2e43270f51290c87f6094e568",
+          "critical_initial_handoff_gap_minutes": 0.0,
+          "critical_e_ENS_kWh": -5.273559366969494e-16,
+          "critical_c_ENS_kWh": -1.7053025658242404e-13,
+          "P3_e_ENS_kWh": -1.0408340855860843e-16,
+          "energy_cost_USD": 3.0993720006069907,
+          "total_CO2_kg_conditional": 8.183073735567632
+        },
+        {
+          "source_block_id": "m21_block_4d99796601b9e5b8",
+          "scenario_id": "m21_extra_3a54b7a84a8f1b6b772e",
+          "policy_id": "C_sci_v21",
+          "policy_alias": "C",
+          "policy_sha256": "5984d44b6e5ac5c6f077470e703e16efaebb522b3ae17af21c5e6f5059cd602d",
+          "configuration_id": "H2",
+          "window_minutes": 360.0,
+          "fault_target": "AUX_CHW_PUMP",
+          "source_binding_sha256": "4dfe62ae105d2696b7782dc36c83ec63c6551e2cded601d6f15c0d4083058add",
+          "scenario_sha256": "1b865699dbb2f0fdb33e434046065839cad4e5c2e43270f51290c87f6094e568",
+          "critical_initial_handoff_gap_minutes": 0.0,
+          "critical_e_ENS_kWh": -7.771561172376096e-16,
+          "critical_c_ENS_kWh": -1.1368683772161603e-13,
+          "P3_e_ENS_kWh": -3.400058012914542e-16,
+          "energy_cost_USD": 1.1371219810618243,
+          "total_CO2_kg_conditional": 3.0112182173729707
+        },
+        {
+          "source_block_id": "m21_block_4d99796601b9e5b8",
+          "scenario_id": "m21_extra_3a54b7a84a8f1b6b772e",
+          "policy_id": "A_sci_v21",
+          "policy_alias": "A",
+          "policy_sha256": "12ccbdc7ae3e809a7278840f047b94938abee0be30f0bcb48487d5d94bad7367",
+          "configuration_id": "H1",
+          "window_minutes": 360.0,
+          "fault_target": "AUX_CHW_PUMP",
+          "source_binding_sha256": "4dfe62ae105d2696b7782dc36c83ec63c6551e2cded601d6f15c0d4083058add",
+          "scenario_sha256": "1b865699dbb2f0fdb33e434046065839cad4e5c2e43270f51290c87f6094e568",
+          "critical_initial_handoff_gap_minutes": 0.0,
+          "critical_e_ENS_kWh": -5.273559366969494e-16,
+          "critical_c_ENS_kWh": -1.7053025658242404e-13,
+          "P3_e_ENS_kWh": -1.0408340855860843e-16,
+          "energy_cost_USD": 3.0993720006069907,
+          "total_CO2_kg_conditional": 8.183073735567632
+        },
+        {
+          "source_block_id": "m21_block_4d99796601b9e5b8",
+          "scenario_id": "m21_extra_3a54b7a84a8f1b6b772e",
+          "policy_id": "A_sci_v21",
+          "policy_alias": "A",
+          "policy_sha256": "12ccbdc7ae3e809a7278840f047b94938abee0be30f0bcb48487d5d94bad7367",
+          "configuration_id": "H2",
+          "window_minutes": 360.0,
+          "fault_target": "AUX_CHW_PUMP",
+          "source_binding_sha256": "4dfe62ae105d2696b7782dc36c83ec63c6551e2cded601d6f15c0d4083058add",
+          "scenario_sha256": "1b865699dbb2f0fdb33e434046065839cad4e5c2e43270f51290c87f6094e568",
+          "critical_initial_handoff_gap_minutes": 0.0,
+          "critical_e_ENS_kWh": -7.771561172376096e-16,
+          "critical_c_ENS_kWh": -1.1368683772161603e-13,
+          "P3_e_ENS_kWh": -3.400058012914542e-16,
+          "energy_cost_USD": 1.1371219810618243,
+          "total_CO2_kg_conditional": 3.0112182173729707
+        },
+        {
+          "source_block_id": "m21_block_1706edd2c32b2937",
+          "scenario_id": "m21_extra_aa15e14f48af243cc5f5",
+          "policy_id": "C_sci_v21",
+          "policy_alias": "C",
+          "policy_sha256": "5984d44b6e5ac5c6f077470e703e16efaebb522b3ae17af21c5e6f5059cd602d",
+          "configuration_id": "H1",
+          "window_minutes": 360.0,
+          "fault_target": "AUX_CHW_PUMP",
+          "source_binding_sha256": "4dfe62ae105d2696b7782dc36c83ec63c6551e2cded601d6f15c0d4083058add",
+          "scenario_sha256": "dab8afc530cfc5676fbcd8a9e64bba8b0c44bc7cf90a6059d6d5138fce742866",
+          "critical_initial_handoff_gap_minutes": 0.0,
+          "critical_e_ENS_kWh": 1.1102230246251565e-16,
+          "critical_c_ENS_kWh": -1.4210854715202004e-13,
+          "P3_e_ENS_kWh": 5.551115123125783e-17,
+          "energy_cost_USD": 3.0997472969689,
+          "total_CO2_kg_conditional": 8.18307373556354
+        },
+        {
+          "source_block_id": "m21_block_1706edd2c32b2937",
+          "scenario_id": "m21_extra_aa15e14f48af243cc5f5",
+          "policy_id": "C_sci_v21",
+          "policy_alias": "C",
+          "policy_sha256": "5984d44b6e5ac5c6f077470e703e16efaebb522b3ae17af21c5e6f5059cd602d",
+          "configuration_id": "H2",
+          "window_minutes": 360.0,
+          "fault_target": "AUX_CHW_PUMP",
+          "source_binding_sha256": "4dfe62ae105d2696b7782dc36c83ec63c6551e2cded601d6f15c0d4083058add",
+          "scenario_sha256": "dab8afc530cfc5676fbcd8a9e64bba8b0c44bc7cf90a6059d6d5138fce742866",
+          "critical_initial_handoff_gap_minutes": 0.0,
+          "critical_e_ENS_kWh": 1.3877787807814457e-16,
+          "critical_c_ENS_kWh": -1.9895196601282805e-13,
+          "P3_e_ENS_kWh": 9.71445146547012e-17,
+          "energy_cost_USD": 1.131524076222803,
+          "total_CO2_kg_conditional": 2.9890501527847846
+        },
+        {
+          "source_block_id": "m21_block_1706edd2c32b2937",
+          "scenario_id": "m21_extra_aa15e14f48af243cc5f5",
+          "policy_id": "A_sci_v21",
+          "policy_alias": "A",
+          "policy_sha256": "12ccbdc7ae3e809a7278840f047b94938abee0be30f0bcb48487d5d94bad7367",
+          "configuration_id": "H1",
+          "window_minutes": 360.0,
+          "fault_target": "AUX_CHW_PUMP",
+          "source_binding_sha256": "4dfe62ae105d2696b7782dc36c83ec63c6551e2cded601d6f15c0d4083058add",
+          "scenario_sha256": "dab8afc530cfc5676fbcd8a9e64bba8b0c44bc7cf90a6059d6d5138fce742866",
+          "critical_initial_handoff_gap_minutes": 0.0,
+          "critical_e_ENS_kWh": 1.1102230246251565e-16,
+          "critical_c_ENS_kWh": -1.4210854715202004e-13,
+          "P3_e_ENS_kWh": 5.551115123125783e-17,
+          "energy_cost_USD": 3.0997472969689,
+          "total_CO2_kg_conditional": 8.18307373556354
+        },
+        {
+          "source_block_id": "m21_block_1706edd2c32b2937",
+          "scenario_id": "m21_extra_aa15e14f48af243cc5f5",
+          "policy_id": "A_sci_v21",
+          "policy_alias": "A",
+          "policy_sha256": "12ccbdc7ae3e809a7278840f047b94938abee0be30f0bcb48487d5d94bad7367",
+          "configuration_id": "H2",
+          "window_minutes": 360.0,
+          "fault_target": "AUX_CHW_PUMP",
+          "source_binding_sha256": "4dfe62ae105d2696b7782dc36c83ec63c6551e2cded601d6f15c0d4083058add",
+          "scenario_sha256": "dab8afc530cfc5676fbcd8a9e64bba8b0c44bc7cf90a6059d6d5138fce742866",
+          "critical_initial_handoff_gap_minutes": 0.0,
+          "critical_e_ENS_kWh": 1.3877787807814457e-16,
+          "critical_c_ENS_kWh": -1.9895196601282805e-13,
+          "P3_e_ENS_kWh": 9.71445146547012e-17,
+          "energy_cost_USD": 1.131524076222803,
+          "total_CO2_kg_conditional": 2.9890501527847846
+        },
+        {
+          "source_block_id": "m21_block_e3ef87e62c6ff1f7",
+          "scenario_id": "m21_extra_ec43b8bbd10700b3d543",
+          "policy_id": "C_sci_v21",
+          "policy_alias": "C",
+          "policy_sha256": "5984d44b6e5ac5c6f077470e703e16efaebb522b3ae17af21c5e6f5059cd602d",
+          "configuration_id": "H1",
+          "window_minutes": 360.0,
+          "fault_target": "AUX_CHW_PUMP",
+          "source_binding_sha256": "4dfe62ae105d2696b7782dc36c83ec63c6551e2cded601d6f15c0d4083058add",
+          "scenario_sha256": "63bcabd6cced02d73254d4ce407b72cf8bbe8e586906da84fd40f27e48cc3e0b",
+          "critical_initial_handoff_gap_minutes": 0.0,
+          "critical_e_ENS_kWh": -1.1379786002407855e-15,
+          "critical_c_ENS_kWh": -1.1368683772161603e-13,
+          "P3_e_ENS_kWh": -8.881784197001252e-16,
+          "energy_cost_USD": 3.0985514475588616,
+          "total_CO2_kg_conditional": 8.183073735566722
+        },
+        {
+          "source_block_id": "m21_block_e3ef87e62c6ff1f7",
+          "scenario_id": "m21_extra_ec43b8bbd10700b3d543",
+          "policy_id": "C_sci_v21",
+          "policy_alias": "C",
+          "policy_sha256": "5984d44b6e5ac5c6f077470e703e16efaebb522b3ae17af21c5e6f5059cd602d",
+          "configuration_id": "H2",
+          "window_minutes": 360.0,
+          "fault_target": "AUX_CHW_PUMP",
+          "source_binding_sha256": "4dfe62ae105d2696b7782dc36c83ec63c6551e2cded601d6f15c0d4083058add",
+          "scenario_sha256": "63bcabd6cced02d73254d4ce407b72cf8bbe8e586906da84fd40f27e48cc3e0b",
+          "critical_initial_handoff_gap_minutes": 0.0,
+          "critical_e_ENS_kWh": -1.304512053934559e-15,
+          "critical_c_ENS_kWh": -2.8421709430404007e-13,
+          "P3_e_ENS_kWh": -1.887379141862766e-15,
+          "energy_cost_USD": 1.1560401343878368,
+          "total_CO2_kg_conditional": 3.064506008932767
+        },
+        {
+          "source_block_id": "m21_block_e3ef87e62c6ff1f7",
+          "scenario_id": "m21_extra_ec43b8bbd10700b3d543",
+          "policy_id": "A_sci_v21",
+          "policy_alias": "A",
+          "policy_sha256": "12ccbdc7ae3e809a7278840f047b94938abee0be30f0bcb48487d5d94bad7367",
+          "configuration_id": "H1",
+          "window_minutes": 360.0,
+          "fault_target": "AUX_CHW_PUMP",
+          "source_binding_sha256": "4dfe62ae105d2696b7782dc36c83ec63c6551e2cded601d6f15c0d4083058add",
+          "scenario_sha256": "63bcabd6cced02d73254d4ce407b72cf8bbe8e586906da84fd40f27e48cc3e0b",
+          "critical_initial_handoff_gap_minutes": 0.0,
+          "critical_e_ENS_kWh": -1.1379786002407855e-15,
+          "critical_c_ENS_kWh": -1.1368683772161603e-13,
+          "P3_e_ENS_kWh": -8.881784197001252e-16,
+          "energy_cost_USD": 3.0985514475588616,
+          "total_CO2_kg_conditional": 8.183073735566722
+        },
+        {
+          "source_block_id": "m21_block_e3ef87e62c6ff1f7",
+          "scenario_id": "m21_extra_ec43b8bbd10700b3d543",
+          "policy_id": "A_sci_v21",
+          "policy_alias": "A",
+          "policy_sha256": "12ccbdc7ae3e809a7278840f047b94938abee0be30f0bcb48487d5d94bad7367",
+          "configuration_id": "H2",
+          "window_minutes": 360.0,
+          "fault_target": "AUX_CHW_PUMP",
+          "source_binding_sha256": "4dfe62ae105d2696b7782dc36c83ec63c6551e2cded601d6f15c0d4083058add",
+          "scenario_sha256": "63bcabd6cced02d73254d4ce407b72cf8bbe8e586906da84fd40f27e48cc3e0b",
+          "critical_initial_handoff_gap_minutes": 0.0,
+          "critical_e_ENS_kWh": -1.304512053934559e-15,
+          "critical_c_ENS_kWh": -2.8421709430404007e-13,
+          "P3_e_ENS_kWh": -1.887379141862766e-15,
+          "energy_cost_USD": 1.1560401343878368,
+          "total_CO2_kg_conditional": 3.064506008932767
+        }
+      ],
+      "paired_values_file": "F4_hardware_AUX_CHW_PUMP_w360_PAIRED_VALUES.csv"
+    },
+    {
+      "name": "F4_hardware_GRID_w360",
+      "family": "F4",
+      "axes": [
+        {
+          "tile": 1,
+          "metric": "critical_initial_handoff_gap_minutes",
+          "values": [
+            [
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0
+            ]
+          ],
+          "colors": [
+            [
+              0.13,
+              0.52,
+              0.39
+            ],
+            [
+              0.82,
+              0.37,
+              0.12
+            ]
+          ]
+        },
+        {
+          "tile": 2,
+          "metric": "critical_e_ENS_kWh",
+          "values": [
+            [
+              -3.788796745960247e-05,
+              -3.788796745960247e-05
+            ],
+            [
+              2.634404874151189e-13,
+              2.634404874151189e-13
+            ]
+          ],
+          "colors": [
+            [
+              0.13,
+              0.52,
+              0.39
+            ],
+            [
+              0.82,
+              0.37,
+              0.12
+            ]
+          ]
+        },
+        {
+          "tile": 3,
+          "metric": "critical_c_ENS_kWh",
+          "values": [
+            [
+              8.77000509670409e-06,
+              8.77000509670409e-06
+            ],
+            [
+              0.0,
+              0.0
+            ]
+          ],
+          "colors": [
+            [
+              0.13,
+              0.52,
+              0.39
+            ],
+            [
+              0.82,
+              0.37,
+              0.12
+            ]
+          ]
+        },
+        {
+          "tile": 4,
+          "metric": "P3_e_ENS_kWh",
+          "values": [
+            [
+              -17.956595062447263,
+              -17.956595062447263
+            ],
+            [
+              -0.29112822276812267,
+              -0.29112822276812267
+            ]
+          ],
+          "colors": [
+            [
+              0.13,
+              0.52,
+              0.39
+            ],
+            [
+              0.82,
+              0.37,
+              0.12
+            ]
+          ]
+        },
+        {
+          "tile": 5,
+          "metric": "energy_cost_USD",
+          "values": [
+            [
+              0.843593047355462,
+              0.843593047355462
+            ],
+            [
+              1.426597150667675,
+              1.426597150667675
+            ]
+          ],
+          "colors": [
+            [
+              0.13,
+              0.52,
+              0.39
+            ],
+            [
+              0.82,
+              0.37,
+              0.12
+            ]
+          ]
+        },
+        {
+          "tile": 6,
+          "metric": "total_CO2_kg_conditional",
+          "values": [
+            [
+              4.845386379021363,
+              4.845386379021363
+            ],
+            [
+              3.970258654318968,
+              3.970258654318968
+            ]
+          ],
+          "colors": [
+            [
+              0.13,
+              0.52,
+              0.39
+            ],
+            [
+              0.82,
+              0.37,
+              0.12
+            ]
+          ]
+        }
+      ],
+      "axes_count": 6,
+      "fault_target": "GRID",
+      "window_minutes": 360.0,
+      "source_blocks": [
+        "m21_block_1706edd2c32b2937",
+        "m21_block_4d99796601b9e5b8",
+        "m21_block_e3ef87e62c6ff1f7",
+        "m21_block_fd548b20a5cafc64"
+      ],
+      "paired_scenarios": [
+        "m21_extra_1b0032e25c95ac24541f",
+        "m21_extra_69c380653be81bb40e48",
+        "m21_extra_aec47fb338519e4f48bd",
+        "m21_extra_c5deb057c2d7c53bf523"
+      ],
+      "paired_values": [
+        {
+          "source_block_id": "m21_block_fd548b20a5cafc64",
+          "scenario_id": "m21_extra_1b0032e25c95ac24541f",
+          "policy_id": "C_sci_v21",
+          "policy_alias": "C",
+          "policy_sha256": "5984d44b6e5ac5c6f077470e703e16efaebb522b3ae17af21c5e6f5059cd602d",
+          "configuration_id": "H1",
+          "window_minutes": 360.0,
+          "fault_target": "GRID",
+          "source_binding_sha256": "4dfe62ae105d2696b7782dc36c83ec63c6551e2cded601d6f15c0d4083058add",
+          "scenario_sha256": "2e73253c84f57253f0f0d1d7c88acecccf1ede244da88c9c1ee10d6df7f98262",
+          "critical_initial_handoff_gap_minutes": 0.0,
+          "critical_e_ENS_kWh": -3.7556482110513896e-05,
+          "critical_c_ENS_kWh": 1.0374450267305111e-05,
+          "P3_e_ENS_kWh": -16.953895106741882,
+          "energy_cost_USD": 1.2422229972736716,
+          "total_CO2_kg_conditional": 4.843216850478257
+        },
+        {
+          "source_block_id": "m21_block_fd548b20a5cafc64",
+          "scenario_id": "m21_extra_1b0032e25c95ac24541f",
+          "policy_id": "C_sci_v21",
+          "policy_alias": "C",
+          "policy_sha256": "5984d44b6e5ac5c6f077470e703e16efaebb522b3ae17af21c5e6f5059cd602d",
+          "configuration_id": "H2",
+          "window_minutes": 360.0,
+          "fault_target": "GRID",
+          "source_binding_sha256": "4dfe62ae105d2696b7782dc36c83ec63c6551e2cded601d6f15c0d4083058add",
+          "scenario_sha256": "2e73253c84f57253f0f0d1d7c88acecccf1ede244da88c9c1ee10d6df7f98262",
+          "critical_initial_handoff_gap_minutes": 0.0,
+          "critical_e_ENS_kWh": 2.824312506956306e-13,
+          "critical_c_ENS_kWh": 0.0,
+          "P3_e_ENS_kWh": -0.33641380601807214,
+          "energy_cost_USD": 1.6113346174620062,
+          "total_CO2_kg_conditional": 4.334150409176573
+        },
+        {
+          "source_block_id": "m21_block_fd548b20a5cafc64",
+          "scenario_id": "m21_extra_1b0032e25c95ac24541f",
+          "policy_id": "A_sci_v21",
+          "policy_alias": "A",
+          "policy_sha256": "12ccbdc7ae3e809a7278840f047b94938abee0be30f0bcb48487d5d94bad7367",
+          "configuration_id": "H1",
+          "window_minutes": 360.0,
+          "fault_target": "GRID",
+          "source_binding_sha256": "4dfe62ae105d2696b7782dc36c83ec63c6551e2cded601d6f15c0d4083058add",
+          "scenario_sha256": "2e73253c84f57253f0f0d1d7c88acecccf1ede244da88c9c1ee10d6df7f98262",
+          "critical_initial_handoff_gap_minutes": 0.0,
+          "critical_e_ENS_kWh": -3.7556482110513896e-05,
+          "critical_c_ENS_kWh": 1.0374450267305111e-05,
+          "P3_e_ENS_kWh": -16.953895106741882,
+          "energy_cost_USD": 1.2422229972736716,
+          "total_CO2_kg_conditional": 4.843216850478257
+        },
+        {
+          "source_block_id": "m21_block_fd548b20a5cafc64",
+          "scenario_id": "m21_extra_1b0032e25c95ac24541f",
+          "policy_id": "A_sci_v21",
+          "policy_alias": "A",
+          "policy_sha256": "12ccbdc7ae3e809a7278840f047b94938abee0be30f0bcb48487d5d94bad7367",
+          "configuration_id": "H2",
+          "window_minutes": 360.0,
+          "fault_target": "GRID",
+          "source_binding_sha256": "4dfe62ae105d2696b7782dc36c83ec63c6551e2cded601d6f15c0d4083058add",
+          "scenario_sha256": "2e73253c84f57253f0f0d1d7c88acecccf1ede244da88c9c1ee10d6df7f98262",
+          "critical_initial_handoff_gap_minutes": 0.0,
+          "critical_e_ENS_kWh": 2.824312506956306e-13,
+          "critical_c_ENS_kWh": 0.0,
+          "P3_e_ENS_kWh": -0.33641380601807214,
+          "energy_cost_USD": 1.6113346174620062,
+          "total_CO2_kg_conditional": 4.334150409176573
+        },
+        {
+          "source_block_id": "m21_block_1706edd2c32b2937",
+          "scenario_id": "m21_extra_69c380653be81bb40e48",
+          "policy_id": "C_sci_v21",
+          "policy_alias": "C",
+          "policy_sha256": "5984d44b6e5ac5c6f077470e703e16efaebb522b3ae17af21c5e6f5059cd602d",
+          "configuration_id": "H1",
+          "window_minutes": 360.0,
+          "fault_target": "GRID",
+          "source_binding_sha256": "4dfe62ae105d2696b7782dc36c83ec63c6551e2cded601d6f15c0d4083058add",
+          "scenario_sha256": "42e6946a3aa9eeb9cbfe0e7d326ea49745cd4f7398b1a50692f6a7d2f80bd897",
+          "critical_initial_handoff_gap_minutes": 0.0,
+          "critical_e_ENS_kWh": -3.8472812745249363e-05,
+          "critical_c_ENS_kWh": 4.1797012605286255e-06,
+          "P3_e_ENS_kWh": -21.370272619809953,
+          "energy_cost_USD": 0.43187125044221375,
+          "total_CO2_kg_conditional": 4.815401703418047
+        },
+        {
+          "source_block_id": "m21_block_1706edd2c32b2937",
+          "scenario_id": "m21_extra_69c380653be81bb40e48",
+          "policy_id": "C_sci_v21",
+          "policy_alias": "C",
+          "policy_sha256": "5984d44b6e5ac5c6f077470e703e16efaebb522b3ae17af21c5e6f5059cd602d",
+          "configuration_id": "H2",
+          "window_minutes": 360.0,
+          "fault_target": "GRID",
+          "source_binding_sha256": "4dfe62ae105d2696b7782dc36c83ec63c6551e2cded601d6f15c0d4083058add",
+          "scenario_sha256": "42e6946a3aa9eeb9cbfe0e7d326ea49745cd4f7398b1a50692f6a7d2f80bd897",
+          "critical_initial_handoff_gap_minutes": 0.0,
+          "critical_e_ENS_kWh": 2.8178197622463763e-13,
+          "critical_c_ENS_kWh": 0.0,
+          "P3_e_ENS_kWh": -0.3355924526756979,
+          "energy_cost_USD": 1.1287925592420152,
+          "total_CO2_kg_conditional": 3.2739596119513408
+        },
+        {
+          "source_block_id": "m21_block_1706edd2c32b2937",
+          "scenario_id": "m21_extra_69c380653be81bb40e48",
+          "policy_id": "A_sci_v21",
+          "policy_alias": "A",
+          "policy_sha256": "12ccbdc7ae3e809a7278840f047b94938abee0be30f0bcb48487d5d94bad7367",
+          "configuration_id": "H1",
+          "window_minutes": 360.0,
+          "fault_target": "GRID",
+          "source_binding_sha256": "4dfe62ae105d2696b7782dc36c83ec63c6551e2cded601d6f15c0d4083058add",
+          "scenario_sha256": "42e6946a3aa9eeb9cbfe0e7d326ea49745cd4f7398b1a50692f6a7d2f80bd897",
+          "critical_initial_handoff_gap_minutes": 0.0,
+          "critical_e_ENS_kWh": -3.8472812745249363e-05,
+          "critical_c_ENS_kWh": 4.1797012605286255e-06,
+          "P3_e_ENS_kWh": -21.370272619809953,
+          "energy_cost_USD": 0.43187125044221375,
+          "total_CO2_kg_conditional": 4.815401703418047
+        },
+        {
+          "source_block_id": "m21_block_1706edd2c32b2937",
+          "scenario_id": "m21_extra_69c380653be81bb40e48",
+          "policy_id": "A_sci_v21",
+          "policy_alias": "A",
+          "policy_sha256": "12ccbdc7ae3e809a7278840f047b94938abee0be30f0bcb48487d5d94bad7367",
+          "configuration_id": "H2",
+          "window_minutes": 360.0,
+          "fault_target": "GRID",
+          "source_binding_sha256": "4dfe62ae105d2696b7782dc36c83ec63c6551e2cded601d6f15c0d4083058add",
+          "scenario_sha256": "42e6946a3aa9eeb9cbfe0e7d326ea49745cd4f7398b1a50692f6a7d2f80bd897",
+          "critical_initial_handoff_gap_minutes": 0.0,
+          "critical_e_ENS_kWh": 2.8178197622463763e-13,
+          "critical_c_ENS_kWh": 0.0,
+          "P3_e_ENS_kWh": -0.3355924526756979,
+          "energy_cost_USD": 1.1287925592420152,
+          "total_CO2_kg_conditional": 3.2739596119513408
+        },
+        {
+          "source_block_id": "m21_block_e3ef87e62c6ff1f7",
+          "scenario_id": "m21_extra_aec47fb338519e4f48bd",
+          "policy_id": "C_sci_v21",
+          "policy_alias": "C",
+          "policy_sha256": "5984d44b6e5ac5c6f077470e703e16efaebb522b3ae17af21c5e6f5059cd602d",
+          "configuration_id": "H1",
+          "window_minutes": 360.0,
+          "fault_target": "GRID",
+          "source_binding_sha256": "4dfe62ae105d2696b7782dc36c83ec63c6551e2cded601d6f15c0d4083058add",
+          "scenario_sha256": "03ce740a680642272397c2a8c6c0f84ab7ddabd1f3ef131eb540191859d9bf61",
+          "critical_initial_handoff_gap_minutes": 0.0,
+          "critical_e_ENS_kWh": -3.713388742943263e-05,
+          "critical_c_ENS_kWh": 1.602861528757354e-05,
+          "P3_e_ENS_kWh": -12.136088505631989,
+          "energy_cost_USD": 1.2475436472234094,
+          "total_CO2_kg_conditional": 4.858042845223963
+        },
+        {
+          "source_block_id": "m21_block_e3ef87e62c6ff1f7",
+          "scenario_id": "m21_extra_aec47fb338519e4f48bd",
+          "policy_id": "C_sci_v21",
+          "policy_alias": "C",
+          "policy_sha256": "5984d44b6e5ac5c6f077470e703e16efaebb522b3ae17af21c5e6f5059cd602d",
+          "configuration_id": "H2",
+          "window_minutes": 360.0,
+          "fault_target": "GRID",
+          "source_binding_sha256": "4dfe62ae105d2696b7782dc36c83ec63c6551e2cded601d6f15c0d4083058add",
+          "scenario_sha256": "03ce740a680642272397c2a8c6c0f84ab7ddabd1f3ef131eb540191859d9bf61",
+          "critical_initial_handoff_gap_minutes": 0.0,
+          "critical_e_ENS_kWh": 2.5331429662212024e-13,
+          "critical_c_ENS_kWh": 0.0,
+          "P3_e_ENS_kWh": -0.15779138988645514,
+          "energy_cost_USD": 1.769230674604927,
+          "total_CO2_kg_conditional": 4.756556052965152
+        },
+        {
+          "source_block_id": "m21_block_e3ef87e62c6ff1f7",
+          "scenario_id": "m21_extra_aec47fb338519e4f48bd",
+          "policy_id": "A_sci_v21",
+          "policy_alias": "A",
+          "policy_sha256": "12ccbdc7ae3e809a7278840f047b94938abee0be30f0bcb48487d5d94bad7367",
+          "configuration_id": "H1",
+          "window_minutes": 360.0,
+          "fault_target": "GRID",
+          "source_binding_sha256": "4dfe62ae105d2696b7782dc36c83ec63c6551e2cded601d6f15c0d4083058add",
+          "scenario_sha256": "03ce740a680642272397c2a8c6c0f84ab7ddabd1f3ef131eb540191859d9bf61",
+          "critical_initial_handoff_gap_minutes": 0.0,
+          "critical_e_ENS_kWh": -3.713388742943263e-05,
+          "critical_c_ENS_kWh": 1.602861528757354e-05,
+          "P3_e_ENS_kWh": -12.136088505631989,
+          "energy_cost_USD": 1.2475436472234094,
+          "total_CO2_kg_conditional": 4.858042845223963
+        },
+        {
+          "source_block_id": "m21_block_e3ef87e62c6ff1f7",
+          "scenario_id": "m21_extra_aec47fb338519e4f48bd",
+          "policy_id": "A_sci_v21",
+          "policy_alias": "A",
+          "policy_sha256": "12ccbdc7ae3e809a7278840f047b94938abee0be30f0bcb48487d5d94bad7367",
+          "configuration_id": "H2",
+          "window_minutes": 360.0,
+          "fault_target": "GRID",
+          "source_binding_sha256": "4dfe62ae105d2696b7782dc36c83ec63c6551e2cded601d6f15c0d4083058add",
+          "scenario_sha256": "03ce740a680642272397c2a8c6c0f84ab7ddabd1f3ef131eb540191859d9bf61",
+          "critical_initial_handoff_gap_minutes": 0.0,
+          "critical_e_ENS_kWh": 2.5331429662212024e-13,
+          "critical_c_ENS_kWh": 0.0,
+          "P3_e_ENS_kWh": -0.15779138988645514,
+          "energy_cost_USD": 1.769230674604927,
+          "total_CO2_kg_conditional": 4.756556052965152
+        },
+        {
+          "source_block_id": "m21_block_4d99796601b9e5b8",
+          "scenario_id": "m21_extra_c5deb057c2d7c53bf523",
+          "policy_id": "C_sci_v21",
+          "policy_alias": "C",
+          "policy_sha256": "5984d44b6e5ac5c6f077470e703e16efaebb522b3ae17af21c5e6f5059cd602d",
+          "configuration_id": "H1",
+          "window_minutes": 360.0,
+          "fault_target": "GRID",
+          "source_binding_sha256": "4dfe62ae105d2696b7782dc36c83ec63c6551e2cded601d6f15c0d4083058add",
+          "scenario_sha256": "c8abe03bdcd2ad6b37ef1df04e33fe70899861c65e1fa7d4e332eca6b69f1a17",
+          "critical_initial_handoff_gap_minutes": 0.0,
+          "critical_e_ENS_kWh": -3.8388687553214e-05,
+          "critical_c_ENS_kWh": 4.497253571409092e-06,
+          "P3_e_ENS_kWh": -21.36612401760523,
+          "energy_cost_USD": 0.4527342944825534,
+          "total_CO2_kg_conditional": 4.864884116965186
+        },
+        {
+          "source_block_id": "m21_block_4d99796601b9e5b8",
+          "scenario_id": "m21_extra_c5deb057c2d7c53bf523",
+          "policy_id": "C_sci_v21",
+          "policy_alias": "C",
+          "policy_sha256": "5984d44b6e5ac5c6f077470e703e16efaebb522b3ae17af21c5e6f5059cd602d",
+          "configuration_id": "H2",
+          "window_minutes": 360.0,
+          "fault_target": "GRID",
+          "source_binding_sha256": "4dfe62ae105d2696b7782dc36c83ec63c6551e2cded601d6f15c0d4083058add",
+          "scenario_sha256": "c8abe03bdcd2ad6b37ef1df04e33fe70899861c65e1fa7d4e332eca6b69f1a17",
+          "critical_initial_handoff_gap_minutes": 0.0,
+          "critical_e_ENS_kWh": 2.362344261180871e-13,
+          "critical_c_ENS_kWh": 0.0,
+          "P3_e_ENS_kWh": -0.3347152424922655,
+          "energy_cost_USD": 1.1970307513617513,
+          "total_CO2_kg_conditional": 3.516368543182807
+        },
+        {
+          "source_block_id": "m21_block_4d99796601b9e5b8",
+          "scenario_id": "m21_extra_c5deb057c2d7c53bf523",
+          "policy_id": "A_sci_v21",
+          "policy_alias": "A",
+          "policy_sha256": "12ccbdc7ae3e809a7278840f047b94938abee0be30f0bcb48487d5d94bad7367",
+          "configuration_id": "H1",
+          "window_minutes": 360.0,
+          "fault_target": "GRID",
+          "source_binding_sha256": "4dfe62ae105d2696b7782dc36c83ec63c6551e2cded601d6f15c0d4083058add",
+          "scenario_sha256": "c8abe03bdcd2ad6b37ef1df04e33fe70899861c65e1fa7d4e332eca6b69f1a17",
+          "critical_initial_handoff_gap_minutes": 0.0,
+          "critical_e_ENS_kWh": -3.8388687553214e-05,
+          "critical_c_ENS_kWh": 4.497253571409092e-06,
+          "P3_e_ENS_kWh": -21.36612401760523,
+          "energy_cost_USD": 0.4527342944825534,
+          "total_CO2_kg_conditional": 4.864884116965186
+        },
+        {
+          "source_block_id": "m21_block_4d99796601b9e5b8",
+          "scenario_id": "m21_extra_c5deb057c2d7c53bf523",
+          "policy_id": "A_sci_v21",
+          "policy_alias": "A",
+          "policy_sha256": "12ccbdc7ae3e809a7278840f047b94938abee0be30f0bcb48487d5d94bad7367",
+          "configuration_id": "H2",
+          "window_minutes": 360.0,
+          "fault_target": "GRID",
+          "source_binding_sha256": "4dfe62ae105d2696b7782dc36c83ec63c6551e2cded601d6f15c0d4083058add",
+          "scenario_sha256": "c8abe03bdcd2ad6b37ef1df04e33fe70899861c65e1fa7d4e332eca6b69f1a17",
+          "critical_initial_handoff_gap_minutes": 0.0,
+          "critical_e_ENS_kWh": 2.362344261180871e-13,
+          "critical_c_ENS_kWh": 0.0,
+          "P3_e_ENS_kWh": -0.3347152424922655,
+          "energy_cost_USD": 1.1970307513617513,
+          "total_CO2_kg_conditional": 3.516368543182807
+        }
+      ],
+      "paired_values_file": "F4_hardware_GRID_w360_PAIRED_VALUES.csv"
+    },
+    {
+      "name": "F4_hardware_GRID_ALL_GT_w360",
+      "family": "F4",
+      "axes": [
+        {
+          "tile": 1,
+          "metric": "critical_initial_handoff_gap_minutes",
+          "values": [
+            [
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0
+            ]
+          ],
+          "colors": [
+            [
+              0.13,
+              0.52,
+              0.39
+            ],
+            [
+              0.82,
+              0.37,
+              0.12
+            ]
+          ]
+        },
+        {
+          "tile": 2,
+          "metric": "critical_e_ENS_kWh",
+          "values": [
+            [
+              -21.47645670415494,
+              -21.47645670415494
+            ],
+            [
+              -4.796163466380676e-14,
+              -4.796163466380676e-14
+            ]
+          ],
+          "colors": [
+            [
+              0.13,
+              0.52,
+              0.39
+            ],
+            [
+              0.82,
+              0.37,
+              0.12
+            ]
+          ]
+        },
+        {
+          "tile": 3,
+          "metric": "critical_c_ENS_kWh",
+          "values": [
+            [
+              4.026035725246402e-06,
+              4.026035725246402e-06
+            ],
+            [
+              0.0,
+              0.0
+            ]
+          ],
+          "colors": [
+            [
+              0.13,
+              0.52,
+              0.39
+            ],
+            [
+              0.82,
+              0.37,
+              0.12
+            ]
+          ]
+        },
+        {
+          "tile": 4,
+          "metric": "P3_e_ENS_kWh",
+          "values": [
+            [
+              1.7804869798965228e-05,
+              1.7804869798965228e-05
+            ],
+            [
+              1.7804870537929673e-05,
+              1.7804870537929673e-05
+            ]
+          ],
+          "colors": [
+            [
+              0.13,
+              0.52,
+              0.39
+            ],
+            [
+              0.82,
+              0.37,
+              0.12
+            ]
+          ]
+        },
+        {
+          "tile": 5,
+          "metric": "energy_cost_USD",
+          "values": [
+            [
+              0.8381902468457554,
+              0.8381902468457554
+            ],
+            [
+              1.1574715856557702,
+              1.1574715856557702
+            ]
+          ],
+          "colors": [
+            [
+              0.13,
+              0.52,
+              0.39
+            ],
+            [
+              0.82,
+              0.37,
+              0.12
+            ]
+          ]
+        },
+        {
+          "tile": 6,
+          "metric": "total_CO2_kg_conditional",
+          "values": [
+            [
+              4.837079037427088,
+              4.837079037427088
+            ],
+            [
+              3.267326057415289,
+              3.267326057415289
+            ]
+          ],
+          "colors": [
+            [
+              0.13,
+              0.52,
+              0.39
+            ],
+            [
+              0.82,
+              0.37,
+              0.12
+            ]
+          ]
+        }
+      ],
+      "axes_count": 6,
+      "fault_target": "GRID+ALL_GT",
+      "window_minutes": 360.0,
+      "source_blocks": [
+        "m21_block_1706edd2c32b2937",
+        "m21_block_e3ef87e62c6ff1f7"
+      ],
+      "paired_scenarios": [
+        "m21_hardware_compound_42ecc465ac9477e92f47",
+        "m21_hardware_compound_5478464ed043b4fef98f"
+      ],
+      "paired_values": [
+        {
+          "source_block_id": "m21_block_e3ef87e62c6ff1f7",
+          "scenario_id": "m21_hardware_compound_42ecc465ac9477e92f47",
+          "policy_id": "C_sci_v21",
+          "policy_alias": "C",
+          "policy_sha256": "5984d44b6e5ac5c6f077470e703e16efaebb522b3ae17af21c5e6f5059cd602d",
+          "configuration_id": "H1",
+          "window_minutes": 360.0,
+          "fault_target": "GRID+ALL_GT",
+          "source_binding_sha256": "4dfe62ae105d2696b7782dc36c83ec63c6551e2cded601d6f15c0d4083058add",
+          "scenario_sha256": "9d3ecf383a7a99a84e2efe834e9d17490e8b1f0b8baa9300e2581c65b365bb6d",
+          "critical_initial_handoff_gap_minutes": 0.0,
+          "critical_e_ENS_kWh": -21.506476195295836,
+          "critical_c_ENS_kWh": 4.213827530463732e-06,
+          "P3_e_ENS_kWh": 1.7120001189141476e-05,
+          "energy_cost_USD": 1.2465054717262944,
+          "total_CO2_kg_conditional": 4.858020233596562
+        },
+        {
+          "source_block_id": "m21_block_e3ef87e62c6ff1f7",
+          "scenario_id": "m21_hardware_compound_42ecc465ac9477e92f47",
+          "policy_id": "C_sci_v21",
+          "policy_alias": "C",
+          "policy_sha256": "5984d44b6e5ac5c6f077470e703e16efaebb522b3ae17af21c5e6f5059cd602d",
+          "configuration_id": "H2",
+          "window_minutes": 360.0,
+          "fault_target": "GRID+ALL_GT",
+          "source_binding_sha256": "4dfe62ae105d2696b7782dc36c83ec63c6551e2cded601d6f15c0d4083058add",
+          "scenario_sha256": "9d3ecf383a7a99a84e2efe834e9d17490e8b1f0b8baa9300e2581c65b365bb6d",
+          "critical_initial_handoff_gap_minutes": 0.0,
+          "critical_e_ENS_kWh": 1.8474111129762605e-13,
+          "critical_c_ENS_kWh": 0.0,
+          "P3_e_ENS_kWh": 1.7119998801717884e-05,
+          "energy_cost_USD": 1.3225321805208807,
+          "total_CO2_kg_conditional": 3.6151309709111956
+        },
+        {
+          "source_block_id": "m21_block_e3ef87e62c6ff1f7",
+          "scenario_id": "m21_hardware_compound_42ecc465ac9477e92f47",
+          "policy_id": "A_sci_v21",
+          "policy_alias": "A",
+          "policy_sha256": "12ccbdc7ae3e809a7278840f047b94938abee0be30f0bcb48487d5d94bad7367",
+          "configuration_id": "H1",
+          "window_minutes": 360.0,
+          "fault_target": "GRID+ALL_GT",
+          "source_binding_sha256": "4dfe62ae105d2696b7782dc36c83ec63c6551e2cded601d6f15c0d4083058add",
+          "scenario_sha256": "9d3ecf383a7a99a84e2efe834e9d17490e8b1f0b8baa9300e2581c65b365bb6d",
+          "critical_initial_handoff_gap_minutes": 0.0,
+          "critical_e_ENS_kWh": -21.506476195295836,
+          "critical_c_ENS_kWh": 4.213827530463732e-06,
+          "P3_e_ENS_kWh": 1.7120001189141476e-05,
+          "energy_cost_USD": 1.2465054717262944,
+          "total_CO2_kg_conditional": 4.858020233596562
+        },
+        {
+          "source_block_id": "m21_block_e3ef87e62c6ff1f7",
+          "scenario_id": "m21_hardware_compound_42ecc465ac9477e92f47",
+          "policy_id": "A_sci_v21",
+          "policy_alias": "A",
+          "policy_sha256": "12ccbdc7ae3e809a7278840f047b94938abee0be30f0bcb48487d5d94bad7367",
+          "configuration_id": "H2",
+          "window_minutes": 360.0,
+          "fault_target": "GRID+ALL_GT",
+          "source_binding_sha256": "4dfe62ae105d2696b7782dc36c83ec63c6551e2cded601d6f15c0d4083058add",
+          "scenario_sha256": "9d3ecf383a7a99a84e2efe834e9d17490e8b1f0b8baa9300e2581c65b365bb6d",
+          "critical_initial_handoff_gap_minutes": 0.0,
+          "critical_e_ENS_kWh": 1.8474111129762605e-13,
+          "critical_c_ENS_kWh": 0.0,
+          "P3_e_ENS_kWh": 1.7119998801717884e-05,
+          "energy_cost_USD": 1.3225321805208807,
+          "total_CO2_kg_conditional": 3.6151309709111956
+        },
+        {
+          "source_block_id": "m21_block_1706edd2c32b2937",
+          "scenario_id": "m21_hardware_compound_5478464ed043b4fef98f",
+          "policy_id": "C_sci_v21",
+          "policy_alias": "C",
+          "policy_sha256": "5984d44b6e5ac5c6f077470e703e16efaebb522b3ae17af21c5e6f5059cd602d",
+          "configuration_id": "H1",
+          "window_minutes": 360.0,
+          "fault_target": "GRID+ALL_GT",
+          "source_binding_sha256": "4dfe62ae105d2696b7782dc36c83ec63c6551e2cded601d6f15c0d4083058add",
+          "scenario_sha256": "6e3542f03de90b7cd389fd4dd5f99b6239dd45e0a1dab29ede0231173f1a57fb",
+          "critical_initial_handoff_gap_minutes": 0.0,
+          "critical_e_ENS_kWh": -21.446437213014047,
+          "critical_c_ENS_kWh": 3.838243920029072e-06,
+          "P3_e_ENS_kWh": 1.848973840878898e-05,
+          "energy_cost_USD": 0.4298750219652163,
+          "total_CO2_kg_conditional": 4.816137841257614
+        },
+        {
+          "source_block_id": "m21_block_1706edd2c32b2937",
+          "scenario_id": "m21_hardware_compound_5478464ed043b4fef98f",
+          "policy_id": "C_sci_v21",
+          "policy_alias": "C",
+          "policy_sha256": "5984d44b6e5ac5c6f077470e703e16efaebb522b3ae17af21c5e6f5059cd602d",
+          "configuration_id": "H2",
+          "window_minutes": 360.0,
+          "fault_target": "GRID+ALL_GT",
+          "source_binding_sha256": "4dfe62ae105d2696b7782dc36c83ec63c6551e2cded601d6f15c0d4083058add",
+          "scenario_sha256": "6e3542f03de90b7cd389fd4dd5f99b6239dd45e0a1dab29ede0231173f1a57fb",
+          "critical_initial_handoff_gap_minutes": 0.0,
+          "critical_e_ENS_kWh": -2.8066438062523957e-13,
+          "critical_c_ENS_kWh": 0.0,
+          "P3_e_ENS_kWh": 1.8489742274141463e-05,
+          "energy_cost_USD": 0.9924109907906598,
+          "total_CO2_kg_conditional": 2.9195211439193827
+        },
+        {
+          "source_block_id": "m21_block_1706edd2c32b2937",
+          "scenario_id": "m21_hardware_compound_5478464ed043b4fef98f",
+          "policy_id": "A_sci_v21",
+          "policy_alias": "A",
+          "policy_sha256": "12ccbdc7ae3e809a7278840f047b94938abee0be30f0bcb48487d5d94bad7367",
+          "configuration_id": "H1",
+          "window_minutes": 360.0,
+          "fault_target": "GRID+ALL_GT",
+          "source_binding_sha256": "4dfe62ae105d2696b7782dc36c83ec63c6551e2cded601d6f15c0d4083058add",
+          "scenario_sha256": "6e3542f03de90b7cd389fd4dd5f99b6239dd45e0a1dab29ede0231173f1a57fb",
+          "critical_initial_handoff_gap_minutes": 0.0,
+          "critical_e_ENS_kWh": -21.446437213014047,
+          "critical_c_ENS_kWh": 3.838243920029072e-06,
+          "P3_e_ENS_kWh": 1.848973840878898e-05,
+          "energy_cost_USD": 0.4298750219652163,
+          "total_CO2_kg_conditional": 4.816137841257614
+        },
+        {
+          "source_block_id": "m21_block_1706edd2c32b2937",
+          "scenario_id": "m21_hardware_compound_5478464ed043b4fef98f",
+          "policy_id": "A_sci_v21",
+          "policy_alias": "A",
+          "policy_sha256": "12ccbdc7ae3e809a7278840f047b94938abee0be30f0bcb48487d5d94bad7367",
+          "configuration_id": "H2",
+          "window_minutes": 360.0,
+          "fault_target": "GRID+ALL_GT",
+          "source_binding_sha256": "4dfe62ae105d2696b7782dc36c83ec63c6551e2cded601d6f15c0d4083058add",
+          "scenario_sha256": "6e3542f03de90b7cd389fd4dd5f99b6239dd45e0a1dab29ede0231173f1a57fb",
+          "critical_initial_handoff_gap_minutes": 0.0,
+          "critical_e_ENS_kWh": -2.8066438062523957e-13,
+          "critical_c_ENS_kWh": 0.0,
+          "P3_e_ENS_kWh": 1.8489742274141463e-05,
+          "energy_cost_USD": 0.9924109907906598,
+          "total_CO2_kg_conditional": 2.9195211439193827
+        }
+      ],
+      "paired_values_file": "F4_hardware_GRID_ALL_GT_w360_PAIRED_VALUES.csv"
+    },
+    {
+      "name": "F4_hardware_TOWER_w360",
+      "family": "F4",
+      "axes": [
+        {
+          "tile": 1,
+          "metric": "critical_initial_handoff_gap_minutes",
+          "values": [
+            [
+              0.0,
+              0.0
+            ],
+            [
+              -15.0,
+              -15.0
+            ]
+          ],
+          "colors": [
+            [
+              0.13,
+              0.52,
+              0.39
+            ],
+            [
+              0.82,
+              0.37,
+              0.12
+            ]
+          ]
+        },
+        {
+          "tile": 2,
+          "metric": "critical_e_ENS_kWh",
+          "values": [
+            [
+              -3.2526065174565133e-19,
+              -3.2526065174565133e-19
+            ],
+            [
+              -1.83660595412527e-14,
+              -1.83660595412527e-14
+            ]
+          ],
+          "colors": [
+            [
+              0.13,
+              0.52,
+              0.39
+            ],
+            [
+              0.82,
+              0.37,
+              0.12
+            ]
+          ]
+        },
+        {
+          "tile": 3,
+          "metric": "critical_c_ENS_kWh",
+          "values": [
+            [
+              -6.394884621840902e-14,
+              -6.394884621840902e-14
+            ],
+            [
+              -56.762866878502436,
+              -56.762866878502436
+            ]
+          ],
+          "colors": [
+            [
+              0.13,
+              0.52,
+              0.39
+            ],
+            [
+              0.82,
+              0.37,
+              0.12
+            ]
+          ]
+        },
+        {
+          "tile": 4,
+          "metric": "P3_e_ENS_kWh",
+          "values": [
+            [
+              -7.632783294297951e-17,
+              -7.632783294297951e-17
+            ],
+            [
+              -1.893450674028685e-14,
+              -1.893450674028685e-14
+            ]
+          ],
+          "colors": [
+            [
+              0.13,
+              0.52,
+              0.39
+            ],
+            [
+              0.82,
+              0.37,
+              0.12
+            ]
+          ]
+        },
+        {
+          "tile": 5,
+          "metric": "energy_cost_USD",
+          "values": [
+            [
+              3.0991231256488874,
+              3.0991231256488874
+            ],
+            [
+              1.9135962802757476,
+              1.9135962802757476
+            ]
+          ],
+          "colors": [
+            [
+              0.13,
+              0.52,
+              0.39
+            ],
+            [
+              0.82,
+              0.37,
+              0.12
+            ]
+          ]
+        },
+        {
+          "tile": 6,
+          "metric": "total_CO2_kg_conditional",
+          "values": [
+            [
+              8.183073735565983,
+              8.183073735565983
+            ],
+            [
+              5.211199591759225,
+              5.211199591759225
+            ]
+          ],
+          "colors": [
+            [
+              0.13,
+              0.52,
+              0.39
+            ],
+            [
+              0.82,
+              0.37,
+              0.12
+            ]
+          ]
+        }
+      ],
+      "axes_count": 6,
+      "fault_target": "TOWER",
+      "window_minutes": 360.0,
+      "source_blocks": [
+        "m21_block_1706edd2c32b2937",
+        "m21_block_4d99796601b9e5b8",
+        "m21_block_e3ef87e62c6ff1f7",
+        "m21_block_fd548b20a5cafc64"
+      ],
+      "paired_scenarios": [
+        "m21_extra_5fc4d54952e2a4a65be6",
+        "m21_extra_b27249014855cbb7afba",
+        "m21_extra_c76ef47d872e5817afad",
+        "m21_extra_dd58839eb8929bc841cf"
+      ],
+      "paired_values": [
+        {
+          "source_block_id": "m21_block_4d99796601b9e5b8",
+          "scenario_id": "m21_extra_5fc4d54952e2a4a65be6",
+          "policy_id": "C_sci_v21",
+          "policy_alias": "C",
+          "policy_sha256": "5984d44b6e5ac5c6f077470e703e16efaebb522b3ae17af21c5e6f5059cd602d",
+          "configuration_id": "H1",
+          "window_minutes": 360.0,
+          "fault_target": "TOWER",
+          "source_binding_sha256": "4dfe62ae105d2696b7782dc36c83ec63c6551e2cded601d6f15c0d4083058add",
+          "scenario_sha256": "8bdd7844353f45c011e4de274f048d761f7960e24e39d236a972600b4a8a3363",
+          "critical_initial_handoff_gap_minutes": 0.0,
+          "critical_e_ENS_kWh": 0.0,
+          "critical_c_ENS_kWh": -1.7053025658242404e-13,
+          "P3_e_ENS_kWh": -7.28583859910259e-17,
+          "energy_cost_USD": 3.09937200060682,
+          "total_CO2_kg_conditional": 8.18307373556786
+        },
+        {
+          "source_block_id": "m21_block_4d99796601b9e5b8",
+          "scenario_id": "m21_extra_5fc4d54952e2a4a65be6",
+          "policy_id": "C_sci_v21",
+          "policy_alias": "C",
+          "policy_sha256": "5984d44b6e5ac5c6f077470e703e16efaebb522b3ae17af21c5e6f5059cd602d",
+          "configuration_id": "H2",
+          "window_minutes": 360.0,
+          "fault_target": "TOWER",
+          "source_binding_sha256": "4dfe62ae105d2696b7782dc36c83ec63c6551e2cded601d6f15c0d4083058add",
+          "scenario_sha256": "8bdd7844353f45c011e4de274f048d761f7960e24e39d236a972600b4a8a3363",
+          "critical_initial_handoff_gap_minutes": -15.0,
+          "critical_e_ENS_kWh": -2.9612813937096583e-15,
+          "critical_c_ENS_kWh": -56.75054236883297,
+          "P3_e_ENS_kWh": -6.702971511174383e-15,
+          "energy_cost_USD": 1.5954676270216623,
+          "total_CO2_kg_conditional": 4.571862838802872
+        },
+        {
+          "source_block_id": "m21_block_4d99796601b9e5b8",
+          "scenario_id": "m21_extra_5fc4d54952e2a4a65be6",
+          "policy_id": "A_sci_v21",
+          "policy_alias": "A",
+          "policy_sha256": "12ccbdc7ae3e809a7278840f047b94938abee0be30f0bcb48487d5d94bad7367",
+          "configuration_id": "H1",
+          "window_minutes": 360.0,
+          "fault_target": "TOWER",
+          "source_binding_sha256": "4dfe62ae105d2696b7782dc36c83ec63c6551e2cded601d6f15c0d4083058add",
+          "scenario_sha256": "8bdd7844353f45c011e4de274f048d761f7960e24e39d236a972600b4a8a3363",
+          "critical_initial_handoff_gap_minutes": 0.0,
+          "critical_e_ENS_kWh": 0.0,
+          "critical_c_ENS_kWh": -1.7053025658242404e-13,
+          "P3_e_ENS_kWh": -7.28583859910259e-17,
+          "energy_cost_USD": 3.09937200060682,
+          "total_CO2_kg_conditional": 8.18307373556786
+        },
+        {
+          "source_block_id": "m21_block_4d99796601b9e5b8",
+          "scenario_id": "m21_extra_5fc4d54952e2a4a65be6",
+          "policy_id": "A_sci_v21",
+          "policy_alias": "A",
+          "policy_sha256": "12ccbdc7ae3e809a7278840f047b94938abee0be30f0bcb48487d5d94bad7367",
+          "configuration_id": "H2",
+          "window_minutes": 360.0,
+          "fault_target": "TOWER",
+          "source_binding_sha256": "4dfe62ae105d2696b7782dc36c83ec63c6551e2cded601d6f15c0d4083058add",
+          "scenario_sha256": "8bdd7844353f45c011e4de274f048d761f7960e24e39d236a972600b4a8a3363",
+          "critical_initial_handoff_gap_minutes": -15.0,
+          "critical_e_ENS_kWh": -2.9612813937096583e-15,
+          "critical_c_ENS_kWh": -56.75054236883297,
+          "P3_e_ENS_kWh": -6.702971511174383e-15,
+          "energy_cost_USD": 1.5954676270216623,
+          "total_CO2_kg_conditional": 4.571862838802872
+        },
+        {
+          "source_block_id": "m21_block_1706edd2c32b2937",
+          "scenario_id": "m21_extra_b27249014855cbb7afba",
+          "policy_id": "C_sci_v21",
+          "policy_alias": "C",
+          "policy_sha256": "5984d44b6e5ac5c6f077470e703e16efaebb522b3ae17af21c5e6f5059cd602d",
+          "configuration_id": "H1",
+          "window_minutes": 360.0,
+          "fault_target": "TOWER",
+          "source_binding_sha256": "4dfe62ae105d2696b7782dc36c83ec63c6551e2cded601d6f15c0d4083058add",
+          "scenario_sha256": "c2ab3253f4f1d96f769ea0cecf555054ed3b520c4346327f3703fec35224ae98",
+          "critical_initial_handoff_gap_minutes": 0.0,
+          "critical_e_ENS_kWh": 1.0842021724855044e-18,
+          "critical_c_ENS_kWh": -1.1368683772161603e-13,
+          "P3_e_ENS_kWh": -5.204170427930421e-17,
+          "energy_cost_USD": 3.0997472969686157,
+          "total_CO2_kg_conditional": 8.183073735562402
+        },
+        {
+          "source_block_id": "m21_block_1706edd2c32b2937",
+          "scenario_id": "m21_extra_b27249014855cbb7afba",
+          "policy_id": "C_sci_v21",
+          "policy_alias": "C",
+          "policy_sha256": "5984d44b6e5ac5c6f077470e703e16efaebb522b3ae17af21c5e6f5059cd602d",
+          "configuration_id": "H2",
+          "window_minutes": 360.0,
+          "fault_target": "TOWER",
+          "source_binding_sha256": "4dfe62ae105d2696b7782dc36c83ec63c6551e2cded601d6f15c0d4083058add",
+          "scenario_sha256": "c2ab3253f4f1d96f769ea0cecf555054ed3b520c4346327f3703fec35224ae98",
+          "critical_initial_handoff_gap_minutes": -15.0,
+          "critical_e_ENS_kWh": -2.5896277310033522e-14,
+          "critical_c_ENS_kWh": -56.749938983923386,
+          "P3_e_ENS_kWh": -3.559652572704408e-15,
+          "energy_cost_USD": 1.474827112513509,
+          "total_CO2_kg_conditional": 4.142618211234094
+        },
+        {
+          "source_block_id": "m21_block_1706edd2c32b2937",
+          "scenario_id": "m21_extra_b27249014855cbb7afba",
+          "policy_id": "A_sci_v21",
+          "policy_alias": "A",
+          "policy_sha256": "12ccbdc7ae3e809a7278840f047b94938abee0be30f0bcb48487d5d94bad7367",
+          "configuration_id": "H1",
+          "window_minutes": 360.0,
+          "fault_target": "TOWER",
+          "source_binding_sha256": "4dfe62ae105d2696b7782dc36c83ec63c6551e2cded601d6f15c0d4083058add",
+          "scenario_sha256": "c2ab3253f4f1d96f769ea0cecf555054ed3b520c4346327f3703fec35224ae98",
+          "critical_initial_handoff_gap_minutes": 0.0,
+          "critical_e_ENS_kWh": 1.0842021724855044e-18,
+          "critical_c_ENS_kWh": -1.1368683772161603e-13,
+          "P3_e_ENS_kWh": -5.204170427930421e-17,
+          "energy_cost_USD": 3.0997472969686157,
+          "total_CO2_kg_conditional": 8.183073735562402
+        },
+        {
+          "source_block_id": "m21_block_1706edd2c32b2937",
+          "scenario_id": "m21_extra_b27249014855cbb7afba",
+          "policy_id": "A_sci_v21",
+          "policy_alias": "A",
+          "policy_sha256": "12ccbdc7ae3e809a7278840f047b94938abee0be30f0bcb48487d5d94bad7367",
+          "configuration_id": "H2",
+          "window_minutes": 360.0,
+          "fault_target": "TOWER",
+          "source_binding_sha256": "4dfe62ae105d2696b7782dc36c83ec63c6551e2cded601d6f15c0d4083058add",
+          "scenario_sha256": "c2ab3253f4f1d96f769ea0cecf555054ed3b520c4346327f3703fec35224ae98",
+          "critical_initial_handoff_gap_minutes": -15.0,
+          "critical_e_ENS_kWh": -2.5896277310033522e-14,
+          "critical_c_ENS_kWh": -56.749938983923386,
+          "P3_e_ENS_kWh": -3.559652572704408e-15,
+          "energy_cost_USD": 1.474827112513509,
+          "total_CO2_kg_conditional": 4.142618211234094
+        },
+        {
+          "source_block_id": "m21_block_e3ef87e62c6ff1f7",
+          "scenario_id": "m21_extra_c76ef47d872e5817afad",
+          "policy_id": "C_sci_v21",
+          "policy_alias": "C",
+          "policy_sha256": "5984d44b6e5ac5c6f077470e703e16efaebb522b3ae17af21c5e6f5059cd602d",
+          "configuration_id": "H1",
+          "window_minutes": 360.0,
+          "fault_target": "TOWER",
+          "source_binding_sha256": "4dfe62ae105d2696b7782dc36c83ec63c6551e2cded601d6f15c0d4083058add",
+          "scenario_sha256": "ce6ab88bcebc462373212585468549d4504498f6f0fd2ff46dffdf071e0ca1d9",
+          "critical_initial_handoff_gap_minutes": 0.0,
+          "critical_e_ENS_kWh": -3.0357660829594124e-18,
+          "critical_c_ENS_kWh": -1.1368683772161603e-13,
+          "P3_e_ENS_kWh": -2.0816681711721685e-17,
+          "energy_cost_USD": 3.0985514466603377,
+          "total_CO2_kg_conditional": 8.183073735566722
+        },
+        {
+          "source_block_id": "m21_block_e3ef87e62c6ff1f7",
+          "scenario_id": "m21_extra_c76ef47d872e5817afad",
+          "policy_id": "C_sci_v21",
+          "policy_alias": "C",
+          "policy_sha256": "5984d44b6e5ac5c6f077470e703e16efaebb522b3ae17af21c5e6f5059cd602d",
+          "configuration_id": "H2",
+          "window_minutes": 360.0,
+          "fault_target": "TOWER",
+          "source_binding_sha256": "4dfe62ae105d2696b7782dc36c83ec63c6551e2cded601d6f15c0d4083058add",
+          "scenario_sha256": "ce6ab88bcebc462373212585468549d4504498f6f0fd2ff46dffdf071e0ca1d9",
+          "critical_initial_handoff_gap_minutes": -15.0,
+          "critical_e_ENS_kWh": -2.784404651290373e-14,
+          "critical_c_ENS_kWh": -56.77863648765043,
+          "P3_e_ENS_kWh": -3.396241621267393e-14,
+          "energy_cost_USD": 2.3403741580484336,
+          "total_CO2_kg_conditional": 6.195063663152723
+        },
+        {
+          "source_block_id": "m21_block_e3ef87e62c6ff1f7",
+          "scenario_id": "m21_extra_c76ef47d872e5817afad",
+          "policy_id": "A_sci_v21",
+          "policy_alias": "A",
+          "policy_sha256": "12ccbdc7ae3e809a7278840f047b94938abee0be30f0bcb48487d5d94bad7367",
+          "configuration_id": "H1",
+          "window_minutes": 360.0,
+          "fault_target": "TOWER",
+          "source_binding_sha256": "4dfe62ae105d2696b7782dc36c83ec63c6551e2cded601d6f15c0d4083058add",
+          "scenario_sha256": "ce6ab88bcebc462373212585468549d4504498f6f0fd2ff46dffdf071e0ca1d9",
+          "critical_initial_handoff_gap_minutes": 0.0,
+          "critical_e_ENS_kWh": -3.0357660829594124e-18,
+          "critical_c_ENS_kWh": -1.1368683772161603e-13,
+          "P3_e_ENS_kWh": -2.0816681711721685e-17,
+          "energy_cost_USD": 3.0985514466603377,
+          "total_CO2_kg_conditional": 8.183073735566722
+        },
+        {
+          "source_block_id": "m21_block_e3ef87e62c6ff1f7",
+          "scenario_id": "m21_extra_c76ef47d872e5817afad",
+          "policy_id": "A_sci_v21",
+          "policy_alias": "A",
+          "policy_sha256": "12ccbdc7ae3e809a7278840f047b94938abee0be30f0bcb48487d5d94bad7367",
+          "configuration_id": "H2",
+          "window_minutes": 360.0,
+          "fault_target": "TOWER",
+          "source_binding_sha256": "4dfe62ae105d2696b7782dc36c83ec63c6551e2cded601d6f15c0d4083058add",
+          "scenario_sha256": "ce6ab88bcebc462373212585468549d4504498f6f0fd2ff46dffdf071e0ca1d9",
+          "critical_initial_handoff_gap_minutes": -15.0,
+          "critical_e_ENS_kWh": -2.784404651290373e-14,
+          "critical_c_ENS_kWh": -56.77863648765043,
+          "P3_e_ENS_kWh": -3.396241621267393e-14,
+          "energy_cost_USD": 2.3403741580484336,
+          "total_CO2_kg_conditional": 6.195063663152723
+        },
+        {
+          "source_block_id": "m21_block_fd548b20a5cafc64",
+          "scenario_id": "m21_extra_dd58839eb8929bc841cf",
+          "policy_id": "C_sci_v21",
+          "policy_alias": "C",
+          "policy_sha256": "5984d44b6e5ac5c6f077470e703e16efaebb522b3ae17af21c5e6f5059cd602d",
+          "configuration_id": "H1",
+          "window_minutes": 360.0,
+          "fault_target": "TOWER",
+          "source_binding_sha256": "4dfe62ae105d2696b7782dc36c83ec63c6551e2cded601d6f15c0d4083058add",
+          "scenario_sha256": "7cd70f1cf03f0e268dd2ba0bfc87cb28ba55d13e59e509b4fe8214006dc7b82c",
+          "critical_initial_handoff_gap_minutes": 0.0,
+          "critical_e_ENS_kWh": 6.505213034913027e-19,
+          "critical_c_ENS_kWh": 1.4210854715202004e-13,
+          "P3_e_ENS_kWh": -1.5959455978986625e-16,
+          "energy_cost_USD": 3.098821758359776,
+          "total_CO2_kg_conditional": 8.18307373556695
+        },
+        {
+          "source_block_id": "m21_block_fd548b20a5cafc64",
+          "scenario_id": "m21_extra_dd58839eb8929bc841cf",
+          "policy_id": "C_sci_v21",
+          "policy_alias": "C",
+          "policy_sha256": "5984d44b6e5ac5c6f077470e703e16efaebb522b3ae17af21c5e6f5059cd602d",
+          "configuration_id": "H2",
+          "window_minutes": 360.0,
+          "fault_target": "TOWER",
+          "source_binding_sha256": "4dfe62ae105d2696b7782dc36c83ec63c6551e2cded601d6f15c0d4083058add",
+          "scenario_sha256": "7cd70f1cf03f0e268dd2ba0bfc87cb28ba55d13e59e509b4fe8214006dc7b82c",
+          "critical_initial_handoff_gap_minutes": -15.0,
+          "critical_e_ENS_kWh": -1.6762632948363887e-14,
+          "critical_c_ENS_kWh": -56.772349673602946,
+          "P3_e_ENS_kWh": -3.151298666459468e-14,
+          "energy_cost_USD": 2.2437162235193853,
+          "total_CO2_kg_conditional": 5.935253653847212
+        },
+        {
+          "source_block_id": "m21_block_fd548b20a5cafc64",
+          "scenario_id": "m21_extra_dd58839eb8929bc841cf",
+          "policy_id": "A_sci_v21",
+          "policy_alias": "A",
+          "policy_sha256": "12ccbdc7ae3e809a7278840f047b94938abee0be30f0bcb48487d5d94bad7367",
+          "configuration_id": "H1",
+          "window_minutes": 360.0,
+          "fault_target": "TOWER",
+          "source_binding_sha256": "4dfe62ae105d2696b7782dc36c83ec63c6551e2cded601d6f15c0d4083058add",
+          "scenario_sha256": "7cd70f1cf03f0e268dd2ba0bfc87cb28ba55d13e59e509b4fe8214006dc7b82c",
+          "critical_initial_handoff_gap_minutes": 0.0,
+          "critical_e_ENS_kWh": 6.505213034913027e-19,
+          "critical_c_ENS_kWh": 1.4210854715202004e-13,
+          "P3_e_ENS_kWh": -1.5959455978986625e-16,
+          "energy_cost_USD": 3.098821758359776,
+          "total_CO2_kg_conditional": 8.18307373556695
+        },
+        {
+          "source_block_id": "m21_block_fd548b20a5cafc64",
+          "scenario_id": "m21_extra_dd58839eb8929bc841cf",
+          "policy_id": "A_sci_v21",
+          "policy_alias": "A",
+          "policy_sha256": "12ccbdc7ae3e809a7278840f047b94938abee0be30f0bcb48487d5d94bad7367",
+          "configuration_id": "H2",
+          "window_minutes": 360.0,
+          "fault_target": "TOWER",
+          "source_binding_sha256": "4dfe62ae105d2696b7782dc36c83ec63c6551e2cded601d6f15c0d4083058add",
+          "scenario_sha256": "7cd70f1cf03f0e268dd2ba0bfc87cb28ba55d13e59e509b4fe8214006dc7b82c",
+          "critical_initial_handoff_gap_minutes": -15.0,
+          "critical_e_ENS_kWh": -1.6762632948363887e-14,
+          "critical_c_ENS_kWh": -56.772349673602946,
+          "P3_e_ENS_kWh": -3.151298666459468e-14,
+          "energy_cost_USD": 2.2437162235193853,
+          "total_CO2_kg_conditional": 5.935253653847212
+        }
+      ],
+      "paired_values_file": "F4_hardware_TOWER_w360_PAIRED_VALUES.csv"
+    }
+  ],
+  "skipped": [
+    {
+      "family": "F5",
+      "reason": "No eligible boundary rows; actual formal boundary not tested"
+    }
+  ],
+  "serialization_tolerance": {
+    "atol": 1e-10,
+    "rtol": 1e-12,
+    "unknown_masks": "exact"
+  },
+  "scientific_gate": false,
+  "matlab_execution": "NOT_RUN",
+  "visual_review": "NOT_RUN",
+  "formal_F4_F5_validation": "NOT_RUN",
+  "actual_physics_started": 0
+}

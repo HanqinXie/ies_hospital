@@ -1,0 +1,27 @@
+{
+  "name": "state_monitored_launch01",
+  "command": [
+    "C:/Users/HanqinXie/AppData/Local/Programs/Python/Python310/python.exe",
+    "-B",
+    "E:/hospital_ies_v21_20261023/reviews/fixed_process_actual252_01/monitor_matlab.py",
+    "--output",
+    "E:/hospital_ies_v21_20261023/reviews/fixed067_state_figure01/monitor01",
+    "--run-dir",
+    "E:/hospital_ies_v21_20261023/reviews/fixed067_state_figure01_audit",
+    "--name",
+    "actual_matlab_state01",
+    "--script",
+    "E:/hospital_ies_v21_20261023/reviews/fixed067_state_figure01/run_state_actual01.m",
+    "--script-sha",
+    "31d8c3224ea38f117d482ec8a879d858790c187e88e9abdb602c202169023e6b"
+  ],
+  "cwd": "D:\\云大文件\\论文\\医院ies\\code_4_2",
+  "started_utc": "2026-10-24T09:53:59.899097+00:00",
+  "finished_utc": "2026-10-24T09:54:28.390542+00:00",
+  "elapsed_seconds": 28.491576199885458,
+  "exit_code": 0,
+  "environment_overrides": {
+    "PYTHONDONTWRITEBYTECODE": "1",
+    "PYTHONIOENCODING": "utf-8"
+  }
+}

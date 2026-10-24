@@ -1,0 +1,151 @@
+{
+  "schema": "hospital_ies.root_final240_scientific_acceptance.v1",
+  "created_utc": "2026-10-24T19:31:12.930873+00:00",
+  "stage": "final",
+  "stage_accepted": true,
+  "execution_mode": "native_serial_single_campaign",
+  "governor_used": false,
+  "registered_pairs": 240,
+  "completed": 240,
+  "failed": 0,
+  "pending": 0,
+  "in_flight": 0,
+  "source_binding_sha256": "4dfe62ae105d2696b7782dc36c83ec63c6551e2cded601d6f15c0d4083058add",
+  "input_binding_sha256": "659ecc488bda87c9338afde283cbb74135ca2ebdf2769ce463d0e61f0c6288d8",
+  "jobfile_sha256": "ea4a3c81687334074669535b92d5b24e3c8f95b7a91812b98703e903f501bf46",
+  "evidence": {
+    "admission": {
+      "path": "E:\\hospital_ies_v21_20261023\\reviews\\final240_root_terminal_admission01\\SERIAL_METADATA_READ_ADMISSION.json",
+      "sha256": "30bd6803073281446d69c86ae540f66d6f9a393eef305fb7570a29b5afb60de5",
+      "bytes": 7203
+    },
+    "jobs": {
+      "path": "E:\\hospital_ies_v21_20261023\\final_blind01\\JOBS_ANALYSIS_ONLY.json",
+      "sha256": "ea4a3c81687334074669535b92d5b24e3c8f95b7a91812b98703e903f501bf46",
+      "bytes": 2959
+    },
+    "native_analysis": {
+      "path": "E:\\hospital_ies_v21_20261023\\final_blind01\\analysis01\\PARALLEL_ANALYSIS_RECEIPT.json",
+      "sha256": "994a42eb6b9382e5a2645c470e2af0655a6d06227b2a0d22aa9045fc4c92dc59",
+      "bytes": 44508
+    },
+    "native_tables": {
+      "path": "E:\\hospital_ies_v21_20261023\\final_blind01\\analysis01\\TABLES.json.gz",
+      "sha256": "f70141272d4f62a20bd82d51991d36b33aa86cdeee201e3c05a02c7f877facd9",
+      "bytes": 689018
+    },
+    "jobs_identity": {
+      "path": "E:\\hospital_ies_v21_20261023\\final_blind01\\analysis_guard01\\JOBS_IDENTITY_GUARD.json",
+      "sha256": "f380c032c8b85331a7fae45bdf1040fe4c39787977e39538a7844410b9d79bbb",
+      "bytes": 73860
+    },
+    "case_identity": {
+      "path": "E:\\hospital_ies_v21_20261023\\final_blind01\\analysis_guard01\\CASE_IDENTITY_GUARD.json",
+      "sha256": "c740a8a199ed74bb8077fc01b51b088fb4e0f53d6d04db167014b9ec3dbec950",
+      "bytes": 1429
+    },
+    "physical": {
+      "path": "E:\\hospital_ies_v21_20261023\\final_blind01\\physical_audit01\\POOL_PHYSICAL_AUDIT_RECEIPT.json",
+      "sha256": "c0b36604f939a8acab18a30cf6df4033b67787a41461618141d490737382b2b6",
+      "bytes": 40720
+    },
+    "inventory": {
+      "path": "E:\\hospital_ies_v21_20261023\\final_blind01\\physical_audit01\\POOL_INVENTORY.json",
+      "sha256": "288c384cac500bae434efb11293fc1b3b92bb4fed3e5f99d3eb8f5713153694e",
+      "bytes": 689150
+    },
+    "current_bytes": {
+      "path": "E:\\hospital_ies_v21_20261023\\final_blind01\\CURRENT_BYTE_AUDIT01.json",
+      "sha256": "8339063a30fcc5b2b0a2e2edfed2e53e4af7341d253ee5dc6eac778a7eb96bbf",
+      "bytes": 816605
+    },
+    "statistical_delivery": {
+      "path": "E:\\hospital_ies_v21_20261023\\reviews\\final12_native_statistical_review01\\DELIVERY_RECEIPT.json",
+      "sha256": "23fcbc232a9d4806274214b1721860f81016449d752c0ce997d9e837506e600f",
+      "bytes": 11097
+    },
+    "statistical_review": {
+      "path": "E:\\hospital_ies_v21_20261023\\reviews\\final12_native_statistical_review01\\actual01\\NATIVE_STATISTICAL_REVIEW.json",
+      "sha256": "9596e67cc111801ed4614153bb943a15ba01934f0d411fcdd80085a9a1336f32",
+      "bytes": 22341
+    },
+    "statistical_report": {
+      "path": "E:\\hospital_ies_v21_20261023\\reviews\\final12_native_statistical_review01\\REVIEW.zh-CN.md",
+      "sha256": "ed6db814f3b9003b0cce156e7e9a233f8a01ec508027f6f1b5463f3f1d36faee",
+      "bytes": 13765
+    },
+    "source_closure": {
+      "path": "E:\\hospital_ies_v21_20261023\\reviews\\final12_native_statistical_review01\\actual01\\SOURCE_CLOSURE.json",
+      "sha256": "831e88b75471aac0761b19eacddfd2f3c4ee46380f9a7b21f8ad60ade61477bf",
+      "bytes": 11705
+    },
+    "physical_terminal_review": {
+      "path": "E:\\hospital_ies_v21_20261023\\reviews\\final240_physical_execution01\\logs\\physical_final240_verify01.stdout.log",
+      "sha256": "5f3da11347cf1eb36e24b22b2548017dd537ab78d6a79675f60f83bca0a9a3b1",
+      "bytes": 3639
+    }
+  },
+  "native_science_pool": {
+    "source_blocks": 12,
+    "quarters": [
+      4,
+      3,
+      2,
+      3
+    ],
+    "scenes": 48,
+    "policies": 5,
+    "configuration": "H0",
+    "window_minutes": 720,
+    "independent_hospitals": 1,
+    "weather_years": 1
+  },
+  "root_review": {
+    "identity": true,
+    "original_full_native_statistics": true,
+    "physical_energy_state_and_saved_rows": true,
+    "current_compressed_byte_SHA": true,
+    "independent_all_pair_and_summary_arithmetic": true,
+    "unknowns_not_zero_filled": true,
+    "original_tolerances_unchanged": true,
+    "policy_superiority_required": false,
+    "policy_or_model_retuned_after_final": false
+  },
+  "outcomes_not_a_winner_gate": {
+    "A_C_all176_equal": false,
+    "A_C_material65_equal": false,
+    "A_critical_material_33_fields_equal_all48": true,
+    "A_P3_electric_material_shorter_minutes_one_case": 60,
+    "A_P3_electric_ENS_reduction_kWh_one_case": 4.063166109291046,
+    "A_P0_and_P1_electric_ENS_increase_each_kWh_one_case": 4.063206741358955e-07,
+    "A_cost_increase_USD_one_case": 1.218940841237611,
+    "A_conditional_CO2_increase_kg_one_case": 2.834849348178068,
+    "R_critical_union_worse_cases": 3,
+    "R_critical_union_increase_each_minutes": 30,
+    "reduction_in_emissions_or_fees_does_not_offset_critical_service_losses": true
+  },
+  "physical_scope": {
+    "segments": 43084,
+    "saved_entries": 821992,
+    "saved_rows": 292626238,
+    "maximum_saved_violation": 5.5303743806689454e-08,
+    "independently_resolved_LPs": 0,
+    "saved_row_residuals_independently_recalculated": false
+  },
+  "limitations": [
+    "Fixed DOE prototype/weather-year case;12 source backgrounds are not12 hospitals or natural incident probabilities.",
+    "A has a limited general-electric-service/cost/emissions tradeoff, plus preserved tiny critical-electric ENS increases; not strict Pareto superiority.",
+    "Recovery and material-duration metrics remain distinct from per-carrier ENS and active disconnection.",
+    "Static boiler source-side auxiliaries and GT starter utilities remain unidentified common assumptions.",
+    "Temperature proxy, real fuel litres and OEM/clinical protection/ventilation are not validated by this energy-ledger acceptance.",
+    "Post-hoc explanatory process extraction does not change preregistered raw priorities or independent sample count."
+  ],
+  "remaining_delivery_checks": [
+    "Derived final12 exports",
+    "Final MATLAB figure QA and publication",
+    "Consolidated reports and closed package",
+    "Current-source fresh-archive365 replay and default pytest",
+    "Ordinary Git completion"
+  ],
+  "full_user_task_completed": false
+}

@@ -1,0 +1,98 @@
+{
+  "schema": "hospital_ies.root_actual_scientific_stage_acceptance.v1",
+  "created_utc": "2026-10-24T10:15:49.839785+00:00",
+  "reviewer": "root",
+  "stage": "hardware",
+  "stage_accepted": true,
+  "completed": 126,
+  "failed": 0,
+  "pending": 0,
+  "in_flight": 0,
+  "source_binding_sha256": "4dfe62ae105d2696b7782dc36c83ec63c6551e2cded601d6f15c0d4083058add",
+  "input_binding_sha256": "659ecc488bda87c9338afde283cbb74135ca2ebdf2769ce463d0e61f0c6288d8",
+  "jobfile_sha256": "2f4ae1fecca9db43ae5413f8a4dbd2f7344cb05e84735c247b398cfec40c9944",
+  "acceptance_scope": "Actual complete126 matched finite hardware effects and costs in four seen seasonal blocks; no winner requirement",
+  "seen_source_blocks": 4,
+  "compound_seen_source_blocks": 2,
+  "registered_scenes": 14,
+  "native_CA_groups": 56,
+  "supplemental_CAM_groups": 84,
+  "original27_STOP_and_new99_completed_records_preserved": true,
+  "candidate_parameters_reselected": false,
+  "clinical_certification": false,
+  "hardware_process_MATLAB_completed": false,
+  "all_study_work_complete": false,
+  "downstream_physics_started_by_this_command": 0,
+  "evidence": [
+    {
+      "path": "E:\\hospital_ies_v21_20261023\\reviews\\hardware126_root_terminal01\\ACTUAL126_TERMINAL_RECONCILIATION.json",
+      "sha256": "78c648d7b986b3e164630e46e205e4ac0cad51f4fea0618a202a0da1dc800b80",
+      "bytes": 86215
+    },
+    {
+      "path": "E:\\hospital_ies_v21_20261023\\hardware126_analysis01\\PARALLEL_ANALYSIS_RECEIPT.json",
+      "sha256": "14bb55011f3e47aa86e45de58ab013808dbdb6854457271c4fee1401a39c6084",
+      "bytes": 18018
+    },
+    {
+      "path": "E:\\hospital_ies_v21_20261023\\hardware126_review_execution01\\CASE_IDENTITY_GUARD.json",
+      "sha256": "c5fb7e31acdafce9f13f2766108e30cd99a3f4ca97af4c2edd17c5bc535475c6",
+      "bytes": 1420
+    },
+    {
+      "path": "E:\\hospital_ies_v21_20261023\\reviews\\hardware126_physical01\\original_auditor_output\\POOL_PHYSICAL_AUDIT_RECEIPT.json",
+      "sha256": "672befd14781ffcc3865d882b99d817a17580ad2ea6993df8c81b84d2598cb4c",
+      "bytes": 22804
+    },
+    {
+      "path": "E:\\hospital_ies_v21_20261023\\reviews\\hardware126_physical01\\FRESH_BYTE_PROOF.json",
+      "sha256": "5b7c07a93903cd6a75de83a3c864e78f957ef42e0155e9c02d28f40338ed8e96",
+      "bytes": 480924
+    },
+    {
+      "path": "E:\\hospital_ies_v21_20261023\\reviews\\hardware126_physical01\\ACTUAL_DELIVERY_RECEIPT.json",
+      "sha256": "67a0a93144cf92717c3970d2b432e9e716c4627ef1b28db3b244b211cfbc4165",
+      "bytes": 55529
+    },
+    {
+      "path": "E:\\hospital_ies_v21_20261023\\hardware126_engineering_supplement02\\SUPPLEMENT_RECEIPT.json",
+      "sha256": "67f433c4ae46dee1debbdf6ca038f489bd2032fcc01b1ed95de261564ac5e981",
+      "bytes": 4079
+    },
+    {
+      "path": "E:\\hospital_ies_v21_20261023\\reviews\\hardware126_engineering01\\AUTHOR_DELIVERY_RECEIPT02.json",
+      "sha256": "9c4649c3301a3c03f3d3666a005b811e246dfd065c6801534bbf437a2faa40c8",
+      "bytes": 26036
+    },
+    {
+      "path": "E:\\hospital_ies_v21_20261023\\reviews\\hardware126_engineering_independent01\\INDEPENDENT_REVIEW.json",
+      "sha256": "cf9efe2c3dd877a31b376660886483326ebfffc926344575dc7fc6035df6ca8c",
+      "bytes": 49880
+    },
+    {
+      "path": "E:\\hospital_ies_v21_20261023\\reviews\\hardware126_engineering_independent01\\DESCRIPTIVE_PROJECTION_REVIEW.json",
+      "sha256": "ac93eab849423f00a72bda78fa3d1f68014968d43bb37ef1ecc065b99beb3cc0",
+      "bytes": 5000
+    },
+    {
+      "path": "E:\\hospital_ies_v21_20261023\\hardware03\\HARDWARE_FREEZE.json",
+      "sha256": "6a2a2d9f447a10a70b5affab686079253b281c4cb56afff1d6aedf20175efe93",
+      "bytes": 1315577
+    },
+    {
+      "path": "E:\\hospital_ies_v21_20261023\\hardware03\\JOBS.json",
+      "sha256": "2f4ae1fecca9db43ae5413f8a4dbd2f7344cb05e84735c247b398cfec40c9944",
+      "bytes": 5837
+    },
+    {
+      "path": "E:\\hospital_ies_v21_20261023\\hardware03\\root_acceptance01\\ROOT_SCIENTIFIC_REVIEW.md",
+      "sha256": "b323f9b755f3289c42bd3db1e85c1ad59dfa5d82b036fbfd9daa1144008663eb",
+      "bytes": 3753
+    },
+    {
+      "path": "E:\\hospital_ies_v21_20261023\\hardware03\\root_acceptance01\\ROOT_TECHNICAL_VALIDATION.json",
+      "sha256": "c85cf438c713a8ab46c09e3493347856e801d880ca85b9db8d61786a0cc121f3",
+      "bytes": 28958
+    }
+  ]
+}

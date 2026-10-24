@@ -1,0 +1,36 @@
+{
+  "schema": "hospital_ies.external_paired_identity_guard.v1",
+  "created_utc": "2026-10-24T19:07:18.794467+00:00",
+  "guard_sha256": "a5da00dd353195a0d2891fd9a37e59332e9cea6319e83d09093f625e29dd0bb9",
+  "guard_is_scientific_acceptance": false,
+  "native_statistics_or_unknown_rows_modified": false,
+  "actual_physics_started": 0,
+  "status": "identity_guard_passed",
+  "check": {
+    "identity_row_count": 240,
+    "case_count": 240,
+    "phase_count": 1,
+    "phase_case_counts": {
+      "final_blind": 240
+    },
+    "status_counts": {
+      "completed": 240
+    },
+    "model_id": "M21_sci_engineering",
+    "source_binding_sha256": "4dfe62ae105d2696b7782dc36c83ec63c6551e2cded601d6f15c0d4083058add",
+    "policy_identity_count": 5,
+    "configuration_identity_count": 1,
+    "scene_identity_count": 48,
+    "phase_isolation": true,
+    "unknown_rows_retained": true,
+    "scientific_values_evaluated": false
+  },
+  "input_binding": {
+    "input_kind": "receipt_bound_case_table",
+    "path": "E:\\hospital_ies_v21_20261023\\final_blind01\\analysis01\\tables\\CASE_METRICS.csv",
+    "sha256": "3cab466b53b0080f666dce46f003a92fe3ad3c478e353033bc634d604011ac93",
+    "receipt_path": "E:\\hospital_ies_v21_20261023\\final_blind01\\analysis01\\tables\\ANALYSIS_RECEIPT.json",
+    "receipt_sha256": "57b6deccce55e751f7d5e333c73944482f0874e434ad8c36483635d751ce9e42",
+    "case_count": 240
+  }
+}

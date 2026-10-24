@@ -1,0 +1,246 @@
+{
+  "schema": "hospital_ies.hardware22_runtime_independent_qa.v1",
+  "status": "functional_and_structure_passed_new_visual_NOT_RUN_final12_zero_drift",
+  "started_utc": "2026-10-24T20:24:53.023897+00:00",
+  "finished_utc": "2026-10-24T20:24:54.862893+00:00",
+  "elapsed_seconds": 1.8393204999156296,
+  "exit_code": 0,
+  "original_runtime_command": {
+    "name": "actual_reexport_hardware22_01",
+    "command": [
+      "C:/Program Files/MATLAB/R2024b/bin/matlab.exe",
+      "-singleCompThread",
+      "-batch",
+      "addpath('D:/hospital_ies_v21_20261023/docs/v21/figures/hardware126_reexport_entry01');\nreexport_verified_hardware22_figs('D:/hospital_ies_v21_20261023/docs/v21/figures/hardware126_actual01','E:/hospital_ies_v21_20261023/reviews/hardware22_portable_runtime01/generated01');"
+    ],
+    "cwd": "D:\\hospital_ies_v21_20261023",
+    "started_utc": "2026-10-24T20:09:17.931751+00:00",
+    "finished_utc": "2026-10-24T20:13:24.348893+00:00",
+    "elapsed_seconds": 246.4177489001304,
+    "exit_code": 0,
+    "environment_overrides": {
+      "PYTHONDONTWRITEBYTECODE": "1",
+      "PYTHONIOENCODING": "utf-8"
+    }
+  },
+  "independent_original_scanner_commands": [
+    {
+      "name": "structure_f4_01",
+      "command": [
+        "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\python.exe",
+        "-B",
+        "E:\\hospital_ies_v21_20261023\\reviews\\matlab_artifact_qa03\\artifact_scan.py",
+        "--matlab-receipt",
+        "E:\\hospital_ies_v21_20261023\\reviews\\hardware22_portable_runtime01\\generated01\\final\\f4_figures\\PAGE_LEGEND_NATIVE_QA.json",
+        "--matlab-sha",
+        "3790515060211c37f7252e4b00f86da0fc9ff32e0505f5284fabc472336cd8fc",
+        "--output",
+        "E:\\hospital_ies_v21_20261023\\reviews\\hardware22_runtime_independent_qa01\\f4_structure01"
+      ],
+      "cwd": "D:\\hospital_ies_v21_20261023",
+      "started_utc": "2026-10-24T20:22:30.429163+00:00",
+      "finished_utc": "2026-10-24T20:22:30.589671+00:00",
+      "elapsed_seconds": 0.1605924000032246,
+      "exit_code": 0,
+      "environment_overrides": {
+        "PYTHONDONTWRITEBYTECODE": "1",
+        "PYTHONIOENCODING": "utf-8"
+      }
+    },
+    {
+      "name": "structure_hw18_01",
+      "command": [
+        "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\python.exe",
+        "-B",
+        "E:\\hospital_ies_v21_20261023\\reviews\\matlab_artifact_qa03\\artifact_scan.py",
+        "--matlab-receipt",
+        "E:\\hospital_ies_v21_20261023\\reviews\\hardware22_portable_runtime01\\generated01\\final\\hw18_figures\\PAGE_LEGEND_NATIVE_QA.json",
+        "--matlab-sha",
+        "706523dbbf4068e495f2a79756ea5680f04dc2ddc7b364a8a5f225d7da4405f0",
+        "--output",
+        "E:\\hospital_ies_v21_20261023\\reviews\\hardware22_runtime_independent_qa01\\hw18_structure01"
+      ],
+      "cwd": "D:\\hospital_ies_v21_20261023",
+      "started_utc": "2026-10-24T20:22:35.921637+00:00",
+      "finished_utc": "2026-10-24T20:22:36.478482+00:00",
+      "elapsed_seconds": 0.5566517999395728,
+      "exit_code": 0,
+      "environment_overrides": {
+        "PYTHONDONTWRITEBYTECODE": "1",
+        "PYTHONIOENCODING": "utf-8"
+      }
+    }
+  ],
+  "hardware_native_scope": {
+    "functional_entry_status": "passed_on_this_host_from_supplied_local_bundle",
+    "original_actual_MATLAB_command": {
+      "name": "actual_reexport_hardware22_01",
+      "command": [
+        "C:/Program Files/MATLAB/R2024b/bin/matlab.exe",
+        "-singleCompThread",
+        "-batch",
+        "addpath('D:/hospital_ies_v21_20261023/docs/v21/figures/hardware126_reexport_entry01');\nreexport_verified_hardware22_figs('D:/hospital_ies_v21_20261023/docs/v21/figures/hardware126_actual01','E:/hospital_ies_v21_20261023/reviews/hardware22_portable_runtime01/generated01');"
+      ],
+      "cwd": "D:\\hospital_ies_v21_20261023",
+      "started_utc": "2026-10-24T20:09:17.931751+00:00",
+      "finished_utc": "2026-10-24T20:13:24.348893+00:00",
+      "elapsed_seconds": 246.4177489001304,
+      "exit_code": 0,
+      "environment_overrides": {
+        "PYTHONDONTWRITEBYTECODE": "1",
+        "PYTHONIOENCODING": "utf-8"
+      }
+    },
+    "mode": "verified_initial_native_FIG_reexport_only_not_CSV_recomputation",
+    "input_contract_members_rehashed": 286,
+    "source_contract_bytes": 86225968,
+    "new_native_figures": 22,
+    "new_formats": 88,
+    "groups": [
+      {
+        "group": "f4_figures",
+        "count": 4,
+        "native_receipt": {
+          "path": "E:\\hospital_ies_v21_20261023\\reviews\\hardware22_portable_runtime01\\generated01\\final\\f4_figures\\PAGE_LEGEND_NATIVE_QA.json",
+          "bytes": 14052,
+          "sha256": "3790515060211c37f7252e4b00f86da0fc9ff32e0505f5284fabc472336cd8fc"
+        },
+        "fresh_structure_receipt": {
+          "path": "E:\\hospital_ies_v21_20261023\\reviews\\hardware22_runtime_independent_qa01\\f4_structure01\\ARTIFACT_STRUCTURE_QA.json",
+          "bytes": 46779,
+          "sha256": "b1514196b1e104f6c44be28f0360ab7b5fb29c8ac70de94b8e9faceedbb59d8f"
+        },
+        "scientific_snapshot_exact_all": true,
+        "yyaxis_limits_RGB_exact_all": true,
+        "explicit_HW18_vector_count": 0,
+        "font_scope": "Original exact923b execution asserts reopened FontName whitelist only; snapshot does not include per-object FontName/FontSize identity.",
+        "PDF_font_embedding_actual_bytes_checked": true,
+        "format_issue_count": 0,
+        "actual_new_full_page_visual_views": 0
+      },
+      {
+        "group": "hw18_figures",
+        "count": 18,
+        "native_receipt": {
+          "path": "E:\\hospital_ies_v21_20261023\\reviews\\hardware22_portable_runtime01\\generated01\\final\\hw18_figures\\PAGE_LEGEND_NATIVE_QA.json",
+          "bytes": 127130,
+          "sha256": "706523dbbf4068e495f2a79756ea5680f04dc2ddc7b364a8a5f225d7da4405f0"
+        },
+        "fresh_structure_receipt": {
+          "path": "E:\\hospital_ies_v21_20261023\\reviews\\hardware22_runtime_independent_qa01\\hw18_structure01\\ARTIFACT_STRUCTURE_QA.json",
+          "bytes": 476193,
+          "sha256": "ae6e384337044e289943ad96fb354fdfd312039bae829d2064eaa1a8cac994a6"
+        },
+        "scientific_snapshot_exact_all": true,
+        "yyaxis_limits_RGB_exact_all": true,
+        "explicit_HW18_vector_count": 324,
+        "font_scope": "Original exact923b execution asserts reopened FontName whitelist only; snapshot does not include per-object FontName/FontSize identity.",
+        "PDF_font_embedding_actual_bytes_checked": true,
+        "format_issue_count": 0,
+        "actual_new_full_page_visual_views": 0
+      }
+    ],
+    "source_and_output_hashes_rechecked": true,
+    "source_native_scientific_snapshots_and_saved_reopened_snapshot_assertions_passed": true,
+    "strict_font_identity_status": "NOT_INDEPENDENTLY_VERIFIED: original helper checks reopened FontName whitelist; no per-object FontName/FontSize snapshot equality",
+    "cross_machine_or_different_bundle_location_execution": "NOT_RUN",
+    "new44_complete_visual_pages": "NOT_RUN",
+    "historical44_full_page_visual_reviews_reused": false,
+    "old_preparation_comments_or_NOT_REEXECUTED_contract_markers": "Historical static source/contract text retained; actual new command and runtime receipt establish this current run.",
+    "scientific_gate": false,
+    "physics_started_by_this_QA": 0,
+    "MATLAB_started_by_this_QA": 0
+  },
+  "final12_mirrors": {
+    "file_count": 436,
+    "bytes": 67440140,
+    "drift_count": 0,
+    "publication_receipt": {
+      "path": "E:\\hospital_ies_v21_20261023\\reviews\\final12_publication01\\PUBLICATION_RECEIPT.json",
+      "bytes": 88203,
+      "sha256": "f6331743752a9040af8f6ffa0cdd263ae1e695e03886927e073c61336b4be300"
+    }
+  },
+  "input_bindings": [
+    {
+      "path": "D:\\hospital_ies_v21_20261023\\docs\\v21\\figures\\hardware126_reexport_entry01\\reexport_verified_hardware22_figs.m",
+      "bytes": 6942,
+      "sha256": "372cfad21543da5931170c6855ed278d46984dfd5cc4b86249d4f64d1410aa03"
+    },
+    {
+      "path": "D:\\hospital_ies_v21_20261023\\docs\\v21\\figures\\hardware126_reexport_entry01\\PORTABLE_INPUT_CONTRACT.json",
+      "bytes": 55572,
+      "sha256": "e960f63eb85cd915f264e65379d2126f4c4c91b0895c4edeb3ce6b7f2d252d08"
+    },
+    {
+      "path": "D:\\hospital_ies_v21_20261023\\docs\\v21\\figures\\hardware126_actual01\\code\\actual_entrypoints\\style_hardware_page_legends_v1.m",
+      "bytes": 9963,
+      "sha256": "923b7ef0269cf91f3dddaf581e5be8fe0b7b25d2bdc603fb18da6fbff46659b4"
+    },
+    {
+      "path": "D:\\hospital_ies_v21_20261023\\docs\\v21\\figures\\hardware126_actual01\\data_and_code\\f4_bundle\\LOCAL_DATA_MANIFEST.json",
+      "bytes": 10214,
+      "sha256": "da08cafd99494d49cee2f6c036e3bb83ca7715ed9c05ca05a0b855adaceb3905"
+    },
+    {
+      "path": "D:\\hospital_ies_v21_20261023\\docs\\v21\\figures\\hardware126_actual01\\data_and_code\\hw18\\HW18_ACTUAL_MANIFEST.json",
+      "bytes": 10203228,
+      "sha256": "8fa4872d98493c137f4abe4dabe3f1dacc694ff392aefa7632b5c5c24b1875a0"
+    },
+    {
+      "path": "E:\\hospital_ies_v21_20261023\\reviews\\hardware22_portable_runtime01\\generated01\\PORTABLE_FIG_REEXPORT_RECEIPT.json",
+      "bytes": 840,
+      "sha256": "101d988f66983b5c113f42d6be23d69da513de833069614635cd9d9523f516d7"
+    },
+    {
+      "path": "E:\\hospital_ies_v21_20261023\\reviews\\hardware22_portable_runtime01\\generated01\\final\\f4_figures\\PAGE_LEGEND_NATIVE_QA.json",
+      "bytes": 14052,
+      "sha256": "3790515060211c37f7252e4b00f86da0fc9ff32e0505f5284fabc472336cd8fc"
+    },
+    {
+      "path": "E:\\hospital_ies_v21_20261023\\reviews\\hardware22_portable_runtime01\\generated01\\final\\hw18_figures\\PAGE_LEGEND_NATIVE_QA.json",
+      "bytes": 127130,
+      "sha256": "706523dbbf4068e495f2a79756ea5680f04dc2ddc7b364a8a5f225d7da4405f0"
+    },
+    {
+      "path": "E:\\hospital_ies_v21_20261023\\reviews\\matlab_artifact_qa03\\artifact_scan.py",
+      "bytes": 9302,
+      "sha256": "6968f56762087ef4b9d82f666f8fc92ce02c10232161237a839f39ef9fb8bfd1"
+    },
+    {
+      "path": "E:\\hospital_ies_v21_20261023\\reviews\\final12_publication01\\PUBLICATION_RECEIPT.json",
+      "bytes": 88203,
+      "sha256": "f6331743752a9040af8f6ffa0cdd263ae1e695e03886927e073c61336b4be300"
+    }
+  ],
+  "output_references": [
+    {
+      "path": "E:\\hospital_ies_v21_20261023\\reviews\\hardware22_runtime_independent_qa01\\SOURCE_CONTRACT_CURRENT_BYTES.json",
+      "bytes": 75285,
+      "sha256": "d465fdaf77d1828163a7a8089352bc7ba621548a04a1e6af00ee3e13c21b7da2"
+    },
+    {
+      "path": "E:\\hospital_ies_v21_20261023\\reviews\\hardware22_runtime_independent_qa01\\GENERATED_HARDWARE_FILE_BINDINGS.json",
+      "bytes": 76234,
+      "sha256": "f3eac1b9e02b69fa367b7eee7017a4c383fec1de011bb5f75569decc323e084e"
+    },
+    {
+      "path": "E:\\hospital_ies_v21_20261023\\reviews\\hardware22_runtime_independent_qa01\\FINAL12_MIRROR_CURRENT_BYTES.json",
+      "bytes": 167830,
+      "sha256": "fc16658ec6196fe31d5a105c79d8a4800536c9fe13fa2a539a21059a8138cbcc"
+    },
+    {
+      "path": "E:\\hospital_ies_v21_20261023\\reviews\\hardware22_runtime_independent_qa01\\HARDWARE_NATIVE_AND_FORMAT_SCOPE.json",
+      "bytes": 4013,
+      "sha256": "fbaec56365271110f858e86709fd75a7e4b567a41c6afc8c585c1fdc307b8103"
+    },
+    {
+      "path": "E:\\hospital_ies_v21_20261023\\reviews\\hardware22_runtime_independent_qa01\\REVIEW.zh-CN.md",
+      "bytes": 2595,
+      "sha256": "7a6b3cd1b1ab95c0763133da10940524ea9cbad662f9fc6eeea0688b51d2899e"
+    }
+  ],
+  "no_existing_D_or_E_files_modified": true,
+  "scientific_gate_issued": false,
+  "new_visual_pages_actually_viewed": 0
+}

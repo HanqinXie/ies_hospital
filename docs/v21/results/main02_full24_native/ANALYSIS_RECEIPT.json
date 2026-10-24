@@ -1,0 +1,82 @@
+{
+  "schema": "hospital_ies.sci_analysis.v21.v1",
+  "files": [
+    {
+      "path": "ATTEMPT_STATUS.csv",
+      "sha256": "9761afde5a559131a2b1b3c0c493d6d6a9d9800d9c7b57bf4aa855b8fe3cbb5e",
+      "rows": 1920,
+      "columns": 13
+    },
+    {
+      "path": "CASE_METRICS.csv",
+      "sha256": "c422e894e3a31508b8230799e37b8d6591fb574ceff55fd3491a148216e29204",
+      "rows": 1920,
+      "columns": 290
+    },
+    {
+      "path": "CARRIER_SERVICE.csv",
+      "sha256": "2ef6438e4f48f7c8ef9fe681f677f731d646e76c9913ae8da43eb5de5cad8e33",
+      "rows": 23040,
+      "columns": 19
+    },
+    {
+      "path": "PAIRED_DIFFERENCES.csv",
+      "sha256": "b336c6c53bdd2f058299870812593c2554b7d894a6eb0893b39b8ec4c2516fb9",
+      "rows": 239616,
+      "columns": 15
+    },
+    {
+      "path": "RESOURCE_MEASUREMENTS.csv",
+      "sha256": "2df88b019f7905f4e2a1252aa767ff0f3b963d3142a5105b04f51a6439fd904d",
+      "rows": 1920,
+      "columns": 44
+    },
+    {
+      "path": "EVIDENCE_INTEGRITY_SUMMARY.csv",
+      "sha256": "a39d91088146cc328213d610e943a5a367e84627a20f0abe733d3f5e8abb2506",
+      "rows": 1,
+      "columns": 9
+    },
+    {
+      "path": "PAIRED_SUMMARY.csv",
+      "sha256": "5818edab8efde42d820d8a00fd174ae409cdbfca8eebeea493fcca493ccf2286",
+      "rows": 5616,
+      "columns": 31
+    },
+    {
+      "path": "MECHANISM_EFFECTS.csv",
+      "sha256": "f01a374e9c81e3db89b3a42940c4d6a5447684986a1296e42bf13f196eed6295",
+      "rows": 0,
+      "columns": 0
+    },
+    {
+      "path": "HARDWARE_DIFFERENCES.csv",
+      "sha256": "f01a374e9c81e3db89b3a42940c4d6a5447684986a1296e42bf13f196eed6295",
+      "rows": 0,
+      "columns": 0
+    },
+    {
+      "path": "DISTURBANCE_INTERACTIONS.csv",
+      "sha256": "f01a374e9c81e3db89b3a42940c4d6a5447684986a1296e42bf13f196eed6295",
+      "rows": 0,
+      "columns": 0
+    },
+    {
+      "path": "NECESSARY_BOUNDARY_CONDITIONS.csv",
+      "sha256": "f01a374e9c81e3db89b3a42940c4d6a5447684986a1296e42bf13f196eed6295",
+      "rows": 0,
+      "columns": 0
+    },
+    {
+      "path": "SCI_TABLES.mat",
+      "sha256": "cd5d91e7da385f04ce52b4386a31a12fc391b4146c826d97b0389f8dba1b01e7"
+    }
+  ],
+  "scientific_figures_generated": 0,
+  "final_plot_backend": "MATLAB only",
+  "carrier_energies_are_not_added": true,
+  "source_blocks_are_statistical_units": true,
+  "unknown_quantities_are_not_zero": true,
+  "mixed_windows_are_separate": true,
+  "emissions_are_conditional_post_run_CO2": true
+}

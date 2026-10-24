@@ -1,0 +1,114 @@
+{
+  "index": 227,
+  "case_identity": {
+    "phase": "final_blind",
+    "scenario_id": "m21_L2_3c1889b6306c398c1108",
+    "policy_id": "F_sci_v21",
+    "configuration_id": "H0",
+    "attempt_id": "attempt_0001",
+    "source_block_id": "m21_final12_62f12db0fd633b0f"
+  },
+  "pid": 96372,
+  "auditor_sha256": "a516d84d286e39f17be10e9624e3c681b1b5e73d8ab03789107437aa1d55d084",
+  "generic_sha256": "a4abf08e94dfe872cef5f1eaa4aecd94744be137566c82345b21b141eaa5e727",
+  "status": "audit_pass",
+  "physical": {
+    "segment_count": 325,
+    "observed_until_minute": 720.0,
+    "storage": {
+      "ups": {
+        "initial_inventory_kWh": 0.0,
+        "initial_paid_input_kWh": 0.0,
+        "charged_input_kWh": 0.0,
+        "discharged_kWh": 0.0,
+        "standing_loss_kWh": 0.0,
+        "conversion_loss_kWh": 0.0,
+        "event_discharged_kWh": 0.0,
+        "recovery_charged_input_kWh": 0.0,
+        "depleted_at_native_end_minute": null,
+        "final_inventory_kWh": 0.0,
+        "full_recharge_observed_by_horizon": true,
+        "recharge_status": "not_observed_in_available_tail",
+        "depletion_status": "not_observed"
+      },
+      "cold_store": {
+        "initial_inventory_kWh": 0.0,
+        "initial_paid_input_kWh": 0.0,
+        "charged_input_kWh": 0.0,
+        "discharged_kWh": 0.0,
+        "standing_loss_kWh": 0.0,
+        "conversion_loss_kWh": 0.0,
+        "event_discharged_kWh": 0.0,
+        "recovery_charged_input_kWh": 0.0,
+        "depleted_at_native_end_minute": null,
+        "final_inventory_kWh": 0.0,
+        "full_recharge_observed_by_horizon": true,
+        "recharge_status": "not_observed_in_available_tail",
+        "depletion_status": "not_observed"
+      }
+    },
+    "carrier_ENS_kWh": [
+      [
+        0.0008640769644285164,
+        0.0,
+        0.0
+      ],
+      [
+        0.0008640769644285164,
+        0.0,
+        0.0
+      ],
+      [
+        0.0008640769644285164,
+        0.0,
+        0.0
+      ],
+      [
+        0.08640769644285123,
+        0.0,
+        0.0
+      ]
+    ],
+    "fan_zero_P3_heat_kWh": 0.0,
+    "fan_source_trace_count": 0,
+    "maximum_electric_cold_residual_kW": 2.2737367544323206e-13,
+    "maximum_auxiliary_dependency_excess_kW": 0.0,
+    "cold_store_pump_electric_kWh": 0.0,
+    "DG_shaft_work_kWh": 0.0,
+    "event_P0_P1_e_ENS_kWh": 0.00032223816705292637,
+    "status": "pass",
+    "result_path": "E:\\hospital_ies_v21_20261023\\final_blind01\\experiments\\final_blind48_all5_H0\\pairs\\m21_L2_3c1889b6306c398c1108__F_sci_v21__H0\\attempt_0001\\RESULT.json",
+    "result_sha256": "2d4f0bd65c164087db669e174320791bb44e3780a1f577e903aa80f4b5aa604a",
+    "raw_path": "E:\\hospital_ies_v21_20261023\\raw\\final_blind01\\final_blind48_all5_H0\\m21_L2_3c1889b6306c398c1108__F_sci_v21__H0\\attempt_0001\\trajectory.json.gz",
+    "raw_sha256": "cfc92404a0877e2f303111d19acd4dbccea2d9330092868543c4d45a443e3513",
+    "solver_sidecar": {
+      "entry_count": 7236,
+      "row_count": 2023192,
+      "maximum_original_row_violation": 3.3259297538279498e-09,
+      "gzip_sha256": "cdda6a8efafd8cb6cd4b9f37fe39f98d537a92f92484d9904107e739d035e33d"
+    },
+    "scenario_id": "m21_L2_3c1889b6306c398c1108",
+    "policy_id": "F_sci_v21",
+    "configuration_id": "H0"
+  },
+  "original_pilot_result": null,
+  "every_original_field_equal": null,
+  "current_artifact_stats": [
+    {
+      "path": "E:\\hospital_ies_v21_20261023\\raw\\final_blind01\\final_blind48_all5_H0\\m21_L2_3c1889b6306c398c1108__F_sci_v21__H0\\attempt_0001\\trajectory.json.gz",
+      "bytes": 3600912,
+      "mtime_ns": 1792866060911408500
+    },
+    {
+      "path": "E:\\hospital_ies_v21_20261023\\raw\\final_blind01\\final_blind48_all5_H0\\m21_L2_3c1889b6306c398c1108__F_sci_v21__H0\\attempt_0001\\solver_rows.jsonl.gz",
+      "bytes": 24081299,
+      "mtime_ns": 1792866054971540200
+    }
+  ],
+  "elapsed_seconds": 11.899854800198227,
+  "cpu_seconds": 11.640625,
+  "memory": {
+    "os_peak_working_set_bytes": 473587712,
+    "private_bytes_at_end": 92536832
+  }
+}

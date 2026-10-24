@@ -1,0 +1,87 @@
+{
+  "schema": "hospital_ies.v21.event_timeline_export.v1",
+  "status": "completed",
+  "source_binding_sha256": "4dfe62ae105d2696b7782dc36c83ec63c6551e2cded601d6f15c0d4083058add",
+  "source_files_checked": 643,
+  "runtime_inputs_checked": 28,
+  "source_and_inputs_unchanged_after_export": true,
+  "result_path": "E:\\hospital_ies_v21_20261023\\hardware03\\experiments\\037_hardware_m21_hardware_compound_5478464ed043b4fef98f_H0\\pairs\\m21_hardware_compound_5478464ed043b4fef98f__A_sci_v21__H0\\attempt_0001\\RESULT.json",
+  "result_sha256": "25711b0b1bc7a1749672a0221b65fce1ed0353d3b2b1b3188062daad7df9dda9",
+  "freeze_path": "E:\\hospital_ies_v21_20261023\\hardware03\\HARDWARE_FREEZE.json",
+  "freeze_sha256": "6a2a2d9f447a10a70b5affab686079253b281c4cb56afff1d6aedf20175efe93",
+  "raw_path": "E:\\hospital_ies_v21_20261023\\raw\\hardware03\\037_hardware_m21_hardware_compound_5478464ed043b4fef98f_H0\\m21_hardware_compound_5478464ed043b4fef98f__A_sci_v21__H0\\attempt_0001\\trajectory.json.gz",
+  "raw_sha256": "e657cf1127ab0509ef1a10018272615fc71c41d6c490bb5abce44747abb6c42e",
+  "sidecar_sha256": "18325a1323692535e1c507b80ea7506c1ec2c0ba667592b15d53ae10405a8393",
+  "scenario_id": "m21_hardware_compound_5478464ed043b4fef98f",
+  "policy_id": "A_sci_v21",
+  "canonical_class": "X_GRID_ALL_GT0",
+  "configuration_id": "H0",
+  "native_process_receipt": {
+    "raw_path": "E:\\hospital_ies_v21_20261023\\raw\\hardware03\\037_hardware_m21_hardware_compound_5478464ed043b4fef98f_H0\\m21_hardware_compound_5478464ed043b4fef98f__A_sci_v21__H0\\attempt_0001\\trajectory.json.gz",
+    "raw_sha256": "e657cf1127ab0509ef1a10018272615fc71c41d6c490bb5abce44747abb6c42e",
+    "execution_model_id": "M21_sci_engineering",
+    "scenario_id": "m21_hardware_compound_5478464ed043b4fef98f",
+    "policy_id": "A_sci_v21",
+    "native_intervals": 55,
+    "resampled": false,
+    "observed_start_minute": 0.0,
+    "observed_end_minute": 360.0,
+    "process_csv_sha256": "83e7b7944d59d58102bbc45fea71852651c40788504222134a6fdb822eee7444",
+    "scientific_figures_generated": 0
+  },
+  "row_counts": {
+    "EVENTS": 194,
+    "SEGMENT_STATES": 55,
+    "DECISION_READINESS": 24,
+    "COMMAND_TIMELINE": 155
+  },
+  "unknown_fields": "Blank CSV cell, preserved native JSON null/absence; never forward filled",
+  "command_semantics": "Event command_executed dispatch is revalidated command permission, not delivered power; only native segment.action is actual supply",
+  "readiness_semantics": "Decision-time observed readiness is separate from segment pre/post fields; missing segment readiness remains unknown",
+  "native_order_retained": true,
+  "interpolation": false,
+  "physical_attempts_started": 0,
+  "scientific_figures_generated": 0,
+  "artifacts": [
+    {
+      "path": "COMMAND_TIMELINE.csv",
+      "bytes": 3566169,
+      "sha256": "45b4eb7adbe299fd0edfdc28b7ff897c4853a93b51e9ffd44b7aa7c9d063acbc"
+    },
+    {
+      "path": "DECISION_READINESS.csv",
+      "bytes": 7197886,
+      "sha256": "8a1002daf2742473af5c0fb1b3f1a36bb0826d7f50f17169d0bc6f935531f96d"
+    },
+    {
+      "path": "EVENTS.csv",
+      "bytes": 5424745,
+      "sha256": "4697a69b0988e32307329793a335d7b8a398fdd289fec8648df21a1813bcb1ac"
+    },
+    {
+      "path": "INITIAL_STATE.json",
+      "bytes": 1348,
+      "sha256": "0cd6ceb791f2c4dc7a7802eecc47d0a5b6a2ea438f378b9dedf534ccc7186a54"
+    },
+    {
+      "path": "native_process\\PROCESS.csv",
+      "bytes": 62891,
+      "sha256": "83e7b7944d59d58102bbc45fea71852651c40788504222134a6fdb822eee7444"
+    },
+    {
+      "path": "native_process\\PROCESS.mat",
+      "bytes": 5337,
+      "sha256": "a90b338f9900636d98f17e6b5fcc753be331a46522bf8e76bcfdde272ee4998c"
+    },
+    {
+      "path": "native_process\\PROCESS_RECEIPT.json",
+      "bytes": 694,
+      "sha256": "7082fcb9795477a3dac001549660a657a82e344d69743af250216c5a8eec461d"
+    },
+    {
+      "path": "SEGMENT_STATES.csv",
+      "bytes": 1296217,
+      "sha256": "097b35e3436f7e48535e8514d1b1798803b89496092a3af6d9a5de6832a2b57e"
+    }
+  ]
+}

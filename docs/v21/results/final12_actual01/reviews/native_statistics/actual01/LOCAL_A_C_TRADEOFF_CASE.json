@@ -1,0 +1,559 @@
+{
+  "schema": "hospital_ies.final12_local_A_C_summary_extract.v1",
+  "utc": "2026-10-24T19:21:17.675905+00:00",
+  "canonical_path": "E:\\hospital_ies_v21_20261023\\final_blind01\\analysis01\\TABLES.json.gz",
+  "canonical_sha256": "f70141272d4f62a20bd82d51991d36b33aa86cdeee201e3c05a02c7f877facd9",
+  "original_script_sha256": "ac132a1127428955c16922e7b452c37c892ee5ac70a6ed2d019b55769db8dc16",
+  "scenario": {
+    "scenario_id": "m21_L1_55e24889a6e1b237d15a",
+    "source_block_id": "m21_final12_b046c742da517542",
+    "season_quarter": 1,
+    "canonical_class": "L1",
+    "fault_target": "GRID",
+    "fault_availability": 0.0,
+    "fault_duration_minutes": 360.0,
+    "response_delay_minutes": 15.0,
+    "phase": "final_blind",
+    "window_minutes": 720.0,
+    "configuration_id": "H0"
+  },
+  "reference": {
+    "policy_id": "C_sci_v21",
+    "RESULT_path": "E:\\hospital_ies_v21_20261023\\final_blind01\\experiments\\final_blind48_all5_H0\\pairs\\m21_L1_55e24889a6e1b237d15a__C_sci_v21__H0\\attempt_0001\\RESULT.json",
+    "RESULT_sha256": "2f1dce0097d652596126f6544035d281aec35e6d855220e5e525d8f5e19df7f0"
+  },
+  "candidate": {
+    "policy_id": "A_sci_v21",
+    "RESULT_path": "E:\\hospital_ies_v21_20261023\\final_blind01\\experiments\\final_blind48_all5_H0\\pairs\\m21_L1_55e24889a6e1b237d15a__A_sci_v21__H0\\attempt_0001\\RESULT.json",
+    "RESULT_sha256": "b5b20e1ad2887c6e1884a38855f3437ead42c9980c8c4bc4e937e125679d6ad0"
+  },
+  "original_values_and_deltas": [
+    {
+      "metric": "P3_e_requested_kWh",
+      "reference_C": 3126.74009390373,
+      "candidate_A": 3126.74009390373,
+      "A_minus_C": 0.0
+    },
+    {
+      "metric": "P3_e_delivered_kWh",
+      "reference_C": 3051.1500918749903,
+      "candidate_A": 3055.213257984281,
+      "A_minus_C": 4.063166109290705
+    },
+    {
+      "metric": "P3_e_ENS_kWh",
+      "reference_C": 75.59000202874498,
+      "candidate_A": 71.52683591945393,
+      "A_minus_C": -4.063166109291046
+    },
+    {
+      "metric": "P3_e_disconnected_ENS_kWh",
+      "reference_C": 9.29642296725224,
+      "candidate_A": 5.233216225893745,
+      "A_minus_C": -4.063206741358496
+    },
+    {
+      "metric": "P3_e_connected_unserved_ENS_kWh",
+      "reference_C": 66.29357906149275,
+      "candidate_A": 66.29361969356019,
+      "A_minus_C": 4.0632067438650665e-05
+    },
+    {
+      "metric": "P3_e_material_minutes",
+      "reference_C": 135.25,
+      "candidate_A": 75.25,
+      "A_minus_C": -60.0
+    },
+    {
+      "metric": "P3_e_longest_material_minutes",
+      "reference_C": 120.0,
+      "candidate_A": 60.0,
+      "A_minus_C": -60.0
+    },
+    {
+      "metric": "P3_e_interruption_count",
+      "reference_C": 3.0,
+      "candidate_A": 3.0,
+      "A_minus_C": 0.0
+    },
+    {
+      "metric": "P3_e_repeat_interruption_count",
+      "reference_C": 2.0,
+      "candidate_A": 2.0,
+      "A_minus_C": 0.0
+    },
+    {
+      "metric": "P3_h_requested_kWh",
+      "reference_C": 676.1989003205591,
+      "candidate_A": 676.1989003205591,
+      "A_minus_C": 0.0
+    },
+    {
+      "metric": "P3_h_delivered_kWh",
+      "reference_C": 669.6074478178092,
+      "candidate_A": 669.6074478178092,
+      "A_minus_C": 0.0
+    },
+    {
+      "metric": "P3_h_ENS_kWh",
+      "reference_C": 6.5914525027498625,
+      "candidate_A": 6.5914525027498625,
+      "A_minus_C": 0.0
+    },
+    {
+      "metric": "P3_h_disconnected_ENS_kWh",
+      "reference_C": 0.0,
+      "candidate_A": 0.0,
+      "A_minus_C": 0.0
+    },
+    {
+      "metric": "P3_h_connected_unserved_ENS_kWh",
+      "reference_C": 6.5914525027498625,
+      "candidate_A": 6.5914525027498625,
+      "A_minus_C": 0.0
+    },
+    {
+      "metric": "P3_h_material_minutes",
+      "reference_C": 15.0,
+      "candidate_A": 15.0,
+      "A_minus_C": 0.0
+    },
+    {
+      "metric": "P3_h_longest_material_minutes",
+      "reference_C": 15.0,
+      "candidate_A": 15.0,
+      "A_minus_C": 0.0
+    },
+    {
+      "metric": "P3_h_interruption_count",
+      "reference_C": 1.0,
+      "candidate_A": 1.0,
+      "A_minus_C": 0.0
+    },
+    {
+      "metric": "P3_h_repeat_interruption_count",
+      "reference_C": 0.0,
+      "candidate_A": 0.0,
+      "A_minus_C": 0.0
+    },
+    {
+      "metric": "P3_c_requested_kWh",
+      "reference_C": 2784.4763890927884,
+      "candidate_A": 2784.4763890927884,
+      "A_minus_C": 0.0
+    },
+    {
+      "metric": "P3_c_delivered_kWh",
+      "reference_C": 2763.0321359770837,
+      "candidate_A": 2763.0321359770837,
+      "A_minus_C": 0.0
+    },
+    {
+      "metric": "P3_c_ENS_kWh",
+      "reference_C": 21.444253115704356,
+      "candidate_A": 21.444253115704356,
+      "A_minus_C": 0.0
+    },
+    {
+      "metric": "P3_c_disconnected_ENS_kWh",
+      "reference_C": 0.0,
+      "candidate_A": 0.0,
+      "A_minus_C": 0.0
+    },
+    {
+      "metric": "P3_c_connected_unserved_ENS_kWh",
+      "reference_C": 21.444253115704356,
+      "candidate_A": 21.444253115704356,
+      "A_minus_C": 0.0
+    },
+    {
+      "metric": "P3_c_material_minutes",
+      "reference_C": 15.0,
+      "candidate_A": 15.0,
+      "A_minus_C": 0.0
+    },
+    {
+      "metric": "P3_c_longest_material_minutes",
+      "reference_C": 15.0,
+      "candidate_A": 15.0,
+      "A_minus_C": 0.0
+    },
+    {
+      "metric": "P3_c_interruption_count",
+      "reference_C": 1.0,
+      "candidate_A": 1.0,
+      "A_minus_C": 0.0
+    },
+    {
+      "metric": "P3_c_repeat_interruption_count",
+      "reference_C": 0.0,
+      "candidate_A": 0.0,
+      "A_minus_C": 0.0
+    },
+    {
+      "metric": "P3_union_material_minutes",
+      "reference_C": 135.25,
+      "candidate_A": 75.25,
+      "A_minus_C": -60.0
+    },
+    {
+      "metric": "P3_union_longest_material_minutes",
+      "reference_C": 120.0,
+      "candidate_A": 60.0,
+      "A_minus_C": -60.0
+    },
+    {
+      "metric": "P3_union_interruption_count",
+      "reference_C": 3.0,
+      "candidate_A": 3.0,
+      "A_minus_C": 0.0
+    },
+    {
+      "metric": "P3_union_repeat_interruption_count",
+      "reference_C": 2.0,
+      "candidate_A": 2.0,
+      "A_minus_C": 0.0
+    },
+    {
+      "metric": "critical_union_minutes",
+      "reference_C": 0.0,
+      "candidate_A": 0.0,
+      "A_minus_C": 0.0
+    },
+    {
+      "metric": "critical_initial_handoff_gap_minutes",
+      "reference_C": 0,
+      "candidate_A": 0,
+      "A_minus_C": 0
+    },
+    {
+      "metric": "critical_post_handoff_gap_minutes",
+      "reference_C": 0,
+      "candidate_A": 0,
+      "A_minus_C": 0
+    },
+    {
+      "metric": "critical_recovery_gap_minutes",
+      "reference_C": 0,
+      "candidate_A": 0,
+      "A_minus_C": 0
+    },
+    {
+      "metric": "energy_cost_USD",
+      "reference_C": 505.5349974791259,
+      "candidate_A": 506.7539383203635,
+      "A_minus_C": 1.218940841237611
+    },
+    {
+      "metric": "total_CO2_kg_conditional",
+      "reference_C": 3405.9256081041112,
+      "candidate_A": 3408.7604574522893,
+      "A_minus_C": 2.834849348178068
+    },
+    {
+      "metric": "phase_recovery_P3_e_ENS_kWh",
+      "reference_C": 0.3911963438108626,
+      "candidate_A": 0.3911963438108626,
+      "A_minus_C": 0.0
+    },
+    {
+      "metric": "phase_recovery_P3_h_ENS_kWh",
+      "reference_C": 0.0,
+      "candidate_A": 0.0,
+      "A_minus_C": 0.0
+    },
+    {
+      "metric": "phase_recovery_P3_c_ENS_kWh",
+      "reference_C": 0.0,
+      "candidate_A": 0.0,
+      "A_minus_C": 0.0
+    },
+    {
+      "metric": "P0_e_ENS_kWh",
+      "reference_C": 0.0004246855428130813,
+      "candidate_A": 0.0004250918634872172,
+      "A_minus_C": 4.063206741358955e-07
+    },
+    {
+      "metric": "P0_h_ENS_kWh",
+      "reference_C": 0.0,
+      "candidate_A": 0.0,
+      "A_minus_C": 0.0
+    },
+    {
+      "metric": "P0_c_ENS_kWh",
+      "reference_C": 0.0,
+      "candidate_A": 0.0,
+      "A_minus_C": 0.0
+    },
+    {
+      "metric": "P1_e_ENS_kWh",
+      "reference_C": 0.0004246855428130813,
+      "candidate_A": 0.0004250918634872172,
+      "A_minus_C": 4.063206741358955e-07
+    },
+    {
+      "metric": "P1_h_ENS_kWh",
+      "reference_C": 0.0,
+      "candidate_A": 0.0,
+      "A_minus_C": 0.0
+    },
+    {
+      "metric": "P1_c_ENS_kWh",
+      "reference_C": 0.0,
+      "candidate_A": 0.0,
+      "A_minus_C": 0.0
+    },
+    {
+      "metric": "P2_e_ENS_kWh",
+      "reference_C": 0.0004246855428130813,
+      "candidate_A": 0.0004250918634872172,
+      "A_minus_C": 4.063206741358955e-07
+    },
+    {
+      "metric": "P2_h_ENS_kWh",
+      "reference_C": 0.0,
+      "candidate_A": 0.0,
+      "A_minus_C": 0.0
+    },
+    {
+      "metric": "P2_c_ENS_kWh",
+      "reference_C": 0.0,
+      "candidate_A": 0.0,
+      "A_minus_C": 0.0
+    }
+  ],
+  "critical_material33_plus_gap3_global_exactness": [
+    {
+      "metric": "P0_e_material_minutes",
+      "exact_equal_pairs": 48,
+      "registered_pairs": 48
+    },
+    {
+      "metric": "P0_e_longest_material_minutes",
+      "exact_equal_pairs": 48,
+      "registered_pairs": 48
+    },
+    {
+      "metric": "P0_e_interruption_count",
+      "exact_equal_pairs": 48,
+      "registered_pairs": 48
+    },
+    {
+      "metric": "P0_e_repeat_interruption_count",
+      "exact_equal_pairs": 48,
+      "registered_pairs": 48
+    },
+    {
+      "metric": "P0_h_material_minutes",
+      "exact_equal_pairs": 48,
+      "registered_pairs": 48
+    },
+    {
+      "metric": "P0_h_longest_material_minutes",
+      "exact_equal_pairs": 48,
+      "registered_pairs": 48
+    },
+    {
+      "metric": "P0_h_interruption_count",
+      "exact_equal_pairs": 48,
+      "registered_pairs": 48
+    },
+    {
+      "metric": "P0_h_repeat_interruption_count",
+      "exact_equal_pairs": 48,
+      "registered_pairs": 48
+    },
+    {
+      "metric": "P0_c_material_minutes",
+      "exact_equal_pairs": 48,
+      "registered_pairs": 48
+    },
+    {
+      "metric": "P0_c_longest_material_minutes",
+      "exact_equal_pairs": 48,
+      "registered_pairs": 48
+    },
+    {
+      "metric": "P0_c_interruption_count",
+      "exact_equal_pairs": 48,
+      "registered_pairs": 48
+    },
+    {
+      "metric": "P0_c_repeat_interruption_count",
+      "exact_equal_pairs": 48,
+      "registered_pairs": 48
+    },
+    {
+      "metric": "P1_e_material_minutes",
+      "exact_equal_pairs": 48,
+      "registered_pairs": 48
+    },
+    {
+      "metric": "P1_e_longest_material_minutes",
+      "exact_equal_pairs": 48,
+      "registered_pairs": 48
+    },
+    {
+      "metric": "P1_e_interruption_count",
+      "exact_equal_pairs": 48,
+      "registered_pairs": 48
+    },
+    {
+      "metric": "P1_e_repeat_interruption_count",
+      "exact_equal_pairs": 48,
+      "registered_pairs": 48
+    },
+    {
+      "metric": "P1_h_material_minutes",
+      "exact_equal_pairs": 48,
+      "registered_pairs": 48
+    },
+    {
+      "metric": "P1_h_longest_material_minutes",
+      "exact_equal_pairs": 48,
+      "registered_pairs": 48
+    },
+    {
+      "metric": "P1_h_interruption_count",
+      "exact_equal_pairs": 48,
+      "registered_pairs": 48
+    },
+    {
+      "metric": "P1_h_repeat_interruption_count",
+      "exact_equal_pairs": 48,
+      "registered_pairs": 48
+    },
+    {
+      "metric": "P1_c_material_minutes",
+      "exact_equal_pairs": 48,
+      "registered_pairs": 48
+    },
+    {
+      "metric": "P1_c_longest_material_minutes",
+      "exact_equal_pairs": 48,
+      "registered_pairs": 48
+    },
+    {
+      "metric": "P1_c_interruption_count",
+      "exact_equal_pairs": 48,
+      "registered_pairs": 48
+    },
+    {
+      "metric": "P1_c_repeat_interruption_count",
+      "exact_equal_pairs": 48,
+      "registered_pairs": 48
+    },
+    {
+      "metric": "P0_union_material_minutes",
+      "exact_equal_pairs": 48,
+      "registered_pairs": 48
+    },
+    {
+      "metric": "P0_union_longest_material_minutes",
+      "exact_equal_pairs": 48,
+      "registered_pairs": 48
+    },
+    {
+      "metric": "P0_union_interruption_count",
+      "exact_equal_pairs": 48,
+      "registered_pairs": 48
+    },
+    {
+      "metric": "P0_union_repeat_interruption_count",
+      "exact_equal_pairs": 48,
+      "registered_pairs": 48
+    },
+    {
+      "metric": "P1_union_material_minutes",
+      "exact_equal_pairs": 48,
+      "registered_pairs": 48
+    },
+    {
+      "metric": "P1_union_longest_material_minutes",
+      "exact_equal_pairs": 48,
+      "registered_pairs": 48
+    },
+    {
+      "metric": "P1_union_interruption_count",
+      "exact_equal_pairs": 48,
+      "registered_pairs": 48
+    },
+    {
+      "metric": "P1_union_repeat_interruption_count",
+      "exact_equal_pairs": 48,
+      "registered_pairs": 48
+    },
+    {
+      "metric": "critical_union_minutes",
+      "exact_equal_pairs": 48,
+      "registered_pairs": 48
+    },
+    {
+      "metric": "critical_initial_handoff_gap_minutes",
+      "exact_equal_pairs": 48,
+      "registered_pairs": 48
+    },
+    {
+      "metric": "critical_post_handoff_gap_minutes",
+      "exact_equal_pairs": 48,
+      "registered_pairs": 48
+    },
+    {
+      "metric": "critical_recovery_gap_minutes",
+      "exact_equal_pairs": 48,
+      "registered_pairs": 48
+    }
+  ],
+  "critical_ENS_global_exactness": [
+    {
+      "metric": "P0_e_ENS_kWh",
+      "nonzero_pairs": [
+        {
+          "scenario_id": "m21_L1_55e24889a6e1b237d15a",
+          "A_minus_C": 4.063206741358955e-07
+        }
+      ],
+      "exact_equal_pairs": 47
+    },
+    {
+      "metric": "P0_h_ENS_kWh",
+      "nonzero_pairs": [],
+      "exact_equal_pairs": 48
+    },
+    {
+      "metric": "P0_c_ENS_kWh",
+      "nonzero_pairs": [],
+      "exact_equal_pairs": 48
+    },
+    {
+      "metric": "P1_e_ENS_kWh",
+      "nonzero_pairs": [
+        {
+          "scenario_id": "m21_L1_55e24889a6e1b237d15a",
+          "A_minus_C": 4.063206741358955e-07
+        }
+      ],
+      "exact_equal_pairs": 47
+    },
+    {
+      "metric": "P1_h_ENS_kWh",
+      "nonzero_pairs": [],
+      "exact_equal_pairs": 48
+    },
+    {
+      "metric": "P1_c_ENS_kWh",
+      "nonzero_pairs": [],
+      "exact_equal_pairs": 48
+    }
+  ],
+  "raw_or_sidecar_read": false,
+  "new_process_or_causal_reconstruction": false,
+  "NOT_GATE": true,
+  "NOT_NEW_INDEPENDENT_POOL": true,
+  "limits": [
+    "This is a post-hoc descriptive summary case, not a new representative raw selection.",
+    "P3 phase-recovery ENS equality is not a measured general-service restoration-time certificate.",
+    "Per-GT protection-trip timing/devices and the cause of this A/C tradeoff require separate authorized process evidence."
+  ]
+}

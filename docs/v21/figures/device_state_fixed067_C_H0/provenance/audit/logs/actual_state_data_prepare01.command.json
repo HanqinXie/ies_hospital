@@ -1,0 +1,27 @@
+{
+  "name": "actual_state_data_prepare01",
+  "command": [
+    "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\python.exe",
+    "-B",
+    "E:\\hospital_ies_v21_20261023\\reviews\\fixed067_state_figure01\\prepare_state.py",
+    "--export-receipt",
+    "E:\\hospital_ies_v21_20261023\\reviews\\fixed_process_actual252_01\\commands02\\exports\\02\\EXPORT_RECEIPT.json",
+    "--export-sha",
+    "7c4b46aded034089278ac8cef0561f616012e2ab323cf7089a4daf1ae48b50df",
+    "--contract-receipt",
+    "E:\\hospital_ies_v21_20261023\\reviews\\fixed067_state_contract01\\RECEIPT.json",
+    "--contract-sha",
+    "ae4a9f2a360169bfbf8a59f88eac632025feb5a6df6002dcff639af038a36409",
+    "--output",
+    "E:\\hospital_ies_v21_20261023\\reviews\\fixed067_state_figure01\\data01"
+  ],
+  "cwd": "D:\\云大文件\\论文\\医院ies\\code_4_2",
+  "started_utc": "2026-10-24T09:01:34.495503+00:00",
+  "finished_utc": "2026-10-24T09:01:34.937413+00:00",
+  "elapsed_seconds": 0.4411510997451842,
+  "exit_code": 0,
+  "environment_overrides": {
+    "PYTHONDONTWRITEBYTECODE": "1",
+    "PYTHONIOENCODING": "utf-8"
+  }
+}

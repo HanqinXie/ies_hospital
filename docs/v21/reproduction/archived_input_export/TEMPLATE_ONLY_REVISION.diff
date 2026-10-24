@@ -1,0 +1,33 @@
+--- parent_d805
++++ child_rev2
+@@ -179,12 +179,28 @@
+         independent_validation_claim=False,final_release_requested=False,
+         exported_fields=[dict(field=name,path=file,bytes=len(pieces[name]),sha256=sha(output/file),canonical_value_sha256=digest(plan[name])) for name,file in FIELDS.items()])
+     with (output/'SOURCE_MANIFEST.json').open('x',encoding='utf8') as stream:json.dump(values,stream,indent=2,ensure_ascii=True,allow_nan=False)
+-    with (output/'FUTURE_COMMANDS.json').open('x',encoding='utf8') as stream:json.dump(dict(cwd=str(root),not_executed=True,argv=commands),stream,indent=2)
++    preflight=[dict(path=str(output/'SOURCE_MANIFEST.json'),sha256=sha(output/'SOURCE_MANIFEST.json'))]
++    preflight += [dict(path=str(output/row['path']),sha256=row['sha256']) for row in values['exported_fields']]
++    execution_contract=dict(future_root_must_not_exist=str(future_root),required_current_file_sha256=preflight,
++        stop_on_first_nonzero_exit=True,check_exit_after_each_native_command=True,
++        retry_or_adopt_existing_campaign=False)
++    with (output/'FUTURE_COMMANDS.json').open('x',encoding='utf8') as stream:json.dump(dict(cwd=str(root),not_executed=True,
++        execution_contract=execution_contract,argv=commands),stream,indent=2)
+     quote=lambda s:"'"+s.replace("'","''")+"'"
+     with (output/'FUTURE_COMMANDS.ps1.txt').open('x',encoding='utf8') as stream:
+         stream.write('# NOT EXECUTED. Fresh future reproduction, not a current-study attempt or independent validation.\n')
++        stream.write("$ErrorActionPreference = 'Stop'\n")
++        stream.write('if (Test-Path -LiteralPath '+quote(str(future_root))+
++            ") { throw 'Future reproduction root already exists; no retry or adoption is permitted.' }\n")
++        for row in preflight:
++            stream.write('if ((Get-FileHash -LiteralPath '+quote(row['path'])+" -Algorithm SHA256).Hash -ne "+quote(row['sha256'])+
++                ") { throw 'Exported reproduction input or manifest SHA drift; no native command started.' }\n")
+         stream.write('Set-Location -LiteralPath '+quote(str(root))+'\n')
+-        stream.write('\n'.join('& '+' '.join(quote(s) for s in command) for command in commands)+'\n')
++        for index,command in enumerate(commands,1):
++            stream.write('& '+' '.join(quote(s) for s in command)+'\n')
++            stream.write('$nativeExit = $LASTEXITCODE\n')
++            stream.write('if ($nativeExit -ne 0) { throw "Native reproduction step '+str(index)+
++                ' failed (exit $nativeExit); later steps are not started." }\n')
+     need(sha(plan_path)==plan_sha and sha(freeze_path)==freeze_sha,'Archive drift after export; retain output as rejected evidence')
+     return values
+ 

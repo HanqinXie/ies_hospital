@@ -1,4 +1,38 @@
-# 医院综合能源系统研究模型 V20
+# 医院综合能源系统研究模型 V21
+
+V21（`M21_sci_engineering`）研究医院关键服务在故障、保护传播许可、需求冲击及两者叠加时的接续、持续供能与恢复。共同模型纳入风机和水泵依赖、有限UPS与蓄冷、实际设备就绪与命令到达、有限柴油轴功等效预算；R、M、F、C、A五方案使用同一物理核心、合法观测和评价。没有MPC或未来故障/真实修复时刻信息。
+
+**科学阶段及归档复现/默认测试已验收，最终普通Git提交/推送状态以Git和外置最终回执为准，不由本proof代签。** a5d3ed7/source4dfe共同源码已实际通过692项回归（另1项可选SQL检查跳过）及45条工程资格。主1920、Q1补充240、支持252、必要界112、硬件126及最终旧十二背景240均已实际完成并接受；原256中4条构造失败保持未知。硬件22图和最终12背景F1/F2均已实际生成、重开、检查格式并完成完整页面视觉审查，已发布数据/代码与正式图。科学计算、审查与正式图件已完成；冻结紧凑ZIP已通过成员核验与新解压，当前4dfe源实际完成365/365标量完整重放及新默认pytest（692 passed, 1 skipped in 218.45s (0:03:38)）。最终普通Git提交/推送状态以Git和外置最终回执为准，不由本proof代签；本次归档与运行证据见交付验证说明。
+
+主19与Q1补充池中A/C的原服务平局各自仍成立。final12中，A/C关键material时间/次数和三阶段gap相同，但一个L1电网案例的P0/P1电ENS各增加4.063206741e−7 kWh；P3电material少60 min、少供电量少4.063166 kWh，伴随费用多1.21894084历史2001 USD和条件CO2多2.83484935 kg，初始与恢复窗不变。这是有限一般电服务取舍，不能写成全面关键优势或严格Pareto改善。R仍有额外关键中断，F/M并集平局也不等于所有ENS相同。保留电力不能跨过坏风机、水泵和共享散热端。详见[工程研究报告](docs/v21/SCI_ENGINEERING_REPORT.md)。
+
+- [共同模型与研究假设](docs/v21/MODEL_SPECIFICATION.md)
+- [情景、五方案与数据边界](docs/v21/SCENARIO_AND_POLICY_PROTOCOL.md)
+- [参数与来源登记](docs/v21/PARAMETER_AND_SOURCE_REGISTER.csv)
+- [完整结果与来源索引](docs/v21/results/README.md)
+- [MATLAB可编辑图表](docs/v21/figures/)
+- [安装、代表运行与复核](docs/v21/REPRODUCTION.md)
+- [本次ZIP、当前源365与默认测试的外置验收](docs/v21/DELIVERY_VERIFICATION.md)
+
+主1920、Q1补充240、支持252、硬件126、最终240这五个实际科学池共2778条轨迹；必要界112属于支持252子集，作为第六科学阶段单独审计但不再加112。原后续master256另有4条构造失败/UNKNOWN，不能当作已执行事故或补零。primary19、Q1_3、final12分别以19、3、12个源块为统计单位，不合并CI，也不是34家医院。
+
+最终12背景[结果与审查](docs/v21/results/final12_actual01/README.md)、[正式F1/F2与本地重画配方](docs/v21/figures/final12_actual01/README.md)已发布；该配方的后续实际本地功能重绘现已通过，原镜像README保留复制时未运行身份；新输出未另重复四完整页视觉，详见复现说明。硬件已验证原生FIG的本地再导出已于2026-10-24 20:13:24 UTC取得真实exit0（246.4177489 s），输出为E:/hospital_ies_v21_20261023/reviews/hardware22_portable_runtime01/generated01；4+18 FIG及88新格式、源FIG至staging链和native snapshot数据exact检查通过，原scanner两组均exit0。字体验收为宋体/Times白名单和PDF嵌入，不证明逐对象FontName/Size前后exact；新44完整页视觉未重复，不能继承原正式22图的44页视觉接受。它是原生FIG再导出，不是CSV重算或科学重放。实际小证明已发布于docs/v21/figures/functional_entry_checks01/README.md。
+
+本仓库README是研究总述。本次已验收紧凑包项目根README取自已冻结guarded复现overlay，SHA为`6e36c6bf125f23e6a0d8c008523aeb2f59120721f537c9fddb485b99115bd0fd`，不承诺与本文件字节相同；overlay及其4+7固定复现文件本次未改。
+
+在新的D/E盘目录安装依赖并执行现有默认测试：
+
+```powershell
+python -m pip install -r docs/v21/reproduction/requirements.txt
+python -m pytest -q
+```
+
+求解需要有效Gurobi许可，交付不含许可证。最终科学图使用MATLAB R2024b，包含FIG、SVG、PDF、600 dpi PNG、绘图代码和CSV/MAT。EnergyPlus独立校验及重新抽取原始SQL需要另行具备原始资料；已发布辅助电CSV可用于日常M21运行。临床房间回路、厂家暂态和环境合规仍是明确限制，不能由聚合服务模型代替。
+
+<details>
+<summary>V20历史说明与原结果（保留原身份）</summary>
+
+# 医院综合能源系统研究模型 V20（历史）
 
 **M20_load_accounting** 修正关键区域负荷分级的重复倍率，并在同一新口径下重跑四类情景比较。原始四份8760小时负荷表、IDF、天气及设备参数保留原字节；不增加设备能力、MPC、未来故障信息或放宽服务判据。
 
@@ -62,3 +96,5 @@ M20调度不要求第三方论文及来源PDF/XLSX；原审查SQL、完整Energy
 本系统是DOE医院原型与历史能源站资料构成的聚合研究模型；P0–P3是功能区代理优先级，缺少真实关键回路、厂家暂态、配电潮流和临床验证。DG轴功预算不是柴油体积，条件运行CO₂不是完整生命周期CO₂e；温度未越限不能抵销实质缺冷。
 
 当前入口位于 `tools/load_accounting/` 与 `scripts/v20_*.py`。旧命名模块和小型fixture中仍有继承实现与回归依赖，保留原路径并登记用途；旧训练/审计入口不作为本轮运行命令。
+
+</details>

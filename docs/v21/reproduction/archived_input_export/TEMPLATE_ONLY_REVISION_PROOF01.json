@@ -1,0 +1,56 @@
+{
+  "schema": "hospital_ies.reproduction_template_revision_proof.v2",
+  "parent_runtime_sha256": "d8055f33893fdc7debdfd564f1c0990835d0d219db63488c3c74387421502c2a",
+  "current_runtime_sha256": "6f74470ef7554fd00fb10624a301f0bb5eeac5dcf7cb23c10dbdd9a9c7e93cfb",
+  "changed_functions": [
+    "export"
+  ],
+  "other_function_AST_identical": true,
+  "export_prefix_through_manifest_write_exact": true,
+  "export_suffix_from_archive_drift_check_exact": true,
+  "original_22_test_source_exact": true,
+  "parent_44_members_byte_identical": true,
+  "original_input_field_comparisons": [
+    {
+      "export": "actual_main_L2_01",
+      "field": "PANEL.json",
+      "sha256": "0a1eaa1bc36eb1a6c671d7215bf35fd7ab2aec47346830eae18dd997d8d15e5f"
+    },
+    {
+      "export": "actual_main_L2_01",
+      "field": "POLICY_SPECS.json",
+      "sha256": "012a8a9829af72af403cfef0e0cd0342fbb6224a90ab444164208f16e0a08bc8"
+    },
+    {
+      "export": "actual_main_L2_01",
+      "field": "CONFIGURATIONS.json",
+      "sha256": "67ac5b5f538921b73628484db9fad70acbd35459476f184c3077d5dac81139c9"
+    },
+    {
+      "export": "actual_pilot_H2_01",
+      "field": "PANEL.json",
+      "sha256": "2a8923e2107710a957ebc59c34ec0831156ff2624d8de71bf66c9e8092156c06"
+    },
+    {
+      "export": "actual_pilot_H2_01",
+      "field": "POLICY_SPECS.json",
+      "sha256": "568098da277486b48462dfc0af56b17518ed7fc8019c85172b9d61cc3ff12090"
+    },
+    {
+      "export": "actual_pilot_H2_01",
+      "field": "CONFIGURATIONS.json",
+      "sha256": "9c9b3ef0b04e23646b5e9f94f7ab3bc576962342c19ab1e2790b44938fe7a5fa"
+    }
+  ],
+  "root_actual_PS5_continuation_evidence": {
+    "E:\\hospital_ies_v21_20261023\\reviews\\reproduction_inputs_prepare01\\DELIVERY_RECEIPT.json": "ad985626535e8c7025d06b456bb0f5478afa14740639dea9b71b4fab850f3710",
+    "E:\\hospital_ies_v21_20261023\\reviews\\reproduction_inputs_root_review01\\commands_and_exit_codes.txt": "72dda71c53cbdb3771dcd823017985bfed62183778ad54a1f8148f0b982677e1",
+    "E:\\hospital_ies_v21_20261023\\reviews\\reproduction_inputs_root_review01\\REPRODUCE_POWERSHELL_CONTINUATION.ps1": "ce62f08ace3786bc99055efd70737fe7c2e1c596068a964b0cddff2979216e5b",
+    "E:\\hospital_ies_v21_20261023\\reviews\\reproduction_inputs_root_review01\\logs\\powershell_native_failure_continuation01.command.json": "38e75edcccae2e02ee557ee4ffb879d8dfd4df8e35f1a97eca6d6942c0322735",
+    "E:\\hospital_ies_v21_20261023\\reviews\\reproduction_inputs_root_review01\\logs\\powershell_native_failure_continuation01.stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "E:\\hospital_ies_v21_20261023\\reviews\\reproduction_inputs_root_review01\\logs\\powershell_native_failure_continuation01.stdout.log": "8bec2a19b8e13d8b69185a946076a819520cb7a9e97ff9cd881350653d973742"
+  },
+  "new_freezes": 0,
+  "registrations": 0,
+  "physics_attempts": 0
+}

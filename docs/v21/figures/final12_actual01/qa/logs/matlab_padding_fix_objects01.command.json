@@ -1,0 +1,18 @@
+{
+  "name": "matlab_padding_fix_objects01",
+  "command": [
+    "C:/Program Files/MATLAB/R2024b/bin/matlab.exe",
+    "-singleCompThread",
+    "-batch",
+    "addpath('E:/hospital_ies_v21_20261023/reviews/final12_layout_fix01');\nstyle_final12_f1_padding('E:/hospital_ies_v21_20261023/final_blind01/figure_qa01/styled_figures01','E:/hospital_ies_v21_20261023/final_blind01/figure_qa02/styled_figures02');\naddpath('E:/hospital_ies_v21_20261023/reviews/matlab_artifact_qa03');\nqa_sci_artifacts('E:/hospital_ies_v21_20261023/final_blind01/figure_qa01/expected01/EXPECTED.json','9c8ee669b70e8310214e1971b3451669e5a20700fa1fb1b32e93bc06326031c1','E:/hospital_ies_v21_20261023/final_blind01/figure_qa02/styled_figures02','E:/hospital_ies_v21_20261023/final_blind01/figure_qa02/objects02');"
+  ],
+  "cwd": "D:\\hospital_ies_v21_20261023",
+  "started_utc": "2026-10-24T19:52:24.833619+00:00",
+  "finished_utc": "2026-10-24T19:52:45.188022+00:00",
+  "elapsed_seconds": 20.354856200050563,
+  "exit_code": 0,
+  "environment_overrides": {
+    "PYTHONDONTWRITEBYTECODE": "1",
+    "PYTHONIOENCODING": "utf-8"
+  }
+}

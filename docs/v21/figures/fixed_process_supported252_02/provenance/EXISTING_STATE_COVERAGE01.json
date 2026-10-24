@@ -1,0 +1,871 @@
+{
+  "schema": "hospital_ies.fixed3_existing_state_coverage.v1",
+  "cases": [
+    {
+      "scenario_id": "m21_normal_69f6a40aaa99e6c7b6ec",
+      "policy_id": "C_sci_v21",
+      "configuration_id": "H0",
+      "original_EXPORT_receipt_path": "E:\\hospital_ies_v21_20261023\\reviews\\fixed_process_actual252_01\\commands02\\exports\\01\\EXPORT_RECEIPT.json",
+      "original_EXPORT_receipt_sha256": "bc43cf0b1637915c3eeb67e0e8f7e24d272fe35c0bcccc32cee945b3025d1193",
+      "source_binding_sha256": "4dfe62ae105d2696b7782dc36c83ec63c6551e2cded601d6f15c0d4083058add",
+      "RESULT_sha256": "99ed073a53b0e12e98b425da0f1e4ca6fd77a61ad6d07f9efdbe076aeae883aa",
+      "raw_sha256": "59cfe6899020f8a220ad06f1695372f5c2c66abe56668f75c74b447338231839",
+      "segment_rows": 48,
+      "decision_rows": 48,
+      "clock": {
+        "segment_start": 0.0,
+        "segment_end": 720.0,
+        "first_decision_time": "0.0",
+        "decision_clock_is_not_segment_clock": true
+      },
+      "flat_segment_nonempty_counts": {
+        "native_segment_index": 48,
+        "process_row_index": 48,
+        "start_minute": 48,
+        "end_minute": 48,
+        "step": 48,
+        "hour_of_year": 48,
+        "command_id": 48,
+        "execution_mode": 48,
+        "grid_bus_state": 48,
+        "grid_transfer_remaining_minutes": 0,
+        "pre_diesel_status": 48,
+        "pre_diesel_start_minute": 0,
+        "pre_diesel_energy_remaining_kWh": 48,
+        "pre_last_grid_import_kW": 48,
+        "pre_last_diesel_kW": 48,
+        "pre_gt_readiness_status": 0,
+        "pre_hrsg_readiness_status": 0,
+        "post_diesel_status": 48,
+        "post_diesel_start_minute": 0,
+        "post_diesel_energy_remaining_kWh": 48,
+        "post_last_grid_import_kW": 48,
+        "post_last_diesel_kW": 48,
+        "post_gt_readiness_status": 0,
+        "post_hrsg_readiness_status": 0
+      },
+      "first_segment_flat_sample": {
+        "native_segment_index": "0",
+        "process_row_index": "0",
+        "start_minute": "0.0",
+        "end_minute": "15.0",
+        "step": "0",
+        "hour_of_year": "211",
+        "command_id": "1",
+        "execution_mode": "held_executed_setpoints",
+        "grid_bus_state": "GRID",
+        "grid_transfer_remaining_minutes": "",
+        "pre_diesel_status": "OFF",
+        "pre_diesel_start_minute": "",
+        "pre_diesel_energy_remaining_kWh": "2400.0",
+        "pre_last_grid_import_kW": "311.9646176417988",
+        "pre_last_diesel_kW": "0.0",
+        "pre_gt_readiness_status": "",
+        "pre_hrsg_readiness_status": "",
+        "post_diesel_status": "OFF",
+        "post_diesel_start_minute": "",
+        "post_diesel_energy_remaining_kWh": "2400.0",
+        "post_last_grid_import_kW": "311.96461764179884",
+        "post_last_diesel_kW": "0.0",
+        "post_gt_readiness_status": "",
+        "post_hrsg_readiness_status": ""
+      },
+      "first_pre_state_native_keys": [
+        "gt_prev",
+        "diesel_energy_remaining_kWh",
+        "extra_faulted",
+        "overload_minutes",
+        "thermal_delta",
+        "last_grid_import_kW",
+        "last_diesel_kW",
+        "auxiliary_request_kW",
+        "cooling_reference_kW",
+        "disconnected_loads",
+        "diesel_status",
+        "diesel_start_minute",
+        "topology_mode"
+      ],
+      "first_operating_readiness_native_keys": [
+        "schema",
+        "observation_time_minute",
+        "actual_gt_kW",
+        "gt_physical_status",
+        "earliest_start_minute",
+        "pending_starts",
+        "gt_can_stop",
+        "arrived_dispatch",
+        "actual_disconnected_kW",
+        "observed_critical_unserved_kW",
+        "known_command_queue",
+        "gt_ramp_anchor_kW",
+        "gt_ramp_budget_kW",
+        "diesel_connected",
+        "actual_diesel_kW",
+        "diesel_arrived_cap_kW"
+      ],
+      "first_arrived_source_permissions": {
+        "gt_electric_kW": [
+          132.26623999999998,
+          0.0,
+          0.0
+        ],
+        "grid_import_kW": 850.0,
+        "diesel_kW": 279.80765437469887,
+        "boiler_steam_lbph": 376.36736880584994,
+        "absorption_cooling_kW": 703.3705679999999,
+        "electric_chiller_cooling_kW": [
+          703.3705679999999,
+          703.3705679999999,
+          1055.055852
+        ],
+        "hrsg_steam_lbph": 1162.5030234002802,
+        "tower_rejection_kW": 283.99901154283305,
+        "gt_fuel_MMBtu_h": 2.1277501895695576
+      },
+      "first_hardware_availability": {
+        "GT_1": 1.0,
+        "GT_2": 1.0,
+        "GT_3": 1.0,
+        "HRSG_1": 1.0,
+        "HRSG_2": 1.0,
+        "HRSG_3": 1.0,
+        "EC_1": 1.0,
+        "EC_2": 1.0,
+        "EC_3": 1.0,
+        "BOILER_1": 1.0,
+        "BOILER_2": 1.0,
+        "BOILER_3": 1.0,
+        "ABS": 1.0,
+        "TOWER": 1.0,
+        "GRID": 1.0,
+        "DIESEL": 1.0,
+        "TOWER_1": 1.0,
+        "TOWER_2": 1.0,
+        "TOWER_3": 1.0,
+        "TOWER_4": 1.0,
+        "AUX_FAN_P0": 1.0,
+        "AUX_FAN_P1": 1.0,
+        "AUX_FAN_P2": 1.0,
+        "AUX_FAN_P3": 1.0,
+        "AUX_CHW_PUMP": 1.0,
+        "AUX_HEAT_PUMP": 1.0
+      },
+      "first_operating_readiness": {
+        "schema": "operating_response.readiness.v15.ramp_window_v2",
+        "observation_time_minute": 0.0,
+        "actual_gt_kW": [
+          132.26624,
+          0.0,
+          0.0
+        ],
+        "gt_physical_status": [
+          "RUNNING",
+          "OFF",
+          "OFF"
+        ],
+        "earliest_start_minute": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "pending_starts": [
+          null,
+          null,
+          null
+        ],
+        "gt_can_stop": [
+          true,
+          true,
+          true
+        ],
+        "arrived_dispatch": {
+          "gt_electric_kW": [
+            132.26624,
+            0.0,
+            0.0
+          ],
+          "grid_import_kW": 311.9646176417988,
+          "diesel_kW": 0.0,
+          "absorption_cooling_kW": 106.63098715604124,
+          "electric_chiller_cooling_kW": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "boiler_steam_lbph": 0.0,
+          "hrsg_steam_lbph": 1162.5030234002804,
+          "tower_rejection_kW": 284.0030022053947,
+          "gt_fuel_MMBtu_h": 2.127750189569558
+        },
+        "actual_disconnected_kW": [
+          [
+            4.3999058918471186e-05,
+            0.0,
+            0.0
+          ],
+          [
+            4.3999058918471186e-05,
+            0.0,
+            0.0
+          ],
+          [
+            4.3999058918471186e-05,
+            0.0,
+            0.0
+          ],
+          [
+            0.004399905891847119,
+            0.0,
+            0.0
+          ]
+        ],
+        "observed_critical_unserved_kW": [
+          [
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "known_command_queue": [],
+        "gt_ramp_anchor_kW": [
+          132.26624,
+          0.0,
+          0.0
+        ],
+        "gt_ramp_budget_kW": 225.0,
+        "diesel_connected": false,
+        "actual_diesel_kW": 0.0,
+        "diesel_arrived_cap_kW": 0.0
+      },
+      "first_pre_state": {
+        "gt_prev": [
+          132.26623999999998,
+          0.0,
+          0.0
+        ],
+        "diesel_energy_remaining_kWh": 2400.0,
+        "extra_faulted": [],
+        "overload_minutes": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "thermal_delta": {},
+        "last_grid_import_kW": 311.9646176417988,
+        "last_diesel_kW": 0.0,
+        "auxiliary_request_kW": 567.0,
+        "cooling_reference_kW": 106.63098715604124,
+        "disconnected_loads": [
+          [
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "diesel_status": "OFF",
+        "diesel_start_minute": null,
+        "topology_mode": "legacy_explicit_permission"
+      },
+      "original_blank_status_fields_not_inferred": true
+    },
+    {
+      "scenario_id": "m21_boundary_a_5c16d21d8dff33fef94e",
+      "policy_id": "C_sci_v21",
+      "configuration_id": "H0",
+      "original_EXPORT_receipt_path": "E:\\hospital_ies_v21_20261023\\reviews\\fixed_process_actual252_01\\commands02\\exports\\02\\EXPORT_RECEIPT.json",
+      "original_EXPORT_receipt_sha256": "7c4b46aded034089278ac8cef0561f616012e2ab323cf7089a4daf1ae48b50df",
+      "source_binding_sha256": "4dfe62ae105d2696b7782dc36c83ec63c6551e2cded601d6f15c0d4083058add",
+      "RESULT_sha256": "134370b3a6918b9361f77c8da308a0b74eb0ee8deecdea2ddf170e222735322a",
+      "raw_sha256": "52d52f69b5ec63c2a5305793607f596618fdbb22aafcd11ec7b2d035064a57be",
+      "segment_rows": 75,
+      "decision_rows": 60,
+      "clock": {
+        "segment_start": 0.0,
+        "segment_end": 900.0,
+        "first_decision_time": "0.0",
+        "decision_clock_is_not_segment_clock": true
+      },
+      "flat_segment_nonempty_counts": {
+        "native_segment_index": 75,
+        "process_row_index": 75,
+        "start_minute": 75,
+        "end_minute": 75,
+        "step": 75,
+        "hour_of_year": 75,
+        "command_id": 75,
+        "execution_mode": 75,
+        "grid_bus_state": 75,
+        "grid_transfer_remaining_minutes": 2,
+        "pre_diesel_status": 75,
+        "pre_diesel_start_minute": 22,
+        "pre_diesel_energy_remaining_kWh": 75,
+        "pre_last_grid_import_kW": 75,
+        "pre_last_diesel_kW": 75,
+        "pre_gt_readiness_status": 0,
+        "pre_hrsg_readiness_status": 0,
+        "post_diesel_status": 75,
+        "post_diesel_start_minute": 21,
+        "post_diesel_energy_remaining_kWh": 75,
+        "post_last_grid_import_kW": 75,
+        "post_last_diesel_kW": 75,
+        "post_gt_readiness_status": 0,
+        "post_hrsg_readiness_status": 0
+      },
+      "first_segment_flat_sample": {
+        "native_segment_index": "0",
+        "process_row_index": "0",
+        "start_minute": "0.0",
+        "end_minute": "15.0",
+        "step": "0",
+        "hour_of_year": "4001",
+        "command_id": "1",
+        "execution_mode": "held_executed_setpoints",
+        "grid_bus_state": "GRID",
+        "grid_transfer_remaining_minutes": "",
+        "pre_diesel_status": "OFF",
+        "pre_diesel_start_minute": "",
+        "pre_diesel_energy_remaining_kWh": "600.0",
+        "pre_last_grid_import_kW": "0.0",
+        "pre_last_diesel_kW": "0.0",
+        "pre_gt_readiness_status": "",
+        "pre_hrsg_readiness_status": "",
+        "post_diesel_status": "OFF",
+        "post_diesel_start_minute": "",
+        "post_diesel_energy_remaining_kWh": "600.0",
+        "post_last_grid_import_kW": "429.5077024839465",
+        "post_last_diesel_kW": "0.0",
+        "post_gt_readiness_status": "",
+        "post_hrsg_readiness_status": ""
+      },
+      "first_pre_state_native_keys": [
+        "gt_prev",
+        "diesel_energy_remaining_kWh",
+        "extra_faulted",
+        "overload_minutes",
+        "thermal_delta",
+        "last_grid_import_kW",
+        "last_diesel_kW",
+        "auxiliary_request_kW",
+        "cooling_reference_kW",
+        "disconnected_loads",
+        "diesel_status",
+        "diesel_start_minute",
+        "topology_mode"
+      ],
+      "first_operating_readiness_native_keys": [
+        "schema",
+        "observation_time_minute",
+        "actual_gt_kW",
+        "gt_physical_status",
+        "earliest_start_minute",
+        "pending_starts",
+        "gt_can_stop",
+        "arrived_dispatch",
+        "actual_disconnected_kW",
+        "observed_critical_unserved_kW",
+        "known_command_queue",
+        "gt_ramp_anchor_kW",
+        "gt_ramp_budget_kW",
+        "diesel_connected",
+        "actual_diesel_kW",
+        "diesel_arrived_cap_kW"
+      ],
+      "first_arrived_source_permissions": {
+        "gt_electric_kW": [
+          0.0,
+          125.20755209999999,
+          0.0
+        ],
+        "grid_import_kW": 850.0,
+        "diesel_kW": 900.0,
+        "boiler_steam_lbph": 759.9942258206194,
+        "absorption_cooling_kW": 703.3705679999999,
+        "electric_chiller_cooling_kW": [
+          703.3705679999999,
+          703.3705679999999,
+          1055.055852
+        ],
+        "hrsg_steam_lbph": 1162.5030243287408,
+        "tower_rejection_kW": 940.3503998404783,
+        "gt_fuel_MMBtu_h": 2.040561939000347
+      },
+      "first_hardware_availability": {
+        "GT_1": 1.0,
+        "GT_2": 1.0,
+        "GT_3": 1.0,
+        "HRSG_1": 1.0,
+        "HRSG_2": 1.0,
+        "HRSG_3": 1.0,
+        "EC_1": 1.0,
+        "EC_2": 1.0,
+        "EC_3": 1.0,
+        "BOILER_1": 1.0,
+        "BOILER_2": 1.0,
+        "BOILER_3": 1.0,
+        "ABS": 1.0,
+        "TOWER": 1.0,
+        "GRID": 1.0,
+        "DIESEL": 1.0,
+        "TOWER_1": 1.0,
+        "TOWER_2": 1.0,
+        "TOWER_3": 1.0,
+        "TOWER_4": 1.0,
+        "AUX_FAN_P0": 1.0,
+        "AUX_FAN_P1": 1.0,
+        "AUX_FAN_P2": 1.0,
+        "AUX_FAN_P3": 1.0,
+        "AUX_CHW_PUMP": 1.0,
+        "AUX_HEAT_PUMP": 1.0
+      },
+      "first_operating_readiness": {
+        "schema": "operating_response.readiness.v15.ramp_window_v2",
+        "observation_time_minute": 0.0,
+        "actual_gt_kW": [
+          0.0,
+          313.01887999999997,
+          192.99722341815914
+        ],
+        "gt_physical_status": [
+          "OFF",
+          "RUNNING",
+          "RUNNING"
+        ],
+        "earliest_start_minute": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "pending_starts": [
+          null,
+          null,
+          null
+        ],
+        "gt_can_stop": [
+          true,
+          true,
+          true
+        ],
+        "arrived_dispatch": {
+          "gt_electric_kW": [
+            0.0,
+            313.01887999999997,
+            192.99722341815914
+          ],
+          "grid_import_kW": 0.0,
+          "diesel_kW": 0.0,
+          "absorption_cooling_kW": 500.49789206183976,
+          "electric_chiller_cooling_kW": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "boiler_steam_lbph": 0.0,
+          "hrsg_steam_lbph": 4698.161099043281,
+          "tower_rejection_kW": 1333.0356187646048,
+          "gt_fuel_MMBtu_h": 8.246764542858266
+        },
+        "actual_disconnected_kW": [
+          [
+            4.860971304342629e-05,
+            0.0,
+            0.0
+          ],
+          [
+            4.860971304342629e-05,
+            0.0,
+            0.0
+          ],
+          [
+            4.860971304342629e-05,
+            0.0,
+            0.0
+          ],
+          [
+            0.004860971304342629,
+            0.0,
+            0.0
+          ]
+        ],
+        "observed_critical_unserved_kW": [
+          [
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "known_command_queue": [],
+        "gt_ramp_anchor_kW": [
+          0.0,
+          313.01887999999997,
+          192.99722341815914
+        ],
+        "gt_ramp_budget_kW": 225.0,
+        "diesel_connected": false,
+        "actual_diesel_kW": 0.0,
+        "diesel_arrived_cap_kW": 0.0
+      },
+      "first_pre_state": {
+        "gt_prev": [
+          0.0,
+          125.20755209999999,
+          0.0
+        ],
+        "diesel_energy_remaining_kWh": 600.0,
+        "extra_faulted": [],
+        "overload_minutes": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "thermal_delta": {},
+        "last_grid_import_kW": 0.0,
+        "last_diesel_kW": 0.0,
+        "auxiliary_request_kW": 567.0,
+        "cooling_reference_kW": 500.4978920618397,
+        "disconnected_loads": [
+          [
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "diesel_status": "OFF",
+        "diesel_start_minute": null,
+        "topology_mode": "legacy_explicit_permission"
+      },
+      "original_blank_status_fields_not_inferred": true
+    },
+    {
+      "scenario_id": "m21_boundary_a_5c16d21d8dff33fef94e",
+      "policy_id": "A_sci_v21",
+      "configuration_id": "H0",
+      "original_EXPORT_receipt_path": "E:\\hospital_ies_v21_20261023\\reviews\\fixed_process_actual252_01\\commands02\\exports\\03\\EXPORT_RECEIPT.json",
+      "original_EXPORT_receipt_sha256": "5af9fd0a689a6fa9f1e36f410f73b48debd89c38f89468c9c2dfa5af15cf04b3",
+      "source_binding_sha256": "4dfe62ae105d2696b7782dc36c83ec63c6551e2cded601d6f15c0d4083058add",
+      "RESULT_sha256": "7aaa6dce26c0ffa4df519d16efc24ed2be2d6089d3decb3096b936d7b676a035",
+      "raw_sha256": "2db690cdf314ca8b0aeb8ac091a146e58be7bb4881a08081fe8f16fa044fea22",
+      "segment_rows": 75,
+      "decision_rows": 60,
+      "clock": {
+        "segment_start": 0.0,
+        "segment_end": 900.0,
+        "first_decision_time": "0.0",
+        "decision_clock_is_not_segment_clock": true
+      },
+      "flat_segment_nonempty_counts": {
+        "native_segment_index": 75,
+        "process_row_index": 75,
+        "start_minute": 75,
+        "end_minute": 75,
+        "step": 75,
+        "hour_of_year": 75,
+        "command_id": 75,
+        "execution_mode": 75,
+        "grid_bus_state": 75,
+        "grid_transfer_remaining_minutes": 2,
+        "pre_diesel_status": 75,
+        "pre_diesel_start_minute": 22,
+        "pre_diesel_energy_remaining_kWh": 75,
+        "pre_last_grid_import_kW": 75,
+        "pre_last_diesel_kW": 75,
+        "pre_gt_readiness_status": 0,
+        "pre_hrsg_readiness_status": 0,
+        "post_diesel_status": 75,
+        "post_diesel_start_minute": 21,
+        "post_diesel_energy_remaining_kWh": 75,
+        "post_last_grid_import_kW": 75,
+        "post_last_diesel_kW": 75,
+        "post_gt_readiness_status": 0,
+        "post_hrsg_readiness_status": 0
+      },
+      "first_segment_flat_sample": {
+        "native_segment_index": "0",
+        "process_row_index": "0",
+        "start_minute": "0.0",
+        "end_minute": "15.0",
+        "step": "0",
+        "hour_of_year": "4001",
+        "command_id": "1",
+        "execution_mode": "held_executed_setpoints",
+        "grid_bus_state": "GRID",
+        "grid_transfer_remaining_minutes": "",
+        "pre_diesel_status": "OFF",
+        "pre_diesel_start_minute": "",
+        "pre_diesel_energy_remaining_kWh": "600.0",
+        "pre_last_grid_import_kW": "0.0",
+        "pre_last_diesel_kW": "0.0",
+        "pre_gt_readiness_status": "",
+        "pre_hrsg_readiness_status": "",
+        "post_diesel_status": "OFF",
+        "post_diesel_start_minute": "",
+        "post_diesel_energy_remaining_kWh": "600.0",
+        "post_last_grid_import_kW": "429.5077024839465",
+        "post_last_diesel_kW": "0.0",
+        "post_gt_readiness_status": "",
+        "post_hrsg_readiness_status": ""
+      },
+      "first_pre_state_native_keys": [
+        "gt_prev",
+        "diesel_energy_remaining_kWh",
+        "extra_faulted",
+        "overload_minutes",
+        "thermal_delta",
+        "last_grid_import_kW",
+        "last_diesel_kW",
+        "auxiliary_request_kW",
+        "cooling_reference_kW",
+        "disconnected_loads",
+        "diesel_status",
+        "diesel_start_minute",
+        "topology_mode"
+      ],
+      "first_operating_readiness_native_keys": [
+        "schema",
+        "observation_time_minute",
+        "actual_gt_kW",
+        "gt_physical_status",
+        "earliest_start_minute",
+        "pending_starts",
+        "gt_can_stop",
+        "arrived_dispatch",
+        "actual_disconnected_kW",
+        "observed_critical_unserved_kW",
+        "known_command_queue",
+        "gt_ramp_anchor_kW",
+        "gt_ramp_budget_kW",
+        "diesel_connected",
+        "actual_diesel_kW",
+        "diesel_arrived_cap_kW"
+      ],
+      "first_arrived_source_permissions": {
+        "gt_electric_kW": [
+          0.0,
+          125.20755209999999,
+          0.0
+        ],
+        "grid_import_kW": 850.0,
+        "diesel_kW": 900.0,
+        "boiler_steam_lbph": 759.9942258206194,
+        "absorption_cooling_kW": 703.3705679999999,
+        "electric_chiller_cooling_kW": [
+          703.3705679999999,
+          703.3705679999999,
+          1055.055852
+        ],
+        "hrsg_steam_lbph": 1162.5030243287408,
+        "tower_rejection_kW": 940.3503998404783,
+        "gt_fuel_MMBtu_h": 2.040561939000347
+      },
+      "first_hardware_availability": {
+        "GT_1": 1.0,
+        "GT_2": 1.0,
+        "GT_3": 1.0,
+        "HRSG_1": 1.0,
+        "HRSG_2": 1.0,
+        "HRSG_3": 1.0,
+        "EC_1": 1.0,
+        "EC_2": 1.0,
+        "EC_3": 1.0,
+        "BOILER_1": 1.0,
+        "BOILER_2": 1.0,
+        "BOILER_3": 1.0,
+        "ABS": 1.0,
+        "TOWER": 1.0,
+        "GRID": 1.0,
+        "DIESEL": 1.0,
+        "TOWER_1": 1.0,
+        "TOWER_2": 1.0,
+        "TOWER_3": 1.0,
+        "TOWER_4": 1.0,
+        "AUX_FAN_P0": 1.0,
+        "AUX_FAN_P1": 1.0,
+        "AUX_FAN_P2": 1.0,
+        "AUX_FAN_P3": 1.0,
+        "AUX_CHW_PUMP": 1.0,
+        "AUX_HEAT_PUMP": 1.0
+      },
+      "first_operating_readiness": {
+        "schema": "operating_response.readiness.v15.ramp_window_v2",
+        "observation_time_minute": 0.0,
+        "actual_gt_kW": [
+          0.0,
+          313.01887999999997,
+          192.99722341815914
+        ],
+        "gt_physical_status": [
+          "OFF",
+          "RUNNING",
+          "RUNNING"
+        ],
+        "earliest_start_minute": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "pending_starts": [
+          null,
+          null,
+          null
+        ],
+        "gt_can_stop": [
+          true,
+          true,
+          true
+        ],
+        "arrived_dispatch": {
+          "gt_electric_kW": [
+            0.0,
+            313.01887999999997,
+            192.99722341815914
+          ],
+          "grid_import_kW": 0.0,
+          "diesel_kW": 0.0,
+          "absorption_cooling_kW": 500.49789206183976,
+          "electric_chiller_cooling_kW": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "boiler_steam_lbph": 0.0,
+          "hrsg_steam_lbph": 4698.161099043281,
+          "tower_rejection_kW": 1333.0356187646048,
+          "gt_fuel_MMBtu_h": 8.246764542858266
+        },
+        "actual_disconnected_kW": [
+          [
+            4.860971304342629e-05,
+            0.0,
+            0.0
+          ],
+          [
+            4.860971304342629e-05,
+            0.0,
+            0.0
+          ],
+          [
+            4.860971304342629e-05,
+            0.0,
+            0.0
+          ],
+          [
+            0.004860971304342629,
+            0.0,
+            0.0
+          ]
+        ],
+        "observed_critical_unserved_kW": [
+          [
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "known_command_queue": [],
+        "gt_ramp_anchor_kW": [
+          0.0,
+          313.01887999999997,
+          192.99722341815914
+        ],
+        "gt_ramp_budget_kW": 225.0,
+        "diesel_connected": false,
+        "actual_diesel_kW": 0.0,
+        "diesel_arrived_cap_kW": 0.0
+      },
+      "first_pre_state": {
+        "gt_prev": [
+          0.0,
+          125.20755209999999,
+          0.0
+        ],
+        "diesel_energy_remaining_kWh": 600.0,
+        "extra_faulted": [],
+        "overload_minutes": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "thermal_delta": {},
+        "last_grid_import_kW": 0.0,
+        "last_diesel_kW": 0.0,
+        "auxiliary_request_kW": 567.0,
+        "cooling_reference_kW": 500.4978920618397,
+        "disconnected_loads": [
+          [
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "diesel_status": "OFF",
+        "diesel_start_minute": null,
+        "topology_mode": "legacy_explicit_permission"
+      },
+      "original_blank_status_fields_not_inferred": true
+    }
+  ],
+  "current_F6_is_power_and_inventory_not_state_trace": true,
+  "proposed_next_plot_NOT_IMPLEMENTED": true,
+  "no_new_raw_export": true,
+  "no_new_physics": true,
+  "no_command_permission_to_actual_supply_inference": true
+}

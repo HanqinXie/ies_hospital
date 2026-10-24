@@ -1,0 +1,962 @@
+{
+  "schema": "hospital_ies.root_actual_hardware22_visual.v1",
+  "recorded_utc": "2026-10-24T11:01:36.235617+00:00",
+  "reviewer": "/root",
+  "tool": "functions.tools.view_image",
+  "basis": "Actual model-visible complete-page PDF and PNG proof images, reviewed in small batches. Visual judgments are supplied by root, not calculated by this recorder.",
+  "final_figure_count": 22,
+  "actual_complete_PDF_views": 22,
+  "actual_complete_PNG_views": 22,
+  "unseen": 0,
+  "failed": 0,
+  "earlier_truncated_HW01_to03_tool_output_counted_as_review": false,
+  "old_bad_layout_and_pilot_views_counted_in_final44": false,
+  "proof_receipt": {
+    "path": "E:\\hospital_ies_v21_20261023\\reviews\\hardware_figures_actual126_01\\final_proofs01\\PROOF_RENDER_RECEIPT.json",
+    "bytes": 60010,
+    "sha256": "07aa9d9108420c5254a65b55d25aa1216f60764c4928af95ad55ab8285595b2b"
+  },
+  "closure": {
+    "path": "E:\\hospital_ies_v21_20261023\\reviews\\hardware_figures_actual126_01\\FINAL_DATA_ARTIFACT_BBOX_CLOSURE01.json",
+    "bytes": 54758,
+    "sha256": "53be6f592d7ea883e99a310208af43daa685f3321f2f15d71b63fd8ab3d46909"
+  },
+  "final_formats": [
+    {
+      "path": "E:\\hospital_ies_v21_20261023\\reviews\\hardware_figures_actual126_01\\final_style01\\f4_figures\\F4_hardware_AUX_CHW_PUMP_w360.fig",
+      "bytes": 50678,
+      "sha256": "9106ec71f2f561d655c257ff7bd78347b360891b616673f93080dfac22c003ad"
+    },
+    {
+      "path": "E:\\hospital_ies_v21_20261023\\reviews\\hardware_figures_actual126_01\\final_style01\\f4_figures\\F4_hardware_AUX_CHW_PUMP_w360.pdf",
+      "bytes": 56624,
+      "sha256": "0f5a419026ae1458e47294cf5a19a7e1f3effae1f8d61ea155a939a3f5f70616"
+    },
+    {
+      "path": "E:\\hospital_ies_v21_20261023\\reviews\\hardware_figures_actual126_01\\final_style01\\f4_figures\\F4_hardware_AUX_CHW_PUMP_w360.svg",
+      "bytes": 416350,
+      "sha256": "f0f342b482d37f0978c3bf2ba753dc9201db599f7e87787ed243539592447a8a"
+    },
+    {
+      "path": "E:\\hospital_ies_v21_20261023\\reviews\\hardware_figures_actual126_01\\final_style01\\f4_figures\\F4_hardware_AUX_CHW_PUMP_w360.png",
+      "bytes": 554427,
+      "sha256": "57bcf6bf76e90f02d56fcb36e948117c29d454ec53e2eadecdccd3495ed30d4e"
+    },
+    {
+      "path": "E:\\hospital_ies_v21_20261023\\reviews\\hardware_figures_actual126_01\\final_style01\\f4_figures\\F4_hardware_GRID_ALL_GT_w360.fig",
+      "bytes": 49875,
+      "sha256": "9d406f509ad91230cc6fc978e81c0de2f27bf9a07775bbb27231dc398e2b3fed"
+    },
+    {
+      "path": "E:\\hospital_ies_v21_20261023\\reviews\\hardware_figures_actual126_01\\final_style01\\f4_figures\\F4_hardware_GRID_ALL_GT_w360.pdf",
+      "bytes": 56468,
+      "sha256": "bdce24ff95a5a5914141195d4c7a7c6d7639466670b81669590dd8670eafa23f"
+    },
+    {
+      "path": "E:\\hospital_ies_v21_20261023\\reviews\\hardware_figures_actual126_01\\final_style01\\f4_figures\\F4_hardware_GRID_ALL_GT_w360.svg",
+      "bytes": 404480,
+      "sha256": "b75c54560d5af1b904e5cf3add3bd3ce46cbeb88413277e9f4a65ac2a7ab1b3c"
+    },
+    {
+      "path": "E:\\hospital_ies_v21_20261023\\reviews\\hardware_figures_actual126_01\\final_style01\\f4_figures\\F4_hardware_GRID_ALL_GT_w360.png",
+      "bytes": 540363,
+      "sha256": "c03eafd683caaacbec9b23aba7bf4c4421ab0ea6108972ff58693223a5abbd1b"
+    },
+    {
+      "path": "E:\\hospital_ies_v21_20261023\\reviews\\hardware_figures_actual126_01\\final_style01\\f4_figures\\F4_hardware_GRID_w360.fig",
+      "bytes": 49873,
+      "sha256": "caaeda2a19981c8def0d12380d1caec08e374a569de09aba8609a3ed32941ca4"
+    },
+    {
+      "path": "E:\\hospital_ies_v21_20261023\\reviews\\hardware_figures_actual126_01\\final_style01\\f4_figures\\F4_hardware_GRID_w360.pdf",
+      "bytes": 56425,
+      "sha256": "cf85c99893c9b856d6722caa020cdc3b0dd593b36d39f1ca1b0b4b630071d5ce"
+    },
+    {
+      "path": "E:\\hospital_ies_v21_20261023\\reviews\\hardware_figures_actual126_01\\final_style01\\f4_figures\\F4_hardware_GRID_w360.svg",
+      "bytes": 402391,
+      "sha256": "d2c21ccba6b64914838e0c4a4f137d7a9464f81571e045e2ff72f24ff9c9a9b4"
+    },
+    {
+      "path": "E:\\hospital_ies_v21_20261023\\reviews\\hardware_figures_actual126_01\\final_style01\\f4_figures\\F4_hardware_GRID_w360.png",
+      "bytes": 537646,
+      "sha256": "fdf18af8502895313bad0c7ff5bc8e2dfc3641e7ba917f3dd6631ffed2c2948c"
+    },
+    {
+      "path": "E:\\hospital_ies_v21_20261023\\reviews\\hardware_figures_actual126_01\\final_style01\\f4_figures\\F4_hardware_TOWER_w360.fig",
+      "bytes": 49863,
+      "sha256": "0c43d18e34e886c1f56e1129cfa8d356399439d7716ba8f7489b756eac23c70c"
+    },
+    {
+      "path": "E:\\hospital_ies_v21_20261023\\reviews\\hardware_figures_actual126_01\\final_style01\\f4_figures\\F4_hardware_TOWER_w360.pdf",
+      "bytes": 55918,
+      "sha256": "e4987969f7626c1d6e23e0ab46f982a407fa6ca6353d8e5e534455b0a405e2db"
+    },
+    {
+      "path": "E:\\hospital_ies_v21_20261023\\reviews\\hardware_figures_actual126_01\\final_style01\\f4_figures\\F4_hardware_TOWER_w360.svg",
+      "bytes": 400124,
+      "sha256": "4f6bb245eb4ec07715df53452e6a74bd478131cf8d227c0b92458fae743b4d22"
+    },
+    {
+      "path": "E:\\hospital_ies_v21_20261023\\reviews\\hardware_figures_actual126_01\\final_style01\\f4_figures\\F4_hardware_TOWER_w360.png",
+      "bytes": 532385,
+      "sha256": "232e1a08f36e4d5030a460920fb39b4d4c8457327d1928ea98bc39b2adfdb5ed"
+    },
+    {
+      "path": "E:\\hospital_ies_v21_20261023\\reviews\\hardware_figures_actual126_01\\final_style01\\hw18_figures\\HW18_01_C_sci_v21_H0.fig",
+      "bytes": 86493,
+      "sha256": "1424d5acc40f5d57bb07f40f3630731ccb4c3cb46b306270ad4422c48c870f26"
+    },
+    {
+      "path": "E:\\hospital_ies_v21_20261023\\reviews\\hardware_figures_actual126_01\\final_style01\\hw18_figures\\HW18_01_C_sci_v21_H0.svg",
+      "bytes": 726169,
+      "sha256": "16057d8128cb5f812e310fe67716d1f62e6ac9b9607e342475474053fe5c904c"
+    },
+    {
+      "path": "E:\\hospital_ies_v21_20261023\\reviews\\hardware_figures_actual126_01\\final_style01\\hw18_figures\\HW18_01_C_sci_v21_H0.pdf",
+      "bytes": 61798,
+      "sha256": "3c86b14d3cf893ab8b0f27ebec878fd48eefb86f3193da51669ab6956fda0ec6"
+    },
+    {
+      "path": "E:\\hospital_ies_v21_20261023\\reviews\\hardware_figures_actual126_01\\final_style01\\hw18_figures\\HW18_01_C_sci_v21_H0.png",
+      "bytes": 774022,
+      "sha256": "29e334dbc0eba621e22e717892a14a4b380d8bfffeca86293b94e1015f77f64c"
+    },
+    {
+      "path": "E:\\hospital_ies_v21_20261023\\reviews\\hardware_figures_actual126_01\\final_style01\\hw18_figures\\HW18_02_C_sci_v21_H1.fig",
+      "bytes": 134269,
+      "sha256": "a266209f5c70ec435aa18bd544bcaa26780720236697717364603bdb63f34a73"
+    },
+    {
+      "path": "E:\\hospital_ies_v21_20261023\\reviews\\hardware_figures_actual126_01\\final_style01\\hw18_figures\\HW18_02_C_sci_v21_H1.svg",
+      "bytes": 1244950,
+      "sha256": "50293bb8deac8a808f477e8efaadb7226f4296b5f8f92390fd9fe3e51e45e59f"
+    },
+    {
+      "path": "E:\\hospital_ies_v21_20261023\\reviews\\hardware_figures_actual126_01\\final_style01\\hw18_figures\\HW18_02_C_sci_v21_H1.pdf",
+      "bytes": 92288,
+      "sha256": "270b421f53afd7a78ad70b5032229c57f43153995b003327b7e53f84f2e91807"
+    },
+    {
+      "path": "E:\\hospital_ies_v21_20261023\\reviews\\hardware_figures_actual126_01\\final_style01\\hw18_figures\\HW18_02_C_sci_v21_H1.png",
+      "bytes": 771436,
+      "sha256": "0b309114f8fb96562dd0732a7c9ba79666c7036b9e242e098600ead739b261b1"
+    },
+    {
+      "path": "E:\\hospital_ies_v21_20261023\\reviews\\hardware_figures_actual126_01\\final_style01\\hw18_figures\\HW18_03_C_sci_v21_H2.fig",
+      "bytes": 195990,
+      "sha256": "54f25dbbc8d62a455c1ccbd640dde086de4ee44fe13bdafd797ec60949e3e0ab"
+    },
+    {
+      "path": "E:\\hospital_ies_v21_20261023\\reviews\\hardware_figures_actual126_01\\final_style01\\hw18_figures\\HW18_03_C_sci_v21_H2.svg",
+      "bytes": 1566452,
+      "sha256": "a087d4142394e7f6d1fdf3dddb8a8857bbc71f8780bb8058bfa5f2973223eb0d"
+    },
+    {
+      "path": "E:\\hospital_ies_v21_20261023\\reviews\\hardware_figures_actual126_01\\final_style01\\hw18_figures\\HW18_03_C_sci_v21_H2.pdf",
+      "bytes": 117765,
+      "sha256": "8e48c205899296e6c9217392119bf8c92089d2ae08d583605d9670895048f9a0"
+    },
+    {
+      "path": "E:\\hospital_ies_v21_20261023\\reviews\\hardware_figures_actual126_01\\final_style01\\hw18_figures\\HW18_03_C_sci_v21_H2.png",
+      "bytes": 863377,
+      "sha256": "c9535c12333484c16c2186b7f16687db43042482c2d749b9100e636788747127"
+    },
+    {
+      "path": "E:\\hospital_ies_v21_20261023\\reviews\\hardware_figures_actual126_01\\final_style01\\hw18_figures\\HW18_04_A_sci_v21_H0.fig",
+      "bytes": 86495,
+      "sha256": "f11725b8a6963d5e1c34d65e57049c7306482f75471060e32f8880323030046e"
+    },
+    {
+      "path": "E:\\hospital_ies_v21_20261023\\reviews\\hardware_figures_actual126_01\\final_style01\\hw18_figures\\HW18_04_A_sci_v21_H0.svg",
+      "bytes": 725989,
+      "sha256": "41a219c16ffdb1c2e7e5e04014a6d152b771d5eecf5951e6fceb3c438eae4e89"
+    },
+    {
+      "path": "E:\\hospital_ies_v21_20261023\\reviews\\hardware_figures_actual126_01\\final_style01\\hw18_figures\\HW18_04_A_sci_v21_H0.pdf",
+      "bytes": 61986,
+      "sha256": "64f6e4cd3988712eb1614528764408e04a7f2f1cdf153de1fe1fac16606589d0"
+    },
+    {
+      "path": "E:\\hospital_ies_v21_20261023\\reviews\\hardware_figures_actual126_01\\final_style01\\hw18_figures\\HW18_04_A_sci_v21_H0.png",
+      "bytes": 774103,
+      "sha256": "76eda55863fe3e87ec3b4b37eb9b3481eac02fceea3f883998ff67e4be082b4e"
+    },
+    {
+      "path": "E:\\hospital_ies_v21_20261023\\reviews\\hardware_figures_actual126_01\\final_style01\\hw18_figures\\HW18_05_A_sci_v21_H1.fig",
+      "bytes": 134272,
+      "sha256": "19767ffdc0b691ae94585494d2347c772dfcb12574c9767eac57040762dc905d"
+    },
+    {
+      "path": "E:\\hospital_ies_v21_20261023\\reviews\\hardware_figures_actual126_01\\final_style01\\hw18_figures\\HW18_05_A_sci_v21_H1.svg",
+      "bytes": 1244770,
+      "sha256": "f6e674801a6a3d3c6f6c4a7fb2f68a65dcea170cb1f019446c39ecacaeb4f7c3"
+    },
+    {
+      "path": "E:\\hospital_ies_v21_20261023\\reviews\\hardware_figures_actual126_01\\final_style01\\hw18_figures\\HW18_05_A_sci_v21_H1.pdf",
+      "bytes": 92471,
+      "sha256": "bcea0bc9c1daedd25c9b43ae9386c670576d6b8bddd4596b5e79fb7499d1207c"
+    },
+    {
+      "path": "E:\\hospital_ies_v21_20261023\\reviews\\hardware_figures_actual126_01\\final_style01\\hw18_figures\\HW18_05_A_sci_v21_H1.png",
+      "bytes": 771611,
+      "sha256": "ed1c4983c2100f6b384e0d11c2e64cbc0e9460d844ca0b5181e6a4788369739c"
+    },
+    {
+      "path": "E:\\hospital_ies_v21_20261023\\reviews\\hardware_figures_actual126_01\\final_style01\\hw18_figures\\HW18_06_A_sci_v21_H2.fig",
+      "bytes": 195986,
+      "sha256": "019e74d403c79f5bea60e878f88af363a52f41488e6fe4d4bbd5039ee352aabf"
+    },
+    {
+      "path": "E:\\hospital_ies_v21_20261023\\reviews\\hardware_figures_actual126_01\\final_style01\\hw18_figures\\HW18_06_A_sci_v21_H2.svg",
+      "bytes": 1566272,
+      "sha256": "178da2cd0cf2590ed666e1bb09b080764e0f5661fa82921772dd890767bbf41c"
+    },
+    {
+      "path": "E:\\hospital_ies_v21_20261023\\reviews\\hardware_figures_actual126_01\\final_style01\\hw18_figures\\HW18_06_A_sci_v21_H2.pdf",
+      "bytes": 117949,
+      "sha256": "5bbcffe0beddc43dbcd932465922101a52c2c2c25c31c4d35596fe0c9fe4827d"
+    },
+    {
+      "path": "E:\\hospital_ies_v21_20261023\\reviews\\hardware_figures_actual126_01\\final_style01\\hw18_figures\\HW18_06_A_sci_v21_H2.png",
+      "bytes": 863502,
+      "sha256": "3096946d6939f464defaae3a401905503f356ccfb478b08b789dfa6a18e68b88"
+    },
+    {
+      "path": "E:\\hospital_ies_v21_20261023\\reviews\\hardware_figures_actual126_01\\final_style01\\hw18_figures\\HW18_07_M_sci_v21_H0.fig",
+      "bytes": 91822,
+      "sha256": "3aa6ee98ca2cf0fe0834a6624506fed662b5588c49d2f10529c9158ee24d43aa"
+    },
+    {
+      "path": "E:\\hospital_ies_v21_20261023\\reviews\\hardware_figures_actual126_01\\final_style01\\hw18_figures\\HW18_07_M_sci_v21_H0.svg",
+      "bytes": 769316,
+      "sha256": "0f6178e4280cd77e93ad887e9b604b1bf865ee013f889f20b3959f6b46840476"
+    },
+    {
+      "path": "E:\\hospital_ies_v21_20261023\\reviews\\hardware_figures_actual126_01\\final_style01\\hw18_figures\\HW18_07_M_sci_v21_H0.pdf",
+      "bytes": 65060,
+      "sha256": "81a6b5b7968b33b7a00240e1a27b0d91c8a173f1422f40b787ec79b4b9623044"
+    },
+    {
+      "path": "E:\\hospital_ies_v21_20261023\\reviews\\hardware_figures_actual126_01\\final_style01\\hw18_figures\\HW18_07_M_sci_v21_H0.png",
+      "bytes": 783294,
+      "sha256": "b081c08c894d91ad3d6878419328cc37cc575bbc4c8396084d2c56f102714cda"
+    },
+    {
+      "path": "E:\\hospital_ies_v21_20261023\\reviews\\hardware_figures_actual126_01\\final_style01\\hw18_figures\\HW18_08_M_sci_v21_H1.fig",
+      "bytes": 137313,
+      "sha256": "4b738fd7865c673df5c2a487fd8d40394a4cffacad57255497d2a6af78e0d549"
+    },
+    {
+      "path": "E:\\hospital_ies_v21_20261023\\reviews\\hardware_figures_actual126_01\\final_style01\\hw18_figures\\HW18_08_M_sci_v21_H1.svg",
+      "bytes": 1278641,
+      "sha256": "5063051a74ac9726c5615ebf7aac6359c328f3bf95269ea8f0d9f1573aedad6a"
+    },
+    {
+      "path": "E:\\hospital_ies_v21_20261023\\reviews\\hardware_figures_actual126_01\\final_style01\\hw18_figures\\HW18_08_M_sci_v21_H1.pdf",
+      "bytes": 94232,
+      "sha256": "43c2e41edc18e5e397ed2eb644496715ea2eb33b84f1b4d0d9d2e70e5ed5a7c9"
+    },
+    {
+      "path": "E:\\hospital_ies_v21_20261023\\reviews\\hardware_figures_actual126_01\\final_style01\\hw18_figures\\HW18_08_M_sci_v21_H1.png",
+      "bytes": 779942,
+      "sha256": "2cd161dd80574cebaf63b316416525608de575fb0deb50538f1004bc0c9600b4"
+    },
+    {
+      "path": "E:\\hospital_ies_v21_20261023\\reviews\\hardware_figures_actual126_01\\final_style01\\hw18_figures\\HW18_09_M_sci_v21_H2.fig",
+      "bytes": 148273,
+      "sha256": "6f6bbef3be3e2e23b335b9dd5ee39ce685e469ff906ec743c5d76dfbcddc72bf"
+    },
+    {
+      "path": "E:\\hospital_ies_v21_20261023\\reviews\\hardware_figures_actual126_01\\final_style01\\hw18_figures\\HW18_09_M_sci_v21_H2.svg",
+      "bytes": 1302666,
+      "sha256": "37dab315d816b7c9960ed29de595808806cb1024c57503acc742be8f4fc3be32"
+    },
+    {
+      "path": "E:\\hospital_ies_v21_20261023\\reviews\\hardware_figures_actual126_01\\final_style01\\hw18_figures\\HW18_09_M_sci_v21_H2.pdf",
+      "bytes": 99582,
+      "sha256": "be3e9c39cb0a6aec71b9cb7733c6ef21a87e8996e21b3fefbc21f17dfcafbded"
+    },
+    {
+      "path": "E:\\hospital_ies_v21_20261023\\reviews\\hardware_figures_actual126_01\\final_style01\\hw18_figures\\HW18_09_M_sci_v21_H2.png",
+      "bytes": 825144,
+      "sha256": "81b7069ec035b4eec53a01ea56d5ea871f4ba2fbf7084e48bff4fc5067fb7511"
+    },
+    {
+      "path": "E:\\hospital_ies_v21_20261023\\reviews\\hardware_figures_actual126_01\\final_style01\\hw18_figures\\HW18_10_C_sci_v21_H0.fig",
+      "bytes": 92212,
+      "sha256": "0a15e879f62f96df91cdb645a9f98bc3b05e59023796c54f4def415104f76ebd"
+    },
+    {
+      "path": "E:\\hospital_ies_v21_20261023\\reviews\\hardware_figures_actual126_01\\final_style01\\hw18_figures\\HW18_10_C_sci_v21_H0.svg",
+      "bytes": 778690,
+      "sha256": "9608d5e52fff0d95e2abf26ceced8072bd14fb0fd5a6280b4db350521ed3cca4"
+    },
+    {
+      "path": "E:\\hospital_ies_v21_20261023\\reviews\\hardware_figures_actual126_01\\final_style01\\hw18_figures\\HW18_10_C_sci_v21_H0.pdf",
+      "bytes": 65610,
+      "sha256": "7b926ce880905ec6d42555bf0ba5781a2bf7e92b958902c628bf39791848ce1e"
+    },
+    {
+      "path": "E:\\hospital_ies_v21_20261023\\reviews\\hardware_figures_actual126_01\\final_style01\\hw18_figures\\HW18_10_C_sci_v21_H0.png",
+      "bytes": 781476,
+      "sha256": "4b28f74d35a3e4f4fc162df5f308948d1e4967bbb6be1a2aec74e0e7e7c54779"
+    },
+    {
+      "path": "E:\\hospital_ies_v21_20261023\\reviews\\hardware_figures_actual126_01\\final_style01\\hw18_figures\\HW18_11_C_sci_v21_H1.fig",
+      "bytes": 141907,
+      "sha256": "31f252934eac56e897ed877e991e3aa6e6f300e330d85272f97e187b5a8fa34d"
+    },
+    {
+      "path": "E:\\hospital_ies_v21_20261023\\reviews\\hardware_figures_actual126_01\\final_style01\\hw18_figures\\HW18_11_C_sci_v21_H1.svg",
+      "bytes": 1277658,
+      "sha256": "760674068bdaebc5de0b6816874715654945c2b23d42389682b7a2fc5e43c775"
+    },
+    {
+      "path": "E:\\hospital_ies_v21_20261023\\reviews\\hardware_figures_actual126_01\\final_style01\\hw18_figures\\HW18_11_C_sci_v21_H1.pdf",
+      "bytes": 93767,
+      "sha256": "ec063abaaf89a32e0c8005e24f336d5d0d7cebfccc32813291975647c789f8a1"
+    },
+    {
+      "path": "E:\\hospital_ies_v21_20261023\\reviews\\hardware_figures_actual126_01\\final_style01\\hw18_figures\\HW18_11_C_sci_v21_H1.png",
+      "bytes": 825372,
+      "sha256": "e226f40615e685c84f834201f195427a2f03190621a3de5a1445fe55fb586164"
+    },
+    {
+      "path": "E:\\hospital_ies_v21_20261023\\reviews\\hardware_figures_actual126_01\\final_style01\\hw18_figures\\HW18_12_C_sci_v21_H2.fig",
+      "bytes": 200669,
+      "sha256": "abfac4294c887012ab23d0e2a20b10a43b9b3420d3ec9ce65de4e6c89b7fd0fb"
+    },
+    {
+      "path": "E:\\hospital_ies_v21_20261023\\reviews\\hardware_figures_actual126_01\\final_style01\\hw18_figures\\HW18_12_C_sci_v21_H2.svg",
+      "bytes": 1578118,
+      "sha256": "05b35ab806d6a3ad85e19e68c4b0bd28207dac71167b774efc9e0e899c97ce90"
+    },
+    {
+      "path": "E:\\hospital_ies_v21_20261023\\reviews\\hardware_figures_actual126_01\\final_style01\\hw18_figures\\HW18_12_C_sci_v21_H2.pdf",
+      "bytes": 117668,
+      "sha256": "ede8fd038bc29cd7922d58ab4ad212fc4ee26a813703484b20a6c7a3e9404389"
+    },
+    {
+      "path": "E:\\hospital_ies_v21_20261023\\reviews\\hardware_figures_actual126_01\\final_style01\\hw18_figures\\HW18_12_C_sci_v21_H2.png",
+      "bytes": 883298,
+      "sha256": "a77289686abf09563131c8c052526094cecb87055486bcc6821cc0589dde9baf"
+    },
+    {
+      "path": "E:\\hospital_ies_v21_20261023\\reviews\\hardware_figures_actual126_01\\final_style01\\hw18_figures\\HW18_13_A_sci_v21_H0.fig",
+      "bytes": 92215,
+      "sha256": "c96eabfc41533b099eae60b8e5eb94781e6bcac91c4b0857224ca68883729b16"
+    },
+    {
+      "path": "E:\\hospital_ies_v21_20261023\\reviews\\hardware_figures_actual126_01\\final_style01\\hw18_figures\\HW18_13_A_sci_v21_H0.svg",
+      "bytes": 778455,
+      "sha256": "b2a99e309a181a4a94efad263604b7380445f4fbe8ea22085a0af7e7042808b2"
+    },
+    {
+      "path": "E:\\hospital_ies_v21_20261023\\reviews\\hardware_figures_actual126_01\\final_style01\\hw18_figures\\HW18_13_A_sci_v21_H0.pdf",
+      "bytes": 65236,
+      "sha256": "4b359ebce34861e603c17785d7945c1b05c0f62eb3504049401f0103da33c9f4"
+    },
+    {
+      "path": "E:\\hospital_ies_v21_20261023\\reviews\\hardware_figures_actual126_01\\final_style01\\hw18_figures\\HW18_13_A_sci_v21_H0.png",
+      "bytes": 779244,
+      "sha256": "03ca53ccc93a3b4a9fbf7244d9e51813e5f029c07214f7602b5fd552fc99a63e"
+    },
+    {
+      "path": "E:\\hospital_ies_v21_20261023\\reviews\\hardware_figures_actual126_01\\final_style01\\hw18_figures\\HW18_14_A_sci_v21_H1.fig",
+      "bytes": 141908,
+      "sha256": "481cbd95eab68e28d9fddbaf7d567424d8f5ce76643748aa714f2d41a3f1a2b2"
+    },
+    {
+      "path": "E:\\hospital_ies_v21_20261023\\reviews\\hardware_figures_actual126_01\\final_style01\\hw18_figures\\HW18_14_A_sci_v21_H1.svg",
+      "bytes": 1277423,
+      "sha256": "f6915109e08aaaff8000d872879efa8d8a0cfa1c693005333563857acc095553"
+    },
+    {
+      "path": "E:\\hospital_ies_v21_20261023\\reviews\\hardware_figures_actual126_01\\final_style01\\hw18_figures\\HW18_14_A_sci_v21_H1.pdf",
+      "bytes": 93378,
+      "sha256": "1dd72906aa1de3d01ccae481c0e035d2fa2c34109fe2fdd067aa91b19c1e72d0"
+    },
+    {
+      "path": "E:\\hospital_ies_v21_20261023\\reviews\\hardware_figures_actual126_01\\final_style01\\hw18_figures\\HW18_14_A_sci_v21_H1.png",
+      "bytes": 823285,
+      "sha256": "6adb53a30361f44bfd98e6a5ea1345aba4de921d4f19c05ff8933af6dc84997e"
+    },
+    {
+      "path": "E:\\hospital_ies_v21_20261023\\reviews\\hardware_figures_actual126_01\\final_style01\\hw18_figures\\HW18_15_A_sci_v21_H2.fig",
+      "bytes": 200671,
+      "sha256": "e39183e0e69a09e23b2fd815b2ecb61d01bb2bfa1339384a4a1ce8f368af7ded"
+    },
+    {
+      "path": "E:\\hospital_ies_v21_20261023\\reviews\\hardware_figures_actual126_01\\final_style01\\hw18_figures\\HW18_15_A_sci_v21_H2.svg",
+      "bytes": 1577883,
+      "sha256": "5dd1c626301402e4b276d0e1628bb3d22974287f59e508b90fc9f966b39a1895"
+    },
+    {
+      "path": "E:\\hospital_ies_v21_20261023\\reviews\\hardware_figures_actual126_01\\final_style01\\hw18_figures\\HW18_15_A_sci_v21_H2.pdf",
+      "bytes": 117285,
+      "sha256": "66717ce3f82fde155f5d5f18e3949aa3ec0250bff5832837bd4c97857265cdd2"
+    },
+    {
+      "path": "E:\\hospital_ies_v21_20261023\\reviews\\hardware_figures_actual126_01\\final_style01\\hw18_figures\\HW18_15_A_sci_v21_H2.png",
+      "bytes": 881625,
+      "sha256": "7908c485cb19672ef039ba643143e1a466cc01b175f1aac0f71dc8f464bd5bc6"
+    },
+    {
+      "path": "E:\\hospital_ies_v21_20261023\\reviews\\hardware_figures_actual126_01\\final_style01\\hw18_figures\\HW18_16_M_sci_v21_H0.fig",
+      "bytes": 100154,
+      "sha256": "ae7d651c8fc50186fcd87787df25b3c1162a258d27a9f3cd5a131def05c7623a"
+    },
+    {
+      "path": "E:\\hospital_ies_v21_20261023\\reviews\\hardware_figures_actual126_01\\final_style01\\hw18_figures\\HW18_16_M_sci_v21_H0.svg",
+      "bytes": 847486,
+      "sha256": "1e3a05f815e03ad5895249a03583b46a138ffefd71e3526b3f4cdff4961ec651"
+    },
+    {
+      "path": "E:\\hospital_ies_v21_20261023\\reviews\\hardware_figures_actual126_01\\final_style01\\hw18_figures\\HW18_16_M_sci_v21_H0.pdf",
+      "bytes": 70471,
+      "sha256": "dd3d023c76fbce08e25d880b9cd33e85d9c78bb27418c7cebc544e048a805b65"
+    },
+    {
+      "path": "E:\\hospital_ies_v21_20261023\\reviews\\hardware_figures_actual126_01\\final_style01\\hw18_figures\\HW18_16_M_sci_v21_H0.png",
+      "bytes": 774957,
+      "sha256": "045ccf3312c23580f74cfd03fcd302b91e20b696bdc453bced9a1c8cdfe7c531"
+    },
+    {
+      "path": "E:\\hospital_ies_v21_20261023\\reviews\\hardware_figures_actual126_01\\final_style01\\hw18_figures\\HW18_17_M_sci_v21_H1.fig",
+      "bytes": 147055,
+      "sha256": "89f9156df078e0821b8670f3ef43bea0161d05c1cc36788f7978613f2e25f70a"
+    },
+    {
+      "path": "E:\\hospital_ies_v21_20261023\\reviews\\hardware_figures_actual126_01\\final_style01\\hw18_figures\\HW18_17_M_sci_v21_H1.svg",
+      "bytes": 1333761,
+      "sha256": "6b66a8e923cb49b8003d0de3db5a0e74f853abc64fe1250a276e5051c318d6ea"
+    },
+    {
+      "path": "E:\\hospital_ies_v21_20261023\\reviews\\hardware_figures_actual126_01\\final_style01\\hw18_figures\\HW18_17_M_sci_v21_H1.pdf",
+      "bytes": 97120,
+      "sha256": "e815908590f4271029a55f80ae1ffdc3b5a4d270125fded8af004b64d9ce8c5f"
+    },
+    {
+      "path": "E:\\hospital_ies_v21_20261023\\reviews\\hardware_figures_actual126_01\\final_style01\\hw18_figures\\HW18_17_M_sci_v21_H1.png",
+      "bytes": 813139,
+      "sha256": "672b57830628a5c04da7dc81c45d1c50b89097b8ce3e49406bc2144544deab02"
+    },
+    {
+      "path": "E:\\hospital_ies_v21_20261023\\reviews\\hardware_figures_actual126_01\\final_style01\\hw18_figures\\HW18_18_M_sci_v21_H2.fig",
+      "bytes": 155676,
+      "sha256": "6d549490322dd40713df2db2ba1864bb2a04add72c09ce389523e93013acd89c"
+    },
+    {
+      "path": "E:\\hospital_ies_v21_20261023\\reviews\\hardware_figures_actual126_01\\final_style01\\hw18_figures\\HW18_18_M_sci_v21_H2.svg",
+      "bytes": 1354599,
+      "sha256": "85f94e2d753cfd604837d9dea8fc148b40382eb76e0b5de2a4703fe570f885a0"
+    },
+    {
+      "path": "E:\\hospital_ies_v21_20261023\\reviews\\hardware_figures_actual126_01\\final_style01\\hw18_figures\\HW18_18_M_sci_v21_H2.pdf",
+      "bytes": 101581,
+      "sha256": "32e065ebb0d3f75c3fd1d28a19061412f72aff7b5ad335bc88f79026f3c78507"
+    },
+    {
+      "path": "E:\\hospital_ies_v21_20261023\\reviews\\hardware_figures_actual126_01\\final_style01\\hw18_figures\\HW18_18_M_sci_v21_H2.png",
+      "bytes": 828206,
+      "sha256": "7b8e1343769e8ea3fdc29e9d4198eceda608b3f35cd0d3794a32011b54ee41b2"
+    }
+  ],
+  "views": [
+    {
+      "name": "F4_hardware_AUX_CHW_PUMP_w360",
+      "actual_views": [
+        {
+          "kind": "PDF_complete_proof",
+          "path": "E:\\hospital_ies_v21_20261023\\reviews\\hardware_figures_actual126_01\\final_proofs01\\F4_hardware_AUX_CHW_PUMP_w360\\PDF_complete_page_01_240dpi.png",
+          "bytes": 183410,
+          "sha256": "5ca590d34a99b631d8dff58ef23fd233a47c5f3ead03c4e8efd8fc2a5e2c5a3f",
+          "complete_page": true,
+          "actual_root_visual_judgment": "PASS"
+        },
+        {
+          "kind": "PNG_complete_proof",
+          "path": "E:\\hospital_ies_v21_20261023\\reviews\\hardware_figures_actual126_01\\final_proofs01\\F4_hardware_AUX_CHW_PUMP_w360\\PNG_complete_page_1800px.png",
+          "bytes": 276434,
+          "sha256": "ff15802db0c51c9b56c3b8c58aea63984aaf9c9149f8668c64ff43c6358ab542",
+          "complete_page": true,
+          "actual_root_visual_judgment": "PASS"
+        }
+      ],
+      "judgment": "Readable title, axes, units, legends and footnotes; no cropped page text or legend over data."
+    },
+    {
+      "name": "F4_hardware_GRID_ALL_GT_w360",
+      "actual_views": [
+        {
+          "kind": "PDF_complete_proof",
+          "path": "E:\\hospital_ies_v21_20261023\\reviews\\hardware_figures_actual126_01\\final_proofs01\\F4_hardware_GRID_ALL_GT_w360\\PDF_complete_page_01_240dpi.png",
+          "bytes": 177067,
+          "sha256": "5df72627a93edf820a6002c3aca9816834afc977bf82ec7f2daf569f0b4fa583",
+          "complete_page": true,
+          "actual_root_visual_judgment": "PASS"
+        },
+        {
+          "kind": "PNG_complete_proof",
+          "path": "E:\\hospital_ies_v21_20261023\\reviews\\hardware_figures_actual126_01\\final_proofs01\\F4_hardware_GRID_ALL_GT_w360\\PNG_complete_page_1800px.png",
+          "bytes": 268059,
+          "sha256": "d213446f2ba1fdfb7e5ddc6b0bdd034c10ac5b5ef9fa2bba56f2b914439e02e0",
+          "complete_page": true,
+          "actual_root_visual_judgment": "PASS"
+        }
+      ],
+      "judgment": "Readable title, axes, units, legends and footnotes; no cropped page text or legend over data."
+    },
+    {
+      "name": "F4_hardware_GRID_w360",
+      "actual_views": [
+        {
+          "kind": "PDF_complete_proof",
+          "path": "E:\\hospital_ies_v21_20261023\\reviews\\hardware_figures_actual126_01\\final_proofs01\\F4_hardware_GRID_w360\\PDF_complete_page_01_240dpi.png",
+          "bytes": 176388,
+          "sha256": "8050f60aeee23425ad2babe19e4670f26a27a8a012a8e4393ec752f96ff993c2",
+          "complete_page": true,
+          "actual_root_visual_judgment": "PASS"
+        },
+        {
+          "kind": "PNG_complete_proof",
+          "path": "E:\\hospital_ies_v21_20261023\\reviews\\hardware_figures_actual126_01\\final_proofs01\\F4_hardware_GRID_w360\\PNG_complete_page_1800px.png",
+          "bytes": 269044,
+          "sha256": "a67d3530e99126071db59b4b125c661fab7da6fd7eb50f1dfee4b68ec9fcedea",
+          "complete_page": true,
+          "actual_root_visual_judgment": "PASS"
+        }
+      ],
+      "judgment": "Readable title, axes, units, legends and footnotes; no cropped page text or legend over data."
+    },
+    {
+      "name": "F4_hardware_TOWER_w360",
+      "actual_views": [
+        {
+          "kind": "PDF_complete_proof",
+          "path": "E:\\hospital_ies_v21_20261023\\reviews\\hardware_figures_actual126_01\\final_proofs01\\F4_hardware_TOWER_w360\\PDF_complete_page_01_240dpi.png",
+          "bytes": 176607,
+          "sha256": "a1fbe8b4014a7d4228289d7e84b061d57305062cd11a151cec9d7d36b7cfee01",
+          "complete_page": true,
+          "actual_root_visual_judgment": "PASS"
+        },
+        {
+          "kind": "PNG_complete_proof",
+          "path": "E:\\hospital_ies_v21_20261023\\reviews\\hardware_figures_actual126_01\\final_proofs01\\F4_hardware_TOWER_w360\\PNG_complete_page_1800px.png",
+          "bytes": 266322,
+          "sha256": "803a66b31a02877c527394b27f81c4bf1e9008f43e1e1d663beeaceabe1e3905",
+          "complete_page": true,
+          "actual_root_visual_judgment": "PASS"
+        }
+      ],
+      "judgment": "Readable title, axes, units, legends and footnotes; no cropped page text or legend over data."
+    },
+    {
+      "name": "HW18_01_C_sci_v21_H0",
+      "actual_views": [
+        {
+          "kind": "PDF_complete_proof",
+          "path": "E:\\hospital_ies_v21_20261023\\reviews\\hardware_figures_actual126_01\\final_proofs01\\HW18_01_C_sci_v21_H0\\PDF_complete_page_01_240dpi.png",
+          "bytes": 264275,
+          "sha256": "6596ac679a664275aae63df3e3fe15c178055b75fdc152fe4210f1de0e69d5da",
+          "complete_page": true,
+          "actual_root_visual_judgment": "PASS"
+        },
+        {
+          "kind": "PNG_complete_proof",
+          "path": "E:\\hospital_ies_v21_20261023\\reviews\\hardware_figures_actual126_01\\final_proofs01\\HW18_01_C_sci_v21_H0\\PNG_complete_page_1800px.png",
+          "bytes": 352722,
+          "sha256": "5b5a178a0c32be40f2687dfec0f71c8b9237db774996556da73543d9be959f18",
+          "complete_page": true,
+          "actual_root_visual_judgment": "PASS"
+        }
+      ],
+      "judgment": "Readable title, axes, units, legends and footnotes; no cropped page text or legend over data."
+    },
+    {
+      "name": "HW18_02_C_sci_v21_H1",
+      "actual_views": [
+        {
+          "kind": "PDF_complete_proof",
+          "path": "E:\\hospital_ies_v21_20261023\\reviews\\hardware_figures_actual126_01\\final_proofs01\\HW18_02_C_sci_v21_H1\\PDF_complete_page_01_240dpi.png",
+          "bytes": 263528,
+          "sha256": "f3b82ac9824d3d57289274cc7b0fac0b76b58dccac1093a994eaaee304efcdb2",
+          "complete_page": true,
+          "actual_root_visual_judgment": "PASS"
+        },
+        {
+          "kind": "PNG_complete_proof",
+          "path": "E:\\hospital_ies_v21_20261023\\reviews\\hardware_figures_actual126_01\\final_proofs01\\HW18_02_C_sci_v21_H1\\PNG_complete_page_1800px.png",
+          "bytes": 350271,
+          "sha256": "21bbfaa932f6043b9b7f1e6062b400070d47ccbcabb94e9a424e9a6c5de3adac",
+          "complete_page": true,
+          "actual_root_visual_judgment": "PASS"
+        }
+      ],
+      "judgment": "Readable title, axes, units, legends and footnotes; no cropped page text or legend over data."
+    },
+    {
+      "name": "HW18_03_C_sci_v21_H2",
+      "actual_views": [
+        {
+          "kind": "PDF_complete_proof",
+          "path": "E:\\hospital_ies_v21_20261023\\reviews\\hardware_figures_actual126_01\\final_proofs01\\HW18_03_C_sci_v21_H2\\PDF_complete_page_01_240dpi.png",
+          "bytes": 349746,
+          "sha256": "6b1ec955954819babbdf2b11bbcadc54b17222736a005dc2509aa902236cae05",
+          "complete_page": true,
+          "actual_root_visual_judgment": "PASS"
+        },
+        {
+          "kind": "PNG_complete_proof",
+          "path": "E:\\hospital_ies_v21_20261023\\reviews\\hardware_figures_actual126_01\\final_proofs01\\HW18_03_C_sci_v21_H2\\PNG_complete_page_1800px.png",
+          "bytes": 418685,
+          "sha256": "be8aa217efcd1361e37ffb6ac392046c4d3205b6df6ebedf1da5b89b797feea4",
+          "complete_page": true,
+          "actual_root_visual_judgment": "PASS"
+        }
+      ],
+      "judgment": "Readable title, axes, units, legends and footnotes; no cropped page text or legend over data."
+    },
+    {
+      "name": "HW18_04_A_sci_v21_H0",
+      "actual_views": [
+        {
+          "kind": "PDF_complete_proof",
+          "path": "E:\\hospital_ies_v21_20261023\\reviews\\hardware_figures_actual126_01\\final_proofs01\\HW18_04_A_sci_v21_H0\\PDF_complete_page_01_240dpi.png",
+          "bytes": 264254,
+          "sha256": "b79c2e8bd1749b31c8d32167494832c4843364834d4d70ca7a579afab0f74a17",
+          "complete_page": true,
+          "actual_root_visual_judgment": "PASS"
+        },
+        {
+          "kind": "PNG_complete_proof",
+          "path": "E:\\hospital_ies_v21_20261023\\reviews\\hardware_figures_actual126_01\\final_proofs01\\HW18_04_A_sci_v21_H0\\PNG_complete_page_1800px.png",
+          "bytes": 352803,
+          "sha256": "a2a1f1bdbe9ec3bc1c0bb73f90ea4ed97e4b7d17db05a0494b6553c92063f67f",
+          "complete_page": true,
+          "actual_root_visual_judgment": "PASS"
+        }
+      ],
+      "judgment": "Readable title, axes, units, legends and footnotes; no cropped page text or legend over data."
+    },
+    {
+      "name": "HW18_05_A_sci_v21_H1",
+      "actual_views": [
+        {
+          "kind": "PDF_complete_proof",
+          "path": "E:\\hospital_ies_v21_20261023\\reviews\\hardware_figures_actual126_01\\final_proofs01\\HW18_05_A_sci_v21_H1\\PDF_complete_page_01_240dpi.png",
+          "bytes": 263517,
+          "sha256": "385bf6c02d384375ff5321a8e320af2fa9c56747eab72f5d824dc3f164f052d1",
+          "complete_page": true,
+          "actual_root_visual_judgment": "PASS"
+        },
+        {
+          "kind": "PNG_complete_proof",
+          "path": "E:\\hospital_ies_v21_20261023\\reviews\\hardware_figures_actual126_01\\final_proofs01\\HW18_05_A_sci_v21_H1\\PNG_complete_page_1800px.png",
+          "bytes": 350312,
+          "sha256": "d90a47f5752776daccfb81123ce3553d3875ce50e660c330d14aa62ff918b1a1",
+          "complete_page": true,
+          "actual_root_visual_judgment": "PASS"
+        }
+      ],
+      "judgment": "Readable title, axes, units, legends and footnotes; no cropped page text or legend over data."
+    },
+    {
+      "name": "HW18_06_A_sci_v21_H2",
+      "actual_views": [
+        {
+          "kind": "PDF_complete_proof",
+          "path": "E:\\hospital_ies_v21_20261023\\reviews\\hardware_figures_actual126_01\\final_proofs01\\HW18_06_A_sci_v21_H2\\PDF_complete_page_01_240dpi.png",
+          "bytes": 349728,
+          "sha256": "b158301c36f3b644dd096eacc2359d137b4fbad01b75ee97c66551af3bd4d0fc",
+          "complete_page": true,
+          "actual_root_visual_judgment": "PASS"
+        },
+        {
+          "kind": "PNG_complete_proof",
+          "path": "E:\\hospital_ies_v21_20261023\\reviews\\hardware_figures_actual126_01\\final_proofs01\\HW18_06_A_sci_v21_H2\\PNG_complete_page_1800px.png",
+          "bytes": 418837,
+          "sha256": "ec7ca218935b22e5808a7f8ca0f645b59e6b3e811f132a8b53080904e83d6e78",
+          "complete_page": true,
+          "actual_root_visual_judgment": "PASS"
+        }
+      ],
+      "judgment": "Readable title, axes, units, legends and footnotes; no cropped page text or legend over data."
+    },
+    {
+      "name": "HW18_07_M_sci_v21_H0",
+      "actual_views": [
+        {
+          "kind": "PDF_complete_proof",
+          "path": "E:\\hospital_ies_v21_20261023\\reviews\\hardware_figures_actual126_01\\final_proofs01\\HW18_07_M_sci_v21_H0\\PDF_complete_page_01_240dpi.png",
+          "bytes": 270397,
+          "sha256": "f721da4e907adcfca009a9bc3741365879d04007225d8da39b4840cf72593355",
+          "complete_page": true,
+          "actual_root_visual_judgment": "PASS"
+        },
+        {
+          "kind": "PNG_complete_proof",
+          "path": "E:\\hospital_ies_v21_20261023\\reviews\\hardware_figures_actual126_01\\final_proofs01\\HW18_07_M_sci_v21_H0\\PNG_complete_page_1800px.png",
+          "bytes": 358444,
+          "sha256": "11c6e44488363501a5c59eb2693f58233148de7998dfba343f093a8f30bf7e6c",
+          "complete_page": true,
+          "actual_root_visual_judgment": "PASS"
+        }
+      ],
+      "judgment": "Readable title, axes, units, legends and footnotes; no cropped page text or legend over data."
+    },
+    {
+      "name": "HW18_08_M_sci_v21_H1",
+      "actual_views": [
+        {
+          "kind": "PDF_complete_proof",
+          "path": "E:\\hospital_ies_v21_20261023\\reviews\\hardware_figures_actual126_01\\final_proofs01\\HW18_08_M_sci_v21_H1\\PDF_complete_page_01_240dpi.png",
+          "bytes": 269643,
+          "sha256": "88d492b05caec587c227edb77e96c7a6f36df3765d9a86ea366febcf0077920b",
+          "complete_page": true,
+          "actual_root_visual_judgment": "PASS"
+        },
+        {
+          "kind": "PNG_complete_proof",
+          "path": "E:\\hospital_ies_v21_20261023\\reviews\\hardware_figures_actual126_01\\final_proofs01\\HW18_08_M_sci_v21_H1\\PNG_complete_page_1800px.png",
+          "bytes": 355497,
+          "sha256": "305f4e0a0f81e32054535944c66a24031596fe38cfcef780c9b1a39f46656793",
+          "complete_page": true,
+          "actual_root_visual_judgment": "PASS"
+        }
+      ],
+      "judgment": "Readable title, axes, units, legends and footnotes; no cropped page text or legend over data."
+    },
+    {
+      "name": "HW18_09_M_sci_v21_H2",
+      "actual_views": [
+        {
+          "kind": "PDF_complete_proof",
+          "path": "E:\\hospital_ies_v21_20261023\\reviews\\hardware_figures_actual126_01\\final_proofs01\\HW18_09_M_sci_v21_H2\\PDF_complete_page_01_240dpi.png",
+          "bytes": 287107,
+          "sha256": "90363d7e5bc1cd28901077033ebdd54549e162bbf9b9438900a94290c5bd3f42",
+          "complete_page": true,
+          "actual_root_visual_judgment": "PASS"
+        },
+        {
+          "kind": "PNG_complete_proof",
+          "path": "E:\\hospital_ies_v21_20261023\\reviews\\hardware_figures_actual126_01\\final_proofs01\\HW18_09_M_sci_v21_H2\\PNG_complete_page_1800px.png",
+          "bytes": 369543,
+          "sha256": "7901025c4f610d601a84c14a97d34d4b3a641ac8acb53c2d507422e0b2ca38c6",
+          "complete_page": true,
+          "actual_root_visual_judgment": "PASS"
+        }
+      ],
+      "judgment": "Readable title, axes, units, legends and footnotes; no cropped page text or legend over data."
+    },
+    {
+      "name": "HW18_10_C_sci_v21_H0",
+      "actual_views": [
+        {
+          "kind": "PDF_complete_proof",
+          "path": "E:\\hospital_ies_v21_20261023\\reviews\\hardware_figures_actual126_01\\final_proofs01\\HW18_10_C_sci_v21_H0\\PDF_complete_page_01_240dpi.png",
+          "bytes": 268106,
+          "sha256": "fc57c57171b0cf36375956a6e97a86a41ad56c209930e97ef398124a39aeac0a",
+          "complete_page": true,
+          "actual_root_visual_judgment": "PASS"
+        },
+        {
+          "kind": "PNG_complete_proof",
+          "path": "E:\\hospital_ies_v21_20261023\\reviews\\hardware_figures_actual126_01\\final_proofs01\\HW18_10_C_sci_v21_H0\\PNG_complete_page_1800px.png",
+          "bytes": 356289,
+          "sha256": "bf784526b9b3bbb96b0999c1cef76286966c03ea6ed6effc96cbf40ed0a78323",
+          "complete_page": true,
+          "actual_root_visual_judgment": "PASS"
+        }
+      ],
+      "judgment": "Readable title, axes, units, legends and footnotes; no cropped page text or legend over data."
+    },
+    {
+      "name": "HW18_11_C_sci_v21_H1",
+      "actual_views": [
+        {
+          "kind": "PDF_complete_proof",
+          "path": "E:\\hospital_ies_v21_20261023\\reviews\\hardware_figures_actual126_01\\final_proofs01\\HW18_11_C_sci_v21_H1\\PDF_complete_page_01_240dpi.png",
+          "bytes": 286004,
+          "sha256": "16154486fb4d573cb532edc1de6dc2caf898d353bf6db929a45e050cc9c1f75b",
+          "complete_page": true,
+          "actual_root_visual_judgment": "PASS"
+        },
+        {
+          "kind": "PNG_complete_proof",
+          "path": "E:\\hospital_ies_v21_20261023\\reviews\\hardware_figures_actual126_01\\final_proofs01\\HW18_11_C_sci_v21_H1\\PNG_complete_page_1800px.png",
+          "bytes": 367958,
+          "sha256": "fd3c3484976baacc7be2a45673515d4ed077f8a214c704b6263cd550b028bfa1",
+          "complete_page": true,
+          "actual_root_visual_judgment": "PASS"
+        }
+      ],
+      "judgment": "Readable title, axes, units, legends and footnotes; no cropped page text or legend over data."
+    },
+    {
+      "name": "HW18_12_C_sci_v21_H2",
+      "actual_views": [
+        {
+          "kind": "PDF_complete_proof",
+          "path": "E:\\hospital_ies_v21_20261023\\reviews\\hardware_figures_actual126_01\\final_proofs01\\HW18_12_C_sci_v21_H2\\PDF_complete_page_01_240dpi.png",
+          "bytes": 353910,
+          "sha256": "eb60d0ba6c3697e657e5befa60937ce045ea29a8809955076ac6e5935a28158d",
+          "complete_page": true,
+          "actual_root_visual_judgment": "PASS"
+        },
+        {
+          "kind": "PNG_complete_proof",
+          "path": "E:\\hospital_ies_v21_20261023\\reviews\\hardware_figures_actual126_01\\final_proofs01\\HW18_12_C_sci_v21_H2\\PNG_complete_page_1800px.png",
+          "bytes": 435181,
+          "sha256": "b3283d788d69a9f9965ef433e3b3ab2f312247c4a58783ddd01a9d52e24810fb",
+          "complete_page": true,
+          "actual_root_visual_judgment": "PASS"
+        }
+      ],
+      "judgment": "Readable title, axes, units, legends and footnotes; no cropped page text or legend over data."
+    },
+    {
+      "name": "HW18_13_A_sci_v21_H0",
+      "actual_views": [
+        {
+          "kind": "PDF_complete_proof",
+          "path": "E:\\hospital_ies_v21_20261023\\reviews\\hardware_figures_actual126_01\\final_proofs01\\HW18_13_A_sci_v21_H0\\PDF_complete_page_01_240dpi.png",
+          "bytes": 268018,
+          "sha256": "55cd687989416048a9eb770b0ec341c644fed184f436c693688da366e48506b0",
+          "complete_page": true,
+          "actual_root_visual_judgment": "PASS"
+        },
+        {
+          "kind": "PNG_complete_proof",
+          "path": "E:\\hospital_ies_v21_20261023\\reviews\\hardware_figures_actual126_01\\final_proofs01\\HW18_13_A_sci_v21_H0\\PNG_complete_page_1800px.png",
+          "bytes": 356455,
+          "sha256": "9df8731f289d57568433cb75e07e16c94080cea1508195f5729ad6c4640630a3",
+          "complete_page": true,
+          "actual_root_visual_judgment": "PASS"
+        }
+      ],
+      "judgment": "Readable title, axes, units, legends and footnotes; no cropped page text or legend over data."
+    },
+    {
+      "name": "HW18_14_A_sci_v21_H1",
+      "actual_views": [
+        {
+          "kind": "PDF_complete_proof",
+          "path": "E:\\hospital_ies_v21_20261023\\reviews\\hardware_figures_actual126_01\\final_proofs01\\HW18_14_A_sci_v21_H1\\PDF_complete_page_01_240dpi.png",
+          "bytes": 285949,
+          "sha256": "d17f3159c316b19275a8635a0f4ccbba807d587975bdb12da63c42e2d86cf2c3",
+          "complete_page": true,
+          "actual_root_visual_judgment": "PASS"
+        },
+        {
+          "kind": "PNG_complete_proof",
+          "path": "E:\\hospital_ies_v21_20261023\\reviews\\hardware_figures_actual126_01\\final_proofs01\\HW18_14_A_sci_v21_H1\\PNG_complete_page_1800px.png",
+          "bytes": 368202,
+          "sha256": "98de1417df42f7b8d3734124485a3fd92f15398c85bdb72c93194eec6f16735f",
+          "complete_page": true,
+          "actual_root_visual_judgment": "PASS"
+        }
+      ],
+      "judgment": "Readable title, axes, units, legends and footnotes; no cropped page text or legend over data."
+    },
+    {
+      "name": "HW18_15_A_sci_v21_H2",
+      "actual_views": [
+        {
+          "kind": "PDF_complete_proof",
+          "path": "E:\\hospital_ies_v21_20261023\\reviews\\hardware_figures_actual126_01\\final_proofs01\\HW18_15_A_sci_v21_H2\\PDF_complete_page_01_240dpi.png",
+          "bytes": 353810,
+          "sha256": "534b1cb540a9111b965c1603f1fd4d929eeee9dd6df897dfa5d2edd3896381b6",
+          "complete_page": true,
+          "actual_root_visual_judgment": "PASS"
+        },
+        {
+          "kind": "PNG_complete_proof",
+          "path": "E:\\hospital_ies_v21_20261023\\reviews\\hardware_figures_actual126_01\\final_proofs01\\HW18_15_A_sci_v21_H2\\PNG_complete_page_1800px.png",
+          "bytes": 435377,
+          "sha256": "d94482e7b6a6b63f0e8ac6843d1e0439911683f8e82c04f87c4b15f5c096477d",
+          "complete_page": true,
+          "actual_root_visual_judgment": "PASS"
+        }
+      ],
+      "judgment": "Readable title, axes, units, legends and footnotes; no cropped page text or legend over data."
+    },
+    {
+      "name": "HW18_16_M_sci_v21_H0",
+      "actual_views": [
+        {
+          "kind": "PDF_complete_proof",
+          "path": "E:\\hospital_ies_v21_20261023\\reviews\\hardware_figures_actual126_01\\final_proofs01\\HW18_16_M_sci_v21_H0\\PDF_complete_page_01_240dpi.png",
+          "bytes": 267144,
+          "sha256": "b229da51a34f889e2565780519335d0195bd84a421343c2af2a4c7103a345489",
+          "complete_page": true,
+          "actual_root_visual_judgment": "PASS"
+        },
+        {
+          "kind": "PNG_complete_proof",
+          "path": "E:\\hospital_ies_v21_20261023\\reviews\\hardware_figures_actual126_01\\final_proofs01\\HW18_16_M_sci_v21_H0\\PNG_complete_page_1800px.png",
+          "bytes": 355818,
+          "sha256": "ce69cbdcc3966b481dd66594d7337c2e455c72228a602ff5211574b8b8d17027",
+          "complete_page": true,
+          "actual_root_visual_judgment": "PASS"
+        }
+      ],
+      "judgment": "Readable title, axes, units, legends and footnotes; no cropped page text or legend over data."
+    },
+    {
+      "name": "HW18_17_M_sci_v21_H1",
+      "actual_views": [
+        {
+          "kind": "PDF_complete_proof",
+          "path": "E:\\hospital_ies_v21_20261023\\reviews\\hardware_figures_actual126_01\\final_proofs01\\HW18_17_M_sci_v21_H1\\PDF_complete_page_01_240dpi.png",
+          "bytes": 282941,
+          "sha256": "8953d9da3b84a82b20eec1f99a53143942e32d6dd4d450fa56a3a94846c12c4a",
+          "complete_page": true,
+          "actual_root_visual_judgment": "PASS"
+        },
+        {
+          "kind": "PNG_complete_proof",
+          "path": "E:\\hospital_ies_v21_20261023\\reviews\\hardware_figures_actual126_01\\final_proofs01\\HW18_17_M_sci_v21_H1\\PNG_complete_page_1800px.png",
+          "bytes": 367183,
+          "sha256": "a50e99230c286fecbe2fd9c6cbab1e496b776bfbd353c036e227b439c38bcd2c",
+          "complete_page": true,
+          "actual_root_visual_judgment": "PASS"
+        }
+      ],
+      "judgment": "Readable title, axes, units, legends and footnotes; no cropped page text or legend over data."
+    },
+    {
+      "name": "HW18_18_M_sci_v21_H2",
+      "actual_views": [
+        {
+          "kind": "PDF_complete_proof",
+          "path": "E:\\hospital_ies_v21_20261023\\reviews\\hardware_figures_actual126_01\\final_proofs01\\HW18_18_M_sci_v21_H2\\PDF_complete_page_01_240dpi.png",
+          "bytes": 291321,
+          "sha256": "9e8d3fcc5447c62e73d0c8a5477525d500439a6fcc436e9facb38cb994b1c42f",
+          "complete_page": true,
+          "actual_root_visual_judgment": "PASS"
+        },
+        {
+          "kind": "PNG_complete_proof",
+          "path": "E:\\hospital_ies_v21_20261023\\reviews\\hardware_figures_actual126_01\\final_proofs01\\HW18_18_M_sci_v21_H2\\PNG_complete_page_1800px.png",
+          "bytes": 377359,
+          "sha256": "c13d5bba3b5e206a1e257b6fe86d4da82f97f0d1b54fe2d1ec604200f3ff28bb",
+          "complete_page": true,
+          "actual_root_visual_judgment": "PASS"
+        }
+      ],
+      "judgment": "Readable title, axes, units, legends and footnotes; no cropped page text or legend over data."
+    }
+  ],
+  "source_numeric_revalidation": "Separate native/source-vector/snapshot QA receipts; this record is visual acceptance only.",
+  "retained_features": [
+    "H0 real zero hardware ports",
+    "H2 real dense cold charge and pump pulses",
+    "native interval steps and inventory endpoints",
+    "initial handoff versus full window material duration distinction"
+  ],
+  "new_physics_attempts": 0,
+  "changes_to_source_data": 0,
+  "scientific_acceptance_gate": false
+}

@@ -1,0 +1,1542 @@
+{
+  "schema": "hospital_ies.root_hardware126_terminal_reconciliation.v1",
+  "created_utc": "2026-10-24T09:49:27.676846+00:00",
+  "status": "actual_metadata_complete_science_NOT_ACCEPTED",
+  "original_stop_terminal": {
+    "path": "E:\\hospital_ies_v21_20261023\\hardware03\\SUPERVISOR_FINISHED.json",
+    "bytes": 7698,
+    "sha256": "22100e266bfecb1b1f5dde345b6af2300365771e5c91bf44999bbcf1b19c2d55"
+  },
+  "continuation99_terminal": {
+    "path": "E:\\hospital_ies_v21_20261023\\hardware03_resume01\\SUPERVISOR_FINISHED.json",
+    "bytes": 10329,
+    "sha256": "a5fe532944140bcf50c90290be7a702b08c07e22399f2c7563d2a5ecd9f1496a"
+  },
+  "original27_not_rerun": true,
+  "continuation99_all_first_attempts": true,
+  "supervisor_records_rewritten": false,
+  "actual_outer_command": {
+    "path": "E:\\hospital_ies_v21_20261023\\hardware03_resume01\\logs\\hardware99_governor01.command.json",
+    "bytes": 604,
+    "sha256": "eb2ce5a29793740272c39fba7dcbeb6acb21b05dc2af0f1b38071709a1251f9b"
+  },
+  "whole126_journal_inventory": {
+    "jobfile": "E:\\hospital_ies_v21_20261023\\hardware03\\JOBS.json",
+    "jobfile_sha256": "2f4ae1fecca9db43ae5413f8a4dbd2f7344cb05e84735c247b398cfec40c9944",
+    "phase": "hardware",
+    "campaign_directories": [
+      "E:\\hospital_ies_v21_20261023\\hardware03\\experiments\\001_hardware_m21_extra_69c380653be81bb40e48_H0",
+      "E:\\hospital_ies_v21_20261023\\hardware03\\experiments\\002_hardware_m21_extra_69c380653be81bb40e48_H1",
+      "E:\\hospital_ies_v21_20261023\\hardware03\\experiments\\003_hardware_m21_extra_69c380653be81bb40e48_H2",
+      "E:\\hospital_ies_v21_20261023\\hardware03\\experiments\\004_hardware_m21_extra_b27249014855cbb7afba_H0",
+      "E:\\hospital_ies_v21_20261023\\hardware03\\experiments\\005_hardware_m21_extra_b27249014855cbb7afba_H1",
+      "E:\\hospital_ies_v21_20261023\\hardware03\\experiments\\006_hardware_m21_extra_b27249014855cbb7afba_H2",
+      "E:\\hospital_ies_v21_20261023\\hardware03\\experiments\\007_hardware_m21_extra_aa15e14f48af243cc5f5_H0",
+      "E:\\hospital_ies_v21_20261023\\hardware03\\experiments\\008_hardware_m21_extra_aa15e14f48af243cc5f5_H1",
+      "E:\\hospital_ies_v21_20261023\\hardware03\\experiments\\009_hardware_m21_extra_aa15e14f48af243cc5f5_H2",
+      "E:\\hospital_ies_v21_20261023\\hardware03\\experiments\\010_hardware_m21_extra_1b0032e25c95ac24541f_H0",
+      "E:\\hospital_ies_v21_20261023\\hardware03\\experiments\\011_hardware_m21_extra_1b0032e25c95ac24541f_H1",
+      "E:\\hospital_ies_v21_20261023\\hardware03\\experiments\\012_hardware_m21_extra_1b0032e25c95ac24541f_H2",
+      "E:\\hospital_ies_v21_20261023\\hardware03\\experiments\\013_hardware_m21_extra_dd58839eb8929bc841cf_H0",
+      "E:\\hospital_ies_v21_20261023\\hardware03\\experiments\\014_hardware_m21_extra_dd58839eb8929bc841cf_H1",
+      "E:\\hospital_ies_v21_20261023\\hardware03\\experiments\\015_hardware_m21_extra_dd58839eb8929bc841cf_H2",
+      "E:\\hospital_ies_v21_20261023\\hardware03\\experiments\\016_hardware_m21_extra_011ab1890729d1ab1015_H0",
+      "E:\\hospital_ies_v21_20261023\\hardware03\\experiments\\017_hardware_m21_extra_011ab1890729d1ab1015_H1",
+      "E:\\hospital_ies_v21_20261023\\hardware03\\experiments\\018_hardware_m21_extra_011ab1890729d1ab1015_H2",
+      "E:\\hospital_ies_v21_20261023\\hardware03\\experiments\\019_hardware_m21_extra_aec47fb338519e4f48bd_H0",
+      "E:\\hospital_ies_v21_20261023\\hardware03\\experiments\\020_hardware_m21_extra_aec47fb338519e4f48bd_H1",
+      "E:\\hospital_ies_v21_20261023\\hardware03\\experiments\\021_hardware_m21_extra_aec47fb338519e4f48bd_H2",
+      "E:\\hospital_ies_v21_20261023\\hardware03\\experiments\\022_hardware_m21_extra_c76ef47d872e5817afad_H0",
+      "E:\\hospital_ies_v21_20261023\\hardware03\\experiments\\023_hardware_m21_extra_c76ef47d872e5817afad_H1",
+      "E:\\hospital_ies_v21_20261023\\hardware03\\experiments\\024_hardware_m21_extra_c76ef47d872e5817afad_H2",
+      "E:\\hospital_ies_v21_20261023\\hardware03\\experiments\\025_hardware_m21_extra_ec43b8bbd10700b3d543_H0",
+      "E:\\hospital_ies_v21_20261023\\hardware03\\experiments\\026_hardware_m21_extra_ec43b8bbd10700b3d543_H1",
+      "E:\\hospital_ies_v21_20261023\\hardware03\\experiments\\027_hardware_m21_extra_ec43b8bbd10700b3d543_H2",
+      "E:\\hospital_ies_v21_20261023\\hardware03\\experiments\\028_hardware_m21_extra_c5deb057c2d7c53bf523_H0",
+      "E:\\hospital_ies_v21_20261023\\hardware03\\experiments\\029_hardware_m21_extra_c5deb057c2d7c53bf523_H1",
+      "E:\\hospital_ies_v21_20261023\\hardware03\\experiments\\030_hardware_m21_extra_c5deb057c2d7c53bf523_H2",
+      "E:\\hospital_ies_v21_20261023\\hardware03\\experiments\\031_hardware_m21_extra_5fc4d54952e2a4a65be6_H0",
+      "E:\\hospital_ies_v21_20261023\\hardware03\\experiments\\032_hardware_m21_extra_5fc4d54952e2a4a65be6_H1",
+      "E:\\hospital_ies_v21_20261023\\hardware03\\experiments\\033_hardware_m21_extra_5fc4d54952e2a4a65be6_H2",
+      "E:\\hospital_ies_v21_20261023\\hardware03\\experiments\\034_hardware_m21_extra_3a54b7a84a8f1b6b772e_H0",
+      "E:\\hospital_ies_v21_20261023\\hardware03\\experiments\\035_hardware_m21_extra_3a54b7a84a8f1b6b772e_H1",
+      "E:\\hospital_ies_v21_20261023\\hardware03\\experiments\\036_hardware_m21_extra_3a54b7a84a8f1b6b772e_H2",
+      "E:\\hospital_ies_v21_20261023\\hardware03\\experiments\\037_hardware_m21_hardware_compound_5478464ed043b4fef98f_H0",
+      "E:\\hospital_ies_v21_20261023\\hardware03\\experiments\\038_hardware_m21_hardware_compound_5478464ed043b4fef98f_H1",
+      "E:\\hospital_ies_v21_20261023\\hardware03\\experiments\\039_hardware_m21_hardware_compound_5478464ed043b4fef98f_H2",
+      "E:\\hospital_ies_v21_20261023\\hardware03\\experiments\\040_hardware_m21_hardware_compound_42ecc465ac9477e92f47_H0",
+      "E:\\hospital_ies_v21_20261023\\hardware03\\experiments\\041_hardware_m21_hardware_compound_42ecc465ac9477e92f47_H1",
+      "E:\\hospital_ies_v21_20261023\\hardware03\\experiments\\042_hardware_m21_hardware_compound_42ecc465ac9477e92f47_H2"
+    ],
+    "campaign_count": 42,
+    "registered_pairs": 126,
+    "actual_started": 126,
+    "completed": 126,
+    "completed_pairs": 126,
+    "failed": 0,
+    "pending": 0,
+    "in_flight": 0,
+    "metadata_inventory": [
+      {
+        "path": "E:\\hospital_ies_v21_20261023\\hardware03\\experiments\\001_hardware_m21_extra_69c380653be81bb40e48_H0\\PLAN.json",
+        "sha256": "4dbcdbb717197746a73112afa3b2c677bdd567937fb404a6f8b8be2042cb54ff"
+      },
+      {
+        "path": "E:\\hospital_ies_v21_20261023\\hardware03\\experiments\\001_hardware_m21_extra_69c380653be81bb40e48_H0\\ATTEMPTS.jsonl",
+        "sha256": "7afb14cdbe4874fef28f9ba4537e98fee2dbb6893f37ac280571aa8969c57002"
+      },
+      {
+        "path": "E:\\hospital_ies_v21_20261023\\hardware03\\experiments\\002_hardware_m21_extra_69c380653be81bb40e48_H1\\PLAN.json",
+        "sha256": "515511c09636f929d8bc0ddb219a28716c0d3c56aa62645cf464290779882bb4"
+      },
+      {
+        "path": "E:\\hospital_ies_v21_20261023\\hardware03\\experiments\\002_hardware_m21_extra_69c380653be81bb40e48_H1\\ATTEMPTS.jsonl",
+        "sha256": "31a02194350bd08dc4c3fdeec22310d05eaf359115567a0ffb64c39042b4689e"
+      },
+      {
+        "path": "E:\\hospital_ies_v21_20261023\\hardware03\\experiments\\003_hardware_m21_extra_69c380653be81bb40e48_H2\\PLAN.json",
+        "sha256": "4b8a13a2d1f81901751a1fbc3b3b5b35c9987855bfe0c93c26528f0e03371e39"
+      },
+      {
+        "path": "E:\\hospital_ies_v21_20261023\\hardware03\\experiments\\003_hardware_m21_extra_69c380653be81bb40e48_H2\\ATTEMPTS.jsonl",
+        "sha256": "cbb5097f63d88c7a60806731c362fce7f7520088f05d4a69943dc62d79058625"
+      },
+      {
+        "path": "E:\\hospital_ies_v21_20261023\\hardware03\\experiments\\004_hardware_m21_extra_b27249014855cbb7afba_H0\\PLAN.json",
+        "sha256": "48cef294bf163c89433eed98436e3247019097b9cd98b9c2cdf105e76a7bcedb"
+      },
+      {
+        "path": "E:\\hospital_ies_v21_20261023\\hardware03\\experiments\\004_hardware_m21_extra_b27249014855cbb7afba_H0\\ATTEMPTS.jsonl",
+        "sha256": "0df45ae33b402500a09ca7c4f92685e8c0699dcda24b018435773989dee541b1"
+      },
+      {
+        "path": "E:\\hospital_ies_v21_20261023\\hardware03\\experiments\\005_hardware_m21_extra_b27249014855cbb7afba_H1\\PLAN.json",
+        "sha256": "374795214deeac2aecb794590483dd6e472ddb1849967e59a99fa48dc4888e4c"
+      },
+      {
+        "path": "E:\\hospital_ies_v21_20261023\\hardware03\\experiments\\005_hardware_m21_extra_b27249014855cbb7afba_H1\\ATTEMPTS.jsonl",
+        "sha256": "5ec6e078e42d7a3087c6bacb6ed2021057ad50c45a765b3e66d87f2ea87d5bf5"
+      },
+      {
+        "path": "E:\\hospital_ies_v21_20261023\\hardware03\\experiments\\006_hardware_m21_extra_b27249014855cbb7afba_H2\\PLAN.json",
+        "sha256": "bc76d9b030d74917c9b7615f652696d1a0e5dc17672848129f0de305780f4286"
+      },
+      {
+        "path": "E:\\hospital_ies_v21_20261023\\hardware03\\experiments\\006_hardware_m21_extra_b27249014855cbb7afba_H2\\ATTEMPTS.jsonl",
+        "sha256": "29c4029a64738c16f52aa04c0ee4aed1a96e57635cdbd4377996d378bf1274d6"
+      },
+      {
+        "path": "E:\\hospital_ies_v21_20261023\\hardware03\\experiments\\007_hardware_m21_extra_aa15e14f48af243cc5f5_H0\\PLAN.json",
+        "sha256": "bd4200218651942199d5630243f2165833402d5c24a15eaf99d991ced687e087"
+      },
+      {
+        "path": "E:\\hospital_ies_v21_20261023\\hardware03\\experiments\\007_hardware_m21_extra_aa15e14f48af243cc5f5_H0\\ATTEMPTS.jsonl",
+        "sha256": "ea6cdc2a6e2231e5134f853e7775b96b5c8d946d73bf4d738e0763591a0033b4"
+      },
+      {
+        "path": "E:\\hospital_ies_v21_20261023\\hardware03\\experiments\\008_hardware_m21_extra_aa15e14f48af243cc5f5_H1\\PLAN.json",
+        "sha256": "abd7eb6fc3c548607f9084e0c23a3bd64092d7d9357c039db79e31c2522c6045"
+      },
+      {
+        "path": "E:\\hospital_ies_v21_20261023\\hardware03\\experiments\\008_hardware_m21_extra_aa15e14f48af243cc5f5_H1\\ATTEMPTS.jsonl",
+        "sha256": "7374498ac273c84caf4dcea8d39e8dbea4c4f840c36a3e5f613e4ae46fd2c274"
+      },
+      {
+        "path": "E:\\hospital_ies_v21_20261023\\hardware03\\experiments\\009_hardware_m21_extra_aa15e14f48af243cc5f5_H2\\PLAN.json",
+        "sha256": "2be5e228acce64c0de544f7b4fd53d3c4bc6228762c3d14282dcef869e58e004"
+      },
+      {
+        "path": "E:\\hospital_ies_v21_20261023\\hardware03\\experiments\\009_hardware_m21_extra_aa15e14f48af243cc5f5_H2\\ATTEMPTS.jsonl",
+        "sha256": "f10b531949ae995431fdf8fb729167566057a2bb0a8c6df442216de732125fce"
+      },
+      {
+        "path": "E:\\hospital_ies_v21_20261023\\hardware03\\experiments\\010_hardware_m21_extra_1b0032e25c95ac24541f_H0\\PLAN.json",
+        "sha256": "251eaefa686186286242e9f36847611899169734d85c5fd29a75fc7667882297"
+      },
+      {
+        "path": "E:\\hospital_ies_v21_20261023\\hardware03\\experiments\\010_hardware_m21_extra_1b0032e25c95ac24541f_H0\\ATTEMPTS.jsonl",
+        "sha256": "6e3fb24682754031cfe44fb5c33ae3c1e92ef5cce7e90d86833b4b1d4047f621"
+      },
+      {
+        "path": "E:\\hospital_ies_v21_20261023\\hardware03\\experiments\\011_hardware_m21_extra_1b0032e25c95ac24541f_H1\\PLAN.json",
+        "sha256": "174f73c9e811e7475a8667d7fb70ac0dc760979a37370b8a33fde90af29c1fcb"
+      },
+      {
+        "path": "E:\\hospital_ies_v21_20261023\\hardware03\\experiments\\011_hardware_m21_extra_1b0032e25c95ac24541f_H1\\ATTEMPTS.jsonl",
+        "sha256": "36409baa3e3907dc077078b19732e1af376bfa031cd8f368807249ce6bcfd8a4"
+      },
+      {
+        "path": "E:\\hospital_ies_v21_20261023\\hardware03\\experiments\\012_hardware_m21_extra_1b0032e25c95ac24541f_H2\\PLAN.json",
+        "sha256": "81d13ccfb968de740a57675f9e5d4471793c0ac809359c55e35d470fa79bac3a"
+      },
+      {
+        "path": "E:\\hospital_ies_v21_20261023\\hardware03\\experiments\\012_hardware_m21_extra_1b0032e25c95ac24541f_H2\\ATTEMPTS.jsonl",
+        "sha256": "521504c7877c8dc4255b11329660ac69e7e4644ee62ad61a60a5a4121e8e40b0"
+      },
+      {
+        "path": "E:\\hospital_ies_v21_20261023\\hardware03\\experiments\\013_hardware_m21_extra_dd58839eb8929bc841cf_H0\\PLAN.json",
+        "sha256": "4edcbf69462aaaa36792a27067a695f1f0b1318b9bea5f973aa6c3e333767b75"
+      },
+      {
+        "path": "E:\\hospital_ies_v21_20261023\\hardware03\\experiments\\013_hardware_m21_extra_dd58839eb8929bc841cf_H0\\ATTEMPTS.jsonl",
+        "sha256": "fd31aa262bfb8dd387acf17287f86f98b458e68d9dbeccc72141fe2d2f19f8b1"
+      },
+      {
+        "path": "E:\\hospital_ies_v21_20261023\\hardware03\\experiments\\014_hardware_m21_extra_dd58839eb8929bc841cf_H1\\PLAN.json",
+        "sha256": "d1093c6c1bc9f5a202b588ff8b00478a3df989502b25a3f63f2765b8c54d93de"
+      },
+      {
+        "path": "E:\\hospital_ies_v21_20261023\\hardware03\\experiments\\014_hardware_m21_extra_dd58839eb8929bc841cf_H1\\ATTEMPTS.jsonl",
+        "sha256": "ce602367596407ce4698435fd72343b11ae0f7e31fe7bd8b132ce1eec6179720"
+      },
+      {
+        "path": "E:\\hospital_ies_v21_20261023\\hardware03\\experiments\\015_hardware_m21_extra_dd58839eb8929bc841cf_H2\\PLAN.json",
+        "sha256": "cf054d4d2032c2fd8e19fea4d49748a4b12276fd6c64dab22ea3c47d119f945f"
+      },
+      {
+        "path": "E:\\hospital_ies_v21_20261023\\hardware03\\experiments\\015_hardware_m21_extra_dd58839eb8929bc841cf_H2\\ATTEMPTS.jsonl",
+        "sha256": "6ca169351c9442cabf114256d0c600808a7e51cd2570830b5f8aa3607530152c"
+      },
+      {
+        "path": "E:\\hospital_ies_v21_20261023\\hardware03\\experiments\\016_hardware_m21_extra_011ab1890729d1ab1015_H0\\PLAN.json",
+        "sha256": "ebbf92a162aa6a6e084e0ae86607c9574ed74be8e924541124488f2b6aaada92"
+      },
+      {
+        "path": "E:\\hospital_ies_v21_20261023\\hardware03\\experiments\\016_hardware_m21_extra_011ab1890729d1ab1015_H0\\ATTEMPTS.jsonl",
+        "sha256": "a0ea322aeaa21d70c809fe58616aeab3e979064168d84b08f163c1ba10837ce7"
+      },
+      {
+        "path": "E:\\hospital_ies_v21_20261023\\hardware03\\experiments\\017_hardware_m21_extra_011ab1890729d1ab1015_H1\\PLAN.json",
+        "sha256": "2224ae6f722afbe1e89dca4e6e458f7d047a315768a0243b16bc21bf43464f01"
+      },
+      {
+        "path": "E:\\hospital_ies_v21_20261023\\hardware03\\experiments\\017_hardware_m21_extra_011ab1890729d1ab1015_H1\\ATTEMPTS.jsonl",
+        "sha256": "38b33dbe923b9720c1c868f2467bc7479325c1bfc5583b72135e80a6805646b3"
+      },
+      {
+        "path": "E:\\hospital_ies_v21_20261023\\hardware03\\experiments\\018_hardware_m21_extra_011ab1890729d1ab1015_H2\\PLAN.json",
+        "sha256": "df9d1972c731e0a04ec51c49091f103cb021f903d36e222b963e7e491c86b934"
+      },
+      {
+        "path": "E:\\hospital_ies_v21_20261023\\hardware03\\experiments\\018_hardware_m21_extra_011ab1890729d1ab1015_H2\\ATTEMPTS.jsonl",
+        "sha256": "2f3525357d4eda96f9a4fb7a3b501eafd114b0da61ae24d14d406798213963d6"
+      },
+      {
+        "path": "E:\\hospital_ies_v21_20261023\\hardware03\\experiments\\019_hardware_m21_extra_aec47fb338519e4f48bd_H0\\PLAN.json",
+        "sha256": "ac311d8055b4f7d0f274127761e61c7aa21b862509d0808a27e82c11f26be30c"
+      },
+      {
+        "path": "E:\\hospital_ies_v21_20261023\\hardware03\\experiments\\019_hardware_m21_extra_aec47fb338519e4f48bd_H0\\ATTEMPTS.jsonl",
+        "sha256": "8eeb1bd23c213d6e8624df687d91ea15678baf74869e0d0634b4045d5fe60939"
+      },
+      {
+        "path": "E:\\hospital_ies_v21_20261023\\hardware03\\experiments\\020_hardware_m21_extra_aec47fb338519e4f48bd_H1\\PLAN.json",
+        "sha256": "4d8e15511881a192783a3066d851f296b9a2f660eb4c05d1cf465526d88cdcce"
+      },
+      {
+        "path": "E:\\hospital_ies_v21_20261023\\hardware03\\experiments\\020_hardware_m21_extra_aec47fb338519e4f48bd_H1\\ATTEMPTS.jsonl",
+        "sha256": "3deda288bd21e00e3c85fe4adc73c1fa5ab018cf83df7c35e3bfc0ee6264aaa1"
+      },
+      {
+        "path": "E:\\hospital_ies_v21_20261023\\hardware03\\experiments\\021_hardware_m21_extra_aec47fb338519e4f48bd_H2\\PLAN.json",
+        "sha256": "f1de4bbd6b3794c7dbc44ff8e4837b58b982215f7b6809ad5c661d95e7607139"
+      },
+      {
+        "path": "E:\\hospital_ies_v21_20261023\\hardware03\\experiments\\021_hardware_m21_extra_aec47fb338519e4f48bd_H2\\ATTEMPTS.jsonl",
+        "sha256": "feae2ad691ad49168912c9913c49ba7f6b661275467f73d0542b8f796c5f107a"
+      },
+      {
+        "path": "E:\\hospital_ies_v21_20261023\\hardware03\\experiments\\022_hardware_m21_extra_c76ef47d872e5817afad_H0\\PLAN.json",
+        "sha256": "1e518549a769e982fb59a42aa3f0a62e067513cab8008c07ae039143ae263da8"
+      },
+      {
+        "path": "E:\\hospital_ies_v21_20261023\\hardware03\\experiments\\022_hardware_m21_extra_c76ef47d872e5817afad_H0\\ATTEMPTS.jsonl",
+        "sha256": "3dd4a3e13c1805d0bc480dc2dabc1b336d2cf3f134d4195813967af006e095cf"
+      },
+      {
+        "path": "E:\\hospital_ies_v21_20261023\\hardware03\\experiments\\023_hardware_m21_extra_c76ef47d872e5817afad_H1\\PLAN.json",
+        "sha256": "d7361d9e79ed21d921d4b2bb091983e872508cb388bb883031beef67b6d593e4"
+      },
+      {
+        "path": "E:\\hospital_ies_v21_20261023\\hardware03\\experiments\\023_hardware_m21_extra_c76ef47d872e5817afad_H1\\ATTEMPTS.jsonl",
+        "sha256": "a8f2da77fd5596dfb8ad373aa05223538db8567395cfffa63d31b8ad36d9f642"
+      },
+      {
+        "path": "E:\\hospital_ies_v21_20261023\\hardware03\\experiments\\024_hardware_m21_extra_c76ef47d872e5817afad_H2\\PLAN.json",
+        "sha256": "e90c4eacd443bf3c993682647f4eed8da1c46d49dd8bdc217092fd9d101f7cf8"
+      },
+      {
+        "path": "E:\\hospital_ies_v21_20261023\\hardware03\\experiments\\024_hardware_m21_extra_c76ef47d872e5817afad_H2\\ATTEMPTS.jsonl",
+        "sha256": "cb1ca72282df831a232f87ef6ebe5624e86ee7762831a1135e1fc2d090593e92"
+      },
+      {
+        "path": "E:\\hospital_ies_v21_20261023\\hardware03\\experiments\\025_hardware_m21_extra_ec43b8bbd10700b3d543_H0\\PLAN.json",
+        "sha256": "122b0a01b92ccb3036696923e500bed0abb3d1959f931415b627600bddd64253"
+      },
+      {
+        "path": "E:\\hospital_ies_v21_20261023\\hardware03\\experiments\\025_hardware_m21_extra_ec43b8bbd10700b3d543_H0\\ATTEMPTS.jsonl",
+        "sha256": "b384461ce07d581f71fb30d302ff9971d45678b23a308b2ab6b94c0983a30352"
+      },
+      {
+        "path": "E:\\hospital_ies_v21_20261023\\hardware03\\experiments\\026_hardware_m21_extra_ec43b8bbd10700b3d543_H1\\PLAN.json",
+        "sha256": "57df06bf42fc0cc3456f43b7985348864520de11c032a2b609c2e708bc82aa6b"
+      },
+      {
+        "path": "E:\\hospital_ies_v21_20261023\\hardware03\\experiments\\026_hardware_m21_extra_ec43b8bbd10700b3d543_H1\\ATTEMPTS.jsonl",
+        "sha256": "f2bb276c8aa67c167c5778e6069fd030e0de154158969b1609a0fbd8bf0e24f8"
+      },
+      {
+        "path": "E:\\hospital_ies_v21_20261023\\hardware03\\experiments\\027_hardware_m21_extra_ec43b8bbd10700b3d543_H2\\PLAN.json",
+        "sha256": "c8b70af01b68351b6e21ae50299b0b1c03ef6aeb8b8c56b3cc343782e6c1b43e"
+      },
+      {
+        "path": "E:\\hospital_ies_v21_20261023\\hardware03\\experiments\\027_hardware_m21_extra_ec43b8bbd10700b3d543_H2\\ATTEMPTS.jsonl",
+        "sha256": "eb8777a266d796424e0ae87048ad9b22fe139aa6832df9f1e4483466f672f277"
+      },
+      {
+        "path": "E:\\hospital_ies_v21_20261023\\hardware03\\experiments\\028_hardware_m21_extra_c5deb057c2d7c53bf523_H0\\PLAN.json",
+        "sha256": "ba19084f495cd1283c79e7e6ba972baffae24d9f51c859cae18a8fa210f76b3f"
+      },
+      {
+        "path": "E:\\hospital_ies_v21_20261023\\hardware03\\experiments\\028_hardware_m21_extra_c5deb057c2d7c53bf523_H0\\ATTEMPTS.jsonl",
+        "sha256": "3b8616aef38b4b16b7925edf6b44544c4eaa9946bcec937121744d839fe7d1ea"
+      },
+      {
+        "path": "E:\\hospital_ies_v21_20261023\\hardware03\\experiments\\029_hardware_m21_extra_c5deb057c2d7c53bf523_H1\\PLAN.json",
+        "sha256": "bd9b20288a51b1178d7e94f72488afbf29284b81e3eff9f77d0570b05c86de5c"
+      },
+      {
+        "path": "E:\\hospital_ies_v21_20261023\\hardware03\\experiments\\029_hardware_m21_extra_c5deb057c2d7c53bf523_H1\\ATTEMPTS.jsonl",
+        "sha256": "95582db0f60a7599023cd09a90e2ce9f34302fcfdc40332775ae889fef003100"
+      },
+      {
+        "path": "E:\\hospital_ies_v21_20261023\\hardware03\\experiments\\030_hardware_m21_extra_c5deb057c2d7c53bf523_H2\\PLAN.json",
+        "sha256": "184f695b387ccb5403ee7925e80800acf6af334f0c9a3df6c193df7937329ca8"
+      },
+      {
+        "path": "E:\\hospital_ies_v21_20261023\\hardware03\\experiments\\030_hardware_m21_extra_c5deb057c2d7c53bf523_H2\\ATTEMPTS.jsonl",
+        "sha256": "64225ccc9b942ec460ad979a6c93a49a5a5d33075b9ecedfdf328a68c65a6dd3"
+      },
+      {
+        "path": "E:\\hospital_ies_v21_20261023\\hardware03\\experiments\\031_hardware_m21_extra_5fc4d54952e2a4a65be6_H0\\PLAN.json",
+        "sha256": "40e23503a7eec6a57e6336bd271c982e1637b5098e956e21c24875ca13a9b3be"
+      },
+      {
+        "path": "E:\\hospital_ies_v21_20261023\\hardware03\\experiments\\031_hardware_m21_extra_5fc4d54952e2a4a65be6_H0\\ATTEMPTS.jsonl",
+        "sha256": "059e32a4266635b2f00ff8d1692a09732cc6a0e9aa6558361b27591c87db08f6"
+      },
+      {
+        "path": "E:\\hospital_ies_v21_20261023\\hardware03\\experiments\\032_hardware_m21_extra_5fc4d54952e2a4a65be6_H1\\PLAN.json",
+        "sha256": "b55e7bd908d06f0839154764a3f7d49d704127680e4cdc49abc35781c382cb13"
+      },
+      {
+        "path": "E:\\hospital_ies_v21_20261023\\hardware03\\experiments\\032_hardware_m21_extra_5fc4d54952e2a4a65be6_H1\\ATTEMPTS.jsonl",
+        "sha256": "be0119a785450be56fd8097279187df50c787414c64cff2a1072b14da208c737"
+      },
+      {
+        "path": "E:\\hospital_ies_v21_20261023\\hardware03\\experiments\\033_hardware_m21_extra_5fc4d54952e2a4a65be6_H2\\PLAN.json",
+        "sha256": "738cb874c45edf5a7fb1b8878d0e39fd98948163c01572cc5d54e5a15ba1f8fb"
+      },
+      {
+        "path": "E:\\hospital_ies_v21_20261023\\hardware03\\experiments\\033_hardware_m21_extra_5fc4d54952e2a4a65be6_H2\\ATTEMPTS.jsonl",
+        "sha256": "9238972f088c0508ea8bddd2cb3d652432136e07e9b9fa2c12973b454acd2756"
+      },
+      {
+        "path": "E:\\hospital_ies_v21_20261023\\hardware03\\experiments\\034_hardware_m21_extra_3a54b7a84a8f1b6b772e_H0\\PLAN.json",
+        "sha256": "4b9a3dec9fd5f251e2910a460c53950467b7143bb9c265340e9980eb791a0e28"
+      },
+      {
+        "path": "E:\\hospital_ies_v21_20261023\\hardware03\\experiments\\034_hardware_m21_extra_3a54b7a84a8f1b6b772e_H0\\ATTEMPTS.jsonl",
+        "sha256": "1a2836fb3672db19284871ff17bb279c8dec79f5a6f4656003bcb7b3b6f1162c"
+      },
+      {
+        "path": "E:\\hospital_ies_v21_20261023\\hardware03\\experiments\\035_hardware_m21_extra_3a54b7a84a8f1b6b772e_H1\\PLAN.json",
+        "sha256": "5319c3ccb8fef3b9ae83b0030e3cdc16971da31473b4f04c6f32d75e12ed1be5"
+      },
+      {
+        "path": "E:\\hospital_ies_v21_20261023\\hardware03\\experiments\\035_hardware_m21_extra_3a54b7a84a8f1b6b772e_H1\\ATTEMPTS.jsonl",
+        "sha256": "108eab15fd4a8046acf1fdab44640adf56a9e7370591e2610c633b42e73f6b60"
+      },
+      {
+        "path": "E:\\hospital_ies_v21_20261023\\hardware03\\experiments\\036_hardware_m21_extra_3a54b7a84a8f1b6b772e_H2\\PLAN.json",
+        "sha256": "1ed0c5007f5b617221c9d5a9a5b811a8ab42d192891ea0cadcee1d89750f0bb9"
+      },
+      {
+        "path": "E:\\hospital_ies_v21_20261023\\hardware03\\experiments\\036_hardware_m21_extra_3a54b7a84a8f1b6b772e_H2\\ATTEMPTS.jsonl",
+        "sha256": "76fb4c561b1664165deba3dc4494840502de0f2516b7f5c4334c216a3b347da4"
+      },
+      {
+        "path": "E:\\hospital_ies_v21_20261023\\hardware03\\experiments\\037_hardware_m21_hardware_compound_5478464ed043b4fef98f_H0\\PLAN.json",
+        "sha256": "e856916bc30dadba51fc339967ec563f9e86c28341af155e2b7053eb86571ea9"
+      },
+      {
+        "path": "E:\\hospital_ies_v21_20261023\\hardware03\\experiments\\037_hardware_m21_hardware_compound_5478464ed043b4fef98f_H0\\ATTEMPTS.jsonl",
+        "sha256": "4e3dace5c36b23f68551b17e4b135d16845f30a923e875235bde38a2894007f1"
+      },
+      {
+        "path": "E:\\hospital_ies_v21_20261023\\hardware03\\experiments\\038_hardware_m21_hardware_compound_5478464ed043b4fef98f_H1\\PLAN.json",
+        "sha256": "1a655f6867d9a14c621af0f4d7fd6cedc1c157cb07339fd36ef0e1366353a6df"
+      },
+      {
+        "path": "E:\\hospital_ies_v21_20261023\\hardware03\\experiments\\038_hardware_m21_hardware_compound_5478464ed043b4fef98f_H1\\ATTEMPTS.jsonl",
+        "sha256": "4a079ffb4f7746941c76a08576b886f827e4dc5cc9dc3152549fb912e7cbd3b0"
+      },
+      {
+        "path": "E:\\hospital_ies_v21_20261023\\hardware03\\experiments\\039_hardware_m21_hardware_compound_5478464ed043b4fef98f_H2\\PLAN.json",
+        "sha256": "93c6d2c976af917affdebc9d592853b5ef08a939ce8e7ec4e33935859896ff9c"
+      },
+      {
+        "path": "E:\\hospital_ies_v21_20261023\\hardware03\\experiments\\039_hardware_m21_hardware_compound_5478464ed043b4fef98f_H2\\ATTEMPTS.jsonl",
+        "sha256": "4f4fcad227ecfbfbc847f6e3541e3cb35505ccecc78e173de3dea9a0fdff7ce3"
+      },
+      {
+        "path": "E:\\hospital_ies_v21_20261023\\hardware03\\experiments\\040_hardware_m21_hardware_compound_42ecc465ac9477e92f47_H0\\PLAN.json",
+        "sha256": "5eb36a858d3113ccc6fe2c4a0a63db6c78b5f71c039b2b1110976d5ab41adacc"
+      },
+      {
+        "path": "E:\\hospital_ies_v21_20261023\\hardware03\\experiments\\040_hardware_m21_hardware_compound_42ecc465ac9477e92f47_H0\\ATTEMPTS.jsonl",
+        "sha256": "a89d6c556e19bc1ee776fde17ebf028e29d23fcaf9dc568b6bf2a64309d90b85"
+      },
+      {
+        "path": "E:\\hospital_ies_v21_20261023\\hardware03\\experiments\\041_hardware_m21_hardware_compound_42ecc465ac9477e92f47_H1\\PLAN.json",
+        "sha256": "a8a928835df3fea042d62915e00ae6291352afd4315cac403329bc556b9ecc3a"
+      },
+      {
+        "path": "E:\\hospital_ies_v21_20261023\\hardware03\\experiments\\041_hardware_m21_hardware_compound_42ecc465ac9477e92f47_H1\\ATTEMPTS.jsonl",
+        "sha256": "c0d8f670324976ae220ded05a1c3f9d68ebc67dd3e40731c23e059508c791a09"
+      },
+      {
+        "path": "E:\\hospital_ies_v21_20261023\\hardware03\\experiments\\042_hardware_m21_hardware_compound_42ecc465ac9477e92f47_H2\\PLAN.json",
+        "sha256": "e906167ad7a9428ae612b98d93a325cc8e65f1feacbf019ae4cefd7aa08e6ba0"
+      },
+      {
+        "path": "E:\\hospital_ies_v21_20261023\\hardware03\\experiments\\042_hardware_m21_hardware_compound_42ecc465ac9477e92f47_H2\\ATTEMPTS.jsonl",
+        "sha256": "68e6691e82b0d3ba138369990897ee7d0105b96df4646414ac0a2953195a9935"
+      }
+    ],
+    "scientific_result_or_raw_files_read": false
+  },
+  "wrapper_commands": [
+    {
+      "path": "E:\\hospital_ies_v21_20261023\\hardware03\\logs\\001_hardware_m21_extra_69c380653be81bb40e48_H0_run01.command.json",
+      "bytes": 702,
+      "sha256": "65aac9f7b02a625ba5c2a73a9594f3828b6c88ee44e6160107b321f57f4a6fab"
+    },
+    {
+      "path": "E:\\hospital_ies_v21_20261023\\hardware03\\logs\\002_hardware_m21_extra_69c380653be81bb40e48_H1_run01.command.json",
+      "bytes": 702,
+      "sha256": "e4edf095546d5b09fe78e859a4df97c17fa98e8059f9f8f28a2ba72848c7f166"
+    },
+    {
+      "path": "E:\\hospital_ies_v21_20261023\\hardware03\\logs\\003_hardware_m21_extra_69c380653be81bb40e48_H2_run01.command.json",
+      "bytes": 703,
+      "sha256": "a759e4f2f5f627761cdfe0582228207b06557e24894c4d1e19a3bf8b66bbd93e"
+    },
+    {
+      "path": "E:\\hospital_ies_v21_20261023\\hardware03\\logs\\004_hardware_m21_extra_b27249014855cbb7afba_H0_run01.command.json",
+      "bytes": 703,
+      "sha256": "a8b37023833c5f10e8003cdbb287f31e26f4c6baea824d3911e8314f1dccc48c"
+    },
+    {
+      "path": "E:\\hospital_ies_v21_20261023\\hardware03\\logs\\005_hardware_m21_extra_b27249014855cbb7afba_H1_run01.command.json",
+      "bytes": 703,
+      "sha256": "faf56d864fec7be38fe8f8d4451fc88c15e60db85283b7c3d7bdb52b6690fb4e"
+    },
+    {
+      "path": "E:\\hospital_ies_v21_20261023\\hardware03\\logs\\006_hardware_m21_extra_b27249014855cbb7afba_H2_run01.command.json",
+      "bytes": 703,
+      "sha256": "6181c273f32e6657de324151b368dfbc3385a233310c8ab81327ace8d5e9b2ee"
+    },
+    {
+      "path": "E:\\hospital_ies_v21_20261023\\hardware03\\logs\\007_hardware_m21_extra_aa15e14f48af243cc5f5_H0_run01.command.json",
+      "bytes": 703,
+      "sha256": "c175c2e07e1bd6d814d398202d3030a34a651b00cac4bd1a2d0f25daa2912f8b"
+    },
+    {
+      "path": "E:\\hospital_ies_v21_20261023\\hardware03\\logs\\008_hardware_m21_extra_aa15e14f48af243cc5f5_H1_run01.command.json",
+      "bytes": 703,
+      "sha256": "71d03ebfc5b1d072250148945e92190fb48a77fb8612dad5cc58e17b879a6804"
+    },
+    {
+      "path": "E:\\hospital_ies_v21_20261023\\hardware03\\logs\\009_hardware_m21_extra_aa15e14f48af243cc5f5_H2_run01.command.json",
+      "bytes": 703,
+      "sha256": "12a129e0d9476c38f8494eee6c6e640ab4c9216b6ddd6709fe8a19499a45e8f5"
+    },
+    {
+      "path": "E:\\hospital_ies_v21_20261023\\hardware03_resume01\\logs\\010_hardware_m21_extra_1b0032e25c95ac24541f_H0_run01.command.json",
+      "bytes": 702,
+      "sha256": "93fc82beac8687eb8033ad26f353e8e78c520e51b565f0646bd375b3ad011814"
+    },
+    {
+      "path": "E:\\hospital_ies_v21_20261023\\hardware03_resume01\\logs\\011_hardware_m21_extra_1b0032e25c95ac24541f_H1_run01.command.json",
+      "bytes": 703,
+      "sha256": "0bf2900f50c3129851addcc928f84630a3b517c4cea87c77f7913c3b2aa52535"
+    },
+    {
+      "path": "E:\\hospital_ies_v21_20261023\\hardware03_resume01\\logs\\012_hardware_m21_extra_1b0032e25c95ac24541f_H2_run01.command.json",
+      "bytes": 703,
+      "sha256": "ac37a2fad8b38783f618664be9b4e589f5e750b8e6084986e73b29ecb384a0d7"
+    },
+    {
+      "path": "E:\\hospital_ies_v21_20261023\\hardware03_resume01\\logs\\013_hardware_m21_extra_dd58839eb8929bc841cf_H0_run01.command.json",
+      "bytes": 703,
+      "sha256": "c83fc76ad0b329ebd70910d7d8d600d059a2d46db398ba8ef83befcc40f993a5"
+    },
+    {
+      "path": "E:\\hospital_ies_v21_20261023\\hardware03_resume01\\logs\\014_hardware_m21_extra_dd58839eb8929bc841cf_H1_run01.command.json",
+      "bytes": 703,
+      "sha256": "332900a134ec4aa3a33a0bf5433edf4598d80e57c2a14fcd846c3c7179a5eba5"
+    },
+    {
+      "path": "E:\\hospital_ies_v21_20261023\\hardware03_resume01\\logs\\015_hardware_m21_extra_dd58839eb8929bc841cf_H2_run01.command.json",
+      "bytes": 703,
+      "sha256": "248e12f76969d4e464ad5abb2e02c2e34d15b179bf28589ec32fd9c7ef6530d9"
+    },
+    {
+      "path": "E:\\hospital_ies_v21_20261023\\hardware03_resume01\\logs\\016_hardware_m21_extra_011ab1890729d1ab1015_H0_run01.command.json",
+      "bytes": 702,
+      "sha256": "130afedee0609daa57f570163e752f80127d6eb2995acf5959f246150233607c"
+    },
+    {
+      "path": "E:\\hospital_ies_v21_20261023\\hardware03_resume01\\logs\\017_hardware_m21_extra_011ab1890729d1ab1015_H1_run01.command.json",
+      "bytes": 703,
+      "sha256": "979bceae5b44f8daa8dfd8996142f5a1b1f8f69c7527140e8ae9e948681318eb"
+    },
+    {
+      "path": "E:\\hospital_ies_v21_20261023\\hardware03_resume01\\logs\\018_hardware_m21_extra_011ab1890729d1ab1015_H2_run01.command.json",
+      "bytes": 703,
+      "sha256": "cca9d21cb777f5ac0713220e5493cc41211e3959c8288ab5c8d2f819ebe6e3fe"
+    },
+    {
+      "path": "E:\\hospital_ies_v21_20261023\\hardware03_resume01\\logs\\019_hardware_m21_extra_aec47fb338519e4f48bd_H0_run01.command.json",
+      "bytes": 703,
+      "sha256": "1b3b33dc3fce453eb7dee3da199c1d40b31d82e40e99c13bb74243fe2fa7e1a8"
+    },
+    {
+      "path": "E:\\hospital_ies_v21_20261023\\hardware03_resume01\\logs\\020_hardware_m21_extra_aec47fb338519e4f48bd_H1_run01.command.json",
+      "bytes": 702,
+      "sha256": "edf69ee12d5f15b3d8830ea5b553fd93ce15b0f0abb9678988c0b9108b7e1553"
+    },
+    {
+      "path": "E:\\hospital_ies_v21_20261023\\hardware03_resume01\\logs\\021_hardware_m21_extra_aec47fb338519e4f48bd_H2_run01.command.json",
+      "bytes": 703,
+      "sha256": "ebd8a71f468f45cb6e221e17c6c07d09c1e4bd7df69ffb08288a23f2274cab35"
+    },
+    {
+      "path": "E:\\hospital_ies_v21_20261023\\hardware03_resume01\\logs\\022_hardware_m21_extra_c76ef47d872e5817afad_H0_run01.command.json",
+      "bytes": 702,
+      "sha256": "e55f560ba1da42306cd05bac023eaee9793e1cce0fd4ddedf5c6a36fbb4d93b6"
+    },
+    {
+      "path": "E:\\hospital_ies_v21_20261023\\hardware03_resume01\\logs\\023_hardware_m21_extra_c76ef47d872e5817afad_H1_run01.command.json",
+      "bytes": 702,
+      "sha256": "bd506603f99eb3a4e68b3d3752685f0fb6b44f58ae5e47e38c069c08d05215f5"
+    },
+    {
+      "path": "E:\\hospital_ies_v21_20261023\\hardware03_resume01\\logs\\024_hardware_m21_extra_c76ef47d872e5817afad_H2_run01.command.json",
+      "bytes": 702,
+      "sha256": "345c37b120d48c1b2b1e9f3d8e487cb26ec0e7dca542b83bb13f43492eccac2c"
+    },
+    {
+      "path": "E:\\hospital_ies_v21_20261023\\hardware03_resume01\\logs\\025_hardware_m21_extra_ec43b8bbd10700b3d543_H0_run01.command.json",
+      "bytes": 703,
+      "sha256": "141e8f5431ad0205990070298b7f73337ba426744d6b2753ec1b9d08cc8099d9"
+    },
+    {
+      "path": "E:\\hospital_ies_v21_20261023\\hardware03_resume01\\logs\\026_hardware_m21_extra_ec43b8bbd10700b3d543_H1_run01.command.json",
+      "bytes": 703,
+      "sha256": "79c35e468833c57cf09902e688d016f6f15b322087aa571da49df9357a272c61"
+    },
+    {
+      "path": "E:\\hospital_ies_v21_20261023\\hardware03_resume01\\logs\\027_hardware_m21_extra_ec43b8bbd10700b3d543_H2_run01.command.json",
+      "bytes": 701,
+      "sha256": "875a766cb923d9608b766b494bd03cc13914b7b2a276b92aa368d23ca71a20aa"
+    },
+    {
+      "path": "E:\\hospital_ies_v21_20261023\\hardware03_resume01\\logs\\028_hardware_m21_extra_c5deb057c2d7c53bf523_H0_run01.command.json",
+      "bytes": 702,
+      "sha256": "aba06fd4a1877c87ab6006989d6d4a7e852e904019e5b23e014523df2f317b06"
+    },
+    {
+      "path": "E:\\hospital_ies_v21_20261023\\hardware03_resume01\\logs\\029_hardware_m21_extra_c5deb057c2d7c53bf523_H1_run01.command.json",
+      "bytes": 702,
+      "sha256": "1d648aa9330ca4e72037b2d58571690afa6804bf593e3a1cda9edfdb52f00980"
+    },
+    {
+      "path": "E:\\hospital_ies_v21_20261023\\hardware03_resume01\\logs\\030_hardware_m21_extra_c5deb057c2d7c53bf523_H2_run01.command.json",
+      "bytes": 702,
+      "sha256": "30f378ee1fd3df1d8d6c0df3f66b80f9d0e53794f1c004ccebe3ea9b111b7c21"
+    },
+    {
+      "path": "E:\\hospital_ies_v21_20261023\\hardware03_resume01\\logs\\031_hardware_m21_extra_5fc4d54952e2a4a65be6_H0_run01.command.json",
+      "bytes": 703,
+      "sha256": "2aabb404589e8d2941db1269fbbbbda4b8f1202655f8b71b50ae9be83612c55f"
+    },
+    {
+      "path": "E:\\hospital_ies_v21_20261023\\hardware03_resume01\\logs\\032_hardware_m21_extra_5fc4d54952e2a4a65be6_H1_run01.command.json",
+      "bytes": 702,
+      "sha256": "1d63738af583c7d2fa5ebf4f399edacb07971ff6d332a0bb9b59e6cc3905d599"
+    },
+    {
+      "path": "E:\\hospital_ies_v21_20261023\\hardware03_resume01\\logs\\033_hardware_m21_extra_5fc4d54952e2a4a65be6_H2_run01.command.json",
+      "bytes": 703,
+      "sha256": "3a8376504abe9580dc144bb962b76794645816ed4cf1447e66b026001ae92826"
+    },
+    {
+      "path": "E:\\hospital_ies_v21_20261023\\hardware03_resume01\\logs\\034_hardware_m21_extra_3a54b7a84a8f1b6b772e_H0_run01.command.json",
+      "bytes": 703,
+      "sha256": "35cc45b7c3747ac1d0589ba33060b29d87a7ada6c433c2c8c56d96d51137bbf9"
+    },
+    {
+      "path": "E:\\hospital_ies_v21_20261023\\hardware03_resume01\\logs\\035_hardware_m21_extra_3a54b7a84a8f1b6b772e_H1_run01.command.json",
+      "bytes": 703,
+      "sha256": "0046bc3b9de1fa0d0dff209b7644bd211efa6c42216a12d0c27176bd0ce272d3"
+    },
+    {
+      "path": "E:\\hospital_ies_v21_20261023\\hardware03_resume01\\logs\\036_hardware_m21_extra_3a54b7a84a8f1b6b772e_H2_run01.command.json",
+      "bytes": 703,
+      "sha256": "1bac1bc17a01317c3620af6bb04a56d59e446aeb7c679b97e974a2e8950fdba0"
+    },
+    {
+      "path": "E:\\hospital_ies_v21_20261023\\hardware03_resume01\\logs\\037_hardware_m21_hardware_compound_5478464ed043b4fef98f_H0_run01.command.json",
+      "bytes": 727,
+      "sha256": "571f188fecc092679a4d6869a78d79c52b6778510b5422ca68479065597b8ec6"
+    },
+    {
+      "path": "E:\\hospital_ies_v21_20261023\\hardware03_resume01\\logs\\038_hardware_m21_hardware_compound_5478464ed043b4fef98f_H1_run01.command.json",
+      "bytes": 727,
+      "sha256": "6a38cd5cbfbe626f0d9284b325d249bb15c4bc9a069065b6b97e997dead8dbd7"
+    },
+    {
+      "path": "E:\\hospital_ies_v21_20261023\\hardware03_resume01\\logs\\039_hardware_m21_hardware_compound_5478464ed043b4fef98f_H2_run01.command.json",
+      "bytes": 726,
+      "sha256": "7a05bbae7cf6cdd9f334ec5b15a14b6b4c6246211124596c1d53d838d116e2f1"
+    },
+    {
+      "path": "E:\\hospital_ies_v21_20261023\\hardware03_resume01\\logs\\040_hardware_m21_hardware_compound_42ecc465ac9477e92f47_H0_run01.command.json",
+      "bytes": 727,
+      "sha256": "0c76c5940a761e6d8379264530a710a6a3e0c306867efe8caa9588a52eee9673"
+    },
+    {
+      "path": "E:\\hospital_ies_v21_20261023\\hardware03_resume01\\logs\\041_hardware_m21_hardware_compound_42ecc465ac9477e92f47_H1_run01.command.json",
+      "bytes": 727,
+      "sha256": "6a89b3ec48bcb0fc33e486b13194b307ad8b76dd66e3352bebd5bef441feb0cb"
+    },
+    {
+      "path": "E:\\hospital_ies_v21_20261023\\hardware03_resume01\\logs\\042_hardware_m21_hardware_compound_42ecc465ac9477e92f47_H2_run01.command.json",
+      "bytes": 727,
+      "sha256": "e5e38158d416d46225825de9e9f754fd4b5d7cd51e830594a9381e69ed7078e8"
+    }
+  ],
+  "retained_immutable_original_anchors": [
+    {
+      "path": "E:\\hospital_ies_v21_20261023\\hardware03\\JOBS.json",
+      "sha256": "2f4ae1fecca9db43ae5413f8a4dbd2f7344cb05e84735c247b398cfec40c9944",
+      "bytes": 5837
+    },
+    {
+      "path": "E:\\hospital_ies_v21_20261023\\hardware03\\SUPERVISOR_FINISHED.json",
+      "sha256": "22100e266bfecb1b1f5dde345b6af2300365771e5c91bf44999bbcf1b19c2d55",
+      "bytes": 7698
+    },
+    {
+      "path": "E:\\hospital_ies_v21_20261023\\hardware03\\STOP_NEW_JOBS",
+      "sha256": "8d9bc6cada22077cd89c4fd4cca51de772cca7ece8e407d4ec55d735ae3b70be",
+      "bytes": 784
+    },
+    {
+      "path": "E:\\hospital_ies_v21_20261023\\hardware03\\HARDWARE_FREEZE.json",
+      "sha256": "6a2a2d9f447a10a70b5affab686079253b281c4cb56afff1d6aedf20175efe93",
+      "bytes": 1315577
+    },
+    {
+      "path": "E:\\hospital_ies_v21_20261023\\staging_panels\\candidate04\\HARDWARE_PROPOSAL.json",
+      "sha256": "345de5259ed5dd1b1218432d4ea2ff36b3ddc8de2441738f1a0564e5dbb6e339",
+      "bytes": 38944
+    },
+    {
+      "path": "E:\\hospital_ies_v21_20261023\\run_study_jobs_v2.py",
+      "sha256": "333f8ab686999ed45d89efa62ef34b467d7f928b5b05ee2c67a1aa5f92d4f6a1",
+      "bytes": 13408
+    },
+    {
+      "path": "E:\\hospital_ies_v21_20261023\\hardware03\\SUPERVISOR_JOURNAL.jsonl",
+      "sha256": "6cbd56f2bf8baf2696c81a78117c8a95254813050998335533f502c0d65d2d68",
+      "bytes": 10144
+    },
+    {
+      "path": "E:\\hospital_ies_v21_20261023\\hardware03\\SUPERVISOR_RESOURCES.jsonl",
+      "sha256": "d555873ea51418cc47b54d071b77997d24574acb41bd723baf832547d7140980",
+      "bytes": 83730
+    },
+    {
+      "path": "E:\\hospital_ies_v21_20261023\\hardware03\\experiments\\001_hardware_m21_extra_69c380653be81bb40e48_H0\\PLAN.json",
+      "sha256": "4dbcdbb717197746a73112afa3b2c677bdd567937fb404a6f8b8be2042cb54ff",
+      "bytes": 10254
+    },
+    {
+      "path": "E:\\hospital_ies_v21_20261023\\hardware03\\experiments\\001_hardware_m21_extra_69c380653be81bb40e48_H0\\MANIFEST.json",
+      "sha256": "68c295beb690e24381bc835c4c6c111fe9de93536f4d42a236382f74952e6aec",
+      "bytes": 80028
+    },
+    {
+      "path": "E:\\hospital_ies_v21_20261023\\hardware03\\experiments\\001_hardware_m21_extra_69c380653be81bb40e48_H0\\FREEZE_REFERENCE.json",
+      "sha256": "8612913b8a745a4bde8db8e0053129560d7ae2c876bc893f678f29bcc033f9bd",
+      "bytes": 243
+    },
+    {
+      "path": "E:\\hospital_ies_v21_20261023\\hardware03\\experiments\\001_hardware_m21_extra_69c380653be81bb40e48_H0\\pairs\\m21_extra_69c380653be81bb40e48__C_sci_v21__H0\\attempt_0001\\RESULT.json",
+      "sha256": "539c421a9447945913bdde2fcda109e893eb1778e9eb63cf8d146a95c3b3a785",
+      "bytes": 20411
+    },
+    {
+      "path": "E:\\hospital_ies_v21_20261023\\hardware03\\experiments\\001_hardware_m21_extra_69c380653be81bb40e48_H0\\pairs\\m21_extra_69c380653be81bb40e48__A_sci_v21__H0\\attempt_0001\\RESULT.json",
+      "sha256": "2675c79a49af08dd1bfd3ce61dd9a030a3751cb959238ada25b828d098647f84",
+      "bytes": 20410
+    },
+    {
+      "path": "E:\\hospital_ies_v21_20261023\\hardware03\\experiments\\001_hardware_m21_extra_69c380653be81bb40e48_H0\\pairs\\m21_extra_69c380653be81bb40e48__M_sci_v21__H0\\attempt_0001\\RESULT.json",
+      "sha256": "79ed00ebb074e556459034f14da917da78ab4812091231cf21cb1ac366eead20",
+      "bytes": 20577
+    },
+    {
+      "path": "E:\\hospital_ies_v21_20261023\\hardware03\\experiments\\001_hardware_m21_extra_69c380653be81bb40e48_H0\\ATTEMPTS.jsonl",
+      "sha256": "7afb14cdbe4874fef28f9ba4537e98fee2dbb6893f37ac280571aa8969c57002",
+      "bytes": 3351
+    },
+    {
+      "path": "E:\\hospital_ies_v21_20261023\\hardware03\\logs\\001_hardware_m21_extra_69c380653be81bb40e48_H0_run01.command.json",
+      "sha256": "65aac9f7b02a625ba5c2a73a9594f3828b6c88ee44e6160107b321f57f4a6fab",
+      "bytes": 702
+    },
+    {
+      "path": "E:\\hospital_ies_v21_20261023\\hardware03\\experiments\\002_hardware_m21_extra_69c380653be81bb40e48_H1\\PLAN.json",
+      "sha256": "515511c09636f929d8bc0ddb219a28716c0d3c56aa62645cf464290779882bb4",
+      "bytes": 10462
+    },
+    {
+      "path": "E:\\hospital_ies_v21_20261023\\hardware03\\experiments\\002_hardware_m21_extra_69c380653be81bb40e48_H1\\MANIFEST.json",
+      "sha256": "2dbba3d59fc5c507d972f1dcfc671753080d3e65de15ca3d939e0ab38b95aaac",
+      "bytes": 80028
+    },
+    {
+      "path": "E:\\hospital_ies_v21_20261023\\hardware03\\experiments\\002_hardware_m21_extra_69c380653be81bb40e48_H1\\FREEZE_REFERENCE.json",
+      "sha256": "8612913b8a745a4bde8db8e0053129560d7ae2c876bc893f678f29bcc033f9bd",
+      "bytes": 243
+    },
+    {
+      "path": "E:\\hospital_ies_v21_20261023\\hardware03\\experiments\\002_hardware_m21_extra_69c380653be81bb40e48_H1\\pairs\\m21_extra_69c380653be81bb40e48__C_sci_v21__H1\\attempt_0001\\RESULT.json",
+      "sha256": "9df7bfd4c0a92a1869ac3c15dfa03dac8257a3739e9391f19f8afd2376e9bbfd",
+      "bytes": 20299
+    },
+    {
+      "path": "E:\\hospital_ies_v21_20261023\\hardware03\\experiments\\002_hardware_m21_extra_69c380653be81bb40e48_H1\\pairs\\m21_extra_69c380653be81bb40e48__A_sci_v21__H1\\attempt_0001\\RESULT.json",
+      "sha256": "418999fe3b28106bb68360f890e80ac140e25c5ca2d25ceaec9a6c070c14da85",
+      "bytes": 20302
+    },
+    {
+      "path": "E:\\hospital_ies_v21_20261023\\hardware03\\experiments\\002_hardware_m21_extra_69c380653be81bb40e48_H1\\pairs\\m21_extra_69c380653be81bb40e48__M_sci_v21__H1\\attempt_0001\\RESULT.json",
+      "sha256": "c72840d72872acec80dcb385fe8a555d7f5fe3a97ac89fe8c4a7ba7706ec7f6d",
+      "bytes": 20449
+    },
+    {
+      "path": "E:\\hospital_ies_v21_20261023\\hardware03\\experiments\\002_hardware_m21_extra_69c380653be81bb40e48_H1\\ATTEMPTS.jsonl",
+      "sha256": "31a02194350bd08dc4c3fdeec22310d05eaf359115567a0ffb64c39042b4689e",
+      "bytes": 3351
+    },
+    {
+      "path": "E:\\hospital_ies_v21_20261023\\hardware03\\logs\\002_hardware_m21_extra_69c380653be81bb40e48_H1_run01.command.json",
+      "sha256": "e4edf095546d5b09fe78e859a4df97c17fa98e8059f9f8f28a2ba72848c7f166",
+      "bytes": 702
+    },
+    {
+      "path": "E:\\hospital_ies_v21_20261023\\hardware03\\experiments\\003_hardware_m21_extra_69c380653be81bb40e48_H2\\PLAN.json",
+      "sha256": "4b8a13a2d1f81901751a1fbc3b3b5b35c9987855bfe0c93c26528f0e03371e39",
+      "bytes": 10463
+    },
+    {
+      "path": "E:\\hospital_ies_v21_20261023\\hardware03\\experiments\\003_hardware_m21_extra_69c380653be81bb40e48_H2\\MANIFEST.json",
+      "sha256": "a86588aa752f6fd90bcbcc93e88fa80acbbb38b143bfe293ded9ba7e13623d11",
+      "bytes": 80028
+    },
+    {
+      "path": "E:\\hospital_ies_v21_20261023\\hardware03\\experiments\\003_hardware_m21_extra_69c380653be81bb40e48_H2\\FREEZE_REFERENCE.json",
+      "sha256": "8612913b8a745a4bde8db8e0053129560d7ae2c876bc893f678f29bcc033f9bd",
+      "bytes": 243
+    },
+    {
+      "path": "E:\\hospital_ies_v21_20261023\\hardware03\\experiments\\003_hardware_m21_extra_69c380653be81bb40e48_H2\\pairs\\m21_extra_69c380653be81bb40e48__C_sci_v21__H2\\attempt_0001\\RESULT.json",
+      "sha256": "9826d713e53efb39bffc7a771e4a3e8eff1c269c552ffdcd4b43c696c4184235",
+      "bytes": 20585
+    },
+    {
+      "path": "E:\\hospital_ies_v21_20261023\\hardware03\\experiments\\003_hardware_m21_extra_69c380653be81bb40e48_H2\\pairs\\m21_extra_69c380653be81bb40e48__A_sci_v21__H2\\attempt_0001\\RESULT.json",
+      "sha256": "83baa43ef469d2ace86ab87e93ec30825cb94be82f72c330ed239ffa5fe307ea",
+      "bytes": 20587
+    },
+    {
+      "path": "E:\\hospital_ies_v21_20261023\\hardware03\\experiments\\003_hardware_m21_extra_69c380653be81bb40e48_H2\\pairs\\m21_extra_69c380653be81bb40e48__M_sci_v21__H2\\attempt_0001\\RESULT.json",
+      "sha256": "deaf9153185e1af76f16d9cc61e711a89324d46db4d93e9d083032bb13e25bc4",
+      "bytes": 20824
+    },
+    {
+      "path": "E:\\hospital_ies_v21_20261023\\hardware03\\experiments\\003_hardware_m21_extra_69c380653be81bb40e48_H2\\ATTEMPTS.jsonl",
+      "sha256": "cbb5097f63d88c7a60806731c362fce7f7520088f05d4a69943dc62d79058625",
+      "bytes": 3351
+    },
+    {
+      "path": "E:\\hospital_ies_v21_20261023\\hardware03\\logs\\003_hardware_m21_extra_69c380653be81bb40e48_H2_run01.command.json",
+      "sha256": "a759e4f2f5f627761cdfe0582228207b06557e24894c4d1e19a3bf8b66bbd93e",
+      "bytes": 703
+    },
+    {
+      "path": "E:\\hospital_ies_v21_20261023\\hardware03\\experiments\\004_hardware_m21_extra_b27249014855cbb7afba_H0\\PLAN.json",
+      "sha256": "48cef294bf163c89433eed98436e3247019097b9cd98b9c2cdf105e76a7bcedb",
+      "bytes": 10256
+    },
+    {
+      "path": "E:\\hospital_ies_v21_20261023\\hardware03\\experiments\\004_hardware_m21_extra_b27249014855cbb7afba_H0\\MANIFEST.json",
+      "sha256": "c8954c14916a583a01300be07f1463913770640bec33bad3dc8918464002706d",
+      "bytes": 80030
+    },
+    {
+      "path": "E:\\hospital_ies_v21_20261023\\hardware03\\experiments\\004_hardware_m21_extra_b27249014855cbb7afba_H0\\FREEZE_REFERENCE.json",
+      "sha256": "8612913b8a745a4bde8db8e0053129560d7ae2c876bc893f678f29bcc033f9bd",
+      "bytes": 243
+    },
+    {
+      "path": "E:\\hospital_ies_v21_20261023\\hardware03\\experiments\\004_hardware_m21_extra_b27249014855cbb7afba_H0\\pairs\\m21_extra_b27249014855cbb7afba__C_sci_v21__H0\\attempt_0001\\RESULT.json",
+      "sha256": "bc598081624229149b184c45c0ccdb0d4a51b2f6c5fef7cba84a8965acfe24b5",
+      "bytes": 20441
+    },
+    {
+      "path": "E:\\hospital_ies_v21_20261023\\hardware03\\experiments\\004_hardware_m21_extra_b27249014855cbb7afba_H0\\pairs\\m21_extra_b27249014855cbb7afba__A_sci_v21__H0\\attempt_0001\\RESULT.json",
+      "sha256": "e72b4343265b074bc97121950733f3a322970dd8c6ecab544f9951a77567af32",
+      "bytes": 20440
+    },
+    {
+      "path": "E:\\hospital_ies_v21_20261023\\hardware03\\experiments\\004_hardware_m21_extra_b27249014855cbb7afba_H0\\pairs\\m21_extra_b27249014855cbb7afba__M_sci_v21__H0\\attempt_0001\\RESULT.json",
+      "sha256": "ea1f8cb24e6ade59b6d568bd0879504ad519b8ef2bc28cc27da5b7c83a1fa527",
+      "bytes": 20737
+    },
+    {
+      "path": "E:\\hospital_ies_v21_20261023\\hardware03\\experiments\\004_hardware_m21_extra_b27249014855cbb7afba_H0\\ATTEMPTS.jsonl",
+      "sha256": "0df45ae33b402500a09ca7c4f92685e8c0699dcda24b018435773989dee541b1",
+      "bytes": 3351
+    },
+    {
+      "path": "E:\\hospital_ies_v21_20261023\\hardware03\\logs\\004_hardware_m21_extra_b27249014855cbb7afba_H0_run01.command.json",
+      "sha256": "a8b37023833c5f10e8003cdbb287f31e26f4c6baea824d3911e8314f1dccc48c",
+      "bytes": 703
+    },
+    {
+      "path": "E:\\hospital_ies_v21_20261023\\hardware03\\experiments\\005_hardware_m21_extra_b27249014855cbb7afba_H1\\PLAN.json",
+      "sha256": "374795214deeac2aecb794590483dd6e472ddb1849967e59a99fa48dc4888e4c",
+      "bytes": 10464
+    },
+    {
+      "path": "E:\\hospital_ies_v21_20261023\\hardware03\\experiments\\005_hardware_m21_extra_b27249014855cbb7afba_H1\\MANIFEST.json",
+      "sha256": "0e86b22a83bfef341e659514b7505923cdeedfb041b9daf23958b0a69e995514",
+      "bytes": 80030
+    },
+    {
+      "path": "E:\\hospital_ies_v21_20261023\\hardware03\\experiments\\005_hardware_m21_extra_b27249014855cbb7afba_H1\\FREEZE_REFERENCE.json",
+      "sha256": "8612913b8a745a4bde8db8e0053129560d7ae2c876bc893f678f29bcc033f9bd",
+      "bytes": 243
+    },
+    {
+      "path": "E:\\hospital_ies_v21_20261023\\hardware03\\experiments\\005_hardware_m21_extra_b27249014855cbb7afba_H1\\pairs\\m21_extra_b27249014855cbb7afba__C_sci_v21__H1\\attempt_0001\\RESULT.json",
+      "sha256": "1a8e31355f5ab55a9964c782dbea6cdb06d90fac36ee7517dbf0786b5d088d31",
+      "bytes": 20478
+    },
+    {
+      "path": "E:\\hospital_ies_v21_20261023\\hardware03\\experiments\\005_hardware_m21_extra_b27249014855cbb7afba_H1\\pairs\\m21_extra_b27249014855cbb7afba__A_sci_v21__H1\\attempt_0001\\RESULT.json",
+      "sha256": "d4060b87a31585ed2f5925ae1574166e9a30520f37fe15df10d2c431783199c9",
+      "bytes": 20481
+    },
+    {
+      "path": "E:\\hospital_ies_v21_20261023\\hardware03\\experiments\\005_hardware_m21_extra_b27249014855cbb7afba_H1\\pairs\\m21_extra_b27249014855cbb7afba__M_sci_v21__H1\\attempt_0001\\RESULT.json",
+      "sha256": "8c18992ff4776a486d9abc799522b7bebdbb4399b8c33995a77fd8d5fb832a6c",
+      "bytes": 20768
+    },
+    {
+      "path": "E:\\hospital_ies_v21_20261023\\hardware03\\experiments\\005_hardware_m21_extra_b27249014855cbb7afba_H1\\ATTEMPTS.jsonl",
+      "sha256": "5ec6e078e42d7a3087c6bacb6ed2021057ad50c45a765b3e66d87f2ea87d5bf5",
+      "bytes": 3351
+    },
+    {
+      "path": "E:\\hospital_ies_v21_20261023\\hardware03\\logs\\005_hardware_m21_extra_b27249014855cbb7afba_H1_run01.command.json",
+      "sha256": "faf56d864fec7be38fe8f8d4451fc88c15e60db85283b7c3d7bdb52b6690fb4e",
+      "bytes": 703
+    },
+    {
+      "path": "E:\\hospital_ies_v21_20261023\\hardware03\\experiments\\006_hardware_m21_extra_b27249014855cbb7afba_H2\\PLAN.json",
+      "sha256": "bc76d9b030d74917c9b7615f652696d1a0e5dc17672848129f0de305780f4286",
+      "bytes": 10465
+    },
+    {
+      "path": "E:\\hospital_ies_v21_20261023\\hardware03\\experiments\\006_hardware_m21_extra_b27249014855cbb7afba_H2\\MANIFEST.json",
+      "sha256": "442a6c87351a09ded474402bf840f77d1f5d437bd66e9ae5f5bda6474cacfa80",
+      "bytes": 80030
+    },
+    {
+      "path": "E:\\hospital_ies_v21_20261023\\hardware03\\experiments\\006_hardware_m21_extra_b27249014855cbb7afba_H2\\FREEZE_REFERENCE.json",
+      "sha256": "8612913b8a745a4bde8db8e0053129560d7ae2c876bc893f678f29bcc033f9bd",
+      "bytes": 243
+    },
+    {
+      "path": "E:\\hospital_ies_v21_20261023\\hardware03\\experiments\\006_hardware_m21_extra_b27249014855cbb7afba_H2\\pairs\\m21_extra_b27249014855cbb7afba__C_sci_v21__H2\\attempt_0001\\RESULT.json",
+      "sha256": "f854702123763cecd17e71daa4c6288840f8cf0be3bc2cb369c2aeccf34d381c",
+      "bytes": 20839
+    },
+    {
+      "path": "E:\\hospital_ies_v21_20261023\\hardware03\\experiments\\006_hardware_m21_extra_b27249014855cbb7afba_H2\\pairs\\m21_extra_b27249014855cbb7afba__A_sci_v21__H2\\attempt_0001\\RESULT.json",
+      "sha256": "86df44bf4dc8c1fa827f02f25c9fc609d419ecb2bfc0af4f999718a79e8c6ab6",
+      "bytes": 20842
+    },
+    {
+      "path": "E:\\hospital_ies_v21_20261023\\hardware03\\experiments\\006_hardware_m21_extra_b27249014855cbb7afba_H2\\pairs\\m21_extra_b27249014855cbb7afba__M_sci_v21__H2\\attempt_0001\\RESULT.json",
+      "sha256": "a9773a1a7c2b5ec197e5defcea92c1e1be0f7dc3c49ab8c07042549fe10aee94",
+      "bytes": 21332
+    },
+    {
+      "path": "E:\\hospital_ies_v21_20261023\\hardware03\\experiments\\006_hardware_m21_extra_b27249014855cbb7afba_H2\\ATTEMPTS.jsonl",
+      "sha256": "29c4029a64738c16f52aa04c0ee4aed1a96e57635cdbd4377996d378bf1274d6",
+      "bytes": 3351
+    },
+    {
+      "path": "E:\\hospital_ies_v21_20261023\\hardware03\\logs\\006_hardware_m21_extra_b27249014855cbb7afba_H2_run01.command.json",
+      "sha256": "6181c273f32e6657de324151b368dfbc3385a233310c8ab81327ace8d5e9b2ee",
+      "bytes": 703
+    },
+    {
+      "path": "E:\\hospital_ies_v21_20261023\\hardware03\\experiments\\007_hardware_m21_extra_aa15e14f48af243cc5f5_H0\\PLAN.json",
+      "sha256": "bd4200218651942199d5630243f2165833402d5c24a15eaf99d991ced687e087",
+      "bytes": 10269
+    },
+    {
+      "path": "E:\\hospital_ies_v21_20261023\\hardware03\\experiments\\007_hardware_m21_extra_aa15e14f48af243cc5f5_H0\\MANIFEST.json",
+      "sha256": "26680137543305c0e36774db41428c4a8d8b3ef4c708500aa72573e04f6c206b",
+      "bytes": 80043
+    },
+    {
+      "path": "E:\\hospital_ies_v21_20261023\\hardware03\\experiments\\007_hardware_m21_extra_aa15e14f48af243cc5f5_H0\\FREEZE_REFERENCE.json",
+      "sha256": "8612913b8a745a4bde8db8e0053129560d7ae2c876bc893f678f29bcc033f9bd",
+      "bytes": 243
+    },
+    {
+      "path": "E:\\hospital_ies_v21_20261023\\hardware03\\experiments\\007_hardware_m21_extra_aa15e14f48af243cc5f5_H0\\pairs\\m21_extra_aa15e14f48af243cc5f5__C_sci_v21__H0\\attempt_0001\\RESULT.json",
+      "sha256": "1d6d0556072dbb8da1284b74531f03dd66bfad59981a3d25f83cc7b6f714851f",
+      "bytes": 20749
+    },
+    {
+      "path": "E:\\hospital_ies_v21_20261023\\hardware03\\experiments\\007_hardware_m21_extra_aa15e14f48af243cc5f5_H0\\pairs\\m21_extra_aa15e14f48af243cc5f5__A_sci_v21__H0\\attempt_0001\\RESULT.json",
+      "sha256": "b21a0c625881f2b2e23e937b40fd2bf305d4d73d72afcdf72d0ef684903c5ee5",
+      "bytes": 20748
+    },
+    {
+      "path": "E:\\hospital_ies_v21_20261023\\hardware03\\experiments\\007_hardware_m21_extra_aa15e14f48af243cc5f5_H0\\pairs\\m21_extra_aa15e14f48af243cc5f5__M_sci_v21__H0\\attempt_0001\\RESULT.json",
+      "sha256": "9e5de4797718e2cb49a8719ea2b7b9b4a00579ad1a582a9bb943b50b9bb93984",
+      "bytes": 21052
+    },
+    {
+      "path": "E:\\hospital_ies_v21_20261023\\hardware03\\experiments\\007_hardware_m21_extra_aa15e14f48af243cc5f5_H0\\ATTEMPTS.jsonl",
+      "sha256": "ea6cdc2a6e2231e5134f853e7775b96b5c8d946d73bf4d738e0763591a0033b4",
+      "bytes": 3351
+    },
+    {
+      "path": "E:\\hospital_ies_v21_20261023\\hardware03\\logs\\007_hardware_m21_extra_aa15e14f48af243cc5f5_H0_run01.command.json",
+      "sha256": "c175c2e07e1bd6d814d398202d3030a34a651b00cac4bd1a2d0f25daa2912f8b",
+      "bytes": 703
+    },
+    {
+      "path": "E:\\hospital_ies_v21_20261023\\hardware03\\experiments\\008_hardware_m21_extra_aa15e14f48af243cc5f5_H1\\PLAN.json",
+      "sha256": "abd7eb6fc3c548607f9084e0c23a3bd64092d7d9357c039db79e31c2522c6045",
+      "bytes": 10477
+    },
+    {
+      "path": "E:\\hospital_ies_v21_20261023\\hardware03\\experiments\\008_hardware_m21_extra_aa15e14f48af243cc5f5_H1\\MANIFEST.json",
+      "sha256": "5834f2fb54dae233be98a9f2ce11d3711a1e110dfd893f4c4389c71f5ae6d787",
+      "bytes": 80043
+    },
+    {
+      "path": "E:\\hospital_ies_v21_20261023\\hardware03\\experiments\\008_hardware_m21_extra_aa15e14f48af243cc5f5_H1\\FREEZE_REFERENCE.json",
+      "sha256": "8612913b8a745a4bde8db8e0053129560d7ae2c876bc893f678f29bcc033f9bd",
+      "bytes": 243
+    },
+    {
+      "path": "E:\\hospital_ies_v21_20261023\\hardware03\\experiments\\008_hardware_m21_extra_aa15e14f48af243cc5f5_H1\\pairs\\m21_extra_aa15e14f48af243cc5f5__C_sci_v21__H1\\attempt_0001\\RESULT.json",
+      "sha256": "0753b0691bbeef91393d2eded359edd009f58f62e8e33f18b617bba18f80edfc",
+      "bytes": 20799
+    },
+    {
+      "path": "E:\\hospital_ies_v21_20261023\\hardware03\\experiments\\008_hardware_m21_extra_aa15e14f48af243cc5f5_H1\\pairs\\m21_extra_aa15e14f48af243cc5f5__A_sci_v21__H1\\attempt_0001\\RESULT.json",
+      "sha256": "81ef462a3b95f99796205d04b4a3dd392a246849ee8f020e42b92f15902adfa5",
+      "bytes": 20800
+    },
+    {
+      "path": "E:\\hospital_ies_v21_20261023\\hardware03\\experiments\\008_hardware_m21_extra_aa15e14f48af243cc5f5_H1\\pairs\\m21_extra_aa15e14f48af243cc5f5__M_sci_v21__H1\\attempt_0001\\RESULT.json",
+      "sha256": "95263eb3cc976ca7c667da3e10fa8132c08b29bb57c0f9dfc20fd1ce5b200084",
+      "bytes": 21085
+    },
+    {
+      "path": "E:\\hospital_ies_v21_20261023\\hardware03\\experiments\\008_hardware_m21_extra_aa15e14f48af243cc5f5_H1\\ATTEMPTS.jsonl",
+      "sha256": "7374498ac273c84caf4dcea8d39e8dbea4c4f840c36a3e5f613e4ae46fd2c274",
+      "bytes": 3351
+    },
+    {
+      "path": "E:\\hospital_ies_v21_20261023\\hardware03\\logs\\008_hardware_m21_extra_aa15e14f48af243cc5f5_H1_run01.command.json",
+      "sha256": "71d03ebfc5b1d072250148945e92190fb48a77fb8612dad5cc58e17b879a6804",
+      "bytes": 703
+    },
+    {
+      "path": "E:\\hospital_ies_v21_20261023\\hardware03\\experiments\\009_hardware_m21_extra_aa15e14f48af243cc5f5_H2\\PLAN.json",
+      "sha256": "2be5e228acce64c0de544f7b4fd53d3c4bc6228762c3d14282dcef869e58e004",
+      "bytes": 10478
+    },
+    {
+      "path": "E:\\hospital_ies_v21_20261023\\hardware03\\experiments\\009_hardware_m21_extra_aa15e14f48af243cc5f5_H2\\MANIFEST.json",
+      "sha256": "b14a9c8024ad93dd90398ea65e04f0c05d9707abe242af17a62255ebdf2d221b",
+      "bytes": 80043
+    },
+    {
+      "path": "E:\\hospital_ies_v21_20261023\\hardware03\\experiments\\009_hardware_m21_extra_aa15e14f48af243cc5f5_H2\\FREEZE_REFERENCE.json",
+      "sha256": "8612913b8a745a4bde8db8e0053129560d7ae2c876bc893f678f29bcc033f9bd",
+      "bytes": 243
+    },
+    {
+      "path": "E:\\hospital_ies_v21_20261023\\hardware03\\experiments\\009_hardware_m21_extra_aa15e14f48af243cc5f5_H2\\pairs\\m21_extra_aa15e14f48af243cc5f5__C_sci_v21__H2\\attempt_0001\\RESULT.json",
+      "sha256": "09fc3a5f89df14b9ad66b4f93d663a3572769f8b0d1f1140e9b2cbc030ac87cf",
+      "bytes": 20912
+    },
+    {
+      "path": "E:\\hospital_ies_v21_20261023\\hardware03\\experiments\\009_hardware_m21_extra_aa15e14f48af243cc5f5_H2\\pairs\\m21_extra_aa15e14f48af243cc5f5__A_sci_v21__H2\\attempt_0001\\RESULT.json",
+      "sha256": "cf6865d86b093a2744a272d5b21611d2ea034398ae4edd62bcd7e6396e105613",
+      "bytes": 20916
+    },
+    {
+      "path": "E:\\hospital_ies_v21_20261023\\hardware03\\experiments\\009_hardware_m21_extra_aa15e14f48af243cc5f5_H2\\pairs\\m21_extra_aa15e14f48af243cc5f5__M_sci_v21__H2\\attempt_0001\\RESULT.json",
+      "sha256": "f376093191d41d3da6814523d3e003c5ddf0da58bab9051bbe68960a5039c3bb",
+      "bytes": 21379
+    },
+    {
+      "path": "E:\\hospital_ies_v21_20261023\\hardware03\\experiments\\009_hardware_m21_extra_aa15e14f48af243cc5f5_H2\\ATTEMPTS.jsonl",
+      "sha256": "f10b531949ae995431fdf8fb729167566057a2bb0a8c6df442216de732125fce",
+      "bytes": 3351
+    },
+    {
+      "path": "E:\\hospital_ies_v21_20261023\\hardware03\\logs\\009_hardware_m21_extra_aa15e14f48af243cc5f5_H2_run01.command.json",
+      "sha256": "12a129e0d9476c38f8494eee6c6e640ab4c9216b6ddd6709fe8a19499a45e8f5",
+      "bytes": 703
+    },
+    {
+      "path": "E:\\hospital_ies_v21_20261023\\hardware03\\experiments\\010_hardware_m21_extra_1b0032e25c95ac24541f_H0\\PLAN.json",
+      "sha256": "251eaefa686186286242e9f36847611899169734d85c5fd29a75fc7667882297",
+      "bytes": 10266
+    },
+    {
+      "path": "E:\\hospital_ies_v21_20261023\\hardware03\\experiments\\010_hardware_m21_extra_1b0032e25c95ac24541f_H0\\MANIFEST.json",
+      "sha256": "5bf161ed47f86dc338dbc14c2a02a3c7041f21e8110a0980f049362203b1b727",
+      "bytes": 80040
+    },
+    {
+      "path": "E:\\hospital_ies_v21_20261023\\hardware03\\experiments\\010_hardware_m21_extra_1b0032e25c95ac24541f_H0\\FREEZE_REFERENCE.json",
+      "sha256": "8612913b8a745a4bde8db8e0053129560d7ae2c876bc893f678f29bcc033f9bd",
+      "bytes": 243
+    },
+    {
+      "path": "E:\\hospital_ies_v21_20261023\\hardware03\\experiments\\011_hardware_m21_extra_1b0032e25c95ac24541f_H1\\PLAN.json",
+      "sha256": "174f73c9e811e7475a8667d7fb70ac0dc760979a37370b8a33fde90af29c1fcb",
+      "bytes": 10474
+    },
+    {
+      "path": "E:\\hospital_ies_v21_20261023\\hardware03\\experiments\\011_hardware_m21_extra_1b0032e25c95ac24541f_H1\\MANIFEST.json",
+      "sha256": "0270d639bcaa14fa3f4a6b1e283dd2347edb91ace8156db7ef4c744a3190f4e0",
+      "bytes": 80040
+    },
+    {
+      "path": "E:\\hospital_ies_v21_20261023\\hardware03\\experiments\\011_hardware_m21_extra_1b0032e25c95ac24541f_H1\\FREEZE_REFERENCE.json",
+      "sha256": "8612913b8a745a4bde8db8e0053129560d7ae2c876bc893f678f29bcc033f9bd",
+      "bytes": 243
+    },
+    {
+      "path": "E:\\hospital_ies_v21_20261023\\hardware03\\experiments\\012_hardware_m21_extra_1b0032e25c95ac24541f_H2\\PLAN.json",
+      "sha256": "81d13ccfb968de740a57675f9e5d4471793c0ac809359c55e35d470fa79bac3a",
+      "bytes": 10475
+    },
+    {
+      "path": "E:\\hospital_ies_v21_20261023\\hardware03\\experiments\\012_hardware_m21_extra_1b0032e25c95ac24541f_H2\\MANIFEST.json",
+      "sha256": "bf9d8086794925d0b24e79f98b50812f0969b12f3a81aafae5d759b6bb95bf96",
+      "bytes": 80040
+    },
+    {
+      "path": "E:\\hospital_ies_v21_20261023\\hardware03\\experiments\\012_hardware_m21_extra_1b0032e25c95ac24541f_H2\\FREEZE_REFERENCE.json",
+      "sha256": "8612913b8a745a4bde8db8e0053129560d7ae2c876bc893f678f29bcc033f9bd",
+      "bytes": 243
+    },
+    {
+      "path": "E:\\hospital_ies_v21_20261023\\hardware03\\experiments\\013_hardware_m21_extra_dd58839eb8929bc841cf_H0\\PLAN.json",
+      "sha256": "4edcbf69462aaaa36792a27067a695f1f0b1318b9bea5f973aa6c3e333767b75",
+      "bytes": 10268
+    },
+    {
+      "path": "E:\\hospital_ies_v21_20261023\\hardware03\\experiments\\013_hardware_m21_extra_dd58839eb8929bc841cf_H0\\MANIFEST.json",
+      "sha256": "bef558d9cc5a68994ca5950839a95823060a2ce67bd5b733f31e36d4a3e95cd7",
+      "bytes": 80042
+    },
+    {
+      "path": "E:\\hospital_ies_v21_20261023\\hardware03\\experiments\\013_hardware_m21_extra_dd58839eb8929bc841cf_H0\\FREEZE_REFERENCE.json",
+      "sha256": "8612913b8a745a4bde8db8e0053129560d7ae2c876bc893f678f29bcc033f9bd",
+      "bytes": 243
+    },
+    {
+      "path": "E:\\hospital_ies_v21_20261023\\hardware03\\experiments\\014_hardware_m21_extra_dd58839eb8929bc841cf_H1\\PLAN.json",
+      "sha256": "d1093c6c1bc9f5a202b588ff8b00478a3df989502b25a3f63f2765b8c54d93de",
+      "bytes": 10476
+    },
+    {
+      "path": "E:\\hospital_ies_v21_20261023\\hardware03\\experiments\\014_hardware_m21_extra_dd58839eb8929bc841cf_H1\\MANIFEST.json",
+      "sha256": "88ec27f412bcf98dbd1f8704a8a819a10a6c0c63681ecb1cedd8df7248c46293",
+      "bytes": 80042
+    },
+    {
+      "path": "E:\\hospital_ies_v21_20261023\\hardware03\\experiments\\014_hardware_m21_extra_dd58839eb8929bc841cf_H1\\FREEZE_REFERENCE.json",
+      "sha256": "8612913b8a745a4bde8db8e0053129560d7ae2c876bc893f678f29bcc033f9bd",
+      "bytes": 243
+    },
+    {
+      "path": "E:\\hospital_ies_v21_20261023\\hardware03\\experiments\\015_hardware_m21_extra_dd58839eb8929bc841cf_H2\\PLAN.json",
+      "sha256": "cf054d4d2032c2fd8e19fea4d49748a4b12276fd6c64dab22ea3c47d119f945f",
+      "bytes": 10477
+    },
+    {
+      "path": "E:\\hospital_ies_v21_20261023\\hardware03\\experiments\\015_hardware_m21_extra_dd58839eb8929bc841cf_H2\\MANIFEST.json",
+      "sha256": "703810316ef7c5923fa4589b26b1831101648719cb59d9be7fde24379372952c",
+      "bytes": 80042
+    },
+    {
+      "path": "E:\\hospital_ies_v21_20261023\\hardware03\\experiments\\015_hardware_m21_extra_dd58839eb8929bc841cf_H2\\FREEZE_REFERENCE.json",
+      "sha256": "8612913b8a745a4bde8db8e0053129560d7ae2c876bc893f678f29bcc033f9bd",
+      "bytes": 243
+    },
+    {
+      "path": "E:\\hospital_ies_v21_20261023\\hardware03\\experiments\\016_hardware_m21_extra_011ab1890729d1ab1015_H0\\PLAN.json",
+      "sha256": "ebbf92a162aa6a6e084e0ae86607c9574ed74be8e924541124488f2b6aaada92",
+      "bytes": 10281
+    },
+    {
+      "path": "E:\\hospital_ies_v21_20261023\\hardware03\\experiments\\016_hardware_m21_extra_011ab1890729d1ab1015_H0\\MANIFEST.json",
+      "sha256": "b6dce436508c2eea3c38530de741f045f66d8855ab11c50740fd5447431552f3",
+      "bytes": 80055
+    },
+    {
+      "path": "E:\\hospital_ies_v21_20261023\\hardware03\\experiments\\016_hardware_m21_extra_011ab1890729d1ab1015_H0\\FREEZE_REFERENCE.json",
+      "sha256": "8612913b8a745a4bde8db8e0053129560d7ae2c876bc893f678f29bcc033f9bd",
+      "bytes": 243
+    },
+    {
+      "path": "E:\\hospital_ies_v21_20261023\\hardware03\\experiments\\017_hardware_m21_extra_011ab1890729d1ab1015_H1\\PLAN.json",
+      "sha256": "2224ae6f722afbe1e89dca4e6e458f7d047a315768a0243b16bc21bf43464f01",
+      "bytes": 10489
+    },
+    {
+      "path": "E:\\hospital_ies_v21_20261023\\hardware03\\experiments\\017_hardware_m21_extra_011ab1890729d1ab1015_H1\\MANIFEST.json",
+      "sha256": "c6ffd629b9eadbb60db16b9176c1f23e2b6234369c122a6b866abb8e4cdfdcc8",
+      "bytes": 80055
+    },
+    {
+      "path": "E:\\hospital_ies_v21_20261023\\hardware03\\experiments\\017_hardware_m21_extra_011ab1890729d1ab1015_H1\\FREEZE_REFERENCE.json",
+      "sha256": "8612913b8a745a4bde8db8e0053129560d7ae2c876bc893f678f29bcc033f9bd",
+      "bytes": 243
+    },
+    {
+      "path": "E:\\hospital_ies_v21_20261023\\hardware03\\experiments\\018_hardware_m21_extra_011ab1890729d1ab1015_H2\\PLAN.json",
+      "sha256": "df9d1972c731e0a04ec51c49091f103cb021f903d36e222b963e7e491c86b934",
+      "bytes": 10490
+    },
+    {
+      "path": "E:\\hospital_ies_v21_20261023\\hardware03\\experiments\\018_hardware_m21_extra_011ab1890729d1ab1015_H2\\MANIFEST.json",
+      "sha256": "c2edfc31cb7dd44415ce581f0af932d4afe304d441fb8bca30eba27f02274f87",
+      "bytes": 80055
+    },
+    {
+      "path": "E:\\hospital_ies_v21_20261023\\hardware03\\experiments\\018_hardware_m21_extra_011ab1890729d1ab1015_H2\\FREEZE_REFERENCE.json",
+      "sha256": "8612913b8a745a4bde8db8e0053129560d7ae2c876bc893f678f29bcc033f9bd",
+      "bytes": 243
+    },
+    {
+      "path": "E:\\hospital_ies_v21_20261023\\hardware03\\experiments\\019_hardware_m21_extra_aec47fb338519e4f48bd_H0\\PLAN.json",
+      "sha256": "ac311d8055b4f7d0f274127761e61c7aa21b862509d0808a27e82c11f26be30c",
+      "bytes": 10266
+    },
+    {
+      "path": "E:\\hospital_ies_v21_20261023\\hardware03\\experiments\\019_hardware_m21_extra_aec47fb338519e4f48bd_H0\\MANIFEST.json",
+      "sha256": "387d43f501a27a4e30f88a8a8785bdf6c8ee4ec58e7795873aa1e1478e383ad6",
+      "bytes": 80040
+    },
+    {
+      "path": "E:\\hospital_ies_v21_20261023\\hardware03\\experiments\\019_hardware_m21_extra_aec47fb338519e4f48bd_H0\\FREEZE_REFERENCE.json",
+      "sha256": "8612913b8a745a4bde8db8e0053129560d7ae2c876bc893f678f29bcc033f9bd",
+      "bytes": 243
+    },
+    {
+      "path": "E:\\hospital_ies_v21_20261023\\hardware03\\experiments\\020_hardware_m21_extra_aec47fb338519e4f48bd_H1\\PLAN.json",
+      "sha256": "4d8e15511881a192783a3066d851f296b9a2f660eb4c05d1cf465526d88cdcce",
+      "bytes": 10474
+    },
+    {
+      "path": "E:\\hospital_ies_v21_20261023\\hardware03\\experiments\\020_hardware_m21_extra_aec47fb338519e4f48bd_H1\\MANIFEST.json",
+      "sha256": "d967bd1eab9a4b28f063f6ab0bd8b30d02ef161592534168d170bec96d274f80",
+      "bytes": 80040
+    },
+    {
+      "path": "E:\\hospital_ies_v21_20261023\\hardware03\\experiments\\020_hardware_m21_extra_aec47fb338519e4f48bd_H1\\FREEZE_REFERENCE.json",
+      "sha256": "8612913b8a745a4bde8db8e0053129560d7ae2c876bc893f678f29bcc033f9bd",
+      "bytes": 243
+    },
+    {
+      "path": "E:\\hospital_ies_v21_20261023\\hardware03\\experiments\\021_hardware_m21_extra_aec47fb338519e4f48bd_H2\\PLAN.json",
+      "sha256": "f1de4bbd6b3794c7dbc44ff8e4837b58b982215f7b6809ad5c661d95e7607139",
+      "bytes": 10475
+    },
+    {
+      "path": "E:\\hospital_ies_v21_20261023\\hardware03\\experiments\\021_hardware_m21_extra_aec47fb338519e4f48bd_H2\\MANIFEST.json",
+      "sha256": "9d83e1b1a9b99adf4bb7217dc4c5cee757f5de1739801c69dd9bb7be7fba0f43",
+      "bytes": 80040
+    },
+    {
+      "path": "E:\\hospital_ies_v21_20261023\\hardware03\\experiments\\021_hardware_m21_extra_aec47fb338519e4f48bd_H2\\FREEZE_REFERENCE.json",
+      "sha256": "8612913b8a745a4bde8db8e0053129560d7ae2c876bc893f678f29bcc033f9bd",
+      "bytes": 243
+    },
+    {
+      "path": "E:\\hospital_ies_v21_20261023\\hardware03\\experiments\\022_hardware_m21_extra_c76ef47d872e5817afad_H0\\PLAN.json",
+      "sha256": "1e518549a769e982fb59a42aa3f0a62e067513cab8008c07ae039143ae263da8",
+      "bytes": 10268
+    },
+    {
+      "path": "E:\\hospital_ies_v21_20261023\\hardware03\\experiments\\022_hardware_m21_extra_c76ef47d872e5817afad_H0\\MANIFEST.json",
+      "sha256": "73f77a31fadd8ce0698e71ca04ffc06834f02d7daa0dc8c4e4a595a7b528cc70",
+      "bytes": 80042
+    },
+    {
+      "path": "E:\\hospital_ies_v21_20261023\\hardware03\\experiments\\022_hardware_m21_extra_c76ef47d872e5817afad_H0\\FREEZE_REFERENCE.json",
+      "sha256": "8612913b8a745a4bde8db8e0053129560d7ae2c876bc893f678f29bcc033f9bd",
+      "bytes": 243
+    },
+    {
+      "path": "E:\\hospital_ies_v21_20261023\\hardware03\\experiments\\023_hardware_m21_extra_c76ef47d872e5817afad_H1\\PLAN.json",
+      "sha256": "d7361d9e79ed21d921d4b2bb091983e872508cb388bb883031beef67b6d593e4",
+      "bytes": 10476
+    },
+    {
+      "path": "E:\\hospital_ies_v21_20261023\\hardware03\\experiments\\023_hardware_m21_extra_c76ef47d872e5817afad_H1\\MANIFEST.json",
+      "sha256": "f670b199370edd464d77a31874e54a3c0d1eac4674e34d55d56356588dfda7fb",
+      "bytes": 80042
+    },
+    {
+      "path": "E:\\hospital_ies_v21_20261023\\hardware03\\experiments\\023_hardware_m21_extra_c76ef47d872e5817afad_H1\\FREEZE_REFERENCE.json",
+      "sha256": "8612913b8a745a4bde8db8e0053129560d7ae2c876bc893f678f29bcc033f9bd",
+      "bytes": 243
+    },
+    {
+      "path": "E:\\hospital_ies_v21_20261023\\hardware03\\experiments\\024_hardware_m21_extra_c76ef47d872e5817afad_H2\\PLAN.json",
+      "sha256": "e90c4eacd443bf3c993682647f4eed8da1c46d49dd8bdc217092fd9d101f7cf8",
+      "bytes": 10477
+    },
+    {
+      "path": "E:\\hospital_ies_v21_20261023\\hardware03\\experiments\\024_hardware_m21_extra_c76ef47d872e5817afad_H2\\MANIFEST.json",
+      "sha256": "dcacff850602d8f505af9c057230fe8c0e8c8b64eb03b8919aa8f73772eb0a9d",
+      "bytes": 80042
+    },
+    {
+      "path": "E:\\hospital_ies_v21_20261023\\hardware03\\experiments\\024_hardware_m21_extra_c76ef47d872e5817afad_H2\\FREEZE_REFERENCE.json",
+      "sha256": "8612913b8a745a4bde8db8e0053129560d7ae2c876bc893f678f29bcc033f9bd",
+      "bytes": 243
+    },
+    {
+      "path": "E:\\hospital_ies_v21_20261023\\hardware03\\experiments\\025_hardware_m21_extra_ec43b8bbd10700b3d543_H0\\PLAN.json",
+      "sha256": "122b0a01b92ccb3036696923e500bed0abb3d1959f931415b627600bddd64253",
+      "bytes": 10281
+    },
+    {
+      "path": "E:\\hospital_ies_v21_20261023\\hardware03\\experiments\\025_hardware_m21_extra_ec43b8bbd10700b3d543_H0\\MANIFEST.json",
+      "sha256": "3cdf354fdfbbde26a37f8c9719588f5e791766352ac7ebfed517adb10a55c6ed",
+      "bytes": 80055
+    },
+    {
+      "path": "E:\\hospital_ies_v21_20261023\\hardware03\\experiments\\025_hardware_m21_extra_ec43b8bbd10700b3d543_H0\\FREEZE_REFERENCE.json",
+      "sha256": "8612913b8a745a4bde8db8e0053129560d7ae2c876bc893f678f29bcc033f9bd",
+      "bytes": 243
+    },
+    {
+      "path": "E:\\hospital_ies_v21_20261023\\hardware03\\experiments\\026_hardware_m21_extra_ec43b8bbd10700b3d543_H1\\PLAN.json",
+      "sha256": "57df06bf42fc0cc3456f43b7985348864520de11c032a2b609c2e708bc82aa6b",
+      "bytes": 10489
+    },
+    {
+      "path": "E:\\hospital_ies_v21_20261023\\hardware03\\experiments\\026_hardware_m21_extra_ec43b8bbd10700b3d543_H1\\MANIFEST.json",
+      "sha256": "7c1f1f4f3de94f15db76f9a274ad06374dfceeef61d3ee74ce4be75c3037656f",
+      "bytes": 80055
+    },
+    {
+      "path": "E:\\hospital_ies_v21_20261023\\hardware03\\experiments\\026_hardware_m21_extra_ec43b8bbd10700b3d543_H1\\FREEZE_REFERENCE.json",
+      "sha256": "8612913b8a745a4bde8db8e0053129560d7ae2c876bc893f678f29bcc033f9bd",
+      "bytes": 243
+    },
+    {
+      "path": "E:\\hospital_ies_v21_20261023\\hardware03\\experiments\\027_hardware_m21_extra_ec43b8bbd10700b3d543_H2\\PLAN.json",
+      "sha256": "c8b70af01b68351b6e21ae50299b0b1c03ef6aeb8b8c56b3cc343782e6c1b43e",
+      "bytes": 10490
+    },
+    {
+      "path": "E:\\hospital_ies_v21_20261023\\hardware03\\experiments\\027_hardware_m21_extra_ec43b8bbd10700b3d543_H2\\MANIFEST.json",
+      "sha256": "c2fd159967f272be3de905b836bde8928ea9760386e55b8bf38a713f48aa8ff5",
+      "bytes": 80055
+    },
+    {
+      "path": "E:\\hospital_ies_v21_20261023\\hardware03\\experiments\\027_hardware_m21_extra_ec43b8bbd10700b3d543_H2\\FREEZE_REFERENCE.json",
+      "sha256": "8612913b8a745a4bde8db8e0053129560d7ae2c876bc893f678f29bcc033f9bd",
+      "bytes": 243
+    },
+    {
+      "path": "E:\\hospital_ies_v21_20261023\\hardware03\\experiments\\028_hardware_m21_extra_c5deb057c2d7c53bf523_H0\\PLAN.json",
+      "sha256": "ba19084f495cd1283c79e7e6ba972baffae24d9f51c859cae18a8fa210f76b3f",
+      "bytes": 10266
+    },
+    {
+      "path": "E:\\hospital_ies_v21_20261023\\hardware03\\experiments\\028_hardware_m21_extra_c5deb057c2d7c53bf523_H0\\MANIFEST.json",
+      "sha256": "127faca1dd0ccc77fe519ef983f4f5e542f99dd6dba3db8a50f7c1d6ce2dd1c4",
+      "bytes": 80040
+    },
+    {
+      "path": "E:\\hospital_ies_v21_20261023\\hardware03\\experiments\\028_hardware_m21_extra_c5deb057c2d7c53bf523_H0\\FREEZE_REFERENCE.json",
+      "sha256": "8612913b8a745a4bde8db8e0053129560d7ae2c876bc893f678f29bcc033f9bd",
+      "bytes": 243
+    },
+    {
+      "path": "E:\\hospital_ies_v21_20261023\\hardware03\\experiments\\029_hardware_m21_extra_c5deb057c2d7c53bf523_H1\\PLAN.json",
+      "sha256": "bd9b20288a51b1178d7e94f72488afbf29284b81e3eff9f77d0570b05c86de5c",
+      "bytes": 10474
+    },
+    {
+      "path": "E:\\hospital_ies_v21_20261023\\hardware03\\experiments\\029_hardware_m21_extra_c5deb057c2d7c53bf523_H1\\MANIFEST.json",
+      "sha256": "16f8b06b47520b608db3d27f6d4aff76b40a6a30fc51222168ce568ee4f09965",
+      "bytes": 80040
+    },
+    {
+      "path": "E:\\hospital_ies_v21_20261023\\hardware03\\experiments\\029_hardware_m21_extra_c5deb057c2d7c53bf523_H1\\FREEZE_REFERENCE.json",
+      "sha256": "8612913b8a745a4bde8db8e0053129560d7ae2c876bc893f678f29bcc033f9bd",
+      "bytes": 243
+    },
+    {
+      "path": "E:\\hospital_ies_v21_20261023\\hardware03\\experiments\\030_hardware_m21_extra_c5deb057c2d7c53bf523_H2\\PLAN.json",
+      "sha256": "184f695b387ccb5403ee7925e80800acf6af334f0c9a3df6c193df7937329ca8",
+      "bytes": 10475
+    },
+    {
+      "path": "E:\\hospital_ies_v21_20261023\\hardware03\\experiments\\030_hardware_m21_extra_c5deb057c2d7c53bf523_H2\\MANIFEST.json",
+      "sha256": "412c93c0e4b613ccca4bce9249d3327a2d1047e09411f12079aeebc96344117d",
+      "bytes": 80040
+    },
+    {
+      "path": "E:\\hospital_ies_v21_20261023\\hardware03\\experiments\\030_hardware_m21_extra_c5deb057c2d7c53bf523_H2\\FREEZE_REFERENCE.json",
+      "sha256": "8612913b8a745a4bde8db8e0053129560d7ae2c876bc893f678f29bcc033f9bd",
+      "bytes": 243
+    },
+    {
+      "path": "E:\\hospital_ies_v21_20261023\\hardware03\\experiments\\031_hardware_m21_extra_5fc4d54952e2a4a65be6_H0\\PLAN.json",
+      "sha256": "40e23503a7eec6a57e6336bd271c982e1637b5098e956e21c24875ca13a9b3be",
+      "bytes": 10268
+    },
+    {
+      "path": "E:\\hospital_ies_v21_20261023\\hardware03\\experiments\\031_hardware_m21_extra_5fc4d54952e2a4a65be6_H0\\MANIFEST.json",
+      "sha256": "ded869ca20e48035465e12b76cbee5025b66ad54bb43f755aa9532050164d826",
+      "bytes": 80042
+    },
+    {
+      "path": "E:\\hospital_ies_v21_20261023\\hardware03\\experiments\\031_hardware_m21_extra_5fc4d54952e2a4a65be6_H0\\FREEZE_REFERENCE.json",
+      "sha256": "8612913b8a745a4bde8db8e0053129560d7ae2c876bc893f678f29bcc033f9bd",
+      "bytes": 243
+    },
+    {
+      "path": "E:\\hospital_ies_v21_20261023\\hardware03\\experiments\\032_hardware_m21_extra_5fc4d54952e2a4a65be6_H1\\PLAN.json",
+      "sha256": "b55e7bd908d06f0839154764a3f7d49d704127680e4cdc49abc35781c382cb13",
+      "bytes": 10476
+    },
+    {
+      "path": "E:\\hospital_ies_v21_20261023\\hardware03\\experiments\\032_hardware_m21_extra_5fc4d54952e2a4a65be6_H1\\MANIFEST.json",
+      "sha256": "f67b2f50a7f19ede0eaf9e5ffce77189ce83f11873cd7071a3b854fa0d11f3b2",
+      "bytes": 80042
+    },
+    {
+      "path": "E:\\hospital_ies_v21_20261023\\hardware03\\experiments\\032_hardware_m21_extra_5fc4d54952e2a4a65be6_H1\\FREEZE_REFERENCE.json",
+      "sha256": "8612913b8a745a4bde8db8e0053129560d7ae2c876bc893f678f29bcc033f9bd",
+      "bytes": 243
+    },
+    {
+      "path": "E:\\hospital_ies_v21_20261023\\hardware03\\experiments\\033_hardware_m21_extra_5fc4d54952e2a4a65be6_H2\\PLAN.json",
+      "sha256": "738cb874c45edf5a7fb1b8878d0e39fd98948163c01572cc5d54e5a15ba1f8fb",
+      "bytes": 10477
+    },
+    {
+      "path": "E:\\hospital_ies_v21_20261023\\hardware03\\experiments\\033_hardware_m21_extra_5fc4d54952e2a4a65be6_H2\\MANIFEST.json",
+      "sha256": "9239462ffdcc0b03370fe7a7f59e5a6ea37d11a72283720449d7ed7034236751",
+      "bytes": 80042
+    },
+    {
+      "path": "E:\\hospital_ies_v21_20261023\\hardware03\\experiments\\033_hardware_m21_extra_5fc4d54952e2a4a65be6_H2\\FREEZE_REFERENCE.json",
+      "sha256": "8612913b8a745a4bde8db8e0053129560d7ae2c876bc893f678f29bcc033f9bd",
+      "bytes": 243
+    },
+    {
+      "path": "E:\\hospital_ies_v21_20261023\\hardware03\\experiments\\034_hardware_m21_extra_3a54b7a84a8f1b6b772e_H0\\PLAN.json",
+      "sha256": "4b9a3dec9fd5f251e2910a460c53950467b7143bb9c265340e9980eb791a0e28",
+      "bytes": 10281
+    },
+    {
+      "path": "E:\\hospital_ies_v21_20261023\\hardware03\\experiments\\034_hardware_m21_extra_3a54b7a84a8f1b6b772e_H0\\MANIFEST.json",
+      "sha256": "a38f6b2965708769162bac12a1364a771fcec0535837eb9745ad9efcbdcbf530",
+      "bytes": 80055
+    },
+    {
+      "path": "E:\\hospital_ies_v21_20261023\\hardware03\\experiments\\034_hardware_m21_extra_3a54b7a84a8f1b6b772e_H0\\FREEZE_REFERENCE.json",
+      "sha256": "8612913b8a745a4bde8db8e0053129560d7ae2c876bc893f678f29bcc033f9bd",
+      "bytes": 243
+    },
+    {
+      "path": "E:\\hospital_ies_v21_20261023\\hardware03\\experiments\\035_hardware_m21_extra_3a54b7a84a8f1b6b772e_H1\\PLAN.json",
+      "sha256": "5319c3ccb8fef3b9ae83b0030e3cdc16971da31473b4f04c6f32d75e12ed1be5",
+      "bytes": 10489
+    },
+    {
+      "path": "E:\\hospital_ies_v21_20261023\\hardware03\\experiments\\035_hardware_m21_extra_3a54b7a84a8f1b6b772e_H1\\MANIFEST.json",
+      "sha256": "9ea515611428a2a87d9e982d0ddfe7bb935bfa88da3fbce4397f6f613fe50333",
+      "bytes": 80055
+    },
+    {
+      "path": "E:\\hospital_ies_v21_20261023\\hardware03\\experiments\\035_hardware_m21_extra_3a54b7a84a8f1b6b772e_H1\\FREEZE_REFERENCE.json",
+      "sha256": "8612913b8a745a4bde8db8e0053129560d7ae2c876bc893f678f29bcc033f9bd",
+      "bytes": 243
+    },
+    {
+      "path": "E:\\hospital_ies_v21_20261023\\hardware03\\experiments\\036_hardware_m21_extra_3a54b7a84a8f1b6b772e_H2\\PLAN.json",
+      "sha256": "1ed0c5007f5b617221c9d5a9a5b811a8ab42d192891ea0cadcee1d89750f0bb9",
+      "bytes": 10490
+    },
+    {
+      "path": "E:\\hospital_ies_v21_20261023\\hardware03\\experiments\\036_hardware_m21_extra_3a54b7a84a8f1b6b772e_H2\\MANIFEST.json",
+      "sha256": "cfe20c686faebe564872a13a2eb86e3b5c2c088550533169c10feea1c1a5801a",
+      "bytes": 80055
+    },
+    {
+      "path": "E:\\hospital_ies_v21_20261023\\hardware03\\experiments\\036_hardware_m21_extra_3a54b7a84a8f1b6b772e_H2\\FREEZE_REFERENCE.json",
+      "sha256": "8612913b8a745a4bde8db8e0053129560d7ae2c876bc893f678f29bcc033f9bd",
+      "bytes": 243
+    },
+    {
+      "path": "E:\\hospital_ies_v21_20261023\\hardware03\\experiments\\037_hardware_m21_hardware_compound_5478464ed043b4fef98f_H0\\PLAN.json",
+      "sha256": "e856916bc30dadba51fc339967ec563f9e86c28341af155e2b7053eb86571ea9",
+      "bytes": 10495
+    },
+    {
+      "path": "E:\\hospital_ies_v21_20261023\\hardware03\\experiments\\037_hardware_m21_hardware_compound_5478464ed043b4fef98f_H0\\MANIFEST.json",
+      "sha256": "99a6ec542cef7da818b099893556adf8369b4ff698878dc7e5f07a0f826f485e",
+      "bytes": 80259
+    },
+    {
+      "path": "E:\\hospital_ies_v21_20261023\\hardware03\\experiments\\037_hardware_m21_hardware_compound_5478464ed043b4fef98f_H0\\FREEZE_REFERENCE.json",
+      "sha256": "8612913b8a745a4bde8db8e0053129560d7ae2c876bc893f678f29bcc033f9bd",
+      "bytes": 243
+    },
+    {
+      "path": "E:\\hospital_ies_v21_20261023\\hardware03\\experiments\\038_hardware_m21_hardware_compound_5478464ed043b4fef98f_H1\\PLAN.json",
+      "sha256": "1a655f6867d9a14c621af0f4d7fd6cedc1c157cb07339fd36ef0e1366353a6df",
+      "bytes": 10703
+    },
+    {
+      "path": "E:\\hospital_ies_v21_20261023\\hardware03\\experiments\\038_hardware_m21_hardware_compound_5478464ed043b4fef98f_H1\\MANIFEST.json",
+      "sha256": "37455f9d845d0ed35c83f0ad050b3257566dc54596a1fec1b12e43e05fecee14",
+      "bytes": 80259
+    },
+    {
+      "path": "E:\\hospital_ies_v21_20261023\\hardware03\\experiments\\038_hardware_m21_hardware_compound_5478464ed043b4fef98f_H1\\FREEZE_REFERENCE.json",
+      "sha256": "8612913b8a745a4bde8db8e0053129560d7ae2c876bc893f678f29bcc033f9bd",
+      "bytes": 243
+    },
+    {
+      "path": "E:\\hospital_ies_v21_20261023\\hardware03\\experiments\\039_hardware_m21_hardware_compound_5478464ed043b4fef98f_H2\\PLAN.json",
+      "sha256": "93c6d2c976af917affdebc9d592853b5ef08a939ce8e7ec4e33935859896ff9c",
+      "bytes": 10704
+    },
+    {
+      "path": "E:\\hospital_ies_v21_20261023\\hardware03\\experiments\\039_hardware_m21_hardware_compound_5478464ed043b4fef98f_H2\\MANIFEST.json",
+      "sha256": "da96cf31d698480883fde2f3ef7b03ca8af812d4c76838502b506eb66d79d255",
+      "bytes": 80259
+    },
+    {
+      "path": "E:\\hospital_ies_v21_20261023\\hardware03\\experiments\\039_hardware_m21_hardware_compound_5478464ed043b4fef98f_H2\\FREEZE_REFERENCE.json",
+      "sha256": "8612913b8a745a4bde8db8e0053129560d7ae2c876bc893f678f29bcc033f9bd",
+      "bytes": 243
+    },
+    {
+      "path": "E:\\hospital_ies_v21_20261023\\hardware03\\experiments\\040_hardware_m21_hardware_compound_42ecc465ac9477e92f47_H0\\PLAN.json",
+      "sha256": "5eb36a858d3113ccc6fe2c4a0a63db6c78b5f71c039b2b1110976d5ab41adacc",
+      "bytes": 10507
+    },
+    {
+      "path": "E:\\hospital_ies_v21_20261023\\hardware03\\experiments\\040_hardware_m21_hardware_compound_42ecc465ac9477e92f47_H0\\MANIFEST.json",
+      "sha256": "c54286bbda5fccca1ab5843fd1abb27b2b06bfbc9a78d9dd1b263c71027c5746",
+      "bytes": 80271
+    },
+    {
+      "path": "E:\\hospital_ies_v21_20261023\\hardware03\\experiments\\040_hardware_m21_hardware_compound_42ecc465ac9477e92f47_H0\\FREEZE_REFERENCE.json",
+      "sha256": "8612913b8a745a4bde8db8e0053129560d7ae2c876bc893f678f29bcc033f9bd",
+      "bytes": 243
+    },
+    {
+      "path": "E:\\hospital_ies_v21_20261023\\hardware03\\experiments\\041_hardware_m21_hardware_compound_42ecc465ac9477e92f47_H1\\PLAN.json",
+      "sha256": "a8a928835df3fea042d62915e00ae6291352afd4315cac403329bc556b9ecc3a",
+      "bytes": 10715
+    },
+    {
+      "path": "E:\\hospital_ies_v21_20261023\\hardware03\\experiments\\041_hardware_m21_hardware_compound_42ecc465ac9477e92f47_H1\\MANIFEST.json",
+      "sha256": "2237dc8e0677deb63144d4e09cf25de7c7147b81b4d067ac102099bbca27d22a",
+      "bytes": 80271
+    },
+    {
+      "path": "E:\\hospital_ies_v21_20261023\\hardware03\\experiments\\041_hardware_m21_hardware_compound_42ecc465ac9477e92f47_H1\\FREEZE_REFERENCE.json",
+      "sha256": "8612913b8a745a4bde8db8e0053129560d7ae2c876bc893f678f29bcc033f9bd",
+      "bytes": 243
+    },
+    {
+      "path": "E:\\hospital_ies_v21_20261023\\hardware03\\experiments\\042_hardware_m21_hardware_compound_42ecc465ac9477e92f47_H2\\PLAN.json",
+      "sha256": "e906167ad7a9428ae612b98d93a325cc8e65f1feacbf019ae4cefd7aa08e6ba0",
+      "bytes": 10716
+    },
+    {
+      "path": "E:\\hospital_ies_v21_20261023\\hardware03\\experiments\\042_hardware_m21_hardware_compound_42ecc465ac9477e92f47_H2\\MANIFEST.json",
+      "sha256": "e2ed388a78db823a1324198fc8a478366db355552779e4b879025ef721574227",
+      "bytes": 80271
+    },
+    {
+      "path": "E:\\hospital_ies_v21_20261023\\hardware03\\experiments\\042_hardware_m21_hardware_compound_42ecc465ac9477e92f47_H2\\FREEZE_REFERENCE.json",
+      "sha256": "8612913b8a745a4bde8db8e0053129560d7ae2c876bc893f678f29bcc033f9bd",
+      "bytes": 243
+    }
+  ],
+  "native_budget": {
+    "path": "E:\\hospital_ies_v21_20261023\\hardware03\\BUDGET_405cde2a6c6b824161cac604d0c03572c00cbe07c824a0da2c6c3c4cd6c8b5b6.jsonl",
+    "bytes": 53478,
+    "sha256": "8b42c5056a402252c09a68c2f4245739d9ec74de58ff189964d11820e8589414"
+  },
+  "original27_budget_prefix_unchanged": true,
+  "registered": 126,
+  "completed": 126,
+  "failed": 0,
+  "pending": 0,
+  "in_flight": 0,
+  "source_or_inputs_reverified_here": false,
+  "scientific_results_or_raw_read": false,
+  "scientific_stage_accepted": false
+}

@@ -1,0 +1,49 @@
+{
+  "selection": "post_hoc_after_final_outcomes",
+  "scenario_id": "m21_L1_55e24889a6e1b237d15a",
+  "source_block_id": "m21_final12_b046c742da517542",
+  "independent_new_n": 0,
+  "preregistered_representative": false,
+  "original_eight_preregistered_raw_selections_modified": false,
+  "scientific_acceptance_issued": false,
+  "physics_attempts": 0,
+  "optimizer_calls": 0,
+  "sidecar_body_decompressed": false,
+  "original_native_or_auditor_or_D_modified": false,
+  "source_binding_sha256": "4dfe62ae105d2696b7782dc36c83ec63c6551e2cded601d6f15c0d4083058add",
+  "known_metadata": [
+    {
+      "path": "E:\\hospital_ies_v21_20261023\\final_blind01\\analysis01\\tables\\CASE_METRICS.csv",
+      "sha256": "3cab466b53b0080f666dce46f003a92fe3ad3c478e353033bc634d604011ac93"
+    },
+    {
+      "path": "E:\\hospital_ies_v21_20261023\\final_blind01\\analysis01\\PARALLEL_ANALYSIS_RECEIPT.json",
+      "sha256": "994a42eb6b9382e5a2645c470e2af0655a6d06227b2a0d22aa9045fc4c92dc59"
+    },
+    {
+      "path": "E:\\hospital_ies_v21_20261023\\reviews\\final240_root_terminal_admission01\\SERIAL_METADATA_READ_ADMISSION.json",
+      "sha256": "30bd6803073281446d69c86ae540f66d6f9a393eef305fb7570a29b5afb60de5"
+    },
+    {
+      "path": "E:\\hospital_ies_v21_20261023\\final_blind01\\physical_audit01\\POOL_PHYSICAL_AUDIT_RECEIPT.json",
+      "sha256": "c0b36604f939a8acab18a30cf6df4033b67787a41461618141d490737382b2b6"
+    },
+    {
+      "path": "E:\\hospital_ies_v21_20261023\\final_blind01\\physical_audit01\\POOL_INVENTORY.json",
+      "sha256": "288c384cac500bae434efb11293fc1b3b92bb4fed3e5f99d3eb8f5713153694e"
+    }
+  ],
+  "source_code_sha256": {
+    "D:\\hospital_ies_v21_20261023\\tools\\sci_engineering\\policy.py": "7f6b31b093efda58109ec9f9723eb53c6a3fb510517e7f47fd31db5fe9d2824c",
+    "D:\\hospital_ies_v21_20261023\\tools\\sci_engineering\\planner.py": "7ec972dc671d05beed1a42c8e2e32e9284d5e259f1aa89b8951c16b8d1a6160b",
+    "D:\\hospital_ies_v21_20261023\\tools\\sci_engineering\\environment.py": "8442727532496233934949d5e21fef638145a8fd1660ad32423b45f78e5d46de",
+    "D:\\hospital_ies_v21_20261023\\tools\\sci_engineering\\runner.py": "8c9192f25e8cbb733d726963688c68b13a5fc96701a748c05f8dcd39b0c38f2d",
+    "D:\\hospital_ies_v21_20261023\\tools\\model_closeout\\readiness.py": "7437f783fc2531fad2b34be1984164b8d580d844ab3eeea9517383c239d6d720",
+    "D:\\hospital_ies_v21_20261023\\src\\hospital_ies\\state_transition.py": "c77ecd4387706ef1468afd6c797308554c25b126cff7bd8481ccb24eb13ca3d6",
+    "D:\\hospital_ies_v21_20261023\\tools\\operating_response\\execution.py": "9a7b116345b874dbc2827c7a1b255cc3458e31d75e1c9200320926bfbef783b9",
+    "D:\\hospital_ies_v21_20261023\\src\\hospital_ies\\data_contract.py": "335cc14a0d93e0b2f5a1ef5596e6ed78052faeacb74965da835d56460c72f5bb"
+  },
+  "exploratory_readonly_scan_failures": [
+    "Three exploratory rg probes used nonexistent/globbed explicit paths and reported Windows path errors. Correct exact source paths were subsequently read; no model command, attempt, or output was changed."
+  ]
+}

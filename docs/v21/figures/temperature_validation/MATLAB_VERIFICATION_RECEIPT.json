@@ -1,0 +1,79 @@
+{
+  "record_written_utc": "2026-10-23T05:17:57.915869+00:00",
+  "actual_matlab_executable": "C:\\Program Files\\MATLAB\\R2024b\\bin\\matlab.exe",
+  "generation_command": "& 'C:\\Program Files\\MATLAB\\R2024b\\bin\\matlab.exe' -batch \"addpath('D:/hospital_ies_v21_20261023/docs/v21/figures'); plot_temperature_validation('D:/hospital_ies_v21_20261023/docs/v21/figures/temperature_validation','E:/hospital_ies_v21_20261023/temperature_validation/analysis03_clock_corrected');\" -logfile 'E:\\hospital_ies_v21_20261023\\pilot20_r2\\review\\matlab_temperature01.log'",
+  "actual_generation_exit_code": 0,
+  "actual_native_reopen_exit_code": 0,
+  "reopen_log": "E:\\hospital_ies_v21_20261023\\pilot20_r2\\review\\matlab_temperature_reopen.log",
+  "generator_sha256": "d4a9bd2982ac16cdf2efc5906f6edc634a09110326f6e730b22f73b6529756b7",
+  "native_fig_qa": {
+    "reopened": true,
+    "axes": 4,
+    "lines": 10,
+    "patches": 4,
+    "images": 0
+  },
+  "visual_QA": "PNG viewed at actual generated resolution; no overlapping/cropped labels observed; exploratory quantitative-failure limitation visible",
+  "files": [
+    {
+      "path": "FIGURE_CAPTION.md",
+      "bytes": 1528,
+      "sha256": "eca1ddb504f56145c9d8a09e43d4f977cfcc596bea259f5661ff6521345aaacf"
+    },
+    {
+      "path": "native_fig_qa.json",
+      "bytes": 60,
+      "sha256": "dc077118f0405947b738421a392fd0dde2b4ca6a0702425f39e8c459ae03cb59"
+    },
+    {
+      "path": "SOURCE_AND_VECTOR_QA.json",
+      "bytes": 1172,
+      "sha256": "bfed7cf878a5f40195d2c9fcbbab0ab2f4438cc3ae6add23c8980196fcdff73f"
+    },
+    {
+      "path": "source_data\\TEMPERATURE_VALIDATION_RESULTS.csv",
+      "bytes": 3395,
+      "sha256": "d2ee115857b70cad9c332d1fcf10caf47f261148b21b3ccc1ca2b0b44f1f51cc"
+    },
+    {
+      "path": "source_data\\val_summer_4h_unchanged_production_proxy.csv",
+      "bytes": 84959,
+      "sha256": "adc70ac882115447f0bfc442e92ff32c2e8b011b7c29ddbbde6ec4f7de4ab1db"
+    },
+    {
+      "path": "source_data\\val_winter_2h_unchanged_production_proxy.csv",
+      "bytes": 85105,
+      "sha256": "8a60c89b9f11b77e8c0d77d4f115a66fbff0e89ef1dd0cfc221fee5d6b7efbc1"
+    },
+    {
+      "path": "temperature_figure_receipt.json",
+      "bytes": 347,
+      "sha256": "a043c27906906610631602faf1837139614c18112cd8511c651474761768a8cc"
+    },
+    {
+      "path": "temperature_validation.fig",
+      "bytes": 43433,
+      "sha256": "ac62292fab462d8f38bfe58c80a6d9096f714759a738f51d1006ba5177d77523"
+    },
+    {
+      "path": "temperature_validation.pdf",
+      "bytes": 77804,
+      "sha256": "d3de86e080350b60a17ef83fe45ac7e341eff7882170f154ec26c9b843d31040"
+    },
+    {
+      "path": "temperature_validation.png",
+      "bytes": 613298,
+      "sha256": "cabbac5b3f84a6935ea0d8522e71d6c1d99d1798dbafed85e8fa280bff0c81f2"
+    },
+    {
+      "path": "temperature_validation.svg",
+      "bytes": 549539,
+      "sha256": "ce425d8c061ec06a540382a2f1211712bc4713d8772aaf5907c87d01e3d55922"
+    },
+    {
+      "path": "temperature_validation_plotted_samples.csv",
+      "bytes": 16813,
+      "sha256": "50f9d65dfe3051d3d98049668cd45bf75ebca7d44bba6c2fcdd213ba3f47e790"
+    }
+  ]
+}

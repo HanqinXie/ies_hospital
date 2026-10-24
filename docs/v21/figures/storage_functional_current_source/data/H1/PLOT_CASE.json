@@ -1,0 +1,35 @@
+{
+  "configuration_id": "H1",
+  "policy_id": "C_sci_v21",
+  "functional_check_only": true,
+  "paired_H0": false,
+  "source_commit": "a5d3ed762e616b0c2537c74971753380999b0d4d",
+  "source_binding_sha256": "4dfe62ae105d2696b7782dc36c83ec63c6551e2cded601d6f15c0d4083058add",
+  "gate_proof_path": "E:\\hospital_ies_v21_20261023\\reviews\\main01_recovery_root01\\ACTUAL_PILOT45_QUALIFIED_GATE.json",
+  "gate_proof_sha256": "3d01bd1cbf68c1392957bf296d279d3b6b4afe479182e1cfcf967ac0d62ab9bd",
+  "result_path": "E:\\hospital_ies_v21_20261023\\pilot45_r5\\experiments\\p45_original_10\\pairs\\m21_storage_runtime_ab3fc3a900bd9ef87f15__C_sci_v21__H1\\attempt_0001\\RESULT.json",
+  "result_sha256": "cc184e95605874558789d13936227907f3e30a86e3298b5767dae2447da26040",
+  "raw_path": "E:\\hospital_ies_v21_20261023\\raw\\pilot45_r5\\p45_original_10\\m21_storage_runtime_ab3fc3a900bd9ef87f15__C_sci_v21__H1\\attempt_0001\\trajectory.json.gz",
+  "raw_sha256": "b08529c65b3a7a26091eb742f403dfea689f827c72e94810ea637bdc360862ff",
+  "scenario_id": "m21_storage_runtime_ab3fc3a900bd9ef87f15",
+  "faults": {
+    "GRID": 0.0,
+    "GT_1": 0.0,
+    "GT_2": 0.0,
+    "GT_3": 0.0
+  },
+  "event_start_minute": 15.0,
+  "event_end_minute": 75.0,
+  "horizon_minutes": 90.0,
+  "store": {
+    "capacity_kWh": 40.0,
+    "power_kW": 160.0,
+    "initial_soc": 1.0,
+    "charge_efficiency": 0.95,
+    "discharge_efficiency": 0.95,
+    "loss_per_hour": 0.0
+  },
+  "inventory_plot_semantics": "Only native initial and final endpoint markers; no interpolation or held-state invention",
+  "power_plot_semantics": "Actual native half-open intervals, duplicated endpoints for horizontal step segments only",
+  "quantitative_claim_scope": "90-minute C-only functional integration check, not a paired H0 effect or general hospital endurance"
+}

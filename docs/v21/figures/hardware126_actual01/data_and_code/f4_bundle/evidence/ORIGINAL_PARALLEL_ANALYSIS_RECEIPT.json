@@ -1,0 +1,659 @@
+{
+  "schema": "hospital_ies.external_parallel_analysis.v1",
+  "created_utc": "2026-10-24T09:59:14.996460+00:00",
+  "root": "D:\\hospital_ies_v21_20261023",
+  "jobs_path": "E:\\hospital_ies_v21_20261023\\hardware03\\JOBS.json",
+  "jobs_sha256": "2f4ae1fecca9db43ae5413f8a4dbd2f7344cb05e84735c247b398cfec40c9944",
+  "analysis_path": "D:\\hospital_ies_v21_20261023\\tools\\sci_engineering\\analysis.py",
+  "analysis_sha256": "8b2aaee6de03705d03b3f0b2e8c2ff70ddcf46cce05de77559913c33ab5b1ae2",
+  "wrapper_sha256": "7fc9c2fcbcd6c9350c930e11d587b6b27e6bcc1073dee9af573639e91f50d133",
+  "source_binding_sha256": "4dfe62ae105d2696b7782dc36c83ec63c6551e2cded601d6f15c0d4083058add",
+  "model_id": "M21_sci_engineering",
+  "original_record_count": 126,
+  "groups": 14,
+  "configured_max_readers": 2,
+  "actual_worker_pids": [
+    17548,
+    62076
+  ],
+  "workers": [
+    {
+      "key": [
+        "hardware",
+        "m21_extra_69c380653be81bb40e48",
+        "m21_block_1706edd2c32b2937"
+      ],
+      "indices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "resource": {
+        "pid": 17548,
+        "elapsed_seconds": 25.22518360009417,
+        "rss_bytes": 40468480,
+        "private_bytes": 29470720,
+        "process_lifetime_peak_rss_bytes": 41553920
+      },
+      "additional_completed_attempt_evidence": []
+    },
+    {
+      "key": [
+        "hardware",
+        "m21_extra_b27249014855cbb7afba",
+        "m21_block_1706edd2c32b2937"
+      ],
+      "indices": [
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17
+      ],
+      "resource": {
+        "pid": 62076,
+        "elapsed_seconds": 25.910870799794793,
+        "rss_bytes": 39800832,
+        "private_bytes": 28934144,
+        "process_lifetime_peak_rss_bytes": 41172992
+      },
+      "additional_completed_attempt_evidence": []
+    },
+    {
+      "key": [
+        "hardware",
+        "m21_extra_1b0032e25c95ac24541f",
+        "m21_block_fd548b20a5cafc64"
+      ],
+      "indices": [
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35
+      ],
+      "resource": {
+        "pid": 62076,
+        "elapsed_seconds": 25.956068499945104,
+        "rss_bytes": 41844736,
+        "private_bytes": 31780864,
+        "process_lifetime_peak_rss_bytes": 43720704
+      },
+      "additional_completed_attempt_evidence": []
+    },
+    {
+      "key": [
+        "hardware",
+        "m21_extra_aa15e14f48af243cc5f5",
+        "m21_block_1706edd2c32b2937"
+      ],
+      "indices": [
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26
+      ],
+      "resource": {
+        "pid": 17548,
+        "elapsed_seconds": 26.69843789981678,
+        "rss_bytes": 41689088,
+        "private_bytes": 30613504,
+        "process_lifetime_peak_rss_bytes": 44097536
+      },
+      "additional_completed_attempt_evidence": []
+    },
+    {
+      "key": [
+        "hardware",
+        "m21_extra_dd58839eb8929bc841cf",
+        "m21_block_fd548b20a5cafc64"
+      ],
+      "indices": [
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44
+      ],
+      "resource": {
+        "pid": 62076,
+        "elapsed_seconds": 25.133697599638253,
+        "rss_bytes": 41844736,
+        "private_bytes": 30691328,
+        "process_lifetime_peak_rss_bytes": 44994560
+      },
+      "additional_completed_attempt_evidence": []
+    },
+    {
+      "key": [
+        "hardware",
+        "m21_extra_011ab1890729d1ab1015",
+        "m21_block_fd548b20a5cafc64"
+      ],
+      "indices": [
+        45,
+        46,
+        47,
+        48,
+        49,
+        50,
+        51,
+        52,
+        53
+      ],
+      "resource": {
+        "pid": 17548,
+        "elapsed_seconds": 25.805626400280744,
+        "rss_bytes": 42307584,
+        "private_bytes": 31531008,
+        "process_lifetime_peak_rss_bytes": 45305856
+      },
+      "additional_completed_attempt_evidence": []
+    },
+    {
+      "key": [
+        "hardware",
+        "m21_extra_aec47fb338519e4f48bd",
+        "m21_block_e3ef87e62c6ff1f7"
+      ],
+      "indices": [
+        54,
+        55,
+        56,
+        57,
+        58,
+        59,
+        60,
+        61,
+        62
+      ],
+      "resource": {
+        "pid": 62076,
+        "elapsed_seconds": 25.010649400297552,
+        "rss_bytes": 41836544,
+        "private_bytes": 30691328,
+        "process_lifetime_peak_rss_bytes": 45535232
+      },
+      "additional_completed_attempt_evidence": []
+    },
+    {
+      "key": [
+        "hardware",
+        "m21_extra_c76ef47d872e5817afad",
+        "m21_block_e3ef87e62c6ff1f7"
+      ],
+      "indices": [
+        63,
+        64,
+        65,
+        66,
+        67,
+        68,
+        69,
+        70,
+        71
+      ],
+      "resource": {
+        "pid": 17548,
+        "elapsed_seconds": 25.520541799720377,
+        "rss_bytes": 42668032,
+        "private_bytes": 32505856,
+        "process_lifetime_peak_rss_bytes": 46309376
+      },
+      "additional_completed_attempt_evidence": []
+    },
+    {
+      "key": [
+        "hardware",
+        "m21_extra_ec43b8bbd10700b3d543",
+        "m21_block_e3ef87e62c6ff1f7"
+      ],
+      "indices": [
+        72,
+        73,
+        74,
+        75,
+        76,
+        77,
+        78,
+        79,
+        80
+      ],
+      "resource": {
+        "pid": 62076,
+        "elapsed_seconds": 25.154596500098705,
+        "rss_bytes": 41873408,
+        "private_bytes": 31047680,
+        "process_lifetime_peak_rss_bytes": 45551616
+      },
+      "additional_completed_attempt_evidence": []
+    },
+    {
+      "key": [
+        "hardware",
+        "m21_extra_c5deb057c2d7c53bf523",
+        "m21_block_4d99796601b9e5b8"
+      ],
+      "indices": [
+        81,
+        82,
+        83,
+        84,
+        85,
+        86,
+        87,
+        88,
+        89
+      ],
+      "resource": {
+        "pid": 17548,
+        "elapsed_seconds": 24.30761339981109,
+        "rss_bytes": 41992192,
+        "private_bytes": 31297536,
+        "process_lifetime_peak_rss_bytes": 46309376
+      },
+      "additional_completed_attempt_evidence": []
+    },
+    {
+      "key": [
+        "hardware",
+        "m21_extra_5fc4d54952e2a4a65be6",
+        "m21_block_4d99796601b9e5b8"
+      ],
+      "indices": [
+        90,
+        91,
+        92,
+        93,
+        94,
+        95,
+        96,
+        97,
+        98
+      ],
+      "resource": {
+        "pid": 62076,
+        "elapsed_seconds": 25.337692100089043,
+        "rss_bytes": 41934848,
+        "private_bytes": 31014912,
+        "process_lifetime_peak_rss_bytes": 45785088
+      },
+      "additional_completed_attempt_evidence": []
+    },
+    {
+      "key": [
+        "hardware",
+        "m21_extra_3a54b7a84a8f1b6b772e",
+        "m21_block_4d99796601b9e5b8"
+      ],
+      "indices": [
+        99,
+        100,
+        101,
+        102,
+        103,
+        104,
+        105,
+        106,
+        107
+      ],
+      "resource": {
+        "pid": 17548,
+        "elapsed_seconds": 26.077600500080734,
+        "rss_bytes": 42631168,
+        "private_bytes": 31244288,
+        "process_lifetime_peak_rss_bytes": 46309376
+      },
+      "additional_completed_attempt_evidence": []
+    },
+    {
+      "key": [
+        "hardware",
+        "m21_hardware_compound_5478464ed043b4fef98f",
+        "m21_block_1706edd2c32b2937"
+      ],
+      "indices": [
+        108,
+        109,
+        110,
+        111,
+        112,
+        113,
+        114,
+        115,
+        116
+      ],
+      "resource": {
+        "pid": 62076,
+        "elapsed_seconds": 25.341201500035822,
+        "rss_bytes": 41693184,
+        "private_bytes": 31014912,
+        "process_lifetime_peak_rss_bytes": 45785088
+      },
+      "additional_completed_attempt_evidence": []
+    },
+    {
+      "key": [
+        "hardware",
+        "m21_hardware_compound_42ecc465ac9477e92f47",
+        "m21_block_e3ef87e62c6ff1f7"
+      ],
+      "indices": [
+        117,
+        118,
+        119,
+        120,
+        121,
+        122,
+        123,
+        124,
+        125
+      ],
+      "resource": {
+        "pid": 17548,
+        "elapsed_seconds": 25.780781699810177,
+        "rss_bytes": 42811392,
+        "private_bytes": 31690752,
+        "process_lifetime_peak_rss_bytes": 46309376
+      },
+      "additional_completed_attempt_evidence": []
+    }
+  ],
+  "initial_resource_gate": {
+    "available_physical_bytes": 25588019200,
+    "system_commit_fraction": 0.5804389334045177,
+    "new_reader_allowed": true
+  },
+  "group_launch_resource_gates": [
+    {
+      "group": [
+        "hardware",
+        "m21_extra_69c380653be81bb40e48",
+        "m21_block_1706edd2c32b2937"
+      ],
+      "available_physical_bytes": 25562218496,
+      "system_commit_fraction": 0.5807073333727182,
+      "new_reader_allowed": true
+    },
+    {
+      "group": [
+        "hardware",
+        "m21_extra_b27249014855cbb7afba",
+        "m21_block_1706edd2c32b2937"
+      ],
+      "available_physical_bytes": 25561235456,
+      "system_commit_fraction": 0.5807630290182932,
+      "new_reader_allowed": true
+    },
+    {
+      "group": [
+        "hardware",
+        "m21_extra_aa15e14f48af243cc5f5",
+        "m21_block_1706edd2c32b2937"
+      ],
+      "available_physical_bytes": 25086074880,
+      "system_commit_fraction": 0.5847790828903043,
+      "new_reader_allowed": true
+    },
+    {
+      "group": [
+        "hardware",
+        "m21_extra_1b0032e25c95ac24541f",
+        "m21_block_fd548b20a5cafc64"
+      ],
+      "available_physical_bytes": 25074589696,
+      "system_commit_fraction": 0.5849620165642828,
+      "new_reader_allowed": true
+    },
+    {
+      "group": [
+        "hardware",
+        "m21_extra_dd58839eb8929bc841cf",
+        "m21_block_fd548b20a5cafc64"
+      ],
+      "available_physical_bytes": 25103933440,
+      "system_commit_fraction": 0.5848825839649983,
+      "new_reader_allowed": true
+    },
+    {
+      "group": [
+        "hardware",
+        "m21_extra_011ab1890729d1ab1015",
+        "m21_block_fd548b20a5cafc64"
+      ],
+      "available_physical_bytes": 25102110720,
+      "system_commit_fraction": 0.5849895328653706,
+      "new_reader_allowed": true
+    },
+    {
+      "group": [
+        "hardware",
+        "m21_extra_aec47fb338519e4f48bd",
+        "m21_block_e3ef87e62c6ff1f7"
+      ],
+      "available_physical_bytes": 25078259712,
+      "system_commit_fraction": 0.5852472578348358,
+      "new_reader_allowed": true
+    },
+    {
+      "group": [
+        "hardware",
+        "m21_extra_c76ef47d872e5817afad",
+        "m21_block_e3ef87e62c6ff1f7"
+      ],
+      "available_physical_bytes": 25108762624,
+      "system_commit_fraction": 0.5853672686901823,
+      "new_reader_allowed": true
+    },
+    {
+      "group": [
+        "hardware",
+        "m21_extra_ec43b8bbd10700b3d543",
+        "m21_block_e3ef87e62c6ff1f7"
+      ],
+      "available_physical_bytes": 25390133248,
+      "system_commit_fraction": 0.5864474326926411,
+      "new_reader_allowed": true
+    },
+    {
+      "group": [
+        "hardware",
+        "m21_extra_c5deb057c2d7c53bf523",
+        "m21_block_4d99796601b9e5b8"
+      ],
+      "available_physical_bytes": 25377923072,
+      "system_commit_fraction": 0.5866029826742118,
+      "new_reader_allowed": true
+    },
+    {
+      "group": [
+        "hardware",
+        "m21_extra_5fc4d54952e2a4a65be6",
+        "m21_block_4d99796601b9e5b8"
+      ],
+      "available_physical_bytes": 25362178048,
+      "system_commit_fraction": 0.5869624848055317,
+      "new_reader_allowed": true
+    },
+    {
+      "group": [
+        "hardware",
+        "m21_extra_3a54b7a84a8f1b6b772e",
+        "m21_block_4d99796601b9e5b8"
+      ],
+      "available_physical_bytes": 25354854400,
+      "system_commit_fraction": 0.5871132608746246,
+      "new_reader_allowed": true
+    },
+    {
+      "group": [
+        "hardware",
+        "m21_hardware_compound_5478464ed043b4fef98f",
+        "m21_block_1706edd2c32b2937"
+      ],
+      "available_physical_bytes": 25358716928,
+      "system_commit_fraction": 0.5867294250505355,
+      "new_reader_allowed": true
+    },
+    {
+      "group": [
+        "hardware",
+        "m21_hardware_compound_42ecc465ac9477e92f47",
+        "m21_block_e3ef87e62c6ff1f7"
+      ],
+      "available_physical_bytes": 25348091904,
+      "system_commit_fraction": 0.5869472348073385,
+      "new_reader_allowed": true
+    }
+  ],
+  "final_resource_gate": {
+    "available_physical_bytes": 25176596480,
+    "system_commit_fraction": 0.5844953666195707,
+    "new_reader_allowed": true
+  },
+  "elapsed_seconds": 223.33681910019368,
+  "serial_validation_seconds": null,
+  "parallel_evidence_seconds": 179.74374129995704,
+  "analysis_purpose": null,
+  "full_sidecar_validation_scope": "Original build_tables latest cases; nonlatest completed attempts separately use original verify_result_evidence. No verification cache.",
+  "original_attempts_preserved": true,
+  "global_source_model_and_case_preflight": true,
+  "raw_or_result_files_modified": false,
+  "actual_physics_started": 0,
+  "worker_bootstrap_repetitions": 100,
+  "global_bootstrap_repetitions": 2000,
+  "serial_comparison": null,
+  "all_serial_table_hashes_equal": null,
+  "table_sha256": {
+    "ATTEMPT_STATUS": "f27c39cee37aa1e7834b531ae1853ed31f54874ffd6a254360e338eee7525dee",
+    "CASE_METRICS": "5c6f537fc190b6442829b6b4953bfdd06e5421f3ce2863c0103bd1dffdffbebe",
+    "CARRIER_SERVICE": "b602b6384676350bfc279b36f0fc723a80fa393f4f766810610376407b2d8c24",
+    "PAIRED_DIFFERENCES": "f3d48fc33ce7ace7162cd167d530c63ddab69a3a7af6d85ce5e03fc75bab0a7c",
+    "RESOURCE_MEASUREMENTS": "a0ee33bd0060b63fe572e30581159058c94ad4f270b7b885035766c4b63afd6a",
+    "EVIDENCE_INTEGRITY_SUMMARY": "c71c80b8f16ef3713d5251ac344587a915b2a8f72133f88696fa3b9806446f1e",
+    "PAIRED_SUMMARY": "8d5a683951fdac7e1fbfc7653b2848a05b2fdd22907fe63864272867de357012",
+    "MECHANISM_EFFECTS": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+    "HARDWARE_DIFFERENCES": "21084a87f6bf42067db0fe31299f9570dd8d1e19fc735bd77efd00a984cd6ba8",
+    "DISTURBANCE_INTERACTIONS": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+    "NECESSARY_BOUNDARY_CONDITIONS": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+  },
+  "table_row_counts": {
+    "ATTEMPT_STATUS": 126,
+    "CASE_METRICS": 126,
+    "CARRIER_SERVICE": 1512,
+    "PAIRED_DIFFERENCES": 13104,
+    "RESOURCE_MEASUREMENTS": 126,
+    "EVIDENCE_INTEGRITY_SUMMARY": 1,
+    "PAIRED_SUMMARY": 6552,
+    "MECHANISM_EFFECTS": 0,
+    "HARDWARE_DIFFERENCES": 8736,
+    "DISTURBANCE_INTERACTIONS": 0,
+    "NECESSARY_BOUNDARY_CONDITIONS": 0
+  },
+  "export_receipt": {
+    "schema": "hospital_ies.sci_analysis.v21.v1",
+    "files": [
+      {
+        "path": "ATTEMPT_STATUS.csv",
+        "sha256": "8d397cda255e6096eab8a229af11671198e6209e448977f7184e660f8e4a301c",
+        "rows": 126,
+        "columns": 13
+      },
+      {
+        "path": "CASE_METRICS.csv",
+        "sha256": "8a96964436aacdc528f33b217915fa47d608244091fd455d011e9ddf38c5ef15",
+        "rows": 126,
+        "columns": 290
+      },
+      {
+        "path": "CARRIER_SERVICE.csv",
+        "sha256": "92056f6abdc5fe4ee77db1313c627ca6461081d9b4bbe5a8722cd54c5e117c3c",
+        "rows": 1512,
+        "columns": 19
+      },
+      {
+        "path": "PAIRED_DIFFERENCES.csv",
+        "sha256": "64e7cab4a0f175fde637e823ec8c9c31e53dffa39f9f9c08929c6f361b5f88d5",
+        "rows": 13104,
+        "columns": 15
+      },
+      {
+        "path": "RESOURCE_MEASUREMENTS.csv",
+        "sha256": "9649b4d4af577357cdfb6115d6b835a933859112f720c4bdf75f341872b13b11",
+        "rows": 126,
+        "columns": 44
+      },
+      {
+        "path": "EVIDENCE_INTEGRITY_SUMMARY.csv",
+        "sha256": "22245eb836dd2109d5699dd01b23d84ffdadb5b0367d6bc672f76fb5b5c0cc4e",
+        "rows": 1,
+        "columns": 9
+      },
+      {
+        "path": "PAIRED_SUMMARY.csv",
+        "sha256": "3cd3410c95e8f660fc556b3821308af153a905f8800a646fdbf6d6315124e0eb",
+        "rows": 6552,
+        "columns": 31
+      },
+      {
+        "path": "MECHANISM_EFFECTS.csv",
+        "sha256": "f01a374e9c81e3db89b3a42940c4d6a5447684986a1296e42bf13f196eed6295",
+        "rows": 0,
+        "columns": 0
+      },
+      {
+        "path": "HARDWARE_DIFFERENCES.csv",
+        "sha256": "2062d88162737fe54116708f2423da7830d35683a5a9b2d5e6e7cf162c783009",
+        "rows": 8736,
+        "columns": 17
+      },
+      {
+        "path": "DISTURBANCE_INTERACTIONS.csv",
+        "sha256": "f01a374e9c81e3db89b3a42940c4d6a5447684986a1296e42bf13f196eed6295",
+        "rows": 0,
+        "columns": 0
+      },
+      {
+        "path": "NECESSARY_BOUNDARY_CONDITIONS.csv",
+        "sha256": "f01a374e9c81e3db89b3a42940c4d6a5447684986a1296e42bf13f196eed6295",
+        "rows": 0,
+        "columns": 0
+      },
+      {
+        "path": "SCI_TABLES.mat",
+        "sha256": "7fe9f026cb54357503658f2b51e4c23fdc1707db2ed350a4b64f5ab6186be8b5"
+      }
+    ],
+    "scientific_figures_generated": 0,
+    "final_plot_backend": "MATLAB only",
+    "carrier_energies_are_not_added": true,
+    "source_blocks_are_statistical_units": true,
+    "unknown_quantities_are_not_zero": true,
+    "mixed_windows_are_separate": true,
+    "emissions_are_conditional_post_run_CO2": true
+  },
+  "serial_check_repeats_full_validation_as_an_independent_regression": false
+}

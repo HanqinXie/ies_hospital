@@ -1,0 +1,114 @@
+{
+  "index": 48,
+  "case_identity": {
+    "phase": "final_blind",
+    "scenario_id": "m21_L2_811dd5c19ef6aeeb2c2a",
+    "policy_id": "C_sci_v21",
+    "configuration_id": "H0",
+    "attempt_id": "attempt_0001",
+    "source_block_id": "m21_final12_6f9356e6d3f682aa"
+  },
+  "pid": 55960,
+  "auditor_sha256": "a516d84d286e39f17be10e9624e3c681b1b5e73d8ab03789107437aa1d55d084",
+  "generic_sha256": "a4abf08e94dfe872cef5f1eaa4aecd94744be137566c82345b21b141eaa5e727",
+  "status": "audit_pass",
+  "physical": {
+    "segment_count": 314,
+    "observed_until_minute": 720.0,
+    "storage": {
+      "ups": {
+        "initial_inventory_kWh": 0.0,
+        "initial_paid_input_kWh": 0.0,
+        "charged_input_kWh": 0.0,
+        "discharged_kWh": 0.0,
+        "standing_loss_kWh": 0.0,
+        "conversion_loss_kWh": 0.0,
+        "event_discharged_kWh": 0.0,
+        "recovery_charged_input_kWh": 0.0,
+        "depleted_at_native_end_minute": null,
+        "final_inventory_kWh": 0.0,
+        "full_recharge_observed_by_horizon": true,
+        "recharge_status": "not_observed_in_available_tail",
+        "depletion_status": "not_observed"
+      },
+      "cold_store": {
+        "initial_inventory_kWh": 0.0,
+        "initial_paid_input_kWh": 0.0,
+        "charged_input_kWh": 0.0,
+        "discharged_kWh": 0.0,
+        "standing_loss_kWh": 0.0,
+        "conversion_loss_kWh": 0.0,
+        "event_discharged_kWh": 0.0,
+        "recovery_charged_input_kWh": 0.0,
+        "depleted_at_native_end_minute": null,
+        "final_inventory_kWh": 0.0,
+        "full_recharge_observed_by_horizon": true,
+        "recharge_status": "not_observed_in_available_tail",
+        "depletion_status": "not_observed"
+      }
+    },
+    "carrier_ENS_kWh": [
+      [
+        0.0007345527443901408,
+        0.0,
+        0.0
+      ],
+      [
+        0.0007345527443901409,
+        0.0,
+        0.0
+      ],
+      [
+        0.0007345527443901408,
+        0.0,
+        0.0
+      ],
+      [
+        0.07345527443901402,
+        0.0,
+        0.0
+      ]
+    ],
+    "fan_zero_P3_heat_kWh": 0.0,
+    "fan_source_trace_count": 0,
+    "maximum_electric_cold_residual_kW": 4.547473508864641e-13,
+    "maximum_auxiliary_dependency_excess_kW": 0.0,
+    "cold_store_pump_electric_kWh": 0.0,
+    "DG_shaft_work_kWh": 0.0,
+    "event_P0_P1_e_ENS_kWh": 0.00041240066372608803,
+    "status": "pass",
+    "result_path": "E:\\hospital_ies_v21_20261023\\final_blind01\\experiments\\final_blind48_all5_H0\\pairs\\m21_L2_811dd5c19ef6aeeb2c2a__C_sci_v21__H0\\attempt_0001\\RESULT.json",
+    "result_sha256": "c506af370628d8e9ec7e3d222b5051cf31c92d372d80dd9c921a0ca525e480a1",
+    "raw_path": "E:\\hospital_ies_v21_20261023\\raw\\final_blind01\\final_blind48_all5_H0\\m21_L2_811dd5c19ef6aeeb2c2a__C_sci_v21__H0\\attempt_0001\\trajectory.json.gz",
+    "raw_sha256": "2fa8f545b46461fe5a8e993120c7c2eb0b7381fd400550e39a563dc387b9e7c6",
+    "solver_sidecar": {
+      "entry_count": 7026,
+      "row_count": 2016768,
+      "maximum_original_row_violation": 7.985249794728588e-09,
+      "gzip_sha256": "53a649d250952653d81f2789554497d7075165aad63d2814134d63517e588015"
+    },
+    "scenario_id": "m21_L2_811dd5c19ef6aeeb2c2a",
+    "policy_id": "C_sci_v21",
+    "configuration_id": "H0"
+  },
+  "original_pilot_result": null,
+  "every_original_field_equal": null,
+  "current_artifact_stats": [
+    {
+      "path": "E:\\hospital_ies_v21_20261023\\raw\\final_blind01\\final_blind48_all5_H0\\m21_L2_811dd5c19ef6aeeb2c2a__C_sci_v21__H0\\attempt_0001\\trajectory.json.gz",
+      "bytes": 3527784,
+      "mtime_ns": 1792845409634063000
+    },
+    {
+      "path": "E:\\hospital_ies_v21_20261023\\raw\\final_blind01\\final_blind48_all5_H0\\m21_L2_811dd5c19ef6aeeb2c2a__C_sci_v21__H0\\attempt_0001\\solver_rows.jsonl.gz",
+      "bytes": 23806435,
+      "mtime_ns": 1792845404072264600
+    }
+  ],
+  "elapsed_seconds": 12.851220999844372,
+  "cpu_seconds": 12.625,
+  "memory": {
+    "os_peak_working_set_bytes": 413081600,
+    "private_bytes_at_end": 62849024
+  }
+}

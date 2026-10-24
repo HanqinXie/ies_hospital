@@ -1,0 +1,114 @@
+{
+  "index": 43,
+  "case_identity": {
+    "phase": "final_blind",
+    "scenario_id": "m21_L1_cb9edd74abe64735f0f7",
+    "policy_id": "C_sci_v21",
+    "configuration_id": "H0",
+    "attempt_id": "attempt_0001",
+    "source_block_id": "m21_final12_6f9356e6d3f682aa"
+  },
+  "pid": 96372,
+  "auditor_sha256": "a516d84d286e39f17be10e9624e3c681b1b5e73d8ab03789107437aa1d55d084",
+  "generic_sha256": "a4abf08e94dfe872cef5f1eaa4aecd94744be137566c82345b21b141eaa5e727",
+  "status": "audit_pass",
+  "physical": {
+    "segment_count": 314,
+    "observed_until_minute": 720.0,
+    "storage": {
+      "ups": {
+        "initial_inventory_kWh": 0.0,
+        "initial_paid_input_kWh": 0.0,
+        "charged_input_kWh": 0.0,
+        "discharged_kWh": 0.0,
+        "standing_loss_kWh": 0.0,
+        "conversion_loss_kWh": 0.0,
+        "event_discharged_kWh": 0.0,
+        "recovery_charged_input_kWh": 0.0,
+        "depleted_at_native_end_minute": null,
+        "final_inventory_kWh": 0.0,
+        "full_recharge_observed_by_horizon": true,
+        "recharge_status": "not_observed_in_available_tail",
+        "depletion_status": "not_observed"
+      },
+      "cold_store": {
+        "initial_inventory_kWh": 0.0,
+        "initial_paid_input_kWh": 0.0,
+        "charged_input_kWh": 0.0,
+        "discharged_kWh": 0.0,
+        "standing_loss_kWh": 0.0,
+        "conversion_loss_kWh": 0.0,
+        "event_discharged_kWh": 0.0,
+        "recovery_charged_input_kWh": 0.0,
+        "depleted_at_native_end_minute": null,
+        "final_inventory_kWh": 0.0,
+        "full_recharge_observed_by_horizon": true,
+        "recharge_status": "not_observed_in_available_tail",
+        "depletion_status": "not_observed"
+      }
+    },
+    "carrier_ENS_kWh": [
+      [
+        0.0007345527443901408,
+        0.0,
+        0.0
+      ],
+      [
+        0.0007345527443901409,
+        0.0,
+        0.0
+      ],
+      [
+        0.0007345527443901408,
+        0.0,
+        0.0
+      ],
+      [
+        0.07345527443901402,
+        0.0,
+        0.0
+      ]
+    ],
+    "fan_zero_P3_heat_kWh": 0.0,
+    "fan_source_trace_count": 0,
+    "maximum_electric_cold_residual_kW": 4.547473508864641e-13,
+    "maximum_auxiliary_dependency_excess_kW": 0.0,
+    "cold_store_pump_electric_kWh": 0.0,
+    "DG_shaft_work_kWh": 0.0,
+    "event_P0_P1_e_ENS_kWh": 0.00041240066372608803,
+    "status": "pass",
+    "result_path": "E:\\hospital_ies_v21_20261023\\final_blind01\\experiments\\final_blind48_all5_H0\\pairs\\m21_L1_cb9edd74abe64735f0f7__C_sci_v21__H0\\attempt_0001\\RESULT.json",
+    "result_sha256": "5185ce38c55b04c073c27cb6e2a87f9e442a7bc6ab9a6d9d87acea2035923b36",
+    "raw_path": "E:\\hospital_ies_v21_20261023\\raw\\final_blind01\\final_blind48_all5_H0\\m21_L1_cb9edd74abe64735f0f7__C_sci_v21__H0\\attempt_0001\\trajectory.json.gz",
+    "raw_sha256": "989d0f38d3855bcf7d7c0063d41bb9932c065e574b22f4a1581b79a6e02e04c0",
+    "solver_sidecar": {
+      "entry_count": 4676,
+      "row_count": 1941568,
+      "maximum_original_row_violation": 7.985249794728588e-09,
+      "gzip_sha256": "dcd1d877518910c57614b6eeb36ef16f2171effc957bf0c31efef32b11a9ba8f"
+    },
+    "scenario_id": "m21_L1_cb9edd74abe64735f0f7",
+    "policy_id": "C_sci_v21",
+    "configuration_id": "H0"
+  },
+  "original_pilot_result": null,
+  "every_original_field_equal": null,
+  "current_artifact_stats": [
+    {
+      "path": "E:\\hospital_ies_v21_20261023\\raw\\final_blind01\\final_blind48_all5_H0\\m21_L1_cb9edd74abe64735f0f7__C_sci_v21__H0\\attempt_0001\\trajectory.json.gz",
+      "bytes": 3309309,
+      "mtime_ns": 1792844845517554400
+    },
+    {
+      "path": "E:\\hospital_ies_v21_20261023\\raw\\final_blind01\\final_blind48_all5_H0\\m21_L1_cb9edd74abe64735f0f7__C_sci_v21__H0\\attempt_0001\\solver_rows.jsonl.gz",
+      "bytes": 23386075,
+      "mtime_ns": 1792844840811519100
+    }
+  ],
+  "elapsed_seconds": 12.30324440030381,
+  "cpu_seconds": 12.125,
+  "memory": {
+    "os_peak_working_set_bytes": 394186752,
+    "private_bytes_at_end": 59871232
+  }
+}

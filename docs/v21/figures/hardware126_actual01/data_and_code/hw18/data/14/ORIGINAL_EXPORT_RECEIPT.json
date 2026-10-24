@@ -1,0 +1,87 @@
+{
+  "schema": "hospital_ies.v21.event_timeline_export.v1",
+  "status": "completed",
+  "source_binding_sha256": "4dfe62ae105d2696b7782dc36c83ec63c6551e2cded601d6f15c0d4083058add",
+  "source_files_checked": 643,
+  "runtime_inputs_checked": 28,
+  "source_and_inputs_unchanged_after_export": true,
+  "result_path": "E:\\hospital_ies_v21_20261023\\hardware03\\experiments\\038_hardware_m21_hardware_compound_5478464ed043b4fef98f_H1\\pairs\\m21_hardware_compound_5478464ed043b4fef98f__A_sci_v21__H1\\attempt_0001\\RESULT.json",
+  "result_sha256": "929540c37663e2e160fb7078576676848a5ee1257f31d8b4773e0b33e5188140",
+  "freeze_path": "E:\\hospital_ies_v21_20261023\\hardware03\\HARDWARE_FREEZE.json",
+  "freeze_sha256": "6a2a2d9f447a10a70b5affab686079253b281c4cb56afff1d6aedf20175efe93",
+  "raw_path": "E:\\hospital_ies_v21_20261023\\raw\\hardware03\\038_hardware_m21_hardware_compound_5478464ed043b4fef98f_H1\\m21_hardware_compound_5478464ed043b4fef98f__A_sci_v21__H1\\attempt_0001\\trajectory.json.gz",
+  "raw_sha256": "e45510a2096d6f757c2648da0e290783b0b07151be6aba142f6b5114def91dbe",
+  "sidecar_sha256": "47a27db5d5c3fb03a8573d38c551361a4d8c19a4831c97f877b7b97389404045",
+  "scenario_id": "m21_hardware_compound_5478464ed043b4fef98f",
+  "policy_id": "A_sci_v21",
+  "canonical_class": "X_GRID_ALL_GT0",
+  "configuration_id": "H1",
+  "native_process_receipt": {
+    "raw_path": "E:\\hospital_ies_v21_20261023\\raw\\hardware03\\038_hardware_m21_hardware_compound_5478464ed043b4fef98f_H1\\m21_hardware_compound_5478464ed043b4fef98f__A_sci_v21__H1\\attempt_0001\\trajectory.json.gz",
+    "raw_sha256": "e45510a2096d6f757c2648da0e290783b0b07151be6aba142f6b5114def91dbe",
+    "execution_model_id": "M21_sci_engineering",
+    "scenario_id": "m21_hardware_compound_5478464ed043b4fef98f",
+    "policy_id": "A_sci_v21",
+    "native_intervals": 386,
+    "resampled": false,
+    "observed_start_minute": 0.0,
+    "observed_end_minute": 360.0,
+    "process_csv_sha256": "6152811734726e52848c31b808bff03dd23152835ac5249f1c98345e69b24f9f",
+    "scientific_figures_generated": 0
+  },
+  "row_counts": {
+    "EVENTS": 250,
+    "SEGMENT_STATES": 386,
+    "DECISION_READINESS": 24,
+    "COMMAND_TIMELINE": 486
+  },
+  "unknown_fields": "Blank CSV cell, preserved native JSON null/absence; never forward filled",
+  "command_semantics": "Event command_executed dispatch is revalidated command permission, not delivered power; only native segment.action is actual supply",
+  "readiness_semantics": "Decision-time observed readiness is separate from segment pre/post fields; missing segment readiness remains unknown",
+  "native_order_retained": true,
+  "interpolation": false,
+  "physical_attempts_started": 0,
+  "scientific_figures_generated": 0,
+  "artifacts": [
+    {
+      "path": "COMMAND_TIMELINE.csv",
+      "bytes": 8886377,
+      "sha256": "c565129433ab0b087f479bf23c7f8c4e2d56d9170bac0ea0eadd056e156809a1"
+    },
+    {
+      "path": "DECISION_READINESS.csv",
+      "bytes": 7179168,
+      "sha256": "61ad53b34a833d3cc62db82c405a855a21bb74ea1a762575cbc00ef263a5b76e"
+    },
+    {
+      "path": "EVENTS.csv",
+      "bytes": 5462047,
+      "sha256": "17ab6e0b7ebd5ef6d46fbe1cc6c80c6174451595d8eeb9f3928c3427b625afc9"
+    },
+    {
+      "path": "INITIAL_STATE.json",
+      "bytes": 1348,
+      "sha256": "0cd6ceb791f2c4dc7a7802eecc47d0a5b6a2ea438f378b9dedf534ccc7186a54"
+    },
+    {
+      "path": "native_process\\PROCESS.csv",
+      "bytes": 441254,
+      "sha256": "6152811734726e52848c31b808bff03dd23152835ac5249f1c98345e69b24f9f"
+    },
+    {
+      "path": "native_process\\PROCESS.mat",
+      "bytes": 14754,
+      "sha256": "5e31a312f72ba8fb790e5ee1b0afa85d1157479eb55447227c3a227368094f7b"
+    },
+    {
+      "path": "native_process\\PROCESS_RECEIPT.json",
+      "bytes": 695,
+      "sha256": "31917689483bc0d67e5b51814e021e28726983fce9d3f7c86059a9894b915165"
+    },
+    {
+      "path": "SEGMENT_STATES.csv",
+      "bytes": 8966866,
+      "sha256": "5694edb9ee2f4ce69c95450b274968078b10a7a996ec2dbc49a2d3d7f5533a1f"
+    }
+  ]
+}

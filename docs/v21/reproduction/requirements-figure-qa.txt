@@ -1,0 +1,5 @@
+# Optional Python checks for MATLAB FIG exports; actual installed versions.
+# MATLAB R2024b and the installed SimSun / Times New Roman fonts are separate.
+-r requirements.txt
+PyMuPDF==1.27.2.3
+Pillow==12.2.0

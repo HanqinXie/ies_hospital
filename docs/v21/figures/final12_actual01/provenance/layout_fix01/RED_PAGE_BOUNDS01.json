@@ -1,0 +1,65 @@
+{
+  "schema": "hospital_ies.final12_fullpage_boundary_regression.v1",
+  "utc": "2026-10-24T19:47:49.304196+00:00",
+  "directory": "E:\\hospital_ies_v21_20261023\\final_blind01\\figure_qa01\\styled_figures02",
+  "guard": "PDF text within page and at least2px white raster edge; no scientific tolerance change",
+  "details": [
+    {
+      "name": "F1_critical_service_final_blind_w720",
+      "input_sha256": {
+        "E:\\hospital_ies_v21_20261023\\final_blind01\\figure_qa01\\styled_figures02\\F1_critical_service_final_blind_w720.pdf": "49b19007b8fb24b942126fc3f0e34af802dce20e54ea3b0cb1e567d7381c4bf4",
+        "E:\\hospital_ies_v21_20261023\\final_blind01\\figure_qa01\\styled_figures02\\F1_critical_service_final_blind_w720.png": "8589bbf43e9af31c3bcdcca6982ed002f75643518209546746268238523f15f6"
+      },
+      "pdf_text_margins_left_top_right_bottom_pt": [
+        -3.1726150512695312,
+        5.001227378845215,
+        36.5626220703125,
+        4.1485595703125
+      ],
+      "png_ink_margins_left_top_right_bottom_px": [
+        0,
+        42,
+        231,
+        51
+      ],
+      "png_dimensions_px": [
+        4252,
+        3307
+      ],
+      "issues": [
+        "PDF text metric bounding box extends beyond physical page",
+        "PNG nonwhite ink touches/clips a physical page edge"
+      ],
+      "passed": false
+    },
+    {
+      "name": "F2_service_cost_final_blind_w720",
+      "input_sha256": {
+        "E:\\hospital_ies_v21_20261023\\final_blind01\\figure_qa01\\styled_figures02\\F2_service_cost_final_blind_w720.pdf": "3b62dc4db959e0e34aef0a996e956164ccc7c1835cf6166afd39a105f2a93e88",
+        "E:\\hospital_ies_v21_20261023\\final_blind01\\figure_qa01\\styled_figures02\\F2_service_cost_final_blind_w720.png": "209b98af242b6c3381748b36bece08231236c972cbd81089aa32e04ec2423e21"
+      },
+      "pdf_text_margins_left_top_right_bottom_pt": [
+        5.67138671875,
+        5.001227378845215,
+        35.232940673828125,
+        3.42999267578125
+      ],
+      "png_ink_margins_left_top_right_bottom_px": [
+        47,
+        42,
+        231,
+        37
+      ],
+      "png_dimensions_px": [
+        4252,
+        3071
+      ],
+      "issues": [],
+      "passed": true
+    }
+  ],
+  "passed": false,
+  "input_files_modified": false,
+  "figures_generated": false,
+  "scientific_plot_backend": "MATLAB"
+}

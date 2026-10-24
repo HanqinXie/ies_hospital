@@ -1,0 +1,26 @@
+{
+  "schema": "hospital_ies.root_visual_review.v1",
+  "created_utc": "2026-10-23T16:18:39.629948+00:00",
+  "status": "passed",
+  "artifact_receipt_sha256": "4693786806cf32037751478a4f04cdd87ae553d7ed567e2b9afc22f9e67d37b6",
+  "reviewed_previews": [
+    {
+      "path": "E:\\hospital_ies_v21_20261023\\storage_functional_r5\\artifact_qa01\\H1_functional_process_pdf_preview.png",
+      "sha256": "fc243a34e108599a27e4abb699689608210d468ea5bd367ee95e3b8e566186a0"
+    },
+    {
+      "path": "E:\\hospital_ies_v21_20261023\\storage_functional_r5\\artifact_qa01\\H2_functional_process_pdf_preview.png",
+      "sha256": "901b81e6592bd82108d5322570a6e4310c9dbf91f12a872d1167883d7775adeb"
+    }
+  ],
+  "method": "Root viewed both complete MATLAB PDF page previews using view_image",
+  "findings": [
+    "All six panels per case visible with legible headings, axes and legends",
+    "Native power discontinuities and inventory endpoints preserved",
+    "H1 initial cooling gap and H2 later cooling gap visible",
+    "Functional-only and unpaired-H0 scope stated in each footer",
+    "No observed overlapping labels, missing glyphs, or clipped data panels"
+  ],
+  "scientific_ranking_or_hardware_effect": false,
+  "physics_attempts": 0
+}

@@ -1,0 +1,163 @@
+{
+  "schema": "hospital_ies.v21.storage_functional_figures.delivery.v1",
+  "status": "passed",
+  "source_root": "E:\\hospital_ies_v21_20261023\\pilot35_r4\\storage_process01",
+  "delivery_root": "D:\\hospital_ies_v21_20261023\\docs\\v21\\figures\\storage_functional_validation",
+  "actual_matlab_exit_code": 0,
+  "matlab_version": "24.2.0.2712019 (R2024b)",
+  "physical_attempts_started": 0,
+  "production_source_and_inputs_unchanged": true,
+  "source_binding_sha256": "2088cd0a61b1d6e07a34619cfafa2b559a25c30aa1f40b8a5bb62848ea95cfd7",
+  "font_and_vector_pdf_checks": [
+    {
+      "file": "H1_functional_process.pdf",
+      "font_names": [
+        "EAAAAA+TimesNewRomanPSMT",
+        "EAAAAB+SimSun"
+      ],
+      "pages": 1,
+      "raster_images": 0
+    },
+    {
+      "file": "H2_functional_process.pdf",
+      "font_names": [
+        "EAAAAA+TimesNewRomanPSMT",
+        "EAAAAB+SimSun"
+      ],
+      "pages": 1,
+      "raster_images": 0
+    }
+  ],
+  "matlab_source_sha256": "897b6f8ea46b6bc051f575f5375b2e5000221ad44606b6f5b2d799fc3da16dd2",
+  "visual_QA": "Both final figures05 PNGs actually inspected; inventory-label overlap and power-legend overlap fixed from figures04; no data changed.",
+  "files": [
+    {
+      "path": "plot_storage_functional_process.m",
+      "bytes": 12606,
+      "sha256": "897b6f8ea46b6bc051f575f5375b2e5000221ad44606b6f5b2d799fc3da16dd2",
+      "source_path": "E:\\hospital_ies_v21_20261023\\pilot35_r4\\storage_process01\\plot_storage_functional_process.m"
+    },
+    {
+      "path": "README.md",
+      "bytes": 3774,
+      "sha256": "175f615e4702f1387d7759fdc65b76b0f10feb35bac5ffc37715c61130d673bc",
+      "source_path": "E:\\hospital_ies_v21_20261023\\pilot35_r4\\storage_process01\\README.md"
+    },
+    {
+      "path": "evidence/MATLAB_RUN05.log",
+      "bytes": 4690,
+      "sha256": "470ccdd23d6560acb8c6ff622ac2c73d4fa5eeac81bfe38fa5d1747263a34c55",
+      "source_path": "E:\\hospital_ies_v21_20261023\\pilot35_r4\\storage_process01\\MATLAB_RUN05.log"
+    },
+    {
+      "path": "evidence/EXPORT_STORAGE01.log",
+      "bytes": 2830,
+      "sha256": "a1355b24c84987e277dec516982d0b50c667f9a937bd28f873cc49797bcfef84",
+      "source_path": "E:\\hospital_ies_v21_20261023\\reviews\\pilot35_gate01\\EXPORT_STORAGE01.log"
+    },
+    {
+      "path": "H1/PLOT_CASE.json",
+      "bytes": 1793,
+      "sha256": "4336805131c44cd47a2a4daaa370730d4e8980dd27bbe28e454485afec968980",
+      "source_path": "E:\\hospital_ies_v21_20261023\\pilot35_r4\\storage_process01\\H1\\PLOT_CASE.json"
+    },
+    {
+      "path": "H1/PROCESS.csv",
+      "bytes": 106739,
+      "sha256": "e7e35d54c1ca90a7e98e9e419ada57852f93ab25cf3bf78ad6d9afd6a56a89a7",
+      "source_path": "E:\\hospital_ies_v21_20261023\\pilot35_r4\\storage_process01\\H1\\PROCESS.csv"
+    },
+    {
+      "path": "H1/PROCESS.mat",
+      "bytes": 5373,
+      "sha256": "41c64a13fcc4bf180c5b5eada4d206b45405a22fe43840c78470645941ba7029",
+      "source_path": "E:\\hospital_ies_v21_20261023\\pilot35_r4\\storage_process01\\H1\\PROCESS.mat"
+    },
+    {
+      "path": "H1/PROCESS_RECEIPT.json",
+      "bytes": 639,
+      "sha256": "fb90c26dbdfa7553aa92e7be19d1f180558fc18c703e515f96b72de0b1400a14",
+      "source_path": "E:\\hospital_ies_v21_20261023\\pilot35_r4\\storage_process01\\H1\\PROCESS_RECEIPT.json"
+    },
+    {
+      "path": "H2/PLOT_CASE.json",
+      "bytes": 1743,
+      "sha256": "70b6999f9178c694af27be1ad10538c2edc95af9fa0c85479169121f40a867f0",
+      "source_path": "E:\\hospital_ies_v21_20261023\\pilot35_r4\\storage_process01\\H2\\PLOT_CASE.json"
+    },
+    {
+      "path": "H2/PROCESS.csv",
+      "bytes": 128745,
+      "sha256": "9b0008331323f8c84b654c6f3494b7ca3268f1b64a0cec27a5d415d1b7966859",
+      "source_path": "E:\\hospital_ies_v21_20261023\\pilot35_r4\\storage_process01\\H2\\PROCESS.csv"
+    },
+    {
+      "path": "H2/PROCESS.mat",
+      "bytes": 5433,
+      "sha256": "b76aa50785df337f1404931de8ad8726d0c795267fcd09e600eff267512fb799",
+      "source_path": "E:\\hospital_ies_v21_20261023\\pilot35_r4\\storage_process01\\H2\\PROCESS.mat"
+    },
+    {
+      "path": "H2/PROCESS_RECEIPT.json",
+      "bytes": 641,
+      "sha256": "76f9f0800cf56756e486ae840f87bfea8b7ed57dfad1195543e8579da989d604",
+      "source_path": "E:\\hospital_ies_v21_20261023\\pilot35_r4\\storage_process01\\H2\\PROCESS_RECEIPT.json"
+    },
+    {
+      "path": "figures/H1_functional_process.fig",
+      "bytes": 71688,
+      "sha256": "be6dbd61166c223e5bf2ef4df67b70f1bc6892c13b41eac1a728a0d4786fb3aa",
+      "source_path": "E:\\hospital_ies_v21_20261023\\pilot35_r4\\storage_process01\\figures05\\H1_functional_process.fig"
+    },
+    {
+      "path": "figures/H1_functional_process.pdf",
+      "bytes": 64301,
+      "sha256": "af6759e810257736b8a75f90d6fbce61a3eb58f1410eaca1c61912c2feca52ee",
+      "source_path": "E:\\hospital_ies_v21_20261023\\pilot35_r4\\storage_process01\\figures05\\H1_functional_process.pdf"
+    },
+    {
+      "path": "figures/H1_functional_process.png",
+      "bytes": 842305,
+      "sha256": "7aacc0650226c7664f2293700b058c03cfa0a2aba061ab66352d30de9c1b0530",
+      "source_path": "E:\\hospital_ies_v21_20261023\\pilot35_r4\\storage_process01\\figures05\\H1_functional_process.png"
+    },
+    {
+      "path": "figures/H1_functional_process.svg",
+      "bytes": 626572,
+      "sha256": "296b060d0b8623baac7f72f176be5ef1c2c14f25679b9d1afcd34aff83f9a727",
+      "source_path": "E:\\hospital_ies_v21_20261023\\pilot35_r4\\storage_process01\\figures05\\H1_functional_process.svg"
+    },
+    {
+      "path": "figures/H2_functional_process.fig",
+      "bytes": 76134,
+      "sha256": "730a4134094b462247f22bd2b782ad14bb27b910c9bd66f5bc1259b6cdbe88a0",
+      "source_path": "E:\\hospital_ies_v21_20261023\\pilot35_r4\\storage_process01\\figures05\\H2_functional_process.fig"
+    },
+    {
+      "path": "figures/H2_functional_process.pdf",
+      "bytes": 66355,
+      "sha256": "feac7703bb8f2b42fde60b6d10c0a1c119e1d56897026c7fe8fa5aedcd96492c",
+      "source_path": "E:\\hospital_ies_v21_20261023\\pilot35_r4\\storage_process01\\figures05\\H2_functional_process.pdf"
+    },
+    {
+      "path": "figures/H2_functional_process.png",
+      "bytes": 913146,
+      "sha256": "1bfb0375b7638f61d05e6b83b5484dcacc0c4e01b13e5331634a13d034c9ad90",
+      "source_path": "E:\\hospital_ies_v21_20261023\\pilot35_r4\\storage_process01\\figures05\\H2_functional_process.png"
+    },
+    {
+      "path": "figures/H2_functional_process.svg",
+      "bytes": 641842,
+      "sha256": "ee4976117b9553c2ecc15f4c3bc294bf64f4b40a708c42d35467648e41501841",
+      "source_path": "E:\\hospital_ies_v21_20261023\\pilot35_r4\\storage_process01\\figures05\\H2_functional_process.svg"
+    },
+    {
+      "path": "figures/MATLAB_FIGURE_QA.json",
+      "bytes": 2346,
+      "sha256": "3aa8deddaefd7d784e24c9671f34d7daff321ba3668014f90caeeaa36fb6c49d",
+      "source_path": "E:\\hospital_ies_v21_20261023\\pilot35_r4\\storage_process01\\figures05\\MATLAB_FIGURE_QA.json"
+    }
+  ],
+  "total_file_bytes": 3579695,
+  "parent_visual_QA": "Root actually viewed both figures05 PNGs and approved layout and truthful native pulses; no further figure edits requested."
+}

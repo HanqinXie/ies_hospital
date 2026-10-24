@@ -1,0 +1,7 @@
+{在不同结构体之间进行下标赋值。
+
+出错 run_local_recipe (第 18 行)
+    results(k)=struct('name',files(k).name,'exact_snapshot_equal',true, ...
+    ^^^^^^^^^^
+} 
+ERROR: MATLAB error Exit Status: 0x00000001

@@ -1,0 +1,100 @@
+{
+  "schema": "hospital_ies.sci_analysis.v21.v1",
+  "files": [
+    {
+      "path": "CASE_METRICS.csv",
+      "sha256": "81ecea1c0cb8ae59d64bdbe795aa2e373ce2b4b9e134f3d362b0833470ce0775",
+      "rows": 240,
+      "columns": 291
+    },
+    {
+      "path": "CARRIER_SERVICE.csv",
+      "sha256": "e6ad608cce5100134900341fe54a87f2860aded992a90924f1ecedb5315f0def",
+      "rows": 2880,
+      "columns": 20
+    },
+    {
+      "path": "RESOURCE_MEASUREMENTS.csv",
+      "sha256": "064ede41fcb8fbba47a03fc29c585f2a0bdf91d45a17dbcd1e8baa79dacaf9ab",
+      "rows": 240,
+      "columns": 45
+    },
+    {
+      "path": "ATTEMPT_STATUS.csv",
+      "sha256": "548b4e111918332783b6d58425c5856fc94d467cf9c3bdc18ccc353bd62dddb4",
+      "rows": 240,
+      "columns": 14
+    },
+    {
+      "path": "PAIRED_DIFFERENCES.csv",
+      "sha256": "76f2754e46e537da31a91e32f3ee60cf97c42b262e56803f50e5310c4b45e3fb",
+      "rows": 29952,
+      "columns": 16
+    },
+    {
+      "path": "PAIRED_SUMMARY.csv",
+      "sha256": "5ec76290bbfa3167be015a80e50c24e4cfe6c58aa5dde9c5e1f09e9de84127e0",
+      "rows": 5616,
+      "columns": 32
+    },
+    {
+      "path": "MECHANISM_EFFECTS.csv",
+      "sha256": "f01a374e9c81e3db89b3a42940c4d6a5447684986a1296e42bf13f196eed6295",
+      "rows": 0,
+      "columns": 0
+    },
+    {
+      "path": "HARDWARE_DIFFERENCES.csv",
+      "sha256": "f01a374e9c81e3db89b3a42940c4d6a5447684986a1296e42bf13f196eed6295",
+      "rows": 0,
+      "columns": 0
+    },
+    {
+      "path": "DISTURBANCE_INTERACTIONS.csv",
+      "sha256": "f01a374e9c81e3db89b3a42940c4d6a5447684986a1296e42bf13f196eed6295",
+      "rows": 0,
+      "columns": 0
+    },
+    {
+      "path": "ABSOLUTE_SERVICE_SUMMARY.csv",
+      "sha256": "9a46a8b7a0506fecac16c44f02ccca73f1290756de4b325a2725ca618889d575",
+      "rows": 44160,
+      "columns": 32
+    },
+    {
+      "path": "SEVERE_CASE_INDEX.csv",
+      "sha256": "b23d435c6951964f05df33fe926b57c1583bd1b9c8f80bb6351b4eabb4c80937",
+      "rows": 181,
+      "columns": 22
+    },
+    {
+      "path": "CONTINUITY_STATUS_COUNTS.csv",
+      "sha256": "0685d4f8cba728446bd0dd600071fd903aba8bd08d82163d749451e57eac70a0",
+      "rows": 285,
+      "columns": 12
+    },
+    {
+      "path": "NECESSARY_BOUNDARY_CONDITIONS.csv",
+      "sha256": "f01a374e9c81e3db89b3a42940c4d6a5447684986a1296e42bf13f196eed6295",
+      "rows": 0,
+      "columns": 0
+    },
+    {
+      "path": "DERIVED_EVIDENCE_SCOPE.csv",
+      "sha256": "dd3745ead9627c4df14fec9537f27914a7360c181e6ae596ce50dfc47faa711c",
+      "rows": 1,
+      "columns": 7
+    },
+    {
+      "path": "SCI_TABLES.mat",
+      "sha256": "17faa4652d99e02f7f3491c444f18d752c49cb0f62d6663650b1333a950e2995"
+    }
+  ],
+  "scientific_figures_generated": 0,
+  "final_plot_backend": "MATLAB only",
+  "carrier_energies_are_not_added": true,
+  "source_blocks_are_statistical_units": true,
+  "unknown_quantities_are_not_zero": true,
+  "mixed_windows_are_separate": true,
+  "emissions_are_conditional_post_run_CO2": true
+}

@@ -1,0 +1,18 @@
+{
+  "name": "actual_local_data_recipe01",
+  "command": [
+    "C:/Program Files/MATLAB/R2024b/bin/matlab.exe",
+    "-singleCompThread",
+    "-batch",
+    "addpath('E:/hospital_ies_v21_20261023/reviews/final12_local_recipe_runtime01'); run_local_recipe('D:/hospital_ies_v21_20261023/docs/v21/figures/final12_actual01','E:/hospital_ies_v21_20261023/reviews/final12_local_recipe_runtime01/generated01');"
+  ],
+  "cwd": "D:\\hospital_ies_v21_20261023",
+  "started_utc": "2026-10-24T20:22:53.432214+00:00",
+  "finished_utc": "2026-10-24T20:23:24.657553+00:00",
+  "elapsed_seconds": 31.225408100057393,
+  "exit_code": 1,
+  "environment_overrides": {
+    "PYTHONDONTWRITEBYTECODE": "1",
+    "PYTHONIOENCODING": "utf-8"
+  }
+}

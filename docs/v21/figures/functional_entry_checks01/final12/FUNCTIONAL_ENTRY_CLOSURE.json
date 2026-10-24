@@ -1,0 +1,126 @@
+{
+  "schema": "hospital_ies.final12.local_recipe_closure.v1",
+  "created_utc": "2026-10-24T20:25:28.143387+00:00",
+  "status": "actual_delivered_local_data_recipe_passed",
+  "actual_recipe": {
+    "name": "actual_local_data_recipe02",
+    "command": [
+      "C:/Program Files/MATLAB/R2024b/bin/matlab.exe",
+      "-singleCompThread",
+      "-batch",
+      "addpath('E:/hospital_ies_v21_20261023/reviews/final12_local_recipe_runtime01'); run_local_recipe02('D:/hospital_ies_v21_20261023/docs/v21/figures/final12_actual01','E:/hospital_ies_v21_20261023/reviews/final12_local_recipe_runtime01/generated02');"
+    ],
+    "cwd": "D:\\hospital_ies_v21_20261023",
+    "started_utc": "2026-10-24T20:24:18.406708+00:00",
+    "finished_utc": "2026-10-24T20:24:49.188575+00:00",
+    "elapsed_seconds": 30.78159649996087,
+    "exit_code": 0,
+    "environment_overrides": {
+      "PYTHONDONTWRITEBYTECODE": "1",
+      "PYTHONIOENCODING": "utf-8"
+    }
+  },
+  "retained_failed_wrapper": {
+    "name": "actual_local_data_recipe01",
+    "command": [
+      "C:/Program Files/MATLAB/R2024b/bin/matlab.exe",
+      "-singleCompThread",
+      "-batch",
+      "addpath('E:/hospital_ies_v21_20261023/reviews/final12_local_recipe_runtime01'); run_local_recipe('D:/hospital_ies_v21_20261023/docs/v21/figures/final12_actual01','E:/hospital_ies_v21_20261023/reviews/final12_local_recipe_runtime01/generated01');"
+    ],
+    "cwd": "D:\\hospital_ies_v21_20261023",
+    "started_utc": "2026-10-24T20:22:53.432214+00:00",
+    "finished_utc": "2026-10-24T20:23:24.657553+00:00",
+    "elapsed_seconds": 31.225408100057393,
+    "exit_code": 1,
+    "environment_overrides": {
+      "PYTHONDONTWRITEBYTECODE": "1",
+      "PYTHONIOENCODING": "utf-8"
+    }
+  },
+  "native_semantic_QA": {
+    "path": "E:\\hospital_ies_v21_20261023\\reviews\\final12_local_recipe_runtime01\\generated02\\LOCAL_RECIPE_FUNCTIONAL_QA.json",
+    "sha256": "0dbedcbe3d91b0eef2e4a525cf639892bd8e54875280f4204446b03cb31be0e2"
+  },
+  "current_input_files_equal_known_published_bindings": 436,
+  "format_checks": [
+    {
+      "stem": "F1_critical_service_final_blind_w720",
+      "files": [
+        {
+          "path": "E:\\hospital_ies_v21_20261023\\reviews\\final12_local_recipe_runtime01\\generated02\\final02\\F1_critical_service_final_blind_w720.fig",
+          "bytes": 50665,
+          "sha256": "374fdea965c266828a5e87d7042ad181e038c30af5c11e99208a7c1e202af29d"
+        },
+        {
+          "path": "E:\\hospital_ies_v21_20261023\\reviews\\final12_local_recipe_runtime01\\generated02\\final02\\F1_critical_service_final_blind_w720.pdf",
+          "bytes": 44925,
+          "sha256": "1c48cfea8b6c9e5c5cff35673026b4c61d90ce96fe3bcc4ea339b3d4fbc6f1e9"
+        },
+        {
+          "path": "E:\\hospital_ies_v21_20261023\\reviews\\final12_local_recipe_runtime01\\generated02\\final02\\F1_critical_service_final_blind_w720.svg",
+          "bytes": 335015,
+          "sha256": "16337f78be5d62f7b275de428b64cf1036e626266069d2fa54bc42c7fbbe8ef9"
+        },
+        {
+          "path": "E:\\hospital_ies_v21_20261023\\reviews\\final12_local_recipe_runtime01\\generated02\\final02\\F1_critical_service_final_blind_w720.png",
+          "bytes": 284253,
+          "sha256": "e240dc44cfb6a2e661fef3bb9f6994f906b88d1f62bc4af4f1e49e36a5cb6240"
+        }
+      ],
+      "PDF_pages": 1,
+      "PDF_embedded_images": 0,
+      "PNG_size": [
+        4252,
+        3307
+      ],
+      "PNG_dpi": [
+        599.9988,
+        599.9988
+      ],
+      "SVG_embedded_images": 0
+    },
+    {
+      "stem": "F2_service_cost_final_blind_w720",
+      "files": [
+        {
+          "path": "E:\\hospital_ies_v21_20261023\\reviews\\final12_local_recipe_runtime01\\generated02\\final02\\F2_service_cost_final_blind_w720.fig",
+          "bytes": 36106,
+          "sha256": "b3ea1e29681350bd8c544b2f08ab473a8a4453c1bb88097d77a68b94f1edad6b"
+        },
+        {
+          "path": "E:\\hospital_ies_v21_20261023\\reviews\\final12_local_recipe_runtime01\\generated02\\final02\\F2_service_cost_final_blind_w720.pdf",
+          "bytes": 42658,
+          "sha256": "d7070f5e63b915cdccbcc5ecfd54c8b5dc454385d922c417ae076d757ba844fe"
+        },
+        {
+          "path": "E:\\hospital_ies_v21_20261023\\reviews\\final12_local_recipe_runtime01\\generated02\\final02\\F2_service_cost_final_blind_w720.svg",
+          "bytes": 277107,
+          "sha256": "aa31869c505a7fd07a2ac9a27de63ac311d478ecb66525c47455b4b37ee2c428"
+        },
+        {
+          "path": "E:\\hospital_ies_v21_20261023\\reviews\\final12_local_recipe_runtime01\\generated02\\final02\\F2_service_cost_final_blind_w720.png",
+          "bytes": 316525,
+          "sha256": "ccac9452a8703299c5e3ab2417444947293f6aed82933dc4ee8abf597f045f23"
+        }
+      ],
+      "PDF_pages": 1,
+      "PDF_embedded_images": 0,
+      "PNG_size": [
+        4252,
+        3071
+      ],
+      "PNG_dpi": [
+        599.9988,
+        599.9988
+      ],
+      "SVG_embedded_images": 0
+    }
+  ],
+  "formal_delivered_figures_unchanged": true,
+  "new_complete_page_visual_reviews": 0,
+  "new_physical_attempts": 0,
+  "new_LP_solves": 0,
+  "new_statistical_or_cohort_analyses": 0,
+  "scope": "Functional local CSV/MAT recipe, reopened native exact X/Y/CData/RGB/axis UserData/limits/ticks/labels/font checks and output format scan. Original canonical visual QA remains authoritative only for the original delivered figures."
+}

@@ -1,0 +1,209 @@
+{
+  "schema": "hospital_ies.local_matlab_data_mirror.v1",
+  "stage": "followup_supported252",
+  "source_binding_sha256": "4dfe62ae105d2696b7782dc36c83ec63c6551e2cded601d6f15c0d4083058add",
+  "original_receipt_path": "E:\\hospital_ies_v21_20261023\\followup_supported252\\analysis01\\PARALLEL_ANALYSIS_RECEIPT.json",
+  "original_receipt_sha256": "96780b089c40cb01fdd39203eaa7f406b13ce0e5cb4d66414591cdf7a1c08c2c",
+  "original_jobs_sha256": "4db2e6fccf112b1bca5c5039287578a6a4b616bcc78d669b703ffdf2ce72c2d3",
+  "source_table_mapping": [
+    {
+      "original_path": "E:\\hospital_ies_v21_20261023\\followup_supported252\\analysis01\\tables\\ATTEMPT_STATUS.csv",
+      "local_path": "E:\\hospital_ies_v21_20261023\\reviews\\remaining_matlab_actual_followup252_01\\prepared\\bundle\\data\\followup_supported252\\tables\\ATTEMPT_STATUS.csv",
+      "relative": "ATTEMPT_STATUS.csv",
+      "sha256": "8776e2380020f1c0e32374c759f8f3cde8455cac303c61870445a343a94978a4",
+      "bytes": 310907
+    },
+    {
+      "original_path": "E:\\hospital_ies_v21_20261023\\followup_supported252\\analysis01\\tables\\CASE_METRICS.csv",
+      "local_path": "E:\\hospital_ies_v21_20261023\\reviews\\remaining_matlab_actual_followup252_01\\prepared\\bundle\\data\\followup_supported252\\tables\\CASE_METRICS.csv",
+      "relative": "CASE_METRICS.csv",
+      "sha256": "5004dda4fb0cb17208def82f47f66b7e1231c2b37fc860e68fc6371efd29d925",
+      "bytes": 968488
+    },
+    {
+      "original_path": "E:\\hospital_ies_v21_20261023\\followup_supported252\\analysis01\\tables\\CARRIER_SERVICE.csv",
+      "local_path": "E:\\hospital_ies_v21_20261023\\reviews\\remaining_matlab_actual_followup252_01\\prepared\\bundle\\data\\followup_supported252\\tables\\CARRIER_SERVICE.csv",
+      "relative": "CARRIER_SERVICE.csv",
+      "sha256": "0a25d031f9f9361a904ee21ca63c49b0df4debe1b91a127c3d64ca6d3b066e9e",
+      "bytes": 598213
+    },
+    {
+      "original_path": "E:\\hospital_ies_v21_20261023\\followup_supported252\\analysis01\\tables\\PAIRED_DIFFERENCES.csv",
+      "local_path": "E:\\hospital_ies_v21_20261023\\reviews\\remaining_matlab_actual_followup252_01\\prepared\\bundle\\data\\followup_supported252\\tables\\PAIRED_DIFFERENCES.csv",
+      "relative": "PAIRED_DIFFERENCES.csv",
+      "sha256": "096b026b51424db3b2d9bca0e3926980bb08a4659785ec899f7313bf29598fd8",
+      "bytes": 3024710
+    },
+    {
+      "original_path": "E:\\hospital_ies_v21_20261023\\followup_supported252\\analysis01\\tables\\RESOURCE_MEASUREMENTS.csv",
+      "local_path": "E:\\hospital_ies_v21_20261023\\reviews\\remaining_matlab_actual_followup252_01\\prepared\\bundle\\data\\followup_supported252\\tables\\RESOURCE_MEASUREMENTS.csv",
+      "relative": "RESOURCE_MEASUREMENTS.csv",
+      "sha256": "9ec1284b9d9926889bf00efcab1f88c2fdfcebf5883bb358c5fb2a6ae03cb899",
+      "bytes": 132621
+    },
+    {
+      "original_path": "E:\\hospital_ies_v21_20261023\\followup_supported252\\analysis01\\tables\\EVIDENCE_INTEGRITY_SUMMARY.csv",
+      "local_path": "E:\\hospital_ies_v21_20261023\\reviews\\remaining_matlab_actual_followup252_01\\prepared\\bundle\\data\\followup_supported252\\tables\\EVIDENCE_INTEGRITY_SUMMARY.csv",
+      "relative": "EVIDENCE_INTEGRITY_SUMMARY.csv",
+      "sha256": "4298e739b4f28a46dab4f5db5356365ce96b1f9e99cfa4bc01b7931d3b468d60",
+      "bytes": 408
+    },
+    {
+      "original_path": "E:\\hospital_ies_v21_20261023\\followup_supported252\\analysis01\\tables\\PAIRED_SUMMARY.csv",
+      "local_path": "E:\\hospital_ies_v21_20261023\\reviews\\remaining_matlab_actual_followup252_01\\prepared\\bundle\\data\\followup_supported252\\tables\\PAIRED_SUMMARY.csv",
+      "relative": "PAIRED_SUMMARY.csv",
+      "sha256": "bbdcc697c8f0e36fadeab7e737036025f2022082a1eb14d39758769725e451ec",
+      "bytes": 2269067
+    },
+    {
+      "original_path": "E:\\hospital_ies_v21_20261023\\followup_supported252\\analysis01\\tables\\MECHANISM_EFFECTS.csv",
+      "local_path": "E:\\hospital_ies_v21_20261023\\reviews\\remaining_matlab_actual_followup252_01\\prepared\\bundle\\data\\followup_supported252\\tables\\MECHANISM_EFFECTS.csv",
+      "relative": "MECHANISM_EFFECTS.csv",
+      "sha256": "ae6317f3763b5aacdbc7eb2e5e879714f4f16239297b05992aef1b762d1a0d61",
+      "bytes": 353337
+    },
+    {
+      "original_path": "E:\\hospital_ies_v21_20261023\\followup_supported252\\analysis01\\tables\\HARDWARE_DIFFERENCES.csv",
+      "local_path": "E:\\hospital_ies_v21_20261023\\reviews\\remaining_matlab_actual_followup252_01\\prepared\\bundle\\data\\followup_supported252\\tables\\HARDWARE_DIFFERENCES.csv",
+      "relative": "HARDWARE_DIFFERENCES.csv",
+      "sha256": "f01a374e9c81e3db89b3a42940c4d6a5447684986a1296e42bf13f196eed6295",
+      "bytes": 5
+    },
+    {
+      "original_path": "E:\\hospital_ies_v21_20261023\\followup_supported252\\analysis01\\tables\\DISTURBANCE_INTERACTIONS.csv",
+      "local_path": "E:\\hospital_ies_v21_20261023\\reviews\\remaining_matlab_actual_followup252_01\\prepared\\bundle\\data\\followup_supported252\\tables\\DISTURBANCE_INTERACTIONS.csv",
+      "relative": "DISTURBANCE_INTERACTIONS.csv",
+      "sha256": "35e90fc6d12b669cceb5f4b06eca6165ad3c8237768f56adce7dd0bb56396f7d",
+      "bytes": 18631
+    },
+    {
+      "original_path": "E:\\hospital_ies_v21_20261023\\followup_supported252\\analysis01\\tables\\NECESSARY_BOUNDARY_CONDITIONS.csv",
+      "local_path": "E:\\hospital_ies_v21_20261023\\reviews\\remaining_matlab_actual_followup252_01\\prepared\\bundle\\data\\followup_supported252\\tables\\NECESSARY_BOUNDARY_CONDITIONS.csv",
+      "relative": "NECESSARY_BOUNDARY_CONDITIONS.csv",
+      "sha256": "4cefc8407c86004b78cfa2afb6c9717793be73cf97a0ad17c3a81c2edfe68f95",
+      "bytes": 17880
+    },
+    {
+      "original_path": "E:\\hospital_ies_v21_20261023\\followup_supported252\\analysis01\\tables\\SCI_TABLES.mat",
+      "local_path": "E:\\hospital_ies_v21_20261023\\reviews\\remaining_matlab_actual_followup252_01\\prepared\\bundle\\data\\followup_supported252\\tables\\SCI_TABLES.mat",
+      "relative": "SCI_TABLES.mat",
+      "sha256": "b49298b878ed8cb4710b0f4a194915ab028d2334c75098eb78a8fc07c9f646b6",
+      "bytes": 148245
+    },
+    {
+      "original_path": "E:\\hospital_ies_v21_20261023\\followup_supported252\\analysis01\\tables\\ANALYSIS_RECEIPT.json",
+      "local_path": "E:\\hospital_ies_v21_20261023\\reviews\\remaining_matlab_actual_followup252_01\\prepared\\bundle\\data\\followup_supported252\\tables\\ANALYSIS_RECEIPT.json",
+      "relative": "ANALYSIS_RECEIPT.json",
+      "sha256": "8aff5a404a275593a80a40a7f597b236fba00b6c62761adb669d2810eebdc028",
+      "bytes": 2518
+    }
+  ],
+  "all_native_tables_preserved": true,
+  "M_rows_removed": false,
+  "original_receipts_rewritten": false,
+  "raw_copied": false,
+  "scientific_gate": false,
+  "matlab_run": "NOT_RUN",
+  "members": [
+    {
+      "path": "code/plot_sci_engineering_publication.m",
+      "sha256": "e4d95dfef43b1b5b9bb19446098a1cc6e05f6e1a4df5af55bae2320e9deeb0c7",
+      "bytes": 30869
+    },
+    {
+      "path": "code/qa_native/artifact_scan.py",
+      "sha256": "6968f56762087ef4b9d82f666f8fc92ce02c10232161237a839f39ef9fb8bfd1",
+      "bytes": 9302
+    },
+    {
+      "path": "code/qa_native/qa_expected.py",
+      "sha256": "6ce7ee6ad422d0acda61d3332754e7ca0fd731feba82719291907e90c3514302",
+      "bytes": 26666
+    },
+    {
+      "path": "code/qa_native/qa_sci_artifacts.m",
+      "sha256": "055a45e2557df742022b0fcfbe1c55adba6c86388c119309f0cc52681b39fe60",
+      "bytes": 16789
+    },
+    {
+      "path": "data/followup_supported252/tables/ANALYSIS_RECEIPT.json",
+      "sha256": "8aff5a404a275593a80a40a7f597b236fba00b6c62761adb669d2810eebdc028",
+      "bytes": 2518
+    },
+    {
+      "path": "data/followup_supported252/tables/ATTEMPT_STATUS.csv",
+      "sha256": "8776e2380020f1c0e32374c759f8f3cde8455cac303c61870445a343a94978a4",
+      "bytes": 310907
+    },
+    {
+      "path": "data/followup_supported252/tables/CARRIER_SERVICE.csv",
+      "sha256": "0a25d031f9f9361a904ee21ca63c49b0df4debe1b91a127c3d64ca6d3b066e9e",
+      "bytes": 598213
+    },
+    {
+      "path": "data/followup_supported252/tables/CASE_METRICS.csv",
+      "sha256": "5004dda4fb0cb17208def82f47f66b7e1231c2b37fc860e68fc6371efd29d925",
+      "bytes": 968488
+    },
+    {
+      "path": "data/followup_supported252/tables/DISTURBANCE_INTERACTIONS.csv",
+      "sha256": "35e90fc6d12b669cceb5f4b06eca6165ad3c8237768f56adce7dd0bb56396f7d",
+      "bytes": 18631
+    },
+    {
+      "path": "data/followup_supported252/tables/EVIDENCE_INTEGRITY_SUMMARY.csv",
+      "sha256": "4298e739b4f28a46dab4f5db5356365ce96b1f9e99cfa4bc01b7931d3b468d60",
+      "bytes": 408
+    },
+    {
+      "path": "data/followup_supported252/tables/HARDWARE_DIFFERENCES.csv",
+      "sha256": "f01a374e9c81e3db89b3a42940c4d6a5447684986a1296e42bf13f196eed6295",
+      "bytes": 5
+    },
+    {
+      "path": "data/followup_supported252/tables/MECHANISM_EFFECTS.csv",
+      "sha256": "ae6317f3763b5aacdbc7eb2e5e879714f4f16239297b05992aef1b762d1a0d61",
+      "bytes": 353337
+    },
+    {
+      "path": "data/followup_supported252/tables/NECESSARY_BOUNDARY_CONDITIONS.csv",
+      "sha256": "4cefc8407c86004b78cfa2afb6c9717793be73cf97a0ad17c3a81c2edfe68f95",
+      "bytes": 17880
+    },
+    {
+      "path": "data/followup_supported252/tables/PAIRED_DIFFERENCES.csv",
+      "sha256": "096b026b51424db3b2d9bca0e3926980bb08a4659785ec899f7313bf29598fd8",
+      "bytes": 3024710
+    },
+    {
+      "path": "data/followup_supported252/tables/PAIRED_SUMMARY.csv",
+      "sha256": "bbdcc697c8f0e36fadeab7e737036025f2022082a1eb14d39758769725e451ec",
+      "bytes": 2269067
+    },
+    {
+      "path": "data/followup_supported252/tables/RESOURCE_MEASUREMENTS.csv",
+      "sha256": "9ec1284b9d9926889bf00efcab1f88c2fdfcebf5883bb358c5fb2a6ae03cb899",
+      "bytes": 132621
+    },
+    {
+      "path": "data/followup_supported252/tables/SCI_TABLES.mat",
+      "sha256": "b49298b878ed8cb4710b0f4a194915ab028d2334c75098eb78a8fc07c9f646b6",
+      "bytes": 148245
+    },
+    {
+      "path": "evidence/ORIGINAL_JOBS.json",
+      "sha256": "4db2e6fccf112b1bca5c5039287578a6a4b616bcc78d669b703ffdf2ce72c2d3",
+      "bytes": 14034
+    },
+    {
+      "path": "evidence/ORIGINAL_PARALLEL_ANALYSIS_RECEIPT.json",
+      "sha256": "96780b089c40cb01fdd39203eaa7f406b13ce0e5cb4d66414591cdf7a1c08c2c",
+      "bytes": 80114
+    },
+    {
+      "path": "replay_remaining_figures.m",
+      "sha256": "3d33f72dd5fc8ebc25e05825d5eb6ec0f440e43b435ff728a5451b052418a0f5",
+      "bytes": 2449
+    }
+  ]
+}

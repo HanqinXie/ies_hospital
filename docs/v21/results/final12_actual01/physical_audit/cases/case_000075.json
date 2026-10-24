@@ -1,0 +1,114 @@
+{
+  "index": 75,
+  "case_identity": {
+    "phase": "final_blind",
+    "scenario_id": "m21_L4_0763da9749409cf4f77f",
+    "policy_id": "R_sci_v21",
+    "configuration_id": "H0",
+    "attempt_id": "attempt_0001",
+    "source_block_id": "m21_final12_b046c742da517542"
+  },
+  "pid": 96372,
+  "auditor_sha256": "a516d84d286e39f17be10e9624e3c681b1b5e73d8ab03789107437aa1d55d084",
+  "generic_sha256": "a4abf08e94dfe872cef5f1eaa4aecd94744be137566c82345b21b141eaa5e727",
+  "status": "audit_pass",
+  "physical": {
+    "segment_count": 102,
+    "observed_until_minute": 720.0,
+    "storage": {
+      "ups": {
+        "initial_inventory_kWh": 0.0,
+        "initial_paid_input_kWh": 0.0,
+        "charged_input_kWh": 0.0,
+        "discharged_kWh": 0.0,
+        "standing_loss_kWh": 0.0,
+        "conversion_loss_kWh": 0.0,
+        "event_discharged_kWh": 0.0,
+        "recovery_charged_input_kWh": 0.0,
+        "depleted_at_native_end_minute": null,
+        "final_inventory_kWh": 0.0,
+        "full_recharge_observed_by_horizon": true,
+        "recharge_status": "not_observed_in_available_tail",
+        "depletion_status": "not_observed"
+      },
+      "cold_store": {
+        "initial_inventory_kWh": 0.0,
+        "initial_paid_input_kWh": 0.0,
+        "charged_input_kWh": 0.0,
+        "discharged_kWh": 0.0,
+        "standing_loss_kWh": 0.0,
+        "conversion_loss_kWh": 0.0,
+        "event_discharged_kWh": 0.0,
+        "recovery_charged_input_kWh": 0.0,
+        "depleted_at_native_end_minute": null,
+        "final_inventory_kWh": 0.0,
+        "full_recharge_observed_by_horizon": true,
+        "recharge_status": "not_observed_in_available_tail",
+        "depletion_status": "not_observed"
+      }
+    },
+    "carrier_ENS_kWh": [
+      [
+        0.0004266939090906832,
+        0.0,
+        5.974835693322521e-06
+      ],
+      [
+        0.00042669391398166055,
+        0.0,
+        5.974831291956472e-06
+      ],
+      [
+        0.00042669376631609935,
+        0.0,
+        5.974964175432517e-06
+      ],
+      [
+        69.13519144698941,
+        8.971957448592438,
+        50.6161307917143
+      ]
+    ],
+    "fan_zero_P3_heat_kWh": 0.0,
+    "fan_source_trace_count": 0,
+    "maximum_electric_cold_residual_kW": 1.2789769243681803e-13,
+    "maximum_auxiliary_dependency_excess_kW": 3.079527743921062e-08,
+    "cold_store_pump_electric_kWh": 0.0,
+    "DG_shaft_work_kWh": 869.4178831311344,
+    "event_P0_P1_e_ENS_kWh": 0.0004814903117928273,
+    "status": "pass",
+    "result_path": "E:\\hospital_ies_v21_20261023\\final_blind01\\experiments\\final_blind48_all5_H0\\pairs\\m21_L4_0763da9749409cf4f77f__R_sci_v21__H0\\attempt_0001\\RESULT.json",
+    "result_sha256": "4eccc6abd58051718a7ca5d2f34a469baf69c51a2c1ca0ea5fb846c61684fc54",
+    "raw_path": "E:\\hospital_ies_v21_20261023\\raw\\final_blind01\\final_blind48_all5_H0\\m21_L4_0763da9749409cf4f77f__R_sci_v21__H0\\attempt_0001\\trajectory.json.gz",
+    "raw_sha256": "a9e0af2d6f49f420508929a52c79d73b04ed886b22f963586b1cd7c08ca8a636",
+    "solver_sidecar": {
+      "entry_count": 1285,
+      "row_count": 41080,
+      "maximum_original_row_violation": 3.079527743921062e-08,
+      "gzip_sha256": "4873aa911db1d3f26a2bb9fed6d682ea26427607ccf72fb0d24feeb55d2c7ad3"
+    },
+    "scenario_id": "m21_L4_0763da9749409cf4f77f",
+    "policy_id": "R_sci_v21",
+    "configuration_id": "H0"
+  },
+  "original_pilot_result": null,
+  "every_original_field_equal": null,
+  "current_artifact_stats": [
+    {
+      "path": "E:\\hospital_ies_v21_20261023\\raw\\final_blind01\\final_blind48_all5_H0\\m21_L4_0763da9749409cf4f77f__R_sci_v21__H0\\attempt_0001\\trajectory.json.gz",
+      "bytes": 626176,
+      "mtime_ns": 1792848280180472600
+    },
+    {
+      "path": "E:\\hospital_ies_v21_20261023\\raw\\final_blind01\\final_blind48_all5_H0\\m21_L4_0763da9749409cf4f77f__R_sci_v21__H0\\attempt_0001\\solver_rows.jsonl.gz",
+      "bytes": 374343,
+      "mtime_ns": 1792848279457579800
+    }
+  ],
+  "elapsed_seconds": 0.5725469002500176,
+  "cpu_seconds": 0.578125,
+  "memory": {
+    "os_peak_working_set_bytes": 459825152,
+    "private_bytes_at_end": 80248832
+  }
+}
