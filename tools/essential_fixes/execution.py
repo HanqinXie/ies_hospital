@@ -274,7 +274,10 @@ class EssentialResponseMixin(LocalResponseMixin):
                 sol=self._solve(connected,f,(next_time-self.time)/60,'after_actual_shedding',cmd,**fixed_args)
             self._request_local_down(sol)
             revised=min(next_time,self._next_boundary(end))
-            if revised<next_time-EPS:
+            if hasattr(self,'_close_actual_interval'):
+                next_time,sol,interval_action,source_start,source_end=self._close_actual_interval(
+                    end,next_time,connected,f,row,cmd,sol,fixed_args)
+            elif revised<next_time-EPS:
                 next_time=revised
                 interval_action,source_start,source_end=self._local_interval_action(next_time,f,row)
                 fixed_args['execution_action']=interval_action
@@ -285,6 +288,9 @@ class EssentialResponseMixin(LocalResponseMixin):
             # Trial only: physical/protection probes must not advance mechanics.
             local_domain_boundary=None
             for local_attempt in range(8):
+                if hasattr(self,'_close_actual_interval'):
+                    next_time,sol,interval_action,source_start,source_end=self._close_actual_interval(
+                        end,next_time,connected,f,row,cmd,sol,fixed_args)
                 span=(next_time-self.time)*60.
                 safe,_,local_receipt=self._limit_by_diesel(span,sol['action']['diesel_kW'],
                     self.diesel_available(self.time,f))

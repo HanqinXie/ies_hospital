@@ -283,6 +283,8 @@ class EngineeringCore(LoadAccountingCore):
             dispatch=copy.deepcopy(result['action']);contacts=np.asarray(result.get('command_disconnected',result['lost']))
             diagnostic=copy.deepcopy(result['joint_diagnostic']);planned=result['planned_current_action']
             warning=result.get('optimizer_warning','');layers=copy.deepcopy(result.get('solver_backend_layers',[]))
+        if hasattr(self,'_prepare_command_dispatch'):
+            dispatch,diagnostic=self._prepare_command_dispatch(dispatch,diagnostic,loads)
         self.solver_calls.append(dict(time_minute=self.time,phase='sci_upper_planning',status='success',
             elapsed_seconds=time.perf_counter()-began,upper_optimizer_called='ordinary_dispatch' not in request,
             optimizer_warning=warning,solver_backend_layers=layers))

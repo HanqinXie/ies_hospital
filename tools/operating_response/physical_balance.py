@@ -27,6 +27,14 @@ def solve_physical(row,plant:Plant,loads:np.ndarray,availability:dict[str,float]
     Lexicographic P0/P1/P2/P3 service is optimized before operating cost.
     """
     assert len(plant.electric_chillers_rt)==3 and plant.gt_count==3
+    m23=(config or {}).get('_model_correctness_v23')
+    if m23 is not None and '_m23_boiler_domain' not in (config or {}):
+        from tools.model_correctness_v23.domains import solve_execution
+        return solve_execution(dict(row=row,plant=plant,loads=loads,availability=availability,state=state,dt_h=dt_h,
+            grid_import_limit_kW=grid_import_limit_kW,diesel_start_available=diesel_start_available,
+            gt_ramp_kW_per_h=gt_ramp_kW_per_h,solver_time_limit_sec=solver_time_limit_sec,config=config,
+            tracking_targets=tracking_targets,security_gt_penalty_USD_per_kWh=security_gt_penalty_USD_per_kWh,
+            execution_action=execution_action,execution_contract=execution_contract),solve_physical)
     # [GT_i kW 0..2, GT_i on 3..5, absorption RT 6, EC RT 7..9,
     #  boiler lbph 10, grid 11, diesel 12, unused steam 13,
     #  group unmet e,h,c 14..25]
@@ -171,6 +179,21 @@ def solve_physical(row,plant:Plant,loads:np.ndarray,availability:dict[str,float]
         highs[boiler_restart_on]=float(closure['station_ac_available'] and not closure['boiler_ready'] and closure['boiler_restart_kW']>0.)
         r=np.zeros(nvars);r[ib]=1.;r[boiler_on]=-highs[ib]
         cap(r,0.,name='m22.boiler_requires_station_enabled')
+        if m23 is not None:
+            # Boiler steam must serve actual building heat or absorption.
+            # The inherited unused-steam port remains available for HRSG,
+            # but cannot be a destination invented for boiler operation.
+            r=np.zeros(nvars);r[ib]=1.;r[ia]=-plant.abs_steam_lb_per_rt
+            for g in range(4):r[idx(g,1)]=1./(plant.steam_kWh_per_lb*plant.exchanger_eff)
+            cap(r,float(loads[:,1].sum())/(plant.steam_kWh_per_lb*plant.exchanger_eff),name='m23.boiler_has_useful_steam_destination',unit='lb/h')
+            domain=(config or {})['_m23_boiler_domain']
+            if domain=='off':highs[ib]=highs[boiler_on]=0.
+            elif domain=='run':
+                if highs[boiler_on]<=0.:
+                    from hospital_ies.execution import ModelConstraintInfeasible
+                    raise ModelConstraintInfeasible('M23 run domain lacks current station/boiler qualification')
+                lows[boiler_on]=1.
+            else:raise ValueError('Unknown M23 boiler execution domain')
         r=np.zeros(nvars);r[ib]=closure['boiler_kW_per_kWsteam']*plant.steam_kWh_per_lb
         r[boiler_on]=closure['boiler_fixed_kW'];r[gp]=-1.;r[ig]=r[idg]=-1.
         r[starter_on]=closure['gt_start_kW']
@@ -205,8 +228,9 @@ def solve_physical(row,plant:Plant,loads:np.ndarray,availability:dict[str,float]
                 # already-arrived steam setting remains exactly the same.
                 highs[index]=actual
                 if actual<=0.:highs[boiler_on]=0.
-                r=np.zeros(nvars);r[ib]=1.;r[boiler_on]=-actual
-                cap(r,0.,0.,name='m22.boiler_arrived_setting_or_station_trip',unit='lb/h')
+                if m23 is None:
+                    r=np.zeros(nvars);r[ib]=1.;r[boiler_on]=-actual
+                    cap(r,0.,0.,name='m22.boiler_arrived_setting_or_station_trip',unit='lb/h')
             else:lows[index]=highs[index]=actual
         if (execution_contract or {}).get('grid_import_mode')=='arrived_ceiling':
             lows[ig]=0. # local port can import up to the ALREADY arrived ceiling
@@ -263,7 +287,7 @@ def solve_physical(row,plant:Plant,loads:np.ndarray,availability:dict[str,float]
     lex_values=[];x=None;optimizer_warning='';backend_layers=[]
     charge_active=storage_indices is not None and (highs[uc]>0. or highs[cc]>0.)
     ordered=[0,1]+(['start'] if closure is not None and max(highs[starter_on],highs[boiler_restart_on])>0. else [])+(['bridge'] if bridge_debt is not None else [])+[2,3]
-    continuity_active=closure is not None and execution_action is not None and float(execution_action.get('boiler_steam_lbph',0.))>0.
+    continuity_active=m23 is None and closure is not None and execution_action is not None and float(execution_action.get('boiler_steam_lbph',0.))>0.
     if continuity_active:ordered+=['boiler_continuity']
     if closure is not None and storage_indices is not None and highs[ud]>0.:
         # A bridge store may improve locked current service, but it is not
@@ -272,6 +296,7 @@ def solve_physical(row,plant:Plant,loads:np.ndarray,availability:dict[str,float]
     if charge_active:ordered+=['charge']
     if closure is not None and highs[recovery_cold]>0.:ordered+=['recovery']
     ordered+=['cost']
+    objective_hierarchy=[]
     for rank,group in enumerate(ordered):
         service_layer=isinstance(group,int)
         charging_layer=group=='charge'
@@ -307,6 +332,8 @@ def solve_physical(row,plant:Plant,loads:np.ndarray,availability:dict[str,float]
             failure.solver_backend_attempts=backend_layers
             raise failure
         x=res.x
+        if m23 is not None:
+            objective_hierarchy.append((group,c.copy(),lex_lock_tolerance(group,float(c@x),config) if service_layer else 0. if ups_service_layer or group=='cost' else 1e-7))
         if sci_dependencies:
             from tools.sci_engineering.service import validate_auxiliary_kW_bounds
             try:
@@ -390,6 +417,7 @@ def solve_physical(row,plant:Plant,loads:np.ndarray,availability:dict[str,float]
     operating_cost=float(c_cost[:26]@x[:26])-security_penalty
     tracking_penalty=float(c_cost[26:26+len(targets)]@x[26:26+len(targets)])
     return {'action':action,'lost':lost,'served':served,'lex_values':lex_values,
+            **({'_m23_objective_hierarchy':[dict(name=name,value=float(objective@x),lock_tolerance=tolerance) for name,objective,tolerance in objective_hierarchy]} if m23 is not None else {}),
             'cost_USD_step':operating_cost,'tracking_penalty_USD_step':tracking_penalty,
             'optimization_objective_USD_step':operating_cost+tracking_penalty+security_penalty,
             'security_objective_penalty_USD_step':security_penalty,

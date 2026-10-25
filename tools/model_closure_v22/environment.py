@@ -165,7 +165,8 @@ class EngineeringCore(legacy.EngineeringCore):
                 solver_backend_layers=copy.deepcopy(getattr(exc,'solver_backend_attempts',[]))))
             return
         except Exception as exc:self._record_error(exc,loads,f,self.env.dt_h,'m22_current_port_selection_solver_error',self.active_command,began)
-        mode='discharge' if float(np.asarray(result['lost'])[:2,2].sum())>.01 and self.cold_store.energy_kWh>1e-9 else ('charge' if self.cold_recharge.allowed(self.cold_store.energy_kWh,self.cold_store.config['capacity_kWh']) else 'idle')
+        deficit=float(np.asarray(result['lost'])[:2,2].sum())
+        mode=self._cold_mode(deficit) if hasattr(self,'_cold_mode') and self.env.correctness_config['storage_fix'] else ('discharge' if deficit>.01 and self.cold_store.energy_kWh>1e-9 else ('charge' if self.cold_recharge.allowed(self.cold_store.energy_kWh,self.cold_store.config['capacity_kWh']) else 'idle'))
         charge=self.ups.energy_kWh<self.ups.config['capacity_kWh']-1e-9 and result['action'].get('ups_discharge_kW',0.)<1e-6
         self._m22_ports=self._base_ports(ups_charge=charge,cold_mode=mode);self._m22_selection_key=key
         self.solver_calls.append(dict(time_minute=self.time,phase='m22_current_port_selection',status='success',cold_mode=mode,
@@ -213,7 +214,9 @@ class EngineeringCore(legacy.EngineeringCore):
         candidates=[x['time_minute'] for x in getattr(self.env,'model_closure_events',[]) if x['time_minute']>self.time+EPS]
         if cfg['control_autonomy_minutes']>self.time+EPS:candidates.append(cfg['control_autonomy_minutes'])
         if not self.station.boiler_ready and float(self.arrived_dispatch.get('boiler_steam_lbph',0.))>EPS:
-            candidates.append(self.time+max(1e-6,cfg['boiler_restart_minutes']-self.station.boiler_powered_minutes))
+            restart_boundary=(self._boiler_restart_boundary() if hasattr(self,'_boiler_restart_boundary') else
+                self.time+max(1e-6,cfg['boiler_restart_minutes']-self.station.boiler_powered_minutes))
+            if restart_boundary is not None:candidates.append(restart_boundary)
         # Powered startup state is resolved at bounded actual intervals; an
         # unpowered pending target does not advance simply because time did.
         if self.gt_start_pending:candidates.append(self.time+1.)
@@ -229,7 +232,7 @@ class EngineeringCore(legacy.EngineeringCore):
         try:
             baseline=solve(self._base_ports())
             deficit=float(np.asarray(baseline['lost'])[:2,2].sum())
-            mode='discharge' if deficit>.01 and self.cold_store.energy_kWh>1e-9 else ('charge' if self.cold_recharge.allowed(self.cold_store.energy_kWh,self.cold_store.config['capacity_kWh']) else 'idle')
+            mode=self._cold_mode(deficit) if hasattr(self,'_cold_mode') and self.env.correctness_config['storage_fix'] else ('discharge' if deficit>.01 and self.cold_store.energy_kWh>1e-9 else ('charge' if self.cold_recharge.allowed(self.cold_store.energy_kWh,self.cold_store.config['capacity_kWh']) else 'idle'))
             candidates=[]
             for charge in ([False,True] if self.ups.energy_kWh<self.ups.config['capacity_kWh']-1e-9 and self.ups.config['capacity_kWh']>0. else [False]):
                 ports=self._base_ports(ups_charge=charge,cold_mode=mode)
@@ -241,7 +244,8 @@ class EngineeringCore(legacy.EngineeringCore):
                 debt=(max(0.,a.get('ups_discharge_kW',0.)*dt_h/self.ups.config['discharge_efficiency']-max(0.,self.ups.energy_kWh-context['ups_target_kWh']))
                     if context['preserve_bridge'] else 0.)
                 return tuple(round(float((lost[g]/normal).sum()),7) for g in (0,1))+(round(debt,7),)+tuple(round(float((lost[g]/normal).sum()),7) for g in (2,3))+(-float(a.get('boiler_station_running',False)),round(a.get('ups_discharge_kW',0.),7),-round(a.get('ups_charge_kW',0.)+a.get('cold_charge_kW',0.),5),r['cost_USD_step'])
-            result,ports=min(candidates,key=key);self._m22_ports=copy.deepcopy(ports)
+            result,ports=self._choose_storage_candidate(candidates) if hasattr(self,'_choose_storage_candidate') and self.env.correctness_config['boiler_domain_search'] else min(candidates,key=key)
+            self._m22_ports=copy.deepcopy(ports)
             if phase!='local_down_endpoint':self._storage_candidate=dict(time_minute=self.time,action=copy.deepcopy(result['action']))
             result['m22_mode_selection']=dict(cold_mode=mode,no_store_critical_cold_deficit_kW=deficit,candidate_count=len(candidates),inventory_committed=False)
             self.solver_calls.append(dict(time_minute=self.time,phase=phase,dt_h=dt_h,status='success',elapsed_seconds=time.perf_counter()-began,solver_backend_layers=result['solver_backend_layers']))
@@ -307,6 +311,7 @@ class EngineeringCore(legacy.EngineeringCore):
                 float(self.env.config['gt_ramp_kW_per_hour']),float(self.env.config['solver_time_limit_sec']),
                 self._physical_solver_config(self.env.dt_h,f),execution_action=candidate,execution_contract=self.env.operating_execution_contract)
         except Exception as exc:
+            if hasattr(self,'_raise_evidence_io_error'):self._raise_evidence_io_error(exc)
             self.solver_calls.append(dict(time_minute=self.time,phase='m22_non_DG_release_witness',status='candidate_infeasible' if isinstance(exc,ModelConstraintInfeasible) else 'solver_error',exception_type=type(exc).__name__,message=str(exc),
                 current_only=True,inventory_committed=False,elapsed_seconds=time.perf_counter()-began,
                 solver_backend_layers=copy.deepcopy(getattr(exc,'solver_backend_attempts',[]))))
