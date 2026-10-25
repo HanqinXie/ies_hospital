@@ -1,0 +1,604 @@
+{
+  "contract_id": "hospital_ies.explicit_result_export.v22.v1",
+  "command": [
+    "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\python.exe",
+    "E:\\hospital_ies_v22_20261025\\build_closeout_data01.py"
+  ],
+  "inputs": [
+    {
+      "RESULT_path": "E:\\hospital_ies_v22_20261025\\runs\\legacy_066_01\\RESULT.json",
+      "RESULT_sha256": "db903648987dc56cd4bf71d532fc91efa298a2950e52dd719894225f060505de",
+      "RESULT_read_error": null,
+      "CASE_path": "E:\\hospital_ies_v22_20261025\\runs\\legacy_066_01\\CASE.json",
+      "CASE_sha256": "827bb35844210129181c015437ee50d0a33068eed7d134054ca39c55bc333616",
+      "CASE_read_error": null
+    },
+    {
+      "RESULT_path": "E:\\hospital_ies_v22_20261025\\runs\\legacy_067_01\\RESULT.json",
+      "RESULT_sha256": "38d9f14e70b46a484959364a1026a319ee28255e48fdddce63249c91ea5efa60",
+      "RESULT_read_error": null,
+      "CASE_path": "E:\\hospital_ies_v22_20261025\\runs\\legacy_067_01\\CASE.json",
+      "CASE_sha256": "a713fd5b4686c5d84d38ad858d1ce54c4ac7ed81ee7bf89fda66345ec073e267",
+      "CASE_read_error": null
+    },
+    {
+      "RESULT_path": "E:\\hospital_ies_v22_20261025\\runs\\legacy_067_02\\RESULT.json",
+      "RESULT_sha256": "17a3206719d963d1dd4ee4147ca75fef5a4bdb05c2bb94f125d1f9707a75ac17",
+      "RESULT_read_error": null,
+      "CASE_path": "E:\\hospital_ies_v22_20261025\\runs\\legacy_067_02\\CASE.json",
+      "CASE_sha256": "f889ff792b957b2fcbf1995697834ca278b2e80b13f1543c2bfa69070b780887",
+      "CASE_read_error": null
+    },
+    {
+      "RESULT_path": "E:\\hospital_ies_v22_20261025\\runs\\legacy_cold_partial_01\\RESULT.json",
+      "RESULT_sha256": "b91794899033b4e408a5fa9e5f66c63020f322048bff3093e3eb186afe0da672",
+      "RESULT_read_error": null,
+      "CASE_path": "E:\\hospital_ies_v22_20261025\\runs\\legacy_cold_partial_01\\CASE.json",
+      "CASE_sha256": "d922ff5ad50b132bafcae8f46f8b95bdfce930cb853af968f73a8ee7b559bfb7",
+      "CASE_read_error": null
+    },
+    {
+      "RESULT_path": "E:\\hospital_ies_v22_20261025\\runs\\legacy_gtM_01\\RESULT.json",
+      "RESULT_sha256": "9781bca2790d72f9d8a196f9b22b4e98ddfbe0cc9e6f678f34574d55125ee6d2",
+      "RESULT_read_error": null,
+      "CASE_path": "E:\\hospital_ies_v22_20261025\\runs\\legacy_gtM_01\\CASE.json",
+      "CASE_sha256": "73be7b63dcff6de8067879f04c444748aea16b6c8da4375341b0e3cbff4c3c1c",
+      "CASE_read_error": null
+    },
+    {
+      "RESULT_path": "E:\\hospital_ies_v22_20261025\\runs\\legacy_ups90_01\\RESULT.json",
+      "RESULT_sha256": "fd3d586f260189a36ea5c25f230a297b6d0f5ac78e917018e18fd5a1c73ebee9",
+      "RESULT_read_error": null,
+      "CASE_path": "E:\\hospital_ies_v22_20261025\\runs\\legacy_ups90_01\\CASE.json",
+      "CASE_sha256": "c7b4fca8a2582f4693b25cc96841b71358cad6e1de3e3d9883c8d0893a347c13",
+      "CASE_read_error": null
+    },
+    {
+      "RESULT_path": "E:\\hospital_ies_v22_20261025\\runs\\legacy_winter_compound_H0_01\\RESULT.json",
+      "RESULT_sha256": "1640364651256830a06a67cd32f9e28b2170678ca05ff5853ce66b3c23c87845",
+      "RESULT_read_error": null,
+      "CASE_path": "E:\\hospital_ies_v22_20261025\\runs\\legacy_winter_compound_H0_01\\CASE.json",
+      "CASE_sha256": "1bcba0dd2c4b78424c1d71894b4a181e4b3acee6e5726223b5c55340dc6cb4e8",
+      "CASE_read_error": null
+    },
+    {
+      "RESULT_path": "E:\\hospital_ies_v22_20261025\\runs\\legacy_winter_compound_H0_02\\RESULT.json",
+      "RESULT_sha256": "ef01d263f899a3c999d12ac7cb46f6902f1e70e2daf0498df6d2ed30d0c89d48",
+      "RESULT_read_error": null,
+      "CASE_path": "E:\\hospital_ies_v22_20261025\\runs\\legacy_winter_compound_H0_02\\CASE.json",
+      "CASE_sha256": "6a1925b270ae8d89c509e5b2649a9a2ff353dcb14a6a808947235ed150728ab7",
+      "CASE_read_error": null
+    },
+    {
+      "RESULT_path": "E:\\hospital_ies_v22_20261025\\runs\\legacy_winter_compound_H0_03\\RESULT.json",
+      "RESULT_sha256": "f84e9208a796d4d260ccd737a725dc9e2bd282bbb6e4d486248914d1e0882b8c",
+      "RESULT_read_error": null,
+      "CASE_path": "E:\\hospital_ies_v22_20261025\\runs\\legacy_winter_compound_H0_03\\CASE.json",
+      "CASE_sha256": "6a1925b270ae8d89c509e5b2649a9a2ff353dcb14a6a808947235ed150728ab7",
+      "CASE_read_error": null
+    },
+    {
+      "RESULT_path": "E:\\hospital_ies_v22_20261025\\runs\\legacy_winter_compound_H0_04\\RESULT.json",
+      "RESULT_sha256": "e01d444e5ce986910c23408e8c83ef1371d1bfd571f8674efdf35c136fb13777",
+      "RESULT_read_error": null,
+      "CASE_path": "E:\\hospital_ies_v22_20261025\\runs\\legacy_winter_compound_H0_04\\CASE.json",
+      "CASE_sha256": "e774426b7b37867f04cea1b01183d56992780caae2e4dc9ed41d220412926f0d",
+      "CASE_read_error": null
+    },
+    {
+      "RESULT_path": "E:\\hospital_ies_v22_20261025\\runs\\legacy_winter_compound_H1_01\\RESULT.json",
+      "RESULT_sha256": "3ad446c2704671dc36a9d291684aa7651fc50714dcd4185c0d93d93d4dbdbede",
+      "RESULT_read_error": null,
+      "CASE_path": "E:\\hospital_ies_v22_20261025\\runs\\legacy_winter_compound_H1_01\\CASE.json",
+      "CASE_sha256": "9afabaed8a12bd5711bb5a104cbe669bac1579e09f783ca062db3f9da0a2a902",
+      "CASE_read_error": null
+    },
+    {
+      "RESULT_path": "E:\\hospital_ies_v22_20261025\\runs\\legacy_winter_grid_H0_01\\RESULT.json",
+      "RESULT_sha256": "9bcaa101a83fb93dc20cd1e5abb35ce377dfc5c4dfc3cacaf26f3d4ebe163482",
+      "RESULT_read_error": null,
+      "CASE_path": "E:\\hospital_ies_v22_20261025\\runs\\legacy_winter_grid_H0_01\\CASE.json",
+      "CASE_sha256": "033b03737ee7f6b09d86218bc046f6aa46790cf29c8aec6095de60cd3c6bf180",
+      "CASE_read_error": null
+    },
+    {
+      "RESULT_path": "E:\\hospital_ies_v22_20261025\\runs\\legacy_winter_grid_H1_01\\RESULT.json",
+      "RESULT_sha256": "7aead82b32f7c099706c21d9bd02a113fc00a185a9635e18e468eb9c9a80ab4d",
+      "RESULT_read_error": null,
+      "CASE_path": "E:\\hospital_ies_v22_20261025\\runs\\legacy_winter_grid_H1_01\\CASE.json",
+      "CASE_sha256": "1b4990f150c39d3bcaf8f5e43d0233cdc4cafa11d3e72bc0e8065be5642de610",
+      "CASE_read_error": null
+    },
+    {
+      "RESULT_path": "E:\\hospital_ies_v22_20261025\\runs\\runner_contract_legacy15_01\\RESULT.json",
+      "RESULT_sha256": "4eb6806627499269cf8a5749fc384b0ffb118330b936f0db8ff3ffd8b8e82454",
+      "RESULT_read_error": null,
+      "CASE_path": "E:\\hospital_ies_v22_20261025\\runs\\runner_contract_legacy15_01\\CASE.json",
+      "CASE_sha256": "a26a5ee37df9f102ab7a23b8e1627b2597378a89a5021a1537a4cc1e59efcb61",
+      "CASE_read_error": null
+    },
+    {
+      "RESULT_path": "E:\\hospital_ies_v22_20261025\\runs\\runner_contract_legacy15_02\\RESULT.json",
+      "RESULT_sha256": "4650cbd7615bd14ed8ba9da9c27372591c105b5fecec441c3b83e726f8931c76",
+      "RESULT_read_error": null,
+      "CASE_path": "E:\\hospital_ies_v22_20261025\\runs\\runner_contract_legacy15_02\\CASE.json",
+      "CASE_sha256": "c078ee831a2f428896eb1afa33d55d198a0ceba197131c1dc6cd236cf1aee0fd",
+      "CASE_read_error": null
+    },
+    {
+      "RESULT_path": "E:\\hospital_ies_v22_20261025\\runs\\m22_normal_winter_01\\RESULT.json",
+      "RESULT_sha256": "a2a67e0c7aff9018d83843fbc9c3a6f53b22660af414175cc5306e6f9a2deb83",
+      "RESULT_read_error": null,
+      "CASE_path": "E:\\hospital_ies_v22_20261025\\runs\\m22_normal_winter_01\\CASE.json",
+      "CASE_sha256": "d96704f1746370f1cef51461788eccb354081d464b9278882a055519abebfa8f",
+      "CASE_read_error": null
+    },
+    {
+      "RESULT_path": "E:\\hospital_ies_v22_20261025\\runs\\m22_ups90_01\\RESULT.json",
+      "RESULT_sha256": "2ddb6ce174b75ddff0dc04f164fcc0cb43ae724a8518094edc7728f5386f90bd",
+      "RESULT_read_error": null,
+      "CASE_path": "E:\\hospital_ies_v22_20261025\\runs\\m22_ups90_01\\CASE.json",
+      "CASE_sha256": "c7b4fca8a2582f4693b25cc96841b71358cad6e1de3e3d9883c8d0893a347c13",
+      "CASE_read_error": null
+    },
+    {
+      "RESULT_path": "E:\\hospital_ies_v22_20261025\\runs\\m22_067_C_01\\RESULT.json",
+      "RESULT_sha256": "a53c1e489f46a9ce67ee12c5c9b7e268893f691a06933cab794ba333799d2543",
+      "RESULT_read_error": null,
+      "CASE_path": "E:\\hospital_ies_v22_20261025\\runs\\m22_067_C_01\\CASE.json",
+      "CASE_sha256": "7032a5e7c8882c34029d89f8ce6582a5899e1295c6abe6a19bd6b5c436e1c4ca",
+      "CASE_read_error": null
+    },
+    {
+      "RESULT_path": "E:\\hospital_ies_v22_20261025\\runs\\m22_normal_winter_02\\RESULT.json",
+      "RESULT_sha256": "be6eec42fa31117f793b9fc5441ccd9770fc3d67a034fa8dac2dcb026a2c0a18",
+      "RESULT_read_error": null,
+      "CASE_path": "E:\\hospital_ies_v22_20261025\\runs\\m22_normal_winter_02\\CASE.json",
+      "CASE_sha256": "d96704f1746370f1cef51461788eccb354081d464b9278882a055519abebfa8f",
+      "CASE_read_error": null
+    },
+    {
+      "RESULT_path": "E:\\hospital_ies_v22_20261025\\runs\\m22_ups90_02\\RESULT.json",
+      "RESULT_sha256": "eccb51bb4437bb0a29398835dbfc607a9bcc3a7c0b61d609d313a9d16f483757",
+      "RESULT_read_error": null,
+      "CASE_path": "E:\\hospital_ies_v22_20261025\\runs\\m22_ups90_02\\CASE.json",
+      "CASE_sha256": "c7b4fca8a2582f4693b25cc96841b71358cad6e1de3e3d9883c8d0893a347c13",
+      "CASE_read_error": null
+    },
+    {
+      "RESULT_path": "E:\\hospital_ies_v22_20261025\\runs\\m22_cold_partial_01\\RESULT.json",
+      "RESULT_sha256": "e15243384f2892d702fbdd7365603623a0e3aaaa8cc509da9a61bd1c20ae9eb3",
+      "RESULT_read_error": null,
+      "CASE_path": "E:\\hospital_ies_v22_20261025\\runs\\m22_cold_partial_01\\CASE.json",
+      "CASE_sha256": "d922ff5ad50b132bafcae8f46f8b95bdfce930cb853af968f73a8ee7b559bfb7",
+      "CASE_read_error": null
+    },
+    {
+      "RESULT_path": "E:\\hospital_ies_v22_20261025\\runs\\m22_normal_winter_03\\RESULT.json",
+      "RESULT_sha256": "6f850f54a49700ad74f386d3db99122d0e15a90778726999c8d292fe0d4b5273",
+      "RESULT_read_error": null,
+      "CASE_path": "E:\\hospital_ies_v22_20261025\\runs\\m22_normal_winter_03\\CASE.json",
+      "CASE_sha256": "d96704f1746370f1cef51461788eccb354081d464b9278882a055519abebfa8f",
+      "CASE_read_error": null
+    },
+    {
+      "RESULT_path": "E:\\hospital_ies_v22_20261025\\runs\\m22_ups90_03\\RESULT.json",
+      "RESULT_sha256": "d228ec5c871c507884bbf0b8c9e2aa01123f80299fed6520d0a772c4cc45cb93",
+      "RESULT_read_error": null,
+      "CASE_path": "E:\\hospital_ies_v22_20261025\\runs\\m22_ups90_03\\CASE.json",
+      "CASE_sha256": "c7b4fca8a2582f4693b25cc96841b71358cad6e1de3e3d9883c8d0893a347c13",
+      "CASE_read_error": null
+    },
+    {
+      "RESULT_path": "E:\\hospital_ies_v22_20261025\\runs\\m22_cold_partial_02\\RESULT.json",
+      "RESULT_sha256": "ae8285bde27abd51b83ef750adb802099cabd4cf4786e7b2819f703301fe83fa",
+      "RESULT_read_error": null,
+      "CASE_path": "E:\\hospital_ies_v22_20261025\\runs\\m22_cold_partial_02\\CASE.json",
+      "CASE_sha256": "d922ff5ad50b132bafcae8f46f8b95bdfce930cb853af968f73a8ee7b559bfb7",
+      "CASE_read_error": null
+    },
+    {
+      "RESULT_path": "E:\\hospital_ies_v22_20261025\\runs\\m22_normal_winter_04\\RESULT.json",
+      "RESULT_sha256": "018f326d84d303d017460a09c8f337c543f35ca61a3521e7f44866f35cdf3b2f",
+      "RESULT_read_error": null,
+      "CASE_path": "E:\\hospital_ies_v22_20261025\\runs\\m22_normal_winter_04\\CASE.json",
+      "CASE_sha256": "d96704f1746370f1cef51461788eccb354081d464b9278882a055519abebfa8f",
+      "CASE_read_error": null
+    },
+    {
+      "RESULT_path": "E:\\hospital_ies_v22_20261025\\runs\\m22_ups90_04\\RESULT.json",
+      "RESULT_sha256": "fe790416fdc4218479291a95e1a83ab0838a7935e20df2df50e9535fe038f32d",
+      "RESULT_read_error": null,
+      "CASE_path": "E:\\hospital_ies_v22_20261025\\runs\\m22_ups90_04\\CASE.json",
+      "CASE_sha256": "c7b4fca8a2582f4693b25cc96841b71358cad6e1de3e3d9883c8d0893a347c13",
+      "CASE_read_error": null
+    },
+    {
+      "RESULT_path": "E:\\hospital_ies_v22_20261025\\runs\\m22_cold_partial_03\\RESULT.json",
+      "RESULT_sha256": "69efa111c65438b58054a67801c059df5b5dbe8428a963314486d5bd356520b5",
+      "RESULT_read_error": null,
+      "CASE_path": "E:\\hospital_ies_v22_20261025\\runs\\m22_cold_partial_03\\CASE.json",
+      "CASE_sha256": "d922ff5ad50b132bafcae8f46f8b95bdfce930cb853af968f73a8ee7b559bfb7",
+      "CASE_read_error": null
+    },
+    {
+      "RESULT_path": "E:\\hospital_ies_v22_20261025\\runs\\m22_067_C_02\\RESULT.json",
+      "RESULT_sha256": "528c80b2c0cd1c20877c67fd19d6ae15e994b16839df635e0b5f45aaf9376317",
+      "RESULT_read_error": null,
+      "CASE_path": "E:\\hospital_ies_v22_20261025\\runs\\m22_067_C_02\\CASE.json",
+      "CASE_sha256": "7032a5e7c8882c34029d89f8ce6582a5899e1295c6abe6a19bd6b5c436e1c4ca",
+      "CASE_read_error": null
+    },
+    {
+      "RESULT_path": "E:\\hospital_ies_v22_20261025\\runs\\m22_067_R_01\\RESULT.json",
+      "RESULT_sha256": "8b8196bf765fa6a07902a6e6bc7956cf7d4a385fc5a8f815789a2e5806e9c699",
+      "RESULT_read_error": null,
+      "CASE_path": "E:\\hospital_ies_v22_20261025\\runs\\m22_067_R_01\\CASE.json",
+      "CASE_sha256": "058126d0f00011b09d17715d621dad16aab06dd7741853d92982ee6a5a2d9f47",
+      "CASE_read_error": null
+    },
+    {
+      "RESULT_path": "E:\\hospital_ies_v22_20261025\\runs\\m22_067_M_01\\RESULT.json",
+      "RESULT_sha256": "c63d75d95d2c9812f1d81b32b32e9d6371c65c5fea6aa2cf8b18c21550a5509c",
+      "RESULT_read_error": null,
+      "CASE_path": "E:\\hospital_ies_v22_20261025\\runs\\m22_067_M_01\\CASE.json",
+      "CASE_sha256": "a8a9272556f2329dd73f733dc40013e456d4667eb47ae82ba8d494a8db16c432",
+      "CASE_read_error": null
+    },
+    {
+      "RESULT_path": "E:\\hospital_ies_v22_20261025\\runs\\m22_067_F_01\\RESULT.json",
+      "RESULT_sha256": "2d4e93c21ed83980c5049eb6dcc6dd31ee18a26d9e43b2fb70ca99cd7f593ebf",
+      "RESULT_read_error": null,
+      "CASE_path": "E:\\hospital_ies_v22_20261025\\runs\\m22_067_F_01\\CASE.json",
+      "CASE_sha256": "c9e3aa07e3587c3b51cf00f2ddb50b8d4babacf485481fe93709bfcd31d07e02",
+      "CASE_read_error": null
+    },
+    {
+      "RESULT_path": "E:\\hospital_ies_v22_20261025\\runs\\m22_067_A_01\\RESULT.json",
+      "RESULT_sha256": "0626656cef90e61b8899ddd7e903fbdd171ac5214b06729b1f2bb489b1dd5e12",
+      "RESULT_read_error": null,
+      "CASE_path": "E:\\hospital_ies_v22_20261025\\runs\\m22_067_A_01\\CASE.json",
+      "CASE_sha256": "f4822d84e634921e799660c268ae57b693277fd33c9a70eba7b35e14d59a403f",
+      "CASE_read_error": null
+    },
+    {
+      "RESULT_path": "E:\\hospital_ies_v22_20261025\\runs\\m22_066_C_02\\RESULT.json",
+      "RESULT_sha256": "2e2c79d52303483e64a40cdecdb1c1bfa8ce579ae5f1b2815c12387aa3d35887",
+      "RESULT_read_error": null,
+      "CASE_path": "E:\\hospital_ies_v22_20261025\\runs\\m22_066_C_02\\CASE.json",
+      "CASE_sha256": "827bb35844210129181c015437ee50d0a33068eed7d134054ca39c55bc333616",
+      "CASE_read_error": null
+    },
+    {
+      "RESULT_path": "E:\\hospital_ies_v22_20261025\\runs\\m22_gtM_01\\RESULT.json",
+      "RESULT_sha256": "e36cf25671ea5551fca89d4d6dc642e6561075c28b1489fd415b0a445fc3badd",
+      "RESULT_read_error": null,
+      "CASE_path": "E:\\hospital_ies_v22_20261025\\runs\\m22_gtM_01\\CASE.json",
+      "CASE_sha256": "73be7b63dcff6de8067879f04c444748aea16b6c8da4375341b0e3cbff4c3c1c",
+      "CASE_read_error": null
+    },
+    {
+      "RESULT_path": "E:\\hospital_ies_v22_20261025\\runs\\m22_normal_summer_01\\RESULT.json",
+      "RESULT_sha256": "d85c473e1438efbfd26864e4b7f55961c23df2c90998aa8599fa176252c8ad0c",
+      "RESULT_read_error": null,
+      "CASE_path": "E:\\hospital_ies_v22_20261025\\runs\\m22_normal_summer_01\\CASE.json",
+      "CASE_sha256": "e0695a208b8ea018e1b6230246f9abdf6b2aac4a96c89b7483dfbe0c000365c6",
+      "CASE_read_error": null
+    },
+    {
+      "RESULT_path": "E:\\hospital_ies_v22_20261025\\runs\\m22_normal_winter_R_01\\RESULT.json",
+      "RESULT_sha256": "1baaa4853a35a5fec3a287204da8ca27759a2117aa3cb6f884bc776903460c96",
+      "RESULT_read_error": null,
+      "CASE_path": "E:\\hospital_ies_v22_20261025\\runs\\m22_normal_winter_R_01\\CASE.json",
+      "CASE_sha256": "8fde61251cae52f28f1bd32922d3fab837cd2f94fe466d9a4df12838f427fb70",
+      "CASE_read_error": null
+    },
+    {
+      "RESULT_path": "E:\\hospital_ies_v22_20261025\\runs\\m22_ups_short_repeat_01\\RESULT.json",
+      "RESULT_sha256": "fdcb4901066e590124614830854894c313043280383c625e50ceb35cf8d63f24",
+      "RESULT_read_error": null,
+      "CASE_path": "E:\\hospital_ies_v22_20261025\\runs\\m22_ups_short_repeat_01\\CASE.json",
+      "CASE_sha256": "68864aed1bc1158e109e8c121bd9c66d5f054aacaefdd7395fff6351edf68733",
+      "CASE_read_error": null
+    },
+    {
+      "RESULT_path": "E:\\hospital_ies_v22_20261025\\runs\\m22_cold_original_90_01\\RESULT.json",
+      "RESULT_sha256": "f99a2be9cc63afca0e17180348849c3bf5ae602afad0f3e93245d07483cac491",
+      "RESULT_read_error": null,
+      "CASE_path": "E:\\hospital_ies_v22_20261025\\runs\\m22_cold_original_90_01\\CASE.json",
+      "CASE_sha256": "16fb365e50402adec0630f30c7ee6884db4a538f9e388d35720570a235089d30",
+      "CASE_read_error": null
+    },
+    {
+      "RESULT_path": "E:\\hospital_ies_v22_20261025\\runs\\m22_cold_chillers_insufficient_01\\RESULT.json",
+      "RESULT_sha256": "00f58bf63897942c1d5d8d40cbdc19aa03fe171f2fe3fab6e39d37716a740edd",
+      "RESULT_read_error": null,
+      "CASE_path": "E:\\hospital_ies_v22_20261025\\runs\\m22_cold_chillers_insufficient_01\\CASE.json",
+      "CASE_sha256": "c286805c7805c31531d9b54f79e7703c50cb4bbcd32fb7411ca4bd0af06f0562",
+      "CASE_read_error": null
+    },
+    {
+      "RESULT_path": "E:\\hospital_ies_v22_20261025\\runs\\m22_cold_no_pump_01\\RESULT.json",
+      "RESULT_sha256": "a5f7bb07da5179e479307576ecc32482eb60b386566f73f2170d434429f125c6",
+      "RESULT_read_error": null,
+      "CASE_path": "E:\\hospital_ies_v22_20261025\\runs\\m22_cold_no_pump_01\\CASE.json",
+      "CASE_sha256": "cd99bf1dce90f75ce5f07a4d94dbb207246e4344f50ab608c999bb530f4a22b8",
+      "CASE_read_error": null
+    },
+    {
+      "RESULT_path": "E:\\hospital_ies_v22_20261025\\runs\\m22_cold_no_fan_01\\RESULT.json",
+      "RESULT_sha256": "5f97fb31765bd5d7d45580080050ad755915b0654ffd0b2a5c3e60a450c7734f",
+      "RESULT_read_error": null,
+      "CASE_path": "E:\\hospital_ies_v22_20261025\\runs\\m22_cold_no_fan_01\\CASE.json",
+      "CASE_sha256": "18897a8cc4d8d362a39fad832e7b04e4a3c7055f8c27cb3c173bcf6303aa68da",
+      "CASE_read_error": null
+    },
+    {
+      "RESULT_path": "E:\\hospital_ies_v22_20261025\\runs\\m22_cold_empty_01\\RESULT.json",
+      "RESULT_sha256": "a9df74653b86621fe4b44aff5a58ccb6088c5e5c26ad6600e09930f61f2f32a2",
+      "RESULT_read_error": null,
+      "CASE_path": "E:\\hospital_ies_v22_20261025\\runs\\m22_cold_empty_01\\CASE.json",
+      "CASE_sha256": "9ee1ffb389f77c95ff422fa21c507866bb207959eb8f27c999366dcaa4b36646",
+      "CASE_read_error": null
+    },
+    {
+      "RESULT_path": "E:\\hospital_ies_v22_20261025\\runs\\m22_cold_partial_H0_01\\RESULT.json",
+      "RESULT_sha256": "0bf4c4362781abac30b1663c869ba92d322c48f92d13149e459784c0b5b000da",
+      "RESULT_read_error": null,
+      "CASE_path": "E:\\hospital_ies_v22_20261025\\runs\\m22_cold_partial_H0_01\\CASE.json",
+      "CASE_sha256": "476fb630493c98d65ca466977f9ba8d26743cb5a082ab6a8153f12bdff6b04eb",
+      "CASE_read_error": null
+    },
+    {
+      "RESULT_path": "E:\\hospital_ies_v22_20261025\\runs\\m22_winter_compound_H0_01\\RESULT.json",
+      "RESULT_sha256": "7fb31f4cdd7bc68b1fec6281396279cc65a55f044c34e78368be4738309ee3ad",
+      "RESULT_read_error": null,
+      "CASE_path": "E:\\hospital_ies_v22_20261025\\runs\\m22_winter_compound_H0_01\\CASE.json",
+      "CASE_sha256": "e774426b7b37867f04cea1b01183d56992780caae2e4dc9ed41d220412926f0d",
+      "CASE_read_error": null
+    },
+    {
+      "RESULT_path": "E:\\hospital_ies_v22_20261025\\runs\\m22_winter_compound_H1_01\\RESULT.json",
+      "RESULT_sha256": "faa1dd0776cce77fa9a64e77c4b8fea6377757e8715b098b3cadc7cf1770a52c",
+      "RESULT_read_error": null,
+      "CASE_path": "E:\\hospital_ies_v22_20261025\\runs\\m22_winter_compound_H1_01\\CASE.json",
+      "CASE_sha256": "9afabaed8a12bd5711bb5a104cbe669bac1579e09f783ca062db3f9da0a2a902",
+      "CASE_read_error": null
+    },
+    {
+      "RESULT_path": "E:\\hospital_ies_v22_20261025\\runs\\m22_winter_grid_H0_01\\RESULT.json",
+      "RESULT_sha256": "a07e07247cb30a354a57b342ffa2c5f331a7d42751b4f113aa99812b667357e3",
+      "RESULT_read_error": null,
+      "CASE_path": "E:\\hospital_ies_v22_20261025\\runs\\m22_winter_grid_H0_01\\CASE.json",
+      "CASE_sha256": "033b03737ee7f6b09d86218bc046f6aa46790cf29c8aec6095de60cd3c6bf180",
+      "CASE_read_error": null
+    },
+    {
+      "RESULT_path": "E:\\hospital_ies_v22_20261025\\runs\\m22_winter_grid_H1_01\\RESULT.json",
+      "RESULT_sha256": "1a7f9fe32c36574fb854090179704636da7990435d683709f3eca40a241d673f",
+      "RESULT_read_error": null,
+      "CASE_path": "E:\\hospital_ies_v22_20261025\\runs\\m22_winter_grid_H1_01\\CASE.json",
+      "CASE_sha256": "1b4990f150c39d3bcaf8f5e43d0233cdc4cafa11d3e72bc0e8065be5642de610",
+      "CASE_read_error": null
+    },
+    {
+      "RESULT_path": "E:\\hospital_ies_v22_20261025\\runs\\m22_winter_grid_A_H1_01\\RESULT.json",
+      "RESULT_sha256": "69e55feb1ac5410bcf31d0caf5527b23036e6ff15798fdb4a72f8a9ba39addbd",
+      "RESULT_read_error": null,
+      "CASE_path": "E:\\hospital_ies_v22_20261025\\runs\\m22_winter_grid_A_H1_01\\CASE.json",
+      "CASE_sha256": "e3e84b8639fa06a6c2be84d8ae375925162a7ea2134920d9dea8740a645954be",
+      "CASE_read_error": null
+    },
+    {
+      "RESULT_path": "E:\\hospital_ies_v22_20261025\\runs\\m22_ups_long_repeat_01\\RESULT.json",
+      "RESULT_sha256": "406e71f05081b07b425acdb3a9e708eeb59492cceb6a2dbd026ae8d4b0db8482",
+      "RESULT_read_error": null,
+      "CASE_path": "E:\\hospital_ies_v22_20261025\\runs\\m22_ups_long_repeat_01\\CASE.json",
+      "CASE_sha256": "01098be173c5ef160a4c8dab8961bb0e48c6f23873af0906874a741f1b6703c0",
+      "CASE_read_error": null
+    },
+    {
+      "RESULT_path": "E:\\hospital_ies_v22_20261025\\runs\\m22_station_ac_interrupt_01\\RESULT.json",
+      "RESULT_sha256": "3b3c2efda715724bde5e7bd2639745ab3f7912867c247cb894131f0313d95b96",
+      "RESULT_read_error": null,
+      "CASE_path": "E:\\hospital_ies_v22_20261025\\runs\\m22_station_ac_interrupt_01\\CASE.json",
+      "CASE_sha256": "77aae128890027ebb9c43cf5154a77f63f70cb709ff8a8072239f51c6445fbb0",
+      "CASE_read_error": null
+    },
+    {
+      "RESULT_path": "E:\\hospital_ies_v22_20261025\\runs\\m22_station_dg_dc_missing_01\\RESULT.json",
+      "RESULT_sha256": "7ba8f9933233d0391e3b488e88ca2a3c55dd7c87afddc0e696d475c790fce400",
+      "RESULT_read_error": null,
+      "CASE_path": "E:\\hospital_ies_v22_20261025\\runs\\m22_station_dg_dc_missing_01\\CASE.json",
+      "CASE_sha256": "f52b5c9083c46b977ace979ca7338cbdf83dea17799bfd1b01b23caa93bc4532",
+      "CASE_read_error": null
+    },
+    {
+      "RESULT_path": "E:\\hospital_ies_v22_20261025\\runs\\m22_aux_normal_0p75_01\\RESULT.json",
+      "RESULT_sha256": "350e39c1e37ce7333abb3f26176663fa2bc4eb51a3c0d9ed2405bdfa0bc5fd63",
+      "RESULT_read_error": null,
+      "CASE_path": "E:\\hospital_ies_v22_20261025\\runs\\m22_aux_normal_0p75_01\\CASE.json",
+      "CASE_sha256": "cba681308d8dae281849b5cc3b0a88fd92976e428730c5fe7d5f040695ac6068",
+      "CASE_read_error": null
+    },
+    {
+      "RESULT_path": "E:\\hospital_ies_v22_20261025\\runs\\m22_aux_normal_1p25_01\\RESULT.json",
+      "RESULT_sha256": "bcdc0401b5f3a222a527c908ef80427da8f5066c6eca86255472d58c9210f753",
+      "RESULT_read_error": null,
+      "CASE_path": "E:\\hospital_ies_v22_20261025\\runs\\m22_aux_normal_1p25_01\\CASE.json",
+      "CASE_sha256": "56f66ea19b48b5a26cdca2fb7a1b89b3258c344a6150dc95eee21ea398c39a6e",
+      "CASE_read_error": null
+    },
+    {
+      "RESULT_path": "E:\\hospital_ies_v22_20261025\\runs\\m22_aux_fault_0p75_01\\RESULT.json",
+      "RESULT_sha256": "dde0c8f5d2f71eac7c02f8751723b8942b00f12a65ad77fd0ab0222c70065421",
+      "RESULT_read_error": null,
+      "CASE_path": "E:\\hospital_ies_v22_20261025\\runs\\m22_aux_fault_0p75_01\\CASE.json",
+      "CASE_sha256": "d1dd7ca2e346d986d68a1757ea30c31a9ce9cc05ca91abbc782c0d0ba058b191",
+      "CASE_read_error": null
+    },
+    {
+      "RESULT_path": "E:\\hospital_ies_v22_20261025\\runs\\m22_aux_fault_1p0_01\\RESULT.json",
+      "RESULT_sha256": "ee09e0e997449a59a49958bad9d81c93291df8082c62112fa1ed6fef9a7dfd0e",
+      "RESULT_read_error": null,
+      "CASE_path": "E:\\hospital_ies_v22_20261025\\runs\\m22_aux_fault_1p0_01\\CASE.json",
+      "CASE_sha256": "1dce5071897a87d50f05fbffc4842abb49b7c372499be354fae1debfdfd450bd",
+      "CASE_read_error": null
+    },
+    {
+      "RESULT_path": "E:\\hospital_ies_v22_20261025\\runs\\m22_aux_fault_1p25_01\\RESULT.json",
+      "RESULT_sha256": "2f074e47e4aa77b783625b99b1556aa6b320dfb9e9aeb1cf62072492d89ecc0d",
+      "RESULT_read_error": null,
+      "CASE_path": "E:\\hospital_ies_v22_20261025\\runs\\m22_aux_fault_1p25_01\\CASE.json",
+      "CASE_sha256": "7109919941dbcf120892f73a54f8812adb16fd60540a443c99d7b0281638716b",
+      "CASE_read_error": null
+    },
+    {
+      "RESULT_path": "E:\\hospital_ies_v22_20261025\\runs\\m22_boiler_low_01\\RESULT.json",
+      "RESULT_sha256": "bb5a9f77de83c88de76cca6928139eb5fbd5171502ca945151c6d1d7ff1a0b27",
+      "RESULT_read_error": null,
+      "CASE_path": "E:\\hospital_ies_v22_20261025\\runs\\m22_boiler_low_01\\CASE.json",
+      "CASE_sha256": "1704dc05847beefeafbce3ef6a5a2c4fe8efe11eb5be161c8d98c060b9972eee",
+      "CASE_read_error": null
+    },
+    {
+      "RESULT_path": "E:\\hospital_ies_v22_20261025\\runs\\m22_boiler_high_01\\RESULT.json",
+      "RESULT_sha256": "1e390edf0bc28ad8071bee427539f7c7de633741fb27c180ddaa31e316943fa7",
+      "RESULT_read_error": null,
+      "CASE_path": "E:\\hospital_ies_v22_20261025\\runs\\m22_boiler_high_01\\CASE.json",
+      "CASE_sha256": "2fbbbf281d7a90fc83b806d6a007c51ad2453c8a535355f3d4cfac20556efc24",
+      "CASE_read_error": null
+    },
+    {
+      "RESULT_path": "E:\\hospital_ies_v22_20261025\\runs\\m22_mechanism_r0_p0_01\\RESULT.json",
+      "RESULT_sha256": "3a458b91cb66af9a4aeb60e7517a7598f7035a715200b099e50b1c8ab0525362",
+      "RESULT_read_error": null,
+      "CASE_path": "E:\\hospital_ies_v22_20261025\\runs\\m22_mechanism_r0_p0_01\\CASE.json",
+      "CASE_sha256": "5055f3844673b4967b1653889c8e61dd7fafb926a54a23e000cbfcfe28d335fe",
+      "CASE_read_error": null
+    },
+    {
+      "RESULT_path": "E:\\hospital_ies_v22_20261025\\runs\\m22_mechanism_r0_p1_01\\RESULT.json",
+      "RESULT_sha256": "0d83b994296c514960f2d847fd1caa2c12d011fa440d320c8da4ea1d92f18e13",
+      "RESULT_read_error": null,
+      "CASE_path": "E:\\hospital_ies_v22_20261025\\runs\\m22_mechanism_r0_p1_01\\CASE.json",
+      "CASE_sha256": "0216cc3a3e46a15b370d3254528613923e9a60e17122f9732cbc32681fc221e4",
+      "CASE_read_error": null
+    },
+    {
+      "RESULT_path": "E:\\hospital_ies_v22_20261025\\runs\\m22_mechanism_r1_p0_01\\RESULT.json",
+      "RESULT_sha256": "055d5b085233a461d46606b380224db0ee8b2de95d911397c63fa97ad08ff8e6",
+      "RESULT_read_error": null,
+      "CASE_path": "E:\\hospital_ies_v22_20261025\\runs\\m22_mechanism_r1_p0_01\\CASE.json",
+      "CASE_sha256": "e8f621d86ed4964a44e6d4c57970fc70f34598e471b3d96466e75fe1913d2dc9",
+      "CASE_read_error": null
+    },
+    {
+      "RESULT_path": "E:\\hospital_ies_v22_20261025\\runs\\m22_mechanism_r1_p1_01\\RESULT.json",
+      "RESULT_sha256": "d5b301b22c6ce6f13b090dc99783189e2d468848ab101dffa9fe4e4ab825f7fc",
+      "RESULT_read_error": null,
+      "CASE_path": "E:\\hospital_ies_v22_20261025\\runs\\m22_mechanism_r1_p1_01\\CASE.json",
+      "CASE_sha256": "f79b223b3e149dff2f2fd9213ef6da9d427f3f74f846243db00432f7080bfe2f",
+      "CASE_read_error": null
+    },
+    {
+      "RESULT_path": "E:\\hospital_ies_v22_20261025\\runs\\m22_seen_L2_spring_01\\RESULT.json",
+      "RESULT_sha256": "4e0554294fee069dfdeb2d7a25f44415d3101167e9162c19c291ab0bde51aa6e",
+      "RESULT_read_error": null,
+      "CASE_path": "E:\\hospital_ies_v22_20261025\\runs\\m22_seen_L2_spring_01\\CASE.json",
+      "CASE_sha256": "b73dc78a07cde92b997f2dfcd8e884dc63f2649b3408784d653e9d0e6140dab2",
+      "CASE_read_error": null
+    },
+    {
+      "RESULT_path": "E:\\hospital_ies_v22_20261025\\runs\\m22_seen_L2_proxy_same_01\\RESULT.json",
+      "RESULT_sha256": "8cb75d4ba50e228efb8efe4af1a11a1e3992d04bca9def27cf191619ab91fb74",
+      "RESULT_read_error": null,
+      "CASE_path": "E:\\hospital_ies_v22_20261025\\runs\\m22_seen_L2_proxy_same_01\\CASE.json",
+      "CASE_sha256": "4f5bb839f6a54dae5ee6fa876c14450ba8deafc11f9bd26073f612fe5816feaf",
+      "CASE_read_error": null
+    },
+    {
+      "RESULT_path": "E:\\hospital_ies_v22_20261025\\runs\\m22_seen_L3_spring_01\\RESULT.json",
+      "RESULT_sha256": "1c37078de579a973ec71883d6ff7d04a384e56c503e61e4de5a6f2106f0972e6",
+      "RESULT_read_error": null,
+      "CASE_path": "E:\\hospital_ies_v22_20261025\\runs\\m22_seen_L3_spring_01\\CASE.json",
+      "CASE_sha256": "3fa2e4b3fd0c9e6d04f5faee74e430fa9e63f780c8916c139c8b34930e3f09aa",
+      "CASE_read_error": null
+    },
+    {
+      "RESULT_path": "E:\\hospital_ies_v22_20261025\\runs\\m22_seen_L4_autumn_01\\RESULT.json",
+      "RESULT_sha256": "04eb09469ff22f8f8165eee2eee27314a2b239ba8494f3c028e7df283904e3bc",
+      "RESULT_read_error": null,
+      "CASE_path": "E:\\hospital_ies_v22_20261025\\runs\\m22_seen_L4_autumn_01\\CASE.json",
+      "CASE_sha256": "1c806f3d3ceb1331768b7890fc9fc758d41ffed12912e3b68b6b0857e2e5aa09",
+      "CASE_read_error": null
+    },
+    {
+      "RESULT_path": "E:\\hospital_ies_v22_20261025\\runs\\m22_cold_bank_t0_full_01\\RESULT.json",
+      "RESULT_sha256": "37c05c1a028e6e4c5440c414f3a05946726094782d31e67f8824055ed778ca85",
+      "RESULT_read_error": null,
+      "CASE_path": "E:\\hospital_ies_v22_20261025\\runs\\m22_cold_bank_t0_full_01\\CASE.json",
+      "CASE_sha256": "adec79cf5d903953935a311d70c6bd01d0be73511c7ccfdee8c449837b1c005c",
+      "CASE_read_error": null
+    },
+    {
+      "RESULT_path": "E:\\hospital_ies_v22_20261025\\runs\\m22_cold_bank_t0_empty_01\\RESULT.json",
+      "RESULT_sha256": "316fe977b689b496b7f65ffee735aef3b81c02be1059ddb8781f59a4f74b72c6",
+      "RESULT_read_error": null,
+      "CASE_path": "E:\\hospital_ies_v22_20261025\\runs\\m22_cold_bank_t0_empty_01\\CASE.json",
+      "CASE_sha256": "56639cc39aab44af961164a2eb59d5969265dd26bb7f07cba9988c59ce2c4afe",
+      "CASE_read_error": null
+    },
+    {
+      "RESULT_path": "E:\\hospital_ies_v22_20261025\\runs\\m22_release_long_C_01\\RESULT.json",
+      "RESULT_sha256": "7f1548d23784016a7d081d31af6c81ca638308f5886412ceff58eb6d5168c771",
+      "RESULT_read_error": null,
+      "CASE_path": "E:\\hospital_ies_v22_20261025\\runs\\m22_release_long_C_01\\CASE.json",
+      "CASE_sha256": "dd0f8ca10c8ece90fcb5179f7e3865d72fc45e3e81f1bfc8c0fbdd8d65e66cab",
+      "CASE_read_error": null
+    },
+    {
+      "RESULT_path": "E:\\hospital_ies_v22_20261025\\runs\\m22_release_long_A_01\\RESULT.json",
+      "RESULT_sha256": "efbae6c0710954f7dbc1feabc379819715391f324b082aa642be8801f4220098",
+      "RESULT_read_error": null,
+      "CASE_path": "E:\\hospital_ies_v22_20261025\\runs\\m22_release_long_A_01\\CASE.json",
+      "CASE_sha256": "0777710abb5bab736b7b10eb3a0e276556a2c8d24ddb9982e7997906b88aa188",
+      "CASE_read_error": null
+    },
+    {
+      "RESULT_path": "E:\\hospital_ies_v22_20261025\\runs\\m22_aux_normal_1p0_01\\RESULT.json",
+      "RESULT_sha256": "506baa68c967d460c22d8baefc27022e9322e1d08c1398bdf795b2cb98259ad2",
+      "RESULT_read_error": null,
+      "CASE_path": "E:\\hospital_ies_v22_20261025\\runs\\m22_aux_normal_1p0_01\\CASE.json",
+      "CASE_sha256": "ba3870e334716bb5fb2e1a0d74aa829dad65954b3373dbb4d387572c6d425ccb",
+      "CASE_read_error": null
+    }
+  ],
+  "output_directory": "E:\\hospital_ies_v22_20261025\\closeout_data01",
+  "explicit_pair_count": 14,
+  "semantics": "Blank is unknown; observed_ columns retain recorded prefixes; full columns require known complete support; after-minus-before pairs never select a winner",
+  "read_only_inputs": true,
+  "raw_trajectories_opened": 0,
+  "recursive_search": false,
+  "counts": {
+    "input_records": 71,
+    "status_counts": {
+      "completed": 66,
+      "failed_unknown": 5
+    },
+    "full_episode_records": 66,
+    "failed_or_unknown_records": 5,
+    "actual_episode_attempts_known_sum": 71,
+    "actual_episode_attempts_unknown_records": 0,
+    "actual_episode_attempts_total": 71,
+    "failed_before_episode_attempt_records": 0,
+    "failed_after_episode_started_records": 5,
+    "historical_attempts_added_known_sum": 0
+  },
+  "table_rows": {
+    "RUNS": 71,
+    "SERVICE": 852,
+    "STORAGE": 142,
+    "PAIR_DIFF": 3724
+  }
+}

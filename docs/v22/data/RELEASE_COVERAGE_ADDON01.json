@@ -1,0 +1,52 @@
+{
+  "registered_utc": "2026-10-25T05:48:09.588709+00:00",
+  "frozen_source": "FROZEN_SOURCE_FINAL03.json",
+  "matched_pair": true,
+  "budget": 2,
+  "original_final42_unchanged": true,
+  "cold_addon2_unchanged": true,
+  "evaluation_role": "seen_development_mechanism_activation_not_independent",
+  "preregistered_questions": [
+    "Does actual current witness remain ready at observed outage240min?",
+    "Does causal release activate only after that condition?",
+    "What actually changes in arrived command/service/budget/cost? Ties and tradeoffs retained"
+  ],
+  "unchanged": "all original load values, H1 capacities, original initialization/seed, physical core, material/protection thresholds, delays, A240 threshold",
+  "changed": "GRID outage from120 to300min and full same-background support360 to480min; same event for C/A",
+  "recipe": "E:\\hospital_ies_v22_20261025\\recipes\\winter_grid_long_release.json",
+  "recipe_sha256": "6c65ae322331a43d2ee406afc7e68eec8d717ef166e3fc4e0cbacf31acfd752b",
+  "jobs": [
+    {
+      "name": "m22_release_long_C_01",
+      "case_file": "E:\\hospital_ies_v22_20261025\\recipes\\winter_grid_long_release.json",
+      "policy": "C",
+      "args": [
+        "--case-file",
+        "E:\\hospital_ies_v22_20261025\\recipes\\winter_grid_long_release.json",
+        "--policy",
+        "C",
+        "--configuration",
+        "H1",
+        "--output",
+        "E:\\hospital_ies_v22_20261025\\runs\\m22_release_long_C_01"
+      ],
+      "output": "E:\\hospital_ies_v22_20261025\\runs\\m22_release_long_C_01"
+    },
+    {
+      "name": "m22_release_long_A_01",
+      "case_file": "E:\\hospital_ies_v22_20261025\\recipes\\winter_grid_long_release.json",
+      "policy": "A",
+      "args": [
+        "--case-file",
+        "E:\\hospital_ies_v22_20261025\\recipes\\winter_grid_long_release.json",
+        "--policy",
+        "A",
+        "--configuration",
+        "H1",
+        "--output",
+        "E:\\hospital_ies_v22_20261025\\runs\\m22_release_long_A_01"
+      ],
+      "output": "E:\\hospital_ies_v22_20261025\\runs\\m22_release_long_A_01"
+    }
+  ]
+}

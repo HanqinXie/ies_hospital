@@ -1,0 +1,41 @@
+{
+  "created_utc": "2026-10-25T06:14:19.172430+00:00",
+  "source_sha256": "afd2d206dceb7923f8cbfcc64caa715e414ade4087e7297e0a120826e6a333a5",
+  "final_episode_count": 47,
+  "actual_attempt_records": 71,
+  "source_script_sha256": "3c279775f27dc0b81906cefca7c14a0c3975dbac86c02a5858ac051c04fabea3",
+  "original_final42_unchanged": true,
+  "coverage_addon_count": 2,
+  "historical2778_not_replayed": true,
+  "administrative_queue_hold": {
+    "path": "E:\\hospital_ies_v22_20261025\\runs\\m22_066_C_01\\QUEUE_HOLD.json",
+    "actual_episode_attempts": 0
+  },
+  "source_plan_sha256": "6f236da29031669018f901013ffec92daf9fae4107b218a6706e39ba4a4bf490",
+  "addon_plan_sha256": "0cd2da61fc9f468fecfb0bee071e21a08a1a1c6ac0881e75b13864efaf1abb07",
+  "release_addon_count": 2,
+  "release_plan_sha256": "a733024e640b47c4f045a8f69886b1067c4c0231dce48dee186167b707e99c73",
+  "exact_aux_baseline_addon_count": 1,
+  "aux_baseline_plan_sha256": "03648c99ec65aedd9054525fb4e6329b84c83085a837bf7b0dc156b71d2ed116",
+  "export_counts": {
+    "input_records": 71,
+    "status_counts": {
+      "completed": 66,
+      "failed_unknown": 5
+    },
+    "full_episode_records": 66,
+    "failed_or_unknown_records": 5,
+    "actual_episode_attempts_known_sum": 71,
+    "actual_episode_attempts_unknown_records": 0,
+    "actual_episode_attempts_total": 71,
+    "failed_before_episode_attempt_records": 0,
+    "failed_after_episode_started_records": 5,
+    "historical_attempts_added_known_sum": 0
+  },
+  "equivalence_pairs": 17,
+  "unknown_semantics": "No failed record enters final metrics; full outcome fields remain blank and actual observed prefixes are retained separately",
+  "raw_trajectories_read_by_this_script": 0,
+  "PROCESS_files_read_for_actual_DG_terminal_inventory": 47,
+  "selection_inventory_view": "Original UPS/cold ledgers plus actual DG first/final shaft-equivalent budget from PROCESS; no RESULT mutation",
+  "controller_future_information_added": false
+}

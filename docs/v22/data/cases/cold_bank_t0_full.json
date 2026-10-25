@@ -1,0 +1,120 @@
+{
+  "id": "cold_bank_t0_full",
+  "purpose": "Coverage of actual healthy-GRID cold-source loss with full versus truly empty initial cold stock",
+  "scenario": {
+    "source_block_id": "m21_seen_boundary_4001_days166_167",
+    "start_hour": 4001,
+    "source_calendar_days": [
+      166,
+      167
+    ],
+    "season_quarter": 2,
+    "role": "development",
+    "experiment_role": "development",
+    "duration_steps": 6,
+    "step_minutes": 15.0,
+    "pre_event_warmup_steps": 0,
+    "initialization_seed": 20261023,
+    "canonical_class": "L1",
+    "event_class": "L1",
+    "analysis_class": "L1",
+    "stage": 1,
+    "enable_propagation": false,
+    "event_schema_version": "p2a.events.v1",
+    "faults": {
+      "EC_1": 0.0,
+      "EC_2": 0.0,
+      "EC_3": 0.0,
+      "ABS": 0.0
+    },
+    "auxiliary_faults": {},
+    "shock": {},
+    "shock_by_priority": {},
+    "shock_by_zone": {},
+    "fault_target": "EC_AND_ABS_BANK",
+    "fault_availability": 0.0,
+    "demand_amplitude": 0.0,
+    "clinical_template_id": "emergency_department",
+    "clinical_coefficients_are_research_assumptions": true,
+    "response_delay_minutes": 15.0,
+    "fault_start_minute": 0.0,
+    "fault_duration_minutes": 60.0,
+    "shock_start_minute": 0.0,
+    "shock_duration_minutes": 60.0,
+    "first_event_minute": 0.0,
+    "recovery_start_minute": 60.0,
+    "history_interval_minutes": [
+      0.0,
+      0.0
+    ],
+    "tail_interval_minutes": [
+      60.0,
+      90.0
+    ],
+    "grid_limit_kW": 850.0,
+    "pre_event_grid_limit_kW": 850.0,
+    "automatic_fast_shedding": false,
+    "initial_reserve_kWh": 2400.0,
+    "initial_reserve_semantics": "finite shaft-equivalent work budget at reset; not chemical kWh or liters",
+    "requires_policy_freeze": false,
+    "selection_allowed": false,
+    "fit_allowed": false,
+    "is_final_blind": false,
+    "original_final12_evaluated": false,
+    "historical_exposure_status": "seen_background_derived_regression",
+    "new_independent_background": false,
+    "prehistory_mode": "fault_at_reset_no_pre_event_recharge",
+    "exogenous_events": [],
+    "family_id": "m21_seen_boundary_4001_days166_167",
+    "root_family_id": "m21_seen_boundary_4001_days166_167",
+    "design_family": "m21_seen_boundary_4001_days166_167",
+    "sampling_cohort": "v22_coverage_addon01_seen_development",
+    "include_in_main_L1": false,
+    "full_source_support": {
+      "raw_start_minute": 240000.0,
+      "raw_end_minute": 240120.0
+    },
+    "analysis_family": "storage_integration_functional_check",
+    "engineering_functional_probe_only": true,
+    "include_in_scientific_hardware_estimate": false,
+    "native_L1_is_parser_encoding_only": false,
+    "functional_configuration_id": "H2",
+    "depletion_and_recharge_are_unverified": true,
+    "functional_probe_only": true,
+    "not_hardware_effect_study": true,
+    "id": "v22_cold_bank_t0_full",
+    "parent_template_id": "m21_seen_boundary_4001_days166_167",
+    "sampling_method": "fixed_development_regression",
+    "distribution_id": "fixed_development_no_probability",
+    "base_state_id": "v22_addon_initialization:ecf10958633b25a512e776dff2b0ad9aba390ead8dd2f516e61a270253de55c9",
+    "exogenous_stream_id": "v22_addon_exogenous:5407bd6b2655bae712b2253e83a0fbddda4d628f71ca9499a16719dbebb25c37",
+    "purpose": "development",
+    "q_design": "fixed_development_no_probability",
+    "p_reference": null,
+    "importance_weight": null,
+    "actual_p0_load_multiplier": {
+      "e": 1.0,
+      "h": 1.0,
+      "c": 1.0
+    },
+    "base_state_identity_is_declared_initialization_spec": true
+  },
+  "configuration": "H2",
+  "policy": {
+    "alias": "C",
+    "config": {}
+  },
+  "provenance": {
+    "source": {
+      "path": "E:\\hospital_ies_v21_20261023\\pilot45_r5\\experiments\\p45_original_11\\PLAN.json",
+      "sha256": "1f8ebb46c7755557a879d6d5f480d77fbe54b3229eea84c86e7e537197f00ddf"
+    },
+    "exact_original_scenario": false,
+    "evaluation_role": "seen_development_or_regression",
+    "independent_validation": false,
+    "coverage_reason": "Original EC-only case had actual ABS support; reset-empty original case charged before the 15min event. Preserve both original results; add these two discriminating cases without changing capacity/load/thresholds.",
+    "base_case_id": "cold_chillers_insufficient",
+    "registered_before_addon_execution_utc": "2026-10-25T05:31:06.342998+00:00"
+  },
+  "legacy_compatible": false
+}

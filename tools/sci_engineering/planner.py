@@ -252,13 +252,13 @@ def _options(value):
     return dict(_standby_options(supplied), **additions)
 
 
-def solve_joint(row, plant, loads, availability, state, dt_h,
+def _solve_joint_candidate(row, plant, loads, availability, state, dt_h,
                 grid_import_limit_kW, diesel_start_available, gt_ramp_kW_per_h,
                 solver_time_limit_sec=6., config=None, tracking_targets=None,
                 security_gt_penalty_USD_per_kWh=0., execution_contract=None, *,
                 joint_options=None, risk_loads=None, retention_eligible=False, connection_mode=None,
                 engineering_options=None, execution_context=None, readiness_context=None, coordination_options=None, execution_limits=None,
-                grid_bridge_request=False):
+                grid_bridge_request=False,_zero_boiler_command_domain=False):
     """Return one queued-command plan plus separately balanced current use.
 
     ``action.grid_import_kW`` is the generated importer ceiling only when the
@@ -408,6 +408,25 @@ def solve_joint(row, plant, loads, availability, state, dt_h,
     def allocate(name, unit):
         index = len(names); names.append(name); units.append(unit)
         return index
+    from tools.model_closure_v22.physical import current_context,bridge_withdrawal_without_debt_kWh
+    closure=current_context(config)
+    closure_ports=(config or {}).get('_sci_storage_ports',{}) if closure is not None else {}
+    now=readiness['observation_time_minute']
+    active_pending=[i for i,item in enumerate(readiness['pending_starts']) if item is not None and item['started']<=now+1e-9 and availability[f'GT_{i+1}']>1e-9]
+    eligible_new=[i for i,item in enumerate(readiness['pending_starts']) if item is None and readiness['actual_gt_kW'][i]<=1e-9
+        and readiness['earliest_start_minute'][i]<=now+1e-9 and availability[f'GT_{i+1}']>1e-9]
+    starter_indices=active_pending+eligible_new
+    def closure_variables(label):
+        return dict(ports={k:allocate('m22.'+label+'.'+k,'kW') for k in ('ups_discharge_kW','ups_charge_kW','cold_discharge_kW','cold_charge_kW')},
+            charge_gap={k:allocate('m22.'+label+'.unused_'+k,'kW') for k in ('ups_charge_kW','cold_charge_kW')},
+            startup={k:allocate('m22.'+label+'.'+k+'.fully_supplied','binary') for k in ('gt_start_electric_kW','boiler_restart_electric_kW')},
+            startup_gap={k:allocate('m22.'+label+'.'+k+'.not_supplied','kW') for k in ('gt_start_electric_kW','boiler_restart_electric_kW')},
+            gt_start_power=allocate('m22.'+label+'.gt_start.actual_power','kW'),
+            gt_start_products={i:allocate('m22.'+label+f'.GT_{i+1}.permitted_and_start_powered','binary') for i in starter_indices},
+            boiler=allocate('m22.'+label+'.boiler_steam','lb/h'),on=allocate('m22.'+label+'.boiler_on','binary'),
+            boiler_gap=allocate('m22.'+label+'.unexecuted_boiler_setting','lb/h'),
+            debt=allocate('m22.'+label+'.bridge_withdrawal','kWh'))
+    closure_master=closure_variables('current') if closure is not None else None
     target_indices = {key: allocate(f'tracking.{key}.absolute_error', 'RT' if index == ia else 'kW')
                       for key, (index, _) in targets.items()}
     separate_ceiling = variant in ('diverse', 'coupled') and contract['grid_import_mode'] == 'arrived_ceiling'
@@ -540,6 +559,8 @@ def solve_joint(row, plant, loads, availability, state, dt_h,
     if dependency_enabled:
         for case in copies:
             case['sci_aux'] = dependency_variables(allocate,'risk.'+case['name'])
+    if closure is not None:
+        for case in copies:case['m22']=closure_variables(case['name'])
     n = len(names)
     vector = lambda: np.zeros(n)
     lower = np.zeros(n); upper = np.full(n, np.inf)
@@ -583,6 +604,86 @@ def solve_joint(row, plant, loads, availability, state, dt_h,
     h = vector(); h[gp] = steam_per_kW*hrsg; h[ib] = 1.; h[ia] = -plant.abs_steam_lb_per_rt; h[iw] = -1.
     c = vector(); c[ia] = RT_TO_KW; c[ie] = RT_TO_KW
     for i in range(4):e[unmet(i, 0)] = 1.; h[unmet(i, 1)] = 1./heat_factor; c[unmet(i, 2)] = 1.
+    def add_closure(block,eb,hb,cb,demand,unserved,*,stage,ready,source_coefficients=None,source_constant=0.,held_steam=None):
+        """Same current ports and station electricity in every named copy.
+
+        Conditional endpoints may prepare a commanded boiler after restart;
+        current/held copies require the actual observed restart qualification.
+        Inventory is queried here; only the execution core can commit it.
+        """
+        ports=block['ports'];ud,uc,cd,cc=[ports[k] for k in ('ups_discharge_kW','ups_charge_kW','cold_discharge_kW','cold_charge_kW')]
+        for name,index in ports.items():upper[index]=float(closure_ports.get(name,0.))
+        for name in ('cold_discharge_kW','cold_charge_kW'):upper[ports[name]]*=float(availability.get('AUX_CHW_PUMP',1.))
+        if stage not in ('current','arrived_current','held_actual','regulated_current','startup_bridge'):
+            duration=coordination['support_minutes']/60.
+            upper[ud]=min(upper[ud],closure['ups_energy_kWh']*closure['ups_discharge_efficiency']/duration)
+            upper[cd]=min(upper[cd],closure['cold_energy_kWh']*closure['cold_discharge_efficiency']/duration)
+        for name,index in block['charge_gap'].items():
+            upper[index]=upper[ports[name]]
+            add({index:1.,ports[name]:1.},upper[index],upper[index],'m22.'+stage+'.unused_'+name)
+        if any(min(upper[ports[d]],upper[ports[ch]])>1e-9 for d,ch in (('ups_discharge_kW','ups_charge_kW'),('cold_discharge_kW','cold_charge_kW'))):raise ValueError('M22 planner storage mode must be exclusive')
+        pump=float(closure_ports.get('cold_pump_kW_per_kW',0.));eb[ud]=1.;eb[uc]=-1.;eb[cd]=eb[cc]=-pump;cb[cd]=1.;cb[cc]=-1.
+        for port,carrier in ((ud,0),(cd,2)):
+            add({port:1.,**{int(unserved[g,carrier]):1. for g in (0,1)}},-np.inf,float(demand[:2,carrier].sum()),'m22.'+stage+'.storage_critical_eligibility')
+        if closure['preserve_bridge']:
+            add({ud:dt_h/closure['ups_discharge_efficiency'],block['debt']:-1.},-np.inf,bridge_withdrawal_without_debt_kWh(closure),'m22.'+stage+'.existing_bridge','kWh')
+        else:upper[block['debt']]=0.
+        b=block['boiler'];on=block['on'];integrality[on]=1
+        cap=plant.boiler_steam_lbph/3*sum(availability[f'BOILER_{i+1}'] for i in range(3))
+        upper[b]=cap if closure['station_ac_available'] and ready else 0.;upper[on]=float(upper[b]>0.)
+        if _zero_boiler_command_domain and held_steam is None:upper[b]=upper[on]=0.
+        add({b:1.,on:-cap},-np.inf,0.,'m22.'+stage+'.boiler_station_enabled','lb/h')
+        if held_steam is None:
+            add({b:1.,ib:-1.},-np.inf,0.,'m22.'+stage+'.boiler_command_ceiling','lb/h')
+            add({b:1.,ib:-1.,on:-cap},-cap,np.inf,'m22.'+stage+'.boiler_same_setting_or_trip','lb/h')
+            add({block['boiler_gap']:1.,b:1.,ib:-1.},0.,0.,'m22.'+stage+'.unexecuted_boiler_setting','lb/h')
+        else:
+            value=min(upper[b],float(held_steam));upper[b]=value
+            add({b:1.,on:-value},0.,0.,'m22.'+stage+'.held_boiler_or_trip','lb/h')
+            if value<=0.:upper[on]=0.
+            add({block['boiler_gap']:1.,b:1.},value,value,'m22.'+stage+'.unexecuted_held_boiler_setting','lb/h')
+        hb[ib]=0.;hb[b]=1.;eb[b]-=closure['boiler_kW_per_kWsteam']*plant.steam_kWh_per_lb;eb[on]-=closure['boiler_fixed_kW']
+        # This feeder cannot receive building UPS. Named source coefficients
+        # already encode current GT readiness and DG/grid connection gates.
+        coefficients={b:closure['boiler_kW_per_kWsteam']*plant.steam_kWh_per_lb,on:closure['boiler_fixed_kW']}
+        observed_stage=stage in ('current','arrived_current','held_actual','regulated_current','startup_bridge')
+        block['startup_requests']={key:(closure[field] if observed_stage else 0.) for key,field in (
+            ('gt_start_electric_kW','gt_start_kW'),('boiler_restart_electric_kW','boiler_restart_kW'))}
+        for product in block['gt_start_products'].values():integrality[product]=1;upper[product]=0.
+        for name,index in block['startup'].items():
+            request=block['startup_requests'][name];integrality[index]=1
+            if name=='gt_start_electric_kW':
+                power=block['gt_start_power'];gap=block['startup_gap'][name]
+                if observed_stage and stage!='held_actual':
+                    unit=closure['gt_starter_kW_per_unit'];maximum=unit*len(starter_indices)
+                    block['startup_requests'][name]=maximum
+                    upper[index]=float(closure['station_ac_available'] and maximum>0.);upper[power]=upper[gap]=maximum
+                    actual={power:1.};required={gap:1.,power:1.}
+                    for i,product in block['gt_start_products'].items():
+                        permission=int(command_go[i]);upper[product]=1.
+                        add({product:1.,index:-1.},-np.inf,0.,'m22.'+stage+f'.GT_{i+1}.start_below_power_enable')
+                        add({product:1.,permission:-1.},-np.inf,0.,'m22.'+stage+f'.GT_{i+1}.start_below_new_permission')
+                        add({product:1.,index:-1.,permission:-1.},-1.,np.inf,'m22.'+stage+f'.GT_{i+1}.start_exact_binary_product')
+                        actual[product]=-unit;required[permission]=required.get(permission,0.)-unit
+                    add(actual,0.,0.,'m22.'+stage+'.GT_start_actual_power')
+                    add(required,0.,0.,'m22.'+stage+'.GT_start_refused_current_permission')
+                else:
+                    upper[index]=float(closure['station_ac_available'] and request>0.);upper[power]=upper[gap]=request
+                    add({power:1.,index:-request},0.,0.,'m22.'+stage+'.held_GT_start_actual_power')
+                    add({gap:1.,power:1.},request,request,'m22.'+stage+'.held_GT_start_accounted_request')
+                eb[power]-=1.;coefficients[power]=1.
+                continue
+            upper[index]=float(closure['station_ac_available'] and request>0.)
+            if name=='boiler_restart_electric_kW' and closure['boiler_ready']:upper[index]=0.
+            if name=='boiler_restart_electric_kW' and _zero_boiler_command_domain and held_steam is None:upper[index]=0.
+            upper[block['startup_gap'][name]]=request
+            add({block['startup_gap'][name]:1.,index:request},request,request,'m22.'+stage+'.'+name+'.accounted_request')
+            eb[index]-=request;coefficients[index]=request
+        for index,value in (source_coefficients or {}).items():coefficients[index]=coefficients.get(index,0.)-value
+        add(coefficients,-np.inf,source_constant,'m22.'+stage+'.station_excludes_building_UPS')
+    if closure is not None:
+        add_closure(closure_master,e,h,c,loads,np.arange(14,26).reshape(4,3),stage='current',ready=closure['station_ac_available'],
+            source_coefficients={**{int(i):1. for i in gp},ig:1.,idg:1.})
     main_balance = np.array([e, h, c])
     main_rhs = np.array([loads[:, 0].sum(), loads[:, 1].sum()/heat_factor, loads[:, 2].sum()])
     for r, rhs, carrier, unit in zip(main_balance, main_rhs, ('electric', 'steam', 'cooling'), ('kW', 'lb/h', 'kW')):
@@ -678,8 +779,10 @@ def solve_joint(row, plant, loads, availability, state, dt_h,
         add({int(used):1.,int(permission):-1.},-np.inf,0.,'command.'+names[used]+'.below_arrived_ceiling','RT',
             source='existing ordinary converter command ceiling, actual use remains balanced')
     upper[ib] = plant.boiler_steam_lbph/3*sum(availability[f'BOILER_{i+1}'] for i in range(3))
+    if _zero_boiler_command_domain:upper[ib]=0.
     upper[ig] = grid_import_limit_kW*availability['GRID']
-    upper[idg] = min(plant.emergency_diesel_kW*availability['DIESEL'], state.diesel_energy_remaining_kWh/dt_h) if diesel_start_available else 0.
+    upper[idg] = ((plant.emergency_diesel_kW*availability['DIESEL'] if closure is not None and closure['instantaneous_diesel_current'] and state.diesel_energy_remaining_kWh>0.
+        else min(plant.emergency_diesel_kW*availability['DIESEL'], state.diesel_energy_remaining_kWh/dt_h)) if diesel_start_available else 0.)
     upper[diesel_ceiling] = plant.emergency_diesel_kW*availability['DIESEL'] if state.diesel_energy_remaining_kWh>0. else 0.
     if execution_limits is not None and not execution_limits['diesel_conditionally_permitted']:
         upper[diesel_ceiling]=0.
@@ -833,6 +936,19 @@ def solve_joint(row, plant, loads, availability, state, dt_h,
             actual = np.asarray(readiness['actual_gt_kW'])
             case['rhs'][0] -= actual.sum()+readiness['actual_diesel_kW']
             case['rhs'][1] -= actual@hrsg*steam_per_kW+held_dispatch.get('boiler_steam_lbph',0.)
+        if closure is not None:
+            # Undo the legacy held steam constant: the new actual station
+            # interlock may trip it, retaining exactly its arrived setting.
+            if held:case['rhs'][1]+=held_dispatch.get('boiler_steam_lbph',0.)
+            source_indices=list(np.r_[gp,go,command_gp,command_go,rg])
+            if case['is_response']:source_indices+=list(case['response_gt'])+list(case['response_on'])
+            source={int(j):float(re[j]) for j in source_indices if re[j]>0.}
+            if not held and phase_diesel is not None:source[phase_diesel]=float(re[phase_diesel])
+            add_closure(case['m22'],re,rh,rc,demand,np.arange(ru,ru+12).reshape(4,3),stage=label,
+                ready=closure['boiler_ready'] if held or pre or label in ('regulated_current','startup_bridge') else closure['station_ac_available'],
+                source_coefficients=source,source_constant=float(np.asarray(readiness['actual_gt_kW']).sum()+readiness['actual_diesel_kW']) if held else 0.,
+                held_steam=held_dispatch.get('boiler_steam_lbph',0.) if held else None)
+            case['balance']=np.array([re,rh,rc])
         if case['certificate'] is not None:
             certificate=case['certificate'];big_m=3.*rated+plant.emergency_diesel_kW+grid_import_limit_kW
             add({rs:1.,certificate:big_m},-np.inf,big_m,'preparation.'+label+'.certified_no_surplus',
@@ -1084,6 +1200,13 @@ def solve_joint(row, plant, loads, availability, state, dt_h,
             request[contacts[group, carrier]] = 1. / max(1., float(loads[:, carrier].sum()))
         run_layer((f'ordinary_{GROUPS[group]}_active_cut', request,
                    'normalized explicitly disconnected carrier request', None), tolerance_override=0.)
+    if closure is not None:
+        co=vector()
+        for index in phase_copies['arrived_current']['m22']['startup_gap'].values():co[index]=1.
+        run_layer(('m22_current_real_start_power_after_critical',co,'kW refused current startup request',None),tolerance_override=0.)
+    if closure is not None and closure['preserve_bridge']:
+        co=vector();co[phase_copies['arrived_current']['m22']['debt']]=1.
+        run_layer(('m22_current_bridge_after_critical',co,'kWh existing bridge withdrawal',None),tolerance_override=0.)
     priority_constraints = list(constraints)
     priority_locks = copy.deepcopy(locks); priority_metadata = copy.deepcopy(metadata)
     conditional_critical=[];conditional_general=[]
@@ -1215,6 +1338,7 @@ def solve_joint(row, plant, loads, availability, state, dt_h,
     if recovery:
         co=vector();co[protection_excess]=protection_weights
         protection_preference=[('protection_target_excess',co,'weighted kW above unchanged GT relay reference; current observed hold utilization only',None)]
+        if closure is not None and not closure['research_stress_proxy']:protection_preference=[]
         endpoint_DG_preference=[]
         if endurance_active and preparation_copies:
             co=vector()
@@ -1257,12 +1381,30 @@ def solve_joint(row, plant, loads, availability, state, dt_h,
         # The common present protection preference remains behind P0/P1.
         # M adds neither reserve nor any post-incident preparation preference.
         ordered = (protection_preference if recovery else [])+service+conditional_critical+conditional_general
+    if closure is not None:
+        # Target stock and charging are shared, after current service. A
+        # conditional endpoint never advances an inventory or startup clock.
+        co=vector();co[closure_master['debt']]=1.
+        insert=next((i for i,item in enumerate(ordered) if item[0] in ('current_P2','current_P3')),len(ordered))
+        ordered.insert(insert,('m22_conditional_bridge_after_critical',co,'kWh existing bridge withdrawal',None))
+        co=vector()
+        for block in [closure_master]+[phase_copies['arrived_current']['m22']]:
+            for name in ('ups_charge_kW','cold_charge_kW'):co[block['charge_gap'][name]]=1.
+        continuity=vector()
+        for block in [closure_master]+[case['m22'] for case in copies if case['name']!='held_actual']:continuity[block['boiler_gap']]=1.
+        ordered.append(('m22_boiler_held_continuity_after_service',continuity,'lb/h unexecuted positive boiler setting',None))
+        ups_for_service=vector()
+        for block in [closure_master]+[case['m22'] for case in copies if case['name'] in ('arrived_current','regulated_current')]:
+            index=block['ports']['ups_discharge_kW']
+            if upper[index]>0.:ups_for_service[index]=1.
+        if np.any(ups_for_service):ordered.append(('m22_current_UPS_for_service_only',ups_for_service,'kW current UPS discharge after all service locks',None))
+        ordered.append(('m22_recharge_after_all_service',co,'kW real charging',None))
     # A normalized P2/P3 lock allowance would become a real contact cut and
     # stack with the unchanged fixed-execution remainder. Preserve the new
     # current service optima exactly; original P0/P1/reference locks stay intact.
     for item in ordered:
         value = run_layer(item, tolerance_override=0. if item[3] in (2, 3) or item[0].startswith(('arrived_current_','regulated_current_'))
-            or item[0] in ('normal_current_new_GT_starts', 'normal_current_GT_state_changes', 'actual_command_shaft_support','protection_target_excess','current_critical_energy_reserve') else None)
+            or item[0] in ('normal_current_new_GT_starts', 'normal_current_GT_state_changes', 'actual_command_shaft_support','protection_target_excess','current_critical_energy_reserve','m22_current_UPS_for_service_only') else None)
         if item[0] == 'normal_current_new_GT_starts':normal_startup_preference['minimum_new_GT_starts'] = value
         if item[0] == 'normal_current_GT_state_changes':normal_commitment_preference['minimum_GT_state_changes'] = value
         if soft_optimization_stopped:break
@@ -1351,6 +1493,11 @@ def solve_joint(row, plant, loads, availability, state, dt_h,
             # held copy. Restore its entire solved witness, rather than mixing
             # its new cold delivery with old auxiliary coordinates.
             x[held_case['sci_aux']] = held_solution[held_case['sci_aux']]
+        if closure is not None:
+            block=held_case['m22'];indices=list(block['ports'].values())+list(block['charge_gap'].values())+[block['boiler'],block['on'],block['debt'],block['boiler_gap']]
+            indices+=list(block['startup'].values())+list(block['startup_gap'].values())
+            indices+=[block['gt_start_power']]+list(block['gt_start_products'].values())
+            x[indices]=held_solution[indices]
     x,m18_conditional_return_permission=finalize_conditional_grid_permission(x,constraints=constraints,
         lower=lower,upper=upper,integrality=integrality,rows=metadata,variables=variables,
         ceiling=int(ceiling),execution_limits=execution_limits,
@@ -1385,6 +1532,11 @@ def solve_joint(row, plant, loads, availability, state, dt_h,
         absorption_cooling_kW=float(x[ia]*RT_TO_KW),electric_chiller_cooling_kW=(x[ie]*RT_TO_KW).tolist(),
         boiler_steam_lbph=float(x[ib]),hrsg_steam_lbph=float(gts@hrsg*steam_per_kW),
         tower_rejection_kW=float(tower@x),gt_fuel_MMBtu_h=float(gts.sum()*fuel_per_kW))
+    if closure is not None:
+        current_action.update({k:float(x[v]) for k,v in closure_master['ports'].items()})
+        current_action.update({k:float(x[v])*closure_master['startup_requests'][k] for k,v in closure_master['startup'].items()})
+        current_action['gt_start_electric_kW']=float(x[closure_master['gt_start_power']])
+        current_action['boiler_steam_lbph']=float(x[closure_master['boiler']])
     risk_records = {}
     for case in copies:
         side = case['balance']@x-case['rhs']; conv = x[case['converters']]
@@ -1418,6 +1570,11 @@ def solve_joint(row, plant, loads, availability, state, dt_h,
             continuous_path_executable_credit=False,
             preparation_status=('balanced_static_endpoint_not_continuous_path' if case['certificate'] is not None and x[case['certificate']]>.5 and x[case['surplus']]<=1e-7 else 'failed_or_diagnostic_no_preparation_credit') if recovery else 'legacy_conditional_witness_not_certified',
             no_surplus_sink_added=True)
+        if closure is not None:
+            risk_records[case['name']].update({k:float(x[v]) for k,v in case['m22']['ports'].items()})
+            risk_records[case['name']].update({k:float(x[v])*case['m22']['startup_requests'][k] for k,v in case['m22']['startup'].items()})
+            risk_records[case['name']]['gt_start_electric_kW']=float(x[case['m22']['gt_start_power']])
+            risk_records[case['name']]['boiler_steam_lbph']=float(x[case['m22']['boiler']])
         if case['name']=='held_actual' and not held_optimized:
             # Observed GT/DG ports and the effective fixed boiler setting are
             # retained. Unoptimized conversion/deficit values are not witnesses.
@@ -1735,6 +1892,14 @@ def solve_joint(row, plant, loads, availability, state, dt_h,
     readiness_phases['committed_ready']['preparation_scenarios']=diagnostic['coordination']['eventual_scenarios']
     readiness_phases['response_within_registered_bound']=dict(**response,
         preparation_scenarios=diagnostic['coordination']['response_scenarios'])
+    if closure is not None:
+        command_steam=float(command_action['boiler_steam_lbph'])
+        blocks=[('current',closure_master,command_steam)]+[(case['name'],case['m22'],float(held_dispatch.get('boiler_steam_lbph',0.)) if case['name']=='held_actual' else command_steam) for case in copies]
+        stage_truth={name:dict(steam_permission_lbph=permission,actual_steam_lbph=float(x[block['boiler']]),station_on_value=float(x[block['on']]),
+            restart_power_kW=float(x[block['startup']['boiler_restart_electric_kW']])*block['startup_requests']['boiler_restart_electric_kW'],known_zero_permission=permission==0.) for name,block,permission in blocks}
+        diagnostic['m22_boiler_command_truth']=dict(compiled_command_steam_lbph=command_steam,zero_command_domain=bool(_zero_boiler_command_domain),stages=stage_truth,
+            zero_permission_phantom_stages=[name for name,value in stage_truth.items() if value['known_zero_permission'] and (value['station_on_value']>.5 or value['restart_power_kW']>0.)],
+            check_basis='Final emitted nonnegative command; held copy uses its own effective arrived setting; no invented positive steam minimum')
     if current_only:
         return _finish_current_plan(x=x, command_action=command_action, diagnostic=diagnostic,
             copies=copies, risk_records=risk_records, loads=loads, hrsg=hrsg,
@@ -1782,6 +1947,9 @@ def _finish_current_plan(*, x, command_action, diagnostic, copies, risk_records,
         tower_rejection_kW=float(current[6]*(RT_TO_KW+plant.abs_steam_lb_per_rt*plant.steam_kWh_per_lb)
             +current[7:10].sum()*(RT_TO_KW+plant.ec_electric_kW_per_rt)),
         gt_fuel_MMBtu_h=float(powers.sum()*fuel_per_kW))
+    for name in ('ups_discharge_kW','ups_charge_kW','cold_discharge_kW','cold_charge_kW','gt_start_electric_kW','boiler_restart_electric_kW'):
+        if name in ready:current_action[name]=ready[name]
+    if 'm22' in case:current_action['boiler_steam_lbph']=ready['boiler_steam_lbph']
     command = copy.deepcopy(command_action)
     if execution_limits is not None:
         command['grid_import_kW']=grid_import_limit_kW*execution_limits['hardware_grid_available_fraction']
@@ -1817,3 +1985,63 @@ def _finish_current_plan(*, x, command_action, diagnostic, copies, risk_records,
         energy_balance_residuals=[float(residual[0]),float(residual[2]),float(residual[1]*heat_factor)],
         steam_balance_residual_lbph=float(residual[1]),optimizer_warning=optimizer_warning,
         solver_backend_layers=backend_layers,joint_diagnostic=diagnostic)
+
+
+class BoilerCommandCompilationError(SolverExecutionError):
+    category='command_compilation_domain_exhausted'
+
+
+def _compiler_phase_layers(layers,phase,valid):
+    recorded=copy.deepcopy(layers)
+    for layer in recorded:
+        layer.update(original_phase=layer.get('phase'),phase=phase,compiler_candidate_valid=valid)
+    return recorded
+
+
+def solve_joint(row, plant, loads, availability, state, dt_h,
+                grid_import_limit_kW, diesel_start_available, gt_ramp_kW_per_h,
+                solver_time_limit_sec=6., config=None, tracking_targets=None,
+                security_gt_penalty_USD_per_kWh=0., execution_contract=None, *,
+                joint_options=None, risk_loads=None, retention_eligible=False, connection_mode=None,
+                engineering_options=None, execution_context=None, readiness_context=None, coordination_options=None, execution_limits=None,
+                grid_bridge_request=False):
+    """Reject an unexecutable zero-boiler candidate; try one declared subdomain.
+
+    Strict positive steam has no declared physical minimum. Rather than invent
+    one, preserve a compiled zero command and fully reoptimize that closed
+    subdomain. A positive-command domain is not searched by this refinement.
+    """
+    arguments=dict(locals())
+    first=_solve_joint_candidate(**arguments)
+    truth=first['joint_diagnostic'].get('m22_boiler_command_truth',{})
+    invalid=truth.get('zero_permission_phantom_stages',[])
+    if not invalid:return first
+    rejection=dict(reason='zero_compiled_steam_permission_with_fixed_boiler_draw',
+        command=copy.deepcopy(first['action']),station_truth=copy.deepcopy(truth),
+        planned_current_action=copy.deepcopy(first['planned_current_action']),
+        planned_unserved_kW=np.asarray(first['lost']).tolist(),
+        solver_backend_layers=copy.deepcopy(first.get('solver_backend_layers',[])))
+    scope=dict(maximum_refinement_attempts=1,command_domain='zero boiler command; matching station-on and restart-supply coordinates fixed zero; held retains its own permission',
+        full_priority_hierarchy_reoptimized=True,prior_candidate_locks_reused=False,
+        positive_command_domain_searched=False,global_physical_infeasibility_claimed=False,
+        original_full_command_domain_optimality_claimed=False,rejected_candidate=rejection)
+    first_layers=_compiler_phase_layers(first.get('solver_backend_layers',[]),'initial_rejected_zero',False)
+    refined=None
+    try:
+        refined=_solve_joint_candidate(**arguments,_zero_boiler_command_domain=True)
+        if refined['joint_diagnostic'].get('m22_boiler_command_truth',{}).get('zero_permission_phantom_stages'):
+            raise SolverExecutionError('Zero-command refinement still violates boiler command truth')
+    except Exception as exc:
+        scope.update(status='bounded_zero_command_domain_unavailable',refinement_error_type=type(exc).__name__,refinement_error_message=str(exc))
+        failure=BoilerCommandCompilationError('M22 rejected a zero-boiler phantom station sink; one bounded zero-command refinement failed. The positive-command domain was not searched; no global physical infeasibility claim.')
+        failure.command_compilation_diagnostic=scope
+        second_layers=_compiler_phase_layers(refined.get('solver_backend_layers',[]) if refined is not None else getattr(exc,'solver_backend_attempts',[]),
+            'zero_domain_refinement',False if refined is not None else None)
+        scope['refinement_solver_layers_available']=bool(second_layers)
+        if first_layers:first_layers[0]['command_compilation_diagnostic']=scope
+        failure.solver_backend_attempts=first_layers+second_layers
+        raise failure from exc
+    scope['status']='valid_zero_command_domain_refinement'
+    refined['joint_diagnostic']['m22_boiler_zero_domain_refinement']=scope
+    refined['solver_backend_layers']=first_layers+_compiler_phase_layers(refined.get('solver_backend_layers',[]),'zero_domain_refinement',True)
+    return refined

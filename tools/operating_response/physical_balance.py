@@ -61,6 +61,15 @@ def solve_physical(row,plant:Plant,loads:np.ndarray,availability:dict[str,float]
         if any(min(float(storage_ports.get(d,0.)),float(storage_ports.get(c,0.)))>1e-9
                for d,c in (storage_names[:2],storage_names[2:])):
             raise ValueError('Storage mode must exclude simultaneous charge/discharge')
+    # Explicit opt-in M22 extensions. Historical M15--M21 calls retain their
+    # original layout, objective order and physical equations.
+    from tools.model_closure_v22.physical import current_context,bridge_withdrawal_without_debt_kWh
+    closure=current_context(config)
+    boiler_on=bridge_debt=recovery_cold=starter_on=boiler_restart_on=None
+    if closure is not None:
+        boiler_on=nvars;recovery_cold=nvars+1;starter_on=nvars+2;boiler_restart_on=nvars+3;nvars+=4
+        if storage_indices is not None and closure['preserve_bridge']:
+            bridge_debt=nvars;nvars+=1
     idx=lambda i,k:iu+i*3+k
     ppoints,spoints,fpoints=gt_level_properties(plant,float(row.outdoor_temperature_C))
     rated=float(ppoints[-1]);steam_per_kW=float(spoints[-1]/rated);fuel_per_kW=float(fpoints[-1]/rated)
@@ -94,6 +103,15 @@ def solve_physical(row,plant:Plant,loads:np.ndarray,availability:dict[str,float]
         pump=float(storage_ports.get('cold_pump_kW_per_kW',0.))
         Aeq[0,ud]=1.;Aeq[0,uc]=-1.;Aeq[0,cd]=Aeq[0,cc]=-pump
         Aeq[2,cd]=1.;Aeq[2,cc]=-1.
+    if closure is not None:
+        Aeq[0,ib]-=closure['boiler_kW_per_kWsteam']*plant.steam_kWh_per_lb
+        Aeq[0,boiler_on]=-closure['boiler_fixed_kW']
+        # A requested starter is either fully supplied or refused. It cannot
+        # turn a lawful total outage into an algebraic model failure.
+        Aeq[0,starter_on]=-closure['gt_start_kW']
+        Aeq[0,boiler_restart_on]=-closure['boiler_restart_kW']
+        Aeq[0,recovery_cold]=-(closure['recovery_pump_kW_per_kW']+closure['recovery_fan_kW_per_kW'])
+        Aeq[2,recovery_cold]=-1.
     for i in range(4):
         Aeq[0,idx(i,0)]=1
         Aeq[1,idx(i,1)]=1/(plant.steam_kWh_per_lb*plant.exchanger_eff)
@@ -131,6 +149,9 @@ def solve_physical(row,plant:Plant,loads:np.ndarray,availability:dict[str,float]
     lows=np.zeros(nvars);highs=np.full(nvars,np.inf)
     if storage_indices is not None:
         for name,index in storage_indices.items():highs[index]=float(storage_ports.get(name,0.))
+        if closure is not None:
+            pump_available=float(availability.get('AUX_CHW_PUMP',1.))
+            highs[cd]*=pump_available;highs[cc]*=pump_available
         for port,carrier in ((ud,0),(cd,2)):
             r=np.zeros(nvars);r[port]=1.
             for g in (0,1):r[idx(g,carrier)]=1.
@@ -143,6 +164,25 @@ def solve_physical(row,plant:Plant,loads:np.ndarray,availability:dict[str,float]
     highs[ib]=plant.boiler_steam_lbph/3*sum(availability[f'BOILER_{i+1}'] for i in range(3))
     highs[ig]=grid_import_limit_kW*availability['GRID']
     highs[idg]=min(plant.emergency_diesel_kW*availability['DIESEL'],state.diesel_energy_remaining_kWh/dt_h) if diesel_start_available else 0.0
+    if closure is not None:
+        if not closure['station_ac_available'] or not closure['boiler_ready']:highs[ib]=0.
+        highs[boiler_on]=float(closure['station_ac_available'] and closure['boiler_ready'])
+        highs[starter_on]=float(closure['station_ac_available'] and closure['gt_start_kW']>0.)
+        highs[boiler_restart_on]=float(closure['station_ac_available'] and not closure['boiler_ready'] and closure['boiler_restart_kW']>0.)
+        r=np.zeros(nvars);r[ib]=1.;r[boiler_on]=-highs[ib]
+        cap(r,0.,name='m22.boiler_requires_station_enabled')
+        r=np.zeros(nvars);r[ib]=closure['boiler_kW_per_kWsteam']*plant.steam_kWh_per_lb
+        r[boiler_on]=closure['boiler_fixed_kW'];r[gp]=-1.;r[ig]=r[idg]=-1.
+        r[starter_on]=closure['gt_start_kW']
+        r[boiler_restart_on]=closure['boiler_restart_kW']
+        cap(r,0.,name='m22.station_sources_exclude_building_UPS')
+        paths=min(availability.get('AUX_FAN_P0',1.),availability.get('AUX_CHW_PUMP',1.))
+        highs[recovery_cold]=closure['recovery_cooling_request_kW']*paths
+        if bridge_debt is not None:
+            r=np.zeros(nvars);r[ud]=dt_h/closure['ups_discharge_efficiency'];r[bridge_debt]=-1.
+            # Recharge occurs only after service. It cannot pay for an
+            # unauthorized discharge in the mutually exclusive current mode.
+            cap(r,bridge_withdrawal_without_debt_kWh(closure),name='m22.existing_bridge_withdrawal',unit='kWh')
     if execution_action is not None and (execution_contract or {}).get('diesel_dispatch_mode')=='arrived_ceiling':
         # M15's finite shaft-work preview locates actual exhaustion. An
         # arbitrary trial duration cannot spread the remaining fuel over Pe.
@@ -159,7 +199,15 @@ def solve_physical(row,plant:Plant,loads:np.ndarray,availability:dict[str,float]
                ib:execution_action['boiler_steam_lbph']}
         for index,value in fixed.items():
             actual=min(highs[index],max(0.,float(value)))
-            lows[index]=highs[index]=actual
+            if closure is not None and index==ib:
+                # A source-side power interlock may stop the held boiler;
+                # it may not invent a new steam setpoint. When on, its
+                # already-arrived steam setting remains exactly the same.
+                highs[index]=actual
+                if actual<=0.:highs[boiler_on]=0.
+                r=np.zeros(nvars);r[ib]=1.;r[boiler_on]=-actual
+                cap(r,0.,0.,name='m22.boiler_arrived_setting_or_station_trip',unit='lb/h')
+            else:lows[index]=highs[index]=actual
         if (execution_contract or {}).get('grid_import_mode')=='arrived_ceiling':
             lows[ig]=0. # local port can import up to the ALREADY arrived ceiling
         if (execution_contract or {}).get('diesel_dispatch_mode')=='arrived_ceiling':
@@ -182,6 +230,7 @@ def solve_physical(row,plant:Plant,loads:np.ndarray,availability:dict[str,float]
         auxiliary_required=add_dependency_constraints(row,loads,availability,auxiliary_indices,
             np.arange(iu,iu+12).reshape(4,3),add_dependency,highs)
     integral=np.zeros(nvars,dtype=int);integral[go]=1
+    if closure is not None:integral[boiler_on]=integral[starter_on]=integral[boiler_restart_on]=1
     constraints=[LinearConstraint(Aeq,beq,beq),LinearConstraint(np.asarray(A),np.asarray(low),np.asarray(high))]
     # Opt-in snapshots preserve exact solver arrays before any clipping. The
     # collector is disabled during ordinary execution and changes no argument.
@@ -199,6 +248,9 @@ def solve_physical(row,plant:Plant,loads:np.ndarray,availability:dict[str,float]
         units += ['fraction']*12
     if storage_indices is not None:
         variable_names += list(storage_names);units += ['kW']*4
+    if closure is not None:
+        variable_names+=['m22.boiler.on','m22.recovery_cooling','m22.starter.fully_supplied','m22.boiler.restart_supplied'];units+=['binary','kW','binary','binary']
+        if bridge_debt is not None:variable_names+=['m22.UPS.bridge_withdrawal'];units+=['kWh']
     variables=[dict(index=i,name=name,unit=units[i]) for i,name in enumerate(variable_names)]
     diagnostic_input={}
     if active_collector() is not None:
@@ -210,20 +262,42 @@ def solve_physical(row,plant:Plant,loads:np.ndarray,availability:dict[str,float]
     locks=[]
     lex_values=[];x=None;optimizer_warning='';backend_layers=[]
     charge_active=storage_indices is not None and (highs[uc]>0. or highs[cc]>0.)
-    for group in range(6 if charge_active else 5):
-        charging_layer=charge_active and group==4
-        c=np.zeros(nvars) if group<4 or charging_layer else c_cost.copy()
+    ordered=[0,1]+(['start'] if closure is not None and max(highs[starter_on],highs[boiler_restart_on])>0. else [])+(['bridge'] if bridge_debt is not None else [])+[2,3]
+    continuity_active=closure is not None and execution_action is not None and float(execution_action.get('boiler_steam_lbph',0.))>0.
+    if continuity_active:ordered+=['boiler_continuity']
+    if closure is not None and storage_indices is not None and highs[ud]>0.:
+        # A bridge store may improve locked current service, but it is not
+        # a free substitute for an already adequate real source's fuel.
+        ordered+=['ups_current_service_only']
+    if charge_active:ordered+=['charge']
+    if closure is not None and highs[recovery_cold]>0.:ordered+=['recovery']
+    ordered+=['cost']
+    for rank,group in enumerate(ordered):
+        service_layer=isinstance(group,int)
+        charging_layer=group=='charge'
+        bridge_layer=group=='bridge'
+        recovery_layer=group=='recovery'
+        start_layer=group=='start'
+        continuity_layer=group=='boiler_continuity'
+        ups_service_layer=group=='ups_current_service_only'
+        c=np.zeros(nvars) if service_layer or charging_layer or bridge_layer or recovery_layer or start_layer or continuity_layer or ups_service_layer else c_cost.copy()
+        if ups_service_layer:c[ud]=1.
+        if continuity_layer:c[boiler_on]=-1.
         if charging_layer:
             c[uc]=-1.;c[cc]=-1.
-        if group<4:
+        if bridge_layer:c[bridge_debt]=1.
+        if recovery_layer:c[recovery_cold]=-1.
+        if start_layer:
+            c[starter_on]=-closure['gt_start_kW'];c[boiler_restart_on]=-closure['boiler_restart_kW']
+        if service_layer:
             for k in range(3):c[idx(group,k)]=1/max(1.,float(loads[:,k].sum()))
         # Native backend retains explicit five layers and the unchanged locks.
         # Equivalent positive row scaling is uniform; finite numerical recovery
         # is registered separately and never grants an execution capability.
         res=solve_layer(milp,c,integrality=integral,bounds=Bounds(lows,highs),constraints=constraints,
-            options={'time_limit':solver_time_limit_sec,'mip_rel_gap':1e-6,'presolve':False},rank=group,variables=variables,
+            options={'time_limit':solver_time_limit_sec,'mip_rel_gap':1e-6,'presolve':False},rank=rank,variables=variables,
             rows=row_metadata,locks=locks,input_context=diagnostic_input,row_scaling=True)
-        backend_layers.append(dict(rank=group,backend=getattr(res,'backend','injected'),
+        backend_layers.append(dict(rank=rank,layer=group,backend=getattr(res,'backend','injected'),
             numerical_version=getattr(res,'numerical_version',None),status=int(res.status),
             attempts=getattr(res,'attempts',[])))
         if res.x is None or res.status!=0:
@@ -241,17 +315,23 @@ def solve_physical(row,plant:Plant,loads:np.ndarray,availability:dict[str,float]
             except Exception as failure:
                 failure.solver_backend_attempts=backend_layers
                 raise
-        if group<4 or charging_layer:
-            val=float(c@x);lex_values.append(val)
-            tol=1e-7 if charging_layer else lex_lock_tolerance(group,val,config)
+        if service_layer or charging_layer or bridge_layer or recovery_layer or start_layer or continuity_layer or ups_service_layer:
+            val=float(c@x)
+            if service_layer or charging_layer:lex_values.append(val)
+            tol=lex_lock_tolerance(group,val,config) if service_layer else 0. if ups_service_layer else 1e-7
             constraints.append(LinearConstraint(c,-np.inf,val+tol))
-            if not charging_layer:
+            if service_layer:
                 # This diagnostic list is specifically nonnegative ENS locks.
                 # The recharge lock remains an explicit constraint/metadata
                 # row, not an ENS implication for the backend preconditioner.
-                locks.append(dict(source_rank=group,objective=c.copy(),objective_constant=0.,incumbent_raw_objective=val,
+                locks.append(dict(source_rank=rank,objective=c.copy(),objective_constant=0.,incumbent_raw_objective=val,
                                   tolerance=tol,upper=val+tol,relation='<=',unit='normalized carrier ENS',source='raw incumbent c@x'))
-            row_metadata.append(dict(name='storage.recharge_after_all_service' if charging_layer else f'priority.{GROUPS[group]}.normalized_ENS.upper',unit='dimensionless',
+            name=('storage.recharge_after_all_service' if charging_layer else 'm22.preserve_existing_bridge_after_critical' if bridge_layer
+                else 'm22.UPS_discharge_only_for_current_service_after_all_service' if ups_service_layer
+                else 'm22.held_boiler_continuity_after_all_service' if continuity_layer
+                else 'm22.actual_recovery_after_all_service' if recovery_layer else 'm22.real_start_power_after_critical' if start_layer
+                else f'priority.{GROUPS[group]}.normalized_ENS.upper')
+            row_metadata.append(dict(name=name,unit='kWh' if bridge_layer else 'kW' if recovery_layer or start_layer or ups_service_layer else 'dimensionless',
                                      source=f'raw rank {group} objective plus original tolerance',kind='priority_lock'))
     auxiliary_bound_validation=None
     if sci_dependencies:
@@ -273,6 +353,14 @@ def solve_physical(row,plant:Plant,loads:np.ndarray,availability:dict[str,float]
     if storage_indices is not None:
         e_actual+=float(x[ud]-x[uc]-pump*(x[cd]+x[cc]))
         c_actual+=float(x[cd]-x[cc])
+    boiler_electric=0.;actual_recovery=0.;starter_electric=0.
+    if closure is not None:
+        from tools.model_closure_v22.physical import boiler_auxiliary_kW
+        boiler_electric=boiler_auxiliary_kW(float(x[ib]),x[boiler_on],plant.steam_kWh_per_lb,closure)
+        actual_recovery=float(x[recovery_cold])
+        starter_electric=closure['gt_start_kW']*float(x[starter_on])
+        e_actual-=boiler_electric+starter_electric+closure['boiler_restart_kW']*float(x[boiler_restart_on])+(closure['recovery_pump_kW_per_kW']+closure['recovery_fan_kW_per_kW'])*actual_recovery
+        c_actual-=actual_recovery
     steam_actual=sum(gts[i]*steam_per_kW*availability[f'HRSG_{i+1}'] for i in range(3)) +x[ib]-x[ia]*plant.abs_steam_lb_per_rt-x[iw]
     steam_residual_lbph=steam_actual-float(served[:,1].sum())/(plant.steam_kWh_per_lb*plant.exchanger_eff)
     steam_residual_kW=steam_residual_lbph*plant.steam_kWh_per_lb*plant.exchanger_eff
@@ -288,6 +376,14 @@ def solve_physical(row,plant:Plant,loads:np.ndarray,availability:dict[str,float]
     if storage_indices is not None:
         action.update({name:float(x[index]) for name,index in storage_indices.items()})
         action['cold_storage_pump_kW']=float(pump*(x[cd]+x[cc]))
+    if closure is not None:
+        action.update(boiler_auxiliary_kW=float(boiler_electric),gt_start_electric_kW=starter_electric,
+            boiler_restart_electric_kW=closure['boiler_restart_kW']*float(x[boiler_restart_on]),
+            station_auxiliary_kW=float(boiler_electric+starter_electric+closure['boiler_restart_kW']*float(x[boiler_restart_on])),
+            recovery_cooling_kW=actual_recovery,
+            recovery_pump_electric_kW=closure['recovery_pump_kW_per_kW']*actual_recovery,
+            recovery_fan_electric_kW=closure['recovery_fan_kW_per_kW']*actual_recovery)
+        action['boiler_station_running']=bool(x[boiler_on]>.5)
     # Tracking deviations are artificial controller penalties, not actual
     # gas/electricity/diesel expenditure. Keep them separate for publications.
     security_penalty=float(security_weight*dt_h*gts.sum())

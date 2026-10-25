@@ -1,0 +1,101 @@
+﻿run,check,status,samples,missing,max_error,tolerance,unit,worst_minute,evidence
+m22_cold_bank_t0_full_01,result_completed,PASS,1,0,0.0,0.0,boolean,,completed
+m22_cold_bank_t0_full_01,frozen_source_binding,PASS,1,0,0.0,0.0,boolean,,
+m22_cold_bank_t0_full_01,frozen_input_binding,PASS,1,0,0.0,0.0,boolean,,
+m22_cold_bank_t0_full_01,raw_sha256,PASS,1,0,0.0,0.0,boolean,,
+m22_cold_bank_t0_full_01,process_row_count,PASS,1,0,0.0,0.0,boolean,,RAW=91 PROCESS=91
+m22_cold_bank_t0_full_01,native_half_open_contiguous,PASS,1,0,0.0,0.0,boolean,,
+m22_cold_bank_t0_full_01,observed_requested_end,PASS,1,0,0.0,1e-07,minute,,"observed=90.0, requested=90.0"
+m22_cold_bank_t0_full_01,service_4x3_identity,PASS,91,0,7.105427357601002e-15,1e-07,kW,0.0,
+m22_cold_bank_t0_full_01,electric_balance_independent,PASS,91,0,1.1368683772161603e-13,0.0001,kW,30.0,source=490.91136080089143;UPS=0.0;sinks=4.819237167072417;delivered=486.0921236338189
+m22_cold_bank_t0_full_01,cooling_balance_independent,PASS,91,0,5.684341886080802e-14,0.0001,kW,60.0,
+m22_cold_bank_t0_full_01,heat_supply_ge_delivery_plus_ABS,PASS,91,0,0.0,0.0001,lbph,0.0,derived unused steam=1158.7229230871058; iw permitted by original model
+m22_cold_bank_t0_full_01,source_aux_excludes_UPS,PASS,91,0,0.0,0.0001,kW,0.0,station=0.0;AC source=192.99722341815863;UPS excluded
+m22_cold_bank_t0_full_01,station_components_sum,PASS,91,0,0.0,1e-07,kW,0.0,
+m22_cold_bank_t0_full_01,boiler_aux_formula,PASS,91,0,0.0,1e-07,kW,0.0,
+m22_cold_bank_t0_full_01,cold_pump_formula,PASS,91,0,0.0,1e-07,kW,0.0,
+m22_cold_bank_t0_full_01,nonnegative_actual_ports,PASS,91,0,0.0,1e-07,native_port_unit,0.0,
+m22_cold_bank_t0_full_01,GT_capacity,PASS,91,0,0.0,0.0001,kW,0.0,
+m22_cold_bank_t0_full_01,HRSG_source_slope,PASS,91,0,0.0,0.0001,lbph,0.0,
+m22_cold_bank_t0_full_01,chiller_capacities,PASS,91,0,0.0,0.0001,kW_cold,0.0,
+m22_cold_bank_t0_full_01,boiler_capacity,PASS,91,0,0.0,0.0001,lbph,0.0,
+m22_cold_bank_t0_full_01,tower_rejection_formula,PASS,91,0,0.0,0.0001,kW,0.0,
+m22_cold_bank_t0_full_01,tower_capacity,PASS,91,0,0.0,0.0001,kW,0.0,
+m22_cold_bank_t0_full_01,diesel_rated_capacity,PASS,91,0,0.0,0.0001,kW,0.0,
+m22_cold_bank_t0_full_01,effective_grid_capacity,PASS,91,0,0.0,0.0001,kW,0.0,
+m22_cold_bank_t0_full_01,ups_charge_discharge_mutex,PASS,91,0,0.0,1e-07,kW,0.0,
+m22_cold_bank_t0_full_01,ups_power_limit,PASS,91,0,0.0,1e-07,kW,0.0,
+m22_cold_bank_t0_full_01,ups_inventory_bounds,PASS,91,0,0.0,1e-07,kWh,0.0,
+m22_cold_bank_t0_full_01,ups_independent_inventory_and_losses,PASS,91,0,0.0,1e-07,kWh,0.0,
+m22_cold_bank_t0_full_01,cold_store_charge_discharge_mutex,PASS,91,0,0.0,1e-07,kW,0.0,
+m22_cold_bank_t0_full_01,cold_store_power_limit,PASS,91,0,0.0,1e-07,kW,0.0,
+m22_cold_bank_t0_full_01,cold_store_inventory_bounds,PASS,91,0,0.0,1e-07,kWh,0.0,
+m22_cold_bank_t0_full_01,cold_store_independent_inventory_and_losses,PASS,91,0,3.552713678800501e-15,1e-07,kWh,21.0,
+m22_cold_bank_t0_full_01,DG_shaft_electric_loss_rotor,PASS,91,0,0.0,1e-06,kWh,0.0,Pm=0.0;Pe=0.0;loss=0.0;dRotor=0.0
+m22_cold_bank_t0_full_01,DG_electric_action_integral,PASS,91,0,0.0,1e-06,kWh,0.0,
+m22_cold_bank_t0_full_01,DG_budget_debit_and_bounds,PASS,91,0,0.0,1e-06,kWh_shaft_equivalent,0.0,
+m22_cold_bank_t0_full_01,PROCESS_matches_RAW_native_fields,PASS,91,0,0.0,1e-07,native_field_unit,0.0,
+m22_cold_bank_t0_full_01,ups_inventory_continuity,PASS,90,0,0.0,1e-07,kWh,1.0,
+m22_cold_bank_t0_full_01,cold_store_inventory_continuity,PASS,90,0,0.0,1e-07,kWh,1.0,
+m22_cold_bank_t0_full_01,RESULT_carrier_service_integrals,PASS,12,0,0.0,1e-07,kWh,,
+m22_cold_bank_t0_full_01,RESULT_actual_energy_integrals,PASS,13,0,0.0,1e-07,field_native_energy_unit,,RAW grid_import_kW vs RESULT.metrics.actual_energy.grid_import_kWh
+m22_cold_bank_t0_full_01,RESULT_actual_cost_sum,PASS,1,0,0.0,1e-07,USD,,RAW sum cost_USD_step; DG shaft correction and initial-inventory fee remain separate
+m22_cold_bank_t0_full_01,emissions_factor_file_binding,PASS,1,0,0.0,0.0,boolean,,D:\hospital_ies_v22_20261025\outputs\v20_load_accounting_20261019_run01\references\EMISSIONS_FACTOR_REGISTRY.json
+m22_cold_bank_t0_full_01,addon_first_native_clock_is_zero,PASS,1,0,0.0,0.0,boolean,,
+m22_cold_bank_t0_full_01,addon_initial_profile_inventory,PASS,1,0,0.0,1e-07,kWh,0.0,actual=60.0;profile=60.0
+m22_cold_bank_t0_full_01,addon_actual_ABS_EC_zero_during_fault,PASS,61,0,0.0,1e-07,kW_cold,0.0,
+m22_cold_bank_t0_full_01,addon_GRID_hardware_healthy_during_fault,PASS,61,0,0.0,0.0,boolean,,t=0.0
+m22_cold_bank_t0_full_01,addon_GRID_actually_connected_during_fault,PASS,61,0,0.0,0.0,boolean,,"t=0.0,state=GRID"
+m22_cold_bank_t0_full_01,addon_GRID_actual_import_observed_within_fault,PASS,1,0,0.0,0.0,boolean,,"actual GRID energy during [0,60)=367.6904453134589 kWh; per-interval zero import is allowed, healthy connection checked separately"
+m22_cold_bank_t0_full_01,addon_full_store_support_mechanism_observed,PASS,1,0,0.0,0.0,boolean,,"actual useful cold during [0,60)=56.79106378282998 kWh"
+m22_cold_bank_t0_full_01,addon_full_store_actual_pump_energy_positive,PASS,1,0,0.0,0.0,boolean,,"actual pump electricity during [0,60)=1.1358212756566002 kWh"
+m22_cold_bank_t0_empty_01,result_completed,PASS,1,0,0.0,0.0,boolean,,completed
+m22_cold_bank_t0_empty_01,frozen_source_binding,PASS,1,0,0.0,0.0,boolean,,
+m22_cold_bank_t0_empty_01,frozen_input_binding,PASS,1,0,0.0,0.0,boolean,,
+m22_cold_bank_t0_empty_01,raw_sha256,PASS,1,0,0.0,0.0,boolean,,
+m22_cold_bank_t0_empty_01,process_row_count,PASS,1,0,0.0,0.0,boolean,,RAW=90 PROCESS=90
+m22_cold_bank_t0_empty_01,native_half_open_contiguous,PASS,1,0,0.0,0.0,boolean,,
+m22_cold_bank_t0_empty_01,observed_requested_end,PASS,1,0,0.0,1e-07,minute,,"observed=90.0, requested=90.0"
+m22_cold_bank_t0_empty_01,service_4x3_identity,PASS,90,0,1.4210854715202004e-14,1e-07,kW,0.0,
+m22_cold_bank_t0_empty_01,electric_balance_independent,PASS,90,0,5.684341886080802e-14,0.0001,kW,15.0,source=486.59212363381886;UPS=0.0;sinks=0.5;delivered=486.0921236338188
+m22_cold_bank_t0_empty_01,cooling_balance_independent,PASS,90,0,5.684341886080802e-14,0.0001,kW,60.0,
+m22_cold_bank_t0_empty_01,heat_supply_ge_delivery_plus_ABS,PASS,90,0,0.0,0.0001,lbph,0.0,derived unused steam=1156.0399383472939; iw permitted by original model
+m22_cold_bank_t0_empty_01,source_aux_excludes_UPS,PASS,90,0,0.0,0.0001,kW,0.0,station=0.0;AC source=192.99722341815863;UPS excluded
+m22_cold_bank_t0_empty_01,station_components_sum,PASS,90,0,0.0,1e-07,kW,0.0,
+m22_cold_bank_t0_empty_01,boiler_aux_formula,PASS,90,0,0.0,1e-07,kW,0.0,
+m22_cold_bank_t0_empty_01,cold_pump_formula,PASS,90,0,0.0,1e-07,kW,0.0,
+m22_cold_bank_t0_empty_01,nonnegative_actual_ports,PASS,90,0,0.0,1e-07,native_port_unit,0.0,
+m22_cold_bank_t0_empty_01,GT_capacity,PASS,90,0,0.0,0.0001,kW,0.0,
+m22_cold_bank_t0_empty_01,HRSG_source_slope,PASS,90,0,0.0,0.0001,lbph,0.0,
+m22_cold_bank_t0_empty_01,chiller_capacities,PASS,90,0,0.0,0.0001,kW_cold,0.0,
+m22_cold_bank_t0_empty_01,boiler_capacity,PASS,90,0,0.0,0.0001,lbph,0.0,
+m22_cold_bank_t0_empty_01,tower_rejection_formula,PASS,90,0,0.0,0.0001,kW,0.0,
+m22_cold_bank_t0_empty_01,tower_capacity,PASS,90,0,0.0,0.0001,kW,0.0,
+m22_cold_bank_t0_empty_01,diesel_rated_capacity,PASS,90,0,0.0,0.0001,kW,0.0,
+m22_cold_bank_t0_empty_01,effective_grid_capacity,PASS,90,0,0.0,0.0001,kW,0.0,
+m22_cold_bank_t0_empty_01,ups_charge_discharge_mutex,PASS,90,0,0.0,1e-07,kW,0.0,
+m22_cold_bank_t0_empty_01,ups_power_limit,PASS,90,0,0.0,1e-07,kW,0.0,
+m22_cold_bank_t0_empty_01,ups_inventory_bounds,PASS,90,0,0.0,1e-07,kWh,0.0,
+m22_cold_bank_t0_empty_01,ups_independent_inventory_and_losses,PASS,90,0,0.0,1e-07,kWh,0.0,
+m22_cold_bank_t0_empty_01,cold_store_charge_discharge_mutex,PASS,90,0,0.0,1e-07,kW,0.0,
+m22_cold_bank_t0_empty_01,cold_store_power_limit,PASS,90,0,0.0,1e-07,kW,0.0,
+m22_cold_bank_t0_empty_01,cold_store_inventory_bounds,PASS,90,0,0.0,1e-07,kWh,0.0,
+m22_cold_bank_t0_empty_01,cold_store_independent_inventory_and_losses,PASS,90,0,3.552713678800501e-15,1e-07,kWh,68.0,
+m22_cold_bank_t0_empty_01,DG_shaft_electric_loss_rotor,PASS,90,0,0.0,1e-06,kWh,0.0,Pm=0.0;Pe=0.0;loss=0.0;dRotor=0.0
+m22_cold_bank_t0_empty_01,DG_electric_action_integral,PASS,90,0,0.0,1e-06,kWh,0.0,
+m22_cold_bank_t0_empty_01,DG_budget_debit_and_bounds,PASS,90,0,0.0,1e-06,kWh_shaft_equivalent,0.0,
+m22_cold_bank_t0_empty_01,PROCESS_matches_RAW_native_fields,PASS,90,0,0.0,1e-07,native_field_unit,0.0,
+m22_cold_bank_t0_empty_01,ups_inventory_continuity,PASS,89,0,0.0,1e-07,kWh,1.0,
+m22_cold_bank_t0_empty_01,cold_store_inventory_continuity,PASS,89,0,0.0,1e-07,kWh,1.0,
+m22_cold_bank_t0_empty_01,RESULT_carrier_service_integrals,PASS,12,0,0.0,1e-07,kWh,,
+m22_cold_bank_t0_empty_01,RESULT_actual_energy_integrals,PASS,13,0,0.0,1e-07,field_native_energy_unit,,RAW grid_import_kW vs RESULT.metrics.actual_energy.grid_import_kWh
+m22_cold_bank_t0_empty_01,RESULT_actual_cost_sum,PASS,1,0,0.0,1e-07,USD,,RAW sum cost_USD_step; DG shaft correction and initial-inventory fee remain separate
+m22_cold_bank_t0_empty_01,emissions_factor_file_binding,PASS,1,0,0.0,0.0,boolean,,D:\hospital_ies_v22_20261025\outputs\v20_load_accounting_20261019_run01\references\EMISSIONS_FACTOR_REGISTRY.json
+m22_cold_bank_t0_empty_01,addon_first_native_clock_is_zero,PASS,1,0,0.0,0.0,boolean,,
+m22_cold_bank_t0_empty_01,addon_initial_profile_inventory,PASS,1,0,0.0,1e-07,kWh,0.0,actual=0.0;profile=0.0
+m22_cold_bank_t0_empty_01,addon_empty_initial_inventory_exact_zero,PASS,1,0,0.0,0.0,boolean,,first actual receipt initial=0.0
+m22_cold_bank_t0_empty_01,addon_actual_ABS_EC_zero_during_fault,PASS,60,0,0.0,1e-07,kW_cold,0.0,
+m22_cold_bank_t0_empty_01,addon_GRID_hardware_healthy_during_fault,PASS,60,0,0.0,0.0,boolean,,t=0.0
+m22_cold_bank_t0_empty_01,addon_GRID_actually_connected_during_fault,PASS,60,0,0.0,0.0,boolean,,"t=0.0,state=GRID"
+m22_cold_bank_t0_empty_01,addon_empty_no_actual_discharge_before_restoration,PASS,60,0,0.0,1e-07,kW,0.0,
+m22_cold_bank_t0_empty_01,addon_GRID_actual_import_observed_within_fault,PASS,1,0,0.0,0.0,boolean,,"actual GRID energy during [0,60)=366.9504484139293 kWh; per-interval zero import is allowed, healthy connection checked separately"

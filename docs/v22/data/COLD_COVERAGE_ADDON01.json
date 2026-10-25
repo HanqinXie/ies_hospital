@@ -1,0 +1,25 @@
+{
+  "schema": "v22.coverage_addon01",
+  "registered_utc": "2026-10-25T05:31:06.343998+00:00",
+  "original_final42_unchanged": true,
+  "frozen_source": "FROZEN_SOURCE_FINAL03.json",
+  "budget": 2,
+  "evaluation_role": "seen_constructed_functional_regression_not_independent",
+  "unchanged": "annual loads, capacities, common model, original protection/material thresholds, policy C, actual paths",
+  "changed": "declared EC+ABS fault at reset and explicitly registered H2/H2_empty initial inventory; no warmup recharge",
+  "execution": "only after lane1 closes; max two physical workers; one actual attempt per fresh output; stop on failure",
+  "jobs": [
+    {
+      "name": "m22_cold_bank_t0_full_01",
+      "case_file": "E:\\hospital_ies_v22_20261025\\recipes\\cold_bank_t0_full.json",
+      "case_file_sha256": "2ffd802659a69c6f4709690b8536e9b74ee39f7fff6370c02a5b19954b0be408",
+      "output": "E:\\hospital_ies_v22_20261025\\runs\\m22_cold_bank_t0_full_01"
+    },
+    {
+      "name": "m22_cold_bank_t0_empty_01",
+      "case_file": "E:\\hospital_ies_v22_20261025\\recipes\\cold_bank_t0_empty.json",
+      "case_file_sha256": "a941c08b4f1ddb67cdd191e0af0fb73eeb2e1b7607eeb3210933eefc6e43e8b1",
+      "output": "E:\\hospital_ies_v22_20261025\\runs\\m22_cold_bank_t0_empty_01"
+    }
+  ]
+}

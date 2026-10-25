@@ -1,0 +1,91 @@
+﻿run,check,status,samples,missing,max_error,tolerance,unit,worst_minute,evidence
+m22_release_long_C_01,result_completed,PASS,1,0,0.0,0.0,boolean,,completed
+m22_release_long_C_01,frozen_source_binding,PASS,1,0,0.0,0.0,boolean,,
+m22_release_long_C_01,frozen_input_binding,PASS,1,0,0.0,0.0,boolean,,
+m22_release_long_C_01,raw_sha256,PASS,1,0,0.0,0.0,boolean,,
+m22_release_long_C_01,process_row_count,PASS,1,0,0.0,0.0,boolean,,RAW=525 PROCESS=525
+m22_release_long_C_01,native_half_open_contiguous,PASS,1,0,0.0,0.0,boolean,,
+m22_release_long_C_01,observed_requested_end,PASS,1,0,0.0,1e-07,minute,,"observed=480.0, requested=480.0"
+m22_release_long_C_01,service_4x3_identity,PASS,525,0,5.684341886080802e-14,1e-07,kW,79.0,
+m22_release_long_C_01,electric_balance_independent,PASS,525,0,1.1368683772161603e-13,0.0001,kW,79.0,source=431.00310881440237;UPS=0.0038868956766208193;sinks=4.811116450658448;delivered=426.1958792594206
+m22_release_long_C_01,cooling_balance_independent,PASS,525,0,1.4210854715202004e-14,0.0001,kW,60.0,
+m22_release_long_C_01,heat_supply_ge_delivery_plus_ABS,PASS,525,0,0.0,0.0001,lbph,0.0,derived unused steam=119.29258374923324; iw permitted by original model
+m22_release_long_C_01,source_aux_excludes_UPS,PASS,525,0,0.0,0.0001,kW,0.0,station=0.5;AC source=444.7308576417992;UPS excluded
+m22_release_long_C_01,station_components_sum,PASS,525,0,0.0,1e-07,kW,0.0,
+m22_release_long_C_01,boiler_aux_formula,PASS,525,0,0.0,1e-07,kW,0.0,
+m22_release_long_C_01,cold_pump_formula,PASS,525,0,0.0,1e-07,kW,0.0,
+m22_release_long_C_01,nonnegative_actual_ports,PASS,525,0,0.0,1e-07,native_port_unit,0.0,
+m22_release_long_C_01,GT_capacity,PASS,525,0,0.0,0.0001,kW,0.0,
+m22_release_long_C_01,HRSG_source_slope,PASS,525,0,0.0,0.0001,lbph,0.0,
+m22_release_long_C_01,chiller_capacities,PASS,525,0,0.0,0.0001,kW_cold,0.0,
+m22_release_long_C_01,boiler_capacity,PASS,525,0,0.0,0.0001,lbph,0.0,
+m22_release_long_C_01,tower_rejection_formula,PASS,525,0,5.684341886080802e-14,0.0001,kW,0.0,
+m22_release_long_C_01,tower_capacity,PASS,525,0,0.0,0.0001,kW,0.0,
+m22_release_long_C_01,diesel_rated_capacity,PASS,525,0,0.0,0.0001,kW,0.0,
+m22_release_long_C_01,effective_grid_capacity,PASS,525,0,0.0,0.0001,kW,0.0,
+m22_release_long_C_01,ups_charge_discharge_mutex,PASS,525,0,0.0,1e-07,kW,0.0,
+m22_release_long_C_01,ups_power_limit,PASS,525,0,0.0,1e-07,kW,0.0,
+m22_release_long_C_01,ups_inventory_bounds,PASS,525,0,0.0,1e-07,kWh,0.0,
+m22_release_long_C_01,ups_independent_inventory_and_losses,PASS,525,0,1.4210854715202004e-14,1e-07,kWh,330.0,
+m22_release_long_C_01,cold_store_charge_discharge_mutex,PASS,525,0,0.0,1e-07,kW,0.0,
+m22_release_long_C_01,cold_store_power_limit,PASS,525,0,0.0,1e-07,kW,0.0,
+m22_release_long_C_01,cold_store_inventory_bounds,PASS,525,0,0.0,1e-07,kWh,0.0,
+m22_release_long_C_01,cold_store_independent_inventory_and_losses,PASS,525,0,0.0,1e-07,kWh,0.0,
+m22_release_long_C_01,DG_shaft_electric_loss_rotor,PASS,525,0,3.88824774846011e-16,1e-06,kWh,288.0,Pm=1.8919506078569803;Pe=1.5919506078600194;loss=0.3000000000159986;dRotor=-1.9037271512287488e-11
+m22_release_long_C_01,DG_electric_action_integral,PASS,525,0,2.220446049250313e-16,1e-06,kWh,91.0,
+m22_release_long_C_01,DG_budget_debit_and_bounds,PASS,525,0,2.2426505097428162e-13,1e-06,kWh_shaft_equivalent,165.0,
+m22_release_long_C_01,PROCESS_matches_RAW_native_fields,PASS,525,0,0.0,1e-07,native_field_unit,0.0,
+m22_release_long_C_01,ups_inventory_continuity,PASS,524,0,0.0,1e-07,kWh,1.0,
+m22_release_long_C_01,cold_store_inventory_continuity,PASS,524,0,0.0,1e-07,kWh,1.0,
+m22_release_long_C_01,RESULT_carrier_service_integrals,PASS,12,0,0.0,1e-07,kWh,,
+m22_release_long_C_01,RESULT_actual_energy_integrals,PASS,13,0,0.0,1e-07,field_native_energy_unit,,RAW grid_import_kW vs RESULT.metrics.actual_energy.grid_import_kWh
+m22_release_long_C_01,RESULT_actual_cost_sum,PASS,1,0,0.0,1e-07,USD,,RAW sum cost_USD_step; DG shaft correction and initial-inventory fee remain separate
+m22_release_long_C_01,emissions_factor_file_binding,PASS,1,0,0.0,0.0,boolean,,D:\hospital_ies_v22_20261025\outputs\v20_load_accounting_20261019_run01\references\EMISSIONS_FACTOR_REGISTRY.json
+m22_release_long_C_01,release_flag_exactly_matches_current_registered_conditions,PASS,32,0,0.0,0.0,boolean,,"t=0.0,elapsed=0.0,ready=True,active=False"
+m22_release_long_C_01,release_witness_no_DG_and_no_pending_generation_credit,PASS,32,0,0.0,0.0,boolean,,t=0.0
+m22_release_long_C_01,release_current_observation_clock_not_future,PASS,32,0,0.0,0.0,boolean,,t=0.0
+m22_release_long_A_01,result_completed,PASS,1,0,0.0,0.0,boolean,,completed
+m22_release_long_A_01,frozen_source_binding,PASS,1,0,0.0,0.0,boolean,,
+m22_release_long_A_01,frozen_input_binding,PASS,1,0,0.0,0.0,boolean,,
+m22_release_long_A_01,raw_sha256,PASS,1,0,0.0,0.0,boolean,,
+m22_release_long_A_01,process_row_count,PASS,1,0,0.0,0.0,boolean,,RAW=525 PROCESS=525
+m22_release_long_A_01,native_half_open_contiguous,PASS,1,0,0.0,0.0,boolean,,
+m22_release_long_A_01,observed_requested_end,PASS,1,0,0.0,1e-07,minute,,"observed=480.0, requested=480.0"
+m22_release_long_A_01,service_4x3_identity,PASS,525,0,5.684341886080802e-14,1e-07,kW,79.0,
+m22_release_long_A_01,electric_balance_independent,PASS,525,0,1.1368683772161603e-13,0.0001,kW,79.0,source=431.00310881440237;UPS=0.0038868956766208193;sinks=4.811116450658448;delivered=426.1958792594206
+m22_release_long_A_01,cooling_balance_independent,PASS,525,0,1.4210854715202004e-14,0.0001,kW,60.0,
+m22_release_long_A_01,heat_supply_ge_delivery_plus_ABS,PASS,525,0,0.0,0.0001,lbph,0.0,derived unused steam=119.29258374923324; iw permitted by original model
+m22_release_long_A_01,source_aux_excludes_UPS,PASS,525,0,0.0,0.0001,kW,0.0,station=0.5;AC source=444.7308576417992;UPS excluded
+m22_release_long_A_01,station_components_sum,PASS,525,0,0.0,1e-07,kW,0.0,
+m22_release_long_A_01,boiler_aux_formula,PASS,525,0,0.0,1e-07,kW,0.0,
+m22_release_long_A_01,cold_pump_formula,PASS,525,0,0.0,1e-07,kW,0.0,
+m22_release_long_A_01,nonnegative_actual_ports,PASS,525,0,0.0,1e-07,native_port_unit,0.0,
+m22_release_long_A_01,GT_capacity,PASS,525,0,0.0,0.0001,kW,0.0,
+m22_release_long_A_01,HRSG_source_slope,PASS,525,0,0.0,0.0001,lbph,0.0,
+m22_release_long_A_01,chiller_capacities,PASS,525,0,0.0,0.0001,kW_cold,0.0,
+m22_release_long_A_01,boiler_capacity,PASS,525,0,0.0,0.0001,lbph,0.0,
+m22_release_long_A_01,tower_rejection_formula,PASS,525,0,5.684341886080802e-14,0.0001,kW,0.0,
+m22_release_long_A_01,tower_capacity,PASS,525,0,0.0,0.0001,kW,0.0,
+m22_release_long_A_01,diesel_rated_capacity,PASS,525,0,0.0,0.0001,kW,0.0,
+m22_release_long_A_01,effective_grid_capacity,PASS,525,0,0.0,0.0001,kW,0.0,
+m22_release_long_A_01,ups_charge_discharge_mutex,PASS,525,0,0.0,1e-07,kW,0.0,
+m22_release_long_A_01,ups_power_limit,PASS,525,0,0.0,1e-07,kW,0.0,
+m22_release_long_A_01,ups_inventory_bounds,PASS,525,0,0.0,1e-07,kWh,0.0,
+m22_release_long_A_01,ups_independent_inventory_and_losses,PASS,525,0,3.552713678800501e-15,1e-07,kWh,91.0,
+m22_release_long_A_01,cold_store_charge_discharge_mutex,PASS,525,0,0.0,1e-07,kW,0.0,
+m22_release_long_A_01,cold_store_power_limit,PASS,525,0,0.0,1e-07,kW,0.0,
+m22_release_long_A_01,cold_store_inventory_bounds,PASS,525,0,0.0,1e-07,kWh,0.0,
+m22_release_long_A_01,cold_store_independent_inventory_and_losses,PASS,525,0,0.0,1e-07,kWh,0.0,
+m22_release_long_A_01,DG_shaft_electric_loss_rotor,PASS,525,0,5.102119898445223e-16,1e-06,kWh,301.0,Pm=3.6700039087926033;Pe=3.3700886661374745;loss=0.30001605857912783;dRotor=-0.0001008159239995305
+m22_release_long_A_01,DG_electric_action_integral,PASS,525,0,4.440892098500626e-16,1e-06,kWh,301.0,
+m22_release_long_A_01,DG_budget_debit_and_bounds,PASS,525,0,2.2426505097428162e-13,1e-06,kWh_shaft_equivalent,165.0,
+m22_release_long_A_01,PROCESS_matches_RAW_native_fields,PASS,525,0,0.0,1e-07,native_field_unit,0.0,
+m22_release_long_A_01,ups_inventory_continuity,PASS,524,0,0.0,1e-07,kWh,1.0,
+m22_release_long_A_01,cold_store_inventory_continuity,PASS,524,0,0.0,1e-07,kWh,1.0,
+m22_release_long_A_01,RESULT_carrier_service_integrals,PASS,12,0,0.0,1e-07,kWh,,
+m22_release_long_A_01,RESULT_actual_energy_integrals,PASS,13,0,0.0,1e-07,field_native_energy_unit,,RAW grid_import_kW vs RESULT.metrics.actual_energy.grid_import_kWh
+m22_release_long_A_01,RESULT_actual_cost_sum,PASS,1,0,0.0,1e-07,USD,,RAW sum cost_USD_step; DG shaft correction and initial-inventory fee remain separate
+m22_release_long_A_01,emissions_factor_file_binding,PASS,1,0,0.0,0.0,boolean,,D:\hospital_ies_v22_20261025\outputs\v20_load_accounting_20261019_run01\references\EMISSIONS_FACTOR_REGISTRY.json
+m22_release_long_A_01,release_flag_exactly_matches_current_registered_conditions,PASS,32,0,0.0,0.0,boolean,,"t=0.0,elapsed=0.0,ready=True,active=False"
+m22_release_long_A_01,release_witness_no_DG_and_no_pending_generation_credit,PASS,32,0,0.0,0.0,boolean,,t=0.0
+m22_release_long_A_01,release_current_observation_clock_not_future,PASS,32,0,0.0,0.0,boolean,,t=0.0

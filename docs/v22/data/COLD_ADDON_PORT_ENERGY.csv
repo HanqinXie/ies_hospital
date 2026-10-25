@@ -1,0 +1,79 @@
+﻿run,port,value,unit,source,missing_segments
+m22_cold_bank_t0_full_01,unused_steam_derived,366.869232192426,lb,"RAW source minus delivered heat/exchanger minus ABS steam; derived, not meter",0
+m22_cold_bank_t0_full_01,heat_delivered,235.67640126844753,kWh_th,RAW 4x3 delivered ledger,0
+m22_cold_bank_t0_full_01,grid_import_kW,636.3998345962577,kWh,RAW action * native duration / 60,0
+m22_cold_bank_t0_full_01,diesel_kW,0.0,kWh,RAW action * native duration / 60,0
+m22_cold_bank_t0_full_01,absorption_cooling_kW,9.017600002791402e-09,kWh,RAW action * native duration / 60,0
+m22_cold_bank_t0_full_01,boiler_steam_lbph,745.8280883995773,lb,RAW action * native duration / 60,0
+m22_cold_bank_t0_full_01,hrsg_steam_lbph,447.97588513564426,lb,RAW action * native duration / 60,0
+m22_cold_bank_t0_full_01,tower_rejection_kW,276.6855164139917,kWh,RAW action * native duration / 60,0
+m22_cold_bank_t0_full_01,gt_fuel_MMBtu_h,0.7863399248579368,MMBtu,RAW action * native duration / 60,0
+m22_cold_bank_t0_full_01,ups_discharge_kW,0.0,kWh,RAW action * native duration / 60,0
+m22_cold_bank_t0_full_01,ups_charge_kW,0.0,kWh,RAW action * native duration / 60,0
+m22_cold_bank_t0_full_01,cold_discharge_kW,56.79106378282998,kWh,RAW action * native duration / 60,0
+m22_cold_bank_t0_full_01,cold_charge_kW,59.999999950000046,kWh,RAW action * native duration / 60,0
+m22_cold_bank_t0_full_01,cold_storage_pump_kW,2.335821274656601,kWh,RAW action * native duration / 60,0
+m22_cold_bank_t0_full_01,boiler_auxiliary_kW,3.3016477849051418,kWh,RAW action * native duration / 60,0
+m22_cold_bank_t0_full_01,gt_start_electric_kW,0.0,kWh,RAW action * native duration / 60,0
+m22_cold_bank_t0_full_01,boiler_restart_electric_kW,0.008333333333333333,kWh,RAW action * native duration / 60,0
+m22_cold_bank_t0_full_01,station_auxiliary_kW,3.3099811182384755,kWh,RAW action * native duration / 60,0
+m22_cold_bank_t0_full_01,recovery_cooling_kW,0.0,kWh,RAW action * native duration / 60,0
+m22_cold_bank_t0_full_01,recovery_pump_electric_kW,0.0,kWh,RAW action * native duration / 60,0
+m22_cold_bank_t0_full_01,recovery_fan_electric_kW,0.0,kWh,RAW action * native duration / 60,0
+m22_cold_bank_t0_full_01,gt_electric_kW,48.24930585453966,kWh,RAW action * native duration / 60,0
+m22_cold_bank_t0_full_01,electric_chiller_cooling_kW,226.98755483823584,kWh_cold,RAW action * native duration / 60,0
+m22_cold_bank_t0_full_01,AC_source_total,684.6491404507975,kWh,RAW GT+GRID+DG action * native duration / 60,0
+m22_cold_bank_t0_full_01,ups_charged_input_kWh,0.0,kWh,RAW storage receipt,0
+m22_cold_bank_t0_full_01,ups_discharged_kWh,0.0,kWh,RAW storage receipt,0
+m22_cold_bank_t0_full_01,ups_standing_loss_kWh,0.0,kWh,RAW storage receipt,0
+m22_cold_bank_t0_full_01,ups_conversion_loss_kWh,0.0,kWh,RAW storage receipt,0
+m22_cold_bank_t0_full_01,cold_store_charged_input_kWh,59.999999950000046,kWh,RAW storage receipt,0
+m22_cold_bank_t0_full_01,cold_store_discharged_kWh,56.79106378282998,kWh,RAW storage receipt,0
+m22_cold_bank_t0_full_01,cold_store_standing_loss_kWh,0.35745738026063534,kWh,RAW storage receipt,0
+m22_cold_bank_t0_full_01,cold_store_conversion_loss_kWh,5.9890033544910635,kWh,RAW storage receipt,0
+m22_cold_bank_t0_full_01,DG_mechanical_work_kWh,0.0,kWh,RAW diesel local response receipt,0
+m22_cold_bank_t0_full_01,DG_electrical_work_kWh,0.0,kWh,RAW diesel local response receipt,0
+m22_cold_bank_t0_full_01,DG_loss_work_kWh,0.0,kWh,RAW diesel local response receipt,0
+m22_cold_bank_t0_full_01,DG_rotor_delta_kWh,0.0,kWh,RAW diesel local response receipt,0
+m22_cold_bank_t0_full_01,DG_fuel_budget_debit_kWh_equivalent,0.0,kWh,RAW diesel local response receipt,0
+m22_cold_bank_t0_full_01,ups_final_inventory,0.0,kWh,RAW final actual storage receipt; never count stock depletion as an efficiency benefit,0
+m22_cold_bank_t0_full_01,cold_store_final_inventory,56.86247543241835,kWh,RAW final actual storage receipt; never count stock depletion as an efficiency benefit,0
+m22_cold_bank_t0_empty_01,unused_steam_derived,366.1984820175391,lb,"RAW source minus delivered heat/exchanger minus ABS steam; derived, not meter",0
+m22_cold_bank_t0_empty_01,heat_delivered,235.86756393115917,kWh_th,RAW 4x3 delivered ledger,0
+m22_cold_bank_t0_empty_01,grid_import_kW,635.6598376967281,kWh,RAW action * native duration / 60,0
+m22_cold_bank_t0_empty_01,diesel_kW,0.0,kWh,RAW action * native duration / 60,0
+m22_cold_bank_t0_empty_01,absorption_cooling_kW,9.017600002791402e-09,kWh,RAW action * native duration / 60,0
+m22_cold_bank_t0_empty_01,boiler_steam_lbph,745.8280844096432,lb,RAW action * native duration / 60,0
+m22_cold_bank_t0_empty_01,hrsg_steam_lbph,447.97588513564426,lb,RAW action * native duration / 60,0
+m22_cold_bank_t0_empty_01,tower_rejection_kW,276.6855164139917,kWh,RAW action * native duration / 60,0
+m22_cold_bank_t0_empty_01,gt_fuel_MMBtu_h,0.7863399248579368,MMBtu,RAW action * native duration / 60,0
+m22_cold_bank_t0_empty_01,ups_discharge_kW,0.0,kWh,RAW action * native duration / 60,0
+m22_cold_bank_t0_empty_01,ups_charge_kW,0.0,kWh,RAW action * native duration / 60,0
+m22_cold_bank_t0_empty_01,cold_discharge_kW,0.0,kWh,RAW action * native duration / 60,0
+m22_cold_bank_t0_empty_01,cold_charge_kW,59.999999950000046,kWh,RAW action * native duration / 60,0
+m22_cold_bank_t0_empty_01,cold_storage_pump_kW,1.1999999990000008,kWh,RAW action * native duration / 60,0
+m22_cold_bank_t0_empty_01,boiler_auxiliary_kW,3.3016477705413814,kWh,RAW action * native duration / 60,0
+m22_cold_bank_t0_empty_01,gt_start_electric_kW,0.0,kWh,RAW action * native duration / 60,0
+m22_cold_bank_t0_empty_01,boiler_restart_electric_kW,0.008333333333333333,kWh,RAW action * native duration / 60,0
+m22_cold_bank_t0_empty_01,station_auxiliary_kW,3.3099811038747142,kWh,RAW action * native duration / 60,0
+m22_cold_bank_t0_empty_01,recovery_cooling_kW,0.0,kWh,RAW action * native duration / 60,0
+m22_cold_bank_t0_empty_01,recovery_pump_electric_kW,0.0,kWh,RAW action * native duration / 60,0
+m22_cold_bank_t0_empty_01,recovery_fan_electric_kW,0.0,kWh,RAW action * native duration / 60,0
+m22_cold_bank_t0_empty_01,gt_electric_kW,48.24930585453966,kWh,RAW action * native duration / 60,0
+m22_cold_bank_t0_empty_01,electric_chiller_cooling_kW,226.98755483823584,kWh_cold,RAW action * native duration / 60,0
+m22_cold_bank_t0_empty_01,AC_source_total,683.9091435512678,kWh,RAW GT+GRID+DG action * native duration / 60,0
+m22_cold_bank_t0_empty_01,ups_charged_input_kWh,0.0,kWh,RAW storage receipt,0
+m22_cold_bank_t0_empty_01,ups_discharged_kWh,0.0,kWh,RAW storage receipt,0
+m22_cold_bank_t0_empty_01,ups_standing_loss_kWh,0.0,kWh,RAW storage receipt,0
+m22_cold_bank_t0_empty_01,ups_conversion_loss_kWh,0.0,kWh,RAW storage receipt,0
+m22_cold_bank_t0_empty_01,cold_store_charged_input_kWh,59.999999950000046,kWh,RAW storage receipt,0
+m22_cold_bank_t0_empty_01,cold_store_discharged_kWh,0.0,kWh,RAW storage receipt,0
+m22_cold_bank_t0_empty_01,cold_store_standing_loss_kWh,0.13752452008166363,kWh,RAW storage receipt,0
+m22_cold_bank_t0_empty_01,cold_store_conversion_loss_kWh,2.999999997500003,kWh,RAW storage receipt,0
+m22_cold_bank_t0_empty_01,DG_mechanical_work_kWh,0.0,kWh,RAW diesel local response receipt,0
+m22_cold_bank_t0_empty_01,DG_electrical_work_kWh,0.0,kWh,RAW diesel local response receipt,0
+m22_cold_bank_t0_empty_01,DG_loss_work_kWh,0.0,kWh,RAW diesel local response receipt,0
+m22_cold_bank_t0_empty_01,DG_rotor_delta_kWh,0.0,kWh,RAW diesel local response receipt,0
+m22_cold_bank_t0_empty_01,DG_fuel_budget_debit_kWh_equivalent,0.0,kWh,RAW diesel local response receipt,0
+m22_cold_bank_t0_empty_01,ups_final_inventory,0.0,kWh,RAW final actual storage receipt; never count stock depletion as an efficiency benefit,0
+m22_cold_bank_t0_empty_01,cold_store_final_inventory,56.86247543241835,kWh,RAW final actual storage receipt; never count stock depletion as an efficiency benefit,0

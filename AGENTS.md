@@ -1,3 +1,7 @@
+# Current V22 model-closure authorization (2026-10-25)
+
+Follow docs/v22/USER_TASK_20261025.txt and docs/v22/IMPLEMENTATION_PLAN.md. The user authorizes continuous bounded model repair and verification; prior V21 final12 is now seen regression. Preserve original inputs, V21 results and history. New model identity M22_model_closure; raw/temp/results on E:/hospital_ies_v22_20261025. One shared physical-core writer. No MPC, ML predictor, future information, paper figures, large audit/packaging workflow or remote publication/main merge. Local research branch commits and necessary targeted reruns are authorized. Current V22 scope overrides conflicting older stage/budget/plotting/release instructions below.
+
 # 医院 IES V20 协作规则
 
 ## 本轮 V21 SCI 授权（2026-10-23）

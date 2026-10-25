@@ -1,0 +1,621 @@
+{
+  "created_utc": "2026-10-25T05:26:29.061878+00:00",
+  "run": "m22_ups_short_repeat_01",
+  "source_sha256": "afd2d206dceb7923f8cbfcc64caa715e414ade4087e7297e0a120826e6a333a5",
+  "raw_sha256": "ac80ad4921bff99a66655aeb7ae2475864fb4e83fbcd020b7945814a4c1ac452",
+  "result_sha256": "fdcb4901066e590124614830854894c313043280383c625e50ceb35cf8d63f24",
+  "script_sha256": "932bc8f57e21ba36c0050ccdc4e7a8609912246ea9ebfafb0590a692e40024f2",
+  "status": "completed",
+  "observed_until_minute": 180.0,
+  "unknown_tail_minutes": 0.0,
+  "solver_runs": 0,
+  "environment_runs": 0,
+  "full42_audit_executed": false,
+  "conclusion": {
+    "grid_actually_returned_before_second_event": true,
+    "first_grid_actual_return_minute": 75.5,
+    "GT_actual_supply_between_45_and_90": false,
+    "second_event_really_removed_actual_grid_source": true,
+    "DG_start_minutes": [
+      15.0,
+      90.0
+    ],
+    "DG_connected_minutes": [
+      15.166666666666666,
+      90.16666666666667
+    ],
+    "UPS_refilled_before_second_event_minute": 82.34667209738365,
+    "second_UPS_bridge": {
+      "start_minute": 90.0,
+      "end_minute": 90.16666666666667,
+      "GRID_kWh": 0.0,
+      "GT_kWh": 0.0,
+      "DG_kWh": 0.0,
+      "UPS_output_kWh": 0.23913685780175423,
+      "UPS_input_kWh": 0.0,
+      "critical_e_material_union_minutes": 0.0,
+      "P0_e_ENS_kWh": 2.3913690562555627e-08,
+      "P0_e_material_minutes": 0.0,
+      "P0_e_max_shortage_kW": 8.608928602519782e-06,
+      "P1_e_ENS_kWh": 2.391369068299349e-08,
+      "P1_e_material_minutes": 0.0,
+      "P1_e_max_shortage_kW": 8.608928645877413e-06
+    },
+    "fullcase_critical_e": {
+      "start_minute": 0.0,
+      "end_minute": 180.0,
+      "GRID_kWh": 305.57701185778404,
+      "GT_kWh": 116.62477627712917,
+      "DG_kWh": 330.7268030362561,
+      "UPS_output_kWh": 32.905719841175134,
+      "UPS_input_kWh": 36.46063140296412,
+      "critical_e_material_union_minutes": 0.0,
+      "P0_e_ENS_kWh": 7.833950278940112e-05,
+      "P0_e_material_minutes": 0.0,
+      "P0_e_max_shortage_kW": 4.860971304342624e-05,
+      "P1_e_ENS_kWh": 7.833950279048784e-05,
+      "P1_e_material_minutes": 0.0,
+      "P1_e_max_shortage_kW": 4.8609713239719796e-05
+    }
+  },
+  "native_before_90": {
+    "start_minute": 89.34667209738365,
+    "end_minute": 90.0,
+    "grid_bus_state": "GRID",
+    "hardware_GRID": 1.0,
+    "grid_import_kW": 102.35053303856145,
+    "GT_total_kW": 0.0,
+    "diesel_kW": 0.0,
+    "diesel_status": "OFF",
+    "diesel_budget_pre_kWh": 2145.312268173547,
+    "diesel_budget_post_kWh": 2145.312268173547,
+    "UPS_discharge_kW": 0.0,
+    "UPS_charge_kW": 0.0,
+    "UPS_initial_kWh": 39.99999999999999,
+    "UPS_final_kWh": 39.99999999999999,
+    "DG_starts_used": 1,
+    "DG_starts_remaining": 1,
+    "P0_e_requested_kW": 50.68355629776685,
+    "P0_e_delivered_kW": 50.683546831854784,
+    "P0_e_shortage_kW": 9.46591206763451e-06,
+    "P1_e_requested_kW": 35.40572972871947,
+    "P1_e_delivered_kW": 35.40572026280741,
+    "P1_e_shortage_kW": 9.46591206763451e-06
+  },
+  "native_after_90": {
+    "start_minute": 90.0,
+    "end_minute": 90.16666666666667,
+    "grid_bus_state": "ISLAND",
+    "hardware_GRID": 0.0,
+    "grid_import_kW": 0.0,
+    "GT_total_kW": 0.0,
+    "diesel_kW": 0.0,
+    "diesel_status": "STARTING",
+    "diesel_budget_pre_kWh": 2145.312268173547,
+    "diesel_budget_post_kWh": 2145.0572994247996,
+    "UPS_discharge_kW": 86.08926880862907,
+    "UPS_charge_kW": 0.0,
+    "UPS_initial_kWh": 39.99999999999999,
+    "UPS_final_kWh": 39.74827699178762,
+    "DG_starts_used": 2,
+    "DG_starts_remaining": 0,
+    "P0_e_requested_kW": 50.68355629776685,
+    "P0_e_delivered_kW": 50.683547688838246,
+    "P0_e_shortage_kW": 8.608928602519782e-06,
+    "P1_e_requested_kW": 35.40572972871947,
+    "P1_e_delivered_kW": 35.405721119790826,
+    "P1_e_shortage_kW": 8.608928645877413e-06
+  },
+  "events": [
+    {
+      "event_id": "core:13",
+      "kind": "grid_bus_state_changed",
+      "time_minute": 15.0,
+      "before": "GRID",
+      "after": "ISLAND",
+      "no_grid_diesel_parallel": true,
+      "reason": "observed_grid_hardware_unavailable",
+      "origin": "local_response_or_state_observation",
+      "cause_class": "grid_bus_state_changed",
+      "parent_event_id": null
+    },
+    {
+      "event_id": "core:14",
+      "kind": "diesel_state_changed",
+      "time_minute": 15.0,
+      "before": "OFF",
+      "after": "STARTING",
+      "mode": "legacy_explicit_permission",
+      "grid_bus_state": "ISLAND",
+      "allowed_priorities": [
+        "P0",
+        "P1"
+      ],
+      "origin": "local_response_or_state_observation",
+      "cause_class": "diesel_state_changed",
+      "parent_event_id": null
+    },
+    {
+      "event_id": "core:19",
+      "kind": "m22_DG_dedicated_DC_start",
+      "time_minute": 15.0,
+      "classification": "dependency",
+      "station": {
+        "boiler_ready": true,
+        "boiler_continuous_power_minutes": 1.0,
+        "diesel_starts_used": 1,
+        "diesel_starts_remaining": 1,
+        "control_autonomy_minutes": 1440.0,
+        "qualification_is_research_assumption": true
+      },
+      "origin": "local_response_or_state_observation",
+      "cause_class": "m22_DG_dedicated_DC_start",
+      "parent_event_id": null
+    },
+    {
+      "event_id": "core:21",
+      "kind": "diesel_state_changed",
+      "time_minute": 15.166666666666666,
+      "before": "STARTING",
+      "after": "CONNECTED",
+      "mode": "legacy_explicit_permission",
+      "grid_bus_state": "ISLAND",
+      "allowed_priorities": [
+        "P0",
+        "P1"
+      ],
+      "origin": "local_response_or_state_observation",
+      "cause_class": "diesel_state_changed",
+      "parent_event_id": null
+    },
+    {
+      "event_id": "core:120",
+      "kind": "gt_start_requested",
+      "time_minute": 60.0,
+      "device": "GT_3",
+      "ready_minute": 75.0,
+      "requested_kW": 225.0,
+      "origin": "local_response_or_state_observation",
+      "cause_class": "gt_start_requested",
+      "parent_event_id": null
+    },
+    {
+      "event_id": "core:124",
+      "kind": "gt_start_process_begun",
+      "time_minute": 60.0,
+      "device": "GT_3",
+      "actual_start_minute": 60.0,
+      "ready_minute": 75.0,
+      "origin": "local_response_or_state_observation",
+      "cause_class": "gt_start_process_begun",
+      "parent_event_id": null
+    },
+    {
+      "event_id": "core:185",
+      "kind": "grid_bus_state_changed",
+      "time_minute": 75.0,
+      "before": "ISLAND",
+      "after": "RETURN_PREP",
+      "no_grid_diesel_parallel": true,
+      "reason": "healthy_grid_and_arrived_permission",
+      "ready_minute": 75.25,
+      "origin": "local_response_or_state_observation",
+      "cause_class": "grid_bus_state_changed",
+      "parent_event_id": null
+    },
+    {
+      "event_id": "core:191",
+      "kind": "gt_pending_start_cancelled_by_arrived_stop",
+      "time_minute": 75.0,
+      "device": "GT_3",
+      "cancelled_start": {
+        "ready": 86.0,
+        "requested": 225.0,
+        "started": 60.0,
+        "start_event_recorded": true
+      },
+      "actual_output_kW": 0.0,
+      "origin": "local_response_or_state_observation",
+      "cause_class": "gt_pending_start_cancelled_by_arrived_stop",
+      "parent_event_id": null
+    },
+    {
+      "event_id": "core:197",
+      "kind": "grid_bus_state_changed",
+      "time_minute": 75.25,
+      "before": "RETURN_PREP",
+      "after": "TRANSFER_OPEN",
+      "no_grid_diesel_parallel": true,
+      "reason": "prepared_open_transition",
+      "grid_close_minute": 75.5,
+      "origin": "local_response_or_state_observation",
+      "cause_class": "grid_bus_state_changed",
+      "parent_event_id": null
+    },
+    {
+      "event_id": "core:198",
+      "kind": "diesel_state_changed",
+      "time_minute": 75.25,
+      "before": "CONNECTED",
+      "after": "READY",
+      "mode": "legacy_explicit_permission",
+      "grid_bus_state": "TRANSFER_OPEN",
+      "allowed_priorities": [
+        "P0",
+        "P1"
+      ],
+      "origin": "local_response_or_state_observation",
+      "cause_class": "diesel_state_changed",
+      "parent_event_id": null
+    },
+    {
+      "event_id": "core:200",
+      "kind": "grid_bus_state_changed",
+      "time_minute": 75.5,
+      "before": "TRANSFER_OPEN",
+      "after": "GRID",
+      "no_grid_diesel_parallel": true,
+      "reason": "finite_open_transfer_completed",
+      "origin": "local_response_or_state_observation",
+      "cause_class": "grid_bus_state_changed",
+      "parent_event_id": null
+    },
+    {
+      "event_id": "core:201",
+      "kind": "diesel_state_changed",
+      "time_minute": 75.5,
+      "before": "READY",
+      "after": "OFF",
+      "mode": "legacy_explicit_permission",
+      "grid_bus_state": "GRID",
+      "allowed_priorities": [
+        "P0",
+        "P1"
+      ],
+      "origin": "local_response_or_state_observation",
+      "cause_class": "diesel_state_changed",
+      "parent_event_id": null
+    },
+    {
+      "event_id": "core:204",
+      "kind": "grid_bus_state_changed",
+      "time_minute": 90.0,
+      "before": "GRID",
+      "after": "ISLAND",
+      "no_grid_diesel_parallel": true,
+      "reason": "observed_grid_hardware_unavailable",
+      "origin": "local_response_or_state_observation",
+      "cause_class": "grid_bus_state_changed",
+      "parent_event_id": null
+    },
+    {
+      "event_id": "core:205",
+      "kind": "diesel_state_changed",
+      "time_minute": 90.0,
+      "before": "OFF",
+      "after": "STARTING",
+      "mode": "legacy_explicit_permission",
+      "grid_bus_state": "ISLAND",
+      "allowed_priorities": [
+        "P0",
+        "P1"
+      ],
+      "origin": "local_response_or_state_observation",
+      "cause_class": "diesel_state_changed",
+      "parent_event_id": null
+    },
+    {
+      "event_id": "core:208",
+      "kind": "m22_DG_dedicated_DC_start",
+      "time_minute": 90.0,
+      "classification": "dependency",
+      "station": {
+        "boiler_ready": true,
+        "boiler_continuous_power_minutes": 1.0,
+        "diesel_starts_used": 2,
+        "diesel_starts_remaining": 0,
+        "control_autonomy_minutes": 1440.0,
+        "qualification_is_research_assumption": true
+      },
+      "origin": "local_response_or_state_observation",
+      "cause_class": "m22_DG_dedicated_DC_start",
+      "parent_event_id": null
+    },
+    {
+      "event_id": "m22_exo:availability:0",
+      "time_minute": 90.0,
+      "kind": "m22_exogenous_availability_changed",
+      "origin": "exogenous",
+      "cause_class": "registered_model_closure_availability",
+      "parent_event_id": null,
+      "details": {
+        "availability": {
+          "GRID": 0.0,
+          "GT_1": 0.0,
+          "GT_2": 0.0,
+          "GT_3": 0.0
+        }
+      },
+      "provenance": "Registered M22 boundary observed in completed actual prefix; no inferred causal parent"
+    },
+    {
+      "event_id": "core:214",
+      "kind": "diesel_state_changed",
+      "time_minute": 90.16666666666667,
+      "before": "STARTING",
+      "after": "CONNECTED",
+      "mode": "legacy_explicit_permission",
+      "grid_bus_state": "ISLAND",
+      "allowed_priorities": [
+        "P0",
+        "P1"
+      ],
+      "origin": "local_response_or_state_observation",
+      "cause_class": "diesel_state_changed",
+      "parent_event_id": null
+    },
+    {
+      "event_id": "m22_exo:availability:1",
+      "time_minute": 120.0,
+      "kind": "m22_exogenous_availability_changed",
+      "origin": "exogenous",
+      "cause_class": "registered_model_closure_availability",
+      "parent_event_id": null,
+      "details": {
+        "availability": {
+          "GRID": 1.0,
+          "GT_1": 1.0,
+          "GT_2": 1.0,
+          "GT_3": 1.0
+        }
+      },
+      "provenance": "Registered M22 boundary observed in completed actual prefix; no inferred causal parent"
+    },
+    {
+      "event_id": "core:309",
+      "kind": "gt_start_requested",
+      "time_minute": 135.0,
+      "device": "GT_2",
+      "ready_minute": 150.0,
+      "requested_kW": 225.0,
+      "origin": "local_response_or_state_observation",
+      "cause_class": "gt_start_requested",
+      "parent_event_id": null
+    },
+    {
+      "event_id": "core:313",
+      "kind": "gt_start_process_begun",
+      "time_minute": 135.0,
+      "device": "GT_2",
+      "actual_start_minute": 135.0,
+      "ready_minute": 150.0,
+      "origin": "local_response_or_state_observation",
+      "cause_class": "gt_start_process_begun",
+      "parent_event_id": null
+    },
+    {
+      "event_id": "core:374",
+      "kind": "grid_bus_state_changed",
+      "time_minute": 150.0,
+      "before": "ISLAND",
+      "after": "RETURN_PREP",
+      "no_grid_diesel_parallel": true,
+      "reason": "healthy_grid_and_arrived_permission",
+      "ready_minute": 150.25,
+      "origin": "local_response_or_state_observation",
+      "cause_class": "grid_bus_state_changed",
+      "parent_event_id": null
+    },
+    {
+      "event_id": "core:375",
+      "kind": "gt_actual_started",
+      "time_minute": 150.0,
+      "device": "GT_2",
+      "before_kW": 0.0,
+      "after_kW": 225.0,
+      "reason": "actual_execution",
+      "origin": "local_response_or_state_observation",
+      "cause_class": "gt_actual_started",
+      "parent_event_id": null
+    },
+    {
+      "event_id": "core:376",
+      "kind": "gt_start_completed",
+      "time_minute": 150.0,
+      "device": "GT_2",
+      "actual_kW": 225.0,
+      "origin": "local_response_or_state_observation",
+      "cause_class": "gt_start_completed",
+      "parent_event_id": null
+    },
+    {
+      "event_id": "core:385",
+      "kind": "grid_bus_state_changed",
+      "time_minute": 150.25,
+      "before": "RETURN_PREP",
+      "after": "TRANSFER_OPEN",
+      "no_grid_diesel_parallel": true,
+      "reason": "prepared_open_transition",
+      "grid_close_minute": 150.5,
+      "origin": "local_response_or_state_observation",
+      "cause_class": "grid_bus_state_changed",
+      "parent_event_id": null
+    },
+    {
+      "event_id": "core:386",
+      "kind": "diesel_state_changed",
+      "time_minute": 150.25,
+      "before": "CONNECTED",
+      "after": "READY",
+      "mode": "legacy_explicit_permission",
+      "grid_bus_state": "TRANSFER_OPEN",
+      "allowed_priorities": [
+        "P0",
+        "P1"
+      ],
+      "origin": "local_response_or_state_observation",
+      "cause_class": "diesel_state_changed",
+      "parent_event_id": null
+    },
+    {
+      "event_id": "core:388",
+      "kind": "grid_bus_state_changed",
+      "time_minute": 150.5,
+      "before": "TRANSFER_OPEN",
+      "after": "GRID",
+      "no_grid_diesel_parallel": true,
+      "reason": "finite_open_transfer_completed",
+      "origin": "local_response_or_state_observation",
+      "cause_class": "grid_bus_state_changed",
+      "parent_event_id": null
+    },
+    {
+      "event_id": "core:389",
+      "kind": "diesel_state_changed",
+      "time_minute": 150.5,
+      "before": "READY",
+      "after": "OFF",
+      "mode": "legacy_explicit_permission",
+      "grid_bus_state": "GRID",
+      "allowed_priorities": [
+        "P0",
+        "P1"
+      ],
+      "origin": "local_response_or_state_observation",
+      "cause_class": "diesel_state_changed",
+      "parent_event_id": null
+    },
+    {
+      "event_id": "core:393",
+      "kind": "diesel_state_changed",
+      "time_minute": 150.75,
+      "before": "OFF",
+      "after": "FAILED",
+      "mode": "legacy_explicit_permission",
+      "grid_bus_state": "GRID",
+      "allowed_priorities": [
+        "P0",
+        "P1"
+      ],
+      "origin": "local_response_or_state_observation",
+      "cause_class": "diesel_state_changed",
+      "parent_event_id": null
+    }
+  ],
+  "windows": [
+    {
+      "start_minute": 0.0,
+      "end_minute": 180.0,
+      "GRID_kWh": 305.57701185778404,
+      "GT_kWh": 116.62477627712917,
+      "DG_kWh": 330.7268030362561,
+      "UPS_output_kWh": 32.905719841175134,
+      "UPS_input_kWh": 36.46063140296412,
+      "critical_e_material_union_minutes": 0.0,
+      "P0_e_ENS_kWh": 7.833950278940112e-05,
+      "P0_e_material_minutes": 0.0,
+      "P0_e_max_shortage_kW": 4.860971304342624e-05,
+      "P1_e_ENS_kWh": 7.833950279048784e-05,
+      "P1_e_material_minutes": 0.0,
+      "P1_e_max_shortage_kW": 4.8609713239719796e-05
+    },
+    {
+      "start_minute": 15.0,
+      "end_minute": 15.166666666666666,
+      "GRID_kWh": 0.0,
+      "GT_kWh": 0.0,
+      "DG_kWh": 0.0,
+      "UPS_output_kWh": 0.3004765293502329,
+      "UPS_input_kWh": 0.0,
+      "critical_e_material_union_minutes": 0.0,
+      "P0_e_ENS_kWh": 1.3502698060897732e-07,
+      "P0_e_material_minutes": 0.0,
+      "P0_e_max_shortage_kW": 4.8609713019232004e-05,
+      "P1_e_ENS_kWh": 1.3502698122144342e-07,
+      "P1_e_material_minutes": 0.0,
+      "P1_e_max_shortage_kW": 4.8609713239719796e-05
+    },
+    {
+      "start_minute": 45.0,
+      "end_minute": 75.5,
+      "GRID_kWh": 0.0,
+      "GT_kWh": 0.0,
+      "DG_kWh": 57.38937814792599,
+      "UPS_output_kWh": 7.482707794727284,
+      "UPS_input_kWh": 6.08790081357259e-06,
+      "critical_e_material_union_minutes": 0.0,
+      "P0_e_ENS_kWh": 1.146817964530918e-05,
+      "P0_e_material_minutes": 0.0,
+      "P0_e_max_shortage_kW": 3.33067315973758e-05,
+      "P1_e_ENS_kWh": 1.1468179645522199e-05,
+      "P1_e_material_minutes": 0.0,
+      "P1_e_max_shortage_kW": 3.33067315973758e-05
+    },
+    {
+      "start_minute": 75.5,
+      "end_minute": 90.0,
+      "GRID_kWh": 43.262489702413724,
+      "GT_kWh": 0.0,
+      "DG_kWh": 0.0,
+      "UPS_output_kWh": 0.0,
+      "UPS_input_kWh": 18.257792248278605,
+      "critical_e_material_union_minutes": 0.0,
+      "P0_e_ENS_kWh": 2.2875954163467637e-06,
+      "P0_e_material_minutes": 0.0,
+      "P0_e_max_shortage_kW": 9.465912067739928e-06,
+      "P1_e_ENS_kWh": 2.2875954162589365e-06,
+      "P1_e_material_minutes": 0.0,
+      "P1_e_max_shortage_kW": 9.46591206763451e-06
+    },
+    {
+      "start_minute": 90.0,
+      "end_minute": 90.16666666666667,
+      "GRID_kWh": 0.0,
+      "GT_kWh": 0.0,
+      "DG_kWh": 0.0,
+      "UPS_output_kWh": 0.23913685780175423,
+      "UPS_input_kWh": 0.0,
+      "critical_e_material_union_minutes": 0.0,
+      "P0_e_ENS_kWh": 2.3913690562555627e-08,
+      "P0_e_material_minutes": 0.0,
+      "P0_e_max_shortage_kW": 8.608928602519782e-06,
+      "P1_e_ENS_kWh": 2.391369068299349e-08,
+      "P1_e_material_minutes": 0.0,
+      "P1_e_max_shortage_kW": 8.608928645877413e-06
+    },
+    {
+      "start_minute": 90.0,
+      "end_minute": 120.0,
+      "GRID_kWh": 0.0,
+      "GT_kWh": 0.0,
+      "DG_kWh": 42.286245776207146,
+      "UPS_output_kWh": 15.234775000632586,
+      "UPS_input_kWh": 0.0,
+      "critical_e_material_union_minutes": 0.0,
+      "P0_e_ENS_kWh": 5.320902894739987e-06,
+      "P0_e_material_minutes": 0.0,
+      "P0_e_max_shortage_kW": 1.2674682976306353e-05,
+      "P1_e_ENS_kWh": 5.320902894780549e-06,
+      "P1_e_material_minutes": 0.0,
+      "P1_e_max_shortage_kW": 1.2674682976306353e-05
+    },
+    {
+      "start_minute": 120.0,
+      "end_minute": 150.5,
+      "GRID_kWh": 0.0,
+      "GT_kWh": 2.6278826666666664,
+      "DG_kWh": 52.10869606986284,
+      "UPS_output_kWh": 0.8928053127903693,
+      "UPS_input_kWh": 1.7030950011052638e-05,
+      "critical_e_material_union_minutes": 0.0,
+      "P0_e_ENS_kWh": 1.056037364772523e-05,
+      "P0_e_material_minutes": 0.0,
+      "P0_e_max_shortage_kW": 4.0529680183206163e-05,
+      "P1_e_ENS_kWh": 1.056037364772523e-05,
+      "P1_e_material_minutes": 0.0,
+      "P1_e_max_shortage_kW": 4.0529680183206163e-05
+    }
+  ],
+  "scope": "Seen H1_short_dg regression; existing registered 10-second dedicated-DC DG start and 40kWh UPS. The 90min event interrupts actual GRID supply; GT remained off beforehand. No causal strategy-advantage claim.",
+  "material_rule": "short>.001 kW and (short>=.01 kW or (request>.001 kW and short/request>=.001)); original rule, not expanded tolerance"
+}

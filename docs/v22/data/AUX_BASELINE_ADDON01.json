@@ -1,0 +1,23 @@
+{
+  "registered_utc": "2026-10-25T06:04:39.183964+00:00",
+  "budget": 1,
+  "original_final42_unchanged": true,
+  "reason": "Finish exact same-recipe normal allocation baseline1.0 for existing .75/1.25 points; ordinary normal_winter baseline has an inactive fault-clock metadata difference and 0.0134USD difference, so do not infer a strict sensitivity attribution from it.",
+  "recipe": "D:\\hospital_ies_v22_20261025\\configs\\model_closure_v22\\recipes\\aux_normal_1p0.json",
+  "recipe_sha256": "0c256dd10f306dfc67b31794ec00afb1c14fb63fcbebf21f18106c2498c0e892",
+  "source": "FROZEN_SOURCE_FINAL03.json",
+  "model_or_physical_input_changes": false,
+  "execution": "After one remaining lane has closed; no more than two physical workers; new output, no retry",
+  "jobs": [
+    {
+      "name": "m22_aux_normal_1p0_01",
+      "output": "E:\\hospital_ies_v22_20261025\\runs\\m22_aux_normal_1p0_01",
+      "args": [
+        "--case-file",
+        "configs/model_closure_v22/recipes/aux_normal_1p0.json",
+        "--output",
+        "E:\\hospital_ies_v22_20261025\\runs\\m22_aux_normal_1p0_01"
+      ]
+    }
+  ]
+}

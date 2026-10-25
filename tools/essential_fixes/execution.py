@@ -61,6 +61,8 @@ class EssentialResponseMixin(LocalResponseMixin):
             self.state.last_diesel_kW = 0.
 
     def _correct_gt_floor(self, loads, f, row):
+        if hasattr(self.env,'closure_config'):
+            return self._correct_gt_floor_subsets(loads,f,row)
         if not self.env.gt_floor_correction_config['enabled']:
             return False
         floor = .4*float(gt_level_properties(self.env.plant, float(row.outdoor_temperature_C))[0][-1])
@@ -132,6 +134,65 @@ class EssentialResponseMixin(LocalResponseMixin):
             probe_unserved_kW=proof['lost'], ramp_time=self.ramp_time,
             ramp_anchor_kW=self.ramp_anchor, ramp_budget_kW=self.ramp_budget,
             continuous_transient_simulated=False, **detail)
+        return True
+
+    def _correct_gt_floor_subsets(self,loads,f,row):
+        """Transactional M22 held-port subsets under the existing floor trip.
+
+        Surviving units use the original ramp anchor/window. Units already
+        below their legal floor may be isolated by the existing instantaneous
+        interlock, with no new start or converter permission. Eligible ordinary
+        dwell clocks are retained; no failed probe commits their state.
+        """
+        from itertools import combinations
+        if not self.env.gt_floor_correction_config['enabled']:return False
+        floor=.4*float(gt_level_properties(self.env.plant,float(row.outdoor_temperature_C))[0][-1])
+        before=copy.deepcopy(self.executed);powers=np.asarray(before['gt_electric_kW'],float)
+        floors=floor*np.array([f[f'GT_{i+1}'] for i in range(3)])
+        indices=[i for i in range(3) if EPS<powers[i]<floors[i]-1e-4 and f[f'GT_{i+1}']>EPS
+            and f'GT_{i+1}' not in self.interlock_latched and f'GT_{i+1}' not in self.state.extra_faulted and i not in self.gt_start_pending]
+        if not indices:return False
+        if self.diesel_available(self.time,f) and before['diesel_kW']>EPS:
+            self.log('gt_floor_local_correction_rejected',reason='diesel_coupled_boundary_requires_resolved_path',before=before)
+            return False
+        feasible=[];attempts=[]
+        for count in range(len(indices),0,-1):
+            for keep in combinations(indices,count):
+                dropped=[i for i in indices if i not in keep]
+                if any(not self.gt_clocks.can_stop(i,self.time) for i in dropped):continue
+                request=copy.deepcopy(before)
+                for i in keep:request['gt_electric_kW'][i]=float(floors[i])
+                trial=copy.copy(self);trial.events=[];trial.gt_start_pending=copy.deepcopy(self.gt_start_pending)
+                trial.interlock_latched=copy.deepcopy(self.interlock_latched);trial.ramp_anchor=None if self.ramp_anchor is None else self.ramp_anchor.copy()
+                candidate=trial._clamp(request,f,normal_ramp=True)
+                if any(candidate['gt_electric_kW'][i]<floors[i]-1e-4 for i in keep):
+                    attempts.append(dict(retained_indices=list(keep),reason='shared_ramp_window_cannot_reach_floor'));continue
+                for i in dropped:candidate['gt_electric_kW'][i]=0.
+                began=clock.perf_counter();dt_h=self.env.dt_h
+                try:
+                    proof=solve_physical(row,self.env.plant,loads,f,self.state,dt_h,
+                        float(self.env.scenario.get('grid_limit_kW',self.env.config['grid_import_limit_kW'])),
+                        self.diesel_available(self.time,f),float(self.env.config['gt_ramp_kW_per_hour']),float(self.env.config['solver_time_limit_sec']),
+                        self._physical_solver_config(dt_h,f),execution_action=candidate,execution_contract=self.env.operating_execution_contract)
+                except ModelConstraintInfeasible as exc:
+                    attempts.append(dict(retained_indices=list(keep),reason='held_ports_cannot_balance_candidate',message=str(exc)))
+                    self.solver_calls.append(dict(time_minute=self.time,phase='gt_floor_subset_probe',status='candidate_infeasible',message=str(exc),elapsed_seconds=clock.perf_counter()-began));continue
+                except Exception as exc:self._record_error(exc,loads,f,dt_h,'gt_floor_subset_probe',request,began)
+                self.solver_calls.append(dict(time_minute=self.time,phase='gt_floor_subset_probe',status='success',elapsed_seconds=clock.perf_counter()-began,solver_backend_layers=copy.deepcopy(proof.get('solver_backend_layers',[]))))
+                attempts.append(dict(retained_indices=list(keep),reason='feasible',unserved_kW=proof['lost']))
+                score=tuple(round(float((np.asarray(proof['lost'])[g]/np.maximum(1.,loads.sum(axis=0))).sum()),8) for g in range(4))+(len(dropped),proof['cost_USD_step'])
+                feasible.append((score,candidate,proof,trial,dropped))
+        if not feasible:
+            self.log('gt_floor_local_correction_rejected',reason='no_registered_held_subset_feasible',subset_attempts=attempts,before=before)
+            return False
+        _,candidate,proof,trial,dropped=min(feasible,key=lambda item:item[0])
+        for i in dropped:self._latch_gt(i,f,'minimum_output_interlock',actual_kW=float(powers[i]),minimum_kW=float(floors[i]),subset_isolation=True)
+        self.ramp_time=trial.ramp_time;self.ramp_anchor=trial.ramp_anchor;self.ramp_budget=trial.ramp_budget
+        self.executed=candidate;self._transition_reason='local_floor_boundary_regulation';self._commit_sources(candidate)
+        self.log('gt_floor_local_correction',before=before,after=candidate,feasible_actual_action=proof['action'],
+            subset_attempts=attempts,dropped_indices=dropped,no_new_command_permission=True,no_boiler_command_increase=True,
+            energy_balance_residuals=proof['energy_balance_residuals'],steam_balance_residual_lbph=proof['steam_balance_residual_lbph'],
+            boundary_execution_abstraction=True,continuous_transient_simulated=False)
         return True
 
     def _surplus_interlock(self, loads, f, row):
