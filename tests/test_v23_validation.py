@@ -93,3 +93,28 @@ def test_raw_stream_does_not_overwrite_evidence_or_replace_nonfinite(tmp_path):
     with pytest.raises(FileExistsError):write_trajectory({},path)
     assert path.read_bytes()==b'original'
     with pytest.raises(ValueError):write_trajectory(dict(value=float('nan')),tmp_path/'bad.gz')
+
+def _inventory_fixture(initial,final,scenario):
+    from types import SimpleNamespace as S
+    store=lambda:S(config=dict(capacity_kWh=0.,initial_soc=0.),energy_kWh=0.)
+    env=S(core=S(ups=store(),cold_store=store(),state=S(diesel_energy_remaining_kWh=final)))
+    payload=dict(scenario=scenario,segments=[dict(start_minute=0.,pre_state=dict(diesel_energy_remaining_kWh=initial))])
+    return env,payload
+
+def test_default_DG_budget_comes_from_actual_initial_state_not_missing_scenario_zero():
+    from tools.model_correctness_v23.validation import _inventory
+    env,payload=_inventory_fixture(2400.,2400.,{})
+    value=_inventory(env,payload)['DG_shaft_budget']
+    assert value['initial_kWh']==2400. and value['scale_kWh']==2400. and value['final_kWh']==2400.
+    assert value['initial_source']=='first_actual_pre_state'
+
+def test_conflicting_explicit_DG_budget_is_not_silently_relabelled():
+    from tools.model_correctness_v23.validation import _inventory
+    env,payload=_inventory_fixture(600.,500.,dict(initial_reserve_kWh=150.))
+    with pytest.raises(ValueError,match='budget'):_inventory(env,payload)
+
+def test_real_zero_DG_budget_stays_zero():
+    from tools.model_correctness_v23.validation import _inventory
+    env,payload=_inventory_fixture(0.,0.,dict(initial_reserve_kWh=0.))
+    value=_inventory(env,payload)['DG_shaft_budget']
+    assert value['initial_kWh']==value['scale_kWh']==value['final_kWh']==0.

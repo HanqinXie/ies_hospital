@@ -259,6 +259,8 @@ def solve_physical(row,plant:Plant,loads:np.ndarray,availability:dict[str,float]
     # Opt-in snapshots preserve exact solver arrays before any clipping. The
     # collector is disabled during ordinary execution and changes no argument.
     from hospital_ies.solver_diagnostics import active_collector,solve_layer
+    if m23 is not None and closure is not None and highs[recovery_cold]>0.:
+        from tools.model_correctness_v23.numerics import solve_layer
     row_metadata=[dict(name=f'balance.{carrier}',unit=unit,source='energy hub balance',kind='physical')
                   for carrier,unit in (('electric','kW'),('steam','lb/h'),('cooling','kW'))]+cap_rows
     variable_names=[f'GT_{i+1}.electric' for i in range(3)]+[f'GT_{i+1}.on' for i in range(3)]+[

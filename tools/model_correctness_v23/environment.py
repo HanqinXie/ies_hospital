@@ -12,7 +12,7 @@ from tools.sci_engineering import environment as sci
 from tools.operating_response import environment as operating
 from . import MODEL_ID,CONTRACT_ID
 from .protection import RestartState
-from .evidence import DomainEvidenceStore,evidence_scope
+from .evidence import DomainEvidenceStore,evidence_scope,all_rows_solver_log
 
 validate_scenario=sci.validate_scenario
 validate_events=base.validate_events
@@ -71,6 +71,8 @@ class EngineeringCore(base.EngineeringCore):
         self._m23_thermal_prepared=None
         self._m23_event_closure=None
         super().__init__(env,initial_action)
+        if env.enable_all_validation_rows:
+            self.solver_calls=all_rows_solver_log(self.solver_calls,env.domain_evidence)
         self._m23_restart=RestartState(restart_minutes=self.station.config['boiler_restart_minutes'],restart_power_kW=self.station.config['boiler_fixed_kW'],ready=self.station.boiler_ready,status='ready' if self.station.boiler_ready else 'dispatch_stopped')
 
     def _current_context(self,f):
@@ -273,12 +275,15 @@ class EngineeringCore(base.EngineeringCore):
         return value
 
 class OperatingHospitalIESEnv(base.OperatingHospitalIESEnv):
-    def __init__(self,root,*,allowed_hours,sealed_days,model_id=MODEL_ID,model_config=None,solver_evidence_directory=None,actual_segment_observer=None,**kwargs):
+    def __init__(self,root,*,allowed_hours,sealed_days,model_id=MODEL_ID,model_config=None,solver_evidence_directory=None,actual_segment_observer=None,enable_all_validation_rows=False,**kwargs):
         if model_id!=MODEL_ID:raise ValueError('Explicit M23 model identity required')
         config=copy.deepcopy(model_config or {});self.correctness_config=correctness_config(config.pop('model_correctness_v23',{}))
         if actual_segment_observer is not None and not callable(actual_segment_observer):raise TypeError('Actual segment observer must be callable')
         self.actual_segment_observer=actual_segment_observer
-        self.domain_evidence=DomainEvidenceStore(solver_evidence_directory) if solver_evidence_directory is not None else None
+        if type(enable_all_validation_rows) is not bool:raise TypeError('All-row logging switch must be boolean')
+        if enable_all_validation_rows and solver_evidence_directory is None:raise ValueError('All-row logging requires an evidence directory')
+        self.enable_all_validation_rows=enable_all_validation_rows
+        self.domain_evidence=DomainEvidenceStore(solver_evidence_directory,enable_all_validation_rows=enable_all_validation_rows) if solver_evidence_directory is not None else None
         self.thermal_coupling=None;self._thermal_initial=None
         super().__init__(root,allowed_hours=allowed_hours,sealed_days=sealed_days,model_id=base.MODEL_ID,model_config=config,**kwargs)
         self.model_id=MODEL_ID;self.operating_model_config['model_correctness_v23']=copy.deepcopy(self.correctness_config)

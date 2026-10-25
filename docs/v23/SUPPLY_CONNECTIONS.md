@@ -74,7 +74,7 @@ DC 例在 0–120 min 显示 `FAILED` 且 `diesel_starts_used=0`；120 min DC �
 
 已从原 `DEVELOPMENT68.json` 找到 `matched_factor_id=m21_factor_bc57b8258fae2cc8` 的 L1 `m21_L1_f323b508a1fccd342a61`，与真实 `seen_L2_spring` recipe 对比。全部外生物理输入相同；差异只有类/解析标签、`stage=1/3`、`enable_propagation` 和派生身份/hash。两种 native stage 都使用同一 fault 时钟。默认 `research_stress_proxy=False` 时 `_protection()` 返回空，必要风机/泵、容量及源限制对全部类别相同。因此这个匹配 L1/L2 在同一配置下物理等价，不能把不同 hash 当作不同外生事故。
 
-旧 `m22_seen_L2_spring_01` 与显式代理开的 `m22_seen_L2_proxy_same_01` 事件均只有 120 min 外生 GT_1=0.5 降额和 480 min 解除，没有研究代理 trip。代理开关是物理机制敏感分支，不能包装成同物理条件下的策略比较；没有触发时也不能声称观察到继发故障。本轮未另跑完整 L1/L2 对；上述为真实 recipe、实际事件和调用链证据，新的配对执行由共同核心集中安排。
+旧 `m22_seen_L2_spring_01` 与显式代理开的 `m22_seen_L2_proxy_same_01` 事件均只有 120 min 外生 GT_1=0.5 降额和 480 min 解除，没有研究代理 trip。代理开关是物理机制敏感分支，不能包装成同物理条件下的策略比较；没有触发时也不能声称观察到继发故障。本轮 Source05 已实际完成匹配 L1/L2 两个 720 min 过程：177 个原生区间的 ACTUAL_PREFIX 逐字节一致，332 条非命令生成事件逐值一致；只有五项标签/解析/身份元数据不同。证据为审查包 `review/attempts/NATIVE_EQUIVALENCE_FINAL.json`。关闭代理后的该配置物理等价，不是两种独立物理事故。
 
 `RestartState` 只把已存在锅炉复归关系明确为：
 
@@ -93,7 +93,7 @@ DC 例在 0–120 min 显示 `FAILED` 且 `diesel_starts_used=0`；120 min DC �
 
 共同核心在实际边界把当前站支路/真实源/设备条件传给 `RestartState.advance()`；在已到达许可下 `request()`；只在 `_after_actual_segment` 用真实启动电是否足额 `commit()`，然后记录前后状态。`ready=False` 时公共平衡必须关闭蒸汽；不能因为 request 正就加锅炉运行/GT 电力消纳。已 ready 的设备仍须按实际运行电判断 supply 是否存在，不能只看支路布尔值。
 
-针对性完整过程建议固定同一到达命令时钟：锅炉复归 0/1/5 min，0 只标理想下界；GT starter 5/10/20 kWe，用同一可行/电源不足短窗各查一次。比较真实复归完成与交付时刻、实际启动电量和保护/候选拒绝；不按策略胜负选点。这些参数已在 V22 登记，纯函数已有 0/1/5 min 时钟检验；实际 IES 敏感轨迹由主核心串行执行，本文件不预报其结果。
+针对性完整过程固定同一到达命令时钟，已完成锅炉复归 0/1/5 min 与 GT starter 5/20 kWe 的实际过程，10 kWe 为共同基准。0 min 只标理想下界。原正常 R 敏感过程在支路返回后由 HRSG 覆盖供热，并不约束锅炉热恢复；另登记并执行同一 GT 暂失、站支路暂失条件的锅炉三组过程，按实际付电和出热时钟核验。完整结果见总报告及审查包补充工程表，未按策略胜负选点。
 
 ## 本工作包实际验证
 

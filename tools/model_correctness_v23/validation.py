@@ -95,8 +95,20 @@ def _inventory(env,payload):
             initial=store.config['capacity_kWh']*store.config['initial_soc'];source='registered_reset_capacity_times_SOC'
         result[key]=dict(initial_kWh=initial,initial_source=source,scale_kWh=store.config['capacity_kWh'],final_kWh=store.energy_kWh,
             initial_paid_input_kWh=payload.get('m21_initial_storage',{}).get(key))
-    initial=float(payload['scenario'].get('initial_shaft_budget_kWh_equivalent',payload['scenario'].get('initial_reserve_kWh',0.)))
-    result['DG_shaft_budget']=dict(initial_kWh=initial,scale_kWh=initial,
+    scene=payload['scenario'];segments=payload.get('segments',[])
+    declared=scene.get('initial_shaft_budget_kWh_equivalent',scene.get('initial_reserve_kWh'))
+    initial=(segments[0].get('pre_state',{}) if segments and abs(float(segments[0].get('start_minute',0.)))<1e-7 else {}).get('diesel_energy_remaining_kWh')
+    source='first_actual_pre_state'
+    if initial is None:
+        initial=(payload.get('initial_state') or {}).get('state',{}).get('diesel_energy_remaining_kWh');source='recorded_reset_state'
+    if initial is None:initial=declared;source='explicit_scenario_budget' if declared is not None else 'missing'
+    for value in (initial,declared):
+        if value is not None and (isinstance(value,bool) or not math.isfinite(float(value)) or float(value)<0.):
+            raise ValueError('Invalid recorded or declared DG budget')
+    if initial is not None and declared is not None and abs(float(initial)-float(declared))>1e-7:
+        raise ValueError('Recorded initial DG budget conflicts with explicit scenario budget')
+    initial=float(initial) if initial is not None else None
+    result['DG_shaft_budget']=dict(initial_kWh=initial,initial_source=source,scale_kWh=initial,
         final_kWh=float(core.state.diesel_energy_remaining_kWh))
     return result
 
@@ -184,7 +196,7 @@ def worker(output):
         rows_writer=SolverRowSidecar(output/'solver_rows.jsonl.gz')
         env=environment.OperatingHospitalIESEnv(ROOT,allowed_hours=allowed_hours(dict(scenarios=[scene])),sealed_days=SEALED_DAYS,
             model_id=MODEL_ID,model_config=config,solver_row_sidecar=rows_writer,
-            solver_evidence_directory=output/'domain_evidence')
+            solver_evidence_directory=output/'domain_evidence',enable_all_validation_rows=True)
         prefix_stream=(output/'ACTUAL_PREFIX.jsonl').open('x',encoding='utf8')
         env.actual_segment_observer=lambda segment:record_actual_prefix(segment,prefix_stream)
         result['model_config']=config;result['resolved_model_config']=copy.deepcopy(env.operating_model_config)

@@ -270,3 +270,102 @@ existing I/O/sidecar checks. `git diff --check` returned exit 0. Logs are
 E root. Source and test writers then stopped. Root owns the final same-source
 matrix and centralized regression; source03 technical results are preserved
 under their original bindings and do not stand in for source04 runs.
+
+## Source05: optional recovery lock presentation and runtime all-row evidence
+
+Source04 winter37 reached actual minute470 before a true native solver
+validation failure. The original current source hour1194, original building
+auxiliary row, arrived ports, runtime state and P0-P3 loads were reproduced in
+E without launching an episode. Both boiler domains' cost layers returned
+native OPTIMAL with physical residual1.1368683772161603e-13, but their original
+recovery lock was violated by9.565482024440257e-10 kW. This is not evidence of
+physical infeasibility. The later resource guard was a separate export
+failure; it must not replace the original solver failure identity.
+
+The true current recovery request was1.0095654820244402e-7 kW. Its original
+maximum-recovery lock has width1e-7 kW, leaving the lawful lower bound
+q>=9.565482024440257e-10 kW at the cost layer. Native feasibility1e-9 can
+accept q=0, whereas original-unit posterior lock acceptance1e-10 correctly
+rejects it. Source05 only multiplies this recovery lock row and both bounds
+by16 in solver coordinates, the smallest binary power at least the ratio
+1e-9/1e-10. Its original coefficients, bounds, objective, lock width, current
+request and posterior checks remain unchanged. No recovery deadband,
+clipping, inventory removal, extra solve or changed integration boundary is
+introduced. The existing solve_layer implementation is isolated with only
+its row-scaling callback replaced; original_problem and the collector retain
+the unchanged original and actual solver matrices. This presentation is
+registered for this unit-coefficient optional recovery lock only, not a
+general guarantee of numerical stability.
+
+The physical_balance hook selects the helper only for M23 with actual
+positive recovery-port capacity. With zero recovery request, all12 native
+layers' original/solver matrices, bounds, objectives, integrality, row_scales,
+raw native vectors and actual actions were bitwise identical to the prior
+route. At the failing winter input, all14 original-layer arrays were
+identical, and only the two cost-layer solver rows39 changed presentation.
+Selected actual recovery9.565482024440257e-10 kW respects the unchanged raw
+lock. The exact current-port regression fixture records the original source
+row and ports under tests/fixtures/v23_winter470_current_port.json.
+
+The independent resource diagnosis of the source04 normal-winter C RAW found
+382,770,261 of436,883,561 uncompressed bytes in1068 repeated inline validation
+row tables, all in rejected candidates or unaccepted native attempts. The
+default successful-row-only externalizer correctly retained those failures,
+but copying them through command/decision/event evidence dominated memory.
+Source05 adds runtime enable_all_validation_rows=False to the M23 environment
+and DomainEvidenceStore. The old default keeps rejected/failed row tables
+inline. Explicit True requires a real solver_evidence_directory; the M23
+worker opts in, and the receipt records this mode.
+
+In this mode only validation.rows and existing *_validation.rows aliases are
+saved in the independent SHA content-addressed gzip store. Failure/rejection
+status, accepted flags, raw x, phase, residual summaries and all other
+metadata stay in place. Previous-incumbent and refinement validation aliases
+are included; unrelated user data named rows stays inline. Accepted solver
+calls retain the old ordered sidecar traversal and record sequence; other
+row tables use CAS without inserting records into that ordered stream.
+restore_domain_evidence recognizes both the old success schema and the new
+hospital_ies.m23.validation_rows.reference.v1 schema and verifies SHA and row
+count. Consumers restore ordered references and CAS references with their
+separate schema-aware readers. Domain logging I/O remains outside solver
+candidate catches or in exception handling bodies, so an I/O failure aborts
+the run instead of rejecting a candidate and selecting another action.
+
+Actual verification and retained E evidence:
+
+- recovery_numerics_fix/RED03.log:3 failed,10 passed before the presentation;
+  GREEN01.log:13 passed in2.23s. Independent review reran13 passed in2.10s.
+- all_rows_fix/RED02.log:8 failed before the optional logger;
+  GREEN01.log:8 passed in0.15s with actual winter native-failure and normal-C
+  rejected-layer evidence, exact restoration, dedup, integrity rejection and
+  fail-closed writes. The first E extraction lacked the already-local ijson
+  path; that failure log remains retained. The corrected extraction uses the
+  existing E dependency and never loads the complete RAW.
+- all_rows_fix/SOURCE05_FINAL.log:56 passed in17.08s, exit0. This includes13
+  numerical regressions,12 all-row/default/alias/I/O tests, prior domain and
+  ordered-reader tests, genuine no-sink negatives and paid-stock exports.
+  git diff --check returned0. No full suite or long matrix was launched by
+  this core task.
+- all_rows_fix/ACTUAL_LOGGING_EQUIVALENCE.json:two actual15-minute C episodes
+  with the runtime logger off/on have identical action, inventory, service
+  ledger, availability and command-data SHA
+  942274762ad94c6c280c926a9d35aa945c93a767fe44f06fdffacd0b92d215db.
+  Both ordered sidecar SHA values match; all ordered/CAS references restore.
+- all_rows_fix/FULL_ACTUAL_ROWS_ROUNDTRIP.json:all1068 actual normal-winter
+  tables,1,284,664 rows, were streamed through the new CAS and restored with
+  identical canonical values.293 unique gzip blobs total4,876,577 bytes.
+  The source RAW SHA94083abbd24494998719c35c7a1cf158ebb306b594cecfd48a4c22938e609b25
+  remained unchanged. The initial proof compared unsorted JSON key order;
+  its assertion/log is retained, and the corrected proof compares canonical
+  sorted JSON while separately checking object equality. This was a pure
+  evidence transformation, not a physical replay or resource guarantee.
+
+Core/source/test freeze followed the final independent read-only review.
+Root owns the affected31/32 output reruns and unified source05 thermal cases.
+The35 successful source04 base trajectories retain their original bindings;
+zero-request matrix/action identity supports only the explicitly restricted
+unaffected-physics statement, not pretending that those trajectories were
+executed from new source bytes. Public reset/step and the command queue are
+unchanged. Additional source05 files are numerics.py, the two regression test
+modules and the small current-port fixture; shared code changes are the
+two-line optional physical_balance hook and M23 logging interfaces.

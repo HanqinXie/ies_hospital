@@ -3,7 +3,7 @@ from __future__ import annotations
 import copy
 import numpy as np
 from hospital_ies.execution import ModelConstraintInfeasible, SolverExecutionError
-from .evidence import successful_backend_evidence
+from .evidence import successful_backend_evidence,retained_backend_evidence
 
 
 def select_candidate(results):
@@ -40,15 +40,15 @@ def solve_execution(arguments, solver):
         try:
             result=solver(**trial)
         except ModelConstraintInfeasible as exc:
-            records.append(dict(domain=domain,status='checked_domain_infeasible',message=str(exc),solver_backend_layers=getattr(exc,'solver_backend_attempts',[])))
+            records.append(dict(domain=domain,status='checked_domain_infeasible',message=str(exc),solver_backend_layers=retained_backend_evidence(getattr(exc,'solver_backend_attempts',[]))))
             continue
         except OSError:
             raise
         except Exception as exc:
-            records.append(dict(domain=domain,status='compiler_or_solver_error',exception_type=type(exc).__name__,message=str(exc),solver_backend_layers=getattr(exc,'solver_backend_attempts',[])));errors.append(exc)
+            records.append(dict(domain=domain,status='compiler_or_solver_error',exception_type=type(exc).__name__,message=str(exc),solver_backend_layers=retained_backend_evidence(getattr(exc,'solver_backend_attempts',[]))));errors.append(exc)
             continue
         if domain=='run' and (not result['action'].get('boiler_station_running') or result['action']['boiler_steam_lbph']<=0.):
-            records.append(dict(domain=domain,status='candidate_rejected',reason='run_domain_has_no_actual_positive_steam',solver_backend_layers=result.get('solver_backend_layers',[])))
+            records.append(dict(domain=domain,status='candidate_rejected',reason='run_domain_has_no_actual_positive_steam',solver_backend_layers=retained_backend_evidence(result.get('solver_backend_layers',[]))))
             continue
         # Evidence failure is a run failure, never a reason to discard a
         # lawful OFF candidate and execute another (possibly dearer) domain.
@@ -88,14 +88,14 @@ def solve_command(arguments, solver):
             error.command_compilation_diagnostic=dict(status=error.category,checked_domains=records,
                 global_physical_infeasibility_claimed=False,positive_command_domain_searched=True,
                 full_priority_hierarchy_reoptimized=True,prior_candidate_locks_reused=False)
-            error.solver_backend_attempts=getattr(exc,'solver_backend_attempts',[])
+            error.solver_backend_attempts=retained_backend_evidence(getattr(exc,'solver_backend_attempts',[]))
             raise error from exc
         truth=result['joint_diagnostic']['m22_boiler_command_truth'];stages=truth['stages']
         invalid=[name for name,value in stages.items() if value['station_on_value']>.5 and value['actual_steam_lbph']<=0.]
         invalid+=truth.get('zero_permission_phantom_stages',[])
         invalid=sorted(set(invalid))
         records.append(dict(domains=dict(domains),status='candidate_rejected' if invalid else 'legal',
-            rejected_stages=invalid,station_truth=copy.deepcopy(truth),solver_backend_layers=(copy.deepcopy(result.get('solver_backend_layers',[])) if invalid else successful_backend_evidence(result.get('solver_backend_layers',[])))))
+            rejected_stages=invalid,station_truth=copy.deepcopy(truth),solver_backend_layers=(retained_backend_evidence(result.get('solver_backend_layers',[])) if invalid else successful_backend_evidence(result.get('solver_backend_layers',[])))))
         if not invalid:
             result['joint_diagnostic']['m23_boiler_domains']=dict(status='legal_domain_selected',checked_domains=records,
                 positive_command_domain_searched=True,full_priority_hierarchy_reoptimized=True,
@@ -110,5 +110,5 @@ def solve_command(arguments, solver):
     error=SolverExecutionError('M23 boiler command candidate closure exceeded its registered finite bound')
     error.category='command_compilation_implementation_gap'
     error.command_compilation_diagnostic=dict(checked_domains=records,global_physical_infeasibility_claimed=False)
-    error.solver_backend_attempts=last.get('solver_backend_layers',[]) if last else []
+    error.solver_backend_attempts=retained_backend_evidence(last.get('solver_backend_layers',[])) if last else []
     raise error
