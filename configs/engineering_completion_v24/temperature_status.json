@@ -1,0 +1,45 @@
+{
+  "version": "V24",
+  "completed_utc": "2026-10-25T18:08:24.906099+00:00",
+  "status": "Bounded diagnosis complete; quantitative temperature gate remains failed",
+  "default_IES_thermal_coupling": null,
+  "replacement_model_accepted": false,
+  "historical_M23_validation_result_preserved": {
+    "all": 16,
+    "passed": 9,
+    "winter_passed": 8,
+    "summer_passed": 1
+  },
+  "M23_strong_summer_calibration": {
+    "passed": 2,
+    "all": 8
+  },
+  "fixed_zone_countercheck": {
+    "passed": 1,
+    "all": 8,
+    "actual_optimizer_fits": 4
+  },
+  "three_state_countercheck": {
+    "passed": 0,
+    "all": 8,
+    "actual_optimizer_fits": 4
+  },
+  "new_EnergyPlus_runs": 4,
+  "new_validation_dates": 0,
+  "old_dates_status": "01-22,07-20,02-19,08-22 are seen development evidence; not new holdout dates",
+  "research_use": "Exploratory conditional paired relative-temperature reconstruction for shared mechanical-coil availability intervention with AHU/fan/fixed OA/reheat available",
+  "unsupported": [
+    "Autonomous absolute temperature forecast",
+    "Quantitative critical thermal guarantee or safety judgment",
+    "General AHU/fan outage",
+    "Heating failure",
+    "Ventilation failure",
+    "Actual measured hospital validation"
+  ],
+  "energy_boundary": "Net realized representative-zone H-C difference only. No extra ventilation/reheat power; extra actual recovery delivery accounted once. Temperature cannot offset cooling ENS.",
+  "historical_inputs_unchanged": true,
+  "source_freeze_sha256": "c31be6944e31330be573d26c87dd154b446add33682e9f8926bb98329b896608",
+  "final_test_log": "logs/final_thermal_regression_fractional_clock.stdout.log",
+  "final_tests_actual": "32 passed",
+  "final_test_exit_code": 0
+}

@@ -245,10 +245,10 @@ class EngineeringCore(base.EngineeringCore):
 
     def generate_command(self,action):
         with evidence_scope(self.env.domain_evidence):command=super().generate_command(action)
-        command['execution_model_id']=MODEL_ID
+        command['execution_model_id']=self.env.model_id
         for event in reversed(self.events):
             if event.get('kind')=='command_generated' and event.get('command',{}).get('id')==command['id']:
-                event['command']['execution_model_id']=MODEL_ID
+                event['command']['execution_model_id']=self.env.model_id
                 break
         return command
 
@@ -260,7 +260,7 @@ class EngineeringCore(base.EngineeringCore):
         finally:
             # The inherited outer wrappers own M21/M22 metadata. This outer
             # version boundary binds every completed actual prefix to M23.
-            for segment in self.segments[first:]:segment.update(execution_model_id=MODEL_ID,model_correctness_contract_id=CONTRACT_ID)
+            for segment in self.segments[first:]:segment.update(execution_model_id=self.env.model_id,model_correctness_contract_id=CONTRACT_ID)
             self._m23_advance_depth-=1
             if self._m23_advance_depth==0 and self.env.actual_segment_observer is not None:
                 for segment in self.segments[getattr(self,'_m23_observed_segments',0):]:
@@ -308,7 +308,7 @@ class OperatingHospitalIESEnv(base.OperatingHospitalIESEnv):
             self.thermal_coupling=ThermalCoupling(**copy.deepcopy(self._thermal_initial))
         original=copy.deepcopy(scenario);self.model_closure_events=validate_events(original.pop('model_closure_events',[]))
         for key in ('_model_closure_v22','_sci_storage_ports'):self.config.pop(key,None)
-        reset=isolated(sci.OperatingHospitalIESEnv.reset,dict(sci.OperatingHospitalIESEnv.reset.__globals__,EngineeringCore=EngineeringCore))
+        reset=isolated(sci.OperatingHospitalIESEnv.reset,dict(sci.OperatingHospitalIESEnv.reset.__globals__,EngineeringCore=getattr(self,'engineering_core_type',EngineeringCore)))
         value=reset(self,scenario=original,seed=seed)
         return value
 
@@ -326,10 +326,10 @@ def run_episode(env,scenario,controller,seed,manifest):
     from .export import json_clean
     original=operating.dataset_export.run_trajectory
     exporter=isolated(original,dict(original.__globals__,json_clean=json_clean))
-    execute=isolated(operating.run_episode,dict(operating.run_episode.__globals__,decision_snapshot=decision_snapshot,
-        OperatingPolicyEnvironment=PolicyEnvironment,dataset_export=SimpleNamespace(run_trajectory=exporter)))
+    execute=isolated(operating.run_episode,dict(operating.run_episode.__globals__,decision_snapshot=getattr(env,'episode_snapshot_function',decision_snapshot),
+        OperatingPolicyEnvironment=getattr(env,'policy_environment_type',PolicyEnvironment),dataset_export=SimpleNamespace(run_trajectory=exporter)))
     result=execute(env,scenario,controller,seed,manifest)
-    result.update(execution_model_id=MODEL_ID,study_contract_id=CONTRACT_ID,model_correctness_contract_id=CONTRACT_ID)
+    result.update(execution_model_id=env.model_id,study_contract_id=getattr(env,'study_contract_id',CONTRACT_ID),model_correctness_contract_id=CONTRACT_ID)
     result['m21_initial_storage']={name:getattr(env.core,name).initial_charged_input_kWh for name in ('ups','cold_store')} if env.core else None
     result['events']=base.observed_model_events(scenario,result.get('summary',{}).get('observed_until_minute',0.),has_segments=bool(result.get('segments')),
         events=result.get('events',[]),research_stress_proxy=env.closure_config['research_stress_proxy'])

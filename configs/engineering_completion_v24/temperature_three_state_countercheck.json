@@ -1,0 +1,150 @@
+{
+  "registered_utc": "2026-10-25T17:59:17.662549+00:00",
+  "model": "M24_air_furniture_construction_countercheck",
+  "hypothesis": "The one lumped solid state cannot jointly represent fast furniture return heat immediately after 2h outage and slow construction release in 6h recovery",
+  "topology": "Air exchanges with furniture and construction in parallel; only construction exchanges with unchanged relative boundary. No new supplied heat source or duplicated ventilation.",
+  "parameter_order": [
+    "fixed_air_capacity_kWh_K",
+    "furniture_capacity_kWh_K",
+    "construction_capacity_kWh_K",
+    "total_air_solid_conductance_kW_K",
+    "furniture_fraction_of_total_conductance",
+    "construction_boundary_conductance_kW_K"
+  ],
+  "bounds": {
+    "OR1_FLR_2": {
+      "fixed_air_capacity_kWh_K": 0.07969984999999999,
+      "lower": [
+        0.7587852525,
+        3.4429920309053927,
+        0.12079071600000003,
+        0.1,
+        0.0278694093667268
+      ],
+      "upper": [
+        3.03514101,
+        13.771968123621571,
+        2.415814320000001,
+        0.9,
+        0.278694093667268
+      ],
+      "initial": [
+        1.5,
+        5.0,
+        0.7,
+        0.5,
+        0.08
+      ]
+    },
+    "OR2_MULT5_FLR_2": {
+      "fixed_air_capacity_kWh_K": 0.07969984999999999,
+      "lower": [
+        0.7587852525,
+        3.4429920309053927,
+        0.12079071600000003,
+        0.1,
+        0.0278694093667268
+      ],
+      "upper": [
+        3.03514101,
+        13.771968123621571,
+        2.415814320000001,
+        0.9,
+        0.278694093667268
+      ],
+      "initial": [
+        1.5,
+        5.0,
+        0.7,
+        0.5,
+        0.08
+      ]
+    },
+    "OR3_FLR_2": {
+      "fixed_air_capacity_kWh_K": 0.07969984999999999,
+      "lower": [
+        0.7587852525,
+        3.4429920309053927,
+        0.12079071600000003,
+        0.1,
+        0.0278694093667268
+      ],
+      "upper": [
+        3.03514101,
+        13.771968123621571,
+        2.415814320000001,
+        0.9,
+        0.278694093667268
+      ],
+      "initial": [
+        1.5,
+        5.0,
+        0.7,
+        0.5,
+        0.08
+      ]
+    },
+    "OR4_FLR_2": {
+      "fixed_air_capacity_kWh_K": 0.07969984999999999,
+      "lower": [
+        0.7587852525,
+        3.4429920309053927,
+        0.12079071600000003,
+        0.1,
+        0.0278694093667268
+      ],
+      "upper": [
+        3.03514101,
+        13.771968123621571,
+        2.415814320000001,
+        0.9,
+        0.278694093667268
+      ],
+      "initial": [
+        1.5,
+        5.0,
+        0.7,
+        0.5,
+        0.08
+      ]
+    }
+  },
+  "basis": [
+    "Air fixed to original IDF 237.91m3*1.2kg/m3*1005J/kgK at normalized reference scale",
+    "Furniture and construction capacities each constrained to 25-100% of their disjoint original IDF material capacity; total <= original furniture+construction",
+    "Total air-solid conductance retains original 0.5-10W/m2K times full surface area; no doubled coupling bound",
+    "Fixed coupling split research range10-90%; same zone vector across durations/days",
+    "Original floor area boundary conductance proxy retained, not an OEM or measured conductance"
+  ],
+  "fit_dates": [
+    "07-20"
+  ],
+  "fit_outage_hours": [
+    2,
+    6
+  ],
+  "fit_split": "summer_calibration_only",
+  "maximum_actual_optimizer_fits": 4,
+  "maximum_starts_per_zone": 1,
+  "maximum_nfev_per_fit": 200,
+  "fit_rule": "One preregistered bounded least-squares attempt per physical zone; all native points uniformly weighted",
+  "already_seen_development_dates": [
+    "01-22",
+    "07-20",
+    "02-19",
+    "08-22"
+  ],
+  "prediction_inputs": [
+    "current relative states",
+    "actual delivered net zone sensible difference",
+    "elapsed interval"
+  ],
+  "forbidden": [
+    "true future walls/radiant state",
+    "true future room temperature",
+    "future event repair time",
+    "separate ventilation or reheat powers added to already complete net sensible input"
+  ],
+  "gate": "All8 strong summer original metrics pass unchanged before any new summer holdout. Weak winter reported separately.",
+  "stop": "If summer calibration remains visibly inadequate, stop model expansion and no new validation background generation; retain exploratory model and explicit intervention applicability"
+}

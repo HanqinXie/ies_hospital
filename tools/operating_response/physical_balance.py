@@ -244,6 +244,14 @@ def solve_physical(row,plant:Plant,loads:np.ndarray,availability:dict[str,float]
             highs[index]=min(highs[index],execution_action['electric_chiller_cooling_kW'][i]/RT_TO_KW)
     for i in range(4):
         for j in range(3):highs[idx(i,j)]=max(0,loads[i,j])
+    service_ceiling=(config or {}).get('_m24_charge_service_ceiling_kW')
+    if service_ceiling is not None:
+        ceiling=np.asarray(service_ceiling,float)
+        if ceiling.shape!=(4,3) or not np.isfinite(ceiling).all() or np.any(ceiling<0.):raise ValueError('Invalid M24 charge service safeguard')
+        for g in range(4):
+            for carrier in range(3):
+                r=np.zeros(nvars);r[idx(g,carrier)]=1.
+                cap(r,float(ceiling[g,carrier]),name=f'm24.charge_preserves.P{g}.{CARRIERS[carrier]}',source='conservative recharge-only service safeguard')
     auxiliary_required=None
     if sci_dependencies:
         from tools.sci_engineering.service import add_dependency_constraints,fan_independent_heat_bound
@@ -362,6 +370,13 @@ def solve_physical(row,plant:Plant,loads:np.ndarray,availability:dict[str,float]
                 else f'priority.{GROUPS[group]}.normalized_ENS.upper')
             row_metadata.append(dict(name=name,unit='kWh' if bridge_layer else 'kW' if recovery_layer or start_layer or ups_service_layer else 'dimensionless',
                                      source=f'raw rank {group} objective plus original tolerance',kind='priority_lock'))
+            if service_layer and (config or {}).get('_m24_exact_service_guard',False):
+                # An additional recharge-witness constraint, never a relaxed
+                # original service lock. It removes the amount that the
+                # ordinary numerical lock would otherwise lend to charging.
+                constraints.append(LinearConstraint(c,-np.inf,val))
+                row_metadata.append(dict(name=f'm24.recharge_witness.P{group}.no_service_slack',unit='dimensionless',
+                    source='pure no-charge witness for conservative recharge safeguard',kind='physical'))
     auxiliary_bound_validation=None
     if sci_dependencies:
         from tools.sci_engineering.service import validate_auxiliary_kW_bounds

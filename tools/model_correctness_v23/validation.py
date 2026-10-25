@@ -122,7 +122,7 @@ def actual_process(payload,path):
     with base.open(encoding='utf-8-sig',newline='') as stream:rows=list(csv.DictReader(stream))
     for row,segment in zip(rows,payload['segments']):
         for key in sorted(segment):
-            if key.startswith('m23_') or key in ('hardware_availability','execution_limits'):
+            if key.startswith(('m23_','m24_')) or key in ('hardware_availability','execution_limits'):
                 row[key+'_json']=json.dumps(segment[key],ensure_ascii=False,separators=(',',':'))
     with path.open('x',encoding='utf-8-sig',newline='') as stream:
         writer=csv.DictWriter(stream,fieldnames=list(dict.fromkeys(k for row in rows for k in row)))
@@ -149,16 +149,22 @@ def record_actual_prefix(segment,stream):
         'hardware_availability','execution_limits','execution_model_id','pre_state','post_state','action',
         'loads_kW','connected_loads_kW','disconnected_loads_kW','unserved_kW','service_request_ledger',
         'cost_USD_step','energy_balance_residuals','steam_balance_residual_lbph','m21_storage',
-        'service_dependencies','m22_station','m23_restoration','m23_event_closure','m23_temperature_diagnostic')
+        'service_dependencies','m22_station','m23_restoration','m23_event_closure','m23_temperature_diagnostic',
+        'm24_cold_mode_selection','m24_tower_capacity')
     stream.write(json.dumps({k:segment[k] for k in keys if k in segment},ensure_ascii=False,allow_nan=False,separators=(',',':'))+'\n')
     stream.flush()
 
 
-def worker(output):
+def worker(output, *, model_version='v23'):
     sys.dont_write_bytecode=True
     sys.path[:0]=[str(ROOT/'src'),str(ROOT)]
     from tools.model_closure_v22.validation import read,write,sha,digest,now,native_process,recover_execution_prefix,validate_exporter_metadata,runtime_policy
-    from tools.model_correctness_v23 import environment,policy,MODEL_ID,CONTRACT_ID
+    from tools.model_correctness_v23 import policy
+    if model_version=='v23':
+        from tools.model_correctness_v23 import environment,MODEL_ID,CONTRACT_ID
+    elif model_version=='v24':
+        from tools.engineering_completion_v24 import environment,MODEL_ID,CONTRACT_ID
+    else:raise ValueError('Unknown explicit engineering model version')
     from tools.model_correctness_v23.metrics import build_reliability_metrics
     from tools.model_correctness_v23.comparison import with_comparison_inputs
     from tools.sci_engineering.runner import compact_metrics,input_binding,source_binding
@@ -168,7 +174,7 @@ def worker(output):
     registration=read(output/'CASE.json');registry=registration['registry'];case=registration['case'];scene=copy.deepcopy(case['scenario'])
     requested=float(scene['duration_steps'])*float(scene.get('step_minutes',15.))
     began=time.perf_counter();env=payload=bindings=rows_writer=prefix_stream=None
-    result=dict(schema='hospital_ies.model_correctness_validation.v23.v1',case_id=case['id'],model_id=MODEL_ID,
+    result=dict(schema='hospital_ies.model_correctness_validation.'+model_version+'.v1',case_id=case['id'],model_id=MODEL_ID,
         status='started',started_utc=now(),actual_episode_attempts=0,requested_end_minute=requested,
         observed_until_minute=None,unknown_tail_minutes=requested,metrics=None,error=None,
         evaluation_role=case.get('evaluation_role','seen_regression'),independent_validation=False,
@@ -186,6 +192,8 @@ def worker(output):
         config=copy.deepcopy(registry['hardware_profiles'][case['configuration']])
         config['model_closure_v22']=copy.deepcopy(case.get('model_closure_v22',registry['model_closure_v22']))
         config['model_correctness_v23']=copy.deepcopy(case.get('model_correctness_v23',registry['model_correctness_v23']))
+        if model_version=='v24':
+            config['engineering_completion_v24']=copy.deepcopy(case.get('engineering_completion_v24',registry['engineering_completion_v24']))
         result['extra_input_bindings']={}
         thermal=config['model_correctness_v23'].get('thermal_coupling')
         if thermal:
@@ -202,7 +210,8 @@ def worker(output):
         result['model_config']=config;result['resolved_model_config']=copy.deepcopy(env.operating_model_config)
         result['model_config_sha256']=digest(result['resolved_model_config'])
         spec=runtime_policy(case,registry,policy)
-        controller=policy.SciPolicy(spec['alias'],config=spec['config'],plant=env.plant)
+        controller=policy.SciPolicy(spec['alias'],config=spec['config'],plant=env.plant,
+            policy_id=(spec['alias']+'_engineering_completion_v24') if model_version=='v24' else None)
         result['policy']=dict(alias=spec['alias'],policy_id=controller.policy_id if hasattr(controller,'policy_id') else spec['alias']+'_model_correctness_v23',config=controller.config)
         result['scenario_sha256']=digest(scene);result['configuration']=case['configuration']
         result['input_access_receipt']=copy.deepcopy(getattr(env,'input_access_receipt',None))
@@ -210,7 +219,8 @@ def worker(output):
             study_contract_id=CONTRACT_ID,model_config_signature=result['model_config_sha256'],configuration_id=case['configuration'],
             execution_model_id=MODEL_ID,simulator_hash=result['source_sha256'],schemas=copy.deepcopy(registry['schemas']),
             splits={scene['id']:dict(group_id=scene['family_id'],split='development',fit_allowed=False,embargo_minutes=60.,grouping_basis='full original source support')})
-        manifest['schemas']['model_correctness_v23']=CONTRACT_ID;manifest['signature']=digest(manifest)
+        manifest['schemas']['model_correctness_v23' if model_version=='v23' else 'engineering_completion_v24']=CONTRACT_ID
+        manifest['signature']=digest(manifest)
         result['manifest']=manifest
         write(output/'RESOLVED_CASE.json',dict(case=case,model_config=result['resolved_model_config'],policy=result['policy'],manifest=manifest))
         result['actual_episode_attempts']=1;write(output/'STATUS.json',result)
@@ -269,16 +279,18 @@ def worker(output):
     return 0 if result['status']=='completed' else 1
 
 
-def main(argv=None):
+def main(argv=None, *, registry_path=None, model_version='v23', worker_script=None):
+    cases_path=Path(registry_path) if registry_path is not None else CASES
+    worker_script=Path(worker_script) if worker_script is not None else Path(__file__).resolve()
     parser=argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--case');parser.add_argument('--list',action='store_true');parser.add_argument('--case-file',type=Path)
     parser.add_argument('--policy',choices=list('RMFCA'));parser.add_argument('--configuration')
     parser.add_argument('--output',type=Path);parser.add_argument('--_worker',action='store_true',help=argparse.SUPPRESS)
     args=parser.parse_args(argv)
-    if args._worker:return worker(args.output)
+    if args._worker:return worker(args.output,model_version=model_version)
     sys.path[:0]=[str(ROOT),str(ROOT/'src')]
     from tools.model_closure_v22.validation import read,write,sha,now,selected_case,validate_exporter_metadata
-    registry=read(CASES)
+    registry=read(cases_path)
     if args.list:
         for case in registry['cases']:print(case['id']+'\t'+case['purpose'])
         return 0
@@ -292,9 +304,10 @@ def main(argv=None):
     validate_exporter_metadata(case['scenario'])
     output=checked_output(args.output);output.mkdir(parents=True,exist_ok=False)
     write(output/'CASE.json',dict(registry={k:v for k,v in registry.items() if k!='cases'},case=case,
-        case_input_binding=dict(path=str(args.case_file or CASES),sha256=sha(args.case_file or CASES))))
-    command=[sys.executable,'-I',str(Path(__file__).resolve()),'--_worker','--output',str(output)]
-    write(output/'INVOCATION.json',dict(command=command,cwd=str(ROOT),started_utc=now(),runner_script_sha256=sha(Path(__file__)),registry_sha256=sha(CASES)))
+        case_input_binding=dict(path=str(args.case_file or cases_path),sha256=sha(args.case_file or cases_path))))
+    command=[sys.executable,'-I',str(worker_script),'--_worker','--output',str(output)]
+    write(output/'INVOCATION.json',dict(command=command,cwd=str(ROOT),started_utc=now(),
+        runner_script_sha256=sha(worker_script),shared_runner_sha256=sha(Path(__file__)),registry_sha256=sha(cases_path),model_version=model_version))
     (output/'temp').mkdir()
     child_env=dict(os.environ,TEMP=str(output/'temp'),TMP=str(output/'temp'),PYTHONDONTWRITEBYTECODE='1',PYTHONIOENCODING='utf-8')
     with (output/'stdout.log').open('x',encoding='utf8') as stdout,(output/'stderr.log').open('x',encoding='utf8') as stderr:

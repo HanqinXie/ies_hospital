@@ -6,7 +6,7 @@ import time
 import numpy as np
 from hospital_ies.control_env import HospitalIESEnv as NativeEnvironment
 from hospital_ies.state_transition import EPS,event_window
-from hospital_ies.execution import ModelConstraintInfeasible
+from hospital_ies.execution import ModelConstraintInfeasible,SolverExecutionError
 from tools.engineering_model.environment import isolated
 from tools.sci_engineering import environment as legacy
 from tools.operating_response.physical_balance import solve_physical
@@ -174,6 +174,10 @@ class EngineeringCore(legacy.EngineeringCore):
             solver_backend_layers=copy.deepcopy(result['solver_backend_layers'])))
 
     def _electric_sink_upper(self,loads,f,row):
+        if hasattr(self,'_search_cold_modes') and self.env.engineering_completion_config['cold_mode_search']:
+            # The no-export decision must see the same lawful current
+            # charging domain as the subsequent actual physical solve.
+            self._select_current_ports(loads,f)
         value=super()._electric_sink_upper(loads,f,row);context=self._current_context(f)
         steam=min(float(self.arrived_dispatch.get('boiler_steam_lbph',0.)),self.env.plant.boiler_steam_lbph/3.*sum(f[f'BOILER_{i}'] for i in (1,2,3)))
         station=0.
@@ -222,15 +226,35 @@ class EngineeringCore(legacy.EngineeringCore):
         if self.gt_start_pending:candidates.append(self.time+1.)
         return min([t]+[x for x in candidates if x>self.time+EPS])
 
-    def _solve(self,loads,f,dt_h,phase,action,**kwargs):
-        began=time.perf_counter();e=self.env;_,row,_,_=self.data_at(self.time)
-        def solve(ports):
+    def _storage_solver(self,loads,f,dt_h,**kwargs):
+        """Build pure same-snapshot solves for actual and current-port trials."""
+        e=self.env;_,row,_,_=self.data_at(self.time)
+        def solve(ports,extra_config=None):
             cfg=dict(e.config,_sci_storage_ports=ports,_model_closure_v22=self._current_context(f))
+            cfg.update(extra_config or {})
             return solve_physical(row,e.plant,loads,f,self.state,dt_h,float(e.scenario.get('grid_limit_kW',e.config['grid_import_limit_kW'])),
                 self.diesel_available(self.time,f),float(e.config['gt_ramp_kW_per_hour']),float(e.config['solver_time_limit_sec']),cfg,
                 execution_contract=e.operating_execution_contract,**kwargs)
+        return solve
+
+    def _solve(self,loads,f,dt_h,phase,action,**kwargs):
+        began=time.perf_counter();e=self.env
+        solve=self._storage_solver(loads,f,dt_h,**kwargs)
         try:
-            baseline=solve(self._base_ports())
+            search_modes=hasattr(self,'_search_cold_modes') and self.env.engineering_completion_config['cold_mode_search']
+            baseline_failure=None
+            try:baseline=solve(self._base_ports())
+            except (ModelConstraintInfeasible,SolverExecutionError) as exc:
+                if not search_modes:raise
+                baseline=None;baseline_failure=exc
+            if search_modes:
+                result,ports,selection=self._search_cold_modes(solve,baseline,loads,f,dt_h,baseline_failure=baseline_failure)
+                self._m22_ports=copy.deepcopy(ports)
+                if phase!='local_down_endpoint':self._storage_candidate=dict(time_minute=self.time,action=copy.deepcopy(result['action']))
+                result['m22_mode_selection']=selection
+                self.solver_calls.append(dict(time_minute=self.time,phase=phase,dt_h=dt_h,status='success',elapsed_seconds=time.perf_counter()-began,
+                    solver_backend_layers=result['solver_backend_layers'],m24_cold_mode_selection=copy.deepcopy(selection)))
+                return result
             deficit=float(np.asarray(baseline['lost'])[:2,2].sum())
             mode=self._cold_mode(deficit) if hasattr(self,'_cold_mode') and self.env.correctness_config['storage_fix'] else ('discharge' if deficit>.01 and self.cold_store.energy_kWh>1e-9 else ('charge' if self.cold_recharge.allowed(self.cold_store.energy_kWh,self.cold_store.config['capacity_kWh']) else 'idle'))
             candidates=[]
