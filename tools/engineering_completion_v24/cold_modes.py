@@ -1,10 +1,63 @@
 """Bounded same-snapshot storage modes with an explicit recharge safeguard."""
 from __future__ import annotations
 import copy
+import math
 import numpy as np
 from hospital_ies.execution import ModelConstraintInfeasible,SolverExecutionError
 from tools.model_correctness_v23.domains import select_candidate
 from tools.model_correctness_v23.evidence import successful_backend_evidence,retained_backend_evidence
+
+NON_COST_ORDER=(0,1,'start','bridge',2,3,'ups_current_service_only','charge','recovery')
+
+
+def admit_discharge_candidates(candidates):
+    """Do not spend cold inventory solely on cost when lawful idle matches.
+
+    Compare every original pre-cost layer in its original order and band.
+    This eligibility rule leaves the original final selector unchanged.
+    """
+    profiles=[]
+    for index,(result,ports) in enumerate(candidates):
+        rows=result.get('_m23_objective_hierarchy');profile={}
+        def invalid(reason):
+            error=ValueError(f'M24 cold candidate {index} objective contract: {reason}')
+            error.category='cold_discharge_objective_contract'
+            error.command_compilation_diagnostic=dict(candidate_index=index,reason=reason,objective_hierarchy=copy.deepcopy(rows),inventory_committed=False)
+            error.solver_backend_attempts=copy.deepcopy(result.get('solver_backend_layers',[]))
+            raise error
+        if not isinstance(rows,list):invalid('missing hierarchy metadata')
+        for row in rows:
+            if not isinstance(row,dict) or not {'name','value','lock_tolerance'}<=set(row):invalid('malformed objective metadata')
+            name=row['name']
+            if type(name) not in (int,str) or name not in (*NON_COST_ORDER,'cost'):invalid(f'unknown objective {name!r}')
+            if name in profile:invalid(f'duplicate objective {name!r}')
+            try:value=float(row['value']);tolerance=float(row['lock_tolerance'])
+            except (ValueError,TypeError):invalid(f'invalid numeric objective {name!r}')
+            if not math.isfinite(value) or not math.isfinite(tolerance) or tolerance<0.:invalid(f'invalid objective value/band {name!r}')
+            profile[name]=(value,tolerance)
+        missing={0,1,2,3,'cost'}-set(profile)
+        if missing:invalid(f'missing required objective {sorted(map(str,missing))}')
+        profiles.append(profile)
+    idles=[index for index,(_,ports) in enumerate(candidates) if ports.get('cold_discharge_kW',0.)==0. and ports.get('cold_charge_kW',0.)==0.]
+    admitted=[];decisions=[]
+    for index,item in enumerate(candidates):
+        result,ports=item
+        if result['action'].get('cold_discharge_kW',0.)<=0.:admitted.append(item);continue
+        pool=[member for member in range(len(candidates)) if member==index or member in idles]
+        trace=[];eligible=True;reason='no_legal_idle_domain'
+        if idles:
+            for name in NON_COST_ORDER:
+                best=min(pool,key=lambda member:profiles[member].get(name,(0.,0.))[0])
+                value,tolerance=profiles[best].get(name,(0.,0.));upper=value+tolerance
+                pool=[member for member in pool if profiles[member].get(name,(0.,0.))[0]<=upper]
+                trace.append(dict(layer=name,best_value=value,original_lock_tolerance=tolerance,upper=upper,
+                    candidate_retained=index in pool,idle_count=sum(member in idles for member in pool)))
+                if index not in pool:eligible=False;reason='idle_has_better_earlier_non_cost_objective';break
+                if not any(member in idles for member in pool):reason='discharge_improves_original_non_cost_hierarchy';break
+            else:eligible=False;reason='idle_matches_all_original_non_cost_objectives'
+        decisions.append(dict(candidate_index=index,idle_candidate_indices=idles,eligible=eligible,reason=reason,comparison=trace))
+        if eligible:admitted.append(item)
+    return admitted,dict(non_cost_order=list(NON_COST_ORDER),original_lock_bands_unchanged=True,decisions=decisions)
 
 
 def search(core,solve,baseline,loads,availability,dt_h,*,baseline_failure=None):
@@ -15,7 +68,7 @@ def search(core,solve,baseline,loads,availability,dt_h,*,baseline_failure=None):
     The no-charge winner and the witness retain the original normalized
     E/H/C objectives in P0--P3 order. All trials read the same snapshot.
     """
-    records=[];noncharging=[]
+    records=[];noncharging=[];record_by_result={}
     ups_modes=[False,True] if core.ups.energy_kWh<core.ups.config['capacity_kWh']-1e-9 and core.ups.config['capacity_kWh']>0. else [False]
     cold_modes=['idle']+(['discharge'] if core.cold_store.energy_kWh>1e-9 else [])
     def retain(mode,ups_charge,status,layers,*,guard_probe=False):
@@ -43,15 +96,24 @@ def search(core,solve,baseline,loads,availability,dt_h,*,baseline_failure=None):
             records.append(dict(cold_mode=recorded_mode,ups_charge=ups_charge,status=status,message=str(exc),
                 guard_probe=bool(extra),**retain(recorded_mode,ups_charge,status,getattr(exc,'solver_backend_attempts',[]),guard_probe=bool(extra))))
             return None
-        records.append(dict(cold_mode=recorded_mode,ups_charge=ups_charge,status='legal',guard_probe=bool(extra),
+        record=dict(cold_mode=recorded_mode,ups_charge=ups_charge,status='legal',guard_probe=bool(extra),
             action=copy.deepcopy(result['action']),unserved_kW=np.asarray(result['lost']).tolist(),
             objective_hierarchy=copy.deepcopy(result['_m23_objective_hierarchy']),cost_USD_step=result['cost_USD_step'],
-            **retain(recorded_mode,ups_charge,'legal',result.get('solver_backend_layers',[]),guard_probe=bool(extra))))
+            **retain(recorded_mode,ups_charge,'legal',result.get('solver_backend_layers',[]),guard_probe=bool(extra)))
+        records.append(record);record_by_result.setdefault(id(result),[]).append(record)
         return result,ports
     for mode in cold_modes:
         for ups_charge in ups_modes:
             item=attempt(mode,ups_charge,reuse=True)
             if item is not None:noncharging.append(item)
+    admission=None
+    if core.cold_store.config['capacity_kWh']>0.:
+        prior=noncharging
+        noncharging,admission=admit_discharge_candidates(prior)
+        for decision in admission['decisions']:
+            related=record_by_result[id(prior[decision['candidate_index']][0])]
+            decision['solver_call_indices']=[record['solver_call_index'] for record in related]
+            for record in related:record.update(eligible_for_mode_selection=decision['eligible'],admission_reason=decision['reason'])
     winner=select_candidate([r for r,_ in noncharging]) if noncharging else None
     selected=next((item for item in noncharging if item[0] is winner),None)
     no_charge_status='legal' if noncharging else 'registered_domains_unavailable' if any(x['status']=='candidate_solver_error' for x in records) else 'registered_domains_infeasible'
@@ -120,4 +182,5 @@ def search(core,solve,baseline,loads,availability,dt_h,*,baseline_failure=None):
         original_service_lock_tolerances_unchanged=True,service_lock_slack_used_to_charge=False)
     diagnostic['candidate_solver_errors']=sum(x['status']=='candidate_solver_error' for x in records)
     diagnostic['safe_no_charge_retained_after_probe_failure']=bool(diagnostic['candidate_solver_errors'] and any(r is result for r,_ in noncharging))
+    if admission is not None:diagnostic['discharge_admission']=admission
     return result,ports,diagnostic
