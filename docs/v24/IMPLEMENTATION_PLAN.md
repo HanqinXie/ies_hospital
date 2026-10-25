@@ -24,39 +24,51 @@
 - [x] Actual one-minute proof:fan0,pump1,P0 E20/H0/C100,GRID ceiling100,EC ceiling100,GT/DG/boiler/ABS0. M24 charges100kW with GRID38.894573kW and actual store pump2kW; stock rises1.583333kWh. M23 remains idle under its own identity.
 - [x] Negatives:no actual source, no pump, no arrived cold-source permission. Empty/partial states and original source-short depletion remain covered. Real tiny inventory is not deleted and empty thresholds/physical tolerances are unchanged.
 - [x] Actual five-minute repeated sequence verifies fan failure→paid recharge→fan return and EC loss→54.15s delivery→empty→legitimate recharge/repeat. Raw receipts and failure logs retained.
-- [ ] Independent review original hierarchy/guard constraints, objective comparison and fallback records. Optional probe failure must be visible; a failed required physical action must remain failed/unknown.
-- [ ] Register and run affected full fan-path/recharge and cold_partial/no-pump/no-fan cases under one frozen M24 source. Hold the original15min decision clock and ordinary queue.
+- [x] Independent review original hierarchy/guard constraints, objective comparison and fallback records. Optional probe failure must be visible; a failed required physical action must remain failed/unknown.
+- [x] Register and run affected full fan-path/recharge and cold_partial/no-pump/no-fan cases under one frozen M24 source. Hold the original15min decision clock and ordinary queue.
 
 ## 2. Tower units and static heat-flow boundary
 
 - [x] Read original Brown/Dirks source and three user-specified official sources. Original hospital source says four1200-ton towers but does not specify tower-ton standard, wet bulb, temperatures or flow.
-- [ ] Expose `tower_rejection_capacity_kW=4220.223408` as independent explicit M24 research kW, preserving current default physics. Do not silently replace with5275.27926 or couple it to an EC capacity change.
-- [ ] Record 12000BTU refrigeration-ton vs conditional15000BTU nominal-tower-ton. Original0.77kWe/RT includes condenser pumps/tower fans; retain aggregate electric accounting and clearly label the static rejection proxy. No unsupported loop-temperature dynamics or duplicated auxiliaries.
-- [ ] One matched C cold-path sensitivity at1.25 rejection kW only, same load/faults/cold stock/controls. It is a unit-ambiguity boundary, not measured hospital uprating or policy superiority.
+- [x] Expose `tower_rejection_capacity_kW=4220.223408` as independent explicit M24 research kW, preserving current default physics. Do not silently replace with5275.27926 or couple it to an EC capacity change.
+- [x] Record 12000BTU refrigeration-ton vs conditional15000BTU nominal-tower-ton. Original0.77kWe/RT includes condenser pumps/tower fans; retain aggregate electric accounting and clearly label the static rejection proxy. No unsupported loop-temperature dynamics or duplicated auxiliaries.
+- [x] One matched C cold-path sensitivity at1.25 rejection kW only, same load/faults/cold stock/controls. It is a unit-ambiguity boundary, not measured hospital uprating or policy superiority.
 
 ## 3. L2: existing actual dependency/secondary functional exit
 
 - [x] Source inspection and old native evidence confirm:after actual nonUPS source becomes0, an already-qualified boiler loses function/protective readiness; real source return plus arrived permission and continuous paid restart restore it. `flow_available` is not actually passed in this production call; do not claim measured flow-trip coverage.
-- [ ] Register staged upstream failure:GRID loss while retaining the original onlineGT_2; after DG actually connects, remove remaining GT. Compare short vs long sufficient disturbance, normal negative, and one lawful policy/resource condition that delays/avoids actual source loss if supported by the executed data.
-- [ ] Verify the primary source transfer did not already create a misleading lock before the intended DG-exhaustion chain. Report actual positive boiler output before source loss, DG EMPTY vs permission-induced zero separately, source0, readiness/latch, actual paid restart and returned steam.
-- [ ] Keep matched L1/L2 label-only counterfactual under the same M24 rule; label changes alone do not modify physics. Correct new recipe canonical metadata without rewriting old results.
-- [ ] No added thermal-loop state:the already implemented mechanism is preferred. A partial capacity limit is not a false temperature accumulator; no unmet-demand/GT-overcurrent proxy returns.
+- [x] Register staged upstream failure:GRID loss while retaining the original onlineGT_2; after DG actually connects, remove remaining GT. Compare short vs long sufficient disturbance, normal negative, and one lawful policy/resource condition that delays/avoids actual source loss if supported by the executed data.
+- [x] Verify the primary source transfer did not already create a misleading lock before the intended DG-exhaustion chain. Report actual positive boiler output before source loss, DG EMPTY vs permission-induced zero separately, source0, readiness/latch, actual paid restart and returned steam.
+- [x] Keep matched L1/L2 label-only counterfactual under the same M24 rule; label changes alone do not modify physics. Correct new recipe canonical metadata without rewriting old results.
+- [x] No added thermal-loop state:the already implemented mechanism is preferred. A partial capacity limit is not a false temperature accumulator; no unmet-demand/GT-overcurrent proxy returns.
 
 ## 4. Summer thermal diagnosis and bounded stop
 
 - [x] Reproduce original summer calibration error and time origin:OR1 six-hour actual recovery760min vs old prediction1890min; identify98.286h slow mode and near-zero pre-event differences. Native substep replay does not explain the tail offset.
 - [x] Fixed-zone two-state diagnostic4fits retained; it improves one tail but leaves strong two-hour recovery bias. It is a failed developmental alternative, not new validation.
 - [x] Predeclare one final physically bounded3state alternative (air/furniture/wall capacities from IDF, total capacity bound unchanged, one start per zone/no daily parameters),4fits. Original standards and all difficult cases retained.
-- [ ] Finish4 specific derived EnergyPlus output additions (summer/winter normal/6h) only to distinguish flow/reheat/NoEconomizer mechanisms; verify original1090 sizing values and original thermal streams unchanged.
-- [ ] If calibration remains materially unqualified, stop structural extension and do not create misleading new-date validation. Report why current passive low-order model is inadequate for quantitative summer recovery. Keep winter weak excitation separate and default supply comparison uncoupled.
-- [ ] Only a genuinely qualifying frozen alternative may proceed to a few preregistered strong summer dates. Never fit back to their outcomes, use future wall truth or change20min to390min.
+- [x] Finish4 specific derived EnergyPlus output additions (summer/winter normal/6h) only to distinguish flow/reheat/NoEconomizer mechanisms; verify original1090 sizing values and original thermal streams unchanged.
+- [x] If calibration remains materially unqualified, stop structural extension and do not create misleading new-date validation. Report why current passive low-order model is inadequate for quantitative summer recovery. Keep winter weak excitation separate and default supply comparison uncoupled.
+- [x] Only a genuinely qualifying frozen alternative may proceed to a few preregistered strong summer dates. Never fit back to their outcomes, use future wall truth or change20min to390min.
 
 ## 5. Small matched resource matrix and final verification
 
-- [ ] Register a targeted matrix after core integration, not a Cartesian search:affected cold paths; staged L2 normal/short/long plus matched labels; tower1.25; DG150/300/600 on the same long background; UPS20/40 with fixed power plus one necessary power control; cold30/60/90 with fixed power plus one power control. Reuse identical baseline tasks instead of duplicate dispatch.
-- [ ] Default C. Add R/M only for existing affected matched comparison or a concrete causal question. No A search. All formal policy pairs require identical actual source/input/physical config/window.
-- [ ] Separate initial actual stock, energy capacity, charge/discharge power, paid preparation, terminal stock. Explain service/fee/general-service tradeoffs and whether source, power, inventory, permit or path is binding. Do not force closed-loop metric monotonicity.
-- [ ] Stop all scientific writers before actual formal runs. Bind source/input/parameters per attempt; failures/prefixes/unknown tails are retained. Fix ordinary failures, refreeze and rerun only affected tasks.
-- [ ] One centralized `python -m pytest -q` after integration, with E basetemp and actual command/stdout/stderr/exit. Preserve the old0.5min stock-band difference; no extra0.25min run unless a new conclusion depends on that magnitude.
-- [ ] Independent process/resource/accounting audit using actual native intervals. No new scientific result inferred merely from hashes or test counts.
+- [x] Register a targeted matrix after core integration, not a Cartesian search:affected cold paths; staged L2 normal/short/long plus matched labels; tower1.25; DG150/300/600 on the same long background; UPS20/40 with fixed power plus one necessary power control; cold30/60/90 with fixed power plus one power control. Reuse identical baseline tasks instead of duplicate dispatch.
+- [x] Default C. Add R/M only for existing affected matched comparison or a concrete causal question. No A search. All formal policy pairs require identical actual source/input/physical config/window.
+- [x] Separate initial actual stock, energy capacity, charge/discharge power, paid preparation, terminal stock. Explain service/fee/general-service tradeoffs and whether source, power, inventory, permit or path is binding. Do not force closed-loop metric monotonicity.
+- [x] Stop all scientific writers before actual formal runs. Bind source/input/parameters per attempt; failures/prefixes/unknown tails are retained. Fix ordinary failures, refreeze and rerun only affected tasks.
+- [x] One centralized `python -m pytest -q` after integration, with E basetemp and actual command/stdout/stderr/exit. Preserve the old0.5min stock-band difference; no extra0.25min run unless a new conclusion depends on that magnitude.
+- [x] Independent process/resource/accounting audit using actual native intervals. No new scientific result inferred merely from hashes or test counts.
 - [ ] Brief Chinese report answers all six task questions, with separate completion status for default supply, propagation and temperature. Current source/config or complete732fd6b-bound patch, small actual tables/processes and minimum command/input closure delivered under100MB. Reuse the existing compact approach; no packaging-system development, plots, remote publication or main merge.
+
+## Source02 targeted corrective gate
+
+Source01 completed26 actual episodes, all native audits passed, but the cold subset exposed a healthy cost-only discharge/recharge cycle. These12 remain historical. Exact Source01 runtime was preserved with796members/SHA/CRC before editing. Source02 changes only M24 cold_modes.py in production, adds admission regression and an exact Source01 snapshot fixture. No original capacity/fault/service locks changed. Local RED and47-pass GREEN exist; new full-suite and12 affected full processes are the release gates.
+
+Finalcohort:14 no-cold Source01 (indices1?4,13?22) plus12 Source02 cold (5?12,23?26), each retaining actual SHA. The zero-cold predicate is independently supported by1309 native intervals, exact old/new current-point transcript parity across UPS0/20half/40full, and the production diff; formal resource/policy pairs stay within one actual source. The incomplete fit/failed intermediate/Source01-cycle records are preserved.
+
+## Actual release outcome
+
+The explicit default testpaths initially missed17 new admission regressions:full_pytest02 recorded1029/1skip, while local47 had already passed. Onlypytest.ini collection was repaired; precollector388 and its actual logs remain. Release freezec8fc recorded1046passed/1skip in341.42s exit0 (full_pytest03_release); skip is optional original annualSQL reconstruction whenSCI_SOURCE_ROOT is unset. Original8760 allocation cached replay is covered. Core commit9a7ba65.
+
+All12 affected release cold tasks actually completed with unknown_tail0, exit0 (formal_cold02,720.593s). After source freeze and actual resource check, two independent workers were allowed; each retained its own process/temp/output/state and unchanged simulation clock. Maximum owned episodeRSS1.406GB and systemcommit0.6562, no guard abort. Finalexplicit14old/12new map and all26 native audits are in E/FINAL_COHORT.json. No forcedbetter result:fullfan remains numerically identical toSource01M24, C/M retainscost/stock/CO2 tradeoffs, capacity/power paths have real opposing serviceeffects.
