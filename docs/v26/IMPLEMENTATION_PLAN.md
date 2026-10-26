@@ -6,6 +6,16 @@
 
 **Stack:** Existing Python3.10.6/Gurobi13.0.2/EnergyPlus26.2.0-4bd7a1f26f, original28 inputs, E:/hospital_ies_v26_20261026 raw/temp/results. No new paper/figures/ML/MPC, main merge/push, external messages, capacity/load-priority/threshold changes, or controller future information.
 
+## Executed closeout (2026-10-26)
+
+The checkboxes below retain the original planning snapshot; actual terminal status is authoritative in `FINAL_ACCEPTANCE.json` and `MODEL_REPORT.md` in this directory and the delivery root.
+
+- A: nine original-trajectory observers plus exactly three preregistered diagnostics completed. The source equations and observation contracts pass; the full cold interface and minPlant8 proposed numerical repair fail frozen admission. Fourth diagnostic unused. No more settings sweep or forced flow/capacity change.
+- B: sixteen actual finite optimizer calls completed (max observed nfev134 <=200). Both structures fail all-eight summer absolute and paired admission. Retire them as standalone temperature acceptance tools. Independent dates, own-clock causal validation and coupling are conditionally NOT EXECUTED, not missing/assumed passes.
+- C: active-path matched N/F/D/FD plus normal public smoke completed; four original native-accounting audits pass. All four have zero critical engineering interruption with different substitution cost. Fault clearance is not actual GT2 restart.
+- Final production source: `bb4b8e268d0be7187d67432c79089c812b1fb82b`, science SHA `bae2c575d16423ec61e762fef910bbea437b398dd0a928bc8d4cafd753100eb6`; original28 input SHA unchanged. Default test actually run once after production freeze: 1190 passed, 1 optional SQL skip, 0 failed/xfail. Clean portable public entry and both read-only evidence replays exit0. Documentation closeout does not change tested scientific bytes.
+- The sole archive is strictly below100000000 bytes; final ZIP member-SHA/CRC/size and ZIP identity are checked after packaging and supplied with the delivery reply. Original large files remain in place; exact duplicate/deep solver/report omissions have per-file SHA ledgers.
+
 ## Baseline and authority
 
 - [x] Fully read main task22338bytes SHA6613287ee4f425da11161574b896e7e453d48f7d1112d9effc5a9a421faa969f, README, complete independent review and reference purposes. Task ZIP SHA d9dad61794076dff40802bba4c45c233765d1067ac4cca057fcab93d152fcdee; all21 indexed members match. Source task staged read-only in E/task_package.
