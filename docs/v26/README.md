@@ -14,7 +14,7 @@ V26在独立研究分支延续真实M25物理核心。四例同背景N/F/D/FD均
 python -B -m tools.model_correction_v26.validation --case smoke_normal --policy C --configuration H0 --operating-rule current_service_bridge --output E:/hospital_ies_v26_user_smoke01
 ```
 
-回到解压根，只读复算9例×81阶段的原生冷边界，无需启动EnergyPlus或优化器：
+回到解压根，只读复算9例、共81阶段的原生冷边界，无需启动EnergyPlus或优化器：
 
 ```powershell
 python -B replay_cold_evidence.py --project project --evidence cold --output E:/hospital_ies_v26_user_cold01
