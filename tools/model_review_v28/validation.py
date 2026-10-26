@@ -11,6 +11,7 @@ def resolve_case(case,registry,alias=None):
     value=original(case,registry,alias,order='after_cost')
     version=value.get('v28_demand_version',registry.get('default_demand_version','A_original_heat'))
     if version not in ('A_original_heat','V28_adopted'):raise ValueError('Unknown registered demand version')
+    if version=='A_original_heat' and value.get('v28_thermal_profile') is not None:raise ValueError('A_original_heat forbids an adopted thermal profile; keep the original heat input')
     if value['policy']['alias'] not in ('C','M'):raise ValueError('V28 registered comparison uses established C/M rules')
     if version=='V28_adopted' and not value.get('v28_thermal_profile'):raise ValueError('Adopted V28 demand version requires bound thermal input')
     value.update(study_id=STUDY_ID,v28_demand_version=version,v28_demand_contract=DEMAND_CONTRACT)

@@ -1,5 +1,5 @@
 {
-  "schema": "hospital_ies.v28.demand_service_cases.v1",
+  "schema": "hospital_ies.v28.demand_service_cases.v2",
   "scope": "Fixed-direct auxiliary A-only comparison and separately adopted central thermal-service input",
   "model_closure_v22": {
     "station": {
@@ -675,9 +675,9 @@
         "pre_event_warmup_steps": 1,
         "initialization_seed": 20261023,
         "canonical_class": "L3",
-        "event_class": "L3",
+        "event_class": "L4",
         "analysis_class": "L3",
-        "stage": 3,
+        "stage": 4,
         "enable_propagation": true,
         "event_schema_version": "p2a.events.v1",
         "faults": {},
@@ -1005,7 +1005,7 @@
     },
     {
       "id": "smoke_normal",
-      "purpose": "15min public-entry integration of actual full initial-state receipt and fixed-direct routing",
+      "purpose": "Clean public V28 fixed-direct and adopted ordinary-DHW target supply entry",
       "scenario": {
         "source_block_id": "m21_seen_boundary_4001_days166_167",
         "source_day_index": 166,
@@ -1134,6 +1134,787 @@
         "original_L4_active_boiler_excited": false
       },
       "v27_objective_order": "after_cost",
+      "v28_demand_version": "V28_adopted",
+      "v28_demand_contract": "hospital_ies.fixed_direct_aux.v28.v1",
+      "v28_thermal_profile": {
+        "files": {
+          "thermal_service_components": {
+            "path": "inputs/model_review_v28/THERMAL_SERVICE_COMPONENTS_8760.csv",
+            "sha256": "27b608272ed268c16fc6fb86ce5fbcf66e4f4f177f3ed7feefacc15c823b11f4"
+          },
+          "thermal_input_metadata": {
+            "path": "inputs/model_review_v28/THERMAL_INPUT_METADATA.json",
+            "sha256": "d24ab6a3458ffa02e57616969ea4866f2c3a051bed3d203748e9888ac0cb9ccb"
+          }
+        }
+      }
+    },
+    {
+      "id": "B_combined_N",
+      "purpose": "Adopted ordinary target; common standard08-11 with active local laundry/water use; matched N",
+      "factorial_variant": "N",
+      "scenario": {
+        "source_block_id": "v28_adopted_jul20_08_11_activity",
+        "source_day_index": 200,
+        "season_quarter": 2,
+        "role": "development",
+        "experiment_role": "seen_engineering_model_regression",
+        "start_hour": 4809,
+        "duration_steps": 12,
+        "step_minutes": 15.0,
+        "pre_event_warmup_steps": 1,
+        "initialization_seed": 20261023,
+        "canonical_class": "NORMAL",
+        "event_class": "L3",
+        "analysis_class": "NORMAL",
+        "stage": 3,
+        "enable_propagation": true,
+        "event_schema_version": "p2a.events.v1",
+        "faults": {},
+        "auxiliary_faults": {},
+        "shock": {},
+        "shock_by_priority": {},
+        "shock_by_zone": {},
+        "fault_target": "GT_2",
+        "fault_availability": 0.0,
+        "demand_amplitude": 0.0,
+        "clinical_template_id": "emergency_department",
+        "clinical_coefficients_are_research_assumptions": true,
+        "response_delay_minutes": 30.0,
+        "fault_start_minute": 30.0,
+        "fault_duration_minutes": 60.0,
+        "shock_start_minute": 30.0,
+        "shock_duration_minutes": 60.0,
+        "first_event_minute": 30.0,
+        "recovery_start_minute": 90.0,
+        "history_interval_minutes": [
+          0.0,
+          30.0
+        ],
+        "tail_interval_minutes": [
+          90.0,
+          180.0
+        ],
+        "root_family_id": "v28_adopted_jul20_08_11_activity",
+        "family_id": "v28_adopted_jul20_08_11_activity",
+        "design_family": "v28_adopted_jul20_08_11_activity",
+        "sampling_cohort": "v28_adopted_thermal_matched_activity",
+        "sampling_method": "Common08-11 selected before runs to cover existing laundry and water-use activity; no severity/capacity change",
+        "grid_limit_kW": 850.0,
+        "pre_event_grid_limit_kW": 850.0,
+        "automatic_fast_shedding": false,
+        "requires_policy_freeze": false,
+        "selection_allowed": false,
+        "fit_allowed": false,
+        "is_final_blind": false,
+        "original_final12_evaluated": false,
+        "historical_exposure_status": "seen_V25_normal_h4001_not_independent_confirmation",
+        "new_independent_background": false,
+        "background_independence": "Full source-block isolation within V21; historical exposure separately reported",
+        "prehistory_mode": "same_continuous_episode_no_reset",
+        "exogenous_events": [],
+        "full_source_support": {
+          "raw_start_minute": 288480.0,
+          "raw_end_minute": 288720.0
+        },
+        "parent_template_id": "v28_adopted_jul20_08_11_activity",
+        "distribution_id": "fixed_development_no_probability",
+        "purpose": "development",
+        "q_design": "fixed_development_no_probability",
+        "p_reference": null,
+        "importance_weight": null,
+        "m21_actual_demand_semantics": "hour-dependent original requests and zonal increments in segment ledger",
+        "exclude_from_main_four_class_summary": false,
+        "normal_verification": true,
+        "normal_exogenous_fault_present": false,
+        "normal_clinical_shock_present": false,
+        "normal_eval_interval_minutes": [
+          0.0,
+          180.0
+        ],
+        "reference_phase_clocks_are_analysis_only": true,
+        "normal_is_new_independent_confirmation_background": false,
+        "id": "v28_B_combined_N",
+        "exogenous_stream_id": "v28_B_exogenous:683e0ccbf7059247169ded4b1ec6327e55492842535a1814d83c069d1d6bfd99",
+        "actual_p0_load_multiplier": {
+          "e": 1.0,
+          "h": 1.0,
+          "c": 1.0
+        },
+        "native_propagation_flag_is_parser_requirement": true,
+        "base_state_identity_is_declared_initialization_spec": true,
+        "model_closure_events": [],
+        "native_event_class_is_parser_encoding_only": true,
+        "base_state_id": "v28_B_original_reset:19b03a229ab0e93d3aeade7ee24e4b6a458c9c937648052d35dc4e42cf2bac5b"
+      },
+      "configuration": "H0",
+      "policy": {
+        "alias": "C",
+        "config": {
+          "response_minutes": 30.0,
+          "support_minutes": 60.0,
+          "delay_bound_minutes": 30.0,
+          "cooling_preparation": true,
+          "time_energy_preparation": true,
+          "execution_recovery": true,
+          "critical_reserve": true,
+          "policy_mode": "coordinated",
+          "reserve_enabled": true,
+          "critical_preparation_first": true,
+          "reserve_rule": "critical_current",
+          "legacy_C19_order": true,
+          "online_GT_count_order": "after_cost",
+          "fixed_reserve_hours": 1.0,
+          "release_after_minutes": 120.0,
+          "release_floor_hours": 0.5,
+          "observed_outage_minutes": 0.0,
+          "critical_non_diesel_ready": false
+        }
+      },
+      "operating_rule_id": "current_service_bridge",
+      "study_id": "hospital_ies.demand_service_boundary.v28.v1",
+      "evaluation_role": "bounded_seen_activity_window_regression_not_blind_or_annual_qualification",
+      "provenance": {
+        "normal_parent_case_id": "four_normal_summer",
+        "demand_parent_case_id": "four_L4_boiler_ER_autumn",
+        "V25_source_sha256": "47345730795cc15eda9e5b15071ddbedb65e916e4341e561c1f51148c75ea278",
+        "original_L4_active_boiler_excited": false
+      },
+      "v27_objective_order": "after_cost",
+      "v28_demand_version": "V28_adopted",
+      "v28_demand_contract": "hospital_ies.fixed_direct_aux.v28.v1",
+      "v28_thermal_profile": {
+        "files": {
+          "thermal_service_components": {
+            "path": "inputs/model_review_v28/THERMAL_SERVICE_COMPONENTS_8760.csv",
+            "sha256": "27b608272ed268c16fc6fb86ce5fbcf66e4f4f177f3ed7feefacc15c823b11f4"
+          },
+          "thermal_input_metadata": {
+            "path": "inputs/model_review_v28/THERMAL_INPUT_METADATA.json",
+            "sha256": "d24ab6a3458ffa02e57616969ea4866f2c3a051bed3d203748e9888ac0cb9ccb"
+          }
+        }
+      }
+    },
+    {
+      "id": "B_combined_F",
+      "purpose": "Adopted ordinary target; common standard08-11 with active local laundry/water use; matched F",
+      "factorial_variant": "F",
+      "scenario": {
+        "source_block_id": "v28_adopted_jul20_08_11_activity",
+        "source_day_index": 200,
+        "season_quarter": 2,
+        "role": "development",
+        "experiment_role": "seen_engineering_model_regression",
+        "start_hour": 4809,
+        "duration_steps": 12,
+        "step_minutes": 15.0,
+        "pre_event_warmup_steps": 1,
+        "initialization_seed": 20261023,
+        "canonical_class": "L2",
+        "event_class": "L3",
+        "analysis_class": "L2",
+        "stage": 3,
+        "enable_propagation": true,
+        "event_schema_version": "p2a.events.v1",
+        "faults": {
+          "GT_2": 0.0
+        },
+        "auxiliary_faults": {},
+        "shock": {},
+        "shock_by_priority": {},
+        "shock_by_zone": {},
+        "fault_target": "GT_2",
+        "fault_availability": 0.0,
+        "demand_amplitude": 0.0,
+        "clinical_template_id": "emergency_department",
+        "clinical_coefficients_are_research_assumptions": true,
+        "response_delay_minutes": 30.0,
+        "fault_start_minute": 30.0,
+        "fault_duration_minutes": 60.0,
+        "shock_start_minute": 30.0,
+        "shock_duration_minutes": 60.0,
+        "first_event_minute": 30.0,
+        "recovery_start_minute": 90.0,
+        "history_interval_minutes": [
+          0.0,
+          30.0
+        ],
+        "tail_interval_minutes": [
+          90.0,
+          180.0
+        ],
+        "root_family_id": "v28_adopted_jul20_08_11_activity",
+        "family_id": "v28_adopted_jul20_08_11_activity",
+        "design_family": "v28_adopted_jul20_08_11_activity",
+        "sampling_cohort": "v28_adopted_thermal_matched_activity",
+        "sampling_method": "Common08-11 selected before runs to cover existing laundry and water-use activity; no severity/capacity change",
+        "grid_limit_kW": 850.0,
+        "pre_event_grid_limit_kW": 850.0,
+        "automatic_fast_shedding": false,
+        "requires_policy_freeze": false,
+        "selection_allowed": false,
+        "fit_allowed": false,
+        "is_final_blind": false,
+        "original_final12_evaluated": false,
+        "historical_exposure_status": "seen_V25_normal_h4001_not_independent_confirmation",
+        "new_independent_background": false,
+        "background_independence": "Full source-block isolation within V21; historical exposure separately reported",
+        "prehistory_mode": "same_continuous_episode_no_reset",
+        "exogenous_events": [],
+        "full_source_support": {
+          "raw_start_minute": 288480.0,
+          "raw_end_minute": 288720.0
+        },
+        "parent_template_id": "v28_adopted_jul20_08_11_activity",
+        "distribution_id": "fixed_development_no_probability",
+        "purpose": "development",
+        "q_design": "fixed_development_no_probability",
+        "p_reference": null,
+        "importance_weight": null,
+        "m21_actual_demand_semantics": "hour-dependent original requests and zonal increments in segment ledger",
+        "exclude_from_main_four_class_summary": false,
+        "normal_verification": false,
+        "normal_exogenous_fault_present": true,
+        "normal_clinical_shock_present": false,
+        "normal_eval_interval_minutes": [
+          0.0,
+          180.0
+        ],
+        "reference_phase_clocks_are_analysis_only": true,
+        "normal_is_new_independent_confirmation_background": false,
+        "id": "v28_B_combined_F",
+        "exogenous_stream_id": "v28_B_exogenous:7134f7a0491a5893d63e7f60416ddf2dcd402cdae0776125b9d3b0c48a9a9741",
+        "actual_p0_load_multiplier": {
+          "e": 1.0,
+          "h": 1.0,
+          "c": 1.0
+        },
+        "native_propagation_flag_is_parser_requirement": true,
+        "base_state_identity_is_declared_initialization_spec": true,
+        "model_closure_events": [],
+        "native_event_class_is_parser_encoding_only": true,
+        "base_state_id": "v28_B_original_reset:19b03a229ab0e93d3aeade7ee24e4b6a458c9c937648052d35dc4e42cf2bac5b"
+      },
+      "configuration": "H0",
+      "policy": {
+        "alias": "C",
+        "config": {
+          "response_minutes": 30.0,
+          "support_minutes": 60.0,
+          "delay_bound_minutes": 30.0,
+          "cooling_preparation": true,
+          "time_energy_preparation": true,
+          "execution_recovery": true,
+          "critical_reserve": true,
+          "policy_mode": "coordinated",
+          "reserve_enabled": true,
+          "critical_preparation_first": true,
+          "reserve_rule": "critical_current",
+          "legacy_C19_order": true,
+          "online_GT_count_order": "after_cost",
+          "fixed_reserve_hours": 1.0,
+          "release_after_minutes": 120.0,
+          "release_floor_hours": 0.5,
+          "observed_outage_minutes": 0.0,
+          "critical_non_diesel_ready": false
+        }
+      },
+      "operating_rule_id": "current_service_bridge",
+      "study_id": "hospital_ies.demand_service_boundary.v28.v1",
+      "evaluation_role": "bounded_seen_activity_window_regression_not_blind_or_annual_qualification",
+      "provenance": {
+        "normal_parent_case_id": "four_normal_summer",
+        "demand_parent_case_id": "four_L4_boiler_ER_autumn",
+        "V25_source_sha256": "47345730795cc15eda9e5b15071ddbedb65e916e4341e561c1f51148c75ea278",
+        "original_L4_active_boiler_excited": false
+      },
+      "v27_objective_order": "after_cost",
+      "v28_demand_version": "V28_adopted",
+      "v28_demand_contract": "hospital_ies.fixed_direct_aux.v28.v1",
+      "v28_thermal_profile": {
+        "files": {
+          "thermal_service_components": {
+            "path": "inputs/model_review_v28/THERMAL_SERVICE_COMPONENTS_8760.csv",
+            "sha256": "27b608272ed268c16fc6fb86ce5fbcf66e4f4f177f3ed7feefacc15c823b11f4"
+          },
+          "thermal_input_metadata": {
+            "path": "inputs/model_review_v28/THERMAL_INPUT_METADATA.json",
+            "sha256": "d24ab6a3458ffa02e57616969ea4866f2c3a051bed3d203748e9888ac0cb9ccb"
+          }
+        }
+      }
+    },
+    {
+      "id": "B_combined_D",
+      "purpose": "Adopted ordinary target; common standard08-11 with active local laundry/water use; matched D",
+      "factorial_variant": "D",
+      "scenario": {
+        "source_block_id": "v28_adopted_jul20_08_11_activity",
+        "source_day_index": 200,
+        "season_quarter": 2,
+        "role": "development",
+        "experiment_role": "seen_engineering_model_regression",
+        "start_hour": 4809,
+        "duration_steps": 12,
+        "step_minutes": 15.0,
+        "pre_event_warmup_steps": 1,
+        "initialization_seed": 20261023,
+        "canonical_class": "L3",
+        "event_class": "L4",
+        "analysis_class": "L3",
+        "stage": 4,
+        "enable_propagation": true,
+        "event_schema_version": "p2a.events.v1",
+        "faults": {},
+        "auxiliary_faults": {},
+        "shock": {},
+        "shock_by_priority": {},
+        "shock_by_zone": {
+          "ER_TRAUMA1_FLR_1": {
+            "e": 0.25,
+            "h": 0.25,
+            "c": 0.25
+          },
+          "ER_TRAUMA2_FLR_1": {
+            "e": 0.25,
+            "h": 0.25,
+            "c": 0.25
+          },
+          "ER_EXAM1_MULT4_FLR_1": {
+            "e": 0.25,
+            "h": 0.25,
+            "c": 0.25
+          },
+          "ER_EXAM3_MULT4_FLR_1": {
+            "e": 0.25,
+            "h": 0.25,
+            "c": 0.25
+          }
+        },
+        "fault_target": "GT_2",
+        "fault_availability": 0.0,
+        "demand_amplitude": 0.25,
+        "clinical_template_id": "emergency_department",
+        "clinical_coefficients_are_research_assumptions": true,
+        "response_delay_minutes": 30.0,
+        "fault_start_minute": 30.0,
+        "fault_duration_minutes": 60.0,
+        "shock_start_minute": 30.0,
+        "shock_duration_minutes": 60.0,
+        "first_event_minute": 30.0,
+        "recovery_start_minute": 90.0,
+        "history_interval_minutes": [
+          0.0,
+          30.0
+        ],
+        "tail_interval_minutes": [
+          90.0,
+          180.0
+        ],
+        "root_family_id": "v28_adopted_jul20_08_11_activity",
+        "family_id": "v28_adopted_jul20_08_11_activity",
+        "design_family": "v28_adopted_jul20_08_11_activity",
+        "sampling_cohort": "v28_adopted_thermal_matched_activity",
+        "sampling_method": "Common08-11 selected before runs to cover existing laundry and water-use activity; no severity/capacity change",
+        "grid_limit_kW": 850.0,
+        "pre_event_grid_limit_kW": 850.0,
+        "automatic_fast_shedding": false,
+        "requires_policy_freeze": false,
+        "selection_allowed": false,
+        "fit_allowed": false,
+        "is_final_blind": false,
+        "original_final12_evaluated": false,
+        "historical_exposure_status": "seen_V25_normal_h4001_not_independent_confirmation",
+        "new_independent_background": false,
+        "background_independence": "Full source-block isolation within V21; historical exposure separately reported",
+        "prehistory_mode": "same_continuous_episode_no_reset",
+        "exogenous_events": [],
+        "full_source_support": {
+          "raw_start_minute": 288480.0,
+          "raw_end_minute": 288720.0
+        },
+        "parent_template_id": "v28_adopted_jul20_08_11_activity",
+        "distribution_id": "fixed_development_no_probability",
+        "purpose": "development",
+        "q_design": "fixed_development_no_probability",
+        "p_reference": null,
+        "importance_weight": null,
+        "m21_actual_demand_semantics": "hour-dependent original requests and zonal increments in segment ledger",
+        "exclude_from_main_four_class_summary": false,
+        "normal_verification": false,
+        "normal_exogenous_fault_present": false,
+        "normal_clinical_shock_present": true,
+        "normal_eval_interval_minutes": [
+          0.0,
+          180.0
+        ],
+        "reference_phase_clocks_are_analysis_only": true,
+        "normal_is_new_independent_confirmation_background": false,
+        "id": "v28_B_combined_D",
+        "exogenous_stream_id": "v28_B_exogenous:70d6c980c922258845c5f1f5b597aebe5c45ef8b7f002e26d066af0ab1bd7f38",
+        "actual_p0_load_multiplier": {
+          "e": 1.0,
+          "h": 1.0,
+          "c": 1.0
+        },
+        "native_propagation_flag_is_parser_requirement": true,
+        "base_state_identity_is_declared_initialization_spec": true,
+        "model_closure_events": [],
+        "native_event_class_is_parser_encoding_only": true,
+        "base_state_id": "v28_B_original_reset:19b03a229ab0e93d3aeade7ee24e4b6a458c9c937648052d35dc4e42cf2bac5b"
+      },
+      "configuration": "H0",
+      "policy": {
+        "alias": "C",
+        "config": {
+          "response_minutes": 30.0,
+          "support_minutes": 60.0,
+          "delay_bound_minutes": 30.0,
+          "cooling_preparation": true,
+          "time_energy_preparation": true,
+          "execution_recovery": true,
+          "critical_reserve": true,
+          "policy_mode": "coordinated",
+          "reserve_enabled": true,
+          "critical_preparation_first": true,
+          "reserve_rule": "critical_current",
+          "legacy_C19_order": true,
+          "online_GT_count_order": "after_cost",
+          "fixed_reserve_hours": 1.0,
+          "release_after_minutes": 120.0,
+          "release_floor_hours": 0.5,
+          "observed_outage_minutes": 0.0,
+          "critical_non_diesel_ready": false
+        }
+      },
+      "operating_rule_id": "current_service_bridge",
+      "study_id": "hospital_ies.demand_service_boundary.v28.v1",
+      "evaluation_role": "bounded_seen_activity_window_regression_not_blind_or_annual_qualification",
+      "provenance": {
+        "normal_parent_case_id": "four_normal_summer",
+        "demand_parent_case_id": "four_L4_boiler_ER_autumn",
+        "V25_source_sha256": "47345730795cc15eda9e5b15071ddbedb65e916e4341e561c1f51148c75ea278",
+        "original_L4_active_boiler_excited": false
+      },
+      "v27_objective_order": "after_cost",
+      "v28_demand_version": "V28_adopted",
+      "v28_demand_contract": "hospital_ies.fixed_direct_aux.v28.v1",
+      "v28_thermal_profile": {
+        "files": {
+          "thermal_service_components": {
+            "path": "inputs/model_review_v28/THERMAL_SERVICE_COMPONENTS_8760.csv",
+            "sha256": "27b608272ed268c16fc6fb86ce5fbcf66e4f4f177f3ed7feefacc15c823b11f4"
+          },
+          "thermal_input_metadata": {
+            "path": "inputs/model_review_v28/THERMAL_INPUT_METADATA.json",
+            "sha256": "d24ab6a3458ffa02e57616969ea4866f2c3a051bed3d203748e9888ac0cb9ccb"
+          }
+        }
+      }
+    },
+    {
+      "id": "B_combined_FD",
+      "purpose": "Adopted ordinary target; common standard08-11 with active local laundry/water use; matched FD",
+      "factorial_variant": "FD",
+      "scenario": {
+        "source_block_id": "v28_adopted_jul20_08_11_activity",
+        "source_day_index": 200,
+        "season_quarter": 2,
+        "role": "development",
+        "experiment_role": "seen_engineering_model_regression",
+        "start_hour": 4809,
+        "duration_steps": 12,
+        "step_minutes": 15.0,
+        "pre_event_warmup_steps": 1,
+        "initialization_seed": 20261023,
+        "canonical_class": "L4",
+        "event_class": "L4b",
+        "analysis_class": "L4",
+        "stage": 4,
+        "enable_propagation": true,
+        "event_schema_version": "p2a.events.v1",
+        "faults": {
+          "GT_2": 0.0
+        },
+        "auxiliary_faults": {},
+        "shock": {},
+        "shock_by_priority": {},
+        "shock_by_zone": {
+          "ER_TRAUMA1_FLR_1": {
+            "e": 0.25,
+            "h": 0.25,
+            "c": 0.25
+          },
+          "ER_TRAUMA2_FLR_1": {
+            "e": 0.25,
+            "h": 0.25,
+            "c": 0.25
+          },
+          "ER_EXAM1_MULT4_FLR_1": {
+            "e": 0.25,
+            "h": 0.25,
+            "c": 0.25
+          },
+          "ER_EXAM3_MULT4_FLR_1": {
+            "e": 0.25,
+            "h": 0.25,
+            "c": 0.25
+          }
+        },
+        "fault_target": "GT_2",
+        "fault_availability": 0.0,
+        "demand_amplitude": 0.25,
+        "clinical_template_id": "emergency_department",
+        "clinical_coefficients_are_research_assumptions": true,
+        "response_delay_minutes": 30.0,
+        "fault_start_minute": 30.0,
+        "fault_duration_minutes": 60.0,
+        "shock_start_minute": 30.0,
+        "shock_duration_minutes": 60.0,
+        "first_event_minute": 30.0,
+        "recovery_start_minute": 90.0,
+        "history_interval_minutes": [
+          0.0,
+          30.0
+        ],
+        "tail_interval_minutes": [
+          90.0,
+          180.0
+        ],
+        "root_family_id": "v28_adopted_jul20_08_11_activity",
+        "family_id": "v28_adopted_jul20_08_11_activity",
+        "design_family": "v28_adopted_jul20_08_11_activity",
+        "sampling_cohort": "v28_adopted_thermal_matched_activity",
+        "sampling_method": "Common08-11 selected before runs to cover existing laundry and water-use activity; no severity/capacity change",
+        "grid_limit_kW": 850.0,
+        "pre_event_grid_limit_kW": 850.0,
+        "automatic_fast_shedding": false,
+        "requires_policy_freeze": false,
+        "selection_allowed": false,
+        "fit_allowed": false,
+        "is_final_blind": false,
+        "original_final12_evaluated": false,
+        "historical_exposure_status": "seen_V25_normal_h4001_not_independent_confirmation",
+        "new_independent_background": false,
+        "background_independence": "Full source-block isolation within V21; historical exposure separately reported",
+        "prehistory_mode": "same_continuous_episode_no_reset",
+        "exogenous_events": [],
+        "full_source_support": {
+          "raw_start_minute": 288480.0,
+          "raw_end_minute": 288720.0
+        },
+        "parent_template_id": "v28_adopted_jul20_08_11_activity",
+        "distribution_id": "fixed_development_no_probability",
+        "purpose": "development",
+        "q_design": "fixed_development_no_probability",
+        "p_reference": null,
+        "importance_weight": null,
+        "m21_actual_demand_semantics": "hour-dependent original requests and zonal increments in segment ledger",
+        "exclude_from_main_four_class_summary": false,
+        "normal_verification": false,
+        "normal_exogenous_fault_present": true,
+        "normal_clinical_shock_present": true,
+        "normal_eval_interval_minutes": [
+          0.0,
+          180.0
+        ],
+        "reference_phase_clocks_are_analysis_only": true,
+        "normal_is_new_independent_confirmation_background": false,
+        "id": "v28_B_combined_FD",
+        "exogenous_stream_id": "v28_B_exogenous:1c5fb7704eb8e6cf48868ce88b85999d770316e2eac2e5c9961d050f420de61c",
+        "actual_p0_load_multiplier": {
+          "e": 1.0,
+          "h": 1.0,
+          "c": 1.0
+        },
+        "native_propagation_flag_is_parser_requirement": true,
+        "base_state_identity_is_declared_initialization_spec": true,
+        "model_closure_events": [],
+        "native_event_class_is_parser_encoding_only": true,
+        "base_state_id": "v28_B_original_reset:19b03a229ab0e93d3aeade7ee24e4b6a458c9c937648052d35dc4e42cf2bac5b"
+      },
+      "configuration": "H0",
+      "policy": {
+        "alias": "C",
+        "config": {
+          "response_minutes": 30.0,
+          "support_minutes": 60.0,
+          "delay_bound_minutes": 30.0,
+          "cooling_preparation": true,
+          "time_energy_preparation": true,
+          "execution_recovery": true,
+          "critical_reserve": true,
+          "policy_mode": "coordinated",
+          "reserve_enabled": true,
+          "critical_preparation_first": true,
+          "reserve_rule": "critical_current",
+          "legacy_C19_order": true,
+          "online_GT_count_order": "after_cost",
+          "fixed_reserve_hours": 1.0,
+          "release_after_minutes": 120.0,
+          "release_floor_hours": 0.5,
+          "observed_outage_minutes": 0.0,
+          "critical_non_diesel_ready": false
+        }
+      },
+      "operating_rule_id": "current_service_bridge",
+      "study_id": "hospital_ies.demand_service_boundary.v28.v1",
+      "evaluation_role": "bounded_seen_activity_window_regression_not_blind_or_annual_qualification",
+      "provenance": {
+        "normal_parent_case_id": "four_normal_summer",
+        "demand_parent_case_id": "four_L4_boiler_ER_autumn",
+        "V25_source_sha256": "47345730795cc15eda9e5b15071ddbedb65e916e4341e561c1f51148c75ea278",
+        "original_L4_active_boiler_excited": false
+      },
+      "v27_objective_order": "after_cost",
+      "v28_demand_version": "V28_adopted",
+      "v28_demand_contract": "hospital_ies.fixed_direct_aux.v28.v1",
+      "v28_thermal_profile": {
+        "files": {
+          "thermal_service_components": {
+            "path": "inputs/model_review_v28/THERMAL_SERVICE_COMPONENTS_8760.csv",
+            "sha256": "27b608272ed268c16fc6fb86ce5fbcf66e4f4f177f3ed7feefacc15c823b11f4"
+          },
+          "thermal_input_metadata": {
+            "path": "inputs/model_review_v28/THERMAL_INPUT_METADATA.json",
+            "sha256": "d24ab6a3458ffa02e57616969ea4866f2c3a051bed3d203748e9888ac0cb9ccb"
+          }
+        }
+      }
+    },
+    {
+      "id": "B_normal_original_heat_control",
+      "purpose": "One matched old-heat-entry normal control for the combined B thermal-service boundary package (target and fan/non-air decomposition); not a pure numerical CSV-input causal contrast",
+      "factorial_variant": "N",
+      "scenario": {
+        "source_block_id": "v28_adopted_jul20_08_11_activity",
+        "source_day_index": 200,
+        "season_quarter": 2,
+        "role": "development",
+        "experiment_role": "seen_engineering_model_regression",
+        "start_hour": 4809,
+        "duration_steps": 12,
+        "step_minutes": 15.0,
+        "pre_event_warmup_steps": 1,
+        "initialization_seed": 20261023,
+        "canonical_class": "NORMAL",
+        "event_class": "L3",
+        "analysis_class": "NORMAL",
+        "stage": 3,
+        "enable_propagation": true,
+        "event_schema_version": "p2a.events.v1",
+        "faults": {},
+        "auxiliary_faults": {},
+        "shock": {},
+        "shock_by_priority": {},
+        "shock_by_zone": {},
+        "fault_target": "GT_2",
+        "fault_availability": 0.0,
+        "demand_amplitude": 0.0,
+        "clinical_template_id": "emergency_department",
+        "clinical_coefficients_are_research_assumptions": true,
+        "response_delay_minutes": 30.0,
+        "fault_start_minute": 30.0,
+        "fault_duration_minutes": 60.0,
+        "shock_start_minute": 30.0,
+        "shock_duration_minutes": 60.0,
+        "first_event_minute": 30.0,
+        "recovery_start_minute": 90.0,
+        "history_interval_minutes": [
+          0.0,
+          30.0
+        ],
+        "tail_interval_minutes": [
+          90.0,
+          180.0
+        ],
+        "root_family_id": "v28_adopted_jul20_08_11_activity",
+        "family_id": "v28_adopted_jul20_08_11_activity",
+        "design_family": "v28_adopted_jul20_08_11_activity",
+        "sampling_cohort": "v28_adopted_thermal_matched_activity",
+        "sampling_method": "Common08-11 selected before runs to cover existing laundry and water-use activity; no severity/capacity change",
+        "grid_limit_kW": 850.0,
+        "pre_event_grid_limit_kW": 850.0,
+        "automatic_fast_shedding": false,
+        "requires_policy_freeze": false,
+        "selection_allowed": false,
+        "fit_allowed": false,
+        "is_final_blind": false,
+        "original_final12_evaluated": false,
+        "historical_exposure_status": "seen_V25_normal_h4001_not_independent_confirmation",
+        "new_independent_background": false,
+        "background_independence": "Full source-block isolation within V21; historical exposure separately reported",
+        "prehistory_mode": "same_continuous_episode_no_reset",
+        "exogenous_events": [],
+        "full_source_support": {
+          "raw_start_minute": 288480.0,
+          "raw_end_minute": 288720.0
+        },
+        "parent_template_id": "v28_adopted_jul20_08_11_activity",
+        "distribution_id": "fixed_development_no_probability",
+        "purpose": "development",
+        "q_design": "fixed_development_no_probability",
+        "p_reference": null,
+        "importance_weight": null,
+        "m21_actual_demand_semantics": "hour-dependent original requests and zonal increments in segment ledger",
+        "exclude_from_main_four_class_summary": false,
+        "normal_verification": true,
+        "normal_exogenous_fault_present": false,
+        "normal_clinical_shock_present": false,
+        "normal_eval_interval_minutes": [
+          0.0,
+          180.0
+        ],
+        "reference_phase_clocks_are_analysis_only": true,
+        "normal_is_new_independent_confirmation_background": false,
+        "id": "v28_B_normal_original_heat_control",
+        "exogenous_stream_id": "v28_B_exogenous:683e0ccbf7059247169ded4b1ec6327e55492842535a1814d83c069d1d6bfd99",
+        "actual_p0_load_multiplier": {
+          "e": 1.0,
+          "h": 1.0,
+          "c": 1.0
+        },
+        "native_propagation_flag_is_parser_requirement": true,
+        "base_state_identity_is_declared_initialization_spec": true,
+        "model_closure_events": [],
+        "native_event_class_is_parser_encoding_only": true,
+        "base_state_id": "v28_B_original_reset:19b03a229ab0e93d3aeade7ee24e4b6a458c9c937648052d35dc4e42cf2bac5b"
+      },
+      "configuration": "H0",
+      "policy": {
+        "alias": "C",
+        "config": {
+          "response_minutes": 30.0,
+          "support_minutes": 60.0,
+          "delay_bound_minutes": 30.0,
+          "cooling_preparation": true,
+          "time_energy_preparation": true,
+          "execution_recovery": true,
+          "critical_reserve": true,
+          "policy_mode": "coordinated",
+          "reserve_enabled": true,
+          "critical_preparation_first": true,
+          "reserve_rule": "critical_current",
+          "legacy_C19_order": true,
+          "online_GT_count_order": "after_cost",
+          "fixed_reserve_hours": 1.0,
+          "release_after_minutes": 120.0,
+          "release_floor_hours": 0.5,
+          "observed_outage_minutes": 0.0,
+          "critical_non_diesel_ready": false
+        }
+      },
+      "operating_rule_id": "current_service_bridge",
+      "study_id": "hospital_ies.demand_service_boundary.v28.v1",
+      "evaluation_role": "bounded_seen_activity_window_regression_not_blind_or_annual_qualification",
+      "provenance": {
+        "normal_parent_case_id": "four_normal_summer",
+        "demand_parent_case_id": "four_L4_boiler_ER_autumn",
+        "V25_source_sha256": "47345730795cc15eda9e5b15071ddbedb65e916e4341e561c1f51148c75ea278",
+        "original_L4_active_boiler_excited": false
+      },
+      "v27_objective_order": "after_cost",
       "v28_demand_version": "A_original_heat",
       "v28_demand_contract": "hospital_ies.fixed_direct_aux.v28.v1"
     }
@@ -1189,5 +1970,5 @@
     "choice": "four_normal_summer_h4001_GT2",
     "reason": "Neither supported completed V25 normal has natural boiler group >2000 lb/h; summer pre30 GT2 actual positive throughout"
   },
-  "default_demand_version": "A_original_heat"
+  "default_demand_version": "V28_adopted"
 }

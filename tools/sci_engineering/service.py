@@ -66,25 +66,11 @@ def fan_independent_heat_bound(row,loads):
         raise ValueError('Invalid heat decomposition load request')
     target_trace=getattr(row,'v28_thermal_service_trace',None)
     if target_trace is not None:
-        from tools.model_review_v28.demand import DEMAND_CONTRACT_ID,enabled
-        from pathlib import PurePosixPath
-        trace=target_trace
-        path=trace.get('path') if isinstance(trace,dict) else None
-        if (not enabled(row) or not isinstance(trace,dict) or not isinstance(path,str)
-            or not path.startswith('inputs/model_review_v28/') or '\\' in path
-            or '..' in PurePosixPath(path).parts
-            or trace.get('boundary')!='ordinary_wateruse_central_target_v28'
-            or trace.get('request_column')!='ordinary_DHW_target_kW'
-            or trace.get('legacy_delivery_column')!='Q_h_DHW_water_use_kW'
-            or not isinstance(trace.get('sha256'),str) or len(trace['sha256'])!=64
-            or any(c not in '0123456789abcdef' for c in trace['sha256'])
-            or isinstance(trace.get('hour_of_year'),bool) or not isinstance(trace.get('hour_of_year'),int)
-            or not 1<=trace['hour_of_year']<=8760):
-            raise ValueError('Invalid V28 ordinary DHW target source trace')
+        from tools.model_review_v28.demand import DEMAND_CONTRACT_ID,thermal_target_context
+        target_context=thermal_target_context(row);trace=target_context['source_trace']
         q=getattr(row,'sci_direct_aux_request',{})
         if q.get('contract_id')!=DEMAND_CONTRACT_ID:raise ValueError('V28 DHW target lacks bound current request')
-        target=float(getattr(row,'Q_h_DHW_water_use_kW',float('nan')))
-        legacy=float(getattr(row,'v28_ordinary_DHW_source_delivered_kW',float('nan')))
+        target=target_context['target_kW'];legacy=target_context['legacy_delivered_kW']
         full_P3=float(q.get('actual_current_P3_heat_request_kW',np.asarray(q['aggregate_request_kW'])[3,1]))
         if any(not math.isfinite(v) or v<0. for v in (target,legacy,full_P3)) or target>full_P3+1e-7:
             raise ValueError('Invalid V28 ordinary DHW target/P3 request decomposition')

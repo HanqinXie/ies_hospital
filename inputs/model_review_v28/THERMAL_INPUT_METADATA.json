@@ -1,0 +1,36 @@
+{
+  "schema": "hospital_ies.v28.adopted_thermal_input.v1",
+  "boundary": "ordinary_wateruse_central_target_v28",
+  "source_input": {
+    "path": "inputs/loads/hospital_ies_demand_8760.csv",
+    "sha256": "0adc2c3f2cd82d600cd17b38e634eae7701710fff0a146e588482dd3cd0a0627"
+  },
+  "target_column": "ordinary_DHW_target_kW",
+  "legacy_delivery_column": "Q_h_DHW_water_use_kW",
+  "source_observation_SQL_sha256": "ac2475010bb7ac5befbf7e2243b77c476b55a0dbbffa48e86a16500a605d07ed",
+  "observation_input_sha256": "342df8fb427f9f9a28963439129d4c2d6d88918fac8a4eb6cf4c156b95ca0ceb",
+  "engine": "26.2.0-4bd7a1f26f",
+  "ordinary_properties": {
+    "density_kg_m3": 999.898,
+    "density_evaluation_C": 5.05,
+    "cp_CPHW_J_kgK": 4180.0,
+    "zone_multiplier": "Already in native requested mass; applied once"
+  },
+  "accepted_system_seconds": 31536000.0,
+  "ordinary_target_annual_kWh": 124440.6168057737,
+  "ordinary_delivered_annual_kWh": 121338.55448404155,
+  "ordinary_signed_target_minus_delivered_kWh": 3102.062321732148,
+  "source_space_heat": "Original delivered space/reheat proxy retained",
+  "ordinary_source_main_heater": "Replaced by IES central supply; original main fuel/pilot/storage/loss account is source evidence only, not duplicated demand or cost",
+  "local_laundry": "retained_source_reference_only",
+  "booster": "electricity_already_in_direct_reference_no_central_preheat_assurance",
+  "booster_upstream_60C_source_energy_and_cost": null,
+  "local_dynamic_service_assurance": false,
+  "thermal_coupling": null,
+  "dynamic_cold_qualified": false,
+  "temperature_qualified": false,
+  "cooling_source_native_unmet_zone_hours": 9.5,
+  "cooling_source_use_limit": "Observed source delivery remains a proxy; no empirical multiplier applied from unmet time",
+  "derivation_evidence": "thermal_source/ordinary_analysis01; local_tanks_and_cooling04; service_ledger01; lossless/minimum native portable replay",
+  "adopted_bytes_sha256": "27b608272ed268c16fc6fb86ce5fbcf66e4f4f177f3ed7feefacc15c823b11f4"
+}

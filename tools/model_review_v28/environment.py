@@ -23,6 +23,7 @@ def activate_boundary(env):
 class OperatingHospitalIESEnv(cooling.OperatingHospitalIESEnv):
     def __init__(self,*args,demand_version='A_original_heat',thermal_profile=None,**kwargs):
         if demand_version not in DEMAND_VERSIONS:raise ValueError('Unknown registered demand version')
+        if demand_version=='A_original_heat' and thermal_profile is not None:raise ValueError('A_original_heat forbids an adopted thermal profile')
         if demand_version=='V28_adopted' and thermal_profile is None:raise ValueError('Adopted V28 thermal input binding required')
         self.v28_demand_version=demand_version
         self.v28_thermal_profile=copy.deepcopy(thermal_profile)

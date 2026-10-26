@@ -46,3 +46,16 @@ def test_boundary_activation_is_in_memory_and_limited_to_original_hour_grant():
     assert pd.isna(env.hourly.loc[0,'sci_demand_boundary_contract'])
     assert pd.isna(env.hourly.loc[2,'sci_demand_boundary_contract'])
     assert env.hourly.Q_h_DHW_water_use_kW.tolist()==original.Q_h_DHW_water_use_kW.tolist()
+
+def test_A_original_heat_cannot_silently_receive_the_adopted_thermal_profile():
+    from tools.model_review_v28.validation import resolve_case
+    case,registry=source_case()
+    case.update(v28_demand_version='A_original_heat',v28_thermal_profile={'files':{}})
+    with pytest.raises(ValueError,match='original heat|A_original_heat'):resolve_case(case,registry)
+
+def test_all_registered_native_scenarios_have_legal_event_encodings():
+    from tools.model_review_v28.environment import validate_scenario
+    registry=json.loads((ROOT/'configs/model_review_v28/cases.json').read_text(encoding='utf8'))
+    for case in registry['cases']:
+        scene=copy.deepcopy(case['scenario']);scene.pop('model_closure_events',None)
+        validate_scenario(scene)

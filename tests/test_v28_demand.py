@@ -194,3 +194,77 @@ def test_lower_history_copy_does_not_invalidate_current_target_source_qualificat
     assert result['maximum_fan_independent_heat_kW']==[0.,0.,0.,20.]
     assert result['bound_current_P3_heat_request_kW']==110.
     assert row.sci_direct_aux_request['aggregate_request_kW'][3][1]==110.
+
+def ordinary_target_row(*,target=30.,extra_space_heat=0.):
+    row,raw=fixture_row();row.Q_h_DHW_water_use_kW=target
+    row.v28_ordinary_DHW_source_delivered_kW=10.
+    row.v28_thermal_service_trace=dict(path='inputs/model_review_v28/THERMAL_SERVICE_COMPONENTS_8760.csv',sha256='b'*64,
+        hour_of_year=1,request_column='ordinary_DHW_target_kW',legacy_delivery_column='Q_h_DHW_water_use_kW',boundary='ordinary_wateruse_central_target_v28')
+    raw[3,1]+=target-10.+extra_space_heat
+    return row,raw
+
+@pytest.mark.parametrize('target',[30.,5.])
+def test_only_ordinary_DHW_target_change_does_not_drive_air_fan(target):
+    m=api();row,raw=ordinary_target_row(target=target);row,loads=m.bind_request(row,raw)
+    q=row.sci_direct_aux_request
+    assert q['auxiliary_request_kW'][3][0]==pytest.approx(5.,abs=1e-12)
+    assert q['auxiliary_request_kW'][3][2]==pytest.approx(raw[3,1]/60.,abs=1e-12)
+    assert q['direct_request_kW']==[30.,31.,32.,33.]
+    assert q['fan_heat_driver_kW'][3]==60.
+    assert loads[3,0]-41.==pytest.approx(raw[3,1]/60.-1.,abs=1e-12)
+
+def test_DHW_plus_space_heat_drives_fan_only_by_space_increment():
+    m=api();row,raw=ordinary_target_row(target=30.,extra_space_heat=20.);row,loads=m.bind_request(row,raw)
+    q=row.sci_direct_aux_request
+    assert q['fan_heat_driver_kW'][3]==80.
+    assert q['auxiliary_request_kW'][3][0]==pytest.approx(5.*80./60.,abs=1e-12)
+    assert q['auxiliary_request_kW'][3][2]==pytest.approx(100./60.,abs=1e-12)
+
+@pytest.mark.parametrize('heat',[0.,10.,30.,80.])
+def test_bound_DHW_connected_heat_driver_is_nonnegative_and_keeps_source_proxy(heat):
+    m=api();row,raw=ordinary_target_row();row,full=m.bind_request(row,raw);connected=full.copy();connected[3,1]=heat
+    q=m.dependency_request(row,connected)
+    assert q['fan_heat_driver_kW'][3]==heat-min(heat,30.)+10.
+    assert np.asarray(q['auxiliary_required_kW'])[3,2]==pytest.approx(heat/60.,abs=1e-12)
+    assert row.sci_direct_aux_request['aggregate_request_kW'][3][1]==80.
+
+def test_invalid_B_target_trace_is_rejected_by_the_request_builder_not_ignored():
+    m=api();row,raw=ordinary_target_row();row.v28_thermal_service_trace['boundary']='unregistered'
+    with pytest.raises(ValueError,match='trace|source'):m.bind_request(row,raw)
+
+def test_actual_core_B_heat_metadata_names_the_new_target_input(monkeypatch):
+    from tools.sci_engineering.environment import EngineeringCore
+    from tools.load_accounting.execution import LoadAccountingCore
+    from hospital_ies.resilience import empty_faults
+    row,raw=ordinary_target_row();source=next(pd.DataFrame([vars(row)]).itertuples(index=False))
+    monkeypatch.setattr(LoadAccountingCore,'_hardware_data_at',lambda self,t:(1,source,raw.copy(),empty_faults()))
+    core=EngineeringCore.__new__(EngineeringCore)
+    core.env=SimpleNamespace(scenario=dict(duration_steps=4),
+        auxiliary_metadata=dict(root_input_sha256={'inputs/loads/hospital_ies_demand_8760.csv':'a'*64},fan_component_columns={}))
+    _,bound,_,_=core._hardware_data_at(0.)
+    assert bound.sci_heat_decomposition_source['path']==row.v28_thermal_service_trace['path']
+    assert bound.sci_heat_decomposition_source['DHW_column']=='ordinary_DHW_target_kW'
+    assert bound.sci_heat_decomposition_source['legacy_DHW_delivered_kW']==10.
+
+@pytest.mark.parametrize('failed_device',['AUX_FAN_P3','AUX_HEAT_PUMP','HEAT_SOURCE'])
+def test_B_ordinary_target_keeps_real_pump_source_and_fan_fault_boundaries(failed_device):
+    m=api()
+    from hospital_ies.model import load_plant
+    from hospital_ies.resilience import RuntimeState,empty_faults
+    from tools.operating_response.physical_balance import solve_physical
+    row,raw=ordinary_target_row();row,full=m.bind_request(row,raw)
+    faults=empty_faults()
+    if failed_device=='HEAT_SOURCE':
+        for i in range(1,4):faults[f'BOILER_{i}']=faults[f'HRSG_{i}']=0.
+    else:faults[failed_device]=0.
+    result=solve_physical(row,load_plant(ROOT/'configs/plant_configs.json','doe_capacity_matched_exploratory'),
+        full,faults,RuntimeState(np.zeros(3),2400.,set(),np.zeros(3),{}),.25,850.,False,900.,6.,{'sci_service_dependencies':True})
+    demand=result['service_dependencies']['demand_components']
+    assert demand['original_request']['direct_request_kW']==[30.,31.,32.,33.]
+    assert demand['direct_delivered_kW'][3]<=33.+1e-7
+    assert demand['original_request']['auxiliary_request_kW'][3][0]==pytest.approx(5.,abs=1e-12)
+    if failed_device=='AUX_FAN_P3':
+        assert result['served'][3,1]==pytest.approx(30.,abs=1e-4)
+        assert result['served'][3,2]<1e-4
+        assert result['service_dependencies']['auxiliary_delivered_kW'][3][0]<1e-8
+    else:assert result['served'][3,1]<1e-4

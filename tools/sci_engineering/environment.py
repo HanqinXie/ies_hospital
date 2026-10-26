@@ -124,6 +124,16 @@ class EngineeringCore(LoadAccountingCore):
             sha256=self.env.auxiliary_metadata['root_input_sha256']['inputs/loads/hospital_ies_demand_8760.csv'],
             hour_of_year=int(h),DHW_column='Q_h_DHW_water_use_kW',
             source_DHW_kW=float(row.Q_h_DHW_water_use_kW),original_P3_h_kW=original_P3_heat)
+        if getattr(row,'v28_thermal_service_trace',None) is not None:
+            from tools.model_review_v28.demand import thermal_target_context
+            context=thermal_target_context(row)
+            row.sci_heat_decomposition_source=dict(context['source_trace'],
+                DHW_column=context['source_trace']['request_column'],source_DHW_kW=context['target_kW'],
+                legacy_DHW_delivered_kW=context['legacy_delivered_kW'],
+                legacy_delivery_source_path='inputs/loads/hospital_ies_demand_8760.csv',
+                legacy_delivery_source_sha256=self.env.auxiliary_metadata['root_input_sha256']['inputs/loads/hospital_ies_demand_8760.csv'],
+                original_P3_h_kW=float(row.sci_direct_aux_request['aggregate_request_kW'][3][1]),
+                service_basis='New ordinary DHW useful-heat target; legacy delivered curve retained separately')
         fan_independent_heat_bound(row,loads) # reject invalid actual source trace before any solve
         f=dict(f);start,end=event_window(self.env.scenario,'fault')
         faults=self.env.scenario.get('auxiliary_faults',{}) if start<=minute<end else {}
