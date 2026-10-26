@@ -1,12 +1,25 @@
 """Bounded complete-state prefix, static inspection and actual continuation."""
 from __future__ import annotations
-import argparse,copy,gzip,hashlib,json,time,traceback
+import argparse,copy,gzip,hashlib,json,time,traceback,math
 from pathlib import Path
 from .validation import ROOT
 from .factory import build_context
 
 def read(p):return json.loads(Path(p).read_text(encoding='utf8'))
-def write(p,value):Path(p).write_text(json.dumps(value,indent=2,ensure_ascii=False,allow_nan=False),encoding='utf8')
+def diagnostic_json(value):
+    """Preserve unbounded diagnostic bounds and unknowns without zero filling."""
+    import numpy as np
+    if isinstance(value,np.ndarray):return diagnostic_json(value.tolist())
+    if isinstance(value,np.generic):return diagnostic_json(value.item())
+    if isinstance(value,float) and not math.isfinite(value):
+        return {'__nonfinite_float__':'nan' if math.isnan(value) else '+inf' if value>0 else '-inf'}
+    if isinstance(value,dict):return {k:diagnostic_json(v) for k,v in value.items()}
+    if isinstance(value,(list,tuple)):return [diagnostic_json(v) for v in value]
+    if isinstance(value,(set,frozenset)):return {'__set__':sorted([diagnostic_json(v) for v in value],key=str)}
+    if isinstance(value,Path):return str(value)
+    return value
+
+def write(p,value):Path(p).write_text(json.dumps(diagnostic_json(value),indent=2,ensure_ascii=False,allow_nan=False),encoding='utf8')
 
 def validate_resume_binding(current,stored):
     for key in ['source_sha256','input_sha256','scenario_sha256','model_config_sha256']:
