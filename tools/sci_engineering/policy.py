@@ -26,6 +26,7 @@ DISPATCH_FIELDS = ('gt_electric_kW', 'grid_import_kW', 'diesel_kW', 'boiler_stea
 EXTRA_DEFAULTS = dict(policy_mode='coordinated', reserve_enabled=True,
     critical_preparation_first=True, reserve_rule='critical_current',
     legacy_C19_order=False,
+    online_GT_count_order='legacy_before_cost',
     fixed_reserve_hours=1., release_after_minutes=120., release_floor_hours=.5,
     observed_outage_minutes=0., critical_non_diesel_ready=False)
 FIXED_RESERVE_CANDIDATES_HOURS = (.5, 1., 2.)
@@ -44,6 +45,8 @@ def coordination_options(value=None):
             raise ValueError(key+' must be boolean')
     if result['policy_mode'] not in ('current','coordinated'):
         raise ValueError('Unknown upper arrangement mode')
+    if result['online_GT_count_order'] not in ('legacy_before_cost','after_cost'):
+        raise ValueError('Unknown online_GT_count_order; no future inputs allowed')
     if result['reserve_rule'] not in ('none','critical_current','fixed_hours','causal_release'):
         raise ValueError('Unknown reserve rule')
     for key in ('fixed_reserve_hours','release_after_minutes','release_floor_hours','observed_outage_minutes'):

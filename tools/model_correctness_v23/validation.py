@@ -155,7 +155,8 @@ def record_actual_prefix(segment,stream):
     stream.flush()
 
 
-def worker(output, *, model_version='v23'):
+def worker(output, *, model_version='v23', study_identity=None, execution_policy_id=None,
+           environment_adapter=None, registered_extra_inputs=None):
     sys.dont_write_bytecode=True
     sys.path[:0]=[str(ROOT/'src'),str(ROOT)]
     from tools.model_closure_v22.validation import read,write,sha,digest,now,native_process,recover_execution_prefix,validate_exporter_metadata,runtime_policy
@@ -167,6 +168,9 @@ def worker(output, *, model_version='v23'):
     elif model_version=='v25':
         from tools.model_correction_v25 import environment,MODEL_ID,CONTRACT_ID
     else:raise ValueError('Unknown explicit engineering model version')
+    if environment_adapter is not None:
+        if model_version!='v25' or not study_identity:raise ValueError('Explicit M25 study required for input adapter')
+        environment=environment_adapter
     from tools.model_correctness_v23.metrics import build_reliability_metrics
     from tools.model_correctness_v23.comparison import with_comparison_inputs
     from tools.sci_engineering.runner import compact_metrics,input_binding,source_binding
@@ -204,6 +208,10 @@ def worker(output, *, model_version='v23'):
             env_options['operating_rule']=rule
             result.update(control_rule_id=rule_id,control_rule=copy.deepcopy(rule))
         result['extra_input_bindings']={}
+        for key,item in (registered_extra_inputs or {}).items():
+            path=Path(item['path']);path=path if path.is_absolute() else ROOT/path
+            if sha(path)!=item['sha256']:raise ValueError('Registered extra input changed: '+key)
+            result['extra_input_bindings'][key]=dict(path=str(path),sha256=item['sha256'])
         thermal=config['model_correctness_v23'].get('thermal_coupling')
         if thermal:
             for key in ('reference_csv','parameters_json'):
@@ -223,6 +231,10 @@ def worker(output, *, model_version='v23'):
         result['model_config_sha256']=digest(result['resolved_model_config'])
         spec=runtime_policy(case,registry,policy)
         policy_id=(spec['alias']+'_engineering_completion_v24') if model_version=='v24' else (spec['alias']+'_'+rule_id+'_model_correction_v25') if model_version=='v25' else None
+        if execution_policy_id is not None:
+            if not study_identity or not isinstance(execution_policy_id,str) or not execution_policy_id.strip():
+                raise ValueError('A named study and nonempty policy identity are required together')
+            policy_id=execution_policy_id
         controller=policy.SciPolicy(spec['alias'],config=spec['config'],plant=env.plant,policy_id=policy_id)
         result['policy']=dict(alias=spec['alias'],policy_id=controller.policy_id if hasattr(controller,'policy_id') else spec['alias']+'_model_correctness_v23',config=controller.config)
         result['scenario_sha256']=digest(scene);result['configuration']=case['configuration']
@@ -232,6 +244,9 @@ def worker(output, *, model_version='v23'):
             execution_model_id=MODEL_ID,simulator_hash=result['source_sha256'],schemas=copy.deepcopy(registry['schemas']),
             splits={scene['id']:dict(group_id=scene['family_id'],split='development',fit_allowed=False,embargo_minutes=60.,grouping_basis='full original source support')})
         manifest['schemas'][{'v23':'model_correctness_v23','v24':'engineering_completion_v24','v25':'model_correction_v25'}[model_version]]=CONTRACT_ID
+        if study_identity is not None:
+            result['study_id']=study_identity
+            manifest.update(study_id=study_identity,study_contract_id=study_identity)
         if model_version=='v25':manifest.update(control_rule_id=rule_id,control_rule=copy.deepcopy(result['control_rule']))
         manifest['signature']=digest(manifest)
         result['manifest']=manifest
@@ -242,6 +257,7 @@ def worker(output, *, model_version='v23'):
         factors=read(factor_path) if factor_path.is_file() and sha(factor_path)==factor['sha256'] else None
         result['emissions_factor_binding']=dict(path=str(factor_path),sha256=sha(factor_path) if factor_path.is_file() else None,registered_match=factors is not None)
         result['metrics']=compact_metrics(payload,env=env,factor_registry=factors)
+        if hasattr(env,'v27_load_profile_receipt'):result['v27_load_profile']=copy.deepcopy(env.v27_load_profile_receipt)
         result['error']=copy.deepcopy(payload.get('error'))
         result['status']='completed' if payload.get('summary',{}).get('status')=='completed' and result['metrics']['complete'] and result['error'] is None else 'failed_unknown'
     except Exception as exc:

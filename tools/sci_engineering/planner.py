@@ -1113,7 +1113,9 @@ def _solve_joint_candidate(row, plant, loads, availability, state, dt_h,
             lower[go[held]] = 0.
             return run_layer(item, reference=reference, lock=lock, tolerance_override=tolerance_override)
         reused_incumbent = False
-        if ((result.status != 0 or result.x is None) and name in OPTIONAL_POST_COST_LAYERS
+        post_cost_online_count = (name=='normal_online_GT_count_after_preparation'
+            and coordination['online_GT_count_order']=='after_cost')
+        if ((result.status != 0 or result.x is None) and (name in OPTIONAL_POST_COST_LAYERS or post_cost_online_count)
                 and not reference and x is not None):
             # A failed post-cost preference is not a new physical failure.
             # Recheck the previous accepted candidate against ALL original
@@ -1139,7 +1141,8 @@ def _solve_joint_candidate(row, plant, loads, availability, state, dt_h,
                 backend_layers[-1].update(fallback_used=True,optional_layer_optimum_claimed=False,
                     incumbent_validation=summary)
         if ((result.status!=0 or result.x is None) and not reused_incumbent and not reference
-                and x is not None and late_soft_service_locks_complete(name,metadata,phase_copies,recovery=coordination['execution_recovery'])):
+                and not post_cost_online_count and x is not None
+                and late_soft_service_locks_complete(name,metadata,phase_copies,recovery=coordination['execution_recovery'])):
             # This late preference follows every current/actionable service
             # lock. A failed numerical optimization is not a new optimum.
             matrix_now,low_now,high_now=flatten_constraints(constraints)
@@ -1420,6 +1423,13 @@ def _solve_joint_candidate(row, plant, loads, availability, state, dt_h,
             if upper[index]>0.:ups_for_service[index]=1.
         if np.any(ups_for_service):ordered.append(('m22_current_UPS_for_service_only',ups_for_service,'kW current UPS discharge after all service locks',None))
         ordered.append(('m22_recharge_after_all_service',co,'kW real charging',None))
+    # V27's explicit economic order moves only the unqualified total-count
+    # preference. All service, preparation, regulator and standby goals stay
+    # in their original order. A fresh solve never reuses its legacy count lock.
+    post_cost_online_count=[]
+    if coordination['online_GT_count_order']=='after_cost':
+        post_cost_online_count=[item for item in ordered if item[0]=='normal_online_GT_count_after_preparation']
+        ordered=[item for item in ordered if item[0]!='normal_online_GT_count_after_preparation']
     # A normalized P2/P3 lock allowance would become a real contact cut and
     # stack with the unchanged fixed-execution remainder. Preserve the new
     # current service optima exactly; original P0/P1/reference locks stay intact.
@@ -1435,9 +1445,11 @@ def _solve_joint_candidate(row, plant, loads, availability, state, dt_h,
         and actual_layer_order.index('preparation_P1') < actual_layer_order.index('normal_current_GT_state_changes'))
     if not soft_optimization_stopped:
         run_layer(('operating_cost_and_original_preferences', cost, 'USD per current step', None),
-            lock=engineering['continuity'] or engineering['contact_mode'] == 'separate',
+            lock=engineering['continuity'] or engineering['contact_mode'] == 'separate' or bool(post_cost_online_count),
             tolerance_override=engineering['cost_equivalence_USD_per_step'])
     cost_optimum = None if soft_optimization_stopped else float(cost@x)
+    if not soft_optimization_stopped:
+        for item in post_cost_online_count:run_layer(item)
     if engineering['continuity'] and not soft_optimization_stopped:
         co = vector(); co[state_changes] = 1.
         run_layer(('actual_GT_combination_changes', co, 'GT changes', None))
@@ -1738,6 +1750,13 @@ def _solve_joint_candidate(row, plant, loads, availability, state, dt_h,
     normal_commitment_preference['planned_GT_state_changes'] = changes
     normal_startup_preference['planned_new_GT_starts'] = int(np.sum((x[go] > .5) & ~actual_running))
     diagnostic['engineering'] = dict(contract_id=ENGINEERING_CONTRACT_ID, options=engineering,
+        online_GT_count_order=dict(requested=coordination['online_GT_count_order'],
+            contract_id='hospital_ies.v27.objective_order.v1',
+            only_online_count_layer_moved=bool(post_cost_online_count),
+            post_cost_count_active=bool(post_cost_online_count),
+            original_cost_equivalence_USD_per_step=engineering['cost_equivalence_USD_per_step'],
+            count_preference_is_physical_constraint=False,
+            no_original_price_or_cost_vector_change=True),
         service_order=['P0','P1','P2','P3'] if recovery else ['P0', 'P1'] if endurance_active else ['P0', 'P1', 'P2', 'P3'],
         execution_recovery=recovery,command_finalization=command_finalization,
         m18_conditional_return_permission=m18_conditional_return_permission,
