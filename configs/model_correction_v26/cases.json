@@ -1,0 +1,785 @@
+{
+  "schema": "hospital_ies.v26.matched_cases.v1",
+  "scope": "Four matched active-path seen-background mechanisms and one normal public smoke; unchanged M25 physics",
+  "model_closure_v22": {
+    "station": {
+      "boiler_fixed_kW": 0.5,
+      "boiler_kW_per_kWsteam": 0.012,
+      "boiler_restart_minutes": 1.0,
+      "gt_starter_kW_per_unit": 10.0,
+      "gt_control_dc_available": true,
+      "dg_start_dc_available": true,
+      "control_autonomy_minutes": 1440.0,
+      "dg_qualified_starts": 2
+    },
+    "storage": {
+      "preserve_bridge": true,
+      "bridge_observation_minutes": 15.0,
+      "cold_recharge_deadband_kWh": 1.0,
+      "cold_recharge_deadband_fraction": 0.02
+    },
+    "auxiliary": {
+      "pump_weight_exponent": 1.0,
+      "actual_power_scale": null,
+      "fan_priority_shares": null
+    },
+    "instantaneous_diesel_current": true,
+    "research_stress_proxy": false
+  },
+  "hardware_profiles": {
+    "H0": {
+      "gt_dynamics": {
+        "gt_start_delay_minutes": 10.0,
+        "minimum_up_minutes": 60.0,
+        "minimum_down_minutes": 30.0,
+        "interlock_rearm_wait_minutes": 30.0,
+        "interlock_rearm_enabled": true
+      },
+      "diesel_local_response": {
+        "inertia_H_seconds": 0.7359,
+        "power_factor_base": 0.8,
+        "governor_tau_seconds": 0.059,
+        "governor_delay_seconds": 0.05,
+        "speed_deadband_pu": 0.001,
+        "speed_min_pu": 0.9,
+        "speed_max_pu": 1.1,
+        "shaft_loss_fraction": 0.02,
+        "speed_regulation_pu": 0.05,
+        "integration_max_step_seconds": 0.01
+      },
+      "hrsg_thermal_readiness": {
+        "warmup_delay_minutes": 0.0
+      },
+      "gt_floor_correction": {
+        "enabled": true
+      },
+      "execution_recovery": {
+        "grid_return_prepare_minutes": 0.25,
+        "grid_open_transfer_minutes": 0.25,
+        "local_contact_restore_delay_minutes": 0.0
+      },
+      "model_closeout": {
+        "grid_bridge_wait_minutes": 30.0
+      },
+      "sci_engineering": {
+        "configuration_id": "H0",
+        "ups": {},
+        "cold_store": {},
+        "cold_pump_kW_per_kW": 0.02,
+        "storage_max_segment_minutes": 1.0,
+        "auxiliary_share_scale": 1.0,
+        "diesel_start_delay_minutes": 15.0,
+        "gt_protection_trip_multiple": 1.05,
+        "gt_overload_hold_minutes": 15.0
+      }
+    }
+  },
+  "schemas": {
+    "feature": "p2a.observation.v1",
+    "label": "p2a.first_observed_failure.v1",
+    "legacy_label": "v42.future_t_plus_1_to_H",
+    "action": "p2a.six_targets.v1",
+    "graph": "p2a.functional_dependencies.v1",
+    "scenario": "p2a.scenario.v1",
+    "split": "p2a.family_components.v1",
+    "event": "p2a.events.v1",
+    "sci_engineering": "hospital_ies.sci_engineering.v21.v1",
+    "model_correction_v25": "hospital_ies.model_correction.v25.v1",
+    "model_correction_v26_study": "hospital_ies.study.v26.v1"
+  },
+  "emissions_factor_registry": {
+    "path": "outputs/v20_load_accounting_20261019_run01/references/EMISSIONS_FACTOR_REGISTRY.json",
+    "sha256": "67ad5404000040d9665f016ee4b9c540783b26a9ad8038550f148881cefc6ab0"
+  },
+  "no_runs_started_by_registry_creation": true,
+  "station_qualification_scope": "1440 min is an explicit finite research qualification covering the 900 min cases; not OEM battery autonomy or hospital certification",
+  "temperature_scope": "Exploratory diagnostic only; cannot cancel cold ENS or select critical control",
+  "selected_policy_parameters": {
+    "F": {
+      "fixed_reserve_hours": 1.0
+    },
+    "A": {
+      "release_after_minutes": 240.0
+    }
+  },
+  "selected_policy_parameter_source": {
+    "path": "docs/v21/DEVELOPMENT_PARAMETER_SELECTION.md",
+    "sha256": "24d6024ee1c132f0aa20117e9538fde080de9286db837dd290b91eac5a8b724e",
+    "interpretation": "Frozen selected F=1 h and A=240 min; runtime policy defaults may include other development candidates"
+  },
+  "model_correctness_v23": {
+    "preparation": true,
+    "storage_fix": true,
+    "boiler_domain_search": true,
+    "thermal_coupling": null
+  },
+  "engineering_completion_v24": {
+    "cold_mode_search": true,
+    "tower_rejection_capacity_kW": 4220.223408
+  },
+  "registration_utc": "2026-10-26T06:00:53.301009+00:00",
+  "baseline_commit": "a016e3119c7730e2c513839bbfe3576d6b3530ab",
+  "cases": [
+    {
+      "id": "combined_N",
+      "purpose": "Matched active GT2 fault x supported ER request: N",
+      "factorial_variant": "N",
+      "scenario": {
+        "source_block_id": "m21_seen_boundary_4001_days166_167",
+        "source_day_index": 166,
+        "season_quarter": 2,
+        "role": "development",
+        "experiment_role": "seen_engineering_model_regression",
+        "start_hour": 4001,
+        "duration_steps": 12,
+        "step_minutes": 15.0,
+        "pre_event_warmup_steps": 1,
+        "initialization_seed": 20261023,
+        "canonical_class": "NORMAL",
+        "event_class": "L3",
+        "analysis_class": "NORMAL",
+        "stage": 3,
+        "enable_propagation": true,
+        "event_schema_version": "p2a.events.v1",
+        "faults": {},
+        "auxiliary_faults": {},
+        "shock": {},
+        "shock_by_priority": {},
+        "shock_by_zone": {},
+        "fault_target": "GT_2",
+        "fault_availability": 0.0,
+        "demand_amplitude": 0.0,
+        "clinical_template_id": "emergency_department",
+        "clinical_coefficients_are_research_assumptions": true,
+        "response_delay_minutes": 30.0,
+        "fault_start_minute": 30.0,
+        "fault_duration_minutes": 60.0,
+        "shock_start_minute": 30.0,
+        "shock_duration_minutes": 60.0,
+        "first_event_minute": 30.0,
+        "recovery_start_minute": 90.0,
+        "history_interval_minutes": [
+          0.0,
+          30.0
+        ],
+        "tail_interval_minutes": [
+          90.0,
+          180.0
+        ],
+        "root_family_id": "m21_seen_boundary_4001_days166_167",
+        "family_id": "m21_seen_boundary_4001_days166_167",
+        "design_family": "m21_seen_boundary_4001_days166_167",
+        "sampling_cohort": "v26_preregistered_active_GT2_factorial",
+        "sampling_method": "fixed_seen_background_selected_by_pre_event_actual_path",
+        "grid_limit_kW": 850.0,
+        "pre_event_grid_limit_kW": 850.0,
+        "automatic_fast_shedding": false,
+        "requires_policy_freeze": false,
+        "selection_allowed": false,
+        "fit_allowed": false,
+        "is_final_blind": false,
+        "original_final12_evaluated": false,
+        "historical_exposure_status": "seen_V25_normal_h4001_not_independent_confirmation",
+        "new_independent_background": false,
+        "background_independence": "Full source-block isolation within V21; historical exposure separately reported",
+        "prehistory_mode": "same_continuous_episode_no_reset",
+        "exogenous_events": [],
+        "full_source_support": {
+          "raw_start_minute": 240000.0,
+          "raw_end_minute": 240240.0
+        },
+        "parent_template_id": "m21_seen_boundary_4001_days166_167",
+        "distribution_id": "fixed_development_no_probability",
+        "purpose": "development",
+        "q_design": "fixed_development_no_probability",
+        "p_reference": null,
+        "importance_weight": null,
+        "m21_actual_demand_semantics": "hour-dependent original requests and zonal increments in segment ledger",
+        "exclude_from_main_four_class_summary": false,
+        "normal_verification": true,
+        "normal_exogenous_fault_present": false,
+        "normal_clinical_shock_present": false,
+        "normal_eval_interval_minutes": [
+          0.0,
+          180.0
+        ],
+        "reference_phase_clocks_are_analysis_only": true,
+        "normal_is_new_independent_confirmation_background": false,
+        "id": "v26_combined_N",
+        "exogenous_stream_id": "v26_exogenous:a24e1e18caee8361eaaae64820287f960339747f30dac6e3553957285e8fef44",
+        "actual_p0_load_multiplier": {
+          "e": 1.0,
+          "h": 1.0,
+          "c": 1.0
+        },
+        "native_propagation_flag_is_parser_requirement": true,
+        "base_state_identity_is_declared_initialization_spec": true,
+        "model_closure_events": [],
+        "native_event_class_is_parser_encoding_only": true,
+        "base_state_id": "v26_initialization:57fab7b2711184628b3efde63aabb6231cb41f057ff9a5576af868314dec187f"
+      },
+      "configuration": "H0",
+      "policy": {
+        "alias": "C",
+        "config": {}
+      },
+      "operating_rule_id": "current_service_bridge",
+      "study_id": "hospital_ies.study.v26.v1",
+      "evaluation_role": "seen_V26_mechanism_regression_not_independent_statistics",
+      "provenance": {
+        "normal_parent_case_id": "four_normal_summer",
+        "demand_parent_case_id": "four_L4_boiler_ER_autumn",
+        "V25_source_sha256": "47345730795cc15eda9e5b15071ddbedb65e916e4341e561c1f51148c75ea278",
+        "original_L4_active_boiler_excited": false
+      }
+    },
+    {
+      "id": "combined_F",
+      "purpose": "Matched active GT2 fault x supported ER request: F",
+      "factorial_variant": "F",
+      "scenario": {
+        "source_block_id": "m21_seen_boundary_4001_days166_167",
+        "source_day_index": 166,
+        "season_quarter": 2,
+        "role": "development",
+        "experiment_role": "seen_engineering_model_regression",
+        "start_hour": 4001,
+        "duration_steps": 12,
+        "step_minutes": 15.0,
+        "pre_event_warmup_steps": 1,
+        "initialization_seed": 20261023,
+        "canonical_class": "L2",
+        "event_class": "L3",
+        "analysis_class": "L2",
+        "stage": 3,
+        "enable_propagation": true,
+        "event_schema_version": "p2a.events.v1",
+        "faults": {
+          "GT_2": 0.0
+        },
+        "auxiliary_faults": {},
+        "shock": {},
+        "shock_by_priority": {},
+        "shock_by_zone": {},
+        "fault_target": "GT_2",
+        "fault_availability": 0.0,
+        "demand_amplitude": 0.0,
+        "clinical_template_id": "emergency_department",
+        "clinical_coefficients_are_research_assumptions": true,
+        "response_delay_minutes": 30.0,
+        "fault_start_minute": 30.0,
+        "fault_duration_minutes": 60.0,
+        "shock_start_minute": 30.0,
+        "shock_duration_minutes": 60.0,
+        "first_event_minute": 30.0,
+        "recovery_start_minute": 90.0,
+        "history_interval_minutes": [
+          0.0,
+          30.0
+        ],
+        "tail_interval_minutes": [
+          90.0,
+          180.0
+        ],
+        "root_family_id": "m21_seen_boundary_4001_days166_167",
+        "family_id": "m21_seen_boundary_4001_days166_167",
+        "design_family": "m21_seen_boundary_4001_days166_167",
+        "sampling_cohort": "v26_preregistered_active_GT2_factorial",
+        "sampling_method": "fixed_seen_background_selected_by_pre_event_actual_path",
+        "grid_limit_kW": 850.0,
+        "pre_event_grid_limit_kW": 850.0,
+        "automatic_fast_shedding": false,
+        "requires_policy_freeze": false,
+        "selection_allowed": false,
+        "fit_allowed": false,
+        "is_final_blind": false,
+        "original_final12_evaluated": false,
+        "historical_exposure_status": "seen_V25_normal_h4001_not_independent_confirmation",
+        "new_independent_background": false,
+        "background_independence": "Full source-block isolation within V21; historical exposure separately reported",
+        "prehistory_mode": "same_continuous_episode_no_reset",
+        "exogenous_events": [],
+        "full_source_support": {
+          "raw_start_minute": 240000.0,
+          "raw_end_minute": 240240.0
+        },
+        "parent_template_id": "m21_seen_boundary_4001_days166_167",
+        "distribution_id": "fixed_development_no_probability",
+        "purpose": "development",
+        "q_design": "fixed_development_no_probability",
+        "p_reference": null,
+        "importance_weight": null,
+        "m21_actual_demand_semantics": "hour-dependent original requests and zonal increments in segment ledger",
+        "exclude_from_main_four_class_summary": false,
+        "normal_verification": false,
+        "normal_exogenous_fault_present": true,
+        "normal_clinical_shock_present": false,
+        "normal_eval_interval_minutes": [
+          0.0,
+          180.0
+        ],
+        "reference_phase_clocks_are_analysis_only": true,
+        "normal_is_new_independent_confirmation_background": false,
+        "id": "v26_combined_F",
+        "exogenous_stream_id": "v26_exogenous:2db57facebe467f5a02f0d826ea9b3655fcfc969fbbcdb335341530fbadb3b4c",
+        "actual_p0_load_multiplier": {
+          "e": 1.0,
+          "h": 1.0,
+          "c": 1.0
+        },
+        "native_propagation_flag_is_parser_requirement": true,
+        "base_state_identity_is_declared_initialization_spec": true,
+        "model_closure_events": [],
+        "native_event_class_is_parser_encoding_only": true,
+        "base_state_id": "v26_initialization:57fab7b2711184628b3efde63aabb6231cb41f057ff9a5576af868314dec187f"
+      },
+      "configuration": "H0",
+      "policy": {
+        "alias": "C",
+        "config": {}
+      },
+      "operating_rule_id": "current_service_bridge",
+      "study_id": "hospital_ies.study.v26.v1",
+      "evaluation_role": "seen_V26_mechanism_regression_not_independent_statistics",
+      "provenance": {
+        "normal_parent_case_id": "four_normal_summer",
+        "demand_parent_case_id": "four_L4_boiler_ER_autumn",
+        "V25_source_sha256": "47345730795cc15eda9e5b15071ddbedb65e916e4341e561c1f51148c75ea278",
+        "original_L4_active_boiler_excited": false
+      }
+    },
+    {
+      "id": "combined_D",
+      "purpose": "Matched active GT2 fault x supported ER request: D",
+      "factorial_variant": "D",
+      "scenario": {
+        "source_block_id": "m21_seen_boundary_4001_days166_167",
+        "source_day_index": 166,
+        "season_quarter": 2,
+        "role": "development",
+        "experiment_role": "seen_engineering_model_regression",
+        "start_hour": 4001,
+        "duration_steps": 12,
+        "step_minutes": 15.0,
+        "pre_event_warmup_steps": 1,
+        "initialization_seed": 20261023,
+        "canonical_class": "L3",
+        "event_class": "L4",
+        "analysis_class": "L3",
+        "stage": 4,
+        "enable_propagation": true,
+        "event_schema_version": "p2a.events.v1",
+        "faults": {},
+        "auxiliary_faults": {},
+        "shock": {},
+        "shock_by_priority": {},
+        "shock_by_zone": {
+          "ER_TRAUMA1_FLR_1": {
+            "e": 0.25,
+            "h": 0.25,
+            "c": 0.25
+          },
+          "ER_TRAUMA2_FLR_1": {
+            "e": 0.25,
+            "h": 0.25,
+            "c": 0.25
+          },
+          "ER_EXAM1_MULT4_FLR_1": {
+            "e": 0.25,
+            "h": 0.25,
+            "c": 0.25
+          },
+          "ER_EXAM3_MULT4_FLR_1": {
+            "e": 0.25,
+            "h": 0.25,
+            "c": 0.25
+          }
+        },
+        "fault_target": "GT_2",
+        "fault_availability": 0.0,
+        "demand_amplitude": 0.25,
+        "clinical_template_id": "emergency_department",
+        "clinical_coefficients_are_research_assumptions": true,
+        "response_delay_minutes": 30.0,
+        "fault_start_minute": 30.0,
+        "fault_duration_minutes": 60.0,
+        "shock_start_minute": 30.0,
+        "shock_duration_minutes": 60.0,
+        "first_event_minute": 30.0,
+        "recovery_start_minute": 90.0,
+        "history_interval_minutes": [
+          0.0,
+          30.0
+        ],
+        "tail_interval_minutes": [
+          90.0,
+          180.0
+        ],
+        "root_family_id": "m21_seen_boundary_4001_days166_167",
+        "family_id": "m21_seen_boundary_4001_days166_167",
+        "design_family": "m21_seen_boundary_4001_days166_167",
+        "sampling_cohort": "v26_preregistered_active_GT2_factorial",
+        "sampling_method": "fixed_seen_background_selected_by_pre_event_actual_path",
+        "grid_limit_kW": 850.0,
+        "pre_event_grid_limit_kW": 850.0,
+        "automatic_fast_shedding": false,
+        "requires_policy_freeze": false,
+        "selection_allowed": false,
+        "fit_allowed": false,
+        "is_final_blind": false,
+        "original_final12_evaluated": false,
+        "historical_exposure_status": "seen_V25_normal_h4001_not_independent_confirmation",
+        "new_independent_background": false,
+        "background_independence": "Full source-block isolation within V21; historical exposure separately reported",
+        "prehistory_mode": "same_continuous_episode_no_reset",
+        "exogenous_events": [],
+        "full_source_support": {
+          "raw_start_minute": 240000.0,
+          "raw_end_minute": 240240.0
+        },
+        "parent_template_id": "m21_seen_boundary_4001_days166_167",
+        "distribution_id": "fixed_development_no_probability",
+        "purpose": "development",
+        "q_design": "fixed_development_no_probability",
+        "p_reference": null,
+        "importance_weight": null,
+        "m21_actual_demand_semantics": "hour-dependent original requests and zonal increments in segment ledger",
+        "exclude_from_main_four_class_summary": false,
+        "normal_verification": false,
+        "normal_exogenous_fault_present": false,
+        "normal_clinical_shock_present": true,
+        "normal_eval_interval_minutes": [
+          0.0,
+          180.0
+        ],
+        "reference_phase_clocks_are_analysis_only": true,
+        "normal_is_new_independent_confirmation_background": false,
+        "id": "v26_combined_D",
+        "exogenous_stream_id": "v26_exogenous:6042a8baa7ef47f54affc24a5ec3ea77fda97cf3e94ec3c59d2c975786630f55",
+        "actual_p0_load_multiplier": {
+          "e": 1.0,
+          "h": 1.0,
+          "c": 1.0
+        },
+        "native_propagation_flag_is_parser_requirement": true,
+        "base_state_identity_is_declared_initialization_spec": true,
+        "model_closure_events": [],
+        "native_event_class_is_parser_encoding_only": true,
+        "base_state_id": "v26_initialization:57fab7b2711184628b3efde63aabb6231cb41f057ff9a5576af868314dec187f"
+      },
+      "configuration": "H0",
+      "policy": {
+        "alias": "C",
+        "config": {}
+      },
+      "operating_rule_id": "current_service_bridge",
+      "study_id": "hospital_ies.study.v26.v1",
+      "evaluation_role": "seen_V26_mechanism_regression_not_independent_statistics",
+      "provenance": {
+        "normal_parent_case_id": "four_normal_summer",
+        "demand_parent_case_id": "four_L4_boiler_ER_autumn",
+        "V25_source_sha256": "47345730795cc15eda9e5b15071ddbedb65e916e4341e561c1f51148c75ea278",
+        "original_L4_active_boiler_excited": false
+      }
+    },
+    {
+      "id": "combined_FD",
+      "purpose": "Matched active GT2 fault x supported ER request: FD",
+      "factorial_variant": "FD",
+      "scenario": {
+        "source_block_id": "m21_seen_boundary_4001_days166_167",
+        "source_day_index": 166,
+        "season_quarter": 2,
+        "role": "development",
+        "experiment_role": "seen_engineering_model_regression",
+        "start_hour": 4001,
+        "duration_steps": 12,
+        "step_minutes": 15.0,
+        "pre_event_warmup_steps": 1,
+        "initialization_seed": 20261023,
+        "canonical_class": "L4",
+        "event_class": "L4b",
+        "analysis_class": "L4",
+        "stage": 4,
+        "enable_propagation": true,
+        "event_schema_version": "p2a.events.v1",
+        "faults": {
+          "GT_2": 0.0
+        },
+        "auxiliary_faults": {},
+        "shock": {},
+        "shock_by_priority": {},
+        "shock_by_zone": {
+          "ER_TRAUMA1_FLR_1": {
+            "e": 0.25,
+            "h": 0.25,
+            "c": 0.25
+          },
+          "ER_TRAUMA2_FLR_1": {
+            "e": 0.25,
+            "h": 0.25,
+            "c": 0.25
+          },
+          "ER_EXAM1_MULT4_FLR_1": {
+            "e": 0.25,
+            "h": 0.25,
+            "c": 0.25
+          },
+          "ER_EXAM3_MULT4_FLR_1": {
+            "e": 0.25,
+            "h": 0.25,
+            "c": 0.25
+          }
+        },
+        "fault_target": "GT_2",
+        "fault_availability": 0.0,
+        "demand_amplitude": 0.25,
+        "clinical_template_id": "emergency_department",
+        "clinical_coefficients_are_research_assumptions": true,
+        "response_delay_minutes": 30.0,
+        "fault_start_minute": 30.0,
+        "fault_duration_minutes": 60.0,
+        "shock_start_minute": 30.0,
+        "shock_duration_minutes": 60.0,
+        "first_event_minute": 30.0,
+        "recovery_start_minute": 90.0,
+        "history_interval_minutes": [
+          0.0,
+          30.0
+        ],
+        "tail_interval_minutes": [
+          90.0,
+          180.0
+        ],
+        "root_family_id": "m21_seen_boundary_4001_days166_167",
+        "family_id": "m21_seen_boundary_4001_days166_167",
+        "design_family": "m21_seen_boundary_4001_days166_167",
+        "sampling_cohort": "v26_preregistered_active_GT2_factorial",
+        "sampling_method": "fixed_seen_background_selected_by_pre_event_actual_path",
+        "grid_limit_kW": 850.0,
+        "pre_event_grid_limit_kW": 850.0,
+        "automatic_fast_shedding": false,
+        "requires_policy_freeze": false,
+        "selection_allowed": false,
+        "fit_allowed": false,
+        "is_final_blind": false,
+        "original_final12_evaluated": false,
+        "historical_exposure_status": "seen_V25_normal_h4001_not_independent_confirmation",
+        "new_independent_background": false,
+        "background_independence": "Full source-block isolation within V21; historical exposure separately reported",
+        "prehistory_mode": "same_continuous_episode_no_reset",
+        "exogenous_events": [],
+        "full_source_support": {
+          "raw_start_minute": 240000.0,
+          "raw_end_minute": 240240.0
+        },
+        "parent_template_id": "m21_seen_boundary_4001_days166_167",
+        "distribution_id": "fixed_development_no_probability",
+        "purpose": "development",
+        "q_design": "fixed_development_no_probability",
+        "p_reference": null,
+        "importance_weight": null,
+        "m21_actual_demand_semantics": "hour-dependent original requests and zonal increments in segment ledger",
+        "exclude_from_main_four_class_summary": false,
+        "normal_verification": false,
+        "normal_exogenous_fault_present": true,
+        "normal_clinical_shock_present": true,
+        "normal_eval_interval_minutes": [
+          0.0,
+          180.0
+        ],
+        "reference_phase_clocks_are_analysis_only": true,
+        "normal_is_new_independent_confirmation_background": false,
+        "id": "v26_combined_FD",
+        "exogenous_stream_id": "v26_exogenous:c9bbc143066f16f29036f9e9c930211c98db33cc987d61857cf4c38950b9497b",
+        "actual_p0_load_multiplier": {
+          "e": 1.0,
+          "h": 1.0,
+          "c": 1.0
+        },
+        "native_propagation_flag_is_parser_requirement": true,
+        "base_state_identity_is_declared_initialization_spec": true,
+        "model_closure_events": [],
+        "native_event_class_is_parser_encoding_only": true,
+        "base_state_id": "v26_initialization:57fab7b2711184628b3efde63aabb6231cb41f057ff9a5576af868314dec187f"
+      },
+      "configuration": "H0",
+      "policy": {
+        "alias": "C",
+        "config": {}
+      },
+      "operating_rule_id": "current_service_bridge",
+      "study_id": "hospital_ies.study.v26.v1",
+      "evaluation_role": "seen_V26_mechanism_regression_not_independent_statistics",
+      "provenance": {
+        "normal_parent_case_id": "four_normal_summer",
+        "demand_parent_case_id": "four_L4_boiler_ER_autumn",
+        "V25_source_sha256": "47345730795cc15eda9e5b15071ddbedb65e916e4341e561c1f51148c75ea278",
+        "original_L4_active_boiler_excited": false
+      }
+    },
+    {
+      "id": "smoke_normal",
+      "purpose": "15min public entry using the same M25 physical implementation",
+      "scenario": {
+        "source_block_id": "m21_seen_boundary_4001_days166_167",
+        "source_day_index": 166,
+        "season_quarter": 2,
+        "role": "development",
+        "experiment_role": "seen_engineering_model_regression",
+        "start_hour": 4001,
+        "duration_steps": 1,
+        "step_minutes": 15.0,
+        "pre_event_warmup_steps": 1,
+        "initialization_seed": 20261023,
+        "canonical_class": "NORMAL",
+        "event_class": "L3",
+        "analysis_class": "NORMAL",
+        "stage": 3,
+        "enable_propagation": true,
+        "event_schema_version": "p2a.events.v1",
+        "faults": {},
+        "auxiliary_faults": {},
+        "shock": {},
+        "shock_by_priority": {},
+        "shock_by_zone": {},
+        "fault_target": "GT_2",
+        "fault_availability": 0.0,
+        "demand_amplitude": 0.0,
+        "clinical_template_id": "emergency_department",
+        "clinical_coefficients_are_research_assumptions": true,
+        "response_delay_minutes": 30.0,
+        "fault_start_minute": 0.0,
+        "fault_duration_minutes": 0.0,
+        "shock_start_minute": 0.0,
+        "shock_duration_minutes": 0.0,
+        "first_event_minute": 0.0,
+        "recovery_start_minute": 15.0,
+        "history_interval_minutes": [
+          0.0,
+          15.0
+        ],
+        "tail_interval_minutes": [
+          15.0,
+          15.0
+        ],
+        "root_family_id": "m21_seen_boundary_4001_days166_167",
+        "family_id": "m21_seen_boundary_4001_days166_167",
+        "design_family": "m21_seen_boundary_4001_days166_167",
+        "sampling_cohort": "v26_preregistered_active_GT2_factorial",
+        "sampling_method": "fixed_seen_background_selected_by_pre_event_actual_path",
+        "grid_limit_kW": 850.0,
+        "pre_event_grid_limit_kW": 850.0,
+        "automatic_fast_shedding": false,
+        "requires_policy_freeze": false,
+        "selection_allowed": false,
+        "fit_allowed": false,
+        "is_final_blind": false,
+        "original_final12_evaluated": false,
+        "historical_exposure_status": "seen_V25_normal_h4001_not_independent_confirmation",
+        "new_independent_background": false,
+        "background_independence": "Full source-block isolation within V21; historical exposure separately reported",
+        "prehistory_mode": "same_continuous_episode_no_reset",
+        "exogenous_events": [],
+        "full_source_support": {
+          "raw_start_minute": 240000.0,
+          "raw_end_minute": 240240.0
+        },
+        "parent_template_id": "m21_seen_boundary_4001_days166_167",
+        "distribution_id": "fixed_development_no_probability",
+        "purpose": "development",
+        "q_design": "fixed_development_no_probability",
+        "p_reference": null,
+        "importance_weight": null,
+        "m21_actual_demand_semantics": "hour-dependent original requests and zonal increments in segment ledger",
+        "exclude_from_main_four_class_summary": false,
+        "normal_verification": true,
+        "normal_exogenous_fault_present": false,
+        "normal_clinical_shock_present": false,
+        "normal_eval_interval_minutes": [
+          0.0,
+          15.0
+        ],
+        "reference_phase_clocks_are_analysis_only": true,
+        "normal_is_new_independent_confirmation_background": false,
+        "id": "v26_smoke_normal",
+        "exogenous_stream_id": "v26_exogenous:ed740f3b8536331dae939277c15ffb7fc939a8264513cf940829a8852c4c30eb",
+        "actual_p0_load_multiplier": {
+          "e": 1.0,
+          "h": 1.0,
+          "c": 1.0
+        },
+        "native_propagation_flag_is_parser_requirement": true,
+        "base_state_identity_is_declared_initialization_spec": true,
+        "model_closure_events": [],
+        "native_event_class_is_parser_encoding_only": true,
+        "base_state_id": "v26_initialization:57fab7b2711184628b3efde63aabb6231cb41f057ff9a5576af868314dec187f"
+      },
+      "configuration": "H0",
+      "policy": {
+        "alias": "C",
+        "config": {}
+      },
+      "operating_rule_id": "current_service_bridge",
+      "study_id": "hospital_ies.study.v26.v1",
+      "evaluation_role": "seen_V26_mechanism_regression_not_independent_statistics",
+      "provenance": {
+        "normal_parent_case_id": "four_normal_summer",
+        "demand_parent_case_id": "four_L4_boiler_ER_autumn",
+        "V25_source_sha256": "47345730795cc15eda9e5b15071ddbedb65e916e4341e561c1f51148c75ea278",
+        "original_L4_active_boiler_excited": false
+      }
+    }
+  ],
+  "resource_comparison_rules": {
+    "scope": "Five same-rated-hardware C short-bridge/current-service versus sustained-critical30min pairs; not capacity/algorithm search",
+    "all_same_current_physical_model": true,
+    "control_rule_is_policy_metadata_not_hardware": true,
+    "new_backgrounds_independent": false,
+    "class_summary_scope": "Only7 preregistered normal/L1/L2/L3/L4 representatives; staged GRID+GT diagnostics excluded"
+  },
+  "model_correction_v25": {
+    "finite_source_return": true
+  },
+  "default_operating_rule": "current_service_bridge",
+  "operating_rules": {
+    "current_service_bridge": {
+      "name": "current_service_bridge"
+    }
+  },
+  "selected_parameter_rules": "Original C command parameters retained; control_rule_id is a separate current-time common-balance reserve option, not a hardware capacity change.",
+  "study_id": "hospital_ies.study.v26.v1",
+  "physical_model_id": "M25_model_correction",
+  "physical_contract_id": "hospital_ies.model_correction.v25.v1",
+  "combined_selection": {
+    "source_sha256": "47345730795cc15eda9e5b15071ddbedb65e916e4341e561c1f51148c75ea278",
+    "candidates": [
+      {
+        "case_id": "four_normal_summer",
+        "start_hour": 4001,
+        "boiler_max_lbph": 0.0,
+        "pre30_gt2_min_kW": 125.20755209999999,
+        "pre30_minutes": 30.0,
+        "native_sha256": "beac067b7d622f446d463ed25a481ba5ff3b0c7bc12eda0a3613fc59d325b154",
+        "process_sha256": "727abbbe75e4f6a2b9deecaea54cec9700b5931adf7d43bc9daa6402ca2f0b76",
+        "case_file_sha256": "6d9d40915311ab6fe04cd6ce66d7c5efcaad0b5b62cc8a5fe9e01e34435359fe",
+        "result_file_sha256": "b96d2d0d3c0f899875ce4ebddac1802a79feff3ca911d9539f9a9de4ff80637b"
+      },
+      {
+        "case_id": "four_normal_winter_optional",
+        "start_hour": 211,
+        "boiler_max_lbph": 0.0,
+        "pre30_gt2_min_kW": 0.0,
+        "pre30_minutes": 30.0,
+        "native_sha256": "1ffc20d66465134a8017dd2a9311e819f5a253887e483bfdc5a2be5ae40400de",
+        "process_sha256": "f41c8ad6670c1124cbb100b2b790c193c93ab667a741dd3503541eba3de89a24",
+        "case_file_sha256": "bb84fb6cad8c24a6930bb4d21aec048ef007c52fcab53f87507e7fdfe29387cb",
+        "result_file_sha256": "b719ab47a794c1622c12514833cb67798fb8e5d982a7d202bc32de061fe5f8c6"
+      }
+    ],
+    "search_scope": "All completed normal_verification runs in V25 original runs root; no new IES/EP/fit execution",
+    "decision_before_V26_outcomes": true,
+    "choice": "four_normal_summer_h4001_GT2",
+    "reason": "Neither supported completed V25 normal has natural boiler group >2000 lb/h; summer pre30 GT2 actual positive throughout"
+  }
+}

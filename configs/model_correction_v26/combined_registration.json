@@ -1,0 +1,110 @@
+{
+  "schema": "hospital_ies.v26.combined_preregistration.v1",
+  "registered_utc": "2026-10-26T06:00:53.301009+00:00",
+  "study_id": "hospital_ies.study.v26.v1",
+  "physical_model_id": "M25_model_correction",
+  "physical_contract_id": "hospital_ies.model_correction.v25.v1",
+  "source_physics_reused_without_rename": true,
+  "case_registry_sha256": "965b175befa10838900df6c608839d119d5e3d03e8fb5106792c1a1d80917f5a",
+  "selection": {
+    "source_sha256": "47345730795cc15eda9e5b15071ddbedb65e916e4341e561c1f51148c75ea278",
+    "candidates": [
+      {
+        "case_id": "four_normal_summer",
+        "start_hour": 4001,
+        "boiler_max_lbph": 0.0,
+        "pre30_gt2_min_kW": 125.20755209999999,
+        "pre30_minutes": 30.0,
+        "native_sha256": "beac067b7d622f446d463ed25a481ba5ff3b0c7bc12eda0a3613fc59d325b154",
+        "process_sha256": "727abbbe75e4f6a2b9deecaea54cec9700b5931adf7d43bc9daa6402ca2f0b76",
+        "case_file_sha256": "6d9d40915311ab6fe04cd6ce66d7c5efcaad0b5b62cc8a5fe9e01e34435359fe",
+        "result_file_sha256": "b96d2d0d3c0f899875ce4ebddac1802a79feff3ca911d9539f9a9de4ff80637b"
+      },
+      {
+        "case_id": "four_normal_winter_optional",
+        "start_hour": 211,
+        "boiler_max_lbph": 0.0,
+        "pre30_gt2_min_kW": 0.0,
+        "pre30_minutes": 30.0,
+        "native_sha256": "1ffc20d66465134a8017dd2a9311e819f5a253887e483bfdc5a2be5ae40400de",
+        "process_sha256": "f41c8ad6670c1124cbb100b2b790c193c93ab667a741dd3503541eba3de89a24",
+        "case_file_sha256": "bb84fb6cad8c24a6930bb4d21aec048ef007c52fcab53f87507e7fdfe29387cb",
+        "result_file_sha256": "b719ab47a794c1622c12514833cb67798fb8e5d982a7d202bc32de061fe5f8c6"
+      }
+    ],
+    "search_scope": "All completed normal_verification runs in V25 original runs root; no new IES/EP/fit execution",
+    "decision_before_V26_outcomes": true,
+    "choice": "four_normal_summer_h4001_GT2",
+    "reason": "Neither supported completed V25 normal has natural boiler group >2000 lb/h; summer pre30 GT2 actual positive throughout"
+  },
+  "case_ids": [
+    "combined_N",
+    "combined_F",
+    "combined_D",
+    "combined_FD",
+    "smoke_normal"
+  ],
+  "common_spec_sha256": "6ce6605cbd209278ef18dfb103ec38e839ee7453eb84b471ccba0df2275b01bf",
+  "factor_window_minutes": [
+    30.0,
+    90.0
+  ],
+  "phase_windows_minutes": {
+    "pre": [
+      0.0,
+      30.0
+    ],
+    "event": [
+      30.0,
+      90.0
+    ],
+    "recovery": [
+      90.0,
+      180.0
+    ]
+  },
+  "same_response_delay_minutes": 30.0,
+  "parser_classes": {
+    "N": {
+      "stage": 3,
+      "event_class": "L3",
+      "canonical_class": "NORMAL"
+    },
+    "F": {
+      "stage": 3,
+      "event_class": "L3",
+      "canonical_class": "L2"
+    },
+    "D": {
+      "stage": 4,
+      "event_class": "L4",
+      "canonical_class": "L3"
+    },
+    "FD": {
+      "stage": 4,
+      "event_class": "L4b",
+      "canonical_class": "L4"
+    }
+  },
+  "native_parser_clocks": "Both delayed_at and protection activation choose fault for stage3 or shock for stage4; both starts30min; all enable propagation.",
+  "rejected_all_stage4_L4b": "Rejected before physical execution: real validator requires both fault and shock. No dummy events added.",
+  "events_after_occurrence_only_for_controller": true,
+  "repair": "GT2 hardware availability returns at90; real queued commands/start/readiness remain required; no forced restart",
+  "HRSG2": "Hardware remains healthy; GT2-dependent contribution is derived from the unchanged common steam equation, not a separately measured per-HRSG port",
+  "no_required_outcome": {
+    "critical_ENS_positive": false,
+    "interaction_positive": false,
+    "policy_win": false,
+    "GT2_restart_by_horizon": false,
+    "permanent_HRSG_damage": false
+  },
+  "old_L4": {
+    "case_id": "four_L4_boiler_ER_autumn",
+    "reference": "V25/runs/m25v2_12_four_L4_boiler_ER_autumn_C_H0_current_service_bridge",
+    "active_boiler_path_excited": false,
+    "rerun": false
+  },
+  "run_plan_sha256": "248253d3a9cb7c7115412656c3ba3ac9f1298a6bdbfc8f7c5a6b847ab169786b",
+  "actual_main_attempts": 0,
+  "new_outcomes_opened": false
+}
