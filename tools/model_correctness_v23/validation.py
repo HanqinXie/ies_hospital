@@ -122,7 +122,7 @@ def actual_process(payload,path):
     with base.open(encoding='utf-8-sig',newline='') as stream:rows=list(csv.DictReader(stream))
     for row,segment in zip(rows,payload['segments']):
         for key in sorted(segment):
-            if key.startswith(('m23_','m24_')) or key in ('hardware_availability','execution_limits'):
+            if key.startswith(('m23_','m24_','m25_')) or key in ('hardware_availability','execution_limits'):
                 row[key+'_json']=json.dumps(segment[key],ensure_ascii=False,separators=(',',':'))
     with path.open('x',encoding='utf-8-sig',newline='') as stream:
         writer=csv.DictWriter(stream,fieldnames=list(dict.fromkeys(k for row in rows for k in row)))
@@ -150,7 +150,7 @@ def record_actual_prefix(segment,stream):
         'loads_kW','connected_loads_kW','disconnected_loads_kW','unserved_kW','service_request_ledger',
         'cost_USD_step','energy_balance_residuals','steam_balance_residual_lbph','m21_storage',
         'service_dependencies','m22_station','m23_restoration','m23_event_closure','m23_temperature_diagnostic',
-        'm24_cold_mode_selection','m24_tower_capacity')
+        'm24_cold_mode_selection','m24_tower_capacity','m25_transfer','m25_reserve')
     stream.write(json.dumps({k:segment[k] for k in keys if k in segment},ensure_ascii=False,allow_nan=False,separators=(',',':'))+'\n')
     stream.flush()
 
@@ -164,6 +164,8 @@ def worker(output, *, model_version='v23'):
         from tools.model_correctness_v23 import environment,MODEL_ID,CONTRACT_ID
     elif model_version=='v24':
         from tools.engineering_completion_v24 import environment,MODEL_ID,CONTRACT_ID
+    elif model_version=='v25':
+        from tools.model_correction_v25 import environment,MODEL_ID,CONTRACT_ID
     else:raise ValueError('Unknown explicit engineering model version')
     from tools.model_correctness_v23.metrics import build_reliability_metrics
     from tools.model_correctness_v23.comparison import with_comparison_inputs
@@ -192,8 +194,15 @@ def worker(output, *, model_version='v23'):
         config=copy.deepcopy(registry['hardware_profiles'][case['configuration']])
         config['model_closure_v22']=copy.deepcopy(case.get('model_closure_v22',registry['model_closure_v22']))
         config['model_correctness_v23']=copy.deepcopy(case.get('model_correctness_v23',registry['model_correctness_v23']))
-        if model_version=='v24':
+        if model_version in ('v24','v25'):
             config['engineering_completion_v24']=copy.deepcopy(case.get('engineering_completion_v24',registry['engineering_completion_v24']))
+        env_options={}
+        if model_version=='v25':
+            from tools.model_correction_v25.validation import resolve_operating_rule
+            rule_id,rule=resolve_operating_rule(registry,case)
+            config['model_correction_v25']=copy.deepcopy(case.get('model_correction_v25',registry['model_correction_v25']))
+            env_options['operating_rule']=rule
+            result.update(control_rule_id=rule_id,control_rule=copy.deepcopy(rule))
         result['extra_input_bindings']={}
         thermal=config['model_correctness_v23'].get('thermal_coupling')
         if thermal:
@@ -204,14 +213,17 @@ def worker(output, *, model_version='v23'):
         rows_writer=SolverRowSidecar(output/'solver_rows.jsonl.gz')
         env=environment.OperatingHospitalIESEnv(ROOT,allowed_hours=allowed_hours(dict(scenarios=[scene])),sealed_days=SEALED_DAYS,
             model_id=MODEL_ID,model_config=config,solver_row_sidecar=rows_writer,
-            solver_evidence_directory=output/'domain_evidence',enable_all_validation_rows=True)
+            solver_evidence_directory=output/'domain_evidence',enable_all_validation_rows=True,**env_options)
+        if model_version=='v25':
+            if env.control_rule_id!=rule_id:raise ValueError('Registered and actual V25 control-rule identities differ')
+            result['control_rule']=copy.deepcopy(env.control_rule)
         prefix_stream=(output/'ACTUAL_PREFIX.jsonl').open('x',encoding='utf8')
         env.actual_segment_observer=lambda segment:record_actual_prefix(segment,prefix_stream)
         result['model_config']=config;result['resolved_model_config']=copy.deepcopy(env.operating_model_config)
         result['model_config_sha256']=digest(result['resolved_model_config'])
         spec=runtime_policy(case,registry,policy)
-        controller=policy.SciPolicy(spec['alias'],config=spec['config'],plant=env.plant,
-            policy_id=(spec['alias']+'_engineering_completion_v24') if model_version=='v24' else None)
+        policy_id=(spec['alias']+'_engineering_completion_v24') if model_version=='v24' else (spec['alias']+'_'+rule_id+'_model_correction_v25') if model_version=='v25' else None
+        controller=policy.SciPolicy(spec['alias'],config=spec['config'],plant=env.plant,policy_id=policy_id)
         result['policy']=dict(alias=spec['alias'],policy_id=controller.policy_id if hasattr(controller,'policy_id') else spec['alias']+'_model_correctness_v23',config=controller.config)
         result['scenario_sha256']=digest(scene);result['configuration']=case['configuration']
         result['input_access_receipt']=copy.deepcopy(getattr(env,'input_access_receipt',None))
@@ -219,7 +231,8 @@ def worker(output, *, model_version='v23'):
             study_contract_id=CONTRACT_ID,model_config_signature=result['model_config_sha256'],configuration_id=case['configuration'],
             execution_model_id=MODEL_ID,simulator_hash=result['source_sha256'],schemas=copy.deepcopy(registry['schemas']),
             splits={scene['id']:dict(group_id=scene['family_id'],split='development',fit_allowed=False,embargo_minutes=60.,grouping_basis='full original source support')})
-        manifest['schemas']['model_correctness_v23' if model_version=='v23' else 'engineering_completion_v24']=CONTRACT_ID
+        manifest['schemas'][{'v23':'model_correctness_v23','v24':'engineering_completion_v24','v25':'model_correction_v25'}[model_version]]=CONTRACT_ID
+        if model_version=='v25':manifest.update(control_rule_id=rule_id,control_rule=copy.deepcopy(result['control_rule']))
         manifest['signature']=digest(manifest)
         result['manifest']=manifest
         write(output/'RESOLVED_CASE.json',dict(case=case,model_config=result['resolved_model_config'],policy=result['policy'],manifest=manifest))
@@ -285,6 +298,7 @@ def main(argv=None, *, registry_path=None, model_version='v23', worker_script=No
     parser=argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--case');parser.add_argument('--list',action='store_true');parser.add_argument('--case-file',type=Path)
     parser.add_argument('--policy',choices=list('RMFCA'));parser.add_argument('--configuration')
+    parser.add_argument('--operating-rule',help='Explicit registered V25 operating option; physical hardware is unchanged')
     parser.add_argument('--output',type=Path);parser.add_argument('--_worker',action='store_true',help=argparse.SUPPRESS)
     args=parser.parse_args(argv)
     if args._worker:return worker(args.output,model_version=model_version)
@@ -299,6 +313,12 @@ def main(argv=None, *, registry_path=None, model_version='v23', worker_script=No
     if not {'id','scenario','configuration','policy'}<=set(case):raise ValueError('Complete registered case required')
     if args.policy:case['policy_override_alias']=args.policy
     if args.configuration:case['configuration']=args.configuration
+    if args.operating_rule:
+        if model_version!='v25':raise ValueError('Operating-rule options require the explicit V25 route')
+        case['operating_rule_id']=args.operating_rule
+    if model_version=='v25':
+        from tools.model_correction_v25.validation import resolve_operating_rule
+        resolve_operating_rule(registry,case)
     if case['configuration'] not in registry['hardware_profiles']:raise ValueError('Unregistered hardware profile')
     if 'model_config' in case or 'hardware_profiles' in case:raise ValueError('No arbitrary physical capacity override')
     validate_exporter_metadata(case['scenario'])

@@ -73,11 +73,18 @@ def solve_physical(row,plant:Plant,loads:np.ndarray,availability:dict[str,float]
     # original layout, objective order and physical equations.
     from tools.model_closure_v22.physical import current_context,bridge_withdrawal_without_debt_kWh
     closure=current_context(config)
+    # Explicit V25 operating preference; absent on every historical route.
+    from tools.model_correction_v25.reserve import validate_solver_context
+    sustained_reserve=validate_solver_context(config)
+    if sustained_reserve is not None and (closure is None or storage_indices is None or not closure['preserve_bridge']):
+        raise ValueError('V25 reserves require current finite storage and bridge layer')
     boiler_on=bridge_debt=recovery_cold=starter_on=boiler_restart_on=None
+    cold_reserve_debt=None
     if closure is not None:
         boiler_on=nvars;recovery_cold=nvars+1;starter_on=nvars+2;boiler_restart_on=nvars+3;nvars+=4
         if storage_indices is not None and closure['preserve_bridge']:
             bridge_debt=nvars;nvars+=1
+        if sustained_reserve is not None:cold_reserve_debt=nvars;nvars+=1
     idx=lambda i,k:iu+i*3+k
     ppoints,spoints,fpoints=gt_level_properties(plant,float(row.outdoor_temperature_C))
     rated=float(ppoints[-1]);steam_per_kW=float(spoints[-1]/rated);fuel_per_kW=float(fpoints[-1]/rated)
@@ -202,10 +209,15 @@ def solve_physical(row,plant:Plant,loads:np.ndarray,availability:dict[str,float]
         paths=min(availability.get('AUX_FAN_P0',1.),availability.get('AUX_CHW_PUMP',1.))
         highs[recovery_cold]=closure['recovery_cooling_request_kW']*paths
         if bridge_debt is not None:
-            r=np.zeros(nvars);r[ud]=dt_h/closure['ups_discharge_efficiency'];r[bridge_debt]=-1.
-            # Recharge occurs only after service. It cannot pay for an
-            # unauthorized discharge in the mutually exclusive current mode.
-            cap(r,bridge_withdrawal_without_debt_kWh(closure),name='m22.existing_bridge_withdrawal',unit='kWh')
+            if sustained_reserve is None:
+                r=np.zeros(nvars);r[ud]=dt_h/closure['ups_discharge_efficiency'];r[bridge_debt]=-1.
+                # Recharge occurs only after service on the historical route.
+                cap(r,bridge_withdrawal_without_debt_kWh(closure),name='m22.existing_bridge_withdrawal',unit='kWh')
+            else:
+                for name,discharge,charge,debt in (('ups',ud,uc,bridge_debt),('cold',cd,cc,cold_reserve_debt)):
+                    asset=sustained_reserve[name];r=np.zeros(nvars)
+                    r[discharge]=dt_h/asset['discharge_efficiency'];r[charge]=-dt_h*asset['charge_efficiency'];r[debt]=-1.
+                    cap(r,asset['retained_energy_kWh']-asset['target_kWh'],name=f'm25.{name}.uncapped_end_inventory_shortfall',unit='kWh')
     if execution_action is not None and (execution_contract or {}).get('diesel_dispatch_mode')=='arrived_ceiling':
         # M15's finite shaft-work preview locates actual exhaustion. An
         # arbitrary trial duration cannot spread the remaining fuel over Pe.
@@ -285,6 +297,7 @@ def solve_physical(row,plant:Plant,loads:np.ndarray,availability:dict[str,float]
     if closure is not None:
         variable_names+=['m22.boiler.on','m22.recovery_cooling','m22.starter.fully_supplied','m22.boiler.restart_supplied'];units+=['binary','kW','binary','binary']
         if bridge_debt is not None:variable_names+=['m22.UPS.bridge_withdrawal'];units+=['kWh']
+        if cold_reserve_debt is not None:variable_names+=['m25.cold.reserve_shortfall'];units+=['kWh']
     variables=[dict(index=i,name=name,unit=units[i]) for i,name in enumerate(variable_names)]
     diagnostic_input={}
     if active_collector() is not None:
@@ -320,7 +333,9 @@ def solve_physical(row,plant:Plant,loads:np.ndarray,availability:dict[str,float]
         if continuity_layer:c[boiler_on]=-1.
         if charging_layer:
             c[uc]=-1.;c[cc]=-1.
-        if bridge_layer:c[bridge_debt]=1.
+        if bridge_layer:
+            c[bridge_debt]=1. if sustained_reserve is None else 1./max(1.,sustained_reserve['ups']['target_kWh'])
+            if sustained_reserve is not None:c[cold_reserve_debt]=1./max(1.,sustained_reserve['cold']['target_kWh'])
         if recovery_layer:c[recovery_cold]=-1.
         if start_layer:
             c[starter_on]=-closure['gt_start_kW'];c[boiler_restart_on]=-closure['boiler_restart_kW']
@@ -363,12 +378,12 @@ def solve_physical(row,plant:Plant,loads:np.ndarray,availability:dict[str,float]
                 # row, not an ENS implication for the backend preconditioner.
                 locks.append(dict(source_rank=rank,objective=c.copy(),objective_constant=0.,incumbent_raw_objective=val,
                                   tolerance=tol,upper=val+tol,relation='<=',unit='normalized carrier ENS',source='raw incumbent c@x'))
-            name=('storage.recharge_after_all_service' if charging_layer else 'm22.preserve_existing_bridge_after_critical' if bridge_layer
+            name=('storage.recharge_after_all_service' if charging_layer else ('m22.preserve_existing_bridge_after_critical' if sustained_reserve is None else 'm25.normalized_end_inventory_shortfall_after_critical_and_restart') if bridge_layer
                 else 'm22.UPS_discharge_only_for_current_service_after_all_service' if ups_service_layer
                 else 'm22.held_boiler_continuity_after_all_service' if continuity_layer
                 else 'm22.actual_recovery_after_all_service' if recovery_layer else 'm22.real_start_power_after_critical' if start_layer
                 else f'priority.{GROUPS[group]}.normalized_ENS.upper')
-            row_metadata.append(dict(name=name,unit='kWh' if bridge_layer else 'kW' if recovery_layer or start_layer or ups_service_layer else 'dimensionless',
+            row_metadata.append(dict(name=name,unit=('kWh' if sustained_reserve is None else 'dimensionless') if bridge_layer else 'kW' if recovery_layer or start_layer or ups_service_layer else 'dimensionless',
                                      source=f'raw rank {group} objective plus original tolerance',kind='priority_lock'))
             if service_layer and (config or {}).get('_m24_exact_service_guard',False):
                 # An additional recharge-witness constraint, never a relaxed

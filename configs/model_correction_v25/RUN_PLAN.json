@@ -1,0 +1,165 @@
+{
+  "schema": "hospital_ies.v25.targeted_plan.v1",
+  "registered_before_formal_results": true,
+  "created_utc": "2026-10-26T01:23:31.055384+00:00",
+  "default_design_minutes": 30.0,
+  "design_minutes_basis": "Research target covering two15min observation windows; not OEM/clinical/standard requirement; uncapped shortfall must be reported",
+  "additional_duration_sensitivity_registered": false,
+  "comparison_order": "original P0/P1 service and actual startup/restoration, then sustained reserve, then original P2/P3; all operating cost/CO2/terminal stock disclosed",
+  "runs": [
+    {
+      "case": "transfer_l2_long_300",
+      "policy": "C",
+      "configuration": "H0",
+      "operating_rule": "current_service_bridge",
+      "group": "transfer"
+    },
+    {
+      "case": "transfer_l2_long_150",
+      "policy": "C",
+      "configuration": "H0",
+      "operating_rule": "current_service_bridge",
+      "group": "transfer"
+    },
+    {
+      "case": "transfer_l2_long_600",
+      "policy": "C",
+      "configuration": "H0",
+      "operating_rule": "current_service_bridge",
+      "group": "transfer"
+    },
+    {
+      "case": "transfer_l2_short_150",
+      "policy": "C",
+      "configuration": "H0",
+      "operating_rule": "current_service_bridge",
+      "group": "transfer"
+    },
+    {
+      "case": "transfer_l2_long_300_legacy",
+      "policy": "C",
+      "configuration": "H0",
+      "operating_rule": "current_service_bridge",
+      "group": "transfer"
+    },
+    {
+      "case": "four_normal_summer",
+      "policy": "C",
+      "configuration": "H0",
+      "operating_rule": "current_service_bridge",
+      "group": "four_class"
+    },
+    {
+      "case": "four_normal_winter_optional",
+      "policy": "C",
+      "configuration": "H0",
+      "operating_rule": "current_service_bridge",
+      "group": "four_class"
+    },
+    {
+      "case": "four_L1_grid_winter",
+      "policy": "C",
+      "configuration": "H1",
+      "operating_rule": "current_service_bridge",
+      "group": "four_class"
+    },
+    {
+      "case": "four_L2_GT2_original",
+      "policy": "C",
+      "configuration": "H0",
+      "operating_rule": "current_service_bridge",
+      "group": "four_class"
+    },
+    {
+      "case": "four_L2_GT2_active_h4001",
+      "policy": "C",
+      "configuration": "H0",
+      "operating_rule": "current_service_bridge",
+      "group": "four_class"
+    },
+    {
+      "case": "four_L3_ward_spring",
+      "policy": "C",
+      "configuration": "H0",
+      "operating_rule": "current_service_bridge",
+      "group": "four_class"
+    },
+    {
+      "case": "four_L4_boiler_ER_autumn",
+      "policy": "C",
+      "configuration": "H0",
+      "operating_rule": "current_service_bridge",
+      "group": "four_class"
+    },
+    {
+      "case": "reserve_l2_long_150_ups20",
+      "policy": "C",
+      "configuration": "UPS20",
+      "operating_rule": "current_service_bridge",
+      "group": "reserve"
+    },
+    {
+      "case": "reserve_l2_long_150_ups20",
+      "policy": "C",
+      "configuration": "UPS20",
+      "operating_rule": "sustained_critical_30min",
+      "group": "reserve"
+    },
+    {
+      "case": "reserve_l2_long_150_ups40",
+      "policy": "C",
+      "configuration": "UPS40",
+      "operating_rule": "current_service_bridge",
+      "group": "reserve"
+    },
+    {
+      "case": "reserve_l2_long_150_ups40",
+      "policy": "C",
+      "configuration": "UPS40",
+      "operating_rule": "sustained_critical_30min",
+      "group": "reserve"
+    },
+    {
+      "case": "reserve_l2_long_150_ups40_power80",
+      "policy": "C",
+      "configuration": "UPS40_POWER80",
+      "operating_rule": "current_service_bridge",
+      "group": "reserve"
+    },
+    {
+      "case": "reserve_l2_long_150_ups40_power80",
+      "policy": "C",
+      "configuration": "UPS40_POWER80",
+      "operating_rule": "sustained_critical_30min",
+      "group": "reserve"
+    },
+    {
+      "case": "reserve_cold_partial_tower",
+      "policy": "C",
+      "configuration": "H2",
+      "operating_rule": "current_service_bridge",
+      "group": "reserve"
+    },
+    {
+      "case": "reserve_cold_partial_tower",
+      "policy": "C",
+      "configuration": "H2",
+      "operating_rule": "sustained_critical_30min",
+      "group": "reserve"
+    },
+    {
+      "case": "reserve_cold_partial_cold_60_power60",
+      "policy": "C",
+      "configuration": "COLD_60_POWER60",
+      "operating_rule": "current_service_bridge",
+      "group": "reserve"
+    },
+    {
+      "case": "reserve_cold_partial_cold_60_power60",
+      "policy": "C",
+      "configuration": "COLD_60_POWER60",
+      "operating_rule": "sustained_critical_30min",
+      "group": "reserve"
+    }
+  ]
+}

@@ -1,3 +1,7 @@
+# Current V25 model correction authorization (2026-10-26)
+
+Follow docs/v25/USER_TASK_20261026.txt and docs/v25/IMPLEMENTATION_PLAN.md. Continue existing linked worktree from V24 c54f852 on sci-v25-model-correction; original inputs, V24 branch/results/failures remain read-only. V25 supersedes the bounded V24 thermal-stop point for observation correction and finite re-identification, not physical/information/precision boundaries. Shared physics/transfer/storage rule code has one writer. Independent thermal and read-only evidence tasks own separate files. New raw/SQL/temp under E:/hospital_ies_v25_20261026. No MPC/ML/future facts, paper/figures, push/main merge or external messages. Continuous authorized work; no routine approval stops. Deliver one self-contained ZIP under100000000 bytes with README/report/acceptance inside.
+
 # Current V24 engineering completion authorization (2026-10-26)
 
 Follow docs/v24/USER_TASK_20261026.txt and docs/v24/IMPLEMENTATION_PLAN.md. Current user authorization supersedes earlier stop points. Continue existing worktree from local V23 commit732fd6b on sci-v24-engineering-completion; old inputs/results/cohort identities stay read-only. New raw/SQL/temp on E:/hospital_ies_v24_20261026. One shared physical-core writer; thermal and source diagnosis own independent files. No MPC/ML predictor/future facts, paper/figures, capacity/threshold changes to force strategy wins, remote push or main merge. Record real failures and bounded thermal stop. Final compact archive under100000000 bytes.

@@ -69,6 +69,9 @@ def search(core,solve,baseline,loads,availability,dt_h,*,baseline_failure=None):
     E/H/C objectives in P0--P3 order. All trials read the same snapshot.
     """
     records=[];noncharging=[];record_by_result={}
+    # Only the explicitly registered V25 rule permits general service to
+    # yield to research reserve charging. Historical M24 keeps all 12 guards.
+    sustained=getattr(core.env,'operating_rule',{}).get('name')=='sustained_critical'
     ups_modes=[False,True] if core.ups.energy_kWh<core.ups.config['capacity_kWh']-1e-9 and core.ups.config['capacity_kWh']>0. else [False]
     cold_modes=['idle']+(['discharge'] if core.cold_store.energy_kWh>1e-9 else [])
     def retain(mode,ups_charge,status,layers,*,guard_probe=False):
@@ -136,6 +139,7 @@ def search(core,solve,baseline,loads,availability,dt_h,*,baseline_failure=None):
                 objective_hierarchy=copy.deepcopy(reference['_m23_objective_hierarchy']),
                 **retain('guard_witness',None,'legal',reference.get('solver_backend_layers',[]),guard_probe=True)))
             guard=np.minimum(np.asarray(reference['lost']),np.asarray(winner['lost']))
+            if sustained:guard[2:]=np.asarray(loads)[2:]
             for ups_charge in ups_modes:
                 item=attempt('charge',ups_charge,{'_m24_charge_service_ceiling_kW':guard.tolist(),'_m24_exact_service_guard':True})
                 if item is not None:candidates.append(item)
@@ -180,6 +184,9 @@ def search(core,solve,baseline,loads,availability,dt_h,*,baseline_failure=None):
         maintenance_recharge_deadband_bypassed=deadband_bypassed,
         maintenance_deadband_bypass_reason=('no_legal_registered_no_charge_domain_with_real_charge_headroom' if deadband_bypassed else None),
         original_service_lock_tolerances_unchanged=True,service_lock_slack_used_to_charge=False)
+    if sustained:
+        diagnostic.update(charge_guard='strict_P0_P1_carrier_service_from_no_charge_and_exact_witness_general_may_yield_to_reserve',
+            charge_guard_general_service_may_yield=True,original_per_priority_E_H_C_sum_unchanged=True)
     diagnostic['candidate_solver_errors']=sum(x['status']=='candidate_solver_error' for x in records)
     diagnostic['safe_no_charge_retained_after_probe_failure']=bool(diagnostic['candidate_solver_errors'] and any(r is result for r,_ in noncharging))
     if admission is not None:diagnostic['discharge_admission']=admission

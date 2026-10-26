@@ -1,0 +1,17 @@
+{
+  "registered_before_new_port_runs": true,
+  "original_case": "native10_cal_summer_0h",
+  "date": "2006-07-20",
+  "event_schedule_start": "12:00",
+  "event_schedule_end": "18:00",
+  "maximum_actual_reference_runs": 4,
+  "cases": ["normal", "one_main_source_off", "all_cold_sources_off", "or_fan_path_off"],
+  "source_limit_method": "Actual chiller On/Off Supervisory=0, no nominal capacity change and no fractional availability inference",
+  "partial_disabled": ["CoolSys1 Chiller2"],
+  "full_disabled": ["CoolSys1 Chiller1", "CoolSys1 Chiller2", "Heat Recovery Chiller"],
+  "fan_method": "Append AvailabilityManager:ScheduledOff to original VAV_OR manager list; event schedule0 creates ForceOff and outside1 leaves original NightCycle authority",
+  "qualification": "Target source actual Evaporator Cooling Rate=0; fan path actual Fan Air Mass Flow and four zone supply-node mass flows=0; positive actual source/flow after release. Verify1090 original sizing entries. Normal reference identical; preregistered distinct partial-source outcome may show no zone impact.",
+  "boundary": "Actual representative-zone net sensible=H-C; Detailed rates integrated using unrounded API durations. Multiply each representative zone once for physical group. Chiller gross cooling, AHU coil cooling, reheat and fan electric are diagnostics, not additional terms in H-C.",
+  "scope": "Reference-building single-direction completed energy-port evidence only, no IES-temperature feedback or online qualification. HRC shutdown also removes its recovered heat and is explicitly a compound plant availability effect. No new independent temperature-validation date.",
+  "default_thermal_coupling": null
+}
