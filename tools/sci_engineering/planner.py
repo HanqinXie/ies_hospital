@@ -510,7 +510,13 @@ def _solve_joint_candidate(row, plant, loads, availability, state, dt_h,
         if coordination['time_energy_preparation'] else None)
     shared_response_on=(np.array([allocate(f'phase.shared_response.GT_{i+1}.ready','binary') for i in range(3)])
         if coordination['time_energy_preparation'] else None)
+    case_request_rows={}
     for label, demand in cases:
+        case_row=row
+        if getattr(row,'sci_demand_boundary_contract',None) is not None:
+            from tools.model_review_v28.demand import counterfactual_request
+            case_row,demand=counterfactual_request(row,demand)
+        case_request_rows[label]=case_row
         start = len(names)
         for device in ('absorption', 'EC_1', 'EC_2', 'EC_3'):
             allocate(f'risk.{label}.{device}.cooling', 'RT')
@@ -879,7 +885,7 @@ def _solve_joint_candidate(row, plant, loads, availability, state, dt_h,
         label = case['name']; demand = case['loads']; conv = case['converters']
         rg = case['grid']; rw = case['steam']; ru = case['unmet']; rs = case['surplus']
         if dependency_enabled:
-            case['sci_required'] = add_dependency_constraints(row,demand,availability,case['sci_aux'],
+            case['sci_required'] = add_dependency_constraints(case_request_rows[label],demand,availability,case['sci_aux'],
                 np.arange(ru,ru+12).reshape(4,3),add,upper,'risk.'+label)
         mask = case['gt_mask']
         conditional=label not in ('held_actual','arrived_current','regulated_current','startup_bridge')
@@ -1817,6 +1823,11 @@ def _solve_joint_candidate(row, plant, loads, availability, state, dt_h,
         original_auxiliary_kW_bound_validation=auxiliary_bound_validation,
         current_auxiliary_required_kW=current_required.tolist() if dependency_enabled else None,
         current_auxiliary_served_kW=(current_required*x[current_aux]).tolist() if dependency_enabled else None)
+    if getattr(row,'sci_demand_boundary_contract',None) is not None:
+        diagnostic['sci']['current_demand_components']=copy.deepcopy(row.sci_direct_aux_request)
+        for name,record in risk_records.items():
+            q=case_request_rows[name].sci_direct_aux_request
+            record['demand_components']={key:copy.deepcopy(q[key]) for key in ('contract_id','direct_request_kW','auxiliary_request_kW')}
     diagnostic['current_priority_contract']=dict(schema='sci_engineering.executable_before_conditional.v21.v1',
         immediate_current_stage='arrived_current',immediate_critical_order=['P0','P1'],
         all_immediate_critical_locks_precede_conditional_targets=True,

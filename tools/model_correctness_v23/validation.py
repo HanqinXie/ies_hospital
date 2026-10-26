@@ -258,6 +258,7 @@ def worker(output, *, model_version='v23', study_identity=None, execution_policy
         result['emissions_factor_binding']=dict(path=str(factor_path),sha256=sha(factor_path) if factor_path.is_file() else None,registered_match=factors is not None)
         result['metrics']=compact_metrics(payload,env=env,factor_registry=factors)
         if hasattr(env,'v27_load_profile_receipt'):result['v27_load_profile']=copy.deepcopy(env.v27_load_profile_receipt)
+        if hasattr(env,'v28_demand_receipt'):result['v28_demand_boundary']=copy.deepcopy(env.v28_demand_receipt)
         result['error']=copy.deepcopy(payload.get('error'))
         result['status']='completed' if payload.get('summary',{}).get('status')=='completed' and result['metrics']['complete'] and result['error'] is None else 'failed_unknown'
     except Exception as exc:

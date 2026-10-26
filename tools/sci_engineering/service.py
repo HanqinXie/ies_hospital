@@ -34,6 +34,9 @@ def dependency_variables(allocate, prefix='current'):
                         for kind in KINDS] for g in range(4)],dtype=int)
 
 def dependency_requirements(row,loads):
+    if getattr(row,'sci_demand_boundary_contract',None) is not None:
+        from tools.model_review_v28.demand import dependency_request
+        return np.asarray(dependency_request(row,loads)['auxiliary_required_kW'],float)
     loads=np.asarray(loads,float)
     result=np.zeros((4,3))
     for g in range(4):
@@ -61,6 +64,36 @@ def fan_independent_heat_bound(row,loads):
     loads=np.asarray(loads,float)
     if loads.shape!=(4,3) or not np.isfinite(loads).all() or np.any(loads<0.):
         raise ValueError('Invalid heat decomposition load request')
+    target_trace=getattr(row,'v28_thermal_service_trace',None)
+    if target_trace is not None:
+        from tools.model_review_v28.demand import DEMAND_CONTRACT_ID,enabled
+        from pathlib import PurePosixPath
+        trace=target_trace
+        path=trace.get('path') if isinstance(trace,dict) else None
+        if (not enabled(row) or not isinstance(trace,dict) or not isinstance(path,str)
+            or not path.startswith('inputs/model_review_v28/') or '\\' in path
+            or '..' in PurePosixPath(path).parts
+            or trace.get('boundary')!='ordinary_wateruse_central_target_v28'
+            or trace.get('request_column')!='ordinary_DHW_target_kW'
+            or trace.get('legacy_delivery_column')!='Q_h_DHW_water_use_kW'
+            or not isinstance(trace.get('sha256'),str) or len(trace['sha256'])!=64
+            or any(c not in '0123456789abcdef' for c in trace['sha256'])
+            or isinstance(trace.get('hour_of_year'),bool) or not isinstance(trace.get('hour_of_year'),int)
+            or not 1<=trace['hour_of_year']<=8760):
+            raise ValueError('Invalid V28 ordinary DHW target source trace')
+        q=getattr(row,'sci_direct_aux_request',{})
+        if q.get('contract_id')!=DEMAND_CONTRACT_ID:raise ValueError('V28 DHW target lacks bound current request')
+        target=float(getattr(row,'Q_h_DHW_water_use_kW',float('nan')))
+        legacy=float(getattr(row,'v28_ordinary_DHW_source_delivered_kW',float('nan')))
+        full_P3=float(q.get('actual_current_P3_heat_request_kW',np.asarray(q['aggregate_request_kW'])[3,1]))
+        if any(not math.isfinite(v) or v<0. for v in (target,legacy,full_P3)) or target>full_P3+1e-7:
+            raise ValueError('Invalid V28 ordinary DHW target/P3 request decomposition')
+        return dict(maximum_fan_independent_heat_kW=[0.,0.,0.,min(float(loads[3,1]),target)],
+            original_P3_identified_heat_kW=target,source_DHW_kW=target,
+            legacy_DHW_delivered_kW=legacy,original_P3_heat_request_kW=float(row.P3_reference_h_kW),
+            bound_current_P3_heat_request_kW=full_P3,source_trace=dict(trace),
+            decomposition_status='source_bound_ordinary_DHW_target_v28',represents_actual_DHW_delivery=False,
+            semantics='Bound requested useful heat of ordinary30WaterUse services, not source heater input or actual delivery. Fan independent; water pump/heat source constraints retained. Local high-temperature services excluded from central request.')
     required=bool(getattr(row,'sci_heat_decomposition_required',False))
     present=hasattr(row,'Q_h_DHW_water_use_kW')
     if required and not present:raise ValueError('Actual M21 row lacks source DHW decomposition')
@@ -92,7 +125,12 @@ def fan_independent_heat_bound(row,loads):
         semantics='Maximum identifiable non-air heat inside original P3 residual, clipped by connected heat; all heat still needs its distribution pump and source. DHW service and aggregate contact composition are not independently identified.')
 
 def add_dependency_constraints(row,loads,availability,indices,unmet_indices,add,upper,prefix='current'):
-    loads=np.asarray(loads,float);required=dependency_requirements(row,loads)
+    loads=np.asarray(loads,float);component_request=None
+    if getattr(row,'sci_demand_boundary_contract',None) is not None:
+        from tools.model_review_v28.demand import dependency_request
+        component_request=dependency_request(row,loads)
+        required=np.asarray(component_request['auxiliary_required_kW'],float)
+    else:required=dependency_requirements(row,loads)
     independent=fan_independent_heat_bound(row,loads)['maximum_fan_independent_heat_kW']
     unmet=np.asarray(unmet_indices,int).reshape(4,3)
     for g in range(4):
@@ -106,7 +144,9 @@ def add_dependency_constraints(row,loads,availability,indices,unmet_indices,add,
             # that amplify the solver's scaled feasibility error in kW.
             upper[indices[g,j]]=available[j] if required[g,j]>0. else 0.
         # 0 <= delivered_e - sum(aux_e) <= direct_e_request.
-        direct=max(0.,loads[g,0]-required[g].sum())
+        if component_request is not None:
+            direct=component_request['direct_cap_kW'][g]
+        else:direct=max(0.,loads[g,0]-required[g].sum())
         coefficients={int(unmet[g,0]):1.,
             **{int(indices[g,j]):float(required[g,j]) for j in range(3)}}
         add(coefficients,loads[g,0]-direct,loads[g,0],f'{prefix}.P{g}.electric_components')

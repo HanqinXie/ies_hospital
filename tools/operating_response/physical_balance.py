@@ -455,6 +455,10 @@ def solve_physical(row,plant:Plant,loads:np.ndarray,availability:dict[str,float]
     security_penalty=float(security_weight*dt_h*gts.sum())
     operating_cost=float(c_cost[:26]@x[:26])-security_penalty
     tracking_penalty=float(c_cost[26:26+len(targets)]@x[26:26+len(targets)])
+    demand_components={}
+    if sci_dependencies and getattr(row,'sci_demand_boundary_contract',None) is not None:
+        from tools.model_review_v28.demand import served_components
+        demand_components=served_components(row,loads,served,auxiliary_required*np.asarray(x[auxiliary_indices]))
     return {'action':action,'lost':lost,'served':served,'lex_values':lex_values,
             **({'_m23_objective_hierarchy':[dict(name=name,value=float(objective@x),lock_tolerance=tolerance) for name,objective,tolerance in objective_hierarchy]} if m23 is not None else {}),
             'cost_USD_step':operating_cost,'tracking_penalty_USD_step':tracking_penalty,
@@ -468,5 +472,7 @@ def solve_physical(row,plant:Plant,loads:np.ndarray,availability:dict[str,float]
                 fan_independent_heat=fan_independent_heat_bound(row,loads),
                 auxiliary_delivered_kW=(auxiliary_required*np.asarray(x[auxiliary_indices])).tolist(),
                 direct_electric_delivered_kW=(served[:,0]-np.sum(auxiliary_required*x[auxiliary_indices],axis=1)).tolist(),
-                semantics='aggregate air-served heat/cold need fan power; identified P3 non-air heat has a maximum fan-independent allowance, not a DHW delivery meter; all thermal delivery retains distribution/source constraints; existing electricity reallocated')}
+                **({'demand_components':demand_components} if demand_components else {}),
+                semantics=('fixed source non-auxiliary direct request plus once-constructed building auxiliary request; actual direct and auxiliary delivery sum to aggregate electric delivery while original requests remain fixed under faults/cuts; identified non-air heat retains its registered fan-independent bound and distribution/source constraints'
+                    if demand_components else 'aggregate air-served heat/cold need fan power; identified P3 non-air heat has a maximum fan-independent allowance, not a DHW delivery meter; all thermal delivery retains distribution/source constraints; existing electricity reallocated'))}
                 if sci_dependencies else {})}

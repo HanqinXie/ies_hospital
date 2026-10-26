@@ -79,6 +79,7 @@ class EngineeringCore(LoadAccountingCore):
 
     def _hardware_data_at(self,minute):
         h,row,loads,f=super()._hardware_data_at(minute)
+        fixed_direct=getattr(row,'sci_demand_boundary_contract',None) is not None
         if not hasattr(row,'Q_h_DHW_water_use_kW'):
             raise ValueError('Actual M21 source row lacks Q_h_DHW_water_use_kW decomposition')
         original_P3_heat=float(getattr(row,'P3_reference_h_kW',loads[3,1]))
@@ -94,15 +95,28 @@ class EngineeringCore(LoadAccountingCore):
                     float(source.zone_sensible_cooling_kW*source.zone_multiplier))
                 for k,carrier in enumerate(('e','h','c')):clinical[g,k]+=baseline[k]*float(values.get(carrier,0.))
             loads=loads+clinical
-            requests=dependency_requirements(row,loads)
-            data=row._asdict()
-            for g in range(4):
-                old=np.array([float(getattr(row,f'P{g}_{kind}_kW')) for kind in ('fan','chw_pump','heat_pump')])
-                auxiliary_increment[g]=float(np.maximum(0.,requests[g]-old).sum())
-                loads[g,0]+=auxiliary_increment[g]
-                for j,kind in enumerate(('fan','chw_pump','heat_pump')):data[f'P{g}_{kind}_kW']=float(requests[g,j])
-                for j,carrier in enumerate(('e','h','c')):data[f'P{g}_reference_{carrier}_kW']=float(loads[g,j])
-            row=SimpleNamespace(**data)
+            if not fixed_direct:
+                requests=dependency_requirements(row,loads)
+                data=row._asdict()
+                for g in range(4):
+                    old=np.array([float(getattr(row,f'P{g}_{kind}_kW')) for kind in ('fan','chw_pump','heat_pump')])
+                    auxiliary_increment[g]=float(np.maximum(0.,requests[g]-old).sum())
+                    loads[g,0]+=auxiliary_increment[g]
+                    for j,kind in enumerate(('fan','chw_pump','heat_pump')):data[f'P{g}_{kind}_kW']=float(requests[g,j])
+                    for j,carrier in enumerate(('e','h','c')):data[f'P{g}_reference_{carrier}_kW']=float(loads[g,j])
+                row=SimpleNamespace(**data)
+        if fixed_direct:
+            from tools.model_review_v28.demand import bind_request
+            row,loads=bind_request(row,loads)
+            q=row.sci_direct_aux_request
+            auxiliary_increment=(np.asarray(q['auxiliary_request_kW'])-np.asarray(q['auxiliary_reference_kW'])).sum(axis=1)
+            # Source component fields remain immutable. Current components are
+            # group-specific: applying each group's common fan factor preserves
+            # its original physical fault-path shares under changed requests.
+            components={}
+            for name,item in self.env.auxiliary_metadata.get('fan_component_columns',{}).items():
+                components[name]=[float(getattr(row,item['power_column']))*float(item['priority_shares'][f'P{g}'])*q['auxiliary_factors'][g][0] for g in range(4)]
+            q['current_fan_components_by_priority_kW']=components
         if hasattr(row,'_asdict'):row=SimpleNamespace(**row._asdict())
         row.sci_clinical_increment_kW=clinical.tolist();row.sci_auxiliary_increment_kW=auxiliary_increment.tolist()
         row.sci_heat_decomposition_required=True
@@ -133,6 +147,8 @@ class EngineeringCore(LoadAccountingCore):
         value['sci_auxiliary']=dict(observation_time_minute=self.time,available_time_minute=self.time,
             availability=auxiliary,required_kW=dependency_requirements(row,loads).tolist(),
             fan_independent_heat=fan_independent_heat_bound(row,loads))
+        if hasattr(row,'sci_direct_aux_request'):
+            value['sci_auxiliary']['demand_components']=copy.deepcopy(row.sci_direct_aux_request)
         value['sci_storage']=dict(observation_time_minute=self.time,available_time_minute=self.time,
             ups=self.ups.observe(),cold_store=self.cold_store.observe())
         value['sci_model_id']=MODEL_ID
@@ -176,7 +192,10 @@ class EngineeringCore(LoadAccountingCore):
             f.get('AUX_HEAT_PUMP',1.)] for g in range(4)],float)
         if not np.isfinite(fractions).all() or np.any((fractions<0.)|(fractions>1.)):
             raise ValueError('Invalid auxiliary availability for no-export bound')
-        direct=np.maximum(0.,loads[:,0]-required.sum(axis=1))
+        if getattr(row,'sci_demand_boundary_contract',None) is not None:
+            from tools.model_review_v28.demand import dependency_request
+            direct=np.asarray(dependency_request(row,loads)['direct_cap_kW'],float)
+        else:direct=np.maximum(0.,loads[:,0]-required.sum(axis=1))
         electric=np.minimum(loads[:,0],direct+(required*fractions).sum(axis=1))
         cold=np.asarray(loads[:,2],float).copy()
         for g in range(4):
@@ -252,6 +271,8 @@ class EngineeringCore(LoadAccountingCore):
         segment['m21_demand_components']=dict(clinical_increment_kW=row.sci_clinical_increment_kW,
             auxiliary_increment_e_kW=row.sci_auxiliary_increment_kW,
             unmodified_original_request_retained=True)
+        if hasattr(row,'sci_direct_aux_request'):
+            segment['m28_demand_components']=copy.deepcopy(result['service_dependencies']['demand_components'])
         segment['execution_model_id']=MODEL_ID
 
     def generate_command(self,action):
