@@ -114,6 +114,15 @@ def test_actual_gt_minimum_up_down_ledger_is_preserved_as_state():
     assert restored.core.gt_clocks.last_off[0]==80.
 
 
+def test_frozenset_hour_permissions_and_cache_keys_roundtrip_as_immutable_sets(tmp_path):
+    e=initialized();e.allowed_hours=frozenset([4001,4002]);e.sealed_days=frozenset([1,2]);e.core.selection_key=('cold',frozenset(['EC_1','EC_2']))
+    snapshot=capture(e);path=tmp_path/'frozen_grants.json';snapshot.save(path)
+    loaded=api().BoundExecutionSnapshot.load(path,template_env=e,binding={'science':'fixed','input':'fixed'});f=loaded.fork()
+    assert type(f.allowed_hours) is frozenset and f.allowed_hours==frozenset([4001,4002])
+    assert type(f.sealed_days) is frozenset and type(f.core.selection_key[1]) is frozenset
+    assert loaded.content_sha256==snapshot.content_sha256 and capture(f).physical_state_sha256==snapshot.physical_state_sha256
+
+
 def test_solver_prefix_refs_stay_complete_and_new_appends_use_distinct_sidecar(tmp_path):
     from tools.sci_engineering.solver_log import SolverCallLog,SolverRowSidecar
     e=initialized();old=SolverRowSidecar(tmp_path/'prefix_rows.gz');new=SolverRowSidecar(tmp_path/'A1_rows.gz')

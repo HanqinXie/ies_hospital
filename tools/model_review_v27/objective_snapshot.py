@@ -37,7 +37,7 @@ def _encode(value):
     if isinstance(value,np.generic):return _encode(value.item())
     if isinstance(value,dict):return {'type':'dict','value':[[_encode(k),_encode(v)] for k,v in value.items()]}
     if isinstance(value,tuple):return {'type':'tuple','value':[_encode(x) for x in value]}
-    if isinstance(value,set):return {'type':'set','value':sorted([_encode(x) for x in value],key=lambda x:json.dumps(x,sort_keys=True))}
+    if isinstance(value,(set,frozenset)):return {'type':'frozenset' if isinstance(value,frozenset) else 'set','value':sorted([_encode(x) for x in value],key=lambda x:json.dumps(x,sort_keys=True))}
     if isinstance(value,list):return [_encode(x) for x in value]
     if isinstance(value,Path):return {'type':'path','value':str(value)}
     if isinstance(value,float) and not math.isfinite(value):return {'type':'nonfinite','value':'nan' if math.isnan(value) else 'inf' if value>0 else '-inf'}
@@ -53,6 +53,7 @@ def _decode(value):
     if kind=='dict':return {_decode(k):_decode(v) for k,v in data}
     if kind=='tuple':return tuple(_decode(x) for x in data)
     if kind=='set':return set(_decode(x) for x in data)
+    if kind=='frozenset':return frozenset(_decode(x) for x in data)
     if kind=='array':return np.asarray(_decode(data),dtype=value['dtype']).reshape(value['shape'])
     if kind=='path':return Path(data)
     if kind=='nonfinite':return {'nan':float('nan'),'inf':float('inf'),'-inf':float('-inf')}[data]

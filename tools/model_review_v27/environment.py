@@ -14,8 +14,14 @@ run_episode=base.run_episode
 def apply_cooling_profile(env,total,zones,mapping):
     """Change actual cold requests; retain source auxiliary reference denominators."""
     from hospital_ies.resilience import build_zone_groups,ZONE_PRIORITY
-    hours=mapping.hour_of_year.to_numpy(int)
-    if len(set(hours))!=len(hours) or not len(hours):raise ValueError('Unique complete mapped hours required')
+    registered_hours=mapping.hour_of_year.to_numpy(int)
+    if len(set(registered_hours))!=len(registered_hours) or not len(registered_hours):raise ValueError('Unique complete mapped hours required')
+    # The source loader intentionally withholds physical values outside the
+    # registered support. Keep the complete120h evidence external; do not
+    # broaden that grant merely because a conditional source table is longer.
+    grant=set(getattr(env,'allowed_hours',registered_hours))
+    hours=np.asarray([h for h in registered_hours if h in grant],dtype=int)
+    if not len(hours):raise ValueError('No conditional source hours within the registered input grant')
     current=env.hourly.set_index('hour_of_year').loc[hours]
     candidate=total.set_index('hour_of_year').loc[hours]
     declared=mapping.set_index('hour_of_year').loc[hours]
@@ -47,7 +53,7 @@ def apply_cooling_profile(env,total,zones,mapping):
     # the source-derived originals. Replacing reference denominators would
     # conceal the actual auxiliary load response to increased current cold.
     env.hourly=new_hourly;env.zones=new_zones;env.groups=new_groups
-    return dict(hours=len(hours),hours_start=int(min(hours)),hours_end=int(max(hours)),source_auxiliary_and_reference_unchanged=True,
+    return dict(hours=len(hours),registered_source_hours=len(registered_hours),applied_only_within_original_grant=True,hours_start=int(min(hours)),hours_end=int(max(hours)),source_auxiliary_and_reference_unchanged=True,
         noncold_inputs_unchanged=True,profile='finite-normal signed numerical delta, conditional transfer to annual baseline')
 
 class OperatingHospitalIESEnv(base.OperatingHospitalIESEnv):

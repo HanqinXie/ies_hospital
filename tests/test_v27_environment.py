@@ -49,3 +49,16 @@ def test_cold_overlay_does_not_silently_compress_an_impossible_new_critical_prox
     from tools.model_review_v27.environment import apply_cooling_profile
     env,total,zones,mapping=example();zones.zone_sensible_cooling_kW=10.
     with pytest.raises(ValueError,match='proxy exceeds total'):apply_cooling_profile(env,total,zones,mapping)
+
+def test_conditional_mapping_does_not_read_withheld_physical_hours_or_expand_source_grant():
+    from tools.model_review_v27.environment import apply_cooling_profile
+    env,total,zones,mapping=example();env.allowed_hours=frozenset([1])
+    unknown=env.hourly.iloc[[0]].copy();unknown.loc[:,'hour_of_year']=2;unknown.loc[:,'Q_c_demand_kW']=np.nan
+    env.hourly=pd.concat([env.hourly,unknown],ignore_index=True)
+    extra_total=total.copy();extra_total.hour_of_year=2
+    extra_map=mapping.copy();extra_map.hour_of_year=2
+    full_total=pd.concat([total,extra_total],ignore_index=True);full_map=pd.concat([mapping,extra_map],ignore_index=True)
+    receipt=apply_cooling_profile(env,full_total,zones,full_map)
+    assert receipt['registered_source_hours']==2 and receipt['hours']==1
+    assert env.allowed_hours==frozenset([1]) and np.isnan(env.hourly.loc[1,'Q_c_demand_kW'])
+    assert set(env.groups.index)=={1}
