@@ -110,3 +110,17 @@ def test_old_actual_port_flows_and_heat_are_preserved_with_their_original_units(
     assert m.compare_original_ports(new,old,channels,previous)['q_kW']==0.
     old.loc[0,'mass_kg_s']=3.
     with pytest.raises(ValueError):m.compare_original_ports(new,old,channels,previous)
+
+
+def test_mean_radiant_temperature_has_zone_clock_despite_system_callback_sampling():
+    m=module('cold_observer')
+    topology=module('cold_topology').cold_topology((ROOT/'inputs/energyplus/Hospital_SanDiego.idf').read_text(encoding='utf-8-sig'))
+    channels=m.observation_channels(topology)
+    radiant=[c for c in channels.values() if c['variable']=='Zone Mean Radiant Temperature']
+    assert len(radiant)==4
+    assert all(c['native_clock']=='Zone' for c in radiant)
+    assert all('zone-held' in c['scope'] and 'system callback' in c['scope'] for c in radiant)
+    legacy={k:dict(c,native_clock='System',scope='representative zone except native system term')
+            if c['variable']=='Zone Mean Radiant Temperature' else c.copy() for k,c in channels.items()}
+    source='Version,26.2;\nTimestep,6;\n'
+    assert m.append_observers(source,channels)==m.append_observers(source,legacy)

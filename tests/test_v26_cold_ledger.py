@@ -39,3 +39,30 @@ def test_actual_loop_mass_uses_exact_505C_source_conversion_not_nominal_5C():
     density=lambda temperature:999.9+(temperature-5.)*(999.7-999.9)/5.
     assert module().loop_mass_from_volume(volume,density)==pytest.approx(5179.113633030072,abs=1e-10)
     assert module().loop_mass_from_volume(volume,density)!=pytest.approx(volume*density(5.),abs=1e-5)
+
+
+def test_functional_api_late_initialization_and_teardown_stay_in_output_directory(tmp_path,monkeypatch):
+    # Functional API may open default files on specific_heat, after density.
+    # A startup-only chdir therefore fails to contain the real late side effect.
+    from pathlib import Path
+    caller=tmp_path/'caller';output=tmp_path/'output'
+    caller.mkdir();output.mkdir();monkeypatch.chdir(caller)
+    def mark(stage):
+        with Path('functional_bootstrap.txt').open('a') as f:f.write(stage+'\n')
+    class Water:
+        def specific_heat(self,state,temperature):mark('late_specific_heat');return 4200.
+    class StateManager:
+        def new_state(self):mark('new_state');return object()
+        def delete_state(self,state):mark('delete_state')
+    class Functional:
+        def glycol(self,state,name):mark('glycol');return Water()
+    class API:
+        state_manager=StateManager()
+        functional=Functional()
+    with pytest.raises(RuntimeError,match='after native call'):
+        with module().functional_api_session(None,output,api_factory=API) as (_,state,water):
+            assert water.specific_heat(state,7.)==4200.
+            raise RuntimeError('after native call')
+    assert Path.cwd()==caller
+    assert not (caller/'functional_bootstrap.txt').exists()
+    assert (output/'functional_bootstrap.txt').read_text().splitlines()==['new_state','glycol','late_specific_heat','delete_state']

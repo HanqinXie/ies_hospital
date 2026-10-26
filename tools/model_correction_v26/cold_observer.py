@@ -114,7 +114,11 @@ def observation_channels(topology):
         for var,unit in [('Zone Air Temperature','C'),('Zone Air Humidity Ratio','kgWater/kgDryAir'),
                          ('Zone Mean Radiant Temperature','C'),('Zone Air System Sensible Heating Rate','W'),
                          ('Zone Air System Sensible Cooling Rate','W')]:
-            add(zone,var,unit,'representative zone except native system term',purpose='B source air equation')
+            if var=='Zone Mean Radiant Temperature':
+                add(zone,var,unit,'representative zone; zone-held value sampled at system callback',
+                    native_clock='Zone',purpose='B source air equation')
+            else:
+                add(zone,var,unit,'representative zone except native system term',purpose='B source air equation')
         for var in ['Zone Total Internal Radiant Heating Rate','Zone Total Internal Visible Radiation Heating Rate']:
             add(zone,var,'W','representative zone',native_clock='Zone',purpose='B actual internal radiative source')
     add('Environment','Site Outdoor Air Barometric Pressure','Pa','site',purpose='B density')
