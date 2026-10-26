@@ -3,6 +3,7 @@ from __future__ import annotations
 
 import argparse
 from contextlib import contextmanager
+import hashlib
 import json
 import os
 from pathlib import Path
@@ -62,7 +63,7 @@ def channel_label(channels,key,variable):
 
 
 def phase_masks(frame,case,channels):
-    ends=pd.to_datetime(frame.timestamp)
+    ends=pd.to_datetime(frame.timestamp,format='mixed')
     start=pd.Timestamp(2006,case['month'],case['day'],12)
     end=start+pd.Timedelta(hours=case['event_hours'] or 6)
     marker=[label for label,c in channels.items() if c['key'].upper()=='V25_PORT_AVAILABILITY']
@@ -81,13 +82,19 @@ def phase_masks(frame,case,channels):
         recovery_first60min=(ends>end)&(ends<=end+pd.Timedelta(minutes=60)))
 
 
+def require_ledger_qualification(case,qualification):
+    if qualification.get('output_only_qualified'):return
+    if case.get('numerical_solver_diagnostic') and qualification.get('numerical_diagnostic_qualified'):return
+    raise ValueError('Unqualified observation cannot enter ledger')
+
+
 def analyze_case(registration,case_id,destination,*,absolute_floor_kWh,tolerance=None):
     reg=json.loads(Path(registration).read_text(encoding='utf-8'))
     case=next(x for x in reg['cases'] if x['case_id']==case_id)
     require_normal_gate(case,tolerance,reg['channel_contract_sha256'])
     source=Path(reg['output_root']).resolve()/case_id
     qualification=json.loads((source/'OBSERVATION_QUALIFICATION.json').read_text(encoding='utf-8'))
-    if not qualification['output_only_qualified']:raise ValueError('Unqualified observation cannot enter ledger')
+    require_ledger_qualification(case,qualification)
     destination=Path(destination).resolve();destination.mkdir(parents=True,exist_ok=False)
     frame=pd.read_csv(source/'OBSERVED_DETAIL.csv')
     channels=case['channels'];topology=reg['topology']
@@ -187,6 +194,11 @@ def analyze_case(registration,case_id,destination,*,absolute_floor_kWh,tolerance
     summary=pd.DataFrame(summaries);summary.to_csv(destination/'BALANCE_SUMMARY.csv',index=False)
     report=dict(case_id=case_id,normal_tolerance_establishment_only=case['normal_for_tolerance'] and tolerance is None,
         interface_qualified=False,absolute_floor_kWh=absolute_floor_kWh,channel_contract_sha256=reg['channel_contract_sha256'],
+        analysis_ledger_source_sha256=hashlib.sha256(Path(__file__).read_bytes()).hexdigest(),
+        raw_observation_component_identity=case.get('raw_observation_component_identity','retained_A_Source01' if case['normal_for_tolerance'] else 'frozen_A_Component_02'),
+        raw_observation_source_files=case.get('retained_normal_observation',{}).get('producer_cold_component_sha256',reg['source_files']),
+        raw_observation_csv_sha256=hashlib.sha256((source/'OBSERVED_DETAIL.csv').read_bytes()).hexdigest(),
+        raw_observation_idf_sha256=case['observer_idf_sha256'],
         raw_observation_source=str(source),loop_volumes_m3=volumes,water_density_at_InitConvTemp_5p05C_kg_m3=density,
         mass_conversion_temperature_C=LOOP_MASS_CONVERSION_C,
         mass_conversion_source='EnergyPlus4bd7a1f26f DataGlobalConstants.hh:591; PlantManager.cc:3560',

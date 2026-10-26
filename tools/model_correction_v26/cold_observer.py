@@ -229,7 +229,7 @@ def prepare_registration(source_root,output_root,weather,installation):
     return target
 
 
-def collect_observed(idf,weather,destination,installation,channels):
+def collect_observed(idf,weather,destination,installation,channels,trace=None):
     """V25 completed-clock convention plus explicit pre-predictor observation."""
     sys.path.insert(0,str(installation))
     from pyenergyplus.api import EnergyPlusAPI
@@ -281,6 +281,7 @@ def collect_observed(idf,weather,destination,installation,channels):
                 last_consumed_pre=pre_sequence
                 pending.append((float(api.exchange.system_time_step(s)),values,
                     {label:api.exchange.get_variable_value(s,handles['port',label]) for label in channels}))
+                if trace is not None:trace.after_system(s)
         except Exception as exc:failures.append(repr(exc));api.runtime.stop_simulation(s)
     def zone_end(s):
         try:
@@ -293,20 +294,24 @@ def collect_observed(idf,weather,destination,installation,channels):
             standard=(pd.Timestamp(2006,month,day)+pd.Timedelta(hours=hour+number*dt_zone)).round('s')
             bucket=standard+pd.Timedelta(hours=dst)
             elapsed=0.
+            completed=[]
             for i,(dt,values,observations) in enumerate(pending):
                 elapsed+=dt
                 clock=dict(bucket_end=bucket,standard_bucket_end=standard,substep_index=i,dt_h=dt,dst=dst,
                            substep_start_h=elapsed-dt,substep_end_h=elapsed,
                            timestamp=standard-pd.Timedelta(hours=dt_zone-elapsed)+pd.Timedelta(hours=dst))
                 ports.append(dict(clock,**observations))
+                completed.append(clock)
                 for z in ZONES:
                     v=values[z];v['heating_kW']/=1000;v['cooling_kW']/=1000
                     detail.append(dict(clock,zone=z,**v,net_sensible_kW=v['heating_kW']-v['cooling_kW']))
             for z in ZONES:zone_rows.append(dict(bucket_end=bucket,standard_bucket_end=standard,zone=z,
                 api_reported_mean_C=api.exchange.get_variable_value(s,handles[z,'reported_mean_C']),dt_h=dt_zone,substeps=len(pending)))
+            if trace is not None:trace.resolve_bucket(completed)
             pending.clear()
         except Exception as exc:failures.append(repr(exc));api.runtime.stop_simulation(s)
     api.runtime.callback_begin_system_timestep_before_predictor(state,capture_pre)
+    if trace is not None:trace.attach(api,state,ready,handles,channels,destination,failures)
     api.runtime.callback_end_system_timestep_after_hvac_reporting(state,system)
     api.runtime.callback_end_zone_timestep_after_zone_reporting(state,zone_end)
     api.runtime.callback_message(state,lambda m:messages.append(m.decode('utf-8',errors='replace')))
@@ -315,6 +320,7 @@ def collect_observed(idf,weather,destination,installation,channels):
     started=datetime.now(timezone.utc).isoformat();begin=time.perf_counter()
     code=api.runtime.run_energyplus(state,command)
     api.state_manager.delete_state(state)
+    if trace is not None:trace.finish()
     (destination/'api_messages.log').write_text('\n'.join(messages),encoding='utf-8')
     pd.DataFrame(detail).to_csv(destination/'API_DETAIL.csv',index=False)
     pd.DataFrame(ports).to_csv(destination/'API_PORT.csv',index=False)

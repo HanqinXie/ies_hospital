@@ -66,3 +66,18 @@ def test_functional_api_late_initialization_and_teardown_stay_in_output_director
     assert Path.cwd()==caller
     assert not (caller/'functional_bootstrap.txt').exists()
     assert (output/'functional_bootstrap.txt').read_text().splitlines()==['new_state','glycol','late_specific_heat','delete_state']
+
+
+def test_phase_clock_accepts_observed_mixed_timestamp_precision_without_rounding():
+    import pandas as pd
+    # The actual795-row alloff export mixes whole seconds and nanosecond
+    # strings. A subsecond boundary also proves we did not round to minutes.
+    frame=pd.DataFrame(dict(timestamp=['2006-07-20 11:50:00',
+        '2006-07-20 12:03:20.000000000','2006-07-20 12:10:00.123456789'],
+        dt_h=[1/6,1/18,1/9+.123456789/3600],availability=[1.,0.,0.]))
+    original=frame.copy(deep=True)
+    masks=module().phase_masks(frame,dict(month=7,day=20,event_hours=6),
+        {'availability':dict(key='V25_PORT_AVAILABILITY',variable='Schedule Value')})
+    assert list(masks['event'])==[False,True,True]
+    assert list(masks['event_first10min'])==[False,True,False]
+    pd.testing.assert_frame_equal(frame,original)
