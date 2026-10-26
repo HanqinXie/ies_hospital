@@ -54,7 +54,9 @@ def reserve_status(core,loads,f):
         guarantee_or_OEM_requirement=False,guaranteed_duration_claimed=False,
         current_critical_and_actual_restart_before_reserve=True,
         reserve_before_general_service=True,original_per_priority_E_H_C_sum_unchanged=True,
-        objective_layer='bridge',objective_semantics='sum_asset_normalized_end_inventory_shortfall')
+        objective_layer='bridge',objective_semantics='sum_asset_normalized_inventory_shortfall_change_per_hour',
+        objective_numerical_contract='m25.reserve.shortfall_change_rate.v2',
+        exact_same_snapshot_order='positive_duration_scaling_and_initial_constant_subtraction')
     for name,store,demand in (('ups',core.ups,critical[0]),('cold',core.cold_store,critical[2])):
         nominal=float(demand)*hours/store.config['discharge_efficiency']
         # Conservative: expose the entire designed withdrawal to the full
@@ -116,6 +118,7 @@ def reserve_status(core,loads,f):
 def solver_context(core,dt_h):
     _,_,loads,f=core.data_at(core.time);status=reserve_status(core,loads,f)
     return {name:dict(target_kWh=status[name]['uncapped_target_kWh'],
+        initial_energy_kWh=store.energy_kWh,
         retained_energy_kWh=store.energy_kWh*math.exp(-store.config['loss_per_hour']*dt_h),
         charge_efficiency=store.config['charge_efficiency'],discharge_efficiency=store.config['discharge_efficiency'])
         for name,store in (('ups',core.ups),('cold',core.cold_store))}
@@ -126,7 +129,7 @@ def validate_solver_context(config):
     if value is None:return None
     if not isinstance(value,dict) or set(value)!={'ups','cold'}:raise ValueError('Invalid V25 reserve asset context')
     for item in value.values():
-        if not isinstance(item,dict) or set(item)!={'target_kWh','retained_energy_kWh','charge_efficiency','discharge_efficiency'}:raise ValueError('Invalid V25 reserve quantities')
+        if not isinstance(item,dict) or set(item)!={'target_kWh','initial_energy_kWh','retained_energy_kWh','charge_efficiency','discharge_efficiency'}:raise ValueError('Invalid V25 reserve quantities')
         if any(isinstance(v,bool) or not math.isfinite(float(v)) or v<0. for v in item.values()):raise ValueError('Invalid finite V25 reserve quantity')
         if not 0.<item['charge_efficiency']<=1. or not 0.<item['discharge_efficiency']<=1.:raise ValueError('Invalid V25 reserve efficiency')
     return value

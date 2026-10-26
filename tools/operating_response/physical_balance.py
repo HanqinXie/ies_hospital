@@ -216,8 +216,14 @@ def solve_physical(row,plant:Plant,loads:np.ndarray,availability:dict[str,float]
             else:
                 for name,discharge,charge,debt in (('ups',ud,uc,bridge_debt),('cold',cd,cc,cold_reserve_debt)):
                     asset=sustained_reserve[name];r=np.zeros(nvars)
-                    r[discharge]=dt_h/asset['discharge_efficiency'];r[charge]=-dt_h*asset['charge_efficiency'];r[debt]=-1.
-                    cap(r,asset['retained_energy_kWh']-asset['target_kWh'],name=f'm25.{name}.uncapped_end_inventory_shortfall',unit='kWh')
+                    initial_debt=max(0.,asset['target_kWh']-asset['initial_energy_kWh'])
+                    # Same exact preference after a common positive scaling
+                    # and constant subtraction. Rate units prevent a fixed
+                    # interval-energy lock becoming large power at tiny dt.
+                    lows[debt]=-initial_debt/dt_h
+                    r[discharge]=1./asset['discharge_efficiency'];r[charge]=-asset['charge_efficiency'];r[debt]=-1.
+                    cap(r,(asset['retained_energy_kWh']+initial_debt-asset['target_kWh'])/dt_h,
+                        name=f'm25.{name}.uncapped_shortfall_change_rate',unit='kWh/h')
     if execution_action is not None and (execution_contract or {}).get('diesel_dispatch_mode')=='arrived_ceiling':
         # M15's finite shaft-work preview locates actual exhaustion. An
         # arbitrary trial duration cannot spread the remaining fuel over Pe.
@@ -296,8 +302,9 @@ def solve_physical(row,plant:Plant,loads:np.ndarray,availability:dict[str,float]
         variable_names += list(storage_names);units += ['kW']*4
     if closure is not None:
         variable_names+=['m22.boiler.on','m22.recovery_cooling','m22.starter.fully_supplied','m22.boiler.restart_supplied'];units+=['binary','kW','binary','binary']
-        if bridge_debt is not None:variable_names+=['m22.UPS.bridge_withdrawal'];units+=['kWh']
-        if cold_reserve_debt is not None:variable_names+=['m25.cold.reserve_shortfall'];units+=['kWh']
+        if bridge_debt is not None:
+            variable_names+=['m22.UPS.bridge_withdrawal' if sustained_reserve is None else 'm25.ups.reserve_shortfall_change_rate'];units+=['kWh' if sustained_reserve is None else 'kWh/h']
+        if cold_reserve_debt is not None:variable_names+=['m25.cold.reserve_shortfall_change_rate'];units+=['kWh/h']
     variables=[dict(index=i,name=name,unit=units[i]) for i,name in enumerate(variable_names)]
     diagnostic_input={}
     if active_collector() is not None:
@@ -378,12 +385,12 @@ def solve_physical(row,plant:Plant,loads:np.ndarray,availability:dict[str,float]
                 # row, not an ENS implication for the backend preconditioner.
                 locks.append(dict(source_rank=rank,objective=c.copy(),objective_constant=0.,incumbent_raw_objective=val,
                                   tolerance=tol,upper=val+tol,relation='<=',unit='normalized carrier ENS',source='raw incumbent c@x'))
-            name=('storage.recharge_after_all_service' if charging_layer else ('m22.preserve_existing_bridge_after_critical' if sustained_reserve is None else 'm25.normalized_end_inventory_shortfall_after_critical_and_restart') if bridge_layer
+            name=('storage.recharge_after_all_service' if charging_layer else ('m22.preserve_existing_bridge_after_critical' if sustained_reserve is None else 'm25.normalized_shortfall_change_rate_after_critical_and_restart') if bridge_layer
                 else 'm22.UPS_discharge_only_for_current_service_after_all_service' if ups_service_layer
                 else 'm22.held_boiler_continuity_after_all_service' if continuity_layer
                 else 'm22.actual_recovery_after_all_service' if recovery_layer else 'm22.real_start_power_after_critical' if start_layer
                 else f'priority.{GROUPS[group]}.normalized_ENS.upper')
-            row_metadata.append(dict(name=name,unit=('kWh' if sustained_reserve is None else 'dimensionless') if bridge_layer else 'kW' if recovery_layer or start_layer or ups_service_layer else 'dimensionless',
+            row_metadata.append(dict(name=name,unit=('kWh' if sustained_reserve is None else '1/h') if bridge_layer else 'kW' if recovery_layer or start_layer or ups_service_layer else 'dimensionless',
                                      source=f'raw rank {group} objective plus original tolerance',kind='priority_lock'))
             if service_layer and (config or {}).get('_m24_exact_service_guard',False):
                 # An additional recharge-witness constraint, never a relaxed

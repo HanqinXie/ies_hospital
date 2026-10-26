@@ -179,3 +179,64 @@ def test_cold_charge_cannot_take_power_before_actual_boiler_restart():
     assert result['action']['cold_charge_kW']>1.
     assert np.max(result['lost'][:2])<1e-4
     assert not core.station.boiler_ready and core.station.boiler_powered_minutes==0.
+
+
+@pytest.mark.parametrize('capacity,gap',[(40.,4.478121157e-6),(20.,1.2401068e-6)])
+def test_near_full_short_interval_cannot_turn_reserve_charge_into_general_discharge(capacity,gap):
+    loads=np.zeros((4,3));loads[0,0]=86.08928602648632;loads[2,0]=50.
+    env,p=reserve_case(loads,ups_capacity=capacity,ups_energy=capacity-gap,
+        cold_capacity=0.,cold_energy=0.,grid=100.)
+    long=solve_case(env,p,minutes=1.)
+    short=solve_case(env,p,minutes=1e-5)
+    assert long['action']['ups_charge_kW']>13.
+    assert short['action']['ups_discharge_kW']<1e-5
+    assert short['action']['ups_charge_kW']>13.
+    assert env.core.observe()['m25_reserve']['ups']['uncapped_target_kWh']==pytest.approx(45.31015054025596)
+
+
+@pytest.mark.parametrize('capacity,gap',[(40.,4.478121157e-6),(20.,1.2401068e-6)])
+def test_near_full_actual_intervals_reach_true_boundary_and_progress(capacity,gap,tmp_path):
+    loads=np.zeros((4,3));loads[0,0]=86.08928602648632;loads[2,0]=50.
+    env,p=reserve_case(loads,ups_capacity=capacity,ups_energy=capacity-gap,
+        cold_capacity=0.,cold_energy=0.,grid=100.)
+    core=env.core;actual=[];original=core._after_actual_segment
+    def verify_actual(segment,result):
+        original(segment,result)
+        stock=segment['m21_storage']['ups'];duration=segment['end_minute']-segment['start_minute']
+        actual.append(dict(start=segment['start_minute'],end=segment['end_minute'],
+            duration_minutes=duration,action=segment['action'],stock=stock))
+        (tmp_path/'near_full_actual.json').write_text(json.dumps(actual,ensure_ascii=False,indent=2),encoding='utf8')
+        if duration<1e-4:
+            assert min(abs(stock['final_kWh']),abs(stock['final_kWh']-capacity))<1e-9, 'shortened interval kept a superseded storage event'
+        assert len(actual)<=12, 'near-full reserve generated repeated microscopic actual segments'
+    core._after_actual_segment=verify_actual
+    core.advance(3.)
+    assert core.time==3. and not env.solver_errors
+    assert len(actual)<=8
+    assert max(s['duration_minutes'] for s in actual)>.9
+    assert all(s['stock']['final_kWh']<=capacity+1e-9 for s in actual)
+
+
+def test_near_full_cold_reserve_uses_the_same_time_unit_and_reaches_full(tmp_path):
+    loads=np.zeros((4,3));loads[0]=[20.,0.,200.];loads[2,0]=50.
+    env,p=reserve_case(loads,ups_capacity=0.,ups_energy=0.,cold_energy=60.-4.5e-6,grid=100.)
+    p['electric_chiller_cooling_kW']=[400.,0.,0.]
+    core=env.core;core.executed=copy.deepcopy(p);core.arrived_dispatch=copy.deepcopy(p)
+    # This near-full state is inside an already admitted recharge cycle;
+    # the existing maintenance deadband must continue to block a new cycle.
+    core.cold_recharge.active=True
+    long=solve_case(env,p,minutes=1.);short=solve_case(env,p,minutes=1e-5)
+    assert long['action']['cold_charge_kW']>100.
+    assert short['action']['cold_charge_kW']>100. and short['action']['cold_discharge_kW']==0.
+    actual=[];original=core._after_actual_segment
+    def verify_actual(segment,result):
+        original(segment,result);stock=segment['m21_storage']['cold_store']
+        duration=segment['end_minute']-segment['start_minute']
+        actual.append(dict(start=segment['start_minute'],end=segment['end_minute'],stock=stock,action=segment['action']))
+        (tmp_path/'near_full_cold_actual.json').write_text(json.dumps(actual,ensure_ascii=False,indent=2),encoding='utf8')
+        if duration<1e-4:assert min(abs(stock['final_kWh']),abs(stock['final_kWh']-60.))<1e-9
+        assert len(actual)<=12
+    core._after_actual_segment=verify_actual
+    core.advance(2.)
+    assert core.time==2. and len(actual)<=6 and not env.solver_errors
+    assert env.core.observe()['m25_reserve']['cold']['uncapped_target_kWh']==pytest.approx(200.*.5/.95)
