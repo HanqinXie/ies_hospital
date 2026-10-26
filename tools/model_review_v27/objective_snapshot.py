@@ -14,6 +14,7 @@ PHYSICAL_CLASSES={
  'hospital_ies.resilience.RuntimeState',
  'tools.sci_engineering.storage.FiniteStore',
  'tools.operating_response.diesel.DieselRotor',
+ 'tools.essential_fixes.diesel.DieselRotor',
  'tools.engineering_model.execution.GTClockLedger',
  'tools.model_closure_v22.station.StationState',
  'tools.model_closure_v22.storage.ColdRechargeState',

@@ -123,6 +123,16 @@ def test_frozenset_hour_permissions_and_cache_keys_roundtrip_as_immutable_sets(t
     assert loaded.content_sha256==snapshot.content_sha256 and capture(f).physical_state_sha256==snapshot.physical_state_sha256
 
 
+def test_actual_m25_essential_diesel_subclass_and_irreversible_fuel_state_roundtrip():
+    from tools.essential_fixes.diesel import DieselRotor
+    e=initialized();e.core.diesel_rotor=DieselRotor(rated_kW=900.)
+    e.core.diesel_rotor.exhaust_fuel()
+    restored=capture(e).fork()
+    assert type(restored.core.diesel_rotor) is DieselRotor
+    assert restored.core.diesel_rotor.fuel_exhausted is True
+    assert vars(restored.core.diesel_rotor)==vars(e.core.diesel_rotor)
+
+
 def test_solver_prefix_refs_stay_complete_and_new_appends_use_distinct_sidecar(tmp_path):
     from tools.sci_engineering.solver_log import SolverCallLog,SolverRowSidecar
     e=initialized();old=SolverRowSidecar(tmp_path/'prefix_rows.gz');new=SolverRowSidecar(tmp_path/'A1_rows.gz')
