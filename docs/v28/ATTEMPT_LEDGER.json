@@ -1,0 +1,98 @@
+{
+  "schema": "hospital_ies.v28.attempt_categories.v1",
+  "primary_physical_episodes": {
+    "completed": 11,
+    "A": 6,
+    "B": 5,
+    "failed_after_physical_start": 0,
+    "unknown_tail_minutes": 0,
+    "evidence": [
+      "A_native_audit/final01/A_NATIVE_AUDIT.json",
+      "B_native_audit/final01/B_NATIVE_AUDIT.json"
+    ],
+    "scope_exception": "One additional same-window normal old-heat control beyond suggested6–10; distinguishes B package from different A window, no full factorial."
+  },
+  "preflight_failures": {
+    "count": 2,
+    "physical_episodes": 0,
+    "metrics": null,
+    "items": [
+      {
+        "kind": "output path gate",
+        "root_cause": "not reproduced/unknown",
+        "evidence": "execution/DISPATCH_PREFLIGHT_FAILURE01.json"
+      },
+      {
+        "kind": "clinical stage/event_class parser encoding",
+        "repair": "valid existing L4 combined encoding; no event size/time change",
+        "evidence": "clinical_case_repair01/REPAIR_RECEIPT.json"
+      }
+    ]
+  },
+  "public_validation_episodes_pre_archive": {
+    "A_integration": {
+      "completed": 1,
+      "minutes": 15,
+      "evidence": "steps/A_public_integration01/COMMAND.json"
+    },
+    "adopted_portable": {
+      "completed": 1,
+      "minutes": 15,
+      "evidence": "execution/CLEAN_PUBLIC_ENTRY.json"
+    }
+  },
+  "public_validation_post_extract": {
+    "count_not_in_prearchive_total": true,
+    "evidence_external": "post_extract_verification01/PUBLIC_ENTRY.json",
+    "status": "Mandatory separate post-archive verification; consult external actual receipt, never inferred from this prearchive ledger."
+  },
+  "backend_optimizer_attempts": {
+    "A": 49333,
+    "A_not_accepted": 581,
+    "B": 9185,
+    "B_not_accepted": 97,
+    "total": 58518,
+    "not_accepted_total": 678,
+    "meaning": "Includes native domain probes, infeasible candidates and retries; separate from physical episodes. All rejected native pointers/SHA retained.",
+    "strategy_fallback": 0,
+    "projection_fallback": 0,
+    "timeout": 0,
+    "native_solver_errors": 0
+  },
+  "annual_EnergyPlus": {
+    "actual_physical_runs": 1,
+    "exit_code": 0,
+    "evidence": [
+      "execution/ANNUAL_OBSERVATION_REGISTRATION.json",
+      "execution/ANNUAL_OBSERVATION_RESULT.json",
+      "steps/annual_observation01/COMMAND.json"
+    ],
+    "input_preparations_not_physical_runs": [
+      1,
+      2
+    ],
+    "adopted_preparation": 3
+  },
+  "readonly_replays": {
+    "new_model_calls": 0,
+    "new_EnergyPlus_calls": 0,
+    "prearchive_wrapper": "portable_verification/portable_replays01/REPLAY_REVIEW_SUMMARY.json",
+    "postarchive_wrapper_external": "post_extract_verification01/replays/REPLAY_REVIEW_SUMMARY.json"
+  },
+  "tests": {
+    "default_actual": "1278 passed in452.09s; zero skipped; exit0",
+    "evidence": "steps/full_pytest_final01/",
+    "test_internal_simulations_counted_as_primary_research": false,
+    "RED_and_diagnostic_failures": "Preserved separately in steps/ and thermal_source/commands/; expected failing regressions are not a passing final test."
+  },
+  "research_fits": 0,
+  "new_controller_training": 0,
+  "not_executed": [
+    "new MPC/ML/controller",
+    "yearlong IES",
+    "paper figures",
+    "full policy/season factorial",
+    "new capacity/sizing experiment",
+    "qualified full hydraulic/temperature dynamic model"
+  ]
+}
