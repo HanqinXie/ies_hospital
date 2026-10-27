@@ -1,0 +1,94 @@
+{
+  "schema": "hospital_ies.v30.final_release_acceptance.v1",
+  "status": "passed",
+  "finished_utc": "2026-10-27T10:32:50.176837+00:00",
+  "archive": "E:\\hospital_ies_v30_20261027\\Hospital_IES_V30_REVIEW_under100MB.zip",
+  "archive_bytes": 98896789,
+  "strict_cap_bytes": 100000000,
+  "archive_sha256": "48a93fcd391f9cbf903d1e6185fc12916ac91a219c75e0bd2c87bf420b96e54d",
+  "archive_members": 1877,
+  "exact_original_native_files_restored": 87668,
+  "unique_raw_payload_SHA_verified": 50105,
+  "original_native_bytes": 2733258186,
+  "independent_extract": "E:\\v30_review_extract01",
+  "readonly_replay_steps": 10,
+  "all_readonly_commands_exit0": true,
+  "final_C_M_comparison_actual_runs": 32,
+  "final_C_M_audit_clean": true,
+  "default_tests_actual_passed": 1363,
+  "research_attempts": 60,
+  "research_completed": 58,
+  "research_failed_unknown_preserved": 2,
+  "independent_public15_actual_runs": 1,
+  "total_actual_executions": 61,
+  "scientific_source_producer": "3252727135645037cedc57ebc188a48d2aa34ccb",
+  "scientific_source_sha256": "2509d2fa562e672af3cfe4058ace55f0e38de6172d1ac2d633210d0e776f0776",
+  "original_input_sha256": "f414d21fc55d5a63282435b9bed9a1c8c289a049f24507f953fb86162fb41d15",
+  "source_and_input_bindings_unchanged": true,
+  "git_before_final_acceptance_document": [
+    {
+      "command": [
+        "git",
+        "status",
+        "--porcelain"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "git",
+        "rev-parse",
+        "HEAD"
+      ],
+      "exit_code": 0,
+      "stdout": "014fd57e3ed2174fdbd134398bec4e0e4df24555\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "git",
+        "rev-parse",
+        "--git-common-dir"
+      ],
+      "exit_code": 0,
+      "stdout": "D:/hospital_ies_v21_20261023/.git\n",
+      "stderr": ""
+    }
+  ],
+  "source_PDFs": "Originals retained at supplied D folder with recorded SHA; duplicate PDF copies omitted from final ZIP; full indexed text and retained page/equation evidence included",
+  "rejection_records": "data/steps/final_zip_build01 and02 plus PACKAGING_RETRY02.json preserved in ZIP; unrelated scientific failures remain in native evidence",
+  "byte_restoration_does_not_establish_unmodeled_physical_or_clinical_qualification": true,
+  "archive_contains_prearchive_records_and_this_acceptance_is_external": true,
+  "evidence": {
+    "release_acceptance/ZIP_BUILD_VERIFICATION.json": {
+      "bytes": 829,
+      "sha256": "ade90fa77d1d9c88330987b0fc727c781c8a443306d905d7fe3000fa010a9a8c"
+    },
+    "release_acceptance/INDEPENDENT_UNPACK.json": {
+      "bytes": 768,
+      "sha256": "c8ffc81305298a23aa741d576b6426f8b79c8df0238eb8bb63bbeabc21f8e055"
+    },
+    "release_acceptance/readonly01/COMPLETION_RECEIPT.json": {
+      "bytes": 26522,
+      "sha256": "995ca87018a93b9b6e3df345f052d6b7a1a39fc76f47b52f84949e84bfa2473d"
+    },
+    "release_acceptance/readonly01/FULL_RESTORE_RECEIPT.json": {
+      "bytes": 1146,
+      "sha256": "426c777434ac5ac2350840240825b16b0d38ed64ab0a85de3c9312588610d044"
+    },
+    "release_acceptance/execution_index/ACTUAL_ATTEMPTS.json": {
+      "bytes": 1529210,
+      "sha256": "01295cfd4aac4fc7c6c199e0a57cfb0090726179c078c0e8c431c97047ee3521"
+    },
+    "release_acceptance/execution_index/PUBLIC_SMOKE.json": {
+      "bytes": 24745,
+      "sha256": "f85e9327c75da1a09f6ca36bbc2083260fb9e560e44ce162f184154eb9a5ee60"
+    }
+  },
+  "actual_public_smoke_receipt": {
+    "path": "E:/v30_public15_01/PUBLIC_SMOKE_RECEIPT.json",
+    "sha256": "d6c390b73cb4fbfa6fac96a5fd04091f70f56d622998659bb13c7e6dd257233f"
+  }
+}

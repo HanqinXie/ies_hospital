@@ -1,0 +1,45 @@
+F.....F.F..
+======================================================================
+FAIL: test_conditional_CO2_delta_requires_nonempty_common_factor (__main__.ReportTests)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "E:\hospital_ies_v30_20261027\engineering_report_tools\test_report.py", line 142, in test_conditional_CO2_delta_requires_nonempty_common_factor
+    self.assertIsNone(row['conditional_CO2_delta_from_actual_normal_kg'])
+AssertionError: -1.0 is not None
+
+======================================================================
+FAIL: test_default_test_gate_reads_actual_count_and_requires_exit0 (__main__.ReportTests) (tail=['tests/subset', '-q'])
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "E:\hospital_ies_v30_20261027\engineering_report_tools\test_report.py", line 99, in test_default_test_gate_reads_actual_count_and_requires_exit0
+    with self.assertRaises(ValueError):a.default_test_gate(root)
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_default_test_gate_reads_actual_count_and_requires_exit0 (__main__.ReportTests) (tail=['-q', '-k=selected'])
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "E:\hospital_ies_v30_20261027\engineering_report_tools\test_report.py", line 99, in test_default_test_gate_reads_actual_count_and_requires_exit0
+    with self.assertRaises(ValueError):a.default_test_gate(root)
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_reference_manifest_binds_copied_numeric_audit_values (__main__.ReportTests)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "E:\hospital_ies_v30_20261027\engineering_report_tools\test_report.py", line 154, in test_reference_manifest_binds_copied_numeric_audit_values
+    a=api();self.assertTrue(hasattr(a,'verify_artifact_manifest'),'Reference manifest check missing')
+AssertionError: False is not true : Reference manifest check missing
+
+======================================================================
+FAIL: test_supporting_failed_state_cannot_be_relabeled_G1_passed (__main__.ReportTests)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "E:\hospital_ies_v30_20261027\engineering_report_tools\test_report.py", line 145, in test_supporting_failed_state_cannot_be_relabeled_G1_passed
+    a=api();self.assertTrue(hasattr(a,'validate_supporting_status'),'Supporting status gate missing')
+AssertionError: False is not true : Supporting status gate missing
+
+----------------------------------------------------------------------
+Ran 12 tests in 0.063s
+
+FAILED (failures=5)

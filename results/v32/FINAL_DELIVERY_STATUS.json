@@ -1,0 +1,368 @@
+{
+  "status": "complete",
+  "finished_utc": "2026-10-27T15:28:37.744920+00:00",
+  "zip": {
+    "status": "verified",
+    "zip": "E:\\hospital_ies_v32_20261027\\Hospital_IES_V32_External_Reference_20261027.zip",
+    "bytes": 35908886,
+    "sha256": "f884e2b8495f424303bfd18f49a7c2836c77cfcc4e79e7a7fdf129425b123f01",
+    "file_count": 1374,
+    "manifest_sha256": "56f9ecddcfe9700ad461a78fc921a3a8fb8bbb1e6c6af12b1386cf63ea45835f",
+    "crc_and_all_member_sha256_verified": true,
+    "hard_cap_bytes": 100000000,
+    "created_utc": "2026-10-27T15:25:49.186322+00:00"
+  },
+  "independent_extract_review": "passed",
+  "readonly_review": {
+    "status": "passed",
+    "started_utc": "2026-10-27T15:25:50.053621+00:00",
+    "new_physical_simulations": 0,
+    "new_solver_calls": 0,
+    "commands": [
+      {
+        "command": [
+          "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\python.exe",
+          "-B",
+          "E:\\v32_packet_verify01\\transport_tools\\restore_all.py",
+          "--solid",
+          "E:\\v32_packet_verify01\\EVIDENCE_BLOBS_V32.tar.xz",
+          "--map",
+          "E:\\v32_packet_verify01\\TRANSPORT_MAP_V32.json",
+          "--destination",
+          "E:\\v32_packet_verify01",
+          "--receipt",
+          "E:\\v32_readonly_verify01\\RESTORE_RECEIPT.json"
+        ],
+        "cwd": "E:\\v32_packet_verify01",
+        "started_utc": "2026-10-27T15:25:51.520987+00:00",
+        "selected_environment": {
+          "PYTHONPATH": "E:\\v32_packet_verify01\\project;E:\\v32_packet_verify01\\project\\src",
+          "SCI_SOURCE_ROOT": null,
+          "TEMP": "E:\\v32_readonly_verify01\\temp",
+          "TMP": "E:\\v32_readonly_verify01\\temp",
+          "PYTHONDONTWRITEBYTECODE": "1"
+        },
+        "exit_code": 0,
+        "finished_utc": "2026-10-27T15:27:05.214231+00:00"
+      },
+      {
+        "command": [
+          "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\python.exe",
+          "-B",
+          "E:\\v32_packet_verify01\\data\\evaluation\\audit_v32.py",
+          "--root",
+          "E:\\v32_packet_verify01\\data",
+          "--manifest",
+          "PORTABLE_REGISTRATION.json",
+          "--support",
+          "E:\\v32_packet_verify01\\data\\audit_support",
+          "--project",
+          "E:\\v32_packet_verify01\\project",
+          "--output",
+          "E:\\v32_readonly_verify01\\audit"
+        ],
+        "cwd": "E:\\v32_packet_verify01\\project",
+        "started_utc": "2026-10-27T15:27:05.223753+00:00",
+        "selected_environment": {
+          "PYTHONPATH": "E:\\v32_packet_verify01\\project;E:\\v32_packet_verify01\\project\\src",
+          "SCI_SOURCE_ROOT": null,
+          "TEMP": "E:\\v32_readonly_verify01\\temp",
+          "TMP": "E:\\v32_readonly_verify01\\temp",
+          "PYTHONDONTWRITEBYTECODE": "1"
+        },
+        "exit_code": 0,
+        "finished_utc": "2026-10-27T15:27:29.967939+00:00"
+      }
+    ],
+    "packet": "E:\\v32_packet_verify01",
+    "source_files_verified": 873,
+    "old_source_files_unchanged": 864,
+    "inputs_verified": 36,
+    "exact_native_files_verified": 15430,
+    "source_producer": "575cb02b2ac3a1bbdce99a6f283891dc05b3d51a",
+    "scientific_records": 6,
+    "historical_reused": 4,
+    "new_formal_runs": 2,
+    "native_restore_receipt_sha256": "5d82bbe35cd38566a35a33b520f1a0fb54ba7668e81eca499f2ff1f4bdd4d35b",
+    "readonly_audit_sha256": "85b5a2449bc1c4ffe4bdb37cb29f041750f33a68ac8ad1cc8b355a38c14e20fa",
+    "finished_utc": "2026-10-27T15:27:30.527460+00:00"
+  },
+  "scientific_exact_comparisons": [
+    {
+      "id": "reused_b01_L1_grid_normal_C",
+      "field": "service",
+      "exact_equal": true
+    },
+    {
+      "id": "reused_b01_L1_grid_normal_C",
+      "field": "fee",
+      "exact_equal": true
+    },
+    {
+      "id": "reused_b01_L1_grid_normal_C",
+      "field": "storage",
+      "exact_equal": true
+    },
+    {
+      "id": "reused_b01_L1_grid_normal_C",
+      "field": "DG_remaining_shaft_budget_kWh",
+      "exact_equal": true
+    },
+    {
+      "id": "reused_b01_L1_grid_normal_C",
+      "field": "terminal_snapshot_digest",
+      "exact_equal": true
+    },
+    {
+      "id": "reused_b01_L1_grid_normal_C",
+      "field": "status",
+      "exact_equal": true
+    },
+    {
+      "id": "reused_b01_L1_grid_normal_C",
+      "field": "complete",
+      "exact_equal": true
+    },
+    {
+      "id": "reused_b01_L1_grid_normal_C",
+      "field": "producer",
+      "exact_equal": true
+    },
+    {
+      "id": "reused_b01_L1_grid_normal_C",
+      "field": "producer_source_sha256",
+      "exact_equal": true
+    },
+    {
+      "id": "reused_b01_L1_grid_normal_M",
+      "field": "service",
+      "exact_equal": true
+    },
+    {
+      "id": "reused_b01_L1_grid_normal_M",
+      "field": "fee",
+      "exact_equal": true
+    },
+    {
+      "id": "reused_b01_L1_grid_normal_M",
+      "field": "storage",
+      "exact_equal": true
+    },
+    {
+      "id": "reused_b01_L1_grid_normal_M",
+      "field": "DG_remaining_shaft_budget_kWh",
+      "exact_equal": true
+    },
+    {
+      "id": "reused_b01_L1_grid_normal_M",
+      "field": "terminal_snapshot_digest",
+      "exact_equal": true
+    },
+    {
+      "id": "reused_b01_L1_grid_normal_M",
+      "field": "status",
+      "exact_equal": true
+    },
+    {
+      "id": "reused_b01_L1_grid_normal_M",
+      "field": "complete",
+      "exact_equal": true
+    },
+    {
+      "id": "reused_b01_L1_grid_normal_M",
+      "field": "producer",
+      "exact_equal": true
+    },
+    {
+      "id": "reused_b01_L1_grid_normal_M",
+      "field": "producer_source_sha256",
+      "exact_equal": true
+    },
+    {
+      "id": "v32_b01_normal_external",
+      "field": "service",
+      "exact_equal": true
+    },
+    {
+      "id": "v32_b01_normal_external",
+      "field": "fee",
+      "exact_equal": true
+    },
+    {
+      "id": "v32_b01_normal_external",
+      "field": "storage",
+      "exact_equal": true
+    },
+    {
+      "id": "v32_b01_normal_external",
+      "field": "DG_remaining_shaft_budget_kWh",
+      "exact_equal": true
+    },
+    {
+      "id": "v32_b01_normal_external",
+      "field": "terminal_snapshot_digest",
+      "exact_equal": true
+    },
+    {
+      "id": "v32_b01_normal_external",
+      "field": "status",
+      "exact_equal": true
+    },
+    {
+      "id": "v32_b01_normal_external",
+      "field": "complete",
+      "exact_equal": true
+    },
+    {
+      "id": "v32_b01_normal_external",
+      "field": "producer",
+      "exact_equal": true
+    },
+    {
+      "id": "v32_b01_normal_external",
+      "field": "producer_source_sha256",
+      "exact_equal": true
+    },
+    {
+      "id": "reused_b01_L1_grid_disturbed_C",
+      "field": "service",
+      "exact_equal": true
+    },
+    {
+      "id": "reused_b01_L1_grid_disturbed_C",
+      "field": "fee",
+      "exact_equal": true
+    },
+    {
+      "id": "reused_b01_L1_grid_disturbed_C",
+      "field": "storage",
+      "exact_equal": true
+    },
+    {
+      "id": "reused_b01_L1_grid_disturbed_C",
+      "field": "DG_remaining_shaft_budget_kWh",
+      "exact_equal": true
+    },
+    {
+      "id": "reused_b01_L1_grid_disturbed_C",
+      "field": "terminal_snapshot_digest",
+      "exact_equal": true
+    },
+    {
+      "id": "reused_b01_L1_grid_disturbed_C",
+      "field": "status",
+      "exact_equal": true
+    },
+    {
+      "id": "reused_b01_L1_grid_disturbed_C",
+      "field": "complete",
+      "exact_equal": true
+    },
+    {
+      "id": "reused_b01_L1_grid_disturbed_C",
+      "field": "producer",
+      "exact_equal": true
+    },
+    {
+      "id": "reused_b01_L1_grid_disturbed_C",
+      "field": "producer_source_sha256",
+      "exact_equal": true
+    },
+    {
+      "id": "reused_b01_L1_grid_disturbed_M",
+      "field": "service",
+      "exact_equal": true
+    },
+    {
+      "id": "reused_b01_L1_grid_disturbed_M",
+      "field": "fee",
+      "exact_equal": true
+    },
+    {
+      "id": "reused_b01_L1_grid_disturbed_M",
+      "field": "storage",
+      "exact_equal": true
+    },
+    {
+      "id": "reused_b01_L1_grid_disturbed_M",
+      "field": "DG_remaining_shaft_budget_kWh",
+      "exact_equal": true
+    },
+    {
+      "id": "reused_b01_L1_grid_disturbed_M",
+      "field": "terminal_snapshot_digest",
+      "exact_equal": true
+    },
+    {
+      "id": "reused_b01_L1_grid_disturbed_M",
+      "field": "status",
+      "exact_equal": true
+    },
+    {
+      "id": "reused_b01_L1_grid_disturbed_M",
+      "field": "complete",
+      "exact_equal": true
+    },
+    {
+      "id": "reused_b01_L1_grid_disturbed_M",
+      "field": "producer",
+      "exact_equal": true
+    },
+    {
+      "id": "reused_b01_L1_grid_disturbed_M",
+      "field": "producer_source_sha256",
+      "exact_equal": true
+    },
+    {
+      "id": "v32_b01_grid_external",
+      "field": "service",
+      "exact_equal": true
+    },
+    {
+      "id": "v32_b01_grid_external",
+      "field": "fee",
+      "exact_equal": true
+    },
+    {
+      "id": "v32_b01_grid_external",
+      "field": "storage",
+      "exact_equal": true
+    },
+    {
+      "id": "v32_b01_grid_external",
+      "field": "DG_remaining_shaft_budget_kWh",
+      "exact_equal": true
+    },
+    {
+      "id": "v32_b01_grid_external",
+      "field": "terminal_snapshot_digest",
+      "exact_equal": true
+    },
+    {
+      "id": "v32_b01_grid_external",
+      "field": "status",
+      "exact_equal": true
+    },
+    {
+      "id": "v32_b01_grid_external",
+      "field": "complete",
+      "exact_equal": true
+    },
+    {
+      "id": "v32_b01_grid_external",
+      "field": "producer",
+      "exact_equal": true
+    },
+    {
+      "id": "v32_b01_grid_external",
+      "field": "producer_source_sha256",
+      "exact_equal": true
+    }
+  ],
+  "original_source873_and_input36_unchanged": true,
+  "git_status": "",
+  "formal_new_hospital_runs": 2,
+  "full_initialization_solver_call_total": null,
+  "no_new_physical_or_solver_calls_during_readonly_replay": true,
+  "scope_closed_no_further_backgrounds_or_tuning": true
+}

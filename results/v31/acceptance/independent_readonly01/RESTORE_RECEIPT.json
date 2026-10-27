@@ -1,0 +1,25 @@
+{
+  "schema": "hospital_ies.multi_container_exact_restore_receipt.v30.fix1.v1",
+  "status": "passed",
+  "started_utc": "2026-10-27T12:51:06.115475+00:00",
+  "finished_utc": "2026-10-27T12:52:00.711946+00:00",
+  "map_sha256": "1267eabd5280798f299385a9bf980fed5e5a7c492fd3dc546602838e03313269",
+  "containers": [
+    {
+      "name": "EVIDENCE_BLOBS_V31.tar.xz",
+      "sha256": "060d3aa50bc383af513aa928278dbcbc04eb4d76e9695ba4e57837ed73201d48",
+      "payloads_verified": 5167,
+      "raw_bytes_verified": 2315462583
+    }
+  ],
+  "raw_payloads_verified": 5167,
+  "exact_original_files_verified": 6961,
+  "original_bytes": 278737264,
+  "existing_identical_files_reused": 0,
+  "prefix": "",
+  "all_container_members_and_raw_SHA_verified": true,
+  "all_mapped_original_files_restored": true,
+  "zlib_runtime": "1.2.12",
+  "no_models_or_solvers": true,
+  "originals_or_CAS_modified": false
+}

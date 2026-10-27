@@ -1,0 +1,25 @@
+{
+  "command": [
+    "python",
+    "-B",
+    "-m",
+    "pytest",
+    "-q",
+    "tests/test_v31_preparation.py",
+    "--basetemp",
+    "E:/hospital_ies_v31_20261027/temp/preparation_red01"
+  ],
+  "cwd": "D:\\hospital_ies_v22_20261025",
+  "started_utc": "2026-10-27T12:13:21.625967+00:00",
+  "selected_environment": {
+    "TEMP": "E:\\hospital_ies_v31_20261027\\temp",
+    "TMP": "E:\\hospital_ies_v31_20261027\\temp",
+    "SCI_SOURCE_ROOT": null,
+    "PYTHONPATH": null,
+    "PYTHONIOENCODING": "utf-8",
+    "PYTHONDONTWRITEBYTECODE": "1"
+  },
+  "exit_code": 1,
+  "elapsed_seconds": 2.030999999959022,
+  "finished_utc": "2026-10-27T12:13:23.649870+00:00"
+}

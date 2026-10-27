@@ -1,0 +1,127 @@
+{
+  "schema": "hospital_ies.v31.audit_partial_selection.v1",
+  "purpose": "Read-only partial check; four planned names identify absent evidence, not executions or final preregistration",
+  "allowed_changed_source_files": [],
+  "runs": [
+    {
+      "id": "n02_b05_L3_ER_normal_C",
+      "context": "b05_L3_ER",
+      "mode": "normal",
+      "method": "C",
+      "evidence_role": "reused_v30",
+      "path": "E:\\hospital_ies_v30_20261027\\runs\\n02_b05_L3_ER_normal_C",
+      "freeze_file": "baseline/FROZEN_SOURCE_V30_C02.json",
+      "case_id": "b05_L3_ER_normal_C"
+    },
+    {
+      "id": "n02_b05_L3_ER_normal_M",
+      "context": "b05_L3_ER",
+      "mode": "normal",
+      "method": "M",
+      "evidence_role": "reused_v30",
+      "path": "E:\\hospital_ies_v30_20261027\\runs\\n02_b05_L3_ER_normal_M",
+      "freeze_file": "baseline/FROZEN_SOURCE_V30_C02.json",
+      "case_id": "b05_L3_ER_normal_M"
+    },
+    {
+      "id": "d02_b05_L3_ER_disturbed_C",
+      "context": "b05_L3_ER",
+      "mode": "disturbed",
+      "method": "C",
+      "evidence_role": "reused_v30",
+      "path": "E:\\hospital_ies_v30_20261027\\runs\\d02_b05_L3_ER_disturbed_C",
+      "freeze_file": "baseline/FROZEN_SOURCE_V30_C02.json",
+      "case_id": "b05_L3_ER_disturbed_C"
+    },
+    {
+      "id": "d02_b05_L3_ER_disturbed_M",
+      "context": "b05_L3_ER",
+      "mode": "disturbed",
+      "method": "M",
+      "evidence_role": "reused_v30",
+      "path": "E:\\hospital_ies_v30_20261027\\runs\\d02_b05_L3_ER_disturbed_M",
+      "freeze_file": "baseline/FROZEN_SOURCE_V30_C02.json",
+      "case_id": "b05_L3_ER_disturbed_M"
+    },
+    {
+      "id": "n02_b07_L4_GT_ER_normal_C",
+      "context": "b07_L4_GT_ER",
+      "mode": "normal",
+      "method": "C",
+      "evidence_role": "reused_v30",
+      "path": "E:\\hospital_ies_v30_20261027\\runs\\n02_b07_L4_GT_ER_normal_C",
+      "freeze_file": "baseline/FROZEN_SOURCE_V30_C02.json",
+      "case_id": "b07_L4_GT_ER_normal_C"
+    },
+    {
+      "id": "n02_b07_L4_GT_ER_normal_M",
+      "context": "b07_L4_GT_ER",
+      "mode": "normal",
+      "method": "M",
+      "evidence_role": "reused_v30",
+      "path": "E:\\hospital_ies_v30_20261027\\runs\\n02_b07_L4_GT_ER_normal_M",
+      "freeze_file": "baseline/FROZEN_SOURCE_V30_C02.json",
+      "case_id": "b07_L4_GT_ER_normal_M"
+    },
+    {
+      "id": "d02_b07_L4_GT_ER_disturbed_C",
+      "context": "b07_L4_GT_ER",
+      "mode": "disturbed",
+      "method": "C",
+      "evidence_role": "reused_v30",
+      "path": "E:\\hospital_ies_v30_20261027\\runs\\d02_b07_L4_GT_ER_disturbed_C",
+      "freeze_file": "baseline/FROZEN_SOURCE_V30_C02.json",
+      "case_id": "b07_L4_GT_ER_disturbed_C"
+    },
+    {
+      "id": "d02_b07_L4_GT_ER_disturbed_M",
+      "context": "b07_L4_GT_ER",
+      "mode": "disturbed",
+      "method": "M",
+      "evidence_role": "reused_v30",
+      "path": "E:\\hospital_ies_v30_20261027\\runs\\d02_b07_L4_GT_ER_disturbed_M",
+      "freeze_file": "baseline/FROZEN_SOURCE_V30_C02.json",
+      "case_id": "b07_L4_GT_ER_disturbed_M"
+    },
+    {
+      "id": "v31_b05_normal_M_cooling_permission",
+      "context": "b05_L3_ER",
+      "mode": "normal",
+      "method": "M_cooling_permission",
+      "evidence_role": "new_v31",
+      "path": "runs/v31_b05_normal_M_cooling_permission",
+      "freeze_file": "FROZEN_SOURCE_V31_P01.json",
+      "case_id": "v31_b05_normal_M_cooling_permission"
+    },
+    {
+      "id": "v31_b05_disturbed_M_cooling_permission",
+      "context": "b05_L3_ER",
+      "mode": "disturbed",
+      "method": "M_cooling_permission",
+      "evidence_role": "new_v31",
+      "path": "runs/v31_b05_disturbed_M_cooling_permission",
+      "freeze_file": "FROZEN_SOURCE_V31_P01.json",
+      "case_id": "v31_b05_disturbed_M_cooling_permission"
+    },
+    {
+      "id": "v31_b07_normal_M_steam_permission",
+      "context": "b07_L4_GT_ER",
+      "mode": "normal",
+      "method": "M_steam_permission",
+      "evidence_role": "new_v31",
+      "path": "runs/v31_b07_normal_M_steam_permission",
+      "freeze_file": "FROZEN_SOURCE_V31_P01.json",
+      "case_id": "v31_b07_normal_M_steam_permission"
+    },
+    {
+      "id": "v31_b07_disturbed_M_steam_permission",
+      "context": "b07_L4_GT_ER",
+      "mode": "disturbed",
+      "method": "M_steam_permission",
+      "evidence_role": "new_v31",
+      "path": "runs/v31_b07_disturbed_M_steam_permission",
+      "freeze_file": "FROZEN_SOURCE_V31_P01.json",
+      "case_id": "v31_b07_disturbed_M_steam_permission"
+    }
+  ]
+}

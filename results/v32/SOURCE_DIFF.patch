@@ -1,0 +1,2309 @@
+diff --git a/AGENTS.md b/AGENTS.md
+index d0e7c19952b7b0a3d88a88956ab06af4c05c852f..78d2f9b9cd3ac8aa2de5d10cbcab6eaa3583feeb 100644
+--- a/AGENTS.md
++++ b/AGENTS.md
+@@ -1,3 +1,7 @@
++# Current V32 independent-input external reference authority (2026-10-27)
++
++Read docs/v32/USER_TASK_20261027.txt and IMPLEMENTATION_PLAN.md. User authorizes one Hirwa/REopt-family fixed-capacity offline reference, Rosales boundary mapping, exactly b01 normal/grid with four reused V30 N02/D02 C/M and two new180min runs. New modules only; preserve all864 V31 science files and36 inputs, C/M/V31 rules, prior outputs/failures and original evaluator. Pure input builder must not read any completed C/M trajectory/aux/station/endogenous/stock/action data; common t0 reset without controller is allowed, initialization total solver count unknown unless instrumented. Offline-known-window future exogenous data allowed only to explicit reference. Register strict/tiered common-version selection before solving/running; conserve priorities, original service/evaluation and actual queue/start/aux/protection/storage constraints. No MPC/ML/newcapacity/search/newbackground/C-improvement/paper/figures. Root integration/realruns; inputs.py and planner.py have separate exclusive owners; shared physics serial/no change planned. New raw/temp/evidence E:/hospital_ies_v32_20261027, one physical worker. Current authorization supersedes only the previous no-new-reference stage stop. No push/main merge/messages; after verified sixrecord actual comparison and one complete compact ZIP, stop this round.
++
+ # Current V31 simple preparation closeout authority (2026-10-27)
+ 
+ Read docs/v31/USER_TASK_20261027.txt and IMPLEMENTATION_PLAN.md. User authorizes exactly four new formal180min runs: b05 normal/disturbed M_cooling_permission and b07 normal/disturbed M_steam_permission; reuse eight verified V30 N02/D02 C/M results. Keep C02 all858 source and36 inputs byte-identical; new modules/config/tests only. Root owns new adapter/controller/entry, no shared physical transition changes. Steam gets only current M23 policy-observable boiler availabilities and original fixed rating through a mailbox, calls shared preparation first, raises only ordinary queued boiler permission. No future script, scenario/time60/GT3 trigger, direct actual/state/inventory/arrived writes, MPC/ML/search/new paper controller/paper/figures or broad test/case expansion. Four formal runs and narrowly justified interface/retry checks only, one physical worker; new raw/temp/results E:/hospital_ies_v31_20261027. Original failures/results/accepted V30 archive/Git common readonly. Local commits allowed, no push or main merge. After valid12record audit and one complete verified ZIP, explicitly decide bounded model closeout and stop expansion.
+diff --git a/docs/v31/ENGINEERING_REPORT_ZH.md b/docs/v31/ENGINEERING_REPORT_ZH.md
+new file mode 100644
+index 0000000000000000000000000000000000000000..a47c871bfb1e9e75017848562e25b8391945047f
+--- /dev/null
++++ b/docs/v31/ENGINEERING_REPORT_ZH.md
+@@ -0,0 +1,172 @@
++本报告证据指针以包内 `data/evaluation/` 为根；登记、冻结与全部运行证据在 `data/`。报告生成时的归档待验状态如实保留；最终 ZIP 的大小、SHA 和打包后检查由交付回复及校验收据给出。
++
++# V31 简单准备措施：工程结论与模型收尾
++
++**本轮模型开发可以结束。** 在登记的 b05、b07 两个有限背景中，四条新增真实运行均连续完成 180 分钟；与八条核验通过的 V30 C02 历史 C/M 记录合并后，12 条记录全部通过独立服务、费用、库存、真实终态及配对审计。没有未知尾段、求解错误、策略回退或未解决的评价错误。两项简单措施均产生了可沿原生执行链解释的服务改善，同时保留了费用、供冷和其他服务的取舍，无需为了让某个方法全面获胜而继续调参或扩样。最终压缩包的清单、独立恢复和大小验收仍由根任务完成；这里的模型收尾结论不冒充归档验收回执。
++
++## b05：简单制冷许可已消除本例全部冷缺供，主要收益来自正常负荷更新
++
++新增 `M_cooling_permission` 从冻结完整 M 配置复制，仅将 `cooling_preparation` 改为 true。它保留 current 模式、after_cost、原队列、原实际执行及全部共同准备，不启用时间／能量准备、能源预留或完整 C 策略。
++
++|方法|正常 P3 冷 ENS（kWh_c）|扰动 P3 冷 ENS（kWh_c）|Δ冷 ENS：扰动−自身正常（kWh_c）|正常费用（USD2001）|扰动费用（USD2001）|Δ费用（USD2001）|
++|---|---:|---:|---:|---:|---:|---:|
++|M|8.788847650063195|10.593407344124453|1.8045596940612576|168.56011316508238|169.00472413675644|0.4446109716740523|
++|M 加制冷许可|0.0|0.0|0.0|168.4772167368995|168.95089128867102|0.4736745517715235|
++|C|0.0|0.0|0.0|163.48747879368625|163.96115334545777|0.4736745517715235|
++
++M 的正常、扰动冷 ENS 均全部发生在 `[60,75)`；这说明原现象已有正常逐小时负荷更新造成的损失，不能把扰动轨迹的 10.593407344124453 kWh_c 全算为 ER 冲击的额外损失。简单措施消除了正常背景的 8.788847650063195 kWh_c，也消除了扰动相对自身正常增加的 1.8045596940612576 kWh_c。原始 P0/P1/P2 的微小冷 ENS 也由约 1e-5 kWh_c 变为 0；它们本来均未触发实质中断，不包装成关键保障等级的跃升。三种方法的 P0/P1 电热冷实质中断时间在 b05 均为 0；微小电 ENS 仍按原值保留。
++
++原生证据显示，新方案的 12 个决策均有 `healthy_converter_permission` 真实目标层记录，不能依据旧 `cooling_constraints_active` 汇总标志判断未生效。扰动 `[60,75)`，M 已到达的 ABS/EC 总许可分别约为 138.6743255401963 / 266.9428011296351 kW_c；新方案分别为 703.3705679999999 / 2461.7969880000005 kW_c。实际供冷仍受物理分配约束：新方案实际 ABS 为 90.40444636543147 kW_c、EC 为 347.36358107310457 kW_c，并没有按许可上限强制出力。共同塔、设备和辅助用电沿原执行器核算，没有新增容量。
++
++简单措施相对 M 的全程费用分别减少 0.08289642818289167（正常）和 0.05383284808542044（扰动）USD2001。但其“扰动减正常”的费用增量反而比 M 多 0.02906358009747123 USD2001，不能只挑一种费用口径。C 在相同冷 ENS 为零的情况下，两种模式均比简单方案少 4.9897379432132425 USD2001。这个剩余差异来自完整方法组合，不能全部归因于单一未检验开关。
++
++## b07：备用供汽许可保住关键热服务，但不是费用与供冷的全面最优方案
++
++新增 `M_steam_permission` 在原 M 共同最低准备之后，将锅炉供汽许可提高到当前合法观测到的健康锅炉额定能力，本例为 3000 lb/h。它不是把“原 M 完全没有锅炉准备”改成有准备，也没有启用 `time_energy_preparation`。
++
++|扰动方法|P0 热 ENS（kWh_h）|P1 热 ENS（kWh_h）|P3 热 ENS（kWh_h）|P0 / P1 热实质中断（分钟）|P3 冷 ENS（kWh_c）|实际费用（USD2001）|
++|---|---:|---:|---:|---|---:|---:|
++|M|12.99693845167845|8.790220719501372|11.006225071162369|15 / 15|66.85648801065737|175.5826376577955|
++|M 加供汽许可|0.0|0.0|0.0|0 / 0|29.902399823603297|177.757136529103|
++|C|4.546657912385399e-06|3.6920258142680913|11.006220524504432|0 / 15|0.0|168.24705643882987|
++
++M 的 P0/P1 热中断为 `[60,75)`，实际恢复 75 分钟、确认恢复 76 分钟。C 的 P0 热只剩原始微小 ENS，未达到实质中断判据，但 P1 仍中断 15 分钟。简单供汽方案的 P0/P1 热没有发生中断，恢复状态为“不适用”，不是虚构一个 0 分钟恢复时刻。它还消除了本例 P3 热缺供；这是真实服务增加，应与较高费用一起解释。
++
++|方法|正常 P3 冷 ENS（kWh_c）|扰动 P3 冷 ENS（kWh_c）|Δ冷 ENS（kWh_c）|正常费用（USD2001）|扰动费用（USD2001）|Δ费用（USD2001）|
++|---|---:|---:|---:|---:|---:|---:|
++|M|33.466246273788606|66.85648801065737|33.39024173686877|167.16327475872373|175.5826376577955|8.419362899071757|
++|M 加供汽许可|29.214012403496987|29.902399823603297|0.6883874201063094|167.3279869671999|177.757136529103|10.429149561903102|
++|C|0.0|0.0|0.0|164.28106493452972|168.24705643882987|3.965991504300149|
++
++简单供汽相对 M 的费用增加为正常 0.16471220847617474、扰动 2.17449887130752 USD2001，扰动增量多 2.0097866628313454 USD2001。它同时使正常 P3 冷 ENS 减少 4.252233870291619、扰动 P3 冷 ENS 减少 36.954088187054076 kWh_c；其中扰动额外损失的减少为 32.70185431676246 kWh_c。完整 C 的 P3 冷 ENS 为零且费用更低，但 P1 热保障不及简单供汽方案。不能据费用、任一关键中断并集或单一载能指标宣布全面胜负，也不能把新增方案与 C 的差异作单因素因果解释。
++
++### 收益来自已到达的备用许可，没有加速队列或新增预热
++
++三条扰动原生轨迹的指令链可以直接对齐：
++
++1. 第 45 分钟生成指令 id=4，并在原生 `command_arrived` 事件中于第 45 分钟真实到达。M、C、新供汽方案的锅炉许可分别为 177.86940203797968、431.8361859946359、3000 lb/h。
++2. `[45,60)` 三者锅炉均已就绪、实际锅炉供汽均为 0。M 与新供汽方案实际 GT_3 均为 128.23270399999998 kW_e；新方案没有通过提前关掉 GT_3 避开已固定的故障目标。
++3. 第 60 分钟生成的响应指令 id=5，计划第 75 分钟到达；第 75 分钟的真实到达事件与之相符。三者 `[60,75)` 仍执行 id=4，不是把第 60 分钟的新响应提前送达。
++4. `[60,75)` 三者实际 GT 均为 0、HRSG 蒸汽为 0、锅炉均已就绪且重启电功率为 0。M、C、新方案的实际锅炉供汽分别为 177.86940203797968、431.8361859946359、1457.7289649165423 lb/h；新方案的实际汽量仍低于 3000 lb/h 许可上限。
++
++新方案增加的蒸汽使现有热服务得到满足，也使原 M 已有的 ABS 许可得到实际蒸汽支撑：本区间 M 实际 ABS 为 0，新供汽方案为 147.81630759369506 kW_c；EC 许可和实际 EC 仍沿原 M 路径。锅炉实际辅助电功率由 M 的 1.140329847336727 增为新方案的 5.747824273699552 kW，真实能耗照常计费。许可本身没有另加人为罚金，实际能耗没有漏计。完整 old/cap/new、当前可用率及其合法时钟、生成与真实到达事件见 `B07_NATIVE_CHAIN_REVIEW.json` 和最终 AUDIT 的原文指针。
++
++## 准备、资源与配对约束
++
++新制冷方案 `[0,60)` 实际购电为 567.1170642239714 kWh_e、运行费用为 51.678252713444536 USD2001；新供汽方案分别为 548.2256812918641 kWh_e、50.35743952240759 USD2001。它们各自与原 M 对应窗口相同，正常／扰动准备前缀也相同。实际许可可以不同，这不等于已经消耗许可上限对应的能量。初始库存准备与窗口实际运行分列，只在全程费用计一次；本轮 H0 初始库存准备费为 0。
++
++十二条记录均为 H0：UPS、蓄冷终存为 0 表示该背景未安装这些库存，并非事故耗尽；DG 实际轴功和端电均为 0，剩余轴功预算均为 2400 kWh。不能从本例推导 UPS/DG 最大续航、资源极限或其他硬件背景的保障能力。真实 180 分钟终态、待启动、队列和库存与最后实际分段一致，未用最后一次决策预测代替终态。
++
++六组同方法正常／扰动对的 `[0,60)` 实际物理、请求、合法观测（含 `feature_metadata`）、命令及队列均一致。计时归一仅处理既有明确求解器容器中的三个耗时／预算字段，不忽略真实状态或命令。两背景内所有方法的 t=0 物理 state/core、硬件、输入和共同终点一致；RNG 单列诊断，不伪称所有完整随机快照相同。ER 冲击仍限于原登记四个区域各载能需求增加 25%，不是全院增加 25%；GT_3 目标、故障窗口与恢复尾段未改。
++
++## 来源、验证与停止范围
++
++V30 八条复用来源为提交 `3252727135645037cedc57ebc188a48d2aa34ccb`、源树摘要 `2509d2fa562e672af3cfe4058ace55f0e38de6172d1ac2d633210d0e776f0776`。V31 四条真实新增来源为 `f009bdb66d5b9d53f1ff2331f2dc58404c2d056b`、源树摘要 `e4c740329fddcddae9e729acc24e6149d1d873e89783e0ef310e3623f604a6fa`。原 858 个源文件逐文件无修改，只增加 6 个登记的配置、适配及测试文件；36 个输入集合摘要保持 `f414d21fc55d5a63282435b9bed9a1c8c289a049f24507f953fb86162fb41d15`。新运行没有伪装成旧提交直接生产。
++
++本轮相关回归实际为 `targeted_shared_green01` 的 60 passed（其中包含 14 项新准备措施测试），退出码 0；独立评价工具另有 17 项明确标注 synthetic 的小测试真实通过。原 V30 的 1363 项默认测试记录属于继承基准，本轮没有把它改称为重新执行。评价工具先冻结，再实际运行最终 12 条只读复算；84 个正式生产文件在复核后重算 SHA 未变，144 个 ENS 标量和 12 个费用标量逐项核对 CSV 的完整可往返表示，144 个原生目标层／供汽收据指针可解析。
++
++两个新增方案分别针对不同背景，不混称为在所有场景验证过的统一新方法。M 到简单措施是本次受控增量；简单措施到 C 仍有多机制差异，不强行分解成 100% 贡献。本轮是观察过 V30 现象后提出的有限机制对照，不是盲测、参数搜索或年可靠率评价。两篇文献及 R_off 的已完成映射和既有复现边界沿用 V30，未新增原作者控制器、连续储能规划重放、MPC、未来信息、设备容量或临床资格声明。
++
++现有证据已经回答两项工程问题：扩大健康制冷许可可覆盖本例正常更新及冲击下的冷缺供；提高已到达的健康锅炉备用许可可覆盖本例响应延迟内的关键热缺口，但需要支付实际能耗，且未取得 C 的全部供冷和费用表现。可以保留这两条易实施的许可规则作为本轮有限结论，停止开放式模型开发。后续工作仅限根任务完成既定交付和归档验收，不再追加无必要的模型功能或实验。
++
++## 关键复核材料
++
++- `final01/AUDIT.json`：独立积分、完整配对、来源连续性和全部检查；`final01/COMPLETION_MATRIX.json` 为 12 条完成矩阵。
++- `final01/MAIN_RESULT_TABLE.csv`：全部 P0–P3 电／热／冷绝对指标、中断与恢复、费用、资源和准备阶段；`PAIRED_DELTAS.json`、`METHOD_CONTRASTS.json` 为带符号增量与方法差异。
++- `B07_NATIVE_CHAIN_REVIEW.json`：第 45/60/75 分钟生成、计划到达、真实到达和实际执行链。
++- `FINAL01_COMMAND.json`、`FINAL01.stdout.log`、`FINAL01.stderr.log`、`FINAL01_QA.json`：真实只读执行、退出码、原始日志与输出核验。
++- `FROZEN_EVALUATION_TOOLS_V31.json`、根目录 `EXPERIMENT_REGISTRATION.json`、`FROZEN_SOURCE_V31_P01.json`：审计工具、实验规则与真实生产来源冻结。
++
++最终归档验收以根任务随后生成的实际回执为准。
++
++
++---
++
++# 十二条记录完整审计附录
++
++# V31 简单准备措施工程复核
++
++状态：十二条记录已完成独立审计。
++
++本报告只读复核，不运行模型。八条 C/M 记录属于历史 V30 N02/D02 复用证据；四条新方案记录来自各自真实 V31 生产冻结。全量源树可因新增文件变化，共同物理、输入及评价绑定另行检查。
++
++下表依次给出正常、扰动绝对结果及扰动减自身正常的带符号增量。各载能形式不相加，微小 ENS 保留原值，不计算改善百分比。
++
++## b05_L3_ER
++
++|方法|工况|费用 USD2001|P0 热 ENS kWh_h|P1 热 ENS kWh_h|P0 冷 ENS kWh_c|P1 冷 ENS kWh_c|
++|---|---|---:|---:|---:|---:|---:|
++|M|normal|168.56011316508238|0.0|0.0|1.0859911656169174e-05|1.0860191753891968e-05|
++|M|disturbed|169.00472413675644|0.0|0.0|1.089150063205223e-05|1.0891790334208158e-05|
++|M|Δ 扰动−正常|0.4446109716740523|0.0|0.0|3.1588975883055744e-08|3.1598580316189964e-08|
++|M_cooling_permission|normal|168.4772167368995|0.0|0.0|0.0|0.0|
++|M_cooling_permission|disturbed|168.95089128867102|0.0|0.0|0.0|0.0|
++|M_cooling_permission|Δ 扰动−正常|0.4736745517715235|0.0|0.0|0.0|0.0|
++|C|normal|163.48747879368625|0.0|0.0|0.0|0.0|
++|C|disturbed|163.96115334545777|0.0|0.0|0.0|0.0|
++|C|Δ 扰动−正常|0.4736745517715235|0.0|0.0|0.0|0.0|
++
++完整 P0–P3 电/热/冷请求、交付、主动切除、连接缺供、ENS、实质中断、恢复、费用与资源终态见 MAIN_RESULT_TABLE.csv；六组带符号增量见 PAIRED_DELTAS.json。
++
++- M：[60,75) 到达锅炉许可均值 210.96045844204488 lb/h，实际供汽 210.96045844204488 lb/h，锅炉就绪观察比例 1.0；实际 GT_3 均值 126.15263306547199 kW_e。
++  到达 ABS/EC 许可均值分别为 138.6743255401963 / 266.9428011296351 kW_c；实际 ABS/EC 制冷分别为 128.451466232078 / 266.9428011296351 kW_c，共同塔排热 667.508876037655 kW，辅助电耗 15.889857516920577 kWh_e。
++  [0,60) 实际运行费用 51.678252713444536 USD2001，初始库存准备费另列 0.0 USD2001；[45,60) 实际 GT_3 均值 126.91404799999997 kW_e。
++- M_cooling_permission：[60,75) 到达锅炉许可均值 210.96045844204488 lb/h，实际供汽 0.0 lb/h，锅炉就绪观察比例 1.0；实际 GT_3 均值 126.15263306547199 kW_e。
++  到达 ABS/EC 许可均值分别为 703.3705679999999 / 2461.7969880000005 kW_c；实际 ABS/EC 制冷分别为 90.40444636543147 / 347.36358107310457 kW_c，共同塔排热 664.2022869579263 kW，辅助电耗 19.913157634245145 kWh_e。
++  [0,60) 实际运行费用 51.678252713444536 USD2001，初始库存准备费另列 0.0 USD2001；[45,60) 实际 GT_3 均值 126.91404799999997 kW_e。
++- C：[60,75) 到达锅炉许可均值 210.96045844204488 lb/h，实际供汽 0.0 lb/h，锅炉就绪观察比例 1.0；实际 GT_3 均值 126.15263306547199 kW_e。
++  到达 ABS/EC 许可均值分别为 703.3705679999999 / 2461.7969880000005 kW_c；实际 ABS/EC 制冷分别为 300.0872369725704 / 137.68079046596566 kW_c，共同塔排热 967.0834778252319 kW，辅助电耗 10.52264827172534 kWh_e。
++  [0,60) 实际运行费用 50.91305975348138 USD2001，初始库存准备费另列 0.0 USD2001；[45,60) 实际 GT_3 均值 126.91404799999997 kW_e。
++
++- normal：M_cooling_permission − M 的费用差 -0.08289642818289167 USD2001；P0/P1 热 ENS 差 0.0 / 0.0 kWh_h；P0/P1 冷 ENS 差 -1.0859911656169174e-05 / -1.0860191753891968e-05 kWh_c。
++- normal：C − M_cooling_permission 的费用差 -4.9897379432132425 USD2001；P0/P1 热 ENS 差 0.0 / 0.0 kWh_h；P0/P1 冷 ENS 差 0.0 / 0.0 kWh_c。
++- disturbed：M_cooling_permission − M 的费用差 -0.05383284808542044 USD2001；P0/P1 热 ENS 差 0.0 / 0.0 kWh_h；P0/P1 冷 ENS 差 -1.089150063205223e-05 / -1.0891790334208158e-05 kWh_c。
++- disturbed：C − M_cooling_permission 的费用差 -4.9897379432132425 USD2001；P0/P1 热 ENS 差 0.0 / 0.0 kWh_h；P0/P1 冷 ENS 差 0.0 / 0.0 kWh_c。
++- disturbance_delta_difference：M_cooling_permission − M 的费用差 0.02906358009747123 USD2001；P0/P1 热 ENS 差 0.0 / 0.0 kWh_h；P0/P1 冷 ENS 差 -3.1588975883055744e-08 / -3.1598580316189964e-08 kWh_c。
++- disturbance_delta_difference：C − M_cooling_permission 的费用差 0.0 USD2001；P0/P1 热 ENS 差 0.0 / 0.0 kWh_h；P0/P1 冷 ENS 差 0.0 / 0.0 kWh_c。
++
++## b07_L4_GT_ER
++
++|方法|工况|费用 USD2001|P0 热 ENS kWh_h|P1 热 ENS kWh_h|P0 冷 ENS kWh_c|P1 冷 ENS kWh_c|
++|---|---|---:|---:|---:|---:|---:|
++|M|normal|167.16327475872373|0.0|0.0|1.12198369741634e-05|1.1220109501053344e-05|
++|M|disturbed|175.5826376577955|12.99693845167845|8.790220719501372|0.0|1.1288912604712209e-05|
++|M|Δ 扰动−正常|8.419362899071757|12.99693845167845|8.790220719501372|-1.12198369741634e-05|6.880310365886544e-08|
++|M_steam_permission|normal|167.3279869671999|0.0|0.0|1.12198369741634e-05|1.1220109501053344e-05|
++|M_steam_permission|disturbed|177.757136529103|0.0|0.0|1.1288630338057715e-05|1.1288912585172284e-05|
++|M_steam_permission|Δ 扰动−正常|10.429149561903102|0.0|0.0|6.879336389431501e-08|6.88030841189402e-08|
++|C|normal|164.28106493452972|0.0|0.0|0.0|0.0|
++|C|disturbed|168.24705643882987|4.546657912385399e-06|3.6920258142680913|0.0|0.0|
++|C|Δ 扰动−正常|3.965991504300149|4.546657912385399e-06|3.6920258142680913|0.0|0.0|
++
++完整 P0–P3 电/热/冷请求、交付、主动切除、连接缺供、ENS、实质中断、恢复、费用与资源终态见 MAIN_RESULT_TABLE.csv；六组带符号增量见 PAIRED_DELTAS.json。
++
++- M：[60,75) 到达锅炉许可均值 177.86940203797968 lb/h，实际供汽 177.86940203797968 lb/h，锅炉就绪观察比例 1.0；实际 GT_3 均值 0.0 kW_e。
++  [0,60) 实际运行费用 50.35743952240759 USD2001，初始库存准备费另列 0.0 USD2001；[45,60) 实际 GT_3 均值 128.23270399999998 kW_e。
++- M_steam_permission：[60,75) 到达锅炉许可均值 3000.0 lb/h，实际供汽 1457.7289649165423 lb/h，锅炉就绪观察比例 1.0；实际 GT_3 均值 0.0 kW_e。
++  [0,60) 实际运行费用 50.35743952240759 USD2001，初始库存准备费另列 0.0 USD2001；[45,60) 实际 GT_3 均值 128.23270399999998 kW_e。
++- C：[60,75) 到达锅炉许可均值 431.8361859946359 lb/h，实际供汽 431.8361859946359 lb/h，锅炉就绪观察比例 1.0；实际 GT_3 均值 0.0 kW_e。
++  [0,60) 实际运行费用 50.35649964494238 USD2001，初始库存准备费另列 0.0 USD2001；[45,60) 实际 GT_3 均值 128.2883576603722 kW_e。
++
++- normal：M_steam_permission − M 的费用差 0.16471220847617474 USD2001；P0/P1 热 ENS 差 0.0 / 0.0 kWh_h；P0/P1 冷 ENS 差 0.0 / 0.0 kWh_c。
++- normal：C − M_steam_permission 的费用差 -3.0469220326701816 USD2001；P0/P1 热 ENS 差 0.0 / 0.0 kWh_h；P0/P1 冷 ENS 差 -1.12198369741634e-05 / -1.1220109501053344e-05 kWh_c。
++- disturbed：M_steam_permission − M 的费用差 2.17449887130752 USD2001；P0/P1 热 ENS 差 -12.99693845167845 / -8.790220719501372 kWh_h；P0/P1 冷 ENS 差 1.1288630338057715e-05 / -1.9539925233402755e-14 kWh_c。
++- disturbed：C − M_steam_permission 的费用差 -9.510080090273135 USD2001；P0/P1 热 ENS 差 4.546657912385399e-06 / 3.6920258142680913 kWh_h；P0/P1 冷 ENS 差 -1.1288630338057715e-05 / -1.1288912585172284e-05 kWh_c。
++- disturbance_delta_difference：M_steam_permission − M 的费用差 2.0097866628313454 USD2001；P0/P1 热 ENS 差 -12.99693845167845 / -8.790220719501372 kWh_h；P0/P1 冷 ENS 差 1.1288630338057715e-05 / -1.9539925233402755e-14 kWh_c。
++- disturbance_delta_difference：C − M_steam_permission 的费用差 -6.4631580576029535 USD2001；P0/P1 热 ENS 差 4.546657912385399e-06 / 3.6920258142680913 kWh_h；P0/P1 冷 ENS 差 -6.879336389431501e-08 / -6.88030841189402e-08 kWh_c。
++
++## 如何解释与收尾
++
++M 到新增方案的比较对应登记措施的增量；新增方案与完整 C 的差异仍包含多个机制，不分摊成相加等于 100% 的贡献。先比较服务和中断，再结合准备阶段实际能耗/费用、一般区域服务及终态库存解释代价。许可不是立即出力，队列到达、设备就绪与实际执行分别保留。
++
++b07 固定故障目标仍为 GT_3。若新增规则使其在 [45,60) 已不再运行，应报告故障暴露条件的内生变化，不能把所有改善归为备用供汽；不得改挑别的 GT。b05 检查 ABS/EC 到达许可和实际制冷、共同塔及辅助电约束。各窗口的原生均值和生成/到达时刻见 AUDIT.json；这不是额外的物理参数或因果假设。
++
++准备 [0,60) 的实际运行费用单列；初始库存准备另列并在全程费用中只计一次。跨 DG 已积分收据的部分窗口不插值轴功，缺失值保持未知。完整终态和所有队列保存在原始 RESULT/trajectory，主表仅给紧凑摘要与指针。
++
++原 M 已有共同最低锅炉许可准备；b07 新方案是在此基础上增加健康锅炉额定许可，不是从完全没有锅炉准备开始。指令生成记录的 planned_arrival_minute 是计划时刻；真正到达另取原生 command_arrived 事件，不能混称。健康制冷许可目标层的原始优化状态与备汽规则 old/cap/new 收据单独抽取并保留原文指针，不依据旧汇总标志推定其生效。
++
++本轮不新增文献控制器、MPC、容量或物理阈值；文献和离线参考沿用 V30 已有层级与限制。两个有限背景不代表年可靠率、临床保障资格或最大续航。
++
++本轮十二记录计算与独立审计已闭合；是否可以结束模型开发仍需根任务合并配置隔离、规则信息边界、针对性验证和交付包验收后决定。
++
++归档验收不在本工具中宣告通过。
+diff --git a/docs/v31/IMPLEMENTATION_PLAN.md b/docs/v31/IMPLEMENTATION_PLAN.md
+index 729256361352a9d97acc95f5bb5439f4a52a7f20..4143d50240a4186f3c19b980baab1c0120f631f8 100644
+--- a/docs/v31/IMPLEMENTATION_PLAN.md
++++ b/docs/v31/IMPLEMENTATION_PLAN.md
+@@ -1,33 +1,33 @@
+-# V31 simple preparation closeout implementation plan
+-
+-Authority: USER_TASK_20261027.txt, supplied by the user as a complete implementation specification. Routine design/implementation and phase transitions are already authorized; no additional design approval is required. This scope supersedes older V30 stop points only for this bounded experiment. No paper, figure, parameter search, MPC, ML, new literature controller, broad C/M replay or default full1363 test run.
+-
+-Goal: four actual180min trajectories (b05 normal/disturbed M_cooling_permission; b07 normal/disturbed M_steam_permission), matched to eight immutable V30 fix1/C02 N02/D02 C/M runs, then evidence-based engineering closeout and one verified compact ZIP.
+-
+-Architecture: new tools/model_closeout_v31 modules and a four-case registry. All858 original C02 source files,36 inputs, physical functions, original M/C defaults and V30 evaluation formula remain byte-identical. Cooling changes only the expanded M cooling_preparation bit. Steam uses the same M23 SciPolicy class with a current-observation mailbox; an opt-in core mixin calls the original common preparation first, then raises only queued boiler_steam_lbph to max(common_permission, healthy observed rated capacity), never beyond the original total rating. No writes to actual state, stock, arrived commands or physical outputs. Receipt provenance contains only three currently observable boiler availabilities, their feature clocks and immutable plant rating. Normal queue generation/arrival events provide actual command timing.
+-
+-Workspace: existing linked D:/hospital_ies_v22_20261025, new sci-v31-simple-preparation branch from clean documentation HEAD e635b919dae9e1c89793a4c29eecbab4e27a05ec; original science producer3252727135645037cedc57ebc188a48d2aa34ccb. Protect D:/hospital_ies_v21_20261023/.git. New raw/temp/evidence E:/hospital_ies_v31_20261027. One physical worker, no C large outputs, respect actual memory. Original V30 evidence and accepted ZIP readonly.
+-
+-## Tasks and gates
+-
+-- [ ] G0: hash all original858/36 files,8 exact N02/D02 reused runs and GT3 lock. Save user task, old freezes, full method configuration, phase ledger and actual environment/commands. Baseline fixtures are not new trajectories.
+-- [ ] G1: write meaningful failing tests for exact M config, isolated cooling toggle, steam only-one-field change after common prep, observation clock/range/missing rejection, frozen M23 factory and default adapter behavior. Then implement new rules.py, environment.py, validation.py and four-case configs only. Registry retains original180min scenarios, source hours3416/3128,H0, localER+.25 and fixedGT3 fault. Tests explicitly invoked; no shared planner/environment edit.
+-- [ ] G2: run targeted green/default-path regressions and verify every original C02 source/input SHA. Record complete configs, code diff and true new producer. Freeze FROZEN_SOURCE_V31_P01 before any formal run. Save EXPERIMENT_REGISTRATION.json with12rows; old8 are historical_reuse, new4 are new_v31. No outcome-based rule change.
+-- [ ] G3: serial actual four180min public-entry runs from original t0, fresh directories. Log all failures/retries with observed prefix and unknown tail. Native events retain original generation/arrival/actual execution; no new fast lane. If a concrete core defect appears, preserve counterexample and stop dependent reuse until impact is resolved.
+-- [ ] G4: independently read native segments. V30 original formulas for each priority/carrier, pure fee, resources, true terminal and initial preparation charge once. Normal/disturbed prefix compare[0,60), state/core t0 equivalence, separate cost/state preparation window, signed disturbance-minus-own-normal deltas. Raw tiny ENS retained; material thresholds unchanged; no cross-carrier sum or zero-baseline percentages. Mechanism traces join generated/arrived commands and actuals, explicitly check b07 GT3 endogenous exposure and both boiler ready states.
+-- [ ] G5: Chinese engineering report,12-row full-precision summary and comparisons, all rule/config/failure/command/validation evidence inside one ZIP. Standalone source/input and lossless native evidence; readonly replay does not launch simulation. Verify ZIP CRC/size/SHA plus an independent extracted readonly replay; keep final exact-ZIP checksum outside as necessary. Aim strict100000000byte cap consistent with prior delivery preference. Final explicitly state whether this bounded model development can end, then stop expanding.
+-
+-## Ownership and source changes
+-
+-Root only: all new D modules/config/tests, environment/controller composition, registration, physical dispatch, integration and packaging. No existing source file is planned to change. baseline_audit agent owns only E:/.../baseline_audit; evaluation agent only E:/.../evaluation; interface reviewer only E:/.../interface_review. One implementation writer for the physical/request path; agents do not edit shared state transitions.
+-
+-Source delta policy: allowed_changed_source_files=[]; added files listed separately. Strategy metadata lives in CASE/RESULT and diagnostic receipts, not in physical resolved_model_config. Existing public reset/step/log schema does not change; additive V31 receipts and independent method IDs are documented in MIGRATION.md.
+-
+-## Verification commands
+-
+-Targeted RED then GREEN: python -B -m pytest -q tests/test_v31_preparation.py --basetemp E:/hospital_ies_v31_20261027/temp/<fresh-name>.
+-Default/shared interfaces: explicit tests/test_v30_public.py tests/test_v30_terminal.py tests/test_v30_start_readiness.py tests/test_sci_policy.py tests/test_v23_validation.py as justified by exact imports; extend only for a reproduced issue. Do not relabel historical1363 as a new result.
+-Formal entry: python -B -m tools.model_closeout_v31.validation --case <registered-id> --output E:/hospital_ies_v31_20261027/runs/<fresh-name>.
+-Readonly audit: python -B evaluation/audit_v31.py --root <data-root> --manifest EXPERIMENT_REGISTRATION.json --support audit_support --output <fresh-directory>.
+-
+-Design self-review: four-case scope and fixed default rule satisfy all task clauses; no missing physical parameters are invented. Current health means model's current policy-observable availability fraction, not an OEM certification. Permits are ceilings only; common actual startup/auxiliary/source limits remain unchanged. V30 backgrounds are already observed mechanism-development cases, not blinded evaluation. Full continuous storage/reference control remains outside scope.
++# V31 simple preparation closeout implementation plan
++
++Authority: USER_TASK_20261027.txt, supplied by the user as a complete implementation specification. Routine design/implementation and phase transitions are already authorized; no additional design approval is required. This scope supersedes older V30 stop points only for this bounded experiment. No paper, figure, parameter search, MPC, ML, new literature controller, broad C/M replay or default full1363 test run.
++
++Goal: four actual180min trajectories (b05 normal/disturbed M_cooling_permission; b07 normal/disturbed M_steam_permission), matched to eight immutable V30 fix1/C02 N02/D02 C/M runs, then evidence-based engineering closeout and one verified compact ZIP.
++
++Architecture: new tools/model_closeout_v31 modules and a four-case registry. All858 original C02 source files,36 inputs, physical functions, original M/C defaults and V30 evaluation formula remain byte-identical. Cooling changes only the expanded M cooling_preparation bit. Steam uses the same M23 SciPolicy class with a current-observation mailbox; an opt-in core mixin calls the original common preparation first, then raises only queued boiler_steam_lbph to max(common_permission, healthy observed rated capacity), never beyond the original total rating. No writes to actual state, stock, arrived commands or physical outputs. Receipt provenance contains only three currently observable boiler availabilities, their feature clocks and immutable plant rating. Normal queue generation/arrival events provide actual command timing.
++
++Workspace: existing linked D:/hospital_ies_v22_20261025, new sci-v31-simple-preparation branch from clean documentation HEAD e635b919dae9e1c89793a4c29eecbab4e27a05ec; original science producer3252727135645037cedc57ebc188a48d2aa34ccb. Protect D:/hospital_ies_v21_20261023/.git. New raw/temp/evidence E:/hospital_ies_v31_20261027. One physical worker, no C large outputs, respect actual memory. Original V30 evidence and accepted ZIP readonly.
++
++## Tasks and gates
++
++- [x] G0: hash all original858/36 files,8 exact N02/D02 reused runs and GT3 lock. Save user task, old freezes, full method configuration, phase ledger and actual environment/commands. Baseline fixtures are not new trajectories.
++- [x] G1: write meaningful failing tests for exact M config, isolated cooling toggle, steam only-one-field change after common prep, observation clock/range/missing rejection, frozen M23 factory and default adapter behavior. Then implement new rules.py, environment.py, validation.py and four-case configs only. Registry retains original180min scenarios, source hours3416/3128,H0, localER+.25 and fixedGT3 fault. Tests explicitly invoked; no shared planner/environment edit.
++- [x] G2: run targeted green/default-path regressions and verify every original C02 source/input SHA. Record complete configs, code diff and true new producer. Freeze FROZEN_SOURCE_V31_P01 before any formal run. Save EXPERIMENT_REGISTRATION.json with12rows; old8 are historical_reuse, new4 are new_v31. No outcome-based rule change.
++- [x] G3: serial actual four180min public-entry runs from original t0, fresh directories. Log all failures/retries with observed prefix and unknown tail. Native events retain original generation/arrival/actual execution; no new fast lane. If a concrete core defect appears, preserve counterexample and stop dependent reuse until impact is resolved.
++- [x] G4: independently read native segments. V30 original formulas for each priority/carrier, pure fee, resources, true terminal and initial preparation charge once. Normal/disturbed prefix compare[0,60), state/core t0 equivalence, separate cost/state preparation window, signed disturbance-minus-own-normal deltas. Raw tiny ENS retained; material thresholds unchanged; no cross-carrier sum or zero-baseline percentages. Mechanism traces join generated/arrived commands and actuals, explicitly check b07 GT3 endogenous exposure and both boiler ready states.
++- [ ] G5: Chinese engineering report,12-row full-precision summary and comparisons, all rule/config/failure/command/validation evidence inside one ZIP. Standalone source/input and lossless native evidence; readonly replay does not launch simulation. Verify ZIP CRC/size/SHA plus an independent extracted readonly replay; keep final exact-ZIP checksum outside as necessary. Aim strict100000000byte cap consistent with prior delivery preference. Final explicitly state whether this bounded model development can end, then stop expanding.
++
++## Ownership and source changes
++
++Root only: all new D modules/config/tests, environment/controller composition, registration, physical dispatch, integration and packaging. No existing source file is planned to change. baseline_audit agent owns only E:/.../baseline_audit; evaluation agent only E:/.../evaluation; interface reviewer only E:/.../interface_review. One implementation writer for the physical/request path; agents do not edit shared state transitions.
++
++Source delta policy: allowed_changed_source_files=[]; added files listed separately. Strategy metadata lives in CASE/RESULT and diagnostic receipts, not in physical resolved_model_config. Existing public reset/step/log schema does not change; additive V31 receipts and independent method IDs are documented in MIGRATION.md.
++
++## Verification commands
++
++Targeted RED then GREEN: python -B -m pytest -q tests/test_v31_preparation.py --basetemp E:/hospital_ies_v31_20261027/temp/<fresh-name>.
++Default/shared interfaces: explicit tests/test_v30_public.py tests/test_v30_terminal.py tests/test_v30_start_readiness.py tests/test_sci_policy.py tests/test_v23_validation.py as justified by exact imports; extend only for a reproduced issue. Do not relabel historical1363 as a new result.
++Formal entry: python -B -m tools.model_closeout_v31.validation --case <registered-id> --output E:/hospital_ies_v31_20261027/runs/<fresh-name>.
++Readonly audit: python -B evaluation/audit_v31.py --root <data-root> --manifest EXPERIMENT_REGISTRATION.json --support audit_support --output <fresh-directory>.
++
++Design self-review: four-case scope and fixed default rule satisfy all task clauses; no missing physical parameters are invented. Current health means model's current policy-observable availability fraction, not an OEM certification. Permits are ceilings only; common actual startup/auxiliary/source limits remain unchanged. V30 backgrounds are already observed mechanism-development cases, not blinded evaluation. Full continuous storage/reference control remains outside scope.
+diff --git a/docs/v31/MAIN_RESULT_TABLE.csv b/docs/v31/MAIN_RESULT_TABLE.csv
+new file mode 100644
+index 0000000000000000000000000000000000000000..50740f254351bc6996d115e50b3638aa85736904
+--- /dev/null
++++ b/docs/v31/MAIN_RESULT_TABLE.csv
+@@ -0,0 +1,13 @@
++﻿id,context,mode,method,evidence_role,status,complete,observed_until_minute,unknown_tail_minutes,producer,producer_source_sha256,physical_patch_id,P0_e_requested_kWh,P0_e_delivered_kWh,P0_e_active_cut_kWh,P0_e_connected_unserved_kWh,P0_e_ENS_kWh,P0_e_material_minutes,P0_e_recovery_status,P0_e_recovery_absolute_minute,P0_e_recovery_confirmation_minute,P0_h_requested_kWh,P0_h_delivered_kWh,P0_h_active_cut_kWh,P0_h_connected_unserved_kWh,P0_h_ENS_kWh,P0_h_material_minutes,P0_h_recovery_status,P0_h_recovery_absolute_minute,P0_h_recovery_confirmation_minute,P0_c_requested_kWh,P0_c_delivered_kWh,P0_c_active_cut_kWh,P0_c_connected_unserved_kWh,P0_c_ENS_kWh,P0_c_material_minutes,P0_c_recovery_status,P0_c_recovery_absolute_minute,P0_c_recovery_confirmation_minute,P1_e_requested_kWh,P1_e_delivered_kWh,P1_e_active_cut_kWh,P1_e_connected_unserved_kWh,P1_e_ENS_kWh,P1_e_material_minutes,P1_e_recovery_status,P1_e_recovery_absolute_minute,P1_e_recovery_confirmation_minute,P1_h_requested_kWh,P1_h_delivered_kWh,P1_h_active_cut_kWh,P1_h_connected_unserved_kWh,P1_h_ENS_kWh,P1_h_material_minutes,P1_h_recovery_status,P1_h_recovery_absolute_minute,P1_h_recovery_confirmation_minute,P1_c_requested_kWh,P1_c_delivered_kWh,P1_c_active_cut_kWh,P1_c_connected_unserved_kWh,P1_c_ENS_kWh,P1_c_material_minutes,P1_c_recovery_status,P1_c_recovery_absolute_minute,P1_c_recovery_confirmation_minute,P2_e_requested_kWh,P2_e_delivered_kWh,P2_e_active_cut_kWh,P2_e_connected_unserved_kWh,P2_e_ENS_kWh,P2_e_material_minutes,P2_e_recovery_status,P2_e_recovery_absolute_minute,P2_e_recovery_confirmation_minute,P2_h_requested_kWh,P2_h_delivered_kWh,P2_h_active_cut_kWh,P2_h_connected_unserved_kWh,P2_h_ENS_kWh,P2_h_material_minutes,P2_h_recovery_status,P2_h_recovery_absolute_minute,P2_h_recovery_confirmation_minute,P2_c_requested_kWh,P2_c_delivered_kWh,P2_c_active_cut_kWh,P2_c_connected_unserved_kWh,P2_c_ENS_kWh,P2_c_material_minutes,P2_c_recovery_status,P2_c_recovery_absolute_minute,P2_c_recovery_confirmation_minute,P3_e_requested_kWh,P3_e_delivered_kWh,P3_e_active_cut_kWh,P3_e_connected_unserved_kWh,P3_e_ENS_kWh,P3_e_material_minutes,P3_e_recovery_status,P3_e_recovery_absolute_minute,P3_e_recovery_confirmation_minute,P3_h_requested_kWh,P3_h_delivered_kWh,P3_h_active_cut_kWh,P3_h_connected_unserved_kWh,P3_h_ENS_kWh,P3_h_material_minutes,P3_h_recovery_status,P3_h_recovery_absolute_minute,P3_h_recovery_confirmation_minute,P3_c_requested_kWh,P3_c_delivered_kWh,P3_c_active_cut_kWh,P3_c_connected_unserved_kWh,P3_c_ENS_kWh,P3_c_material_minutes,P3_c_recovery_status,P3_c_recovery_absolute_minute,P3_c_recovery_confirmation_minute,grid_kWh_e,grid_fee,GT_fuel_MMBtu,boiler_fuel_MMBtu,DG_shaft_kWh,DG_electric_kWh,initial_preparation_grid_kWh_e,initial_preparation_fee_USD2001,actual_fee_USD2001,raw_source_arithmetic,cost_USD_step_used,unknown_tail_fee_USD2001,DG_chemical_fuel,ups_initial_stock_kWh,ups_final_stock_kWh,ups_charged_input_kWh,ups_discharged_kWh,ups_standing_loss_kWh,ups_conversion_loss_kWh,ups_balance_residual_kWh,ups_carrier,ups_unit,ups_preparation_input_kWh,cold_store_initial_stock_kWh,cold_store_final_stock_kWh,cold_store_charged_input_kWh,cold_store_discharged_kWh,cold_store_standing_loss_kWh,cold_store_conversion_loss_kWh,cold_store_balance_residual_kWh,cold_store_carrier,cold_store_unit,cold_store_preparation_input_kWh,DG_remaining_shaft_budget_kWh,prep_0_60_grid_kWh_e,prep_0_60_grid_fee,prep_0_60_GT_fuel_MMBtu,prep_0_60_boiler_fuel_MMBtu,prep_0_60_DG_shaft_kWh,prep_0_60_DG_electric_kWh,prep_0_60_initial_preparation_grid_kWh_e,prep_0_60_initial_preparation_fee_USD2001,prep_0_60_actual_fee_USD2001,prep_0_60_raw_source_arithmetic,prep_0_60_cost_USD_step_used,prep_0_60_unknown_tail_fee_USD2001,prep_0_60_DG_chemical_fuel,terminal_GT_summary,terminal_queue_pointer
++reused_b05_L3_ER_normal_M,b05_L3_ER,normal,M,reused_v30,completed,True,180.0,0.0,3252727135645037cedc57ebc188a48d2aa34ccb,2509d2fa562e672af3cfe4058ace55f0e38de6172d1ac2d633210d0e776f0776,hospital_ies.powered_start_minimum_off_readiness.v30.fix1,277.2266347006748,277.2264457771125,0.0,0.00018892356232446316,0.0001889235623195873,0,not_applicable,,,229.05554360306417,229.05554360306417,0.0,0.0,0.0,0,not_applicable,,,163.82066678195906,163.82065592204742,0.0,1.0859911656659235e-05,1.0859911656169174e-05,0,not_applicable,,,149.05220471860315,149.05201579549208,0.0,0.00018892311108141741,0.0001889231110752121,0,not_applicable,,,95.48977179362235,95.48977179362235,0.0,0.0,0.0,0,not_applicable,,,105.43778869900356,105.4377778388118,0.0,1.086019175359091e-05,1.0860191753891968e-05,0,not_applicable,,,162.96653958922386,162.96635066611282,0.0,0.00018892311108204354,0.00018892311107698845,0,not_applicable,,,0.0,0.0,0.0,0.0,0.0,0,not_applicable,,,123.71472659091069,123.71471573071892,0.0,1.0860191753202251e-05,1.0860191753891968e-05,0,not_applicable,,,1474.9460919638068,1474.9254501202324,0.0,0.02064184357444348,0.020641843574480893,0,not_applicable,,,143.84790613443755,143.84790613443755,0.0,0.0,0.0,0,not_applicable,,,792.4857055326917,783.6968578826285,0.0,8.78884765006319,8.788847650063195,15.0,observed,75.0,76.0,1882.1800731429157,138.45316618039288,6.15295981408497,0.067483777793028,0.0,0.0,0.0,0.0,168.56011316508238,True,False,,,0.0,0.0,0.0,0.0,0.0,0.0,0.0,e,kWh_e,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,c,kWh_c,0.0,2400.0,567.1170642239714,41.71713124431534,2.05808294816719,0.0,0.0,0.0,0.0,0.0,51.678252713444536,True,False,,,"{""actual_electric_kW"":[0.0,0.0,125.595392],""arrived_permission_kW"":[0.0,0.0,125.595392],""clocks"":{""time"":180.0,""up"":60.0,""down"":30.0,""powers"":[0.0,0.0,125.595392],""running"":[false,false,true],""last_on"":[-60.0,-60.0,-60.0],""last_off"":[-30.0,-30.0,-30.0],""initial_age"":""Initially running/off resources assumed eligible; prior actual ages unknown""},""start_pending"":{},""actual_start_progress"":{},""unfinished_starts"":[]}",E:\hospital_ies_v30_20261027\runs\n02_b05_L3_ER_normal_M/RESULT.json#/terminal_snapshot
++reused_b05_L3_ER_normal_C,b05_L3_ER,normal,C,reused_v30,completed,True,180.0,0.0,3252727135645037cedc57ebc188a48d2aa34ccb,2509d2fa562e672af3cfe4058ace55f0e38de6172d1ac2d633210d0e776f0776,hospital_ies.powered_start_minimum_off_readiness.v30.fix1,277.22663470067477,277.2264282815277,0.0,0.00020641914709723083,0.00020641914709074172,0,not_applicable,,,229.0555436030642,229.0555436030642,0.0,0.0,0.0,0,not_applicable,,,163.82066678195906,163.82066678195906,0.0,0.0,0.0,0,not_applicable,,,149.05220471860318,149.05199829945607,0.0,0.00020641914709723083,0.00020641914709074172,0,not_applicable,,,95.48977179362234,95.48977179362234,0.0,0.0,0.0,0,not_applicable,,,105.43778869900355,105.43778869900355,0.0,0.0,0.0,0,not_applicable,,,162.96653958922386,162.96633317007678,0.0,0.00020641914709723083,0.00020641914709074172,0,not_applicable,,,0.0,0.0,0.0,0.0,0.0,0,not_applicable,,,123.71472659091066,123.71472659091066,0.0,0.0,0.0,0,not_applicable,,,1474.9460919638068,1474.925450049097,0.0,0.020641914709723094,0.020641914709756293,0,not_applicable,,,143.84790613443755,143.84790613443755,0.0,0.0,0.0,0,not_applicable,,,792.4857055326917,792.4857055326917,0.0,0.0,0.0,0,not_applicable,,,1435.3760283603438,105.58626064618689,11.963061600723012,0.0,0.0,0.0,0.0,0.0,163.48747879368625,True,False,,,0.0,0.0,0.0,0.0,0.0,0.0,0.0,e,kWh_e,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,c,kWh_c,0.0,2400.0,443.845925293147,32.64930626456389,3.7735027869664233,0.0,0.0,0.0,0.0,0.0,50.91305975348138,True,False,,,"{""actual_electric_kW"":[125.595392,0.0,125.595392],""arrived_permission_kW"":[125.595392,0.0,125.595392],""clocks"":{""time"":180.0,""up"":60.0,""down"":30.0,""powers"":[125.595392,0.0,125.595392],""running"":[true,false,true],""last_on"":[10.0,-60.0,-60.0],""last_off"":[-30.0,-30.0,-30.0],""initial_age"":""Initially running/off resources assumed eligible; prior actual ages unknown""},""start_pending"":{},""actual_start_progress"":{},""unfinished_starts"":[]}",E:\hospital_ies_v30_20261027\runs\n02_b05_L3_ER_normal_C/RESULT.json#/terminal_snapshot
++v31_b05_normal_M_cooling_permission,b05_L3_ER,normal,M_cooling_permission,new_v31,completed,True,180.0,0.0,f009bdb66d5b9d53f1ff2331f2dc58404c2d056b,e4c740329fddcddae9e729acc24e6149d1d873e89783e0ef310e3623f604a6fa,hospital_ies.powered_start_minimum_off_readiness.v30.fix1,277.2266347006748,277.2264282815277,0.0,0.00020641914709723083,0.00020641914709074172,0,not_applicable,,,229.05554360306417,229.05554360306417,0.0,0.0,0.0,0,not_applicable,,,163.82066678195906,163.82066678195906,0.0,0.0,0.0,0,not_applicable,,,149.05220471860315,149.05199829945607,0.0,0.00020641914709723083,0.00020641914709074172,0,not_applicable,,,95.48977179362235,95.48977179362235,0.0,0.0,0.0,0,not_applicable,,,105.43778869900356,105.43778869900356,0.0,0.0,0.0,0,not_applicable,,,162.96653958922386,162.9663331700768,0.0,0.00020641914709723083,0.00020641914709074172,0,not_applicable,,,0.0,0.0,0.0,0.0,0.0,0,not_applicable,,,123.71472659091069,123.71472659091069,0.0,0.0,0.0,0,not_applicable,,,1474.9460919638068,1474.925450049097,0.0,0.020641914709723094,0.020641914709756293,0,not_applicable,,,143.84790613443755,143.84790613443755,0.0,0.0,0.0,0,not_applicable,,,792.4857055326917,792.4857055326917,0.0,0.0,0.0,0,not_applicable,,,1885.4933555835812,138.69689123672825,6.15295981408497,0.0,0.0,0.0,0.0,0.0,168.4772167368995,True,False,,,0.0,0.0,0.0,0.0,0.0,0.0,0.0,e,kWh_e,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,c,kWh_c,0.0,2400.0,567.1170642239714,41.71713124431534,2.05808294816719,0.0,0.0,0.0,0.0,0.0,51.678252713444536,True,False,,,"{""actual_electric_kW"":[0.0,0.0,125.595392],""arrived_permission_kW"":[0.0,0.0,125.595392],""clocks"":{""time"":180.0,""up"":60.0,""down"":30.0,""powers"":[0.0,0.0,125.595392],""running"":[false,false,true],""last_on"":[-60.0,-60.0,-60.0],""last_off"":[-30.0,-30.0,-30.0],""initial_age"":""Initially running/off resources assumed eligible; prior actual ages unknown""},""start_pending"":{},""actual_start_progress"":{},""unfinished_starts"":[]}",runs/v31_b05_normal_M_cooling_permission/RESULT.json#/terminal_snapshot
++reused_b05_L3_ER_disturbed_M,b05_L3_ER,disturbed,M,reused_v30,completed,True,180.0,0.0,3252727135645037cedc57ebc188a48d2aa34ccb,2509d2fa562e672af3cfe4058ace55f0e38de6172d1ac2d633210d0e776f0776,hospital_ies.powered_start_minimum_off_readiness.v30.fix1,278.4283489580945,278.4281595959267,0.0,0.00018936216777530016,0.00018936216777060534,0,not_applicable,,,230.23901229144602,230.23901229144602,0.0,0.0,0.0,0,not_applicable,,,164.5963474085659,164.59633651706525,0.0,1.089150063237394e-05,1.089150063205223e-05,0,not_applicable,,,152.88633773192902,152.88614837022837,0.0,0.00018936170068302552,0.00018936170067872037,0,not_applicable,,,101.32872300055222,101.32872300055222,0.0,0.0,0.0,0,not_applicable,,,107.4364754594553,107.43646456766496,0.0,1.089179033467452e-05,1.0891790334208158e-05,0,not_applicable,,,162.96653958922386,162.9663502275232,0.0,0.00018936170068448318,0.0001893617006804906,0,not_applicable,,,0.0,0.0,0.0,0.0,0.0,0,not_applicable,,,123.71472659091069,123.71471569912035,0.0,1.089179033377045e-05,1.0891790334208158e-05,0,not_applicable,,,1474.9460919638068,1474.92539994447,0.0,0.020692019336737956,0.020692019336785054,0,not_applicable,,,143.84790613443755,143.84790613443755,0.0,0.0,0.0,0,not_applicable,,,792.4857055326917,781.8922981885672,0.0,10.593407344124453,10.593407344124453,15.0,observed,75.0,76.0,1888.2242679726337,138.89777715206694,6.15295981408497,0.067483777793028,0.0,0.0,0.0,0.0,169.00472413675644,True,False,,,0.0,0.0,0.0,0.0,0.0,0.0,0.0,e,kWh_e,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,c,kWh_c,0.0,2400.0,567.1170642239714,41.71713124431534,2.05808294816719,0.0,0.0,0.0,0.0,0.0,51.678252713444536,True,False,,,"{""actual_electric_kW"":[0.0,0.0,125.595392],""arrived_permission_kW"":[0.0,0.0,125.595392],""clocks"":{""time"":180.0,""up"":60.0,""down"":30.0,""powers"":[0.0,0.0,125.595392],""running"":[false,false,true],""last_on"":[-60.0,-60.0,-60.0],""last_off"":[-30.0,-30.0,-30.0],""initial_age"":""Initially running/off resources assumed eligible; prior actual ages unknown""},""start_pending"":{},""actual_start_progress"":{},""unfinished_starts"":[]}",E:\hospital_ies_v30_20261027\runs\d02_b05_L3_ER_disturbed_M/RESULT.json#/terminal_snapshot
++reused_b05_L3_ER_disturbed_C,b05_L3_ER,disturbed,C,reused_v30,completed,True,180.0,0.0,3252727135645037cedc57ebc188a48d2aa34ccb,2509d2fa562e672af3cfe4058ace55f0e38de6172d1ac2d633210d0e776f0776,hospital_ies.powered_start_minimum_off_readiness.v30.fix1,278.42834895809443,278.4281420353626,0.0,0.00020692273182430537,0.0002069227318202138,0,not_applicable,,,230.23901229144607,230.23901229144607,0.0,0.0,0.0,0,not_applicable,,,164.5963474085659,164.5963474085659,0.0,0.0,0.0,0,not_applicable,,,152.88633773192905,152.88613080919723,0.0,0.00020692273182430537,0.0002069227318202138,0,not_applicable,,,101.3287230005522,101.3287230005522,0.0,0.0,0.0,0,not_applicable,,,107.4364754594553,107.4364754594553,0.0,0.0,0.0,0,not_applicable,,,162.96653958922386,162.96633266649206,0.0,0.00020692273182430537,0.0002069227318202138,0,not_applicable,,,0.0,0.0,0.0,0.0,0.0,0,not_applicable,,,123.71472659091066,123.71472659091066,0.0,0.0,0.0,0,not_applicable,,,1474.9460919638068,1474.9253996906245,0.0,0.020692273182430544,0.02069227318247613,0,not_applicable,,,143.84790613443755,143.84790613443755,0.0,0.0,0.0,0,not_applicable,,,792.4857055326917,792.4857055326917,0.0,0.0,0.0,0,not_applicable,,,1441.8153235176505,106.0599351979584,11.963061600723012,0.0,0.0,0.0,0.0,0.0,163.96115334545777,True,False,,,0.0,0.0,0.0,0.0,0.0,0.0,0.0,e,kWh_e,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,c,kWh_c,0.0,2400.0,443.845925293147,32.64930626456389,3.7735027869664233,0.0,0.0,0.0,0.0,0.0,50.91305975348138,True,False,,,"{""actual_electric_kW"":[125.595392,0.0,125.595392],""arrived_permission_kW"":[125.595392,0.0,125.595392],""clocks"":{""time"":180.0,""up"":60.0,""down"":30.0,""powers"":[125.595392,0.0,125.595392],""running"":[true,false,true],""last_on"":[10.0,-60.0,-60.0],""last_off"":[-30.0,-30.0,-30.0],""initial_age"":""Initially running/off resources assumed eligible; prior actual ages unknown""},""start_pending"":{},""actual_start_progress"":{},""unfinished_starts"":[]}",E:\hospital_ies_v30_20261027\runs\d02_b05_L3_ER_disturbed_C/RESULT.json#/terminal_snapshot
++v31_b05_disturbed_M_cooling_permission,b05_L3_ER,disturbed,M_cooling_permission,new_v31,completed,True,180.0,0.0,f009bdb66d5b9d53f1ff2331f2dc58404c2d056b,e4c740329fddcddae9e729acc24e6149d1d873e89783e0ef310e3623f604a6fa,hospital_ies.powered_start_minimum_off_readiness.v30.fix1,278.4283489580945,278.4281420353626,0.0,0.00020692273182430537,0.0002069227318202138,0,not_applicable,,,230.23901229144602,230.23901229144602,0.0,0.0,0.0,0,not_applicable,,,164.5963474085659,164.5963474085659,0.0,0.0,0.0,0,not_applicable,,,152.88633773192902,152.88613080919725,0.0,0.00020692273182430537,0.0002069227318202138,0,not_applicable,,,101.32872300055222,101.32872300055222,0.0,0.0,0.0,0,not_applicable,,,107.4364754594553,107.4364754594553,0.0,0.0,0.0,0,not_applicable,,,162.96653958922386,162.96633266649206,0.0,0.00020692273182430537,0.0002069227318202138,0,not_applicable,,,0.0,0.0,0.0,0.0,0.0,0,not_applicable,,,123.71472659091069,123.71472659091069,0.0,0.0,0.0,0,not_applicable,,,1474.9460919638068,1474.9253996906243,0.0,0.02069227318243055,0.02069227318247613,0,not_applicable,,,143.84790613443755,143.84790613443755,0.0,0.0,0.0,0,not_applicable,,,792.4857055326917,792.4857055326917,0.0,0.0,0.0,0,not_applicable,,,1891.9326507408882,139.17056578849977,6.15295981408497,0.0,0.0,0.0,0.0,0.0,168.95089128867102,True,False,,,0.0,0.0,0.0,0.0,0.0,0.0,0.0,e,kWh_e,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,c,kWh_c,0.0,2400.0,567.1170642239714,41.71713124431534,2.05808294816719,0.0,0.0,0.0,0.0,0.0,51.678252713444536,True,False,,,"{""actual_electric_kW"":[0.0,0.0,125.595392],""arrived_permission_kW"":[0.0,0.0,125.595392],""clocks"":{""time"":180.0,""up"":60.0,""down"":30.0,""powers"":[0.0,0.0,125.595392],""running"":[false,false,true],""last_on"":[-60.0,-60.0,-60.0],""last_off"":[-30.0,-30.0,-30.0],""initial_age"":""Initially running/off resources assumed eligible; prior actual ages unknown""},""start_pending"":{},""actual_start_progress"":{},""unfinished_starts"":[]}",runs/v31_b05_disturbed_M_cooling_permission/RESULT.json#/terminal_snapshot
++reused_b07_L4_GT_ER_normal_M,b07_L4_GT_ER,normal,M,reused_v30,completed,True,180.0,0.0,3252727135645037cedc57ebc188a48d2aa34ccb,2509d2fa562e672af3cfe4058ace55f0e38de6172d1ac2d633210d0e776f0776,hospital_ies.powered_start_minimum_off_readiness.v30.fix1,277.0660058816051,277.06581646554395,0.0,0.0001894160612195647,0.0001894160612216922,0,not_applicable,,,222.4771426493381,222.4771426493381,0.0,0.0,0.0,0,not_applicable,,,163.47711188313193,163.47710066329495,0.0,1.1219836973349411e-05,1.12198369741634e-05,0,not_applicable,,,149.8559180046088,149.8557285889741,0.0,0.0001894156346614506,0.00018941563466512434,0,not_applicable,,,89.90931770324677,89.90931770324677,0.0,0.0,0.0,0,not_applicable,,,104.73707325746824,104.73706203735873,0.0,1.1220109501057704e-05,1.1220109501053344e-05,0,not_applicable,,,162.97083452347846,162.97064493226878,0.0,0.0001895912096765565,0.00018959120967941182,0,not_applicable,,,0.0,0.0,0.0,0.0,0.0,0,not_applicable,,,124.6416465702143,124.64163546227957,0.0,1.1107934735377713e-05,1.1107934735899774e-05,0,not_applicable,,,1479.8798137610934,1479.8591162440214,0.0,0.020697517071473298,0.02069751707149316,0,not_applicable,,,136.76822468646884,136.76822468646884,0.0,0.0,0.0,0,not_applicable,,,718.8681710791625,685.4019248053739,0.0,33.466246273788606,33.466246273788606,15.0,observed,75.0,76.0,1862.9474078186834,137.03841131914237,6.167247002016246,0.056898336740234805,0.0,0.0,0.0,0.0,167.16327475872373,True,False,,,0.0,0.0,0.0,0.0,0.0,0.0,0.0,e,kWh_e,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,c,kWh_c,0.0,2400.0,548.2256812918641,40.32748111582952,2.0723054559045586,0.0,0.0,0.0,0.0,0.0,50.35743952240759,True,False,,,"{""actual_electric_kW"":[0.0,0.0,125.75052799999995],""arrived_permission_kW"":[0.0,0.0,125.75052799999995],""clocks"":{""time"":180.0,""up"":60.0,""down"":30.0,""powers"":[0.0,0.0,125.75052799999995],""running"":[false,false,true],""last_on"":[-60.0,-60.0,-60.0],""last_off"":[-30.0,-30.0,-30.0],""initial_age"":""Initially running/off resources assumed eligible; prior actual ages unknown""},""start_pending"":{},""actual_start_progress"":{},""unfinished_starts"":[]}",E:\hospital_ies_v30_20261027\runs\n02_b07_L4_GT_ER_normal_M/RESULT.json#/terminal_snapshot
++reused_b07_L4_GT_ER_normal_C,b07_L4_GT_ER,normal,C,reused_v30,completed,True,180.0,0.0,3252727135645037cedc57ebc188a48d2aa34ccb,2509d2fa562e672af3cfe4058ace55f0e38de6172d1ac2d633210d0e776f0776,hospital_ies.powered_start_minimum_off_readiness.v30.fix1,277.06600588160507,277.0657989043479,0.0,0.0002069772572170786,0.00020697725722129695,0,not_applicable,,,222.47714264933808,222.47714264933808,0.0,0.0,0.0,0,not_applicable,,,163.4771118831319,163.4771118831319,0.0,0.0,0.0,0,not_applicable,,,149.85591800460887,149.85571102735156,0.0,0.0002069772572170786,0.00020697725722129695,0,not_applicable,,,89.90931770324676,89.90931770324676,0.0,0.0,0.0,0,not_applicable,,,104.73707325746824,104.73707325746824,0.0,0.0,0.0,0,not_applicable,,,162.9708345234784,162.97062754622127,0.0,0.00020697725721707856,0.00020697725722129695,0,not_applicable,,,0.0,0.0,0.0,0.0,0.0,0,not_applicable,,,124.64164657021432,124.64164657021432,0.0,0.0,0.0,0,not_applicable,,,1479.8798137610936,1479.8591160353715,0.0,0.020697725721707864,0.02069772572173178,0,not_applicable,,,136.76822468646884,136.76822468646884,0.0,0.0,0.0,0,not_applicable,,,718.8681710791627,718.8681710791627,0.0,0.0,0.0,0,not_applicable,,,1613.62599419051,118.69832813265393,9.417920826833845,0.0,0.0,0.0,0.0,0.0,164.28106493452972,True,False,,,0.0,0.0,0.0,0.0,0.0,0.0,0.0,e,kWh_e,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,c,kWh_c,0.0,2400.0,548.1537273553295,40.32218818425803,2.0732048472488325,0.0,0.0,0.0,0.0,0.0,50.35649964494238,True,False,,,"{""actual_electric_kW"":[0.0,125.75052799999995,125.75052799999995],""arrived_permission_kW"":[0.0,125.75052799999995,125.75052799999995],""clocks"":{""time"":180.0,""up"":60.0,""down"":30.0,""powers"":[0.0,125.75052799999995,125.75052799999995],""running"":[false,true,true],""last_on"":[-60.0,85.0,-60.0],""last_off"":[-30.0,-30.0,-30.0],""initial_age"":""Initially running/off resources assumed eligible; prior actual ages unknown""},""start_pending"":{},""actual_start_progress"":{},""unfinished_starts"":[]}",E:\hospital_ies_v30_20261027\runs\n02_b07_L4_GT_ER_normal_C/RESULT.json#/terminal_snapshot
++v31_b07_normal_M_steam_permission,b07_L4_GT_ER,normal,M_steam_permission,new_v31,completed,True,180.0,0.0,f009bdb66d5b9d53f1ff2331f2dc58404c2d056b,e4c740329fddcddae9e729acc24e6149d1d873e89783e0ef310e3623f604a6fa,hospital_ies.powered_start_minimum_off_readiness.v30.fix1,277.0660058816051,277.06581646554395,0.0,0.0001894160612195647,0.0001894160612216922,0,not_applicable,,,222.4771426493381,222.4771426493381,0.0,0.0,0.0,0,not_applicable,,,163.47711188313193,163.47710066329495,0.0,1.1219836973349411e-05,1.12198369741634e-05,0,not_applicable,,,149.8559180046088,149.8557285889741,0.0,0.0001894156346614506,0.00018941563466512434,0,not_applicable,,,89.90931770324677,89.90931770324677,0.0,0.0,0.0,0,not_applicable,,,104.73707325746824,104.73706203735873,0.0,1.1220109501057704e-05,1.1220109501053344e-05,0,not_applicable,,,162.97083452347846,162.97062754622124,0.0,0.00020697725721707856,0.0002069772572212969,0,not_applicable,,,0.0,0.0,0.0,0.0,0.0,0,not_applicable,,,124.6416465702143,124.6416465702143,0.0,0.0,0.0,0,not_applicable,,,1479.8798137610934,1479.8591336297477,0.0,0.02068013134503362,0.02068013134505975,0,not_applicable,,,136.76822468646884,136.76822468646884,0.0,0.0,0.0,0,not_applicable,,,718.8681710791625,689.6541586756655,0.0,29.214012403496987,29.214012403496987,15.0,observed,75.0,76.0,1863.2015617267252,137.0571068806179,6.167247002016246,0.08706706545937472,0.0,0.0,0.0,0.0,167.3279869671999,True,False,,,0.0,0.0,0.0,0.0,0.0,0.0,0.0,e,kWh_e,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,c,kWh_c,0.0,2400.0,548.2256812918641,40.32748111582952,2.0723054559045586,0.0,0.0,0.0,0.0,0.0,50.35743952240759,True,False,,,"{""actual_electric_kW"":[0.0,0.0,125.75052799999995],""arrived_permission_kW"":[0.0,0.0,125.75052799999995],""clocks"":{""time"":180.0,""up"":60.0,""down"":30.0,""powers"":[0.0,0.0,125.75052799999995],""running"":[false,false,true],""last_on"":[-60.0,-60.0,-60.0],""last_off"":[-30.0,-30.0,-30.0],""initial_age"":""Initially running/off resources assumed eligible; prior actual ages unknown""},""start_pending"":{},""actual_start_progress"":{},""unfinished_starts"":[]}",runs/v31_b07_normal_M_steam_permission/RESULT.json#/terminal_snapshot
++reused_b07_L4_GT_ER_disturbed_M,b07_L4_GT_ER,disturbed,M,reused_v30,completed,True,180.0,0.0,3252727135645037cedc57ebc188a48d2aa34ccb,2509d2fa562e672af3cfe4058ace55f0e38de6172d1ac2d633210d0e776f0776,hospital_ies.powered_start_minimum_off_readiness.v30.fix1,278.2602528427852,278.26006306112475,0.0,0.0001897816604245138,0.0001897816604277125,0,not_applicable,,,223.5507979841173,210.55385953243888,0.0,12.99693845167845,12.99693845167845,15.0,observed,75.0,76.0,164.24220727977527,164.24220727977527,0.0,0.0,0.0,0,not_applicable,,,153.68758836339944,153.68739857075403,0.0,0.0001897926454046902,0.0001897926454077492,0,not_applicable,,,95.27570126607297,86.4854805465716,0.0,8.790220719501372,8.790220719501372,15.0,observed,75.0,76.0,106.72552809163591,106.72551680272332,0.0,1.1288912604010188e-05,1.1288912604712209e-05,0,not_applicable,,,162.97083452347843,162.97062704362952,0.0,0.00020747984894907564,0.0002074798489530849,0,not_applicable,,,0.0,0.0,0.0,0.0,0.0,0,not_applicable,,,124.64164657021429,124.64164657021429,0.0,0.0,0.0,0,not_applicable,,,1479.8798137610934,1479.8590834853715,0.0,0.020730275721366036,0.020730275721376756,0,not_applicable,,,136.7682246864688,125.76199961530645,0.0,11.006225071162369,11.006225071162369,15.0,observed,75.0,76.0,718.8681710791626,652.0116830685052,0.0,66.85648801065737,66.85648801065737,15.0,observed,75.0,76.0,2154.5517528095356,158.48882693666943,2.0723054559045586,1.4594736187082622,0.0,0.0,0.0,0.0,175.5826376577955,True,False,,,0.0,0.0,0.0,0.0,0.0,0.0,0.0,e,kWh_e,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,c,kWh_c,0.0,2400.0,548.2256812918641,40.32748111582952,2.0723054559045586,0.0,0.0,0.0,0.0,0.0,50.35743952240759,True,False,,,"{""actual_electric_kW"":[0.0,0.0,0.0],""arrived_permission_kW"":[0.0,0.0,0.0],""clocks"":{""time"":180.0,""up"":60.0,""down"":30.0,""powers"":[0.0,0.0,0.0],""running"":[false,false,false],""last_on"":[-60.0,-60.0,-60.0],""last_off"":[-30.0,-30.0,60.0],""initial_age"":""Initially running/off resources assumed eligible; prior actual ages unknown""},""start_pending"":{},""actual_start_progress"":{},""unfinished_starts"":[]}",E:\hospital_ies_v30_20261027\runs\d02_b07_L4_GT_ER_disturbed_M/RESULT.json#/terminal_snapshot
++reused_b07_L4_GT_ER_disturbed_C,b07_L4_GT_ER,disturbed,C,reused_v30,completed,True,180.0,0.0,3252727135645037cedc57ebc188a48d2aa34ccb,2509d2fa562e672af3cfe4058ace55f0e38de6172d1ac2d633210d0e776f0776,hospital_ies.powered_start_minimum_off_readiness.v30.fix1,278.260252842785,278.2600630611246,0.0,0.00018978166042451372,0.00018978166042771252,0,not_applicable,,,223.55079798411725,223.55079343745936,0.0,4.546657913754825e-06,4.546657912385399e-06,0,not_applicable,,,164.24220727977527,164.24220727977527,0.0,0.0,0.0,0,not_applicable,,,153.68758836339939,153.68739858173893,0.0,0.00018978166042451372,0.00018978166042771252,0,not_applicable,,,95.27570126607297,91.58367545180488,0.0,3.6920258142680913,3.6920258142680913,15.0,observed,75.0,76.0,106.72552809163591,106.72552809163591,0.0,0.0,0.0,0,not_applicable,,,162.97083452347837,162.97062704362943,0.0,0.00020747984894907559,0.00020747984895308494,0,not_applicable,,,0.0,0.0,0.0,0.0,0.0,0,not_applicable,,,124.64164657021426,124.64164657021426,0.0,0.0,0.0,0,not_applicable,,,1479.8798137610938,1479.8590657761977,0.0,0.020747984894969162,0.020747984894981638,0,not_applicable,,,136.7682246864688,125.76200416196437,0.0,11.006220524504432,11.006220524504432,15.0,observed,75.0,76.0,718.8681710791625,718.8681710791625,0.0,0.0,0.0,0,not_applicable,,,1760.2037778940116,129.48058990188346,7.5312453841253335,0.47835514003714613,0.0,0.0,0.0,0.0,168.24705643882987,True,False,,,0.0,0.0,0.0,0.0,0.0,0.0,0.0,e,kWh_e,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,c,kWh_c,0.0,2400.0,548.1537273553295,40.32218818425803,2.0732048472488325,0.0,0.0,0.0,0.0,0.0,50.35649964494238,True,False,,,"{""actual_electric_kW"":[125.75052799999995,125.75052799999995,0.0],""arrived_permission_kW"":[125.75052799999995,125.75052799999995,0.0],""clocks"":{""time"":180.0,""up"":60.0,""down"":30.0,""powers"":[125.75052799999995,125.75052799999995,0.0],""running"":[true,true,false],""last_on"":[100.0,100.0,-60.0],""last_off"":[-30.0,-30.0,60.0],""initial_age"":""Initially running/off resources assumed eligible; prior actual ages unknown""},""start_pending"":{},""actual_start_progress"":{},""unfinished_starts"":[]}",E:\hospital_ies_v30_20261027\runs\d02_b07_L4_GT_ER_disturbed_C/RESULT.json#/terminal_snapshot
++v31_b07_disturbed_M_steam_permission,b07_L4_GT_ER,disturbed,M_steam_permission,new_v31,completed,True,180.0,0.0,f009bdb66d5b9d53f1ff2331f2dc58404c2d056b,e4c740329fddcddae9e729acc24e6149d1d873e89783e0ef310e3623f604a6fa,hospital_ies.powered_start_minimum_off_readiness.v30.fix1,278.2602528427852,278.2600630496975,0.0,0.00018979308762265455,0.00018979308762467895,0,not_applicable,,,223.5507979841173,223.5507979841173,0.0,0.0,0.0,0,not_applicable,,,164.24220727977527,164.24219599114494,0.0,1.1288630338357212e-05,1.1288630338057715e-05,0,not_applicable,,,153.68758836339944,153.68739857075403,0.0,0.00018979264540467574,0.0001897926454077492,0,not_applicable,,,95.27570126607297,95.27570126607297,0.0,0.0,0.0,0,not_applicable,,,106.72552809163591,106.72551680272335,0.0,1.1288912585355377e-05,1.1288912585172284e-05,0,not_applicable,,,162.97083452347843,162.97062704362952,0.0,0.00020747984894907564,0.0002074798489530849,0,not_applicable,,,0.0,0.0,0.0,0.0,0.0,0,not_applicable,,,124.64164657021429,124.64164657021429,0.0,0.0,0.0,0,not_applicable,,,1479.8798137610934,1479.8590834963566,0.0,0.020730264736401494,0.020730264736414483,0,not_applicable,,,136.7682246864688,136.7682246864688,0.0,0.0,0.0,0,not_applicable,,,718.8681710791626,688.9657712555593,0.0,29.902399823603297,29.902399823603297,15.0,observed,75.0,76.0,2157.1747061000356,158.68177138071863,2.0723054559045586,1.868885690455852,0.0,0.0,0.0,0.0,177.757136529103,True,False,,,0.0,0.0,0.0,0.0,0.0,0.0,0.0,e,kWh_e,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,c,kWh_c,0.0,2400.0,548.2256812918641,40.32748111582952,2.0723054559045586,0.0,0.0,0.0,0.0,0.0,50.35743952240759,True,False,,,"{""actual_electric_kW"":[0.0,0.0,0.0],""arrived_permission_kW"":[0.0,0.0,0.0],""clocks"":{""time"":180.0,""up"":60.0,""down"":30.0,""powers"":[0.0,0.0,0.0],""running"":[false,false,false],""last_on"":[-60.0,-60.0,-60.0],""last_off"":[-30.0,-30.0,60.0],""initial_age"":""Initially running/off resources assumed eligible; prior actual ages unknown""},""start_pending"":{},""actual_start_progress"":{},""unfinished_starts"":[]}",runs/v31_b07_disturbed_M_steam_permission/RESULT.json#/terminal_snapshot
+diff --git a/docs/v31/SCOPE_AND_ASSUMPTIONS.md b/docs/v31/SCOPE_AND_ASSUMPTIONS.md
+new file mode 100644
+index 0000000000000000000000000000000000000000..8fc8c01689ddf23212b1a2ec272e8c2ff50420f5
+--- /dev/null
++++ b/docs/v31/SCOPE_AND_ASSUMPTIONS.md
+@@ -0,0 +1,15 @@
++# V31 scope, assumptions and closure
++
++No new physical parameter, device, capacity, load class, service threshold or failure standard was introduced. The new operating rule uses the original three equal boiler ratings and currently observable availability fractions. Availability is not completed startup/readiness. The actual ready state, gas/steam/electric balances, common station power, ordinary command queue and all execution constraints remain in the C02 model.
++
++M already had shared minimum boiler/cooling preparation; steam adds rated conditional permission beyond that minimum. The new controller never reads scenario names, the fixed60min event, the GT3 target, future demands, true repair or stop times. The scenario registry holds fixed exogenous scripts only to drive the simulator. The mailbox contains only existing M23 observable features and their available/valid clocks, current decision time and original public rating. Actual command arrivals are reviewed offline.
++
++These are observed V30 mechanism-development backgrounds, not new blind samples or annual reliability data. Both new methods have separate names and fixed context-specific scope. M to new is the added-rule contrast; new to full C still includes several mechanisms and cannot be decomposed into percentages adding to100. Raw tiny ENS stays in CSV; interruption uses unchanged V30 material criteria.
++
++All12 selected runs are H0. UPS/cold storage zero means not installed; unusedDG budget is not a maximum-autonomy result. No new endurance, clinical/OEM, humidity/cleanliness or complete hydraulic qualification was attempted. Original V30 source-load/dynamic-room and literature/R_off limitations remain inherited scope; they do not create a new feature requirement for this bounded four-run closeout.
++
++The independent12record audit, fixed-source/input check, code/interface review and targeted60tests passed. Four formal runs completed180min with no unknown tails or core/evaluation failure; no optional short trajectory, new C/M rerun, parameter search or model expansion was dispatched. The first implementation-test failure was an incomplete plant test stub, fixed by using the original real plant; no production constraint or assertion tolerance was relaxed. All original RED/failed-harness/green logs remain.
++
++Scientific producer f009bdb66d5b9d53f1ff2331f2dc58404c2d056b/source e4c740329fddcddae9e729acc24e6149d1d873e89783e0ef310e3623f604a6fa. Old858scientific files and36inputs remain byte-identical; only6scientific files were added. Later documentation-only HEADs do not relabel the old/new trajectories.
++
++Decision: 本轮模型开发可以结束。 Remaining work is the already-authorized one-package assembly and integrity/readonly replay acceptance. No additional model feature or experiment is a completion gate.
+diff --git a/docs/v32/IMPLEMENTATION_PLAN.md b/docs/v32/IMPLEMENTATION_PLAN.md
+new file mode 100644
+index 0000000000000000000000000000000000000000..1cf038774416596e7834f7ce7e1c8ebd8a1200ef
+--- /dev/null
++++ b/docs/v32/IMPLEMENTATION_PLAN.md
+@@ -0,0 +1,24 @@
++# V32 independent-input external reference implementation plan
++
++Authority: USER_TASK_20261027.txt. The user authorizes continuous execution and necessary bounded fixes without routine approval. This new external-reference stage supersedes V31's no-new-reference stop only for the specified b01 experiment; all V30/V31 physics, policy, input, evaluation, old result and information boundaries remain frozen. Existing isolated linked worktree uses new sci-v32-external-reference from clean documentation HEAD77ef5b2; science bases3252727/V30 andf009bdb/V31 remain separate.
++
++Goal: one Hirwa-equation-based REopt-family fixed-capacity offline reference, Rosales design/service/economic scope crosswalk, four reused b01 C/M records and two new180min reference records. No MPC/ML, new hardware, changes to C/M/V31 rules, parameter search, new backgrounds, paper/figures or official/author-software reproduction claims. New large data/temp only E:/hospital_ies_v32_20261027. One hospital physical worker, actual memory dispatch threshold0.85; no C large output. No push/main merge/external messages.
++
++## Design and gates
++
++- [ ] G0: preserve task, two existing freezes, review disposition, original864 source/36 input hashes and exact b01 N02/D02 four-history identity. Keep dev_grid_180/R03 historical-only, never fill b01 slots with them.
++- [ ] G1 independent input: pure raw-data/adopted-thermal/direct-aux construction; current source1160/1161/1162,12quarter-hour periods, exogenous grid60..120 only for grid branch. No C/M completed file, actual auxiliary/station loads, native partition, endogenous availability, stock/action/startup history may be read while constructing input. Separate read-isolation test, no deletion of historical data. Independently call common initialization only, without controller/episode, preserve complete t0 state/core and original H1 inventories/2400shaft budget, quantify initialization solver calls separately.
++- [ ] G2 mathematics: preserve literature balances/CHP/converters/finite fuel/storage/fees in new planner. Register strict and tiered in advance. Tiered four sequential P0,P1,P2,P3 objectives, each sum of per-carrier ENS divided by that priority/carrier's positive full-window requested energy; zero-demand terms excluded and unmet fixed0. Cost last. No huge scalar penalty, no cross-carrier ENS reporting sum. All old physical and evaluation source files unchanged.
++- [ ] G3 preregister/solve: strict normal/grid60s each, expand to300s only if no independently verified incumbent and no proof of infeasibility. Both strict verified feasible -> both strict formal; either proved infeasible -> both tiered; budget-ended unknown without incumbent -> both tiered, strict remains unknown. Incumbent may be used with actual termination/bound/gap disclosed. Tiered120s per lex layer, preserve all attempts, locks and incomplete-layer status. Reject invalid incumbent; never execute no-plan or zero-fill. No terminal-stock equality added only to the reference. Solve tiny fixtures first, then bounded hospital planning; no author numerical reproduction claim.
++- [ ] G4 mapping: one new explicit offline policy/entry, not C/M. Fixed45min planning preparation lead from15min actual queue delay +10min nominal startup +15min decision-sampling allowance=40 rounded to15min grid45. It is neither30min communication nor a readiness guarantee. Actual min-off, requested-power-dependent powered work, ramp, station electricity, transfer and protection still govern. Retain raw plan, any independently verified label canonicalization, converted requests, actual generation/arrival and execution. Identical-unit static relabeling never swaps physical state or proves dynamic equivalence; prefer common t0 identity and disclose any incompatibility. No direct storage ports or proactive cuts mapped; plan storage/unmet stay separate from actual. Common M23 minimum preparation/local real-time allocation must be disclosed; no C/M controller invocation or fallback.
++- [ ] G5 two actual runs: freeze new source/input/spec/plan/actions/selection and exact b01 cases before dispatch. Common t0 initialization,180min, H1. Normal and grid offline prefault actions may differ intentionally; no same-prefix gate for them. Failures keep prefix/unknown tail and original outputs; bounded diagnosis/retry only if necessary, no performance selection.
++- [ ] G6 independent actual audit: six records with real producer identities, native P0–P3 e/h/c requests/delivered/ENS, material interruption/recovery, gas/grid/DGshaft+Pe, initial prep once, running feeUSD2001, stores/terminal and completeness. Signed disturbed-minus-own-normal deltas; offline delta includes advance preparation difference. Match hardware/scenario/t0/physical execution/evaluation with old C/M but disclose offline information advantage. Separate plan/request/arrival/actual, power/cost components and ending stock. No online ranking, unconditional cost lower bound, clinical or annual reliability claim.
++- [ ] G7 package: all scientific reports/crosswalks/registration/independent input/provenance/plans/failed attempts/native evidence/necessary source+inputs/test/env/logs+readonly replay inside one ZIP. Lossless transport and original-byte SHA verification; aim strict100000000bytes consistent with prior preference. Fresh extracted readonly replay only, no automatic new model. Final answer states supported conclusions and stronger unverified claims, then stop.
++
++## File ownership and constraints
++
++Root: new __init__, initialization, actions/entry, scenario registry, integration/actual runs, final result audit/report and packaging. Input agent: new inputs.py and tests/test_v32_inputs.py only, E:/.../input_build. Planner agent: new planner.py and tests/test_v32_planner.py only, E:/.../plan_model. Literature/baseline reviewer: E:/.../literature_baseline only, no D edits. All prior864science files and36inputs are protected byte-identical; added files change whole source SHA honestly. One state-transition owner, no shared core editing planned.
++
++Registered approximations must identify fixed GT fuel/heat slopes, any startup/auxiliary/DG rotor/queue dynamics omitted from static planning, critical-only UPS access and H1 zero cold capacity. Those remain actual original execution constraints and are measured in plan-to-actual differences; planning feasibility is not actual dynamic qualification. No finite NG budget is invented. Hirwa/Rosales original apparatus/long-horizon costs are not substituted for HospitalUSD2001/window metrics.
++
++Meaningful TDD and only affected original interface/evaluation tests; no default32-case or1363-test replay. Initializer/static MILP/synthetic fixtures are not hospital episodes. Each run/solve/verification stores commands, environment, exit, raw log, failure and version binding. User's autonomous scope replaces generic skill approval gates; design self-review found the specified branches and raw-source limitations sufficiently concrete to proceed.
+diff --git a/docs/v32/MIGRATION_AND_ASSUMPTIONS.md b/docs/v32/MIGRATION_AND_ASSUMPTIONS.md
+new file mode 100644
+index 0000000000000000000000000000000000000000..d9a96d0dd7af23e8332b0a4d8d447df214051fc9
+--- /dev/null
++++ b/docs/v32/MIGRATION_AND_ASSUMPTIONS.md
+@@ -0,0 +1,21 @@
++# V32 additive reference identity and limits
++
++All864 existing V31 scientific files,36 original inputs, C/M/default/V31 preparation rules and V30 evaluation remain unchanged. V32 adds independent raw input, a separate fixed-capacity mathematical planner, common-reset certificate, explicit request conversion and a named reference entry. Whole-tree SHA changes honestly; old records retain3252727 and new records will bind their true new source producer.
++
++Input grid is0,15,...180min using raw source hours1160/1161/1162 with1163as endpoint support only. Direct/auxiliary electric and adopted coil/DHW useful thermal requests follow frozen rules; fan allocation is not rescaled by added DHW. Building aux and own-plan equipment station/start consumption are separate. Pure input generation passed a copied-raw input/config read sandbox with823 read events and zero prohibited operating-result reads. Source-quality scope is metadata/evaluation only, not a demand reduction.
++
++Independent common initialization uses the original constructor/reset with no controller or episode. Both actual initial states match, GT targets[131.180288,0,0], UPS40kWh_e, cold0, DG2400kWh shaft. The empty post-reset core solver log is not proof of zero low-level initial MILP calls; total initialization solver count is null/not separately instrumented. Initial charged input and its fee are accounted once in actual evaluation, not offered as free pre-window energy.
++
++Reference permission is offline_known_window for original exogenous load/weather/grid outage; no future actual trip/start/service/stock is supplied. It is not an online/fair same-information comparison. One shared numerical reference is based primarily on Hirwa's published equations; Rosales supplies design/service/economic boundaries. No author software or officialREopt execution/numerical reproduction is claimed.
++
++Strict requires all original P0–P3 e/h/c. Pre-registered tiered adaptation is Hospital-added, lexicographic P0→P1→P2→P3 then actual-window proxy cost. Each level sums equally weighted carrier ENS divided by that level/carrier's positive full-window demand integral, excludes zero-demand terms and fixes their unmet0. Report carrier units separately. No massive penalty or changed actual material threshold. Both branches use one selected formulation per prior rule; no outcome-based swapping or tuning.
++
++The planning model retains coupled source/conversion/storage/fuel/fees, original capacities and original static coefficients. Static planning does not resolve the complete GT min-off/start/ramp/actual station/DG rotor/queue/transfer/protection trajectory. Actual engine constraints still apply and their effects are measured. Boiler variable/fixed station electricity is represented; actual startup and rotor/deadband differences are not silently zeroed in actual cost. No natural-gas budget, newPV/BESS/cold store or special terminal equality is invented. H1 UPS is critical-building-only, including its defined building auxiliary request, never arbitrary plant/station supply. DG follows the actual legacy_explicit_permission contract; the old envelope's extra conservative critical-electric cap is not a physical constraint and is not reintroduced to handicap this reference.
++
++Plan-to-request uses a fixed45min preparation lead=ceil_to15(15actual communication+10nominal GT start+15decision sampling allowance). This is not30min communication and is not a guarantee covering remaining min-off or requested-power-dependent actual powered-start work. GT and boiler targets may be requested early, converters/grid/DG use current planned requests. Ordinary queue, min-on/off, ramp and actual usefulness constraints remain. Static identical-generator relabeling preserves raw/canonical plans and audited balances/fees only, favors independently initialized online identity and does not swap physical states or prove dynamic interchangeability.
++
++Execution identity: literature_adapted_offline_onoff_preparation_plus_common_realtime_allocation. New reference controller is a bare frozen schedule reader, not a C/M policy subclass. It does not call any online optimizer or fallback controller. Common M23 minimum current critical boiler/EC preparation is a disclosed shared physical interface after the frozen controller request, not hidden C action generation. Generated, arrived and actual values can differ and are logged.
++
++full_continuous_plan_replayed=false; planned_storage_ports_executed=false; planned_unmet_directly_executed=false. The interface has no direct UPS/cold charge/discharge command. All requested active cuts remain zero; planned unmet is not treated as actual unmet. Original/canonical plan, converted requests, generated/arrived permissions, real service, fee components and ending stock must be compared separately. Lower fee with less service or lower remaining stock is not same-condition saving or a bound.
++
++Targeted actual60tests include new input/planner/controller tests plus unchanged relevant V30 public/terminal/start interfaces. They do not mean a new1363-test run. Synthetic tests, independent resets and staticMILPs are not hospital trajectories. Rejected fixture/API attempts are retained distinctly from actual failures.
+diff --git a/docs/v32/USER_TASK_20261027.txt b/docs/v32/USER_TASK_20261027.txt
+new file mode 100644
+index 0000000000000000000000000000000000000000..9ebe642e89423e7ac940c5822b6410d134836ba7
+--- /dev/null
++++ b/docs/v32/USER_TASK_20261027.txt
+@@ -0,0 +1,386 @@
++# Hospital IES V32：外部文献参照适配与实际执行比较
++
++## 一、任务目标与授权范围
++
++V30 fix1/C02 物理核心、V31 P01 实现及已有内部对照已经定版。本轮进入新的研究阶段：建立一个来源清楚、输入独立、执行过程可核查的外部文献参照，说明它与现有 C/M 在相同医院条件下的实际表现和差异。
++
++需要连续完成：
++
++**文献方法确认 → 独立输入构建 → 参照规划与必要适配 → 真实执行 → 独立复算 → 工程解释 → 压缩包交付。**
++
++本任务授权新增外部参照模块、配置、必要测试与运行记录，替代此前“不再新增文献参照”的阶段性停止要求。V30/V31 原物理模型、策略、输入和历史结果的冻结要求继续有效。
++
++可以自主定位目录、建立独立分支或工作副本、安排并行阅读与审查、实现最小适配、修复本轮接口错误、调整合理的求解预算并完成运行。常规实现选择无需逐项询问。
++
++本轮不增加 MPC、机器学习、设备容量，不修改 C/M 或 V31 两项简单规则，不进行参数搜索，不写论文，不制作论文图表。不要为使任何方案获胜而修改需求、故障、保护阈值、服务判据或费用口径。
++
++## 二、两篇文献的使用方式
++
++使用用户已经提供的两篇文献及 V30 中的全文索引、方程核对和映射：
++
++1. Hirwa et al.  
++   *Optimizing design and dispatch of a resilient renewable energy microgrid for a South African hospital*  
++   Applied Energy, 2023.  
++   DOI：10.1016/j.apenergy.2023.121438
++
++2. Rosales-Asensio et al.  
++   *Peak load reduction and resilience benefits through optimized dispatch, heating and cooling strategies in buildings with critical microgrids*  
++   Journal of Building Engineering, 2023.  
++   DOI：10.1016/j.jobe.2023.106096
++
++优先复用已有全文和映射，不机械重复上一轮阅读。必要时查原文、附录和公开说明，并保留具体页码、公式或段落依据。
++
++本轮默认采用：
++
++- 以 Hirwa 较完整的公开方程作为规划结构的主要依据；
++- Rosales 用于核对系统设计、服务要求、经济目标与韧性评价边界；
++- 建立一个共同的 **REopt 类固定容量离线参照**。
++
++不要为了两篇文章各有一个名字而制造两个实质相同的控制器。若两篇在固定本院容量后落到同一数学结构，保留一个数值参照，分别交代两篇贡献即可。
++
++文献映射必须明确区分：
++
++- 原文已有；
++- 固定本院设备后作出的修改；
++- 本院新增的服务或执行约束；
++- 未公开、无法确认或本轮没有实现的部分。
++
++不得将本院适配结果写成作者程序运行结果、官方 REopt 运行结果或原论文数值的精确复现，除非确有对应的真实执行证据。
++
++## 三、冻结基准与正式比较矩阵
++
++### 3.1 基准
++
++查找并核对：
++
++- V30 `FROZEN_SOURCE_V30_C02.json`
++- V31 `FROZEN_SOURCE_V31_P01.json`
++- `REVIEW_DISPOSITION_ZH.md`
++- V30 最终 N02/D02 的场景、完整配置、原生结果和评价
++- `PAPER_COMPLETION.json`
++- 原 `tools/model_review_v30/offline.py`
++- 原 `tools/model_review_v30/reference.py`
++
++V30 科学来源标识：
++
++`3252727135645037cedc57ebc188a48d2aa34ccb`
++
++V31 科学来源标识：
++
++`f009bdb66d5b9d53f1ff2331f2dc58404c2d056b`
++
++新增模块使用独立版本和目录，保留原 R_off 实现及结果。新增文件使总源码摘要改变是正常的，应分别核对共同物理核心、输入、评价和新增参照代码，不能把新结果绑定成旧提交直接产生。
++
++### 3.2 正式范围
++
++固定采用 **b01_L1_grid**：
++
++- `start_hour=1160`
++- H1 硬件配置
++- 总时长 180 min
++- 准备阶段 `[0,60)`
++- 外网停电阶段 `[60,120)`
++- 恢复阶段 `[120,180]`
++- 正常分支保留同一原始负荷变化，但没有外网故障
++- 不增加医疗需求冲击
++
++直接复用冻结登记及其时间解释，不重新挑选时段。
++
++特别注意：旧 `reference.py` 默认使用 `dev_grid_180`，不能直接沿用后误称为 b01 比较。旧 R03 结果也不能自动充当本轮新参照。
++
++正式执行矩阵：
++
++| 方法 | 正常运行 | 外网停电运行 |
++|---|---|---|
++| 原 C | 复用 V30 N02 | 复用 V30 D02 |
++| 原 M | 复用 V30 N02 | 复用 V30 D02 |
++| 新独立离线参照 | 新增 1 条 | 新增 1 条 |
++
++原则上共 **6 条实际运行记录：4 条历史复用、2 条新增**。
++
++规划求解、数值小例和必要短运行单独标注，不算作正式医院场景。不得自动扩展到全部八背景，也不增加 C＋供汽或两项简单准备的组合实验。
++
++## 四、独立构建参照输入
++
++这是本轮最重要的工作。
++
++旧 `hospital_envelope_spec()` 从历史 C 轨迹取需求账、设备可用率和原生分段。新参照必须从共同原始资料建立未来工况，不能以 C 已经运行完的结果作为输入。
++
++### 4.1 可以使用的资料
++
++- 冻结的医院原始电、热、冷负荷；
++- 医疗区域与 P0–P3 分级映射；
++- 冻结气象及设备性能参数；
++- 登记的外生断网事件；
++- 原设备容量和运行约束；
++- 按共同初始化程序得到的 t=0 物理状态。
++
++优先复用现有纯数据处理链，核对实际接口后使用：
++
++- `pipeline.read_data`
++- `resilience.build_zone_groups`
++- `tools/sci_engineering/auxiliary.py`
++- `tools/model_closure_v22/auxiliary.py`
++- `tools/model_review_v28/demand.py`
++- V28 `thermal_adapter.py`
++- `tools/model_review_v29/source_scope.py`
++- 原 `gt_level_properties` 等设备参数计算函数。
++
++已有辅助用电缓存和输入绑定可以使用，无需为了本任务重新运行 EnergyPlus。
++
++### 4.2 不能使用的未来运行结果
++
++参照输入构建不得读取 C/M 的：
++
++- 完成轨迹；
++- 实际连接或实际服务后的辅助电耗；
++- 实际站用电；
++- 内生保护、跳闸和恢复历史；
++- 实际库存轨迹；
++- 启动完成时刻；
++- 原生实际分段边界；
++- 已执行动作表。
++
++历史 C/M 结果可以用于来源核对和最终结果比较，不能进入参照规划实例的生成过程。
++
++应准确区分：V28 的完整原始需求可以由原始资料独立构建，不必为了证明独立而刻意改变合法需求数值。需要去除的是对历史策略运行结果的取数依赖。
++
++### 4.3 重点防止边界和单位错误
++
++- 医疗区域分组应在建筑总量内守恒分配，不能再叠加一次区域负荷。
++- 按冻结入口解释 `start_hour`、CSV 小时编号、数组下标和时间戳，不自行加减 1。
++- 复用 V28 adopted 供热与生活热水边界。
++- 保留既有直接电与辅助电拆分，避免风机、冷冻水泵等重复计入。
++- 不把新增生活热水需求按同一比例套用到所有风机。
++- 建筑完整辅助需求与设备站用电分别处理：前者由冻结需求规则构建，后者由参照自己的设备计划和实际运行产生。
++- 冷却塔排热、吸收制冷蒸汽输入、换热器效率、锅炉效率和燃气单位沿用本院定义。
++- 无法完整表达的动态辅助消耗可以登记为规划近似，但实际执行必须按原模型核算，不能无说明地记为零。
++
++建立输入来源清单，能逐项追溯到文件、字段、变换和单位。
++
++### 4.4 时间网格与初态
++
++规划网格由登记的决策时刻、原始负荷变化边界及必要的外生事件边界生成，不读取 C 的实际分段。
++
++新方案从共同 t=0 初态完整运行。可以独立调用同一初始化程序；初始化本身可能调用求解器，这不等于运行 C/M 策略。
++
++不得借用 C 的 t=60 状态，也不得重新平衡成更有利的初态，不赠送窗口开始前的预启动或预充能。
++
++## 五、明确离线信息权限
++
++新参照登记为：
++
++`information_permission = offline_known_window`
++
++允许它知道本窗口的原始外生需求、气象和外网停电起止。
++
++不提供未来内生保护动作、实际启动完成时刻、真实库存和未来实际服务。这些只能由参照自己的计划预测，由共同执行器实际产生。
++
++原 C/M 的信息条件保持不变。
++
++**不要要求离线参照正常与停电运行在 `[0,60)` 的动作完全相同。** 已知未来停电后提前准备，是该参照的信息优势，应公开说明，并将准备期间实际发生的费用和能耗计入完整窗口。
++
++新参照不得被标记为与 C/M 同信息的在线方法。不能因其使用了未来信息就把提前准备误判为程序泄漏，也不能隐去该信息优势后直接宣称公平排名。
++
++## 六、规划模型与不可行处理
++
++### 6.1 保留严格服务规划
++
++先建立来源明确的固定容量、多时段规划，保留文献相关的：
++
++- 电、热、冷供需关系；
++- 热电耦合；
++- 发电和转换设备能力；
++- 多时段库存连续及效率；
++- 有限备用能源；
++- 费用计算。
++
++容量全部使用本院冻结值，不开展重新定容，也不引入本院未安装的光伏、通用电池或大容量蓄冷设备。
++
++先检查正常／停电两支“全部登记需求必须满足”的严格规划。保存完整求解状态和独立可行性核查。
++
++### 6.2 事先登记分级应急适配
++
++为避免固定医院设备下严格规划无解后无法形成实际参照，在正式运行前同时登记一个明确的本院适配：
++
++- 每级、每种能源允许存在缺供；
++- `0 ≤ unmet ≤ 原始需求`；
++- 按固定的 P0 → P1 → P2 → P3 顺序优先保障服务，再考虑费用；
++- 各载能的目标归一或量纲处理事先说明并固定；
++- 实际结果仍分别报告电、热、冷，不生成无解释的总缺供量；
++- 不使用为追求某一比较结果而调整的巨大惩罚系数。
++
++这是本院新增的应急服务适配，不能归为原作者已经提出的目标函数。
++
++### 6.3 正常／停电使用同一个登记版本
++
++在运行前固定选择规则：
++
++1. 若两支严格规划都有经独立算术核验的可行解，则两条正式执行统一采用严格版本。
++2. 若任一支严格规划被证明不可行，则两条正式执行统一采用预登记的分级应急适配。
++3. 限时未找到可行解与已证明不可行必须区分。可在合理求解预算内处理；若最终因未取得可行解而转入分级适配，也须按事先登记的路径执行，并明确标记原问题仍为未知，不能写成物理不可行。
++4. 若限时获得可行 incumbent，可以在独立核验后采用，但必须披露未证明最优、实际求解状态和可用的界或间隙。
++5. 不能正常分支用一种方法、停电分支临时换另一种方法，再将其混称为同一个方案。
++
++所有分支规则在正式结果产生前保存。保留严格模型的结果，不能通过删需求、加设备或放宽物理条件制造可行解。
++
++## 七、计划如何进入真实执行
++
++本轮默认执行身份为：
++
++**“文献方法适配的离线启停／准备计划＋共同实时分配”。**
++
++通过已有参照控制器入口和普通命令队列接入。所有命令仍经过原来的：
++
++- 生成与到达；
++- 启停等待和最短开停条件；
++- 设备就绪与辅助电源；
++- 保护和母线限制；
++- 实际供能与资源扣账。
++
++不得直接写库存、已到达命令、设备就绪或实际功率。不得调用 C/M 产生隐藏兜底动作，也不能在失败后静默替换为 C/M。
++
++公共场景解析和初始化可以复用，但最终控制器、方法身份、配置、来源和输出必须明确属于新参照。
++
++### 7.1 明确每类计划变量的去向
++
++对 GT、锅炉、EC/ABS、电网、DG、计划缺供和储能变量逐项说明：
++
++- 直接映射为什么请求；
++- 是否经过提前准备转换；
++- 哪些由共同实时执行器重新分配；
++- 哪些计划变量没有实际执行接口。
++
++旧接口没有 UPS／蓄冷直接充放功率端口。若仍不能逐值执行连续储能计划，就保持：
++
++- `full_continuous_plan_replayed = false`
++- `planned_storage_ports_executed = false`
++
++分别保存计划库存和实际库存，不为本轮扩建完整储能控制接口。
++
++如果规划中的分级缺供没有逐项映射为主动切除命令，也必须披露，不能把计划缺供直接当作实际缺供。
++
++### 7.2 准备提前量
++
++提前准备规则必须在运行前固定，依据冻结的通信、启动和决策周期参数确定。
++
++如果沿用旧 45 min 提前量，要明确它是规划准备提前量，不能将其描述为实际通信延迟。不得根据 C/M 的表现反复搜索提前量，也不得把提前量当作跳过真实启动和队列的权限。
++
++保留原始规划、转换后的请求、真正到达的命令与实际执行四层记录。
++
++## 八、比较口径
++
++### 8.1 共同条件
++
++核对新参照与原 C/M 的：
++
++- 医院需求和分级；
++- 设备与容量；
++- 外生故障；
++- t=0 物理状态；
++- 实际执行器和时间终点；
++- 服务判据；
++- 实际费用口径。
++
++H1 参数直接从冻结配置读取并展开。UPS 保持本院已有供电权限，不能被改成可向任意母线供电的通用电池；未安装的蓄冷不能补上。
++
++DG 初始储备沿用本院轴功等效能量口径，不能直接当作柴油化学能或体积。即使端电输出为零，真实启动和空载损耗仍须按原账本计入。未登记有限天然气库存时，不自行杜撰天然气预算。
++
++### 8.2 实际指标
++
++六条运行统一报告：
++
++- P0–P3 分电、热、冷的请求、实际供给和 ENS；
++- 关键服务实质中断时间与恢复时刻；
++- 实际购电、燃气、DG 轴功与端电；
++- 初始准备投入、窗口内运行费用；
++- UPS、蓄冷及相关终态；
++- 运行是否完整、未知尾段、失败或回退。
++
++费用沿用本院 USD2001 短窗口径，不称为原文长期 LCC、NPV 或原文节费比例。
++
++同时给出各方法正常、扰动绝对结果，以及“扰动减自身正常”的带符号增量。说明离线参照的这一增量也包含预知停电后的提前安排差别。
++
++### 8.3 计划与实际分开
++
++单独比较：
++
++- 计划服务与实际服务；
++- 计划能耗与实际能耗；
++- 计划费用与实际费用；
++- 计划库存与实际库存；
++- 计划启停与实际完成时刻。
++
++计划费用与实际费用组成若不同，先作口径对齐说明，再解释差值，不把未包含的准备费、启动损耗等误写成求解误差。
++
++终态库存不同，须与费用并列报告。不要只给外部参照增加末库存约束后称比较公平，也不能把少留库存造成的低费用直接解释成同条件节费。
++
++结果是不同信息条件、明确适配范围下的实际执行比较，不是同信息在线算法排名，也不自动构成费用下界或性能上界。
++
++## 九、必要验证
++
++只针对本轮新增风险开展有意义的检查。
++
++1. **输入独立性**  
++   在隔离检查中，参照实例能够在不读取 C/M 结果目录的条件下生成。核对原始需求、外生事件、时间支持及共同初态。不要通过改动或删除用户原结果来做这个检查。
++
++2. **规划算术**  
++   独立检查采用解的能量关系、缺供边界、燃料预算、库存连续和目标值。用少量明确的小例检查受限供能与终止状态分类，不把合成测试当作医院真实运行。
++
++3. **接口执行**  
++   冻结请求表与实际生成请求对应，命令有真实到达记录，启动和供能由原执行器完成。检查没有隐藏 C/M 兜底和提前写入实际状态。
++
++4. **结果复算**  
++   两条新增实际运行连续覆盖 180 min，真实终态明确；服务、费用和资源能从原生分段复算。核对四条历史复用确为同一 b01 背景。
++
++共同物理核心不变时，不默认重跑全部 32 条主比较或 1,363 项旧测试。只在发现具体风险时增加针对性回归，并说明原因。
++
++实现错误可以自主修复，重新冻结受影响的参照内容并重跑必要项。保留失败和修改记录，不挑选最好的一次结果替换其他尝试。
++
++若没有经核验的可行计划，不执行空计划，不把实际服务或费用填成零。若实际执行失败，保留真实完成时段与未知尾段，明确本轮尚未完成的部分。
++
++## 十、交付与结束条件
++
++最终提供一个压缩包，建议命名：
++
++`Hospital_IES_V32_External_Reference_20261027.zip`
++
++关键材料集中放入包内：
++
++1. **中文工程报告**  
++   说明参照的准确身份、两篇各提供了什么、本院作了哪些适配、实际运行结果、计划与执行差距，以及哪些结论可以成立。
++
++2. **两篇分别的对应表**  
++   标明页码／公式、保留项、修改项、本院新增项和未实现项。明确只建立了几个独立数值参照。
++
++3. **实验登记与来源绑定**  
++   包含比较矩阵、信息权限、严格／分级版本选择规则、时间网格、准备提前量、初态、终态处理和完整配置。
++
++4. **独立输入与规划产物**  
++   原始输入来源、单位与变换、严格规划状态、实际采用版本、原始计划、独立可行性核查、动作映射和未执行计划变量。
++
++5. **六条运行的结果与必要原生证据**  
++   区分四条历史复用和两条新增；保存请求、到达、启动、实际分段、终态及失败记录。
++
++6. **代码、差异、环境与复现说明**  
++   能恢复本轮参照并复核结果。默认复核入口只读，不自动启动新医院仿真；实际重跑使用独立显式命令。
++
++7. **实际验证记录与文件清单**  
++   给出真实命令、退出码、日志、校验和。使用无损压缩和必要去重，不降采样、不删关键执行证据。
++
++尽量控制为便于提交的单一压缩包，避免重复塞入全部历史大数据。关键科学材料不要散落在包外。
++
++完成标准是：
++
++- 两篇方法来源和差异说清楚；
++- 新参照输入独立于 C/M 完成轨迹；
++- 信息权限和执行身份明确；
++- 两条正式运行完成，四条历史来源匹配；
++- 实际指标可复算，计划与执行差距有解释；
++- 没有未解决、会改变本轮结论的适配错误。
++
++相较 C/M 更差、费用更高、没有明显优势或出现计划执行偏差，都可以是有效结果。无需让任何一方获胜。
++
++完成后停止本轮，不自动扩展到其他背景、其他提前量、新的 C 改进方案或新的在线算法。最终明确回答：
++
++**“本轮外部参照比较已经完成，能够支持哪些结论；哪些更强主张仍未得到验证。”**
+\ No newline at end of file
+diff --git a/tests/test_v32_execution.py b/tests/test_v32_execution.py
+new file mode 100644
+index 0000000000000000000000000000000000000000..220d821e9c065ce018d8541eed7a64cd9feb3854
+--- /dev/null
++++ b/tests/test_v32_execution.py
+@@ -0,0 +1,75 @@
++"""V32 registry/initialization/request identity contracts; no hospital episode."""
++import copy,importlib,json,sys
++from pathlib import Path
++import pytest
++ROOT=Path(__file__).resolve().parents[1];sys.path[:0]=[str(ROOT),str(ROOT/'src')]
++def api(name):
++ try:return importlib.import_module('tools.model_reference_v32.'+name)
++ except ModuleNotFoundError as error:pytest.fail('V32 independent execution component missing: '+str(error))
++
++@pytest.mark.parametrize('branch,mode',[('normal','normal'),('grid','disturbed')])
++def test_registration_is_actual_b01_and_not_old_dev_default(branch,mode):
++ m=api('snapshot');case,registry=m.load_frozen_case(ROOT,branch)
++ assert case['id']=='b01_L1_grid_'+mode+'_M'
++ assert case['scenario']['start_hour']==1160 and case['configuration']=='H1'
++ assert case['scenario']['duration_steps']*case['scenario']['step_minutes']==180
++ assert case['scenario']['shock_by_zone']=={}
++ assert case['scenario']['faults']==({} if branch=='normal' else {'GRID':0.})
++ cfg,rule=m.physical_configuration(case,registry)
++ assert cfg['sci_engineering']['ups']['capacity_kWh']==40.
++ assert cfg['sci_engineering']['cold_store']=={}
++ assert cfg['model_correctness_v23']['thermal_coupling'] is None
++ assert rule['name']=='current_service_bridge'
++ with pytest.raises(ValueError):m.load_frozen_case(ROOT,'dev_grid_180')
++
++def test_configuration_does_not_mutate_frozen_registry():
++ m=api('snapshot');case,reg=m.load_frozen_case(ROOT,'grid');before=copy.deepcopy((case,reg))
++ cfg,rule=m.physical_configuration(case,reg)
++ cfg['sci_engineering']['ups']['capacity_kWh']=999.
++ assert (case,reg)==before
++
++def minimal_spec():
++ return dict(duration_h=[.25,.25],start_minute=0.,generators=[dict(name='GT_1',capacity=[100.,100.],fuel_slope=.01,fuel_fixed=0.)],
++  boiler={'capacity':[50.,50.]},electric_chillers=[dict(name='EC_1',tower_per_c=1.2)],absorption={'tower_per_c':2.},
++  storages=[{'name':'ups','carrier':'e'}],dispatch_mapping=dict(gt_names=['GT_1',None,None],dg_name=None,ec_names=['EC_1',None,None],
++   boiler_heat_to_steam=2.,gt_steam_per_e=[[3.,3.],[0.,0.],[0.,0.]]))
++def minimal_plan():
++ p={'GT_1':[0.,80.],'GT_1.on':[0.,1.],'boiler':[0.,10.],'boiler.on':[0.,1.],'EC_1':[20.,30.],'ABS':[5.,6.],
++    'grid':[90.,0.],'ups.charge':[0.,0.],'ups.discharge':[0.,10.],'ups.stock':[40.,37.5]}
++ for g in range(4):
++  for c in 'ehc':p[f'unmet.P{g}.{c}']=[0.,0.]
++ return p
++
++def test_request_keeps_unexecuted_storage_unmet_and_fixed_preparation(monkeypatch):
++ m=api('actions');monkeypatch.setattr(m,'audit_plan',lambda *a,**k:{'valid':True})
++ plan=minimal_plan();plan['unmet.P3.e'][1]=2.
++ r=m.extract_requests(minimal_spec(),plan,formulation='tiered',preparation_lead_minutes=45.)
++ assert r['information_permission']=='offline_known_window'
++ assert r['full_continuous_plan_replayed'] is False and r['planned_storage_ports_executed'] is False
++ one=r['requests'][0];d=one['action']['ordinary_dispatch']['dispatch']
++ assert d['gt_electric_kW']==[80.,0.,0.] and d['boiler_steam_lbph']==20.
++ assert one['action']['ordinary_dispatch']['disconnected_kW']==[[0.,0.,0.]]*4
++ assert 'ups.stock' in one['unexecuted_storage_plan']
++ assert r['requests'][1]['unexecuted_unmet_plan']['P3']['e']==2.
++ assert one['requested_dispatch_is_not_execution_receipt'] is True
++ assert plan['GT_1'][0]==0.
++
++def test_invalid_or_no_plan_is_never_converted_to_zero_request(monkeypatch):
++ m=api('actions');monkeypatch.setattr(m,'audit_plan',lambda *a,**k:{'valid':False})
++ with pytest.raises(ValueError):m.extract_requests(minimal_spec(),minimal_plan(),formulation='strict')
++ with pytest.raises(ValueError):m.extract_requests(minimal_spec(),None,formulation='strict')
++
++def test_reference_controller_is_explicit_offline_and_never_a_C_M_fallback(tmp_path):
++ m=api('reference');from tools.model_reference_v32 import METHOD_ID,EXECUTION_ID
++ schedule=dict(method_id=METHOD_ID,execution_identity=EXECUTION_ID,information_permission='offline_known_window',
++  full_continuous_plan_replayed=False,planned_storage_ports_executed=False,
++  requests=[{'time_minute':0.,'action':{'ordinary_dispatch':{'test_marker':1}}},{'time_minute':15.,'action':{'ordinary_dispatch':{'test_marker':2}}}])
++ p=tmp_path/'actions.json';p.write_text(json.dumps(schedule),encoding='utf8')
++ with pytest.raises(ValueError):m.OfflinePlanPolicy('M',config={'actions_path':str(p)})
++ controller=m.OfflinePlanPolicy(METHOD_ID,config={'actions_path':str(p)},policy_id=METHOD_ID)
++ action,diagnostic=controller.decide([{'decision_time_min':15.}])
++ assert action['ordinary_dispatch']['test_marker']==2 and diagnostic['strategy_fallback'] is False
++ assert diagnostic['information_permission']=='offline_known_window'
++ assert diagnostic['full_continuous_plan_replayed'] is False
++ schedule['information_permission']='causal_online';p.write_text(json.dumps(schedule),encoding='utf8')
++ with pytest.raises(ValueError):m.OfflinePlanPolicy(METHOD_ID,config={'actions_path':str(p)})
+diff --git a/tests/test_v32_inputs.py b/tests/test_v32_inputs.py
+new file mode 100644
+index 0000000000000000000000000000000000000000..df613dbe3d9044ff0f8553f539f90e96faf1738e
+--- /dev/null
++++ b/tests/test_v32_inputs.py
+@@ -0,0 +1,134 @@
++"""Pure input construction only; no Hospital initialization, episode or solver."""
++from pathlib import Path
++import builtins
++import copy
++import io
++import json
++import shutil
++import sys
++from unittest.mock import patch
++import numpy as np
++import pandas as pd
++import pytest
++
++ROOT=Path(__file__).resolve().parents[1]
++sys.path[:0]=[str(ROOT),str(ROOT/'src')]
++
++def api():
++    from tools.model_reference_v32 import inputs
++    return inputs
++
++def initial(mode='legacy_explicit_permission'):
++    return dict(initial_stocks=dict(ups=40.,cold_store=0.),diesel_shaft_budget_kWh=2400.,
++        initial_state={'synthetic_fixture':True},
++        execution_contract=dict(diesel_mode=mode,diesel_allowed_priorities=['P0','P1']),
++        provenance=dict(origin='synthetic_test_fixture',not_historical_trajectory=True))
++
++@pytest.fixture(scope='module')
++def pair():
++    return {b:api().build_hospital_spec(ROOT,branch=b,initial_snapshot=initial()) for b in ['normal','grid']}
++
++def test_missing_initial_certificate_fails_before_input_reads(monkeypatch):
++    def fail(*a,**k):raise AssertionError('No input read permitted without explicit initial certificate')
++    with patch('builtins.open',fail),patch('io.open',fail):
++        with pytest.raises(ValueError,match='initial'):api().build_hospital_spec(ROOT,initial_snapshot=None)
++
++def test_source_clock_and_grid_are_registered_not_native(pair):
++    mod=api();assert mod.source_hour_at(1160,0)==1160
++    assert mod.source_hour_at(1160,59.999)==1160
++    assert mod.source_hour_at(1160,60)==1161
++    assert mod.source_hour_at(1160,180)==1163
++    assert mod.planning_grid(180,15,[62.5])==sorted(set(range(0,181,15))|{62.5})
++    for s in pair.values():
++        assert s['time_grid_minutes']==list(range(0,181,15))
++        assert s['source_hours_by_period']==[1160]*4+[1161]*4+[1162]*4
++        assert s['source_terminal_hour']==1163
++        assert s['duration_h']==[.25]*12
++        assert len(s['original_demand_by_priority_kW'])==12
++        assert s['provenance']['grid_source']=='decision_clock+raw_hourly+registered_exogenous_event_edges'
++
++def test_priority_and_building_totals_are_conservative(pair):
++    frame=pd.read_csv(ROOT/'inputs/loads/hospital_ies_demand_8760.csv')
++    thermal=pd.read_csv(ROOT/'inputs/model_review_v28/THERMAL_SERVICE_COMPONENTS_8760.csv')
++    s=pair['normal'];dem=np.array(s['original_demand_by_priority_kW'])
++    for i,ledger in enumerate(s['demand_ledger']):
++        h=s['source_hours_by_period'][i];row=frame.iloc[h-1];target=thermal.iloc[h-1]
++        raw=np.array(ledger['raw_group_loads_before_aux_kW'])
++        np.testing.assert_allclose(raw.sum(0),[row.P_e_nonplant_kW+row.P_e_unresolved_kW,row.Q_h_demand_kW,row.Q_c_demand_kW],rtol=0,atol=1e-8)
++        np.testing.assert_allclose(dem[i].sum(0),[s['demand_e'][i],s['demand_h'][i],s['demand_c'][i]],rtol=0,atol=1e-8)
++        assert abs(dem[i,:,1].sum()-target.central_heat_request_kW)<1e-8
++        assert abs(dem[i,:,2].sum()-row.Q_c_demand_kW)<1e-8
++        assert ledger['source_timestamp']==str(pd.Timestamp(row.timestamp))
++
++def test_direct_aux_and_DHW_fan_boundary_are_not_double_counted(pair):
++    s=pair['normal'];dem=np.array(s['original_demand_by_priority_kW'])
++    direct=np.array(s['electric_direct_by_priority_kW']);aux=np.array(s['electric_auxiliary_by_priority_kW'])
++    np.testing.assert_allclose(dem[:,:,0],direct+aux,rtol=0,atol=1e-10)
++    changed_DHW=False
++    for i,ledger in enumerate(s['demand_ledger']):
++        req=ledger['direct_aux_request'];components=np.array(req['auxiliary_request_kW'])
++        np.testing.assert_allclose(aux[i],components.sum(1),rtol=0,atol=1e-10)
++        np.testing.assert_allclose(components[:,0],np.array(req['auxiliary_reference_kW'])[:,0],rtol=0,atol=1e-10)
++        np.testing.assert_allclose(components[:,1],np.array(req['auxiliary_reference_kW'])[:,1],rtol=0,atol=1e-10)
++        changed_DHW |= abs(req['ordinary_DHW_target_kW']-req['ordinary_DHW_legacy_delivered_kW'])>1e-4
++        assert req['ordinary_DHW_target_source_trace']['boundary']=='ordinary_wateruse_central_target_v28'
++    assert changed_DHW,'This real source window must exercise adopted target versus old delivered DHW'
++
++def test_normal_grid_share_raw_demands_and_only_exogenous_grid_changes(pair):
++    n,g=pair['normal'],pair['grid']
++    assert n['original_demand_by_priority_kW']==g['original_demand_by_priority_kW']
++    assert n['grid_capacity']==[850.]*12
++    assert g['grid_capacity']==[850.]*4+[0.]*4+[850.]*4
++    assert all(v==1. for a in g['exogenous_availability_by_period'] for k,v in a.items() if k!='GRID')
++    assert g['information_permission']=='offline_known_window'
++    assert g['provenance']['historical_operating_results_read'] is False
++
++def test_H1_storage_and_DG_match_actual_permission_no_old_critical_cap(pair):
++    s=pair['grid'];stores={x['name']:x for x in s['storages']};dg=next(x for x in s['generators'] if x['name']=='DG')
++    assert stores['ups']['capacity']==40 and stores['ups']['power']==160 and stores['ups']['initial']==40
++    assert stores['ups']['discharge_scope']=='building_critical_only' and stores['ups']['eligible_priorities']==[0,1]
++    assert stores['cold_store']['capacity']==stores['cold_store']['initial']==0
++    assert s['fuel_budgets']=={'diesel_shaft':2400.}
++    assert 'electric_service_limit' not in dg and dg.get('electric_service_scope')!='building_critical_only'
++    assert dg['capacity']==[0.]*4+[900.]*4+[0.]*4
++    assert s['initialization_provenance']['origin']=='synthetic_test_fixture'
++
++def test_emergency_bus_explicitly_uses_registered_priority_scope():
++    s=api().build_hospital_spec(ROOT,branch='grid',initial_snapshot=initial('emergency_bus'))
++    dg=next(x for x in s['generators'] if x['name']=='DG')
++    assert dg['electric_service_scope']=='building_critical_only' and dg['eligible_priorities']==[0,1]
++
++def test_independent_common_initialization_source_provenance_is_preserved():
++    certificate=initial()
++    certificate['provenance']=dict(source='independent common initialization',completed_policy_results_read=False,
++        new_hospital_episodes=0,C_M_decision_calls=0)
++    s=api().build_hospital_spec(ROOT,branch='normal',initial_snapshot=certificate)
++    assert s['initialization_provenance']==certificate['provenance']
++    assert 'origin' not in s['initialization_provenance']
++
++def test_nonzero_initial_time_is_rejected_without_reading_sources():
++    certificate=initial();certificate['time_minute']=60.
++    with pytest.raises(ValueError,match='t=0'):
++        api().build_hospital_spec(ROOT,branch='normal',initial_snapshot=certificate)
++
++def test_isolated_raw_copy_builds_with_global_result_read_denial(tmp_path):
++    root=tmp_path/'raw_only';root.mkdir()
++    for folder in ['inputs','configs']:
++        shutil.copytree(ROOT/folder,root/folder)
++    seen=[];original_builtin=builtins.open;original_io=io.open
++    def guard(op):
++        def wrapped(file,*args,**kwargs):
++            if isinstance(file,(str,bytes,Path)):
++                p=Path(file);parts=[x.casefold() for x in p.parts]
++                if any(x in ('outputs','runs','trajectory.json.gz','result.json','actual_prefix.jsonl') for x in parts):
++                    raise AssertionError('Forbidden operating-result read: '+str(file))
++                seen.append(str(file))
++            return op(file,*args,**kwargs)
++        return wrapped
++    mod=api()
++    with patch('builtins.open',guard(original_builtin)),patch('io.open',guard(original_io)):
++        n=mod.build_hospital_spec(root,branch='normal',initial_snapshot=initial())
++        g=mod.build_hospital_spec(root,branch='grid',initial_snapshot=initial())
++    assert seen and n['demand_e']==g['demand_e']
++    assert not (root/'outputs').exists() and not (root/'runs').exists()
++    assert all(not any(x in ('outputs','runs') for x in Path(p).parts) for p in seen)
+diff --git a/tests/test_v32_planner.py b/tests/test_v32_planner.py
+new file mode 100644
+index 0000000000000000000000000000000000000000..9cfa7a4216aa974c7d86e65095c72ee7207894c9
+--- /dev/null
++++ b/tests/test_v32_planner.py
+@@ -0,0 +1,333 @@
++"""Synthetic mathematical fixtures only; no hospital episode or C/M input."""
++from pathlib import Path
++import copy
++import importlib.util
++from types import SimpleNamespace
++import pytest
++
++ROOT = Path(__file__).resolve().parents[1]
++
++
++def api():
++    path = ROOT/'tools/model_reference_v32/planner.py'
++    assert path.is_file(), 'Missing independent V32 priority planning module'
++    spec = importlib.util.spec_from_file_location('v32_planner_under_test',path)
++    module = importlib.util.module_from_spec(spec)
++    spec.loader.exec_module(module)
++    return module
++
++
++def tiny(demands=None, durations=None):
++    demands = demands or [[[1.,0.,0.],[1.,0.,0.],[0.,0.,0.],[0.,0.,0.]]]
++    n = len(demands)
++    return dict(schema='hospital_ies.reference_v32.spec.v1',evidence_class='synthetic_mathematical_fixture',
++        information_permission='offline_known_window',duration_h=durations or [1.]*n,
++        original_demand_by_priority_kW=demands,
++        demand_e=[sum(p[0] for p in d) for d in demands],
++        demand_h=[sum(p[1] for p in d) for d in demands],
++        demand_c=[sum(p[2] for p in d) for d in demands],
++        grid_capacity=[2.]*n,grid_price=[3.]*n,generators=[],
++        boiler=dict(capacity=0.,fuel_slope=0.,fuel_type='gas'),
++        electric_chillers=[],absorption=dict(capacity=0.,heat_per_c=1.,electric_per_c=0.,tower_per_c=0.),
++        tower_capacity=[10.]*n,storages=[],fuel_budgets={},fuel_prices={'gas':1.})
++
++
++def storage(initial=1.):
++    return dict(name='ups',carrier='e',capacity=2.,power=2.,initial=initial,minimum=0.,
++        charge_efficiency=1.,discharge_efficiency=1.,decay_per_h=0.,loss_mode='none',
++        charge_allowed=[False],discharge_allowed=[True],
++        discharge_scope='building_critical_only',eligible_priorities=[0,1])
++
++
++def test_strict_feasible_plan_has_independent_energy_fee_and_priority_gate():
++    m = api(); spec = tiny()
++    result = m.solve_reference(spec,formulation='strict',time_limit_s=5.)
++    assert result['status']=='optimal'
++    assert result['verified_incumbent'] and result['adoptable']
++    assert result['objective_fee']==pytest.approx(6.,abs=1e-8)
++    assert result['plan']['grid']==pytest.approx([2.])
++    assert result['audit']['valid']
++    assert result['audit']['service']['P0']['e']['ENS_kWh']==0.
++    assert result['audit']['service']['P1']['e']['requested_kWh']==1.
++
++
++def test_strict_infeasibility_never_becomes_unknown_or_a_zero_plan():
++    m = api(); spec = tiny();spec['grid_capacity']=[1.]
++    result = m.solve_reference(spec,formulation='strict',time_limit_s=5.)
++    assert result['status']=='infeasible'
++    assert result['termination_reason']=='proved_infeasible'
++    assert result['plan'] is None and result['objective_fee'] is None
++    assert not result['verified_incumbent'] and not result['adoptable']
++
++
++def test_tiered_serves_P0_before_P1_and_fee_without_a_big_penalty():
++    m = api();spec=tiny();spec['grid_capacity']=[1.];spec['grid_price']=[1e6]
++    result=m.solve_reference(spec,formulation='tiered',time_limit_s=5.)
++    assert result['status']=='optimal' and result['adoptable']
++    assert result['plan']['unmet.P0.e']==pytest.approx([0.],abs=2e-9)
++    assert result['plan']['unmet.P1.e']==pytest.approx([1.],abs=2e-9)
++    assert result['objective_fee']==pytest.approx(1e6,abs=0.01)
++    assert [layer['name'] for layer in result['layers']]==['P0','P1','P2','P3','fee']
++    assert result['lexicographic_optimality_proven']
++
++
++def test_carrier_normalization_uses_fixed_full_window_positive_demand():
++    m=api();spec=tiny([[[100.,1.,0.],[0.,0.,0.],[0.,0.,0.],[0.,0.,0.]]])
++    spec['grid_capacity']=[0.]
++    spec['generators']=[dict(name='E',capacity=100.,min_power=0.,fuel_type='gas',fuel_slope=1.,fuel_fixed=0.,heat_slope=0.,heat_fixed=0.)]
++    spec['boiler']=dict(capacity=1.,fuel_type='gas',fuel_slope=1.)
++    spec['fuel_budgets']={'gas':1.} # Explicit synthetic constraint, not hospital gas inventory.
++    result=m.solve_reference(spec,formulation='tiered',time_limit_s=5.)
++    denom=result['normalization']['denominators_kWh']['P0']
++    assert denom=={'e':100.,'h':1.,'c':0.}
++    assert result['normalization']['zero_demand_contribution']=='omitted'
++    assert result['plan']['boiler']==pytest.approx([1.],abs=2e-8)
++    assert result['audit']['service']['P0']['h']['ENS_kWh']==pytest.approx(0.,abs=2e-9)
++    assert result['audit']['service']['P0']['e']['ENS_kWh']==pytest.approx(100.,abs=2e-7)
++    assert 'total_cross_carrier_ENS' not in result['audit']
++
++
++def test_multiperiod_ups_efficiency_initial_and_terminal_are_not_gifted():
++    m=api();spec=tiny([[[0.,0.,0.]]*4,[[1.,0.,0.],[0.,0.,0.],[0.,0.,0.],[0.,0.,0.]]])
++    spec.update(grid_capacity=[2.,0.],grid_price=[1.,10.])
++    ups=storage(initial=0.);ups.update(charge_efficiency=0.5,charge_allowed=[True,False],discharge_allowed=[False,True])
++    spec['storages']=[ups]
++    result=m.solve_reference(spec,formulation='strict',time_limit_s=5.)
++    assert result['adoptable'],result
++    assert result['plan']['ups.charge']==pytest.approx([2.,0.])
++    assert result['plan']['ups.discharge']==pytest.approx([0.,1.])
++    assert result['plan']['ups.stock']==pytest.approx([1.,0.])
++    assert result['objective_fee']==pytest.approx(2.)
++
++
++def test_ups_cannot_supply_general_load_when_critical_demand_is_zero():
++    m=api();spec=tiny([[[0.,0.,0.],[0.,0.,0.],[0.,0.,0.],[1.,0.,0.]]])
++    spec.update(grid_capacity=[0.],storages=[storage()])
++    result=m.solve_reference(spec,formulation='tiered',time_limit_s=5.)
++    assert result['adoptable']
++    assert result['plan']['ups.discharge']==pytest.approx([0.],abs=1e-9)
++    assert result['plan']['ups.stock']==pytest.approx([1.])
++    assert result['audit']['service']['P3']['e']['ENS_kWh']==pytest.approx(1.)
++
++
++def test_independent_audit_catches_ups_to_unserved_critical_relabeling():
++    m=api();spec=tiny([[[1.,0.,0.],[0.,0.,0.],[0.,0.,0.],[1.,0.,0.]]])
++    spec.update(grid_capacity=[0.],storages=[storage()])
++    result=m.solve_reference(spec,formulation='tiered',time_limit_s=5.)
++    bad=copy.deepcopy(result['plan']);bad['unmet.P0.e']=[1.];bad['unmet.P3.e']=[0.]
++    audit=m.audit_plan(spec,bad,formulation='tiered')
++    assert not audit['valid']
++    assert any('critical' in v['check'] for v in audit['violations'])
++
++
++def test_tower_capacity_is_independently_binding_not_only_chiller_nameplate():
++    m=api();spec=tiny([[[0.,0.,1.],[0.,0.,0.],[0.,0.,0.],[0.,0.,0.]]])
++    spec['electric_chillers']=[dict(name='EC',capacity=2.,electric_per_c=1.,tower_per_c=2.)]
++    spec['tower_capacity']=[1.]
++    result=m.solve_reference(spec,formulation='tiered',time_limit_s=5.)
++    assert result['plan']['EC']==pytest.approx([0.5],abs=1e-8)
++    assert result['audit']['service']['P0']['c']['ENS_kWh']==pytest.approx(0.5,abs=1e-8)
++    bad=copy.deepcopy(result['plan']);bad['EC']=[1.]
++    assert not m.audit_plan(spec,bad,formulation='tiered')['valid']
++
++
++def test_diesel_shaft_budget_and_inventory_corruption_are_independently_checked():
++    m=api();spec=tiny();spec['grid_capacity']=[0.]
++    spec['generators']=[dict(name='DG',capacity=2.,min_power=0.,fuel_type='diesel_shaft',fuel_slope=1.,fuel_fixed=0.,heat_slope=0.,heat_fixed=0.)]
++    spec['fuel_budgets']={'diesel_shaft':1.};spec['fuel_prices']['diesel_shaft']=0.3
++    result=m.solve_reference(spec,formulation='tiered',time_limit_s=5.)
++    assert result['audit']['fuel_used']['diesel_shaft']==pytest.approx(1.)
++    bad=copy.deepcopy(result['plan']);bad['DG']=[2.]
++    assert any('fuel_budget' in v['check'] for v in m.audit_plan(spec,bad,formulation='tiered')['violations'])
++    ss=tiny([[[1.,0.,0.],[0.,0.,0.],[0.,0.,0.],[0.,0.,0.]]]);ss.update(grid_capacity=[0.],storages=[storage()])
++    ok=m.solve_reference(ss,formulation='strict',time_limit_s=5.)
++    bad=copy.deepcopy(ok['plan']);bad['ups.stock'][0]+=0.1
++    assert not m.audit_plan(ss,bad,formulation='strict')['valid']
++
++
++def test_termination_distinguishes_limit_incumbent_absence_and_proof():
++    m=api()
++    assert m.classify_termination(SimpleNamespace(status=1,x=None))['status']=='no_incumbent'
++    assert m.classify_termination(SimpleNamespace(status=1,x=[1.]))['status']=='time_limit'
++    assert m.classify_termination(SimpleNamespace(status=2,x=None))['termination_reason']=='proved_infeasible'
++    assert not m.classify_termination(SimpleNamespace(status=0,x=[float('nan')]))['incumbent']
++
++
++def test_pair_gate_keeps_strict_limit_incumbent_and_unknown_infeasibility_separate():
++    m=api();good=dict(formulation='strict',status='optimal',verified_incumbent=True,adoptable=True)
++    limit=dict(good,status='time_limit');unknown=dict(formulation='strict',status='no_incumbent',verified_incumbent=False,adoptable=False)
++    infeasible=dict(unknown,status='infeasible',termination_reason='proved_infeasible')
++    assert m.select_common_formulation(good,limit)['selected_formulation']=='strict'
++    assert m.select_common_formulation(good,infeasible)['selected_formulation']=='tiered'
++    assert m.select_common_formulation(good,unknown)['selected_formulation'] is None
++    selection=m.select_common_formulation(good,unknown,allow_unknown_tiered=True)
++    assert selection['selected_formulation']=='tiered' and selection['strict_infeasibility_proven'] is False
++
++
++def test_source_and_aggregate_boundary_rejects_trace_input_and_double_counting():
++    m=api();spec=tiny();spec['demand_e']=[3.]
++    with pytest.raises(ValueError,match='priority|aggregate'):m.validate_spec(spec)
++    spec=tiny();spec['evidence_class']='historical_C_conditioned_static_planning_envelope'
++    with pytest.raises(ValueError,match='historical|independent'):m.validate_spec(spec)
++    spec=tiny();spec['information_permission']='causal_online'
++    with pytest.raises(ValueError,match='offline'):m.validate_spec(spec)
++
++
++def test_symmetric_generator_labels_preserve_tiered_unmet_and_raw_plan():
++    m=api();spec=tiny([[[1.,0.,0.],[0.,0.,0.],[0.,0.,0.],[1.,0.,0.]]]*2)
++    spec['grid_capacity']=[0.,0.]
++    spec['generators']=[dict(name=name,capacity=1.,min_power=1.,fuel_type='gas',fuel_slope=1.,fuel_fixed=0.,heat_slope=0.,heat_fixed=0.) for name in ('A','B')]
++    spec['fuel_budgets']={'gas':2.}
++    result=m.solve_reference(spec,formulation='tiered',time_limit_s=5.)
++    raw=copy.deepcopy(result['plan'])
++    raw.update({'A':[0.,1.],'A.on':[0.,1.],'B':[1.,0.],'B.on':[1.,0.]})
++    original=copy.deepcopy(raw)
++    relabeled=m.stabilize_symmetric_generators(spec,raw,['A','B'],[1.,0.],formulation='tiered')
++    assert relabeled['verified_equivalent'] and relabeled['independent_audit']['valid']
++    assert relabeled['plan']['A']==[1.,1.] and relabeled['plan']['B']==[0.,0.]
++    assert raw==original
++    assert relabeled['proves_dynamic_minimum_up_down_or_startup_feasibility'] is False
++    spec['generators'][1]['capacity']=[1.,0.5]
++    refused=m.stabilize_symmetric_generators(spec,raw,['A','B'],[1.,0.],formulation='tiered')
++    assert not refused['verified_equivalent'] and refused['reason']=='not_identical_over_complete_window'
++
++
++def test_full_window_fuel_budget_requires_a_scalar_not_a_per_period_array():
++    m=api();spec=tiny([[[1.,0.,0.],[0.,0.,0.],[0.,0.,0.],[0.,0.,0.]]]*2)
++    spec['fuel_budgets']={'diesel_shaft':[1.,1.]}
++    with pytest.raises(ValueError,match='budget|scalar'):
++        m.validate_spec(spec)
++
++
++def test_priority_lock_uses_its_dimensionless_tolerance_not_energy_tolerance():
++    m=api();spec=tiny();result=m.solve_reference(spec,formulation='strict',time_limit_s=5.)
++    bad=copy.deepcopy(result['plan']);bad['unmet.P0.e']=[1e-7];bad['grid'][0]-=1e-7
++    audit=m.audit_plan(spec,bad,formulation='tiered',objective_locks=[dict(priority='P0',upper=0.)])
++    assert not audit['valid']
++    assert any(v['check']=='priority_lock.P0' for v in audit['violations'])
++
++
++def test_solver_objective_metadata_must_match_independent_named_arithmetic(monkeypatch):
++    m=api();actual=m.milp
++    def wrong_metadata(**kwargs):
++        result=actual(**kwargs)
++        result.fun+=1.
++        return result
++    monkeypatch.setattr(m,'milp',wrong_metadata)
++    result=m.solve_reference(tiny(),formulation='strict',time_limit_s=5.)
++    assert not result['adoptable']
++    assert result['status']=='invalid_incumbent'
++    assert result['layers'][0]['independent_objective_matches_solver'] is False
++
++
++def test_limited_math_backend_no_incumbent_is_unknown_not_infeasible(monkeypatch):
++    m=api()
++    monkeypatch.setattr(m,'milp',lambda **kwargs:SimpleNamespace(status=1,x=None,fun=None,message='synthetic limit fixture'))
++    result=m.solve_reference(tiny(),formulation='strict',time_limit_s=0.)
++    assert result['status']=='no_incumbent' and result['termination_reason']=='limit_reached'
++    assert result['plan'] is None and result['objective_fee'] is None and not result['adoptable']
++
++
++def test_later_missing_incumbent_retains_verified_plan_but_not_complete_lex_claim(monkeypatch):
++    m=api();actual=m.milp;calls=[]
++    def limited_after_first(**kwargs):
++        calls.append(1)
++        return actual(**kwargs) if len(calls)==1 else SimpleNamespace(status=1,x=None,fun=None,message='synthetic later limit fixture')
++    monkeypatch.setattr(m,'milp',limited_after_first)
++    result=m.solve_reference(tiny(),formulation='tiered',time_limit_s=5.)
++    assert result['verified_incumbent'] and result['plan'] is not None
++    assert result['status']=='time_limit' and not result['lexicographic_layers_completed']
++    assert not result['lexicographic_optimality_proven']
++    assert result['layers'][-1]['status']=='no_incumbent'
++
++
++def test_lock_infeasibility_is_not_misreported_as_original_physical_infeasibility(monkeypatch):
++    m=api();actual=m.milp;calls=[]
++    def inconsistent_lock_backend(**kwargs):
++        calls.append(1)
++        return actual(**kwargs) if len(calls)==1 else SimpleNamespace(status=2,x=None,fun=None,message='synthetic inconsistent lock fixture')
++    monkeypatch.setattr(m,'milp',inconsistent_lock_backend)
++    result=m.solve_reference(tiny(),formulation='tiered',time_limit_s=5.)
++    assert result['status']=='lexicographic_lock_infeasible'
++    assert not result['adoptable'] and result['plan'] is not None
++
++
++def test_hospital_ups_cannot_be_redeclared_as_unrestricted_generic_battery():
++    m=api();spec=tiny();spec['evidence_class']='independent_original_hospital_input'
++    general=storage();general['name']='battery';general.pop('discharge_scope');spec['storages']=[general]
++    with pytest.raises(ValueError,match='generic|Hospital'):
++        m.validate_spec(spec)
++
++
++def test_unavailable_generator_cannot_create_fixed_heat_in_independent_audit():
++    m=api();spec=tiny([[[0.,0.,0.]]*4]);spec['grid_capacity']=[0.]
++    spec['generators']=[dict(name='CHP',capacity=0.,min_power=0.,fuel_type='gas',fuel_slope=0.,fuel_fixed=0.,heat_slope=0.,heat_fixed=1.)]
++    plan=m.solve_reference(spec,formulation='strict',time_limit_s=5.)['plan']
++    spec['original_demand_by_priority_kW'][0]=[[0.,1.,0.],[0.,0.,0.],[0.,0.,0.],[0.,0.,0.]];spec['demand_h']=[1.]
++    plan['CHP.on']=[1.]
++    audit=m.audit_plan(spec,plan,formulation='strict')
++    assert not audit['valid']
++    assert any('availability' in row['check'] for row in audit['violations'])
++
++
++def test_chp_absorption_station_electricity_tower_and_fuel_match_hand_balance():
++    m=api();spec=tiny([[[0.8,1.,0.5],[0.,0.,0.],[0.,0.,0.],[0.,0.,0.]]])
++    spec['grid_capacity']=[0.]
++    spec['generators']=[dict(name='CHP',capacity=1.,min_power=1.,fuel_type='gas',fuel_slope=3.,fuel_fixed=2.,heat_slope=2.,heat_fixed=0.,fixed_electric=0.1)]
++    spec['absorption']=dict(capacity=0.5,heat_per_c=2.,electric_per_c=0.2,tower_per_c=3.)
++    spec['tower_capacity']=[1.5];spec['fuel_prices']['gas']=4.
++    result=m.solve_reference(spec,formulation='strict',time_limit_s=5.)
++    assert result['adoptable'] and result['audit']['valid']
++    assert result['plan']['CHP']==pytest.approx([1.])
++    assert result['plan']['ABS']==pytest.approx([0.5])
++    assert result['audit']['fuel_used']['gas']==pytest.approx(5.)
++    assert result['objective_fee']==pytest.approx(20.)
++    assert result['audit']['maximum_balance_residual']<1e-8
++    assert result['audit']['fuel_budget_scope']['gas']=='not_registered_no_budget_imposed'
++
++
++def test_implicit_end_thermal_decay_matches_independent_two_period_certificate():
++    m=api();spec=tiny([[[0.,0.,0.]]*4,[[0.,0.4,0.],[0.,0.,0.],[0.,0.,0.],[0.,0.,0.]]])
++    spec.update(grid_capacity=[0.,0.],boiler=dict(capacity=[0.25,0.],fuel_slope=0.,fuel_type='gas'))
++    spec['storages']=[dict(name='hot',carrier='h',capacity=2.,power=0.5,initial=1.,minimum=0.,
++        charge_efficiency=0.8,discharge_efficiency=0.8,decay_per_h=0.1,loss_mode='implicit_end',
++        charge_allowed=[True,False],discharge_allowed=[False,True],terminal_min=65/121,terminal_max=65/121)]
++    result=m.solve_reference(spec,formulation='strict',time_limit_s=5.)
++    assert result['adoptable']
++    assert result['plan']['hot.stock']==pytest.approx([12/11,65/121])
++    assert result['plan']['hot.charge']==pytest.approx([0.25,0.])
++    assert result['plan']['hot.discharge']==pytest.approx([0.,0.4])
++
++
++def test_negative_station_coefficient_cannot_create_free_electricity():
++    m=api();spec=tiny([[[1.,0.,0.],[0.,0.,0.],[0.,0.,0.],[0.,0.,0.]]])
++    spec['grid_capacity']=[0.]
++    spec['generators']=[dict(name='G',capacity=0.5,min_power=0.5,fuel_type='gas',fuel_slope=1.,fuel_fixed=0.,
++        heat_slope=0.,heat_fixed=0.,fixed_electric=-0.5)]
++    with pytest.raises(ValueError,match='electric|coefficient'):
++        m.solve_reference(spec,formulation='strict',time_limit_s=5.)
++
++
++@pytest.mark.parametrize('field,value',[
++    ('fixed_electric',float('nan')),('fixed_electric',[0.,0.]),('electric_service_limit',-1.)])
++def test_extra_used_generator_coefficients_have_finite_nonnegative_horizon_domain(field,value):
++    m=api();spec=tiny();g=dict(name='G',capacity=1.,min_power=0.,fuel_type='gas',fuel_slope=0.,fuel_fixed=0.,heat_slope=0.,heat_fixed=0.)
++    g[field]=value;spec['generators']=[g]
++    with pytest.raises(ValueError,match='electric|coefficient'):
++        m.validate_spec(spec)
++
++
++@pytest.mark.parametrize('field,value',[
++    ('charge_electric_per_carrier',-1.),('discharge_electric_per_carrier',float('nan')),
++    ('charge_electric_per_carrier',[0.1])])
++def test_storage_pump_electricity_cannot_be_negative_missing_or_a_scalar_alias_array(field,value):
++    m=api();spec=tiny();ups=storage();ups[field]=value;spec['storages']=[ups]
++    with pytest.raises(ValueError,match='electric|coefficient|scalar'):
++        m.validate_spec(spec)
++
++
++def test_active_fuel_cost_is_not_silently_zero_when_price_is_missing():
++    m=api();spec=tiny();spec['fuel_prices']={}
++    spec['generators']=[dict(name='G',capacity=1.,min_power=0.,fuel_type='gas',fuel_slope=1.,fuel_fixed=0.,heat_slope=0.,heat_fixed=0.)]
++    with pytest.raises(ValueError,match='price'):
++        m.validate_spec(spec)
+diff --git a/tools/model_reference_v32/__init__.py b/tools/model_reference_v32/__init__.py
+new file mode 100644
+index 0000000000000000000000000000000000000000..76c0d7169283afb14d8d36fbbb1aaf8fdfe5f722
+--- /dev/null
++++ b/tools/model_reference_v32/__init__.py
+@@ -0,0 +1,4 @@
++"""Independent-input, fixed-capacity external reference for registered b01."""
++STUDY_ID='hospital_ies.external_reference.v32.v1'
++METHOD_ID='R32_fixed_capacity_offline'
++EXECUTION_ID='literature_adapted_offline_onoff_preparation_plus_common_realtime_allocation'
+diff --git a/tools/model_reference_v32/actions.py b/tools/model_reference_v32/actions.py
+new file mode 100644
+index 0000000000000000000000000000000000000000..074e5cfe9034481b53fc085bbb0f0e6fe0eed2d8
+--- /dev/null
++++ b/tools/model_reference_v32/actions.py
+@@ -0,0 +1,54 @@
++"""Explicit offline plan -> ordinary queued requests; no state or storage writes."""
++import copy,math
++from . import METHOD_ID,EXECUTION_ID
++from .planner import audit_plan
++
++def at(value,i):return float(value[i] if isinstance(value,(list,tuple)) else value)
++
++def extract_requests(spec,plan,*,formulation,preparation_lead_minutes=45.,objective_locks=None):
++    if plan is None or not audit_plan(spec,plan,formulation=formulation,objective_locks=objective_locks)['valid']:
++        raise ValueError('A verified adopted incumbent is required; no empty-plan fallback')
++    if not math.isfinite(preparation_lead_minutes) or preparation_lead_minutes<0.:raise ValueError('Invalid fixed preparation lead')
++    starts=[];clock=float(spec.get('start_minute',0.))
++    for dt in spec['duration_h']:starts.append(clock);clock+=float(dt)*60.
++    n=len(starts);mapping=spec['dispatch_mapping'];gens={g['name']:g for g in spec['generators']};requests=[]
++    for h,minute in enumerate(starts):
++        future=[j for j in range(h,n) if starts[j]<=minute+preparation_lead_minutes+1e-9];gt=[];preparations=[]
++        for name in mapping['gt_names']:
++            target=0. if name is None else min(max(float(plan[name][j]) for j in future),at(gens[name]['capacity'],h))
++            gt.append(target)
++            if name and target>float(plan[name][h])+1e-7:preparations.append(dict(device=name,current_plan_kW=plan[name][h],requested_kW=target,basis='known-window future target maximum clipped by current exogenous capacity'))
++        boiler=min(max(float(plan['boiler'][j]) for j in future),at(spec['boiler']['capacity'],h))
++        if boiler>float(plan['boiler'][h])+1e-7:preparations.append(dict(device='boiler',current_plan_kW_h=plan['boiler'][h],requested_kW_h=boiler))
++        ec=[float(plan[name][h]) if name else 0. for name in mapping['ec_names']];ab=float(plan['ABS'][h])
++        tower=ab*at(spec['absorption'].get('tower_per_c',0.),h)+sum(float(plan[obj['name']][h])*at(obj.get('tower_per_c',0.),h) for obj in spec['electric_chillers'])
++        steam=sum(p*at(mapping['gt_steam_per_e'][i],h) for i,p in enumerate(gt))
++        fuel=sum(gt[i]*at(gens[name].get('fuel_slope',0.),h)+(gt[i]>1e-9)*at(gens[name].get('fuel_fixed',0.),h) for i,name in enumerate(mapping['gt_names']) if name)
++        dispatch=dict(gt_electric_kW=gt,grid_import_kW=float(plan['grid'][h]),diesel_kW=float(plan[mapping['dg_name']][h]) if mapping.get('dg_name') else 0.,
++            boiler_steam_lbph=boiler*float(mapping['boiler_heat_to_steam']),absorption_cooling_kW=ab,electric_chiller_cooling_kW=ec,
++            hrsg_steam_lbph=steam,tower_rejection_kW=tower,gt_fuel_MMBtu_h=fuel)
++        corrections=[]
++        for field,v in list(dispatch.items()):
++            values=v if isinstance(v,list) else [v];revised=[]
++            for i,x in enumerate(values):
++                if not math.isfinite(x):raise ValueError('Nonfinite plan request')
++                if x<0.:
++                    if x < -1e-9:raise ValueError('Material negative plan request')
++                    corrections.append(dict(field=field,index=i,before=x,after=0.,reason='solver_nonnegative_boundary_roundoff'));x=0.
++                revised.append(x)
++            dispatch[field]=revised if isinstance(v,list) else revised[0]
++        action={'ordinary_dispatch':dict(dispatch=dispatch,disconnected_kW=[[0.,0.,0.] for _ in range(4)],rule_diagnostic=dict(policy_id=METHOD_ID,
++            information_permission='offline_known_window',full_continuous_plan_replayed=False,planned_storage_ports_executed=False,
++            planned_unmet_directly_executed=False,preparation_lead_minutes=preparation_lead_minutes))}
++        from tools.sci_engineering.policy import validate_action
++        validate_action(action)
++        requests.append(dict(time_minute=minute,period=h,preparation_requests=preparations,numeric_roundoff_corrections=corrections,action=action,
++            unexecuted_storage_plan={k:float(plan[k][h]) for s in spec['storages'] for k in (s['name']+'.charge',s['name']+'.discharge',s['name']+'.stock')},
++            unexecuted_unmet_plan={f'P{g}':{c:float(plan.get(f'unmet.P{g}.{c}',[0.]*n)[h]) for c in 'ehc'} for g in range(4)},
++            requested_dispatch_is_not_execution_receipt=True))
++    return dict(schema='hospital_ies.v32.frozen_offline_requests.v1',method_id=METHOD_ID,execution_identity=EXECUTION_ID,formulation=formulation,
++        information_permission='offline_known_window',preparation_lead_minutes=preparation_lead_minutes,full_continuous_plan_replayed=False,
++        planned_storage_ports_executed=False,planned_unmet_directly_executed=False,requests=requests,
++        adaptation_limits=['No ordinary UPS/cold charge/discharge command ports','Plan unmet is not mapped to active disconnection',
++            'Common M23 current minimum preparation may enlarge boiler/EC ceilings after the frozen controller request',
++            'Actual queue, powered startup, minimum on/off, ramp, transfer, protection and local reallocation remain original'])
+diff --git a/tools/model_reference_v32/inputs.py b/tools/model_reference_v32/inputs.py
+new file mode 100644
+index 0000000000000000000000000000000000000000..35fd86b5b371d27b779ad5c1f22b97db40d975bf
+--- /dev/null
++++ b/tools/model_reference_v32/inputs.py
+@@ -0,0 +1,262 @@
++"""Independent fixed-Hospital offline inputs from frozen raw data only.
++
++This module never creates an environment, resets a core, calls a controller or
++optimizer, or opens an operating result. An explicit caller-supplied common
++initial-state certificate is required. The old C-envelope adapter is not used.
++"""
++from __future__ import annotations
++import copy
++import hashlib
++import json
++import math
++from pathlib import Path
++from types import SimpleNamespace
++import numpy as np
++import pandas as pd
++
++SCHEMA='hospital_ies.offline_reference.v30.v1'
++INPUT_SCHEMA='hospital_ies.independent_raw_inputs.v32.v1'
++
++
++def _sha(path):
++    h=hashlib.sha256()
++    with Path(path).open('rb') as f:
++        for block in iter(lambda:f.read(1048576),b''):h.update(block)
++    return h.hexdigest()
++
++
++def _finite(value,name,*,positive=False):
++    if isinstance(value,bool):raise ValueError('Invalid '+name)
++    x=float(value)
++    if not math.isfinite(x) or x<0 or (positive and x<=0):raise ValueError('Invalid '+name)
++    return x
++
++
++def source_hour_at(start_hour,minute):
++    """Same one-based source clock as the common data_at, including endpoint."""
++    start=_finite(start_hour,'start_hour',positive=True)
++    if not start.is_integer():raise ValueError('Integer start_hour required')
++    minute=_finite(minute,'minute')
++    hour=int(start)+math.floor((minute+1e-9)/60.)
++    if not 1<=hour<=8760:raise ValueError('Outside8760 source support')
++    return hour
++
++
++def planning_grid(duration_minutes=180,decision_minutes=15,event_edges=()):
++    duration=_finite(duration_minutes,'duration',positive=True)
++    step=_finite(decision_minutes,'decision_minutes',positive=True)
++    points={0.,duration}
++    points.update(i*step for i in range(1,math.ceil(duration/step)) if i*step<duration)
++    points.update(float(i*60) for i in range(1,math.ceil(duration/60)) if i*60<duration)
++    for edge in event_edges:
++        value=_finite(edge,'event_edge')
++        if value>duration:raise ValueError('Event outside planning window')
++        points.add(value)
++    return sorted(points)
++
++
++def _registered(root,branch):
++    if branch not in ('normal','grid'):raise ValueError('Only normal/grid b01 branches authorized')
++    registry=json.loads((root/'configs/model_review_v30/cases.json').read_text(encoding='utf-8-sig'))
++    mode='normal' if branch=='normal' else 'disturbed'
++    candidates=[c for c in registry['cases'] if c.get('v30_context')=='b01_L1_grid' and c.get('v30_mode')==mode]
++    if len(candidates)!=2:raise ValueError('Both frozen C/M physical registrations required')
++    first=candidates[0]
++    for other in candidates[1:]:
++        if any(other[k]!=first[k] for k in ('scenario','configuration','v28_thermal_profile','v28_demand_contract')):
++            raise ValueError('Frozen C/M physical source registrations disagree')
++    scene=copy.deepcopy(first['scenario'])
++    if scene['start_hour']!=1160 or first['configuration']!='H1' or scene['duration_steps']*scene['step_minutes']!=180:
++        raise ValueError('Only registered b01/start1160/H1/180 window supported')
++    if scene.get('shock') or scene.get('shock_by_priority') or scene.get('shock_by_zone') or scene.get('auxiliary_faults'):
++        raise ValueError('b01 forbids clinical/auxiliary shocks')
++    if scene.get('faults')!=({} if branch=='normal' else {'GRID':0.0}):raise ValueError('Different frozen grid event')
++    return registry,first,scene
++
++
++def _initial(value):
++    if not isinstance(value,dict):raise ValueError('Explicit initial_snapshot certificate required')
++    missing={'initial_stocks','diesel_shaft_budget_kWh','initial_state','provenance'}-set(value)
++    if missing:raise ValueError('Incomplete initial_snapshot: '+','.join(sorted(missing)))
++    initial=copy.deepcopy(value)
++    if not isinstance(initial['initial_stocks'],dict) or set(initial['initial_stocks'])!={'ups','cold_store'}:
++        raise ValueError('Both explicit initial stocks required')
++    initial['initial_stocks']={k:_finite(v,'initial stock '+k) for k,v in initial['initial_stocks'].items()}
++    initial['diesel_shaft_budget_kWh']=_finite(initial['diesel_shaft_budget_kWh'],'initial diesel shaft budget')
++    if (not isinstance(initial['provenance'],dict)
++            or not (initial['provenance'].get('origin') or initial['provenance'].get('source'))):
++        raise ValueError('Initial certificate provenance origin/source required')
++    if 'time_minute' in initial and _finite(initial['time_minute'],'initial time')!=0:
++        raise ValueError('Initial certificate must describe t=0')
++    contract=initial.get('execution_contract') or initial.get('operating_execution_contract')
++    if not isinstance(contract,dict) or contract.get('diesel_mode') not in ('legacy_explicit_permission','emergency_bus'):
++        raise ValueError('Actual initial execution_contract diesel mode required')
++    initial['execution_contract']=copy.deepcopy(contract)
++    return initial
++
++
++def _raw_frames(root,registry,case,hours):
++    # Only pure processing functions are imported. No environment/runner import.
++    from hospital_ies.pipeline import read_data
++    from hospital_ies.resilience import build_zone_groups
++    from tools.sci_engineering.auxiliary import apply_auxiliary_allocation
++    from tools.model_closure_v22.auxiliary import compute_allocation
++    from tools.model_review_v28.thermal_adapter import apply_thermal_profile
++    hourly=read_data(root)
++    zones=pd.read_csv(root/'inputs/loads/critical_zones_8760.csv')
++    source=hourly[hourly.hour_of_year.isin(hours)].copy(deep=True)
++    selected_zones=zones[zones.hour_of_year.isin(hours)].copy(deep=True)
++    raw=build_zone_groups(selected_zones,source)
++    options=registry['model_closure_v22']['auxiliary']
++    if options!=dict(pump_weight_exponent=1.0,actual_power_scale=None,fan_priority_shares=None):
++        raise ValueError('This fixed input adapter does not alter frozen auxiliary ownership/power')
++    auxiliary=compute_allocation(root,**options)
++    metadata=copy.deepcopy(auxiliary.attrs['metadata'])
++    selected=auxiliary[auxiliary.hour_of_year.isin(hours)].copy(deep=True)
++    groups=apply_auxiliary_allocation(raw,selected).set_index('hour_of_year')
++    indexed=selected.set_index('hour_of_year')
++    for column in selected.columns:
++        if column!='hour_of_year':source[column]=source.hour_of_year.map(indexed[column])
++    for g in range(4):
++        for carrier in 'ehc':source[f'P{g}_reference_{carrier}_kW']=source.hour_of_year.map(groups[f'P{g}_{carrier}_kW'])
++    frames=SimpleNamespace(root=root,hourly=source,groups=groups,allowed_hours=set(hours))
++    thermal_receipt=apply_thermal_profile(frames,case['v28_thermal_profile'])
++    frames.hourly['sci_demand_boundary_contract']='hospital_ies.fixed_direct_aux.v28.v1'
++    return frames,raw.set_index('hour_of_year'),metadata,thermal_receipt
++
++
++def build_hospital_spec(project_root,*,branch='normal',initial_snapshot=None):
++    """Return a planner-compatible spec; no historical native result is read.
++
++    ``initial_snapshot`` requires explicit initial_stocks:{ups,cold_store},
++    diesel_shaft_budget_kWh, initial_state, provenance:{origin/source:...}, and the
++    actual execution_contract (or operating_execution_contract). Synthetic
++    certificates remain labelled synthetic and never become common-init proof.
++    """
++    initial=_initial(initial_snapshot)  # before any data read
++    root=Path(project_root).resolve();registry,case,scene=_registered(root,branch)
++    from hospital_ies.model import load_plant,gt_level_properties,illustrative_tariff,RT_TO_KW,KWH_PER_MMBTU
++    from hospital_ies.resilience import empty_faults
++    from tools.model_review_v28.demand import construct_request
++    from tools.model_review_v29.source_scope import window_scope
++    event_edges=[]
++    for kind in ('fault','shock'):
++        if float(scene.get(kind+'_duration_minutes',0))>0:
++            begin=float(scene[kind+'_start_minute']);event_edges.extend([begin,begin+float(scene[kind+'_duration_minutes'])])
++    for event in scene.get('model_closure_events',[]):event_edges.append(float(event['time_minute']))
++    grid=planning_grid(180,float(scene['step_minutes']),event_edges)
++    hours=sorted({source_hour_at(1160,t) for t in grid})
++    frames,raw_groups,auxmeta,thermal_receipt=_raw_frames(root,registry,case,hours)
++    hourly=frames.hourly.set_index('hour_of_year')
++    plant=load_plant(root/'configs/plant_configs.json','doe_capacity_matched_exploratory')
++    hardware=copy.deepcopy(registry['hardware_profiles']['H1'])
++    station=copy.deepcopy(registry['model_closure_v22']['station'])
++    arrays=[];ledgers=[];period_hours=[];availability=[];rated=[];steam=[];fuel=[];prices=[];temps=[]
++    for begin,end in zip(grid[:-1],grid[1:]):
++        h=source_hour_at(1160,begin);row=SimpleNamespace(**hourly.loc[h].to_dict())
++        raw_current=np.array([[frames.groups.loc[h,f'P{g}_{k}_kW'] for k in 'ehc'] for g in range(4)],float)
++        request=construct_request(row,raw_current)
++        # Preserve component fault-path ownership, not actual connected power.
++        request['current_fan_components_by_priority_kW']={name:[float(getattr(row,item['power_column']))*
++            float(item['priority_shares'][f'P{g}'])*request['auxiliary_factors'][g][0] for g in range(4)]
++            for name,item in auxmeta['fan_component_columns'].items()}
++        demand=np.asarray(request['aggregate_request_kW'],float)
++        arrays.append(demand);period_hours.append(h)
++        f=empty_faults()
++        if branch=='grid' and scene['fault_start_minute']<=begin<scene['fault_start_minute']+scene['fault_duration_minutes']:f.update(scene['faults'])
++        for event in scene.get('model_closure_events',[]):
++            if event['time_minute']<=begin:f.update(event['availability'])
++        availability.append(f)
++        power,sp,fp=gt_level_properties(plant,float(row.outdoor_temperature_C))
++        rated.append(float(power[-1]));steam.append(float(sp[-1]/power[-1]));fuel.append(float(fp[-1]/power[-1]))
++        prices.append(float(illustrative_tariff(pd.Timestamp(row.timestamp),plant)));temps.append(float(row.outdoor_temperature_C))
++        ledgers.append(dict(start_minute=begin,end_minute=end,source_hour=h,source_timestamp=str(pd.Timestamp(row.timestamp)),
++            raw_group_loads_before_aux_kW=[[float(raw_groups.loc[h,f'P{g}_{k}_kW']) for k in 'ehc'] for g in range(4)],
++            direct_aux_request=request,building_station_boundary='aggregate building request includes direct+full building auxiliaries once; plan station auxiliaries are separate',
++            local_thermal_source_reference=copy.deepcopy(getattr(row,'v28_local_thermal_source_reference',None))))
++    loads=np.asarray(arrays);n=len(arrays);A=lambda name:[a[name] for a in availability]
++    heat_factor=plant.steam_kWh_per_lb*plant.exchanger_eff
++    generators=[dict(name='GT_'+str(i),capacity=[rated[t]*A('GT_'+str(i))[t] for t in range(n)],
++        min_power=[.4*rated[t]*A('GT_'+str(i))[t] for t in range(n)],fuel_type='gas',fuel_slope=fuel,fuel_fixed=0,
++        heat_slope=[steam[t]*A('HRSG_'+str(i))[t]*heat_factor for t in range(n)],heat_fixed=0) for i in (1,2,3)]
++    dg=dict(name='DG',capacity=[plant.emergency_diesel_kW*a['DIESEL'] if a['GRID']<1-1e-9 else 0. for a in availability],
++        min_power=0.,fuel_type='diesel_shaft',fuel_slope=1.,fuel_fixed=plant.emergency_diesel_kW*hardware['diesel_local_response']['shaft_loss_fraction'],heat_slope=0.,heat_fixed=0.)
++    contract=initial['execution_contract']
++    if contract['diesel_mode']=='emergency_bus':
++        eligible=[int(p[1:]) for p in contract.get('diesel_allowed_priorities',[]) if p in ('P0','P1','P2','P3')]
++        if not eligible:raise ValueError('Emergency DG needs explicit allowed priorities')
++        dg.update(electric_service_limit=loads[:,eligible,0].sum(axis=1).tolist(),electric_service_scope='building_critical_only',eligible_priorities=eligible)
++    generators.append(dg)
++    boiler=dict(capacity=[plant.boiler_steam_lbph/3*sum(a['BOILER_'+str(i)] for i in (1,2,3))*heat_factor for a in availability],
++        fuel_slope=1/(plant.exchanger_eff*plant.boiler_eff*KWH_PER_MMBTU),fuel_type='gas',
++        fixed_electric=station['boiler_fixed_kW'],electric_per_h=station['boiler_kW_per_kWsteam']/plant.exchanger_eff)
++    ec=[dict(name='EC_'+str(i+1),capacity=[plant.electric_chillers_rt[i]*RT_TO_KW*a['EC_'+str(i+1)] for a in availability],
++        electric_per_c=plant.ec_electric_kW_per_rt/RT_TO_KW,tower_per_c=1+plant.ec_electric_kW_per_rt/RT_TO_KW) for i in range(3)]
++    absorption=dict(capacity=[plant.absorption_rt*RT_TO_KW*a['ABS'] for a in availability],
++        heat_per_c=plant.abs_steam_lb_per_rt*heat_factor/RT_TO_KW,electric_per_c=plant.abs_electric_kW_per_rt/RT_TO_KW,
++        tower_per_c=1+plant.abs_steam_lb_per_rt*plant.steam_kWh_per_lb/RT_TO_KW)
++    defaults=dict(capacity_kWh=0.,power_kW=0.,initial_soc=0.,charge_efficiency=.95,discharge_efficiency=.95,loss_per_hour=0.)
++    stores=[]
++    for name,carrier in [('ups','e'),('cold_store','c')]:
++        cfg=dict(defaults,**hardware['sci_engineering'][name]);stock=initial['initial_stocks'][name]
++        if stock>cfg['capacity_kWh']:raise ValueError('Initial stock exceeds fixed installed capacity')
++        charge=[a['GRID']>=1-1e-9 and (name=='ups' or a['TOWER']>=1-1e-9) for a in availability]
++        stores.append(dict(name=name,carrier=carrier,capacity=float(cfg['capacity_kWh']),power=float(cfg['power_kW']),initial=stock,
++            minimum=0.,charge_efficiency=cfg['charge_efficiency'],discharge_efficiency=cfg['discharge_efficiency'],
++            decay_per_h=cfg['loss_per_hour'],loss_mode='exponential_beginning',charge_allowed=charge,discharge_allowed=[not b for b in charge],
++            discharge_limit=loads[:,:2,'ehc'.index(carrier)].sum(axis=1).tolist(),
++            discharge_scope='building_critical_only',eligible_priorities=[0,1],
++            charge_electric_per_carrier=hardware['sci_engineering']['cold_pump_kW_per_kW'] if carrier=='c' else 0.,
++            discharge_electric_per_carrier=hardware['sci_engineering']['cold_pump_kW_per_kW'] if carrier=='c' else 0.))
++    binding_paths=['configs/plant_configs.json','configs/model_review_v30/cases.json',
++        'inputs/loads/hospital_ies_demand_8760.csv','inputs/loads/electricity_boundary_8760.csv',
++        'inputs/loads/thermal_boundary_8760.csv','inputs/loads/critical_zones_8760.csv',
++        'inputs/sci_engineering/auxiliary_allocation_8760.csv','inputs/sci_engineering/auxiliary_metadata.json',
++        'inputs/model_review_v28/THERMAL_SERVICE_COMPONENTS_8760.csv','inputs/model_review_v28/THERMAL_INPUT_METADATA.json',
++        'inputs/model_review_v29/SOURCE_QUALITY_METADATA.json','inputs/model_review_v29/SOURCE_COOLING_UNMET_HOURS.csv',
++        'inputs/model_review_v29/ALL55_ZONES_NATIVE_UNMET_SUMMARY.csv']
++    spec=dict(schema=SCHEMA,input_schema=INPUT_SCHEMA,evidence_class='independent_raw_input_offline_planning',
++        information_permission='offline_known_window',physical_execution_validated=False,branch=branch,start_hour=1160,configuration='H1',start_minute=0.,
++        duration_h=[(b-a)/60 for a,b in zip(grid[:-1],grid[1:])],time_grid_minutes=grid,
++        source_hours_by_period=period_hours,source_terminal_hour=source_hour_at(1160,180),
++        demand_e=loads[:,:,0].sum(axis=1).tolist(),demand_h=loads[:,:,1].sum(axis=1).tolist(),demand_c=loads[:,:,2].sum(axis=1).tolist(),
++        original_demand_by_priority_kW=loads.tolist(),
++        electric_direct_by_priority_kW=[q['direct_aux_request']['direct_request_kW'] for q in ledgers],
++        electric_auxiliary_by_priority_kW=[np.asarray(q['direct_aux_request']['auxiliary_request_kW']).sum(axis=1).tolist() for q in ledgers],
++        demand_ledger=ledgers,exogenous_availability_by_period=availability,outdoor_temperature_C=temps,
++        grid_capacity=[float(scene['grid_limit_kW'])*a['GRID'] for a in availability],grid_price=prices,
++        generators=generators,boiler=boiler,electric_chillers=ec,absorption=absorption,
++        tower_capacity=[float(registry['engineering_completion_v24']['tower_rejection_capacity_kW'])*a['TOWER'] for a in availability],
++        storages=stores,fuel_budgets={'diesel_shaft':initial['diesel_shaft_budget_kWh']},
++        fuel_prices={'gas':plant.gas_price_usd_per_mmbtu,'diesel_shaft':.30},
++        dispatch_mapping=dict(gt_names=['GT_1','GT_2','GT_3'],dg_name='DG',ec_names=['EC_1','EC_2','EC_3'],
++            boiler_heat_to_steam=1/heat_factor,gt_steam_per_e=[[steam[t]*A('HRSG_'+str(i))[t] for t in range(n)] for i in (1,2,3)]),
++        initial_state=copy.deepcopy(initial['initial_state']),initial_snapshot=copy.deepcopy(initial),
++        initialization_provenance=copy.deepcopy(initial['provenance']),
++        execution_parameters=dict(station=station,hardware_profile=hardware,execution_contract=contract),
++        provenance=dict(grid_source='decision_clock+raw_hourly+registered_exogenous_event_edges',historical_operating_results_read=False,
++            input_bindings={name:dict(sha256=_sha(root/name),bytes=(root/name).stat().st_size) for name in binding_paths},
++            transformations=['read_data','build_zone_groups','compute_allocation(hash-verified published auxiliary cache)',
++                'apply_auxiliary_allocation','apply_thermal_profile(pure frame namespace)','V28 construct_request'],
++            units=dict(electric='kW_e',heat='useful kW_h',cooling='useful kW_c',gas='MMBtu',diesel='shaft-equivalent kWh',prices='USD2001'),
++            thermal_boundary=thermal_receipt,source_quality_scope=window_scope(root,scene),
++            availability_scope='registered exogenous only; no future trips, actual restart, bus state or connected-service history',
++            initialization_solver_scope=dict(
++                recorded_core_solver_calls=len(initial['initialization_solver_calls']) if isinstance(initial.get('initialization_solver_calls'),list) else None,
++                total_initialization_solver_calls=None,
++                scope='Common reset may solve before creating core logs; total not separately instrumented. This pure input builder performs no initialization or solve.'),
++            terminal_source_row_is_support_only=True,station_demand_is_not_in_building_request=True),
++        registered_simplifications=[
++            'Independent full original demand; no historical C/M auxiliary, station power, endogenous availability or native boundaries used',
++            'GT full-load linear heat/fuel coefficients reuse current common-planner surrogate, not original author numerical software',
++            'Dynamic GT startup/queue/ramp/minimum-up/down and actual boiler/DG readiness remain common-executor physics; planning station/start parameters provided separately',
++            'Boiler fixed/variable station electric included; GT starter and DG startup/rotor/governor work require own-plan approximation and actual replay accounting',
++            'Legacy-permission DG old-envelope critical-demand cap removed; emergency_bus only uses its actual registered allowed priorities',
++            'DG shaft surrogate counts electric output plus rated-speed loss; actual startup/no-load work must be compared separately',
++            'UPS only P0/P1 full building electricity including building auxiliaries, never plant/station/general services',
++            'Uninstalled cold store remains zero; no extra PV, BESS or gas budget',
++            'No terminal inventory equality added; planned/actual inventories and initial preparation charge reported separately',
++            'Source quality metadata is evaluation-only and never changes/scales original demand',
++            'Full continuous/storage plan is not an actual execution interface'])
++    if not np.isfinite(loads).all() or (loads<0).any():raise ValueError('Invalid independent demand')
++    return spec
+diff --git a/tools/model_reference_v32/planner.py b/tools/model_reference_v32/planner.py
+new file mode 100644
+index 0000000000000000000000000000000000000000..f98e4a5391ae0a457dc805fc19a757581c2a841f
+--- /dev/null
++++ b/tools/model_reference_v32/planner.py
+@@ -0,0 +1,499 @@
++"""Independent-input fixed-capacity REopt-family static planning reference.
++
++Hirwa's multi-period supply/conversion/storage structure is adapted to the
++frozen hospital. Tiered service is an explicitly hospital-added adaptation.
++No C/M trajectories, environment, execution hooks or actual-state writes.
++"""
++from __future__ import annotations
++
++import copy
++import json
++import math
++import numpy as np
++from scipy.optimize import Bounds, LinearConstraint, milp
++from scipy.sparse import coo_matrix
++from tools.model_review_v30.offline import _validate as _validate_static
++
++SCHEMA = 'hospital_ies.model_reference_v32.priority_plan.v1'
++PRIORITIES = ('P0','P1','P2','P3')
++CARRIERS = ('e','h','c')
++LEX_LOCK_TOLERANCE = 1e-9
++
++
++def _at(value, h):
++    return float(value[h] if isinstance(value,(list,tuple,np.ndarray)) else value)
++
++
++def _loads(spec):
++    value = spec.get('original_demand_by_priority_kW',spec.get('demand_by_priority_kW'))
++    return np.asarray(value,dtype=float)
++
++
++def _eligible(obj):
++    values = obj.get('eligible_priorities',[0,1])
++    indices = tuple(int(v[1:]) if isinstance(v,str) and v.startswith('P') else int(v) for v in values)
++    if not indices or len(set(indices))!=len(indices) or any(v not in range(4) for v in indices):
++        raise ValueError('Invalid eligible building priorities')
++    return indices
++
++
++def validate_spec(spec):
++    if spec.get('evidence_class')=='historical_C_conditioned_static_planning_envelope' or spec.get('built_from_cm_trace'):
++        raise ValueError('Independent original input required, not historical C/M outcomes')
++    n = _validate_static(spec)
++    for budget in spec['fuel_budgets'].values():
++        if isinstance(budget,(list,tuple,np.ndarray)):
++            raise ValueError('Fixed full-window fuel budget must be a scalar')
++    demand = _loads(spec)
++    if demand.shape!=(n,4,3) or not np.isfinite(demand).all() or (demand<0).any():
++        raise ValueError('Finite nonnegative original priority demand T x 4 x 3 required')
++    if 'original_demand_by_priority_kW' in spec and 'demand_by_priority_kW' in spec:
++        if not np.array_equal(demand,np.asarray(spec['demand_by_priority_kW'],dtype=float)):
++            raise ValueError('Conflicting priority demand aliases')
++    for c,carrier in enumerate(CARRIERS):
++        aggregate = np.asarray([_at(spec['demand_'+carrier],h) for h in range(n)])
++        if np.max(np.abs(demand[:,:,c].sum(axis=1)-aggregate))>1e-8:
++            raise ValueError('Aggregate demand must equal original priority sum without double counting')
++    synthetic = spec.get('evidence_class') in ('synthetic_mathematical_fixture','artificial_test_fixture')
++    def coefficient(value, name, scalar_only=False):
++        is_array=isinstance(value,(list,tuple,np.ndarray))
++        if scalar_only and is_array:
++            raise ValueError(name+' coefficient must be a scalar')
++        values=np.asarray(value if is_array else [value],dtype=float)
++        if values.ndim!=1 or (is_array and len(values)!=n) or not np.isfinite(values).all() or (values<0).any():
++            raise ValueError('Finite nonnegative horizon-matched '+name+' coefficient required')
++    names = []
++    for g in spec['generators']:
++        names.append(g['name'])
++        for key in ('fixed_electric','electric_service_limit'):
++            if key in g:
++                coefficient(g[key],g['name']+'.'+key)
++        for h in range(n):
++            if _at(g.get('min_power',0.),h)>_at(g['capacity'],h):
++                raise ValueError('Generator minimum exceeds physical capacity')
++        if g.get('electric_service_scope') not in (None,'building_critical_only'):
++            raise ValueError('Unknown generator electric service scope')
++        if g.get('electric_service_scope'):
++            _eligible(g)
++        active_fuel=any(_at(g['capacity'],h)>0 and (_at(g.get('fuel_slope',0),h)>0 or _at(g.get('fuel_fixed',0),h)>0) for h in range(n))
++        if active_fuel and g['fuel_type'] not in spec['fuel_prices']:
++            raise ValueError('Missing explicit active-source fuel price')
++    boiler=spec['boiler']
++    if any(_at(boiler['capacity'],h)>0 and _at(boiler.get('fuel_slope',0),h)>0 for h in range(n)):
++        if boiler.get('fuel_type','gas') not in spec['fuel_prices']:
++            raise ValueError('Missing explicit boiler fuel price')
++    for s in spec['storages']:
++        names.append(s['name'])
++        for key in ('charge_electric_per_carrier','discharge_electric_per_carrier'):
++            if key in s:
++                coefficient(s[key],s['name']+'.'+key,scalar_only=True)
++        for key in ('capacity','power','initial','minimum','decay_per_h','terminal_min','terminal_max'):
++            if key in s and isinstance(s[key],(list,tuple,np.ndarray)):
++                raise ValueError('Fixed storage scalar parameters required')
++        scope = s.get('discharge_scope')
++        if scope not in (None,'building_critical_only'):
++            raise ValueError('Unknown storage discharge scope')
++        if scope:
++            _eligible(s)
++        if not synthetic:
++            if (s['name'],s['carrier']) not in (('ups','e'),('cold_store','c')):
++                raise ValueError('No uninstalled generic battery or thermal store may be added')
++            if scope!='building_critical_only' or _eligible(s)!=(0,1):
++                raise ValueError('Hospital UPS/cold store must retain P0/P1 building-critical-only scope')
++    if len(set(names))!=len(names):
++        raise ValueError('Duplicate source/storage names')
++    return n
++
++
++def normalization(spec):
++    demand = _loads(spec);duration = spec['duration_h']
++    denominators = {p:{c:math.fsum(float(demand[h,ip,ic])*_at(duration,h) for h in range(len(duration)))
++        for ic,c in enumerate(CARRIERS)} for ip,p in enumerate(PRIORITIES)}
++    return dict(denominators_kWh=denominators,zero_demand_contribution='omitted',
++        definition='For each priority: sum of carrier ENS divided by its own fixed positive full-window requested energy',
++        actual_ENS_carriers_reported_separately=True,lock_tolerance_dimensionless=LEX_LOCK_TOLERANCE)
++
++
++def classify_termination(result):
++    x = getattr(result,'x',None)
++    incumbent = x is not None and bool(np.isfinite(x).all())
++    if result.status==0 and incumbent:
++        return dict(status='optimal',termination_reason='optimal',incumbent=True)
++    if result.status==1:
++        return dict(status='time_limit' if incumbent else 'no_incumbent',termination_reason='limit_reached',incumbent=incumbent)
++    if result.status==2:
++        return dict(status='infeasible',termination_reason='proved_infeasible',incumbent=False)
++    if result.status==3:
++        return dict(status='unbounded',termination_reason='proved_unbounded',incumbent=False)
++    return dict(status='solver_error' if result.status else 'no_incumbent',
++                termination_reason='solver_returned_no_valid_plan',incumbent=False)
++
++
++def _scope_groups(spec):
++    groups = {}
++    for store in spec['storages']:
++        if store.get('discharge_scope')=='building_critical_only':
++            groups.setdefault((store['carrier'],_eligible(store)),[]).append(store['name']+'.discharge')
++    for source in spec['generators']:
++        if source.get('electric_service_scope')=='building_critical_only':
++            groups.setdefault(('e',_eligible(source)),[]).append(source['name'])
++    return groups
++
++
++def _build(spec, formulation):
++    n = validate_spec(spec); demand = _loads(spec)
++    keys = ['grid','boiler','boiler.on','ABS','heat_waste']+[e['name'] for e in spec['electric_chillers']]
++    for g in spec['generators']:
++        keys.extend((g['name'],g['name']+'.on'))
++    for s in spec['storages']:
++        keys.extend(s['name']+'.'+kind for kind in ('charge','discharge','stock'))
++    keys.extend('unmet.'+p+'.'+c for p in PRIORITIES for c in CARRIERS)
++    if len(set(keys))!=len(keys):
++        raise ValueError('Planning variable names collide')
++    index = {(key,h):j*n+h for j,key in enumerate(keys) for h in range(n)}
++    nv = len(index); fee = np.zeros(nv);lo=np.zeros(nv);hi=np.full(nv,np.inf);integer=np.zeros(nv)
++    rr=[];cc=[];dd=[];lower=[];upper=[];row_names=[]
++    def V(key,h):
++        return index[key,h]
++    def row(terms,lb,ub,name):
++        r=len(lower)
++        for key,value in terms.items():
++            if value:
++                rr.append(r);cc.append(key);dd.append(value)
++        lower.append(lb);upper.append(ub);row_names.append(name)
++    fuel_terms={f:{} for f in spec['fuel_budgets']}
++    for h in range(n):
++        dt=_at(spec['duration_h'],h);b=spec['boiler'];ab=spec['absorption']
++        hi[V('grid',h)]=_at(spec['grid_capacity'],h);fee[V('grid',h)]=dt*_at(spec['grid_price'],h)
++        cap=_at(b['capacity'],h);hi[V('boiler',h)]=cap;hi[V('boiler.on',h)]=float(cap>0);integer[V('boiler.on',h)]=1
++        row({V('boiler',h):1.,V('boiler.on',h):-cap},-np.inf,0.,'boiler.on')
++        fuel=b.get('fuel_type','gas');slope=_at(b.get('fuel_slope',0),h)
++        fee[V('boiler',h)]=dt*slope*_at(spec['fuel_prices'].get(fuel,0),h)
++        if fuel in fuel_terms:
++            fuel_terms[fuel][V('boiler',h)]=dt*slope
++        hi[V('ABS',h)]=_at(ab['capacity'],h)
++        balances={'e':{V('grid',h):1.,V('boiler',h):-_at(b.get('electric_per_h',0),h),
++                       V('boiler.on',h):-_at(b.get('fixed_electric',0),h),V('ABS',h):-_at(ab.get('electric_per_c',0),h)},
++                  'h':{V('boiler',h):1.,V('ABS',h):-_at(ab['heat_per_c'],h),V('heat_waste',h):-1.},
++                  'c':{V('ABS',h):1.}}
++        tower={V('ABS',h):_at(ab.get('tower_per_c',0),h)}
++        for ec in spec['electric_chillers']:
++            key=ec['name'];hi[V(key,h)]=_at(ec['capacity'],h)
++            balances['e'][V(key,h)]=-_at(ec['electric_per_c'],h);balances['c'][V(key,h)]=1.
++            tower[V(key,h)]=_at(ec.get('tower_per_c',0),h)
++        for g in spec['generators']:
++            key=g['name'];p=V(key,h);z=V(key+'.on',h);cap=_at(g['capacity'],h)
++            hi[p]=cap;hi[z]=float(cap>0);integer[z]=1
++            row({p:1.,z:-cap},-np.inf,0.,key+'.capacity')
++            row({p:1.,z:-_at(g.get('min_power',0),h)},0.,np.inf,key+'.minimum')
++            if 'electric_service_limit' in g:
++                hi[p]=min(hi[p],_at(g['electric_service_limit'],h))
++            balances['e'][p]=1.;balances['e'][z]=-_at(g.get('fixed_electric',0),h)
++            balances['h'][p]=_at(g.get('heat_slope',0),h);balances['h'][z]=_at(g.get('heat_fixed',0),h)
++            fuel=g['fuel_type'];fs=_at(g.get('fuel_slope',0),h);ff=_at(g.get('fuel_fixed',0),h)
++            price=_at(spec['fuel_prices'].get(fuel,0),h);fee[p]=dt*fs*price;fee[z]=dt*ff*price
++            if fuel in fuel_terms:
++                fuel_terms[fuel][p]=dt*fs;fuel_terms[fuel][z]=dt*ff
++        for s in spec['storages']:
++            key=s['name'];ch=V(key+'.charge',h);dis=V(key+'.discharge',h);stock=V(key+'.stock',h)
++            power=float(s['power']);hi[ch]=power*bool(_at(s.get('charge_allowed',1),h));hi[dis]=power*bool(_at(s.get('discharge_allowed',1),h))
++            if 'discharge_limit' in s:
++                hi[dis]=min(hi[dis],_at(s['discharge_limit'],h))
++            lo[stock]=float(s.get('minimum',0));hi[stock]=float(s['capacity'])
++            mode=s.get('loss_mode','none');rate=float(s.get('decay_per_h',0))
++            a=1+dt*rate if mode=='implicit_end' else 1.
++            retained=math.exp(-rate*dt) if mode=='exponential_beginning' else 1.
++            terms={stock:a,ch:-dt*float(s['charge_efficiency']),dis:dt/float(s['discharge_efficiency'])}
++            if h:
++                terms[V(key+'.stock',h-1)]=-retained;rhs=0.
++            else:
++                rhs=float(s['initial'])*retained
++            row(terms,rhs,rhs,key+'.inventory');row({ch:1.,dis:1.},-np.inf,power,key+'.shared_power')
++            balances[s['carrier']][dis]=balances[s['carrier']].get(dis,0)+1.
++            balances[s['carrier']][ch]=balances[s['carrier']].get(ch,0)-1.
++            for variable,field in ((ch,'charge_electric_per_carrier'),(dis,'discharge_electric_per_carrier')):
++                balances['e'][variable]=balances['e'].get(variable,0)-float(s.get(field,0))
++            if h==n-1:
++                lo[stock]=max(lo[stock],float(s.get('terminal_min',s.get('minimum',0))))
++                hi[stock]=min(hi[stock],float(s.get('terminal_max',s['capacity'])))
++        for ip,p in enumerate(PRIORITIES):
++            for ic,c in enumerate(CARRIERS):
++                variable=V('unmet.'+p+'.'+c,h)
++                hi[variable]=float(demand[h,ip,ic]) if formulation=='tiered' else 0.
++                balances[c][variable]=1.
++        for carrier,terms in balances.items():
++            requested=_at(spec['demand_'+carrier],h)
++            row(terms,requested,requested,carrier+'.balance')
++        for (carrier,priorities),suppliers in _scope_groups(spec).items():
++            ic=CARRIERS.index(carrier);terms={V(key,h):1. for key in suppliers}
++            for ip in priorities:
++                terms[V('unmet.'+PRIORITIES[ip]+'.'+carrier,h)]=1.
++            row(terms,-np.inf,float(sum(demand[h,ip,ic] for ip in priorities)),carrier+'.served_critical_scope')
++        row(tower,-np.inf,_at(spec['tower_capacity'],h),'tower.capacity')
++    for fuel,terms in fuel_terms.items():
++        row(terms,-np.inf,float(spec['fuel_budgets'][fuel]),'budget.'+fuel)
++    return dict(n=n,keys=keys,index=index,nv=nv,fee=fee,lo=lo,hi=hi,integer=integer,
++        rr=rr,cc=cc,dd=dd,lower=lower,upper=upper,row_names=row_names,row=row)
++
++
++def _finite_or_none(value):
++    return float(value) if value is not None and math.isfinite(float(value)) else None
++
++
++def solve_reference(spec, formulation='strict', time_limit_s=60.):
++    """Run explicit fixed priority layers, each with its disclosed budget."""
++    if formulation not in ('strict','tiered'):
++        raise ValueError('Unknown strict/tiered formulation')
++    if isinstance(time_limit_s,bool) or not math.isfinite(time_limit_s) or time_limit_s<0:
++        raise ValueError('Invalid per-layer solve budget')
++    model=_build(spec,formulation);norm=normalization(spec);n=model['n']
++    V=lambda key,h:model['index'][key,h]
++    objectives=[]
++    if formulation=='tiered':
++        for p in PRIORITIES:
++            objective=np.zeros(model['nv'])
++            for c in CARRIERS:
++                denominator=norm['denominators_kWh'][p][c]
++                if denominator>0:
++                    for h in range(n):
++                        objective[V('unmet.'+p+'.'+c,h)]=_at(spec['duration_h'],h)/denominator
++            objectives.append((p,objective))
++    objectives.append(('fee',model['fee']))
++    layers=[];locks=[];last_plan=None;last_audit=None;termination=None;failure=None
++    for name,objective in objectives:
++        if name!='fee' and not np.any(objective):
++            layers.append(dict(name=name,status='not_applicable_zero_demand',incumbent=last_plan is not None,objective_value=0.,optimality_proven=True))
++            continue
++        matrix=coo_matrix((model['dd'],(model['rr'],model['cc'])),shape=(len(model['lower']),model['nv'])).tocsc()
++        result=milp(c=objective,integrality=model['integer'],bounds=Bounds(model['lo'],model['hi']),
++            constraints=LinearConstraint(matrix,np.asarray(model['lower']),np.asarray(model['upper'])),
++            options={'time_limit':float(time_limit_s),'mip_rel_gap':1e-9})
++        termination=classify_termination(result)
++        entry=dict(name=name,**termination,raw_status=int(result.status),solver_message=str(result.message),
++            objective_value=_finite_or_none(getattr(result,'fun',None)),
++            mip_gap=_finite_or_none(getattr(result,'mip_gap',None)),mip_dual_bound=_finite_or_none(getattr(result,'mip_dual_bound',None)),
++            mip_node_count=_finite_or_none(getattr(result,'mip_node_count',None)),
++            time_limit_seconds=float(time_limit_s),optimality_proven=termination['status']=='optimal')
++        layers.append(entry)
++        if not termination['incumbent']:
++            if termination['status']=='infeasible' and locks:
++                failure='lexicographic_lock_infeasible'
++            elif termination['status'] not in ('no_incumbent','time_limit'):
++                failure=termination['status']
++            break
++        candidate={key:[float(result.x[V(key,h)]) for h in range(n)] for key in model['keys']}
++        audit=audit_plan(spec,candidate,formulation=formulation,objective_locks=locks)
++        entry['independent_audit_valid']=audit['valid']
++        if audit['valid']:
++            independently_recomputed=audit['independently_recomputed_fee'] if name=='fee' else audit['normalized_service_objectives'][name]
++            reported=entry['objective_value']
++            objective_tolerance=1e-7 if name=='fee' else LEX_LOCK_TOLERANCE
++            objective_matches=reported is not None and abs(reported-independently_recomputed)<=objective_tolerance
++            entry.update(independently_recomputed_objective=independently_recomputed,
++                independent_objective_matches_solver=objective_matches,objective_metadata_tolerance=objective_tolerance)
++            if not objective_matches:
++                audit['valid']=False
++                audit['violations'].append(dict(check='solver_objective_metadata',violation=abs(reported-independently_recomputed) if reported is not None else None))
++                entry['independent_audit_valid']=False
++        if not audit['valid']:
++            last_plan=candidate;last_audit=audit;failure='invalid_incumbent';break
++        last_plan,last_audit=candidate,audit
++        if name!='fee':
++            value=audit['normalized_service_objectives'][name]
++            lock=dict(priority=name,value=value,upper=value+LEX_LOCK_TOLERANCE,optimality_proven=entry['optimality_proven'])
++            locks.append(lock)
++            model['row']({i:float(v) for i,v in enumerate(objective) if v},-np.inf,lock['upper'],'lock.'+name)
++    verified=last_plan is not None and last_audit is not None and last_audit['valid']
++    solved_all=len(layers)==len(objectives) and layers[-1]['name']=='fee' and bool(layers[-1].get('independent_audit_valid'))
++    optimal=solved_all and all(layer.get('optimality_proven',False) for layer in layers)
++    if failure:
++        status=failure;reason='independent_or_lexicographic_gate_failure' if failure in ('invalid_incumbent','lexicographic_lock_infeasible') else termination['termination_reason']
++    elif optimal:
++        status='optimal';reason='optimal'
++    elif verified:
++        status='time_limit';reason='verified_incumbent_without_complete_optimality_proof'
++    else:
++        status=(termination or {}).get('status','no_incumbent');reason=(termination or {}).get('termination_reason','no_valid_plan')
++    return dict(schema=SCHEMA,formulation=formulation,status=status,termination_reason=reason,
++        incumbent=last_plan is not None,verified_incumbent=bool(verified),adoptable=bool(verified and not failure),
++        plan=last_plan,audit=last_audit,objective_fee=last_audit['independently_recomputed_fee'] if verified else None,
++        layers=layers,objective_locks=locks,normalization=norm,lexicographic_layers_completed=solved_all,
++        lexicographic_optimality_proven=optimal,variable_count=model['nv'],binary_count=int(model['integer'].sum()),
++        constraint_count=len(model['lower']),time_limit_per_layer_seconds=float(time_limit_s),
++        information_permission=spec['information_permission'],actual_replayed=False,
++        full_continuous_plan_replayed=False,planned_storage_ports_executed=False,
++        registered_simplifications=copy.deepcopy(spec.get('registered_simplifications',[])),
++        plan_fee_excludes_initial_inventory_preparation=True,
++        dynamic_startup_ramp_minimum_on_off_qualified=False,
++        fuel_budget_not_invented_for_absent_carrier=True)
++
++
++def audit_plan(spec, plan, formulation='strict', tolerance=1e-6, objective_locks=None):
++    """Independent named-flow arithmetic, without solver rows/index/matrix."""
++    n=validate_spec(spec);demand=_loads(spec)
++    if formulation not in ('strict','tiered'):
++        raise ValueError('Unknown strict/tiered formulation')
++    if plan is None:
++        return dict(valid=False,reason='no_plan',maximum_violation=None)
++    violations=[];observed=[];residuals=[];fuel_used={};fee=0.;standing={}
++    previous={s['name']:float(s['initial']) for s in spec['storages']}
++    service={p:{c:{key:[] for key in ('requested_kWh','served_kWh','ENS_kWh')} for c in CARRIERS} for p in PRIORITIES}
++    def check(name,value,allowed=None):
++        value=float(value)
++        observed.append(value)
++        if not math.isfinite(value) or value>(tolerance if allowed is None else allowed):
++            violations.append(dict(check=name,violation=value))
++    try:
++        for values in plan.values():
++            if len(values)!=n or not np.isfinite(values).all():
++                raise ValueError('Malformed plan array')
++            for value in values:
++                check('nonnegative',-float(value))
++        for h in range(n):
++            P=lambda key:float(plan[key][h]);dt=_at(spec['duration_h'],h)
++            delivered={c:0. for c in CARRIERS}
++            for ip,p in enumerate(PRIORITIES):
++                for ic,c in enumerate(CARRIERS):
++                    requested=float(demand[h,ip,ic]);unmet=P('unmet.'+p+'.'+c)
++                    check(p+'.'+c+'.unmet_upper',unmet-requested)
++                    if formulation=='strict':
++                        check(p+'.'+c+'.strict_unmet',abs(unmet))
++                    delivered[c]+=requested-unmet
++                    for key,value in (('requested_kWh',requested*dt),('served_kWh',(requested-unmet)*dt),('ENS_kWh',unmet*dt)):
++                        service[p][c][key].append(value)
++            b=spec['boiler'];ab=spec['absorption'];e=P('grid');heat=P('boiler')-P('heat_waste');cold=P('ABS')
++            check('grid.capacity',P('grid')-_at(spec['grid_capacity'],h));fee+=dt*P('grid')*_at(spec['grid_price'],h)
++            z=P('boiler.on');check('boiler.integral',abs(z-round(z)));check('boiler.binary_upper',z-1.)
++            check('boiler.availability',z-float(_at(b['capacity'],h)>0.))
++            check('boiler.capacity',P('boiler')-_at(b['capacity'],h)*z)
++            e-=P('boiler')*_at(b.get('electric_per_h',0),h)+z*_at(b.get('fixed_electric',0),h)
++            e-=P('ABS')*_at(ab.get('electric_per_c',0),h);heat-=P('ABS')*_at(ab['heat_per_c'],h)
++            tower=P('ABS')*_at(ab.get('tower_per_c',0),h);check('ABS.capacity',P('ABS')-_at(ab['capacity'],h))
++            fuel=dt*P('boiler')*_at(b.get('fuel_slope',0),h);kind=b.get('fuel_type','gas')
++            fuel_used[kind]=fuel_used.get(kind,0)+fuel;fee+=fuel*_at(spec['fuel_prices'].get(kind,0),h)
++            for ec in spec['electric_chillers']:
++                q=P(ec['name']);check(ec['name']+'.capacity',q-_at(ec['capacity'],h))
++                cold+=q;e-=q*_at(ec['electric_per_c'],h);tower+=q*_at(ec.get('tower_per_c',0),h)
++            for g in spec['generators']:
++                p=P(g['name']);z=P(g['name']+'.on')
++                check(g['name']+'.integral',abs(z-round(z)));check(g['name']+'.binary_upper',z-1.)
++                check(g['name']+'.availability',z-float(_at(g['capacity'],h)>0.))
++                check(g['name']+'.capacity',p-_at(g['capacity'],h)*z);check(g['name']+'.minimum',_at(g.get('min_power',0),h)*z-p)
++                if 'electric_service_limit' in g:
++                    check(g['name']+'.service_limit',p-_at(g['electric_service_limit'],h))
++                e+=p-z*_at(g.get('fixed_electric',0),h)
++                heat+=p*_at(g.get('heat_slope',0),h)+z*_at(g.get('heat_fixed',0),h)
++                fuel=dt*(p*_at(g.get('fuel_slope',0),h)+z*_at(g.get('fuel_fixed',0),h));kind=g['fuel_type']
++                fuel_used[kind]=fuel_used.get(kind,0)+fuel;fee+=fuel*_at(spec['fuel_prices'].get(kind,0),h)
++            for s in spec['storages']:
++                key=s['name'];ch=P(key+'.charge');dis=P(key+'.discharge');stock=P(key+'.stock')
++                mode=s.get('loss_mode','none');rate=float(s.get('decay_per_h',0))
++                loss=dt*rate*stock if mode=='implicit_end' else previous[key]*(1-math.exp(-dt*rate)) if mode=='exponential_beginning' else 0.
++                expected=previous[key]-loss+dt*(float(s['charge_efficiency'])*ch-dis/float(s['discharge_efficiency']))
++                check(key+'.inventory',abs(stock-expected));check(key+'.capacity',stock-s['capacity']);check(key+'.minimum',s.get('minimum',0)-stock)
++                check(key+'.shared_power',ch+dis-s['power'])
++                check(key+'.charge_mode',ch-s['power']*bool(_at(s.get('charge_allowed',1),h)))
++                check(key+'.discharge_mode',dis-s['power']*bool(_at(s.get('discharge_allowed',1),h)))
++                if 'discharge_limit' in s:
++                    check(key+'.discharge_limit',dis-_at(s['discharge_limit'],h))
++                if h==n-1:
++                    check(key+'.terminal_min',s.get('terminal_min',s.get('minimum',0))-stock)
++                    check(key+'.terminal_max',stock-s.get('terminal_max',s['capacity']))
++                previous[key]=stock;standing[key]=standing.get(key,0)+loss
++                if s['carrier']=='e':
++                    e+=dis-ch
++                elif s['carrier']=='h':
++                    heat+=dis-ch
++                else:
++                    cold+=dis-ch
++                e-=ch*s.get('charge_electric_per_carrier',0)+dis*s.get('discharge_electric_per_carrier',0)
++            # Rebuild eligible supplier totals from named ports, not MILP rows.
++            groups={}
++            for s in spec['storages']:
++                if s.get('discharge_scope')=='building_critical_only':
++                    key=(s['carrier'],_eligible(s));groups[key]=groups.get(key,0)+P(s['name']+'.discharge')
++            for g in spec['generators']:
++                if g.get('electric_service_scope')=='building_critical_only':
++                    key=('e',_eligible(g));groups[key]=groups.get(key,0)+P(g['name'])
++            for (carrier,eligible),value in groups.items():
++                ic=CARRIERS.index(carrier)
++                served=sum(float(demand[h,ip,ic])-P('unmet.'+PRIORITIES[ip]+'.'+carrier) for ip in eligible)
++                check(carrier+'.served_critical_storage_source_scope',value-served)
++            row=dict(period=h,electric=e-delivered['e'],heat=heat-delivered['h'],cooling=cold-delivered['c'],tower_violation=max(0.,tower-_at(spec['tower_capacity'],h)))
++            for key in ('electric','heat','cooling'):
++                check(key+'.balance',abs(row[key]))
++            check('tower.capacity',row['tower_violation']);residuals.append(row)
++        for fuel,budget in spec['fuel_budgets'].items():
++            check('fuel_budget.'+fuel,fuel_used.get(fuel,0)-budget)
++        service={p:{c:{key:math.fsum(values) for key,values in metrics.items()} for c,metrics in carriers.items()} for p,carriers in service.items()}
++        denominators=normalization(spec)['denominators_kWh']
++        objectives={p:math.fsum(service[p][c]['ENS_kWh']/denominators[p][c] for c in CARRIERS if denominators[p][c]>0.) for p in PRIORITIES}
++        for lock in objective_locks or []:
++            check('priority_lock.'+lock['priority'],objectives[lock['priority']]-lock['upper'],LEX_LOCK_TOLERANCE)
++    except (KeyError,ValueError,TypeError,OverflowError) as error:
++        return dict(valid=False,reason='invalid_or_incomplete_plan',error=str(error),maximum_violation=None)
++    return dict(valid=not violations,violations=violations,period_residuals=residuals,service=service,
++        normalized_service_objectives=objectives,fuel_used=fuel_used,independently_recomputed_fee=fee,
++        storage_standing_loss=standing,terminal_stocks=previous,tolerance=tolerance,
++        objective_lock_audit_tolerance_dimensionless=LEX_LOCK_TOLERANCE,
++        maximum_violation=max([max(0.,v) for v in observed],default=0.),
++        maximum_balance_residual=max([abs(row[key]) for row in residuals for key in ('electric','heat','cooling')],default=0.),
++        fuel_budget_scope={fuel:'registered' if fuel in spec['fuel_budgets'] else 'not_registered_no_budget_imposed' for fuel in fuel_used},
++        independent_of_solver_matrix=True,actual_execution_qualified=False)
++
++
++def select_common_formulation(normal_strict, grid_strict, allow_unknown_tiered=False):
++    results=(normal_strict,grid_strict)
++    if any(r.get('formulation')!='strict' for r in results):
++        raise ValueError('The common gate requires two strict planning records')
++    verified=all(r.get('verified_incumbent') and r.get('adoptable') for r in results)
++    proved=any(r.get('status')=='infeasible' and r.get('termination_reason')=='proved_infeasible' for r in results)
++    unresolved_error=any(r.get('status') in ('invalid_incumbent','lexicographic_lock_infeasible','solver_error','unbounded') for r in results)
++    if verified:
++        selected='strict';reason='both_strict_have_independently_verified_incumbents'
++    elif unresolved_error:
++        selected=None;reason='unresolved_planning_gate_error'
++    elif proved:
++        selected='tiered';reason='at_least_one_strict_problem_proved_infeasible'
++    elif allow_unknown_tiered:
++        selected='tiered';reason='registered_no_incumbent_after_budget_path_strict_feasibility_unknown'
++    else:
++        selected=None;reason='no_verified_incumbent_strict_feasibility_unknown'
++    return dict(selected_formulation=selected,selection_reason=reason,strict_infeasibility_proven=proved,
++        both_strict_verified_incumbents=verified,same_formulation_required_for_normal_and_grid=True,
++        performance_comparison_used_for_selection=False)
++
++
++def stabilize_symmetric_generators(spec, plan, names, initial_targets, formulation='strict'):
++    """Relabel only exact full-window symmetric units; raw plan is untouched."""
++    objects={g['name']:g for g in spec['generators']}
++    if len(set(names))!=len(names) or len(initial_targets)!=len(names) or any(name not in objects for name in names):
++        raise ValueError('Invalid symmetric generator/initial target mapping')
++    if not all(isinstance(x,(int,float)) and math.isfinite(x) and x>=0 for x in initial_targets):
++        raise ValueError('Finite nonnegative original initial targets required')
++    signatures=[json.dumps({key:value for key,value in objects[name].items() if key!='name'},sort_keys=True) for name in names]
++    if len(set(signatures))!=1:
++        return dict(plan=copy.deepcopy(plan),verified_equivalent=False,reason='not_identical_over_complete_window',permutations=[])
++    before=audit_plan(spec,plan,formulation=formulation)
++    if not before['valid']:
++        raise ValueError('Cannot relabel an invalid raw plan')
++    canonical=copy.deepcopy(plan);previous=list(initial_targets);permutations=[]
++    for h in range(len(spec['duration_h'])):
++        targets=sorted(range(len(names)),key=lambda i:(-previous[i],i))
++        sources=sorted(range(len(names)),key=lambda i:(-float(plan[names[i]][h]),i))
++        assignments=[]
++        for target,source in zip(targets,sources):
++            canonical[names[target]][h]=plan[names[source]][h]
++            canonical[names[target]+'.on'][h]=plan[names[source]+'.on'][h]
++            if target!=source:
++                assignments.append(dict(source=names[source],target=names[target]))
++        if assignments:
++            permutations.append(dict(period=h,assignments=assignments))
++        previous=[float(canonical[name][h]) for name in names]
++    after=audit_plan(spec,canonical,formulation=formulation)
++    service_equal=all(after['service'][p][c]==before['service'][p][c] for p in PRIORITIES for c in CARRIERS)
++    if not after['valid'] or not service_equal or abs(after['independently_recomputed_fee']-before['independently_recomputed_fee'])>1e-7:
++        raise ValueError('Symmetry relabeling did not preserve independent feasibility, service and fee')
++    return dict(plan=canonical,verified_equivalent=True,reason='identical_full_window_parameters_static_label_permutation',
++        permutations=permutations,independent_audit=after,original_plan_unchanged=True,
++        proves_dynamic_minimum_up_down_or_startup_feasibility=False)
+diff --git a/tools/model_reference_v32/reference.py b/tools/model_reference_v32/reference.py
+new file mode 100644
+index 0000000000000000000000000000000000000000..8384faeb38f1b039c614d9e6aa63871a1c45ade5
+--- /dev/null
++++ b/tools/model_reference_v32/reference.py
+@@ -0,0 +1,91 @@
++"""Explicit b01 independent-input offline reference through the common queue."""
++from __future__ import annotations
++import argparse,copy,gzip,hashlib,json,os,subprocess,sys
++from pathlib import Path
++ROOT=Path(__file__).resolve().parents[2]
++sys.path[:0]=[str(ROOT),str(ROOT/'src')]
++from tools.model_reference_v32 import STUDY_ID,METHOD_ID,EXECUTION_ID
++def read(p):return json.loads(Path(p).read_text(encoding='utf-8-sig'))
++def sha(p):return hashlib.sha256(Path(p).read_bytes()).hexdigest()
++
++class OfflinePlanPolicy:
++    def __init__(self,alias,config=None,plant=None,policy_id=None):
++        if alias!=METHOD_ID:raise ValueError('Explicit V32 method required; never substitute C/M')
++        self.config=copy.deepcopy(config or {});self.policy_id=policy_id or METHOD_ID
++        path=Path(self.config['actions_path'])
++        if self.config.get('actions_sha256') not in (None,sha(path)):raise ValueError('Frozen V32 requests changed')
++        schedule=read(path)
++        if schedule.get('method_id')!=METHOD_ID or schedule.get('execution_identity')!=EXECUTION_ID or schedule.get('information_permission')!='offline_known_window' or schedule.get('full_continuous_plan_replayed') is not False or schedule.get('planned_storage_ports_executed') is not False:
++            raise ValueError('Wrong offline registration or unsupported continuous plan claim')
++        self.requests=copy.deepcopy(schedule['requests'])
++        if not self.requests or any(self.requests[i]['time_minute']>self.requests[i+1]['time_minute'] for i in range(len(self.requests)-1)):raise ValueError('No ordered verified plan; no zero fallback')
++    def decide(self,records):
++        now=float(records[-1]['decision_time_min']);available=[r for r in self.requests if r['time_minute']<=now+1e-9]
++        if not available:raise ValueError('No registered offline request at this actual decision time')
++        request=copy.deepcopy(available[-1])
++        return request['action'],dict(policy_id=self.policy_id,information_permission='offline_known_window',execution_identity=EXECUTION_ID,
++            schedule_time_minute=request['time_minute'],decision_time_minute=now,full_continuous_plan_replayed=False,
++            planned_storage_ports_executed=False,planned_unmet_directly_executed=False,strategy_fallback=False,fallback_reason=None,
++            online_solver_calls=0,source='frozen independent-input offline request table; no C/M controller call')
++
++def main(argv=None):
++    from tools.model_correctness_v23 import validation as common
++    from tools.model_closure_v22.validation import write,now
++    p=argparse.ArgumentParser(description=__doc__);p.add_argument('--branch',choices=['normal','grid'])
++    for name in ('spec','plan','actions','initial','selection'):p.add_argument('--'+name,type=Path)
++    p.add_argument('--output',type=Path,required=True);p.add_argument('--_worker',action='store_true',help=argparse.SUPPRESS);a=p.parse_args(argv)
++    if a._worker:
++        registration=read(a.output/'CASE.json');case=registration['case'];registry=registration['registry']
++        if case['policy']['alias']!=METHOD_ID or registration['method_registry'].get(METHOD_ID)!=EXECUTION_ID:raise ValueError('Unregistered external reference')
++        from tools.model_review_v30.environment import with_terminal
++        from tools.model_review_v30.evaluation import export_evaluation
++        from tools.model_review_v29.validation import annotate_result
++        extra=copy.deepcopy(case['v28_thermal_profile']['files']);extra.update(registry.get('source_quality',{}).get('files',{}));extra.update(registration['reference_file_bindings'])
++        code=common.worker(a.output,model_version='v25',study_identity=STUDY_ID,execution_policy_id=case['v32_reference']['policy_id'],
++            controller_factory=OfflinePlanPolicy,environment_adapter=with_terminal(case.get('v27_load_overlay'),thermal_profile=case['v28_thermal_profile']),registered_extra_inputs=extra)
++        if (a.output/'RESULT.json').is_file():
++            result=read(a.output/'RESULT.json');result.update(core_execution_status=result['status'],export_status='started',external_reference=case['v32_reference'])
++            try:
++                result=annotate_result(a.output,ROOT,case,result)
++                with gzip.open(a.output/'trajectory.json.gz','rt',encoding='utf8') as f:payload=json.load(f)
++                evaluation=export_evaluation(payload,result);evaluation['provenance']['evidence_role']='new_v32_independent_offline_reference'
++                write(a.output/'EVALUATION.json',evaluation);result.update(v30_evaluation=evaluation,terminal_snapshot=evaluation['terminal_snapshot'],export_status='completed')
++            except Exception as error:
++                write(a.output/'V32_EXPORT_ERROR.json',dict(type=type(error).__name__,message=str(error),core_status=result['status']))
++                result.update(status='failed_v32_export',export_status='failed',export_error=str(error));code=code or 2
++            write(a.output/'RESULT.json',result);write(a.output/'STATUS.json',{k:result.get(k) for k in ('case_id','status','core_execution_status','export_status','actual_episode_attempts','observed_until_minute','unknown_tail_minutes')})
++        return code
++    if a.branch is None or any(getattr(a,k) is None for k in ('spec','plan','actions','initial','selection')):p.error('Explicit b01 --branch and all five frozen reference inputs required')
++    from tools.model_reference_v32.snapshot import load_frozen_case
++    from tools.model_reference_v32.planner import audit_plan
++    from tools.sci_engineering.policy import validate_action
++    case,registry=load_frozen_case(ROOT,a.branch);spec=read(a.spec);plan=read(a.plan);schedule=read(a.actions);selection=read(a.selection);initial=read(a.initial)
++    formulation=selection['selected_formulation']
++    if plan.get('formulation')!=formulation or schedule.get('formulation')!=formulation or plan.get('plan') is None:raise ValueError('Normal/grid must use the same selected verified version')
++    if not audit_plan(spec,plan['plan'],formulation=formulation,objective_locks=plan.get('objective_locks'))['valid']:raise ValueError('Selected plan failed independent arithmetic')
++    if abs(sum(spec['duration_h'])*60-180.)>1e-8 or float(case['scenario']['start_hour'])!=1160. or case['configuration']!='H1':raise ValueError('Wrong b01 horizon/source/hardware')
++    for store in ('ups','cold_store'):
++        expected=float(registry['hardware_profiles']['H1']['sci_engineering'].get(store,{}).get('capacity_kWh',0.))*float(registry['hardware_profiles']['H1']['sci_engineering'].get(store,{}).get('initial_soc',0.))
++        if initial['initial_stocks'][store]!=expected:raise ValueError('Independent initialization stock differs')
++    for request in schedule['requests']:validate_action(request['action'])
++    case.update(id='v32_b01_'+a.branch+'_external',study_id=STUDY_ID,evaluation_role='offline_known_window_independent_reference',purpose='Independent raw-input fixed-capacity external reference, not same-information ranking')
++    case['v32_reference']=dict(branch=a.branch,policy_id=METHOD_ID+'_'+formulation+'_v32',method_id=METHOD_ID,execution_identity=EXECUTION_ID,
++        selected_formulation=formulation,information_permission='offline_known_window',input_independent_of_completed_C_M=True,
++        full_continuous_plan_replayed=False,planned_storage_ports_executed=False,planned_unmet_directly_executed=False,
++        preparation_lead_minutes=schedule['preparation_lead_minutes'],actual_communication_delay_minutes=case['scenario']['response_delay_minutes'],
++        common_preparation='unchanged shared M23 current critical boiler/EC minimum permissions after the frozen ordinary request',
++        same_information_ranking_or_bound=False)
++    case['policy']=dict(alias=METHOD_ID,config=dict(actions_path=str(a.actions.resolve()),actions_sha256=sha(a.actions),information_permission='offline_known_window',selected_formulation=formulation))
++    output=common.checked_output(a.output)
++    if os.name=='nt' and output.drive.upper() not in ('D:','E:'):raise ValueError('New raw output must remain D/E')
++    output.mkdir(parents=True,exist_ok=False)
++    bindings={name:dict(path=str(getattr(a,name).resolve()),sha256=sha(getattr(a,name))) for name in ('spec','plan','actions','initial','selection')}
++    write(output/'CASE.json',dict(registry={k:v for k,v in registry.items() if k!='cases'},case=case,method_registry={METHOD_ID:EXECUTION_ID},reference_file_bindings=bindings))
++    command=[sys.executable,'-I',str(Path(__file__).resolve()),'--_worker','--output',str(output)]
++    write(output/'INVOCATION.json',dict(command=command,cwd=str(ROOT),started_utc=now(),study_id=STUDY_ID,reference_script_sha256=sha(__file__),shared_runner_sha256=sha(common.__file__),reference_file_bindings=bindings))
++    (output/'temp').mkdir();env=dict(os.environ,TEMP=str(output/'temp'),TMP=str(output/'temp'),PYTHONDONTWRITEBYTECODE='1',PYTHONIOENCODING='utf-8')
++    with (output/'stdout.log').open('x',encoding='utf8') as out,(output/'stderr.log').open('x',encoding='utf8') as err:run=subprocess.run(command,cwd=ROOT,env=env,stdout=out,stderr=err)
++    invocation=read(output/'INVOCATION.json');invocation.update(exit_code=run.returncode,finished_utc=now());write(output/'INVOCATION.json',invocation)
++    print(json.dumps(dict(output=str(output),exit_code=run.returncode,method_id=METHOD_ID,branch=a.branch,formulation=formulation)))
++    return run.returncode
++if __name__=='__main__':raise SystemExit(main())
+diff --git a/tools/model_reference_v32/snapshot.py b/tools/model_reference_v32/snapshot.py
+new file mode 100644
+index 0000000000000000000000000000000000000000..1f7ba014e192cec923158458c8af7a3ecefe47c3
+--- /dev/null
++++ b/tools/model_reference_v32/snapshot.py
+@@ -0,0 +1,52 @@
++"""Independent common reset only, never a historical trajectory or C/M decision."""
++import copy,json
++from pathlib import Path
++
++def load_frozen_case(root,branch):
++    if branch not in ('normal','grid'):raise ValueError('Only registered b01 normal/grid branches')
++    root=Path(root);registry=json.loads((root/'configs/model_review_v30/cases.json').read_text(encoding='utf8'))
++    cid='b01_L1_grid_'+('normal' if branch=='normal' else 'disturbed')+'_M'
++    raw=copy.deepcopy(next(c for c in registry['cases'] if c['id']==cid))
++    from tools.model_review_v30.validation import resolve_case
++    case=resolve_case(raw,registry)
++    return case,registry
++
++def physical_configuration(case,registry):
++    from tools.model_correction_v25.validation import resolve_operating_rule
++    config=copy.deepcopy(registry['hardware_profiles'][case['configuration']])
++    for name in ('model_closure_v22','model_correctness_v23','engineering_completion_v24','model_correction_v25'):
++        config[name]=copy.deepcopy(case.get(name,registry[name]))
++    _,rule=resolve_operating_rule(registry,case)
++    return config,rule
++
++def initialize(root,branch,output):
++    """Original t0 reset may solve initialization; zero policy/episode calls."""
++    from tools.model_review_v30.environment import with_terminal
++    from tools.model_review_v30.terminal import _plain
++    from tools.sci_engineering.design import allowed_hours,SEALED_DAYS
++    from tools.model_correction_v25 import MODEL_ID
++    from tools.sci_engineering.runner import input_binding,source_binding,digest
++    root=Path(root).resolve();output=Path(output).resolve()
++    if output.exists():raise FileExistsError('Fresh independent initialization output required')
++    if output.drive.upper() not in ('D:','E:'):raise ValueError('Initialization evidence stays D/E')
++    output.mkdir(parents=True);case,registry=load_frozen_case(root,branch);config,rule=physical_configuration(case,registry)
++    adapter=with_terminal(case.get('v27_load_overlay'),thermal_profile=case['v28_thermal_profile'])
++    env=adapter.OperatingHospitalIESEnv(root,allowed_hours=allowed_hours({'scenarios':[case['scenario']]}),sealed_days=SEALED_DAYS,
++        model_id=MODEL_ID,model_config=config,operating_rule=rule,solver_evidence_directory=output/'domain_evidence',enable_all_validation_rows=True)
++    env.reset(scenario=copy.deepcopy(case['scenario']),seed=int(case['scenario'].get('initialization_seed',20261023)))
++    if env.core.time!=0.:raise ValueError('Initialization unexpectedly advanced actual time')
++    result=dict(schema='hospital_ies.v32.independent_common_initialization.v1',branch=branch,time_minute=0.,
++        initial_stocks={k:float(getattr(env.core,k).energy_kWh) for k in ('ups','cold_store')},
++        diesel_shaft_budget_kWh=float(env.state.diesel_energy_remaining_kWh),initial_state=_plain(vars(env.state)),
++        initial_GT_kW=env.state.gt_prev.tolist(),stores={k:copy.deepcopy(getattr(env.core,k).config) for k in ('ups','cold_store')},
++        plant=env.plant.as_dict(),physical_initial_receipt=_plain(env.v28_demand_receipt['full_initial_state_and_core']),
++        resolved_model_config=copy.deepcopy(env.operating_model_config),execution_contract=copy.deepcopy(env.execution_contract),
++        operating_execution_contract=copy.deepcopy(env.operating_execution_contract),
++        initialization_solver_calls=_plain(list(env.core.solver_calls)),
++        provenance=dict(source='original common environment constructor/reset, no controller constructed or episode executed',
++            source_files=source_binding(root),input_files=input_binding(root),root=str(root),base_case_id=case['id'],
++            scenario=copy.deepcopy(case['scenario']),initialization_seed=case['scenario'].get('initialization_seed',20261023),
++            completed_policy_results_read=False,new_hospital_episodes=0,C_M_decision_calls=0))
++    result['physical_initial_receipt_sha256']=digest(result['physical_initial_receipt'])
++    (output/'INITIALIZATION.json').write_text(json.dumps(result,ensure_ascii=False,indent=2)+'\n',encoding='utf8')
++    return result

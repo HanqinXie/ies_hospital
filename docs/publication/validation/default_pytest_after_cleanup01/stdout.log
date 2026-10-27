@@ -1,0 +1,986 @@
+........................................................................ [  5%]
+.....................FFF................................................ [ 10%]
+................................................................FFFF.... [ 15%]
+.......................................................FF............... [ 21%]
+.........................F........F..F.FF....F..F....................... [ 26%]
+.................................F...FF..............F.................. [ 31%]
+....................................s................................... [ 36%]
+........................................................................ [ 42%]
+........................................................................ [ 47%]
+........................................................................ [ 52%]
+........................................................................ [ 58%]
+........................................................................ [ 63%]
+........................................................................ [ 68%]
+........................................................................ [ 73%]
+........................................................................ [ 79%]
+........................................................................ [ 84%]
+........................................................................ [ 89%]
+........................................................................ [ 95%]
+...................................................................      [100%]
+================================== FAILURES ===================================
+_ test_actual_joint_policy_accepts_explicit_m15_model_without_legacy_schema_leak[F] _
+
+policy_key = 'F'
+
+    @pytest.mark.parametrize('policy_key',['F','E','K2'])
+    def test_actual_joint_policy_accepts_explicit_m15_model_without_legacy_schema_leak(policy_key):
+        from tools.operating_response.data_design import normal_proposal,SEALED_DAYS
+        from tools.operating_response.runner import factory,policy_specs
+        m=module();scene=copy.deepcopy(normal_proposal()['scenarios'][0]);scene['duration_steps']=1
+        first=scene['start_hour']
+        env=m.OperatingHospitalIESEnv(ROOT,allowed_hours=[first,first+1],sealed_days=SEALED_DAYS,
+            model_id='M15_local_response')
+        env.reset(scenario=scene,seed=20261017)
+>       action,_=factory(policy_specs()[policy_key]).decide([m.decision_snapshot(env)])
+
+tests\test_operating_environment.py:67: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+tools\operating_response\runner.py:64: in policy_specs
+    old=legacy.policy_specs()
+tools\engineering_model\runner.py:51: in policy_specs
+    old=read(ROOT/'outputs/v13_executed_service_20261017_run01/design/DEVELOPMENT_POLICY_SPECS.json')
+tools\engineering_model\runner.py:23: in read
+    def read(path):return json.loads(Path(path).read_text(encoding='utf-8'))
+C:\Users\HanqinXie\AppData\Local\Programs\Python\Python310\lib\pathlib.py:1134: in read_text
+    with self.open(mode='r', encoding=encoding, errors=errors) as f:
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = WindowsPath('D:/hospital_ies_v22_20261025/outputs/v13_executed_service_20261017_run01/design/DEVELOPMENT_POLICY_SPECS.json')
+mode = 'r', buffering = -1, encoding = 'utf-8', errors = None, newline = None
+
+    def open(self, mode='r', buffering=-1, encoding=None,
+             errors=None, newline=None):
+        """
+        Open the file pointed by this path and return a file object, as
+        the built-in open() function does.
+        """
+        if "b" not in mode:
+            encoding = io.text_encoding(encoding)
+>       return self._accessor.open(self, mode, buffering, encoding, errors,
+                                   newline)
+E       FileNotFoundError: [Errno 2] No such file or directory: 'D:\\hospital_ies_v22_20261025\\outputs\\v13_executed_service_20261017_run01\\design\\DEVELOPMENT_POLICY_SPECS.json'
+
+C:\Users\HanqinXie\AppData\Local\Programs\Python\Python310\lib\pathlib.py:1119: FileNotFoundError
+_ test_actual_joint_policy_accepts_explicit_m15_model_without_legacy_schema_leak[E] _
+
+policy_key = 'E'
+
+    @pytest.mark.parametrize('policy_key',['F','E','K2'])
+    def test_actual_joint_policy_accepts_explicit_m15_model_without_legacy_schema_leak(policy_key):
+        from tools.operating_response.data_design import normal_proposal,SEALED_DAYS
+        from tools.operating_response.runner import factory,policy_specs
+        m=module();scene=copy.deepcopy(normal_proposal()['scenarios'][0]);scene['duration_steps']=1
+        first=scene['start_hour']
+        env=m.OperatingHospitalIESEnv(ROOT,allowed_hours=[first,first+1],sealed_days=SEALED_DAYS,
+            model_id='M15_local_response')
+        env.reset(scenario=scene,seed=20261017)
+>       action,_=factory(policy_specs()[policy_key]).decide([m.decision_snapshot(env)])
+
+tests\test_operating_environment.py:67: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+tools\operating_response\runner.py:64: in policy_specs
+    old=legacy.policy_specs()
+tools\engineering_model\runner.py:51: in policy_specs
+    old=read(ROOT/'outputs/v13_executed_service_20261017_run01/design/DEVELOPMENT_POLICY_SPECS.json')
+tools\engineering_model\runner.py:23: in read
+    def read(path):return json.loads(Path(path).read_text(encoding='utf-8'))
+C:\Users\HanqinXie\AppData\Local\Programs\Python\Python310\lib\pathlib.py:1134: in read_text
+    with self.open(mode='r', encoding=encoding, errors=errors) as f:
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = WindowsPath('D:/hospital_ies_v22_20261025/outputs/v13_executed_service_20261017_run01/design/DEVELOPMENT_POLICY_SPECS.json')
+mode = 'r', buffering = -1, encoding = 'utf-8', errors = None, newline = None
+
+    def open(self, mode='r', buffering=-1, encoding=None,
+             errors=None, newline=None):
+        """
+        Open the file pointed by this path and return a file object, as
+        the built-in open() function does.
+        """
+        if "b" not in mode:
+            encoding = io.text_encoding(encoding)
+>       return self._accessor.open(self, mode, buffering, encoding, errors,
+                                   newline)
+E       FileNotFoundError: [Errno 2] No such file or directory: 'D:\\hospital_ies_v22_20261025\\outputs\\v13_executed_service_20261017_run01\\design\\DEVELOPMENT_POLICY_SPECS.json'
+
+C:\Users\HanqinXie\AppData\Local\Programs\Python\Python310\lib\pathlib.py:1119: FileNotFoundError
+_ test_actual_joint_policy_accepts_explicit_m15_model_without_legacy_schema_leak[K2] _
+
+policy_key = 'K2'
+
+    @pytest.mark.parametrize('policy_key',['F','E','K2'])
+    def test_actual_joint_policy_accepts_explicit_m15_model_without_legacy_schema_leak(policy_key):
+        from tools.operating_response.data_design import normal_proposal,SEALED_DAYS
+        from tools.operating_response.runner import factory,policy_specs
+        m=module();scene=copy.deepcopy(normal_proposal()['scenarios'][0]);scene['duration_steps']=1
+        first=scene['start_hour']
+        env=m.OperatingHospitalIESEnv(ROOT,allowed_hours=[first,first+1],sealed_days=SEALED_DAYS,
+            model_id='M15_local_response')
+        env.reset(scenario=scene,seed=20261017)
+>       action,_=factory(policy_specs()[policy_key]).decide([m.decision_snapshot(env)])
+
+tests\test_operating_environment.py:67: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+tools\operating_response\runner.py:64: in policy_specs
+    old=legacy.policy_specs()
+tools\engineering_model\runner.py:51: in policy_specs
+    old=read(ROOT/'outputs/v13_executed_service_20261017_run01/design/DEVELOPMENT_POLICY_SPECS.json')
+tools\engineering_model\runner.py:23: in read
+    def read(path):return json.loads(Path(path).read_text(encoding='utf-8'))
+C:\Users\HanqinXie\AppData\Local\Programs\Python\Python310\lib\pathlib.py:1134: in read_text
+    with self.open(mode='r', encoding=encoding, errors=errors) as f:
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = WindowsPath('D:/hospital_ies_v22_20261025/outputs/v13_executed_service_20261017_run01/design/DEVELOPMENT_POLICY_SPECS.json')
+mode = 'r', buffering = -1, encoding = 'utf-8', errors = None, newline = None
+
+    def open(self, mode='r', buffering=-1, encoding=None,
+             errors=None, newline=None):
+        """
+        Open the file pointed by this path and return a file object, as
+        the built-in open() function does.
+        """
+        if "b" not in mode:
+            encoding = io.text_encoding(encoding)
+>       return self._accessor.open(self, mode, buffering, encoding, errors,
+                                   newline)
+E       FileNotFoundError: [Errno 2] No such file or directory: 'D:\\hospital_ies_v22_20261025\\outputs\\v13_executed_service_20261017_run01\\design\\DEVELOPMENT_POLICY_SPECS.json'
+
+C:\Users\HanqinXie\AppData\Local\Programs\Python\Python310\lib\pathlib.py:1119: FileNotFoundError
+______ test_all_ordinary_policy_adapters_run_on_one_common_m18_model[E] _______
+
+name = 'E'
+
+    @pytest.mark.parametrize('name', ['E', 'K1', 'C', 'C4compat'])
+    def test_all_ordinary_policy_adapters_run_on_one_common_m18_model(name):
+        from tools.execution_recovery import environment as m, runner
+        from tools.operating_response.data_design import normal_proposal, SEALED_DAYS
+        scene = copy.deepcopy(normal_proposal()['scenarios'][0]); scene['duration_steps'] = 1
+        first = scene['start_hour']
+        env = m.OperatingHospitalIESEnv(ROOT, allowed_hours=[first, first+1], sealed_days=SEALED_DAYS)
+        env.reset(scenario=scene, seed=20261018)
+        env.core.boundary()
+>       controller = runner.factory(runner.policy_specs()[name])
+
+tests\test_execution_recovery_core.py:357: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+tools\execution_recovery\runner.py:77: in policy_specs
+    pool = {key: copy.deepcopy(baselines()[key]) for key in ('E', 'K1')}
+tools\execution_recovery\runner.py:77: in <dictcomp>
+    pool = {key: copy.deepcopy(baselines()[key]) for key in ('E', 'K1')}
+tools\essential_fixes\runner.py:73: in policy_specs
+    return {key: copy.deepcopy(old.policy_specs()[key]) for key in ('E', 'K1', 'K2')}
+tools\essential_fixes\runner.py:73: in <dictcomp>
+    return {key: copy.deepcopy(old.policy_specs()[key]) for key in ('E', 'K1', 'K2')}
+tools\operating_response\runner.py:64: in policy_specs
+    old=legacy.policy_specs()
+tools\engineering_model\runner.py:51: in policy_specs
+    old=read(ROOT/'outputs/v13_executed_service_20261017_run01/design/DEVELOPMENT_POLICY_SPECS.json')
+tools\engineering_model\runner.py:23: in read
+    def read(path):return json.loads(Path(path).read_text(encoding='utf-8'))
+C:\Users\HanqinXie\AppData\Local\Programs\Python\Python310\lib\pathlib.py:1134: in read_text
+    with self.open(mode='r', encoding=encoding, errors=errors) as f:
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = WindowsPath('D:/hospital_ies_v22_20261025/outputs/v13_executed_service_20261017_run01/design/DEVELOPMENT_POLICY_SPECS.json')
+mode = 'r', buffering = -1, encoding = 'utf-8', errors = None, newline = None
+
+    def open(self, mode='r', buffering=-1, encoding=None,
+             errors=None, newline=None):
+        """
+        Open the file pointed by this path and return a file object, as
+        the built-in open() function does.
+        """
+        if "b" not in mode:
+            encoding = io.text_encoding(encoding)
+>       return self._accessor.open(self, mode, buffering, encoding, errors,
+                                   newline)
+E       FileNotFoundError: [Errno 2] No such file or directory: 'D:\\hospital_ies_v22_20261025\\outputs\\v13_executed_service_20261017_run01\\design\\DEVELOPMENT_POLICY_SPECS.json'
+
+C:\Users\HanqinXie\AppData\Local\Programs\Python\Python310\lib\pathlib.py:1119: FileNotFoundError
+______ test_all_ordinary_policy_adapters_run_on_one_common_m18_model[K1] ______
+
+name = 'K1'
+
+    @pytest.mark.parametrize('name', ['E', 'K1', 'C', 'C4compat'])
+    def test_all_ordinary_policy_adapters_run_on_one_common_m18_model(name):
+        from tools.execution_recovery import environment as m, runner
+        from tools.operating_response.data_design import normal_proposal, SEALED_DAYS
+        scene = copy.deepcopy(normal_proposal()['scenarios'][0]); scene['duration_steps'] = 1
+        first = scene['start_hour']
+        env = m.OperatingHospitalIESEnv(ROOT, allowed_hours=[first, first+1], sealed_days=SEALED_DAYS)
+        env.reset(scenario=scene, seed=20261018)
+        env.core.boundary()
+>       controller = runner.factory(runner.policy_specs()[name])
+
+tests\test_execution_recovery_core.py:357: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+tools\execution_recovery\runner.py:77: in policy_specs
+    pool = {key: copy.deepcopy(baselines()[key]) for key in ('E', 'K1')}
+tools\execution_recovery\runner.py:77: in <dictcomp>
+    pool = {key: copy.deepcopy(baselines()[key]) for key in ('E', 'K1')}
+tools\essential_fixes\runner.py:73: in policy_specs
+    return {key: copy.deepcopy(old.policy_specs()[key]) for key in ('E', 'K1', 'K2')}
+tools\essential_fixes\runner.py:73: in <dictcomp>
+    return {key: copy.deepcopy(old.policy_specs()[key]) for key in ('E', 'K1', 'K2')}
+tools\operating_response\runner.py:64: in policy_specs
+    old=legacy.policy_specs()
+tools\engineering_model\runner.py:51: in policy_specs
+    old=read(ROOT/'outputs/v13_executed_service_20261017_run01/design/DEVELOPMENT_POLICY_SPECS.json')
+tools\engineering_model\runner.py:23: in read
+    def read(path):return json.loads(Path(path).read_text(encoding='utf-8'))
+C:\Users\HanqinXie\AppData\Local\Programs\Python\Python310\lib\pathlib.py:1134: in read_text
+    with self.open(mode='r', encoding=encoding, errors=errors) as f:
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = WindowsPath('D:/hospital_ies_v22_20261025/outputs/v13_executed_service_20261017_run01/design/DEVELOPMENT_POLICY_SPECS.json')
+mode = 'r', buffering = -1, encoding = 'utf-8', errors = None, newline = None
+
+    def open(self, mode='r', buffering=-1, encoding=None,
+             errors=None, newline=None):
+        """
+        Open the file pointed by this path and return a file object, as
+        the built-in open() function does.
+        """
+        if "b" not in mode:
+            encoding = io.text_encoding(encoding)
+>       return self._accessor.open(self, mode, buffering, encoding, errors,
+                                   newline)
+E       FileNotFoundError: [Errno 2] No such file or directory: 'D:\\hospital_ies_v22_20261025\\outputs\\v13_executed_service_20261017_run01\\design\\DEVELOPMENT_POLICY_SPECS.json'
+
+C:\Users\HanqinXie\AppData\Local\Programs\Python\Python310\lib\pathlib.py:1119: FileNotFoundError
+______ test_all_ordinary_policy_adapters_run_on_one_common_m18_model[C] _______
+
+name = 'C'
+
+    @pytest.mark.parametrize('name', ['E', 'K1', 'C', 'C4compat'])
+    def test_all_ordinary_policy_adapters_run_on_one_common_m18_model(name):
+        from tools.execution_recovery import environment as m, runner
+        from tools.operating_response.data_design import normal_proposal, SEALED_DAYS
+        scene = copy.deepcopy(normal_proposal()['scenarios'][0]); scene['duration_steps'] = 1
+        first = scene['start_hour']
+        env = m.OperatingHospitalIESEnv(ROOT, allowed_hours=[first, first+1], sealed_days=SEALED_DAYS)
+        env.reset(scenario=scene, seed=20261018)
+        env.core.boundary()
+>       controller = runner.factory(runner.policy_specs()[name])
+
+tests\test_execution_recovery_core.py:357: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+tools\execution_recovery\runner.py:77: in policy_specs
+    pool = {key: copy.deepcopy(baselines()[key]) for key in ('E', 'K1')}
+tools\execution_recovery\runner.py:77: in <dictcomp>
+    pool = {key: copy.deepcopy(baselines()[key]) for key in ('E', 'K1')}
+tools\essential_fixes\runner.py:73: in policy_specs
+    return {key: copy.deepcopy(old.policy_specs()[key]) for key in ('E', 'K1', 'K2')}
+tools\essential_fixes\runner.py:73: in <dictcomp>
+    return {key: copy.deepcopy(old.policy_specs()[key]) for key in ('E', 'K1', 'K2')}
+tools\operating_response\runner.py:64: in policy_specs
+    old=legacy.policy_specs()
+tools\engineering_model\runner.py:51: in policy_specs
+    old=read(ROOT/'outputs/v13_executed_service_20261017_run01/design/DEVELOPMENT_POLICY_SPECS.json')
+tools\engineering_model\runner.py:23: in read
+    def read(path):return json.loads(Path(path).read_text(encoding='utf-8'))
+C:\Users\HanqinXie\AppData\Local\Programs\Python\Python310\lib\pathlib.py:1134: in read_text
+    with self.open(mode='r', encoding=encoding, errors=errors) as f:
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = WindowsPath('D:/hospital_ies_v22_20261025/outputs/v13_executed_service_20261017_run01/design/DEVELOPMENT_POLICY_SPECS.json')
+mode = 'r', buffering = -1, encoding = 'utf-8', errors = None, newline = None
+
+    def open(self, mode='r', buffering=-1, encoding=None,
+             errors=None, newline=None):
+        """
+        Open the file pointed by this path and return a file object, as
+        the built-in open() function does.
+        """
+        if "b" not in mode:
+            encoding = io.text_encoding(encoding)
+>       return self._accessor.open(self, mode, buffering, encoding, errors,
+                                   newline)
+E       FileNotFoundError: [Errno 2] No such file or directory: 'D:\\hospital_ies_v22_20261025\\outputs\\v13_executed_service_20261017_run01\\design\\DEVELOPMENT_POLICY_SPECS.json'
+
+C:\Users\HanqinXie\AppData\Local\Programs\Python\Python310\lib\pathlib.py:1119: FileNotFoundError
+___ test_all_ordinary_policy_adapters_run_on_one_common_m18_model[C4compat] ___
+
+name = 'C4compat'
+
+    @pytest.mark.parametrize('name', ['E', 'K1', 'C', 'C4compat'])
+    def test_all_ordinary_policy_adapters_run_on_one_common_m18_model(name):
+        from tools.execution_recovery import environment as m, runner
+        from tools.operating_response.data_design import normal_proposal, SEALED_DAYS
+        scene = copy.deepcopy(normal_proposal()['scenarios'][0]); scene['duration_steps'] = 1
+        first = scene['start_hour']
+        env = m.OperatingHospitalIESEnv(ROOT, allowed_hours=[first, first+1], sealed_days=SEALED_DAYS)
+        env.reset(scenario=scene, seed=20261018)
+        env.core.boundary()
+>       controller = runner.factory(runner.policy_specs()[name])
+
+tests\test_execution_recovery_core.py:357: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+tools\execution_recovery\runner.py:77: in policy_specs
+    pool = {key: copy.deepcopy(baselines()[key]) for key in ('E', 'K1')}
+tools\execution_recovery\runner.py:77: in <dictcomp>
+    pool = {key: copy.deepcopy(baselines()[key]) for key in ('E', 'K1')}
+tools\essential_fixes\runner.py:73: in policy_specs
+    return {key: copy.deepcopy(old.policy_specs()[key]) for key in ('E', 'K1', 'K2')}
+tools\essential_fixes\runner.py:73: in <dictcomp>
+    return {key: copy.deepcopy(old.policy_specs()[key]) for key in ('E', 'K1', 'K2')}
+tools\operating_response\runner.py:64: in policy_specs
+    old=legacy.policy_specs()
+tools\engineering_model\runner.py:51: in policy_specs
+    old=read(ROOT/'outputs/v13_executed_service_20261017_run01/design/DEVELOPMENT_POLICY_SPECS.json')
+tools\engineering_model\runner.py:23: in read
+    def read(path):return json.loads(Path(path).read_text(encoding='utf-8'))
+C:\Users\HanqinXie\AppData\Local\Programs\Python\Python310\lib\pathlib.py:1134: in read_text
+    with self.open(mode='r', encoding=encoding, errors=errors) as f:
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = WindowsPath('D:/hospital_ies_v22_20261025/outputs/v13_executed_service_20261017_run01/design/DEVELOPMENT_POLICY_SPECS.json')
+mode = 'r', buffering = -1, encoding = 'utf-8', errors = None, newline = None
+
+    def open(self, mode='r', buffering=-1, encoding=None,
+             errors=None, newline=None):
+        """
+        Open the file pointed by this path and return a file object, as
+        the built-in open() function does.
+        """
+        if "b" not in mode:
+            encoding = io.text_encoding(encoding)
+>       return self._accessor.open(self, mode, buffering, encoding, errors,
+                                   newline)
+E       FileNotFoundError: [Errno 2] No such file or directory: 'D:\\hospital_ies_v22_20261025\\outputs\\v13_executed_service_20261017_run01\\design\\DEVELOPMENT_POLICY_SPECS.json'
+
+C:\Users\HanqinXie\AppData\Local\Programs\Python\Python310\lib\pathlib.py:1119: FileNotFoundError
+______ test_versioned_environment_routes_and_measured_service_ledger[E] _______
+
+name = 'E'
+
+    @pytest.mark.parametrize('name',['E','K1','C19','C18_M19'])
+    def test_versioned_environment_routes_and_measured_service_ledger(name):
+        from tools.model_closeout import environment as m
+        from tools.model_closeout.policy import StateCoordinatedPolicy
+        from tools.essential_fixes.runner import factory,policy_specs
+        from tools.operating_response.data_design import normal_proposal,SEALED_DAYS
+        scene=copy.deepcopy(normal_proposal()['scenarios'][0]);scene['duration_steps']=1
+        first=scene['start_hour']
+        env=m.OperatingHospitalIESEnv(ROOT,allowed_hours=[first,first+1],sealed_days=SEALED_DAYS)
+        env.reset(scenario=scene,seed=20261018);env.core.boundary()
+>       policy=(factory(policy_specs()[name]) if name in ('E','K1') else
+            StateCoordinatedPolicy({'critical_reserve':name=='C19'},policy_id=name))
+
+tests\test_model_closeout_environment.py:19: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+tools\essential_fixes\runner.py:73: in policy_specs
+    return {key: copy.deepcopy(old.policy_specs()[key]) for key in ('E', 'K1', 'K2')}
+tools\essential_fixes\runner.py:73: in <dictcomp>
+    return {key: copy.deepcopy(old.policy_specs()[key]) for key in ('E', 'K1', 'K2')}
+tools\operating_response\runner.py:64: in policy_specs
+    old=legacy.policy_specs()
+tools\engineering_model\runner.py:51: in policy_specs
+    old=read(ROOT/'outputs/v13_executed_service_20261017_run01/design/DEVELOPMENT_POLICY_SPECS.json')
+tools\engineering_model\runner.py:23: in read
+    def read(path):return json.loads(Path(path).read_text(encoding='utf-8'))
+C:\Users\HanqinXie\AppData\Local\Programs\Python\Python310\lib\pathlib.py:1134: in read_text
+    with self.open(mode='r', encoding=encoding, errors=errors) as f:
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = WindowsPath('D:/hospital_ies_v22_20261025/outputs/v13_executed_service_20261017_run01/design/DEVELOPMENT_POLICY_SPECS.json')
+mode = 'r', buffering = -1, encoding = 'utf-8', errors = None, newline = None
+
+    def open(self, mode='r', buffering=-1, encoding=None,
+             errors=None, newline=None):
+        """
+        Open the file pointed by this path and return a file object, as
+        the built-in open() function does.
+        """
+        if "b" not in mode:
+            encoding = io.text_encoding(encoding)
+>       return self._accessor.open(self, mode, buffering, encoding, errors,
+                                   newline)
+E       FileNotFoundError: [Errno 2] No such file or directory: 'D:\\hospital_ies_v22_20261025\\outputs\\v13_executed_service_20261017_run01\\design\\DEVELOPMENT_POLICY_SPECS.json'
+
+C:\Users\HanqinXie\AppData\Local\Programs\Python\Python310\lib\pathlib.py:1119: FileNotFoundError
+______ test_versioned_environment_routes_and_measured_service_ledger[K1] ______
+
+name = 'K1'
+
+    @pytest.mark.parametrize('name',['E','K1','C19','C18_M19'])
+    def test_versioned_environment_routes_and_measured_service_ledger(name):
+        from tools.model_closeout import environment as m
+        from tools.model_closeout.policy import StateCoordinatedPolicy
+        from tools.essential_fixes.runner import factory,policy_specs
+        from tools.operating_response.data_design import normal_proposal,SEALED_DAYS
+        scene=copy.deepcopy(normal_proposal()['scenarios'][0]);scene['duration_steps']=1
+        first=scene['start_hour']
+        env=m.OperatingHospitalIESEnv(ROOT,allowed_hours=[first,first+1],sealed_days=SEALED_DAYS)
+        env.reset(scenario=scene,seed=20261018);env.core.boundary()
+>       policy=(factory(policy_specs()[name]) if name in ('E','K1') else
+            StateCoordinatedPolicy({'critical_reserve':name=='C19'},policy_id=name))
+
+tests\test_model_closeout_environment.py:19: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+tools\essential_fixes\runner.py:73: in policy_specs
+    return {key: copy.deepcopy(old.policy_specs()[key]) for key in ('E', 'K1', 'K2')}
+tools\essential_fixes\runner.py:73: in <dictcomp>
+    return {key: copy.deepcopy(old.policy_specs()[key]) for key in ('E', 'K1', 'K2')}
+tools\operating_response\runner.py:64: in policy_specs
+    old=legacy.policy_specs()
+tools\engineering_model\runner.py:51: in policy_specs
+    old=read(ROOT/'outputs/v13_executed_service_20261017_run01/design/DEVELOPMENT_POLICY_SPECS.json')
+tools\engineering_model\runner.py:23: in read
+    def read(path):return json.loads(Path(path).read_text(encoding='utf-8'))
+C:\Users\HanqinXie\AppData\Local\Programs\Python\Python310\lib\pathlib.py:1134: in read_text
+    with self.open(mode='r', encoding=encoding, errors=errors) as f:
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = WindowsPath('D:/hospital_ies_v22_20261025/outputs/v13_executed_service_20261017_run01/design/DEVELOPMENT_POLICY_SPECS.json')
+mode = 'r', buffering = -1, encoding = 'utf-8', errors = None, newline = None
+
+    def open(self, mode='r', buffering=-1, encoding=None,
+             errors=None, newline=None):
+        """
+        Open the file pointed by this path and return a file object, as
+        the built-in open() function does.
+        """
+        if "b" not in mode:
+            encoding = io.text_encoding(encoding)
+>       return self._accessor.open(self, mode, buffering, encoding, errors,
+                                   newline)
+E       FileNotFoundError: [Errno 2] No such file or directory: 'D:\\hospital_ies_v22_20261025\\outputs\\v13_executed_service_20261017_run01\\design\\DEVELOPMENT_POLICY_SPECS.json'
+
+C:\Users\HanqinXie\AppData\Local\Programs\Python\Python310\lib\pathlib.py:1119: FileNotFoundError
+__________ test_v19_ids_and_baselines_preserve_original_preferences ___________
+
+    def test_v19_ids_and_baselines_preserve_original_preferences():
+        r = api()
+        from tools.execution_recovery.runner import policy_specs
+        assert r.RUN.name == 'v19_model_closeout_20261018_run01'
+        assert r.MODEL_ID == 'M19_model_closeout'
+>       specs = r.policy_specs()
+
+tests\test_model_closeout_registration.py:35: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+tools\model_closeout\runner.py:89: in policy_specs
+    previous = prior()
+tools\execution_recovery\runner.py:77: in policy_specs
+    pool = {key: copy.deepcopy(baselines()[key]) for key in ('E', 'K1')}
+tools\execution_recovery\runner.py:77: in <dictcomp>
+    pool = {key: copy.deepcopy(baselines()[key]) for key in ('E', 'K1')}
+tools\essential_fixes\runner.py:73: in policy_specs
+    return {key: copy.deepcopy(old.policy_specs()[key]) for key in ('E', 'K1', 'K2')}
+tools\essential_fixes\runner.py:73: in <dictcomp>
+    return {key: copy.deepcopy(old.policy_specs()[key]) for key in ('E', 'K1', 'K2')}
+tools\operating_response\runner.py:64: in policy_specs
+    old=legacy.policy_specs()
+tools\engineering_model\runner.py:51: in policy_specs
+    old=read(ROOT/'outputs/v13_executed_service_20261017_run01/design/DEVELOPMENT_POLICY_SPECS.json')
+tools\engineering_model\runner.py:23: in read
+    def read(path):return json.loads(Path(path).read_text(encoding='utf-8'))
+C:\Users\HanqinXie\AppData\Local\Programs\Python\Python310\lib\pathlib.py:1134: in read_text
+    with self.open(mode='r', encoding=encoding, errors=errors) as f:
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = WindowsPath('D:/hospital_ies_v22_20261025/outputs/v13_executed_service_20261017_run01/design/DEVELOPMENT_POLICY_SPECS.json')
+mode = 'r', buffering = -1, encoding = 'utf-8', errors = None, newline = None
+
+    def open(self, mode='r', buffering=-1, encoding=None,
+             errors=None, newline=None):
+        """
+        Open the file pointed by this path and return a file object, as
+        the built-in open() function does.
+        """
+        if "b" not in mode:
+            encoding = io.text_encoding(encoding)
+>       return self._accessor.open(self, mode, buffering, encoding, errors,
+                                   newline)
+E       FileNotFoundError: [Errno 2] No such file or directory: 'D:\\hospital_ies_v22_20261025\\outputs\\v13_executed_service_20261017_run01\\design\\DEVELOPMENT_POLICY_SPECS.json'
+
+C:\Users\HanqinXie\AppData\Local\Programs\Python\Python310\lib\pathlib.py:1119: FileNotFoundError
+_____ test_final_freeze_binds_model_policy_and_declared_clock_sensitivity _____
+
+    def test_final_freeze_binds_model_policy_and_declared_clock_sensitivity():
+>       r = api(); f, spec = freeze_fixture(r)
+
+tests\test_model_closeout_registration.py:123: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+tests\test_model_closeout_registration.py:114: in freeze_fixture
+    spec = r.policy_specs()['C19']
+tools\model_closeout\runner.py:89: in policy_specs
+    previous = prior()
+tools\execution_recovery\runner.py:77: in policy_specs
+    pool = {key: copy.deepcopy(baselines()[key]) for key in ('E', 'K1')}
+tools\execution_recovery\runner.py:77: in <dictcomp>
+    pool = {key: copy.deepcopy(baselines()[key]) for key in ('E', 'K1')}
+tools\essential_fixes\runner.py:73: in policy_specs
+    return {key: copy.deepcopy(old.policy_specs()[key]) for key in ('E', 'K1', 'K2')}
+tools\essential_fixes\runner.py:73: in <dictcomp>
+    return {key: copy.deepcopy(old.policy_specs()[key]) for key in ('E', 'K1', 'K2')}
+tools\operating_response\runner.py:64: in policy_specs
+    old=legacy.policy_specs()
+tools\engineering_model\runner.py:51: in policy_specs
+    old=read(ROOT/'outputs/v13_executed_service_20261017_run01/design/DEVELOPMENT_POLICY_SPECS.json')
+tools\engineering_model\runner.py:23: in read
+    def read(path):return json.loads(Path(path).read_text(encoding='utf-8'))
+C:\Users\HanqinXie\AppData\Local\Programs\Python\Python310\lib\pathlib.py:1134: in read_text
+    with self.open(mode='r', encoding=encoding, errors=errors) as f:
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = WindowsPath('D:/hospital_ies_v22_20261025/outputs/v13_executed_service_20261017_run01/design/DEVELOPMENT_POLICY_SPECS.json')
+mode = 'r', buffering = -1, encoding = 'utf-8', errors = None, newline = None
+
+    def open(self, mode='r', buffering=-1, encoding=None,
+             errors=None, newline=None):
+        """
+        Open the file pointed by this path and return a file object, as
+        the built-in open() function does.
+        """
+        if "b" not in mode:
+            encoding = io.text_encoding(encoding)
+>       return self._accessor.open(self, mode, buffering, encoding, errors,
+                                   newline)
+E       FileNotFoundError: [Errno 2] No such file or directory: 'D:\\hospital_ies_v22_20261025\\outputs\\v13_executed_service_20261017_run01\\design\\DEVELOPMENT_POLICY_SPECS.json'
+
+C:\Users\HanqinXie\AppData\Local\Programs\Python\Python310\lib\pathlib.py:1119: FileNotFoundError
+_ test_unhandled_attempt_is_retained_with_unknown_tail_and_no_zero_substitute _
+
+tmp_path = WindowsPath('E:/hospital_ies_publish_20261028/temp/pytest-of-HanqinXie/pytest-0/test_unhandled_attempt_is_reta0')
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x0000018B4549A560>
+
+    def test_unhandled_attempt_is_retained_with_unknown_tail_and_no_zero_substitute(tmp_path,monkeypatch):
+>       r=api();directory,plan=fake_registration(r,tmp_path,monkeypatch)
+
+tests\test_model_closeout_registration.py:178: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+tests\test_model_closeout_registration.py:172: in fake_registration
+    plan=r.register({'scenarios':[scene]},r.RUN/'experiments'/'fresh',[r.policy_specs()['E']],
+tools\model_closeout\runner.py:89: in policy_specs
+    previous = prior()
+tools\execution_recovery\runner.py:77: in policy_specs
+    pool = {key: copy.deepcopy(baselines()[key]) for key in ('E', 'K1')}
+tools\execution_recovery\runner.py:77: in <dictcomp>
+    pool = {key: copy.deepcopy(baselines()[key]) for key in ('E', 'K1')}
+tools\essential_fixes\runner.py:73: in policy_specs
+    return {key: copy.deepcopy(old.policy_specs()[key]) for key in ('E', 'K1', 'K2')}
+tools\essential_fixes\runner.py:73: in <dictcomp>
+    return {key: copy.deepcopy(old.policy_specs()[key]) for key in ('E', 'K1', 'K2')}
+tools\operating_response\runner.py:64: in policy_specs
+    old=legacy.policy_specs()
+tools\engineering_model\runner.py:51: in policy_specs
+    old=read(ROOT/'outputs/v13_executed_service_20261017_run01/design/DEVELOPMENT_POLICY_SPECS.json')
+tools\engineering_model\runner.py:23: in read
+    def read(path):return json.loads(Path(path).read_text(encoding='utf-8'))
+C:\Users\HanqinXie\AppData\Local\Programs\Python\Python310\lib\pathlib.py:1134: in read_text
+    with self.open(mode='r', encoding=encoding, errors=errors) as f:
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = WindowsPath('D:/hospital_ies_v22_20261025/outputs/v13_executed_service_20261017_run01/design/DEVELOPMENT_POLICY_SPECS.json')
+mode = 'r', buffering = -1, encoding = 'utf-8', errors = None, newline = None
+
+    def open(self, mode='r', buffering=-1, encoding=None,
+             errors=None, newline=None):
+        """
+        Open the file pointed by this path and return a file object, as
+        the built-in open() function does.
+        """
+        if "b" not in mode:
+            encoding = io.text_encoding(encoding)
+>       return self._accessor.open(self, mode, buffering, encoding, errors,
+                                   newline)
+E       FileNotFoundError: [Errno 2] No such file or directory: 'D:\\hospital_ies_v22_20261025\\outputs\\v13_executed_service_20261017_run01\\design\\DEVELOPMENT_POLICY_SPECS.json'
+
+C:\Users\HanqinXie\AppData\Local\Programs\Python\Python310\lib\pathlib.py:1119: FileNotFoundError
+__ test_real_metadata_manifest_binds_new_model_and_confirmation_denominator ___
+
+    def test_real_metadata_manifest_binds_new_model_and_confirmation_denominator():
+        r=api();d=api('data_design');scenes,reg=confirmation_fixture(d)
+        p=d.panel('synthetic_confirmation',scenes,freeze_signature='test_freeze',
+            evaluation_role='independent_confirmation',isolation_registration=reg)
+        _,config=r.model_contract(r.MODEL_ID,{})
+>       policies=[r.policy_specs()[k]['policy_id'] for k in ('E','K1','C19')]
+
+tests\test_model_closeout_registration.py:214: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+tests\test_model_closeout_registration.py:214: in <listcomp>
+    policies=[r.policy_specs()[k]['policy_id'] for k in ('E','K1','C19')]
+tools\model_closeout\runner.py:89: in policy_specs
+    previous = prior()
+tools\execution_recovery\runner.py:77: in policy_specs
+    pool = {key: copy.deepcopy(baselines()[key]) for key in ('E', 'K1')}
+tools\execution_recovery\runner.py:77: in <dictcomp>
+    pool = {key: copy.deepcopy(baselines()[key]) for key in ('E', 'K1')}
+tools\essential_fixes\runner.py:73: in policy_specs
+    return {key: copy.deepcopy(old.policy_specs()[key]) for key in ('E', 'K1', 'K2')}
+tools\essential_fixes\runner.py:73: in <dictcomp>
+    return {key: copy.deepcopy(old.policy_specs()[key]) for key in ('E', 'K1', 'K2')}
+tools\operating_response\runner.py:64: in policy_specs
+    old=legacy.policy_specs()
+tools\engineering_model\runner.py:51: in policy_specs
+    old=read(ROOT/'outputs/v13_executed_service_20261017_run01/design/DEVELOPMENT_POLICY_SPECS.json')
+tools\engineering_model\runner.py:23: in read
+    def read(path):return json.loads(Path(path).read_text(encoding='utf-8'))
+C:\Users\HanqinXie\AppData\Local\Programs\Python\Python310\lib\pathlib.py:1134: in read_text
+    with self.open(mode='r', encoding=encoding, errors=errors) as f:
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = WindowsPath('D:/hospital_ies_v22_20261025/outputs/v13_executed_service_20261017_run01/design/DEVELOPMENT_POLICY_SPECS.json')
+mode = 'r', buffering = -1, encoding = 'utf-8', errors = None, newline = None
+
+    def open(self, mode='r', buffering=-1, encoding=None,
+             errors=None, newline=None):
+        """
+        Open the file pointed by this path and return a file object, as
+        the built-in open() function does.
+        """
+        if "b" not in mode:
+            encoding = io.text_encoding(encoding)
+>       return self._accessor.open(self, mode, buffering, encoding, errors,
+                                   newline)
+E       FileNotFoundError: [Errno 2] No such file or directory: 'D:\\hospital_ies_v22_20261025\\outputs\\v13_executed_service_20261017_run01\\design\\DEVELOPMENT_POLICY_SPECS.json'
+
+C:\Users\HanqinXie\AppData\Local\Programs\Python\Python310\lib\pathlib.py:1119: FileNotFoundError
+_ test_changed_or_missing_final_artifact_rejected_before_environment_creation _
+
+tmp_path = WindowsPath('E:/hospital_ies_publish_20261028/temp/pytest-of-HanqinXie/pytest-0/test_changed_or_missing_final_0')
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x0000018B63A2C460>
+
+    def test_changed_or_missing_final_artifact_rejected_before_environment_creation(tmp_path,monkeypatch):
+>       r=api();directory,plan=fake_registration(r,tmp_path,monkeypatch)
+
+tests\test_model_closeout_registration.py:226: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+tests\test_model_closeout_registration.py:172: in fake_registration
+    plan=r.register({'scenarios':[scene]},r.RUN/'experiments'/'fresh',[r.policy_specs()['E']],
+tools\model_closeout\runner.py:89: in policy_specs
+    previous = prior()
+tools\execution_recovery\runner.py:77: in policy_specs
+    pool = {key: copy.deepcopy(baselines()[key]) for key in ('E', 'K1')}
+tools\execution_recovery\runner.py:77: in <dictcomp>
+    pool = {key: copy.deepcopy(baselines()[key]) for key in ('E', 'K1')}
+tools\essential_fixes\runner.py:73: in policy_specs
+    return {key: copy.deepcopy(old.policy_specs()[key]) for key in ('E', 'K1', 'K2')}
+tools\essential_fixes\runner.py:73: in <dictcomp>
+    return {key: copy.deepcopy(old.policy_specs()[key]) for key in ('E', 'K1', 'K2')}
+tools\operating_response\runner.py:64: in policy_specs
+    old=legacy.policy_specs()
+tools\engineering_model\runner.py:51: in policy_specs
+    old=read(ROOT/'outputs/v13_executed_service_20261017_run01/design/DEVELOPMENT_POLICY_SPECS.json')
+tools\engineering_model\runner.py:23: in read
+    def read(path):return json.loads(Path(path).read_text(encoding='utf-8'))
+C:\Users\HanqinXie\AppData\Local\Programs\Python\Python310\lib\pathlib.py:1134: in read_text
+    with self.open(mode='r', encoding=encoding, errors=errors) as f:
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = WindowsPath('D:/hospital_ies_v22_20261025/outputs/v13_executed_service_20261017_run01/design/DEVELOPMENT_POLICY_SPECS.json')
+mode = 'r', buffering = -1, encoding = 'utf-8', errors = None, newline = None
+
+    def open(self, mode='r', buffering=-1, encoding=None,
+             errors=None, newline=None):
+        """
+        Open the file pointed by this path and return a file object, as
+        the built-in open() function does.
+        """
+        if "b" not in mode:
+            encoding = io.text_encoding(encoding)
+>       return self._accessor.open(self, mode, buffering, encoding, errors,
+                                   newline)
+E       FileNotFoundError: [Errno 2] No such file or directory: 'D:\\hospital_ies_v22_20261025\\outputs\\v13_executed_service_20261017_run01\\design\\DEVELOPMENT_POLICY_SPECS.json'
+
+C:\Users\HanqinXie\AppData\Local\Programs\Python\Python310\lib\pathlib.py:1119: FileNotFoundError
+______ test_freeze_refuses_source_change_during_protected_baseline_check ______
+
+tmp_path = WindowsPath('E:/hospital_ies_publish_20261028/temp/pytest-of-HanqinXie/pytest-0/test_freeze_refuses_source_cha0')
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x0000018B45A3AF80>
+
+    def test_freeze_refuses_source_change_during_protected_baseline_check(tmp_path,monkeypatch):
+        f=api('freeze');r=api();g=api('gate')
+        monkeypatch.setattr(f,'B',tmp_path)
+        (tmp_path/'logs').mkdir();(tmp_path/'test_gates').mkdir();(tmp_path/'baseline').mkdir()
+        source={'x':'a'}
+        gate=dict(passed=True,exit_code=0,source_before=source,source_after=source,
+            test_files_sha256={},test_files_after_sha256={})
+        (tmp_path/'logs/check.command.json').write_text(json.dumps({'exit_code':0}),encoding='utf8')
+        (tmp_path/'test_gates/check.json').write_text(json.dumps(gate),encoding='utf8')
+        (tmp_path/'baseline/initial.json').write_text(json.dumps({'files':{}}),encoding='utf8')
+        (tmp_path/'M19_MODEL_CONFIG.json').write_text('{}',encoding='utf8')
+        bindings=iter([source,{'x':'changed'}])
+        monkeypatch.setattr(r,'source_binding',lambda:next(bindings))
+        monkeypatch.setattr(r,'model_contract',lambda model,config:({},config))
+        monkeypatch.setattr(g,'test_binding',lambda:{})
+        monkeypatch.setattr(sys,'argv',['freeze','--name','synthetic_candidate','--tests','check','--main'])
+        with pytest.raises(ValueError,match='[Ss]ource|[Tt]est'):
+>           f.main()
+
+tests\test_model_closeout_registration.py:300: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+tools\model_closeout\freeze.py:74: in main
+    policies=r.policy_specs(), affected_regression_command=test,
+tools\model_closeout\runner.py:89: in policy_specs
+    previous = prior()
+tools\execution_recovery\runner.py:77: in policy_specs
+    pool = {key: copy.deepcopy(baselines()[key]) for key in ('E', 'K1')}
+tools\execution_recovery\runner.py:77: in <dictcomp>
+    pool = {key: copy.deepcopy(baselines()[key]) for key in ('E', 'K1')}
+tools\essential_fixes\runner.py:73: in policy_specs
+    return {key: copy.deepcopy(old.policy_specs()[key]) for key in ('E', 'K1', 'K2')}
+tools\essential_fixes\runner.py:73: in <dictcomp>
+    return {key: copy.deepcopy(old.policy_specs()[key]) for key in ('E', 'K1', 'K2')}
+tools\operating_response\runner.py:64: in policy_specs
+    old=legacy.policy_specs()
+tools\engineering_model\runner.py:51: in policy_specs
+    old=read(ROOT/'outputs/v13_executed_service_20261017_run01/design/DEVELOPMENT_POLICY_SPECS.json')
+tools\engineering_model\runner.py:23: in read
+    def read(path):return json.loads(Path(path).read_text(encoding='utf-8'))
+C:\Users\HanqinXie\AppData\Local\Programs\Python\Python310\lib\pathlib.py:1134: in read_text
+    with self.open(mode='r', encoding=encoding, errors=errors) as f:
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = WindowsPath('D:/hospital_ies_v22_20261025/outputs/v13_executed_service_20261017_run01/design/DEVELOPMENT_POLICY_SPECS.json')
+mode = 'r', buffering = -1, encoding = 'utf-8', errors = None, newline = None
+
+    def open(self, mode='r', buffering=-1, encoding=None,
+             errors=None, newline=None):
+        """
+        Open the file pointed by this path and return a file object, as
+        the built-in open() function does.
+        """
+        if "b" not in mode:
+            encoding = io.text_encoding(encoding)
+>       return self._accessor.open(self, mode, buffering, encoding, errors,
+                                   newline)
+E       FileNotFoundError: [Errno 2] No such file or directory: 'D:\\hospital_ies_v22_20261025\\outputs\\v13_executed_service_20261017_run01\\design\\DEVELOPMENT_POLICY_SPECS.json'
+
+C:\Users\HanqinXie\AppData\Local\Programs\Python\Python310\lib\pathlib.py:1119: FileNotFoundError
+______ test_development_subset_keeps_evaluation_role_and_unfrozen_status ______
+
+    def test_development_subset_keeps_evaluation_role_and_unfrozen_status():
+>       c=api('campaign');p=c.subset_proposal(c.proposal('key'),[9,10])
+
+tests\test_model_closeout_registration.py:320: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+tools\model_closeout\campaign.py:32: in proposal
+    long = read(OLD / 'design/LONG_FINAL_R1_PROPOSAL.json')['scenarios']
+tools\model_closeout\campaign.py:17: in read
+    return json.loads(Path(path).read_text(encoding='utf8'))
+C:\Users\HanqinXie\AppData\Local\Programs\Python\Python310\lib\pathlib.py:1134: in read_text
+    with self.open(mode='r', encoding=encoding, errors=errors) as f:
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = WindowsPath('D:/hospital_ies_v22_20261025/outputs/v18_execution_recovery_20261018_run01/design/LONG_FINAL_R1_PROPOSAL.json')
+mode = 'r', buffering = -1, encoding = 'utf8', errors = None, newline = None
+
+    def open(self, mode='r', buffering=-1, encoding=None,
+             errors=None, newline=None):
+        """
+        Open the file pointed by this path and return a file object, as
+        the built-in open() function does.
+        """
+        if "b" not in mode:
+            encoding = io.text_encoding(encoding)
+>       return self._accessor.open(self, mode, buffering, encoding, errors,
+                                   newline)
+E       FileNotFoundError: [Errno 2] No such file or directory: 'D:\\hospital_ies_v22_20261025\\outputs\\v18_execution_recovery_20261018_run01\\design\\LONG_FINAL_R1_PROPOSAL.json'
+
+C:\Users\HanqinXie\AppData\Local\Programs\Python\Python310\lib\pathlib.py:1119: FileNotFoundError
+________ test_new_runner_has_own_output_and_keeps_baseline_preferences ________
+
+    def test_new_runner_has_own_output_and_keeps_baseline_preferences():
+        from tools.essential_fixes.runner import policy_specs
+        m = api()
+        assert m.RUN.name == 'v18_execution_recovery_20261018_run01'
+>       assert m.policy_specs()['E'] == policy_specs()['E']
+
+tests\test_execution_recovery_runner.py:21: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+tools\execution_recovery\runner.py:77: in policy_specs
+    pool = {key: copy.deepcopy(baselines()[key]) for key in ('E', 'K1')}
+tools\execution_recovery\runner.py:77: in <dictcomp>
+    pool = {key: copy.deepcopy(baselines()[key]) for key in ('E', 'K1')}
+tools\essential_fixes\runner.py:73: in policy_specs
+    return {key: copy.deepcopy(old.policy_specs()[key]) for key in ('E', 'K1', 'K2')}
+tools\essential_fixes\runner.py:73: in <dictcomp>
+    return {key: copy.deepcopy(old.policy_specs()[key]) for key in ('E', 'K1', 'K2')}
+tools\operating_response\runner.py:64: in policy_specs
+    old=legacy.policy_specs()
+tools\engineering_model\runner.py:51: in policy_specs
+    old=read(ROOT/'outputs/v13_executed_service_20261017_run01/design/DEVELOPMENT_POLICY_SPECS.json')
+tools\engineering_model\runner.py:23: in read
+    def read(path):return json.loads(Path(path).read_text(encoding='utf-8'))
+C:\Users\HanqinXie\AppData\Local\Programs\Python\Python310\lib\pathlib.py:1134: in read_text
+    with self.open(mode='r', encoding=encoding, errors=errors) as f:
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = WindowsPath('D:/hospital_ies_v22_20261025/outputs/v13_executed_service_20261017_run01/design/DEVELOPMENT_POLICY_SPECS.json')
+mode = 'r', buffering = -1, encoding = 'utf-8', errors = None, newline = None
+
+    def open(self, mode='r', buffering=-1, encoding=None,
+             errors=None, newline=None):
+        """
+        Open the file pointed by this path and return a file object, as
+        the built-in open() function does.
+        """
+        if "b" not in mode:
+            encoding = io.text_encoding(encoding)
+>       return self._accessor.open(self, mode, buffering, encoding, errors,
+                                   newline)
+E       FileNotFoundError: [Errno 2] No such file or directory: 'D:\\hospital_ies_v22_20261025\\outputs\\v13_executed_service_20261017_run01\\design\\DEVELOPMENT_POLICY_SPECS.json'
+
+C:\Users\HanqinXie\AppData\Local\Programs\Python\Python310\lib\pathlib.py:1119: FileNotFoundError
+_ test_final_comparison_requires_exact_freeze_signature_source_config_and_policy _
+
+    def test_final_comparison_requires_exact_freeze_signature_source_config_and_policy():
+>       m=api();f,spec=frozen()
+
+tests\test_execution_recovery_freeze.py:18: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+tests\test_execution_recovery_freeze.py:10: in frozen
+    m=api();spec=m.policy_specs()['C']
+tools\execution_recovery\runner.py:77: in policy_specs
+    pool = {key: copy.deepcopy(baselines()[key]) for key in ('E', 'K1')}
+tools\execution_recovery\runner.py:77: in <dictcomp>
+    pool = {key: copy.deepcopy(baselines()[key]) for key in ('E', 'K1')}
+tools\essential_fixes\runner.py:73: in policy_specs
+    return {key: copy.deepcopy(old.policy_specs()[key]) for key in ('E', 'K1', 'K2')}
+tools\essential_fixes\runner.py:73: in <dictcomp>
+    return {key: copy.deepcopy(old.policy_specs()[key]) for key in ('E', 'K1', 'K2')}
+tools\operating_response\runner.py:64: in policy_specs
+    old=legacy.policy_specs()
+tools\engineering_model\runner.py:51: in policy_specs
+    old=read(ROOT/'outputs/v13_executed_service_20261017_run01/design/DEVELOPMENT_POLICY_SPECS.json')
+tools\engineering_model\runner.py:23: in read
+    def read(path):return json.loads(Path(path).read_text(encoding='utf-8'))
+C:\Users\HanqinXie\AppData\Local\Programs\Python\Python310\lib\pathlib.py:1134: in read_text
+    with self.open(mode='r', encoding=encoding, errors=errors) as f:
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = WindowsPath('D:/hospital_ies_v22_20261025/outputs/v13_executed_service_20261017_run01/design/DEVELOPMENT_POLICY_SPECS.json')
+mode = 'r', buffering = -1, encoding = 'utf-8', errors = None, newline = None
+
+    def open(self, mode='r', buffering=-1, encoding=None,
+             errors=None, newline=None):
+        """
+        Open the file pointed by this path and return a file object, as
+        the built-in open() function does.
+        """
+        if "b" not in mode:
+            encoding = io.text_encoding(encoding)
+>       return self._accessor.open(self, mode, buffering, encoding, errors,
+                                   newline)
+E       FileNotFoundError: [Errno 2] No such file or directory: 'D:\\hospital_ies_v22_20261025\\outputs\\v13_executed_service_20261017_run01\\design\\DEVELOPMENT_POLICY_SPECS.json'
+
+C:\Users\HanqinXie\AppData\Local\Programs\Python\Python310\lib\pathlib.py:1119: FileNotFoundError
+_____ test_assumption_change_requires_signed_source_bound_preregistration _____
+
+    def test_assumption_change_requires_signed_source_bound_preregistration():
+>       m=api();f,spec=frozen();config=copy.deepcopy(f['model_config']);config['execution_recovery']['local_contact_restore_delay_minutes']=.25
+
+tests\test_execution_recovery_freeze.py:30: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+tests\test_execution_recovery_freeze.py:10: in frozen
+    m=api();spec=m.policy_specs()['C']
+tools\execution_recovery\runner.py:77: in policy_specs
+    pool = {key: copy.deepcopy(baselines()[key]) for key in ('E', 'K1')}
+tools\execution_recovery\runner.py:77: in <dictcomp>
+    pool = {key: copy.deepcopy(baselines()[key]) for key in ('E', 'K1')}
+tools\essential_fixes\runner.py:73: in policy_specs
+    return {key: copy.deepcopy(old.policy_specs()[key]) for key in ('E', 'K1', 'K2')}
+tools\essential_fixes\runner.py:73: in <dictcomp>
+    return {key: copy.deepcopy(old.policy_specs()[key]) for key in ('E', 'K1', 'K2')}
+tools\operating_response\runner.py:64: in policy_specs
+    old=legacy.policy_specs()
+tools\engineering_model\runner.py:51: in policy_specs
+    old=read(ROOT/'outputs/v13_executed_service_20261017_run01/design/DEVELOPMENT_POLICY_SPECS.json')
+tools\engineering_model\runner.py:23: in read
+    def read(path):return json.loads(Path(path).read_text(encoding='utf-8'))
+C:\Users\HanqinXie\AppData\Local\Programs\Python\Python310\lib\pathlib.py:1134: in read_text
+    with self.open(mode='r', encoding=encoding, errors=errors) as f:
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = WindowsPath('D:/hospital_ies_v22_20261025/outputs/v13_executed_service_20261017_run01/design/DEVELOPMENT_POLICY_SPECS.json')
+mode = 'r', buffering = -1, encoding = 'utf-8', errors = None, newline = None
+
+    def open(self, mode='r', buffering=-1, encoding=None,
+             errors=None, newline=None):
+        """
+        Open the file pointed by this path and return a file object, as
+        the built-in open() function does.
+        """
+        if "b" not in mode:
+            encoding = io.text_encoding(encoding)
+>       return self._accessor.open(self, mode, buffering, encoding, errors,
+                                   newline)
+E       FileNotFoundError: [Errno 2] No such file or directory: 'D:\\hospital_ies_v22_20261025\\outputs\\v13_executed_service_20261017_run01\\design\\DEVELOPMENT_POLICY_SPECS.json'
+
+C:\Users\HanqinXie\AppData\Local\Programs\Python\Python310\lib\pathlib.py:1119: FileNotFoundError
+_____________ test_new_model_and_policy_preferences_are_explicit ______________
+
+    def test_new_model_and_policy_preferences_are_explicit():
+        from tools.model_closeout.runner import policy_specs as old_specs
+        assert r.MODEL_ID == "M20_load_accounting"
+        assert "v20_load_accounting" in r.RUN.as_posix()
+        specs = r.policy_specs()
+        assert set(specs) == {"E", "K1", "C19", "C18_M20"}
+        for alias, old_alias in (("E", "E"), ("K1", "K1"), ("C19", "C19"), ("C18_M20", "C18_M19")):
+            spec = specs[alias]
+            assert "M20" in spec["policy_id"]
+>           assert spec["config"] == old_specs()[old_alias]["config"]
+
+tests\test_v20_runtime.py:31: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+tools\model_closeout\runner.py:89: in policy_specs
+    previous = prior()
+tools\execution_recovery\runner.py:77: in policy_specs
+    pool = {key: copy.deepcopy(baselines()[key]) for key in ('E', 'K1')}
+tools\execution_recovery\runner.py:77: in <dictcomp>
+    pool = {key: copy.deepcopy(baselines()[key]) for key in ('E', 'K1')}
+tools\essential_fixes\runner.py:73: in policy_specs
+    return {key: copy.deepcopy(old.policy_specs()[key]) for key in ('E', 'K1', 'K2')}
+tools\essential_fixes\runner.py:73: in <dictcomp>
+    return {key: copy.deepcopy(old.policy_specs()[key]) for key in ('E', 'K1', 'K2')}
+tools\operating_response\runner.py:64: in policy_specs
+    old=legacy.policy_specs()
+tools\engineering_model\runner.py:51: in policy_specs
+    old=read(ROOT/'outputs/v13_executed_service_20261017_run01/design/DEVELOPMENT_POLICY_SPECS.json')
+tools\engineering_model\runner.py:23: in read
+    def read(path):return json.loads(Path(path).read_text(encoding='utf-8'))
+C:\Users\HanqinXie\AppData\Local\Programs\Python\Python310\lib\pathlib.py:1134: in read_text
+    with self.open(mode='r', encoding=encoding, errors=errors) as f:
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = WindowsPath('D:/hospital_ies_v22_20261025/outputs/v13_executed_service_20261017_run01/design/DEVELOPMENT_POLICY_SPECS.json')
+mode = 'r', buffering = -1, encoding = 'utf-8', errors = None, newline = None
+
+    def open(self, mode='r', buffering=-1, encoding=None,
+             errors=None, newline=None):
+        """
+        Open the file pointed by this path and return a file object, as
+        the built-in open() function does.
+        """
+        if "b" not in mode:
+            encoding = io.text_encoding(encoding)
+>       return self._accessor.open(self, mode, buffering, encoding, errors,
+                                   newline)
+E       FileNotFoundError: [Errno 2] No such file or directory: 'D:\\hospital_ies_v22_20261025\\outputs\\v13_executed_service_20261017_run01\\design\\DEVELOPMENT_POLICY_SPECS.json'
+
+C:\Users\HanqinXie\AppData\Local\Programs\Python\Python310\lib\pathlib.py:1119: FileNotFoundError
+=========================== short test summary info ===========================
+FAILED tests/test_operating_environment.py::test_actual_joint_policy_accepts_explicit_m15_model_without_legacy_schema_leak[F]
+FAILED tests/test_operating_environment.py::test_actual_joint_policy_accepts_explicit_m15_model_without_legacy_schema_leak[E]
+FAILED tests/test_operating_environment.py::test_actual_joint_policy_accepts_explicit_m15_model_without_legacy_schema_leak[K2]
+FAILED tests/test_execution_recovery_core.py::test_all_ordinary_policy_adapters_run_on_one_common_m18_model[E]
+FAILED tests/test_execution_recovery_core.py::test_all_ordinary_policy_adapters_run_on_one_common_m18_model[K1]
+FAILED tests/test_execution_recovery_core.py::test_all_ordinary_policy_adapters_run_on_one_common_m18_model[C]
+FAILED tests/test_execution_recovery_core.py::test_all_ordinary_policy_adapters_run_on_one_common_m18_model[C4compat]
+FAILED tests/test_model_closeout_environment.py::test_versioned_environment_routes_and_measured_service_ledger[E]
+FAILED tests/test_model_closeout_environment.py::test_versioned_environment_routes_and_measured_service_ledger[K1]
+FAILED tests/test_model_closeout_registration.py::test_v19_ids_and_baselines_preserve_original_preferences
+FAILED tests/test_model_closeout_registration.py::test_final_freeze_binds_model_policy_and_declared_clock_sensitivity
+FAILED tests/test_model_closeout_registration.py::test_unhandled_attempt_is_retained_with_unknown_tail_and_no_zero_substitute
+FAILED tests/test_model_closeout_registration.py::test_real_metadata_manifest_binds_new_model_and_confirmation_denominator
+FAILED tests/test_model_closeout_registration.py::test_changed_or_missing_final_artifact_rejected_before_environment_creation
+FAILED tests/test_model_closeout_registration.py::test_freeze_refuses_source_change_during_protected_baseline_check
+FAILED tests/test_model_closeout_registration.py::test_development_subset_keeps_evaluation_role_and_unfrozen_status
+FAILED tests/test_execution_recovery_runner.py::test_new_runner_has_own_output_and_keeps_baseline_preferences
+FAILED tests/test_execution_recovery_freeze.py::test_final_comparison_requires_exact_freeze_signature_source_config_and_policy
+FAILED tests/test_execution_recovery_freeze.py::test_assumption_change_requires_signed_source_bound_preregistration
+FAILED tests/test_v20_runtime.py::test_new_model_and_policy_preferences_are_explicit
+20 failed, 1342 passed, 1 skipped in 420.72s (0:07:00)

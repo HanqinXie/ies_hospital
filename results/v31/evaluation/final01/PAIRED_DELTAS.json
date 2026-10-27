@@ -1,0 +1,2984 @@
+[
+  {
+    "context": "b05_L3_ER",
+    "method": "C",
+    "normal_id": "reused_b05_L3_ER_normal_C",
+    "disturbed_id": "reused_b05_L3_ER_disturbed_C",
+    "deltas": {
+      "definition": "disturbed minus own normal",
+      "ENS_kWh": {
+        "P0": {
+          "e": 5.035847294720952e-07,
+          "h": 0.0,
+          "c": 0.0
+        },
+        "P1": {
+          "e": 5.035847294720952e-07,
+          "h": 0.0,
+          "c": 0.0
+        },
+        "P2": {
+          "e": 5.035847294720952e-07,
+          "h": 0.0,
+          "c": 0.0
+        },
+        "P3": {
+          "e": 5.0358472719835845e-05,
+          "h": 0.0,
+          "c": 0.0
+        }
+      },
+      "material_minutes": {
+        "P0": {
+          "e": 0,
+          "h": 0,
+          "c": 0
+        },
+        "P1": {
+          "e": 0,
+          "h": 0,
+          "c": 0
+        },
+        "P2": {
+          "e": 0,
+          "h": 0,
+          "c": 0
+        },
+        "P3": {
+          "e": 0,
+          "h": 0,
+          "c": 0
+        }
+      },
+      "recovery": {
+        "P0": {
+          "e": {
+            "normal": "not_applicable",
+            "disturbed": "not_applicable",
+            "absolute_minute_difference": null
+          },
+          "h": {
+            "normal": "not_applicable",
+            "disturbed": "not_applicable",
+            "absolute_minute_difference": null
+          },
+          "c": {
+            "normal": "not_applicable",
+            "disturbed": "not_applicable",
+            "absolute_minute_difference": null
+          }
+        },
+        "P1": {
+          "e": {
+            "normal": "not_applicable",
+            "disturbed": "not_applicable",
+            "absolute_minute_difference": null
+          },
+          "h": {
+            "normal": "not_applicable",
+            "disturbed": "not_applicable",
+            "absolute_minute_difference": null
+          },
+          "c": {
+            "normal": "not_applicable",
+            "disturbed": "not_applicable",
+            "absolute_minute_difference": null
+          }
+        },
+        "P2": {
+          "e": {
+            "normal": "not_applicable",
+            "disturbed": "not_applicable",
+            "absolute_minute_difference": null
+          },
+          "h": {
+            "normal": "not_applicable",
+            "disturbed": "not_applicable",
+            "absolute_minute_difference": null
+          },
+          "c": {
+            "normal": "not_applicable",
+            "disturbed": "not_applicable",
+            "absolute_minute_difference": null
+          }
+        },
+        "P3": {
+          "e": {
+            "normal": "not_applicable",
+            "disturbed": "not_applicable",
+            "absolute_minute_difference": null
+          },
+          "h": {
+            "normal": "not_applicable",
+            "disturbed": "not_applicable",
+            "absolute_minute_difference": null
+          },
+          "c": {
+            "normal": "not_applicable",
+            "disturbed": "not_applicable",
+            "absolute_minute_difference": null
+          }
+        }
+      },
+      "actual_fee_USD2001": 0.4736745517715235,
+      "DG_shaft_work_kWh": 0.0,
+      "DG_electric_work_kWh": 0.0,
+      "final_stock_kWh": {
+        "ups": 0.0,
+        "cold_store": 0.0
+      },
+      "DG_remaining_shaft_budget_kWh": 0.0
+    },
+    "prefault_actual_online_prefix": {
+      "equal_raw": false,
+      "equal_after_timing_normalization": true,
+      "timing_only_difference": true,
+      "raw": {
+        "difference_count": 582,
+        "samples": [
+          {
+            "path": "/decisions/0/command_generated/joint_dispatch/diagnostic/m23_boiler_domains/checked_domains/0/solver_backend_layers/0/attempts/0/elapsed_seconds",
+            "left": 0.013788199983537197,
+            "right": 0.014869899954646826
+          },
+          {
+            "path": "/decisions/0/command_generated/joint_dispatch/diagnostic/m23_boiler_domains/checked_domains/0/solver_backend_layers/0/attempts/0/parameters/TimeLimit",
+            "left": 5.987795200198889,
+            "right": 5.989747100044042
+          },
+          {
+            "path": "/decisions/0/command_generated/joint_dispatch/diagnostic/m23_boiler_domains/checked_domains/0/solver_backend_layers/1/attempts/0/elapsed_seconds",
+            "left": 0.012238499708473682,
+            "right": 0.009563100058585405
+          },
+          {
+            "path": "/decisions/0/command_generated/joint_dispatch/diagnostic/m23_boiler_domains/checked_domains/0/solver_backend_layers/1/attempts/0/parameters/TimeLimit",
+            "left": 5.983854700345546,
+            "right": 5.988819300197065
+          },
+          {
+            "path": "/decisions/0/command_generated/joint_dispatch/diagnostic/m23_boiler_domains/checked_domains/0/solver_backend_layers/2/attempts/0/elapsed_seconds",
+            "left": 0.01683499990031123,
+            "right": 0.01171599980443716
+          },
+          {
+            "path": "/decisions/0/command_generated/joint_dispatch/diagnostic/m23_boiler_domains/checked_domains/0/solver_backend_layers/2/attempts/0/parameters/TimeLimit",
+            "left": 5.984647299628705,
+            "right": 5.989703000057489
+          },
+          {
+            "path": "/decisions/0/command_generated/joint_dispatch/diagnostic/m23_boiler_domains/checked_domains/0/solver_backend_layers/3/attempts/0/elapsed_seconds",
+            "left": 0.012626500334590673,
+            "right": 0.011294300202280283
+          },
+          {
+            "path": "/decisions/0/command_generated/joint_dispatch/diagnostic/m23_boiler_domains/checked_domains/0/solver_backend_layers/3/attempts/0/parameters/TimeLimit",
+            "left": 5.98804899957031,
+            "right": 5.989196600392461
+          },
+          {
+            "path": "/decisions/0/command_generated/joint_dispatch/diagnostic/m23_boiler_domains/checked_domains/0/solver_backend_layers/4/attempts/0/elapsed_seconds",
+            "left": 0.031900899950414896,
+            "right": 0.03368719993159175
+          },
+          {
+            "path": "/decisions/0/command_generated/joint_dispatch/diagnostic/m23_boiler_domains/checked_domains/0/solver_backend_layers/4/attempts/0/parameters/TimeLimit",
+            "left": 5.989454099908471,
+            "right": 5.988526899833232
+          },
+          {
+            "path": "/decisions/0/command_generated/joint_dispatch/diagnostic/m23_boiler_domains/checked_domains/0/solver_backend_layers/5/attempts/0/elapsed_seconds",
+            "left": 0.010408899746835232,
+            "right": 0.011806999798864126
+          },
+          {
+            "path": "/decisions/0/command_generated/joint_dispatch/diagnostic/m23_boiler_domains/checked_domains/0/solver_backend_layers/5/attempts/0/parameters/TimeLimit",
+            "left": 5.988278900273144,
+            "right": 5.98834989964962
+          },
+          {
+            "path": "/decisions/0/command_generated/joint_dispatch/diagnostic/m23_boiler_domains/checked_domains/0/solver_backend_layers/6/attempts/0/elapsed_seconds",
+            "left": 0.00969860004261136,
+            "right": 0.011525600217282772
+          },
+          {
+            "path": "/decisions/0/command_generated/joint_dispatch/diagnostic/m23_boiler_domains/checked_domains/0/solver_backend_layers/6/attempts/0/parameters/TimeLimit",
+            "left": 5.988885200116783,
+            "right": 5.98856749990955
+          },
+          {
+            "path": "/decisions/0/command_generated/joint_dispatch/diagnostic/m23_boiler_domains/checked_domains/0/solver_backend_layers/7/attempts/0/elapsed_seconds",
+            "left": 0.01035190001130104,
+            "right": 0.00989669980481267
+          },
+          {
+            "path": "/decisions/0/command_generated/joint_dispatch/diagnostic/m23_boiler_domains/checked_domains/0/solver_backend_layers/7/attempts/0/parameters/TimeLimit",
+            "left": 5.988326900172979,
+            "right": 5.987764000426978
+          },
+          {
+            "path": "/decisions/0/command_generated/joint_dispatch/diagnostic/m23_boiler_domains/checked_domains/0/solver_backend_layers/8/attempts/0/elapsed_seconds",
+            "left": 0.012149999849498272,
+            "right": 0.011663800105452538
+          },
+          {
+            "path": "/decisions/0/command_generated/joint_dispatch/diagnostic/m23_boiler_domains/checked_domains/0/solver_backend_layers/8/attempts/0/parameters/TimeLimit",
+            "left": 5.987097900360823,
+            "right": 5.987546099815518
+          },
+          {
+            "path": "/decisions/0/command_generated/joint_dispatch/diagnostic/m23_boiler_domains/checked_domains/0/solver_backend_layers/9/attempts/0/elapsed_seconds",
+            "left": 0.010661700274795294,
+            "right": 0.011098300106823444
+          },
+          {
+            "path": "/decisions/0/command_generated/joint_dispatch/diagnostic/m23_boiler_domains/checked_domains/0/solver_backend_layers/9/attempts/0/parameters/TimeLimit",
+            "left": 5.984453500248492,
+            "right": 5.987977799959481
+          }
+        ]
+      },
+      "normalized": {
+        "difference_count": 0,
+        "samples": []
+      },
+      "left_normalized_sha256": "23c841a5d243c9ff6c869be4d5e19119d4602d503492d2e7f6bb0b8ab769a405",
+      "right_normalized_sha256": "23c841a5d243c9ff6c869be4d5e19119d4602d503492d2e7f6bb0b8ab769a405"
+    },
+    "initial_comparisons": {
+      "state": {
+        "equal_raw": true,
+        "equal_after_timing_normalization": true,
+        "timing_only_difference": false,
+        "raw": {
+          "difference_count": 0,
+          "samples": []
+        },
+        "normalized": {
+          "difference_count": 0,
+          "samples": []
+        },
+        "left_normalized_sha256": "40856697a1fc83643134be0015fa81d3fe09c907796237fca639a9a0656a1455",
+        "right_normalized_sha256": "40856697a1fc83643134be0015fa81d3fe09c907796237fca639a9a0656a1455"
+      },
+      "core": {
+        "equal_raw": true,
+        "equal_after_timing_normalization": true,
+        "timing_only_difference": false,
+        "raw": {
+          "difference_count": 0,
+          "samples": []
+        },
+        "normalized": {
+          "difference_count": 0,
+          "samples": []
+        },
+        "left_normalized_sha256": "4d3467e3c2d8df3fc044cfdeddc94e4a8bd04a3abf367b0c6ff3c0c6fb20c7c9",
+        "right_normalized_sha256": "4d3467e3c2d8df3fc044cfdeddc94e4a8bd04a3abf367b0c6ff3c0c6fb20c7c9"
+      },
+      "rng": {
+        "equal_raw": false,
+        "equal_after_timing_normalization": false,
+        "timing_only_difference": false,
+        "raw": {
+          "difference_count": 1246,
+          "samples": [
+            {
+              "path": "/numpy/__tuple__/1/value/1",
+              "left": 3297465630,
+              "right": 783326364
+            },
+            {
+              "path": "/numpy/__tuple__/1/value/2",
+              "left": 2845358068,
+              "right": 2977651849
+            },
+            {
+              "path": "/numpy/__tuple__/1/value/3",
+              "left": 1011814252,
+              "right": 1275573017
+            },
+            {
+              "path": "/numpy/__tuple__/1/value/4",
+              "left": 4057706038,
+              "right": 1322293920
+            },
+            {
+              "path": "/numpy/__tuple__/1/value/5",
+              "left": 430820056,
+              "right": 1231887377
+            },
+            {
+              "path": "/numpy/__tuple__/1/value/6",
+              "left": 2181380345,
+              "right": 2917878057
+            },
+            {
+              "path": "/numpy/__tuple__/1/value/7",
+              "left": 104734493,
+              "right": 1982454279
+            },
+            {
+              "path": "/numpy/__tuple__/1/value/8",
+              "left": 1930856731,
+              "right": 234243286
+            },
+            {
+              "path": "/numpy/__tuple__/1/value/9",
+              "left": 4106093611,
+              "right": 4174360003
+            },
+            {
+              "path": "/numpy/__tuple__/1/value/10",
+              "left": 1020042432,
+              "right": 3443816214
+            },
+            {
+              "path": "/numpy/__tuple__/1/value/11",
+              "left": 900754579,
+              "right": 1170686137
+            },
+            {
+              "path": "/numpy/__tuple__/1/value/12",
+              "left": 2394022812,
+              "right": 3598492140
+            },
+            {
+              "path": "/numpy/__tuple__/1/value/13",
+              "left": 1987571330,
+              "right": 2339857323
+            },
+            {
+              "path": "/numpy/__tuple__/1/value/14",
+              "left": 1007808141,
+              "right": 2163567575
+            },
+            {
+              "path": "/numpy/__tuple__/1/value/15",
+              "left": 580252086,
+              "right": 1487437862
+            },
+            {
+              "path": "/numpy/__tuple__/1/value/16",
+              "left": 445422785,
+              "right": 4108056475
+            },
+            {
+              "path": "/numpy/__tuple__/1/value/17",
+              "left": 2612828585,
+              "right": 1768249097
+            },
+            {
+              "path": "/numpy/__tuple__/1/value/18",
+              "left": 2934928579,
+              "right": 1184502696
+            },
+            {
+              "path": "/numpy/__tuple__/1/value/19",
+              "left": 1747935884,
+              "right": 791833580
+            },
+            {
+              "path": "/numpy/__tuple__/1/value/20",
+              "left": 2331523221,
+              "right": 824459796
+            }
+          ]
+        },
+        "normalized": {
+          "difference_count": 1246,
+          "samples": [
+            {
+              "path": "/numpy/__tuple__/1/value/1",
+              "left": 3297465630,
+              "right": 783326364
+            },
+            {
+              "path": "/numpy/__tuple__/1/value/2",
+              "left": 2845358068,
+              "right": 2977651849
+            },
+            {
+              "path": "/numpy/__tuple__/1/value/3",
+              "left": 1011814252,
+              "right": 1275573017
+            },
+            {
+              "path": "/numpy/__tuple__/1/value/4",
+              "left": 4057706038,
+              "right": 1322293920
+            },
+            {
+              "path": "/numpy/__tuple__/1/value/5",
+              "left": 430820056,
+              "right": 1231887377
+            },
+            {
+              "path": "/numpy/__tuple__/1/value/6",
+              "left": 2181380345,
+              "right": 2917878057
+            },
+            {
+              "path": "/numpy/__tuple__/1/value/7",
+              "left": 104734493,
+              "right": 1982454279
+            },
+            {
+              "path": "/numpy/__tuple__/1/value/8",
+              "left": 1930856731,
+              "right": 234243286
+            },
+            {
+              "path": "/numpy/__tuple__/1/value/9",
+              "left": 4106093611,
+              "right": 4174360003
+            },
+            {
+              "path": "/numpy/__tuple__/1/value/10",
+              "left": 1020042432,
+              "right": 3443816214
+            },
+            {
+              "path": "/numpy/__tuple__/1/value/11",
+              "left": 900754579,
+              "right": 1170686137
+            },
+            {
+              "path": "/numpy/__tuple__/1/value/12",
+              "left": 2394022812,
+              "right": 3598492140
+            },
+            {
+              "path": "/numpy/__tuple__/1/value/13",
+              "left": 1987571330,
+              "right": 2339857323
+            },
+            {
+              "path": "/numpy/__tuple__/1/value/14",
+              "left": 1007808141,
+              "right": 2163567575
+            },
+            {
+              "path": "/numpy/__tuple__/1/value/15",
+              "left": 580252086,
+              "right": 1487437862
+            },
+            {
+              "path": "/numpy/__tuple__/1/value/16",
+              "left": 445422785,
+              "right": 4108056475
+            },
+            {
+              "path": "/numpy/__tuple__/1/value/17",
+              "left": 2612828585,
+              "right": 1768249097
+            },
+            {
+              "path": "/numpy/__tuple__/1/value/18",
+              "left": 2934928579,
+              "right": 1184502696
+            },
+            {
+              "path": "/numpy/__tuple__/1/value/19",
+              "left": 1747935884,
+              "right": 791833580
+            },
+            {
+              "path": "/numpy/__tuple__/1/value/20",
+              "left": 2331523221,
+              "right": 824459796
+            }
+          ]
+        },
+        "left_normalized_sha256": "b66214eea09c0b0f843169f05735a33d9c15b2086dc1285c102ef3b918123208",
+        "right_normalized_sha256": "be833ef53c1005af6db4ecce929bf36c2e52d92dbd53f1d7cad21181f34c711f"
+      }
+    },
+    "complete_expanded_policy_equal": true
+  },
+  {
+    "context": "b05_L3_ER",
+    "method": "M",
+    "normal_id": "reused_b05_L3_ER_normal_M",
+    "disturbed_id": "reused_b05_L3_ER_disturbed_M",
+    "deltas": {
+      "definition": "disturbed minus own normal",
+      "ENS_kWh": {
+        "P0": {
+          "e": 4.386054510180544e-07,
+          "h": 0.0,
+          "c": 3.1588975883055744e-08
+        },
+        "P1": {
+          "e": 4.3858960350828076e-07,
+          "h": 0.0,
+          "c": 3.1598580316189964e-08
+        },
+        "P2": {
+          "e": 4.38589603502155e-07,
+          "h": 0.0,
+          "c": 3.1598580316189964e-08
+        },
+        "P3": {
+          "e": 5.017576230416029e-05,
+          "h": 0.0,
+          "c": 1.8045596940612576
+        }
+      },
+      "material_minutes": {
+        "P0": {
+          "e": 0,
+          "h": 0,
+          "c": 0
+        },
+        "P1": {
+          "e": 0,
+          "h": 0,
+          "c": 0
+        },
+        "P2": {
+          "e": 0,
+          "h": 0,
+          "c": 0
+        },
+        "P3": {
+          "e": 0,
+          "h": 0,
+          "c": 0.0
+        }
+      },
+      "recovery": {
+        "P0": {
+          "e": {
+            "normal": "not_applicable",
+            "disturbed": "not_applicable",
+            "absolute_minute_difference": null
+          },
+          "h": {
+            "normal": "not_applicable",
+            "disturbed": "not_applicable",
+            "absolute_minute_difference": null
+          },
+          "c": {
+            "normal": "not_applicable",
+            "disturbed": "not_applicable",
+            "absolute_minute_difference": null
+          }
+        },
+        "P1": {
+          "e": {
+            "normal": "not_applicable",
+            "disturbed": "not_applicable",
+            "absolute_minute_difference": null
+          },
+          "h": {
+            "normal": "not_applicable",
+            "disturbed": "not_applicable",
+            "absolute_minute_difference": null
+          },
+          "c": {
+            "normal": "not_applicable",
+            "disturbed": "not_applicable",
+            "absolute_minute_difference": null
+          }
+        },
+        "P2": {
+          "e": {
+            "normal": "not_applicable",
+            "disturbed": "not_applicable",
+            "absolute_minute_difference": null
+          },
+          "h": {
+            "normal": "not_applicable",
+            "disturbed": "not_applicable",
+            "absolute_minute_difference": null
+          },
+          "c": {
+            "normal": "not_applicable",
+            "disturbed": "not_applicable",
+            "absolute_minute_difference": null
+          }
+        },
+        "P3": {
+          "e": {
+            "normal": "not_applicable",
+            "disturbed": "not_applicable",
+            "absolute_minute_difference": null
+          },
+          "h": {
+            "normal": "not_applicable",
+            "disturbed": "not_applicable",
+            "absolute_minute_difference": null
+          },
+          "c": {
+            "normal": "observed",
+            "disturbed": "observed",
+            "absolute_minute_difference": 0.0
+          }
+        }
+      },
+      "actual_fee_USD2001": 0.4446109716740523,
+      "DG_shaft_work_kWh": 0.0,
+      "DG_electric_work_kWh": 0.0,
+      "final_stock_kWh": {
+        "ups": 0.0,
+        "cold_store": 0.0
+      },
+      "DG_remaining_shaft_budget_kWh": 0.0
+    },
+    "prefault_actual_online_prefix": {
+      "equal_raw": false,
+      "equal_after_timing_normalization": true,
+      "timing_only_difference": true,
+      "raw": {
+        "difference_count": 448,
+        "samples": [
+          {
+            "path": "/decisions/0/command_generated/joint_dispatch/diagnostic/m23_boiler_domains/checked_domains/0/solver_backend_layers/0/attempts/0/elapsed_seconds",
+            "left": 0.004347499925643206,
+            "right": 0.0040291002951562405
+          },
+          {
+            "path": "/decisions/0/command_generated/joint_dispatch/diagnostic/m23_boiler_domains/checked_domains/0/solver_backend_layers/0/attempts/0/parameters/TimeLimit",
+            "left": 5.998778800014406,
+            "right": 5.998990499880165
+          },
+          {
+            "path": "/decisions/0/command_generated/joint_dispatch/diagnostic/m23_boiler_domains/checked_domains/0/solver_backend_layers/1/attempts/0/elapsed_seconds",
+            "left": 0.0037123998627066612,
+            "right": 0.002956900279968977
+          },
+          {
+            "path": "/decisions/0/command_generated/joint_dispatch/diagnostic/m23_boiler_domains/checked_domains/0/solver_backend_layers/1/attempts/0/parameters/TimeLimit",
+            "left": 5.998637600336224,
+            "right": 5.998944400344044
+          },
+          {
+            "path": "/decisions/0/command_generated/joint_dispatch/diagnostic/m23_boiler_domains/checked_domains/0/solver_backend_layers/2/attempts/0/elapsed_seconds",
+            "left": 0.0034485002979636192,
+            "right": 0.002753700129687786
+          },
+          {
+            "path": "/decisions/0/command_generated/joint_dispatch/diagnostic/m23_boiler_domains/checked_domains/0/solver_backend_layers/2/attempts/0/parameters/TimeLimit",
+            "left": 5.998654500115663,
+            "right": 5.998587199952453
+          },
+          {
+            "path": "/decisions/0/command_generated/joint_dispatch/diagnostic/m23_boiler_domains/checked_domains/0/solver_backend_layers/3/attempts/0/elapsed_seconds",
+            "left": 0.002821899950504303,
+            "right": 0.0028214999474585056
+          },
+          {
+            "path": "/decisions/0/command_generated/joint_dispatch/diagnostic/m23_boiler_domains/checked_domains/0/solver_backend_layers/3/attempts/0/parameters/TimeLimit",
+            "left": 5.998549300245941,
+            "right": 5.998355700168759
+          },
+          {
+            "path": "/decisions/0/command_generated/joint_dispatch/diagnostic/m23_boiler_domains/checked_domains/0/solver_backend_layers/4/attempts/0/elapsed_seconds",
+            "left": 0.004231399856507778,
+            "right": 0.003283299971371889
+          },
+          {
+            "path": "/decisions/0/command_generated/joint_dispatch/diagnostic/m23_boiler_domains/checked_domains/0/solver_backend_layers/4/attempts/0/parameters/TimeLimit",
+            "left": 5.998177600093186,
+            "right": 5.998490300029516
+          },
+          {
+            "path": "/decisions/0/command_generated/joint_dispatch/diagnostic/m23_boiler_domains/checked_domains/0/solver_backend_layers/5/attempts/0/elapsed_seconds",
+            "left": 0.0030592000111937523,
+            "right": 0.003234600182622671
+          },
+          {
+            "path": "/decisions/0/command_generated/joint_dispatch/diagnostic/m23_boiler_domains/checked_domains/0/solver_backend_layers/5/attempts/0/parameters/TimeLimit",
+            "left": 5.998213200364262,
+            "right": 5.998093600384891
+          },
+          {
+            "path": "/decisions/0/command_generated/joint_dispatch/diagnostic/m23_boiler_domains/checked_domains/0/solver_backend_layers/6/attempts/0/elapsed_seconds",
+            "left": 0.003945100121200085,
+            "right": 0.003080800175666809
+          },
+          {
+            "path": "/decisions/0/command_generated/joint_dispatch/diagnostic/m23_boiler_domains/checked_domains/0/solver_backend_layers/6/attempts/0/parameters/TimeLimit",
+            "left": 5.997839599382132,
+            "right": 5.997947400435805
+          },
+          {
+            "path": "/decisions/0/command_generated/joint_dispatch/diagnostic/m23_boiler_domains/checked_domains/0/solver_backend_layers/7/attempts/0/elapsed_seconds",
+            "left": 0.003648600075393915,
+            "right": 0.003270300105214119
+          },
+          {
+            "path": "/decisions/0/command_generated/joint_dispatch/diagnostic/m23_boiler_domains/checked_domains/0/solver_backend_layers/7/attempts/0/parameters/TimeLimit",
+            "left": 5.997315499931574,
+            "right": 5.997942500282079
+          },
+          {
+            "path": "/decisions/0/command_generated/joint_dispatch/diagnostic/m23_boiler_domains/checked_domains/0/solver_backend_layers/8/attempts/0/elapsed_seconds",
+            "left": 0.0038879001513123512,
+            "right": 0.003363099880516529
+          },
+          {
+            "path": "/decisions/0/command_generated/joint_dispatch/diagnostic/m23_boiler_domains/checked_domains/0/solver_backend_layers/8/attempts/0/parameters/TimeLimit",
+            "left": 5.996933000162244,
+            "right": 5.998026000335813
+          },
+          {
+            "path": "/decisions/0/command_generated/joint_dispatch/diagnostic/m23_boiler_domains/checked_domains/0/solver_backend_layers/9/attempts/0/elapsed_seconds",
+            "left": 0.003184800036251545,
+            "right": 0.0032083000987768173
+          },
+          {
+            "path": "/decisions/0/command_generated/joint_dispatch/diagnostic/m23_boiler_domains/checked_domains/0/solver_backend_layers/9/attempts/0/parameters/TimeLimit",
+            "left": 5.997489500325173,
+            "right": 5.997541000135243
+          }
+        ]
+      },
+      "normalized": {
+        "difference_count": 0,
+        "samples": []
+      },
+      "left_normalized_sha256": "bdcab5f9aa3335452c7044eeac83fd5b95ef569e34c49214215292db1c1274de",
+      "right_normalized_sha256": "bdcab5f9aa3335452c7044eeac83fd5b95ef569e34c49214215292db1c1274de"
+    },
+    "initial_comparisons": {
+      "state": {
+        "equal_raw": true,
+        "equal_after_timing_normalization": true,
+        "timing_only_difference": false,
+        "raw": {
+          "difference_count": 0,
+          "samples": []
+        },
+        "normalized": {
+          "difference_count": 0,
+          "samples": []
+        },
+        "left_normalized_sha256": "40856697a1fc83643134be0015fa81d3fe09c907796237fca639a9a0656a1455",
+        "right_normalized_sha256": "40856697a1fc83643134be0015fa81d3fe09c907796237fca639a9a0656a1455"
+      },
+      "core": {
+        "equal_raw": true,
+        "equal_after_timing_normalization": true,
+        "timing_only_difference": false,
+        "raw": {
+          "difference_count": 0,
+          "samples": []
+        },
+        "normalized": {
+          "difference_count": 0,
+          "samples": []
+        },
+        "left_normalized_sha256": "4d3467e3c2d8df3fc044cfdeddc94e4a8bd04a3abf367b0c6ff3c0c6fb20c7c9",
+        "right_normalized_sha256": "4d3467e3c2d8df3fc044cfdeddc94e4a8bd04a3abf367b0c6ff3c0c6fb20c7c9"
+      },
+      "rng": {
+        "equal_raw": false,
+        "equal_after_timing_normalization": false,
+        "timing_only_difference": false,
+        "raw": {
+          "difference_count": 1246,
+          "samples": [
+            {
+              "path": "/numpy/__tuple__/1/value/1",
+              "left": 2215126690,
+              "right": 4046945222
+            },
+            {
+              "path": "/numpy/__tuple__/1/value/2",
+              "left": 2392539430,
+              "right": 155323957
+            },
+            {
+              "path": "/numpy/__tuple__/1/value/3",
+              "left": 1181744098,
+              "right": 2395693440
+            },
+            {
+              "path": "/numpy/__tuple__/1/value/4",
+              "left": 371268848,
+              "right": 957774954
+            },
+            {
+              "path": "/numpy/__tuple__/1/value/5",
+              "left": 1272605088,
+              "right": 1214183823
+            },
+            {
+              "path": "/numpy/__tuple__/1/value/6",
+              "left": 2390130763,
+              "right": 1533762940
+            },
+            {
+              "path": "/numpy/__tuple__/1/value/7",
+              "left": 2595572888,
+              "right": 1065937315
+            },
+            {
+              "path": "/numpy/__tuple__/1/value/8",
+              "left": 3254367048,
+              "right": 2795207415
+            },
+            {
+              "path": "/numpy/__tuple__/1/value/9",
+              "left": 333180049,
+              "right": 1097649117
+            },
+            {
+              "path": "/numpy/__tuple__/1/value/10",
+              "left": 4111466605,
+              "right": 3479780510
+            },
+            {
+              "path": "/numpy/__tuple__/1/value/11",
+              "left": 802802260,
+              "right": 506118753
+            },
+            {
+              "path": "/numpy/__tuple__/1/value/12",
+              "left": 3209452381,
+              "right": 128597110
+            },
+            {
+              "path": "/numpy/__tuple__/1/value/13",
+              "left": 2660445065,
+              "right": 4142785020
+            },
+            {
+              "path": "/numpy/__tuple__/1/value/14",
+              "left": 2649429270,
+              "right": 3646581965
+            },
+            {
+              "path": "/numpy/__tuple__/1/value/15",
+              "left": 667531748,
+              "right": 3054438692
+            },
+            {
+              "path": "/numpy/__tuple__/1/value/16",
+              "left": 1138130983,
+              "right": 1157913288
+            },
+            {
+              "path": "/numpy/__tuple__/1/value/17",
+              "left": 716557663,
+              "right": 3818099810
+            },
+            {
+              "path": "/numpy/__tuple__/1/value/18",
+              "left": 1076300698,
+              "right": 1867026239
+            },
+            {
+              "path": "/numpy/__tuple__/1/value/19",
+              "left": 3400433059,
+              "right": 2500133454
+            },
+            {
+              "path": "/numpy/__tuple__/1/value/20",
+              "left": 1615966592,
+              "right": 3056662412
+            }
+          ]
+        },
+        "normalized": {
+          "difference_count": 1246,
+          "samples": [
+            {
+              "path": "/numpy/__tuple__/1/value/1",
+              "left": 2215126690,
+              "right": 4046945222
+            },
+            {
+              "path": "/numpy/__tuple__/1/value/2",
+              "left": 2392539430,
+              "right": 155323957
+            },
+            {
+              "path": "/numpy/__tuple__/1/value/3",
+              "left": 1181744098,
+              "right": 2395693440
+            },
+            {
+              "path": "/numpy/__tuple__/1/value/4",
+              "left": 371268848,
+              "right": 957774954
+            },
+            {
+              "path": "/numpy/__tuple__/1/value/5",
+              "left": 1272605088,
+              "right": 1214183823
+            },
+            {
+              "path": "/numpy/__tuple__/1/value/6",
+              "left": 2390130763,
+              "right": 1533762940
+            },
+            {
+              "path": "/numpy/__tuple__/1/value/7",
+              "left": 2595572888,
+              "right": 1065937315
+            },
+            {
+              "path": "/numpy/__tuple__/1/value/8",
+              "left": 3254367048,
+              "right": 2795207415
+            },
+            {
+              "path": "/numpy/__tuple__/1/value/9",
+              "left": 333180049,
+              "right": 1097649117
+            },
+            {
+              "path": "/numpy/__tuple__/1/value/10",
+              "left": 4111466605,
+              "right": 3479780510
+            },
+            {
+              "path": "/numpy/__tuple__/1/value/11",
+              "left": 802802260,
+              "right": 506118753
+            },
+            {
+              "path": "/numpy/__tuple__/1/value/12",
+              "left": 3209452381,
+              "right": 128597110
+            },
+            {
+              "path": "/numpy/__tuple__/1/value/13",
+              "left": 2660445065,
+              "right": 4142785020
+            },
+            {
+              "path": "/numpy/__tuple__/1/value/14",
+              "left": 2649429270,
+              "right": 3646581965
+            },
+            {
+              "path": "/numpy/__tuple__/1/value/15",
+              "left": 667531748,
+              "right": 3054438692
+            },
+            {
+              "path": "/numpy/__tuple__/1/value/16",
+              "left": 1138130983,
+              "right": 1157913288
+            },
+            {
+              "path": "/numpy/__tuple__/1/value/17",
+              "left": 716557663,
+              "right": 3818099810
+            },
+            {
+              "path": "/numpy/__tuple__/1/value/18",
+              "left": 1076300698,
+              "right": 1867026239
+            },
+            {
+              "path": "/numpy/__tuple__/1/value/19",
+              "left": 3400433059,
+              "right": 2500133454
+            },
+            {
+              "path": "/numpy/__tuple__/1/value/20",
+              "left": 1615966592,
+              "right": 3056662412
+            }
+          ]
+        },
+        "left_normalized_sha256": "2ba0b10084a245869428ba8d7e687d2da5a819cd5b728d3af20869231613ae34",
+        "right_normalized_sha256": "57e93d24af7137a3f2a0677cada40d03cdbbb7eb46a0ff507df67264bf452bb3"
+      }
+    },
+    "complete_expanded_policy_equal": true
+  },
+  {
+    "context": "b05_L3_ER",
+    "method": "M_cooling_permission",
+    "normal_id": "v31_b05_normal_M_cooling_permission",
+    "disturbed_id": "v31_b05_disturbed_M_cooling_permission",
+    "deltas": {
+      "definition": "disturbed minus own normal",
+      "ENS_kWh": {
+        "P0": {
+          "e": 5.035847294720952e-07,
+          "h": 0.0,
+          "c": 0.0
+        },
+        "P1": {
+          "e": 5.035847294720952e-07,
+          "h": 0.0,
+          "c": 0.0
+        },
+        "P2": {
+          "e": 5.035847294720952e-07,
+          "h": 0.0,
+          "c": 0.0
+        },
+        "P3": {
+          "e": 5.0358472719835845e-05,
+          "h": 0.0,
+          "c": 0.0
+        }
+      },
+      "material_minutes": {
+        "P0": {
+          "e": 0,
+          "h": 0,
+          "c": 0
+        },
+        "P1": {
+          "e": 0,
+          "h": 0,
+          "c": 0
+        },
+        "P2": {
+          "e": 0,
+          "h": 0,
+          "c": 0
+        },
+        "P3": {
+          "e": 0,
+          "h": 0,
+          "c": 0
+        }
+      },
+      "recovery": {
+        "P0": {
+          "e": {
+            "normal": "not_applicable",
+            "disturbed": "not_applicable",
+            "absolute_minute_difference": null
+          },
+          "h": {
+            "normal": "not_applicable",
+            "disturbed": "not_applicable",
+            "absolute_minute_difference": null
+          },
+          "c": {
+            "normal": "not_applicable",
+            "disturbed": "not_applicable",
+            "absolute_minute_difference": null
+          }
+        },
+        "P1": {
+          "e": {
+            "normal": "not_applicable",
+            "disturbed": "not_applicable",
+            "absolute_minute_difference": null
+          },
+          "h": {
+            "normal": "not_applicable",
+            "disturbed": "not_applicable",
+            "absolute_minute_difference": null
+          },
+          "c": {
+            "normal": "not_applicable",
+            "disturbed": "not_applicable",
+            "absolute_minute_difference": null
+          }
+        },
+        "P2": {
+          "e": {
+            "normal": "not_applicable",
+            "disturbed": "not_applicable",
+            "absolute_minute_difference": null
+          },
+          "h": {
+            "normal": "not_applicable",
+            "disturbed": "not_applicable",
+            "absolute_minute_difference": null
+          },
+          "c": {
+            "normal": "not_applicable",
+            "disturbed": "not_applicable",
+            "absolute_minute_difference": null
+          }
+        },
+        "P3": {
+          "e": {
+            "normal": "not_applicable",
+            "disturbed": "not_applicable",
+            "absolute_minute_difference": null
+          },
+          "h": {
+            "normal": "not_applicable",
+            "disturbed": "not_applicable",
+            "absolute_minute_difference": null
+          },
+          "c": {
+            "normal": "not_applicable",
+            "disturbed": "not_applicable",
+            "absolute_minute_difference": null
+          }
+        }
+      },
+      "actual_fee_USD2001": 0.4736745517715235,
+      "DG_shaft_work_kWh": 0.0,
+      "DG_electric_work_kWh": 0.0,
+      "final_stock_kWh": {
+        "ups": 0.0,
+        "cold_store": 0.0
+      },
+      "DG_remaining_shaft_budget_kWh": 0.0
+    },
+    "prefault_actual_online_prefix": {
+      "equal_raw": false,
+      "equal_after_timing_normalization": true,
+      "timing_only_difference": true,
+      "raw": {
+        "difference_count": 464,
+        "samples": [
+          {
+            "path": "/decisions/0/command_generated/joint_dispatch/diagnostic/m23_boiler_domains/checked_domains/0/solver_backend_layers/0/attempts/0/elapsed_seconds",
+            "left": 0.005054300185292959,
+            "right": 0.004195400048047304
+          },
+          {
+            "path": "/decisions/0/command_generated/joint_dispatch/diagnostic/m23_boiler_domains/checked_domains/0/solver_backend_layers/0/attempts/0/parameters/TimeLimit",
+            "left": 5.998827399685979,
+            "right": 5.998960799537599
+          },
+          {
+            "path": "/decisions/0/command_generated/joint_dispatch/diagnostic/m23_boiler_domains/checked_domains/0/solver_backend_layers/1/attempts/0/elapsed_seconds",
+            "left": 0.003371099941432476,
+            "right": 0.0029727998189628124
+          },
+          {
+            "path": "/decisions/0/command_generated/joint_dispatch/diagnostic/m23_boiler_domains/checked_domains/0/solver_backend_layers/1/attempts/0/parameters/TimeLimit",
+            "left": 5.9988069999963045,
+            "right": 5.99889239994809
+          },
+          {
+            "path": "/decisions/0/command_generated/joint_dispatch/diagnostic/m23_boiler_domains/checked_domains/0/solver_backend_layers/2/attempts/0/elapsed_seconds",
+            "left": 0.003927700221538544,
+            "right": 0.0031866002827882767
+          },
+          {
+            "path": "/decisions/0/command_generated/joint_dispatch/diagnostic/m23_boiler_domains/checked_domains/0/solver_backend_layers/2/attempts/0/parameters/TimeLimit",
+            "left": 5.998169499915093,
+            "right": 5.998592000454664
+          },
+          {
+            "path": "/decisions/0/command_generated/joint_dispatch/diagnostic/m23_boiler_domains/checked_domains/0/solver_backend_layers/3/attempts/0/elapsed_seconds",
+            "left": 0.00281960004940629,
+            "right": 0.002646099776029587
+          },
+          {
+            "path": "/decisions/0/command_generated/joint_dispatch/diagnostic/m23_boiler_domains/checked_domains/0/solver_backend_layers/3/attempts/0/parameters/TimeLimit",
+            "left": 5.998366700019687,
+            "right": 5.998541699722409
+          },
+          {
+            "path": "/decisions/0/command_generated/joint_dispatch/diagnostic/m23_boiler_domains/checked_domains/0/solver_backend_layers/4/attempts/0/elapsed_seconds",
+            "left": 0.0030135000124573708,
+            "right": 0.003198899794369936
+          },
+          {
+            "path": "/decisions/0/command_generated/joint_dispatch/diagnostic/m23_boiler_domains/checked_domains/0/solver_backend_layers/4/attempts/0/parameters/TimeLimit",
+            "left": 5.998403000179678,
+            "right": 5.998390200082213
+          },
+          {
+            "path": "/decisions/0/command_generated/joint_dispatch/diagnostic/m23_boiler_domains/checked_domains/0/solver_backend_layers/5/attempts/0/elapsed_seconds",
+            "left": 0.0034917001612484455,
+            "right": 0.003019500058144331
+          },
+          {
+            "path": "/decisions/0/command_generated/joint_dispatch/diagnostic/m23_boiler_domains/checked_domains/0/solver_backend_layers/5/attempts/0/parameters/TimeLimit",
+            "left": 5.998216899577528,
+            "right": 5.9981613997370005
+          },
+          {
+            "path": "/decisions/0/command_generated/joint_dispatch/diagnostic/m23_boiler_domains/checked_domains/0/solver_backend_layers/6/attempts/0/elapsed_seconds",
+            "left": 0.003179099876433611,
+            "right": 0.004154600203037262
+          },
+          {
+            "path": "/decisions/0/command_generated/joint_dispatch/diagnostic/m23_boiler_domains/checked_domains/0/solver_backend_layers/6/attempts/0/parameters/TimeLimit",
+            "left": 5.998174200300127,
+            "right": 5.9973764000460505
+          },
+          {
+            "path": "/decisions/0/command_generated/joint_dispatch/diagnostic/m23_boiler_domains/checked_domains/0/solver_backend_layers/7/attempts/0/elapsed_seconds",
+            "left": 0.0029902998358011246,
+            "right": 0.0034004999324679375
+          },
+          {
+            "path": "/decisions/0/command_generated/joint_dispatch/diagnostic/m23_boiler_domains/checked_domains/0/solver_backend_layers/7/attempts/0/parameters/TimeLimit",
+            "left": 5.99738600011915,
+            "right": 5.997637500055134
+          },
+          {
+            "path": "/decisions/0/command_generated/joint_dispatch/diagnostic/m23_boiler_domains/checked_domains/0/solver_backend_layers/8/attempts/0/elapsed_seconds",
+            "left": 0.003356199711561203,
+            "right": 0.0036089997738599777
+          },
+          {
+            "path": "/decisions/0/command_generated/joint_dispatch/diagnostic/m23_boiler_domains/checked_domains/0/solver_backend_layers/8/attempts/0/parameters/TimeLimit",
+            "left": 5.997628899756819,
+            "right": 5.996997500304133
+          },
+          {
+            "path": "/decisions/0/command_generated/joint_dispatch/diagnostic/m23_boiler_domains/checked_domains/0/solver_backend_layers/9/attempts/0/elapsed_seconds",
+            "left": 0.003032200038433075,
+            "right": 0.0033400999382138252
+          },
+          {
+            "path": "/decisions/0/command_generated/joint_dispatch/diagnostic/m23_boiler_domains/checked_domains/0/solver_backend_layers/9/attempts/0/parameters/TimeLimit",
+            "left": 5.997414299752563,
+            "right": 5.997345500160009
+          }
+        ]
+      },
+      "normalized": {
+        "difference_count": 0,
+        "samples": []
+      },
+      "left_normalized_sha256": "fa7af9707bcfe47018bc69919d9300852730bf3bba5e74d8e585d1807285494a",
+      "right_normalized_sha256": "fa7af9707bcfe47018bc69919d9300852730bf3bba5e74d8e585d1807285494a"
+    },
+    "initial_comparisons": {
+      "state": {
+        "equal_raw": true,
+        "equal_after_timing_normalization": true,
+        "timing_only_difference": false,
+        "raw": {
+          "difference_count": 0,
+          "samples": []
+        },
+        "normalized": {
+          "difference_count": 0,
+          "samples": []
+        },
+        "left_normalized_sha256": "40856697a1fc83643134be0015fa81d3fe09c907796237fca639a9a0656a1455",
+        "right_normalized_sha256": "40856697a1fc83643134be0015fa81d3fe09c907796237fca639a9a0656a1455"
+      },
+      "core": {
+        "equal_raw": true,
+        "equal_after_timing_normalization": true,
+        "timing_only_difference": false,
+        "raw": {
+          "difference_count": 0,
+          "samples": []
+        },
+        "normalized": {
+          "difference_count": 0,
+          "samples": []
+        },
+        "left_normalized_sha256": "4d3467e3c2d8df3fc044cfdeddc94e4a8bd04a3abf367b0c6ff3c0c6fb20c7c9",
+        "right_normalized_sha256": "4d3467e3c2d8df3fc044cfdeddc94e4a8bd04a3abf367b0c6ff3c0c6fb20c7c9"
+      },
+      "rng": {
+        "equal_raw": false,
+        "equal_after_timing_normalization": false,
+        "timing_only_difference": false,
+        "raw": {
+          "difference_count": 1246,
+          "samples": [
+            {
+              "path": "/numpy/__tuple__/1/value/1",
+              "left": 590462977,
+              "right": 3216963330
+            },
+            {
+              "path": "/numpy/__tuple__/1/value/2",
+              "left": 2556135942,
+              "right": 915239840
+            },
+            {
+              "path": "/numpy/__tuple__/1/value/3",
+              "left": 2431991765,
+              "right": 3421562385
+            },
+            {
+              "path": "/numpy/__tuple__/1/value/4",
+              "left": 773307003,
+              "right": 3791739593
+            },
+            {
+              "path": "/numpy/__tuple__/1/value/5",
+              "left": 3175057151,
+              "right": 3497072029
+            },
+            {
+              "path": "/numpy/__tuple__/1/value/6",
+              "left": 3997192989,
+              "right": 631596392
+            },
+            {
+              "path": "/numpy/__tuple__/1/value/7",
+              "left": 4130559939,
+              "right": 892435184
+            },
+            {
+              "path": "/numpy/__tuple__/1/value/8",
+              "left": 2572949792,
+              "right": 3222713998
+            },
+            {
+              "path": "/numpy/__tuple__/1/value/9",
+              "left": 1201826098,
+              "right": 2033850342
+            },
+            {
+              "path": "/numpy/__tuple__/1/value/10",
+              "left": 3032432738,
+              "right": 1224007961
+            },
+            {
+              "path": "/numpy/__tuple__/1/value/11",
+              "left": 2101013946,
+              "right": 1994369406
+            },
+            {
+              "path": "/numpy/__tuple__/1/value/12",
+              "left": 1073809869,
+              "right": 3268581754
+            },
+            {
+              "path": "/numpy/__tuple__/1/value/13",
+              "left": 2555859319,
+              "right": 300938211
+            },
+            {
+              "path": "/numpy/__tuple__/1/value/14",
+              "left": 1108087249,
+              "right": 2325252885
+            },
+            {
+              "path": "/numpy/__tuple__/1/value/15",
+              "left": 2462040047,
+              "right": 1324127085
+            },
+            {
+              "path": "/numpy/__tuple__/1/value/16",
+              "left": 4271924604,
+              "right": 3008586795
+            },
+            {
+              "path": "/numpy/__tuple__/1/value/17",
+              "left": 2422011308,
+              "right": 3852287329
+            },
+            {
+              "path": "/numpy/__tuple__/1/value/18",
+              "left": 3904350314,
+              "right": 3910127650
+            },
+            {
+              "path": "/numpy/__tuple__/1/value/19",
+              "left": 507991207,
+              "right": 3057752992
+            },
+            {
+              "path": "/numpy/__tuple__/1/value/20",
+              "left": 3980573678,
+              "right": 4078955287
+            }
+          ]
+        },
+        "normalized": {
+          "difference_count": 1246,
+          "samples": [
+            {
+              "path": "/numpy/__tuple__/1/value/1",
+              "left": 590462977,
+              "right": 3216963330
+            },
+            {
+              "path": "/numpy/__tuple__/1/value/2",
+              "left": 2556135942,
+              "right": 915239840
+            },
+            {
+              "path": "/numpy/__tuple__/1/value/3",
+              "left": 2431991765,
+              "right": 3421562385
+            },
+            {
+              "path": "/numpy/__tuple__/1/value/4",
+              "left": 773307003,
+              "right": 3791739593
+            },
+            {
+              "path": "/numpy/__tuple__/1/value/5",
+              "left": 3175057151,
+              "right": 3497072029
+            },
+            {
+              "path": "/numpy/__tuple__/1/value/6",
+              "left": 3997192989,
+              "right": 631596392
+            },
+            {
+              "path": "/numpy/__tuple__/1/value/7",
+              "left": 4130559939,
+              "right": 892435184
+            },
+            {
+              "path": "/numpy/__tuple__/1/value/8",
+              "left": 2572949792,
+              "right": 3222713998
+            },
+            {
+              "path": "/numpy/__tuple__/1/value/9",
+              "left": 1201826098,
+              "right": 2033850342
+            },
+            {
+              "path": "/numpy/__tuple__/1/value/10",
+              "left": 3032432738,
+              "right": 1224007961
+            },
+            {
+              "path": "/numpy/__tuple__/1/value/11",
+              "left": 2101013946,
+              "right": 1994369406
+            },
+            {
+              "path": "/numpy/__tuple__/1/value/12",
+              "left": 1073809869,
+              "right": 3268581754
+            },
+            {
+              "path": "/numpy/__tuple__/1/value/13",
+              "left": 2555859319,
+              "right": 300938211
+            },
+            {
+              "path": "/numpy/__tuple__/1/value/14",
+              "left": 1108087249,
+              "right": 2325252885
+            },
+            {
+              "path": "/numpy/__tuple__/1/value/15",
+              "left": 2462040047,
+              "right": 1324127085
+            },
+            {
+              "path": "/numpy/__tuple__/1/value/16",
+              "left": 4271924604,
+              "right": 3008586795
+            },
+            {
+              "path": "/numpy/__tuple__/1/value/17",
+              "left": 2422011308,
+              "right": 3852287329
+            },
+            {
+              "path": "/numpy/__tuple__/1/value/18",
+              "left": 3904350314,
+              "right": 3910127650
+            },
+            {
+              "path": "/numpy/__tuple__/1/value/19",
+              "left": 507991207,
+              "right": 3057752992
+            },
+            {
+              "path": "/numpy/__tuple__/1/value/20",
+              "left": 3980573678,
+              "right": 4078955287
+            }
+          ]
+        },
+        "left_normalized_sha256": "8ad34aad6ce3c5c23384337c9f1a9b14ea1d8c85b1e450911907669c6fdc3e17",
+        "right_normalized_sha256": "eee6bdc6480b88f5e9bfe64a106c0ba821dde32ef6228dd8b746e0eddfddeddb"
+      }
+    },
+    "complete_expanded_policy_equal": true
+  },
+  {
+    "context": "b07_L4_GT_ER",
+    "method": "C",
+    "normal_id": "reused_b07_L4_GT_ER_normal_C",
+    "disturbed_id": "reused_b07_L4_GT_ER_disturbed_C",
+    "deltas": {
+      "definition": "disturbed minus own normal",
+      "ENS_kWh": {
+        "P0": {
+          "e": -1.7195596793584427e-05,
+          "h": 4.546657912385399e-06,
+          "c": 0.0
+        },
+        "P1": {
+          "e": -1.7195596793584427e-05,
+          "h": 3.6920258142680913,
+          "c": 0.0
+        },
+        "P2": {
+          "e": 5.025917317879886e-07,
+          "h": 0.0,
+          "c": 0.0
+        },
+        "P3": {
+          "e": 5.025917324985932e-05,
+          "h": 11.006220524504432,
+          "c": 0.0
+        }
+      },
+      "material_minutes": {
+        "P0": {
+          "e": 0,
+          "h": 0,
+          "c": 0
+        },
+        "P1": {
+          "e": 0,
+          "h": 15.0,
+          "c": 0
+        },
+        "P2": {
+          "e": 0,
+          "h": 0,
+          "c": 0
+        },
+        "P3": {
+          "e": 0,
+          "h": 15.0,
+          "c": 0
+        }
+      },
+      "recovery": {
+        "P0": {
+          "e": {
+            "normal": "not_applicable",
+            "disturbed": "not_applicable",
+            "absolute_minute_difference": null
+          },
+          "h": {
+            "normal": "not_applicable",
+            "disturbed": "not_applicable",
+            "absolute_minute_difference": null
+          },
+          "c": {
+            "normal": "not_applicable",
+            "disturbed": "not_applicable",
+            "absolute_minute_difference": null
+          }
+        },
+        "P1": {
+          "e": {
+            "normal": "not_applicable",
+            "disturbed": "not_applicable",
+            "absolute_minute_difference": null
+          },
+          "h": {
+            "normal": "not_applicable",
+            "disturbed": "observed",
+            "absolute_minute_difference": null
+          },
+          "c": {
+            "normal": "not_applicable",
+            "disturbed": "not_applicable",
+            "absolute_minute_difference": null
+          }
+        },
+        "P2": {
+          "e": {
+            "normal": "not_applicable",
+            "disturbed": "not_applicable",
+            "absolute_minute_difference": null
+          },
+          "h": {
+            "normal": "not_applicable",
+            "disturbed": "not_applicable",
+            "absolute_minute_difference": null
+          },
+          "c": {
+            "normal": "not_applicable",
+            "disturbed": "not_applicable",
+            "absolute_minute_difference": null
+          }
+        },
+        "P3": {
+          "e": {
+            "normal": "not_applicable",
+            "disturbed": "not_applicable",
+            "absolute_minute_difference": null
+          },
+          "h": {
+            "normal": "not_applicable",
+            "disturbed": "observed",
+            "absolute_minute_difference": null
+          },
+          "c": {
+            "normal": "not_applicable",
+            "disturbed": "not_applicable",
+            "absolute_minute_difference": null
+          }
+        }
+      },
+      "actual_fee_USD2001": 3.965991504300149,
+      "DG_shaft_work_kWh": 0.0,
+      "DG_electric_work_kWh": 0.0,
+      "final_stock_kWh": {
+        "ups": 0.0,
+        "cold_store": 0.0
+      },
+      "DG_remaining_shaft_budget_kWh": 0.0
+    },
+    "prefault_actual_online_prefix": {
+      "equal_raw": false,
+      "equal_after_timing_normalization": true,
+      "timing_only_difference": true,
+      "raw": {
+        "difference_count": 320,
+        "samples": [
+          {
+            "path": "/decisions/0/command_generated/joint_dispatch/diagnostic/m23_boiler_domains/checked_domains/0/solver_backend_layers/0/attempts/0/elapsed_seconds",
+            "left": 0.01236450020223856,
+            "right": 0.013476099818944931
+          },
+          {
+            "path": "/decisions/0/command_generated/joint_dispatch/diagnostic/m23_boiler_domains/checked_domains/0/solver_backend_layers/0/attempts/0/parameters/TimeLimit",
+            "left": 5.987180900294334,
+            "right": 5.988970699254423
+          },
+          {
+            "path": "/decisions/0/command_generated/joint_dispatch/diagnostic/m23_boiler_domains/checked_domains/0/solver_backend_layers/1/attempts/0/elapsed_seconds",
+            "left": 0.010335699655115604,
+            "right": 0.012031999882310629
+          },
+          {
+            "path": "/decisions/0/command_generated/joint_dispatch/diagnostic/m23_boiler_domains/checked_domains/0/solver_backend_layers/1/attempts/0/parameters/TimeLimit",
+            "left": 5.9892826997675,
+            "right": 5.989099299535155
+          },
+          {
+            "path": "/decisions/0/command_generated/joint_dispatch/diagnostic/m23_boiler_domains/checked_domains/0/solver_backend_layers/2/attempts/0/elapsed_seconds",
+            "left": 0.014236799906939268,
+            "right": 0.013949899934232235
+          },
+          {
+            "path": "/decisions/0/command_generated/joint_dispatch/diagnostic/m23_boiler_domains/checked_domains/0/solver_backend_layers/2/attempts/0/parameters/TimeLimit",
+            "left": 5.989688600413501,
+            "right": 5.98765810020268
+          },
+          {
+            "path": "/decisions/0/command_generated/joint_dispatch/diagnostic/m23_boiler_domains/checked_domains/0/solver_backend_layers/3/attempts/0/elapsed_seconds",
+            "left": 0.009542999789118767,
+            "right": 0.009834100026637316
+          },
+          {
+            "path": "/decisions/0/command_generated/joint_dispatch/diagnostic/m23_boiler_domains/checked_domains/0/solver_backend_layers/3/attempts/0/parameters/TimeLimit",
+            "left": 5.989513999782503,
+            "right": 5.988276100251824
+          },
+          {
+            "path": "/decisions/0/command_generated/joint_dispatch/diagnostic/m23_boiler_domains/checked_domains/0/solver_backend_layers/4/attempts/0/elapsed_seconds",
+            "left": 0.03477169992402196,
+            "right": 0.03232199978083372
+          },
+          {
+            "path": "/decisions/0/command_generated/joint_dispatch/diagnostic/m23_boiler_domains/checked_domains/0/solver_backend_layers/4/attempts/0/parameters/TimeLimit",
+            "left": 5.984831800218672,
+            "right": 5.988616599701345
+          },
+          {
+            "path": "/decisions/0/command_generated/joint_dispatch/diagnostic/m23_boiler_domains/checked_domains/0/solver_backend_layers/5/attempts/0/elapsed_seconds",
+            "left": 0.009905599988996983,
+            "right": 0.012973099946975708
+          },
+          {
+            "path": "/decisions/0/command_generated/joint_dispatch/diagnostic/m23_boiler_domains/checked_domains/0/solver_backend_layers/5/attempts/0/parameters/TimeLimit",
+            "left": 5.987755400128663,
+            "right": 5.9888951000757515
+          },
+          {
+            "path": "/decisions/0/command_generated/joint_dispatch/diagnostic/m23_boiler_domains/checked_domains/0/solver_backend_layers/6/attempts/0/elapsed_seconds",
+            "left": 0.009699499700218439,
+            "right": 0.011206299997866154
+          },
+          {
+            "path": "/decisions/0/command_generated/joint_dispatch/diagnostic/m23_boiler_domains/checked_domains/0/solver_backend_layers/6/attempts/0/parameters/TimeLimit",
+            "left": 5.989067200105637,
+            "right": 5.98830520035699
+          },
+          {
+            "path": "/decisions/0/command_generated/joint_dispatch/diagnostic/m23_boiler_domains/checked_domains/0/solver_backend_layers/7/attempts/0/elapsed_seconds",
+            "left": 0.012618900276720524,
+            "right": 0.009896500036120415
+          },
+          {
+            "path": "/decisions/0/command_generated/joint_dispatch/diagnostic/m23_boiler_domains/checked_domains/0/solver_backend_layers/7/attempts/0/parameters/TimeLimit",
+            "left": 5.988159999717027,
+            "right": 5.984796700067818
+          },
+          {
+            "path": "/decisions/0/command_generated/joint_dispatch/diagnostic/m23_boiler_domains/checked_domains/0/solver_backend_layers/8/attempts/0/elapsed_seconds",
+            "left": 0.011591400019824505,
+            "right": 0.01203370001167059
+          },
+          {
+            "path": "/decisions/0/command_generated/joint_dispatch/diagnostic/m23_boiler_domains/checked_domains/0/solver_backend_layers/8/attempts/0/parameters/TimeLimit",
+            "left": 5.987093900330365,
+            "right": 5.9869240005500615
+          },
+          {
+            "path": "/decisions/0/command_generated/joint_dispatch/diagnostic/m23_boiler_domains/checked_domains/0/solver_backend_layers/9/attempts/0/elapsed_seconds",
+            "left": 0.011057500261813402,
+            "right": 0.012425099965184927
+          },
+          {
+            "path": "/decisions/0/command_generated/joint_dispatch/diagnostic/m23_boiler_domains/checked_domains/0/solver_backend_layers/9/attempts/0/parameters/TimeLimit",
+            "left": 5.984887199942023,
+            "right": 5.988229000009596
+          }
+        ]
+      },
+      "normalized": {
+        "difference_count": 0,
+        "samples": []
+      },
+      "left_normalized_sha256": "636ee6d459eb6122bc4f277864a871ce24e4f4c946a983351d9b84f4367532a2",
+      "right_normalized_sha256": "636ee6d459eb6122bc4f277864a871ce24e4f4c946a983351d9b84f4367532a2"
+    },
+    "initial_comparisons": {
+      "state": {
+        "equal_raw": true,
+        "equal_after_timing_normalization": true,
+        "timing_only_difference": false,
+        "raw": {
+          "difference_count": 0,
+          "samples": []
+        },
+        "normalized": {
+          "difference_count": 0,
+          "samples": []
+        },
+        "left_normalized_sha256": "05131613f46eb7b082072952ac2ba678a580fb6c2e9a692ec2eeeaeb8d5e91bf",
+        "right_normalized_sha256": "05131613f46eb7b082072952ac2ba678a580fb6c2e9a692ec2eeeaeb8d5e91bf"
+      },
+      "core": {
+        "equal_raw": true,
+        "equal_after_timing_normalization": true,
+        "timing_only_difference": false,
+        "raw": {
+          "difference_count": 0,
+          "samples": []
+        },
+        "normalized": {
+          "difference_count": 0,
+          "samples": []
+        },
+        "left_normalized_sha256": "f494647ca9cffbaa405ada70c856e5cf6aa2a94005460263a53adc12e0f35fa0",
+        "right_normalized_sha256": "f494647ca9cffbaa405ada70c856e5cf6aa2a94005460263a53adc12e0f35fa0"
+      },
+      "rng": {
+        "equal_raw": false,
+        "equal_after_timing_normalization": false,
+        "timing_only_difference": false,
+        "raw": {
+          "difference_count": 1246,
+          "samples": [
+            {
+              "path": "/numpy/__tuple__/1/value/1",
+              "left": 939511547,
+              "right": 2694848385
+            },
+            {
+              "path": "/numpy/__tuple__/1/value/2",
+              "left": 171667199,
+              "right": 2005340386
+            },
+            {
+              "path": "/numpy/__tuple__/1/value/3",
+              "left": 2157314775,
+              "right": 1816151560
+            },
+            {
+              "path": "/numpy/__tuple__/1/value/4",
+              "left": 547170027,
+              "right": 1495146693
+            },
+            {
+              "path": "/numpy/__tuple__/1/value/5",
+              "left": 3467579259,
+              "right": 1686816299
+            },
+            {
+              "path": "/numpy/__tuple__/1/value/6",
+              "left": 821472802,
+              "right": 30361290
+            },
+            {
+              "path": "/numpy/__tuple__/1/value/7",
+              "left": 915177645,
+              "right": 3653287000
+            },
+            {
+              "path": "/numpy/__tuple__/1/value/8",
+              "left": 3003831852,
+              "right": 4210042539
+            },
+            {
+              "path": "/numpy/__tuple__/1/value/9",
+              "left": 1408232715,
+              "right": 392577927
+            },
+            {
+              "path": "/numpy/__tuple__/1/value/10",
+              "left": 1589286430,
+              "right": 3029122601
+            },
+            {
+              "path": "/numpy/__tuple__/1/value/11",
+              "left": 1185131106,
+              "right": 1538173190
+            },
+            {
+              "path": "/numpy/__tuple__/1/value/12",
+              "left": 4157026001,
+              "right": 1057678673
+            },
+            {
+              "path": "/numpy/__tuple__/1/value/13",
+              "left": 364297602,
+              "right": 4275367733
+            },
+            {
+              "path": "/numpy/__tuple__/1/value/14",
+              "left": 1187849081,
+              "right": 3324278881
+            },
+            {
+              "path": "/numpy/__tuple__/1/value/15",
+              "left": 3665048277,
+              "right": 3511542453
+            },
+            {
+              "path": "/numpy/__tuple__/1/value/16",
+              "left": 1304288379,
+              "right": 2753835263
+            },
+            {
+              "path": "/numpy/__tuple__/1/value/17",
+              "left": 3943088194,
+              "right": 2238553420
+            },
+            {
+              "path": "/numpy/__tuple__/1/value/18",
+              "left": 1450688755,
+              "right": 3162334616
+            },
+            {
+              "path": "/numpy/__tuple__/1/value/19",
+              "left": 2430804002,
+              "right": 1762310530
+            },
+            {
+              "path": "/numpy/__tuple__/1/value/20",
+              "left": 2154462556,
+              "right": 1723029992
+            }
+          ]
+        },
+        "normalized": {
+          "difference_count": 1246,
+          "samples": [
+            {
+              "path": "/numpy/__tuple__/1/value/1",
+              "left": 939511547,
+              "right": 2694848385
+            },
+            {
+              "path": "/numpy/__tuple__/1/value/2",
+              "left": 171667199,
+              "right": 2005340386
+            },
+            {
+              "path": "/numpy/__tuple__/1/value/3",
+              "left": 2157314775,
+              "right": 1816151560
+            },
+            {
+              "path": "/numpy/__tuple__/1/value/4",
+              "left": 547170027,
+              "right": 1495146693
+            },
+            {
+              "path": "/numpy/__tuple__/1/value/5",
+              "left": 3467579259,
+              "right": 1686816299
+            },
+            {
+              "path": "/numpy/__tuple__/1/value/6",
+              "left": 821472802,
+              "right": 30361290
+            },
+            {
+              "path": "/numpy/__tuple__/1/value/7",
+              "left": 915177645,
+              "right": 3653287000
+            },
+            {
+              "path": "/numpy/__tuple__/1/value/8",
+              "left": 3003831852,
+              "right": 4210042539
+            },
+            {
+              "path": "/numpy/__tuple__/1/value/9",
+              "left": 1408232715,
+              "right": 392577927
+            },
+            {
+              "path": "/numpy/__tuple__/1/value/10",
+              "left": 1589286430,
+              "right": 3029122601
+            },
+            {
+              "path": "/numpy/__tuple__/1/value/11",
+              "left": 1185131106,
+              "right": 1538173190
+            },
+            {
+              "path": "/numpy/__tuple__/1/value/12",
+              "left": 4157026001,
+              "right": 1057678673
+            },
+            {
+              "path": "/numpy/__tuple__/1/value/13",
+              "left": 364297602,
+              "right": 4275367733
+            },
+            {
+              "path": "/numpy/__tuple__/1/value/14",
+              "left": 1187849081,
+              "right": 3324278881
+            },
+            {
+              "path": "/numpy/__tuple__/1/value/15",
+              "left": 3665048277,
+              "right": 3511542453
+            },
+            {
+              "path": "/numpy/__tuple__/1/value/16",
+              "left": 1304288379,
+              "right": 2753835263
+            },
+            {
+              "path": "/numpy/__tuple__/1/value/17",
+              "left": 3943088194,
+              "right": 2238553420
+            },
+            {
+              "path": "/numpy/__tuple__/1/value/18",
+              "left": 1450688755,
+              "right": 3162334616
+            },
+            {
+              "path": "/numpy/__tuple__/1/value/19",
+              "left": 2430804002,
+              "right": 1762310530
+            },
+            {
+              "path": "/numpy/__tuple__/1/value/20",
+              "left": 2154462556,
+              "right": 1723029992
+            }
+          ]
+        },
+        "left_normalized_sha256": "b9f44967f6a1aac50fab47f0d58581262c6eef695dd4b49be24f136315522144",
+        "right_normalized_sha256": "e72804ed800765f1cbf8d73017a029d7ed1b927e7aaad7048234e70596d9fe34"
+      }
+    },
+    "complete_expanded_policy_equal": true
+  },
+  {
+    "context": "b07_L4_GT_ER",
+    "method": "M",
+    "normal_id": "reused_b07_L4_GT_ER_normal_M",
+    "disturbed_id": "reused_b07_L4_GT_ER_disturbed_M",
+    "deltas": {
+      "definition": "disturbed minus own normal",
+      "ENS_kWh": {
+        "P0": {
+          "e": 3.6559920602030616e-07,
+          "h": 12.99693845167845,
+          "c": -1.12198369741634e-05
+        },
+        "P1": {
+          "e": 3.7701074262486145e-07,
+          "h": 8.790220719501372,
+          "c": 6.880310365886544e-08
+        },
+        "P2": {
+          "e": 1.788863927367309e-05,
+          "h": 0.0,
+          "c": -1.1107934735899774e-05
+        },
+        "P3": {
+          "e": 3.275864988359564e-05,
+          "h": 11.006225071162369,
+          "c": 33.39024173686877
+        }
+      },
+      "material_minutes": {
+        "P0": {
+          "e": 0,
+          "h": 15.0,
+          "c": 0
+        },
+        "P1": {
+          "e": 0,
+          "h": 15.0,
+          "c": 0
+        },
+        "P2": {
+          "e": 0,
+          "h": 0,
+          "c": 0
+        },
+        "P3": {
+          "e": 0,
+          "h": 15.0,
+          "c": 0.0
+        }
+      },
+      "recovery": {
+        "P0": {
+          "e": {
+            "normal": "not_applicable",
+            "disturbed": "not_applicable",
+            "absolute_minute_difference": null
+          },
+          "h": {
+            "normal": "not_applicable",
+            "disturbed": "observed",
+            "absolute_minute_difference": null
+          },
+          "c": {
+            "normal": "not_applicable",
+            "disturbed": "not_applicable",
+            "absolute_minute_difference": null
+          }
+        },
+        "P1": {
+          "e": {
+            "normal": "not_applicable",
+            "disturbed": "not_applicable",
+            "absolute_minute_difference": null
+          },
+          "h": {
+            "normal": "not_applicable",
+            "disturbed": "observed",
+            "absolute_minute_difference": null
+          },
+          "c": {
+            "normal": "not_applicable",
+            "disturbed": "not_applicable",
+            "absolute_minute_difference": null
+          }
+        },
+        "P2": {
+          "e": {
+            "normal": "not_applicable",
+            "disturbed": "not_applicable",
+            "absolute_minute_difference": null
+          },
+          "h": {
+            "normal": "not_applicable",
+            "disturbed": "not_applicable",
+            "absolute_minute_difference": null
+          },
+          "c": {
+            "normal": "not_applicable",
+            "disturbed": "not_applicable",
+            "absolute_minute_difference": null
+          }
+        },
+        "P3": {
+          "e": {
+            "normal": "not_applicable",
+            "disturbed": "not_applicable",
+            "absolute_minute_difference": null
+          },
+          "h": {
+            "normal": "not_applicable",
+            "disturbed": "observed",
+            "absolute_minute_difference": null
+          },
+          "c": {
+            "normal": "observed",
+            "disturbed": "observed",
+            "absolute_minute_difference": 0.0
+          }
+        }
+      },
+      "actual_fee_USD2001": 8.419362899071757,
+      "DG_shaft_work_kWh": 0.0,
+      "DG_electric_work_kWh": 0.0,
+      "final_stock_kWh": {
+        "ups": 0.0,
+        "cold_store": 0.0
+      },
+      "DG_remaining_shaft_budget_kWh": 0.0
+    },
+    "prefault_actual_online_prefix": {
+      "equal_raw": false,
+      "equal_after_timing_normalization": true,
+      "timing_only_difference": true,
+      "raw": {
+        "difference_count": 447,
+        "samples": [
+          {
+            "path": "/decisions/0/command_generated/joint_dispatch/diagnostic/m23_boiler_domains/checked_domains/0/solver_backend_layers/0/attempts/0/elapsed_seconds",
+            "left": 0.0038362997584044933,
+            "right": 0.0045472001656889915
+          },
+          {
+            "path": "/decisions/0/command_generated/joint_dispatch/diagnostic/m23_boiler_domains/checked_domains/0/solver_backend_layers/0/attempts/0/parameters/TimeLimit",
+            "left": 5.998933000490069,
+            "right": 5.998945000115782
+          },
+          {
+            "path": "/decisions/0/command_generated/joint_dispatch/diagnostic/m23_boiler_domains/checked_domains/0/solver_backend_layers/1/attempts/0/elapsed_seconds",
+            "left": 0.0027486998587846756,
+            "right": 0.0032232999801635742
+          },
+          {
+            "path": "/decisions/0/command_generated/joint_dispatch/diagnostic/m23_boiler_domains/checked_domains/0/solver_backend_layers/1/attempts/0/parameters/TimeLimit",
+            "left": 5.9990063002333045,
+            "right": 5.998240899760276
+          },
+          {
+            "path": "/decisions/0/command_generated/joint_dispatch/diagnostic/m23_boiler_domains/checked_domains/0/solver_backend_layers/2/attempts/0/elapsed_seconds",
+            "left": 0.003702899906784296,
+            "right": 0.003347699996083975
+          },
+          {
+            "path": "/decisions/0/command_generated/joint_dispatch/diagnostic/m23_boiler_domains/checked_domains/0/solver_backend_layers/2/attempts/0/parameters/TimeLimit",
+            "left": 5.9988047000952065,
+            "right": 5.998816500417888
+          },
+          {
+            "path": "/decisions/0/command_generated/joint_dispatch/diagnostic/m23_boiler_domains/checked_domains/0/solver_backend_layers/3/attempts/0/elapsed_seconds",
+            "left": 0.002992900088429451,
+            "right": 0.0030564996413886547
+          },
+          {
+            "path": "/decisions/0/command_generated/joint_dispatch/diagnostic/m23_boiler_domains/checked_domains/0/solver_backend_layers/3/attempts/0/parameters/TimeLimit",
+            "left": 5.998259000014514,
+            "right": 5.998380099888891
+          },
+          {
+            "path": "/decisions/0/command_generated/joint_dispatch/diagnostic/m23_boiler_domains/checked_domains/0/solver_backend_layers/4/attempts/0/elapsed_seconds",
+            "left": 0.003328099846839905,
+            "right": 0.003455699887126684
+          },
+          {
+            "path": "/decisions/0/command_generated/joint_dispatch/diagnostic/m23_boiler_domains/checked_domains/0/solver_backend_layers/4/attempts/0/parameters/TimeLimit",
+            "left": 5.99842040007934,
+            "right": 5.998058199882507
+          },
+          {
+            "path": "/decisions/0/command_generated/joint_dispatch/diagnostic/m23_boiler_domains/checked_domains/0/solver_backend_layers/5/attempts/0/elapsed_seconds",
+            "left": 0.003350100014358759,
+            "right": 0.004295699764043093
+          },
+          {
+            "path": "/decisions/0/command_generated/joint_dispatch/diagnostic/m23_boiler_domains/checked_domains/0/solver_backend_layers/5/attempts/0/parameters/TimeLimit",
+            "left": 5.9983649998903275,
+            "right": 5.997703499626368
+          },
+          {
+            "path": "/decisions/0/command_generated/joint_dispatch/diagnostic/m23_boiler_domains/checked_domains/0/solver_backend_layers/6/attempts/0/elapsed_seconds",
+            "left": 0.00504670012742281,
+            "right": 0.00354900024831295
+          },
+          {
+            "path": "/decisions/0/command_generated/joint_dispatch/diagnostic/m23_boiler_domains/checked_domains/0/solver_backend_layers/6/attempts/0/parameters/TimeLimit",
+            "left": 5.996539399493486,
+            "right": 5.998182099778205
+          },
+          {
+            "path": "/decisions/0/command_generated/joint_dispatch/diagnostic/m23_boiler_domains/checked_domains/0/solver_backend_layers/7/attempts/0/elapsed_seconds",
+            "left": 0.0037261000834405422,
+            "right": 0.003771000076085329
+          },
+          {
+            "path": "/decisions/0/command_generated/joint_dispatch/diagnostic/m23_boiler_domains/checked_domains/0/solver_backend_layers/7/attempts/0/parameters/TimeLimit",
+            "left": 5.99751909961924,
+            "right": 5.997856799978763
+          },
+          {
+            "path": "/decisions/0/command_generated/joint_dispatch/diagnostic/m23_boiler_domains/checked_domains/0/solver_backend_layers/8/attempts/0/elapsed_seconds",
+            "left": 0.0037170001305639744,
+            "right": 0.004382200073450804
+          },
+          {
+            "path": "/decisions/0/command_generated/joint_dispatch/diagnostic/m23_boiler_domains/checked_domains/0/solver_backend_layers/8/attempts/0/parameters/TimeLimit",
+            "left": 5.997299499809742,
+            "right": 5.9969896003603935
+          },
+          {
+            "path": "/decisions/0/command_generated/joint_dispatch/diagnostic/m23_boiler_domains/checked_domains/0/solver_backend_layers/9/attempts/0/elapsed_seconds",
+            "left": 0.002977999858558178,
+            "right": 0.003550400026142597
+          },
+          {
+            "path": "/decisions/0/command_generated/joint_dispatch/diagnostic/m23_boiler_domains/checked_domains/0/solver_backend_layers/9/attempts/0/parameters/TimeLimit",
+            "left": 5.997034800238907,
+            "right": 5.996809800155461
+          }
+        ]
+      },
+      "normalized": {
+        "difference_count": 0,
+        "samples": []
+      },
+      "left_normalized_sha256": "4db13b3461b2d048895606fdd174c1844e7e80924dc994495f1f039f1aaeb090",
+      "right_normalized_sha256": "4db13b3461b2d048895606fdd174c1844e7e80924dc994495f1f039f1aaeb090"
+    },
+    "initial_comparisons": {
+      "state": {
+        "equal_raw": true,
+        "equal_after_timing_normalization": true,
+        "timing_only_difference": false,
+        "raw": {
+          "difference_count": 0,
+          "samples": []
+        },
+        "normalized": {
+          "difference_count": 0,
+          "samples": []
+        },
+        "left_normalized_sha256": "05131613f46eb7b082072952ac2ba678a580fb6c2e9a692ec2eeeaeb8d5e91bf",
+        "right_normalized_sha256": "05131613f46eb7b082072952ac2ba678a580fb6c2e9a692ec2eeeaeb8d5e91bf"
+      },
+      "core": {
+        "equal_raw": true,
+        "equal_after_timing_normalization": true,
+        "timing_only_difference": false,
+        "raw": {
+          "difference_count": 0,
+          "samples": []
+        },
+        "normalized": {
+          "difference_count": 0,
+          "samples": []
+        },
+        "left_normalized_sha256": "f494647ca9cffbaa405ada70c856e5cf6aa2a94005460263a53adc12e0f35fa0",
+        "right_normalized_sha256": "f494647ca9cffbaa405ada70c856e5cf6aa2a94005460263a53adc12e0f35fa0"
+      },
+      "rng": {
+        "equal_raw": false,
+        "equal_after_timing_normalization": false,
+        "timing_only_difference": false,
+        "raw": {
+          "difference_count": 1246,
+          "samples": [
+            {
+              "path": "/numpy/__tuple__/1/value/1",
+              "left": 3065828464,
+              "right": 328016735
+            },
+            {
+              "path": "/numpy/__tuple__/1/value/2",
+              "left": 2356346729,
+              "right": 3877658340
+            },
+            {
+              "path": "/numpy/__tuple__/1/value/3",
+              "left": 1340114031,
+              "right": 1951658414
+            },
+            {
+              "path": "/numpy/__tuple__/1/value/4",
+              "left": 1099576190,
+              "right": 1243208905
+            },
+            {
+              "path": "/numpy/__tuple__/1/value/5",
+              "left": 3865561915,
+              "right": 3591206703
+            },
+            {
+              "path": "/numpy/__tuple__/1/value/6",
+              "left": 1370736328,
+              "right": 3354437156
+            },
+            {
+              "path": "/numpy/__tuple__/1/value/7",
+              "left": 38366214,
+              "right": 1735467660
+            },
+            {
+              "path": "/numpy/__tuple__/1/value/8",
+              "left": 3138947324,
+              "right": 2291735065
+            },
+            {
+              "path": "/numpy/__tuple__/1/value/9",
+              "left": 343719568,
+              "right": 1429672773
+            },
+            {
+              "path": "/numpy/__tuple__/1/value/10",
+              "left": 233870123,
+              "right": 1272942203
+            },
+            {
+              "path": "/numpy/__tuple__/1/value/11",
+              "left": 2301622496,
+              "right": 1646423327
+            },
+            {
+              "path": "/numpy/__tuple__/1/value/12",
+              "left": 744521396,
+              "right": 3103338953
+            },
+            {
+              "path": "/numpy/__tuple__/1/value/13",
+              "left": 13970473,
+              "right": 564638053
+            },
+            {
+              "path": "/numpy/__tuple__/1/value/14",
+              "left": 1758416116,
+              "right": 1104551266
+            },
+            {
+              "path": "/numpy/__tuple__/1/value/15",
+              "left": 261379867,
+              "right": 4217082982
+            },
+            {
+              "path": "/numpy/__tuple__/1/value/16",
+              "left": 445964368,
+              "right": 3059626174
+            },
+            {
+              "path": "/numpy/__tuple__/1/value/17",
+              "left": 1650091734,
+              "right": 102675980
+            },
+            {
+              "path": "/numpy/__tuple__/1/value/18",
+              "left": 3080944440,
+              "right": 3213575695
+            },
+            {
+              "path": "/numpy/__tuple__/1/value/19",
+              "left": 2848293578,
+              "right": 284890118
+            },
+            {
+              "path": "/numpy/__tuple__/1/value/20",
+              "left": 618658923,
+              "right": 905896046
+            }
+          ]
+        },
+        "normalized": {
+          "difference_count": 1246,
+          "samples": [
+            {
+              "path": "/numpy/__tuple__/1/value/1",
+              "left": 3065828464,
+              "right": 328016735
+            },
+            {
+              "path": "/numpy/__tuple__/1/value/2",
+              "left": 2356346729,
+              "right": 3877658340
+            },
+            {
+              "path": "/numpy/__tuple__/1/value/3",
+              "left": 1340114031,
+              "right": 1951658414
+            },
+            {
+              "path": "/numpy/__tuple__/1/value/4",
+              "left": 1099576190,
+              "right": 1243208905
+            },
+            {
+              "path": "/numpy/__tuple__/1/value/5",
+              "left": 3865561915,
+              "right": 3591206703
+            },
+            {
+              "path": "/numpy/__tuple__/1/value/6",
+              "left": 1370736328,
+              "right": 3354437156
+            },
+            {
+              "path": "/numpy/__tuple__/1/value/7",
+              "left": 38366214,
+              "right": 1735467660
+            },
+            {
+              "path": "/numpy/__tuple__/1/value/8",
+              "left": 3138947324,
+              "right": 2291735065
+            },
+            {
+              "path": "/numpy/__tuple__/1/value/9",
+              "left": 343719568,
+              "right": 1429672773
+            },
+            {
+              "path": "/numpy/__tuple__/1/value/10",
+              "left": 233870123,
+              "right": 1272942203
+            },
+            {
+              "path": "/numpy/__tuple__/1/value/11",
+              "left": 2301622496,
+              "right": 1646423327
+            },
+            {
+              "path": "/numpy/__tuple__/1/value/12",
+              "left": 744521396,
+              "right": 3103338953
+            },
+            {
+              "path": "/numpy/__tuple__/1/value/13",
+              "left": 13970473,
+              "right": 564638053
+            },
+            {
+              "path": "/numpy/__tuple__/1/value/14",
+              "left": 1758416116,
+              "right": 1104551266
+            },
+            {
+              "path": "/numpy/__tuple__/1/value/15",
+              "left": 261379867,
+              "right": 4217082982
+            },
+            {
+              "path": "/numpy/__tuple__/1/value/16",
+              "left": 445964368,
+              "right": 3059626174
+            },
+            {
+              "path": "/numpy/__tuple__/1/value/17",
+              "left": 1650091734,
+              "right": 102675980
+            },
+            {
+              "path": "/numpy/__tuple__/1/value/18",
+              "left": 3080944440,
+              "right": 3213575695
+            },
+            {
+              "path": "/numpy/__tuple__/1/value/19",
+              "left": 2848293578,
+              "right": 284890118
+            },
+            {
+              "path": "/numpy/__tuple__/1/value/20",
+              "left": 618658923,
+              "right": 905896046
+            }
+          ]
+        },
+        "left_normalized_sha256": "316ee05a377a85f6a27be7c79b7822c996da642867f521c7809cc57eba343a94",
+        "right_normalized_sha256": "ca5a09418f7eca1b6b8a9c5d7aeb5f08fda5f2373a2b600b4affa13a0f3e1a59"
+      }
+    },
+    "complete_expanded_policy_equal": true
+  },
+  {
+    "context": "b07_L4_GT_ER",
+    "method": "M_steam_permission",
+    "normal_id": "v31_b07_normal_M_steam_permission",
+    "disturbed_id": "v31_b07_disturbed_M_steam_permission",
+    "deltas": {
+      "definition": "disturbed minus own normal",
+      "ENS_kWh": {
+        "P0": {
+          "e": 3.770264029867576e-07,
+          "h": 0.0,
+          "c": 6.879336389431501e-08
+        },
+        "P1": {
+          "e": 3.7701074262486145e-07,
+          "h": 0.0,
+          "c": 6.88030841189402e-08
+        },
+        "P2": {
+          "e": 5.025917317880157e-07,
+          "h": 0.0,
+          "c": 0.0
+        },
+        "P3": {
+          "e": 5.013339135473416e-05,
+          "h": 0.0,
+          "c": 0.6883874201063094
+        }
+      },
+      "material_minutes": {
+        "P0": {
+          "e": 0,
+          "h": 0,
+          "c": 0
+        },
+        "P1": {
+          "e": 0,
+          "h": 0,
+          "c": 0
+        },
+        "P2": {
+          "e": 0,
+          "h": 0,
+          "c": 0
+        },
+        "P3": {
+          "e": 0,
+          "h": 0,
+          "c": 0.0
+        }
+      },
+      "recovery": {
+        "P0": {
+          "e": {
+            "normal": "not_applicable",
+            "disturbed": "not_applicable",
+            "absolute_minute_difference": null
+          },
+          "h": {
+            "normal": "not_applicable",
+            "disturbed": "not_applicable",
+            "absolute_minute_difference": null
+          },
+          "c": {
+            "normal": "not_applicable",
+            "disturbed": "not_applicable",
+            "absolute_minute_difference": null
+          }
+        },
+        "P1": {
+          "e": {
+            "normal": "not_applicable",
+            "disturbed": "not_applicable",
+            "absolute_minute_difference": null
+          },
+          "h": {
+            "normal": "not_applicable",
+            "disturbed": "not_applicable",
+            "absolute_minute_difference": null
+          },
+          "c": {
+            "normal": "not_applicable",
+            "disturbed": "not_applicable",
+            "absolute_minute_difference": null
+          }
+        },
+        "P2": {
+          "e": {
+            "normal": "not_applicable",
+            "disturbed": "not_applicable",
+            "absolute_minute_difference": null
+          },
+          "h": {
+            "normal": "not_applicable",
+            "disturbed": "not_applicable",
+            "absolute_minute_difference": null
+          },
+          "c": {
+            "normal": "not_applicable",
+            "disturbed": "not_applicable",
+            "absolute_minute_difference": null
+          }
+        },
+        "P3": {
+          "e": {
+            "normal": "not_applicable",
+            "disturbed": "not_applicable",
+            "absolute_minute_difference": null
+          },
+          "h": {
+            "normal": "not_applicable",
+            "disturbed": "not_applicable",
+            "absolute_minute_difference": null
+          },
+          "c": {
+            "normal": "observed",
+            "disturbed": "observed",
+            "absolute_minute_difference": 0.0
+          }
+        }
+      },
+      "actual_fee_USD2001": 10.429149561903102,
+      "DG_shaft_work_kWh": 0.0,
+      "DG_electric_work_kWh": 0.0,
+      "final_stock_kWh": {
+        "ups": 0.0,
+        "cold_store": 0.0
+      },
+      "DG_remaining_shaft_budget_kWh": 0.0
+    },
+    "prefault_actual_online_prefix": {
+      "equal_raw": false,
+      "equal_after_timing_normalization": true,
+      "timing_only_difference": true,
+      "raw": {
+        "difference_count": 448,
+        "samples": [
+          {
+            "path": "/decisions/0/command_generated/joint_dispatch/diagnostic/m23_boiler_domains/checked_domains/0/solver_backend_layers/0/attempts/0/elapsed_seconds",
+            "left": 0.005058899987488985,
+            "right": 0.005139999557286501
+          },
+          {
+            "path": "/decisions/0/command_generated/joint_dispatch/diagnostic/m23_boiler_domains/checked_domains/0/solver_backend_layers/0/attempts/0/parameters/TimeLimit",
+            "left": 5.998838400002569,
+            "right": 5.999120300170034
+          },
+          {
+            "path": "/decisions/0/command_generated/joint_dispatch/diagnostic/m23_boiler_domains/checked_domains/0/solver_backend_layers/1/attempts/0/elapsed_seconds",
+            "left": 0.003703000023961067,
+            "right": 0.0038916999474167824
+          },
+          {
+            "path": "/decisions/0/command_generated/joint_dispatch/diagnostic/m23_boiler_domains/checked_domains/0/solver_backend_layers/1/attempts/0/parameters/TimeLimit",
+            "left": 5.998688200023025,
+            "right": 5.998643400147557
+          },
+          {
+            "path": "/decisions/0/command_generated/joint_dispatch/diagnostic/m23_boiler_domains/checked_domains/0/solver_backend_layers/2/attempts/0/elapsed_seconds",
+            "left": 0.0033831000328063965,
+            "right": 0.003797799814492464
+          },
+          {
+            "path": "/decisions/0/command_generated/joint_dispatch/diagnostic/m23_boiler_domains/checked_domains/0/solver_backend_layers/2/attempts/0/parameters/TimeLimit",
+            "left": 5.998164299875498,
+            "right": 5.998215799685568
+          },
+          {
+            "path": "/decisions/0/command_generated/joint_dispatch/diagnostic/m23_boiler_domains/checked_domains/0/solver_backend_layers/3/attempts/0/elapsed_seconds",
+            "left": 0.0038882996886968613,
+            "right": 0.003257700242102146
+          },
+          {
+            "path": "/decisions/0/command_generated/joint_dispatch/diagnostic/m23_boiler_domains/checked_domains/0/solver_backend_layers/3/attempts/0/parameters/TimeLimit",
+            "left": 5.99821009952575,
+            "right": 5.998313099611551
+          },
+          {
+            "path": "/decisions/0/command_generated/joint_dispatch/diagnostic/m23_boiler_domains/checked_domains/0/solver_backend_layers/4/attempts/0/elapsed_seconds",
+            "left": 0.003474800381809473,
+            "right": 0.0035933000035583973
+          },
+          {
+            "path": "/decisions/0/command_generated/joint_dispatch/diagnostic/m23_boiler_domains/checked_domains/0/solver_backend_layers/4/attempts/0/parameters/TimeLimit",
+            "left": 5.998055099975318,
+            "right": 5.998235199600458
+          },
+          {
+            "path": "/decisions/0/command_generated/joint_dispatch/diagnostic/m23_boiler_domains/checked_domains/0/solver_backend_layers/5/attempts/0/elapsed_seconds",
+            "left": 0.00314539996907115,
+            "right": 0.0047598001547157764
+          },
+          {
+            "path": "/decisions/0/command_generated/joint_dispatch/diagnostic/m23_boiler_domains/checked_domains/0/solver_backend_layers/5/attempts/0/parameters/TimeLimit",
+            "left": 5.997689699754119,
+            "right": 5.996872100047767
+          },
+          {
+            "path": "/decisions/0/command_generated/joint_dispatch/diagnostic/m23_boiler_domains/checked_domains/0/solver_backend_layers/6/attempts/0/elapsed_seconds",
+            "left": 0.0038049998693168163,
+            "right": 0.004284699913114309
+          },
+          {
+            "path": "/decisions/0/command_generated/joint_dispatch/diagnostic/m23_boiler_domains/checked_domains/0/solver_backend_layers/6/attempts/0/parameters/TimeLimit",
+            "left": 5.997751499991864,
+            "right": 5.996326900087297
+          },
+          {
+            "path": "/decisions/0/command_generated/joint_dispatch/diagnostic/m23_boiler_domains/checked_domains/0/solver_backend_layers/7/attempts/0/elapsed_seconds",
+            "left": 0.004017500206828117,
+            "right": 0.0035287998616695404
+          },
+          {
+            "path": "/decisions/0/command_generated/joint_dispatch/diagnostic/m23_boiler_domains/checked_domains/0/solver_backend_layers/7/attempts/0/parameters/TimeLimit",
+            "left": 5.996570699848235,
+            "right": 5.99766970006749
+          },
+          {
+            "path": "/decisions/0/command_generated/joint_dispatch/diagnostic/m23_boiler_domains/checked_domains/0/solver_backend_layers/8/attempts/0/elapsed_seconds",
+            "left": 0.004598400089889765,
+            "right": 0.004253599792718887
+          },
+          {
+            "path": "/decisions/0/command_generated/joint_dispatch/diagnostic/m23_boiler_domains/checked_domains/0/solver_backend_layers/8/attempts/0/parameters/TimeLimit",
+            "left": 5.996812399942428,
+            "right": 5.996736399363726
+          },
+          {
+            "path": "/decisions/0/command_generated/joint_dispatch/diagnostic/m23_boiler_domains/checked_domains/0/solver_backend_layers/9/attempts/0/elapsed_seconds",
+            "left": 0.0033946000039577484,
+            "right": 0.004008899908512831
+          },
+          {
+            "path": "/decisions/0/command_generated/joint_dispatch/diagnostic/m23_boiler_domains/checked_domains/0/solver_backend_layers/9/attempts/0/parameters/TimeLimit",
+            "left": 5.997550300322473,
+            "right": 5.996860499493778
+          }
+        ]
+      },
+      "normalized": {
+        "difference_count": 0,
+        "samples": []
+      },
+      "left_normalized_sha256": "9a89d30fb93a15f0178d3ee44d33b064a9c8459ad1ba82e62dd147be0b435af6",
+      "right_normalized_sha256": "9a89d30fb93a15f0178d3ee44d33b064a9c8459ad1ba82e62dd147be0b435af6"
+    },
+    "initial_comparisons": {
+      "state": {
+        "equal_raw": true,
+        "equal_after_timing_normalization": true,
+        "timing_only_difference": false,
+        "raw": {
+          "difference_count": 0,
+          "samples": []
+        },
+        "normalized": {
+          "difference_count": 0,
+          "samples": []
+        },
+        "left_normalized_sha256": "05131613f46eb7b082072952ac2ba678a580fb6c2e9a692ec2eeeaeb8d5e91bf",
+        "right_normalized_sha256": "05131613f46eb7b082072952ac2ba678a580fb6c2e9a692ec2eeeaeb8d5e91bf"
+      },
+      "core": {
+        "equal_raw": true,
+        "equal_after_timing_normalization": true,
+        "timing_only_difference": false,
+        "raw": {
+          "difference_count": 0,
+          "samples": []
+        },
+        "normalized": {
+          "difference_count": 0,
+          "samples": []
+        },
+        "left_normalized_sha256": "f494647ca9cffbaa405ada70c856e5cf6aa2a94005460263a53adc12e0f35fa0",
+        "right_normalized_sha256": "f494647ca9cffbaa405ada70c856e5cf6aa2a94005460263a53adc12e0f35fa0"
+      },
+      "rng": {
+        "equal_raw": false,
+        "equal_after_timing_normalization": false,
+        "timing_only_difference": false,
+        "raw": {
+          "difference_count": 1246,
+          "samples": [
+            {
+              "path": "/numpy/__tuple__/1/value/1",
+              "left": 1307927207,
+              "right": 3705650680
+            },
+            {
+              "path": "/numpy/__tuple__/1/value/2",
+              "left": 2174604099,
+              "right": 1548091870
+            },
+            {
+              "path": "/numpy/__tuple__/1/value/3",
+              "left": 134771382,
+              "right": 3182975342
+            },
+            {
+              "path": "/numpy/__tuple__/1/value/4",
+              "left": 1817396355,
+              "right": 311927210
+            },
+            {
+              "path": "/numpy/__tuple__/1/value/5",
+              "left": 78571020,
+              "right": 473710171
+            },
+            {
+              "path": "/numpy/__tuple__/1/value/6",
+              "left": 3154495595,
+              "right": 3971645426
+            },
+            {
+              "path": "/numpy/__tuple__/1/value/7",
+              "left": 3339078344,
+              "right": 3836013474
+            },
+            {
+              "path": "/numpy/__tuple__/1/value/8",
+              "left": 2802932625,
+              "right": 2609020479
+            },
+            {
+              "path": "/numpy/__tuple__/1/value/9",
+              "left": 1441378587,
+              "right": 3887221269
+            },
+            {
+              "path": "/numpy/__tuple__/1/value/10",
+              "left": 3287800585,
+              "right": 835469748
+            },
+            {
+              "path": "/numpy/__tuple__/1/value/11",
+              "left": 498988131,
+              "right": 3952513888
+            },
+            {
+              "path": "/numpy/__tuple__/1/value/12",
+              "left": 1207227588,
+              "right": 3617487715
+            },
+            {
+              "path": "/numpy/__tuple__/1/value/13",
+              "left": 1483827763,
+              "right": 3685685192
+            },
+            {
+              "path": "/numpy/__tuple__/1/value/14",
+              "left": 2920402591,
+              "right": 1741989884
+            },
+            {
+              "path": "/numpy/__tuple__/1/value/15",
+              "left": 2602169847,
+              "right": 4243225036
+            },
+            {
+              "path": "/numpy/__tuple__/1/value/16",
+              "left": 3894424768,
+              "right": 3174161740
+            },
+            {
+              "path": "/numpy/__tuple__/1/value/17",
+              "left": 3475440053,
+              "right": 152862395
+            },
+            {
+              "path": "/numpy/__tuple__/1/value/18",
+              "left": 3803389869,
+              "right": 744174723
+            },
+            {
+              "path": "/numpy/__tuple__/1/value/19",
+              "left": 2287470630,
+              "right": 170002356
+            },
+            {
+              "path": "/numpy/__tuple__/1/value/20",
+              "left": 1866854613,
+              "right": 2166998036
+            }
+          ]
+        },
+        "normalized": {
+          "difference_count": 1246,
+          "samples": [
+            {
+              "path": "/numpy/__tuple__/1/value/1",
+              "left": 1307927207,
+              "right": 3705650680
+            },
+            {
+              "path": "/numpy/__tuple__/1/value/2",
+              "left": 2174604099,
+              "right": 1548091870
+            },
+            {
+              "path": "/numpy/__tuple__/1/value/3",
+              "left": 134771382,
+              "right": 3182975342
+            },
+            {
+              "path": "/numpy/__tuple__/1/value/4",
+              "left": 1817396355,
+              "right": 311927210
+            },
+            {
+              "path": "/numpy/__tuple__/1/value/5",
+              "left": 78571020,
+              "right": 473710171
+            },
+            {
+              "path": "/numpy/__tuple__/1/value/6",
+              "left": 3154495595,
+              "right": 3971645426
+            },
+            {
+              "path": "/numpy/__tuple__/1/value/7",
+              "left": 3339078344,
+              "right": 3836013474
+            },
+            {
+              "path": "/numpy/__tuple__/1/value/8",
+              "left": 2802932625,
+              "right": 2609020479
+            },
+            {
+              "path": "/numpy/__tuple__/1/value/9",
+              "left": 1441378587,
+              "right": 3887221269
+            },
+            {
+              "path": "/numpy/__tuple__/1/value/10",
+              "left": 3287800585,
+              "right": 835469748
+            },
+            {
+              "path": "/numpy/__tuple__/1/value/11",
+              "left": 498988131,
+              "right": 3952513888
+            },
+            {
+              "path": "/numpy/__tuple__/1/value/12",
+              "left": 1207227588,
+              "right": 3617487715
+            },
+            {
+              "path": "/numpy/__tuple__/1/value/13",
+              "left": 1483827763,
+              "right": 3685685192
+            },
+            {
+              "path": "/numpy/__tuple__/1/value/14",
+              "left": 2920402591,
+              "right": 1741989884
+            },
+            {
+              "path": "/numpy/__tuple__/1/value/15",
+              "left": 2602169847,
+              "right": 4243225036
+            },
+            {
+              "path": "/numpy/__tuple__/1/value/16",
+              "left": 3894424768,
+              "right": 3174161740
+            },
+            {
+              "path": "/numpy/__tuple__/1/value/17",
+              "left": 3475440053,
+              "right": 152862395
+            },
+            {
+              "path": "/numpy/__tuple__/1/value/18",
+              "left": 3803389869,
+              "right": 744174723
+            },
+            {
+              "path": "/numpy/__tuple__/1/value/19",
+              "left": 2287470630,
+              "right": 170002356
+            },
+            {
+              "path": "/numpy/__tuple__/1/value/20",
+              "left": 1866854613,
+              "right": 2166998036
+            }
+          ]
+        },
+        "left_normalized_sha256": "91426b0e16b1785836e468e7b9c10ae5eef8134818c0a5e0b5372826753c0a35",
+        "right_normalized_sha256": "c98aa4b4acc3ebd4734eff9c8a56710ef4916e6b370e7c52bd84216a23a75849"
+      }
+    },
+    "complete_expanded_policy_equal": true
+  }
+]

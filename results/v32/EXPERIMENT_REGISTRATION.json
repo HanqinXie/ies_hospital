@@ -1,0 +1,168 @@
+{
+  "schema": "hospital_ies.v32.external_reference_registration.v1",
+  "created_utc": "2026-10-27T14:53:49.984378+00:00",
+  "authority": "docs/v32/USER_TASK_20261027.txt",
+  "base_v31_freeze": "baseline/FROZEN_SOURCE_V31_P01.json",
+  "information_permission": "offline_known_window",
+  "execution_identity": "literature_adapted_offline_onoff_preparation_plus_common_realtime_allocation",
+  "literature_reference_count": 1,
+  "literature_contributions": {
+    "Hirwa": "public balance/fuel/coupled conversion/multiperiod storage mathematics",
+    "Rosales": "design/service/economic/resilience scope"
+  },
+  "fixed_background": {
+    "context": "b01_L1_grid",
+    "start_hour": 1160,
+    "hardware": "H1",
+    "end_minute": 180,
+    "prepare": [
+      0,
+      60
+    ],
+    "grid_outage": [
+      60,
+      120
+    ],
+    "tail": [
+      120,
+      180
+    ],
+    "medical_shock": false
+  },
+  "selection_rule": {
+    "strict_initial_seconds": 60,
+    "strict_retry_seconds": 300,
+    "retry_only": "limit/no verified incumbent, not proved infeasible",
+    "both_verified_strict_incumbents": "both strict, disclose actual status/bound/gap",
+    "either_strict_proved_infeasible": "both tiered",
+    "strict_budget_ended_unknown_without_incumbent": "both tiered, strict stays unknown not physical infeasible",
+    "tiered_seconds_per_layer": 120,
+    "tiered_priority_order": [
+      "P0",
+      "P1",
+      "P2",
+      "P3",
+      "fee"
+    ],
+    "per_priority_normalization": "equal-weight sum of per-carrier ENS / that priority-carrier full-window positive requested energy; zero-demand term excluded",
+    "no_large_penalty": true,
+    "no_method_switch_between_branches": true
+  },
+  "preparation_rule": {
+    "lead_minutes": 45,
+    "actual_scene_communication_minutes": 15,
+    "nominal_gt_start_minutes": 10,
+    "decision_minutes": 15,
+    "sampling_allowance_minutes": 15,
+    "formula": "ceil_to15(15+10+15)=45",
+    "mapping": "future known GT/boiler target max through lead clipped to current capacity, remaining continuous requests current period",
+    "not_actual_communication_delay": true,
+    "not_start_completion_guarantee": true
+  },
+  "symmetry_rule": {
+    "only_if_all_static_full_window_parameters_equal": true,
+    "initial_online_identity_from_independent_t0": true,
+    "preserve_raw_plan": true,
+    "independent_service_and_fee_equivalence_check": true,
+    "dynamic_state_interchangeability_claim": false
+  },
+  "scope": {
+    "original864_source_files_unchanged": true,
+    "original36_inputs_unchanged": true,
+    "full_continuous_plan_replayed": false,
+    "planned_storage_ports_executed": false,
+    "planned_unmet_directly_executed": false,
+    "terminal_stock_equality_added": false,
+    "DG_scope": "actual frozen legacy_explicit_permission, no old historical-envelope conservative critical-electric cap",
+    "UPS_scope": "existing P0/P1 full building electricity only; no station/arbitrary bus port",
+    "common_M23_minimum_preparation_retained": true,
+    "no_C_M_controller_fallback": true,
+    "normal_grid_prefault_equality_required": false
+  },
+  "no_future_completed_operating_inputs": true,
+  "allowed_changed_source_files": [],
+  "runs": [
+    {
+      "id": "reused_b01_L1_grid_normal_C",
+      "context": "b01_L1_grid",
+      "mode": "normal",
+      "method": "C",
+      "evidence_role": "reused_v30",
+      "case_id": "b01_L1_grid_normal_C",
+      "path": "E:\\hospital_ies_v30_20261027\\runs\\n02_b01_L1_grid_normal_C",
+      "freeze_file": "baseline/FROZEN_SOURCE_V30_C02.json"
+    },
+    {
+      "id": "reused_b01_L1_grid_normal_M",
+      "context": "b01_L1_grid",
+      "mode": "normal",
+      "method": "M",
+      "evidence_role": "reused_v30",
+      "case_id": "b01_L1_grid_normal_M",
+      "path": "E:\\hospital_ies_v30_20261027\\runs\\n02_b01_L1_grid_normal_M",
+      "freeze_file": "baseline/FROZEN_SOURCE_V30_C02.json"
+    },
+    {
+      "id": "v32_b01_normal_external",
+      "context": "b01_L1_grid",
+      "mode": "normal",
+      "method": "R32_fixed_capacity_offline",
+      "evidence_role": "new_v32",
+      "case_id": "v32_b01_normal_external",
+      "path": "runs/v32_b01_normal_external",
+      "freeze_file": "FROZEN_SOURCE_V32_P01.json",
+      "reference_files": {
+        "spec": "input_build/formal_isolated_01/b01_normal.spec.json",
+        "plan": "planning/normal.adopted_plan.json",
+        "actions": "planning/normal.requests.json",
+        "initial": "initialization/normal/INITIALIZATION.json",
+        "selection": "planning/SELECTION.json"
+      }
+    },
+    {
+      "id": "reused_b01_L1_grid_disturbed_C",
+      "context": "b01_L1_grid",
+      "mode": "disturbed",
+      "method": "C",
+      "evidence_role": "reused_v30",
+      "case_id": "b01_L1_grid_disturbed_C",
+      "path": "E:\\hospital_ies_v30_20261027\\runs\\d02_b01_L1_grid_disturbed_C",
+      "freeze_file": "baseline/FROZEN_SOURCE_V30_C02.json"
+    },
+    {
+      "id": "reused_b01_L1_grid_disturbed_M",
+      "context": "b01_L1_grid",
+      "mode": "disturbed",
+      "method": "M",
+      "evidence_role": "reused_v30",
+      "case_id": "b01_L1_grid_disturbed_M",
+      "path": "E:\\hospital_ies_v30_20261027\\runs\\d02_b01_L1_grid_disturbed_M",
+      "freeze_file": "baseline/FROZEN_SOURCE_V30_C02.json"
+    },
+    {
+      "id": "v32_b01_grid_external",
+      "context": "b01_L1_grid",
+      "mode": "disturbed",
+      "method": "R32_fixed_capacity_offline",
+      "evidence_role": "new_v32",
+      "case_id": "v32_b01_grid_external",
+      "path": "runs/v32_b01_grid_external",
+      "freeze_file": "FROZEN_SOURCE_V32_P01.json",
+      "reference_files": {
+        "spec": "input_build/formal_isolated_01/b01_grid.spec.json",
+        "plan": "planning/grid.adopted_plan.json",
+        "actions": "planning/grid.requests.json",
+        "initial": "initialization/grid/INITIALIZATION.json",
+        "selection": "planning/SELECTION.json"
+      }
+    }
+  ],
+  "computation_budget": {
+    "formal_new_episodes": 2,
+    "physical_parallel_workers": 1,
+    "no_optional_short_episode_planned": true,
+    "finite_error_retries_preserved": true,
+    "maximum_actual_episode_attempts": 6,
+    "maximum_experiment_wall_hours": 12
+  }
+}

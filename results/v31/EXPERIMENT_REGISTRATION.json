@@ -1,0 +1,1335 @@
+{
+  "schema": "hospital_ies.v31.fixed_preparation_registration.v1",
+  "created_utc": "2026-10-27T12:15:38.107967+00:00",
+  "authority": "docs/v31/USER_TASK_20261027.txt",
+  "base_scientific_producer": "3252727135645037cedc57ebc188a48d2aa34ccb",
+  "base_source_sha256": "2509d2fa562e672af3cfe4058ace55f0e38de6172d1ac2d633210d0e776f0776",
+  "base_input_sha256": "f414d21fc55d5a63282435b9bed9a1c8c289a049f24507f953fb86162fb41d15",
+  "new_scientific_producer": "f009bdb66d5b9d53f1ff2331f2dc58404c2d056b",
+  "new_producer_state": "frozen_before_formal_runs",
+  "rules": {
+    "M_cooling_permission": {
+      "display_name": "M 加制冷许可准备",
+      "base_alias": "M",
+      "config_delta": {
+        "cooling_preparation": true
+      },
+      "steam_rule_enabled": false
+    },
+    "M_steam_permission": {
+      "display_name": "M 加额外备用供汽许可",
+      "base_alias": "M",
+      "config_delta": {},
+      "steam_rule_enabled": true,
+      "rule": "After common preparation, raise boiler queued permission to max(common permission, equal-rated boiler total times currently observable availabilities/3); no more than total nameplate",
+      "input_fields": [
+        "availability_BOILER_1",
+        "availability_BOILER_2",
+        "availability_BOILER_3"
+      ],
+      "fixed_parameter": "original plant.boiler_steam_lbph",
+      "no_scenario_or_future_trigger": true,
+      "ordinary_queue_and_physical_execution_unchanged": true
+    }
+  },
+  "complete_registered_configuration": {
+    "model_closure_v22": {
+      "station": {
+        "boiler_fixed_kW": 0.5,
+        "boiler_kW_per_kWsteam": 0.012,
+        "boiler_restart_minutes": 1.0,
+        "gt_starter_kW_per_unit": 10.0,
+        "gt_control_dc_available": true,
+        "dg_start_dc_available": true,
+        "control_autonomy_minutes": 1440.0,
+        "dg_qualified_starts": 2
+      },
+      "storage": {
+        "preserve_bridge": true,
+        "bridge_observation_minutes": 15.0,
+        "cold_recharge_deadband_kWh": 1.0,
+        "cold_recharge_deadband_fraction": 0.02
+      },
+      "auxiliary": {
+        "pump_weight_exponent": 1.0,
+        "actual_power_scale": null,
+        "fan_priority_shares": null
+      },
+      "instantaneous_diesel_current": true,
+      "research_stress_proxy": false
+    },
+    "schemas": {
+      "feature": "p2a.observation.v1",
+      "label": "p2a.first_observed_failure.v1",
+      "legacy_label": "v42.future_t_plus_1_to_H",
+      "action": "p2a.six_targets.v1",
+      "graph": "p2a.functional_dependencies.v1",
+      "scenario": "p2a.scenario.v1",
+      "split": "p2a.family_components.v1",
+      "event": "p2a.events.v1",
+      "sci_engineering": "hospital_ies.sci_engineering.v21.v1",
+      "model_correction_v25": "hospital_ies.model_correction.v25.v1",
+      "model_correction_v26_study": "hospital_ies.study.v26.v1",
+      "objective_load_review_v27": "hospital_ies.objective_load_review.v27.v1"
+    },
+    "emissions_factor_registry": {
+      "path": "outputs/v20_load_accounting_20261019_run01/references/EMISSIONS_FACTOR_REGISTRY.json",
+      "sha256": "67ad5404000040d9665f016ee4b9c540783b26a9ad8038550f148881cefc6ab0"
+    },
+    "station_qualification_scope": "1440 min is an explicit finite research qualification covering the 900 min cases; not OEM battery autonomy or hospital certification",
+    "model_correctness_v23": {
+      "preparation": true,
+      "storage_fix": true,
+      "boiler_domain_search": true,
+      "thermal_coupling": null
+    },
+    "engineering_completion_v24": {
+      "cold_mode_search": true,
+      "tower_rejection_capacity_kW": 4220.223408
+    },
+    "selected_policy_parameters": {
+      "F": {
+        "fixed_reserve_hours": 1.0
+      },
+      "A": {
+        "release_after_minutes": 240.0
+      }
+    },
+    "selected_policy_parameter_source": {
+      "path": "docs/v21/DEVELOPMENT_PARAMETER_SELECTION.md",
+      "sha256": "24d6024ee1c132f0aa20117e9538fde080de9286db837dd290b91eac5a8b724e",
+      "interpretation": "Frozen selected F=1 h and A=240 min; runtime policy defaults may include other development candidates"
+    },
+    "model_correction_v25": {
+      "finite_source_return": true
+    },
+    "operating_rules": {
+      "current_service_bridge": {
+        "name": "current_service_bridge"
+      }
+    },
+    "default_operating_rule": "current_service_bridge",
+    "selected_parameter_rules": "Original C command parameters retained; control_rule_id is a separate current-time common-balance reserve option, not a hardware capacity change.",
+    "schema": "hospital_ies.v31.four_fixed_preparation_cases.v1",
+    "study_id": "hospital_ies.simple_preparation_closeout.v31.v1",
+    "physical_model_id": "M25_model_correction",
+    "core_reuse": {
+      "scientific_producer_commit": "09f922840b7cfaef209d693ebfdda3492e16e24a",
+      "source_sha256": "9cb3ea825662324cf7b718ffca7c581066506907859a5739c7d5a3c366fc18f9",
+      "input_sha256": "5c6fea468008561acefd81b16d4cd57a8524f7897f861ccb436f1a32adaaeae8",
+      "interpretation": "V28 adopted physics/request baseline; new entry/quality/registration has its own full source/input binding.",
+      "new_control_algorithm": false
+    },
+    "default_demand_version": "V28_adopted",
+    "adopted_thermal_profile": {
+      "files": {
+        "thermal_service_components": {
+          "path": "inputs/model_review_v28/THERMAL_SERVICE_COMPONENTS_8760.csv",
+          "sha256": "27b608272ed268c16fc6fb86ce5fbcf66e4f4f177f3ed7feefacc15c823b11f4"
+        },
+        "thermal_input_metadata": {
+          "path": "inputs/model_review_v28/THERMAL_INPUT_METADATA.json",
+          "sha256": "d24ab6a3458ffa02e57616969ea4866f2c3a051bed3d203748e9888ac0cb9ccb"
+        }
+      }
+    },
+    "registration_utc": "2026-10-27T01:55:34.888481+00:00",
+    "scope": "V30 finite 8-context C/M comparison; no policy selection or capacity changes",
+    "hardware_profiles": {
+      "H0": {
+        "gt_dynamics": {
+          "gt_start_delay_minutes": 10.0,
+          "minimum_up_minutes": 60.0,
+          "minimum_down_minutes": 30.0,
+          "interlock_rearm_wait_minutes": 30.0,
+          "interlock_rearm_enabled": true
+        },
+        "diesel_local_response": {
+          "inertia_H_seconds": 0.7359,
+          "power_factor_base": 0.8,
+          "governor_tau_seconds": 0.059,
+          "governor_delay_seconds": 0.05,
+          "speed_deadband_pu": 0.001,
+          "speed_min_pu": 0.9,
+          "speed_max_pu": 1.1,
+          "shaft_loss_fraction": 0.02,
+          "speed_regulation_pu": 0.05,
+          "integration_max_step_seconds": 0.01
+        },
+        "hrsg_thermal_readiness": {
+          "warmup_delay_minutes": 0.0
+        },
+        "gt_floor_correction": {
+          "enabled": true
+        },
+        "execution_recovery": {
+          "grid_return_prepare_minutes": 0.25,
+          "grid_open_transfer_minutes": 0.25,
+          "local_contact_restore_delay_minutes": 0.0
+        },
+        "model_closeout": {
+          "grid_bridge_wait_minutes": 30.0
+        },
+        "sci_engineering": {
+          "configuration_id": "H0",
+          "ups": {},
+          "cold_store": {},
+          "cold_pump_kW_per_kW": 0.02,
+          "storage_max_segment_minutes": 1.0,
+          "auxiliary_share_scale": 1.0,
+          "diesel_start_delay_minutes": 15.0,
+          "gt_protection_trip_multiple": 1.05,
+          "gt_overload_hold_minutes": 15.0
+        }
+      },
+      "H1": {
+        "gt_dynamics": {
+          "gt_start_delay_minutes": 10.0,
+          "minimum_up_minutes": 60.0,
+          "minimum_down_minutes": 30.0,
+          "interlock_rearm_wait_minutes": 30.0,
+          "interlock_rearm_enabled": true
+        },
+        "diesel_local_response": {
+          "inertia_H_seconds": 0.7359,
+          "power_factor_base": 0.8,
+          "governor_tau_seconds": 0.059,
+          "governor_delay_seconds": 0.05,
+          "speed_deadband_pu": 0.001,
+          "speed_min_pu": 0.9,
+          "speed_max_pu": 1.1,
+          "shaft_loss_fraction": 0.02,
+          "speed_regulation_pu": 0.05,
+          "integration_max_step_seconds": 0.01
+        },
+        "hrsg_thermal_readiness": {
+          "warmup_delay_minutes": 0.0
+        },
+        "gt_floor_correction": {
+          "enabled": true
+        },
+        "execution_recovery": {
+          "grid_return_prepare_minutes": 0.25,
+          "grid_open_transfer_minutes": 0.25,
+          "local_contact_restore_delay_minutes": 0.0
+        },
+        "model_closeout": {
+          "grid_bridge_wait_minutes": 30.0
+        },
+        "sci_engineering": {
+          "configuration_id": "H1",
+          "ups": {
+            "capacity_kWh": 40.0,
+            "power_kW": 160.0,
+            "initial_soc": 1.0,
+            "charge_efficiency": 0.95,
+            "discharge_efficiency": 0.95,
+            "loss_per_hour": 0.0
+          },
+          "cold_store": {},
+          "cold_pump_kW_per_kW": 0.02,
+          "storage_max_segment_minutes": 1.0,
+          "auxiliary_share_scale": 1.0,
+          "diesel_start_delay_minutes": 15.0,
+          "gt_protection_trip_multiple": 1.05,
+          "gt_overload_hold_minutes": 15.0
+        }
+      },
+      "H2": {
+        "gt_dynamics": {
+          "gt_start_delay_minutes": 10.0,
+          "minimum_up_minutes": 60.0,
+          "minimum_down_minutes": 30.0,
+          "interlock_rearm_wait_minutes": 30.0,
+          "interlock_rearm_enabled": true
+        },
+        "diesel_local_response": {
+          "inertia_H_seconds": 0.7359,
+          "power_factor_base": 0.8,
+          "governor_tau_seconds": 0.059,
+          "governor_delay_seconds": 0.05,
+          "speed_deadband_pu": 0.001,
+          "speed_min_pu": 0.9,
+          "speed_max_pu": 1.1,
+          "shaft_loss_fraction": 0.02,
+          "speed_regulation_pu": 0.05,
+          "integration_max_step_seconds": 0.01
+        },
+        "hrsg_thermal_readiness": {
+          "warmup_delay_minutes": 0.0
+        },
+        "gt_floor_correction": {
+          "enabled": true
+        },
+        "execution_recovery": {
+          "grid_return_prepare_minutes": 0.25,
+          "grid_open_transfer_minutes": 0.25,
+          "local_contact_restore_delay_minutes": 0.0
+        },
+        "model_closeout": {
+          "grid_bridge_wait_minutes": 30.0
+        },
+        "sci_engineering": {
+          "configuration_id": "H2",
+          "ups": {},
+          "cold_store": {
+            "capacity_kWh": 60.0,
+            "power_kW": 120.0,
+            "initial_soc": 1.0,
+            "charge_efficiency": 0.95,
+            "discharge_efficiency": 0.95,
+            "loss_per_hour": 0.01
+          },
+          "cold_pump_kW_per_kW": 0.02,
+          "storage_max_segment_minutes": 1.0,
+          "auxiliary_share_scale": 1.0,
+          "diesel_start_delay_minutes": 15.0,
+          "gt_protection_trip_multiple": 1.05,
+          "gt_overload_hold_minutes": 15.0
+        }
+      }
+    },
+    "hardware_identity_source": {
+      "path": "configs/model_correction_v25/cases.json",
+      "sha256": "62c4b7e75072d591c6b74d64bfcbe355ca6e573777b0dc277360f798f51136b8",
+      "instruction": "Exact registered profiles; no silently inherited cross-configuration inventory."
+    },
+    "source_quality": {
+      "files": {
+        "quality_metadata": {
+          "path": "inputs/model_review_v29/SOURCE_QUALITY_METADATA.json",
+          "sha256": "af3b7c276bb6ace2f48e50af80ef6259f221a3afb30a6989a1db0e6e980d53fd"
+        },
+        "source_cooling_unmet": {
+          "path": "inputs/model_review_v29/SOURCE_COOLING_UNMET_HOURS.csv",
+          "sha256": "8a33b9c050b8adf81aea5649328757cc71163a2ff96ef3d1cf900471d1c97799"
+        },
+        "all55_screening": {
+          "path": "inputs/model_review_v29/ALL55_ZONES_NATIVE_UNMET_SUMMARY.csv",
+          "sha256": "92a5346bb8954d3ba9cb6eb229b1c9ac8ab89b7b2c6cb3b308fbb554f0e6c2ba"
+        }
+      },
+      "evaluation_only": true,
+      "not_controller_input": true
+    },
+    "cases": [
+      {
+        "v28_demand_version": "V28_adopted",
+        "v28_demand_contract": "hospital_ies.fixed_direct_aux.v28.v1",
+        "v28_thermal_profile": {
+          "files": {
+            "thermal_service_components": {
+              "path": "inputs/model_review_v28/THERMAL_SERVICE_COMPONENTS_8760.csv",
+              "sha256": "27b608272ed268c16fc6fb86ce5fbcf66e4f4f177f3ed7feefacc15c823b11f4"
+            },
+            "thermal_input_metadata": {
+              "path": "inputs/model_review_v28/THERMAL_INPUT_METADATA.json",
+              "sha256": "d24ab6a3458ffa02e57616969ea4866f2c3a051bed3d203748e9888ac0cb9ccb"
+            }
+          }
+        },
+        "operating_rule_id": "current_service_bridge",
+        "id": "v31_b05_normal_M_cooling_permission",
+        "purpose": "Fixed simple permission contrast; not a new blind background",
+        "scenario": {
+          "source_block_id": "v30_source_3416",
+          "start_hour": 3416,
+          "source_calendar_days": [
+            142
+          ],
+          "season_quarter": 2,
+          "role": "development",
+          "experiment_role": "matched_normal",
+          "duration_steps": 12,
+          "step_minutes": 15.0,
+          "pre_event_warmup_steps": 4,
+          "initialization_seed": 20261027,
+          "canonical_class": "L3",
+          "event_class": "L1",
+          "analysis_class": "L3",
+          "stage": 1,
+          "enable_propagation": false,
+          "event_schema_version": "p2a.events.v1",
+          "faults": {},
+          "auxiliary_faults": {},
+          "shock": {},
+          "shock_by_priority": {},
+          "shock_by_zone": {},
+          "fault_target": "",
+          "fault_availability": 1.0,
+          "demand_amplitude": 0.0,
+          "clinical_template_id": "emergency_department",
+          "clinical_coefficients_are_research_assumptions": true,
+          "response_delay_minutes": 15.0,
+          "fault_start_minute": 60.0,
+          "fault_duration_minutes": 0.0,
+          "shock_start_minute": 60.0,
+          "shock_duration_minutes": 0.0,
+          "first_event_minute": 60.0,
+          "recovery_start_minute": 120.0,
+          "history_interval_minutes": [
+            0.0,
+            60.0
+          ],
+          "tail_interval_minutes": [
+            120.0,
+            180.0
+          ],
+          "grid_limit_kW": 850.0,
+          "pre_event_grid_limit_kW": 850.0,
+          "automatic_fast_shedding": false,
+          "initial_reserve_kWh": 2400.0,
+          "initial_reserve_semantics": "finite shaft-equivalent work budget at reset; not chemical kWh or liters",
+          "requires_policy_freeze": false,
+          "selection_allowed": false,
+          "fit_allowed": false,
+          "is_final_blind": false,
+          "original_final12_evaluated": false,
+          "historical_exposure_status": "not_certified_unseen_outside_V29",
+          "new_independent_background": false,
+          "prehistory_mode": "same_continuous_episode_no_reset",
+          "exogenous_events": [],
+          "family_id": "v30_source_3416",
+          "root_family_id": "v30_source_3416",
+          "design_family": "v30_source_3416",
+          "sampling_cohort": "v30_preregistered_finite_comparison",
+          "include_in_main_L1": false,
+          "full_source_support": {
+            "raw_start_minute": 204900.0,
+            "raw_end_minute": 205140.0
+          },
+          "id": "v30_b05_L3_ER_normal",
+          "analysis_family": "paired_hardware_fault_only",
+          "hardware_factor_pair_preserved": true,
+          "pump_failure_is_negative_control": false,
+          "fixed_complete_source_minutes": 360.0,
+          "parent_template_id": "v30_source_3416",
+          "base_state_id": "v30_initial:c750a5bb021e2dbac7f1c4e012da40c6f5b954a0230057a76ed44d2f73b8d483",
+          "exogenous_stream_id": "v30_exogenous:e52b12269adb147beb0c5d89a288cd0c78a8d4c94f9464e970d34f3548e352f7",
+          "distribution_id": "fixed_development_no_probability",
+          "sampling_method": "source_load_quantile_without_policy_results",
+          "purpose": "finite_comparison",
+          "q_design": "fixed_development_no_probability",
+          "p_reference": null,
+          "importance_weight": null,
+          "actual_p0_load_multiplier": {
+            "e": 1.0,
+            "h": 1.0,
+            "c": 1.0
+          },
+          "m21_physical_exogenous_sha256": "e52b12269adb147beb0c5d89a288cd0c78a8d4c94f9464e970d34f3548e352f7",
+          "exclude_from_main_four_class_summary": false,
+          "model_closure_events": [],
+          "normal_verification": true,
+          "normal_exogenous_fault_present": false,
+          "normal_clinical_shock_present": false,
+          "native_event_class_is_parser_encoding_only": true,
+          "source_day_index": 142,
+          "source_day_isolation_basis": "full support, disjoint new selected windows",
+          "background_independence": "disjoint among current eight and old V29; no claim across all legacy campaigns",
+          "original_p0_load_multiplier": 1.0,
+          "normal_eval_interval_minutes": [
+            0.0,
+            180.0
+          ],
+          "normal_is_new_independent_confirmation_background": false,
+          "reference_phase_clocks_are_analysis_only": true
+        },
+        "configuration": "H0",
+        "policy": {
+          "alias": "M",
+          "config": {
+            "response_minutes": 30.0,
+            "support_minutes": 60.0,
+            "delay_bound_minutes": 30.0,
+            "cooling_preparation": true,
+            "time_energy_preparation": false,
+            "execution_recovery": true,
+            "critical_reserve": false,
+            "policy_mode": "current",
+            "reserve_enabled": false,
+            "critical_preparation_first": false,
+            "reserve_rule": "none",
+            "legacy_C19_order": false,
+            "online_GT_count_order": "after_cost",
+            "fixed_reserve_hours": 1.0,
+            "release_after_minutes": 120.0,
+            "release_floor_hours": 0.5,
+            "observed_outage_minutes": 0.0,
+            "critical_non_diesel_ready": false
+          }
+        },
+        "evaluation_role": "new_v31_preparation_comparison",
+        "v29_mechanism": {
+          "reused_metadata_only": true
+        },
+        "v30_context": "b05_L3_ER",
+        "v30_mode": "normal",
+        "v27_objective_order": "after_cost",
+        "study_id": "hospital_ies.simple_preparation_closeout.v31.v1",
+        "v29_core_reuse": {
+          "scientific_producer_commit": "09f922840b7cfaef209d693ebfdda3492e16e24a",
+          "source_sha256": "9cb3ea825662324cf7b718ffca7c581066506907859a5739c7d5a3c366fc18f9",
+          "input_sha256": "5c6fea468008561acefd81b16d4cd57a8524f7897f861ccb436f1a32adaaeae8",
+          "interpretation": "V28 adopted physics/request baseline; new entry/quality/registration has its own full source/input binding.",
+          "new_control_algorithm": false
+        },
+        "v31_preparation": {
+          "method": "M_cooling_permission",
+          "policy_id": "M_cooling_permission_v31",
+          "display_name": "M 加制冷许可准备",
+          "base_case_id": "b05_L3_ER_normal_M",
+          "original_scientific_producer": "3252727135645037cedc57ebc188a48d2aa34ccb",
+          "only_registered_preparation_change": true
+        }
+      },
+      {
+        "v28_demand_version": "V28_adopted",
+        "v28_demand_contract": "hospital_ies.fixed_direct_aux.v28.v1",
+        "v28_thermal_profile": {
+          "files": {
+            "thermal_service_components": {
+              "path": "inputs/model_review_v28/THERMAL_SERVICE_COMPONENTS_8760.csv",
+              "sha256": "27b608272ed268c16fc6fb86ce5fbcf66e4f4f177f3ed7feefacc15c823b11f4"
+            },
+            "thermal_input_metadata": {
+              "path": "inputs/model_review_v28/THERMAL_INPUT_METADATA.json",
+              "sha256": "d24ab6a3458ffa02e57616969ea4866f2c3a051bed3d203748e9888ac0cb9ccb"
+            }
+          }
+        },
+        "operating_rule_id": "current_service_bridge",
+        "id": "v31_b05_disturbed_M_cooling_permission",
+        "purpose": "Fixed simple permission contrast; not a new blind background",
+        "scenario": {
+          "source_block_id": "v30_source_3416",
+          "start_hour": 3416,
+          "source_calendar_days": [
+            142
+          ],
+          "season_quarter": 2,
+          "role": "development",
+          "experiment_role": "finite_primary_disturbance",
+          "duration_steps": 12,
+          "step_minutes": 15.0,
+          "pre_event_warmup_steps": 4,
+          "initialization_seed": 20261027,
+          "canonical_class": "L3",
+          "event_class": "L2",
+          "analysis_class": "L3",
+          "stage": 2,
+          "enable_propagation": false,
+          "event_schema_version": "p2a.events.v1",
+          "faults": {},
+          "auxiliary_faults": {},
+          "shock": {},
+          "shock_by_priority": {},
+          "shock_by_zone": {
+            "ER_TRAUMA1_FLR_1": {
+              "e": 0.25,
+              "h": 0.25,
+              "c": 0.25
+            },
+            "ER_TRAUMA2_FLR_1": {
+              "e": 0.25,
+              "h": 0.25,
+              "c": 0.25
+            },
+            "ER_EXAM1_MULT4_FLR_1": {
+              "e": 0.25,
+              "h": 0.25,
+              "c": 0.25
+            },
+            "ER_EXAM3_MULT4_FLR_1": {
+              "e": 0.25,
+              "h": 0.25,
+              "c": 0.25
+            }
+          },
+          "fault_target": "",
+          "fault_availability": 1.0,
+          "demand_amplitude": 0.25,
+          "clinical_template_id": "emergency_department",
+          "clinical_coefficients_are_research_assumptions": true,
+          "response_delay_minutes": 15.0,
+          "fault_start_minute": 60.0,
+          "fault_duration_minutes": 0.0,
+          "shock_start_minute": 60.0,
+          "shock_duration_minutes": 60.0,
+          "first_event_minute": 60.0,
+          "recovery_start_minute": 120.0,
+          "history_interval_minutes": [
+            0.0,
+            60.0
+          ],
+          "tail_interval_minutes": [
+            120.0,
+            180.0
+          ],
+          "grid_limit_kW": 850.0,
+          "pre_event_grid_limit_kW": 850.0,
+          "automatic_fast_shedding": false,
+          "initial_reserve_kWh": 2400.0,
+          "initial_reserve_semantics": "finite shaft-equivalent work budget at reset; not chemical kWh or liters",
+          "requires_policy_freeze": false,
+          "selection_allowed": false,
+          "fit_allowed": false,
+          "is_final_blind": false,
+          "original_final12_evaluated": false,
+          "historical_exposure_status": "not_certified_unseen_outside_V29",
+          "new_independent_background": false,
+          "prehistory_mode": "same_continuous_episode_no_reset",
+          "exogenous_events": [],
+          "family_id": "v30_source_3416",
+          "root_family_id": "v30_source_3416",
+          "design_family": "v30_source_3416",
+          "sampling_cohort": "v30_preregistered_finite_comparison",
+          "include_in_main_L1": false,
+          "full_source_support": {
+            "raw_start_minute": 204900.0,
+            "raw_end_minute": 205140.0
+          },
+          "id": "v30_b05_L3_ER_disturbed",
+          "analysis_family": "paired_hardware_fault_only",
+          "hardware_factor_pair_preserved": true,
+          "pump_failure_is_negative_control": false,
+          "fixed_complete_source_minutes": 360.0,
+          "parent_template_id": "v30_source_3416",
+          "base_state_id": "v30_initial:c750a5bb021e2dbac7f1c4e012da40c6f5b954a0230057a76ed44d2f73b8d483",
+          "exogenous_stream_id": "v30_exogenous:556edcbbd0712186cfc981504fbcb5d77851369def265ae5dbf409ac8a2869f9",
+          "distribution_id": "fixed_development_no_probability",
+          "sampling_method": "source_load_quantile_without_policy_results",
+          "purpose": "finite_comparison",
+          "q_design": "fixed_development_no_probability",
+          "p_reference": null,
+          "importance_weight": null,
+          "actual_p0_load_multiplier": {
+            "e": 1.0,
+            "h": 1.0,
+            "c": 1.0
+          },
+          "m21_physical_exogenous_sha256": "556edcbbd0712186cfc981504fbcb5d77851369def265ae5dbf409ac8a2869f9",
+          "exclude_from_main_four_class_summary": false,
+          "model_closure_events": [],
+          "normal_verification": false,
+          "normal_exogenous_fault_present": false,
+          "normal_clinical_shock_present": true,
+          "native_event_class_is_parser_encoding_only": true,
+          "source_day_index": 142,
+          "source_day_isolation_basis": "full support, disjoint new selected windows",
+          "background_independence": "disjoint among current eight and old V29; no claim across all legacy campaigns",
+          "original_p0_load_multiplier": 1.0,
+          "normal_eval_interval_minutes": [
+            0.0,
+            180.0
+          ],
+          "normal_is_new_independent_confirmation_background": false,
+          "reference_phase_clocks_are_analysis_only": true
+        },
+        "configuration": "H0",
+        "policy": {
+          "alias": "M",
+          "config": {
+            "response_minutes": 30.0,
+            "support_minutes": 60.0,
+            "delay_bound_minutes": 30.0,
+            "cooling_preparation": true,
+            "time_energy_preparation": false,
+            "execution_recovery": true,
+            "critical_reserve": false,
+            "policy_mode": "current",
+            "reserve_enabled": false,
+            "critical_preparation_first": false,
+            "reserve_rule": "none",
+            "legacy_C19_order": false,
+            "online_GT_count_order": "after_cost",
+            "fixed_reserve_hours": 1.0,
+            "release_after_minutes": 120.0,
+            "release_floor_hours": 0.5,
+            "observed_outage_minutes": 0.0,
+            "critical_non_diesel_ready": false
+          }
+        },
+        "evaluation_role": "new_v31_preparation_comparison",
+        "v29_mechanism": {
+          "reused_metadata_only": true
+        },
+        "v30_context": "b05_L3_ER",
+        "v30_mode": "disturbed",
+        "v27_objective_order": "after_cost",
+        "study_id": "hospital_ies.simple_preparation_closeout.v31.v1",
+        "v29_core_reuse": {
+          "scientific_producer_commit": "09f922840b7cfaef209d693ebfdda3492e16e24a",
+          "source_sha256": "9cb3ea825662324cf7b718ffca7c581066506907859a5739c7d5a3c366fc18f9",
+          "input_sha256": "5c6fea468008561acefd81b16d4cd57a8524f7897f861ccb436f1a32adaaeae8",
+          "interpretation": "V28 adopted physics/request baseline; new entry/quality/registration has its own full source/input binding.",
+          "new_control_algorithm": false
+        },
+        "v31_preparation": {
+          "method": "M_cooling_permission",
+          "policy_id": "M_cooling_permission_v31",
+          "display_name": "M 加制冷许可准备",
+          "base_case_id": "b05_L3_ER_disturbed_M",
+          "original_scientific_producer": "3252727135645037cedc57ebc188a48d2aa34ccb",
+          "only_registered_preparation_change": true
+        }
+      },
+      {
+        "v28_demand_version": "V28_adopted",
+        "v28_demand_contract": "hospital_ies.fixed_direct_aux.v28.v1",
+        "v28_thermal_profile": {
+          "files": {
+            "thermal_service_components": {
+              "path": "inputs/model_review_v28/THERMAL_SERVICE_COMPONENTS_8760.csv",
+              "sha256": "27b608272ed268c16fc6fb86ce5fbcf66e4f4f177f3ed7feefacc15c823b11f4"
+            },
+            "thermal_input_metadata": {
+              "path": "inputs/model_review_v28/THERMAL_INPUT_METADATA.json",
+              "sha256": "d24ab6a3458ffa02e57616969ea4866f2c3a051bed3d203748e9888ac0cb9ccb"
+            }
+          }
+        },
+        "operating_rule_id": "current_service_bridge",
+        "id": "v31_b07_normal_M_steam_permission",
+        "purpose": "Fixed simple permission contrast; not a new blind background",
+        "scenario": {
+          "source_block_id": "v30_source_3128",
+          "start_hour": 3128,
+          "source_calendar_days": [
+            130
+          ],
+          "season_quarter": 2,
+          "role": "development",
+          "experiment_role": "matched_normal",
+          "duration_steps": 12,
+          "step_minutes": 15.0,
+          "pre_event_warmup_steps": 4,
+          "initialization_seed": 20261027,
+          "canonical_class": "L4",
+          "event_class": "L1",
+          "analysis_class": "L4",
+          "stage": 1,
+          "enable_propagation": false,
+          "event_schema_version": "p2a.events.v1",
+          "faults": {},
+          "auxiliary_faults": {},
+          "shock": {},
+          "shock_by_priority": {},
+          "shock_by_zone": {},
+          "fault_target": "",
+          "fault_availability": 1.0,
+          "demand_amplitude": 0.0,
+          "clinical_template_id": "emergency_department",
+          "clinical_coefficients_are_research_assumptions": true,
+          "response_delay_minutes": 15.0,
+          "fault_start_minute": 60.0,
+          "fault_duration_minutes": 0.0,
+          "shock_start_minute": 60.0,
+          "shock_duration_minutes": 0.0,
+          "first_event_minute": 60.0,
+          "recovery_start_minute": 120.0,
+          "history_interval_minutes": [
+            0.0,
+            60.0
+          ],
+          "tail_interval_minutes": [
+            120.0,
+            180.0
+          ],
+          "grid_limit_kW": 850.0,
+          "pre_event_grid_limit_kW": 850.0,
+          "automatic_fast_shedding": false,
+          "initial_reserve_kWh": 2400.0,
+          "initial_reserve_semantics": "finite shaft-equivalent work budget at reset; not chemical kWh or liters",
+          "requires_policy_freeze": false,
+          "selection_allowed": false,
+          "fit_allowed": false,
+          "is_final_blind": false,
+          "original_final12_evaluated": false,
+          "historical_exposure_status": "not_certified_unseen_outside_V29",
+          "new_independent_background": false,
+          "prehistory_mode": "same_continuous_episode_no_reset",
+          "exogenous_events": [],
+          "family_id": "v30_source_3128",
+          "root_family_id": "v30_source_3128",
+          "design_family": "v30_source_3128",
+          "sampling_cohort": "v30_preregistered_finite_comparison",
+          "include_in_main_L1": false,
+          "full_source_support": {
+            "raw_start_minute": 187620.0,
+            "raw_end_minute": 187860.0
+          },
+          "id": "v30_b07_L4_GT_ER_normal",
+          "analysis_family": "paired_hardware_fault_only",
+          "hardware_factor_pair_preserved": true,
+          "pump_failure_is_negative_control": false,
+          "fixed_complete_source_minutes": 360.0,
+          "parent_template_id": "v30_source_3128",
+          "base_state_id": "v30_initial:647b7eacb389979d052fbe1cd2ec00870972cfdff4dde948327af26ddb603025",
+          "exogenous_stream_id": "v30_exogenous:e52b12269adb147beb0c5d89a288cd0c78a8d4c94f9464e970d34f3548e352f7",
+          "distribution_id": "fixed_development_no_probability",
+          "sampling_method": "source_load_quantile_without_policy_results",
+          "purpose": "finite_comparison",
+          "q_design": "fixed_development_no_probability",
+          "p_reference": null,
+          "importance_weight": null,
+          "actual_p0_load_multiplier": {
+            "e": 1.0,
+            "h": 1.0,
+            "c": 1.0
+          },
+          "m21_physical_exogenous_sha256": "e52b12269adb147beb0c5d89a288cd0c78a8d4c94f9464e970d34f3548e352f7",
+          "exclude_from_main_four_class_summary": false,
+          "model_closure_events": [],
+          "normal_verification": true,
+          "normal_exogenous_fault_present": false,
+          "normal_clinical_shock_present": false,
+          "native_event_class_is_parser_encoding_only": true,
+          "source_day_index": 130,
+          "source_day_isolation_basis": "full support, disjoint new selected windows",
+          "background_independence": "disjoint among current eight and old V29; no claim across all legacy campaigns",
+          "original_p0_load_multiplier": 1.0,
+          "normal_eval_interval_minutes": [
+            0.0,
+            180.0
+          ],
+          "normal_is_new_independent_confirmation_background": false,
+          "reference_phase_clocks_are_analysis_only": true
+        },
+        "configuration": "H0",
+        "policy": {
+          "alias": "M",
+          "config": {
+            "response_minutes": 30.0,
+            "support_minutes": 60.0,
+            "delay_bound_minutes": 30.0,
+            "cooling_preparation": false,
+            "time_energy_preparation": false,
+            "execution_recovery": true,
+            "critical_reserve": false,
+            "policy_mode": "current",
+            "reserve_enabled": false,
+            "critical_preparation_first": false,
+            "reserve_rule": "none",
+            "legacy_C19_order": false,
+            "online_GT_count_order": "after_cost",
+            "fixed_reserve_hours": 1.0,
+            "release_after_minutes": 120.0,
+            "release_floor_hours": 0.5,
+            "observed_outage_minutes": 0.0,
+            "critical_non_diesel_ready": false
+          }
+        },
+        "evaluation_role": "new_v31_preparation_comparison",
+        "v29_mechanism": {
+          "reused_metadata_only": true
+        },
+        "v30_context": "b07_L4_GT_ER",
+        "v30_mode": "normal",
+        "v27_objective_order": "after_cost",
+        "study_id": "hospital_ies.simple_preparation_closeout.v31.v1",
+        "v29_core_reuse": {
+          "scientific_producer_commit": "09f922840b7cfaef209d693ebfdda3492e16e24a",
+          "source_sha256": "9cb3ea825662324cf7b718ffca7c581066506907859a5739c7d5a3c366fc18f9",
+          "input_sha256": "5c6fea468008561acefd81b16d4cd57a8524f7897f861ccb436f1a32adaaeae8",
+          "interpretation": "V28 adopted physics/request baseline; new entry/quality/registration has its own full source/input binding.",
+          "new_control_algorithm": false
+        },
+        "v31_preparation": {
+          "method": "M_steam_permission",
+          "policy_id": "M_steam_permission_v31",
+          "display_name": "M 加额外备用供汽许可",
+          "base_case_id": "b07_L4_GT_ER_normal_M",
+          "original_scientific_producer": "3252727135645037cedc57ebc188a48d2aa34ccb",
+          "only_registered_preparation_change": true
+        }
+      },
+      {
+        "v28_demand_version": "V28_adopted",
+        "v28_demand_contract": "hospital_ies.fixed_direct_aux.v28.v1",
+        "v28_thermal_profile": {
+          "files": {
+            "thermal_service_components": {
+              "path": "inputs/model_review_v28/THERMAL_SERVICE_COMPONENTS_8760.csv",
+              "sha256": "27b608272ed268c16fc6fb86ce5fbcf66e4f4f177f3ed7feefacc15c823b11f4"
+            },
+            "thermal_input_metadata": {
+              "path": "inputs/model_review_v28/THERMAL_INPUT_METADATA.json",
+              "sha256": "d24ab6a3458ffa02e57616969ea4866f2c3a051bed3d203748e9888ac0cb9ccb"
+            }
+          }
+        },
+        "operating_rule_id": "current_service_bridge",
+        "id": "v31_b07_disturbed_M_steam_permission",
+        "purpose": "Fixed simple permission contrast; not a new blind background",
+        "scenario": {
+          "source_block_id": "v30_source_3128",
+          "start_hour": 3128,
+          "source_calendar_days": [
+            130
+          ],
+          "season_quarter": 2,
+          "role": "development",
+          "experiment_role": "finite_primary_disturbance",
+          "duration_steps": 12,
+          "step_minutes": 15.0,
+          "pre_event_warmup_steps": 4,
+          "initialization_seed": 20261027,
+          "canonical_class": "L4",
+          "event_class": "L4b",
+          "analysis_class": "L4",
+          "stage": 4,
+          "enable_propagation": true,
+          "event_schema_version": "p2a.events.v1",
+          "faults": {
+            "GT_3": 0.0
+          },
+          "auxiliary_faults": {},
+          "shock": {},
+          "shock_by_priority": {},
+          "shock_by_zone": {
+            "ER_TRAUMA1_FLR_1": {
+              "e": 0.25,
+              "h": 0.25,
+              "c": 0.25
+            },
+            "ER_TRAUMA2_FLR_1": {
+              "e": 0.25,
+              "h": 0.25,
+              "c": 0.25
+            },
+            "ER_EXAM1_MULT4_FLR_1": {
+              "e": 0.25,
+              "h": 0.25,
+              "c": 0.25
+            },
+            "ER_EXAM3_MULT4_FLR_1": {
+              "e": 0.25,
+              "h": 0.25,
+              "c": 0.25
+            }
+          },
+          "fault_target": "GT_3",
+          "fault_availability": 0.0,
+          "demand_amplitude": 0.25,
+          "clinical_template_id": "emergency_department",
+          "clinical_coefficients_are_research_assumptions": true,
+          "response_delay_minutes": 15.0,
+          "fault_start_minute": 60.0,
+          "fault_duration_minutes": 60.0,
+          "shock_start_minute": 60.0,
+          "shock_duration_minutes": 60.0,
+          "first_event_minute": 60.0,
+          "recovery_start_minute": 120.0,
+          "history_interval_minutes": [
+            0.0,
+            60.0
+          ],
+          "tail_interval_minutes": [
+            120.0,
+            180.0
+          ],
+          "grid_limit_kW": 850.0,
+          "pre_event_grid_limit_kW": 850.0,
+          "automatic_fast_shedding": false,
+          "initial_reserve_kWh": 2400.0,
+          "initial_reserve_semantics": "finite shaft-equivalent work budget at reset; not chemical kWh or liters",
+          "requires_policy_freeze": false,
+          "selection_allowed": false,
+          "fit_allowed": false,
+          "is_final_blind": false,
+          "original_final12_evaluated": false,
+          "historical_exposure_status": "not_certified_unseen_outside_V29",
+          "new_independent_background": false,
+          "prehistory_mode": "same_continuous_episode_no_reset",
+          "exogenous_events": [],
+          "family_id": "v30_source_3128",
+          "root_family_id": "v30_source_3128",
+          "design_family": "v30_source_3128",
+          "sampling_cohort": "v30_preregistered_finite_comparison",
+          "include_in_main_L1": false,
+          "full_source_support": {
+            "raw_start_minute": 187620.0,
+            "raw_end_minute": 187860.0
+          },
+          "id": "v30_b07_L4_GT_ER_disturbed",
+          "analysis_family": "paired_hardware_fault_only",
+          "hardware_factor_pair_preserved": true,
+          "pump_failure_is_negative_control": false,
+          "fixed_complete_source_minutes": 360.0,
+          "parent_template_id": "v30_source_3128",
+          "base_state_id": "v30_initial:647b7eacb389979d052fbe1cd2ec00870972cfdff4dde948327af26ddb603025",
+          "exogenous_stream_id": "v30_exogenous:5b64eed5b08aeb93e9f0ae05d67d8520f2ec5ac6c81a40f58e30c732a5d0ba59",
+          "distribution_id": "fixed_development_no_probability",
+          "sampling_method": "source_load_quantile_without_policy_results",
+          "purpose": "finite_comparison",
+          "q_design": "fixed_development_no_probability",
+          "p_reference": null,
+          "importance_weight": null,
+          "actual_p0_load_multiplier": {
+            "e": 1.0,
+            "h": 1.0,
+            "c": 1.0
+          },
+          "m21_physical_exogenous_sha256": "5b64eed5b08aeb93e9f0ae05d67d8520f2ec5ac6c81a40f58e30c732a5d0ba59",
+          "exclude_from_main_four_class_summary": false,
+          "model_closure_events": [],
+          "normal_verification": false,
+          "normal_exogenous_fault_present": true,
+          "normal_clinical_shock_present": true,
+          "native_event_class_is_parser_encoding_only": true,
+          "source_day_index": 130,
+          "source_day_isolation_basis": "full support, disjoint new selected windows",
+          "background_independence": "disjoint among current eight and old V29; no claim across all legacy campaigns",
+          "original_p0_load_multiplier": 1.0,
+          "normal_eval_interval_minutes": [
+            0.0,
+            180.0
+          ],
+          "normal_is_new_independent_confirmation_background": false,
+          "reference_phase_clocks_are_analysis_only": true
+        },
+        "configuration": "H0",
+        "policy": {
+          "alias": "M",
+          "config": {
+            "response_minutes": 30.0,
+            "support_minutes": 60.0,
+            "delay_bound_minutes": 30.0,
+            "cooling_preparation": false,
+            "time_energy_preparation": false,
+            "execution_recovery": true,
+            "critical_reserve": false,
+            "policy_mode": "current",
+            "reserve_enabled": false,
+            "critical_preparation_first": false,
+            "reserve_rule": "none",
+            "legacy_C19_order": false,
+            "online_GT_count_order": "after_cost",
+            "fixed_reserve_hours": 1.0,
+            "release_after_minutes": 120.0,
+            "release_floor_hours": 0.5,
+            "observed_outage_minutes": 0.0,
+            "critical_non_diesel_ready": false
+          }
+        },
+        "evaluation_role": "new_v31_preparation_comparison",
+        "v29_mechanism": {
+          "reused_metadata_only": true
+        },
+        "v30_context": "b07_L4_GT_ER",
+        "v30_mode": "disturbed",
+        "v27_objective_order": "after_cost",
+        "study_id": "hospital_ies.simple_preparation_closeout.v31.v1",
+        "v29_core_reuse": {
+          "scientific_producer_commit": "09f922840b7cfaef209d693ebfdda3492e16e24a",
+          "source_sha256": "9cb3ea825662324cf7b718ffca7c581066506907859a5739c7d5a3c366fc18f9",
+          "input_sha256": "5c6fea468008561acefd81b16d4cd57a8524f7897f861ccb436f1a32adaaeae8",
+          "interpretation": "V28 adopted physics/request baseline; new entry/quality/registration has its own full source/input binding.",
+          "new_control_algorithm": false
+        },
+        "v31_preparation": {
+          "method": "M_steam_permission",
+          "policy_id": "M_steam_permission_v31",
+          "display_name": "M 加额外备用供汽许可",
+          "base_case_id": "b07_L4_GT_ER_disturbed_M",
+          "original_scientific_producer": "3252727135645037cedc57ebc188a48d2aa34ccb",
+          "only_registered_preparation_change": true
+        }
+      }
+    ],
+    "conditional_transfer_gate": "Run the original300kWh shaft N/F pair only if adopted grid does not exerciseDG, or a retained finite-diesel-budget-exhaustion claim remains unsupported. Otherwise omit with explicit scope limit; do not run150/600 matrix.",
+    "reused_V28_evidence": {
+      "producer_commit": "09f922840b7cfaef209d693ebfdda3492e16e24a",
+      "source_sha256": "9cb3ea825662324cf7b718ffca7c581066506907859a5739c7d5a3c366fc18f9",
+      "input_sha256": "5c6fea468008561acefd81b16d4cd57a8524f7897f861ccb436f1a32adaaeae8",
+      "case_ids": [
+        "B_combined_N",
+        "B_combined_D",
+        "B_combined_FD"
+      ],
+      "hardware": "H0",
+      "demand_version": "V28_adopted",
+      "replay_requires_original_native_records": true,
+      "no_new_physical_runs": true
+    },
+    "physical_core_variant": "M25_model_correction+hospital_ies.powered_start_minimum_off_readiness.v30.fix1",
+    "v31_base_M_configs": {
+      "b05_L3_ER_normal_M": {
+        "response_minutes": 30.0,
+        "support_minutes": 60.0,
+        "delay_bound_minutes": 30.0,
+        "cooling_preparation": false,
+        "time_energy_preparation": false,
+        "execution_recovery": true,
+        "critical_reserve": false,
+        "policy_mode": "current",
+        "reserve_enabled": false,
+        "critical_preparation_first": false,
+        "reserve_rule": "none",
+        "legacy_C19_order": false,
+        "online_GT_count_order": "after_cost",
+        "fixed_reserve_hours": 1.0,
+        "release_after_minutes": 120.0,
+        "release_floor_hours": 0.5,
+        "observed_outage_minutes": 0.0,
+        "critical_non_diesel_ready": false
+      },
+      "b05_L3_ER_disturbed_M": {
+        "response_minutes": 30.0,
+        "support_minutes": 60.0,
+        "delay_bound_minutes": 30.0,
+        "cooling_preparation": false,
+        "time_energy_preparation": false,
+        "execution_recovery": true,
+        "critical_reserve": false,
+        "policy_mode": "current",
+        "reserve_enabled": false,
+        "critical_preparation_first": false,
+        "reserve_rule": "none",
+        "legacy_C19_order": false,
+        "online_GT_count_order": "after_cost",
+        "fixed_reserve_hours": 1.0,
+        "release_after_minutes": 120.0,
+        "release_floor_hours": 0.5,
+        "observed_outage_minutes": 0.0,
+        "critical_non_diesel_ready": false
+      },
+      "b07_L4_GT_ER_normal_M": {
+        "response_minutes": 30.0,
+        "support_minutes": 60.0,
+        "delay_bound_minutes": 30.0,
+        "cooling_preparation": false,
+        "time_energy_preparation": false,
+        "execution_recovery": true,
+        "critical_reserve": false,
+        "policy_mode": "current",
+        "reserve_enabled": false,
+        "critical_preparation_first": false,
+        "reserve_rule": "none",
+        "legacy_C19_order": false,
+        "online_GT_count_order": "after_cost",
+        "fixed_reserve_hours": 1.0,
+        "release_after_minutes": 120.0,
+        "release_floor_hours": 0.5,
+        "observed_outage_minutes": 0.0,
+        "critical_non_diesel_ready": false
+      },
+      "b07_L4_GT_ER_disturbed_M": {
+        "response_minutes": 30.0,
+        "support_minutes": 60.0,
+        "delay_bound_minutes": 30.0,
+        "cooling_preparation": false,
+        "time_energy_preparation": false,
+        "execution_recovery": true,
+        "critical_reserve": false,
+        "policy_mode": "current",
+        "reserve_enabled": false,
+        "critical_preparation_first": false,
+        "reserve_rule": "none",
+        "legacy_C19_order": false,
+        "online_GT_count_order": "after_cost",
+        "fixed_reserve_hours": 1.0,
+        "release_after_minutes": 120.0,
+        "release_floor_hours": 0.5,
+        "observed_outage_minutes": 0.0,
+        "critical_non_diesel_ready": false
+      }
+    },
+    "v31_methods": {
+      "M_cooling_permission": {
+        "display_name": "M 加制冷许可准备",
+        "base_alias": "M",
+        "config_delta": {
+          "cooling_preparation": true
+        },
+        "steam_rule_enabled": false
+      },
+      "M_steam_permission": {
+        "display_name": "M 加额外备用供汽许可",
+        "base_alias": "M",
+        "config_delta": {},
+        "steam_rule_enabled": true,
+        "rule": "After common preparation, raise boiler queued permission to max(common permission, equal-rated boiler total times currently observable availabilities/3); no more than total nameplate",
+        "input_fields": [
+          "availability_BOILER_1",
+          "availability_BOILER_2",
+          "availability_BOILER_3"
+        ],
+        "fixed_parameter": "original plant.boiler_steam_lbph",
+        "no_scenario_or_future_trigger": true,
+        "ordinary_queue_and_physical_execution_unchanged": true
+      }
+    }
+  },
+  "allowed_changed_source_files": [],
+  "planned_added_source_paths": [
+    "tools/model_closeout_v31/__init__.py",
+    "tools/model_closeout_v31/rules.py",
+    "tools/model_closeout_v31/environment.py",
+    "tools/model_closeout_v31/validation.py",
+    "configs/model_closeout_v31/cases.json",
+    "tests/test_v31_preparation.py"
+  ],
+  "background_exposure": "Previously observed V30 mechanism development backgrounds, not blinded",
+  "fixed_b07_fault_device": "GT_3",
+  "fixed_clock": {
+    "preparation": [
+      0,
+      60
+    ],
+    "disturbance": [
+      60,
+      120
+    ],
+    "recovery": [
+      120,
+      180
+    ]
+  },
+  "original_t0_initialization": true,
+  "common_physical_source_files_must_be_byte_identical": true,
+  "maximum_formal_new_runs": 4,
+  "no_outcome_based_tuning": true,
+  "optional_short_runs_not_planned": true,
+  "runs": [
+    {
+      "id": "reused_b05_L3_ER_normal_M",
+      "context": "b05_L3_ER",
+      "mode": "normal",
+      "method": "M",
+      "evidence_role": "reused_v30",
+      "path": "E:\\hospital_ies_v30_20261027\\runs\\n02_b05_L3_ER_normal_M",
+      "freeze_file": "baseline/FROZEN_SOURCE_V30_C02.json",
+      "case_id": "b05_L3_ER_normal_M"
+    },
+    {
+      "id": "reused_b05_L3_ER_normal_C",
+      "context": "b05_L3_ER",
+      "mode": "normal",
+      "method": "C",
+      "evidence_role": "reused_v30",
+      "path": "E:\\hospital_ies_v30_20261027\\runs\\n02_b05_L3_ER_normal_C",
+      "freeze_file": "baseline/FROZEN_SOURCE_V30_C02.json",
+      "case_id": "b05_L3_ER_normal_C"
+    },
+    {
+      "id": "v31_b05_normal_M_cooling_permission",
+      "context": "b05_L3_ER",
+      "mode": "normal",
+      "method": "M_cooling_permission",
+      "evidence_role": "new_v31",
+      "path": "runs/v31_b05_normal_M_cooling_permission",
+      "freeze_file": "FROZEN_SOURCE_V31_P01.json",
+      "case_id": "v31_b05_normal_M_cooling_permission"
+    },
+    {
+      "id": "reused_b05_L3_ER_disturbed_M",
+      "context": "b05_L3_ER",
+      "mode": "disturbed",
+      "method": "M",
+      "evidence_role": "reused_v30",
+      "path": "E:\\hospital_ies_v30_20261027\\runs\\d02_b05_L3_ER_disturbed_M",
+      "freeze_file": "baseline/FROZEN_SOURCE_V30_C02.json",
+      "case_id": "b05_L3_ER_disturbed_M"
+    },
+    {
+      "id": "reused_b05_L3_ER_disturbed_C",
+      "context": "b05_L3_ER",
+      "mode": "disturbed",
+      "method": "C",
+      "evidence_role": "reused_v30",
+      "path": "E:\\hospital_ies_v30_20261027\\runs\\d02_b05_L3_ER_disturbed_C",
+      "freeze_file": "baseline/FROZEN_SOURCE_V30_C02.json",
+      "case_id": "b05_L3_ER_disturbed_C"
+    },
+    {
+      "id": "v31_b05_disturbed_M_cooling_permission",
+      "context": "b05_L3_ER",
+      "mode": "disturbed",
+      "method": "M_cooling_permission",
+      "evidence_role": "new_v31",
+      "path": "runs/v31_b05_disturbed_M_cooling_permission",
+      "freeze_file": "FROZEN_SOURCE_V31_P01.json",
+      "case_id": "v31_b05_disturbed_M_cooling_permission"
+    },
+    {
+      "id": "reused_b07_L4_GT_ER_normal_M",
+      "context": "b07_L4_GT_ER",
+      "mode": "normal",
+      "method": "M",
+      "evidence_role": "reused_v30",
+      "path": "E:\\hospital_ies_v30_20261027\\runs\\n02_b07_L4_GT_ER_normal_M",
+      "freeze_file": "baseline/FROZEN_SOURCE_V30_C02.json",
+      "case_id": "b07_L4_GT_ER_normal_M"
+    },
+    {
+      "id": "reused_b07_L4_GT_ER_normal_C",
+      "context": "b07_L4_GT_ER",
+      "mode": "normal",
+      "method": "C",
+      "evidence_role": "reused_v30",
+      "path": "E:\\hospital_ies_v30_20261027\\runs\\n02_b07_L4_GT_ER_normal_C",
+      "freeze_file": "baseline/FROZEN_SOURCE_V30_C02.json",
+      "case_id": "b07_L4_GT_ER_normal_C"
+    },
+    {
+      "id": "v31_b07_normal_M_steam_permission",
+      "context": "b07_L4_GT_ER",
+      "mode": "normal",
+      "method": "M_steam_permission",
+      "evidence_role": "new_v31",
+      "path": "runs/v31_b07_normal_M_steam_permission",
+      "freeze_file": "FROZEN_SOURCE_V31_P01.json",
+      "case_id": "v31_b07_normal_M_steam_permission"
+    },
+    {
+      "id": "reused_b07_L4_GT_ER_disturbed_M",
+      "context": "b07_L4_GT_ER",
+      "mode": "disturbed",
+      "method": "M",
+      "evidence_role": "reused_v30",
+      "path": "E:\\hospital_ies_v30_20261027\\runs\\d02_b07_L4_GT_ER_disturbed_M",
+      "freeze_file": "baseline/FROZEN_SOURCE_V30_C02.json",
+      "case_id": "b07_L4_GT_ER_disturbed_M"
+    },
+    {
+      "id": "reused_b07_L4_GT_ER_disturbed_C",
+      "context": "b07_L4_GT_ER",
+      "mode": "disturbed",
+      "method": "C",
+      "evidence_role": "reused_v30",
+      "path": "E:\\hospital_ies_v30_20261027\\runs\\d02_b07_L4_GT_ER_disturbed_C",
+      "freeze_file": "baseline/FROZEN_SOURCE_V30_C02.json",
+      "case_id": "b07_L4_GT_ER_disturbed_C"
+    },
+    {
+      "id": "v31_b07_disturbed_M_steam_permission",
+      "context": "b07_L4_GT_ER",
+      "mode": "disturbed",
+      "method": "M_steam_permission",
+      "evidence_role": "new_v31",
+      "path": "runs/v31_b07_disturbed_M_steam_permission",
+      "freeze_file": "FROZEN_SOURCE_V31_P01.json",
+      "case_id": "v31_b07_disturbed_M_steam_permission"
+    }
+  ],
+  "evaluation": {
+    "formula_source": "unchanged tools/model_review_v30/evaluation.py and frozen V30 accounting",
+    "carrier_sum": false,
+    "signed_delta": "disturbed minus own normal",
+    "near_zero_percent": false,
+    "first_window_running_fees_separate_from_initial_preparation_charge": true,
+    "DG_partial_receipt_interpolation": false
+  },
+  "new_source_sha256": "e4c740329fddcddae9e729acc24e6149d1d873e89783e0ef310e3623f604a6fa",
+  "new_source_file_count": 864,
+  "actual_added_source_files": [
+    "configs/model_closeout_v31/cases.json",
+    "tests/test_v31_preparation.py",
+    "tools/model_closeout_v31/__init__.py",
+    "tools/model_closeout_v31/environment.py",
+    "tools/model_closeout_v31/rules.py",
+    "tools/model_closeout_v31/validation.py"
+  ]
+}

@@ -1,0 +1,216 @@
+{
+  "scope": "read_only_current_hashes_AST_and_saved_evidence_no_import_env_model_solver",
+  "checks": {
+    "expected_HEAD": true,
+    "clean_tracked_and_untracked_worktree": true,
+    "original_858_files_unchanged": true,
+    "original_36_input_map_unchanged": true,
+    "all_current_864_source_file_hashes_match_P01": true,
+    "all_current_36_input_file_hashes_match_P01": true,
+    "only_six_scientific_files_added": true,
+    "git_diff_does_not_touch_old_scientific_or_input_files": true,
+    "new_freeze_producer_HEAD": true,
+    "exactly_four_registered_cases": true,
+    "four_cases_exact_physics_and_declared_config_delta": true,
+    "disturbed_b07_fixed_GT3": true,
+    "saved_final_matrix_12_8_4_complete_clean": true,
+    "all_saved_run_checks_and_context_checks_pass": true,
+    "no_saved_audit_exceptions_or_integrity_failures": true,
+    "two_new_pairs_have_same_t0_state_core_and_causal_prefix": true,
+    "four_new_runs_bound_to_exact_source_and_full_180": true,
+    "saved_combined_targeted_60_exit0": true,
+    "added_python_files_parse": true
+  },
+  "passed": true,
+  "git_commands": [
+    {
+      "command": [
+        "git",
+        "rev-parse",
+        "HEAD"
+      ],
+      "cwd": "D:\\hospital_ies_v22_20261025",
+      "exit_code": 0,
+      "stdout": "f009bdb66d5b9d53f1ff2331f2dc58404c2d056b\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "git",
+        "status",
+        "--short"
+      ],
+      "cwd": "D:\\hospital_ies_v22_20261025",
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "git",
+        "diff",
+        "--name-only",
+        "e635b919dae9e1c89793a4c29eecbab4e27a05ec",
+        "f009bdb66d5b9d53f1ff2331f2dc58404c2d056b"
+      ],
+      "cwd": "D:\\hospital_ies_v22_20261025",
+      "exit_code": 0,
+      "stdout": "AGENTS.md\nconfigs/model_closeout_v31/cases.json\ndocs/v31/IMPLEMENTATION_PLAN.md\ndocs/v31/MIGRATION.md\ndocs/v31/USER_TASK_20261027.txt\ntests/test_v31_preparation.py\ntools/model_closeout_v31/__init__.py\ntools/model_closeout_v31/environment.py\ntools/model_closeout_v31/rules.py\ntools/model_closeout_v31/validation.py\n",
+      "stderr": ""
+    }
+  ],
+  "git_changed_paths": [
+    "AGENTS.md",
+    "configs/model_closeout_v31/cases.json",
+    "docs/v31/IMPLEMENTATION_PLAN.md",
+    "docs/v31/MIGRATION.md",
+    "docs/v31/USER_TASK_20261027.txt",
+    "tests/test_v31_preparation.py",
+    "tools/model_closeout_v31/__init__.py",
+    "tools/model_closeout_v31/environment.py",
+    "tools/model_closeout_v31/rules.py",
+    "tools/model_closeout_v31/validation.py"
+  ],
+  "added_scientific_files": [
+    "configs/model_closeout_v31/cases.json",
+    "tests/test_v31_preparation.py",
+    "tools/model_closeout_v31/__init__.py",
+    "tools/model_closeout_v31/environment.py",
+    "tools/model_closeout_v31/rules.py",
+    "tools/model_closeout_v31/validation.py"
+  ],
+  "source_mismatches": [],
+  "input_mismatches": [],
+  "current_source_count": 864,
+  "current_input_count": 36,
+  "configurations": [
+    {
+      "case_id": "v31_b05_normal_M_cooling_permission",
+      "scenario_exact_original": true,
+      "complete_config_exact_declared_change": true,
+      "same_H0": true
+    },
+    {
+      "case_id": "v31_b05_disturbed_M_cooling_permission",
+      "scenario_exact_original": true,
+      "complete_config_exact_declared_change": true,
+      "same_H0": true
+    },
+    {
+      "case_id": "v31_b07_normal_M_steam_permission",
+      "scenario_exact_original": true,
+      "complete_config_exact_declared_change": true,
+      "same_H0": true
+    },
+    {
+      "case_id": "v31_b07_disturbed_M_steam_permission",
+      "scenario_exact_original": true,
+      "complete_config_exact_declared_change": true,
+      "same_H0": true
+    }
+  ],
+  "new_pair_t0_prefix_results": [
+    {
+      "context": "b05_L3_ER",
+      "method": "M_cooling_permission",
+      "prefix_equal_after_only_declared_solver_timing": true,
+      "t0_state_equal_raw": true,
+      "t0_core_equal_raw": true,
+      "rng_equal_raw": false,
+      "rng_difference_retained": 1246
+    },
+    {
+      "context": "b07_L4_GT_ER",
+      "method": "M_steam_permission",
+      "prefix_equal_after_only_declared_solver_timing": true,
+      "t0_state_equal_raw": true,
+      "t0_core_equal_raw": true,
+      "rng_equal_raw": false,
+      "rng_difference_retained": 1246
+    }
+  ],
+  "new_native_trace_summary": [
+    {
+      "id": "v31_b05_normal_M_cooling_permission",
+      "producer": "f009bdb66d5b9d53f1ff2331f2dc58404c2d056b",
+      "source_sha256": "e4c740329fddcddae9e729acc24e6149d1d873e89783e0ef310e3623f604a6fa",
+      "complete": true,
+      "observed_until_minute": 180.0,
+      "requested_end_minute": 180.0,
+      "command_count": 12,
+      "actual_arrival_event_count": 12,
+      "cold_target_native_pointer_count": 60,
+      "steam_native_receipt_count": 0
+    },
+    {
+      "id": "v31_b05_disturbed_M_cooling_permission",
+      "producer": "f009bdb66d5b9d53f1ff2331f2dc58404c2d056b",
+      "source_sha256": "e4c740329fddcddae9e729acc24e6149d1d873e89783e0ef310e3623f604a6fa",
+      "complete": true,
+      "observed_until_minute": 180.0,
+      "requested_end_minute": 180.0,
+      "command_count": 12,
+      "actual_arrival_event_count": 12,
+      "cold_target_native_pointer_count": 60,
+      "steam_native_receipt_count": 0
+    },
+    {
+      "id": "v31_b07_normal_M_steam_permission",
+      "producer": "f009bdb66d5b9d53f1ff2331f2dc58404c2d056b",
+      "source_sha256": "e4c740329fddcddae9e729acc24e6149d1d873e89783e0ef310e3623f604a6fa",
+      "complete": true,
+      "observed_until_minute": 180.0,
+      "requested_end_minute": 180.0,
+      "command_count": 12,
+      "actual_arrival_event_count": 12,
+      "cold_target_native_pointer_count": 0,
+      "steam_native_receipt_count": 12
+    },
+    {
+      "id": "v31_b07_disturbed_M_steam_permission",
+      "producer": "f009bdb66d5b9d53f1ff2331f2dc58404c2d056b",
+      "source_sha256": "e4c740329fddcddae9e729acc24e6149d1d873e89783e0ef310e3623f604a6fa",
+      "complete": true,
+      "observed_until_minute": 180.0,
+      "requested_end_minute": 180.0,
+      "command_count": 12,
+      "actual_arrival_event_count": 12,
+      "cold_target_native_pointer_count": 0,
+      "steam_native_receipt_count": 12
+    }
+  ],
+  "saved_final_audit_sha256": "aa6f31b07aca98b932bb2d1108f587e419ed522b85242412d052157976b74780",
+  "frozen_P01_sha256": "e56d653fbc66824df944103fd8b69c6e3bb495a2589d2037171b991d27dd50b9",
+  "saved_test_command": {
+    "command": [
+      "python",
+      "-B",
+      "-m",
+      "pytest",
+      "-q",
+      "tests/test_v31_preparation.py",
+      "tests/test_v30_public.py",
+      "tests/test_v30_terminal.py",
+      "tests/test_v30_start_readiness.py",
+      "tests/test_sci_policy.py",
+      "tests/test_v23_validation.py",
+      "--basetemp",
+      "E:/hospital_ies_v31_20261027/temp/targeted_shared_green01"
+    ],
+    "cwd": "D:\\hospital_ies_v22_20261025",
+    "started_utc": "2026-10-27T12:16:55.966060+00:00",
+    "selected_environment": {
+      "TEMP": "E:\\hospital_ies_v31_20261027\\temp",
+      "TMP": "E:\\hospital_ies_v31_20261027\\temp",
+      "SCI_SOURCE_ROOT": null,
+      "PYTHONPATH": null,
+      "PYTHONIOENCODING": "utf-8",
+      "PYTHONDONTWRITEBYTECODE": "1"
+    },
+    "exit_code": 0,
+    "elapsed_seconds": 15.0,
+    "finished_utc": "2026-10-27T12:17:10.958303+00:00"
+  },
+  "saved_test_stdout_sha256": "056e3555adb4b46e9e065f07a6230e2583ab77f7a0af8c0dc68f2b502f501104",
+  "saved_test_run_is_not_a_new_reviewer_test_run": true
+}

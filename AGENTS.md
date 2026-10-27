@@ -1,71 +1,14 @@
-# Current V32 independent-input external reference authority (2026-10-27)
+# Hospital IES 当前协作边界（2026-10-28）
 
-Read docs/v32/USER_TASK_20261027.txt and IMPLEMENTATION_PLAN.md. User authorizes one Hirwa/REopt-family fixed-capacity offline reference, Rosales boundary mapping, exactly b01 normal/grid with four reused V30 N02/D02 C/M and two new180min runs. New modules only; preserve all864 V31 science files and36 inputs, C/M/V31 rules, prior outputs/failures and original evaluator. Pure input builder must not read any completed C/M trajectory/aux/station/endogenous/stock/action data; common t0 reset without controller is allowed, initialization total solver count unknown unless instrumented. Offline-known-window future exogenous data allowed only to explicit reference. Register strict/tiered common-version selection before solving/running; conserve priorities, original service/evaluation and actual queue/start/aux/protection/storage constraints. No MPC/ML/newcapacity/search/newbackground/C-improvement/paper/figures. Root integration/realruns; inputs.py and planner.py have separate exclusive owners; shared physics serial/no change planned. New raw/temp/evidence E:/hospital_ies_v32_20261027, one physical worker. Current authorization supersedes only the previous no-new-reference stage stop. No push/main merge/messages; after verified sixrecord actual comparison and one complete compact ZIP, stop this round.
+先读 `docs/publication/IMPLEMENTATION_PLAN.md`、`release/CURRENT.json` 及对应版本任务书。本轮用户明确授权清理并更新GitHub仓库默认分支、写入最新模型/结果；旧科研任务的 no-push/main-merge 阶段停止点不适用于此次发布。不得由此扩大系统、账户、凭据或付费权限。
 
-# Current V31 simple preparation closeout authority (2026-10-27)
-
-Read docs/v31/USER_TASK_20261027.txt and IMPLEMENTATION_PLAN.md. User authorizes exactly four new formal180min runs: b05 normal/disturbed M_cooling_permission and b07 normal/disturbed M_steam_permission; reuse eight verified V30 N02/D02 C/M results. Keep C02 all858 source and36 inputs byte-identical; new modules/config/tests only. Root owns new adapter/controller/entry, no shared physical transition changes. Steam gets only current M23 policy-observable boiler availabilities and original fixed rating through a mailbox, calls shared preparation first, raises only ordinary queued boiler permission. No future script, scenario/time60/GT3 trigger, direct actual/state/inventory/arrived writes, MPC/ML/search/new paper controller/paper/figures or broad test/case expansion. Four formal runs and narrowly justified interface/retry checks only, one physical worker; new raw/temp/results E:/hospital_ies_v31_20261027. Original failures/results/accepted V30 archive/Git common readonly. Local commits allowed, no push or main merge. After valid12record audit and one complete verified ZIP, explicitly decide bounded model closeout and stop expansion.
-
-# Current V30 evaluation and literature authority (2026-10-27)
-
-Read docs/v30/USER_TASK_20261027.txt and IMPLEMENTATION_PLAN.md. Continuous authorized evaluation repair, terminal output, full two-paper mapping, finite C/M comparison and a bounded offline reference; no routine phase approval. Original physical core unchanged unless a reproduced defect; root alone owns shared state transitions. Adopted loads/parameters/after_cost/legal information and existing true execution limits remain. All new raw/temp E:/hospital_ies_v30_20261027; preserve all prior results/failures/branches. No MPC/ML/EP/paper/figures/capacity design; no push/main merge/messages. Per-phase freezes and actual logs required; synthetic fixtures/historical exports are not new trajectories. Final one ZIP aim under100000000 bytes without losing evidence. Later task supersedes older scope stops within explicit authority.
-
-# Current V29 same-version mechanism closeout authority (2026-10-27)
-
-Read docs/v29/USER_TASK_20261027.txt, V28_Model_Review_20261027.txt and IMPLEMENTATION_PLAN.md. Continuous bounded model finalization authorized on sci-v29-mechanism-closeout from cf45de8. Reuse V28 physical/demand core and33 adopted inputs; no core change without reproduced defect. Root alone owns shared physics if needed, V29 entry/config/dispatch; exclusive source_scope implementer owns only new quality/scope files and tests; baseline/mechanism reviewers readonly. New raw/temp/results E:/hospital_ies_v29_20261027. Inherit after_cost, legal information, original event/hardware/capacity/price/service/protection rules; stress_proxyfalse and thermal_couplingnull. Register exact inherited H0/H1/H2 identity, do not leak inventories. Reuse actual B_N/D/FD with producer identity; finite new grid/tower/pump/optional compoundDG and oneM checks only. No new EP by default, no sourceCp/wholewater loop expansion, ML/MPC/fit/paper/figures/broad matrix. One final default test and extracted entry/replay; oneZIP strictlyunder100000000bytes. Old inputs/results/failures/Gitcommon preserved. Local commits allowed, no main merge or push. This task supersedes older closed-stage stops only within its exact scope.
-
-# Current V28 demand-boundary closure authority (2026-10-26)
-
-Read docs/v28/USER_TASK_20261026.txt, V27_Model_Review_20261026.txt and IMPLEMENTATION_PLAN.md. User authorizes continuous direct/aux electrical demand closure and source thermal-service correction, including only-output annual EP when actual originalSQL lacks required observations. Existing linked worktree on sci-v28-demand-boundaries from clean V27 a06ad8; preserve original28, V27 Source04 and all old raw/failures/branches. All new large outputs/temp E:/hospital_ies_v28_20261026. v28_direct_aux alone edits shared service/environment/planner/executor/request core; root public V28 integration/config/dispatch; v28_thermal_source new thermal extraction/observation only; reviewer readonly. Retain after_cost and all earlier goal ordering/capacities/prices/thresholds/permission/info rules. No MPC/ML/newfit/full-year IES/figures. Targeted A W1 four under originalheat, B source/target/local heater ledgers and adopted newinput, then minimum affected common-version regression. One final full default test and extracted clean public entry/replays; one ZIP strictly<100000000bytes with all actual primary failures/rejections and minimal native evidence, original largeSQL local SHA omissions. Local commits authorized; no main merge/remote push. Current task supersedes older closed-stage stops and V27 no-new-EP/old<=16 target only within explicit V28 scope.
-
-# Current V27 objective and cooling-load review authority (2026-10-26)
-
-Read docs/v27/USER_TASK_20261026.txt, V26_Model_Review_20261026.txt and IMPLEMENTATION_PLAN.md. Full bounded continuous implementation authorized; reuse isolated sci-v27-objective-load-review from60143c2, preserve all old inputs/results/branches. Root owns integration/dispatch; v27_objectives alone writes shared planner/policy/core; independent source and snapshot tasks do not edit state transition. No MPC/ML/new thermal fit/paper/figures/default new EP/annual or old22 matrix. Target <=16 IES trajectories, <=6 snapshot groups, registered direct-purpose extras <=8; conditional shortEP max4 only on task triggers. Dynamic cold/low-order temperature remain unqualified and defaultNone. New data/temp only E:/hospital_ies_v27_20261026. Final default tests once; one self-contained ZIP strictly<100000000 bytes, actual failures/unknown/assumptions retained, no main push/merge. Current V27 scope overrides prior closed-stage stops and V26 no-core-change rule only for directly authorized objective/input work.
-
-# Current V26 model correction authorization (2026-10-26)
-
-Follow docs/v26/USER_TASK_20261026.txt and docs/v26/IMPLEMENTATION_PLAN.md. The user authorizes continuous bounded cold-side energy/inventory closure, explicit thermal state/report/air-balance recovery diagnosis and at most one supported finite candidate, plus matched active-path N/F/D/FD. Existing linked worktree continues on sci-v26-model-correction from V25 a016e3119c7730e2c513839bbfe3576d6b3530ab; V25 branch/source/results/failures and original28 inputs remain preserved. New raw/SQL/temp/results only E:/hospital_ies_v26_20261026. One shared EP observer owner, one shared physical-core owner; independent temperature and case modules have explicit ownership. M25 supply core remains the common implementation unless an actual new defect is reproduced. Do not reopen closed DG/UPS/old22 accounting, add MPC/ML/future facts, change capacities/service/precision criteria, make paper/figures, push/main merge, send external messages, or add packaging/watchers. Calibration max16 actual calls/max200nfev, extra isolation max2 hypotheses/4runs, independent dates and experimental coupling gated exactly by task. Deliver one self-contained ZIP strictly under100000000 bytes, root task/README/report/assumptions/acceptance and real evidence inside. Current V26 scope supersedes conflicting older workflow stop points; no routine approval pauses.
-
-# Current V25 model correction authorization (2026-10-26)
-
-Follow docs/v25/USER_TASK_20261026.txt and docs/v25/IMPLEMENTATION_PLAN.md. Continue existing linked worktree from V24 c54f852 on sci-v25-model-correction; original inputs, V24 branch/results/failures remain read-only. V25 supersedes the bounded V24 thermal-stop point for observation correction and finite re-identification, not physical/information/precision boundaries. Shared physics/transfer/storage rule code has one writer. Independent thermal and read-only evidence tasks own separate files. New raw/SQL/temp under E:/hospital_ies_v25_20261026. No MPC/ML/future facts, paper/figures, push/main merge or external messages. Continuous authorized work; no routine approval stops. Deliver one self-contained ZIP under100000000 bytes with README/report/acceptance inside.
-
-# Current V24 engineering completion authorization (2026-10-26)
-
-Follow docs/v24/USER_TASK_20261026.txt and docs/v24/IMPLEMENTATION_PLAN.md. Current user authorization supersedes earlier stop points. Continue existing worktree from local V23 commit732fd6b on sci-v24-engineering-completion; old inputs/results/cohort identities stay read-only. New raw/SQL/temp on E:/hospital_ies_v24_20261026. One shared physical-core writer; thermal and source diagnosis own independent files. No MPC/ML predictor/future facts, paper/figures, capacity/threshold changes to force strategy wins, remote push or main merge. Record real failures and bounded thermal stop. Final compact archive under100000000 bytes.
-
-# Current V23 correctness authorization (2026-10-25)
-
-Follow docs/v23/USER_TASK_20261025.txt and docs/v23/IMPLEMENTATION_PLAN.md. Continue in this existing worktree on sci-v23-model-correctness from local V22 commit08eb3fb; preserve the V22 branch, original inputs and all old results. New raw/SQL/temp on E:/hospital_ies_v23_20261025, model M23_model_correctness. Continuous bounded code repair, high-resolution EnergyPlus inputs, affected reruns and lightweight content-bearing review package are authorized. One shared physical-core writer (root); independent package file ownership is recorded in the plan. No MPC, ML predictor, future information, altered capacities to force success, paper figures, broad strategy search, remote publish or main merge. This current task supersedes conflicting older stop, freeze, one-fit and no-package limitations below; old result freezes do not prohibit new model repair.
-
-# Current V22 model-closure authorization (2026-10-25)
-
-Follow docs/v22/USER_TASK_20261025.txt and docs/v22/IMPLEMENTATION_PLAN.md. The user authorizes continuous bounded model repair and verification; prior V21 final12 is now seen regression. Preserve original inputs, V21 results and history. New model identity M22_model_closure; raw/temp/results on E:/hospital_ies_v22_20261025. One shared physical-core writer. No MPC, ML predictor, future information, paper figures, large audit/packaging workflow or remote publication/main merge. Local research branch commits and necessary targeted reruns are authorized. Current V22 scope overrides conflicting older stage/budget/plotting/release instructions below.
-
-# 医院 IES V20 协作规则
-
-## 本轮 V21 SCI 授权（2026-10-23）
-
-当前主文件为 `docs/v21/USER_TASK_20261023.txt`，执行设计与阶段门槛为
-`docs/v21/IMPLEMENTATION_PLAN.md`。用户已授权共同工程模型、五方案、正式独立
-工况、边界与有限硬件扩展连续完成；此授权替代下文 V20 仅负荷口径修正的范围。
-旧版输入、结果、失败和 Git 历史保持只读；新模型身份 `M21_sci_engineering`。
-大型 raw、独立运行与临时目录用 E/D，不使用 C；本轮原始证据根为
-`E:/hospital_ies_v21_20261023`。同一物理核心串行修改。禁止 MPC、未来事故信息、
-隐藏执行权限或通过改变共同条件制造策略优势。最终十二背景继续封存；任何最终
-启用必须有冻结与明确一次性记录。本轮新预算从本轮实际 attempt 开始，不继承
-发布 V20 的旧 48 小时墙钟。默认 pytest 保留 V20 支持门槛并增补 V21 回归，
-临时目录通过 `--basetemp E:/...` 明确指向本轮新目录。
-
-先读 `docs/v20/IMPLEMENTATION_PLAN.md`、`docs/v20/USER_TASK_20261019.txt`、字段合同和README。用户已授权连续完成修正、验证、固定比较、整理和推送，不沿用旧阶段停止点。
-
-- V19通过 `v19-model-closeout` 标签追溯。原始输入及旧结果不可改写为新结果；新版本建立独立源、输入、测试、模型、策略、配置与冻结。
-- 不增加MPC、未来故障/修复信息、物理容量或动作权限；不调整保护/服务阈值、冲击或评价容差制造优势。最终12背景封存；原八背景仅作已见复核。
-- 逐字段处理倍率，不统一修改CSV。保留压缩前代理和、超量、比例与P3余量；温度使用代表单区量。
-- 故障、命令生成/到达、实际执行、接点、保护及评价分开。保留失败、回退、未知尾段和未开始分母。
-- 先复现和有效红绿回归，再最小修复；同一物理核心串行改动。禁止删除断言、扩大容差或用xfail隐藏核心问题。
-- 默认 `python -m pytest -q` 的文件范围由 `pytest.ini` 明确，不冒充全部历史研究测试。结论必须有本次实际命令、退出码和原日志。
-- 冻结后不得更改被绑定生产/输入/测试继续混跑。修复需新冻结与新批次，不覆写旧attempt。
-- 大产物及TEMP/TMP放D/E。正常长窗单策略单进程全局串行；并发扣除在途子进程预留，不关闭用户程序。
-- 使用 `scripts/v20_repository.py verify` 校验科学闭包；`python publication/build_v20_release.py --destination <新D/E绝对目录>`按完整白名单发布并补齐冻结后发现的小型回归fixture。独立复现用 `python publication/reproduce_v20.py --name <新名称>`。raw、SQL、论文原件、许可证、凭据和缓存不入Git。
-- 替换main使用普通提交，保留地址、历史、标签及访问设置；推送前检查增改删清单，推送后独立克隆并运行核心门槛和完整代表案例。
+- 当前科学基线为V30 fix1/C02物理核心、V31 P01措施、V32 P01外部参照。873个科学源码（含pytest.ini）和36项原始输入按 `release/FROZEN_SOURCE_V32_P01.json` 原字节保留；任何后续模型修改必须另立研究版本和验证，不覆盖既有结果producer。
+- 不使用MPC，不新增未来信息在线控制器，不改容量、负荷、保护阈值、分级/服务判据来制造优势。V32仅自身参照允许登记的offline_known_window外生信息，C/M权限不变。
+- 旧文件清理仅针对明确清单中的当前Git工作树文件；保留历史提交、恢复标签和E盘科研原始/失败/审计数据。`outputs/`保留的是默认测试所需夹具，不得按旧版本号整目录删除。
+- 不删除断言、扩大容差或改写pytest选择集掩盖失败。先复现，定位具体数据/接口/物理问题，再最小修复和复跑。
+- source_binding会枚举src/tools/scripts/tests内Python、configs内JSON、根Python及pytest.ini；input_binding枚举原始inputs和requirements。发布辅助工具放 `release/`，避免无意改变873/36绑定。
+- 默认只读核验：`python -B release/verify_repository.py`。冻结默认测试：`python -B -m pytest -q`。V31/V32新增测试按README显式补验，记录真实命令/退出码/日志及失败与跳过。
+- 不自动启动新医院实验、调参、训练或扩展背景。新原生/临时大数据放D/E，不能写C盘；每条真实重跑使用全新输出目录。
+- 故障状态、命令生成/到达、实际执行、保护和评价分离。库存、缺供、费用、末态、失败/回退及未知尾段不允许静默丢弃或填零。
+- 涉及同一物理状态转移函数的修改仅一个实现任务串行处理。发布/资料整理可并行，只在各自目录工作。
+- 不重写Git历史、不强推、不删除已有分支或release。推送前检查当前远端头，远端发生新工作时先保留并整合。

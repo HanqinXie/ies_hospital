@@ -1,0 +1,62 @@
+{
+  "study": "V30",
+  "authority": "docs/v30/USER_TASK_20261027.txt",
+  "source_root": "D:\\hospital_ies_v22_20261025",
+  "output_root": "E:\\hospital_ies_v30_20261027",
+  "stages": {
+    "G0": {
+      "status": "completed"
+    },
+    "G1": {
+      "status": "implemented_targeted_checks_passed",
+      "evidence": [
+        "evaluation/final_01/VALIDATION_SUMMARY.json",
+        "steps/terminal_progress_green01/COMMAND.json"
+      ]
+    },
+    "G2": {
+      "status": "passed_independent_gate",
+      "evidence": "review/G2_GATE.json"
+    },
+    "G3": {
+      "status": "complete_with_explicit_reproduction_and_execution_limits",
+      "evidence": [
+        "literature/hirwa/mapping.json",
+        "literature/rosales/mapping.json",
+        "reference_replay_audit/audit_02/AUDIT_STATUS.json",
+        "reference_replay_audit/mechanisms_01"
+      ]
+    },
+    "G4": {
+      "status": "all32_fixed_core_completed_and_independently_audited",
+      "evidence": "comparison_audit_fix1/final01/CAMPAIGN_AUDIT.json",
+      "study_attempts": 60,
+      "completed": 58,
+      "failed_unknown_preserved": 2
+    },
+    "G5": {
+      "status": "completed_and_independently_accepted",
+      "evidence": "release_acceptance/FINAL_RELEASE.json",
+      "archive_bytes": 98896789,
+      "actual_total_executions": 61
+    }
+  },
+  "budget": {
+    "max_actual_trajectories": 64,
+    "max_experiment_wall_hours": 24,
+    "parallel_physical_workers": 1
+  },
+  "evidence_roles": [
+    "historical_reuse",
+    "offline_historical_export",
+    "new_actual_simulation",
+    "synthetic_test_fixture"
+  ],
+  "no_remote_publication": true,
+  "budget_revision": {
+    "reason": "Observed D01 physical pending-start clock defect; refreeze same repaired core and rerun all32 C/M,2reference and1failed-case verification; preserve25 prior attempts, no scenario selection by wins",
+    "expected_total_study_attempts": 60,
+    "old_limit": 48,
+    "source": "current user authorization to diagnose repair rerun affected parts and autonomously adjust compute"
+  }
+}

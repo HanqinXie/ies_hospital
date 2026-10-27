@@ -1,0 +1,37 @@
+{
+  "status": "read_only_static_addendum_not_runtime_test_result",
+  "original_keep_manifest_unchanged": true,
+  "additional_files": [
+    {
+      "path": "outputs/v13_executed_service_20261017_run01/design/DEVELOPMENT_POLICY_SPECS.json",
+      "bytes": 744,
+      "sha256": "c89c50716465e8b0b3ee34e134e2a9ae7dcbf99f359472e69e3fe40885a15e9d",
+      "git_blob": "1f3d59dde3737c10f84fbd12cc130e4158f8d189",
+      "recover_from_commit": "575cb02b2ac3a1bbdce99a6f283891dc05b3d51a",
+      "reason": "tools/engineering_model/runner.py:51 policy_specs; inherited by V15/V16/V18/V19 policies; default failures 94-96,209-212,272-273,314,323,326,328,329,334,394,398,399,414",
+      "current_exists": false
+    },
+    {
+      "path": "outputs/v11_autonomous_dispatch_20261016_run01/new_data/standby_manifest.json",
+      "bytes": 4326180,
+      "sha256": "ca01d42fd1e2cefdf5e9ead956d4237910eedcf382177695682a04e53088e1a3",
+      "git_blob": "bd36536d8c634e053226ec059470417adb704672",
+      "recover_from_commit": "575cb02b2ac3a1bbdce99a6f283891dc05b3d51a",
+      "reason": "tools/coordinated_dispatch/data_design.py:356 unconditional signed metadata read in inherited build_manifest; source/input schema/options only, no physical call",
+      "current_exists": false
+    },
+    {
+      "path": "outputs/v18_execution_recovery_20261018_run01/design/LONG_FINAL_R1_PROPOSAL.json",
+      "bytes": 55229,
+      "sha256": "4c5ef87c24c4e8000bf8b54c663801178de8516b61a78090381cc392b34e3e48",
+      "git_blob": "433c277b8a6eda75ec048a372706a2068dc2afff",
+      "recover_from_commit": "575cb02b2ac3a1bbdce99a6f283891dc05b3d51a",
+      "reason": "tools/model_closeout/campaign.py:35 proposal(key), called by default test_model_closeout_registration.py test_development_subset_keeps_evaluation_role_and_unfrozen_status; MAIN already retained",
+      "current_exists": false
+    }
+  ],
+  "additional_count": 3,
+  "additional_bytes": 4382153,
+  "recommended_keep_baseline_after_restore": 1033,
+  "candidate_removal_after_restore": 5820
+}

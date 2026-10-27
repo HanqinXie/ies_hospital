@@ -1,0 +1,759 @@
+{
+  "schema": "hospital_ies.model_reference_v32.priority_plan.v1",
+  "formulation": "strict",
+  "status": "optimal",
+  "termination_reason": "optimal",
+  "incumbent": true,
+  "verified_incumbent": true,
+  "adoptable": true,
+  "plan": {
+    "grid": [
+      246.3897301870618,
+      246.3897301870618,
+      246.3897301870618,
+      246.3897301870618,
+      364.64821327638924,
+      364.64821327638924,
+      364.64821327638924,
+      364.64821327638924,
+      434.66261086167844,
+      434.66261086167844,
+      434.66261086167844,
+      434.66261086167844
+    ],
+    "boiler": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "boiler.on": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "ABS": [
+      111.14619208122768,
+      111.14619208122768,
+      111.14619208122768,
+      111.14619208122768,
+      121.91093838718405,
+      121.91093838718405,
+      121.91093838718405,
+      121.91093838718405,
+      73.02967492116163,
+      73.02967492116163,
+      73.02967492116163,
+      73.02967492116163
+    ],
+    "heat_waste": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "EC_1": [
+      6.689921610758262,
+      6.689921610758262,
+      6.689921610758262,
+      6.689921610758262,
+      12.068142006920255,
+      12.068142006920255,
+      12.068142006920255,
+      12.068142006920255,
+      167.3987956543562,
+      167.3987956543562,
+      167.3987956543562,
+      167.3987956543562
+    ],
+    "EC_2": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "EC_3": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "GT_1": [
+      131.180288,
+      131.180288,
+      131.180288,
+      131.180288,
+      130.24947199999997,
+      130.24947199999997,
+      130.24947199999997,
+      130.24947199999997,
+      129.31865599999998,
+      129.31865599999998,
+      129.31865599999998,
+      129.31865599999998
+    ],
+    "GT_1.on": [
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0
+    ],
+    "GT_2": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      1.1173448085516883e-14,
+      1.1173448085516883e-14,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "GT_2.on": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "GT_3": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "GT_3.on": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "DG": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "DG.on": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "ups.charge": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "ups.discharge": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "ups.stock": [
+      40.0,
+      40.0,
+      40.0,
+      40.0,
+      40.0,
+      40.0,
+      40.0,
+      40.0,
+      40.0,
+      40.0,
+      40.0,
+      40.0
+    ],
+    "cold_store.charge": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "cold_store.discharge": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "cold_store.stock": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "unmet.P0.e": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "unmet.P0.h": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "unmet.P0.c": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "unmet.P1.e": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "unmet.P1.h": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "unmet.P1.c": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "unmet.P2.e": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "unmet.P2.h": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "unmet.P2.c": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "unmet.P3.e": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "unmet.P3.h": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "unmet.P3.c": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ]
+  },
+  "audit": {
+    "valid": true,
+    "violations": [],
+    "period_residuals": [
+      {
+        "period": 0,
+        "electric": 0.0,
+        "heat": 0.0,
+        "cooling": 0.0,
+        "tower_violation": 0.0
+      },
+      {
+        "period": 1,
+        "electric": 0.0,
+        "heat": 0.0,
+        "cooling": 0.0,
+        "tower_violation": 0.0
+      },
+      {
+        "period": 2,
+        "electric": 0.0,
+        "heat": 0.0,
+        "cooling": 0.0,
+        "tower_violation": 0.0
+      },
+      {
+        "period": 3,
+        "electric": 0.0,
+        "heat": 0.0,
+        "cooling": 0.0,
+        "tower_violation": 0.0
+      },
+      {
+        "period": 4,
+        "electric": 5.684341886080802e-14,
+        "heat": 0.0,
+        "cooling": 0.0,
+        "tower_violation": 0.0
+      },
+      {
+        "period": 5,
+        "electric": 5.684341886080802e-14,
+        "heat": 0.0,
+        "cooling": 0.0,
+        "tower_violation": 0.0
+      },
+      {
+        "period": 6,
+        "electric": 5.684341886080802e-14,
+        "heat": -2.842170943040401e-14,
+        "cooling": 0.0,
+        "tower_violation": 0.0
+      },
+      {
+        "period": 7,
+        "electric": 5.684341886080802e-14,
+        "heat": -2.842170943040401e-14,
+        "cooling": 0.0,
+        "tower_violation": 0.0
+      },
+      {
+        "period": 8,
+        "electric": 0.0,
+        "heat": 0.0,
+        "cooling": 0.0,
+        "tower_violation": 0.0
+      },
+      {
+        "period": 9,
+        "electric": 0.0,
+        "heat": 0.0,
+        "cooling": 0.0,
+        "tower_violation": 0.0
+      },
+      {
+        "period": 10,
+        "electric": 0.0,
+        "heat": 0.0,
+        "cooling": 0.0,
+        "tower_violation": 0.0
+      },
+      {
+        "period": 11,
+        "electric": 0.0,
+        "heat": 0.0,
+        "cooling": 0.0,
+        "tower_violation": 0.0
+      }
+    ],
+    "service": {
+      "P0": {
+        "e": {
+          "requested_kWh": 181.00201479188632,
+          "served_kWh": 181.00201479188632,
+          "ENS_kWh": 0.0
+        },
+        "h": {
+          "requested_kWh": 191.57636661139247,
+          "served_kWh": 191.57636661139247,
+          "ENS_kWh": 0.0
+        },
+        "c": {
+          "requested_kWh": 111.04424463963173,
+          "served_kWh": 111.04424463963173,
+          "ENS_kWh": 0.0
+        }
+      },
+      "P1": {
+        "e": {
+          "requested_kWh": 114.62956394119658,
+          "served_kWh": 114.62956394119658,
+          "ENS_kWh": 0.0
+        },
+        "h": {
+          "requested_kWh": 113.6673282773518,
+          "served_kWh": 113.6673282773518,
+          "ENS_kWh": 0.0
+        },
+        "c": {
+          "requested_kWh": 75.70342864260799,
+          "served_kWh": 75.70342864260799,
+          "ENS_kWh": 0.0
+        }
+      },
+      "P2": {
+        "e": {
+          "requested_kWh": 103.10617838220651,
+          "served_kWh": 103.10617838220651,
+          "ENS_kWh": 0.0
+        },
+        "h": {
+          "requested_kWh": 0.0,
+          "served_kWh": 0.0,
+          "ENS_kWh": 0.0
+        },
+        "c": {
+          "requested_kWh": 86.14280457251216,
+          "served_kWh": 86.14280457251216,
+          "ENS_kWh": 0.0
+        }
+      },
+      "P3": {
+        "e": {
+          "requested_kWh": 984.7681579087239,
+          "served_kWh": 984.7681579087239,
+          "ENS_kWh": 0.0
+        },
+        "h": {
+          "requested_kWh": 205.00329906707825,
+          "served_kWh": 205.00329906707825,
+          "ENS_kWh": 0.0
+        },
+        "c": {
+          "requested_kWh": 219.35318680685617,
+          "served_kWh": 219.35318680685617,
+          "ENS_kWh": 0.0
+        }
+      }
+    },
+    "normalized_service_objectives": {
+      "P0": 0.0,
+      "P1": 0.0,
+      "P2": 0.0,
+      "P3": 0.0
+    },
+    "fuel_used": {
+      "gas": 6.300274587740001,
+      "diesel_shaft": 0.0
+    },
+    "independently_recomputed_fee": 87.54675124864066,
+    "storage_standing_loss": {
+      "ups": 0.0,
+      "cold_store": 0.0
+    },
+    "terminal_stocks": {
+      "ups": 40.0,
+      "cold_store": 0.0
+    },
+    "tolerance": 1e-06,
+    "objective_lock_audit_tolerance_dimensionless": 1e-09,
+    "maximum_violation": 5.684341886080802e-14,
+    "maximum_balance_residual": 5.684341886080802e-14,
+    "fuel_budget_scope": {
+      "gas": "not_registered_no_budget_imposed",
+      "diesel_shaft": "registered"
+    },
+    "independent_of_solver_matrix": true,
+    "actual_execution_qualified": false
+  },
+  "objective_fee": 87.54675124864066,
+  "layers": [
+    {
+      "name": "fee",
+      "status": "optimal",
+      "termination_reason": "optimal",
+      "incumbent": true,
+      "raw_status": 0,
+      "solver_message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+      "objective_value": 87.54675124864067,
+      "mip_gap": 0.0,
+      "mip_dual_bound": 87.54675124864067,
+      "mip_node_count": 1.0,
+      "time_limit_seconds": 60.0,
+      "optimality_proven": true,
+      "independent_audit_valid": true,
+      "independently_recomputed_objective": 87.54675124864066,
+      "independent_objective_matches_solver": true,
+      "objective_metadata_tolerance": 1e-07
+    }
+  ],
+  "objective_locks": [],
+  "normalization": {
+    "denominators_kWh": {
+      "P0": {
+        "e": 181.00201479188632,
+        "h": 191.57636661139247,
+        "c": 111.04424463963173
+      },
+      "P1": {
+        "e": 114.62956394119658,
+        "h": 113.6673282773518,
+        "c": 75.70342864260799
+      },
+      "P2": {
+        "e": 103.10617838220651,
+        "h": 0.0,
+        "c": 86.14280457251216
+      },
+      "P3": {
+        "e": 984.7681579087239,
+        "h": 205.00329906707825,
+        "c": 219.35318680685617
+      }
+    },
+    "zero_demand_contribution": "omitted",
+    "definition": "For each priority: sum of carrier ENS divided by its own fixed positive full-window requested energy",
+    "actual_ENS_carriers_reported_separately": true,
+    "lock_tolerance_dimensionless": 1e-09
+  },
+  "lexicographic_layers_completed": true,
+  "lexicographic_optimality_proven": true,
+  "variable_count": 408,
+  "binary_count": 60,
+  "constraint_count": 229,
+  "time_limit_per_layer_seconds": 60.0,
+  "information_permission": "offline_known_window",
+  "actual_replayed": false,
+  "full_continuous_plan_replayed": false,
+  "planned_storage_ports_executed": false,
+  "registered_simplifications": [
+    "Independent full original demand; no historical C/M auxiliary, station power, endogenous availability or native boundaries used",
+    "GT full-load linear heat/fuel coefficients reuse current common-planner surrogate, not original author numerical software",
+    "Dynamic GT startup/queue/ramp/minimum-up/down and actual boiler/DG readiness remain common-executor physics; planning station/start parameters provided separately",
+    "Boiler fixed/variable station electric included; GT starter and DG startup/rotor/governor work require own-plan approximation and actual replay accounting",
+    "Legacy-permission DG old-envelope critical-demand cap removed; emergency_bus only uses its actual registered allowed priorities",
+    "DG shaft surrogate counts electric output plus rated-speed loss; actual startup/no-load work must be compared separately",
+    "UPS only P0/P1 full building electricity including building auxiliaries, never plant/station/general services",
+    "Uninstalled cold store remains zero; no extra PV, BESS or gas budget",
+    "No terminal inventory equality added; planned/actual inventories and initial preparation charge reported separately",
+    "Source quality metadata is evaluation-only and never changes/scales original demand",
+    "Full continuous/storage plan is not an actual execution interface"
+  ],
+  "plan_fee_excludes_initial_inventory_preparation": true,
+  "dynamic_startup_ramp_minimum_on_off_qualified": false,
+  "fuel_budget_not_invented_for_absent_carrier": true,
+  "canonicalization": {
+    "raw_plan_file": "normal.strict.01.json",
+    "static_equivalence_verified": true,
+    "dynamic_identity_equivalence_proven": false,
+    "original_physical_state_never_permuted": true,
+    "initial_identity_source": "independent common t0 reset"
+  }
+}

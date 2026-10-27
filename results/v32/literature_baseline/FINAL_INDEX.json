@@ -1,0 +1,89 @@
+{
+  "schema": "hospital_ies.v32.literature_baseline.delivery_index.v1",
+  "created_utc": "2026-10-27T14:48:05.520035+00:00",
+  "status": "readonly_literature_and_historical_baseline_review_complete",
+  "files": {
+    "HIRWA_V32_MAPPING_ZH.md": {
+      "bytes": 7877,
+      "sha256": "357f7809d9bc507318986d809b94c01616338928d8d22a8ad69879facd9f3b48"
+    },
+    "ROSALES_V32_MAPPING_ZH.md": {
+      "bytes": 7018,
+      "sha256": "c88426dfd45c67362719edb3d1b0ddb18fa5d4d7ee0b7ecd7ba44656a71b87fc"
+    },
+    "THEORY_AND_FAIRNESS_REVIEW_ZH.md": {
+      "bytes": 9428,
+      "sha256": "69b772cd524aca85837e02bb255a300c79e4cc277affdd63abadc7260a4c1a33"
+    },
+    "BASELINE_REUSE_ZH.md": {
+      "bytes": 4784,
+      "sha256": "a7ee844c796df0e7b784fb96325ff6514dcd8eb1da87e92e5d8a8df2f53b6fb9"
+    },
+    "README_ZH.md": {
+      "bytes": 2443,
+      "sha256": "d973d4b571f46385f1cf5b2c5755416758e12531944ce4d31d8b43bdfcd494bc"
+    },
+    "capture_readonly_evidence.py": {
+      "bytes": 13971,
+      "sha256": "8aae7e35a6c56cf8e427e20b859d2100ccdaea2ddc12d119c2407290c724f35c"
+    },
+    "capture_readonly_evidence_r1_preserved.py": {
+      "bytes": 13671,
+      "sha256": "ec3020a658788597b77720b34e3d35d015daa9500cf385bf85f579160f365ffd"
+    },
+    "ACTUAL01_COMMAND.json": {
+      "bytes": 693,
+      "sha256": "5a8ef37509d7eb54c38cc16c0d7623d2f02c1693899d2c9db5f2ac2c68136b72"
+    },
+    "ACTUAL01.stdout.log": {
+      "bytes": 572,
+      "sha256": "8fc72182b63c865b595a48a5297a1987adf9a96e53a0008c9829393054b45ea9"
+    },
+    "ACTUAL01.stderr.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ACTUAL02_COMMAND.json": {
+      "bytes": 702,
+      "sha256": "78eb1a726fafc07bfccfc4acc99c55970013fd48f7cdc16ea3a7315285cee161"
+    },
+    "ACTUAL02.stdout.log": {
+      "bytes": 570,
+      "sha256": "d4749924a5531f7c39998bfd5341503be2264f514e6490888bea8f2d2e2bbe31"
+    },
+    "ACTUAL02.stderr.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "actual01/READONLY_EVIDENCE.json": {
+      "bytes": 316271,
+      "sha256": "97791ad8aa85bb17f4e468640eff54e1b16847618e9eefce0280c7870312544b"
+    },
+    "actual02/READONLY_EVIDENCE.json": {
+      "bytes": 316681,
+      "sha256": "623e1951cabe3a597061e5639f3609a2f2373ee930f0296b55fc1d91dfa9d5ae"
+    }
+  },
+  "actual_readonly_command_exit_code": 0,
+  "previous_collector_attempt_exit_code": 1,
+  "previous_attempt_retained": true,
+  "source_files_in_P01_manifest_verified": 864,
+  "not_a_count_of_current_V32_source_tree": true,
+  "input_files_verified": 36,
+  "old_C02_source_changes": 0,
+  "original_pdf_hashes_match": true,
+  "b01_historical_records_verified": 4,
+  "old_R03_start_hour": 211,
+  "V32_b01_start_hour": 1160,
+  "distinct_numerical_references_recommended": 1,
+  "new_simulations_in_this_subtask": 0,
+  "solver_calls": 0,
+  "tests_run": 0,
+  "D_source_edits": 0,
+  "old_results_edits": 0,
+  "all_bound_read_sources_unchanged": true,
+  "all_mapped_Hirwa_formula_labels_present": true,
+  "numbered_Rosales_equations": null,
+  "input_builder_must_not_consume_historical_audit_values": true,
+  "completion_scope": "Literature/design and baseline verification only; no claim of new V32 plans, actual runs or delivery acceptance"
+}

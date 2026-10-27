@@ -1,0 +1,18 @@
+{
+  "command": [
+    "python",
+    "-B",
+    "-m",
+    "unittest",
+    "discover",
+    "-s",
+    "E:\\hospital_ies_v32_20261027\\evaluation",
+    "-p",
+    "test_audit_v32.py",
+    "-v"
+  ],
+  "exit_code": 1,
+  "stdout": "RED01.stdout.log",
+  "stderr": "RED01.stderr.log",
+  "role": "synthetic read-only audit fixtures, no solver/model"
+}

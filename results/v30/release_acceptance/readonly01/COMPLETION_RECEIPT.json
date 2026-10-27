@@ -1,0 +1,608 @@
+{
+  "schema": "hospital_ies.v30.portable_readonly_review.v1",
+  "status": "passed_full_restore_and_readonly_replays",
+  "started_utc": "2026-10-27T10:23:23.954948+00:00",
+  "requested_packet": "E:\\v30_review_extract01",
+  "output": "E:\\hospital_ies_v30_20261027\\release_acceptance\\readonly01",
+  "commands": [
+    {
+      "step": "restore_all",
+      "argv": [
+        "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\python.exe",
+        "-B",
+        "E:\\v30_review_extract01\\transport_tools\\restore_all.py",
+        "--map",
+        "E:\\v30_review_extract01\\TRANSPORT_MAP_FINAL_FIX1.json",
+        "--solid",
+        "E:\\v30_review_extract01\\EVIDENCE_BLOBS_PROOF01.tar.xz",
+        "--solid",
+        "E:\\v30_review_extract01\\EVIDENCE_BLOBS_DELTA_FIX1.tar.xz",
+        "--destination",
+        "E:\\v30_review_extract01",
+        "--receipt",
+        "E:\\hospital_ies_v30_20261027\\release_acceptance\\readonly01\\FULL_RESTORE_RECEIPT.json"
+      ],
+      "cwd": "E:\\v30_review_extract01",
+      "started_utc": "2026-10-27T10:23:24.360846+00:00",
+      "selected_environment": {
+        "PYTHONPATH": "E:\\v30_review_extract01\\project;E:\\v30_review_extract01\\project\\src",
+        "TEMP": "E:\\hospital_ies_v30_20261027\\release_acceptance\\readonly01\\temp",
+        "TMP": "E:\\hospital_ies_v30_20261027\\release_acceptance\\readonly01\\temp",
+        "PYTHONDONTWRITEBYTECODE": "1",
+        "PYTHONIOENCODING": "utf-8"
+      },
+      "stdout": "stdout.log",
+      "stderr": "stderr.log",
+      "exit_code": 0,
+      "finished_utc": "2026-10-27T10:30:55.442842+00:00",
+      "elapsed_seconds": 451.081996
+    },
+    {
+      "step": "comparison_fix1",
+      "argv": [
+        "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\python.exe",
+        "-B",
+        "E:\\v30_review_extract01\\data\\comparison_audit_fix1\\audit_campaign.py",
+        "--root",
+        "E:\\v30_review_extract01\\data",
+        "--runs",
+        "E:\\v30_review_extract01\\data\\runs",
+        "--normal-prefix",
+        "n02_",
+        "--disturbance-prefix",
+        "d02_",
+        "--freeze-file",
+        "FROZEN_SOURCE_V30_C02.json",
+        "--accounting",
+        "E:\\v30_review_extract01\\data\\comparison_audit_fix1\\FROZEN_ACCOUNTING.json",
+        "--output",
+        "E:\\hospital_ies_v30_20261027\\release_acceptance\\readonly01\\comparison_fix1"
+      ],
+      "cwd": "E:\\v30_review_extract01\\project",
+      "started_utc": "2026-10-27T10:30:56.034537+00:00",
+      "selected_environment": {
+        "PYTHONPATH": "E:\\v30_review_extract01\\project;E:\\v30_review_extract01\\project\\src",
+        "TEMP": "E:\\hospital_ies_v30_20261027\\release_acceptance\\readonly01\\temp",
+        "TMP": "E:\\hospital_ies_v30_20261027\\release_acceptance\\readonly01\\temp",
+        "PYTHONDONTWRITEBYTECODE": "1",
+        "PYTHONIOENCODING": "utf-8"
+      },
+      "stdout": "stdout.log",
+      "stderr": "stderr.log",
+      "exit_code": 0,
+      "finished_utc": "2026-10-27T10:32:05.255655+00:00",
+      "elapsed_seconds": 69.221118
+    },
+    {
+      "step": "historical_01",
+      "argv": [
+        "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\python.exe",
+        "-B",
+        "-m",
+        "tools.model_review_v30.evaluation",
+        "--repo",
+        "E:\\v30_review_extract01\\project",
+        "--run",
+        "E:\\v30_review_extract01\\data\\reused_v29\\runs\\m29s01_01_grid_winter_normal_C_H1_current_service_bridge",
+        "--output",
+        "E:\\hospital_ies_v30_20261027\\release_acceptance\\readonly01\\historical_exports\\m29s01_01_grid_winter_normal_C_H1_current_service_bridge"
+      ],
+      "cwd": "E:\\v30_review_extract01\\project",
+      "started_utc": "2026-10-27T10:32:05.261669+00:00",
+      "selected_environment": {
+        "PYTHONPATH": "E:\\v30_review_extract01\\project;E:\\v30_review_extract01\\project\\src",
+        "TEMP": "E:\\hospital_ies_v30_20261027\\release_acceptance\\readonly01\\temp",
+        "TMP": "E:\\hospital_ies_v30_20261027\\release_acceptance\\readonly01\\temp",
+        "PYTHONDONTWRITEBYTECODE": "1",
+        "PYTHONIOENCODING": "utf-8"
+      },
+      "stdout": "stdout.log",
+      "stderr": "stderr.log",
+      "exit_code": 0,
+      "finished_utc": "2026-10-27T10:32:08.658752+00:00",
+      "elapsed_seconds": 3.397083
+    },
+    {
+      "step": "historical_02",
+      "argv": [
+        "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\python.exe",
+        "-B",
+        "-m",
+        "tools.model_review_v30.evaluation",
+        "--repo",
+        "E:\\v30_review_extract01\\project",
+        "--run",
+        "E:\\v30_review_extract01\\data\\reused_v29\\runs\\m29s01_02_grid_winter_fault_C_H1_current_service_bridge",
+        "--output",
+        "E:\\hospital_ies_v30_20261027\\release_acceptance\\readonly01\\historical_exports\\m29s01_02_grid_winter_fault_C_H1_current_service_bridge"
+      ],
+      "cwd": "E:\\v30_review_extract01\\project",
+      "started_utc": "2026-10-27T10:32:08.659751+00:00",
+      "selected_environment": {
+        "PYTHONPATH": "E:\\v30_review_extract01\\project;E:\\v30_review_extract01\\project\\src",
+        "TEMP": "E:\\hospital_ies_v30_20261027\\release_acceptance\\readonly01\\temp",
+        "TMP": "E:\\hospital_ies_v30_20261027\\release_acceptance\\readonly01\\temp",
+        "PYTHONDONTWRITEBYTECODE": "1",
+        "PYTHONIOENCODING": "utf-8"
+      },
+      "stdout": "stdout.log",
+      "stderr": "stderr.log",
+      "exit_code": 0,
+      "finished_utc": "2026-10-27T10:32:12.354485+00:00",
+      "elapsed_seconds": 3.694734
+    },
+    {
+      "step": "historical_03",
+      "argv": [
+        "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\python.exe",
+        "-B",
+        "-m",
+        "tools.model_review_v30.evaluation",
+        "--repo",
+        "E:\\v30_review_extract01\\project",
+        "--run",
+        "E:\\v30_review_extract01\\data\\reused_v29\\runs\\m29s01_03_tower_summer_normal_C_H2_current_service_bridge",
+        "--output",
+        "E:\\hospital_ies_v30_20261027\\release_acceptance\\readonly01\\historical_exports\\m29s01_03_tower_summer_normal_C_H2_current_service_bridge"
+      ],
+      "cwd": "E:\\v30_review_extract01\\project",
+      "started_utc": "2026-10-27T10:32:12.355484+00:00",
+      "selected_environment": {
+        "PYTHONPATH": "E:\\v30_review_extract01\\project;E:\\v30_review_extract01\\project\\src",
+        "TEMP": "E:\\hospital_ies_v30_20261027\\release_acceptance\\readonly01\\temp",
+        "TMP": "E:\\hospital_ies_v30_20261027\\release_acceptance\\readonly01\\temp",
+        "PYTHONDONTWRITEBYTECODE": "1",
+        "PYTHONIOENCODING": "utf-8"
+      },
+      "stdout": "stdout.log",
+      "stderr": "stderr.log",
+      "exit_code": 0,
+      "finished_utc": "2026-10-27T10:32:13.258076+00:00",
+      "elapsed_seconds": 0.902592
+    },
+    {
+      "step": "historical_04",
+      "argv": [
+        "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\python.exe",
+        "-B",
+        "-m",
+        "tools.model_review_v30.evaluation",
+        "--repo",
+        "E:\\v30_review_extract01\\project",
+        "--run",
+        "E:\\v30_review_extract01\\data\\reused_v29\\runs\\m29s01_04_tower_summer_fault_C_H2_current_service_bridge",
+        "--output",
+        "E:\\hospital_ies_v30_20261027\\release_acceptance\\readonly01\\historical_exports\\m29s01_04_tower_summer_fault_C_H2_current_service_bridge"
+      ],
+      "cwd": "E:\\v30_review_extract01\\project",
+      "started_utc": "2026-10-27T10:32:13.259266+00:00",
+      "selected_environment": {
+        "PYTHONPATH": "E:\\v30_review_extract01\\project;E:\\v30_review_extract01\\project\\src",
+        "TEMP": "E:\\hospital_ies_v30_20261027\\release_acceptance\\readonly01\\temp",
+        "TMP": "E:\\hospital_ies_v30_20261027\\release_acceptance\\readonly01\\temp",
+        "PYTHONDONTWRITEBYTECODE": "1",
+        "PYTHONIOENCODING": "utf-8"
+      },
+      "stdout": "stdout.log",
+      "stderr": "stderr.log",
+      "exit_code": 0,
+      "finished_utc": "2026-10-27T10:32:14.134974+00:00",
+      "elapsed_seconds": 0.875708
+    },
+    {
+      "step": "historical_05",
+      "argv": [
+        "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\python.exe",
+        "-B",
+        "-m",
+        "tools.model_review_v30.evaluation",
+        "--repo",
+        "E:\\v30_review_extract01\\project",
+        "--run",
+        "E:\\v30_review_extract01\\data\\reused_v29\\runs\\m29s01_05_heat_pump_winter_normal_C_H0_current_service_bridge",
+        "--output",
+        "E:\\hospital_ies_v30_20261027\\release_acceptance\\readonly01\\historical_exports\\m29s01_05_heat_pump_winter_normal_C_H0_current_service_bridge"
+      ],
+      "cwd": "E:\\v30_review_extract01\\project",
+      "started_utc": "2026-10-27T10:32:14.156143+00:00",
+      "selected_environment": {
+        "PYTHONPATH": "E:\\v30_review_extract01\\project;E:\\v30_review_extract01\\project\\src",
+        "TEMP": "E:\\hospital_ies_v30_20261027\\release_acceptance\\readonly01\\temp",
+        "TMP": "E:\\hospital_ies_v30_20261027\\release_acceptance\\readonly01\\temp",
+        "PYTHONDONTWRITEBYTECODE": "1",
+        "PYTHONIOENCODING": "utf-8"
+      },
+      "stdout": "stdout.log",
+      "stderr": "stderr.log",
+      "exit_code": 0,
+      "finished_utc": "2026-10-27T10:32:15.112548+00:00",
+      "elapsed_seconds": 0.956405
+    },
+    {
+      "step": "historical_06",
+      "argv": [
+        "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\python.exe",
+        "-B",
+        "-m",
+        "tools.model_review_v30.evaluation",
+        "--repo",
+        "E:\\v30_review_extract01\\project",
+        "--run",
+        "E:\\v30_review_extract01\\data\\reused_v29\\runs\\m29s01_06_heat_pump_winter_fault_C_H0_current_service_bridge",
+        "--output",
+        "E:\\hospital_ies_v30_20261027\\release_acceptance\\readonly01\\historical_exports\\m29s01_06_heat_pump_winter_fault_C_H0_current_service_bridge"
+      ],
+      "cwd": "E:\\v30_review_extract01\\project",
+      "started_utc": "2026-10-27T10:32:15.113714+00:00",
+      "selected_environment": {
+        "PYTHONPATH": "E:\\v30_review_extract01\\project;E:\\v30_review_extract01\\project\\src",
+        "TEMP": "E:\\hospital_ies_v30_20261027\\release_acceptance\\readonly01\\temp",
+        "TMP": "E:\\hospital_ies_v30_20261027\\release_acceptance\\readonly01\\temp",
+        "PYTHONDONTWRITEBYTECODE": "1",
+        "PYTHONIOENCODING": "utf-8"
+      },
+      "stdout": "stdout.log",
+      "stderr": "stderr.log",
+      "exit_code": 0,
+      "finished_utc": "2026-10-27T10:32:16.110540+00:00",
+      "elapsed_seconds": 0.996826
+    },
+    {
+      "step": "historical_07",
+      "argv": [
+        "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\python.exe",
+        "-B",
+        "-m",
+        "tools.model_review_v30.evaluation",
+        "--repo",
+        "E:\\v30_review_extract01\\project",
+        "--run",
+        "E:\\v30_review_extract01\\data\\reused_v29\\runs\\m29s01_07_grid_winter_M_normal_M_H1_current_service_bridge",
+        "--output",
+        "E:\\hospital_ies_v30_20261027\\release_acceptance\\readonly01\\historical_exports\\m29s01_07_grid_winter_M_normal_M_H1_current_service_bridge"
+      ],
+      "cwd": "E:\\v30_review_extract01\\project",
+      "started_utc": "2026-10-27T10:32:16.111179+00:00",
+      "selected_environment": {
+        "PYTHONPATH": "E:\\v30_review_extract01\\project;E:\\v30_review_extract01\\project\\src",
+        "TEMP": "E:\\hospital_ies_v30_20261027\\release_acceptance\\readonly01\\temp",
+        "TMP": "E:\\hospital_ies_v30_20261027\\release_acceptance\\readonly01\\temp",
+        "PYTHONDONTWRITEBYTECODE": "1",
+        "PYTHONIOENCODING": "utf-8"
+      },
+      "stdout": "stdout.log",
+      "stderr": "stderr.log",
+      "exit_code": 0,
+      "finished_utc": "2026-10-27T10:32:17.990588+00:00",
+      "elapsed_seconds": 1.879409
+    },
+    {
+      "step": "reference_R03",
+      "argv": [
+        "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\python.exe",
+        "-B",
+        "E:\\v30_review_extract01\\data\\reference_replay_audit\\audit.py",
+        "--project",
+        "E:\\v30_review_extract01\\project",
+        "--root",
+        "E:\\v30_review_extract01\\data",
+        "--output",
+        "E:\\hospital_ies_v30_20261027\\release_acceptance\\readonly01\\reference_R03"
+      ],
+      "cwd": "E:\\v30_review_extract01\\project",
+      "started_utc": "2026-10-27T10:32:17.990588+00:00",
+      "selected_environment": {
+        "PYTHONPATH": "E:\\v30_review_extract01\\project;E:\\v30_review_extract01\\project\\src",
+        "TEMP": "E:\\hospital_ies_v30_20261027\\release_acceptance\\readonly01\\temp",
+        "TMP": "E:\\hospital_ies_v30_20261027\\release_acceptance\\readonly01\\temp",
+        "PYTHONDONTWRITEBYTECODE": "1",
+        "PYTHONIOENCODING": "utf-8"
+      },
+      "stdout": "stdout.log",
+      "stderr": "stderr.log",
+      "exit_code": 0,
+      "finished_utc": "2026-10-27T10:32:22.087796+00:00",
+      "elapsed_seconds": 4.097208
+    },
+    {
+      "step": "reference_mechanisms",
+      "argv": [
+        "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\python.exe",
+        "-B",
+        "E:\\v30_review_extract01\\data\\reference_replay_audit\\mechanism_audit.py",
+        "--project",
+        "E:\\v30_review_extract01\\project",
+        "--root",
+        "E:\\v30_review_extract01\\data",
+        "--output",
+        "E:\\hospital_ies_v30_20261027\\release_acceptance\\readonly01\\reference_mechanisms"
+      ],
+      "cwd": "E:\\v30_review_extract01\\project",
+      "started_utc": "2026-10-27T10:32:22.088795+00:00",
+      "selected_environment": {
+        "PYTHONPATH": "E:\\v30_review_extract01\\project;E:\\v30_review_extract01\\project\\src",
+        "TEMP": "E:\\hospital_ies_v30_20261027\\release_acceptance\\readonly01\\temp",
+        "TMP": "E:\\hospital_ies_v30_20261027\\release_acceptance\\readonly01\\temp",
+        "PYTHONDONTWRITEBYTECODE": "1",
+        "PYTHONIOENCODING": "utf-8"
+      },
+      "stdout": "stdout.log",
+      "stderr": "stderr.log",
+      "exit_code": 0,
+      "finished_utc": "2026-10-27T10:32:25.711858+00:00",
+      "elapsed_seconds": 3.623063
+    }
+  ],
+  "new_physical_simulations": 0,
+  "new_solver_calls": 0,
+  "runtime": {
+    "python": "3.10.6 (tags/v3.10.6:9c7b4bd, Aug  1 2022, 21:53:49) [MSC v.1932 64 bit (AMD64)]",
+    "platform": "Windows-10-10.0.26100-SP0",
+    "zlib_runtime": "1.2.12"
+  },
+  "driver_sha256": "af2c5471a1d1f518d1acc8e580fbc3ffabbc664724f887235f2ddb6e07ba0963",
+  "restore_skipped": false,
+  "full_restore_verified": true,
+  "packet": "E:\\v30_review_extract01",
+  "transport": {
+    "original_files": 87668,
+    "raw_payloads": 50105,
+    "containers": [
+      {
+        "name": "EVIDENCE_BLOBS_PROOF01.tar.xz",
+        "sha256": "ad1d441d05ab1dbacf144bb6f00bfc0fd69e90550637e7057fad29b47cddb8e0",
+        "bytes": 44239236
+      },
+      {
+        "name": "EVIDENCE_BLOBS_DELTA_FIX1.tar.xz",
+        "sha256": "2d603dc79999fa2f0b98377aa855c6dafdc5316b298636e6880ecd11619ce033",
+        "bytes": 30995948
+      }
+    ],
+    "map_sha256": "f6be5595dfea50e6489a9bcef689fa60ec8573534ac331910951b325cb901ac2"
+  },
+  "restorer_sha256": "fb67d9d53abb842dbf614813c65abf79a07b5b7b8f50162d1ab2f982c2b91e85",
+  "restoration": {
+    "status": "passed",
+    "map_sha256": "f6be5595dfea50e6489a9bcef689fa60ec8573534ac331910951b325cb901ac2",
+    "exact_original_files_verified": 87668,
+    "raw_payloads_verified": 50105,
+    "full_restore_verified": true,
+    "basis": "new full restore in this invocation",
+    "receipt_sha256": "426c777434ac5ac2350840240825b16b0d38ed64ab0a85de3c9312588610d044"
+  },
+  "source": {
+    "status": "passed",
+    "project": "E:\\v30_review_extract01\\project",
+    "source_file_count": 858,
+    "input_file_count": 36,
+    "producer": "3252727135645037cedc57ebc188a48d2aa34ccb",
+    "source_sha256": "2509d2fa562e672af3cfe4058ace55f0e38de6172d1ac2d633210d0e776f0776",
+    "input_sha256": "f414d21fc55d5a63282435b9bed9a1c8c289a049f24507f953fb86162fb41d15",
+    "git_required": false,
+    "source_and_inputs_exact": true
+  },
+  "freeze_sha256": "7d5f96864801c01d2b242530cfd5239fedb58f863b44e5cb8e31c1ef29fff761",
+  "readonly_cli_plan": [
+    {
+      "name": "comparison_fix1",
+      "argv": [
+        "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\python.exe",
+        "-B",
+        "E:\\v30_review_extract01\\data\\comparison_audit_fix1\\audit_campaign.py",
+        "--root",
+        "E:\\v30_review_extract01\\data",
+        "--runs",
+        "E:\\v30_review_extract01\\data\\runs",
+        "--normal-prefix",
+        "n02_",
+        "--disturbance-prefix",
+        "d02_",
+        "--freeze-file",
+        "FROZEN_SOURCE_V30_C02.json",
+        "--accounting",
+        "E:\\v30_review_extract01\\data\\comparison_audit_fix1\\FROZEN_ACCOUNTING.json",
+        "--output",
+        "E:\\hospital_ies_v30_20261027\\release_acceptance\\readonly01\\comparison_fix1"
+      ]
+    },
+    {
+      "name": "historical_01",
+      "argv": [
+        "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\python.exe",
+        "-B",
+        "-m",
+        "tools.model_review_v30.evaluation",
+        "--repo",
+        "E:\\v30_review_extract01\\project",
+        "--run",
+        "E:\\v30_review_extract01\\data\\reused_v29\\runs\\m29s01_01_grid_winter_normal_C_H1_current_service_bridge",
+        "--output",
+        "E:\\hospital_ies_v30_20261027\\release_acceptance\\readonly01\\historical_exports\\m29s01_01_grid_winter_normal_C_H1_current_service_bridge"
+      ]
+    },
+    {
+      "name": "historical_02",
+      "argv": [
+        "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\python.exe",
+        "-B",
+        "-m",
+        "tools.model_review_v30.evaluation",
+        "--repo",
+        "E:\\v30_review_extract01\\project",
+        "--run",
+        "E:\\v30_review_extract01\\data\\reused_v29\\runs\\m29s01_02_grid_winter_fault_C_H1_current_service_bridge",
+        "--output",
+        "E:\\hospital_ies_v30_20261027\\release_acceptance\\readonly01\\historical_exports\\m29s01_02_grid_winter_fault_C_H1_current_service_bridge"
+      ]
+    },
+    {
+      "name": "historical_03",
+      "argv": [
+        "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\python.exe",
+        "-B",
+        "-m",
+        "tools.model_review_v30.evaluation",
+        "--repo",
+        "E:\\v30_review_extract01\\project",
+        "--run",
+        "E:\\v30_review_extract01\\data\\reused_v29\\runs\\m29s01_03_tower_summer_normal_C_H2_current_service_bridge",
+        "--output",
+        "E:\\hospital_ies_v30_20261027\\release_acceptance\\readonly01\\historical_exports\\m29s01_03_tower_summer_normal_C_H2_current_service_bridge"
+      ]
+    },
+    {
+      "name": "historical_04",
+      "argv": [
+        "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\python.exe",
+        "-B",
+        "-m",
+        "tools.model_review_v30.evaluation",
+        "--repo",
+        "E:\\v30_review_extract01\\project",
+        "--run",
+        "E:\\v30_review_extract01\\data\\reused_v29\\runs\\m29s01_04_tower_summer_fault_C_H2_current_service_bridge",
+        "--output",
+        "E:\\hospital_ies_v30_20261027\\release_acceptance\\readonly01\\historical_exports\\m29s01_04_tower_summer_fault_C_H2_current_service_bridge"
+      ]
+    },
+    {
+      "name": "historical_05",
+      "argv": [
+        "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\python.exe",
+        "-B",
+        "-m",
+        "tools.model_review_v30.evaluation",
+        "--repo",
+        "E:\\v30_review_extract01\\project",
+        "--run",
+        "E:\\v30_review_extract01\\data\\reused_v29\\runs\\m29s01_05_heat_pump_winter_normal_C_H0_current_service_bridge",
+        "--output",
+        "E:\\hospital_ies_v30_20261027\\release_acceptance\\readonly01\\historical_exports\\m29s01_05_heat_pump_winter_normal_C_H0_current_service_bridge"
+      ]
+    },
+    {
+      "name": "historical_06",
+      "argv": [
+        "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\python.exe",
+        "-B",
+        "-m",
+        "tools.model_review_v30.evaluation",
+        "--repo",
+        "E:\\v30_review_extract01\\project",
+        "--run",
+        "E:\\v30_review_extract01\\data\\reused_v29\\runs\\m29s01_06_heat_pump_winter_fault_C_H0_current_service_bridge",
+        "--output",
+        "E:\\hospital_ies_v30_20261027\\release_acceptance\\readonly01\\historical_exports\\m29s01_06_heat_pump_winter_fault_C_H0_current_service_bridge"
+      ]
+    },
+    {
+      "name": "historical_07",
+      "argv": [
+        "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\python.exe",
+        "-B",
+        "-m",
+        "tools.model_review_v30.evaluation",
+        "--repo",
+        "E:\\v30_review_extract01\\project",
+        "--run",
+        "E:\\v30_review_extract01\\data\\reused_v29\\runs\\m29s01_07_grid_winter_M_normal_M_H1_current_service_bridge",
+        "--output",
+        "E:\\hospital_ies_v30_20261027\\release_acceptance\\readonly01\\historical_exports\\m29s01_07_grid_winter_M_normal_M_H1_current_service_bridge"
+      ]
+    },
+    {
+      "name": "reference_R03",
+      "argv": [
+        "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\python.exe",
+        "-B",
+        "E:\\v30_review_extract01\\data\\reference_replay_audit\\audit.py",
+        "--project",
+        "E:\\v30_review_extract01\\project",
+        "--root",
+        "E:\\v30_review_extract01\\data",
+        "--output",
+        "E:\\hospital_ies_v30_20261027\\release_acceptance\\readonly01\\reference_R03"
+      ]
+    },
+    {
+      "name": "reference_mechanisms",
+      "argv": [
+        "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\python.exe",
+        "-B",
+        "E:\\v30_review_extract01\\data\\reference_replay_audit\\mechanism_audit.py",
+        "--project",
+        "E:\\v30_review_extract01\\project",
+        "--root",
+        "E:\\v30_review_extract01\\data",
+        "--output",
+        "E:\\hospital_ies_v30_20261027\\release_acceptance\\readonly01\\reference_mechanisms"
+      ]
+    }
+  ],
+  "reviewer_sha256": {
+    "data/comparison_audit_fix1/audit_campaign.py": "1236b5f310151d91ff643911cb811c1870254b15a9d64fe531e3d6978030d464",
+    "data/comparison_audit_fix1/FROZEN_ACCOUNTING.json": "524f5fc0dc2cc46748b1a11792b768632c01a9a91b670411bec9b517d1d13f56",
+    "data/reference_replay_audit/audit.py": "72640d503b033b00d33dcda79cf2ba1afd6a3d7fc117e20793da092693b3aeec",
+    "data/reference_replay_audit/mechanism_audit.py": "e5da798889b712da60049a94b55b4c97a7fc73ba4d39a5303532250be780677b",
+    "project/tools/model_review_v30/evaluation.py": "15c974a35b7ad4d9ab60ac663a93c3f76348a06735db2631a41e362f6716cb08"
+  },
+  "campaign": {
+    "final_actual_cases": 32,
+    "final_matrix_clean": true,
+    "producer": "3252727135645037cedc57ebc188a48d2aa34ccb"
+  },
+  "historical_exports": [
+    {
+      "path": "E:\\hospital_ies_v30_20261027\\release_acceptance\\readonly01\\historical_exports\\m29s01_01_grid_winter_normal_C_H1_current_service_bridge",
+      "producer": "8926dfb7a1632d98b71b0692c6e37df9f4a61855",
+      "independent_fee_difference_USD2001": 0.0,
+      "role": "historical_offline_export_not_new_simulation"
+    },
+    {
+      "path": "E:\\hospital_ies_v30_20261027\\release_acceptance\\readonly01\\historical_exports\\m29s01_02_grid_winter_fault_C_H1_current_service_bridge",
+      "producer": "8926dfb7a1632d98b71b0692c6e37df9f4a61855",
+      "independent_fee_difference_USD2001": 8.526512829121202e-14,
+      "role": "historical_offline_export_not_new_simulation"
+    },
+    {
+      "path": "E:\\hospital_ies_v30_20261027\\release_acceptance\\readonly01\\historical_exports\\m29s01_03_tower_summer_normal_C_H2_current_service_bridge",
+      "producer": "8926dfb7a1632d98b71b0692c6e37df9f4a61855",
+      "independent_fee_difference_USD2001": 0.0,
+      "role": "historical_offline_export_not_new_simulation"
+    },
+    {
+      "path": "E:\\hospital_ies_v30_20261027\\release_acceptance\\readonly01\\historical_exports\\m29s01_04_tower_summer_fault_C_H2_current_service_bridge",
+      "producer": "8926dfb7a1632d98b71b0692c6e37df9f4a61855",
+      "independent_fee_difference_USD2001": 0.0,
+      "role": "historical_offline_export_not_new_simulation"
+    },
+    {
+      "path": "E:\\hospital_ies_v30_20261027\\release_acceptance\\readonly01\\historical_exports\\m29s01_05_heat_pump_winter_normal_C_H0_current_service_bridge",
+      "producer": "8926dfb7a1632d98b71b0692c6e37df9f4a61855",
+      "independent_fee_difference_USD2001": 0.0,
+      "role": "historical_offline_export_not_new_simulation"
+    },
+    {
+      "path": "E:\\hospital_ies_v30_20261027\\release_acceptance\\readonly01\\historical_exports\\m29s01_06_heat_pump_winter_fault_C_H0_current_service_bridge",
+      "producer": "8926dfb7a1632d98b71b0692c6e37df9f4a61855",
+      "independent_fee_difference_USD2001": 0.0,
+      "role": "historical_offline_export_not_new_simulation"
+    },
+    {
+      "path": "E:\\hospital_ies_v30_20261027\\release_acceptance\\readonly01\\historical_exports\\m29s01_07_grid_winter_M_normal_M_H1_current_service_bridge",
+      "producer": "8926dfb7a1632d98b71b0692c6e37df9f4a61855",
+      "independent_fee_difference_USD2001": 0.0,
+      "role": "historical_offline_export_not_new_simulation"
+    }
+  ],
+  "reference": {
+    "normal_and_grid_actual_180_reviewed": true,
+    "tower_actual_replayed": false,
+    "full_continuous_or_storage_plan_replayed": false,
+    "new_simulations": 0,
+    "new_solver_calls": 0
+  },
+  "scientific_scope": "Read-only re-export/recompute of saved native evidence; no new physical or author-software replication",
+  "finished_utc": "2026-10-27T10:32:26.365271+00:00"
+}

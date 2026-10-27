@@ -1,0 +1,397 @@
+{
+  "schema": "hospital_ies.v31.final_static_packaging_QA.v1",
+  "created_utc": "2026-10-27T12:55:28.007842+00:00",
+  "status": "passed",
+  "issues": [],
+  "archive": {
+    "path": "E:\\hospital_ies_v31_20261027\\Hospital_IES_V31_Simple_Preparation_Closeout_20261027.zip",
+    "bytes": 24246025,
+    "sha256": "a36105a82be48b6ec2815928472bd1242111370af0bb3d3e2591133375d848b3",
+    "members": 1166
+  },
+  "checks": [
+    {
+      "name": "ZIP_size_and_members",
+      "passed": true,
+      "bytes": 24246025,
+      "members": 1166
+    },
+    {
+      "name": "safe_unique_members",
+      "passed": true,
+      "unsafe": [],
+      "case_aliases": [],
+      "links": []
+    },
+    {
+      "name": "MANIFEST_matches_central_directory",
+      "passed": true,
+      "manifest_files": 1165,
+      "missing": [],
+      "extra": [],
+      "size_mismatches": []
+    },
+    {
+      "name": "P01_864_sources_36_inputs_match_ZIP_and_extracted_project",
+      "passed": true,
+      "source_count": 864,
+      "input_count": 36,
+      "mismatches": [],
+      "extracted_project_mismatches": [],
+      "producer": "f009bdb66d5b9d53f1ff2331f2dc58404c2d056b",
+      "source_sha256": "e4c740329fddcddae9e729acc24e6149d1d873e89783e0ef310e3623f604a6fa",
+      "input_sha256": "f414d21fc55d5a63282435b9bed9a1c8c289a049f24507f953fb86162fb41d15"
+    },
+    {
+      "name": "original_858_and_36_unchanged_only6_added",
+      "passed": true,
+      "added": [
+        "configs/model_closeout_v31/cases.json",
+        "tests/test_v31_preparation.py",
+        "tools/model_closeout_v31/__init__.py",
+        "tools/model_closeout_v31/environment.py",
+        "tools/model_closeout_v31/rules.py",
+        "tools/model_closeout_v31/validation.py"
+      ],
+      "old_producer": "3252727135645037cedc57ebc188a48d2aa34ccb",
+      "new_producer": "f009bdb66d5b9d53f1ff2331f2dc58404c2d056b"
+    },
+    {
+      "name": "freeze_aggregate_digests",
+      "passed": true
+    },
+    {
+      "name": "critical_materials_present",
+      "passed": true,
+      "required_count": 28,
+      "missing": []
+    },
+    {
+      "name": "main_table_has12_records",
+      "passed": true,
+      "rows": 12,
+      "columns": [
+        "id",
+        "context",
+        "mode",
+        "method",
+        "evidence_role",
+        "status",
+        "complete",
+        "observed_until_minute",
+        "unknown_tail_minutes",
+        "producer",
+        "producer_source_sha256",
+        "physical_patch_id",
+        "P0_e_requested_kWh",
+        "P0_e_delivered_kWh",
+        "P0_e_active_cut_kWh",
+        "P0_e_connected_unserved_kWh",
+        "P0_e_ENS_kWh",
+        "P0_e_material_minutes",
+        "P0_e_recovery_status",
+        "P0_e_recovery_absolute_minute",
+        "P0_e_recovery_confirmation_minute",
+        "P0_h_requested_kWh",
+        "P0_h_delivered_kWh",
+        "P0_h_active_cut_kWh",
+        "P0_h_connected_unserved_kWh",
+        "P0_h_ENS_kWh",
+        "P0_h_material_minutes",
+        "P0_h_recovery_status",
+        "P0_h_recovery_absolute_minute",
+        "P0_h_recovery_confirmation_minute",
+        "P0_c_requested_kWh",
+        "P0_c_delivered_kWh",
+        "P0_c_active_cut_kWh",
+        "P0_c_connected_unserved_kWh",
+        "P0_c_ENS_kWh",
+        "P0_c_material_minutes",
+        "P0_c_recovery_status",
+        "P0_c_recovery_absolute_minute",
+        "P0_c_recovery_confirmation_minute",
+        "P1_e_requested_kWh",
+        "P1_e_delivered_kWh",
+        "P1_e_active_cut_kWh",
+        "P1_e_connected_unserved_kWh",
+        "P1_e_ENS_kWh",
+        "P1_e_material_minutes",
+        "P1_e_recovery_status",
+        "P1_e_recovery_absolute_minute",
+        "P1_e_recovery_confirmation_minute",
+        "P1_h_requested_kWh",
+        "P1_h_delivered_kWh",
+        "P1_h_active_cut_kWh",
+        "P1_h_connected_unserved_kWh",
+        "P1_h_ENS_kWh",
+        "P1_h_material_minutes",
+        "P1_h_recovery_status",
+        "P1_h_recovery_absolute_minute",
+        "P1_h_recovery_confirmation_minute",
+        "P1_c_requested_kWh",
+        "P1_c_delivered_kWh",
+        "P1_c_active_cut_kWh",
+        "P1_c_connected_unserved_kWh",
+        "P1_c_ENS_kWh",
+        "P1_c_material_minutes",
+        "P1_c_recovery_status",
+        "P1_c_recovery_absolute_minute",
+        "P1_c_recovery_confirmation_minute",
+        "P2_e_requested_kWh",
+        "P2_e_delivered_kWh",
+        "P2_e_active_cut_kWh",
+        "P2_e_connected_unserved_kWh",
+        "P2_e_ENS_kWh",
+        "P2_e_material_minutes",
+        "P2_e_recovery_status",
+        "P2_e_recovery_absolute_minute",
+        "P2_e_recovery_confirmation_minute",
+        "P2_h_requested_kWh",
+        "P2_h_delivered_kWh",
+        "P2_h_active_cut_kWh",
+        "P2_h_connected_unserved_kWh",
+        "P2_h_ENS_kWh",
+        "P2_h_material_minutes",
+        "P2_h_recovery_status",
+        "P2_h_recovery_absolute_minute",
+        "P2_h_recovery_confirmation_minute",
+        "P2_c_requested_kWh",
+        "P2_c_delivered_kWh",
+        "P2_c_active_cut_kWh",
+        "P2_c_connected_unserved_kWh",
+        "P2_c_ENS_kWh",
+        "P2_c_material_minutes",
+        "P2_c_recovery_status",
+        "P2_c_recovery_absolute_minute",
+        "P2_c_recovery_confirmation_minute",
+        "P3_e_requested_kWh",
+        "P3_e_delivered_kWh",
+        "P3_e_active_cut_kWh",
+        "P3_e_connected_unserved_kWh",
+        "P3_e_ENS_kWh",
+        "P3_e_material_minutes",
+        "P3_e_recovery_status",
+        "P3_e_recovery_absolute_minute",
+        "P3_e_recovery_confirmation_minute",
+        "P3_h_requested_kWh",
+        "P3_h_delivered_kWh",
+        "P3_h_active_cut_kWh",
+        "P3_h_connected_unserved_kWh",
+        "P3_h_ENS_kWh",
+        "P3_h_material_minutes",
+        "P3_h_recovery_status",
+        "P3_h_recovery_absolute_minute",
+        "P3_h_recovery_confirmation_minute",
+        "P3_c_requested_kWh",
+        "P3_c_delivered_kWh",
+        "P3_c_active_cut_kWh",
+        "P3_c_connected_unserved_kWh",
+        "P3_c_ENS_kWh",
+        "P3_c_material_minutes",
+        "P3_c_recovery_status",
+        "P3_c_recovery_absolute_minute",
+        "P3_c_recovery_confirmation_minute",
+        "grid_kWh_e",
+        "grid_fee",
+        "GT_fuel_MMBtu",
+        "boiler_fuel_MMBtu",
+        "DG_shaft_kWh",
+        "DG_electric_kWh",
+        "initial_preparation_grid_kWh_e",
+        "initial_preparation_fee_USD2001",
+        "actual_fee_USD2001",
+        "raw_source_arithmetic",
+        "cost_USD_step_used",
+        "unknown_tail_fee_USD2001",
+        "DG_chemical_fuel",
+        "ups_initial_stock_kWh",
+        "ups_final_stock_kWh",
+        "ups_charged_input_kWh",
+        "ups_discharged_kWh",
+        "ups_standing_loss_kWh",
+        "ups_conversion_loss_kWh",
+        "ups_balance_residual_kWh",
+        "ups_carrier",
+        "ups_unit",
+        "ups_preparation_input_kWh",
+        "cold_store_initial_stock_kWh",
+        "cold_store_final_stock_kWh",
+        "cold_store_charged_input_kWh",
+        "cold_store_discharged_kWh",
+        "cold_store_standing_loss_kWh",
+        "cold_store_conversion_loss_kWh",
+        "cold_store_balance_residual_kWh",
+        "cold_store_carrier",
+        "cold_store_unit",
+        "cold_store_preparation_input_kWh",
+        "DG_remaining_shaft_budget_kWh",
+        "prep_0_60_grid_kWh_e",
+        "prep_0_60_grid_fee",
+        "prep_0_60_GT_fuel_MMBtu",
+        "prep_0_60_boiler_fuel_MMBtu",
+        "prep_0_60_DG_shaft_kWh",
+        "prep_0_60_DG_electric_kWh",
+        "prep_0_60_initial_preparation_grid_kWh_e",
+        "prep_0_60_initial_preparation_fee_USD2001",
+        "prep_0_60_actual_fee_USD2001",
+        "prep_0_60_raw_source_arithmetic",
+        "prep_0_60_cost_USD_step_used",
+        "prep_0_60_unknown_tail_fee_USD2001",
+        "prep_0_60_DG_chemical_fuel",
+        "terminal_GT_summary",
+        "terminal_queue_pointer"
+      ]
+    },
+    {
+      "name": "report_and_table_copies_equal",
+      "passed": true,
+      "pairs": [
+        {
+          "left": "ENGINEERING_REPORT_ZH.md",
+          "right": "project/docs/v31/ENGINEERING_REPORT_ZH.md",
+          "sha256": "8e98aebb9a871fa75ae80114aa8f91816c4e07342948d84df986e709476aca1c",
+          "equal": true
+        },
+        {
+          "left": "MAIN_RESULT_TABLE.csv",
+          "right": "project/docs/v31/MAIN_RESULT_TABLE.csv",
+          "sha256": "35812a9075312581ebde4388f9e82135572931252eb75b11dda99920b56297e2",
+          "equal": true
+        },
+        {
+          "left": "MAIN_RESULT_TABLE.csv",
+          "right": "data/evaluation/final01/MAIN_RESULT_TABLE.csv",
+          "sha256": "35812a9075312581ebde4388f9e82135572931252eb75b11dda99920b56297e2",
+          "equal": true
+        }
+      ],
+      "note": "Root engineering interpretation is intentionally longer than the included final01 arithmetic audit report."
+    },
+    {
+      "name": "PORTABLE_only_location_remap",
+      "passed": true,
+      "run_count": 12,
+      "path_failures": [],
+      "scientific_fields_unchanged": true
+    },
+    {
+      "name": "rules_configuration_freezes_and_GT3_lock",
+      "passed": true,
+      "rules": {
+        "M_cooling_permission": {
+          "display_name": "M 加制冷许可准备",
+          "base_alias": "M",
+          "config_delta": {
+            "cooling_preparation": true
+          },
+          "steam_rule_enabled": false
+        },
+        "M_steam_permission": {
+          "display_name": "M 加额外备用供汽许可",
+          "base_alias": "M",
+          "config_delta": {},
+          "steam_rule_enabled": true,
+          "rule": "After common preparation, raise boiler queued permission to max(common permission, equal-rated boiler total times currently observable availabilities/3); no more than total nameplate",
+          "input_fields": [
+            "availability_BOILER_1",
+            "availability_BOILER_2",
+            "availability_BOILER_3"
+          ],
+          "fixed_parameter": "original plant.boiler_steam_lbph",
+          "no_scenario_or_future_trigger": true,
+          "ordinary_queue_and_physical_execution_unchanged": true
+        }
+      },
+      "fixed_clock": {
+        "preparation": [
+          0,
+          60
+        ],
+        "disturbance": [
+          60,
+          120
+        ],
+        "recovery": [
+          120,
+          180
+        ]
+      }
+    },
+    {
+      "name": "final_delivery_tools_READY_and_all31_members",
+      "passed": true,
+      "required": 31,
+      "mismatches": []
+    },
+    {
+      "name": "baseline_READY_members",
+      "passed": true,
+      "required": 20,
+      "mismatches": []
+    },
+    {
+      "name": "actual_test_and_failure_logs_retained",
+      "passed": true,
+      "checked_files": 76,
+      "missing_or_different": []
+    },
+    {
+      "name": "single_native_container_and_map_targets",
+      "passed": true,
+      "containers": [
+        {
+          "name": "EVIDENCE_BLOBS_V31.tar.xz",
+          "sha256": "060d3aa50bc383af513aa928278dbcbc04eb4d76e9695ba4e57837ed73201d48",
+          "bytes": 8049280,
+          "format": "tar.xz",
+          "role": "single",
+          "payload_count": 5167,
+          "raw_bytes": 2315462583,
+          "xz_preset": 9
+        }
+      ],
+      "target_counts": {
+        "reused_v30": 4970,
+        "new_v31": 1991
+      },
+      "mismatches": [],
+      "independent_full_restore_not_repeated": true
+    },
+    {
+      "name": "restore_tools_equal_frozen_versions",
+      "passed": true,
+      "hashes": {
+        "transport_tools/restore_all.py": "fb67d9d53abb842dbf614813c65abf79a07b5b7b8f50162d1ab2f982c2b91e85",
+        "data/delivery_tools/restore_all.py": "fb67d9d53abb842dbf614813c65abf79a07b5b7b8f50162d1ab2f982c2b91e85",
+        "transport_tools/transport_common.py": "f7fd0c5541213fd3ce91ef038152627fa41e08f9765c90b32c86bd3d4fee5e88",
+        "data/delivery_tools/transport_common.py": "f7fd0c5541213fd3ce91ef038152627fa41e08f9765c90b32c86bd3d4fee5e88"
+      }
+    },
+    {
+      "name": "default_review_driver_portable_and_readonly_static",
+      "passed": true,
+      "packaged_audit_support": [
+        "data/audit_support/audit_campaign.py",
+        "data/audit_support/FROZEN_ACCOUNTING.json"
+      ],
+      "runtime_execution_not_repeated": true,
+      "scope": "Static source inspection, not a second actual review run"
+    },
+    {
+      "name": "README_dependencies_and_execution_identity_explicit",
+      "passed": true,
+      "dependencies_disclosed": "Python/scientific packages; Gurobi for explicit simulation; exact gzip zlib1.2.12; no distributed license"
+    },
+    {
+      "name": "final_ZIP_SHA_and_stability",
+      "passed": true,
+      "sha256": "a36105a82be48b6ec2815928472bd1242111370af0bb3d3e2591133375d848b3"
+    }
+  ],
+  "new_model_runs": 0,
+  "new_solver_calls": 0,
+  "restored_native_runs_scanned": false,
+  "full_CRC_repeated": false,
+  "ZIP_or_scientific_source_changed": false,
+  "full_independent_restore_and_audit": "Handled separately by root; this check does not replace its receipt"
+}

@@ -1,0 +1,44 @@
+{
+  "old_source_count": 843,
+  "new_source_count": 857,
+  "unchanged_original_source_count": 839,
+  "changed_original_source": {
+    "pytest.ini": {
+      "old_sha256": "4e07c1f03e80e5def793ad40e051f3c3a07d9d43efdc368ef77e27ace8759f1e",
+      "new_sha256": "f9f74d4965a90ef803a08ed6f7caccc67ef0ed1b3010613925770b1c45f8c031"
+    },
+    "tools/model_closure_v22/validation.py": {
+      "old_sha256": "263e33aff7c51cd610686b1390c5df174629de2d67c436c6156ba20bc91fa125",
+      "new_sha256": "96f3dd71236bf935e88153398b164f2cad78ae65ce3593502872f6cb8a9b11c4"
+    },
+    "tools/model_correctness_v23/validation.py": {
+      "old_sha256": "1b91fe3fd37989d76b2dc75fe2623358e5d6366f7d38cf76f64de0d8b975e94e",
+      "new_sha256": "8329b0537dbc0463c5375a1290c1b198ef81d0d68c9f7bbfa0e9fe15e5092ac9"
+    },
+    "tools/sci_engineering/runner.py": {
+      "old_sha256": "8c9192f25e8cbb733d726963688c68b13a5fc96701a748c05f8dcd39b0c38f2d",
+      "new_sha256": "8dd6b8c49dcb3d836758f2f1d2f75f6c23d031f64afd6b15b4dfabdee30d26c6"
+    }
+  },
+  "new_source_files": {
+    "configs/model_review_v30/cases.json": "e26e72aa5a1bc9673554c4ce5da72e054b80c0da0ce0cb85a7afe0129571ce32",
+    "configs/model_review_v30/tiny_reference_fixture.json": "a8d7a41c2ce3059cbe0668932e8d4de700dc25a46129605e537685e8957f20ee",
+    "tests/test_v30_evaluation.py": "a2fb81f148ce192bfd0b3c533a6775f151280699dbcbf5fcc310c2e0226e27a6",
+    "tests/test_v30_offline.py": "70f68b271d39e98d64dfdab8be71ae242e728c182a84d498c53d259f05ed91e4",
+    "tests/test_v30_public.py": "83b3f2d81d72cada6e878636d989ea9839a2cb780065fe03c170d4234e02a53e",
+    "tests/test_v30_reference.py": "26afdd49e5295060efe37d676c74f342ff4980345c181fc994a958d4191ceb56",
+    "tests/test_v30_terminal.py": "a518b69c1e01d4218a7c0c47b9ca3034631a08a8a32448a0aece45f59cf3ef57",
+    "tools/model_review_v30/__init__.py": "521c3437e5311fa43df753865bd2f9f649ce4f9beb130e7ee453e23cb0914154",
+    "tools/model_review_v30/environment.py": "2fb04f9d1f53a35cbaada4d36e30ea81110e9ac0cccbd0094e0bf289da332b03",
+    "tools/model_review_v30/evaluation.py": "15c974a35b7ad4d9ab60ac663a93c3f76348a06735db2631a41e362f6716cb08",
+    "tools/model_review_v30/offline.py": "cb2a3990231a8567226aad006e67a4c7f7b243c5d83d8ea9bf59f0e22e30f18d",
+    "tools/model_review_v30/reference.py": "cd384740f600bfc93a7c2a151b73346900d381d9f3ee21d4af02e6d5c737d617",
+    "tools/model_review_v30/terminal.py": "a60d3288ef7fe89a620e1207a408b908283d7c0e26f84e2f8351aef42c0e1679",
+    "tools/model_review_v30/validation.py": "837de981bbd2c10255a34c57a90bf6f50380ae0c573fc313e15174987c9c4082"
+  },
+  "all36_original_inputs_byte_identical": true,
+  "physical_state_transition_integrators_unchanged": true,
+  "original_C_M_policy_planner_files_unchanged": true,
+  "changes_are_evaluation_actual_fee_or_explicit_controller_entry_or_failure_export_and_tests": true,
+  "normal_reuse_compatibility": "N01 and D01 differ in output hooks and opt-in reference factory/error handling; C/M defaults use original policies/physics. Independent actual prefault histories still require audit."
+}

@@ -1,0 +1,111 @@
+{
+  "created_utc": "2026-10-27T12:15:56.103450+00:00",
+  "project": "D:\\hospital_ies_v22_20261025",
+  "scope": "read_only_source_and_saved_result_no_environment_no_solver",
+  "source_files": [
+    {
+      "relative_path": "src/hospital_ies/data_contract.py",
+      "bytes": 13944,
+      "sha256": "335cc14a0d93e0b2f5a1ef5596e6ed78052faeacb74965da835d56460c72f5bb"
+    },
+    {
+      "relative_path": "src/hospital_ies/model.py",
+      "bytes": 12378,
+      "sha256": "096cdd42117e24024a0096d19c30275f95adce63e4427da4e3569b48969b4804"
+    },
+    {
+      "relative_path": "tools/integrated_learning/policies.py",
+      "bytes": 5509,
+      "sha256": "eb1d78bdf7be71686d0e8cf189cd09068ecac232576aa2399867234232e562fe"
+    },
+    {
+      "relative_path": "tools/sci_engineering/policy.py",
+      "bytes": 20571,
+      "sha256": "8bf43d0d5fb3f5e609e84b8ecf6cf1e037bd1439f7f49a7d119f614ded66efbe"
+    },
+    {
+      "relative_path": "tools/sci_engineering/environment.py",
+      "bytes": 27671,
+      "sha256": "b5869d5b11eb58699263b2179514bd262593eeadd7b555ff2bb6b449beccc827"
+    },
+    {
+      "relative_path": "tools/sci_engineering/planner.py",
+      "bytes": 160170,
+      "sha256": "2aca6fbd95ebc15f82d9d98b364d35a5bde9585a97be6e313f25973662d58b16"
+    },
+    {
+      "relative_path": "tools/model_closure_v22/policy.py",
+      "bytes": 3252,
+      "sha256": "f77e497d7d5fa7708305d3cb2f01c29ca254bb6aec26f465d2c4cf46ad976b8b"
+    },
+    {
+      "relative_path": "tools/model_closure_v22/validation.py",
+      "bytes": 29349,
+      "sha256": "96f3dd71236bf935e88153398b164f2cad78ae65ce3593502872f6cb8a9b11c4"
+    },
+    {
+      "relative_path": "tools/model_correctness_v23/policy.py",
+      "bytes": 1139,
+      "sha256": "b943f10398dede63e2a4f6fb3c970a2a456d060ca866f599d50018a43956d144"
+    },
+    {
+      "relative_path": "tools/model_correctness_v23/environment.py",
+      "bytes": 22824,
+      "sha256": "6db840b548680f1ba942c23d4ed825d67a52afa7b39bc6ff2894e29af5de0d30"
+    },
+    {
+      "relative_path": "tools/model_correctness_v23/validation.py",
+      "bytes": 26086,
+      "sha256": "8329b0537dbc0463c5375a1290c1b198ef81d0d68c9f7bbfa0e9fe15e5092ac9"
+    },
+    {
+      "relative_path": "tools/model_correction_v25/reserve.py",
+      "bytes": 13421,
+      "sha256": "6754608e317f94fae2f40516dbca033c6be869a01edd8cd257ac1753179f3dba"
+    },
+    {
+      "relative_path": "tools/model_correction_v25/environment.py",
+      "bytes": 3836,
+      "sha256": "3a18fbc5f9347abe3e511300ee2e0cce722d619e2665cf6f43b29e32b5e7026d"
+    },
+    {
+      "relative_path": "tools/model_review_v27/validation.py",
+      "bytes": 6398,
+      "sha256": "18df106cdf20adcc08de5d7ad3b3a3d0f9dea21a39daeaf690e76164901f9623"
+    },
+    {
+      "relative_path": "tools/model_review_v28/validation.py",
+      "bytes": 6044,
+      "sha256": "e001fe614e6a8750ddda72f5123fb129225394f95e63ea059eda0b625ea2ab19"
+    },
+    {
+      "relative_path": "tools/model_review_v29/validation.py",
+      "bytes": 7571,
+      "sha256": "95c4f5087d1167ea8851332859576f962fd2f81d4ff0627f6d2b0d7ae4a0a4da"
+    },
+    {
+      "relative_path": "tools/model_review_v30/environment.py",
+      "bytes": 1418,
+      "sha256": "e43b04681f6c6fe1fa8d937cbfe5383ec52cdb5c2410336e97dcf8562c40d4a8"
+    },
+    {
+      "relative_path": "tools/model_review_v30/validation.py",
+      "bytes": 5742,
+      "sha256": "837de981bbd2c10255a34c57a90bf6f50380ae0c573fc313e15174987c9c4082"
+    }
+  ],
+  "other_inputs": [
+    {
+      "path": "E:\\hospital_ies_v30_20261027\\runs\\n02_b07_L4_GT_ER_normal_M\\RESULT.json",
+      "bytes": 4415958,
+      "sha256": "480206349e274cebb7dad8ec0d131ce9c85dc3232fa335f6a8c28f734d6ced45"
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\.codex\\attachments\\88c814dc-c968-4c4a-8e66-aca2561b33b1\\已粘贴的文本.txt",
+      "bytes": 15427,
+      "sha256": "7c2cff0df62d64e0dd2c518f743f1a68942e6bccfbd73f9b0c7faf81e7e6203c"
+    }
+  ],
+  "actual_probe_receipt": "INTERFACE_PROBES_RECEIPT.json",
+  "metadata_generation_note": "First metadata-only command failed before writing outputs because PowerShell pipe replaced non-ASCII attachment basename with question marks; folder glob used on retry. No production command was involved."
+}

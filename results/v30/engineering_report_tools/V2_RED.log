@@ -1,0 +1,65 @@
+FFFFFF
+======================================================================
+FAIL: test_actual_b02_one_ulp_pairs_are_roundoff_labels_without_value_changes (__main__.PresentationTests)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "E:\hospital_ies_v30_20261027\engineering_report_tools\test_presentation_v2.py", line 19, in test_actual_b02_one_ulp_pairs_are_roundoff_labels_without_value_changes
+    a=api()
+  File "E:\hospital_ies_v30_20261027\engineering_report_tools\test_presentation_v2.py", line 12, in api
+    assert path.is_file(),'v2 presentation processor missing'
+AssertionError: v2 presentation processor missing
+
+======================================================================
+FAIL: test_actual_equal_b02_P0_heat_remains_same (__main__.PresentationTests)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "E:\hospital_ies_v30_20261027\engineering_report_tools\test_presentation_v2.py", line 27, in test_actual_equal_b02_P0_heat_remains_same
+    a=api();value=22.409228565359957
+  File "E:\hospital_ies_v30_20261027\engineering_report_tools\test_presentation_v2.py", line 12, in api
+    assert path.is_file(),'v2 presentation processor missing'
+AssertionError: v2 presentation processor missing
+
+======================================================================
+FAIL: test_different_material_outcome_is_not_hidden_by_ulp_label (__main__.PresentationTests)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "E:\hospital_ies_v30_20261027\engineering_report_tools\test_presentation_v2.py", line 39, in test_different_material_outcome_is_not_hidden_by_ulp_label
+    a=api();value=52.88374543597887
+  File "E:\hospital_ies_v30_20261027\engineering_report_tools\test_presentation_v2.py", line 12, in api
+    assert path.is_file(),'v2 presentation processor missing'
+AssertionError: v2 presentation processor missing
+
+======================================================================
+FAIL: test_larger_true_difference_keeps_original_sign (__main__.PresentationTests)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "E:\hospital_ies_v30_20261027\engineering_report_tools\test_presentation_v2.py", line 34, in test_larger_true_difference_keeps_original_sign
+    a=api();self.assertEqual(a.compare_cell_v2(3.692,8.790,15.,15.)['classification'],'C_ENS_lower')
+  File "E:\hospital_ies_v30_20261027\engineering_report_tools\test_presentation_v2.py", line 12, in api
+    assert path.is_file(),'v2 presentation processor missing'
+AssertionError: v2 presentation processor missing
+
+======================================================================
+FAIL: test_nonmaterial_raw_difference_is_not_an_advantage (__main__.PresentationTests)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "E:\hospital_ies_v30_20261027\engineering_report_tools\test_presentation_v2.py", line 44, in test_nonmaterial_raw_difference_is_not_an_advantage
+    a=api();row=a.compare_cell_v2(1e-12,2e-12,0.,0.)
+  File "E:\hospital_ies_v30_20261027\engineering_report_tools\test_presentation_v2.py", line 12, in api
+    assert path.is_file(),'v2 presentation processor missing'
+AssertionError: v2 presentation processor missing
+
+======================================================================
+FAIL: test_unknown_materiality_is_not_treated_as_zero (__main__.PresentationTests)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "E:\hospital_ies_v30_20261027\engineering_report_tools\test_presentation_v2.py", line 49, in test_unknown_materiality_is_not_treated_as_zero
+    a=api();self.assertEqual(a.compare_cell_v2(1.,2.,None,None)['classification'],'materiality_unknown')
+  File "E:\hospital_ies_v30_20261027\engineering_report_tools\test_presentation_v2.py", line 12, in api
+    assert path.is_file(),'v2 presentation processor missing'
+AssertionError: v2 presentation processor missing
+
+----------------------------------------------------------------------
+Ran 6 tests in 0.001s
+
+FAILED (failures=6)

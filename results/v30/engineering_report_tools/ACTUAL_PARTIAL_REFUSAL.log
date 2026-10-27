@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "E:\hospital_ies_v30_20261027\engineering_report_tools\build_engineering_report.py", line 381, in <module>
+    if __name__=='__main__':raise SystemExit(main())
+  File "E:\hospital_ies_v30_20261027\engineering_report_tools\build_engineering_report.py", line 378, in main
+    args=parser.parse_args(argv);result=build_report(args.root,args.audit,args.output);print(json.dumps(result));return 0
+  File "E:\hospital_ies_v30_20261027\engineering_report_tools\build_engineering_report.py", line 318, in build_report
+    if audit.get('final_matrix_complete_and_clean') is not True:raise ValueError('Final matrix gate is not complete and clean; no report output created')
+ValueError: Final matrix gate is not complete and clean; no report output created

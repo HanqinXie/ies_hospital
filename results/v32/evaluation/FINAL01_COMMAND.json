@@ -1,0 +1,21 @@
+{
+  "command": [
+    "python",
+    "-B",
+    "E:\\hospital_ies_v32_20261027\\evaluation\\audit_v32.py",
+    "--root",
+    "E:\\hospital_ies_v32_20261027",
+    "--manifest",
+    "EXPERIMENT_REGISTRATION.json",
+    "--support",
+    "audit_support",
+    "--project",
+    "D:/hospital_ies_v22_20261025",
+    "--output",
+    "E:\\hospital_ies_v32_20261027\\evaluation\\final01"
+  ],
+  "exit_code": 1,
+  "stdout": "FINAL01.stdout.log",
+  "stderr": "FINAL01.stderr.log",
+  "role": "actual six-record read-only audit; no model/solver calls"
+}

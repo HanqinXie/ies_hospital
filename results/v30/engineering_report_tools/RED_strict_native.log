@@ -1,0 +1,32 @@
+..F.F...F
+======================================================================
+FAIL: test_exact32_source_patch_and_internal_checks_are_required (__main__.ReportTests)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "E:\hospital_ies_v30_20261027\engineering_report_tools\test_report.py", line 79, in test_exact32_source_patch_and_internal_checks_are_required
+    with self.assertRaises(ValueError):a.validate_final_gate(broken,freeze)
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_native_service_crosscheck_rejects_audit_values_that_disagree (__main__.ReportTests)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "E:\hospital_ies_v30_20261027\engineering_report_tools\test_report.py", line 116, in test_native_service_crosscheck_rejects_audit_values_that_disagree
+    a=api();self.assertTrue(hasattr(a,'check_native_service'),'Native service consistency check missing')
+AssertionError: False is not true : Native service consistency check missing
+
+======================================================================
+FAIL: test_zero_pair_same_and_tiny_delta_is_not_an_advantage_claim (__main__.ReportTests)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "E:\hospital_ies_v30_20261027\engineering_report_tools\test_report.py", line 113, in test_zero_pair_same_and_tiny_delta_is_not_an_advantage_claim
+    self.assertEqual(a.compare_cell(1.,2.,None,None)['classification'],'materiality_unknown')
+AssertionError: 'raw_numerical_difference_without_material_interruption' != 'materiality_unknown'
+- raw_numerical_difference_without_material_interruption
++ materiality_unknown
+
+
+----------------------------------------------------------------------
+Ran 9 tests in 0.049s
+
+FAILED (failures=3)

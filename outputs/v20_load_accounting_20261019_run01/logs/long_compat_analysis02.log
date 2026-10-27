@@ -1,8 +1,0 @@
-Traceback (most recent call last):
-  File "D:\hospital_ies_v20_20261019\outputs\v20_load_accounting_20261019_run01\review\long_compat_analysis01\analyze.py", line 245, in <module>
-    if __name__=='__main__':main()
-  File "D:\hospital_ies_v20_20261019\outputs\v20_load_accounting_20261019_run01\review\long_compat_analysis01\analyze.py", line 218, in main
-    for r in csv.DictReader(stream):
-  File "C:\Users\HanqinXie\AppData\Local\Programs\Python\Python310\lib\csv.py", line 111, in __next__
-    row = next(self.reader)
-_csv.Error: field larger than field limit (131072)

@@ -1,0 +1,80 @@
+{
+  "interfaces": [
+    {
+      "file": "src/hospital_ies/control_env.py",
+      "line": 61,
+      "name": "reset",
+      "frozen": true
+    },
+    {
+      "file": "src/hospital_ies/control_env.py",
+      "line": 123,
+      "name": "step",
+      "frozen": true
+    },
+    {
+      "file": "src/hospital_ies/pipeline.py",
+      "line": 158,
+      "name": "run",
+      "frozen": true
+    },
+    {
+      "file": "tools/model_closeout_v31/environment.py",
+      "line": 34,
+      "name": "create",
+      "frozen": true
+    },
+    {
+      "file": "tools/model_closure_v22/environment.py",
+      "line": 424,
+      "name": "run_episode",
+      "frozen": true
+    },
+    {
+      "file": "tools/model_closure_v22/environment.py",
+      "line": 385,
+      "name": "reset",
+      "frozen": true
+    },
+    {
+      "file": "tools/model_closure_v22/recovery_validation.py",
+      "line": 29,
+      "name": "run",
+      "frozen": true
+    },
+    {
+      "file": "tools/model_review_v27/environment.py",
+      "line": 75,
+      "name": "reset",
+      "frozen": true
+    },
+    {
+      "file": "tools/model_review_v28/environment.py",
+      "line": 33,
+      "name": "reset",
+      "frozen": true
+    },
+    {
+      "file": "tools/model_review_v30/environment.py",
+      "line": 7,
+      "name": "with_terminal",
+      "frozen": true
+    },
+    {
+      "file": "tools/model_review_v30/environment.py",
+      "line": 9,
+      "name": "create",
+      "frozen": true
+    }
+  ],
+  "fixture_paths": [
+    "tests/fixtures/p1b_fixed_scenarios.json",
+    "tests/fixtures/p2c_core_lex_counterexamples.json",
+    "tests/fixtures/p2c_lex_counterexamples.json",
+    "tests/fixtures/p2c_replay_new4_counterexamples.json",
+    "tests/fixtures/sci_heat_pump_start_surplus.json",
+    "tests/fixtures/v23_winter470_current_port.json",
+    "tests/fixtures/v24_source01_cold_modes_snapshot.py"
+  ],
+  "all_existing_tests_and_fixtures_retained": true
+}

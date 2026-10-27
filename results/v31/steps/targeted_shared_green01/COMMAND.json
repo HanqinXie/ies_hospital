@@ -1,0 +1,30 @@
+{
+  "command": [
+    "python",
+    "-B",
+    "-m",
+    "pytest",
+    "-q",
+    "tests/test_v31_preparation.py",
+    "tests/test_v30_public.py",
+    "tests/test_v30_terminal.py",
+    "tests/test_v30_start_readiness.py",
+    "tests/test_sci_policy.py",
+    "tests/test_v23_validation.py",
+    "--basetemp",
+    "E:/hospital_ies_v31_20261027/temp/targeted_shared_green01"
+  ],
+  "cwd": "D:\\hospital_ies_v22_20261025",
+  "started_utc": "2026-10-27T12:16:55.966060+00:00",
+  "selected_environment": {
+    "TEMP": "E:\\hospital_ies_v31_20261027\\temp",
+    "TMP": "E:\\hospital_ies_v31_20261027\\temp",
+    "SCI_SOURCE_ROOT": null,
+    "PYTHONPATH": null,
+    "PYTHONIOENCODING": "utf-8",
+    "PYTHONDONTWRITEBYTECODE": "1"
+  },
+  "exit_code": 0,
+  "elapsed_seconds": 15.0,
+  "finished_utc": "2026-10-27T12:17:10.958303+00:00"
+}

@@ -1,0 +1,688 @@
+{
+  "schema": "hospital_ies.v32.independent_t0_lifecycle_review.v1",
+  "created_utc": "2026-10-27T15:17:59.937008+00:00",
+  "status": "passed",
+  "all_checks_passed": true,
+  "records": [
+    {
+      "branch": "normal",
+      "raw_gzip_sha256": "4cbe81e3a28f29fbbfa1cf9c6f7d0d4b69712dc934cfeb5a3d7e6c73f951153d",
+      "certificate_sha256": "36dbed823fe7d642065c036d0d2fa573db7bbce16e2477154fe0e6c85ca30402",
+      "checks": {
+        "wrapped_reset_state_exactly_matches_certificate": true,
+        "native_before_after_events_consistent": true,
+        "exact_full_reconstruction_matches_first_prestate": true,
+        "exactly_five_reset_to_firstpre_scalar_differences": true,
+        "actual_first_command_generated_and_arrived_at_zero": true,
+        "first_prestate_t0_not_future_or_elapsed": true,
+        "initial_stock_not_added_before_first_interval": true,
+        "boiler_not_free_ready_at_zero": true,
+        "DG_budget_unchanged_by_zero_boundary": true,
+        "common_M23_preparation_stays_conditional_and_queued": true
+      },
+      "reset_vs_firstpre_differences": [
+        {
+          "path": "/auxiliary_request_kW",
+          "reset": 5.864962751269004,
+          "first_pre": 16.10631299673553
+        },
+        {
+          "path": "/disconnected_loads/0/0",
+          "reset": 3.716807240944325e-05,
+          "first_pre": 0.0
+        },
+        {
+          "path": "/disconnected_loads/1/0",
+          "reset": 3.716807240944325e-05,
+          "first_pre": 0.0
+        },
+        {
+          "path": "/disconnected_loads/2/0",
+          "reset": 3.716807240944325e-05,
+          "first_pre": 0.0
+        },
+        {
+          "path": "/disconnected_loads/3/0",
+          "reset": 0.0037168072409443256,
+          "first_pre": 0.0
+        }
+      ],
+      "remaining_reconstruction_differences": [],
+      "event_causal_order": [
+        {
+          "event_id": "core:1",
+          "kind": "engineering_initial_age_assumption",
+          "time_minute": 0.0
+        },
+        {
+          "event_id": "core:2",
+          "kind": "local_diesel_model_initialized",
+          "time_minute": 0.0
+        },
+        {
+          "event_id": "core:3",
+          "kind": "persistent_permissions_initialized",
+          "time_minute": 0.0
+        },
+        {
+          "event_id": "core:4",
+          "kind": "m21_storage_initial_inventory",
+          "time_minute": 0.0
+        },
+        {
+          "event_id": "core:5",
+          "kind": "m22_station_initial_state",
+          "time_minute": 0.0
+        },
+        {
+          "event_id": "core:6",
+          "kind": "disconnected_port_demand_changed",
+          "time_minute": 0.0
+        },
+        {
+          "event_id": "core:7",
+          "kind": "forced_capacity_or_permission_clamp",
+          "time_minute": 0.0
+        },
+        {
+          "event_id": "core:8",
+          "kind": "command_generated",
+          "time_minute": 0.0
+        },
+        {
+          "event_id": "core:9",
+          "kind": "arrived_permissions_replaced",
+          "time_minute": 0.0
+        },
+        {
+          "event_id": "core:10",
+          "kind": "forced_capacity_or_permission_clamp",
+          "time_minute": 0.0
+        },
+        {
+          "event_id": "core:11",
+          "kind": "command_arrived",
+          "time_minute": 0.0
+        },
+        {
+          "event_id": "core:12",
+          "kind": "load_connection_restored",
+          "time_minute": 0.0
+        },
+        {
+          "event_id": "core:13",
+          "kind": "command_executed",
+          "time_minute": 0.0
+        }
+      ],
+      "reconstruction_transitions": [
+        {
+          "event_id": "core:6",
+          "kind": "disconnected_port_demand_changed",
+          "time_minute": 0.0,
+          "before_kW": [
+            [
+              3.716807240944325e-05,
+              0.0,
+              0.0
+            ],
+            [
+              3.716807240944325e-05,
+              0.0,
+              0.0
+            ],
+            [
+              3.716807240944325e-05,
+              0.0,
+              0.0
+            ],
+            [
+              0.0037168072409443256,
+              0.0,
+              0.0
+            ]
+          ],
+          "after_kW": [
+            [
+              3.716807240944325e-05,
+              0.0,
+              0.0
+            ],
+            [
+              3.716807240944325e-05,
+              0.0,
+              0.0
+            ],
+            [
+              3.716807240944324e-05,
+              0.0,
+              0.0
+            ],
+            [
+              0.003716807534596198,
+              0.0,
+              0.0
+            ]
+          ],
+          "reason": "same disconnected contact fractions; exogenous demand change, not reconnection"
+        },
+        {
+          "event_id": "core:12",
+          "kind": "load_connection_restored",
+          "time_minute": 0.0,
+          "command_id": 1,
+          "restored_kW": [
+            [
+              3.716807240944325e-05,
+              0.0,
+              0.0
+            ],
+            [
+              3.716807240944325e-05,
+              0.0,
+              0.0
+            ],
+            [
+              3.716807240944324e-05,
+              0.0,
+              0.0
+            ],
+            [
+              0.003716807534596198,
+              0.0,
+              0.0
+            ]
+          ]
+        },
+        {
+          "event_id": "core:13",
+          "kind": "command_executed",
+          "command_id": 1,
+          "arrival_minute": 0.0,
+          "reason": "revalidated_against_current_capacity_and_ramp",
+          "recomputed_auxiliary_request_kW": 16.10631299673553,
+          "recomputed_cooling_reference_kW": 117.83611369198594
+        }
+      ],
+      "first_segment": {
+        "start": 0.0,
+        "end": 1.0,
+        "command_id": 1,
+        "actual_boiler_steam_lbph": 0.0,
+        "boiler_restart_electric_kW": 0.5,
+        "station": {
+          "boiler_ready": true,
+          "boiler_continuous_power_minutes": 1.0,
+          "diesel_starts_used": 0,
+          "diesel_starts_remaining": 2,
+          "control_autonomy_minutes": 1440.0,
+          "qualification_is_research_assumption": true,
+          "boiler_execution_status": "restart_completed",
+          "boiler_ready_before_actual_interval": false,
+          "boiler_restart_power_supplied": true,
+          "actual_source_electric_kW": 377.5700181870617,
+          "building_UPS_is_station_source": false
+        },
+        "storage": {
+          "ups": {
+            "initial_kWh": 40.0,
+            "final_kWh": 39.99129523353816,
+            "charged_input_kWh": 0.0,
+            "discharged_kWh": 0.008269528138745737,
+            "standing_loss_kWh": 0.0,
+            "conversion_loss_kWh": 0.0004352383230918804,
+            "balance_residual_kWh": 0.0
+          },
+          "cold_store": {
+            "initial_kWh": 0.0,
+            "final_kWh": 0.0,
+            "charged_input_kWh": 0.0,
+            "discharged_kWh": 0.0,
+            "standing_loss_kWh": 0.0,
+            "conversion_loss_kWh": 0.0,
+            "balance_residual_kWh": 0.0
+          }
+        }
+      },
+      "shared_preparation": {
+        "enabled": true,
+        "current_critical_heat_kW": 81.65060360338668,
+        "original_boiler_target_lbph": 0.0,
+        "queued_boiler_ceiling_lbph": 286.4933459767954,
+        "current_extra_recovery_request_kW": 0.0,
+        "queued_extra_converter_headroom_kW": 0.0,
+        "conditional_permission_is_actual_supply": false,
+        "ordinary_queue_and_decision_clock_unchanged": true,
+        "future_repair_information_used": false,
+        "boiler_semantics": "arrived_conditional_ceiling"
+      },
+      "raw_request_boiler_steam_lbph": 0.0,
+      "queued_boiler_steam_lbph": 286.4933459767954,
+      "raw_request_EC_kW": [
+        6.689921610758262,
+        0.0,
+        0.0
+      ],
+      "queued_EC_kW": [
+        53.35463079626801,
+        0.0,
+        0.0
+      ],
+      "fields_ignored": [],
+      "comparison_tolerance": 0.0
+    },
+    {
+      "branch": "grid",
+      "raw_gzip_sha256": "ee7d00877bc4ccf1b761f3574a669d4a6bfb5981cf5401d8790a01073d2a9fa5",
+      "certificate_sha256": "70b5e1b0448e8e9e6e049bb7f25890cf4c261198ad8660182b00f96df3b02820",
+      "checks": {
+        "wrapped_reset_state_exactly_matches_certificate": true,
+        "native_before_after_events_consistent": true,
+        "exact_full_reconstruction_matches_first_prestate": true,
+        "exactly_five_reset_to_firstpre_scalar_differences": true,
+        "actual_first_command_generated_and_arrived_at_zero": true,
+        "first_prestate_t0_not_future_or_elapsed": true,
+        "initial_stock_not_added_before_first_interval": true,
+        "boiler_not_free_ready_at_zero": true,
+        "DG_budget_unchanged_by_zero_boundary": true,
+        "common_M23_preparation_stays_conditional_and_queued": true
+      },
+      "reset_vs_firstpre_differences": [
+        {
+          "path": "/auxiliary_request_kW",
+          "reset": 5.864962751269004,
+          "first_pre": 16.10631299673553
+        },
+        {
+          "path": "/disconnected_loads/0/0",
+          "reset": 3.716807240944325e-05,
+          "first_pre": 0.0
+        },
+        {
+          "path": "/disconnected_loads/1/0",
+          "reset": 3.716807240944325e-05,
+          "first_pre": 0.0
+        },
+        {
+          "path": "/disconnected_loads/2/0",
+          "reset": 3.716807240944325e-05,
+          "first_pre": 0.0
+        },
+        {
+          "path": "/disconnected_loads/3/0",
+          "reset": 0.0037168072409443256,
+          "first_pre": 0.0
+        }
+      ],
+      "remaining_reconstruction_differences": [],
+      "event_causal_order": [
+        {
+          "event_id": "core:1",
+          "kind": "engineering_initial_age_assumption",
+          "time_minute": 0.0
+        },
+        {
+          "event_id": "core:2",
+          "kind": "local_diesel_model_initialized",
+          "time_minute": 0.0
+        },
+        {
+          "event_id": "core:3",
+          "kind": "persistent_permissions_initialized",
+          "time_minute": 0.0
+        },
+        {
+          "event_id": "core:4",
+          "kind": "m21_storage_initial_inventory",
+          "time_minute": 0.0
+        },
+        {
+          "event_id": "core:5",
+          "kind": "m22_station_initial_state",
+          "time_minute": 0.0
+        },
+        {
+          "event_id": "core:6",
+          "kind": "disconnected_port_demand_changed",
+          "time_minute": 0.0
+        },
+        {
+          "event_id": "core:7",
+          "kind": "forced_capacity_or_permission_clamp",
+          "time_minute": 0.0
+        },
+        {
+          "event_id": "core:8",
+          "kind": "command_generated",
+          "time_minute": 0.0
+        },
+        {
+          "event_id": "core:9",
+          "kind": "arrived_permissions_replaced",
+          "time_minute": 0.0
+        },
+        {
+          "event_id": "core:10",
+          "kind": "forced_capacity_or_permission_clamp",
+          "time_minute": 0.0
+        },
+        {
+          "event_id": "core:11",
+          "kind": "command_arrived",
+          "time_minute": 0.0
+        },
+        {
+          "event_id": "core:12",
+          "kind": "load_connection_restored",
+          "time_minute": 0.0
+        },
+        {
+          "event_id": "core:13",
+          "kind": "command_executed",
+          "time_minute": 0.0
+        }
+      ],
+      "reconstruction_transitions": [
+        {
+          "event_id": "core:6",
+          "kind": "disconnected_port_demand_changed",
+          "time_minute": 0.0,
+          "before_kW": [
+            [
+              3.716807240944325e-05,
+              0.0,
+              0.0
+            ],
+            [
+              3.716807240944325e-05,
+              0.0,
+              0.0
+            ],
+            [
+              3.716807240944325e-05,
+              0.0,
+              0.0
+            ],
+            [
+              0.0037168072409443256,
+              0.0,
+              0.0
+            ]
+          ],
+          "after_kW": [
+            [
+              3.716807240944325e-05,
+              0.0,
+              0.0
+            ],
+            [
+              3.716807240944325e-05,
+              0.0,
+              0.0
+            ],
+            [
+              3.716807240944324e-05,
+              0.0,
+              0.0
+            ],
+            [
+              0.003716807534596198,
+              0.0,
+              0.0
+            ]
+          ],
+          "reason": "same disconnected contact fractions; exogenous demand change, not reconnection"
+        },
+        {
+          "event_id": "core:12",
+          "kind": "load_connection_restored",
+          "time_minute": 0.0,
+          "command_id": 1,
+          "restored_kW": [
+            [
+              3.716807240944325e-05,
+              0.0,
+              0.0
+            ],
+            [
+              3.716807240944325e-05,
+              0.0,
+              0.0
+            ],
+            [
+              3.716807240944324e-05,
+              0.0,
+              0.0
+            ],
+            [
+              0.003716807534596198,
+              0.0,
+              0.0
+            ]
+          ]
+        },
+        {
+          "event_id": "core:13",
+          "kind": "command_executed",
+          "command_id": 1,
+          "arrival_minute": 0.0,
+          "reason": "revalidated_against_current_capacity_and_ramp",
+          "recomputed_auxiliary_request_kW": 16.10631299673553,
+          "recomputed_cooling_reference_kW": 117.83611369198594
+        }
+      ],
+      "first_segment": {
+        "start": 0.0,
+        "end": 1.0,
+        "command_id": 1,
+        "actual_boiler_steam_lbph": 0.0,
+        "boiler_restart_electric_kW": 0.5,
+        "station": {
+          "boiler_ready": true,
+          "boiler_continuous_power_minutes": 1.0,
+          "diesel_starts_used": 0,
+          "diesel_starts_remaining": 2,
+          "control_autonomy_minutes": 1440.0,
+          "qualification_is_research_assumption": true,
+          "boiler_execution_status": "restart_completed",
+          "boiler_ready_before_actual_interval": false,
+          "boiler_restart_power_supplied": true,
+          "actual_source_electric_kW": 377.5700181870617,
+          "building_UPS_is_station_source": false
+        },
+        "storage": {
+          "ups": {
+            "initial_kWh": 40.0,
+            "final_kWh": 39.99129523353816,
+            "charged_input_kWh": 0.0,
+            "discharged_kWh": 0.008269528138745737,
+            "standing_loss_kWh": 0.0,
+            "conversion_loss_kWh": 0.0004352383230918804,
+            "balance_residual_kWh": 0.0
+          },
+          "cold_store": {
+            "initial_kWh": 0.0,
+            "final_kWh": 0.0,
+            "charged_input_kWh": 0.0,
+            "discharged_kWh": 0.0,
+            "standing_loss_kWh": 0.0,
+            "conversion_loss_kWh": 0.0,
+            "balance_residual_kWh": 0.0
+          }
+        }
+      },
+      "shared_preparation": {
+        "enabled": true,
+        "current_critical_heat_kW": 81.65060360338668,
+        "original_boiler_target_lbph": 0.0,
+        "queued_boiler_ceiling_lbph": 286.4933459767954,
+        "current_extra_recovery_request_kW": 0.0,
+        "queued_extra_converter_headroom_kW": 0.0,
+        "conditional_permission_is_actual_supply": false,
+        "ordinary_queue_and_decision_clock_unchanged": true,
+        "future_repair_information_used": false,
+        "boiler_semantics": "arrived_conditional_ceiling"
+      },
+      "raw_request_boiler_steam_lbph": 0.0,
+      "queued_boiler_steam_lbph": 286.4933459767954,
+      "raw_request_EC_kW": [
+        6.689921610758262,
+        0.0,
+        0.0
+      ],
+      "queued_EC_kW": [
+        53.35463079626801,
+        0.0,
+        0.0
+      ],
+      "fields_ignored": [],
+      "comparison_tolerance": 0.0
+    }
+  ],
+  "source_evidence": {
+    "src/hospital_ies/dataset_export.py": {
+      "sha256": "bf07517f5a85ab460afff35d0488595fd5b37a6b9b60320583abbcccc8493f15",
+      "matches_frozen_source": true,
+      "line_evidence": {
+        "initial=json_clean(dict(state=asdict(env.state),executed=env.core.executed))": [
+          116
+        ]
+      }
+    },
+    "src/hospital_ies/state_transition.py": {
+      "sha256": "c77ecd4387706ef1468afd6c797308554c25b126cff7bd8481ccb24eb13ca3d6",
+      "matches_frozen_source": true,
+      "line_evidence": {
+        "def aux(self,a):": [
+          54
+        ],
+        "def _commit_sources": [
+          127
+        ],
+        "def boundary": [
+          235
+        ],
+        "self._sync_connections(loads)": [
+          237
+        ],
+        "old_disconnected=": [
+          270
+        ],
+        "self.state.auxiliary_request_kW=self.aux(actual)": [
+          279
+        ],
+        "def _sync_connections": [
+          397
+        ],
+        "def advance": [
+          476
+        ],
+        "pre_state=clean(asdict(self.state))": [
+          485
+        ]
+      }
+    },
+    "tools/essential_fixes/execution.py": {
+      "sha256": "0d1bb1161810a49275b03fbd9c8951bb64727ef9b0f12d7658655d3a615d24f4",
+      "matches_frozen_source": true,
+      "line_evidence": {
+        "def advance": [
+          248
+        ],
+        "self.boundary()": [
+          251,
+          441
+        ],
+        "pre_state=clean(asdict(self.state))": [
+          264
+        ]
+      }
+    },
+    "tools/model_correctness_v23/environment.py": {
+      "sha256": "6db840b548680f1ba942c23d4ed825d67a52afa7b39bc6ff2894e29af5de0d30",
+      "matches_frozen_source": true,
+      "line_evidence": {
+        "def _prepare_command_dispatch": [
+          145
+        ],
+        "ordinary_queue_and_decision_clock_unchanged=True": [
+          173
+        ]
+      }
+    }
+  },
+  "v2_auditor_review": {
+    "checks": {
+      "reference_module_matches_v2_freeze": true,
+      "strict_reset_unwrap_and_exact_equality": true,
+      "full_boundary_checkpoint_equal_raw": true,
+      "prior_false_diagnostic_preserved": true,
+      "actual_final02_readonly_exit_zero": true,
+      "actual_both_v2_checkpoints_passed": true,
+      "latest_small_fixture_log_passed": true
+    },
+    "reference_checks_sha256": "3d9d67867580f33dc8ccc1d652fce19dbeb6d40d222f5d73eb191de5f1bfa032",
+    "freeze_sha256": "1a97251aba09a0ab04885c7157dd68ce4122b7e221ed9e5d410a7acb03ce8da3",
+    "final02_audit_sha256": "9a3d26b8df17577fa42ead09b2403766bb778c7ab9c3903de9aa74054aac59e8",
+    "final02_command_sha256": "e482d5e800683c8d036ce57934ebb7482e74faf5ded3cad804085f40797d58c2",
+    "actual_two_checkpoint_records": [
+      {
+        "checks": {
+          "spec_certificate_unmodified": true,
+          "actual_t0_state_matches_independent_certificate": true,
+          "actual_first_interval_state_matches_boundary_events": true,
+          "actual_initial_stocks_match_certificate": true,
+          "actual_initial_DG_budget_matches_certificate": true,
+          "t0_state_receipt_matches": true,
+          "t0_core_receipt_matches": true,
+          "independent_initialization_not_historical_result": true
+        },
+        "lifecycle_valid": true,
+        "full_prestate_equal_raw": true,
+        "legacy_v1_threeway_result_retained": false,
+        "ignored_fields": []
+      },
+      {
+        "checks": {
+          "spec_certificate_unmodified": true,
+          "actual_t0_state_matches_independent_certificate": true,
+          "actual_first_interval_state_matches_boundary_events": true,
+          "actual_initial_stocks_match_certificate": true,
+          "actual_initial_DG_budget_matches_certificate": true,
+          "t0_state_receipt_matches": true,
+          "t0_core_receipt_matches": true,
+          "independent_initialization_not_historical_result": true
+        },
+        "lifecycle_valid": true,
+        "full_prestate_equal_raw": true,
+        "legacy_v1_threeway_result_retained": false,
+        "ignored_fields": []
+      }
+    ],
+    "fixture_scope": "11 synthetic fixtures reported in actual GREEN03_lifecycle log; reviewer did not rerun them",
+    "fixtures_inspected": [
+      "changed unrelated GTprev makes full checkpoint fail",
+      "missing restore/execution evidence makes checkpoint fail"
+    ]
+  },
+  "interpretation": [
+    "Reset certificate and payload wrapped reset state are exactly equal; comparing the whole wrapper object or a post-command first interval state with reset is a lifecycle category error.",
+    "At0 core:6 refreshes inherited disconnected contact fractions against adopted current demand; this is not restoration. The zero-cut ordinary command1 is generated and arrives at0 under the original normal queue rule. core:12 then explicitly restores the tiny inherited contacts and core:13 updates auxiliary request from the revalidated executed dispatch.",
+    "Auxiliary16.10631299673553 is the registered source-side converter-request calculation using executed ceilings and original plant0.14/0.77 coefficients, not measured delivered service or free energy.",
+    "The shared M23 preparation increases queued boiler/EC conditional ceilings already disclosed by the study. Initial boiler is not ready; the first actual interval supplies0.5kW restart electricity and reaches ready only after1minute. UPS initial40kWh is unchanged and actual first-interval discharge/loss is retained.",
+    "There is no new storage, capacity, fuel, instant readiness, future command arrival or reinitialization gift in this lifecycle correction. It corrects evaluation checkpoints, not physics."
+  ],
+  "limitations": [
+    "This review independently parses the two existing gzip payloads and performs pure exact data reconstruction only. It does not rerun reset, controller, episode, model, optimizer, or auditor.",
+    "Exported same-time events are lexicographically ordered by event_id; numeric core event ids reconstruct their emission order. The review does not infer causality from list order or word markers alone.",
+    "The reconstructed checkpoint is for these frozen two runs at0. Generic command-state updates beyond those present here are not claimed implemented by the independent data proof.",
+    "Common initialization total solver calls remain null/unknown; nothing in this review changes that scope.",
+    "V1 final01 failure and original false three-way diagnostic remain preserved; no old result or source was edited."
+  ],
+  "new_models": 0,
+  "new_solver_calls": 0,
+  "new_tests": 0,
+  "auditor_calls": 0,
+  "protected_source_edits": 0,
+  "old_E_edits": 0
+}

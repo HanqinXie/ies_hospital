@@ -1,8 +1,0 @@
-Traceback (most recent call last):
-  File "D:\hospital_ies_v20_20261019\outputs\v20_load_accounting_20261019_run01\review\normal008_continuation01\verify_final_saved_closure.py", line 188, in <module>
-    if __name__=='__main__':run()
-  File "D:\hospital_ies_v20_20261019\outputs\v20_load_accounting_20261019_run01\review\normal008_continuation01\verify_final_saved_closure.py", line 156, in run
-    with (report/'STATUS.csv').open(encoding='utf8-sig',newline='') as stream:status=list(csv.DictReader(stream))
-  File "C:\Users\HanqinXie\AppData\Local\Programs\Python\Python310\lib\pathlib.py", line 1119, in open
-    return self._accessor.open(self, mode, buffering, encoding, errors,
-LookupError: unknown encoding: utf8-sig

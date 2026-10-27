@@ -1,0 +1,92 @@
+{
+  "status": "passed",
+  "started_utc": "2026-10-27T16:41:36.478025+00:00",
+  "finished_utc": "2026-10-27T16:41:37.168180+00:00",
+  "curation_script": {
+    "original_path": "E:/hospital_ies_publish_20261028/results_audit/curate_results.py",
+    "original_relative_path": "curate_results.py",
+    "bytes": 26776,
+    "sha256": "f1b9acefd7a8866552b5afc8dac098fbadfbf8ed4c498c4a4763a2e473b2d155"
+  },
+  "source_roots": [
+    "E:/hospital_ies_v30_20261027",
+    "E:/hospital_ies_v31_20261027",
+    "E:/hospital_ies_v32_20261027"
+  ],
+  "selected_original_files": 315,
+  "selected_original_bytes": 10533072,
+  "all_selected_copy_sha256_exact": true,
+  "per_version": {
+    "v30": {
+      "files": 113,
+      "bytes": 3956061
+    },
+    "v31": {
+      "files": 90,
+      "bytes": 2220463
+    },
+    "v32": {
+      "files": 112,
+      "bytes": 4356548
+    }
+  },
+  "generated_files": [
+    {
+      "original_path": "E:/hospital_ies_publish_20261028/results_stage/CATALOG.json",
+      "original_relative_path": "CATALOG.json",
+      "bytes": 145942,
+      "sha256": "80a375a0a4374c50aa163da9b5be455f4514cd2debee3938f46b8e0ff4c3d17f"
+    },
+    {
+      "original_path": "E:/hospital_ies_publish_20261028/results_stage/ORIGINAL_FAILURE_LOCATIONS.json",
+      "original_relative_path": "ORIGINAL_FAILURE_LOCATIONS.json",
+      "bytes": 9542,
+      "sha256": "cc9b53054f1d383b6303d09b74e45257ebd353678ffa65cdbc089ba5eeafa8b7"
+    },
+    {
+      "original_path": "E:/hospital_ies_publish_20261028/results_stage/README_RESULTS_ZH.md",
+      "original_relative_path": "README_RESULTS_ZH.md",
+      "bytes": 7106,
+      "sha256": "468d94a39b8c308823dc8183412187d8067105a40ce701288a1ea2715ea1f0b5"
+    }
+  ],
+  "release_assets_current_sha_size_verified": [
+    {
+      "version": "v30",
+      "original_path": "E:/hospital_ies_v30_20261027/Hospital_IES_V30_REVIEW_under100MB.zip",
+      "original_relative_path": "Hospital_IES_V30_REVIEW_under100MB.zip",
+      "bytes": 98896789,
+      "sha256": "48a93fcd391f9cbf903d1e6185fc12916ac91a219c75e0bd2c87bf420b96e54d",
+      "transport": "GitHub Release asset",
+      "copied_to_git_tree": false,
+      "contents_role": "Accepted portable package with native evidence and reproducible source/input bindings"
+    },
+    {
+      "version": "v31",
+      "original_path": "E:/hospital_ies_v31_20261027/Hospital_IES_V31_Simple_Preparation_Closeout_20261027.zip",
+      "original_relative_path": "Hospital_IES_V31_Simple_Preparation_Closeout_20261027.zip",
+      "bytes": 24246025,
+      "sha256": "a36105a82be48b6ec2815928472bd1242111370af0bb3d3e2591133375d848b3",
+      "transport": "GitHub Release asset",
+      "copied_to_git_tree": false,
+      "contents_role": "Accepted portable package with native evidence and reproducible source/input bindings"
+    },
+    {
+      "version": "v32",
+      "original_path": "E:/hospital_ies_v32_20261027/Hospital_IES_V32_External_Reference_20261027.zip",
+      "original_relative_path": "Hospital_IES_V32_External_Reference_20261027.zip",
+      "bytes": 35908886,
+      "sha256": "f884e2b8495f424303bfd18f49a7c2836c77cfcc4e79e7a7fdf129425b123f01",
+      "transport": "GitHub Release asset",
+      "copied_to_git_tree": false,
+      "contents_role": "Accepted portable package with native evidence and reproducible source/input bindings"
+    }
+  ],
+  "new_simulations": 0,
+  "new_solver_calls": 0,
+  "new_scientific_recomputations": 0,
+  "D_files_modified": 0,
+  "original_E_files_modified": 0,
+  "git_or_api_operations": 0,
+  "exploration_note": "One read-only report-display command exited 1 due Windows GBK stdout UnicodeEncodeError; rerun with UTF-8 stdout succeeded. No scientific command failed or was rerun in this curation task."
+}

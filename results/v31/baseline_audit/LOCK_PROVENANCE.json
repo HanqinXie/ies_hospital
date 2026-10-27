@@ -1,0 +1,76 @@
+{
+  "status": "passed",
+  "original_proposal": "GT_2 placeholder retained",
+  "frozen_effective_target": "GT_3",
+  "selection_witness_role": "N01 original target-selection witness only; not included among eight reusable runs",
+  "witness_path": "E:\\hospital_ies_v30_20261027\\runs\\n01_b07_L4_GT_ER_normal_C\\trajectory.json.gz",
+  "witness_sha256": "e12366dfee63ddf0632ac3a4610565bc9e14978f7af4a388c4a3f509977aa79e",
+  "witness_measured_45_60_mean_GT_kW": [
+    0.0,
+    0.0,
+    128.2883576603722
+  ],
+  "witness_window_minutes": 15.0,
+  "target_reselected": false,
+  "actual_b07_phase_checks": [
+    {
+      "run_id": "n02_b07_L4_GT_ER_normal_C",
+      "hardware_availability_GT3": {
+        "prepare": [
+          1.0
+        ],
+        "fault_window": [
+          1.0
+        ],
+        "recovery": [
+          1.0
+        ]
+      }
+    },
+    {
+      "run_id": "n02_b07_L4_GT_ER_normal_M",
+      "hardware_availability_GT3": {
+        "prepare": [
+          1.0
+        ],
+        "fault_window": [
+          1.0
+        ],
+        "recovery": [
+          1.0
+        ]
+      }
+    },
+    {
+      "run_id": "d02_b07_L4_GT_ER_disturbed_C",
+      "hardware_availability_GT3": {
+        "prepare": [
+          1.0
+        ],
+        "fault_window": [
+          0.0
+        ],
+        "recovery": [
+          1.0
+        ]
+      }
+    },
+    {
+      "run_id": "d02_b07_L4_GT_ER_disturbed_M",
+      "hardware_availability_GT3": {
+        "prepare": [
+          1.0
+        ],
+        "fault_window": [
+          0.0
+        ],
+        "recovery": [
+          1.0
+        ]
+      }
+    }
+  ],
+  "new_simulations": 0,
+  "new_solver_calls": 0,
+  "large_native_copies": 0
+}

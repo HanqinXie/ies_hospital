@@ -1,0 +1,51 @@
+{
+  "schema": "hospital_ies.v31.independent_evaluation_delivery_index.v1",
+  "created_utc": "2026-10-27T12:33:18.830602+00:00",
+  "status": "complete_for_registered_twelve_records",
+  "files_sha256": {
+    "FROZEN_EVALUATION_TOOLS_V31.json": "b50542b9f3c0f756b8a7be0f9d368e5769c8fb7e91da8eebce218ad42d0ab74c",
+    "audit_v31.py": "b8e618e57402def18ec468e6a43d80c83f1a7eabe44efdfb716ad45bb53ca803",
+    "test_audit_v31.py": "194fcb67ccc75d404f9ec95e1461a69f331d6825c9a464daef00f6656639b6d5",
+    "README_ZH.md": "d06b33ba403bd2d504de52bc1c1eaaab59722b533c04c012424ef73764a09ad8",
+    "FINAL01_COMMAND.json": "6a5fb2cff762626caae5b07b48248aea25d71395880fe437d2fffb8d70256354",
+    "FINAL01_QA.json": "15fe3351f31e319d4bd6a8d0b9523ec28b806db7cde306daff31e19a0ac0ddc6",
+    "FINAL_ENGINEERING_INTERPRETATION_ZH.md": "6e54c285bbb5e360bf1b32683cbc3ce4d548b9be1e2b4651d5a40510f85238c1",
+    "B07_NATIVE_CHAIN_REVIEW.json": "b104fef70c95956ef703fbb2c97f077c28fac2c4d1a101c672f4e64e251cfcb1",
+    "final01/AUDIT.json": "aa6f31b07aca98b932bb2d1108f587e419ed522b85242412d052157976b74780",
+    "final01/MAIN_RESULT_TABLE.csv": "35812a9075312581ebde4388f9e82135572931252eb75b11dda99920b56297e2",
+    "final01/ENGINEERING_REPORT_ZH.md": "98004cca1be9b0563f3dcb44f7da0656d121b3e7cb7d27a832917f3276a4ee06",
+    "final01/COMPLETION_MATRIX.json": "ea70f9d319b3e9ab59dd1e9dee380bf7388a86c553b74f3b0b29ed25905b6704",
+    "final01/PAIRED_DELTAS.json": "fb1d724136d4c75a2a36eb4f6ca7c09048e25d187e5c51677939feadb6a607f9",
+    "final01/METHOD_CONTRASTS.json": "0462dfb964ccecf882ed281703ea8eafe6201f1f7c02655de61cb7e185e3adb0"
+  },
+  "tool_tests": {
+    "actual_passed": 17,
+    "synthetic": true,
+    "exit_code": 0,
+    "log": "GREEN07_native_receipt.log"
+  },
+  "actual_formal_audit": {
+    "exit_code": 0,
+    "completed": 12,
+    "reused_V30": 8,
+    "new_V31": 4,
+    "unknown_tails": 0,
+    "solver_errors": 0,
+    "strategy_fallbacks": 0,
+    "audit_failures": 0,
+    "final_matrix_complete_and_clean": true
+  },
+  "reviewer_new_simulations": 0,
+  "D_source_edits": 0,
+  "formula_or_threshold_changes": 0,
+  "new_physical_assumptions": 0,
+  "model_development_closeout": "can_end_within_fixed_V31_scope",
+  "archive_acceptance": "parent_task_pending",
+  "known_limits": [
+    "Two finite deterministic previously exposed contexts, not a blind test or annual reliability",
+    "M to variant is registered added measure; variant to C remains a composite contrast",
+    "Preparation-window partial DG receipts remain unknown; native exact boundaries used for states",
+    "Native reliability material criteria unchanged; ENS, costs, stocks and terminal evidence independently checked",
+    "No original-author literature controller or continuous/storage reference replay added"
+  ]
+}

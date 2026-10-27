@@ -1,0 +1,64 @@
+{
+  "Hirwa": {
+    "doi": "10.1016/j.apenergy.2023.121438",
+    "mapping_source": "literature/hirwa/mapping.json",
+    "mapping_sha256": "2af36ade37cdc33bf23f9df400f933ccd89c090c29a24cce97c80664ffaa4a38",
+    "frozen_mapping_status": {
+      "mapping_completed": true,
+      "equation_checked": true,
+      "equation_checked_scope": "fresh full text, rendered key equations, units and fixed-capacity algebra; no original solver execution",
+      "prototype_verified": false,
+      "replayed": false,
+      "blocked": [
+        "exact original numerical reproduction: author code/raw 8760 unavailable",
+        "DG size and O&M printed inconsistencies unresolved"
+      ]
+    },
+    "current_layers": {
+      "mapping_completed": true,
+      "printed_equation_checked": true,
+      "synthetic_multiperiod_prototype_verified": true,
+      "fixed_Hospital_static_envelope_verified": true,
+      "R_off_onoff_preparation_replayed_on_common_core": {
+        "normal": true,
+        "grid": true,
+        "tower": false
+      },
+      "full_continuous_or_storage_plan_replayed": false,
+      "original_author_software_executed": false,
+      "exact_paper_numerical_reproduction": false
+    },
+    "interpretation": "Shared R_off adaptation derives mathematics mainly from Hirwa; actual on/off/preparation replay is bounded evidence, not original paper replication"
+  },
+  "Rosales": {
+    "doi": "10.1016/j.jobe.2023.106096",
+    "mapping_source": "literature/rosales/mapping.json",
+    "mapping_sha256": "81989147e0f9a9b60b4b91fcd8f9647a204e9456d1aa2e52474729832dc4945a",
+    "frozen_mapping_completion": {
+      "mapping_completed": true,
+      "equation_checked": null,
+      "equation_checked_reason": "No numbered equations in this PDF",
+      "prototype_verified": false,
+      "replayed": false,
+      "exact_numerical_reproduction_blocked": true,
+      "blocked_reasons": [
+        "原始CSV与代码未取得",
+        "工具与求解器完整版本未知",
+        "终端库存和复测细节未公开"
+      ],
+      "core_code_modified": false,
+      "simulations_run": false,
+      "old_results_modified": false,
+      "fixed_hospital_adaptation_can_continue_independently": true
+    },
+    "current_layers": {
+      "mapping_completed": true,
+      "numbered_equation_check_not_applicable": true,
+      "independent_Rosales_algorithm_implemented": false,
+      "independent_Rosales_algorithm_replayed": false,
+      "boundary_reference_used_in_shared_R_off": true,
+      "exact_paper_numerical_reproduction": false
+    },
+    "interpretation": "Design/service/information boundary reference only; do not count shared R_off as a second reproduced online controller"
+  }
+}
