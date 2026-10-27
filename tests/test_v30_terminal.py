@@ -34,6 +34,21 @@ def test_missing_core_is_unknown_not_zero():
     assert value['completeness']=='unknown_no_live_core'
     assert value['inventories'] is None
 
+def test_unfinished_start_uses_actual_powered_progress_not_ready_timestamp():
+    terminal=importlib.import_module('tools.model_review_v30.terminal')
+    state=SimpleNamespace(gt_prev=[0.,0.,0.])
+    core=SimpleNamespace(time=90.,gt_start_pending={2:{'started':75.,'ready':85.,'requested':20.}},
+        _m22_gt_progress={2:3.},solver_calls=[],executed={},ups=SimpleNamespace(energy_kWh=0.),
+        cold_store=SimpleNamespace(energy_kWh=0.))
+    env=SimpleNamespace(state=state,core=core,execution_contract={'gt_start_delay_minutes':10.},
+        config={'gt_ramp_kW_per_hour':120.})
+    snap=terminal.terminal_snapshot(env,90.)
+    pending=snap['GT']['unfinished_starts'][0]
+    assert pending['required_powered_minutes']==10.
+    assert pending['actual_powered_minutes']==3.
+    assert pending['remaining_powered_minutes']==7.
+    assert pending['actually_completed'] is False
+
 def test_runner_pure_fee_is_distinct_from_objective_cost():
     import sys
     from pathlib import Path

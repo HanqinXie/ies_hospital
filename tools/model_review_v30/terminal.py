@@ -38,6 +38,18 @@ def terminal_snapshot(env,observed_until_minute):
             snapshot_time_minute=None,observed_until_minute=observed_until_minute,inventories=None,
             source='no live core; no zero-imputation')
     before=_capture(env);core=before['core'];state=before['state']
+    starts=[]
+    delay=getattr(env,'execution_contract',{}).get('gt_start_delay_minutes')
+    ramp=getattr(env,'config',{}).get('gt_ramp_kW_per_hour')
+    for index,pending in (core.get('gt_start_pending') or {}).items():
+        progress=(core.get('_m22_gt_progress') or {}).get(str(index))
+        required=(max(float(delay),float(pending['requested'])/float(ramp)*60.)
+            if delay is not None and ramp is not None and ramp>0 and pending.get('requested') is not None else None)
+        starts.append(dict(device='GT_'+str(int(index)+1),requested_kW=pending.get('requested'),
+            actual_powered_minutes=progress,required_powered_minutes=required,
+            remaining_powered_minutes=max(0.,required-progress) if required is not None and progress is not None else None,
+            remaining_is_conditional_on_continued_actual_start_power=True,actually_completed=False,
+            scheduled_ready_minute_is_not_completion_evidence=pending.get('ready')))
     stocks={}
     for key,carrier in (('ups','e'),('cold_store','c')):
         stocks[key]=dict(stock_kWh=core.get(key,{}).get('energy_kWh'),carrier=carrier,
@@ -47,7 +59,7 @@ def terminal_snapshot(env,observed_until_minute):
         completeness='actual_live_core',GT=dict(actual_electric_kW=state.get('gt_prev'),
             arrived_permission_kW=core.get('executed',{}).get('gt_electric_kW'),
             clocks=core.get('gt_clocks'),start_pending=core.get('gt_start_pending'),
-            actual_start_progress=core.get('_m22_gt_progress')),
+            actual_start_progress=core.get('_m22_gt_progress'),unfinished_starts=starts),
         DG=dict(status=state.get('diesel_status'),start_minute=state.get('diesel_start_minute'),
             actual_electric_kW=state.get('last_diesel_kW'),arrived_ceiling_kW=core.get('executed',{}).get('diesel_kW'),
             remaining_shaft_budget_kWh=state.get('diesel_energy_remaining_kWh'),
