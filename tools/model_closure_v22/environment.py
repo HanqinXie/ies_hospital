@@ -190,13 +190,15 @@ class EngineeringCore(legacy.EngineeringCore):
     def _clamp(self,dispatch,f,normal_ramp=False):
         # Preserve inherited arrived permission/ramp logic; replace elapsed
         # wall time by accumulated, actually powered startup work.
+        # V30 fix: remaining work begins no earlier than the actual min-off
+        # eligibility stored in pending.started, even while that lies ahead.
         for i,pending in self.gt_start_pending.items():
             required=max(self.env.execution_contract['gt_start_delay_minutes'],pending['requested']/float(self.env.config['gt_ramp_kW_per_hour'])*60.)
-            pending['ready']=self.time+max(0.,required-self._m22_gt_progress.get(i,0.))
+            pending['ready']=max(self.time,pending['started'])+max(0.,required-self._m22_gt_progress.get(i,0.))
         result=super()._clamp(dispatch,f,normal_ramp=normal_ramp)
         for i,pending in self.gt_start_pending.items():
             required=max(self.env.execution_contract['gt_start_delay_minutes'],pending['requested']/float(self.env.config['gt_ramp_kW_per_hour'])*60.)
-            pending['ready']=self.time+max(0.,required-self._m22_gt_progress.get(i,0.))
+            pending['ready']=max(self.time,pending['started'])+max(0.,required-self._m22_gt_progress.get(i,0.))
             if self._m22_gt_progress.get(i,0.)<required-EPS:result['gt_electric_kW'][i]=0.
         return result
 
