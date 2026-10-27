@@ -334,7 +334,7 @@ def compact_metrics(payload, *, env=None, factor_registry=None):
     shaft=energy.get('DG_mechanical_work_kWh');electric=energy.get('DG_electrical_work_kWh')
     correction=.30*(shaft-electric) if shaft is not None and electric is not None else None
     economics=dict(accounting_cost_USD_sum_segments=cost_sum,DG_fee_correction_USD=correction,
-        energy_cost_USD=None,initial_inventory_grid_input_kWh_conditional=None,
+        energy_cost_USD=None,actual_fee_USD2001=None,initial_inventory_grid_input_kWh_conditional=None,
         initial_inventory_fee_USD_conditional=None,inventory_recharge_fee_added_twice=False,
         price_year=2001,price_currency='USD',actual_recharge_is_already_in_segment_energy_and_cost=True,
         DG_fee_semantics='0.30 USD per actual shaft-equivalent kWh; old electric fee replaced once',
@@ -359,6 +359,10 @@ def compact_metrics(payload, *, env=None, factor_registry=None):
                          initial_inventory_fee_USD_conditional=inventory_fee)
         if all(x is not None for x in (cost_sum,correction,inventory_fee)):
             economics['energy_cost_USD']=cost_sum+correction+inventory_fee
+        source_fee=source_economics.get('actual_energy_fee_USD')
+        if all(x is not None for x in (source_fee,correction,inventory_fee)):
+            economics['actual_fee_USD2001']=source_fee+correction+inventory_fee
+        economics['actual_fee_basis']='Observed actual source energy + DG shaft/electric fee difference once + conditional initial preparation once; objective tie-breaks excluded'
         if factor_registry:
             from tools.model_closeout.emissions import evaluate_emissions
             case=factor_registry['cases'][factor_registry['main_case_id']]
