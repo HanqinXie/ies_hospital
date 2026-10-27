@@ -29,6 +29,7 @@ class OfflineSchedulePolicy:
         return request['action'],dict(policy_id=self.policy_id,execution_identity=EXECUTION_ID,
             information_permission='offline_known_window',schedule_time_minute=request['time_minute'],
             decision_time_minute=minute,full_continuous_plan_replayed=False,
+            strategy_fallback=False,fallback_reason=None,
             storage_plan_written_to_core=False,source='preregistered offline requests, no C/M preparation function')
 
 def main(argv=None):

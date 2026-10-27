@@ -21,6 +21,7 @@ def test_reference_samples_only_registered_schedule_and_never_c_preparation(tmp_
     assert request['ordinary_dispatch']['dispatch']['gt_electric_kW']==[2.,0.,0.]
     assert diag['full_continuous_plan_replayed'] is False
     assert diag['information_permission']=='offline_known_window'
+    assert diag['strategy_fallback'] is False
     request['ordinary_dispatch']['dispatch']['gt_electric_kW'][0]=999.
     assert policy.decide([{'decision_time_min':15.}])[0]['ordinary_dispatch']['dispatch']['gt_electric_kW'][0]==2.
     assert data==before

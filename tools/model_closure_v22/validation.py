@@ -214,11 +214,11 @@ def recover_execution_prefix(env, scene, model_id, error):
         if isinstance(value, (int, float)):
             inventory[name] = float(value)
     requested = float(scene['duration_steps']) * float(scene.get('step_minutes', 15.))
-    return dict(schema='hospital_ies.recovered_execution_prefix.v22.v1', execution_model_id=model_id,
+    value=dict(schema='hospital_ies.recovered_execution_prefix.v22.v1', execution_model_id=model_id,
         scenario=copy.deepcopy(scene), initial_state=None, segments=segments, events=events,
         decisions=[], zones=copy.deepcopy(getattr(env, 'zone_history', [])),
         execution_rows=copy.deepcopy(getattr(env, 'history', [])),
-        solver_calls=copy.deepcopy(getattr(core, 'solver_calls', [])),
+        solver_calls=copy.deepcopy(list(getattr(core, 'solver_calls', []))),
         solver_errors=copy.deepcopy(getattr(core, 'errors', [])), m21_initial_storage=inventory or None,
         error=copy.deepcopy(error), recovered_prefix=True,
         recovery_semantics='Recorded env.core segments/events only; raw core event IDs retained; exporter decisions, labels and initial state unavailable',
@@ -226,6 +226,9 @@ def recover_execution_prefix(env, scene, model_id, error):
         summary=dict(status='failed_unknown_recovered_prefix', completed=False,
             full_trajectory_outcome_valid=False, observed_until_minute=observed,
             requested_end_minute=requested, outcome_unknown_after_minute=observed))
+    snapshot=getattr(env,'v30_terminal_snapshot',None)
+    if snapshot is not None:value['terminal_snapshot']=copy.deepcopy(snapshot)
+    return value
 
 
 def worker(case_path, runtime_root, output, legacy):
