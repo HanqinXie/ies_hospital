@@ -49,6 +49,18 @@ def test_unfinished_start_uses_actual_powered_progress_not_ready_timestamp():
     assert pending['remaining_powered_minutes']==7.
     assert pending['actually_completed'] is False
 
+def test_dg_timer_and_boiler_powered_work_are_distinct_remaining_requirements():
+    terminal=importlib.import_module('tools.model_review_v30.terminal')
+    state=SimpleNamespace(gt_prev=[0.,0.,0.],diesel_status='STARTING',diesel_start_minute=80.)
+    core=SimpleNamespace(time=90.,gt_start_pending={},solver_calls=[],executed={},
+        station=SimpleNamespace(boiler_ready=False,boiler_powered_minutes=.4,
+            config={'boiler_restart_minutes':1.}),ups=SimpleNamespace(energy_kWh=0.),cold_store=SimpleNamespace(energy_kWh=0.))
+    env=SimpleNamespace(state=state,core=core,sci_config={'diesel_start_delay_minutes':15.})
+    snap=terminal.terminal_snapshot(env,90.)
+    assert snap['DG']['startup']['remaining_timer_minutes']==5.
+    assert snap['DG']['startup']['cranking_energy_kWh'] is None
+    assert snap['station']['remaining_restart_powered_minutes']==.6
+
 def test_runner_pure_fee_is_distinct_from_objective_cost():
     import sys
     from pathlib import Path

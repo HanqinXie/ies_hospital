@@ -1,0 +1,347 @@
+{
+  "id": "hirwa_equation_three_period_synthetic_reference",
+  "evidence_class": "artificial_test_fixture_not_hospital_or_paper_data",
+  "status": "hand_derived_feasible_schedule_and_necessary_condition_infeasibility_certificate; not solver execution",
+  "purpose": [
+    "multi-period battery coupling",
+    "EC electrical input",
+    "ABS thermal input",
+    "CHP thermal intercept",
+    "DG and CHP per-on-hour fixed fuel",
+    "finite fuel",
+    "hard-demand infeasibility"
+  ],
+  "units": {
+    "duration": "h",
+    "electric_power": "kW_e",
+    "useful_heat_power": "kW_h",
+    "useful_cooling_power": "kW_c",
+    "fuel_rate": "kWh_fuel/h",
+    "fuel_budget": "kWh_fuel",
+    "battery_stock": "kWh_e",
+    "cost": "synthetic USD"
+  },
+  "all_parameters_synthetic": true,
+  "paper_equation_sources": {
+    "electric_balance": {
+      "page": 5,
+      "equations": [
+        "2a",
+        "2b"
+      ]
+    },
+    "diesel_fuel": {
+      "page": 5,
+      "equation": "1c"
+    },
+    "CHP_fuel": {
+      "page": 16,
+      "equations": [
+        "A.1a",
+        "A.1b"
+      ]
+    },
+    "CHP_heat": {
+      "page": 16,
+      "equations": [
+        "A.2a",
+        "A.2b",
+        "A.2c"
+      ]
+    },
+    "battery": {
+      "page": 17,
+      "equations": [
+        "A.3a",
+        "A.3h",
+        "A.3i",
+        "A.3l",
+        "A.3m"
+      ]
+    },
+    "thermal_balance_useful_load_coordinates": {
+      "page": 17,
+      "equations": [
+        "A.4a",
+        "A.4b"
+      ]
+    },
+    "capacity_on": {
+      "pages": [
+        17,
+        18
+      ],
+      "equations": [
+        "A.5",
+        "A.7e"
+      ]
+    }
+  },
+  "changes_from_paper": [
+    "fixed capacities",
+    "3 one-hour periods rather than 8760",
+    "no PV/export/curtailment/hot or cold storage in joint fixture",
+    "fuel unit kWh_fuel rather than MMBTU with coherently synthetic coefficients",
+    "already useful thermal/cooling demand; do not apply historical A.4 RHS scaling",
+    "CHP fixed fuel equality explicitly selected for fixture",
+    "terminal battery exactly zero is an artificial boundary condition, not attributed to original paper",
+    "no startup/communication/tower/pump dynamics; not hospital executable physics"
+  ],
+  "parameters": {
+    "duration_h": [
+      1,
+      1,
+      1
+    ],
+    "grid_available": [
+      true,
+      false,
+      false
+    ],
+    "direct_electric_demand_kW_e": [
+      2,
+      2,
+      2
+    ],
+    "useful_heat_demand_kW_h": [
+      1,
+      1,
+      1
+    ],
+    "useful_cooling_demand_kW_c": [
+      2,
+      2,
+      2
+    ],
+    "grid_capacity_kW_e": 5,
+    "DG_backup_only": true,
+    "DG_capacity_kW_e": 1,
+    "DG_min_on_power_kW_e": 1,
+    "DG_fuel_slope_kWh_fuel_per_kWh_e": 3,
+    "DG_fixed_fuel_kWh_fuel_per_on_hour": 1,
+    "DG_fuel_budget_kWh_fuel": 8,
+    "CHP_capacity_kW_e": 1,
+    "CHP_min_on_power_kW_e": 1,
+    "CHP_fuel_slope_kWh_fuel_per_kWh_e": 2,
+    "CHP_fixed_fuel_kWh_fuel_per_capacity_kW_on_hour": 0.5,
+    "CHP_heat_kW_h_per_kW_e": 0.5,
+    "CHP_fixed_heat_kW_h_per_capacity_kW_on": 0.5,
+    "CHP_ambient_factor": 1,
+    "boiler_useful_heat_capacity_kW_h": 1,
+    "boiler_efficiency": 0.8,
+    "gas_fuel_budget_kWh_fuel": 8.75,
+    "EC_cooling_capacity_kW_c": 2,
+    "EC_COP": 2,
+    "ABS_cooling_capacity_kW_c": 0.5,
+    "ABS_COP": 0.5,
+    "battery_capacity_kWh_e": 1.5,
+    "battery_initial_stock_kWh_e": 0,
+    "battery_min_stock_kWh_e": 0,
+    "battery_power_sum_capacity_kW_e": 2,
+    "battery_charge_efficiency": 0.8,
+    "battery_discharge_efficiency": 1,
+    "battery_terminal_stock_kWh_e": 0,
+    "grid_price_USD_per_kWh_e": [
+      1,
+      1,
+      1
+    ],
+    "DG_price_USD_per_kWh_fuel": 0.5,
+    "gas_price_USD_per_kWh_fuel": 0.25
+  },
+  "hand_schedule": {
+    "grid_kW_e": [
+      4.875,
+      0,
+      0
+    ],
+    "CHP_on": [
+      0,
+      1,
+      1
+    ],
+    "CHP_electric_kW_e": [
+      0,
+      1,
+      1
+    ],
+    "CHP_useful_heat_kW_h": [
+      0,
+      1,
+      1
+    ],
+    "DG_on": [
+      0,
+      1,
+      1
+    ],
+    "DG_electric_kW_e": [
+      0,
+      1,
+      1
+    ],
+    "boiler_useful_heat_kW_h": [
+      1,
+      1,
+      1
+    ],
+    "EC_useful_cooling_kW_c": [
+      2,
+      1.5,
+      1.5
+    ],
+    "EC_input_kW_e": [
+      1,
+      0.75,
+      0.75
+    ],
+    "ABS_useful_cooling_kW_c": [
+      0,
+      0.5,
+      0.5
+    ],
+    "ABS_input_kW_h": [
+      0,
+      1,
+      1
+    ],
+    "battery_charge_input_kW_e": [
+      1.875,
+      0,
+      0
+    ],
+    "battery_discharge_delivered_kW_e": [
+      0,
+      0.75,
+      0.75
+    ],
+    "battery_end_stock_kWh_e": [
+      1.5,
+      0.75,
+      0
+    ],
+    "DG_fuel_rate_kWh_fuel_per_h": [
+      0,
+      4,
+      4
+    ],
+    "CHP_fuel_rate_kWh_fuel_per_h": [
+      0,
+      2.5,
+      2.5
+    ],
+    "boiler_fuel_rate_kWh_fuel_per_h": [
+      1.25,
+      1.25,
+      1.25
+    ]
+  },
+  "expected": {
+    "electric_balance_residual_kW_e": [
+      0,
+      0,
+      0
+    ],
+    "heat_balance_residual_kW_h": [
+      0,
+      0,
+      0
+    ],
+    "cooling_balance_residual_kW_c": [
+      0,
+      0,
+      0
+    ],
+    "battery_balance_residual_kWh_e": [
+      0,
+      0,
+      0
+    ],
+    "DG_fuel_used_kWh_fuel": 8,
+    "gas_fuel_used_kWh_fuel": 8.75,
+    "battery_charge_input_kWh_e": 1.875,
+    "battery_delivered_discharge_kWh_e": 1.5,
+    "battery_conversion_loss_kWh_e": 0.375,
+    "grid_purchase_kWh_e": 4.875,
+    "grid_fee_USD": 4.875,
+    "DG_fuel_fee_USD": 4,
+    "gas_fee_USD": 2.1875,
+    "schedule_total_fee_USD": 11.0625,
+    "cost_is_optimal_claim": false
+  },
+  "infeasible_variant": {
+    "changed_parameter": "DG_fuel_budget_kWh_fuel",
+    "changed_value": 7.9,
+    "hard_demand_retained": true,
+    "expected_status": "provably_infeasible",
+    "hand_certificate": [
+      "Across the two outage hours, direct electricity >=4 kWh_e.",
+      "Total useful cooling 4 kWh_c; ABS capacity <=1 kWh_c over the two hours, so EC useful cooling >=3 kWh_c and EC electricity >=1.5 kWh_e.",
+      "Outage electrical sinks >=5.5 kWh_e, excluding any charging losses.",
+      "CHP can deliver <=2 kWh_e; net battery contribution <=1.5 kWh_e (full initial outage stock, charging efficiency <=1).",
+      "DG must deliver >=2 kWh_e; two 1kW hours force output 1kW and on=1 in both hours.",
+      "DG fuel >=2*(3*1+1)=8 kWh_fuel >7.9. No unmet-load relaxation is allowed."
+    ]
+  },
+  "separate_thermal_decay_fixture": {
+    "evidence_class": "artificial_test_fixture",
+    "equation": "A.3j, implicit end-state loss",
+    "duration_h": [
+      1,
+      1
+    ],
+    "initial_stock_kWh_h": 1,
+    "charge_input_kW_h": [
+      0.25,
+      0
+    ],
+    "delivered_discharge_kW_h": [
+      0,
+      0.4
+    ],
+    "charge_efficiency": 0.8,
+    "discharge_efficiency": 0.8,
+    "decay_rate_per_h": 0.1,
+    "capacity_kWh_h": 2,
+    "power_sum_capacity_kW_h": 0.5,
+    "end_stock_exact_fraction": [
+      "12/11",
+      "65/121"
+    ],
+    "end_stock_kWh_h": [
+      1.0909090909090908,
+      0.5371900826446281
+    ],
+    "standing_loss_exact_fraction_kWh_h": [
+      "6/55",
+      "13/242"
+    ],
+    "standing_loss_kWh_h": [
+      0.10909090909090909,
+      0.05371900826446281
+    ],
+    "charge_conversion_loss_kWh_h": 0.05,
+    "discharge_conversion_loss_kWh_h": 0.1,
+    "global_balance_exact": "1+1/4-2/5-(6/55+13/242)-1/20-1/10=65/121",
+    "no_action_two_step_comparison": {
+      "implicit_A3j_end_stock": 0.8264462809917356,
+      "explicit_previous_stock_decay_end_stock": 0.81,
+      "conclusion": "Different discretizations; only the implicit value follows printed A.3j"
+    }
+  },
+  "historical_scaling_fixture": {
+    "evidence_class": "artificial_units_fixture",
+    "useful_cooling_demand_kW_c": 6,
+    "EC_COP": 3,
+    "correct_EC_input_kW_e": 2,
+    "paper_delta_c_coordinate_kW": 2,
+    "paper_rhs_delta_c_times_COP_kW_c": 6,
+    "wrong_repeated_Hospital_demand_scaling_kW_c": 18,
+    "useful_heat_demand_kW_h": 7,
+    "boiler_efficiency": 0.7,
+    "correct_boiler_input_kW_fuel": 10,
+    "paper_delta_h_coordinate_kW": 10,
+    "paper_rhs_delta_h_times_efficiency_kW_h": 7,
+    "wrong_repeated_Hospital_demand_scaling_kW_h": 4.9
+  }
+}

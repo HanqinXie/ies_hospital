@@ -5047,7 +5047,7 @@
         "enable_propagation": true,
         "event_schema_version": "p2a.events.v1",
         "faults": {
-          "GT_2": 0.0
+          "GT_3": 0.0
         },
         "auxiliary_faults": {},
         "shock": {},
@@ -5074,7 +5074,7 @@
             "c": 0.25
           }
         },
-        "fault_target": "GT_2",
+        "fault_target": "GT_3",
         "fault_availability": 0.0,
         "demand_amplitude": 0.25,
         "clinical_template_id": "emergency_department",
@@ -5124,7 +5124,7 @@
         "fixed_complete_source_minutes": 360.0,
         "parent_template_id": "v30_source_3128",
         "base_state_id": "v30_initial:647b7eacb389979d052fbe1cd2ec00870972cfdff4dde948327af26ddb603025",
-        "exogenous_stream_id": "v30_exogenous:82246f0c8cf8f91ef0587a5a79e816f8270347656faf5889e5a94681eee15fa4",
+        "exogenous_stream_id": "v30_exogenous:5b64eed5b08aeb93e9f0ae05d67d8520f2ec5ac6c81a40f58e30c732a5d0ba59",
         "distribution_id": "fixed_development_no_probability",
         "sampling_method": "source_load_quantile_without_policy_results",
         "purpose": "finite_comparison",
@@ -5136,7 +5136,7 @@
           "h": 1.0,
           "c": 1.0
         },
-        "m21_physical_exogenous_sha256": "82246f0c8cf8f91ef0587a5a79e816f8270347656faf5889e5a94681eee15fa4",
+        "m21_physical_exogenous_sha256": "5b64eed5b08aeb93e9f0ae05d67d8520f2ec5ac6c81a40f58e30c732a5d0ba59",
         "exclude_from_main_four_class_summary": false,
         "model_closure_events": [],
         "normal_verification": false,
@@ -5233,7 +5233,7 @@
         "enable_propagation": true,
         "event_schema_version": "p2a.events.v1",
         "faults": {
-          "GT_2": 0.0
+          "GT_3": 0.0
         },
         "auxiliary_faults": {},
         "shock": {},
@@ -5260,7 +5260,7 @@
             "c": 0.25
           }
         },
-        "fault_target": "GT_2",
+        "fault_target": "GT_3",
         "fault_availability": 0.0,
         "demand_amplitude": 0.25,
         "clinical_template_id": "emergency_department",
@@ -5310,7 +5310,7 @@
         "fixed_complete_source_minutes": 360.0,
         "parent_template_id": "v30_source_3128",
         "base_state_id": "v30_initial:647b7eacb389979d052fbe1cd2ec00870972cfdff4dde948327af26ddb603025",
-        "exogenous_stream_id": "v30_exogenous:82246f0c8cf8f91ef0587a5a79e816f8270347656faf5889e5a94681eee15fa4",
+        "exogenous_stream_id": "v30_exogenous:5b64eed5b08aeb93e9f0ae05d67d8520f2ec5ac6c81a40f58e30c732a5d0ba59",
         "distribution_id": "fixed_development_no_probability",
         "sampling_method": "source_load_quantile_without_policy_results",
         "purpose": "finite_comparison",
@@ -5322,7 +5322,7 @@
           "h": 1.0,
           "c": 1.0
         },
-        "m21_physical_exogenous_sha256": "82246f0c8cf8f91ef0587a5a79e816f8270347656faf5889e5a94681eee15fa4",
+        "m21_physical_exogenous_sha256": "5b64eed5b08aeb93e9f0ae05d67d8520f2ec5ac6c81a40f58e30c732a5d0ba59",
         "exclude_from_main_four_class_summary": false,
         "model_closure_events": [],
         "normal_verification": false,

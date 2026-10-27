@@ -36,17 +36,19 @@ def main(argv=None):
             environment_adapter=with_terminal(overlay,thermal_profile=case['v28_thermal_profile']),registered_extra_inputs=extra)
         if (a.output/'RESULT.json').is_file():
             result=read(a.output/'RESULT.json')
+            result.update(core_execution_status=result['status'],export_status='started')
             try:
                 result=annotate_result(a.output,ROOT,case,result)
                 with gzip.open(a.output/'trajectory.json.gz','rt',encoding='utf8') as stream:payload=json.load(stream)
                 evaluation=export_evaluation(payload,result)
                 evaluation['provenance']['evidence_role']='new_actual_simulation'
                 write(a.output/'EVALUATION.json',evaluation)
-                result.update(v30_evaluation=evaluation,terminal_snapshot=evaluation['terminal_snapshot'])
+                result.update(v30_evaluation=evaluation,terminal_snapshot=evaluation['terminal_snapshot'],export_status='completed')
             except Exception as error:
                 write(a.output/'V30_EXPORT_ERROR.json',dict(type=type(error).__name__,message=str(error),core_status=result['status']))
-                result.update(status='failed_v30_export',v30_export_error=str(error));code=code or 2
+                result.update(status='failed_v30_export',export_status='failed',v30_export_error=str(error));code=code or 2
             write(a.output/'RESULT.json',result)
+            write(a.output/'STATUS.json',{key:result.get(key) for key in ('case_id','status','core_execution_status','export_status','actual_episode_attempts','observed_until_minute','unknown_tail_minutes')})
         return code
     registry=read(registry_path)
     if a.list:

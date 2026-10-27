@@ -3,6 +3,7 @@ from __future__ import annotations
 import hashlib
 import json
 import math
+import copy
 import numpy as np
 
 CORE_FIELDS = ('time','executed','pending_commands','pending_contact_restore',
@@ -10,7 +11,8 @@ CORE_FIELDS = ('time','executed','pending_commands','pending_contact_restore',
     'grid_return_started_minute','grid_open_started_minute','active_command',
     'station','_m22_gt_progress','_m23_restart','ups','cold_store','diesel_rotor',
     'disconnected_fraction','automatic_fraction','arrived_dispatch','sequence',
-    'local_down','interlock_latched','bridge_wait_started_minute','bridge_wait_fallback_reason')
+    'local_down','interlock_latched','bridge_wait_started_minute','bridge_wait_fallback_reason',
+    'hardware_availability','last_availability')
 
 def _plain(value):
     if value is None or isinstance(value,(str,bool,int)):return value
@@ -38,11 +40,24 @@ def terminal_snapshot(env,observed_until_minute):
             snapshot_time_minute=None,observed_until_minute=observed_until_minute,inventories=None,
             source='no live core; no zero-imputation')
     before=_capture(env);core=before['core'];state=before['state']
+    station=copy.deepcopy(core.get('station'))
+    if station is not None:
+        required=station.get('config',{}).get('boiler_restart_minutes')
+        progress=station.get('boiler_powered_minutes')
+        station['remaining_restart_powered_minutes']=(max(0.,required-progress)
+            if required is not None and progress is not None and station.get('boiler_ready') is False
+            else 0. if station.get('boiler_ready') is True else None)
+    dg_start=state.get('diesel_start_minute');dg_required=getattr(env,'sci_config',{}).get('diesel_start_delay_minutes')
+    dg_startup=dict(status=state.get('diesel_status'),actual_timer_elapsed_minutes=None,
+        remaining_timer_minutes=None,cranking_energy_kWh=None,cranking_energy_scope='not physically metered; research start qualification only')
+    if state.get('diesel_status')=='STARTING' and dg_start is not None and dg_required is not None:
+        elapsed=max(0.,core['time']-dg_start)
+        dg_startup.update(actual_timer_elapsed_minutes=elapsed,remaining_timer_minutes=max(0.,dg_required-elapsed))
     starts=[]
     delay=getattr(env,'execution_contract',{}).get('gt_start_delay_minutes')
     ramp=getattr(env,'config',{}).get('gt_ramp_kW_per_hour')
     for index,pending in (core.get('gt_start_pending') or {}).items():
-        progress=(core.get('_m22_gt_progress') or {}).get(str(index))
+        progress=(core.get('_m22_gt_progress') or {}).get(str(index),0.) if '_m22_gt_progress' in core else None
         required=(max(float(delay),float(pending['requested'])/float(ramp)*60.)
             if delay is not None and ramp is not None and ramp>0 and pending.get('requested') is not None else None)
         starts.append(dict(device='GT_'+str(int(index)+1),requested_kW=pending.get('requested'),
@@ -62,9 +77,9 @@ def terminal_snapshot(env,observed_until_minute):
             actual_start_progress=core.get('_m22_gt_progress'),unfinished_starts=starts),
         DG=dict(status=state.get('diesel_status'),start_minute=state.get('diesel_start_minute'),
             actual_electric_kW=state.get('last_diesel_kW'),arrived_ceiling_kW=core.get('executed',{}).get('diesel_kW'),
-            remaining_shaft_budget_kWh=state.get('diesel_energy_remaining_kWh'),
+            remaining_shaft_budget_kWh=state.get('diesel_energy_remaining_kWh'),startup=dg_startup,
             chemical_fuel_kWh=None,rotor=core.get('diesel_rotor')),
-        station=core.get('station'),restart=core.get('_m23_restart'),
+        station=station,restart=core.get('_m23_restart'),
         grid_transfer={k:core.get(k) for k in ('grid_bus_state','grid_return_started_minute','grid_open_started_minute')},
         pending_commands=core.get('pending_commands'),pending_contact_restore=core.get('pending_contact_restore'),
         pending_shed=core.get('pending_shed'),inventories=stocks,actual_state=state,

@@ -156,7 +156,9 @@ def record_actual_prefix(segment,stream):
 
 
 def worker(output, *, model_version='v23', study_identity=None, execution_policy_id=None,
-           environment_adapter=None, registered_extra_inputs=None):
+           environment_adapter=None, registered_extra_inputs=None,controller_factory=None):
+    if controller_factory is not None and (not study_identity or not execution_policy_id):
+        raise ValueError('Custom controller requires explicit named study and execution policy registration')
     sys.dont_write_bytecode=True
     sys.path[:0]=[str(ROOT/'src'),str(ROOT)]
     from tools.model_closure_v22.validation import read,write,sha,digest,now,native_process,recover_execution_prefix,validate_exporter_metadata,runtime_policy
@@ -235,7 +237,8 @@ def worker(output, *, model_version='v23', study_identity=None, execution_policy
             if not study_identity or not isinstance(execution_policy_id,str) or not execution_policy_id.strip():
                 raise ValueError('A named study and nonempty policy identity are required together')
             policy_id=execution_policy_id
-        controller=policy.SciPolicy(spec['alias'],config=spec['config'],plant=env.plant,policy_id=policy_id)
+        construct_controller=policy.SciPolicy if controller_factory is None else controller_factory
+        controller=construct_controller(spec['alias'],config=spec['config'],plant=env.plant,policy_id=policy_id)
         result['policy']=dict(alias=spec['alias'],policy_id=controller.policy_id if hasattr(controller,'policy_id') else spec['alias']+'_model_correctness_v23',config=controller.config)
         result['scenario_sha256']=digest(scene);result['configuration']=case['configuration']
         result['input_access_receipt']=copy.deepcopy(getattr(env,'input_access_receipt',None))
