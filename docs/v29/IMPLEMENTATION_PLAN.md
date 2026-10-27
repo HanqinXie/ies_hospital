@@ -18,20 +18,20 @@
 
 ## 0. Verify baseline and register the scope
 
-- [ ] Read full V29 task, V28 review and all three thematic reviews; verify22 indexed payload sizes/SHA and original task ZIP.
-- [ ] Independently verify current scientific837/33, old31 bytes, old ZIP99,268,822B/c3b116..., commonGit, clean HEAD and remote refs. Reuse already independently extracted V28; do not unzip it again.
-- [ ] Run only focused unchanged public baseline once: python -B -m pytest -q tests/test_v28_public_contract.py. Keep full old1278 as historical, not V29 result.
-- [ ] Complete coverage table with exact code/old case/producer/demand/hardware identity; distinguish actual B_D healthy hardware and activeGT2 FD from parser labels. Preserve any failed audit assumptions with corrected exact diagnostic-field definitions.
+- [x] Read full V29 task, V28 review and all three thematic reviews; verify22 indexed payload sizes/SHA and original task ZIP.
+- [x] Independently verify current scientific837/33, old31 bytes, old ZIP99,268,822B/c3b116..., commonGit, clean HEAD and remote refs. Reuse already independently extracted V28; do not unzip it again.
+- [x] Run only focused unchanged public baseline once: python -B -m pytest -q tests/test_v28_public_contract.py. Keep full old1278 as historical, not V29 result.
+- [x] Complete coverage table with exact code/old case/producer/demand/hardware identity; distinguish actual B_D healthy hardware and activeGT2 FD from parser labels. Preserve any failed audit assumptions with corrected exact diagnostic-field definitions.
 
 ## 1. Minimal adopted-version public entry and quality/scope metadata
 
 Create tools/model_review_v29/{__init__,validation,source_scope}.py; configs/model_review_v29/cases.json; inputs/model_review_v29/{SOURCE_COOLING_UNMET_HOURS.csv,SOURCE_QUALITY_METADATA.json,ALL55_ZONES_NATIVE_UNMET_SUMMARY.csv}; tests/test_v29_{public_contract,source_scope}.py. No legacy test assertion/tolerance deletion or capacity/price/threshold/control change.
 
-- [ ] Add meaningful public RED tests: adopted default mandatory; explicit A/unknown/profile mismatch rejected; H0/H1/H2 inventory matches exact inherited profiles; source fault/time/amplitude and after_cost/thermal_coupling/research_stress_proxy remain frozen; actual parser encodings validate. Tests fail for missing V29 behavior before implementation.
-- [ ] Implement V29 resolve_case by calling V28 resolve_case then requiring V28_adopted and exact bound formal thermal files. Keep C/M policies and existing operating rule; use public reset/step unchanged. V29 worker calls common.worker(model_version='v25', environment_adapter=V28 with_boundary) with original policy identity and a separate V29 study identity. No new simulator/controller.
-- [ ] Source quality RED tests cover raw26rows/25uniquehours/55-screen/9.5zoneh, no intersection and a known intersection, partial-hour endpoints, invalid/missing/nonfinite source rejection, input immutability, no deletion/scaling, and unknown preheat remainsnull.
-- [ ] Implement small offline load_quality(root) and window_scope(root,scenario). Preserve original qualityCSV bytes/zone-hour rows and actual55-zone screening evidence/units. Window is [(start_hour-1)*60, +duration_steps*step_minutes), intersect hourly source support and label actual affected regions. State source cooling is delivery proxy even with no overlap. Integrate local source-reference Laundry/Booster/preheat only from already-bound formal hourly input; upstream energy/cost/CO2 unknownnull, no extra actual IES addition.
-- [ ] Add source_scope to RESULT and SOURCE_SCOPE.json only after worker completion, including failed/unknown prefix status; never put source future quality or scope into observations/actions. A metadata failure is explicit failure, not a fake completed/zero record. Run only affected new tests, keep original public tests unchanged. Update pytest.ini explicit default file list.
+- [x] Add meaningful public RED tests: adopted default mandatory; explicit A/unknown/profile mismatch rejected; H0/H1/H2 inventory matches exact inherited profiles; source fault/time/amplitude and after_cost/thermal_coupling/research_stress_proxy remain frozen; actual parser encodings validate. Tests fail for missing V29 behavior before implementation.
+- [x] Implement V29 resolve_case by calling V28 resolve_case then requiring V28_adopted and exact bound formal thermal files. Keep C/M policies and existing operating rule; use public reset/step unchanged. V29 worker calls common.worker(model_version='v25', environment_adapter=V28 with_boundary) with original policy identity and a separate V29 study identity. No new simulator/controller.
+- [x] Source quality RED tests cover raw26rows/25uniquehours/55-screen/9.5zoneh, no intersection and a known intersection, partial-hour endpoints, invalid/missing/nonfinite source rejection, input immutability, no deletion/scaling, and unknown preheat remainsnull.
+- [x] Implement small offline load_quality(root) and window_scope(root,scenario). Preserve original qualityCSV bytes/zone-hour rows and actual55-zone screening evidence/units. Window is [(start_hour-1)*60, +duration_steps*step_minutes), intersect hourly source support and label actual affected regions. State source cooling is delivery proxy even with no overlap. Integrate local source-reference Laundry/Booster/preheat only from already-bound formal hourly input; upstream energy/cost/CO2 unknownnull, no extra actual IES addition.
+- [x] Add source_scope to RESULT and SOURCE_SCOPE.json only after worker completion, including failed/unknown prefix status; never put source future quality or scope into observations/actions. A metadata failure is explicit failure, not a fake completed/zero record. Run only affected new tests, keep original public tests unchanged. Update pytest.ini explicit default file list.
 
 ## 2. Actual finite mechanism validation
 

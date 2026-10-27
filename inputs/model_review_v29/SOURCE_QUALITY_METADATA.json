@@ -1,0 +1,67 @@
+{
+  "schema": "hospital_ies.v29.source_quality_scope.v1",
+  "source_version": "V28",
+  "source_producer_commit": "09f922840b7cfaef209d693ebfdda3492e16e24a",
+  "source_scientific_sha256": "9cb3ea825662324cf7b718ffca7c581066506907859a5739c7d5a3c366fc18f9",
+  "source_input_sha256": "5c6fea468008561acefd81b16d4cd57a8524f7897f861ccb436f1a32adaaeae8",
+  "source_observation_SQL_sha256": "ac2475010bb7ac5befbf7e2243b77c476b55a0dbbffa48e86a16500a605d07ed",
+  "source_engine": "26.2.0-4bd7a1f26f",
+  "source_mode": "delivery_proxy",
+  "cooling_unmet": {
+    "path": "inputs/model_review_v29/SOURCE_COOLING_UNMET_HOURS.csv",
+    "origin_path": "thermal_source/cooling_unmet_localization01/NATIVE_UNMET_SERVICE_PATH_HOURS.csv",
+    "sha256": "8a33b9c050b8adf81aea5649328757cc71163a2ff96ef3d1cf900471d1c97799",
+    "zone_hour_records": 26,
+    "unique_hours": 25,
+    "native_unmet_zone_hours": 9.5,
+    "regions": ["Kitchen_Flr_5", "Radiology_Flr_4"]
+  },
+  "screening": {
+    "path": "inputs/model_review_v29/ALL55_ZONES_NATIVE_UNMET_SUMMARY.csv",
+    "origin_path": "thermal_source/local_tanks_and_cooling04/ALL55_ZONES_NATIVE_UNMET_SUMMARY.csv",
+    "sha256": "92a5346bb8954d3ba9cb6eb229b1c9ac8ab89b7b2c6cb3b308fbb554f0e6c2ba",
+    "zone_count": 55,
+    "carriers": ["Heating", "Cooling"],
+    "method": "All 55 IDF source zones; Zone Heating Setpoint Not Met Time and Zone Cooling Setpoint Not Met Time, Hourly native Sum in hr, all 8760 source hours; retain zero rows and both carriers. Localized nonzero cooling zone-hour rows are unmodified native hourly evidence."
+  },
+  "thermal_reference": {
+    "path": "inputs/model_review_v28/THERMAL_SERVICE_COMPONENTS_8760.csv",
+    "sha256": "27b608272ed268c16fc6fb86ce5fbcf66e4f4f177f3ed7feefacc15c823b11f4",
+    "boundary": "ordinary_wateruse_central_target_v28",
+    "role": "Normal source-year reference only; not actual local service during an IES fault."
+  },
+  "units": {
+    "hour_of_year": "1-based standard source hour; support [(h-1)*60,h*60) minutes",
+    "native_unmet_zone_hours": "zone*h",
+    "native_hourly_room_C": "degC",
+    "native_hourly_setpoint_C": "degC",
+    "native_hourly_room_minus_target_C": "K",
+    "native_coil_delivered_kWh": "kWh",
+    "water_mass_kg_s_min": "kg/s",
+    "water_mass_kg_s_max": "kg/s",
+    "water_inlet_C_min": "degC",
+    "water_inlet_C_max": "degC",
+    "CHW_supply_C_min": "degC",
+    "CHW_supply_C_max": "degC",
+    "CHW_setpoint_C_min": "degC",
+    "CHW_setpoint_C_max": "degC",
+    "accepted_system_intervals": "count",
+    "total_native_zone_hours": "zone*h",
+    "hours_with_nonzero_native_unmet": "source-hour count per zone and carrier",
+    "peak_native_unmet_h": "h per source zone-hour",
+    "thermal_reference_power_columns": "kW hourly mean; integrate overlap minutes / 60 to kWh"
+  },
+  "scope": {
+    "local_source_unmet_is_whole_hospital_outage": false,
+    "full_target_demand_qualified": false,
+    "humidity_hydraulics_cleanliness_qualified": false,
+    "empirical_cooling_scale_applied": false,
+    "source_hours_deleted": false,
+    "thermal_coupling": null,
+    "upstream_preheat_central_assurance": false,
+    "unknown_upstream_energy_kWh": null,
+    "unknown_upstream_cost": null,
+    "unknown_upstream_CO2_kg": null,
+    "partial_hour_unmet_timing": "Hourly flags identify support only; exact unmet duration inside a partial source hour is unknown. Never prorate native unmet zone-hours."
+  }
+}
