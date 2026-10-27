@@ -1,0 +1,77 @@
+{
+  "schema": "hospital_ies.v29.actual_attempts.v1",
+  "new_primary": {
+    "completed": 7,
+    "failed_after_physical_start": 0,
+    "unknown_tail_minutes": 0,
+    "producer": "8926dfb7a1632d98b71b0692c6e37df9f4a61855",
+    "source_sha256": "ec2a2e8cd42470a70e87fdb5f8a8921374f409cb88267d7b45798b32eb6ee72d",
+    "input_sha256": "f414d21fc55d5a63282435b9bed9a1c8c289a049f24507f953fb86162fb41d15",
+    "actual_case_discovery": "native_audit/final01/ATTEMPT_DISCOVERY.json"
+  },
+  "reused_primary": {
+    "count": 3,
+    "new_model_runs": 0,
+    "producer": "09f922840b7cfaef209d693ebfdda3492e16e24a",
+    "evidence": "execution/REUSED_RESULT_PROVENANCE.json",
+    "native_audit": "native_audit/reused_B3_audit01/MECHANISM_AUDIT.json"
+  },
+  "new_backend_attempts": {
+    "total": 51457,
+    "accepted": 50539,
+    "not_accepted": 918,
+    "strategy_fallback_steps": 0,
+    "projection_fallback_steps": 0,
+    "timeout_attempts": 0,
+    "meaning": "Native candidates/infeasible probes/retries, not918 physical episodes; all native pointers and rejected metadata retained."
+  },
+  "verification_physical_episodes_prearchive": {
+    "completed": 1,
+    "minutes": 15,
+    "evidence": "execution/CLEAN_PUBLIC_ENTRY.json"
+  },
+  "verification_physical_episodes_postarchive": {
+    "status": "separate mandatory postarchive external receipt",
+    "external_evidence": "post_extract_verification01/FINAL_VERIFICATION.json",
+    "never_inferred_from_prearchive_record": true
+  },
+  "conditional_not_executed": {
+    "cases": [
+      "transfer_300_normal",
+      "transfer_300_fault"
+    ],
+    "evidence": "execution/CONDITIONAL_TRANSFER_DECISION.json",
+    "zero_metrics_imputed": false
+  },
+  "tests": {
+    "default_passed": 1320,
+    "default_skipped": 0,
+    "pytest_seconds": 431.2,
+    "exit_code": 0,
+    "environment_captured_before_execution": "execution/FULL_DEFAULT_TEST_CONTEXT.json",
+    "test_internal_model_invocations_are_primary_research": false
+  },
+  "readonly_replay": {
+    "actual_exit_codes": [
+      0,
+      0,
+      0
+    ],
+    "models_called": 0,
+    "EP_called": 0,
+    "evidence": "portable_verification/portable_replays01/REPLAY_REVIEW_SUMMARY.json"
+  },
+  "failures_preserved": [
+    "public_contract_red01/02: missing new API/registry; first RED had a test sys.path dependency corrected without assertion removal",
+    "source_scope RED01 fixture not ready then RED02 missing implementation; raw logs retained",
+    "public_contract_green01: invalid shortened smoke reference time, fixed before physical dispatch via original legal V28smoke",
+    "freeze01: gitshow CRLF vs read_text LF comparison, fixed by exact per-line test-list comparison; no physics change",
+    "baseline initial strict comparison: pure solver wallclock receipt remaining_original_budget_seconds explicitly identified; all real physics/commands compared",
+    "engineering narrative trailing encoding error and first CRLF paragraph parsing prewrite failure: originals and repair receipt retained; no numeric/source change",
+    "Nonphysical closeout command-index helper initially assumed object-only/BOM-free JSON; actual baseline array and PowerShell UTF8-BOM commands diagnosed, accepted without rewriting raw files; compose03 passed. No scientific source or model rerun."
+  ],
+  "new_annual_EnergyPlus_runs": 0,
+  "new_research_fits": 0,
+  "new_MPC_or_ML": 0,
+  "original_inputs_or_history_deleted": false
+}
