@@ -1,0 +1,36 @@
+{
+  "schema": "single_fault.sf2.independent_test_oracle_provenance.v1",
+  "origin_path": "E:\\hospital_ies_single_fault_model_20261102_run01\\analysis\\cooling_mechanism\\pnnl_sf2_design01\\pnnl_fuel_oracle.py",
+  "reviewed_oracle_sha256": "0cab16e27d61bdebc0f1be63a87ef738543a35a72dfec5b5ce575fed63ba0073",
+  "byte_identical_to_independent_oracle": true,
+  "original_review_path": "E:\\hospital_ies_single_fault_model_20261102_run01\\analysis\\cooling_mechanism\\pnnl_sf2_design01\\INDEPENDENT_REVIEW.json",
+  "original_review_sha256": "b14bc3f279b40650a1118e61f59c2e53af994815e1fb53959ab836f597a81117",
+  "independent_review": {
+    "schema": "hospital_ies.PNNL.oracle.independent_review.v1",
+    "reviewer": "/root/sf_physics_audit/recovery_service_review",
+    "status": "accepted_pure_source_equation_oracle_only",
+    "reviewed_oracle_sha256": "0cab16e27d61bdebc0f1be63a87ef738543a35a72dfec5b5ce575fed63ba0073",
+    "actual_tests": 7,
+    "test_exit_code": 0,
+    "independent_high_precision_check": {
+      "decimal_precision": 70,
+      "fuel_rate_points": 48,
+      "ramp_paths": 10,
+      "max_relative_rate_difference": 3.99e-16,
+      "max_integral_difference_MMBtu": 5.37e-13
+    },
+    "scope_review": [
+      "ISO800 log preserved, actual P/320 normalization correct",
+      "Temperature heat-rate factor once; no repeated power derating",
+      "Modular scaling and per-unit sum correct",
+      ".9851 fit value retained",
+      "Ramp integral and near-equal endpoint expansion correct",
+      "Zero only mathematical limit; OFF/pilot/startup null",
+      "HRSG loading retained as independent assumption"
+    ],
+    "SF2_source_or_producer_acceptance": false,
+    "source": "delegated non-author tool inspection and pure arithmetic final response"
+  },
+  "runtime_dependency_on_external_E_files": false,
+  "scope": "Only a standard-library test oracle; neither producer implementation nor OEM/transient certification; equations and assertions unchanged during relocation"
+}

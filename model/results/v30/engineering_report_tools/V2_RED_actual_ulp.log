@@ -1,0 +1,38 @@
+F....
+======================================================================
+FAIL: test_actual_b02_one_ulp_pairs_are_roundoff_labels_without_value_changes (__main__.PresentationTests) (c=19.218339912503154, m=19.21833991250315)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "E:\hospital_ies_v30_20261027\engineering_report_tools\test_presentation_v2.py", line 24, in test_actual_b02_one_ulp_pairs_are_roundoff_labels_without_value_changes
+    self.assertEqual(row['classification'],'roundoff_only_same_material_outcome')
+AssertionError: 'C_ENS_higher' != 'roundoff_only_same_material_outcome'
+- C_ENS_higher
++ roundoff_only_same_material_outcome
+
+
+======================================================================
+FAIL: test_actual_b02_one_ulp_pairs_are_roundoff_labels_without_value_changes (__main__.PresentationTests) (c=52.88374543597887, m=52.883745435978874)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "E:\hospital_ies_v30_20261027\engineering_report_tools\test_presentation_v2.py", line 24, in test_actual_b02_one_ulp_pairs_are_roundoff_labels_without_value_changes
+    self.assertEqual(row['classification'],'roundoff_only_same_material_outcome')
+AssertionError: 'C_ENS_lower' != 'roundoff_only_same_material_outcome'
+- C_ENS_lower
++ roundoff_only_same_material_outcome
+
+
+======================================================================
+FAIL: test_actual_equal_b02_P0_heat_remains_same (__main__.PresentationTests)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "E:\hospital_ies_v30_20261027\engineering_report_tools\test_presentation_v2.py", line 31, in test_actual_equal_b02_P0_heat_remains_same
+    self.assertEqual(a.compare_cell_v2(math.nextafter(value,math.inf),value,60.,60.)['classification'],
+AssertionError: 'C_ENS_higher' != 'roundoff_only_same_material_outcome'
+- C_ENS_higher
++ roundoff_only_same_material_outcome
+
+
+----------------------------------------------------------------------
+Ran 6 tests in 0.010s
+
+FAILED (failures=3)

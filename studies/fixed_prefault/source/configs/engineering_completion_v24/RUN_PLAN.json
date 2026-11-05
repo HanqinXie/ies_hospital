@@ -1,0 +1,171 @@
+{
+  "schema": "hospital_ies.v24.targeted_plan.v1",
+  "registered_before_formal_results": true,
+  "created_utc": "2026-10-25T18:15:34.903984+00:00",
+  "runs": [
+    {
+      "case": "normal_winter",
+      "policy": "C",
+      "configuration": "H0",
+      "group": "normal"
+    },
+    {
+      "case": "normal_winter",
+      "policy": "R",
+      "configuration": "H0",
+      "group": "normal"
+    },
+    {
+      "case": "normal_summer",
+      "policy": "C",
+      "configuration": "H0",
+      "group": "normal"
+    },
+    {
+      "case": "normal_summer",
+      "policy": "R",
+      "configuration": "H0",
+      "group": "normal"
+    },
+    {
+      "case": "cold_partial_tower",
+      "policy": "C",
+      "configuration": "H2",
+      "group": "affected_regression"
+    },
+    {
+      "case": "cold_partial_tower",
+      "policy": "M",
+      "configuration": "H2",
+      "group": "matched_policy"
+    },
+    {
+      "case": "cold_no_pump",
+      "policy": "C",
+      "configuration": "H2",
+      "group": "affected_regression"
+    },
+    {
+      "case": "cold_no_fan",
+      "policy": "C",
+      "configuration": "H2",
+      "group": "affected_regression"
+    },
+    {
+      "case": "cold_bank_t0_empty",
+      "policy": "C",
+      "configuration": "H2_empty",
+      "group": "affected_regression"
+    },
+    {
+      "case": "cold_bank_t0_full",
+      "policy": "C",
+      "configuration": "H2",
+      "group": "affected_regression"
+    },
+    {
+      "case": "cold_recharge_repeat",
+      "policy": "C",
+      "configuration": "H2",
+      "group": "affected_regression"
+    },
+    {
+      "case": "fan_recharge_repeat",
+      "policy": "C",
+      "configuration": "H2_empty",
+      "group": "cold_mode_mechanism"
+    },
+    {
+      "case": "l2_normal",
+      "policy": "C",
+      "configuration": "H0",
+      "group": "propagation"
+    },
+    {
+      "case": "l2_short_150",
+      "policy": "C",
+      "configuration": "H0",
+      "group": "propagation"
+    },
+    {
+      "case": "l2_long_150",
+      "policy": "C",
+      "configuration": "H0",
+      "group": "propagation"
+    },
+    {
+      "case": "l2_long_150",
+      "policy": "R",
+      "configuration": "H0",
+      "group": "propagation_policy"
+    },
+    {
+      "case": "l2_long_300",
+      "policy": "C",
+      "configuration": "H0",
+      "group": "dg_budget"
+    },
+    {
+      "case": "l1_label_long_150",
+      "policy": "C",
+      "configuration": "H0",
+      "group": "propagation"
+    },
+    {
+      "case": "l2_long_600",
+      "policy": "C",
+      "configuration": "H0",
+      "group": "dg_budget"
+    },
+    {
+      "case": "l2_long_150_ups20",
+      "policy": "C",
+      "configuration": "UPS20",
+      "group": "ups_energy"
+    },
+    {
+      "case": "l2_long_150_ups40",
+      "policy": "C",
+      "configuration": "UPS40",
+      "group": "ups_energy"
+    },
+    {
+      "case": "l2_long_150_ups40_power80",
+      "policy": "C",
+      "configuration": "UPS40_POWER80",
+      "group": "ups_power"
+    },
+    {
+      "case": "cold_partial_cold_30",
+      "policy": "C",
+      "configuration": "COLD_30",
+      "group": "cold_energy"
+    },
+    {
+      "case": "cold_partial_cold_90",
+      "policy": "C",
+      "configuration": "COLD_90",
+      "group": "cold_energy"
+    },
+    {
+      "case": "cold_partial_cold_60_power60",
+      "policy": "C",
+      "configuration": "COLD_60_POWER60",
+      "group": "cold_power"
+    },
+    {
+      "case": "cold_partial_tower_ton15000",
+      "policy": "C",
+      "configuration": "H2",
+      "group": "tower_unit_boundary"
+    }
+  ],
+  "full_legacy_fan_recharge_diagnostic": {
+    "case": "fan_recharge_repeat",
+    "policy": "C",
+    "physical_model": "M23_route_in_same_source_tree",
+    "formal_policy_comparison": false
+  },
+  "no_large_cartesian_search": true,
+  "no_A_search": true
+}

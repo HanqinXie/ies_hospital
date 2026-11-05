@@ -1,0 +1,576 @@
+{
+  "schema": "hospital_ies.run_cleanup_inventory.v1",
+  "created_utc": "2026-11-04T03:46:30.462331+00:00",
+  "read_only_scope": true,
+  "formal_experiments_started": 0,
+  "files_deleted": 0,
+  "files_moved": 0,
+  "resource_snapshot": {
+    "total_RAM_bytes": 50870132736,
+    "available_RAM_bytes": 22107869184,
+    "cpu_logical": 24,
+    "cpu_physical": 24,
+    "cpu_name": "Intel Core Ultra 9 275HX",
+    "disk_free_bytes": {
+      "C": 710721740800,
+      "D": 168097722368,
+      "E": 429282443264
+    },
+    "python_processes": [
+      {
+        "pid": 101804,
+        "name": "python.exe",
+        "rss_bytes": 18223104
+      }
+    ]
+  },
+  "old_roots_inventory": [
+    {
+      "path": "E:\\hospital_ies_minute1_20261103_run01",
+      "files": 1578444,
+      "directories": 96147,
+      "bytes": 39797044628,
+      "walk_seconds": 65.63476967811584,
+      "errors": [],
+      "major_groups": {
+        "native_runs": {
+          "files": 1349709,
+          "bytes": 15261750000
+        },
+        "input_generation": {
+          "files": 207,
+          "bytes": 16746785813
+        },
+        "orchestration": {
+          "files": 665,
+          "bytes": 3263237958
+        },
+        "analysis": {
+          "files": 44,
+          "bytes": 2330293132
+        },
+        "temp": {
+          "files": 94468,
+          "bytes": 810710584
+        }
+      }
+    },
+    {
+      "path": "D:\\云大文件\\论文\\医院ies\\code_4_2\\plotting\\problems_8",
+      "files": 411,
+      "bytes": 254760389,
+      "groups": {
+        "archive": {
+          "files": 165,
+          "bytes": 31046874
+        },
+        "normalized_demand_preview_20261104": {
+          "files": 87,
+          "bytes": 14417902
+        },
+        "normalized_preview_20261104": {
+          "files": 76,
+          "bytes": 10806682
+        },
+        "data": {
+          "files": 11,
+          "bytes": 181272048
+        },
+        "png": {
+          "files": 24,
+          "bytes": 8447571
+        },
+        "svg": {
+          "files": 24,
+          "bytes": 3411439
+        },
+        "qa": {
+          "files": 18,
+          "bytes": 5283032
+        },
+        "scripts": {
+          "files": 5,
+          "bytes": 68275
+        }
+      }
+    }
+  ],
+  "required_core_inputs": [
+    {
+      "source_path": "E:\\hospital_ies_minute1_20261103_run01\\input_generation\\extraction01\\minute_loads.csv",
+      "relative_path": "input_generation/extraction01/minute_loads.csv",
+      "role": "required_native_minute_runtime_input",
+      "exists": true,
+      "bytes": 2075944,
+      "sha256": "29721c9758a0d4814d44df102af400ebd8467c34cb7f2907fcffd503028b3467"
+    },
+    {
+      "source_path": "E:\\hospital_ies_minute1_20261103_run01\\input_generation\\extraction01\\minute_critical_zones.csv",
+      "relative_path": "input_generation/extraction01/minute_critical_zones.csv",
+      "role": "required_native_minute_runtime_input",
+      "exists": true,
+      "bytes": 4063344,
+      "sha256": "73e0759eb8fcdcd664a399d4f47fe9619a3b7501e07c643acf2dd4c905f580b9"
+    },
+    {
+      "source_path": "E:\\hospital_ies_minute1_20261103_run01\\input_generation\\extraction01\\minute_thermal_components.csv",
+      "relative_path": "input_generation/extraction01/minute_thermal_components.csv",
+      "role": "required_native_minute_runtime_input",
+      "exists": true,
+      "bytes": 220598,
+      "sha256": "783097d04b21cb226cdacff61ab19a6f604173a87962cef1dfca182a9fcf7ddc"
+    },
+    {
+      "source_path": "E:\\hospital_ies_minute1_20261103_run01\\input_generation\\extraction01\\MINUTE_SOURCE_METADATA.json",
+      "relative_path": "input_generation/extraction01/MINUTE_SOURCE_METADATA.json",
+      "role": "required_native_minute_runtime_input",
+      "exists": true,
+      "bytes": 49067,
+      "sha256": "ee8e7ff4d56b603a3b6ca3f0c6aa5689b457b9258ae686fe82900ca8ce7e91ff"
+    }
+  ],
+  "required_core_input_bytes": 6408953,
+  "recommended_small_input_provenance": [
+    {
+      "source_path": "E:\\hospital_ies_minute1_20261103_run01\\input_generation\\extraction01\\MINUTE_SOURCE_MANIFEST.json",
+      "relative_path": "input_generation/extraction01/MINUTE_SOURCE_MANIFEST.json",
+      "role": "input_provenance_or_generation_recipe_only_not_old_IES_outcome",
+      "exists": true,
+      "bytes": 1068,
+      "sha256": "f0173cb892d2abc15483259692f834670febaa0b1e8d44ef83bafeeed55e142d"
+    },
+    {
+      "source_path": "E:\\hospital_ies_minute1_20261103_run01\\input_generation\\extraction01\\DERIVATION_CHECKS.json",
+      "relative_path": "input_generation/extraction01/DERIVATION_CHECKS.json",
+      "role": "input_provenance_or_generation_recipe_only_not_old_IES_outcome",
+      "exists": true,
+      "bytes": 16108,
+      "sha256": "1aa94597479fad17a321c6478836ded9b20b61a430b4a3fcbcfff1ec0ef23cfb"
+    },
+    {
+      "source_path": "E:\\hospital_ies_minute1_20261103_run01\\input_generation\\extraction01\\SAME_RUN_MINUTE_HOURLY_CHECKS.json",
+      "relative_path": "input_generation/extraction01/SAME_RUN_MINUTE_HOURLY_CHECKS.json",
+      "role": "input_provenance_or_generation_recipe_only_not_old_IES_outcome",
+      "exists": true,
+      "bytes": 500,
+      "sha256": "cfdbb863d95609bbd07f849692e4734a121473eb9e4301334aaa5a4e0d7c628d"
+    },
+    {
+      "source_path": "E:\\hospital_ies_minute1_20261103_run01\\input_generation\\extraction01\\NATIVE_WINDOW_READ_RECEIPT.json",
+      "relative_path": "input_generation/extraction01/NATIVE_WINDOW_READ_RECEIPT.json",
+      "role": "input_provenance_or_generation_recipe_only_not_old_IES_outcome",
+      "exists": true,
+      "bytes": 504,
+      "sha256": "7183a1b489ecb812c231c2bd7a2feed1c9afe54c1001a129eb9957c5789a8a6f"
+    },
+    {
+      "source_path": "E:\\hospital_ies_minute1_20261103_run01\\reviews\\MINUTE_INPUT_ADMISSION01.json",
+      "relative_path": "reviews/MINUTE_INPUT_ADMISSION01.json",
+      "role": "input_provenance_or_generation_recipe_only_not_old_IES_outcome",
+      "exists": true,
+      "bytes": 4836,
+      "sha256": "3ee1c3e365b9c1ea5adbdc0fbb62835f9da187bf72f4f509813d75a0c34647c1"
+    },
+    {
+      "source_path": "E:\\hospital_ies_minute1_20261103_run01\\reviews\\EP_MINUTE_SOURCE_GATE_REVIEW.json",
+      "relative_path": "reviews/EP_MINUTE_SOURCE_GATE_REVIEW.json",
+      "role": "input_provenance_or_generation_recipe_only_not_old_IES_outcome",
+      "exists": true,
+      "bytes": 325724,
+      "sha256": "f02e380bda03dff2afec71be83302bed4e99488cdf8c811cf131334c5d89d833"
+    },
+    {
+      "source_path": "E:\\hospital_ies_minute1_20261103_run01\\input_generation\\source_production01\\START_RECEIPT.json",
+      "relative_path": "input_generation/source_production01/START_RECEIPT.json",
+      "role": "input_provenance_or_generation_recipe_only_not_old_IES_outcome",
+      "exists": true,
+      "bytes": 1324,
+      "sha256": "9c2adf10baee48d8ee34e43beef4aed65e95ef2d04b575db7d2e5c661499a788"
+    },
+    {
+      "source_path": "E:\\hospital_ies_minute1_20261103_run01\\input_generation\\source_production01\\COMMAND_RECEIPT.json",
+      "relative_path": "input_generation/source_production01/COMMAND_RECEIPT.json",
+      "role": "input_provenance_or_generation_recipe_only_not_old_IES_outcome",
+      "exists": true,
+      "bytes": 3562,
+      "sha256": "b35b960a2da2f3236ad9fa90ab3ebd1d6bab36fefc87444a1acd1e1fb139d6d0"
+    },
+    {
+      "source_path": "E:\\hospital_ies_minute1_20261103_run01\\input_generation\\source_production01\\POSTFLIGHT.json",
+      "relative_path": "input_generation/source_production01/POSTFLIGHT.json",
+      "role": "input_provenance_or_generation_recipe_only_not_old_IES_outcome",
+      "exists": true,
+      "bytes": 2934,
+      "sha256": "f9f0ca2d78f631863bd3f2f56c70e29212c958ff7a7cf51553fe4753b7fc81bb"
+    },
+    {
+      "source_path": "E:\\hospital_ies_minute1_20261103_run01\\input_generation\\source_production01\\WARNING_FAMILY_COMPARISON.json",
+      "relative_path": "input_generation/source_production01/WARNING_FAMILY_COMPARISON.json",
+      "role": "input_provenance_or_generation_recipe_only_not_old_IES_outcome",
+      "exists": true,
+      "bytes": 203143,
+      "sha256": "757b1cd4b8a2b92452b4c0de939568713e4d1ba4b812282c4c35a481897fa482"
+    },
+    {
+      "source_path": "E:\\hospital_ies_minute1_20261103_run01\\input_generation\\source_production01\\SQL_COMPLETION_FLAG_INVESTIGATION.json",
+      "relative_path": "input_generation/source_production01/SQL_COMPLETION_FLAG_INVESTIGATION.json",
+      "role": "input_provenance_or_generation_recipe_only_not_old_IES_outcome",
+      "exists": true,
+      "bytes": 1305,
+      "sha256": "dbc9f58df0b1f3d047c0c24964f985002ecb01cb10e7b243b18733589bb8d53a"
+    },
+    {
+      "source_path": "E:\\hospital_ies_minute1_20261103_run01\\input_generation\\source_quality01\\COMPACT_SOURCE_QUALITY_RECEIPT.json",
+      "relative_path": "input_generation/source_quality01/COMPACT_SOURCE_QUALITY_RECEIPT.json",
+      "role": "input_provenance_or_generation_recipe_only_not_old_IES_outcome",
+      "exists": true,
+      "bytes": 15656,
+      "sha256": "6293773756594e5019365118f7ee7659c241fdea74bb0aed21d986b01d2e60cb"
+    },
+    {
+      "source_path": "E:\\hospital_ies_minute1_20261103_run01\\input_generation\\raw_window_review01\\RAW_WINDOW_REVIEW.json",
+      "relative_path": "input_generation/raw_window_review01/RAW_WINDOW_REVIEW.json",
+      "role": "input_provenance_or_generation_recipe_only_not_old_IES_outcome",
+      "exists": true,
+      "bytes": 127387,
+      "sha256": "a2a667ce4d95a013e52432122dc00b4c428cb5c00e5e0e2a513bf7b59e639731"
+    },
+    {
+      "source_path": "E:\\hospital_ies_minute1_20261103_run01\\input_generation\\sizing_frozen_complete01\\FREEZE_RECEIPT.json",
+      "relative_path": "input_generation/sizing_frozen_complete01/FREEZE_RECEIPT.json",
+      "role": "input_provenance_or_generation_recipe_only_not_old_IES_outcome",
+      "exists": true,
+      "bytes": 322855,
+      "sha256": "e70af2e182f346165cdca1c1ee41c29d4542f959a482205be8df4590516363cd"
+    },
+    {
+      "source_path": "E:\\hospital_ies_minute1_20261103_run01\\input_generation\\sizing_frozen_complete01\\FIXED_INPUT_INDEPENDENT_AUDIT.json",
+      "relative_path": "input_generation/sizing_frozen_complete01/FIXED_INPUT_INDEPENDENT_AUDIT.json",
+      "role": "input_provenance_or_generation_recipe_only_not_old_IES_outcome",
+      "exists": true,
+      "bytes": 101117,
+      "sha256": "e0be37a753f09c055e4b1219642490a3fb9596ff6334f98c15648ae663f23653"
+    },
+    {
+      "source_path": "E:\\hospital_ies_minute1_20261103_run01\\input_generation\\sizing_frozen_complete01\\FROZEN_ACTUAL_SIZE_COMPARISON.json",
+      "relative_path": "input_generation/sizing_frozen_complete01/FROZEN_ACTUAL_SIZE_COMPARISON.json",
+      "role": "input_provenance_or_generation_recipe_only_not_old_IES_outcome",
+      "exists": true,
+      "bytes": 431903,
+      "sha256": "ab0c3091c18195ee467a6ac8047c78748040b35b502029f90b3b0551820f3688"
+    },
+    {
+      "source_path": "E:\\hospital_ies_minute1_20261103_run01\\input_generation\\sizing_frozen_complete01\\OUTPUT_BOUNDARY_REVIEW.json",
+      "relative_path": "input_generation/sizing_frozen_complete01/OUTPUT_BOUNDARY_REVIEW.json",
+      "role": "input_provenance_or_generation_recipe_only_not_old_IES_outcome",
+      "exists": true,
+      "bytes": 21171,
+      "sha256": "72023f712ffc0c633e1ea071110919ed3d6145e2668e322b2775773c14009903"
+    },
+    {
+      "source_path": "E:\\hospital_ies_minute1_20261103_run01\\input_generation\\source_production01\\Hospital_SanDiego_minute_frozen.idf",
+      "relative_path": "input_generation/source_production01/Hospital_SanDiego_minute_frozen.idf",
+      "role": "input_provenance_or_generation_recipe_only_not_old_IES_outcome",
+      "exists": true,
+      "bytes": 717003,
+      "sha256": "c5cdbc196d619f9fc8d678754cfbaa559882b84a63a26f442606813e14c6ceee"
+    }
+  ],
+  "optional_source_generation_recipes": [
+    {
+      "source_path": "E:\\hospital_ies_minute1_20261103_run01\\tools\\ep_minute_extract.py",
+      "relative_path": "tools/ep_minute_extract.py",
+      "role": "optional_source_code_to_port_if_source_regeneration_required",
+      "exists": true,
+      "bytes": 34982,
+      "sha256": "43355bef3df1b67ffcb97c771ca709a8b78b1d5d40258863c4f01e3438fe0ebc"
+    },
+    {
+      "source_path": "E:\\hospital_ies_minute1_20261103_run01\\tools\\ep_minute_source.py",
+      "relative_path": "tools/ep_minute_source.py",
+      "role": "optional_source_code_to_port_if_source_regeneration_required",
+      "exists": true,
+      "bytes": 25830,
+      "sha256": "da24ee1d05a938c319e2307798579d82ae96f67e4be8b5c857d31851adae4742"
+    },
+    {
+      "source_path": "E:\\hospital_ies_minute1_20261103_run01\\tools\\ep_native_size_capture.py",
+      "relative_path": "tools/ep_native_size_capture.py",
+      "role": "optional_source_code_to_port_if_source_regeneration_required",
+      "exists": true,
+      "bytes": 3144,
+      "sha256": "21dfdde2bc7b11c969af02b0acc7841361c52816d7b79eb0dead150b15994d9c"
+    },
+    {
+      "source_path": "E:\\hospital_ies_minute1_20261103_run01\\tools\\ep_raw_window_review.py",
+      "relative_path": "tools/ep_raw_window_review.py",
+      "role": "optional_source_code_to_port_if_source_regeneration_required",
+      "exists": true,
+      "bytes": 6520,
+      "sha256": "d0dfa40040ac8b97c5d3afdcc007cd6fc0e77975277fd729466630081899d01a"
+    },
+    {
+      "source_path": "E:\\hospital_ies_minute1_20261103_run01\\tools\\ep_source_quality.py",
+      "relative_path": "tools/ep_source_quality.py",
+      "role": "optional_source_code_to_port_if_source_regeneration_required",
+      "exists": true,
+      "bytes": 15338,
+      "sha256": "6baec8bcdb5ffaad802a0fd8cbdae3fe81aea3778fca2fd1ab1ee01b27f829e7"
+    }
+  ],
+  "historical_case_design_to_port": [
+    {
+      "source_path": "E:\\hospital_ies_minute1_20261103_run01\\design\\MINUTE_REGISTRATION01.json",
+      "relative_path": "design/MINUTE_REGISTRATION01.json",
+      "role": "historical_case_design_input_only_recreate_new_registration_no_old_results",
+      "exists": true,
+      "bytes": 19191,
+      "sha256": "3ba0c85f6fc44d9a6e546372145a29f06663cdc54c8a2bd72f299d17469828a3"
+    },
+    {
+      "source_path": "E:\\hospital_ies_minute1_20261103_run01\\design\\PARALLEL_EXECUTION_POLICY02.json",
+      "relative_path": "design/PARALLEL_EXECUTION_POLICY02.json",
+      "role": "historical_resource_policy_reference_only",
+      "exists": true,
+      "bytes": 1229,
+      "sha256": "fcc58477e7cf07e4340b882678daf14f54fa3b21f44f5182b4b3a485dbf00924"
+    },
+    {
+      "source_path": "E:\\hospital_ies_minute1_20261103_run01\\design\\cases01\\T01_N.json",
+      "relative_path": "design/cases01/T01_N.json",
+      "role": "historical_case_design_input_only_recreate_new_case",
+      "exists": true,
+      "bytes": 15920,
+      "sha256": "832265bd09999d382e535284600c200082fa56e5b7ad7d522ce9469c72047156"
+    },
+    {
+      "source_path": "E:\\hospital_ies_minute1_20261103_run01\\design\\cases01\\T01_R.json",
+      "relative_path": "design/cases01/T01_R.json",
+      "role": "historical_case_design_input_only_recreate_new_case",
+      "exists": true,
+      "bytes": 17000,
+      "sha256": "6fa437ad49f89c03b7ffddf8fa5dbfb58e8d202abfa5b22fa198f69317ba1e4b"
+    },
+    {
+      "source_path": "E:\\hospital_ies_minute1_20261103_run01\\design\\cases01\\T01_U.json",
+      "relative_path": "design/cases01/T01_U.json",
+      "role": "historical_case_design_input_only_recreate_new_case",
+      "exists": true,
+      "bytes": 17000,
+      "sha256": "1bd083adc06aca63cadc86f42979079bc061b130863e491a087a35e3fe43496f"
+    },
+    {
+      "source_path": "E:\\hospital_ies_minute1_20261103_run01\\design\\cases01\\T02_N.json",
+      "relative_path": "design/cases01/T02_N.json",
+      "role": "historical_case_design_input_only_recreate_new_case",
+      "exists": true,
+      "bytes": 15908,
+      "sha256": "43fc029c4ed13ea610f83f8ee14453154c667171745dd1f202b243c756a1b266"
+    },
+    {
+      "source_path": "E:\\hospital_ies_minute1_20261103_run01\\design\\cases01\\T02_R.json",
+      "relative_path": "design/cases01/T02_R.json",
+      "role": "historical_case_design_input_only_recreate_new_case",
+      "exists": true,
+      "bytes": 17016,
+      "sha256": "0e0de4ae315466cd518354b1b83a8f10c4f8a6511167edd38f28d4e83ea75114"
+    },
+    {
+      "source_path": "E:\\hospital_ies_minute1_20261103_run01\\design\\cases01\\T02_U.json",
+      "relative_path": "design/cases01/T02_U.json",
+      "role": "historical_case_design_input_only_recreate_new_case",
+      "exists": true,
+      "bytes": 17016,
+      "sha256": "f2d6537ddaec7bfe1471e346c9d1c42a41e0787e9adddbd295e60dbe4f2c9d58"
+    },
+    {
+      "source_path": "E:\\hospital_ies_minute1_20261103_run01\\design\\cases01\\T03_N.json",
+      "relative_path": "design/cases01/T03_N.json",
+      "role": "historical_case_design_input_only_recreate_new_case",
+      "exists": true,
+      "bytes": 15955,
+      "sha256": "427dae5fcc52d6a9ebe89daf6b8be19c8005a9958f890ddeda9c2d2f9507f7a7"
+    },
+    {
+      "source_path": "E:\\hospital_ies_minute1_20261103_run01\\design\\cases01\\T03_R.json",
+      "relative_path": "design/cases01/T03_R.json",
+      "role": "historical_case_design_input_only_recreate_new_case",
+      "exists": true,
+      "bytes": 17020,
+      "sha256": "feb3bb9573547f9279485216884d5ddb7b04f2b91ab634a03b4b27f76105865a"
+    },
+    {
+      "source_path": "E:\\hospital_ies_minute1_20261103_run01\\design\\cases01\\T03_U.json",
+      "relative_path": "design/cases01/T03_U.json",
+      "role": "historical_case_design_input_only_recreate_new_case",
+      "exists": true,
+      "bytes": 17020,
+      "sha256": "8be96b2dcba7e6399fa32e9b5030c4407e2c99916561f9c8c7840f62bf529ee5"
+    },
+    {
+      "source_path": "E:\\hospital_ies_minute1_20261103_run01\\design\\cases01\\T04_R.json",
+      "relative_path": "design/cases01/T04_R.json",
+      "role": "historical_case_design_input_only_recreate_new_case",
+      "exists": true,
+      "bytes": 17032,
+      "sha256": "0635c8b398daeba268b164bb9543855dcbada9c73ae940434212da39282f6e8f"
+    },
+    {
+      "source_path": "E:\\hospital_ies_minute1_20261103_run01\\design\\cases01\\T04_U.json",
+      "relative_path": "design/cases01/T04_U.json",
+      "role": "historical_case_design_input_only_recreate_new_case",
+      "exists": true,
+      "bytes": 17032,
+      "sha256": "ecc9357fd20613e8b084850084cb6c410a5e95e0072231dabd758617f79a6e26"
+    },
+    {
+      "source_path": "E:\\hospital_ies_minute1_20261103_run01\\design\\cases01\\T05_R.json",
+      "relative_path": "design/cases01/T05_R.json",
+      "role": "historical_case_design_input_only_recreate_new_case",
+      "exists": true,
+      "bytes": 17036,
+      "sha256": "4cbf42e9081ce4612cb32481adeb5b60611c981750a57527f8a51f4d4c89907e"
+    },
+    {
+      "source_path": "E:\\hospital_ies_minute1_20261103_run01\\design\\cases01\\T05_U.json",
+      "relative_path": "design/cases01/T05_U.json",
+      "role": "historical_case_design_input_only_recreate_new_case",
+      "exists": true,
+      "bytes": 17036,
+      "sha256": "2014b23cea2b91292f81a56a476f6ab94d761464d7051d9813988a9c5fa6e219"
+    },
+    {
+      "source_path": "E:\\hospital_ies_minute1_20261103_run01\\design\\cases01\\T06_N.json",
+      "relative_path": "design/cases01/T06_N.json",
+      "role": "historical_case_design_input_only_recreate_new_case",
+      "exists": true,
+      "bytes": 15986,
+      "sha256": "4d8727dc7077da9b60b844195d31ab530b09f5fd8f64e3919ff5fe26113b914a"
+    },
+    {
+      "source_path": "E:\\hospital_ies_minute1_20261103_run01\\design\\cases01\\T06_R.json",
+      "relative_path": "design/cases01/T06_R.json",
+      "role": "historical_case_design_input_only_recreate_new_case",
+      "exists": true,
+      "bytes": 17126,
+      "sha256": "7f56b204e943cb970494398a4c61784a50ed078219fd58b59a0ae2d51520e466"
+    },
+    {
+      "source_path": "E:\\hospital_ies_minute1_20261103_run01\\design\\cases01\\T06_U.json",
+      "relative_path": "design/cases01/T06_U.json",
+      "role": "historical_case_design_input_only_recreate_new_case",
+      "exists": true,
+      "bytes": 17126,
+      "sha256": "acfd7faa14d294aa5b71aa071d51b703f084fe6a6af7a18bee28aba899d7aa0f"
+    },
+    {
+      "source_path": "E:\\hospital_ies_minute1_20261103_run01\\design\\cases01\\T07_N.json",
+      "relative_path": "design/cases01/T07_N.json",
+      "role": "historical_case_design_input_only_recreate_new_case",
+      "exists": true,
+      "bytes": 15958,
+      "sha256": "2ccbf9bc44c59546b3d393e891c46aa5693adc409307b1d372c229db8adafcd3"
+    },
+    {
+      "source_path": "E:\\hospital_ies_minute1_20261103_run01\\design\\cases01\\T07_R.json",
+      "relative_path": "design/cases01/T07_R.json",
+      "role": "historical_case_design_input_only_recreate_new_case",
+      "exists": true,
+      "bytes": 17034,
+      "sha256": "9944cfa72e6293cca525c2dfb0b40d6b8590ac18454712cac6d4ccfb898308f1"
+    },
+    {
+      "source_path": "E:\\hospital_ies_minute1_20261103_run01\\design\\cases01\\T07_U.json",
+      "relative_path": "design/cases01/T07_U.json",
+      "role": "historical_case_design_input_only_recreate_new_case",
+      "exists": true,
+      "bytes": 17034,
+      "sha256": "b8d32be33df08d89b98b13b243bf6a0b45a526afb76775449bd53fce4159c4e4"
+    }
+  ],
+  "optional_postprocessing_source_to_port": [
+    {
+      "source_path": "E:\\hospital_ies_minute1_20261103_run01\\tools\\audit_minute_case.py",
+      "relative_path": "tools/audit_minute_case.py",
+      "role": "optional_algorithm_source_only_requires_new_root_model_and_hash_adaptation",
+      "exists": true,
+      "bytes": 92475,
+      "sha256": "6a0e72d01ab769184dc7c19588116c9b42138c68355a3fce494d182ea2d6e006"
+    },
+    {
+      "source_path": "E:\\hospital_ies_minute1_20261103_run01\\tools\\audit_minute_case_v4.py",
+      "relative_path": "tools/audit_minute_case_v4.py",
+      "role": "optional_algorithm_source_only_requires_new_root_model_and_hash_adaptation",
+      "exists": true,
+      "bytes": 19574,
+      "sha256": "d8653fe44176f98951cdb029083ed1990c8e411bd49ee47719635f55bc661c1b"
+    },
+    {
+      "source_path": "E:\\hospital_ies_minute1_20261103_run01\\tools\\audit_minute_case_v5.py",
+      "relative_path": "tools/audit_minute_case_v5.py",
+      "role": "optional_algorithm_source_only_requires_new_root_model_and_hash_adaptation",
+      "exists": true,
+      "bytes": 20590,
+      "sha256": "2e9c780086001e05a3f2090236b2a0883783798e9671d80c590d63c03c3baeef"
+    },
+    {
+      "source_path": "E:\\hospital_ies_minute1_20261103_run01\\tools\\minute_thermal_math_v3.py",
+      "relative_path": "tools/minute_thermal_math_v3.py",
+      "role": "optional_algorithm_source_only_requires_new_root_model_and_hash_adaptation",
+      "exists": true,
+      "bytes": 31619,
+      "sha256": "2eb2afe93889a125c46601664d555d57c4bbdd5f875891cbb9c40f582ee40b46"
+    },
+    {
+      "source_path": "E:\\hospital_ies_minute1_20261103_run01\\tools\\minute_thermal_audit_v4.py",
+      "relative_path": "tools/minute_thermal_audit_v4.py",
+      "role": "optional_algorithm_source_only_requires_new_root_model_and_hash_adaptation",
+      "exists": true,
+      "bytes": 32721,
+      "sha256": "19e03000f2a7e1b50f85e44aa686701413d55f8c2104dad5af56fca2434b38b6"
+    },
+    {
+      "source_path": "E:\\hospital_ies_minute1_20261103_run01\\tools\\minute_thermal_audit_v5_bounded.py",
+      "relative_path": "tools/minute_thermal_audit_v5_bounded.py",
+      "role": "optional_algorithm_source_only_requires_new_root_model_and_hash_adaptation",
+      "exists": true,
+      "bytes": 25058,
+      "sha256": "20349648cb9ea7f25d36d3e0e891a9f3fce80cc1e4028fa2cf9e50324aca7843"
+    },
+    {
+      "source_path": "E:\\hospital_ies_minute1_20261103_run01\\tools\\minute_plot_data_v6.py",
+      "relative_path": "tools/minute_plot_data_v6.py",
+      "role": "optional_algorithm_source_only_requires_new_root_model_and_hash_adaptation",
+      "exists": true,
+      "bytes": 20629,
+      "sha256": "22a89a23e19bb4de77460f2ea1d1b8dc73a96310dd309ecd9c8b0deb47122a34"
+    },
+    {
+      "source_path": "E:\\hospital_ies_minute1_20261103_run01\\tools\\minute_plot_render_v7.py",
+      "relative_path": "tools/minute_plot_render_v7.py",
+      "role": "optional_algorithm_source_only_requires_new_root_model_and_hash_adaptation",
+      "exists": true,
+      "bytes": 14913,
+      "sha256": "22568fed39d49a14c83c890c29ae2b3279d36190e178c7f500662d2760acad91"
+    },
+    {
+      "source_path": "E:\\hospital_ies_minute1_20261103_run01\\tools\\minute_plot_root_qa08.py",
+      "relative_path": "tools/minute_plot_root_qa08.py",
+      "role": "optional_algorithm_source_only_requires_new_root_model_and_hash_adaptation",
+      "exists": true,
+      "bytes": 31376,
+      "sha256": "cbed181cb9831016a7a07c25850704c319725cb4829586fa0b8bdef8b8e2927f"
+    },
+    {
+      "source_path": "E:\\hospital_ies_minute1_20261103_run01\\tools\\minute_posterior_analysis09.py",
+      "relative_path": "tools/minute_posterior_analysis09.py",
+      "role": "optional_algorithm_source_only_requires_new_root_model_and_hash_adaptation",
+      "exists": true,
+      "bytes": 53368,
+      "sha256": "f0b6a7dbb3901ed5f4d88200dc45a76be05058367a5a8556e0db4c75e70419ac"
+    }
+  ],
+  "source_admission_policy": "Old final04 admission and QA authenticate only old source 9198; generate a fresh exact source admission after new code freezes. Never retag old accepted outcomes.",
+  "deletion_exclusions_policy": "Retain only explicitly reused input bytes, source recipes, and necessary input provenance as new-input dependencies. Do not copy old IES trajectories, audit outcomes, figures, posterior results or command-event sidecars elsewhere to defeat requested deletion.",
+  "raw_source_deletion_limit": "EnergyPlus eplusout.sql/eplusout.eso are old raw outputs and are not in this migration whitelist. Metadata retains original path/hash as historical provenance; after deletion immediate re-extraction from original raw is unavailable. Runtime replay remains possible from retained minute input bytes; source regeneration uses preserved frozen IDF, weather and exact engine/recipe identity."
+}

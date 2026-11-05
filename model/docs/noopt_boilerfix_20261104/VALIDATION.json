@@ -1,0 +1,36 @@
+{
+  "schema": "hospital_ies.boiler_useful_pressure_fix.validation.v1",
+  "status": "implemented_focused_component_verified",
+  "worktree": "D:\\hospital_ies_noopt_boilerfix_20261104",
+  "base_commit": "079111ed4b84fbd11633ccd2ff6b61208f0f09a1",
+  "production_scope": {
+    "status": "passed",
+    "only_evaluate_forward_body_changed": true,
+    "signature_and_decorators_identical": true,
+    "base_commit": "079111ed4b84fbd11633ccd2ff6b61208f0f09a1",
+    "old_sha256": "b0f8f4a79caa3483e17688470177e74a2638daaf1e888085fe5d47da0b87a2f9",
+    "new_sha256": "79c83c9b0b5f3352e4708d12f9424210949cf5065b8bdef411d94e639f029092",
+    "source_path": "tools/noopt_unattended_20261104/forward.py"
+  },
+  "command": "python -B -m pytest -q docs/noopt_boilerfix_20261104/test_boiler_pressure.py --noconftest -p no:cacheprovider",
+  "red": {
+    "exit_code": 1,
+    "result": "2 failed,1 passed",
+    "log": "logs/01_red.txt"
+  },
+  "green": {
+    "exit_code": 0,
+    "result": "3 passed",
+    "log": "logs/02_green.txt"
+  },
+  "diff_check_exit_code": 0,
+  "resets_or_simulations_run": 0,
+  "NR_reuse_certified_here": false,
+  "files": {
+    "docs\\noopt_boilerfix_20261104\\test_boiler_pressure.py": "83008be3ad3d3f8ff38cff0a456a24a96679056deb8746ad0e911e16a360531c",
+    "docs\\noopt_boilerfix_20261104\\logs\\01_red.txt": "730f5e5a235a865c4b171bfd9a273ffe49f5ff2b7c79663c7495eb75985d7408",
+    "docs\\noopt_boilerfix_20261104\\logs\\02_green.txt": "2c70fc51b672c80093e57f2cb08b10aaa9c671cf15319856e223905649ec4430",
+    "docs\\noopt_boilerfix_20261104\\FIX_REPORT_ZH.md": "c2fd6210c305c947745e610cc9fa239ef4be4b290e100b54afa23d93fe44ef16",
+    "docs\\noopt_boilerfix_20261104\\FUNCTION_SCOPE_CHECK.json": "57de609f0ba9a4c234796649e17885278bbdf0f365415df2351e567c855dc521"
+  }
+}

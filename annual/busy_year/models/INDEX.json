@@ -1,0 +1,43 @@
+{
+  "schema": "hospital_ies.busy_year_cases.v1",
+  "calendar_state": "candidate_requires_normal_reference",
+  "annual_admitted": false,
+  "physical_starts": 0,
+  "calendar_file": "CALENDAR.json",
+  "calendar_sha256": "d3cf004ca50a4f9de4fcc0e8a5dca2838bd70afc988cfce92a479ccb40c91957",
+  "binding": {
+    "calendar_sha256": "d3cf004ca50a4f9de4fcc0e8a5dca2838bd70afc988cfce92a479ccb40c91957"
+  },
+  "cases": [
+    {
+      "method": "M_available",
+      "path": "cases/M_available.json",
+      "file_sha256": "96928f712b047791c0c61fdcfdeef8149bf6e64ba469db081a81e7be3556ccbb",
+      "canonical_sha256": "c81fa957932e43db0ee00b60218e273cb8bb5ab58dd14a9dfd6e7cbde01ca0c7",
+      "mode": "FD",
+      "configuration": "H2",
+      "hours": 8760,
+      "source_hour": 1
+    },
+    {
+      "method": "M_ready",
+      "path": "cases/M_ready.json",
+      "file_sha256": "08a195f4a0779d00c3b45ca0dc0bb0ad73ee4a7dbaef086924582422464fb417",
+      "canonical_sha256": "1f101d451d56e376adcb5f3dd39f18e416e22046b31a32e30f81d560cec88988",
+      "mode": "FD",
+      "configuration": "H2",
+      "hours": 8760,
+      "source_hour": 1
+    },
+    {
+      "method": "C_ready",
+      "path": "cases/C_ready.json",
+      "file_sha256": "719fcd1ec9fc595edbebafe009eee7870b4d67dafab18c4e025e6c7a6bc43962",
+      "canonical_sha256": "40a61583be9062fefe3b65240603d7e8eab9a5aae8f62c7a846468866cbb01e8",
+      "mode": "FD",
+      "configuration": "H2",
+      "hours": 8760,
+      "source_hour": 1
+    }
+  ]
+}

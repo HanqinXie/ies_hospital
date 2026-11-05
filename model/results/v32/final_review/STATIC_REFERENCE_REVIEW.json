@@ -1,0 +1,629 @@
+{
+  "schema": "hospital_ies.v32.final_independent_static_reference_review.v1",
+  "created_utc": "2026-10-27T15:09:23.565362+00:00",
+  "status": "passed",
+  "all_checks_passed": true,
+  "checks": [
+    {
+      "id": "current_all_frozen_sources_match",
+      "passed": true,
+      "evidence": {
+        "source_count": 873
+      }
+    },
+    {
+      "id": "current_all_frozen_inputs_match",
+      "passed": true,
+      "evidence": {
+        "input_count": 36
+      }
+    },
+    {
+      "id": "old_scientific_bindings_unchanged",
+      "passed": true,
+      "evidence": {
+        "old_source_count": 864,
+        "old_input_count": 36
+      }
+    },
+    {
+      "id": "six_rows_four_reused_two_new",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "id": "one_selected_formulation",
+      "passed": true,
+      "evidence": {
+        "selection": {
+          "selected_formulation": "strict",
+          "selection_reason": "both_strict_branches_have_independently_verified_incumbents",
+          "strict_status": {
+            "normal": "optimal",
+            "grid": "optimal"
+          },
+          "same_formulation_for_normal_and_grid": true,
+          "original_registration_sha256": "26dfcd41506d32a8103ac26e18451e7336e6bc205a5d2885d123db2024d836b0",
+          "adopted_source_files": {
+            "normal": "normal.strict.01.json",
+            "grid": "grid.strict.01.json"
+          },
+          "information_permission": "offline_known_window",
+          "actual_hospital_runs_started": false,
+          "stronger_claims_not_established": [
+            "same-information online ranking",
+            "strict dynamic feasibility guarantee",
+            "author/official software reproduction",
+            "cost lower bound"
+          ]
+        }
+      }
+    },
+    {
+      "id": "registered_information_and_permissions",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "id": "no_controller_substitution_or_decision_fallback",
+      "passed": true,
+      "evidence": {
+        "source": "tools/model_reference_v32/reference.py",
+        "lines": [
+          45,
+          13
+        ]
+      }
+    },
+    {
+      "id": "snapshot_only_common_initialization",
+      "passed": true,
+      "evidence": {
+        "source": "tools/model_reference_v32/snapshot.py",
+        "case_source": "M-suffixed frozen case used solely to obtain original physical configuration, no M policy construction/decision",
+        "reset_lines": [
+          36
+        ]
+      }
+    },
+    {
+      "id": "ordinary_action_route_without_stock_write",
+      "passed": true,
+      "evidence": {
+        "source": "tools/model_reference_v32/actions.py",
+        "lines": [
+          40
+        ]
+      }
+    },
+    {
+      "id": "shared_factory_is_explicit_opt_in",
+      "passed": true,
+      "evidence": {
+        "source": "tools/model_correctness_v23/validation.py",
+        "lines": [
+          240
+        ]
+      }
+    },
+    {
+      "id": "ordinary_request_uses_original_pending_queue",
+      "passed": true,
+      "evidence": {
+        "source": "tools/sci_engineering/environment.py",
+        "lines": [
+          294,
+          323,
+          328
+        ]
+      }
+    },
+    {
+      "id": "shared_preparation_disclosed",
+      "passed": true,
+      "evidence": {
+        "source": "tools/model_correctness_v23/environment.py",
+        "lines": [
+          145,
+          173
+        ]
+      }
+    },
+    {
+      "id": "reused_b01_L1_grid_normal_C_terminal_and_bindings",
+      "passed": true,
+      "evidence": {
+        "status": "completed",
+        "core_execution_status": "completed",
+        "export_status": "completed",
+        "observed_until_minute": 180.0,
+        "unknown_tail_minutes": 0.0,
+        "exit_code": 0,
+        "producer": "3252727135645037cedc57ebc188a48d2aa34ccb",
+        "source_sha256": "2509d2fa562e672af3cfe4058ace55f0e38de6172d1ac2d633210d0e776f0776"
+      }
+    },
+    {
+      "id": "reused_b01_L1_grid_normal_M_terminal_and_bindings",
+      "passed": true,
+      "evidence": {
+        "status": "completed",
+        "core_execution_status": "completed",
+        "export_status": "completed",
+        "observed_until_minute": 180.0,
+        "unknown_tail_minutes": 0.0,
+        "exit_code": 0,
+        "producer": "3252727135645037cedc57ebc188a48d2aa34ccb",
+        "source_sha256": "2509d2fa562e672af3cfe4058ace55f0e38de6172d1ac2d633210d0e776f0776"
+      }
+    },
+    {
+      "id": "v32_b01_normal_external_terminal_and_bindings",
+      "passed": true,
+      "evidence": {
+        "status": "completed",
+        "core_execution_status": "completed",
+        "export_status": "completed",
+        "observed_until_minute": 180.0,
+        "unknown_tail_minutes": 0.0,
+        "exit_code": 0,
+        "producer": "575cb02b2ac3a1bbdce99a6f283891dc05b3d51a",
+        "source_sha256": "537607856bce8360252d267e805a662c6c1fbcbfa7306608ab0b8e30b97c1f09"
+      }
+    },
+    {
+      "id": "normal_case_exact_freeze",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "id": "normal_five_reference_bindings_exact",
+      "passed": true,
+      "evidence": {
+        "spec": {
+          "path": "E:\\hospital_ies_v32_20261027\\input_build\\formal_isolated_01\\b01_normal.spec.json",
+          "sha256": "6b027fa16e085e97e2bd28ec11cccced6641e82efcfdb99cb76b13f1bf10477e"
+        },
+        "plan": {
+          "path": "E:\\hospital_ies_v32_20261027\\planning\\normal.adopted_plan.json",
+          "sha256": "f028799c8719f817c14582a4c6d3a346262441873131093ba92bf1d7b16cdaed"
+        },
+        "actions": {
+          "path": "E:\\hospital_ies_v32_20261027\\planning\\normal.requests.json",
+          "sha256": "46f23d18fc91fee3af56989616bf87251c17e2733cf88d9c4900349f26f391b6"
+        },
+        "initial": {
+          "path": "E:\\hospital_ies_v32_20261027\\initialization\\normal\\INITIALIZATION.json",
+          "sha256": "36dbed823fe7d642065c036d0d2fa573db7bbce16e2477154fe0e6c85ca30402"
+        },
+        "selection": {
+          "path": "E:\\hospital_ies_v32_20261027\\planning\\SELECTION.json",
+          "sha256": "a463a7d6e95fa24fd6c956e094f5eb30cd657a1c6ff4e78656ff1ad06b1c3bbc"
+        }
+      }
+    },
+    {
+      "id": "normal_reference_artifact_frozen",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "id": "normal_source_clock_and_hardware",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "id": "normal_three_false_flags_and_offline_identity",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "id": "normal_registered_request_timing_and_permission",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "id": "normal_selected_plan_and_schedule_chain",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "id": "normal_initialization_physical_binding_unchanged",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "id": "reused_b01_L1_grid_disturbed_C_terminal_and_bindings",
+      "passed": true,
+      "evidence": {
+        "status": "completed",
+        "core_execution_status": "completed",
+        "export_status": "completed",
+        "observed_until_minute": 180.0,
+        "unknown_tail_minutes": 0.0,
+        "exit_code": 0,
+        "producer": "3252727135645037cedc57ebc188a48d2aa34ccb",
+        "source_sha256": "2509d2fa562e672af3cfe4058ace55f0e38de6172d1ac2d633210d0e776f0776"
+      }
+    },
+    {
+      "id": "reused_b01_L1_grid_disturbed_M_terminal_and_bindings",
+      "passed": true,
+      "evidence": {
+        "status": "completed",
+        "core_execution_status": "completed",
+        "export_status": "completed",
+        "observed_until_minute": 180.0,
+        "unknown_tail_minutes": 0.0,
+        "exit_code": 0,
+        "producer": "3252727135645037cedc57ebc188a48d2aa34ccb",
+        "source_sha256": "2509d2fa562e672af3cfe4058ace55f0e38de6172d1ac2d633210d0e776f0776"
+      }
+    },
+    {
+      "id": "v32_b01_grid_external_terminal_and_bindings",
+      "passed": true,
+      "evidence": {
+        "status": "completed",
+        "core_execution_status": "completed",
+        "export_status": "completed",
+        "observed_until_minute": 180.0,
+        "unknown_tail_minutes": 0.0,
+        "exit_code": 0,
+        "producer": "575cb02b2ac3a1bbdce99a6f283891dc05b3d51a",
+        "source_sha256": "537607856bce8360252d267e805a662c6c1fbcbfa7306608ab0b8e30b97c1f09"
+      }
+    },
+    {
+      "id": "grid_case_exact_freeze",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "id": "grid_five_reference_bindings_exact",
+      "passed": true,
+      "evidence": {
+        "spec": {
+          "path": "E:\\hospital_ies_v32_20261027\\input_build\\formal_isolated_01\\b01_grid.spec.json",
+          "sha256": "b2d9cb40409a003b2b247f13d3063eeda51aba0b07b187079c41392a056fec87"
+        },
+        "plan": {
+          "path": "E:\\hospital_ies_v32_20261027\\planning\\grid.adopted_plan.json",
+          "sha256": "bf92dbb66502af5223dac566a1ccf570be0186cdf3e9f8749f617d1c36f7eac3"
+        },
+        "actions": {
+          "path": "E:\\hospital_ies_v32_20261027\\planning\\grid.requests.json",
+          "sha256": "b6a4903ee24a68304cd214f7efe929b275937b6ead2b2a160634ea4505df3864"
+        },
+        "initial": {
+          "path": "E:\\hospital_ies_v32_20261027\\initialization\\grid\\INITIALIZATION.json",
+          "sha256": "70b5e1b0448e8e9e6e049bb7f25890cf4c261198ad8660182b00f96df3b02820"
+        },
+        "selection": {
+          "path": "E:\\hospital_ies_v32_20261027\\planning\\SELECTION.json",
+          "sha256": "a463a7d6e95fa24fd6c956e094f5eb30cd657a1c6ff4e78656ff1ad06b1c3bbc"
+        }
+      }
+    },
+    {
+      "id": "grid_reference_artifact_frozen",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "id": "grid_source_clock_and_hardware",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "id": "grid_three_false_flags_and_offline_identity",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "id": "grid_registered_request_timing_and_permission",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "id": "grid_selected_plan_and_schedule_chain",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "id": "grid_initialization_physical_binding_unchanged",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "id": "initialization_solver_scope_honest",
+      "passed": true,
+      "evidence": {
+        "scope": "common_initialization01 only",
+        "recorded_core_solver_calls_each_branch": 0,
+        "total_initialization_solver_calls": null,
+        "total_count_reason": "The existing NativeEnvironment reset may solve its initial normal balance before EngineeringCore and its solver log are created. That lower reset solver count was not separately instrumented. An empty post-reset core log does not prove zero optimizer calls.",
+        "new_hospital_episodes": 0,
+        "C_M_controller_decision_calls": 0,
+        "initial_state_and_certificate_unchanged": true,
+        "rerun_required_for_physical_or_input_comparability": false,
+        "pure_input_builder_solver_calls": 0
+      }
+    }
+  ],
+  "check_count": 35,
+  "blocking_check_ids": [],
+  "runs": [
+    {
+      "id": "reused_b01_L1_grid_normal_C",
+      "role": "reused_v30",
+      "path": "E:\\hospital_ies_v30_20261027\\runs\\n02_b01_L1_grid_normal_C",
+      "authority": {
+        "status": "completed",
+        "core_execution_status": "completed",
+        "export_status": "completed",
+        "observed_until_minute": 180.0,
+        "unknown_tail_minutes": 0.0,
+        "exit_code": 0,
+        "producer": "3252727135645037cedc57ebc188a48d2aa34ccb",
+        "source_sha256": "2509d2fa562e672af3cfe4058ace55f0e38de6172d1ac2d633210d0e776f0776"
+      },
+      "metadata_sha256": {
+        "CASE.json": "27feba2952e5bcff082ca53e926612a7066fff00b7f02c6ffbf8ed11561ccc9c",
+        "RESULT.json": "e6e46524adb0c8630c085b06c58ce8701da4140ca76fe455f8c2f4413cbbe140",
+        "STATUS.json": "af0814cd3bf4b32fdbe37aacdd581ee24806fd494f0b17aae4761a451cf40471",
+        "INVOCATION.json": "52c0d782cdabdaf3d036f1b30941f3c125e318f3db935c0caf132cc25d42a05a"
+      }
+    },
+    {
+      "id": "reused_b01_L1_grid_normal_M",
+      "role": "reused_v30",
+      "path": "E:\\hospital_ies_v30_20261027\\runs\\n02_b01_L1_grid_normal_M",
+      "authority": {
+        "status": "completed",
+        "core_execution_status": "completed",
+        "export_status": "completed",
+        "observed_until_minute": 180.0,
+        "unknown_tail_minutes": 0.0,
+        "exit_code": 0,
+        "producer": "3252727135645037cedc57ebc188a48d2aa34ccb",
+        "source_sha256": "2509d2fa562e672af3cfe4058ace55f0e38de6172d1ac2d633210d0e776f0776"
+      },
+      "metadata_sha256": {
+        "CASE.json": "86e77c58269126ee1e9d00f10bfbd69ce5a5097f6a894c5f72b4d79b928b9c9f",
+        "RESULT.json": "206f1323ac470223a1691e85a117d8dbe75b969cc4c45bb32557ceac579014d8",
+        "STATUS.json": "3da934cb897a2e4f878c5f3c4bfee1b66a9323f8ad00907c42aca6e39efec42f",
+        "INVOCATION.json": "42ea3b9ca99cedaf33f607e54f0282bb4da48fd28d3c4d6721b993cfb3f7a970"
+      }
+    },
+    {
+      "id": "v32_b01_normal_external",
+      "role": "new_v32",
+      "path": "runs/v32_b01_normal_external",
+      "authority": {
+        "status": "completed",
+        "core_execution_status": "completed",
+        "export_status": "completed",
+        "observed_until_minute": 180.0,
+        "unknown_tail_minutes": 0.0,
+        "exit_code": 0,
+        "producer": "575cb02b2ac3a1bbdce99a6f283891dc05b3d51a",
+        "source_sha256": "537607856bce8360252d267e805a662c6c1fbcbfa7306608ab0b8e30b97c1f09"
+      },
+      "metadata_sha256": {
+        "CASE.json": "9752c616269383296498cdd75c63467096bd972df0d5629ab5b2ffdcb3916274",
+        "RESULT.json": "da0053df49e456bcbb10fd85188e1376c44399f4b819ef321d3ea62ff68ba3bd",
+        "STATUS.json": "b8a4eacdf4d7bc0045a5f6575c18259cbfa152364b82d36c4d427acf77e3f812",
+        "INVOCATION.json": "f1deb9331486caaaad0bbc7bcf1d966c2c640f1a9209b72f1d9404369a17fcb5"
+      },
+      "reference_file_bindings": {
+        "spec": {
+          "path": "E:\\hospital_ies_v32_20261027\\input_build\\formal_isolated_01\\b01_normal.spec.json",
+          "sha256": "6b027fa16e085e97e2bd28ec11cccced6641e82efcfdb99cb76b13f1bf10477e"
+        },
+        "plan": {
+          "path": "E:\\hospital_ies_v32_20261027\\planning\\normal.adopted_plan.json",
+          "sha256": "f028799c8719f817c14582a4c6d3a346262441873131093ba92bf1d7b16cdaed"
+        },
+        "actions": {
+          "path": "E:\\hospital_ies_v32_20261027\\planning\\normal.requests.json",
+          "sha256": "46f23d18fc91fee3af56989616bf87251c17e2733cf88d9c4900349f26f391b6"
+        },
+        "initial": {
+          "path": "E:\\hospital_ies_v32_20261027\\initialization\\normal\\INITIALIZATION.json",
+          "sha256": "36dbed823fe7d642065c036d0d2fa573db7bbce16e2477154fe0e6c85ca30402"
+        },
+        "selection": {
+          "path": "E:\\hospital_ies_v32_20261027\\planning\\SELECTION.json",
+          "sha256": "a463a7d6e95fa24fd6c956e094f5eb30cd657a1c6ff4e78656ff1ad06b1c3bbc"
+        }
+      },
+      "reference": {
+        "branch": "normal",
+        "policy_id": "R32_fixed_capacity_offline_strict_v32",
+        "method_id": "R32_fixed_capacity_offline",
+        "execution_identity": "literature_adapted_offline_onoff_preparation_plus_common_realtime_allocation",
+        "selected_formulation": "strict",
+        "information_permission": "offline_known_window",
+        "input_independent_of_completed_C_M": true,
+        "full_continuous_plan_replayed": false,
+        "planned_storage_ports_executed": false,
+        "planned_unmet_directly_executed": false,
+        "preparation_lead_minutes": 45,
+        "actual_communication_delay_minutes": 15.0,
+        "common_preparation": "unchanged shared M23 current critical boiler/EC minimum permissions after the frozen ordinary request",
+        "same_information_ranking_or_bound": false
+      },
+      "request_count": 12
+    },
+    {
+      "id": "reused_b01_L1_grid_disturbed_C",
+      "role": "reused_v30",
+      "path": "E:\\hospital_ies_v30_20261027\\runs\\d02_b01_L1_grid_disturbed_C",
+      "authority": {
+        "status": "completed",
+        "core_execution_status": "completed",
+        "export_status": "completed",
+        "observed_until_minute": 180.0,
+        "unknown_tail_minutes": 0.0,
+        "exit_code": 0,
+        "producer": "3252727135645037cedc57ebc188a48d2aa34ccb",
+        "source_sha256": "2509d2fa562e672af3cfe4058ace55f0e38de6172d1ac2d633210d0e776f0776"
+      },
+      "metadata_sha256": {
+        "CASE.json": "2e027f6736a3957798ab605d6d40ee3046e0435c2a43b3e6c35e8061fea3f862",
+        "RESULT.json": "cbe9abf954ab5c5f3383a8f27b42bf6a6ec90ae922eee372134e61c018ec7b03",
+        "STATUS.json": "e566175da0fb3a5a7c8c64b06731d0332fea02faf6178a846d80299dd7856f76",
+        "INVOCATION.json": "a804594ce0e4448eaaf068c6e3899921a2d02e192cb03485f737e10b375c2d77"
+      }
+    },
+    {
+      "id": "reused_b01_L1_grid_disturbed_M",
+      "role": "reused_v30",
+      "path": "E:\\hospital_ies_v30_20261027\\runs\\d02_b01_L1_grid_disturbed_M",
+      "authority": {
+        "status": "completed",
+        "core_execution_status": "completed",
+        "export_status": "completed",
+        "observed_until_minute": 180.0,
+        "unknown_tail_minutes": 0.0,
+        "exit_code": 0,
+        "producer": "3252727135645037cedc57ebc188a48d2aa34ccb",
+        "source_sha256": "2509d2fa562e672af3cfe4058ace55f0e38de6172d1ac2d633210d0e776f0776"
+      },
+      "metadata_sha256": {
+        "CASE.json": "a10f0d274372688ae4ec279fb485315ed830d937e074e63859d12220e17d1dc1",
+        "RESULT.json": "ef06beb72a6b1eaafd935fdbf09365a14c0cb76323bd883062c3234ebf571647",
+        "STATUS.json": "313708478b43979363cd84a1386254643e29cceeaa4c23121c56362584605626",
+        "INVOCATION.json": "1e2dea86915eb6d1f624a561fb75a72bd623c98d9f52cb0823d57e66f7f4ac43"
+      }
+    },
+    {
+      "id": "v32_b01_grid_external",
+      "role": "new_v32",
+      "path": "runs/v32_b01_grid_external",
+      "authority": {
+        "status": "completed",
+        "core_execution_status": "completed",
+        "export_status": "completed",
+        "observed_until_minute": 180.0,
+        "unknown_tail_minutes": 0.0,
+        "exit_code": 0,
+        "producer": "575cb02b2ac3a1bbdce99a6f283891dc05b3d51a",
+        "source_sha256": "537607856bce8360252d267e805a662c6c1fbcbfa7306608ab0b8e30b97c1f09"
+      },
+      "metadata_sha256": {
+        "CASE.json": "fae291cb6095876be2fe013c6fe77c5b559cae5758f279ffa8779db1b399d0af",
+        "RESULT.json": "d67bfa9d221ffcd029c306eae6c866c9caed150aa46cb50ad3adaecbd539ce7a",
+        "STATUS.json": "e848a5815fa2c27a3eadd1e0908f2a34747bfb796a843edf75dee3ad13051901",
+        "INVOCATION.json": "f6c03dc1d8dd4587b2cb3138de4c6e75440438f4006e60d9040e1a1966241b41"
+      },
+      "reference_file_bindings": {
+        "spec": {
+          "path": "E:\\hospital_ies_v32_20261027\\input_build\\formal_isolated_01\\b01_grid.spec.json",
+          "sha256": "b2d9cb40409a003b2b247f13d3063eeda51aba0b07b187079c41392a056fec87"
+        },
+        "plan": {
+          "path": "E:\\hospital_ies_v32_20261027\\planning\\grid.adopted_plan.json",
+          "sha256": "bf92dbb66502af5223dac566a1ccf570be0186cdf3e9f8749f617d1c36f7eac3"
+        },
+        "actions": {
+          "path": "E:\\hospital_ies_v32_20261027\\planning\\grid.requests.json",
+          "sha256": "b6a4903ee24a68304cd214f7efe929b275937b6ead2b2a160634ea4505df3864"
+        },
+        "initial": {
+          "path": "E:\\hospital_ies_v32_20261027\\initialization\\grid\\INITIALIZATION.json",
+          "sha256": "70b5e1b0448e8e9e6e049bb7f25890cf4c261198ad8660182b00f96df3b02820"
+        },
+        "selection": {
+          "path": "E:\\hospital_ies_v32_20261027\\planning\\SELECTION.json",
+          "sha256": "a463a7d6e95fa24fd6c956e094f5eb30cd657a1c6ff4e78656ff1ad06b1c3bbc"
+        }
+      },
+      "reference": {
+        "branch": "grid",
+        "policy_id": "R32_fixed_capacity_offline_strict_v32",
+        "method_id": "R32_fixed_capacity_offline",
+        "execution_identity": "literature_adapted_offline_onoff_preparation_plus_common_realtime_allocation",
+        "selected_formulation": "strict",
+        "information_permission": "offline_known_window",
+        "input_independent_of_completed_C_M": true,
+        "full_continuous_plan_replayed": false,
+        "planned_storage_ports_executed": false,
+        "planned_unmet_directly_executed": false,
+        "preparation_lead_minutes": 45,
+        "actual_communication_delay_minutes": 15.0,
+        "common_preparation": "unchanged shared M23 current critical boiler/EC minimum permissions after the frozen ordinary request",
+        "same_information_ranking_or_bound": false
+      },
+      "request_count": 12
+    }
+  ],
+  "initialization_code_time_bindings": [
+    {
+      "branch": "normal",
+      "certificate_source_count": 872,
+      "final_source_count": 873,
+      "added_after_initialization": [
+        "tools/model_reference_v32/reference.py"
+      ],
+      "removed_after_initialization": [],
+      "changed_after_initialization": [
+        "tests/test_v32_execution.py",
+        "tests/test_v32_inputs.py",
+        "tests/test_v32_planner.py",
+        "tools/model_reference_v32/inputs.py",
+        "tools/model_reference_v32/planner.py"
+      ],
+      "old864_unchanged": true,
+      "input36_unchanged": true
+    },
+    {
+      "branch": "grid",
+      "certificate_source_count": 872,
+      "final_source_count": 873,
+      "added_after_initialization": [
+        "tools/model_reference_v32/reference.py"
+      ],
+      "removed_after_initialization": [],
+      "changed_after_initialization": [
+        "tests/test_v32_execution.py",
+        "tests/test_v32_inputs.py",
+        "tests/test_v32_planner.py",
+        "tools/model_reference_v32/inputs.py",
+        "tools/model_reference_v32/planner.py"
+      ],
+      "old864_unchanged": true,
+      "input36_unchanged": true
+    }
+  ],
+  "producer": "575cb02b2ac3a1bbdce99a6f283891dc05b3d51a",
+  "source_sha256": "537607856bce8360252d267e805a662c6c1fbcbfa7306608ab0b8e30b97c1f09",
+  "current_git_head": "575cb02b2ac3a1bbdce99a6f283891dc05b3d51a",
+  "git_command_exit": 0,
+  "inputs_sha256": "f414d21fc55d5a63282435b9bed9a1c8c289a049f24507f953fb86162fb41d15",
+  "reviewed_source_SHA": {
+    "snapshot.py": "94017738bde483ef3bb64bf9f3c9e8de311426727f730ffc99221e38e50f4c7d",
+    "actions.py": "8f40ced3ff122a61054cce62f0ac47866eff25dff6c015cc1791e6154ea19865",
+    "reference.py": "1f323a9361e78bfd8c5cc5e6c5a2d2d34dc7033517eaa88699ce7e2748a08b39"
+  },
+  "authority_sha256": {
+    "FROZEN_SOURCE_V32_P01.json": "14e95188ff44447c4f6e2e04ef9aad8b5f92bf6b0c961e90343d85d4259a998b",
+    "EXPERIMENT_REGISTRATION.json": "26dfcd41506d32a8103ac26e18451e7336e6bc205a5d2885d123db2024d836b0",
+    "planning\\SELECTION.json": "a463a7d6e95fa24fd6c956e094f5eb30cd657a1c6ff4e78656ff1ad06b1c3bbc",
+    "initialization\\INIT_SOLVER_SCOPE.json": "b61eca87818a2429c35de12210e5aecb83f305c73efadbf24271b9cf2cb0c478"
+  },
+  "limitations": [
+    "Static source and authoritative metadata review only: no trajectory/solver/domain full-file verification, model/solver execution, or plan re-solve in this review.",
+    "Common initialization certificates bind their true earlier872-source state; final execution binds873. Original864 scientific files and36 inputs are equal at both times. Added reference.py and changed new V32 input/planner/tests are documented rather than silently relabeled.",
+    "The common reset total solver-call count is unknown; only its post-reset core log is zero. Pure input builder and this review make no solver calls.",
+    "Runtime controller constructor checks two execution flags but does not independently reject planned_unmet_directly_executed=True. All official SHA-bound schedules, CASE/RESULT and per-request flags set all three false; this is a generic API hardening limit, not a defect in these frozen runs.",
+    "Original CASE reference paths are forensic absolute paths. Portability/rehydration is a separate final-packet acceptance task.",
+    "SELECTION.actual_hospital_runs_started=false records selection-time status before formal execution and is not a current completion claim.",
+    "The explicit offline known window and shared current minimum preparation mean this is a literature adaptation plus common realtime allocator, not author reproduction, same-information C/M ranking, strict dynamic feasibility proof, or cost lower bound."
+  ],
+  "new_models": 0,
+  "new_solver_calls": 0,
+  "new_tests": 0,
+  "protected_files_modified": false
+}

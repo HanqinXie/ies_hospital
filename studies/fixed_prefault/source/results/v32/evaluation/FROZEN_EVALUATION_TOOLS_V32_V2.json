@@ -1,0 +1,38 @@
+{
+  "schema": "hospital_ies.v32.six_record_auditor_freeze.v2",
+  "created_utc": "2026-10-27T15:15:59.878390+00:00",
+  "tool_files_sha256": {
+    "audit_v32.py": "18607ddb0183951c7143c7d68ed7c9bf3d1d5046efc967a0f52f583284a61efa",
+    "reference_checks.py": "3d9d67867580f33dc8ccc1d652fce19dbeb6d40d222f5d73eb191de5f1bfa032",
+    "test_audit_v32.py": "42ffefd2e7a310bcb8f71b0679f4714c6fc0900cc6dc07518814c3a2fe007b02",
+    "DESIGN_AND_API.md": "9f3ffe174f832f9af6ecd0c5cd0a7d4be5578e39d9b820748f3a1f89736e77e5",
+    "LIFECYCLE_CORRECTION_V2.md": "71f18ca7536ecc81ef798927511eaac582a58920351ee7143d2e94750749fbd6",
+    "v31_window_support.py": "b8e618e57402def18ec468e6a43d80c83f1a7eabe44efdfb716ad45bb53ca803",
+    "v30_support/audit_campaign.py": "1236b5f310151d91ff643911cb811c1870254b15a9d64fe531e3d6978030d464",
+    "v30_support/FROZEN_ACCOUNTING.json": "524f5fc0dc2cc46748b1a11792b768632c01a9a91b670411bec9b517d1d13f56",
+    "SUPPORT_LINEAGE.json": "93bc883e348a07fdf790378ae25811e6ba7643056c65d613bfdbd8404c8a605b"
+  },
+  "snapshot": "frozen_tools02",
+  "actual_small_tests": {
+    "count": 11,
+    "exit_code": 0,
+    "stdout": "GREEN03_lifecycle.stdout.log",
+    "stderr": "GREEN03_lifecycle.stderr.log"
+  },
+  "registration_sha256": "26dfcd41506d32a8103ac26e18451e7336e6bc205a5d2885d123db2024d836b0",
+  "scientific_freeze_sha256": "14e95188ff44447c4f6e2e04ef9aad8b5f92bf6b0c961e90343d85d4259a998b",
+  "project_planner_sha256": "fe43b7d259487a967123b1a963a0f8f0217febd8ded92f4b8f5d03b60cddae31",
+  "previous_failure": {
+    "path": "final01",
+    "exit_code": 1,
+    "frozen_v1_sha256": "659b1fec55e169016bdaa0ded14989db5a58624af365f7800d22e6830874feb3",
+    "reason": "V1 conflated wrapped reset state and first post-boundary interval state"
+  },
+  "original_v1_unchanged": true,
+  "primary_formulas_changed": false,
+  "actual_simulations_rerun": 0,
+  "reviewer_model_calls": 0,
+  "reviewer_solver_calls": 0,
+  "D_source_edits": 0,
+  "offline_same_prefix_required": false
+}

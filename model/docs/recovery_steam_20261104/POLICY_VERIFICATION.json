@@ -1,0 +1,57 @@
+{
+    "schema":  "hospital_ies.recovery_steam.policy_verification.v1",
+    "working_directory":  "D:/hospital_ies_recovery_steam_20261104",
+    "test_command":  "python -m pytest -q --confcutdir=docs/recovery_steam_20261104 docs/recovery_steam_20261104/test_policy.py --tb=short",
+    "runs":  [
+                 {
+                     "passed":  0,
+                     "failed":  6,
+                     "log":  "POLICY_RED.log",
+                     "exit_code":  1
+                 },
+                 {
+                     "passed":  6,
+                     "failed":  0,
+                     "log":  "POLICY_GREEN01.log",
+                     "exit_code":  0
+                 }
+             ],
+    "files":  [
+                  {
+                      "path":  "tools/recovery_steam_20261104/__init__.py",
+                      "bytes":  84,
+                      "sha256":  "06911295750d6ef07c0dcf3f886c22d41c8d26c4ba982435dfa93ecc1c66b185"
+                  },
+                  {
+                      "path":  "tools/recovery_steam_20261104/policy.py",
+                      "bytes":  9233,
+                      "sha256":  "c6d9157c6b3c8584efd6dccc90c13fcd7c840b87eb6d86c3240a55f004408fb0"
+                  },
+                  {
+                      "path":  "docs/recovery_steam_20261104/test_policy.py",
+                      "bytes":  7685,
+                      "sha256":  "4616cddc0b3fba0fdad839595643c6d0a47269fd74becea6e44b1825b15a57e5"
+                  },
+                  {
+                      "path":  "docs/recovery_steam_20261104/POLICY_RED.log",
+                      "bytes":  20318,
+                      "sha256":  "cb3776ecbe508cc9a653d133cf4ec1b62ee990f06e10b15e8545abed3c19390b"
+                  },
+                  {
+                      "path":  "docs/recovery_steam_20261104/POLICY_GREEN01.log",
+                      "bytes":  202,
+                      "sha256":  "484cdbe501660cb605e6878f3a52347458f1795fea3ce47cdca1b490e4ea5317"
+                  },
+                  {
+                      "path":  "docs/recovery_steam_20261104/POLICY_IMPLEMENTATION_REPORT.md",
+                      "bytes":  4774,
+                      "sha256":  "4cd9169eccd02d119c7cd0539d382caec91cd6083136b90970a3637c7fba29ec"
+                  }
+              ],
+    "original_R1_policy_sha256":  "c679cd76cb40fd5506dc8b445a7f66adea881820a9cc7edb6871af48800624b4",
+    "copied_R1_policy_sha256":  "c679cd76cb40fd5506dc8b445a7f66adea881820a9cc7edb6871af48800624b4",
+    "R1_diff_exit_code":  0,
+    "trajectories_executed":  false,
+    "existing_core_modified":  false,
+    "committed":  false
+}

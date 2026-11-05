@@ -1,0 +1,39 @@
+{
+  "status": "PASS_WITH_LIMITATIONS",
+  "checks": {
+    "required_core_columns_present": true,
+    "main_csvs_have_8760_rows": true,
+    "hourly_timestamps_unique_and_contiguous": true,
+    "critical_zone_count": 14,
+    "critical_zone_rows": 122640,
+    "each_critical_zone_has_8760_unique_hours": true,
+    "electricity_nonnegative": true,
+    "hourly_facility_balance_pass": true,
+    "max_abs_hourly_balance_residual_kW": 6.297184995673888e-13,
+    "pump_components_reconcile_hourly_to_parent_meter": true,
+    "chiller_electricity_reconciles_hourly_to_cooling_meter": true,
+    "tower_fan_electricity_reconciles_hourly_to_heat_rejection_meter": true,
+    "exterior_child_meters_reconcile_to_parent": true,
+    "original_outputs_unchanged_vs_snapshot": true,
+    "simulation_severe_errors": 0,
+    "simulation_fatal_errors": 0,
+    "simulation_warning_message_markers_per_run": 199
+  },
+  "annual_integrals": {
+    "facility_electricity_MWh": 4807.7891099456665,
+    "building_side_electricity_MWh": 3984.2953520415836,
+    "central_plant_electricity_MWh": 798.656690281039,
+    "unresolved_electricity_MWh": 24.837067623082824,
+    "terminal_cooling_MWh_thermal": 3324.7383634514836,
+    "chiller_evaporator_cooling_MWh_thermal": 3308.6149877401704,
+    "space_and_reheat_MWh_thermal": 1175.6134982843867,
+    "domestic_hot_water_MWh_thermal": 121.33855448404115,
+    "natural_gas_input_MWh_fuel": 1592.07963235011
+  },
+  "limitations": [
+    "Terminal cooling and chiller evaporator annual sums differ by 16.123 MWh thermal (0.485% of terminal output); no artificial balancing term was added.",
+    "Transformer distribution loss and secondary chilled-water distribution pump remain in P_e_unresolved.",
+    "Current 26.2 converted/repaired model does not exactly reproduce the supplied PNNL reference annual end uses.",
+    "Simulation warnings remain; inspect eplusout.err before formal calibration or operational use."
+  ]
+}

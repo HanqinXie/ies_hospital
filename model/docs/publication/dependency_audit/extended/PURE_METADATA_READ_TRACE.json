@@ -1,0 +1,49 @@
+{
+  "status": "pure_metadata_dependency_trace_not_tests",
+  "created_utc": "2026-10-27T16:47:20.514014+00:00",
+  "readthrough_producer": "575cb02b2ac3a1bbdce99a6f283891dc05b3d51a",
+  "no_repository_files_restored": true,
+  "physical_or_solver_calls": 0,
+  "write_attempts": 0,
+  "calls": [
+    {
+      "interface": "model_closeout.runner.policy_specs",
+      "status": "exception",
+      "type": "FileNotFoundError",
+      "message": "[Errno 2] No such file or directory: 'D:\\\\hospital_ies_v22_20261025\\\\outputs\\\\v13_executed_service_20261017_run01\\\\design\\\\DEVELOPMENT_POLICY_SPECS.json'"
+    },
+    {
+      "interface": "model_closeout.runner.source_binding",
+      "status": "returned_pure_metadata",
+      "result_type": "dict",
+      "result_count": 467
+    },
+    {
+      "interface": "model_closeout.campaign.proposal(key)",
+      "status": "exception",
+      "type": "FileNotFoundError",
+      "message": "[Errno 2] No such file or directory: 'D:\\\\hospital_ies_v22_20261025\\\\outputs\\\\v18_execution_recovery_20261018_run01\\\\design\\\\LONG_FINAL_R1_PROPOSAL.json'"
+    },
+    {
+      "interface": "model_closeout.runner.model_contract(original M19 config)",
+      "status": "returned_pure_metadata",
+      "result_type": "dict",
+      "result_count": 6
+    },
+    {
+      "interface": "load_accounting.runner.source_binding",
+      "status": "returned_pure_metadata",
+      "result_type": "dict",
+      "result_count": 479
+    },
+    {
+      "interface": "load_accounting.runner.policy_specs",
+      "status": "returned_pure_metadata",
+      "result_type": "dict",
+      "result_count": 4
+    }
+  ],
+  "missing_files_served_from_git_blob": [],
+  "repository_read_counts": {},
+  "forbidden": []
+}

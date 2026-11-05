@@ -1,0 +1,111 @@
+{
+  "status": "model_change_implemented_scoped_checks_passed_full_gate_not_passed",
+  "focused_tests_passed": 42,
+  "full_suite": {
+    "passed": 2885,
+    "failed": 2,
+    "skipped": 1,
+    "errors": 13,
+    "exit_code": 1,
+    "baseline_failures_reproduced": true,
+    "missing_historical_snapshot": true,
+    "phase": "development_verification_not_final_frozen_release",
+    "final_full_gate_passed": false
+  },
+  "native_integration": {
+    "status": "passed",
+    "scope": "bounded_real_runtime_integration_not_complete_scientific_trajectory",
+    "separate_common_preparation_minutes": 60.0,
+    "unattended_minutes": 3,
+    "native_segment_count": 9,
+    "optimizer_attempts": [],
+    "common_checkpoint_unchanged": true,
+    "checkpoint": {
+      "time_minute": 60.0,
+      "common_preparation_segment_count": 287,
+      "common_preparation_may_use_optimization": true,
+      "unattended_optimization_allowed": false,
+      "branch_reference": {
+        "schema": "hospital_ies.frozen_prefault_branches.v1",
+        "carrier_shares": [
+          [
+            0.13963089381669722,
+            0.5973441350738412,
+            0.08096062792076508
+          ],
+          [
+            0.07081952590548278,
+            0.17910556356252197,
+            0.051122090143891616
+          ],
+          [
+            0.07792864145848523,
+            0.0,
+            0.05594069430524756
+          ],
+          [
+            0.7116209388193347,
+            0.22355030136363682,
+            0.8119765876300957
+          ]
+        ],
+        "electric_port_shares": [
+          0.12072258843942792,
+          0.061229404508335535,
+          0.06737582961251132,
+          0.6152558318128649,
+          0.1354163456268603,
+          0.0
+        ],
+        "cold_port_shares": [
+          0.08096062792076508,
+          0.051122090143891616,
+          0.05594069430524756,
+          0.8119765876300957,
+          0.0
+        ],
+        "actual_prefault_served_kW": [
+          [
+            99.72496317510021,
+            96.68747728333616,
+            62.35505967313317
+          ],
+          [
+            50.579598969506755,
+            28.990432970652293,
+            39.3737186013111
+          ],
+          [
+            55.65695876684069,
+            0.0,
+            43.084958962695374
+          ],
+          [
+            508.24262438333085,
+            36.18435909161089,
+            625.3761843894454
+          ]
+        ],
+        "held_ups_charge_kW": 0.0,
+        "held_cold_charge_kW": 0.0,
+        "source": {
+          "start_minute": 59.74972700451863,
+          "end_minute": 60.0,
+          "role": "actual_common_prefault_interval",
+          "future_information_used": false
+        },
+        "unused_share_transfer": false,
+        "priority_order_used": false,
+        "qualification": "Aggregate held branch allocation assumption; no calibrated hydraulic flow claimed"
+      },
+      "complete_live_state_copied": true
+    },
+    "maximum_balance_residual_kW": 1.1368683772161603e-13,
+    "elapsed_seconds": 285.21799999987707
+  },
+  "exact_integration_source_binding_reverified": true,
+  "exact_integration_input_binding_reverified": true,
+  "changed_file_hashes_reverified": true,
+  "full_campaign_executed": false,
+  "old_figures_replaced": false
+}

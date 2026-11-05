@@ -1,0 +1,31 @@
+{
+  "created_utc": "2026-10-27T16:38:50.903300+00:00",
+  "source_read_only": true,
+  "hospital_or_solver_calls": 0,
+  "git_mutations": 0,
+  "initial_minimal_count": 980,
+  "frozen_source": 873,
+  "frozen_inputs": 36,
+  "frozen_source_or_input_mismatches": 0,
+  "default_test_file_count": 140,
+  "minimum_additional_test_fixture_files": 48,
+  "additional_fixture_bytes": 4127061,
+  "recommended_keep_total": 1030,
+  "candidate_remove_total": 5823,
+  "candidate_remove_by_top": {
+    "outputs": 4222,
+    "docs": 1583,
+    "publication": 18
+  },
+  "blocking_findings": [
+    "Bare 980 project omits module-top-level replay.py imports selected by immutable pytest.ini; preserve 48 extra original files before claiming default pytest availability.",
+    "Do not add/delete/change Python files in src/tools/scripts/tests or repo root, configs/**/*.json, pytest.ini, input-bound files, or root requirements*.txt; exact source/input enumeration is itself checked by frozen runner.",
+    "Root README is stale V21 and links omitted V20/V21 documentation; rewrite for V32 before publishing; README is not frozen source.",
+    "Remaining historical tests outside pytest.ini may require removed old artifacts; mark as historical/tag-specific, never claim python -m pytest tests passes."
+  ],
+  "nonblocking_notes": [
+    "Four older outputs in 980 are runtime/provenance dependencies, not stale results to remove.",
+    "No default pytest or solver commands executed in this read-only audit.",
+    "Retain 873 frozen source and all 36 frozen input bytes; old 864 remains protected."
+  ]
+}

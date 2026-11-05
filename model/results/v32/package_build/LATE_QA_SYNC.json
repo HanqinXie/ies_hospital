@@ -1,0 +1,40 @@
+{
+  "reason": "Late independent closed QA/supplement arrived after initial support snapshot; include them without rerunning or changing scientific results",
+  "preserved_prior_candidate_sha256": "5441f2fcf8037fe765fb59f3b75f7f619a5ff51341b92c5225b57fe773bded95",
+  "preserved_prior_candidate_bytes": 35894482,
+  "late_files": [
+    {
+      "path": "data/evaluation/FINAL_READY.json",
+      "bytes": 7775,
+      "sha256": "36bf49c041970502e4362afb73d40e6cdf94565bacb2680eeca5d5029aaf1ace"
+    },
+    {
+      "path": "data/evaluation/ENGINEERING_SUPPLEMENT_ZH.md",
+      "bytes": 3185,
+      "sha256": "20846b09667fabbd1fbb1572f44acfb2c0b5fec8548e270159065a0131e64fe8"
+    },
+    {
+      "path": "data/evaluation/FINAL_QA_COMMAND.py",
+      "bytes": 5317,
+      "sha256": "afd782278fe1747cfd909a740a1ea00cfefd2e97a07c383b21e3f1a08b7f9a1e"
+    },
+    {
+      "path": "data/evaluation/FINAL_QA.stdout.log",
+      "bytes": 335,
+      "sha256": "d201c8c54e2494c189a0442dfa933c702a70809f4a5e07a054204ee64de6006e"
+    },
+    {
+      "path": "data/evaluation/FINAL_QA.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "data/evaluation/FINAL_QA_INVOCATION.json",
+      "bytes": 294,
+      "sha256": "f20e04c229aa6fc96a1e49d3b25995fc48970d1e0d534ec4dab447c9d6445390"
+    }
+  ],
+  "new_physical_runs": 0,
+  "new_solver_calls": 0,
+  "original_two_runs_unchanged": true
+}

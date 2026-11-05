@@ -1,0 +1,4592 @@
+[
+  {
+    "scenario_id": "p2b_L4a_boundary_p2b_day_153_0",
+    "policy": "priority_milp",
+    "expected_old_rank": 2,
+    "source_file": "outputs\\v43_p2b_20261013_run01\\report_data\\failures.jsonl",
+    "source_sha256": "5d48b2367506c1f2419ce76b8fed9a254801a0b1153a70d5d6cfa710b7412bb9",
+    "diagnostic": {
+      "scenario_id": "p2b_L4a_boundary_p2b_day_153_0",
+      "scenario": {
+        "actual_p0_load_multiplier": {
+          "c": 1.6986143292008036,
+          "e": 4.085361292993382,
+          "h": 1.3
+        },
+        "automatic_fast_shedding": false,
+        "base_state_id": "p2b_initial:e8f81e8be5ba48b4f327d73c976487002fe8acf2a1b343f770dbebe902a460d3",
+        "control_capability_note": "existing automatic_fast_shedding=False; no capability parameters changed",
+        "demand_background": "calendar_pool",
+        "design_family": "p2b_root:7f39e8e807bca9ca77a2eafd75b45d97430dc558a9b5016543ff3a6fbe93f0d0",
+        "distribution_id": "p_study.p2b.independent_conditional.v1",
+        "duration_steps": 32,
+        "enable_propagation": true,
+        "event_class": "L4a",
+        "event_schema_version": "p2a.events.v1",
+        "exogenous_events": [
+          {
+            "end_minute": 300.0,
+            "kind": "load_shock",
+            "origin": "exogenous",
+            "shock": {
+              "c": 0.6986143292008037,
+              "e": 1.7235741953289216,
+              "h": 0.3
+            },
+            "shock_by_priority": {
+              "P0": {
+                "e": 0.5
+              }
+            },
+            "start_minute": 60.0
+          }
+        ],
+        "exogenous_stream_id": "p2b_stream:7f39e8e807bca9ca77a2eafd75b45d97430dc558a9b5016543ff3a6fbe93f0d0",
+        "experiment_role": "pilot_train",
+        "family_id": "p2b_root:7f39e8e807bca9ca77a2eafd75b45d97430dc558a9b5016543ff3a6fbe93f0d0",
+        "full_source_support": {
+          "actual_trajectory_interval_minutes": [
+            220680,
+            221160.0
+          ],
+          "algebraic_initialization_iterations": 6,
+          "endpoint_source_hour_reserved": true,
+          "historical_observation_interval_minutes": [
+            0,
+            60
+          ],
+          "initialization_historical_minutes": 0,
+          "initialization_source_hours": [
+            3679
+          ],
+          "label_tail_interval_minutes": [
+            420,
+            480
+          ],
+          "raw_end_minute": 221220,
+          "raw_start_minute": 220680,
+          "score_interval_minutes": [
+            60,
+            420
+          ],
+          "source_semantics": "hourly rows; reset repeats first row; final boundary hour conservatively included"
+        },
+        "grid_limit_kW": 250.0,
+        "history_interval_minutes": [
+          0,
+          60
+        ],
+        "id": "p2b_L4a_boundary_p2b_day_153_0",
+        "importance_weight": null,
+        "initialization_seed": 20261012,
+        "label_horizons_minutes": [
+          15,
+          30,
+          60
+        ],
+        "offline_input_order": [
+          "shock_e",
+          "shock_c",
+          "calendar_hour"
+        ],
+        "offline_inputs": [
+          1.7235741953289216,
+          0.6986143292008037,
+          3679
+        ],
+        "p_reference": null,
+        "parent_instance_id": "p2b_root:7f39e8e807bca9ca77a2eafd75b45d97430dc558a9b5016543ff3a6fbe93f0d0",
+        "parent_template_id": "p2b_root:7f39e8e807bca9ca77a2eafd75b45d97430dc558a9b5016543ff3a6fbe93f0d0",
+        "pre_event_warmup_steps": 6,
+        "purpose": "development",
+        "q_design_density": null,
+        "response_clock_anchor": "shock_start_minute",
+        "response_delay_minutes": 45.0,
+        "root_family_id": "p2b_root:7f39e8e807bca9ca77a2eafd75b45d97430dc558a9b5016543ff3a6fbe93f0d0",
+        "sample_schema_version": "p2b.experiment.design.v1",
+        "sampling_cohort": "main",
+        "sampling_method": "balanced_calendar_strata_independent_uniform_continuous",
+        "sampling_role": "fixed_study",
+        "sampling_weight_is_failure_probability": false,
+        "score_interval_minutes": [
+          60,
+          420
+        ],
+        "shock": {
+          "c": 0.6986143292008037,
+          "e": 1.7235741953289216,
+          "h": 0.3
+        },
+        "shock_by_priority": {
+          "P0": {
+            "e": 0.5
+          }
+        },
+        "shock_duration_minutes": 240.0,
+        "shock_mode": "mixed",
+        "shock_start_minute": 60.0,
+        "stage": 4,
+        "start_hour": 3679,
+        "step_minutes": 15,
+        "stratum": "boundary_candidate",
+        "study_stratum": "L4a_boundary",
+        "tail_interval_minutes": [
+          420,
+          480
+        ],
+        "template_type": "L4a",
+        "time_block_id": "p2b_day_153"
+      },
+      "step": 5,
+      "time_minute": 75.0,
+      "phase": "fixed_execution",
+      "loads_kW": [
+        [
+          350.31673211438465,
+          26.66619087903238,
+          70.70688053862159
+        ],
+        [
+          211.25389518897666,
+          116.19218837368145,
+          49.30431410175979
+        ],
+        [
+          95.9017988447411,
+          0.0,
+          51.5685259588835
+        ],
+        [
+          790.6969577177863,
+          0.0,
+          354.2531974993994
+        ]
+      ],
+      "availability": {
+        "GT_1": 0.0,
+        "GT_2": 1.0,
+        "GT_3": 1.0,
+        "HRSG_1": 1.0,
+        "HRSG_2": 1.0,
+        "HRSG_3": 1.0,
+        "EC_1": 1.0,
+        "EC_2": 1.0,
+        "EC_3": 1.0,
+        "BOILER_1": 1.0,
+        "BOILER_2": 1.0,
+        "BOILER_3": 1.0,
+        "ABS": 1.0,
+        "TOWER": 1.0,
+        "GRID": 1.0,
+        "DIESEL": 1.0,
+        "TOWER_1": 1.0,
+        "TOWER_2": 1.0,
+        "TOWER_3": 1.0,
+        "TOWER_4": 1.0
+      },
+      "state": {
+        "gt_prev": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "diesel_energy_remaining_kWh": 2400.0,
+        "extra_faulted": [
+          "GT_1"
+        ],
+        "overload_minutes": [
+          15.0,
+          0.0,
+          0.0
+        ],
+        "thermal_delta": {
+          "ER_EXAM1_MULT4_FLR_1": 0.0,
+          "ER_TRAUMA1_FLR_1": 0.0,
+          "ER_EXAM3_MULT4_FLR_1": 0.0,
+          "ER_TRAUMA2_FLR_1": 0.0,
+          "OR1_FLR_2": 0.0,
+          "OR2_MULT5_FLR_2": 0.0,
+          "OR3_FLR_2": 0.0,
+          "OR4_FLR_2": 0.0,
+          "IC_PATROOM1_MULT5_FLR_2": 0.0,
+          "IC_PATROOM2_FLR_2": 0.0,
+          "IC_PATROOM3_MULT6_FLR_2": 0.0,
+          "ICU_FLR_2": 0.0,
+          "ICU_NURSESTN_LOBBY_FLR_2": 0.0,
+          "RADIOLOGY_FLR_4": 0.5394774836714678
+        },
+        "last_grid_import_kW": 249.99999790674752,
+        "last_diesel_kW": 0.0,
+        "auxiliary_request_kW": 4.777586652688569,
+        "cooling_reference_kW": 236.47763239888852,
+        "disconnected_loads": [
+          [
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.012777483466251948,
+            0.0,
+            -0.0
+          ]
+        ],
+        "diesel_status": "OFF",
+        "diesel_start_minute": null,
+        "topology_mode": "legacy_explicit_permission"
+      },
+      "command": {
+        "id": 4,
+        "generated_minute": 45.0,
+        "arrival_minute": 45.0,
+        "request": {},
+        "dispatch": {
+          "gt_electric_kW": [
+            145.73808623590963,
+            0.0,
+            0.0
+          ],
+          "grid_import_kW": 250.0,
+          "diesel_kW": 0.0,
+          "absorption_cooling_kW": 160.25986285550994,
+          "electric_chiller_cooling_kW": [
+            76.21776954337858,
+            0.0,
+            0.0
+          ],
+          "boiler_steam_lbph": 0.0,
+          "hrsg_steam_lbph": 1339.0187578672687,
+          "tower_rejection_kW": 519.7444978538373,
+          "gt_fuel_MMBtu_h": 2.3660258242169645
+        },
+        "disconnected": [
+          [
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0037267458013492153,
+            0.0,
+            -0.0
+          ]
+        ],
+        "reference_cooling_kW": 236.47763239888852,
+        "weight": 0.0,
+        "optimizer_warning": ""
+      },
+      "executed_action": {
+        "gt_electric_kW": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "grid_import_kW": 250.0,
+        "diesel_kW": 0.0,
+        "absorption_cooling_kW": 160.25986285550994,
+        "electric_chiller_cooling_kW": [
+          76.21776954337858,
+          0.0,
+          0.0
+        ],
+        "boiler_steam_lbph": 0.0,
+        "hrsg_steam_lbph": 1339.0187578672687,
+        "tower_rejection_kW": 519.7444978538373,
+        "gt_fuel_MMBtu_h": 2.3660258242169645
+      },
+      "pending_commands": [
+        {
+          "id": 5,
+          "generated_minute": 60.0,
+          "arrival_minute": 105.0,
+          "request": {},
+          "dispatch": {
+            "gt_electric_kW": [
+              313.98848000000004,
+              224.98551817838631,
+              225.0
+            ],
+            "grid_import_kW": 250.0,
+            "diesel_kW": 0.0,
+            "absorption_cooling_kW": 525.8329180986644,
+            "electric_chiller_cooling_kW": [
+              -1.0806997713826343e-13,
+              0.0,
+              0.0
+            ],
+            "boiler_steam_lbph": 0.0,
+            "hrsg_steam_lbph": 7071.295121094683,
+            "tower_rejection_kW": 1400.5134096705513,
+            "gt_fuel_MMBtu_h": 12.436738183989467
+          },
+          "disconnected": [
+            [
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              455.1406877555948,
+              0.0,
+              0.0
+            ]
+          ],
+          "reference_cooling_kW": 525.8329180986643,
+          "weight": 0.0,
+          "optimizer_warning": ""
+        },
+        {
+          "id": 6,
+          "generated_minute": 75.0,
+          "arrival_minute": 105.0,
+          "request": {},
+          "dispatch": {
+            "gt_electric_kW": [
+              0.0,
+              224.9855181783865,
+              225.0
+            ],
+            "grid_import_kW": 250.0,
+            "diesel_kW": 0.0,
+            "absorption_cooling_kW": 525.8329180986643,
+            "electric_chiller_cooling_kW": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "boiler_steam_lbph": 0.0,
+            "hrsg_steam_lbph": 4165.037562593984,
+            "tower_rejection_kW": 1400.5134096705513,
+            "gt_fuel_MMBtu_h": 7.325317470902577
+          },
+          "disconnected": [
+            [
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              769.1291677555947,
+              0.0,
+              0.0
+            ]
+          ],
+          "reference_cooling_kW": 525.8329180986643,
+          "weight": 0.0,
+          "optimizer_warning": ""
+        }
+      ],
+      "local_execution_state": {
+        "pending_shed": null,
+        "local_down": null,
+        "gt_start_pending": {},
+        "auto_shed_latched": false,
+        "automatic_disconnected": [
+          [
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "disconnected_fraction": [
+          [
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            1.615951201486068e-05,
+            0.0,
+            -0.0
+          ]
+        ],
+        "automatic_fraction": [
+          [
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "connection_basis_loads": [
+          [
+            350.31673211438465,
+            26.66619087903238,
+            70.70688053862159
+          ],
+          [
+            211.25389518897666,
+            116.19218837368145,
+            49.30431410175979
+          ],
+          [
+            95.9017988447411,
+            0.0,
+            51.5685259588835
+          ],
+          [
+            790.7097352012526,
+            0.0,
+            354.2531974993994
+          ]
+        ],
+        "grid_outage_start": null,
+        "ramp_time": 45.0,
+        "ramp_anchor": [
+          145.73808623590963,
+          0.0,
+          0.0
+        ],
+        "ramp_budget": 225.0
+      },
+      "config": {
+        "schema_version": "4.1-research-prototype",
+        "provenance": "All limits here are illustrative research assumptions, NOT OEM relay or hospital safety ratings.",
+        "grid_import_limit_kW": 850.0,
+        "diesel_initial_energy_kWh": 2400.0,
+        "diesel_start_delay_minutes": 15.0,
+        "gt_ramp_kW_per_hour": 900.0,
+        "gt_short_term_overload_multiple": 1.05,
+        "gt_protection_trip_multiple": 1.05,
+        "gt_overload_hold_minutes": 15,
+        "thermal_setpoint_margin_C": 2.0,
+        "mass_participation": 0.5,
+        "effective_U_W_m2K": 1.5,
+        "solver_time_limit_sec": 6.0,
+        "priority": "strict lexicographic 0,1,2,3 then cost; each carrier normalized by total demand; P0-P2 lock abs tolerance 1e-7, P3 lock abs tolerance 1e-5, with relative tolerance",
+        "lex_lock_abs_tol_by_priority": [
+          1e-07,
+          1e-07,
+          1e-07,
+          1e-05
+        ],
+        "lex_lock_rel_tol_by_priority": [
+          0.0,
+          0.0,
+          0.0,
+          1e-08
+        ],
+        "p0_solver_feasibility_tol_kW": 0.001,
+        "p0_unserved_abs_tol_kW": 0.01,
+        "p0_unserved_rel_tol": 0.001,
+        "p0_unserved_abs_tol_kWh": 0.01,
+        "precontrol_load_shed_enabled": true,
+        "cascade": "Delayed pre-control proxy subtracts incremental grid headroom, diesel reserve available after start delay, and executable P3/P2/P1 shedding (P0 preserved) before sharing residual across surviving GTs; not a network or relay simulation.",
+        "dynamic_temperature": "baseline DOE zone mean temperature + uncalibrated 1R1C cold-loss perturbation",
+        "cost": "uses historical 2001 prices from v2; diesel $0.30/kWh illustrative only",
+        "precontrol_cooling_to_el_fraction": 0.6,
+        "cooling_tower_topology": "shared_common_tower_for_all_EC_and_ABS",
+        "mpc_cold_tracking_penalty_USD_per_kW_step": 0.2
+      },
+      "execution_contract": {
+        "name": "p1b_no_export_interlock",
+        "provenance": "Explicit uncalibrated research contract; see docs/v43/P1B_EXECUTION_CONTRACT.md. No OEM/ATS/relay data supplied. Not the default baseline.",
+        "grid_import_mode": "arrived_ceiling",
+        "gt_local_down_rate_kW_per_hour": 900.0,
+        "gt_local_down_delay_minutes": 0.25,
+        "local_max_segment_minutes": 0.25,
+        "surplus_interlock": "isolate_largest_gt",
+        "surplus_interlock_delay_minutes": 0.0,
+        "automatic_shedding_delay_minutes": 0.0,
+        "gt_start_delay_minutes": 0.0,
+        "diesel_mode": "legacy_explicit_permission",
+        "ats_transfer_minutes": 0.0,
+        "diesel_allowed_priorities": [
+          "P0",
+          "P1"
+        ],
+        "thermal_mode": "legacy_loss_fraction"
+      },
+      "plant": {
+        "case": "doe_capacity_matched_exploratory",
+        "gt_count": 3,
+        "gt_rated_kW": 320.0,
+        "hrsg_rated_lbph": 2906.2575585007,
+        "absorption_rt": 200.0,
+        "electric_chillers_rt": [
+          200.0,
+          200.0,
+          300.0
+        ],
+        "boiler_steam_lbph": 3000.0,
+        "cooling_tower_rejection_kW": 4220.223408,
+        "emergency_diesel_kW": 900.0,
+        "steam_kWh_per_lb": 0.3,
+        "exchanger_eff": 0.95,
+        "abs_steam_lb_per_rt": 19.5,
+        "abs_electric_kW_per_rt": 0.14,
+        "ec_electric_kW_per_rt": 0.77,
+        "boiler_eff": 0.8,
+        "nominal_gt_capacity_used_for_heat_rate_kW": 800.0,
+        "tariff": {
+          "gas_per_MMBtu": 4.84,
+          "electricity_onpeak_per_kWh": 0.09256,
+          "electricity_midpeak_per_kWh": 0.07356,
+          "electricity_offpeak_per_kWh": 0.05456
+        },
+        "gas_price_usd_per_mmbtu": 4.84,
+        "levels": [
+          0.4,
+          0.6,
+          0.8,
+          1.0
+        ],
+        "inclusion_unresolved": "include_all"
+      },
+      "dt_h": 0.25,
+      "row": {
+        "timestamp": "2017-06-03 08:00:00",
+        "outdoor_temperature_C": 17.583333333333332
+      }
+    }
+  },
+  {
+    "scenario_id": "p2b_L4a_boundary_p2b_day_153_0",
+    "policy": "secure_milp",
+    "expected_old_rank": 3,
+    "source_file": "outputs\\v43_p2b_20261013_run01\\report_data\\failures.jsonl",
+    "source_sha256": "5d48b2367506c1f2419ce76b8fed9a254801a0b1153a70d5d6cfa710b7412bb9",
+    "diagnostic": {
+      "scenario_id": "p2b_L4a_boundary_p2b_day_153_0",
+      "scenario": {
+        "actual_p0_load_multiplier": {
+          "c": 1.6986143292008036,
+          "e": 4.085361292993382,
+          "h": 1.3
+        },
+        "automatic_fast_shedding": false,
+        "base_state_id": "p2b_initial:e8f81e8be5ba48b4f327d73c976487002fe8acf2a1b343f770dbebe902a460d3",
+        "control_capability_note": "existing automatic_fast_shedding=False; no capability parameters changed",
+        "demand_background": "calendar_pool",
+        "design_family": "p2b_root:7f39e8e807bca9ca77a2eafd75b45d97430dc558a9b5016543ff3a6fbe93f0d0",
+        "distribution_id": "p_study.p2b.independent_conditional.v1",
+        "duration_steps": 32,
+        "enable_propagation": true,
+        "event_class": "L4a",
+        "event_schema_version": "p2a.events.v1",
+        "exogenous_events": [
+          {
+            "end_minute": 300.0,
+            "kind": "load_shock",
+            "origin": "exogenous",
+            "shock": {
+              "c": 0.6986143292008037,
+              "e": 1.7235741953289216,
+              "h": 0.3
+            },
+            "shock_by_priority": {
+              "P0": {
+                "e": 0.5
+              }
+            },
+            "start_minute": 60.0
+          }
+        ],
+        "exogenous_stream_id": "p2b_stream:7f39e8e807bca9ca77a2eafd75b45d97430dc558a9b5016543ff3a6fbe93f0d0",
+        "experiment_role": "pilot_train",
+        "family_id": "p2b_root:7f39e8e807bca9ca77a2eafd75b45d97430dc558a9b5016543ff3a6fbe93f0d0",
+        "full_source_support": {
+          "actual_trajectory_interval_minutes": [
+            220680,
+            221160.0
+          ],
+          "algebraic_initialization_iterations": 6,
+          "endpoint_source_hour_reserved": true,
+          "historical_observation_interval_minutes": [
+            0,
+            60
+          ],
+          "initialization_historical_minutes": 0,
+          "initialization_source_hours": [
+            3679
+          ],
+          "label_tail_interval_minutes": [
+            420,
+            480
+          ],
+          "raw_end_minute": 221220,
+          "raw_start_minute": 220680,
+          "score_interval_minutes": [
+            60,
+            420
+          ],
+          "source_semantics": "hourly rows; reset repeats first row; final boundary hour conservatively included"
+        },
+        "grid_limit_kW": 250.0,
+        "history_interval_minutes": [
+          0,
+          60
+        ],
+        "id": "p2b_L4a_boundary_p2b_day_153_0",
+        "importance_weight": null,
+        "initialization_seed": 20261012,
+        "label_horizons_minutes": [
+          15,
+          30,
+          60
+        ],
+        "offline_input_order": [
+          "shock_e",
+          "shock_c",
+          "calendar_hour"
+        ],
+        "offline_inputs": [
+          1.7235741953289216,
+          0.6986143292008037,
+          3679
+        ],
+        "p_reference": null,
+        "parent_instance_id": "p2b_root:7f39e8e807bca9ca77a2eafd75b45d97430dc558a9b5016543ff3a6fbe93f0d0",
+        "parent_template_id": "p2b_root:7f39e8e807bca9ca77a2eafd75b45d97430dc558a9b5016543ff3a6fbe93f0d0",
+        "pre_event_warmup_steps": 6,
+        "purpose": "development",
+        "q_design_density": null,
+        "response_clock_anchor": "shock_start_minute",
+        "response_delay_minutes": 45.0,
+        "root_family_id": "p2b_root:7f39e8e807bca9ca77a2eafd75b45d97430dc558a9b5016543ff3a6fbe93f0d0",
+        "sample_schema_version": "p2b.experiment.design.v1",
+        "sampling_cohort": "main",
+        "sampling_method": "balanced_calendar_strata_independent_uniform_continuous",
+        "sampling_role": "fixed_study",
+        "sampling_weight_is_failure_probability": false,
+        "score_interval_minutes": [
+          60,
+          420
+        ],
+        "shock": {
+          "c": 0.6986143292008037,
+          "e": 1.7235741953289216,
+          "h": 0.3
+        },
+        "shock_by_priority": {
+          "P0": {
+            "e": 0.5
+          }
+        },
+        "shock_duration_minutes": 240.0,
+        "shock_mode": "mixed",
+        "shock_start_minute": 60.0,
+        "stage": 4,
+        "start_hour": 3679,
+        "step_minutes": 15,
+        "stratum": "boundary_candidate",
+        "study_stratum": "L4a_boundary",
+        "tail_interval_minutes": [
+          420,
+          480
+        ],
+        "template_type": "L4a",
+        "time_block_id": "p2b_day_153"
+      },
+      "step": 4,
+      "time_minute": 60.0,
+      "phase": "fixed_execution",
+      "loads_kW": [
+        [
+          350.31673211438465,
+          26.66619087903238,
+          70.70688053862159
+        ],
+        [
+          211.25389518897666,
+          116.19218837368145,
+          49.30431410175979
+        ],
+        [
+          95.9017988447411,
+          0.0,
+          51.5685259588835
+        ],
+        [
+          790.6969577177863,
+          0.0,
+          354.2531974993994
+        ]
+      ],
+      "availability": {
+        "GT_1": 1.0,
+        "GT_2": 1.0,
+        "GT_3": 1.0,
+        "HRSG_1": 1.0,
+        "HRSG_2": 1.0,
+        "HRSG_3": 1.0,
+        "EC_1": 1.0,
+        "EC_2": 1.0,
+        "EC_3": 1.0,
+        "BOILER_1": 1.0,
+        "BOILER_2": 1.0,
+        "BOILER_3": 1.0,
+        "ABS": 1.0,
+        "TOWER": 1.0,
+        "GRID": 1.0,
+        "DIESEL": 1.0,
+        "TOWER_1": 1.0,
+        "TOWER_2": 1.0,
+        "TOWER_3": 1.0,
+        "TOWER_4": 1.0
+      },
+      "state": {
+        "gt_prev": [
+          132.08463043412277,
+          0.0,
+          0.0
+        ],
+        "diesel_energy_remaining_kWh": 2400.0,
+        "extra_faulted": [],
+        "overload_minutes": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "thermal_delta": {
+          "ER_EXAM1_MULT4_FLR_1": 0.0,
+          "ER_TRAUMA1_FLR_1": 0.0,
+          "ER_EXAM3_MULT4_FLR_1": 0.0,
+          "ER_TRAUMA2_FLR_1": 0.0,
+          "OR1_FLR_2": 0.0,
+          "OR2_MULT5_FLR_2": 0.0,
+          "OR3_FLR_2": 0.0,
+          "OR4_FLR_2": 0.0,
+          "IC_PATROOM1_MULT5_FLR_2": 0.0,
+          "IC_PATROOM2_FLR_2": 0.0,
+          "IC_PATROOM3_MULT6_FLR_2": 0.0,
+          "ICU_FLR_2": 0.0,
+          "ICU_NURSESTN_LOBBY_FLR_2": 0.0,
+          "RADIOLOGY_FLR_4": 0.0
+        },
+        "last_grid_import_kW": 249.9962732914661,
+        "last_diesel_kW": 0.0,
+        "auxiliary_request_kW": 9.413777045002657,
+        "cooling_reference_kW": 236.47763239888852,
+        "disconnected_loads": [
+          [
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.012777483466251948,
+            0.0,
+            -0.0
+          ]
+        ],
+        "diesel_status": "OFF",
+        "diesel_start_minute": null,
+        "topology_mode": "legacy_explicit_permission"
+      },
+      "command": {
+        "id": 4,
+        "generated_minute": 45.0,
+        "arrival_minute": 45.0,
+        "request": {
+          "security": {
+            "gt_loading_penalty_USD_per_kWh": 0.35
+          }
+        },
+        "dispatch": {
+          "gt_electric_kW": [
+            132.08463043412277,
+            0.0,
+            0.0
+          ],
+          "grid_import_kW": 250.0,
+          "diesel_kW": 0.0,
+          "absorption_cooling_kW": 236.47763239888855,
+          "electric_chiller_cooling_kW": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "boiler_steam_lbph": 548.052783202047,
+          "hrsg_steam_lbph": 1213.572939958624,
+          "tower_rejection_kW": 629.8390303507853,
+          "gt_fuel_MMBtu_h": 2.144364967736794
+        },
+        "disconnected": [
+          [
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0037267458013492153,
+            0.0,
+            -0.0
+          ]
+        ],
+        "reference_cooling_kW": 236.47763239888852,
+        "weight": 0.35,
+        "optimizer_warning": ""
+      },
+      "executed_action": {
+        "gt_electric_kW": [
+          132.08463043412277,
+          0.0,
+          0.0
+        ],
+        "grid_import_kW": 250.0,
+        "diesel_kW": 0.0,
+        "absorption_cooling_kW": 236.47763239888855,
+        "electric_chiller_cooling_kW": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "boiler_steam_lbph": 548.052783202047,
+        "hrsg_steam_lbph": 1213.572939958624,
+        "tower_rejection_kW": 629.8390303507853,
+        "gt_fuel_MMBtu_h": 2.144364967736794
+      },
+      "pending_commands": [
+        {
+          "id": 5,
+          "generated_minute": 60.0,
+          "arrival_minute": 105.0,
+          "request": {
+            "security": {
+              "gt_loading_penalty_USD_per_kWh": 0.35
+            }
+          },
+          "dispatch": {
+            "gt_electric_kW": [
+              313.98848000000004,
+              224.98551817838631,
+              225.0
+            ],
+            "grid_import_kW": 250.0,
+            "diesel_kW": 0.0,
+            "absorption_cooling_kW": 525.8329180986644,
+            "electric_chiller_cooling_kW": [
+              -1.0806997713826343e-13,
+              0.0,
+              0.0
+            ],
+            "boiler_steam_lbph": 0.0,
+            "hrsg_steam_lbph": 7071.295121094683,
+            "tower_rejection_kW": 1400.5134096705513,
+            "gt_fuel_MMBtu_h": 12.436738183989467
+          },
+          "disconnected": [
+            [
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              455.1406877555948,
+              0.0,
+              0.0
+            ]
+          ],
+          "reference_cooling_kW": 525.8329180986643,
+          "weight": 0.35,
+          "optimizer_warning": ""
+        }
+      ],
+      "local_execution_state": {
+        "pending_shed": null,
+        "local_down": null,
+        "gt_start_pending": {},
+        "auto_shed_latched": false,
+        "automatic_disconnected": [
+          [
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "disconnected_fraction": [
+          [
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            1.615951201486068e-05,
+            0.0,
+            -0.0
+          ]
+        ],
+        "automatic_fraction": [
+          [
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "connection_basis_loads": [
+          [
+            350.31673211438465,
+            26.66619087903238,
+            70.70688053862159
+          ],
+          [
+            211.25389518897666,
+            116.19218837368145,
+            49.30431410175979
+          ],
+          [
+            95.9017988447411,
+            0.0,
+            51.5685259588835
+          ],
+          [
+            790.7097352012526,
+            0.0,
+            354.2531974993994
+          ]
+        ],
+        "grid_outage_start": null,
+        "ramp_time": 45.0,
+        "ramp_anchor": [
+          132.08463043412277,
+          0.0,
+          0.0
+        ],
+        "ramp_budget": 225.0
+      },
+      "config": {
+        "schema_version": "4.1-research-prototype",
+        "provenance": "All limits here are illustrative research assumptions, NOT OEM relay or hospital safety ratings.",
+        "grid_import_limit_kW": 850.0,
+        "diesel_initial_energy_kWh": 2400.0,
+        "diesel_start_delay_minutes": 15.0,
+        "gt_ramp_kW_per_hour": 900.0,
+        "gt_short_term_overload_multiple": 1.05,
+        "gt_protection_trip_multiple": 1.05,
+        "gt_overload_hold_minutes": 15,
+        "thermal_setpoint_margin_C": 2.0,
+        "mass_participation": 0.5,
+        "effective_U_W_m2K": 1.5,
+        "solver_time_limit_sec": 6.0,
+        "priority": "strict lexicographic 0,1,2,3 then cost; each carrier normalized by total demand; P0-P2 lock abs tolerance 1e-7, P3 lock abs tolerance 1e-5, with relative tolerance",
+        "lex_lock_abs_tol_by_priority": [
+          1e-07,
+          1e-07,
+          1e-07,
+          1e-05
+        ],
+        "lex_lock_rel_tol_by_priority": [
+          0.0,
+          0.0,
+          0.0,
+          1e-08
+        ],
+        "p0_solver_feasibility_tol_kW": 0.001,
+        "p0_unserved_abs_tol_kW": 0.01,
+        "p0_unserved_rel_tol": 0.001,
+        "p0_unserved_abs_tol_kWh": 0.01,
+        "precontrol_load_shed_enabled": true,
+        "cascade": "Delayed pre-control proxy subtracts incremental grid headroom, diesel reserve available after start delay, and executable P3/P2/P1 shedding (P0 preserved) before sharing residual across surviving GTs; not a network or relay simulation.",
+        "dynamic_temperature": "baseline DOE zone mean temperature + uncalibrated 1R1C cold-loss perturbation",
+        "cost": "uses historical 2001 prices from v2; diesel $0.30/kWh illustrative only",
+        "precontrol_cooling_to_el_fraction": 0.6,
+        "cooling_tower_topology": "shared_common_tower_for_all_EC_and_ABS",
+        "mpc_cold_tracking_penalty_USD_per_kW_step": 0.2
+      },
+      "execution_contract": {
+        "name": "p1b_no_export_interlock",
+        "provenance": "Explicit uncalibrated research contract; see docs/v43/P1B_EXECUTION_CONTRACT.md. No OEM/ATS/relay data supplied. Not the default baseline.",
+        "grid_import_mode": "arrived_ceiling",
+        "gt_local_down_rate_kW_per_hour": 900.0,
+        "gt_local_down_delay_minutes": 0.25,
+        "local_max_segment_minutes": 0.25,
+        "surplus_interlock": "isolate_largest_gt",
+        "surplus_interlock_delay_minutes": 0.0,
+        "automatic_shedding_delay_minutes": 0.0,
+        "gt_start_delay_minutes": 0.0,
+        "diesel_mode": "legacy_explicit_permission",
+        "ats_transfer_minutes": 0.0,
+        "diesel_allowed_priorities": [
+          "P0",
+          "P1"
+        ],
+        "thermal_mode": "legacy_loss_fraction"
+      },
+      "plant": {
+        "case": "doe_capacity_matched_exploratory",
+        "gt_count": 3,
+        "gt_rated_kW": 320.0,
+        "hrsg_rated_lbph": 2906.2575585007,
+        "absorption_rt": 200.0,
+        "electric_chillers_rt": [
+          200.0,
+          200.0,
+          300.0
+        ],
+        "boiler_steam_lbph": 3000.0,
+        "cooling_tower_rejection_kW": 4220.223408,
+        "emergency_diesel_kW": 900.0,
+        "steam_kWh_per_lb": 0.3,
+        "exchanger_eff": 0.95,
+        "abs_steam_lb_per_rt": 19.5,
+        "abs_electric_kW_per_rt": 0.14,
+        "ec_electric_kW_per_rt": 0.77,
+        "boiler_eff": 0.8,
+        "nominal_gt_capacity_used_for_heat_rate_kW": 800.0,
+        "tariff": {
+          "gas_per_MMBtu": 4.84,
+          "electricity_onpeak_per_kWh": 0.09256,
+          "electricity_midpeak_per_kWh": 0.07356,
+          "electricity_offpeak_per_kWh": 0.05456
+        },
+        "gas_price_usd_per_mmbtu": 4.84,
+        "levels": [
+          0.4,
+          0.6,
+          0.8,
+          1.0
+        ],
+        "inclusion_unresolved": "include_all"
+      },
+      "dt_h": 0.25,
+      "row": {
+        "timestamp": "2017-06-03 08:00:00",
+        "outdoor_temperature_C": 17.583333333333332
+      }
+    }
+  },
+  {
+    "scenario_id": "p2b_L4a_boundary_p2b_day_153_4",
+    "policy": "priority_milp",
+    "expected_old_rank": 3,
+    "source_file": "outputs\\v43_p2b_20261013_run01\\report_data\\failures.jsonl",
+    "source_sha256": "5d48b2367506c1f2419ce76b8fed9a254801a0b1153a70d5d6cfa710b7412bb9",
+    "diagnostic": {
+      "scenario_id": "p2b_L4a_boundary_p2b_day_153_4",
+      "scenario": {
+        "actual_p0_load_multiplier": {
+          "c": 1.955673923696028,
+          "e": 2.9627884736905985,
+          "h": 1.3
+        },
+        "automatic_fast_shedding": false,
+        "base_state_id": "p2b_initial:e8f81e8be5ba48b4f327d73c976487002fe8acf2a1b343f770dbebe902a460d3",
+        "control_capability_note": "existing automatic_fast_shedding=False; no capability parameters changed",
+        "demand_background": "calendar_pool",
+        "design_family": "p2b_root:b04c711b37363f165fd3ec96f3f5f7a441c4df2e6d8c952b03ac5bc61a77cc3c",
+        "distribution_id": "p_study.p2b.independent_conditional.v1",
+        "duration_steps": 32,
+        "enable_propagation": true,
+        "event_class": "L4a",
+        "event_schema_version": "p2a.events.v1",
+        "exogenous_events": [
+          {
+            "end_minute": 300.0,
+            "kind": "load_shock",
+            "origin": "exogenous",
+            "shock": {
+              "c": 0.9556739236960281,
+              "e": 0.9751923157937324,
+              "h": 0.3
+            },
+            "shock_by_priority": {
+              "P0": {
+                "e": 0.5
+              }
+            },
+            "start_minute": 60.0
+          }
+        ],
+        "exogenous_stream_id": "p2b_stream:b04c711b37363f165fd3ec96f3f5f7a441c4df2e6d8c952b03ac5bc61a77cc3c",
+        "experiment_role": "pilot_train",
+        "family_id": "p2b_root:b04c711b37363f165fd3ec96f3f5f7a441c4df2e6d8c952b03ac5bc61a77cc3c",
+        "full_source_support": {
+          "actual_trajectory_interval_minutes": [
+            220680,
+            221160.0
+          ],
+          "algebraic_initialization_iterations": 6,
+          "endpoint_source_hour_reserved": true,
+          "historical_observation_interval_minutes": [
+            0,
+            60
+          ],
+          "initialization_historical_minutes": 0,
+          "initialization_source_hours": [
+            3679
+          ],
+          "label_tail_interval_minutes": [
+            420,
+            480
+          ],
+          "raw_end_minute": 221220,
+          "raw_start_minute": 220680,
+          "score_interval_minutes": [
+            60,
+            420
+          ],
+          "source_semantics": "hourly rows; reset repeats first row; final boundary hour conservatively included"
+        },
+        "grid_limit_kW": 250.0,
+        "history_interval_minutes": [
+          0,
+          60
+        ],
+        "id": "p2b_L4a_boundary_p2b_day_153_4",
+        "importance_weight": null,
+        "initialization_seed": 20261012,
+        "label_horizons_minutes": [
+          15,
+          30,
+          60
+        ],
+        "offline_input_order": [
+          "shock_e",
+          "shock_c",
+          "calendar_hour"
+        ],
+        "offline_inputs": [
+          0.9751923157937324,
+          0.9556739236960281,
+          3679
+        ],
+        "p_reference": null,
+        "parent_instance_id": "p2b_root:b04c711b37363f165fd3ec96f3f5f7a441c4df2e6d8c952b03ac5bc61a77cc3c",
+        "parent_template_id": "p2b_root:b04c711b37363f165fd3ec96f3f5f7a441c4df2e6d8c952b03ac5bc61a77cc3c",
+        "pre_event_warmup_steps": 6,
+        "purpose": "development",
+        "q_design_density": null,
+        "response_clock_anchor": "shock_start_minute",
+        "response_delay_minutes": 45.0,
+        "root_family_id": "p2b_root:b04c711b37363f165fd3ec96f3f5f7a441c4df2e6d8c952b03ac5bc61a77cc3c",
+        "sample_schema_version": "p2b.experiment.design.v1",
+        "sampling_cohort": "main",
+        "sampling_method": "balanced_calendar_strata_independent_uniform_continuous",
+        "sampling_role": "fixed_study",
+        "sampling_weight_is_failure_probability": false,
+        "score_interval_minutes": [
+          60,
+          420
+        ],
+        "shock": {
+          "c": 0.9556739236960281,
+          "e": 0.9751923157937324,
+          "h": 0.3
+        },
+        "shock_by_priority": {
+          "P0": {
+            "e": 0.5
+          }
+        },
+        "shock_duration_minutes": 240.0,
+        "shock_mode": "mixed",
+        "shock_start_minute": 60.0,
+        "stage": 4,
+        "start_hour": 3679,
+        "step_minutes": 15,
+        "stratum": "boundary_candidate",
+        "study_stratum": "L4a_boundary",
+        "tail_interval_minutes": [
+          420,
+          480
+        ],
+        "template_type": "L4a",
+        "time_block_id": "p2b_day_153"
+      },
+      "step": 4,
+      "time_minute": 60.0,
+      "phase": "fixed_execution",
+      "loads_kW": [
+        [
+          254.05693685636464,
+          26.66619087903238,
+          81.40729777096183
+        ],
+        [
+          153.20569242225787,
+          116.19218837368145,
+          56.76577652556186
+        ],
+        [
+          69.54996727234463,
+          0.0,
+          59.372642610804164
+        ],
+        [
+          573.4297812353299,
+          0.0,
+          407.8640623863558
+        ]
+      ],
+      "availability": {
+        "GT_1": 1.0,
+        "GT_2": 1.0,
+        "GT_3": 1.0,
+        "HRSG_1": 1.0,
+        "HRSG_2": 1.0,
+        "HRSG_3": 1.0,
+        "EC_1": 1.0,
+        "EC_2": 1.0,
+        "EC_3": 1.0,
+        "BOILER_1": 1.0,
+        "BOILER_2": 1.0,
+        "BOILER_3": 1.0,
+        "ABS": 1.0,
+        "TOWER": 1.0,
+        "GRID": 1.0,
+        "DIESEL": 1.0,
+        "TOWER_1": 1.0,
+        "TOWER_2": 1.0,
+        "TOWER_3": 1.0,
+        "TOWER_4": 1.0
+      },
+      "state": {
+        "gt_prev": [
+          145.73808623590963,
+          0.0,
+          0.0
+        ],
+        "diesel_energy_remaining_kWh": 2400.0,
+        "extra_faulted": [],
+        "overload_minutes": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "thermal_delta": {
+          "ER_EXAM1_MULT4_FLR_1": 0.0,
+          "ER_TRAUMA1_FLR_1": 0.0,
+          "ER_EXAM3_MULT4_FLR_1": 0.0,
+          "ER_TRAUMA2_FLR_1": 0.0,
+          "OR1_FLR_2": 0.0,
+          "OR2_MULT5_FLR_2": 0.0,
+          "OR3_FLR_2": 0.0,
+          "OR4_FLR_2": 0.0,
+          "IC_PATROOM1_MULT5_FLR_2": 0.0,
+          "IC_PATROOM2_FLR_2": 0.0,
+          "IC_PATROOM3_MULT6_FLR_2": 0.0,
+          "ICU_FLR_2": 0.0,
+          "ICU_NURSESTN_LOBBY_FLR_2": 0.0,
+          "RADIOLOGY_FLR_4": 0.0
+        },
+        "last_grid_import_kW": 249.99627329146608,
+        "last_diesel_kW": 0.0,
+        "auxiliary_request_kW": 23.067232846789494,
+        "cooling_reference_kW": 236.47763239888852,
+        "disconnected_loads": [
+          [
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.009266495181591467,
+            0.0,
+            -0.0
+          ]
+        ],
+        "diesel_status": "OFF",
+        "diesel_start_minute": null,
+        "topology_mode": "legacy_explicit_permission"
+      },
+      "command": {
+        "id": 4,
+        "generated_minute": 45.0,
+        "arrival_minute": 45.0,
+        "request": {},
+        "dispatch": {
+          "gt_electric_kW": [
+            145.73808623590963,
+            0.0,
+            0.0
+          ],
+          "grid_import_kW": 250.0,
+          "diesel_kW": 0.0,
+          "absorption_cooling_kW": 160.25986285550994,
+          "electric_chiller_cooling_kW": [
+            76.21776954337858,
+            0.0,
+            0.0
+          ],
+          "boiler_steam_lbph": 0.0,
+          "hrsg_steam_lbph": 1339.0187578672687,
+          "tower_rejection_kW": 519.7444978538373,
+          "gt_fuel_MMBtu_h": 2.3660258242169645
+        },
+        "disconnected": [
+          [
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0037267458013492153,
+            0.0,
+            -0.0
+          ]
+        ],
+        "reference_cooling_kW": 236.47763239888852,
+        "weight": 0.0,
+        "optimizer_warning": ""
+      },
+      "executed_action": {
+        "gt_electric_kW": [
+          145.73808623590963,
+          0.0,
+          0.0
+        ],
+        "grid_import_kW": 250.0,
+        "diesel_kW": 0.0,
+        "absorption_cooling_kW": 160.25986285550994,
+        "electric_chiller_cooling_kW": [
+          76.21776954337858,
+          0.0,
+          0.0
+        ],
+        "boiler_steam_lbph": 0.0,
+        "hrsg_steam_lbph": 1339.0187578672687,
+        "tower_rejection_kW": 519.7444978538373,
+        "gt_fuel_MMBtu_h": 2.3660258242169645
+      },
+      "pending_commands": [
+        {
+          "id": 5,
+          "generated_minute": 60.0,
+          "arrival_minute": 105.0,
+          "request": {},
+          "dispatch": {
+            "gt_electric_kW": [
+              313.98848000000004,
+              224.98949748355727,
+              225.0
+            ],
+            "grid_import_kW": 250.0,
+            "diesel_kW": 0.0,
+            "absorption_cooling_kW": 605.4097792936838,
+            "electric_chiller_cooling_kW": [
+              -1.4622683449855388e-13,
+              0.0,
+              0.0
+            ],
+            "boiler_steam_lbph": 0.0,
+            "hrsg_steam_lbph": 7071.331953292254,
+            "tower_rejection_kW": 1612.459937487977,
+            "gt_fuel_MMBtu_h": 12.436802963126825
+          },
+          "disconnected": [
+            [
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              60.37401246410943,
+              0.0,
+              0.0
+            ]
+          ],
+          "reference_cooling_kW": 605.4097792936836,
+          "weight": 0.0,
+          "optimizer_warning": ""
+        }
+      ],
+      "local_execution_state": {
+        "pending_shed": null,
+        "local_down": null,
+        "gt_start_pending": {},
+        "auto_shed_latched": false,
+        "automatic_disconnected": [
+          [
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "disconnected_fraction": [
+          [
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            1.615951201486068e-05,
+            0.0,
+            -0.0
+          ]
+        ],
+        "automatic_fraction": [
+          [
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "connection_basis_loads": [
+          [
+            254.05693685636464,
+            26.66619087903238,
+            81.40729777096183
+          ],
+          [
+            153.20569242225787,
+            116.19218837368145,
+            56.76577652556186
+          ],
+          [
+            69.54996727234463,
+            0.0,
+            59.372642610804164
+          ],
+          [
+            573.4390477305114,
+            0.0,
+            407.8640623863558
+          ]
+        ],
+        "grid_outage_start": null,
+        "ramp_time": 45.0,
+        "ramp_anchor": [
+          145.73808623590963,
+          0.0,
+          0.0
+        ],
+        "ramp_budget": 225.0
+      },
+      "config": {
+        "schema_version": "4.1-research-prototype",
+        "provenance": "All limits here are illustrative research assumptions, NOT OEM relay or hospital safety ratings.",
+        "grid_import_limit_kW": 850.0,
+        "diesel_initial_energy_kWh": 2400.0,
+        "diesel_start_delay_minutes": 15.0,
+        "gt_ramp_kW_per_hour": 900.0,
+        "gt_short_term_overload_multiple": 1.05,
+        "gt_protection_trip_multiple": 1.05,
+        "gt_overload_hold_minutes": 15,
+        "thermal_setpoint_margin_C": 2.0,
+        "mass_participation": 0.5,
+        "effective_U_W_m2K": 1.5,
+        "solver_time_limit_sec": 6.0,
+        "priority": "strict lexicographic 0,1,2,3 then cost; each carrier normalized by total demand; P0-P2 lock abs tolerance 1e-7, P3 lock abs tolerance 1e-5, with relative tolerance",
+        "lex_lock_abs_tol_by_priority": [
+          1e-07,
+          1e-07,
+          1e-07,
+          1e-05
+        ],
+        "lex_lock_rel_tol_by_priority": [
+          0.0,
+          0.0,
+          0.0,
+          1e-08
+        ],
+        "p0_solver_feasibility_tol_kW": 0.001,
+        "p0_unserved_abs_tol_kW": 0.01,
+        "p0_unserved_rel_tol": 0.001,
+        "p0_unserved_abs_tol_kWh": 0.01,
+        "precontrol_load_shed_enabled": true,
+        "cascade": "Delayed pre-control proxy subtracts incremental grid headroom, diesel reserve available after start delay, and executable P3/P2/P1 shedding (P0 preserved) before sharing residual across surviving GTs; not a network or relay simulation.",
+        "dynamic_temperature": "baseline DOE zone mean temperature + uncalibrated 1R1C cold-loss perturbation",
+        "cost": "uses historical 2001 prices from v2; diesel $0.30/kWh illustrative only",
+        "precontrol_cooling_to_el_fraction": 0.6,
+        "cooling_tower_topology": "shared_common_tower_for_all_EC_and_ABS",
+        "mpc_cold_tracking_penalty_USD_per_kW_step": 0.2
+      },
+      "execution_contract": {
+        "name": "p1b_no_export_interlock",
+        "provenance": "Explicit uncalibrated research contract; see docs/v43/P1B_EXECUTION_CONTRACT.md. No OEM/ATS/relay data supplied. Not the default baseline.",
+        "grid_import_mode": "arrived_ceiling",
+        "gt_local_down_rate_kW_per_hour": 900.0,
+        "gt_local_down_delay_minutes": 0.25,
+        "local_max_segment_minutes": 0.25,
+        "surplus_interlock": "isolate_largest_gt",
+        "surplus_interlock_delay_minutes": 0.0,
+        "automatic_shedding_delay_minutes": 0.0,
+        "gt_start_delay_minutes": 0.0,
+        "diesel_mode": "legacy_explicit_permission",
+        "ats_transfer_minutes": 0.0,
+        "diesel_allowed_priorities": [
+          "P0",
+          "P1"
+        ],
+        "thermal_mode": "legacy_loss_fraction"
+      },
+      "plant": {
+        "case": "doe_capacity_matched_exploratory",
+        "gt_count": 3,
+        "gt_rated_kW": 320.0,
+        "hrsg_rated_lbph": 2906.2575585007,
+        "absorption_rt": 200.0,
+        "electric_chillers_rt": [
+          200.0,
+          200.0,
+          300.0
+        ],
+        "boiler_steam_lbph": 3000.0,
+        "cooling_tower_rejection_kW": 4220.223408,
+        "emergency_diesel_kW": 900.0,
+        "steam_kWh_per_lb": 0.3,
+        "exchanger_eff": 0.95,
+        "abs_steam_lb_per_rt": 19.5,
+        "abs_electric_kW_per_rt": 0.14,
+        "ec_electric_kW_per_rt": 0.77,
+        "boiler_eff": 0.8,
+        "nominal_gt_capacity_used_for_heat_rate_kW": 800.0,
+        "tariff": {
+          "gas_per_MMBtu": 4.84,
+          "electricity_onpeak_per_kWh": 0.09256,
+          "electricity_midpeak_per_kWh": 0.07356,
+          "electricity_offpeak_per_kWh": 0.05456
+        },
+        "gas_price_usd_per_mmbtu": 4.84,
+        "levels": [
+          0.4,
+          0.6,
+          0.8,
+          1.0
+        ],
+        "inclusion_unresolved": "include_all"
+      },
+      "dt_h": 0.25,
+      "row": {
+        "timestamp": "2017-06-03 08:00:00",
+        "outdoor_temperature_C": 17.583333333333332
+      }
+    }
+  },
+  {
+    "scenario_id": "p2b_L4a_boundary_p2b_day_281_3",
+    "policy": "secure_milp",
+    "expected_old_rank": 2,
+    "source_file": "outputs\\v43_p2b_20261013_run01\\report_data\\failures.jsonl",
+    "source_sha256": "5d48b2367506c1f2419ce76b8fed9a254801a0b1153a70d5d6cfa710b7412bb9",
+    "diagnostic": {
+      "scenario_id": "p2b_L4a_boundary_p2b_day_281_3",
+      "scenario": {
+        "actual_p0_load_multiplier": {
+          "c": 1.4788896660277653,
+          "e": 3.5264893110966375,
+          "h": 1.3
+        },
+        "automatic_fast_shedding": false,
+        "base_state_id": "p2b_initial:0cdb6857f245d47139731fa9898d7b6269f2ccbb70f59de5a89f594b6b4dcaef",
+        "control_capability_note": "existing automatic_fast_shedding=False; no capability parameters changed",
+        "demand_background": "calendar_pool",
+        "design_family": "p2b_root:cd4ccb7d6e27bf4fc55594eeba839a893965cd425ec7c5babc7d18db07039d1f",
+        "distribution_id": "p_study.p2b.independent_conditional.v1",
+        "duration_steps": 32,
+        "enable_propagation": true,
+        "event_class": "L4a",
+        "event_schema_version": "p2a.events.v1",
+        "exogenous_events": [
+          {
+            "end_minute": 300.0,
+            "kind": "load_shock",
+            "origin": "exogenous",
+            "shock": {
+              "c": 0.47888966602776534,
+              "e": 1.350992874064425,
+              "h": 0.3
+            },
+            "shock_by_priority": {
+              "P0": {
+                "e": 0.5
+              }
+            },
+            "start_minute": 60.0
+          }
+        ],
+        "exogenous_stream_id": "p2b_stream:cd4ccb7d6e27bf4fc55594eeba839a893965cd425ec7c5babc7d18db07039d1f",
+        "experiment_role": "pilot_train",
+        "family_id": "p2b_root:cd4ccb7d6e27bf4fc55594eeba839a893965cd425ec7c5babc7d18db07039d1f",
+        "full_source_support": {
+          "actual_trajectory_interval_minutes": [
+            405000,
+            405480.0
+          ],
+          "algebraic_initialization_iterations": 6,
+          "endpoint_source_hour_reserved": true,
+          "historical_observation_interval_minutes": [
+            0,
+            60
+          ],
+          "initialization_historical_minutes": 0,
+          "initialization_source_hours": [
+            6751
+          ],
+          "label_tail_interval_minutes": [
+            420,
+            480
+          ],
+          "raw_end_minute": 405540,
+          "raw_start_minute": 405000,
+          "score_interval_minutes": [
+            60,
+            420
+          ],
+          "source_semantics": "hourly rows; reset repeats first row; final boundary hour conservatively included"
+        },
+        "grid_limit_kW": 250.0,
+        "history_interval_minutes": [
+          0,
+          60
+        ],
+        "id": "p2b_L4a_boundary_p2b_day_281_3",
+        "importance_weight": null,
+        "initialization_seed": 20261012,
+        "label_horizons_minutes": [
+          15,
+          30,
+          60
+        ],
+        "offline_input_order": [
+          "shock_e",
+          "shock_c",
+          "calendar_hour"
+        ],
+        "offline_inputs": [
+          1.350992874064425,
+          0.47888966602776534,
+          6751
+        ],
+        "p_reference": null,
+        "parent_instance_id": "p2b_root:cd4ccb7d6e27bf4fc55594eeba839a893965cd425ec7c5babc7d18db07039d1f",
+        "parent_template_id": "p2b_root:cd4ccb7d6e27bf4fc55594eeba839a893965cd425ec7c5babc7d18db07039d1f",
+        "pre_event_warmup_steps": 6,
+        "purpose": "development",
+        "q_design_density": null,
+        "response_clock_anchor": "shock_start_minute",
+        "response_delay_minutes": 45.0,
+        "root_family_id": "p2b_root:cd4ccb7d6e27bf4fc55594eeba839a893965cd425ec7c5babc7d18db07039d1f",
+        "sample_schema_version": "p2b.experiment.design.v1",
+        "sampling_cohort": "main",
+        "sampling_method": "balanced_calendar_strata_independent_uniform_continuous",
+        "sampling_role": "fixed_study",
+        "sampling_weight_is_failure_probability": false,
+        "score_interval_minutes": [
+          60,
+          420
+        ],
+        "shock": {
+          "c": 0.47888966602776534,
+          "e": 1.350992874064425,
+          "h": 0.3
+        },
+        "shock_by_priority": {
+          "P0": {
+            "e": 0.5
+          }
+        },
+        "shock_duration_minutes": 240.0,
+        "shock_mode": "mixed",
+        "shock_start_minute": 60.0,
+        "stage": 4,
+        "start_hour": 6751,
+        "step_minutes": 15,
+        "stratum": "boundary_candidate",
+        "study_stratum": "L4a_boundary",
+        "tail_interval_minutes": [
+          420,
+          480
+        ],
+        "template_type": "L4a",
+        "time_block_id": "p2b_day_281"
+      },
+      "step": 5,
+      "time_minute": 75.0,
+      "phase": "fixed_execution",
+      "loads_kW": [
+        [
+          176.31094282093193,
+          54.34415817853598,
+          42.29044939676786
+        ],
+        [
+          164.7652915083683,
+          124.88075829914393,
+          38.86658102351967
+        ],
+        [
+          44.26930112111719,
+          0.0,
+          24.36799423754377
+        ],
+        [
+          580.9482704118795,
+          0.0,
+          252.00615875044053
+        ]
+      ],
+      "availability": {
+        "GT_1": 0.0,
+        "GT_2": 1.0,
+        "GT_3": 1.0,
+        "HRSG_1": 1.0,
+        "HRSG_2": 1.0,
+        "HRSG_3": 1.0,
+        "EC_1": 1.0,
+        "EC_2": 1.0,
+        "EC_3": 1.0,
+        "BOILER_1": 1.0,
+        "BOILER_2": 1.0,
+        "BOILER_3": 1.0,
+        "ABS": 1.0,
+        "TOWER": 1.0,
+        "GRID": 1.0,
+        "DIESEL": 1.0,
+        "TOWER_1": 1.0,
+        "TOWER_2": 1.0,
+        "TOWER_3": 1.0,
+        "TOWER_4": 1.0
+      },
+      "state": {
+        "gt_prev": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "diesel_energy_remaining_kWh": 2400.0,
+        "extra_faulted": [
+          "GT_1"
+        ],
+        "overload_minutes": [
+          15.0,
+          0.0,
+          0.0
+        ],
+        "thermal_delta": {
+          "ER_EXAM1_MULT4_FLR_1": 0.0,
+          "ER_TRAUMA1_FLR_1": 0.0,
+          "ER_EXAM3_MULT4_FLR_1": 0.0,
+          "ER_TRAUMA2_FLR_1": 0.0,
+          "OR1_FLR_2": 0.0,
+          "OR2_MULT5_FLR_2": 0.0,
+          "OR3_FLR_2": 0.0,
+          "OR4_FLR_2": 0.0,
+          "IC_PATROOM1_MULT5_FLR_2": 0.0,
+          "IC_PATROOM2_FLR_2": 0.0,
+          "IC_PATROOM3_MULT6_FLR_2": 0.0,
+          "ICU_FLR_2": 0.0,
+          "ICU_NURSESTN_LOBBY_FLR_2": 0.0,
+          "RADIOLOGY_FLR_4": 0.29278914187045246
+        },
+        "last_grid_import_kW": 170.96616743927765,
+        "last_diesel_kW": 0.0,
+        "auxiliary_request_kW": 3.230820168385317,
+        "cooling_reference_kW": 150.76707847840268,
+        "disconnected_loads": [
+          [
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.008794775374394565,
+            0.0,
+            -0.0
+          ]
+        ],
+        "diesel_status": "OFF",
+        "diesel_start_minute": null,
+        "topology_mode": "legacy_explicit_permission"
+      },
+      "command": {
+        "id": 4,
+        "generated_minute": 45.0,
+        "arrival_minute": 45.0,
+        "request": {
+          "security": {
+            "gt_loading_penalty_USD_per_kWh": 0.35
+          }
+        },
+        "dispatch": {
+          "gt_electric_kW": [
+            129.16351999999998,
+            0.0,
+            0.0
+          ],
+          "grid_import_kW": 170.96616886254918,
+          "diesel_kW": 0.0,
+          "absorption_cooling_kW": 106.32729850611125,
+          "electric_chiller_cooling_kW": [
+            44.43977997229142,
+            0.0,
+            0.0
+          ],
+          "boiler_steam_lbph": 0.0,
+          "hrsg_steam_lbph": 1162.50302340028,
+          "tower_rejection_kW": 337.3638332176244,
+          "gt_fuel_MMBtu_h": 2.085153117071277
+        },
+        "disconnected": [
+          [
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.002861699383618955,
+            0.0,
+            -0.0
+          ]
+        ],
+        "reference_cooling_kW": 150.76707847840268,
+        "weight": 0.35,
+        "optimizer_warning": ""
+      },
+      "executed_action": {
+        "gt_electric_kW": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "grid_import_kW": 170.96616886254918,
+        "diesel_kW": 0.0,
+        "absorption_cooling_kW": 106.32729850611125,
+        "electric_chiller_cooling_kW": [
+          44.43977997229142,
+          0.0,
+          0.0
+        ],
+        "boiler_steam_lbph": 0.0,
+        "hrsg_steam_lbph": 1162.50302340028,
+        "tower_rejection_kW": 337.3638332176244,
+        "gt_fuel_MMBtu_h": 2.085153117071277
+      },
+      "pending_commands": [
+        {
+          "id": 5,
+          "generated_minute": 60.0,
+          "arrival_minute": 105.0,
+          "request": {
+            "security": {
+              "gt_loading_penalty_USD_per_kWh": 0.35
+            }
+          },
+          "dispatch": {
+            "gt_electric_kW": [
+              280.5256530405989,
+              225.0,
+              225.0
+            ],
+            "grid_import_kW": 250.0,
+            "diesel_kW": 0.0,
+            "absorption_cooling_kW": 357.53118340827183,
+            "electric_chiller_cooling_kW": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "boiler_steam_lbph": 0.0,
+            "hrsg_steam_lbph": 6720.19527009441,
+            "tower_rejection_kW": 952.2553638315818,
+            "gt_fuel_MMBtu_h": 11.865308343153096
+          },
+          "disconnected": [
+            [
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.009663026006376713,
+              0.0,
+              -0.0
+            ]
+          ],
+          "reference_cooling_kW": 357.53118340827183,
+          "weight": 0.35,
+          "optimizer_warning": ""
+        },
+        {
+          "id": 6,
+          "generated_minute": 75.0,
+          "arrival_minute": 105.0,
+          "request": {
+            "security": {
+              "gt_loading_penalty_USD_per_kWh": 0.35
+            }
+          },
+          "dispatch": {
+            "gt_electric_kW": [
+              0.0,
+              224.99033697399335,
+              225.0
+            ],
+            "grid_import_kW": 250.0,
+            "diesel_kW": 0.0,
+            "absorption_cooling_kW": 357.53118340827183,
+            "electric_chiller_cooling_kW": [
+              2.765529036642129e-15,
+              0.0,
+              0.0
+            ],
+            "boiler_steam_lbph": 0.0,
+            "hrsg_steam_lbph": 4139.516417437513,
+            "tower_rejection_kW": 952.2553638315818,
+            "gt_fuel_MMBtu_h": 7.308811233955486
+          },
+          "disconnected": [
+            [
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              280.544979092612,
+              0.0,
+              0.0
+            ]
+          ],
+          "reference_cooling_kW": 357.53118340827183,
+          "weight": 0.35,
+          "optimizer_warning": ""
+        }
+      ],
+      "local_execution_state": {
+        "pending_shed": null,
+        "local_down": null,
+        "gt_start_pending": {},
+        "auto_shed_latched": false,
+        "automatic_disconnected": [
+          [
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "disconnected_fraction": [
+          [
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            1.513842571405829e-05,
+            0.0,
+            -0.0
+          ]
+        ],
+        "automatic_fraction": [
+          [
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "connection_basis_loads": [
+          [
+            176.31094282093193,
+            54.34415817853598,
+            42.29044939676786
+          ],
+          [
+            164.7652915083683,
+            124.88075829914393,
+            38.86658102351967
+          ],
+          [
+            44.26930112111719,
+            0.0,
+            24.36799423754377
+          ],
+          [
+            580.957065187254,
+            0.0,
+            252.00615875044053
+          ]
+        ],
+        "grid_outage_start": null,
+        "ramp_time": 45.0,
+        "ramp_anchor": [
+          129.16351999999998,
+          0.0,
+          0.0
+        ],
+        "ramp_budget": 225.0
+      },
+      "config": {
+        "schema_version": "4.1-research-prototype",
+        "provenance": "All limits here are illustrative research assumptions, NOT OEM relay or hospital safety ratings.",
+        "grid_import_limit_kW": 850.0,
+        "diesel_initial_energy_kWh": 2400.0,
+        "diesel_start_delay_minutes": 15.0,
+        "gt_ramp_kW_per_hour": 900.0,
+        "gt_short_term_overload_multiple": 1.05,
+        "gt_protection_trip_multiple": 1.05,
+        "gt_overload_hold_minutes": 15,
+        "thermal_setpoint_margin_C": 2.0,
+        "mass_participation": 0.5,
+        "effective_U_W_m2K": 1.5,
+        "solver_time_limit_sec": 6.0,
+        "priority": "strict lexicographic 0,1,2,3 then cost; each carrier normalized by total demand; P0-P2 lock abs tolerance 1e-7, P3 lock abs tolerance 1e-5, with relative tolerance",
+        "lex_lock_abs_tol_by_priority": [
+          1e-07,
+          1e-07,
+          1e-07,
+          1e-05
+        ],
+        "lex_lock_rel_tol_by_priority": [
+          0.0,
+          0.0,
+          0.0,
+          1e-08
+        ],
+        "p0_solver_feasibility_tol_kW": 0.001,
+        "p0_unserved_abs_tol_kW": 0.01,
+        "p0_unserved_rel_tol": 0.001,
+        "p0_unserved_abs_tol_kWh": 0.01,
+        "precontrol_load_shed_enabled": true,
+        "cascade": "Delayed pre-control proxy subtracts incremental grid headroom, diesel reserve available after start delay, and executable P3/P2/P1 shedding (P0 preserved) before sharing residual across surviving GTs; not a network or relay simulation.",
+        "dynamic_temperature": "baseline DOE zone mean temperature + uncalibrated 1R1C cold-loss perturbation",
+        "cost": "uses historical 2001 prices from v2; diesel $0.30/kWh illustrative only",
+        "precontrol_cooling_to_el_fraction": 0.6,
+        "cooling_tower_topology": "shared_common_tower_for_all_EC_and_ABS",
+        "mpc_cold_tracking_penalty_USD_per_kW_step": 0.2
+      },
+      "execution_contract": {
+        "name": "p1b_no_export_interlock",
+        "provenance": "Explicit uncalibrated research contract; see docs/v43/P1B_EXECUTION_CONTRACT.md. No OEM/ATS/relay data supplied. Not the default baseline.",
+        "grid_import_mode": "arrived_ceiling",
+        "gt_local_down_rate_kW_per_hour": 900.0,
+        "gt_local_down_delay_minutes": 0.25,
+        "local_max_segment_minutes": 0.25,
+        "surplus_interlock": "isolate_largest_gt",
+        "surplus_interlock_delay_minutes": 0.0,
+        "automatic_shedding_delay_minutes": 0.0,
+        "gt_start_delay_minutes": 0.0,
+        "diesel_mode": "legacy_explicit_permission",
+        "ats_transfer_minutes": 0.0,
+        "diesel_allowed_priorities": [
+          "P0",
+          "P1"
+        ],
+        "thermal_mode": "legacy_loss_fraction"
+      },
+      "plant": {
+        "case": "doe_capacity_matched_exploratory",
+        "gt_count": 3,
+        "gt_rated_kW": 320.0,
+        "hrsg_rated_lbph": 2906.2575585007,
+        "absorption_rt": 200.0,
+        "electric_chillers_rt": [
+          200.0,
+          200.0,
+          300.0
+        ],
+        "boiler_steam_lbph": 3000.0,
+        "cooling_tower_rejection_kW": 4220.223408,
+        "emergency_diesel_kW": 900.0,
+        "steam_kWh_per_lb": 0.3,
+        "exchanger_eff": 0.95,
+        "abs_steam_lb_per_rt": 19.5,
+        "abs_electric_kW_per_rt": 0.14,
+        "ec_electric_kW_per_rt": 0.77,
+        "boiler_eff": 0.8,
+        "nominal_gt_capacity_used_for_heat_rate_kW": 800.0,
+        "tariff": {
+          "gas_per_MMBtu": 4.84,
+          "electricity_onpeak_per_kWh": 0.09256,
+          "electricity_midpeak_per_kWh": 0.07356,
+          "electricity_offpeak_per_kWh": 0.05456
+        },
+        "gas_price_usd_per_mmbtu": 4.84,
+        "levels": [
+          0.4,
+          0.6,
+          0.8,
+          1.0
+        ],
+        "inclusion_unresolved": "include_all"
+      },
+      "dt_h": 0.25,
+      "row": {
+        "timestamp": "2017-10-09 08:00:00",
+        "outdoor_temperature_C": 16.75
+      }
+    }
+  },
+  {
+    "scenario_id": "p2b_L4a_boundary_p2b_day_100_4",
+    "policy": "priority_milp",
+    "expected_old_rank": 3,
+    "source_file": "outputs\\v43_p2b_20261013_run01\\report_data\\failures.jsonl",
+    "source_sha256": "5d48b2367506c1f2419ce76b8fed9a254801a0b1153a70d5d6cfa710b7412bb9",
+    "diagnostic": {
+      "scenario_id": "p2b_L4a_boundary_p2b_day_100_4",
+      "scenario": {
+        "actual_p0_load_multiplier": {
+          "c": 1.990674560485732,
+          "e": 3.6493688002982343,
+          "h": 1.3
+        },
+        "automatic_fast_shedding": false,
+        "base_state_id": "p2b_initial:6726225faa332c32f3735f6fcbff662d422c2d5f24228a97c46d3d9cc95ac7bd",
+        "control_capability_note": "existing automatic_fast_shedding=False; no capability parameters changed",
+        "demand_background": "calendar_pool",
+        "design_family": "p2b_root:58d45a205b1f1d803fe95c01e2c99e63850cf9ccf24138d67b6e4f907e835bcf",
+        "distribution_id": "p_study.p2b.independent_conditional.v1",
+        "duration_steps": 32,
+        "enable_propagation": true,
+        "event_class": "L4a",
+        "event_schema_version": "p2a.events.v1",
+        "exogenous_events": [
+          {
+            "end_minute": 300.0,
+            "kind": "load_shock",
+            "origin": "exogenous",
+            "shock": {
+              "c": 0.9906745604857321,
+              "e": 1.4329125335321562,
+              "h": 0.3
+            },
+            "shock_by_priority": {
+              "P0": {
+                "e": 0.5
+              }
+            },
+            "start_minute": 60.0
+          }
+        ],
+        "exogenous_stream_id": "p2b_stream:58d45a205b1f1d803fe95c01e2c99e63850cf9ccf24138d67b6e4f907e835bcf",
+        "experiment_role": "pilot_train",
+        "family_id": "p2b_root:58d45a205b1f1d803fe95c01e2c99e63850cf9ccf24138d67b6e4f907e835bcf",
+        "full_source_support": {
+          "actual_trajectory_interval_minutes": [
+            144360,
+            144840.0
+          ],
+          "algebraic_initialization_iterations": 6,
+          "endpoint_source_hour_reserved": true,
+          "historical_observation_interval_minutes": [
+            0,
+            60
+          ],
+          "initialization_historical_minutes": 0,
+          "initialization_source_hours": [
+            2407
+          ],
+          "label_tail_interval_minutes": [
+            420,
+            480
+          ],
+          "raw_end_minute": 144900,
+          "raw_start_minute": 144360,
+          "score_interval_minutes": [
+            60,
+            420
+          ],
+          "source_semantics": "hourly rows; reset repeats first row; final boundary hour conservatively included"
+        },
+        "grid_limit_kW": 250.0,
+        "history_interval_minutes": [
+          0,
+          60
+        ],
+        "id": "p2b_L4a_boundary_p2b_day_100_4",
+        "importance_weight": null,
+        "initialization_seed": 20261012,
+        "label_horizons_minutes": [
+          15,
+          30,
+          60
+        ],
+        "offline_input_order": [
+          "shock_e",
+          "shock_c",
+          "calendar_hour"
+        ],
+        "offline_inputs": [
+          1.4329125335321562,
+          0.9906745604857321,
+          2407
+        ],
+        "p_reference": null,
+        "parent_instance_id": "p2b_root:58d45a205b1f1d803fe95c01e2c99e63850cf9ccf24138d67b6e4f907e835bcf",
+        "parent_template_id": "p2b_root:58d45a205b1f1d803fe95c01e2c99e63850cf9ccf24138d67b6e4f907e835bcf",
+        "pre_event_warmup_steps": 6,
+        "purpose": "development",
+        "q_design_density": null,
+        "response_clock_anchor": "shock_start_minute",
+        "response_delay_minutes": 45.0,
+        "root_family_id": "p2b_root:58d45a205b1f1d803fe95c01e2c99e63850cf9ccf24138d67b6e4f907e835bcf",
+        "sample_schema_version": "p2b.experiment.design.v1",
+        "sampling_cohort": "main",
+        "sampling_method": "balanced_calendar_strata_independent_uniform_continuous",
+        "sampling_role": "fixed_study",
+        "sampling_weight_is_failure_probability": false,
+        "score_interval_minutes": [
+          60,
+          420
+        ],
+        "shock": {
+          "c": 0.9906745604857321,
+          "e": 1.4329125335321562,
+          "h": 0.3
+        },
+        "shock_by_priority": {
+          "P0": {
+            "e": 0.5
+          }
+        },
+        "shock_duration_minutes": 240.0,
+        "shock_mode": "mixed",
+        "shock_start_minute": 60.0,
+        "stage": 4,
+        "start_hour": 2407,
+        "step_minutes": 15,
+        "stratum": "boundary_candidate",
+        "study_stratum": "L4a_boundary",
+        "tail_interval_minutes": [
+          420,
+          480
+        ],
+        "template_type": "L4a",
+        "time_block_id": "p2b_day_100"
+      },
+      "step": 5,
+      "time_minute": 75.0,
+      "phase": "command_generation",
+      "loads_kW": [
+        [
+          479.4515661703967,
+          22.071357583651285,
+          94.86813085490776
+        ],
+        [
+          241.38358866046292,
+          119.65895102687627,
+          65.01161970494965
+        ],
+        [
+          122.77204446111789,
+          0.0,
+          79.24735631769299
+        ],
+        [
+          921.1217476424351,
+          3.694822225952521e-14,
+          92.80491019507753
+        ]
+      ],
+      "availability": {
+        "GT_1": 0.0,
+        "GT_2": 1.0,
+        "GT_3": 1.0,
+        "HRSG_1": 1.0,
+        "HRSG_2": 1.0,
+        "HRSG_3": 1.0,
+        "EC_1": 1.0,
+        "EC_2": 1.0,
+        "EC_3": 1.0,
+        "BOILER_1": 1.0,
+        "BOILER_2": 1.0,
+        "BOILER_3": 1.0,
+        "ABS": 1.0,
+        "TOWER": 1.0,
+        "GRID": 1.0,
+        "DIESEL": 1.0,
+        "TOWER_1": 1.0,
+        "TOWER_2": 1.0,
+        "TOWER_3": 1.0,
+        "TOWER_4": 1.0
+      },
+      "state": {
+        "gt_prev": [
+          0.0,
+          1.2790831087472351e-14,
+          0.0
+        ],
+        "diesel_energy_remaining_kWh": 2400.0,
+        "extra_faulted": [
+          "GT_1"
+        ],
+        "overload_minutes": [
+          15.0,
+          0.0,
+          0.0
+        ],
+        "thermal_delta": {
+          "ER_EXAM1_MULT4_FLR_1": 0.10766787364451015,
+          "ER_TRAUMA1_FLR_1": 0.0,
+          "ER_EXAM3_MULT4_FLR_1": 0.09673519436336368,
+          "ER_TRAUMA2_FLR_1": 0.0,
+          "OR1_FLR_2": 0.0,
+          "OR2_MULT5_FLR_2": 0.0,
+          "OR3_FLR_2": 0.0,
+          "OR4_FLR_2": 0.0,
+          "IC_PATROOM1_MULT5_FLR_2": 0.11396622765432392,
+          "IC_PATROOM2_FLR_2": 0.11019555166588903,
+          "IC_PATROOM3_MULT6_FLR_2": 0.11297758863416119,
+          "ICU_FLR_2": 0.0,
+          "ICU_NURSESTN_LOBBY_FLR_2": 0.08333709422255144,
+          "RADIOLOGY_FLR_4": 0.7074538275837252
+        },
+        "last_grid_import_kW": 249.9998235286779,
+        "last_diesel_kW": 0.0,
+        "auxiliary_request_kW": 5.380132282702472,
+        "cooling_reference_kW": 135.15095355712768,
+        "disconnected_loads": [
+          [
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.015720523674388157,
+            0.0,
+            -0.0
+          ]
+        ],
+        "diesel_status": "OFF",
+        "diesel_start_minute": null,
+        "topology_mode": "legacy_explicit_permission"
+      },
+      "command": {},
+      "executed_action": {
+        "gt_electric_kW": [
+          0.0,
+          1.2790831087472351e-14,
+          0.0
+        ],
+        "grid_import_kW": 250.0,
+        "diesel_kW": 0.0,
+        "absorption_cooling_kW": 135.15095355712768,
+        "electric_chiller_cooling_kW": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "boiler_steam_lbph": 0.0,
+        "hrsg_steam_lbph": 2108.0685721751483,
+        "tower_rejection_kW": 359.963623941481,
+        "gt_fuel_MMBtu_h": 3.8218239144619295
+      },
+      "pending_commands": [
+        {
+          "id": 5,
+          "generated_minute": 60.0,
+          "arrival_minute": 105.0,
+          "request": {},
+          "dispatch": {
+            "gt_electric_kW": [
+              324.2485927105313,
+              225.0,
+              225.0
+            ],
+            "grid_import_kW": 250.0,
+            "diesel_kW": 0.0,
+            "absorption_cooling_kW": 331.93201707262796,
+            "electric_chiller_cooling_kW": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "boiler_steam_lbph": 0.0,
+            "hrsg_steam_lbph": 6939.254067039206,
+            "tower_rejection_kW": 884.074056622646,
+            "gt_fuel_MMBtu_h": 12.491418609498378
+          },
+          "disconnected": [
+            [
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              753.6940098712323,
+              0.0,
+              0.0
+            ]
+          ],
+          "reference_cooling_kW": 331.93201707262796,
+          "weight": 0.0,
+          "optimizer_warning": ""
+        }
+      ],
+      "local_execution_state": {
+        "pending_shed": null,
+        "local_down": null,
+        "gt_start_pending": {},
+        "auto_shed_latched": false,
+        "automatic_disconnected": [
+          [
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "disconnected_fraction": [
+          [
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            1.706671644071378e-05,
+            0.0,
+            -0.0
+          ]
+        ],
+        "automatic_fraction": [
+          [
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "connection_basis_loads": [
+          [
+            479.4515661703967,
+            22.071357583651285,
+            94.86813085490776
+          ],
+          [
+            241.38358866046292,
+            119.65895102687627,
+            65.01161970494965
+          ],
+          [
+            122.77204446111789,
+            0.0,
+            79.24735631769299
+          ],
+          [
+            921.1217476424351,
+            3.694822225952521e-14,
+            92.80491019507753
+          ]
+        ],
+        "grid_outage_start": null,
+        "ramp_time": 45.0,
+        "ramp_anchor": [
+          237.17740389197672,
+          1.2790831087472351e-14,
+          0.0
+        ],
+        "ramp_budget": 225.0
+      },
+      "config": {
+        "schema_version": "4.1-research-prototype",
+        "provenance": "All limits here are illustrative research assumptions, NOT OEM relay or hospital safety ratings.",
+        "grid_import_limit_kW": 850.0,
+        "diesel_initial_energy_kWh": 2400.0,
+        "diesel_start_delay_minutes": 15.0,
+        "gt_ramp_kW_per_hour": 900.0,
+        "gt_short_term_overload_multiple": 1.05,
+        "gt_protection_trip_multiple": 1.05,
+        "gt_overload_hold_minutes": 15,
+        "thermal_setpoint_margin_C": 2.0,
+        "mass_participation": 0.5,
+        "effective_U_W_m2K": 1.5,
+        "solver_time_limit_sec": 6.0,
+        "priority": "strict lexicographic 0,1,2,3 then cost; each carrier normalized by total demand; P0-P2 lock abs tolerance 1e-7, P3 lock abs tolerance 1e-5, with relative tolerance",
+        "lex_lock_abs_tol_by_priority": [
+          1e-07,
+          1e-07,
+          1e-07,
+          1e-05
+        ],
+        "lex_lock_rel_tol_by_priority": [
+          0.0,
+          0.0,
+          0.0,
+          1e-08
+        ],
+        "p0_solver_feasibility_tol_kW": 0.001,
+        "p0_unserved_abs_tol_kW": 0.01,
+        "p0_unserved_rel_tol": 0.001,
+        "p0_unserved_abs_tol_kWh": 0.01,
+        "precontrol_load_shed_enabled": true,
+        "cascade": "Delayed pre-control proxy subtracts incremental grid headroom, diesel reserve available after start delay, and executable P3/P2/P1 shedding (P0 preserved) before sharing residual across surviving GTs; not a network or relay simulation.",
+        "dynamic_temperature": "baseline DOE zone mean temperature + uncalibrated 1R1C cold-loss perturbation",
+        "cost": "uses historical 2001 prices from v2; diesel $0.30/kWh illustrative only",
+        "precontrol_cooling_to_el_fraction": 0.6,
+        "cooling_tower_topology": "shared_common_tower_for_all_EC_and_ABS",
+        "mpc_cold_tracking_penalty_USD_per_kW_step": 0.2
+      },
+      "execution_contract": {
+        "name": "p1b_no_export_interlock",
+        "provenance": "Explicit uncalibrated research contract; see docs/v43/P1B_EXECUTION_CONTRACT.md. No OEM/ATS/relay data supplied. Not the default baseline.",
+        "grid_import_mode": "arrived_ceiling",
+        "gt_local_down_rate_kW_per_hour": 900.0,
+        "gt_local_down_delay_minutes": 0.25,
+        "local_max_segment_minutes": 0.25,
+        "surplus_interlock": "isolate_largest_gt",
+        "surplus_interlock_delay_minutes": 0.0,
+        "automatic_shedding_delay_minutes": 0.0,
+        "gt_start_delay_minutes": 0.0,
+        "diesel_mode": "legacy_explicit_permission",
+        "ats_transfer_minutes": 0.0,
+        "diesel_allowed_priorities": [
+          "P0",
+          "P1"
+        ],
+        "thermal_mode": "legacy_loss_fraction"
+      },
+      "plant": {
+        "case": "doe_capacity_matched_exploratory",
+        "gt_count": 3,
+        "gt_rated_kW": 320.0,
+        "hrsg_rated_lbph": 2906.2575585007,
+        "absorption_rt": 200.0,
+        "electric_chillers_rt": [
+          200.0,
+          200.0,
+          300.0
+        ],
+        "boiler_steam_lbph": 3000.0,
+        "cooling_tower_rejection_kW": 4220.223408,
+        "emergency_diesel_kW": 900.0,
+        "steam_kWh_per_lb": 0.3,
+        "exchanger_eff": 0.95,
+        "abs_steam_lb_per_rt": 19.5,
+        "abs_electric_kW_per_rt": 0.14,
+        "ec_electric_kW_per_rt": 0.77,
+        "boiler_eff": 0.8,
+        "nominal_gt_capacity_used_for_heat_rate_kW": 800.0,
+        "tariff": {
+          "gas_per_MMBtu": 4.84,
+          "electricity_onpeak_per_kWh": 0.09256,
+          "electricity_midpeak_per_kWh": 0.07356,
+          "electricity_offpeak_per_kWh": 0.05456
+        },
+        "gas_price_usd_per_mmbtu": 4.84,
+        "levels": [
+          0.4,
+          0.6,
+          0.8,
+          1.0
+        ],
+        "inclusion_unresolved": "include_all"
+      },
+      "dt_h": 0.25,
+      "row": {
+        "timestamp": "2017-04-11 08:00:00",
+        "outdoor_temperature_C": 13.166666666666666
+      }
+    }
+  },
+  {
+    "scenario_id": "p2b_L4a_boundary_p2b_day_100_4",
+    "policy": "secure_milp",
+    "expected_old_rank": 3,
+    "source_file": "outputs\\v43_p2b_20261013_run01\\report_data\\failures.jsonl",
+    "source_sha256": "5d48b2367506c1f2419ce76b8fed9a254801a0b1153a70d5d6cfa710b7412bb9",
+    "diagnostic": {
+      "scenario_id": "p2b_L4a_boundary_p2b_day_100_4",
+      "scenario": {
+        "actual_p0_load_multiplier": {
+          "c": 1.990674560485732,
+          "e": 3.6493688002982343,
+          "h": 1.3
+        },
+        "automatic_fast_shedding": false,
+        "base_state_id": "p2b_initial:6726225faa332c32f3735f6fcbff662d422c2d5f24228a97c46d3d9cc95ac7bd",
+        "control_capability_note": "existing automatic_fast_shedding=False; no capability parameters changed",
+        "demand_background": "calendar_pool",
+        "design_family": "p2b_root:58d45a205b1f1d803fe95c01e2c99e63850cf9ccf24138d67b6e4f907e835bcf",
+        "distribution_id": "p_study.p2b.independent_conditional.v1",
+        "duration_steps": 32,
+        "enable_propagation": true,
+        "event_class": "L4a",
+        "event_schema_version": "p2a.events.v1",
+        "exogenous_events": [
+          {
+            "end_minute": 300.0,
+            "kind": "load_shock",
+            "origin": "exogenous",
+            "shock": {
+              "c": 0.9906745604857321,
+              "e": 1.4329125335321562,
+              "h": 0.3
+            },
+            "shock_by_priority": {
+              "P0": {
+                "e": 0.5
+              }
+            },
+            "start_minute": 60.0
+          }
+        ],
+        "exogenous_stream_id": "p2b_stream:58d45a205b1f1d803fe95c01e2c99e63850cf9ccf24138d67b6e4f907e835bcf",
+        "experiment_role": "pilot_train",
+        "family_id": "p2b_root:58d45a205b1f1d803fe95c01e2c99e63850cf9ccf24138d67b6e4f907e835bcf",
+        "full_source_support": {
+          "actual_trajectory_interval_minutes": [
+            144360,
+            144840.0
+          ],
+          "algebraic_initialization_iterations": 6,
+          "endpoint_source_hour_reserved": true,
+          "historical_observation_interval_minutes": [
+            0,
+            60
+          ],
+          "initialization_historical_minutes": 0,
+          "initialization_source_hours": [
+            2407
+          ],
+          "label_tail_interval_minutes": [
+            420,
+            480
+          ],
+          "raw_end_minute": 144900,
+          "raw_start_minute": 144360,
+          "score_interval_minutes": [
+            60,
+            420
+          ],
+          "source_semantics": "hourly rows; reset repeats first row; final boundary hour conservatively included"
+        },
+        "grid_limit_kW": 250.0,
+        "history_interval_minutes": [
+          0,
+          60
+        ],
+        "id": "p2b_L4a_boundary_p2b_day_100_4",
+        "importance_weight": null,
+        "initialization_seed": 20261012,
+        "label_horizons_minutes": [
+          15,
+          30,
+          60
+        ],
+        "offline_input_order": [
+          "shock_e",
+          "shock_c",
+          "calendar_hour"
+        ],
+        "offline_inputs": [
+          1.4329125335321562,
+          0.9906745604857321,
+          2407
+        ],
+        "p_reference": null,
+        "parent_instance_id": "p2b_root:58d45a205b1f1d803fe95c01e2c99e63850cf9ccf24138d67b6e4f907e835bcf",
+        "parent_template_id": "p2b_root:58d45a205b1f1d803fe95c01e2c99e63850cf9ccf24138d67b6e4f907e835bcf",
+        "pre_event_warmup_steps": 6,
+        "purpose": "development",
+        "q_design_density": null,
+        "response_clock_anchor": "shock_start_minute",
+        "response_delay_minutes": 45.0,
+        "root_family_id": "p2b_root:58d45a205b1f1d803fe95c01e2c99e63850cf9ccf24138d67b6e4f907e835bcf",
+        "sample_schema_version": "p2b.experiment.design.v1",
+        "sampling_cohort": "main",
+        "sampling_method": "balanced_calendar_strata_independent_uniform_continuous",
+        "sampling_role": "fixed_study",
+        "sampling_weight_is_failure_probability": false,
+        "score_interval_minutes": [
+          60,
+          420
+        ],
+        "shock": {
+          "c": 0.9906745604857321,
+          "e": 1.4329125335321562,
+          "h": 0.3
+        },
+        "shock_by_priority": {
+          "P0": {
+            "e": 0.5
+          }
+        },
+        "shock_duration_minutes": 240.0,
+        "shock_mode": "mixed",
+        "shock_start_minute": 60.0,
+        "stage": 4,
+        "start_hour": 2407,
+        "step_minutes": 15,
+        "stratum": "boundary_candidate",
+        "study_stratum": "L4a_boundary",
+        "tail_interval_minutes": [
+          420,
+          480
+        ],
+        "template_type": "L4a",
+        "time_block_id": "p2b_day_100"
+      },
+      "step": 5,
+      "time_minute": 75.0,
+      "phase": "command_generation",
+      "loads_kW": [
+        [
+          479.4515661703967,
+          22.071357583651285,
+          94.86813085490776
+        ],
+        [
+          241.38358866046292,
+          119.65895102687627,
+          65.01161970494965
+        ],
+        [
+          122.77204446111789,
+          0.0,
+          79.24735631769299
+        ],
+        [
+          921.1217476424351,
+          3.694822225952521e-14,
+          92.80491019507753
+        ]
+      ],
+      "availability": {
+        "GT_1": 0.0,
+        "GT_2": 1.0,
+        "GT_3": 1.0,
+        "HRSG_1": 1.0,
+        "HRSG_2": 1.0,
+        "HRSG_3": 1.0,
+        "EC_1": 1.0,
+        "EC_2": 1.0,
+        "EC_3": 1.0,
+        "BOILER_1": 1.0,
+        "BOILER_2": 1.0,
+        "BOILER_3": 1.0,
+        "ABS": 1.0,
+        "TOWER": 1.0,
+        "GRID": 1.0,
+        "DIESEL": 1.0,
+        "TOWER_1": 1.0,
+        "TOWER_2": 1.0,
+        "TOWER_3": 1.0,
+        "TOWER_4": 1.0
+      },
+      "state": {
+        "gt_prev": [
+          0.0,
+          1.2790831087472351e-14,
+          0.0
+        ],
+        "diesel_energy_remaining_kWh": 2400.0,
+        "extra_faulted": [
+          "GT_1"
+        ],
+        "overload_minutes": [
+          15.0,
+          0.0,
+          0.0
+        ],
+        "thermal_delta": {
+          "ER_EXAM1_MULT4_FLR_1": 0.10766787364451015,
+          "ER_TRAUMA1_FLR_1": 0.0,
+          "ER_EXAM3_MULT4_FLR_1": 0.09673519436336368,
+          "ER_TRAUMA2_FLR_1": 0.0,
+          "OR1_FLR_2": 0.0,
+          "OR2_MULT5_FLR_2": 0.0,
+          "OR3_FLR_2": 0.0,
+          "OR4_FLR_2": 0.0,
+          "IC_PATROOM1_MULT5_FLR_2": 0.11396622765432392,
+          "IC_PATROOM2_FLR_2": 0.11019555166588903,
+          "IC_PATROOM3_MULT6_FLR_2": 0.11297758863416119,
+          "ICU_FLR_2": 0.0,
+          "ICU_NURSESTN_LOBBY_FLR_2": 0.08333709422255144,
+          "RADIOLOGY_FLR_4": 0.7074538275837252
+        },
+        "last_grid_import_kW": 249.9998235286779,
+        "last_diesel_kW": 0.0,
+        "auxiliary_request_kW": 5.380132282702472,
+        "cooling_reference_kW": 135.15095355712768,
+        "disconnected_loads": [
+          [
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.015720523674388157,
+            0.0,
+            -0.0
+          ]
+        ],
+        "diesel_status": "OFF",
+        "diesel_start_minute": null,
+        "topology_mode": "legacy_explicit_permission"
+      },
+      "command": {
+        "security": {
+          "gt_loading_penalty_USD_per_kWh": 0.35
+        }
+      },
+      "executed_action": {
+        "gt_electric_kW": [
+          0.0,
+          1.2790831087472351e-14,
+          0.0
+        ],
+        "grid_import_kW": 250.0,
+        "diesel_kW": 0.0,
+        "absorption_cooling_kW": 135.15095355712768,
+        "electric_chiller_cooling_kW": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "boiler_steam_lbph": 0.0,
+        "hrsg_steam_lbph": 2108.0685721751483,
+        "tower_rejection_kW": 359.963623941481,
+        "gt_fuel_MMBtu_h": 3.8218239144619295
+      },
+      "pending_commands": [
+        {
+          "id": 5,
+          "generated_minute": 60.0,
+          "arrival_minute": 105.0,
+          "request": {
+            "security": {
+              "gt_loading_penalty_USD_per_kWh": 0.35
+            }
+          },
+          "dispatch": {
+            "gt_electric_kW": [
+              324.2485927105313,
+              225.0,
+              225.0
+            ],
+            "grid_import_kW": 250.0,
+            "diesel_kW": 0.0,
+            "absorption_cooling_kW": 331.93201707262796,
+            "electric_chiller_cooling_kW": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "boiler_steam_lbph": 0.0,
+            "hrsg_steam_lbph": 6939.254067039206,
+            "tower_rejection_kW": 884.074056622646,
+            "gt_fuel_MMBtu_h": 12.491418609498378
+          },
+          "disconnected": [
+            [
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              753.6940098712323,
+              0.0,
+              0.0
+            ]
+          ],
+          "reference_cooling_kW": 331.93201707262796,
+          "weight": 0.35,
+          "optimizer_warning": ""
+        }
+      ],
+      "local_execution_state": {
+        "pending_shed": null,
+        "local_down": null,
+        "gt_start_pending": {},
+        "auto_shed_latched": false,
+        "automatic_disconnected": [
+          [
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "disconnected_fraction": [
+          [
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            1.706671644071378e-05,
+            0.0,
+            -0.0
+          ]
+        ],
+        "automatic_fraction": [
+          [
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "connection_basis_loads": [
+          [
+            479.4515661703967,
+            22.071357583651285,
+            94.86813085490776
+          ],
+          [
+            241.38358866046292,
+            119.65895102687627,
+            65.01161970494965
+          ],
+          [
+            122.77204446111789,
+            0.0,
+            79.24735631769299
+          ],
+          [
+            921.1217476424351,
+            3.694822225952521e-14,
+            92.80491019507753
+          ]
+        ],
+        "grid_outage_start": null,
+        "ramp_time": 45.0,
+        "ramp_anchor": [
+          237.17740389197672,
+          1.2790831087472351e-14,
+          0.0
+        ],
+        "ramp_budget": 225.0
+      },
+      "config": {
+        "schema_version": "4.1-research-prototype",
+        "provenance": "All limits here are illustrative research assumptions, NOT OEM relay or hospital safety ratings.",
+        "grid_import_limit_kW": 850.0,
+        "diesel_initial_energy_kWh": 2400.0,
+        "diesel_start_delay_minutes": 15.0,
+        "gt_ramp_kW_per_hour": 900.0,
+        "gt_short_term_overload_multiple": 1.05,
+        "gt_protection_trip_multiple": 1.05,
+        "gt_overload_hold_minutes": 15,
+        "thermal_setpoint_margin_C": 2.0,
+        "mass_participation": 0.5,
+        "effective_U_W_m2K": 1.5,
+        "solver_time_limit_sec": 6.0,
+        "priority": "strict lexicographic 0,1,2,3 then cost; each carrier normalized by total demand; P0-P2 lock abs tolerance 1e-7, P3 lock abs tolerance 1e-5, with relative tolerance",
+        "lex_lock_abs_tol_by_priority": [
+          1e-07,
+          1e-07,
+          1e-07,
+          1e-05
+        ],
+        "lex_lock_rel_tol_by_priority": [
+          0.0,
+          0.0,
+          0.0,
+          1e-08
+        ],
+        "p0_solver_feasibility_tol_kW": 0.001,
+        "p0_unserved_abs_tol_kW": 0.01,
+        "p0_unserved_rel_tol": 0.001,
+        "p0_unserved_abs_tol_kWh": 0.01,
+        "precontrol_load_shed_enabled": true,
+        "cascade": "Delayed pre-control proxy subtracts incremental grid headroom, diesel reserve available after start delay, and executable P3/P2/P1 shedding (P0 preserved) before sharing residual across surviving GTs; not a network or relay simulation.",
+        "dynamic_temperature": "baseline DOE zone mean temperature + uncalibrated 1R1C cold-loss perturbation",
+        "cost": "uses historical 2001 prices from v2; diesel $0.30/kWh illustrative only",
+        "precontrol_cooling_to_el_fraction": 0.6,
+        "cooling_tower_topology": "shared_common_tower_for_all_EC_and_ABS",
+        "mpc_cold_tracking_penalty_USD_per_kW_step": 0.2
+      },
+      "execution_contract": {
+        "name": "p1b_no_export_interlock",
+        "provenance": "Explicit uncalibrated research contract; see docs/v43/P1B_EXECUTION_CONTRACT.md. No OEM/ATS/relay data supplied. Not the default baseline.",
+        "grid_import_mode": "arrived_ceiling",
+        "gt_local_down_rate_kW_per_hour": 900.0,
+        "gt_local_down_delay_minutes": 0.25,
+        "local_max_segment_minutes": 0.25,
+        "surplus_interlock": "isolate_largest_gt",
+        "surplus_interlock_delay_minutes": 0.0,
+        "automatic_shedding_delay_minutes": 0.0,
+        "gt_start_delay_minutes": 0.0,
+        "diesel_mode": "legacy_explicit_permission",
+        "ats_transfer_minutes": 0.0,
+        "diesel_allowed_priorities": [
+          "P0",
+          "P1"
+        ],
+        "thermal_mode": "legacy_loss_fraction"
+      },
+      "plant": {
+        "case": "doe_capacity_matched_exploratory",
+        "gt_count": 3,
+        "gt_rated_kW": 320.0,
+        "hrsg_rated_lbph": 2906.2575585007,
+        "absorption_rt": 200.0,
+        "electric_chillers_rt": [
+          200.0,
+          200.0,
+          300.0
+        ],
+        "boiler_steam_lbph": 3000.0,
+        "cooling_tower_rejection_kW": 4220.223408,
+        "emergency_diesel_kW": 900.0,
+        "steam_kWh_per_lb": 0.3,
+        "exchanger_eff": 0.95,
+        "abs_steam_lb_per_rt": 19.5,
+        "abs_electric_kW_per_rt": 0.14,
+        "ec_electric_kW_per_rt": 0.77,
+        "boiler_eff": 0.8,
+        "nominal_gt_capacity_used_for_heat_rate_kW": 800.0,
+        "tariff": {
+          "gas_per_MMBtu": 4.84,
+          "electricity_onpeak_per_kWh": 0.09256,
+          "electricity_midpeak_per_kWh": 0.07356,
+          "electricity_offpeak_per_kWh": 0.05456
+        },
+        "gas_price_usd_per_mmbtu": 4.84,
+        "levels": [
+          0.4,
+          0.6,
+          0.8,
+          1.0
+        ],
+        "inclusion_unresolved": "include_all"
+      },
+      "dt_h": 0.25,
+      "row": {
+        "timestamp": "2017-04-11 08:00:00",
+        "outdoor_temperature_C": 13.166666666666666
+      }
+    }
+  },
+  {
+    "scenario_id": "p2b_L4a_boundary_p2b_day_136_4",
+    "policy": "priority_milp",
+    "expected_old_rank": 3,
+    "source_file": "outputs\\v43_p2b_20261013_run01\\report_data\\failures.jsonl",
+    "source_sha256": "5d48b2367506c1f2419ce76b8fed9a254801a0b1153a70d5d6cfa710b7412bb9",
+    "diagnostic": {
+      "scenario_id": "p2b_L4a_boundary_p2b_day_136_4",
+      "scenario": {
+        "actual_p0_load_multiplier": {
+          "c": 1.502660478083333,
+          "e": 3.28075080636116,
+          "h": 1.3
+        },
+        "automatic_fast_shedding": false,
+        "base_state_id": "p2b_initial:7f36588e3ab2b308dd45bdeb9de6aef408e422848ec2f8a6c1efcdb155996ddb",
+        "control_capability_note": "existing automatic_fast_shedding=False; no capability parameters changed",
+        "demand_background": "calendar_pool",
+        "design_family": "p2b_root:0dd74501a8ac85e03c9a9a12f876b1a7eacfe3d4cef4406ffcdf0ce0523d92d2",
+        "distribution_id": "p_study.p2b.independent_conditional.v1",
+        "duration_steps": 32,
+        "enable_propagation": true,
+        "event_class": "L4a",
+        "event_schema_version": "p2a.events.v1",
+        "exogenous_events": [
+          {
+            "end_minute": 300.0,
+            "kind": "load_shock",
+            "origin": "exogenous",
+            "shock": {
+              "c": 0.5026604780833329,
+              "e": 1.1871672042407735,
+              "h": 0.3
+            },
+            "shock_by_priority": {
+              "P0": {
+                "e": 0.5
+              }
+            },
+            "start_minute": 60.0
+          }
+        ],
+        "exogenous_stream_id": "p2b_stream:0dd74501a8ac85e03c9a9a12f876b1a7eacfe3d4cef4406ffcdf0ce0523d92d2",
+        "experiment_role": "pilot_train",
+        "family_id": "p2b_root:0dd74501a8ac85e03c9a9a12f876b1a7eacfe3d4cef4406ffcdf0ce0523d92d2",
+        "full_source_support": {
+          "actual_trajectory_interval_minutes": [
+            196200,
+            196680.0
+          ],
+          "algebraic_initialization_iterations": 6,
+          "endpoint_source_hour_reserved": true,
+          "historical_observation_interval_minutes": [
+            0,
+            60
+          ],
+          "initialization_historical_minutes": 0,
+          "initialization_source_hours": [
+            3271
+          ],
+          "label_tail_interval_minutes": [
+            420,
+            480
+          ],
+          "raw_end_minute": 196740,
+          "raw_start_minute": 196200,
+          "score_interval_minutes": [
+            60,
+            420
+          ],
+          "source_semantics": "hourly rows; reset repeats first row; final boundary hour conservatively included"
+        },
+        "grid_limit_kW": 250.0,
+        "history_interval_minutes": [
+          0,
+          60
+        ],
+        "id": "p2b_L4a_boundary_p2b_day_136_4",
+        "importance_weight": null,
+        "initialization_seed": 20261012,
+        "label_horizons_minutes": [
+          15,
+          30,
+          60
+        ],
+        "offline_input_order": [
+          "shock_e",
+          "shock_c",
+          "calendar_hour"
+        ],
+        "offline_inputs": [
+          1.1871672042407735,
+          0.5026604780833329,
+          3271
+        ],
+        "p_reference": null,
+        "parent_instance_id": "p2b_root:0dd74501a8ac85e03c9a9a12f876b1a7eacfe3d4cef4406ffcdf0ce0523d92d2",
+        "parent_template_id": "p2b_root:0dd74501a8ac85e03c9a9a12f876b1a7eacfe3d4cef4406ffcdf0ce0523d92d2",
+        "pre_event_warmup_steps": 6,
+        "purpose": "development",
+        "q_design_density": null,
+        "response_clock_anchor": "shock_start_minute",
+        "response_delay_minutes": 45.0,
+        "root_family_id": "p2b_root:0dd74501a8ac85e03c9a9a12f876b1a7eacfe3d4cef4406ffcdf0ce0523d92d2",
+        "sample_schema_version": "p2b.experiment.design.v1",
+        "sampling_cohort": "main",
+        "sampling_method": "balanced_calendar_strata_independent_uniform_continuous",
+        "sampling_role": "fixed_study",
+        "sampling_weight_is_failure_probability": false,
+        "score_interval_minutes": [
+          60,
+          420
+        ],
+        "shock": {
+          "c": 0.5026604780833329,
+          "e": 1.1871672042407735,
+          "h": 0.3
+        },
+        "shock_by_priority": {
+          "P0": {
+            "e": 0.5
+          }
+        },
+        "shock_duration_minutes": 240.0,
+        "shock_mode": "mixed",
+        "shock_start_minute": 60.0,
+        "stage": 4,
+        "start_hour": 3271,
+        "step_minutes": 15,
+        "stratum": "boundary_candidate",
+        "study_stratum": "L4a_boundary",
+        "tail_interval_minutes": [
+          420,
+          480
+        ],
+        "template_type": "L4a",
+        "time_block_id": "p2b_day_136"
+      },
+      "step": 4,
+      "time_minute": 60.0,
+      "phase": "fixed_execution",
+      "loads_kW": [
+        [
+          431.0227873368414,
+          21.88797722865576,
+          71.50064842233694
+        ],
+        [
+          217.0017464596746,
+          118.39954514511973,
+          48.93797819061687
+        ],
+        [
+          110.3710000018371,
+          0.0,
+          60.27427980391053
+        ],
+        [
+          834.0559010083006,
+          1.8474111129762605e-14,
+          139.1499971751517
+        ]
+      ],
+      "availability": {
+        "GT_1": 1.0,
+        "GT_2": 1.0,
+        "GT_3": 1.0,
+        "HRSG_1": 1.0,
+        "HRSG_2": 1.0,
+        "HRSG_3": 1.0,
+        "EC_1": 1.0,
+        "EC_2": 1.0,
+        "EC_3": 1.0,
+        "BOILER_1": 1.0,
+        "BOILER_2": 1.0,
+        "BOILER_3": 1.0,
+        "ABS": 1.0,
+        "TOWER": 1.0,
+        "GRID": 1.0,
+        "DIESEL": 1.0,
+        "TOWER_1": 1.0,
+        "TOWER_2": 1.0,
+        "TOWER_3": 1.0,
+        "TOWER_4": 1.0
+      },
+      "state": {
+        "gt_prev": [
+          237.90045304684583,
+          0.0,
+          0.0
+        ],
+        "diesel_energy_remaining_kWh": 2400.0,
+        "extra_faulted": [],
+        "overload_minutes": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "thermal_delta": {
+          "ER_EXAM1_MULT4_FLR_1": 0.0,
+          "ER_TRAUMA1_FLR_1": 0.0,
+          "ER_EXAM3_MULT4_FLR_1": 0.0,
+          "ER_TRAUMA2_FLR_1": 0.0,
+          "OR1_FLR_2": 0.0,
+          "OR2_MULT5_FLR_2": 0.0,
+          "OR3_FLR_2": 0.0,
+          "OR4_FLR_2": 0.0,
+          "IC_PATROOM1_MULT5_FLR_2": 0.0,
+          "IC_PATROOM2_FLR_2": 0.0,
+          "IC_PATROOM3_MULT6_FLR_2": 0.0,
+          "ICU_FLR_2": 0.0,
+          "ICU_NURSESTN_LOBBY_FLR_2": 0.0,
+          "RADIOLOGY_FLR_4": 0.0
+        },
+        "last_grid_import_kW": 249.99517761443778,
+        "last_diesel_kW": 0.0,
+        "auxiliary_request_kW": 5.661896828307619,
+        "cooling_reference_kW": 142.22898528871886,
+        "disconnected_loads": [
+          [
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.014225639222703639,
+            0.0,
+            -0.0
+          ]
+        ],
+        "diesel_status": "OFF",
+        "diesel_start_minute": null,
+        "topology_mode": "legacy_explicit_permission"
+      },
+      "command": {
+        "id": 4,
+        "generated_minute": 45.0,
+        "arrival_minute": 45.0,
+        "request": {},
+        "dispatch": {
+          "gt_electric_kW": [
+            237.90045304684583,
+            0.0,
+            0.0
+          ],
+          "grid_import_kW": 250.0,
+          "diesel_kW": 0.0,
+          "absorption_cooling_kW": 142.22898528871886,
+          "electric_chiller_cooling_kW": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "boiler_steam_lbph": 0.0,
+          "hrsg_steam_lbph": 2132.1984978705664,
+          "tower_rejection_kW": 378.8153884715729,
+          "gt_fuel_MMBtu_h": 3.838191214521847
+        },
+        "disconnected": [
+          [
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.004822433786523247,
+            0.0,
+            -0.0
+          ]
+        ],
+        "reference_cooling_kW": 142.22898528871886,
+        "weight": 0.0,
+        "optimizer_warning": ""
+      },
+      "executed_action": {
+        "gt_electric_kW": [
+          237.90045304684583,
+          0.0,
+          0.0
+        ],
+        "grid_import_kW": 250.0,
+        "diesel_kW": 0.0,
+        "absorption_cooling_kW": 142.22898528871886,
+        "electric_chiller_cooling_kW": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "boiler_steam_lbph": 0.0,
+        "hrsg_steam_lbph": 2132.1984978705664,
+        "tower_rejection_kW": 378.8153884715729,
+        "gt_fuel_MMBtu_h": 3.838191214521847
+      },
+      "pending_commands": [
+        {
+          "id": 5,
+          "generated_minute": 60.0,
+          "arrival_minute": 105.0,
+          "request": {},
+          "dispatch": {
+            "gt_electric_kW": [
+              319.61215999999996,
+              224.98407534339572,
+              225.0
+            ],
+            "grid_import_kW": 250.0,
+            "diesel_kW": 0.0,
+            "absorption_cooling_kW": 319.86290359201604,
+            "electric_chiller_cooling_kW": [
+              2.039866210688351e-14,
+              0.0,
+              0.0
+            ],
+            "boiler_steam_lbph": 0.0,
+            "hrsg_steam_lbph": 6997.996809509461,
+            "tower_rejection_kW": 851.9289498964425,
+            "gt_fuel_MMBtu_h": 12.446007132380569
+          },
+          "disconnected": [
+            [
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              585.6026296294243,
+              0.0,
+              0.0
+            ]
+          ],
+          "reference_cooling_kW": 319.86290359201604,
+          "weight": 0.0,
+          "optimizer_warning": ""
+        }
+      ],
+      "local_execution_state": {
+        "pending_shed": null,
+        "local_down": null,
+        "gt_start_pending": {},
+        "auto_shed_latched": false,
+        "automatic_disconnected": [
+          [
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "disconnected_fraction": [
+          [
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            1.705568724764479e-05,
+            0.0,
+            -0.0
+          ]
+        ],
+        "automatic_fraction": [
+          [
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "connection_basis_loads": [
+          [
+            431.0227873368414,
+            21.88797722865576,
+            71.50064842233694
+          ],
+          [
+            217.0017464596746,
+            118.39954514511973,
+            48.93797819061687
+          ],
+          [
+            110.3710000018371,
+            0.0,
+            60.27427980391053
+          ],
+          [
+            834.0701266475232,
+            1.8474111129762605e-14,
+            139.1499971751517
+          ]
+        ],
+        "grid_outage_start": null,
+        "ramp_time": 45.0,
+        "ramp_anchor": [
+          237.90045304684583,
+          0.0,
+          0.0
+        ],
+        "ramp_budget": 225.0
+      },
+      "config": {
+        "schema_version": "4.1-research-prototype",
+        "provenance": "All limits here are illustrative research assumptions, NOT OEM relay or hospital safety ratings.",
+        "grid_import_limit_kW": 850.0,
+        "diesel_initial_energy_kWh": 2400.0,
+        "diesel_start_delay_minutes": 15.0,
+        "gt_ramp_kW_per_hour": 900.0,
+        "gt_short_term_overload_multiple": 1.05,
+        "gt_protection_trip_multiple": 1.05,
+        "gt_overload_hold_minutes": 15,
+        "thermal_setpoint_margin_C": 2.0,
+        "mass_participation": 0.5,
+        "effective_U_W_m2K": 1.5,
+        "solver_time_limit_sec": 6.0,
+        "priority": "strict lexicographic 0,1,2,3 then cost; each carrier normalized by total demand; P0-P2 lock abs tolerance 1e-7, P3 lock abs tolerance 1e-5, with relative tolerance",
+        "lex_lock_abs_tol_by_priority": [
+          1e-07,
+          1e-07,
+          1e-07,
+          1e-05
+        ],
+        "lex_lock_rel_tol_by_priority": [
+          0.0,
+          0.0,
+          0.0,
+          1e-08
+        ],
+        "p0_solver_feasibility_tol_kW": 0.001,
+        "p0_unserved_abs_tol_kW": 0.01,
+        "p0_unserved_rel_tol": 0.001,
+        "p0_unserved_abs_tol_kWh": 0.01,
+        "precontrol_load_shed_enabled": true,
+        "cascade": "Delayed pre-control proxy subtracts incremental grid headroom, diesel reserve available after start delay, and executable P3/P2/P1 shedding (P0 preserved) before sharing residual across surviving GTs; not a network or relay simulation.",
+        "dynamic_temperature": "baseline DOE zone mean temperature + uncalibrated 1R1C cold-loss perturbation",
+        "cost": "uses historical 2001 prices from v2; diesel $0.30/kWh illustrative only",
+        "precontrol_cooling_to_el_fraction": 0.6,
+        "cooling_tower_topology": "shared_common_tower_for_all_EC_and_ABS",
+        "mpc_cold_tracking_penalty_USD_per_kW_step": 0.2
+      },
+      "execution_contract": {
+        "name": "p1b_no_export_interlock",
+        "provenance": "Explicit uncalibrated research contract; see docs/v43/P1B_EXECUTION_CONTRACT.md. No OEM/ATS/relay data supplied. Not the default baseline.",
+        "grid_import_mode": "arrived_ceiling",
+        "gt_local_down_rate_kW_per_hour": 900.0,
+        "gt_local_down_delay_minutes": 0.25,
+        "local_max_segment_minutes": 0.25,
+        "surplus_interlock": "isolate_largest_gt",
+        "surplus_interlock_delay_minutes": 0.0,
+        "automatic_shedding_delay_minutes": 0.0,
+        "gt_start_delay_minutes": 0.0,
+        "diesel_mode": "legacy_explicit_permission",
+        "ats_transfer_minutes": 0.0,
+        "diesel_allowed_priorities": [
+          "P0",
+          "P1"
+        ],
+        "thermal_mode": "legacy_loss_fraction"
+      },
+      "plant": {
+        "case": "doe_capacity_matched_exploratory",
+        "gt_count": 3,
+        "gt_rated_kW": 320.0,
+        "hrsg_rated_lbph": 2906.2575585007,
+        "absorption_rt": 200.0,
+        "electric_chillers_rt": [
+          200.0,
+          200.0,
+          300.0
+        ],
+        "boiler_steam_lbph": 3000.0,
+        "cooling_tower_rejection_kW": 4220.223408,
+        "emergency_diesel_kW": 900.0,
+        "steam_kWh_per_lb": 0.3,
+        "exchanger_eff": 0.95,
+        "abs_steam_lb_per_rt": 19.5,
+        "abs_electric_kW_per_rt": 0.14,
+        "ec_electric_kW_per_rt": 0.77,
+        "boiler_eff": 0.8,
+        "nominal_gt_capacity_used_for_heat_rate_kW": 800.0,
+        "tariff": {
+          "gas_per_MMBtu": 4.84,
+          "electricity_onpeak_per_kWh": 0.09256,
+          "electricity_midpeak_per_kWh": 0.07356,
+          "electricity_offpeak_per_kWh": 0.05456
+        },
+        "gas_price_usd_per_mmbtu": 4.84,
+        "levels": [
+          0.4,
+          0.6,
+          0.8,
+          1.0
+        ],
+        "inclusion_unresolved": "include_all"
+      },
+      "dt_h": 0.25,
+      "row": {
+        "timestamp": "2017-05-17 08:00:00",
+        "outdoor_temperature_C": 15.166666666666666
+      }
+    }
+  },
+  {
+    "scenario_id": "p2b_L4a_boundary_p2b_day_136_4",
+    "policy": "secure_milp",
+    "expected_old_rank": 3,
+    "source_file": "outputs\\v43_p2b_20261013_run01\\report_data\\failures.jsonl",
+    "source_sha256": "5d48b2367506c1f2419ce76b8fed9a254801a0b1153a70d5d6cfa710b7412bb9",
+    "diagnostic": {
+      "scenario_id": "p2b_L4a_boundary_p2b_day_136_4",
+      "scenario": {
+        "actual_p0_load_multiplier": {
+          "c": 1.502660478083333,
+          "e": 3.28075080636116,
+          "h": 1.3
+        },
+        "automatic_fast_shedding": false,
+        "base_state_id": "p2b_initial:7f36588e3ab2b308dd45bdeb9de6aef408e422848ec2f8a6c1efcdb155996ddb",
+        "control_capability_note": "existing automatic_fast_shedding=False; no capability parameters changed",
+        "demand_background": "calendar_pool",
+        "design_family": "p2b_root:0dd74501a8ac85e03c9a9a12f876b1a7eacfe3d4cef4406ffcdf0ce0523d92d2",
+        "distribution_id": "p_study.p2b.independent_conditional.v1",
+        "duration_steps": 32,
+        "enable_propagation": true,
+        "event_class": "L4a",
+        "event_schema_version": "p2a.events.v1",
+        "exogenous_events": [
+          {
+            "end_minute": 300.0,
+            "kind": "load_shock",
+            "origin": "exogenous",
+            "shock": {
+              "c": 0.5026604780833329,
+              "e": 1.1871672042407735,
+              "h": 0.3
+            },
+            "shock_by_priority": {
+              "P0": {
+                "e": 0.5
+              }
+            },
+            "start_minute": 60.0
+          }
+        ],
+        "exogenous_stream_id": "p2b_stream:0dd74501a8ac85e03c9a9a12f876b1a7eacfe3d4cef4406ffcdf0ce0523d92d2",
+        "experiment_role": "pilot_train",
+        "family_id": "p2b_root:0dd74501a8ac85e03c9a9a12f876b1a7eacfe3d4cef4406ffcdf0ce0523d92d2",
+        "full_source_support": {
+          "actual_trajectory_interval_minutes": [
+            196200,
+            196680.0
+          ],
+          "algebraic_initialization_iterations": 6,
+          "endpoint_source_hour_reserved": true,
+          "historical_observation_interval_minutes": [
+            0,
+            60
+          ],
+          "initialization_historical_minutes": 0,
+          "initialization_source_hours": [
+            3271
+          ],
+          "label_tail_interval_minutes": [
+            420,
+            480
+          ],
+          "raw_end_minute": 196740,
+          "raw_start_minute": 196200,
+          "score_interval_minutes": [
+            60,
+            420
+          ],
+          "source_semantics": "hourly rows; reset repeats first row; final boundary hour conservatively included"
+        },
+        "grid_limit_kW": 250.0,
+        "history_interval_minutes": [
+          0,
+          60
+        ],
+        "id": "p2b_L4a_boundary_p2b_day_136_4",
+        "importance_weight": null,
+        "initialization_seed": 20261012,
+        "label_horizons_minutes": [
+          15,
+          30,
+          60
+        ],
+        "offline_input_order": [
+          "shock_e",
+          "shock_c",
+          "calendar_hour"
+        ],
+        "offline_inputs": [
+          1.1871672042407735,
+          0.5026604780833329,
+          3271
+        ],
+        "p_reference": null,
+        "parent_instance_id": "p2b_root:0dd74501a8ac85e03c9a9a12f876b1a7eacfe3d4cef4406ffcdf0ce0523d92d2",
+        "parent_template_id": "p2b_root:0dd74501a8ac85e03c9a9a12f876b1a7eacfe3d4cef4406ffcdf0ce0523d92d2",
+        "pre_event_warmup_steps": 6,
+        "purpose": "development",
+        "q_design_density": null,
+        "response_clock_anchor": "shock_start_minute",
+        "response_delay_minutes": 45.0,
+        "root_family_id": "p2b_root:0dd74501a8ac85e03c9a9a12f876b1a7eacfe3d4cef4406ffcdf0ce0523d92d2",
+        "sample_schema_version": "p2b.experiment.design.v1",
+        "sampling_cohort": "main",
+        "sampling_method": "balanced_calendar_strata_independent_uniform_continuous",
+        "sampling_role": "fixed_study",
+        "sampling_weight_is_failure_probability": false,
+        "score_interval_minutes": [
+          60,
+          420
+        ],
+        "shock": {
+          "c": 0.5026604780833329,
+          "e": 1.1871672042407735,
+          "h": 0.3
+        },
+        "shock_by_priority": {
+          "P0": {
+            "e": 0.5
+          }
+        },
+        "shock_duration_minutes": 240.0,
+        "shock_mode": "mixed",
+        "shock_start_minute": 60.0,
+        "stage": 4,
+        "start_hour": 3271,
+        "step_minutes": 15,
+        "stratum": "boundary_candidate",
+        "study_stratum": "L4a_boundary",
+        "tail_interval_minutes": [
+          420,
+          480
+        ],
+        "template_type": "L4a",
+        "time_block_id": "p2b_day_136"
+      },
+      "step": 4,
+      "time_minute": 60.0,
+      "phase": "fixed_execution",
+      "loads_kW": [
+        [
+          431.0227873368414,
+          21.88797722865576,
+          71.50064842233694
+        ],
+        [
+          217.0017464596746,
+          118.39954514511973,
+          48.93797819061687
+        ],
+        [
+          110.3710000018371,
+          0.0,
+          60.27427980391053
+        ],
+        [
+          834.0559010083006,
+          1.8474111129762605e-14,
+          139.1499971751517
+        ]
+      ],
+      "availability": {
+        "GT_1": 1.0,
+        "GT_2": 1.0,
+        "GT_3": 1.0,
+        "HRSG_1": 1.0,
+        "HRSG_2": 1.0,
+        "HRSG_3": 1.0,
+        "EC_1": 1.0,
+        "EC_2": 1.0,
+        "EC_3": 1.0,
+        "BOILER_1": 1.0,
+        "BOILER_2": 1.0,
+        "BOILER_3": 1.0,
+        "ABS": 1.0,
+        "TOWER": 1.0,
+        "GRID": 1.0,
+        "DIESEL": 1.0,
+        "TOWER_1": 1.0,
+        "TOWER_2": 1.0,
+        "TOWER_3": 1.0,
+        "TOWER_4": 1.0
+      },
+      "state": {
+        "gt_prev": [
+          237.90045304684583,
+          0.0,
+          0.0
+        ],
+        "diesel_energy_remaining_kWh": 2400.0,
+        "extra_faulted": [],
+        "overload_minutes": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "thermal_delta": {
+          "ER_EXAM1_MULT4_FLR_1": 0.0,
+          "ER_TRAUMA1_FLR_1": 0.0,
+          "ER_EXAM3_MULT4_FLR_1": 0.0,
+          "ER_TRAUMA2_FLR_1": 0.0,
+          "OR1_FLR_2": 0.0,
+          "OR2_MULT5_FLR_2": 0.0,
+          "OR3_FLR_2": 0.0,
+          "OR4_FLR_2": 0.0,
+          "IC_PATROOM1_MULT5_FLR_2": 0.0,
+          "IC_PATROOM2_FLR_2": 0.0,
+          "IC_PATROOM3_MULT6_FLR_2": 0.0,
+          "ICU_FLR_2": 0.0,
+          "ICU_NURSESTN_LOBBY_FLR_2": 0.0,
+          "RADIOLOGY_FLR_4": 0.0
+        },
+        "last_grid_import_kW": 249.99517761443778,
+        "last_diesel_kW": 0.0,
+        "auxiliary_request_kW": 5.661896828307619,
+        "cooling_reference_kW": 142.22898528871886,
+        "disconnected_loads": [
+          [
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.014225639222703639,
+            0.0,
+            -0.0
+          ]
+        ],
+        "diesel_status": "OFF",
+        "diesel_start_minute": null,
+        "topology_mode": "legacy_explicit_permission"
+      },
+      "command": {
+        "id": 4,
+        "generated_minute": 45.0,
+        "arrival_minute": 45.0,
+        "request": {
+          "security": {
+            "gt_loading_penalty_USD_per_kWh": 0.35
+          }
+        },
+        "dispatch": {
+          "gt_electric_kW": [
+            237.90045304684583,
+            0.0,
+            0.0
+          ],
+          "grid_import_kW": 250.0,
+          "diesel_kW": 0.0,
+          "absorption_cooling_kW": 142.22898528871886,
+          "electric_chiller_cooling_kW": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "boiler_steam_lbph": 0.0,
+          "hrsg_steam_lbph": 2132.1984978705664,
+          "tower_rejection_kW": 378.8153884715729,
+          "gt_fuel_MMBtu_h": 3.838191214521847
+        },
+        "disconnected": [
+          [
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.004822433786523247,
+            0.0,
+            -0.0
+          ]
+        ],
+        "reference_cooling_kW": 142.22898528871886,
+        "weight": 0.35,
+        "optimizer_warning": ""
+      },
+      "executed_action": {
+        "gt_electric_kW": [
+          237.90045304684583,
+          0.0,
+          0.0
+        ],
+        "grid_import_kW": 250.0,
+        "diesel_kW": 0.0,
+        "absorption_cooling_kW": 142.22898528871886,
+        "electric_chiller_cooling_kW": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "boiler_steam_lbph": 0.0,
+        "hrsg_steam_lbph": 2132.1984978705664,
+        "tower_rejection_kW": 378.8153884715729,
+        "gt_fuel_MMBtu_h": 3.838191214521847
+      },
+      "pending_commands": [
+        {
+          "id": 5,
+          "generated_minute": 60.0,
+          "arrival_minute": 105.0,
+          "request": {
+            "security": {
+              "gt_loading_penalty_USD_per_kWh": 0.35
+            }
+          },
+          "dispatch": {
+            "gt_electric_kW": [
+              319.61215999999996,
+              224.98407534339572,
+              225.0
+            ],
+            "grid_import_kW": 250.0,
+            "diesel_kW": 0.0,
+            "absorption_cooling_kW": 319.86290359201604,
+            "electric_chiller_cooling_kW": [
+              2.039866210688351e-14,
+              0.0,
+              0.0
+            ],
+            "boiler_steam_lbph": 0.0,
+            "hrsg_steam_lbph": 6997.996809509461,
+            "tower_rejection_kW": 851.9289498964425,
+            "gt_fuel_MMBtu_h": 12.446007132380569
+          },
+          "disconnected": [
+            [
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              585.6026296294243,
+              0.0,
+              0.0
+            ]
+          ],
+          "reference_cooling_kW": 319.86290359201604,
+          "weight": 0.35,
+          "optimizer_warning": ""
+        }
+      ],
+      "local_execution_state": {
+        "pending_shed": null,
+        "local_down": null,
+        "gt_start_pending": {},
+        "auto_shed_latched": false,
+        "automatic_disconnected": [
+          [
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "disconnected_fraction": [
+          [
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            1.705568724764479e-05,
+            0.0,
+            -0.0
+          ]
+        ],
+        "automatic_fraction": [
+          [
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "connection_basis_loads": [
+          [
+            431.0227873368414,
+            21.88797722865576,
+            71.50064842233694
+          ],
+          [
+            217.0017464596746,
+            118.39954514511973,
+            48.93797819061687
+          ],
+          [
+            110.3710000018371,
+            0.0,
+            60.27427980391053
+          ],
+          [
+            834.0701266475232,
+            1.8474111129762605e-14,
+            139.1499971751517
+          ]
+        ],
+        "grid_outage_start": null,
+        "ramp_time": 45.0,
+        "ramp_anchor": [
+          237.90045304684583,
+          0.0,
+          0.0
+        ],
+        "ramp_budget": 225.0
+      },
+      "config": {
+        "schema_version": "4.1-research-prototype",
+        "provenance": "All limits here are illustrative research assumptions, NOT OEM relay or hospital safety ratings.",
+        "grid_import_limit_kW": 850.0,
+        "diesel_initial_energy_kWh": 2400.0,
+        "diesel_start_delay_minutes": 15.0,
+        "gt_ramp_kW_per_hour": 900.0,
+        "gt_short_term_overload_multiple": 1.05,
+        "gt_protection_trip_multiple": 1.05,
+        "gt_overload_hold_minutes": 15,
+        "thermal_setpoint_margin_C": 2.0,
+        "mass_participation": 0.5,
+        "effective_U_W_m2K": 1.5,
+        "solver_time_limit_sec": 6.0,
+        "priority": "strict lexicographic 0,1,2,3 then cost; each carrier normalized by total demand; P0-P2 lock abs tolerance 1e-7, P3 lock abs tolerance 1e-5, with relative tolerance",
+        "lex_lock_abs_tol_by_priority": [
+          1e-07,
+          1e-07,
+          1e-07,
+          1e-05
+        ],
+        "lex_lock_rel_tol_by_priority": [
+          0.0,
+          0.0,
+          0.0,
+          1e-08
+        ],
+        "p0_solver_feasibility_tol_kW": 0.001,
+        "p0_unserved_abs_tol_kW": 0.01,
+        "p0_unserved_rel_tol": 0.001,
+        "p0_unserved_abs_tol_kWh": 0.01,
+        "precontrol_load_shed_enabled": true,
+        "cascade": "Delayed pre-control proxy subtracts incremental grid headroom, diesel reserve available after start delay, and executable P3/P2/P1 shedding (P0 preserved) before sharing residual across surviving GTs; not a network or relay simulation.",
+        "dynamic_temperature": "baseline DOE zone mean temperature + uncalibrated 1R1C cold-loss perturbation",
+        "cost": "uses historical 2001 prices from v2; diesel $0.30/kWh illustrative only",
+        "precontrol_cooling_to_el_fraction": 0.6,
+        "cooling_tower_topology": "shared_common_tower_for_all_EC_and_ABS",
+        "mpc_cold_tracking_penalty_USD_per_kW_step": 0.2
+      },
+      "execution_contract": {
+        "name": "p1b_no_export_interlock",
+        "provenance": "Explicit uncalibrated research contract; see docs/v43/P1B_EXECUTION_CONTRACT.md. No OEM/ATS/relay data supplied. Not the default baseline.",
+        "grid_import_mode": "arrived_ceiling",
+        "gt_local_down_rate_kW_per_hour": 900.0,
+        "gt_local_down_delay_minutes": 0.25,
+        "local_max_segment_minutes": 0.25,
+        "surplus_interlock": "isolate_largest_gt",
+        "surplus_interlock_delay_minutes": 0.0,
+        "automatic_shedding_delay_minutes": 0.0,
+        "gt_start_delay_minutes": 0.0,
+        "diesel_mode": "legacy_explicit_permission",
+        "ats_transfer_minutes": 0.0,
+        "diesel_allowed_priorities": [
+          "P0",
+          "P1"
+        ],
+        "thermal_mode": "legacy_loss_fraction"
+      },
+      "plant": {
+        "case": "doe_capacity_matched_exploratory",
+        "gt_count": 3,
+        "gt_rated_kW": 320.0,
+        "hrsg_rated_lbph": 2906.2575585007,
+        "absorption_rt": 200.0,
+        "electric_chillers_rt": [
+          200.0,
+          200.0,
+          300.0
+        ],
+        "boiler_steam_lbph": 3000.0,
+        "cooling_tower_rejection_kW": 4220.223408,
+        "emergency_diesel_kW": 900.0,
+        "steam_kWh_per_lb": 0.3,
+        "exchanger_eff": 0.95,
+        "abs_steam_lb_per_rt": 19.5,
+        "abs_electric_kW_per_rt": 0.14,
+        "ec_electric_kW_per_rt": 0.77,
+        "boiler_eff": 0.8,
+        "nominal_gt_capacity_used_for_heat_rate_kW": 800.0,
+        "tariff": {
+          "gas_per_MMBtu": 4.84,
+          "electricity_onpeak_per_kWh": 0.09256,
+          "electricity_midpeak_per_kWh": 0.07356,
+          "electricity_offpeak_per_kWh": 0.05456
+        },
+        "gas_price_usd_per_mmbtu": 4.84,
+        "levels": [
+          0.4,
+          0.6,
+          0.8,
+          1.0
+        ],
+        "inclusion_unresolved": "include_all"
+      },
+      "dt_h": 0.25,
+      "row": {
+        "timestamp": "2017-05-17 08:00:00",
+        "outdoor_temperature_C": 15.166666666666666
+      }
+    }
+  }
+]

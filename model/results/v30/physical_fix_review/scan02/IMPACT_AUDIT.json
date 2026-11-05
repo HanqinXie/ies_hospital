@@ -1,0 +1,3285 @@
+{
+  "schema": "hospital_ies.v30.pending_start_impact_readonly.v1",
+  "created_utc": "2026-10-27T08:01:18.761371+00:00",
+  "status": "counterexample_and_observed_impact_audited",
+  "project_source_edits": false,
+  "new_simulations": 0,
+  "summary": {
+    "saved_new_run_count": 24,
+    "new_actual_attempt_count": 25,
+    "new_attempts_without_saved_raw": [
+      "r01_normal_R_off"
+    ],
+    "saved_V29_run_count": 7,
+    "future_start_observed_runs": [
+      "d01_b02_L1_heat_pump_disturbed_M"
+    ],
+    "ready_before_started_observed_runs": [
+      "d01_b02_L1_heat_pump_disturbed_M"
+    ],
+    "no_saved_observation_can_certify_path_never_touched": true
+  },
+  "runs": [
+    {
+      "run": "d01_b01_L1_grid_disturbed_C",
+      "evidence_role": "new_actual_V30_attempt",
+      "status": "completed",
+      "producer": "7e1a5320d98027ec9c5897e778a8b63b01ed41bb",
+      "actual_episode_attempts": 1,
+      "raw_saved": true,
+      "producer_source_sha256": "cdea107ef1dfd5a5cce1d6d1c0419f97af602c4224279871dc68a88ed6f06f39",
+      "observed_until_minute": 180.0,
+      "requested_end_minute": 180.0,
+      "unknown_tail_minutes": 0.0,
+      "small_error": {
+        "type": null,
+        "message": null,
+        "underlying_category": null,
+        "classification": null
+      },
+      "native_segment_count": 223,
+      "decision_observation_count": 12,
+      "decision_times_minute": [
+        0.0,
+        15.0,
+        30.0,
+        45.0,
+        60.0,
+        75.0,
+        90.0,
+        105.0,
+        120.0,
+        135.0,
+        150.0,
+        165.0
+      ],
+      "nonempty_pending_decision_times": [],
+      "maximum_gap_between_saved_pending_observation_opportunities_minutes": 15.0,
+      "unobserved_pending_state_intervals": [
+        [
+          0.0,
+          15.0
+        ],
+        [
+          15.0,
+          30.0
+        ],
+        [
+          30.0,
+          45.0
+        ],
+        [
+          45.0,
+          60.0
+        ],
+        [
+          60.0,
+          75.0
+        ],
+        [
+          75.0,
+          90.0
+        ],
+        [
+          90.0,
+          105.0
+        ],
+        [
+          105.0,
+          120.0
+        ],
+        [
+          120.0,
+          135.0
+        ],
+        [
+          135.0,
+          150.0
+        ],
+        [
+          150.0,
+          165.0
+        ],
+        [
+          165.0,
+          180.0
+        ]
+      ],
+      "terminal_pending_coverage": "actual_saved_terminal_start_pending",
+      "pending_observations": [],
+      "observed_future_start_count": 0,
+      "observed_ready_before_started_count": 0,
+      "observed_actual_positive_while_future_start_count": 0,
+      "no_observed_invalid_clock_is_not_proof_no_path_touch": true,
+      "producer_files_sha256": {
+        "RESULT.json": "7e1ff029727098e597b5a8a9fde3f261ba0916e29da88384370cb1abf1f58a23",
+        "trajectory.json.gz": "72ba423abc4b0a1a62b261c54ec9aee5f7ea9c63f7be1adb6330a95fe4920b88",
+        "BINDINGS.json": "4e8565772390258e00db60561cc75923cfd5d5f91676b13df8bdbb1e03560c67"
+      },
+      "producer_files_unchanged": true,
+      "raw_result_sha_matches": true
+    },
+    {
+      "run": "d01_b01_L1_grid_disturbed_M",
+      "evidence_role": "new_actual_V30_attempt",
+      "status": "completed",
+      "producer": "7e1a5320d98027ec9c5897e778a8b63b01ed41bb",
+      "actual_episode_attempts": 1,
+      "raw_saved": true,
+      "producer_source_sha256": "cdea107ef1dfd5a5cce1d6d1c0419f97af602c4224279871dc68a88ed6f06f39",
+      "observed_until_minute": 180.0,
+      "requested_end_minute": 180.0,
+      "unknown_tail_minutes": 0.0,
+      "small_error": {
+        "type": null,
+        "message": null,
+        "underlying_category": null,
+        "classification": null
+      },
+      "native_segment_count": 224,
+      "decision_observation_count": 12,
+      "decision_times_minute": [
+        0.0,
+        15.0,
+        30.0,
+        45.0,
+        60.0,
+        75.0,
+        90.0,
+        105.0,
+        120.0,
+        135.0,
+        150.0,
+        165.0
+      ],
+      "nonempty_pending_decision_times": [],
+      "maximum_gap_between_saved_pending_observation_opportunities_minutes": 15.0,
+      "unobserved_pending_state_intervals": [
+        [
+          0.0,
+          15.0
+        ],
+        [
+          15.0,
+          30.0
+        ],
+        [
+          30.0,
+          45.0
+        ],
+        [
+          45.0,
+          60.0
+        ],
+        [
+          60.0,
+          75.0
+        ],
+        [
+          75.0,
+          90.0
+        ],
+        [
+          90.0,
+          105.0
+        ],
+        [
+          105.0,
+          120.0
+        ],
+        [
+          120.0,
+          135.0
+        ],
+        [
+          135.0,
+          150.0
+        ],
+        [
+          150.0,
+          165.0
+        ],
+        [
+          165.0,
+          180.0
+        ]
+      ],
+      "terminal_pending_coverage": "actual_saved_terminal_start_pending",
+      "pending_observations": [],
+      "observed_future_start_count": 0,
+      "observed_ready_before_started_count": 0,
+      "observed_actual_positive_while_future_start_count": 0,
+      "no_observed_invalid_clock_is_not_proof_no_path_touch": true,
+      "producer_files_sha256": {
+        "RESULT.json": "0de4e78441789ce0ac7cb03d94e3063dbf53f81641750c22984073a1ba8d4691",
+        "trajectory.json.gz": "fe2114a019e755195d14389ea67ee40bb90bb9856d86eea3589a69ce9fa325e1",
+        "BINDINGS.json": "4e8565772390258e00db60561cc75923cfd5d5f91676b13df8bdbb1e03560c67"
+      },
+      "producer_files_unchanged": true,
+      "raw_result_sha_matches": true
+    },
+    {
+      "run": "d01_b02_L1_heat_pump_disturbed_C",
+      "evidence_role": "new_actual_V30_attempt",
+      "status": "completed",
+      "producer": "7e1a5320d98027ec9c5897e778a8b63b01ed41bb",
+      "actual_episode_attempts": 1,
+      "raw_saved": true,
+      "producer_source_sha256": "cdea107ef1dfd5a5cce1d6d1c0419f97af602c4224279871dc68a88ed6f06f39",
+      "observed_until_minute": 180.0,
+      "requested_end_minute": 180.0,
+      "unknown_tail_minutes": 0.0,
+      "small_error": {
+        "type": null,
+        "message": null,
+        "underlying_category": null,
+        "classification": null
+      },
+      "native_segment_count": 13,
+      "decision_observation_count": 12,
+      "decision_times_minute": [
+        0.0,
+        15.0,
+        30.0,
+        45.0,
+        60.0,
+        75.0,
+        90.0,
+        105.0,
+        120.0,
+        135.0,
+        150.0,
+        165.0
+      ],
+      "nonempty_pending_decision_times": [],
+      "maximum_gap_between_saved_pending_observation_opportunities_minutes": 15.0,
+      "unobserved_pending_state_intervals": [
+        [
+          0.0,
+          15.0
+        ],
+        [
+          15.0,
+          30.0
+        ],
+        [
+          30.0,
+          45.0
+        ],
+        [
+          45.0,
+          60.0
+        ],
+        [
+          60.0,
+          75.0
+        ],
+        [
+          75.0,
+          90.0
+        ],
+        [
+          90.0,
+          105.0
+        ],
+        [
+          105.0,
+          120.0
+        ],
+        [
+          120.0,
+          135.0
+        ],
+        [
+          135.0,
+          150.0
+        ],
+        [
+          150.0,
+          165.0
+        ],
+        [
+          165.0,
+          180.0
+        ]
+      ],
+      "terminal_pending_coverage": "actual_saved_terminal_start_pending",
+      "pending_observations": [],
+      "observed_future_start_count": 0,
+      "observed_ready_before_started_count": 0,
+      "observed_actual_positive_while_future_start_count": 0,
+      "no_observed_invalid_clock_is_not_proof_no_path_touch": true,
+      "producer_files_sha256": {
+        "RESULT.json": "b3cb6dced39b86c1f339a1d0a812744252f2dbb75e5444be4240dc6cbfe00045",
+        "trajectory.json.gz": "8ddc4aecdfde756f42f42be5d79a2d865b1e8b9f50d890b5a6dcb48e64fa29fb",
+        "BINDINGS.json": "4e8565772390258e00db60561cc75923cfd5d5f91676b13df8bdbb1e03560c67"
+      },
+      "producer_files_unchanged": true,
+      "raw_result_sha_matches": true
+    },
+    {
+      "run": "d01_b02_L1_heat_pump_disturbed_M",
+      "evidence_role": "new_actual_V30_attempt",
+      "status": "failed_unknown",
+      "producer": "7e1a5320d98027ec9c5897e778a8b63b01ed41bb",
+      "actual_episode_attempts": 1,
+      "raw_saved": true,
+      "producer_source_sha256": "cdea107ef1dfd5a5cce1d6d1c0419f97af602c4224279871dc68a88ed6f06f39",
+      "observed_until_minute": 90.0,
+      "requested_end_minute": 180.0,
+      "unknown_tail_minutes": 90.0,
+      "small_error": {
+        "type": "SolverExecutionError",
+        "message": "M23 checked boiler command domains unavailable; no global physical infeasibility claim",
+        "underlying_category": "command_compilation_implementation_gap",
+        "classification": "solver_error"
+      },
+      "native_segment_count": 21,
+      "decision_observation_count": 7,
+      "decision_times_minute": [
+        0.0,
+        15.0,
+        30.0,
+        45.0,
+        60.0,
+        75.0,
+        90.0
+      ],
+      "nonempty_pending_decision_times": [
+        90.0
+      ],
+      "maximum_gap_between_saved_pending_observation_opportunities_minutes": 15.0,
+      "unobserved_pending_state_intervals": [
+        [
+          0.0,
+          15.0
+        ],
+        [
+          15.0,
+          30.0
+        ],
+        [
+          30.0,
+          45.0
+        ],
+        [
+          45.0,
+          60.0
+        ],
+        [
+          60.0,
+          75.0
+        ],
+        [
+          75.0,
+          90.0
+        ]
+      ],
+      "terminal_pending_coverage": "actual_saved_terminal_start_pending",
+      "pending_observations": [
+        {
+          "source": "decisions/6/operating_readiness/pending_starts",
+          "time_minute": 90.0,
+          "device": "GT_1",
+          "started_minute": 105.0,
+          "ready_minute": 100.0,
+          "requested_kW": 126.83648,
+          "actual_powered_progress_minutes": null,
+          "actual_output_kW": 0.0,
+          "future_start": true,
+          "ready_before_started": true,
+          "ready_before_observation": false,
+          "actual_positive_while_start_future": false,
+          "saved_pending_keys": [
+            "started",
+            "ready",
+            "requested"
+          ]
+        },
+        {
+          "source": "terminal_snapshot/GT/start_pending",
+          "time_minute": 90.0,
+          "device": "GT_1",
+          "started_minute": 105.0,
+          "ready_minute": 100.0,
+          "requested_kW": 126.83648,
+          "actual_powered_progress_minutes": null,
+          "actual_output_kW": 0.0,
+          "future_start": true,
+          "ready_before_started": true,
+          "ready_before_observation": false,
+          "actual_positive_while_start_future": false,
+          "saved_pending_keys": [
+            "ready",
+            "requested",
+            "started",
+            "start_event_recorded"
+          ]
+        }
+      ],
+      "observed_future_start_count": 2,
+      "observed_ready_before_started_count": 2,
+      "observed_actual_positive_while_future_start_count": 0,
+      "no_observed_invalid_clock_is_not_proof_no_path_touch": true,
+      "producer_files_sha256": {
+        "RESULT.json": "1c70000767be0490118430a9093789eb0943ca632117d34aea96ae432f9f5f4b",
+        "trajectory.json.gz": "908ffa80d178ae696515a6904e9f733566a9058510bc40c3934935dc96a09cb4",
+        "BINDINGS.json": "4e8565772390258e00db60561cc75923cfd5d5f91676b13df8bdbb1e03560c67"
+      },
+      "producer_files_unchanged": true,
+      "raw_result_sha_matches": true
+    },
+    {
+      "run": "dev01_dev_grid_180",
+      "evidence_role": "new_actual_V30_attempt",
+      "status": "completed",
+      "producer": "b89c72c6033e4f77892d710f24e735439bfc1be6",
+      "actual_episode_attempts": 1,
+      "raw_saved": true,
+      "producer_source_sha256": "3d6d07aff60cf03d94410b9b72d5b02c555005668e168b41dfaed526cb170a22",
+      "observed_until_minute": 180.0,
+      "requested_end_minute": 180.0,
+      "unknown_tail_minutes": 0.0,
+      "small_error": {
+        "type": null,
+        "message": null,
+        "underlying_category": null,
+        "classification": null
+      },
+      "native_segment_count": 223,
+      "decision_observation_count": 12,
+      "decision_times_minute": [
+        0.0,
+        15.0,
+        30.0,
+        45.0,
+        60.0,
+        75.0,
+        90.0,
+        105.0,
+        120.0,
+        135.0,
+        150.0,
+        165.0
+      ],
+      "nonempty_pending_decision_times": [],
+      "maximum_gap_between_saved_pending_observation_opportunities_minutes": 15.0,
+      "unobserved_pending_state_intervals": [
+        [
+          0.0,
+          15.0
+        ],
+        [
+          15.0,
+          30.0
+        ],
+        [
+          30.0,
+          45.0
+        ],
+        [
+          45.0,
+          60.0
+        ],
+        [
+          60.0,
+          75.0
+        ],
+        [
+          75.0,
+          90.0
+        ],
+        [
+          90.0,
+          105.0
+        ],
+        [
+          105.0,
+          120.0
+        ],
+        [
+          120.0,
+          135.0
+        ],
+        [
+          135.0,
+          150.0
+        ],
+        [
+          150.0,
+          165.0
+        ],
+        [
+          165.0,
+          180.0
+        ]
+      ],
+      "terminal_pending_coverage": "actual_saved_terminal_start_pending",
+      "pending_observations": [],
+      "observed_future_start_count": 0,
+      "observed_ready_before_started_count": 0,
+      "observed_actual_positive_while_future_start_count": 0,
+      "no_observed_invalid_clock_is_not_proof_no_path_touch": true,
+      "producer_files_sha256": {
+        "RESULT.json": "c696c7684ab54264cf95e12d6dcbc7b5567707f8b7a4a480a39d2b992709778e",
+        "trajectory.json.gz": "93b51489d251ff495e050e7e16c856e566b05c110aba8c445bf72a5f424a9983",
+        "BINDINGS.json": "edbd3fbacc1f5f9e80645b60238ec03c99ae6ac27b3606adaf46a92b14f290bd"
+      },
+      "producer_files_unchanged": true,
+      "raw_result_sha_matches": true
+    },
+    {
+      "run": "dev01_dev_tower_90",
+      "evidence_role": "new_actual_V30_attempt",
+      "status": "completed",
+      "producer": "b89c72c6033e4f77892d710f24e735439bfc1be6",
+      "actual_episode_attempts": 1,
+      "raw_saved": true,
+      "producer_source_sha256": "3d6d07aff60cf03d94410b9b72d5b02c555005668e168b41dfaed526cb170a22",
+      "observed_until_minute": 90.0,
+      "requested_end_minute": 90.0,
+      "unknown_tail_minutes": 0.0,
+      "small_error": {
+        "type": null,
+        "message": null,
+        "underlying_category": null,
+        "classification": null
+      },
+      "native_segment_count": 91,
+      "decision_observation_count": 6,
+      "decision_times_minute": [
+        0.0,
+        15.0,
+        30.0,
+        45.0,
+        60.0,
+        75.0
+      ],
+      "nonempty_pending_decision_times": [],
+      "maximum_gap_between_saved_pending_observation_opportunities_minutes": 15.0,
+      "unobserved_pending_state_intervals": [
+        [
+          0.0,
+          15.0
+        ],
+        [
+          15.0,
+          30.0
+        ],
+        [
+          30.0,
+          45.0
+        ],
+        [
+          45.0,
+          60.0
+        ],
+        [
+          60.0,
+          75.0
+        ],
+        [
+          75.0,
+          90.0
+        ]
+      ],
+      "terminal_pending_coverage": "actual_saved_terminal_start_pending",
+      "pending_observations": [],
+      "observed_future_start_count": 0,
+      "observed_ready_before_started_count": 0,
+      "observed_actual_positive_while_future_start_count": 0,
+      "no_observed_invalid_clock_is_not_proof_no_path_touch": true,
+      "producer_files_sha256": {
+        "RESULT.json": "ed344451bd57f702692cdeb8a386010c23eeba2b3756c9c2f31fb118bc1c7e14",
+        "trajectory.json.gz": "91f32009740ba033caf586ac31d22eba979dfc11a64cdd0a075d98afc7fe8baa",
+        "BINDINGS.json": "edbd3fbacc1f5f9e80645b60238ec03c99ae6ac27b3606adaf46a92b14f290bd"
+      },
+      "producer_files_unchanged": true,
+      "raw_result_sha_matches": true
+    },
+    {
+      "run": "n01_b01_L1_grid_normal_C",
+      "evidence_role": "new_actual_V30_attempt",
+      "status": "completed",
+      "producer": "155f27da7461ca4361f803b36ce42a4f74f40477",
+      "actual_episode_attempts": 1,
+      "raw_saved": true,
+      "producer_source_sha256": "5e710713375039bb42f99fa064ea2878a3a34aafe47a063b6b23c406f44c748f",
+      "observed_until_minute": 180.0,
+      "requested_end_minute": 180.0,
+      "unknown_tail_minutes": 0.0,
+      "small_error": {
+        "type": null,
+        "message": null,
+        "underlying_category": null,
+        "classification": null
+      },
+      "native_segment_count": 182,
+      "decision_observation_count": 12,
+      "decision_times_minute": [
+        0.0,
+        15.0,
+        30.0,
+        45.0,
+        60.0,
+        75.0,
+        90.0,
+        105.0,
+        120.0,
+        135.0,
+        150.0,
+        165.0
+      ],
+      "nonempty_pending_decision_times": [],
+      "maximum_gap_between_saved_pending_observation_opportunities_minutes": 15.0,
+      "unobserved_pending_state_intervals": [
+        [
+          0.0,
+          15.0
+        ],
+        [
+          15.0,
+          30.0
+        ],
+        [
+          30.0,
+          45.0
+        ],
+        [
+          45.0,
+          60.0
+        ],
+        [
+          60.0,
+          75.0
+        ],
+        [
+          75.0,
+          90.0
+        ],
+        [
+          90.0,
+          105.0
+        ],
+        [
+          105.0,
+          120.0
+        ],
+        [
+          120.0,
+          135.0
+        ],
+        [
+          135.0,
+          150.0
+        ],
+        [
+          150.0,
+          165.0
+        ],
+        [
+          165.0,
+          180.0
+        ]
+      ],
+      "terminal_pending_coverage": "actual_saved_terminal_start_pending",
+      "pending_observations": [],
+      "observed_future_start_count": 0,
+      "observed_ready_before_started_count": 0,
+      "observed_actual_positive_while_future_start_count": 0,
+      "no_observed_invalid_clock_is_not_proof_no_path_touch": true,
+      "producer_files_sha256": {
+        "RESULT.json": "09c1c3be9f06fe79d6362d3eaf6f35f5fd1d76cd1735fdfd32084dec3a110b6a",
+        "trajectory.json.gz": "e98237be0942404c14ca903ec101c25f2384e7b15c33165145849590af59a6a5",
+        "BINDINGS.json": "7d8fac4bdc14a2487c1c2cdbb8ad99a45f57e19212957ba5b14aba232a6dce16"
+      },
+      "producer_files_unchanged": true,
+      "raw_result_sha_matches": true
+    },
+    {
+      "run": "n01_b01_L1_grid_normal_M",
+      "evidence_role": "new_actual_V30_attempt",
+      "status": "completed",
+      "producer": "155f27da7461ca4361f803b36ce42a4f74f40477",
+      "actual_episode_attempts": 1,
+      "raw_saved": true,
+      "producer_source_sha256": "5e710713375039bb42f99fa064ea2878a3a34aafe47a063b6b23c406f44c748f",
+      "observed_until_minute": 180.0,
+      "requested_end_minute": 180.0,
+      "unknown_tail_minutes": 0.0,
+      "small_error": {
+        "type": null,
+        "message": null,
+        "underlying_category": null,
+        "classification": null
+      },
+      "native_segment_count": 182,
+      "decision_observation_count": 12,
+      "decision_times_minute": [
+        0.0,
+        15.0,
+        30.0,
+        45.0,
+        60.0,
+        75.0,
+        90.0,
+        105.0,
+        120.0,
+        135.0,
+        150.0,
+        165.0
+      ],
+      "nonempty_pending_decision_times": [],
+      "maximum_gap_between_saved_pending_observation_opportunities_minutes": 15.0,
+      "unobserved_pending_state_intervals": [
+        [
+          0.0,
+          15.0
+        ],
+        [
+          15.0,
+          30.0
+        ],
+        [
+          30.0,
+          45.0
+        ],
+        [
+          45.0,
+          60.0
+        ],
+        [
+          60.0,
+          75.0
+        ],
+        [
+          75.0,
+          90.0
+        ],
+        [
+          90.0,
+          105.0
+        ],
+        [
+          105.0,
+          120.0
+        ],
+        [
+          120.0,
+          135.0
+        ],
+        [
+          135.0,
+          150.0
+        ],
+        [
+          150.0,
+          165.0
+        ],
+        [
+          165.0,
+          180.0
+        ]
+      ],
+      "terminal_pending_coverage": "actual_saved_terminal_start_pending",
+      "pending_observations": [],
+      "observed_future_start_count": 0,
+      "observed_ready_before_started_count": 0,
+      "observed_actual_positive_while_future_start_count": 0,
+      "no_observed_invalid_clock_is_not_proof_no_path_touch": true,
+      "producer_files_sha256": {
+        "RESULT.json": "e8ed032ea0477e932794b105945de67d1b0e6fdae09da394a15c5d73eb0be8f4",
+        "trajectory.json.gz": "af329e22566107c83ff513ac9bf30af6af9bee7ba88e9c5e886ace6a3d7930fd",
+        "BINDINGS.json": "7d8fac4bdc14a2487c1c2cdbb8ad99a45f57e19212957ba5b14aba232a6dce16"
+      },
+      "producer_files_unchanged": true,
+      "raw_result_sha_matches": true
+    },
+    {
+      "run": "n01_b02_L1_heat_pump_normal_C",
+      "evidence_role": "new_actual_V30_attempt",
+      "status": "completed",
+      "producer": "155f27da7461ca4361f803b36ce42a4f74f40477",
+      "actual_episode_attempts": 1,
+      "raw_saved": true,
+      "producer_source_sha256": "5e710713375039bb42f99fa064ea2878a3a34aafe47a063b6b23c406f44c748f",
+      "observed_until_minute": 180.0,
+      "requested_end_minute": 180.0,
+      "unknown_tail_minutes": 0.0,
+      "small_error": {
+        "type": null,
+        "message": null,
+        "underlying_category": null,
+        "classification": null
+      },
+      "native_segment_count": 13,
+      "decision_observation_count": 12,
+      "decision_times_minute": [
+        0.0,
+        15.0,
+        30.0,
+        45.0,
+        60.0,
+        75.0,
+        90.0,
+        105.0,
+        120.0,
+        135.0,
+        150.0,
+        165.0
+      ],
+      "nonempty_pending_decision_times": [],
+      "maximum_gap_between_saved_pending_observation_opportunities_minutes": 15.0,
+      "unobserved_pending_state_intervals": [
+        [
+          0.0,
+          15.0
+        ],
+        [
+          15.0,
+          30.0
+        ],
+        [
+          30.0,
+          45.0
+        ],
+        [
+          45.0,
+          60.0
+        ],
+        [
+          60.0,
+          75.0
+        ],
+        [
+          75.0,
+          90.0
+        ],
+        [
+          90.0,
+          105.0
+        ],
+        [
+          105.0,
+          120.0
+        ],
+        [
+          120.0,
+          135.0
+        ],
+        [
+          135.0,
+          150.0
+        ],
+        [
+          150.0,
+          165.0
+        ],
+        [
+          165.0,
+          180.0
+        ]
+      ],
+      "terminal_pending_coverage": "actual_saved_terminal_start_pending",
+      "pending_observations": [],
+      "observed_future_start_count": 0,
+      "observed_ready_before_started_count": 0,
+      "observed_actual_positive_while_future_start_count": 0,
+      "no_observed_invalid_clock_is_not_proof_no_path_touch": true,
+      "producer_files_sha256": {
+        "RESULT.json": "04bbc7a84106acc48f4815c338fe1dbf6c512e286c0262d083c667321acb454d",
+        "trajectory.json.gz": "6bcc20a5e0ff853e1ef6b151bfb70ca38986c4f09e3aa086bfb0c761999500c2",
+        "BINDINGS.json": "7d8fac4bdc14a2487c1c2cdbb8ad99a45f57e19212957ba5b14aba232a6dce16"
+      },
+      "producer_files_unchanged": true,
+      "raw_result_sha_matches": true
+    },
+    {
+      "run": "n01_b02_L1_heat_pump_normal_M",
+      "evidence_role": "new_actual_V30_attempt",
+      "status": "completed",
+      "producer": "155f27da7461ca4361f803b36ce42a4f74f40477",
+      "actual_episode_attempts": 1,
+      "raw_saved": true,
+      "producer_source_sha256": "5e710713375039bb42f99fa064ea2878a3a34aafe47a063b6b23c406f44c748f",
+      "observed_until_minute": 180.0,
+      "requested_end_minute": 180.0,
+      "unknown_tail_minutes": 0.0,
+      "small_error": {
+        "type": null,
+        "message": null,
+        "underlying_category": null,
+        "classification": null
+      },
+      "native_segment_count": 13,
+      "decision_observation_count": 12,
+      "decision_times_minute": [
+        0.0,
+        15.0,
+        30.0,
+        45.0,
+        60.0,
+        75.0,
+        90.0,
+        105.0,
+        120.0,
+        135.0,
+        150.0,
+        165.0
+      ],
+      "nonempty_pending_decision_times": [],
+      "maximum_gap_between_saved_pending_observation_opportunities_minutes": 15.0,
+      "unobserved_pending_state_intervals": [
+        [
+          0.0,
+          15.0
+        ],
+        [
+          15.0,
+          30.0
+        ],
+        [
+          30.0,
+          45.0
+        ],
+        [
+          45.0,
+          60.0
+        ],
+        [
+          60.0,
+          75.0
+        ],
+        [
+          75.0,
+          90.0
+        ],
+        [
+          90.0,
+          105.0
+        ],
+        [
+          105.0,
+          120.0
+        ],
+        [
+          120.0,
+          135.0
+        ],
+        [
+          135.0,
+          150.0
+        ],
+        [
+          150.0,
+          165.0
+        ],
+        [
+          165.0,
+          180.0
+        ]
+      ],
+      "terminal_pending_coverage": "actual_saved_terminal_start_pending",
+      "pending_observations": [],
+      "observed_future_start_count": 0,
+      "observed_ready_before_started_count": 0,
+      "observed_actual_positive_while_future_start_count": 0,
+      "no_observed_invalid_clock_is_not_proof_no_path_touch": true,
+      "producer_files_sha256": {
+        "RESULT.json": "780bddc3fc2c9ca9812e9917b900a43c6543e1ce889c88e5bebccce335c0bc50",
+        "trajectory.json.gz": "31afdcf14c75fbf171921fc8a56f43bdeb36f22bff69bc4b4efbcbfc84ba31a5",
+        "BINDINGS.json": "7d8fac4bdc14a2487c1c2cdbb8ad99a45f57e19212957ba5b14aba232a6dce16"
+      },
+      "producer_files_unchanged": true,
+      "raw_result_sha_matches": true
+    },
+    {
+      "run": "n01_b03_L2_tower_normal_C",
+      "evidence_role": "new_actual_V30_attempt",
+      "status": "completed",
+      "producer": "155f27da7461ca4361f803b36ce42a4f74f40477",
+      "actual_episode_attempts": 1,
+      "raw_saved": true,
+      "producer_source_sha256": "5e710713375039bb42f99fa064ea2878a3a34aafe47a063b6b23c406f44c748f",
+      "observed_until_minute": 180.0,
+      "requested_end_minute": 180.0,
+      "unknown_tail_minutes": 0.0,
+      "small_error": {
+        "type": null,
+        "message": null,
+        "underlying_category": null,
+        "classification": null
+      },
+      "native_segment_count": 183,
+      "decision_observation_count": 12,
+      "decision_times_minute": [
+        0.0,
+        15.0,
+        30.0,
+        45.0,
+        60.0,
+        75.0,
+        90.0,
+        105.0,
+        120.0,
+        135.0,
+        150.0,
+        165.0
+      ],
+      "nonempty_pending_decision_times": [],
+      "maximum_gap_between_saved_pending_observation_opportunities_minutes": 15.0,
+      "unobserved_pending_state_intervals": [
+        [
+          0.0,
+          15.0
+        ],
+        [
+          15.0,
+          30.0
+        ],
+        [
+          30.0,
+          45.0
+        ],
+        [
+          45.0,
+          60.0
+        ],
+        [
+          60.0,
+          75.0
+        ],
+        [
+          75.0,
+          90.0
+        ],
+        [
+          90.0,
+          105.0
+        ],
+        [
+          105.0,
+          120.0
+        ],
+        [
+          120.0,
+          135.0
+        ],
+        [
+          135.0,
+          150.0
+        ],
+        [
+          150.0,
+          165.0
+        ],
+        [
+          165.0,
+          180.0
+        ]
+      ],
+      "terminal_pending_coverage": "actual_saved_terminal_start_pending",
+      "pending_observations": [],
+      "observed_future_start_count": 0,
+      "observed_ready_before_started_count": 0,
+      "observed_actual_positive_while_future_start_count": 0,
+      "no_observed_invalid_clock_is_not_proof_no_path_touch": true,
+      "producer_files_sha256": {
+        "RESULT.json": "cb3939e0710f08cd41215d8f1219cf00cdebed094b27fb2086e36a72c99d1b76",
+        "trajectory.json.gz": "12ba44c99b8b82a2743fd5deab09779bfe16d16180fb0a4b000516f72fdc18d2",
+        "BINDINGS.json": "7d8fac4bdc14a2487c1c2cdbb8ad99a45f57e19212957ba5b14aba232a6dce16"
+      },
+      "producer_files_unchanged": true,
+      "raw_result_sha_matches": true
+    },
+    {
+      "run": "n01_b03_L2_tower_normal_M",
+      "evidence_role": "new_actual_V30_attempt",
+      "status": "completed",
+      "producer": "155f27da7461ca4361f803b36ce42a4f74f40477",
+      "actual_episode_attempts": 1,
+      "raw_saved": true,
+      "producer_source_sha256": "5e710713375039bb42f99fa064ea2878a3a34aafe47a063b6b23c406f44c748f",
+      "observed_until_minute": 180.0,
+      "requested_end_minute": 180.0,
+      "unknown_tail_minutes": 0.0,
+      "small_error": {
+        "type": null,
+        "message": null,
+        "underlying_category": null,
+        "classification": null
+      },
+      "native_segment_count": 185,
+      "decision_observation_count": 12,
+      "decision_times_minute": [
+        0.0,
+        15.0,
+        30.0,
+        45.0,
+        60.0,
+        75.0,
+        90.0,
+        105.0,
+        120.0,
+        135.0,
+        150.0,
+        165.0
+      ],
+      "nonempty_pending_decision_times": [],
+      "maximum_gap_between_saved_pending_observation_opportunities_minutes": 15.0,
+      "unobserved_pending_state_intervals": [
+        [
+          0.0,
+          15.0
+        ],
+        [
+          15.0,
+          30.0
+        ],
+        [
+          30.0,
+          45.0
+        ],
+        [
+          45.0,
+          60.0
+        ],
+        [
+          60.0,
+          75.0
+        ],
+        [
+          75.0,
+          90.0
+        ],
+        [
+          90.0,
+          105.0
+        ],
+        [
+          105.0,
+          120.0
+        ],
+        [
+          120.0,
+          135.0
+        ],
+        [
+          135.0,
+          150.0
+        ],
+        [
+          150.0,
+          165.0
+        ],
+        [
+          165.0,
+          180.0
+        ]
+      ],
+      "terminal_pending_coverage": "actual_saved_terminal_start_pending",
+      "pending_observations": [],
+      "observed_future_start_count": 0,
+      "observed_ready_before_started_count": 0,
+      "observed_actual_positive_while_future_start_count": 0,
+      "no_observed_invalid_clock_is_not_proof_no_path_touch": true,
+      "producer_files_sha256": {
+        "RESULT.json": "20c3a080cf2e0016e517302748ee7c34febd4a142e44e05f5ade110e5cce25b3",
+        "trajectory.json.gz": "77a6969380538887189359d790191fa969b96e869fea3bc92e6dbb55ef888a31",
+        "BINDINGS.json": "7d8fac4bdc14a2487c1c2cdbb8ad99a45f57e19212957ba5b14aba232a6dce16"
+      },
+      "producer_files_unchanged": true,
+      "raw_result_sha_matches": true
+    },
+    {
+      "run": "n01_b04_L2_chw_pump_normal_C",
+      "evidence_role": "new_actual_V30_attempt",
+      "status": "completed",
+      "producer": "155f27da7461ca4361f803b36ce42a4f74f40477",
+      "actual_episode_attempts": 1,
+      "raw_saved": true,
+      "producer_source_sha256": "5e710713375039bb42f99fa064ea2878a3a34aafe47a063b6b23c406f44c748f",
+      "observed_until_minute": 180.0,
+      "requested_end_minute": 180.0,
+      "unknown_tail_minutes": 0.0,
+      "small_error": {
+        "type": null,
+        "message": null,
+        "underlying_category": null,
+        "classification": null
+      },
+      "native_segment_count": 15,
+      "decision_observation_count": 12,
+      "decision_times_minute": [
+        0.0,
+        15.0,
+        30.0,
+        45.0,
+        60.0,
+        75.0,
+        90.0,
+        105.0,
+        120.0,
+        135.0,
+        150.0,
+        165.0
+      ],
+      "nonempty_pending_decision_times": [],
+      "maximum_gap_between_saved_pending_observation_opportunities_minutes": 15.0,
+      "unobserved_pending_state_intervals": [
+        [
+          0.0,
+          15.0
+        ],
+        [
+          15.0,
+          30.0
+        ],
+        [
+          30.0,
+          45.0
+        ],
+        [
+          45.0,
+          60.0
+        ],
+        [
+          60.0,
+          75.0
+        ],
+        [
+          75.0,
+          90.0
+        ],
+        [
+          90.0,
+          105.0
+        ],
+        [
+          105.0,
+          120.0
+        ],
+        [
+          120.0,
+          135.0
+        ],
+        [
+          135.0,
+          150.0
+        ],
+        [
+          150.0,
+          165.0
+        ],
+        [
+          165.0,
+          180.0
+        ]
+      ],
+      "terminal_pending_coverage": "actual_saved_terminal_start_pending",
+      "pending_observations": [],
+      "observed_future_start_count": 0,
+      "observed_ready_before_started_count": 0,
+      "observed_actual_positive_while_future_start_count": 0,
+      "no_observed_invalid_clock_is_not_proof_no_path_touch": true,
+      "producer_files_sha256": {
+        "RESULT.json": "dce85043f31eb7b7c5222b86ff5c0ace5b8f6c55a8468bb100634402f350551f",
+        "trajectory.json.gz": "71537824565ffef9d8832f35b83d858fca2bdbe58c00c664bcab7680487b4cc9",
+        "BINDINGS.json": "7d8fac4bdc14a2487c1c2cdbb8ad99a45f57e19212957ba5b14aba232a6dce16"
+      },
+      "producer_files_unchanged": true,
+      "raw_result_sha_matches": true
+    },
+    {
+      "run": "n01_b04_L2_chw_pump_normal_M",
+      "evidence_role": "new_actual_V30_attempt",
+      "status": "completed",
+      "producer": "155f27da7461ca4361f803b36ce42a4f74f40477",
+      "actual_episode_attempts": 1,
+      "raw_saved": true,
+      "producer_source_sha256": "5e710713375039bb42f99fa064ea2878a3a34aafe47a063b6b23c406f44c748f",
+      "observed_until_minute": 180.0,
+      "requested_end_minute": 180.0,
+      "unknown_tail_minutes": 0.0,
+      "small_error": {
+        "type": null,
+        "message": null,
+        "underlying_category": null,
+        "classification": null
+      },
+      "native_segment_count": 17,
+      "decision_observation_count": 12,
+      "decision_times_minute": [
+        0.0,
+        15.0,
+        30.0,
+        45.0,
+        60.0,
+        75.0,
+        90.0,
+        105.0,
+        120.0,
+        135.0,
+        150.0,
+        165.0
+      ],
+      "nonempty_pending_decision_times": [],
+      "maximum_gap_between_saved_pending_observation_opportunities_minutes": 15.0,
+      "unobserved_pending_state_intervals": [
+        [
+          0.0,
+          15.0
+        ],
+        [
+          15.0,
+          30.0
+        ],
+        [
+          30.0,
+          45.0
+        ],
+        [
+          45.0,
+          60.0
+        ],
+        [
+          60.0,
+          75.0
+        ],
+        [
+          75.0,
+          90.0
+        ],
+        [
+          90.0,
+          105.0
+        ],
+        [
+          105.0,
+          120.0
+        ],
+        [
+          120.0,
+          135.0
+        ],
+        [
+          135.0,
+          150.0
+        ],
+        [
+          150.0,
+          165.0
+        ],
+        [
+          165.0,
+          180.0
+        ]
+      ],
+      "terminal_pending_coverage": "actual_saved_terminal_start_pending",
+      "pending_observations": [],
+      "observed_future_start_count": 0,
+      "observed_ready_before_started_count": 0,
+      "observed_actual_positive_while_future_start_count": 0,
+      "no_observed_invalid_clock_is_not_proof_no_path_touch": true,
+      "producer_files_sha256": {
+        "RESULT.json": "2a8deb31a4d7219e7bb1618999d33c346a380512d2175ae3f04463d632ffa0fd",
+        "trajectory.json.gz": "53562a2108441be1f3b19ea2dc66b4cfbe95825dad61e200cb464fd60d7c4b7c",
+        "BINDINGS.json": "7d8fac4bdc14a2487c1c2cdbb8ad99a45f57e19212957ba5b14aba232a6dce16"
+      },
+      "producer_files_unchanged": true,
+      "raw_result_sha_matches": true
+    },
+    {
+      "run": "n01_b05_L3_ER_normal_C",
+      "evidence_role": "new_actual_V30_attempt",
+      "status": "completed",
+      "producer": "155f27da7461ca4361f803b36ce42a4f74f40477",
+      "actual_episode_attempts": 1,
+      "raw_saved": true,
+      "producer_source_sha256": "5e710713375039bb42f99fa064ea2878a3a34aafe47a063b6b23c406f44c748f",
+      "observed_until_minute": 180.0,
+      "requested_end_minute": 180.0,
+      "unknown_tail_minutes": 0.0,
+      "small_error": {
+        "type": null,
+        "message": null,
+        "underlying_category": null,
+        "classification": null
+      },
+      "native_segment_count": 26,
+      "decision_observation_count": 12,
+      "decision_times_minute": [
+        0.0,
+        15.0,
+        30.0,
+        45.0,
+        60.0,
+        75.0,
+        90.0,
+        105.0,
+        120.0,
+        135.0,
+        150.0,
+        165.0
+      ],
+      "nonempty_pending_decision_times": [],
+      "maximum_gap_between_saved_pending_observation_opportunities_minutes": 15.0,
+      "unobserved_pending_state_intervals": [
+        [
+          0.0,
+          15.0
+        ],
+        [
+          15.0,
+          30.0
+        ],
+        [
+          30.0,
+          45.0
+        ],
+        [
+          45.0,
+          60.0
+        ],
+        [
+          60.0,
+          75.0
+        ],
+        [
+          75.0,
+          90.0
+        ],
+        [
+          90.0,
+          105.0
+        ],
+        [
+          105.0,
+          120.0
+        ],
+        [
+          120.0,
+          135.0
+        ],
+        [
+          135.0,
+          150.0
+        ],
+        [
+          150.0,
+          165.0
+        ],
+        [
+          165.0,
+          180.0
+        ]
+      ],
+      "terminal_pending_coverage": "actual_saved_terminal_start_pending",
+      "pending_observations": [],
+      "observed_future_start_count": 0,
+      "observed_ready_before_started_count": 0,
+      "observed_actual_positive_while_future_start_count": 0,
+      "no_observed_invalid_clock_is_not_proof_no_path_touch": true,
+      "producer_files_sha256": {
+        "RESULT.json": "2452ad94da45dbe4ea5cb076b5502a3c80bb8e4551cd0bc9ee242535b52ce15d",
+        "trajectory.json.gz": "228254098b90e8c5aa69e8830493cf6539c9dbf56c6786f8ae721ad4910f4b52",
+        "BINDINGS.json": "7d8fac4bdc14a2487c1c2cdbb8ad99a45f57e19212957ba5b14aba232a6dce16"
+      },
+      "producer_files_unchanged": true,
+      "raw_result_sha_matches": true
+    },
+    {
+      "run": "n01_b05_L3_ER_normal_M",
+      "evidence_role": "new_actual_V30_attempt",
+      "status": "completed",
+      "producer": "155f27da7461ca4361f803b36ce42a4f74f40477",
+      "actual_episode_attempts": 1,
+      "raw_saved": true,
+      "producer_source_sha256": "5e710713375039bb42f99fa064ea2878a3a34aafe47a063b6b23c406f44c748f",
+      "observed_until_minute": 180.0,
+      "requested_end_minute": 180.0,
+      "unknown_tail_minutes": 0.0,
+      "small_error": {
+        "type": null,
+        "message": null,
+        "underlying_category": null,
+        "classification": null
+      },
+      "native_segment_count": 19,
+      "decision_observation_count": 12,
+      "decision_times_minute": [
+        0.0,
+        15.0,
+        30.0,
+        45.0,
+        60.0,
+        75.0,
+        90.0,
+        105.0,
+        120.0,
+        135.0,
+        150.0,
+        165.0
+      ],
+      "nonempty_pending_decision_times": [],
+      "maximum_gap_between_saved_pending_observation_opportunities_minutes": 15.0,
+      "unobserved_pending_state_intervals": [
+        [
+          0.0,
+          15.0
+        ],
+        [
+          15.0,
+          30.0
+        ],
+        [
+          30.0,
+          45.0
+        ],
+        [
+          45.0,
+          60.0
+        ],
+        [
+          60.0,
+          75.0
+        ],
+        [
+          75.0,
+          90.0
+        ],
+        [
+          90.0,
+          105.0
+        ],
+        [
+          105.0,
+          120.0
+        ],
+        [
+          120.0,
+          135.0
+        ],
+        [
+          135.0,
+          150.0
+        ],
+        [
+          150.0,
+          165.0
+        ],
+        [
+          165.0,
+          180.0
+        ]
+      ],
+      "terminal_pending_coverage": "actual_saved_terminal_start_pending",
+      "pending_observations": [],
+      "observed_future_start_count": 0,
+      "observed_ready_before_started_count": 0,
+      "observed_actual_positive_while_future_start_count": 0,
+      "no_observed_invalid_clock_is_not_proof_no_path_touch": true,
+      "producer_files_sha256": {
+        "RESULT.json": "3800fe344b9eb81c258100de03dd84298b2089affb309bbc13aa9d368bf7c7c4",
+        "trajectory.json.gz": "59eb61e9c54878992a9347251b4edf0564b45eac3f675969e83fc4282a2345dc",
+        "BINDINGS.json": "7d8fac4bdc14a2487c1c2cdbb8ad99a45f57e19212957ba5b14aba232a6dce16"
+      },
+      "producer_files_unchanged": true,
+      "raw_result_sha_matches": true
+    },
+    {
+      "run": "n01_b06_L3_OR_normal_C",
+      "evidence_role": "new_actual_V30_attempt",
+      "status": "completed",
+      "producer": "155f27da7461ca4361f803b36ce42a4f74f40477",
+      "actual_episode_attempts": 1,
+      "raw_saved": true,
+      "producer_source_sha256": "5e710713375039bb42f99fa064ea2878a3a34aafe47a063b6b23c406f44c748f",
+      "observed_until_minute": 180.0,
+      "requested_end_minute": 180.0,
+      "unknown_tail_minutes": 0.0,
+      "small_error": {
+        "type": null,
+        "message": null,
+        "underlying_category": null,
+        "classification": null
+      },
+      "native_segment_count": 15,
+      "decision_observation_count": 12,
+      "decision_times_minute": [
+        0.0,
+        15.0,
+        30.0,
+        45.0,
+        60.0,
+        75.0,
+        90.0,
+        105.0,
+        120.0,
+        135.0,
+        150.0,
+        165.0
+      ],
+      "nonempty_pending_decision_times": [],
+      "maximum_gap_between_saved_pending_observation_opportunities_minutes": 15.0,
+      "unobserved_pending_state_intervals": [
+        [
+          0.0,
+          15.0
+        ],
+        [
+          15.0,
+          30.0
+        ],
+        [
+          30.0,
+          45.0
+        ],
+        [
+          45.0,
+          60.0
+        ],
+        [
+          60.0,
+          75.0
+        ],
+        [
+          75.0,
+          90.0
+        ],
+        [
+          90.0,
+          105.0
+        ],
+        [
+          105.0,
+          120.0
+        ],
+        [
+          120.0,
+          135.0
+        ],
+        [
+          135.0,
+          150.0
+        ],
+        [
+          150.0,
+          165.0
+        ],
+        [
+          165.0,
+          180.0
+        ]
+      ],
+      "terminal_pending_coverage": "actual_saved_terminal_start_pending",
+      "pending_observations": [],
+      "observed_future_start_count": 0,
+      "observed_ready_before_started_count": 0,
+      "observed_actual_positive_while_future_start_count": 0,
+      "no_observed_invalid_clock_is_not_proof_no_path_touch": true,
+      "producer_files_sha256": {
+        "RESULT.json": "5b644ed1e32bf37a00488ae19cc1e669eae3381522cab0987e8e93a3f7a17ca5",
+        "trajectory.json.gz": "8211ad61d18424fa67d18c2d980fb4216529d8674940a8813d0f8280a1da09a9",
+        "BINDINGS.json": "7d8fac4bdc14a2487c1c2cdbb8ad99a45f57e19212957ba5b14aba232a6dce16"
+      },
+      "producer_files_unchanged": true,
+      "raw_result_sha_matches": true
+    },
+    {
+      "run": "n01_b06_L3_OR_normal_M",
+      "evidence_role": "new_actual_V30_attempt",
+      "status": "completed",
+      "producer": "155f27da7461ca4361f803b36ce42a4f74f40477",
+      "actual_episode_attempts": 1,
+      "raw_saved": true,
+      "producer_source_sha256": "5e710713375039bb42f99fa064ea2878a3a34aafe47a063b6b23c406f44c748f",
+      "observed_until_minute": 180.0,
+      "requested_end_minute": 180.0,
+      "unknown_tail_minutes": 0.0,
+      "small_error": {
+        "type": null,
+        "message": null,
+        "underlying_category": null,
+        "classification": null
+      },
+      "native_segment_count": 19,
+      "decision_observation_count": 12,
+      "decision_times_minute": [
+        0.0,
+        15.0,
+        30.0,
+        45.0,
+        60.0,
+        75.0,
+        90.0,
+        105.0,
+        120.0,
+        135.0,
+        150.0,
+        165.0
+      ],
+      "nonempty_pending_decision_times": [],
+      "maximum_gap_between_saved_pending_observation_opportunities_minutes": 15.0,
+      "unobserved_pending_state_intervals": [
+        [
+          0.0,
+          15.0
+        ],
+        [
+          15.0,
+          30.0
+        ],
+        [
+          30.0,
+          45.0
+        ],
+        [
+          45.0,
+          60.0
+        ],
+        [
+          60.0,
+          75.0
+        ],
+        [
+          75.0,
+          90.0
+        ],
+        [
+          90.0,
+          105.0
+        ],
+        [
+          105.0,
+          120.0
+        ],
+        [
+          120.0,
+          135.0
+        ],
+        [
+          135.0,
+          150.0
+        ],
+        [
+          150.0,
+          165.0
+        ],
+        [
+          165.0,
+          180.0
+        ]
+      ],
+      "terminal_pending_coverage": "actual_saved_terminal_start_pending",
+      "pending_observations": [],
+      "observed_future_start_count": 0,
+      "observed_ready_before_started_count": 0,
+      "observed_actual_positive_while_future_start_count": 0,
+      "no_observed_invalid_clock_is_not_proof_no_path_touch": true,
+      "producer_files_sha256": {
+        "RESULT.json": "03c16bc76a54a0254269da38a146480c3566a17093758d8292aa6cb1ac8b7706",
+        "trajectory.json.gz": "2906e89ae6e8f2c7b9388be1b950c4631771e77a05c15158d7295f5ff93d44f5",
+        "BINDINGS.json": "7d8fac4bdc14a2487c1c2cdbb8ad99a45f57e19212957ba5b14aba232a6dce16"
+      },
+      "producer_files_unchanged": true,
+      "raw_result_sha_matches": true
+    },
+    {
+      "run": "n01_b07_L4_GT_ER_normal_C",
+      "evidence_role": "new_actual_V30_attempt",
+      "status": "completed",
+      "producer": "155f27da7461ca4361f803b36ce42a4f74f40477",
+      "actual_episode_attempts": 1,
+      "raw_saved": true,
+      "producer_source_sha256": "5e710713375039bb42f99fa064ea2878a3a34aafe47a063b6b23c406f44c748f",
+      "observed_until_minute": 180.0,
+      "requested_end_minute": 180.0,
+      "unknown_tail_minutes": 0.0,
+      "small_error": {
+        "type": null,
+        "message": null,
+        "underlying_category": null,
+        "classification": null
+      },
+      "native_segment_count": 40,
+      "decision_observation_count": 12,
+      "decision_times_minute": [
+        0.0,
+        15.0,
+        30.0,
+        45.0,
+        60.0,
+        75.0,
+        90.0,
+        105.0,
+        120.0,
+        135.0,
+        150.0,
+        165.0
+      ],
+      "nonempty_pending_decision_times": [
+        75.0
+      ],
+      "maximum_gap_between_saved_pending_observation_opportunities_minutes": 15.0,
+      "unobserved_pending_state_intervals": [
+        [
+          0.0,
+          15.0
+        ],
+        [
+          15.0,
+          30.0
+        ],
+        [
+          30.0,
+          45.0
+        ],
+        [
+          45.0,
+          60.0
+        ],
+        [
+          60.0,
+          75.0
+        ],
+        [
+          75.0,
+          90.0
+        ],
+        [
+          90.0,
+          105.0
+        ],
+        [
+          105.0,
+          120.0
+        ],
+        [
+          120.0,
+          135.0
+        ],
+        [
+          135.0,
+          150.0
+        ],
+        [
+          150.0,
+          165.0
+        ],
+        [
+          165.0,
+          180.0
+        ]
+      ],
+      "terminal_pending_coverage": "actual_saved_terminal_start_pending",
+      "pending_observations": [
+        {
+          "source": "decisions/5/operating_readiness/pending_starts",
+          "time_minute": 75.0,
+          "device": "GT_1",
+          "started_minute": 75.0,
+          "ready_minute": 85.0,
+          "requested_kW": 125.98323210000001,
+          "actual_powered_progress_minutes": null,
+          "actual_output_kW": 0.0,
+          "future_start": false,
+          "ready_before_started": false,
+          "ready_before_observation": false,
+          "actual_positive_while_start_future": false,
+          "saved_pending_keys": [
+            "started",
+            "ready",
+            "requested"
+          ]
+        }
+      ],
+      "observed_future_start_count": 0,
+      "observed_ready_before_started_count": 0,
+      "observed_actual_positive_while_future_start_count": 0,
+      "no_observed_invalid_clock_is_not_proof_no_path_touch": true,
+      "producer_files_sha256": {
+        "RESULT.json": "3612d09f48845170228fc93db04a165fbd5de745fb03d28916f9a9b12c20713e",
+        "trajectory.json.gz": "e12366dfee63ddf0632ac3a4610565bc9e14978f7af4a388c4a3f509977aa79e",
+        "BINDINGS.json": "7d8fac4bdc14a2487c1c2cdbb8ad99a45f57e19212957ba5b14aba232a6dce16"
+      },
+      "producer_files_unchanged": true,
+      "raw_result_sha_matches": true
+    },
+    {
+      "run": "n01_b07_L4_GT_ER_normal_M",
+      "evidence_role": "new_actual_V30_attempt",
+      "status": "completed",
+      "producer": "155f27da7461ca4361f803b36ce42a4f74f40477",
+      "actual_episode_attempts": 1,
+      "raw_saved": true,
+      "producer_source_sha256": "5e710713375039bb42f99fa064ea2878a3a34aafe47a063b6b23c406f44c748f",
+      "observed_until_minute": 180.0,
+      "requested_end_minute": 180.0,
+      "unknown_tail_minutes": 0.0,
+      "small_error": {
+        "type": null,
+        "message": null,
+        "underlying_category": null,
+        "classification": null
+      },
+      "native_segment_count": 17,
+      "decision_observation_count": 12,
+      "decision_times_minute": [
+        0.0,
+        15.0,
+        30.0,
+        45.0,
+        60.0,
+        75.0,
+        90.0,
+        105.0,
+        120.0,
+        135.0,
+        150.0,
+        165.0
+      ],
+      "nonempty_pending_decision_times": [],
+      "maximum_gap_between_saved_pending_observation_opportunities_minutes": 15.0,
+      "unobserved_pending_state_intervals": [
+        [
+          0.0,
+          15.0
+        ],
+        [
+          15.0,
+          30.0
+        ],
+        [
+          30.0,
+          45.0
+        ],
+        [
+          45.0,
+          60.0
+        ],
+        [
+          60.0,
+          75.0
+        ],
+        [
+          75.0,
+          90.0
+        ],
+        [
+          90.0,
+          105.0
+        ],
+        [
+          105.0,
+          120.0
+        ],
+        [
+          120.0,
+          135.0
+        ],
+        [
+          135.0,
+          150.0
+        ],
+        [
+          150.0,
+          165.0
+        ],
+        [
+          165.0,
+          180.0
+        ]
+      ],
+      "terminal_pending_coverage": "actual_saved_terminal_start_pending",
+      "pending_observations": [],
+      "observed_future_start_count": 0,
+      "observed_ready_before_started_count": 0,
+      "observed_actual_positive_while_future_start_count": 0,
+      "no_observed_invalid_clock_is_not_proof_no_path_touch": true,
+      "producer_files_sha256": {
+        "RESULT.json": "4d545b86397a6a881277573a948ec96f3b98fe9be7cdfb69dce15dc67706c49d",
+        "trajectory.json.gz": "5438424959e38bdfaee4f71b7d7a06420e86b4320ed15dcf5a8759fe7b392116",
+        "BINDINGS.json": "7d8fac4bdc14a2487c1c2cdbb8ad99a45f57e19212957ba5b14aba232a6dce16"
+      },
+      "producer_files_unchanged": true,
+      "raw_result_sha_matches": true
+    },
+    {
+      "run": "n01_b08_L4_GRID_OR_normal_C",
+      "evidence_role": "new_actual_V30_attempt",
+      "status": "completed",
+      "producer": "155f27da7461ca4361f803b36ce42a4f74f40477",
+      "actual_episode_attempts": 1,
+      "raw_saved": true,
+      "producer_source_sha256": "5e710713375039bb42f99fa064ea2878a3a34aafe47a063b6b23c406f44c748f",
+      "observed_until_minute": 180.0,
+      "requested_end_minute": 180.0,
+      "unknown_tail_minutes": 0.0,
+      "small_error": {
+        "type": null,
+        "message": null,
+        "underlying_category": null,
+        "classification": null
+      },
+      "native_segment_count": 182,
+      "decision_observation_count": 12,
+      "decision_times_minute": [
+        0.0,
+        15.0,
+        30.0,
+        45.0,
+        60.0,
+        75.0,
+        90.0,
+        105.0,
+        120.0,
+        135.0,
+        150.0,
+        165.0
+      ],
+      "nonempty_pending_decision_times": [],
+      "maximum_gap_between_saved_pending_observation_opportunities_minutes": 15.0,
+      "unobserved_pending_state_intervals": [
+        [
+          0.0,
+          15.0
+        ],
+        [
+          15.0,
+          30.0
+        ],
+        [
+          30.0,
+          45.0
+        ],
+        [
+          45.0,
+          60.0
+        ],
+        [
+          60.0,
+          75.0
+        ],
+        [
+          75.0,
+          90.0
+        ],
+        [
+          90.0,
+          105.0
+        ],
+        [
+          105.0,
+          120.0
+        ],
+        [
+          120.0,
+          135.0
+        ],
+        [
+          135.0,
+          150.0
+        ],
+        [
+          150.0,
+          165.0
+        ],
+        [
+          165.0,
+          180.0
+        ]
+      ],
+      "terminal_pending_coverage": "actual_saved_terminal_start_pending",
+      "pending_observations": [],
+      "observed_future_start_count": 0,
+      "observed_ready_before_started_count": 0,
+      "observed_actual_positive_while_future_start_count": 0,
+      "no_observed_invalid_clock_is_not_proof_no_path_touch": true,
+      "producer_files_sha256": {
+        "RESULT.json": "5b3cf87a6d51265ca93d436f05a92bdf9c93c45aeec1e5f0efc5eb7519b091d6",
+        "trajectory.json.gz": "b4d7a1fc16af9def7bfea888b40a82308e2b2dee90d784f04a1ddb756fb81e22",
+        "BINDINGS.json": "7d8fac4bdc14a2487c1c2cdbb8ad99a45f57e19212957ba5b14aba232a6dce16"
+      },
+      "producer_files_unchanged": true,
+      "raw_result_sha_matches": true
+    },
+    {
+      "run": "n01_b08_L4_GRID_OR_normal_M",
+      "evidence_role": "new_actual_V30_attempt",
+      "status": "completed",
+      "producer": "155f27da7461ca4361f803b36ce42a4f74f40477",
+      "actual_episode_attempts": 1,
+      "raw_saved": true,
+      "producer_source_sha256": "5e710713375039bb42f99fa064ea2878a3a34aafe47a063b6b23c406f44c748f",
+      "observed_until_minute": 180.0,
+      "requested_end_minute": 180.0,
+      "unknown_tail_minutes": 0.0,
+      "small_error": {
+        "type": null,
+        "message": null,
+        "underlying_category": null,
+        "classification": null
+      },
+      "native_segment_count": 182,
+      "decision_observation_count": 12,
+      "decision_times_minute": [
+        0.0,
+        15.0,
+        30.0,
+        45.0,
+        60.0,
+        75.0,
+        90.0,
+        105.0,
+        120.0,
+        135.0,
+        150.0,
+        165.0
+      ],
+      "nonempty_pending_decision_times": [],
+      "maximum_gap_between_saved_pending_observation_opportunities_minutes": 15.0,
+      "unobserved_pending_state_intervals": [
+        [
+          0.0,
+          15.0
+        ],
+        [
+          15.0,
+          30.0
+        ],
+        [
+          30.0,
+          45.0
+        ],
+        [
+          45.0,
+          60.0
+        ],
+        [
+          60.0,
+          75.0
+        ],
+        [
+          75.0,
+          90.0
+        ],
+        [
+          90.0,
+          105.0
+        ],
+        [
+          105.0,
+          120.0
+        ],
+        [
+          120.0,
+          135.0
+        ],
+        [
+          135.0,
+          150.0
+        ],
+        [
+          150.0,
+          165.0
+        ],
+        [
+          165.0,
+          180.0
+        ]
+      ],
+      "terminal_pending_coverage": "actual_saved_terminal_start_pending",
+      "pending_observations": [],
+      "observed_future_start_count": 0,
+      "observed_ready_before_started_count": 0,
+      "observed_actual_positive_while_future_start_count": 0,
+      "no_observed_invalid_clock_is_not_proof_no_path_touch": true,
+      "producer_files_sha256": {
+        "RESULT.json": "6657868c1f0d813e176646069709d54e65fd1214c30a653da9c98b0d1c24707c",
+        "trajectory.json.gz": "0989f042d6394647017964a79c91cae4360a59e3fc0794cebd3962ae52484ad5",
+        "BINDINGS.json": "7d8fac4bdc14a2487c1c2cdbb8ad99a45f57e19212957ba5b14aba232a6dce16"
+      },
+      "producer_files_unchanged": true,
+      "raw_result_sha_matches": true
+    },
+    {
+      "run": "r01_normal_R_off",
+      "evidence_role": "new_actual_V30_attempt",
+      "status": "failed_unknown",
+      "actual_episode_attempts": 1,
+      "producer": "d6df0c003253d942f436c254e4490ab9ce564b24",
+      "producer_source_sha256": "344a55cd85e7127bbe62ee3b2c75f5c4b97b5d548748af99356384bc5328e1d6",
+      "raw_saved": false,
+      "requested_end_minute": 180.0,
+      "observed_until_minute": null,
+      "unknown_tail_minutes": 180.0,
+      "small_error": {
+        "type": "KeyError",
+        "message": "'strategy_fallback'",
+        "underlying_category": null
+      },
+      "terminal_pending_coverage": "trajectory_missing_pending_history_unknown",
+      "no_observed_invalid_clock_is_not_proof_no_path_touch": true,
+      "available_producer_files_sha256": {
+        "RESULT.json": "2e38b966f72f08a5ebb2622f3674014d29dac054f15c36695fa795a014e7e054",
+        "BINDINGS.json": "7afe1c6cdbf9810cd92541b465ed42075ea859a98558e6067da3d3a653ef5987",
+        "ACTUAL_PREFIX.jsonl": "6730cbec9c27c25390a45adcbaa6e52e92c61ed025ae6324ef16fcb155c2cc26",
+        "INVOCATION.json": "42c0be918299b68c7ba85ac1438baf79126120465136df62f55e5331f878aa80"
+      },
+      "missing_trajectory_is_not_zero_execution_or_zero_tail": true
+    },
+    {
+      "run": "r02_grid_R_off",
+      "evidence_role": "new_actual_V30_attempt",
+      "status": "completed",
+      "producer": "7e1a5320d98027ec9c5897e778a8b63b01ed41bb",
+      "actual_episode_attempts": 1,
+      "raw_saved": true,
+      "producer_source_sha256": "cdea107ef1dfd5a5cce1d6d1c0419f97af602c4224279871dc68a88ed6f06f39",
+      "observed_until_minute": 180.0,
+      "requested_end_minute": 180.0,
+      "unknown_tail_minutes": 0.0,
+      "small_error": {
+        "type": null,
+        "message": null,
+        "underlying_category": null,
+        "classification": null
+      },
+      "native_segment_count": 260,
+      "decision_observation_count": 12,
+      "decision_times_minute": [
+        0.0,
+        15.0,
+        30.0,
+        45.0,
+        60.0,
+        75.0,
+        90.0,
+        105.0,
+        120.0,
+        135.0,
+        150.0,
+        165.0
+      ],
+      "nonempty_pending_decision_times": [],
+      "maximum_gap_between_saved_pending_observation_opportunities_minutes": 15.0,
+      "unobserved_pending_state_intervals": [
+        [
+          0.0,
+          15.0
+        ],
+        [
+          15.0,
+          30.0
+        ],
+        [
+          30.0,
+          45.0
+        ],
+        [
+          45.0,
+          60.0
+        ],
+        [
+          60.0,
+          75.0
+        ],
+        [
+          75.0,
+          90.0
+        ],
+        [
+          90.0,
+          105.0
+        ],
+        [
+          105.0,
+          120.0
+        ],
+        [
+          120.0,
+          135.0
+        ],
+        [
+          135.0,
+          150.0
+        ],
+        [
+          150.0,
+          165.0
+        ],
+        [
+          165.0,
+          180.0
+        ]
+      ],
+      "terminal_pending_coverage": "actual_saved_terminal_start_pending",
+      "pending_observations": [],
+      "observed_future_start_count": 0,
+      "observed_ready_before_started_count": 0,
+      "observed_actual_positive_while_future_start_count": 0,
+      "no_observed_invalid_clock_is_not_proof_no_path_touch": true,
+      "producer_files_sha256": {
+        "RESULT.json": "aa0eb00f6945eeca5bcbc57ea037543b7ef04facfa2bf32359fcab3171e7108b",
+        "trajectory.json.gz": "dcb86fe8dd66fcc3f2f2534e52b12805087b52509782f4c5024132d1ad815740",
+        "BINDINGS.json": "4e8565772390258e00db60561cc75923cfd5d5f91676b13df8bdbb1e03560c67"
+      },
+      "producer_files_unchanged": true,
+      "raw_result_sha_matches": true
+    },
+    {
+      "run": "r02_normal_R_off",
+      "evidence_role": "new_actual_V30_attempt",
+      "status": "completed",
+      "producer": "7e1a5320d98027ec9c5897e778a8b63b01ed41bb",
+      "actual_episode_attempts": 1,
+      "raw_saved": true,
+      "producer_source_sha256": "cdea107ef1dfd5a5cce1d6d1c0419f97af602c4224279871dc68a88ed6f06f39",
+      "observed_until_minute": 180.0,
+      "requested_end_minute": 180.0,
+      "unknown_tail_minutes": 0.0,
+      "small_error": {
+        "type": null,
+        "message": null,
+        "underlying_category": null,
+        "classification": null
+      },
+      "native_segment_count": 187,
+      "decision_observation_count": 12,
+      "decision_times_minute": [
+        0.0,
+        15.0,
+        30.0,
+        45.0,
+        60.0,
+        75.0,
+        90.0,
+        105.0,
+        120.0,
+        135.0,
+        150.0,
+        165.0
+      ],
+      "nonempty_pending_decision_times": [],
+      "maximum_gap_between_saved_pending_observation_opportunities_minutes": 15.0,
+      "unobserved_pending_state_intervals": [
+        [
+          0.0,
+          15.0
+        ],
+        [
+          15.0,
+          30.0
+        ],
+        [
+          30.0,
+          45.0
+        ],
+        [
+          45.0,
+          60.0
+        ],
+        [
+          60.0,
+          75.0
+        ],
+        [
+          75.0,
+          90.0
+        ],
+        [
+          90.0,
+          105.0
+        ],
+        [
+          105.0,
+          120.0
+        ],
+        [
+          120.0,
+          135.0
+        ],
+        [
+          135.0,
+          150.0
+        ],
+        [
+          150.0,
+          165.0
+        ],
+        [
+          165.0,
+          180.0
+        ]
+      ],
+      "terminal_pending_coverage": "actual_saved_terminal_start_pending",
+      "pending_observations": [],
+      "observed_future_start_count": 0,
+      "observed_ready_before_started_count": 0,
+      "observed_actual_positive_while_future_start_count": 0,
+      "no_observed_invalid_clock_is_not_proof_no_path_touch": true,
+      "producer_files_sha256": {
+        "RESULT.json": "0f0ff88ca19fa4f1459f84f295c065d3075cba9427d556abe6492fc67db449bd",
+        "trajectory.json.gz": "5d069de83f0cfdd2efc4b06ec8105f71ec63074b7eb4ce440bf345c9cb9cc36d",
+        "BINDINGS.json": "4e8565772390258e00db60561cc75923cfd5d5f91676b13df8bdbb1e03560c67"
+      },
+      "producer_files_unchanged": true,
+      "raw_result_sha_matches": true
+    },
+    {
+      "run": "m29s01_01_grid_winter_normal_C_H1_current_service_bridge",
+      "evidence_role": "historical_V29_producer",
+      "status": "completed",
+      "producer": "8926dfb7a1632d98b71b0692c6e37df9f4a61855",
+      "actual_episode_attempts": 1,
+      "raw_saved": true,
+      "producer_source_sha256": "ec2a2e8cd42470a70e87fdb5f8a8921374f409cb88267d7b45798b32eb6ee72d",
+      "observed_until_minute": 360.0,
+      "requested_end_minute": 360.0,
+      "unknown_tail_minutes": 0.0,
+      "small_error": {
+        "type": null,
+        "message": null,
+        "underlying_category": null,
+        "classification": null
+      },
+      "native_segment_count": 362,
+      "decision_observation_count": 24,
+      "decision_times_minute": [
+        0.0,
+        15.0,
+        30.0,
+        45.0,
+        60.0,
+        75.0,
+        90.0,
+        105.0,
+        120.0,
+        135.0,
+        150.0,
+        165.0,
+        180.0,
+        195.0,
+        210.0,
+        225.0,
+        240.0,
+        255.0,
+        270.0,
+        285.0,
+        300.0,
+        315.0,
+        330.0,
+        345.0
+      ],
+      "nonempty_pending_decision_times": [],
+      "maximum_gap_between_saved_pending_observation_opportunities_minutes": 15.0,
+      "unobserved_pending_state_intervals": [
+        [
+          0.0,
+          15.0
+        ],
+        [
+          15.0,
+          30.0
+        ],
+        [
+          30.0,
+          45.0
+        ],
+        [
+          45.0,
+          60.0
+        ],
+        [
+          60.0,
+          75.0
+        ],
+        [
+          75.0,
+          90.0
+        ],
+        [
+          90.0,
+          105.0
+        ],
+        [
+          105.0,
+          120.0
+        ],
+        [
+          120.0,
+          135.0
+        ],
+        [
+          135.0,
+          150.0
+        ],
+        [
+          150.0,
+          165.0
+        ],
+        [
+          165.0,
+          180.0
+        ],
+        [
+          180.0,
+          195.0
+        ],
+        [
+          195.0,
+          210.0
+        ],
+        [
+          210.0,
+          225.0
+        ],
+        [
+          225.0,
+          240.0
+        ],
+        [
+          240.0,
+          255.0
+        ],
+        [
+          255.0,
+          270.0
+        ],
+        [
+          270.0,
+          285.0
+        ],
+        [
+          285.0,
+          300.0
+        ],
+        [
+          300.0,
+          315.0
+        ],
+        [
+          315.0,
+          330.0
+        ],
+        [
+          330.0,
+          345.0
+        ],
+        [
+          345.0,
+          360.0
+        ]
+      ],
+      "terminal_pending_coverage": "not_saved_historical_unknown",
+      "pending_observations": [],
+      "observed_future_start_count": 0,
+      "observed_ready_before_started_count": 0,
+      "observed_actual_positive_while_future_start_count": 0,
+      "no_observed_invalid_clock_is_not_proof_no_path_touch": true,
+      "producer_files_sha256": {
+        "RESULT.json": "1b33ee2ee3e13c85352e9312b409973af79220d06affb002ba67d1860636c5d4",
+        "trajectory.json.gz": "0106c657b0604453202aff1b1e8d53faa4833e6a0aebec420cc27d3c8fda65f1",
+        "BINDINGS.json": "8a13691503ef972a2fa60aec6034c08ba2fc555692930e2a557eeee34aa6d405"
+      },
+      "producer_files_unchanged": true,
+      "raw_result_sha_matches": true
+    },
+    {
+      "run": "m29s01_02_grid_winter_fault_C_H1_current_service_bridge",
+      "evidence_role": "historical_V29_producer",
+      "status": "completed",
+      "producer": "8926dfb7a1632d98b71b0692c6e37df9f4a61855",
+      "actual_episode_attempts": 1,
+      "raw_saved": true,
+      "producer_source_sha256": "ec2a2e8cd42470a70e87fdb5f8a8921374f409cb88267d7b45798b32eb6ee72d",
+      "observed_until_minute": 360.0,
+      "requested_end_minute": 360.0,
+      "unknown_tail_minutes": 0.0,
+      "small_error": {
+        "type": null,
+        "message": null,
+        "underlying_category": null,
+        "classification": null
+      },
+      "native_segment_count": 403,
+      "decision_observation_count": 24,
+      "decision_times_minute": [
+        0.0,
+        15.0,
+        30.0,
+        45.0,
+        60.0,
+        75.0,
+        90.0,
+        105.0,
+        120.0,
+        135.0,
+        150.0,
+        165.0,
+        180.0,
+        195.0,
+        210.0,
+        225.0,
+        240.0,
+        255.0,
+        270.0,
+        285.0,
+        300.0,
+        315.0,
+        330.0,
+        345.0
+      ],
+      "nonempty_pending_decision_times": [],
+      "maximum_gap_between_saved_pending_observation_opportunities_minutes": 15.0,
+      "unobserved_pending_state_intervals": [
+        [
+          0.0,
+          15.0
+        ],
+        [
+          15.0,
+          30.0
+        ],
+        [
+          30.0,
+          45.0
+        ],
+        [
+          45.0,
+          60.0
+        ],
+        [
+          60.0,
+          75.0
+        ],
+        [
+          75.0,
+          90.0
+        ],
+        [
+          90.0,
+          105.0
+        ],
+        [
+          105.0,
+          120.0
+        ],
+        [
+          120.0,
+          135.0
+        ],
+        [
+          135.0,
+          150.0
+        ],
+        [
+          150.0,
+          165.0
+        ],
+        [
+          165.0,
+          180.0
+        ],
+        [
+          180.0,
+          195.0
+        ],
+        [
+          195.0,
+          210.0
+        ],
+        [
+          210.0,
+          225.0
+        ],
+        [
+          225.0,
+          240.0
+        ],
+        [
+          240.0,
+          255.0
+        ],
+        [
+          255.0,
+          270.0
+        ],
+        [
+          270.0,
+          285.0
+        ],
+        [
+          285.0,
+          300.0
+        ],
+        [
+          300.0,
+          315.0
+        ],
+        [
+          315.0,
+          330.0
+        ],
+        [
+          330.0,
+          345.0
+        ],
+        [
+          345.0,
+          360.0
+        ]
+      ],
+      "terminal_pending_coverage": "not_saved_historical_unknown",
+      "pending_observations": [],
+      "observed_future_start_count": 0,
+      "observed_ready_before_started_count": 0,
+      "observed_actual_positive_while_future_start_count": 0,
+      "no_observed_invalid_clock_is_not_proof_no_path_touch": true,
+      "producer_files_sha256": {
+        "RESULT.json": "2b3532d85ffccb754d5d3ae9bd3dbb20ae4be675e34cec067594b9ebee70bb04",
+        "trajectory.json.gz": "1f6f4213fd5e8cb2d750df6f1391aa5c2644bcb4ecf44589fbeec2d7b4cf29f8",
+        "BINDINGS.json": "8a13691503ef972a2fa60aec6034c08ba2fc555692930e2a557eeee34aa6d405"
+      },
+      "producer_files_unchanged": true,
+      "raw_result_sha_matches": true
+    },
+    {
+      "run": "m29s01_03_tower_summer_normal_C_H2_current_service_bridge",
+      "evidence_role": "historical_V29_producer",
+      "status": "completed",
+      "producer": "8926dfb7a1632d98b71b0692c6e37df9f4a61855",
+      "actual_episode_attempts": 1,
+      "raw_saved": true,
+      "producer_source_sha256": "ec2a2e8cd42470a70e87fdb5f8a8921374f409cb88267d7b45798b32eb6ee72d",
+      "observed_until_minute": 90.0,
+      "requested_end_minute": 90.0,
+      "unknown_tail_minutes": 0.0,
+      "small_error": {
+        "type": null,
+        "message": null,
+        "underlying_category": null,
+        "classification": null
+      },
+      "native_segment_count": 90,
+      "decision_observation_count": 6,
+      "decision_times_minute": [
+        0.0,
+        15.0,
+        30.0,
+        45.0,
+        60.0,
+        75.0
+      ],
+      "nonempty_pending_decision_times": [],
+      "maximum_gap_between_saved_pending_observation_opportunities_minutes": 15.0,
+      "unobserved_pending_state_intervals": [
+        [
+          0.0,
+          15.0
+        ],
+        [
+          15.0,
+          30.0
+        ],
+        [
+          30.0,
+          45.0
+        ],
+        [
+          45.0,
+          60.0
+        ],
+        [
+          60.0,
+          75.0
+        ],
+        [
+          75.0,
+          90.0
+        ]
+      ],
+      "terminal_pending_coverage": "not_saved_historical_unknown",
+      "pending_observations": [],
+      "observed_future_start_count": 0,
+      "observed_ready_before_started_count": 0,
+      "observed_actual_positive_while_future_start_count": 0,
+      "no_observed_invalid_clock_is_not_proof_no_path_touch": true,
+      "producer_files_sha256": {
+        "RESULT.json": "29128a7677fbd26bd1b1f7cd00f0983c9d46ce7f225649e07e7edc1676fe90b0",
+        "trajectory.json.gz": "93dd43d1bc8d43dd86fa05fb6dac469563d332ab605efc7f58681c8b842a5f6f",
+        "BINDINGS.json": "8a13691503ef972a2fa60aec6034c08ba2fc555692930e2a557eeee34aa6d405"
+      },
+      "producer_files_unchanged": true,
+      "raw_result_sha_matches": true
+    },
+    {
+      "run": "m29s01_04_tower_summer_fault_C_H2_current_service_bridge",
+      "evidence_role": "historical_V29_producer",
+      "status": "completed",
+      "producer": "8926dfb7a1632d98b71b0692c6e37df9f4a61855",
+      "actual_episode_attempts": 1,
+      "raw_saved": true,
+      "producer_source_sha256": "ec2a2e8cd42470a70e87fdb5f8a8921374f409cb88267d7b45798b32eb6ee72d",
+      "observed_until_minute": 90.0,
+      "requested_end_minute": 90.0,
+      "unknown_tail_minutes": 0.0,
+      "small_error": {
+        "type": null,
+        "message": null,
+        "underlying_category": null,
+        "classification": null
+      },
+      "native_segment_count": 91,
+      "decision_observation_count": 6,
+      "decision_times_minute": [
+        0.0,
+        15.0,
+        30.0,
+        45.0,
+        60.0,
+        75.0
+      ],
+      "nonempty_pending_decision_times": [],
+      "maximum_gap_between_saved_pending_observation_opportunities_minutes": 15.0,
+      "unobserved_pending_state_intervals": [
+        [
+          0.0,
+          15.0
+        ],
+        [
+          15.0,
+          30.0
+        ],
+        [
+          30.0,
+          45.0
+        ],
+        [
+          45.0,
+          60.0
+        ],
+        [
+          60.0,
+          75.0
+        ],
+        [
+          75.0,
+          90.0
+        ]
+      ],
+      "terminal_pending_coverage": "not_saved_historical_unknown",
+      "pending_observations": [],
+      "observed_future_start_count": 0,
+      "observed_ready_before_started_count": 0,
+      "observed_actual_positive_while_future_start_count": 0,
+      "no_observed_invalid_clock_is_not_proof_no_path_touch": true,
+      "producer_files_sha256": {
+        "RESULT.json": "b613e0d609c6b461b38e636726b6ff65da5935c0350f69835472370916a367e1",
+        "trajectory.json.gz": "76d039da5c09bf6193eceb328a22c8de209cb98548d3d6383fd15cc0c6559f8f",
+        "BINDINGS.json": "8a13691503ef972a2fa60aec6034c08ba2fc555692930e2a557eeee34aa6d405"
+      },
+      "producer_files_unchanged": true,
+      "raw_result_sha_matches": true
+    },
+    {
+      "run": "m29s01_05_heat_pump_winter_normal_C_H0_current_service_bridge",
+      "evidence_role": "historical_V29_producer",
+      "status": "completed",
+      "producer": "8926dfb7a1632d98b71b0692c6e37df9f4a61855",
+      "actual_episode_attempts": 1,
+      "raw_saved": true,
+      "producer_source_sha256": "ec2a2e8cd42470a70e87fdb5f8a8921374f409cb88267d7b45798b32eb6ee72d",
+      "observed_until_minute": 180.0,
+      "requested_end_minute": 180.0,
+      "unknown_tail_minutes": 0.0,
+      "small_error": {
+        "type": null,
+        "message": null,
+        "underlying_category": null,
+        "classification": null
+      },
+      "native_segment_count": 15,
+      "decision_observation_count": 12,
+      "decision_times_minute": [
+        0.0,
+        15.0,
+        30.0,
+        45.0,
+        60.0,
+        75.0,
+        90.0,
+        105.0,
+        120.0,
+        135.0,
+        150.0,
+        165.0
+      ],
+      "nonempty_pending_decision_times": [],
+      "maximum_gap_between_saved_pending_observation_opportunities_minutes": 15.0,
+      "unobserved_pending_state_intervals": [
+        [
+          0.0,
+          15.0
+        ],
+        [
+          15.0,
+          30.0
+        ],
+        [
+          30.0,
+          45.0
+        ],
+        [
+          45.0,
+          60.0
+        ],
+        [
+          60.0,
+          75.0
+        ],
+        [
+          75.0,
+          90.0
+        ],
+        [
+          90.0,
+          105.0
+        ],
+        [
+          105.0,
+          120.0
+        ],
+        [
+          120.0,
+          135.0
+        ],
+        [
+          135.0,
+          150.0
+        ],
+        [
+          150.0,
+          165.0
+        ],
+        [
+          165.0,
+          180.0
+        ]
+      ],
+      "terminal_pending_coverage": "not_saved_historical_unknown",
+      "pending_observations": [],
+      "observed_future_start_count": 0,
+      "observed_ready_before_started_count": 0,
+      "observed_actual_positive_while_future_start_count": 0,
+      "no_observed_invalid_clock_is_not_proof_no_path_touch": true,
+      "producer_files_sha256": {
+        "RESULT.json": "af652da80090ff34314660c9d80fac785456b2da1ba8ebeb1ade708860d9c4d8",
+        "trajectory.json.gz": "3b7b06fe52bed949a9c644e73ef2cfd73eca680c0efc675662547b4b85ff8584",
+        "BINDINGS.json": "8a13691503ef972a2fa60aec6034c08ba2fc555692930e2a557eeee34aa6d405"
+      },
+      "producer_files_unchanged": true,
+      "raw_result_sha_matches": true
+    },
+    {
+      "run": "m29s01_06_heat_pump_winter_fault_C_H0_current_service_bridge",
+      "evidence_role": "historical_V29_producer",
+      "status": "completed",
+      "producer": "8926dfb7a1632d98b71b0692c6e37df9f4a61855",
+      "actual_episode_attempts": 1,
+      "raw_saved": true,
+      "producer_source_sha256": "ec2a2e8cd42470a70e87fdb5f8a8921374f409cb88267d7b45798b32eb6ee72d",
+      "observed_until_minute": 180.0,
+      "requested_end_minute": 180.0,
+      "unknown_tail_minutes": 0.0,
+      "small_error": {
+        "type": null,
+        "message": null,
+        "underlying_category": null,
+        "classification": null
+      },
+      "native_segment_count": 15,
+      "decision_observation_count": 12,
+      "decision_times_minute": [
+        0.0,
+        15.0,
+        30.0,
+        45.0,
+        60.0,
+        75.0,
+        90.0,
+        105.0,
+        120.0,
+        135.0,
+        150.0,
+        165.0
+      ],
+      "nonempty_pending_decision_times": [],
+      "maximum_gap_between_saved_pending_observation_opportunities_minutes": 15.0,
+      "unobserved_pending_state_intervals": [
+        [
+          0.0,
+          15.0
+        ],
+        [
+          15.0,
+          30.0
+        ],
+        [
+          30.0,
+          45.0
+        ],
+        [
+          45.0,
+          60.0
+        ],
+        [
+          60.0,
+          75.0
+        ],
+        [
+          75.0,
+          90.0
+        ],
+        [
+          90.0,
+          105.0
+        ],
+        [
+          105.0,
+          120.0
+        ],
+        [
+          120.0,
+          135.0
+        ],
+        [
+          135.0,
+          150.0
+        ],
+        [
+          150.0,
+          165.0
+        ],
+        [
+          165.0,
+          180.0
+        ]
+      ],
+      "terminal_pending_coverage": "not_saved_historical_unknown",
+      "pending_observations": [],
+      "observed_future_start_count": 0,
+      "observed_ready_before_started_count": 0,
+      "observed_actual_positive_while_future_start_count": 0,
+      "no_observed_invalid_clock_is_not_proof_no_path_touch": true,
+      "producer_files_sha256": {
+        "RESULT.json": "c2a09a6ff2003669db36643fc73e002c76581c478f2fef3dc387cae0bdd5aff7",
+        "trajectory.json.gz": "d49b193ea6165a8af448dfcc8abd0424216d2ff3974b632270a5c3663ef2d880",
+        "BINDINGS.json": "8a13691503ef972a2fa60aec6034c08ba2fc555692930e2a557eeee34aa6d405"
+      },
+      "producer_files_unchanged": true,
+      "raw_result_sha_matches": true
+    },
+    {
+      "run": "m29s01_07_grid_winter_M_normal_M_H1_current_service_bridge",
+      "evidence_role": "historical_V29_producer",
+      "status": "completed",
+      "producer": "8926dfb7a1632d98b71b0692c6e37df9f4a61855",
+      "actual_episode_attempts": 1,
+      "raw_saved": true,
+      "producer_source_sha256": "ec2a2e8cd42470a70e87fdb5f8a8921374f409cb88267d7b45798b32eb6ee72d",
+      "observed_until_minute": 360.0,
+      "requested_end_minute": 360.0,
+      "unknown_tail_minutes": 0.0,
+      "small_error": {
+        "type": null,
+        "message": null,
+        "underlying_category": null,
+        "classification": null
+      },
+      "native_segment_count": 362,
+      "decision_observation_count": 24,
+      "decision_times_minute": [
+        0.0,
+        15.0,
+        30.0,
+        45.0,
+        60.0,
+        75.0,
+        90.0,
+        105.0,
+        120.0,
+        135.0,
+        150.0,
+        165.0,
+        180.0,
+        195.0,
+        210.0,
+        225.0,
+        240.0,
+        255.0,
+        270.0,
+        285.0,
+        300.0,
+        315.0,
+        330.0,
+        345.0
+      ],
+      "nonempty_pending_decision_times": [],
+      "maximum_gap_between_saved_pending_observation_opportunities_minutes": 15.0,
+      "unobserved_pending_state_intervals": [
+        [
+          0.0,
+          15.0
+        ],
+        [
+          15.0,
+          30.0
+        ],
+        [
+          30.0,
+          45.0
+        ],
+        [
+          45.0,
+          60.0
+        ],
+        [
+          60.0,
+          75.0
+        ],
+        [
+          75.0,
+          90.0
+        ],
+        [
+          90.0,
+          105.0
+        ],
+        [
+          105.0,
+          120.0
+        ],
+        [
+          120.0,
+          135.0
+        ],
+        [
+          135.0,
+          150.0
+        ],
+        [
+          150.0,
+          165.0
+        ],
+        [
+          165.0,
+          180.0
+        ],
+        [
+          180.0,
+          195.0
+        ],
+        [
+          195.0,
+          210.0
+        ],
+        [
+          210.0,
+          225.0
+        ],
+        [
+          225.0,
+          240.0
+        ],
+        [
+          240.0,
+          255.0
+        ],
+        [
+          255.0,
+          270.0
+        ],
+        [
+          270.0,
+          285.0
+        ],
+        [
+          285.0,
+          300.0
+        ],
+        [
+          300.0,
+          315.0
+        ],
+        [
+          315.0,
+          330.0
+        ],
+        [
+          330.0,
+          345.0
+        ],
+        [
+          345.0,
+          360.0
+        ]
+      ],
+      "terminal_pending_coverage": "not_saved_historical_unknown",
+      "pending_observations": [],
+      "observed_future_start_count": 0,
+      "observed_ready_before_started_count": 0,
+      "observed_actual_positive_while_future_start_count": 0,
+      "no_observed_invalid_clock_is_not_proof_no_path_touch": true,
+      "producer_files_sha256": {
+        "RESULT.json": "7cddd00d69cb2e3642855f62cf6faeaedfb5fe4f78cdf9e239438d26e555f43a",
+        "trajectory.json.gz": "e96cd0c3f6be729ba7c38bced30b946ab902365e343a2d7626ff9327b0dc84be",
+        "BINDINGS.json": "8a13691503ef972a2fa60aec6034c08ba2fc555692930e2a557eeee34aa6d405"
+      },
+      "producer_files_unchanged": true,
+      "raw_result_sha_matches": true
+    }
+  ],
+  "arithmetic_counterexample": {
+    "evidence_role": "synthetic_arithmetic_counterexample_not_simulation",
+    "time_minute": 90.0,
+    "last_actual_off_minute": 75.0,
+    "minimum_down_minutes": 30.0,
+    "eligible_actual_start_minute": 105.0,
+    "requested_kW": 126.83648,
+    "original_ramp_kW_per_hour": 900.0,
+    "original_start_delay_minutes": 10.0,
+    "accumulated_actual_powered_minutes": 0.0,
+    "required_powered_minutes": 10.0,
+    "old_ready_minute": 100.0,
+    "corrected_projected_ready_minute": 115.0,
+    "projection_is_not_actual_supply": true,
+    "actual_start_power_or_future_service_not_invented": true,
+    "algebra": "new-old=max(0, eligible_started-current_time), with the same remaining actual powered requirement"
+  },
+  "scope_and_limits": [
+    "Only saved decision.operating_readiness.pending_starts and saved terminal GT starts are directly inspected.",
+    "Native intervals retain actual output/state but do not retain the entire pending-start dictionary at every _clamp call.",
+    "A completed trajectory and no sampled invalid clock cannot prove the path was never touched between saved observations.",
+    "Historical V29 terminal snapshots lack live pending queues; their absence is unknown, not an empty queue.",
+    "Failed d01 b02 M retains actual observed prefix to90 and unknown90-minute tail; no zero supply or cost tail inferred."
+  ],
+  "minimal_fix_review": {
+    "change": "Both powered-start ready projections use max(self.time,pending.started)+remaining_actual_powered_minutes.",
+    "original_capacity_delay_ramp_minimum_off_and_power_thresholds_unchanged": true,
+    "does_not_relax_actual_powered_progress_gate": true,
+    "does_not_allow_future_eligible_start_early": true,
+    "actual_completion_requires_existing_inherited_eligibility_and_actual_powered_supply": true,
+    "further_validation_required": "Root real implementation RED/GREEN, source-version rebinding, affected full common-core replay."
+  },
+  "comparison_rebind_recommendation": {
+    "rerun_all32_C_M_under_one_corrected_core": true,
+    "old_N01_D01_and_failed_source_preserved": true,
+    "no_selective_favorable_case_replacement": true,
+    "previous_new_attempts_at_inventory": 25,
+    "additional_full_common_core_attempts": 32,
+    "new_total_if_no_extra_attempts": 57,
+    "budget_authorization_is_parent_task_scope_not_this_reviewer": true
+  }
+}

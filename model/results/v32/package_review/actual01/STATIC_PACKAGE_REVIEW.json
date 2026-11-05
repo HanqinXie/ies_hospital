@@ -1,0 +1,210 @@
+{
+  "schema": "hospital_ies.v32.static_package_source_review.v1",
+  "created_utc": "2026-10-27T15:20:15.772481+00:00",
+  "status": "passed",
+  "checks": [
+    {
+      "check": "default_exact_six_four_reuse_two_new",
+      "passed": true,
+      "path": "review_driver_tools/review_packet.py",
+      "line": 23,
+      "detail": "Audit validator requires completed6/reused4/new2 and clean final matrix."
+    },
+    {
+      "check": "default_only_restore_and_saved_audit_subprocesses",
+      "passed": true,
+      "path": "review_driver_tools/review_packet.py",
+      "line": 53,
+      "detail": "Default commands are restore_all.py and audit_v32.py. No initialization, episode or solve invocation; planner.audit_plan is arithmetic."
+    },
+    {
+      "check": "default_full_native_restore_without_prefix",
+      "passed": true,
+      "path": "review_driver_tools/review_packet.py",
+      "line": 56,
+      "detail": "Full restore count/map SHA/status verified before six-record audit; matching originals reused and changed originals refused by frozen restore tool."
+    },
+    {
+      "check": "default_frozen_source_and_input_gate",
+      "passed": true,
+      "path": "review_driver_tools/review_packet.py",
+      "line": 48,
+      "detail": "873 current and old864 subset unchanged; original36 input dictionary equality plus project hashes before and after review."
+    },
+    {
+      "check": "default_external_fresh_D_E_output",
+      "passed": true,
+      "path": "review_driver_tools/review_packet.py",
+      "line": 42,
+      "detail": "Default rejects existing/in-packet output and Windows packet/output outside D/E before restoration."
+    },
+    {
+      "check": "root_reports_explicitly_staged",
+      "passed": true,
+      "path": "package_build/stage_support.py",
+      "line": 55,
+      "detail": "Initial missing root-copy issue was corrected by owner; default README/report/table links now have explicit copy operations."
+    },
+    {
+      "check": "delivery_tools_READY_whitelist_exactly_verified",
+      "passed": true,
+      "path": "package_build/stage_support.py",
+      "line": 46,
+      "detail": {
+        "required_files": 40,
+        "listed_without_READY": 39,
+        "mismatches": [],
+        "root_copy_excludes_CAS": true
+      }
+    },
+    {
+      "check": "raw_clone_CAS_cache_exclusions",
+      "passed": true,
+      "path": "package_build/stage_support.py",
+      "line": 23,
+      "detail": "Raw isolated clone excluded with omission SHA receipt; CAS excluded by whitelist and explicit guard. Complete native runs are represented only by the single container/map."
+    },
+    {
+      "check": "root_required_files_and_clean_six_preZIP_gate",
+      "passed": true,
+      "path": "package_build/build_zip.py",
+      "line": 18,
+      "detail": "Root README/report/table/deltas/planactual/commands/container/map/portable registration required; final02 clean6=4+2 gate before packaging."
+    },
+    {
+      "check": "manifest_all_member_SHA_length_CRC_and_decimal_cap",
+      "passed": true,
+      "path": "package_build/build_zip.py",
+      "line": 36,
+      "detail": "Builder enforces hard decimal100MB, SHA/length for every other member, exact set and CRC; manifest intentionally excludes itself to avoid self-reference."
+    },
+    {
+      "check": "portable_registration_remaps_only_historical_paths",
+      "passed": true,
+      "path": "package_build/stage_support.py",
+      "line": 32,
+      "detail": "New paths already runs/<new>; historical n02/d02 basenames retained. Five reference_files remain root-data-relative and CASE/RESULT original absolute metadata are preserved."
+    },
+    {
+      "check": "README_information_storage_and_solver_scope_disclosed",
+      "passed": true,
+      "path": "package_build/README_PACKET.md",
+      "line": 5,
+      "detail": "README separates offline information, actual common allocation, no full continuous/storage/unmet replay, unknown total init solve count, required gzip runtime, and explicit opt-in fresh simulation command."
+    },
+    {
+      "check": "audit_only_arithmetic_plan_check",
+      "passed": true,
+      "path": "evaluation/reference_checks.py",
+      "line": 265,
+      "detail": "Readonly reference validation invokes the frozen residual/objective arithmetic, not solve_reference/milp."
+    }
+  ],
+  "passed_count": 13,
+  "blocking_findings": [],
+  "corrected_findings": [
+    "stage_support initially did not copy root README/report/table; owner added explicit root copies",
+    "stage_support initially walked tools despite READY; owner added SHA/length-checked whitelist"
+  ],
+  "tests": {
+    "count": 6,
+    "exit_code": 0,
+    "passed": true,
+    "original_and_tested_copy_equal": true,
+    "copies": [
+      {
+        "path": "review_packet.py",
+        "original_sha256": "3d1721e28ac247cc3c5efa4138345f3b86de5812f2443e4ef99701e75a269f6b",
+        "tested_copy_sha256": "3d1721e28ac247cc3c5efa4138345f3b86de5812f2443e4ef99701e75a269f6b"
+      },
+      {
+        "path": "test_review_packet.py",
+        "original_sha256": "4b1167f0c3b6024547f7e930edd38e3ba60fba6c289c566ded860f779476245c",
+        "tested_copy_sha256": "4b1167f0c3b6024547f7e930edd38e3ba60fba6c289c566ded860f779476245c"
+      }
+    ],
+    "command_record": "package_review/steps/SYNTHETIC_ENTRY_TESTS01/COMMAND.json",
+    "scope": "Synthetic guards only; copied under review scope because one test creates its temporary fixture beside the module."
+  },
+  "source_bindings": [
+    {
+      "path": "review_driver_tools/review_packet.py",
+      "bytes": 6046,
+      "sha256": "3d1721e28ac247cc3c5efa4138345f3b86de5812f2443e4ef99701e75a269f6b"
+    },
+    {
+      "path": "review_driver_tools/test_review_packet.py",
+      "bytes": 2292,
+      "sha256": "4b1167f0c3b6024547f7e930edd38e3ba60fba6c289c566ded860f779476245c"
+    },
+    {
+      "path": "package_build/stage_support.py",
+      "bytes": 5031,
+      "sha256": "e50d249b6b86837efc4237ee702349448abf9bf88eb028d4cbbce750ebbb7e5e"
+    },
+    {
+      "path": "package_build/build_zip.py",
+      "bytes": 3685,
+      "sha256": "f63b2d4040c8f4ff94af7274abc33105a05cc329b9c4a68e40247b860830fefe"
+    },
+    {
+      "path": "package_build/extract_and_review.py",
+      "bytes": 2542,
+      "sha256": "505829566db21113173c4e4d17a12b9f4cf5ab27b29f99b5a9269dcfa2c81c53"
+    },
+    {
+      "path": "package_build/write_report.py",
+      "bytes": 11081,
+      "sha256": "60d64dce345966af62f7c6a7c4a4ed0ec07359b9a98ed545df58bc4df9481fe2"
+    },
+    {
+      "path": "package_build/README_PACKET.md",
+      "bytes": 5285,
+      "sha256": "9aaad5f8dbd0427d411fb68de6eff2172fb943ce2c45e3759c314f9153cb4e2f"
+    },
+    {
+      "path": "evaluation/audit_v32.py",
+      "bytes": 22549,
+      "sha256": "18607ddb0183951c7143c7d68ed7c9bf3d1d5046efc967a0f52f583284a61efa"
+    },
+    {
+      "path": "evaluation/reference_checks.py",
+      "bytes": 21636,
+      "sha256": "3d9d67867580f33dc8ccc1d652fce19dbeb6d40d222f5d73eb191de5f1bfa032"
+    },
+    {
+      "path": "delivery_tools/restore_all.py",
+      "bytes": 6387,
+      "sha256": "fb67d9d53abb842dbf614813c65abf79a07b5b7b8f50162d1ab2f982c2b91e85"
+    },
+    {
+      "path": "delivery_tools/transport_common.py",
+      "bytes": 8092,
+      "sha256": "f7fd0c5541213fd3ce91ef038152627fa41e08f9765c90b32c86bd3d4fee5e88"
+    }
+  ],
+  "delivery_READY_sha256": "d99f4e9a221b5e1f2a3a000275f1207cc0243e09bb8197273e8e83b4e1a16675",
+  "support_metadata_snapshot": {
+    "kept_files": 248,
+    "kept_bytes": 9936103,
+    "omitted_files": 283,
+    "omitted_bytes": 168760672,
+    "meaning": "Before actual stage. Metadata inventory only, no native run scans."
+  },
+  "not_executed": [
+    "stage_support",
+    "build_zip",
+    "extract_and_review",
+    "native restoration",
+    "six-record scientific audit",
+    "hospital model",
+    "optimizer"
+  ],
+  "new_models": 0,
+  "new_solver_calls": 0,
+  "scope": "Source/static and synthetic entry guards. Final staged-member SHA, ZIP cap/CRC and independent full restored audit remain root acceptance gates.",
+  "known_nonblocking_limits": [
+    "Manifest is not an independent signature/authenticity mechanism. Default checks its SHA entries; ZIP builder additionally checks declared lengths and exact member set.",
+    "extract_and_review helper should be invoked with explicit D/E paths as documented; default public review_packet enforces packet/output D/E itself."
+  ]
+}

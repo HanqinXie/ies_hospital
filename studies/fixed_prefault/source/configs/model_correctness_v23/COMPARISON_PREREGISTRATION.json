@@ -1,0 +1,64 @@
+﻿{
+    "schema":  "hospital_ies.comparison_preregistration.v23.v1",
+    "registered_utc":  "2026-10-25T11:17:09Z",
+    "status":  "frozen_before_new_formal_strategy_results",
+    "scope":  "Offline result interpretation only; no physical, solver, clinical or control thresholds changed",
+    "recovery":  {
+                     "contract_id":  "hospital_ies.delivered_service_recovery.v23.v1",
+                     "confirmation_seconds":  {
+                                                  "e":  0,
+                                                  "h":  60,
+                                                  "c":  60
+                                              },
+                     "rationale":  "Electric restoration confirms on any positive actual service interval; heat/cold require a fixed 60 seconds of continuous original non-material-shortage delivery to reject instantaneous finite-energy bridges. This fixed reporting time is independent of event/integration step and the old 1s equivalence band, and is not a temperature or clinical standard.",
+                     "thermal_diagnostic_confirmation_seconds":  [
+                                                                     30,
+                                                                     120
+                                                                 ],
+                     "candidate":  "Actual end of original material shortage, retained even when unconfirmed",
+                     "confirmation":  "Candidate plus carrier-specific uninterrupted confirmation horizon",
+                     "union":  "Union of overlapping affected-carrier pending confirmation windows; electricity retains zero confirmation delay",
+                     "statuses":  [
+                                      "not_applicable",
+                                      "observed",
+                                      "censored",
+                                      "missing"
+                                  ],
+                     "terminal_candidate_status":  "observed_unconfirmed",
+                     "reference_not_applicable_sentinel":  "not_applicable",
+                     "clocks":  [
+                                    "absolute actual service-resumption candidate and subsequent confirmation",
+                                    "signed offset and nonnegative wait after external fault clearance",
+                                    "signed offset and nonnegative wait after actual applicable source restoration"
+                                ]
+                 },
+    "comparison":  {
+                       "contract_id":  "hospital_ies.engineering_comparison.v23.v1",
+                       "tier_order":  [
+                                          "critical_service",
+                                          "general_service",
+                                          "terminal_inventory_and_cost",
+                                          "conditional_emissions"
+                                      ],
+                       "ENS_absolute_kWh":  0.001,
+                       "ENS_requested_fraction":  1E-06,
+                       "ENS_scope":  "Every priority/carrier separately; retain original raw values and six critical cells without carrier compensation",
+                       "time_band_minutes":  0.016666666666666666,
+                       "engineering_interruption_count_band":  0,
+                       "money_absolute_USD2001":  0.01,
+                       "CO2_absolute_kg":  0.01,
+                       "inventory_absolute_kWh":  0.001,
+                       "relative_band":  1E-06,
+                       "money_rule":  "max(0.01 USD2001, 1e-6 * larger raw cost); a reporting unit for illustrative monetary inputs, not measurement accuracy",
+                       "CO2_rule":  "max(0.01 kg, 1e-6 * larger raw conditional CO2); same registered factor and boundary required",
+                       "inventory_rule":  "Each store separately max(0.001 kWh, 1e-6 * capacity or initial DG shaft-work-equivalent budget); identical initial stock and scale required",
+                       "required_inventories":  [
+                                                    "ups",
+                                                    "cold_store",
+                                                    "DG_shaft_budget"
+                                                ],
+                       "inventory_tradeoffs":  "All terminal stores and fee form one noncompensating vector; no invented salvage value or energy exchange",
+                       "unknowns":  "Missing/censored evidence stays unknown; no-interruption N/A is not recovery zero",
+                       "pair_scope":  "Only explicitly listed runs with identical complete scenario and effective physical configuration, different policy, same model/source/input binding and unchanged source/input bytes; failed or drifted attempts remain visible but cannot enter formal ranking"
+                   }
+}

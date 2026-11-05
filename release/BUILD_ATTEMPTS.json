@@ -1,0 +1,17 @@
+{
+  "attempts": [
+    {
+      "command": "python -B release/build_source_publication.py (from original workspace)",
+      "exit_code": 1,
+      "reason": "Initial builder expected normal-year evidence names in busy-year layout; original evidence layout was inspected and optional source-specific files handled without inventing replacements."
+    },
+    {
+      "command": "python -B release/build_source_publication.py (from original workspace)",
+      "exit_code": 0,
+      "copied_files": 3783,
+      "copied_bytes": 204490177,
+      "parameter_rows": 177
+    }
+  ],
+  "science_modified": false
+}

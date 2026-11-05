@@ -1,0 +1,3233 @@
+{
+  "schema": "hospital_ies.publish.results_catalog.v1",
+  "created_utc": "2026-10-27T16:41:37.165177+00:00",
+  "publication_task": "2026-10-28 latest model and results GitHub update",
+  "curation_only": true,
+  "new_simulations": 0,
+  "new_solver_calls": 0,
+  "new_scientific_recomputations": 0,
+  "original_files_modified": false,
+  "validation_this_task": "Read final saved receipts and audit status; verify copied bytes, table counts and accepted ZIP size/SHA only. No scientific tests or audits rerun.",
+  "versions": [
+    {
+      "version": "v30",
+      "role": "Current primary C/M comparison on powered-start minimum-off readiness fix1, C02 production freeze",
+      "original_root": "E:/hospital_ies_v30_20261027",
+      "final_audit_relative_path": "comparison_audit_fix1/final01/CAMPAIGN_AUDIT.json",
+      "final_table_relative_path": "engineering_report_tools/actual_final02/MAIN_RESULT_TABLE.csv",
+      "final_audit_status": "complete_audit",
+      "final_matrix_complete_and_clean": true,
+      "final_audit_summary": {
+        "attempted": 32,
+        "not_started": 0,
+        "audited": 32,
+        "completed": 32,
+        "producer_failed": 0,
+        "unknown_tail_runs": [],
+        "solver_error_runs": [],
+        "strategy_fallback_runs": [],
+        "audit_check_failure_runs": [],
+        "context_integrity_failure_count": 0
+      },
+      "table_rows": 32,
+      "scientific_producer": "3252727135645037cedc57ebc188a48d2aa34ccb",
+      "scientific_source_sha256": "2509d2fa562e672af3cfe4058ace55f0e38de6172d1ac2d633210d0e776f0776",
+      "scientific_source_files": 858,
+      "input_files": 36,
+      "input_set_sha256": "f414d21fc55d5a63282435b9bed9a1c8c289a049f24507f953fb86162fb41d15",
+      "physical_patch_id": "hospital_ies.powered_start_minimum_off_readiness.v30.fix1",
+      "sample_scope": [
+        {
+          "context": "b01_L1_grid",
+          "source_start_hour": 1160,
+          "source_hours_including_endpoint": [
+            1160,
+            1161,
+            1162,
+            1163
+          ],
+          "hardware": "H1",
+          "end_minute": 180.0,
+          "preparation_minutes": 60.0,
+          "disturbance_window": [
+            60.0,
+            120.0
+          ]
+        },
+        {
+          "context": "b02_L1_heat_pump",
+          "source_start_hour": 1016,
+          "source_hours_including_endpoint": [
+            1016,
+            1017,
+            1018,
+            1019
+          ],
+          "hardware": "H0",
+          "end_minute": 180.0,
+          "preparation_minutes": 60.0,
+          "disturbance_window": [
+            60.0,
+            120.0
+          ]
+        },
+        {
+          "context": "b03_L2_tower",
+          "source_start_hour": 5816,
+          "source_hours_including_endpoint": [
+            5816,
+            5817,
+            5818,
+            5819
+          ],
+          "hardware": "H2",
+          "end_minute": 180.0,
+          "preparation_minutes": 60.0,
+          "disturbance_window": [
+            60.0,
+            120.0
+          ]
+        },
+        {
+          "context": "b04_L2_chw_pump",
+          "source_start_hour": 5072,
+          "source_hours_including_endpoint": [
+            5072,
+            5073,
+            5074,
+            5075
+          ],
+          "hardware": "H0",
+          "end_minute": 180.0,
+          "preparation_minutes": 60.0,
+          "disturbance_window": [
+            60.0,
+            120.0
+          ]
+        },
+        {
+          "context": "b05_L3_ER",
+          "source_start_hour": 3416,
+          "source_hours_including_endpoint": [
+            3416,
+            3417,
+            3418,
+            3419
+          ],
+          "hardware": "H0",
+          "end_minute": 180.0,
+          "preparation_minutes": 60.0,
+          "disturbance_window": [
+            60.0,
+            120.0
+          ]
+        },
+        {
+          "context": "b06_L3_OR",
+          "source_start_hour": 6704,
+          "source_hours_including_endpoint": [
+            6704,
+            6705,
+            6706,
+            6707
+          ],
+          "hardware": "H0",
+          "end_minute": 180.0,
+          "preparation_minutes": 60.0,
+          "disturbance_window": [
+            60.0,
+            120.0
+          ]
+        },
+        {
+          "context": "b07_L4_GT_ER",
+          "source_start_hour": 3128,
+          "source_hours_including_endpoint": [
+            3128,
+            3129,
+            3130,
+            3131
+          ],
+          "hardware": "H0",
+          "end_minute": 180.0,
+          "preparation_minutes": 60.0,
+          "disturbance_window": [
+            60.0,
+            120.0
+          ]
+        },
+        {
+          "context": "b08_L4_GRID_OR",
+          "source_start_hour": 7112,
+          "source_hours_including_endpoint": [
+            7112,
+            7113,
+            7114,
+            7115
+          ],
+          "hardware": "H1",
+          "end_minute": 180.0,
+          "preparation_minutes": 60.0,
+          "disturbance_window": [
+            60.0,
+            120.0
+          ]
+        }
+      ],
+      "recorded_validation": {
+        "recorded_original_tests": "1363 passed in full_default_after_fix01; not rerun during publication",
+        "recorded_release_acceptance": "release_acceptance/FINAL_RELEASE.json status passed",
+        "recorded_independent_restore": "87,668 original native files / 50,105 unique raw payload hashes",
+        "recorded_research_attempts": {
+          "actual": 60,
+          "completed": 58,
+          "failed_unknown": 2
+        },
+        "separate_public_smoke_executions": 1
+      },
+      "limitations": [
+        "Eight finite deterministic contexts, not annual failure probabilities or certified blind evaluation",
+        "Only N02/D02 comprise the final 32; prior producer attempts and R_off are retained separately",
+        "Physical bottlenecks and service/fee tradeoffs remain; no universal C dominance",
+        "Tiny raw ENS and carrier/priority distinctions preserved; no summed e/h/c ENS or fabricated percentage gains",
+        "Original R03/R_off uses an older hour-211 context and is not the b01 hour-1160 reference"
+      ],
+      "selected_files": {
+        "files": 113,
+        "bytes": 3956061
+      }
+    },
+    {
+      "version": "v31",
+      "role": "Simple preparation closeout: two registered permission variants in already observed b05 and b07 contexts",
+      "original_root": "E:/hospital_ies_v31_20261027",
+      "final_audit_relative_path": "evaluation/final01/AUDIT.json",
+      "final_table_relative_path": "evaluation/final01/MAIN_RESULT_TABLE.csv",
+      "final_audit_status": "complete_audit",
+      "final_matrix_complete_and_clean": true,
+      "final_audit_summary": {
+        "expected": 12,
+        "not_started": 0,
+        "audited": 12,
+        "completed": 12,
+        "reused_v30": 8,
+        "new_v31": 4,
+        "unknown_or_incomplete": [],
+        "solver_error_runs": [],
+        "strategy_fallback_runs": [],
+        "unknown_failure_diagnostic_runs": [],
+        "audit_failure_runs": []
+      },
+      "table_rows": 12,
+      "scientific_producer": "f009bdb66d5b9d53f1ff2331f2dc58404c2d056b",
+      "scientific_source_sha256": "e4c740329fddcddae9e729acc24e6149d1d873e89783e0ef310e3623f604a6fa",
+      "scientific_source_files": 864,
+      "input_files": 36,
+      "input_set_sha256": "f414d21fc55d5a63282435b9bed9a1c8c289a049f24507f953fb86162fb41d15",
+      "physical_patch_id": "hospital_ies.powered_start_minimum_off_readiness.v30.fix1",
+      "sample_scope": [
+        {
+          "context": "b05_L3_ER",
+          "source_start_hour": 3416,
+          "source_hours_including_endpoint": [
+            3416,
+            3417,
+            3418,
+            3419
+          ],
+          "hardware": "H0",
+          "end_minute": 180.0,
+          "preparation_minutes": 60.0,
+          "disturbance_window": [
+            60.0,
+            120.0
+          ]
+        },
+        {
+          "context": "b07_L4_GT_ER",
+          "source_start_hour": 3128,
+          "source_hours_including_endpoint": [
+            3128,
+            3129,
+            3130,
+            3131
+          ],
+          "hardware": "H0",
+          "end_minute": 180.0,
+          "preparation_minutes": 60.0,
+          "disturbance_window": [
+            60.0,
+            120.0
+          ]
+        }
+      ],
+      "recorded_validation": {
+        "recorded_actual_targeted_source_tests": 60,
+        "includes_new_preparation_tests": 14,
+        "recorded_synthetic_evaluation_tests": 17,
+        "recorded_release_acceptance": "acceptance/FINAL_ACCEPTANCE.json status passed",
+        "recorded_independent_native_restore": 6961
+      },
+      "limitations": [
+        "Four new trajectories plus eight reused V30 records; not twelve new simulations",
+        "b05 and b07 were already observed development contexts, not blinded or annual reliability",
+        "Cooling and steam permission variants target different contexts and are not one universally validated controller",
+        "Higher steam permission improves heat service with fee and cooling tradeoffs; does not establish full dominance",
+        "V30 default 1363 tests are inherited evidence; V31 actual targeted source regression is 60 passed"
+      ],
+      "selected_files": {
+        "files": 90,
+        "bytes": 2220463
+      }
+    },
+    {
+      "version": "v32",
+      "role": "One offline known-window fixed-capacity literature adaptation on b01; external reference, not online ranking",
+      "original_root": "E:/hospital_ies_v32_20261027",
+      "final_audit_relative_path": "evaluation/final02/AUDIT.json",
+      "final_table_relative_path": "evaluation/final02/MAIN_RESULT_TABLE.csv",
+      "final_audit_status": "complete_audit",
+      "final_matrix_complete_and_clean": true,
+      "final_audit_summary": {
+        "expected": 6,
+        "not_started": 0,
+        "audited": 6,
+        "completed": 6,
+        "reused_v30": 4,
+        "new_v32": 2,
+        "unknown_or_incomplete": [],
+        "solver_error_runs": [],
+        "strategy_fallback_runs": [],
+        "audit_failure_runs": []
+      },
+      "table_rows": 6,
+      "scientific_producer": "575cb02b2ac3a1bbdce99a6f283891dc05b3d51a",
+      "scientific_source_sha256": "537607856bce8360252d267e805a662c6c1fbcbfa7306608ab0b8e30b97c1f09",
+      "scientific_source_files": 873,
+      "input_files": 36,
+      "input_set_sha256": "f414d21fc55d5a63282435b9bed9a1c8c289a049f24507f953fb86162fb41d15",
+      "physical_patch_id": "hospital_ies.powered_start_minimum_off_readiness.v30.fix1",
+      "sample_scope": [
+        {
+          "context": "b01_L1_grid",
+          "source_start_hour": 1160,
+          "source_hours_including_endpoint": [
+            1160,
+            1161,
+            1162,
+            1163
+          ],
+          "hardware": "H1",
+          "end_minute": 180.0,
+          "preparation_minutes": 60.0,
+          "disturbance_window": [
+            60.0,
+            120.0
+          ]
+        }
+      ],
+      "recorded_validation": {
+        "recorded_actual_targeted_source_tests": 60,
+        "recorded_static_reference_checks_passed": 35,
+        "recorded_delivery_status": "FINAL_DELIVERY_STATUS.json status complete",
+        "recorded_independent_extract_review": "package_build/INDEPENDENT_EXTRACT_REVIEW.json status passed",
+        "recorded_independent_native_restore": 15430,
+        "full_initialization_solver_call_total": null
+      },
+      "limitations": [
+        "Six records comprise two newly executed references and four frozen V30 C/M reuses",
+        "Offline full-window information differs from C/M current lawful observations",
+        "Lower fees accompany larger P3 ENS and lower terminal UPS stock; not equal-service savings or superiority",
+        "Not original-author software, official REopt execution, or exact original-paper numerical replication",
+        "full_continuous_plan_replayed=false; planned_storage_ports_executed=false; planned_unmet_directly_executed=false",
+        "Full initialization solver-call total remains null; core-log zero is not total zero",
+        "Final audit is final02; final01 lifecycle issue is retained, not hidden"
+      ],
+      "selected_files": {
+        "files": 112,
+        "bytes": 4356548
+      }
+    }
+  ],
+  "release_assets": [
+    {
+      "version": "v30",
+      "original_path": "E:/hospital_ies_v30_20261027/Hospital_IES_V30_REVIEW_under100MB.zip",
+      "original_relative_path": "Hospital_IES_V30_REVIEW_under100MB.zip",
+      "bytes": 98896789,
+      "sha256": "48a93fcd391f9cbf903d1e6185fc12916ac91a219c75e0bd2c87bf420b96e54d",
+      "transport": "GitHub Release asset",
+      "copied_to_git_tree": false,
+      "contents_role": "Accepted portable package with native evidence and reproducible source/input bindings"
+    },
+    {
+      "version": "v31",
+      "original_path": "E:/hospital_ies_v31_20261027/Hospital_IES_V31_Simple_Preparation_Closeout_20261027.zip",
+      "original_relative_path": "Hospital_IES_V31_Simple_Preparation_Closeout_20261027.zip",
+      "bytes": 24246025,
+      "sha256": "a36105a82be48b6ec2815928472bd1242111370af0bb3d3e2591133375d848b3",
+      "transport": "GitHub Release asset",
+      "copied_to_git_tree": false,
+      "contents_role": "Accepted portable package with native evidence and reproducible source/input bindings"
+    },
+    {
+      "version": "v32",
+      "original_path": "E:/hospital_ies_v32_20261027/Hospital_IES_V32_External_Reference_20261027.zip",
+      "original_relative_path": "Hospital_IES_V32_External_Reference_20261027.zip",
+      "bytes": 35908886,
+      "sha256": "f884e2b8495f424303bfd18f49a7c2836c77cfcc4e79e7a7fdf129425b123f01",
+      "transport": "GitHub Release asset",
+      "copied_to_git_tree": false,
+      "contents_role": "Accepted portable package with native evidence and reproducible source/input bindings"
+    }
+  ],
+  "copied_artifacts": [
+    {
+      "version": "v30",
+      "staged_path": "v30/ACTIVE_TARGET_LOCK.json",
+      "original_path": "E:/hospital_ies_v30_20261027/ACTIVE_TARGET_LOCK.json",
+      "original_relative_path": "ACTIVE_TARGET_LOCK.json",
+      "bytes": 821,
+      "sha256": "9cb11db4ba3d901ce86e26676f57e65bf421d64d0c9a749f5df29c4f67ae9ef1",
+      "copy_sha256_exact": true
+    },
+    {
+      "version": "v30",
+      "staged_path": "v30/CALENDAR_LABEL_CORRECTIONS_FIX01.json",
+      "original_path": "E:/hospital_ies_v30_20261027/CALENDAR_LABEL_CORRECTIONS_FIX01.json",
+      "original_relative_path": "CALENDAR_LABEL_CORRECTIONS_FIX01.json",
+      "bytes": 9871,
+      "sha256": "292769379b02cfc3e69c914a4292b2f37dd7b9ea44eaf3cc61c136333ec856a0",
+      "copy_sha256_exact": true
+    },
+    {
+      "version": "v30",
+      "staged_path": "v30/DISTURBANCE_ATTEMPTS.jsonl",
+      "original_path": "E:/hospital_ies_v30_20261027/DISTURBANCE_ATTEMPTS.jsonl",
+      "original_relative_path": "DISTURBANCE_ATTEMPTS.jsonl",
+      "bytes": 3503,
+      "sha256": "e85e9f51eb31a5852ba5843505c49241d0ac9d80340a809d56627c964f0f3cbd",
+      "copy_sha256_exact": true
+    },
+    {
+      "version": "v30",
+      "staged_path": "v30/FIXED_CAMPAIGN_ATTEMPTS.jsonl",
+      "original_path": "E:/hospital_ies_v30_20261027/FIXED_CAMPAIGN_ATTEMPTS.jsonl",
+      "original_relative_path": "FIXED_CAMPAIGN_ATTEMPTS.jsonl",
+      "bytes": 28804,
+      "sha256": "e280396f44cb5d64febe1a4d3f3023ed1d84e2bd9dca781ed844a9f854e0382e",
+      "copy_sha256_exact": true
+    },
+    {
+      "version": "v30",
+      "staged_path": "v30/FROZEN_SOURCE_V30_C02.json",
+      "original_path": "E:/hospital_ies_v30_20261027/FROZEN_SOURCE_V30_C02.json",
+      "original_relative_path": "FROZEN_SOURCE_V30_C02.json",
+      "bytes": 370015,
+      "sha256": "7d5f96864801c01d2b242530cfd5239fedb58f863b44e5cb8e31c1ef29fff761",
+      "copy_sha256_exact": true
+    },
+    {
+      "version": "v30",
+      "staged_path": "v30/NORMAL_ATTEMPTS.jsonl",
+      "original_path": "E:/hospital_ies_v30_20261027/NORMAL_ATTEMPTS.jsonl",
+      "original_relative_path": "NORMAL_ATTEMPTS.jsonl",
+      "bytes": 13259,
+      "sha256": "ae458cc13ae5b7ea6c12ee4eccaaeb52a0fb45ae82326da16dfd9193bbddb16a",
+      "copy_sha256_exact": true
+    },
+    {
+      "version": "v30",
+      "staged_path": "v30/REFERENCE_ATTEMPTS.jsonl",
+      "original_path": "E:/hospital_ies_v30_20261027/REFERENCE_ATTEMPTS.jsonl",
+      "original_relative_path": "REFERENCE_ATTEMPTS.jsonl",
+      "bytes": 3592,
+      "sha256": "0ef84066246d27a150803c7fdd7df9917116bb2c8a03ea7ed64cc6a0b6e38fd8",
+      "copy_sha256_exact": true
+    },
+    {
+      "version": "v30",
+      "staged_path": "v30/RUN_PLAN.json",
+      "original_path": "E:/hospital_ies_v30_20261027/RUN_PLAN.json",
+      "original_relative_path": "RUN_PLAN.json",
+      "bytes": 2097,
+      "sha256": "adab673f3293ae26b8bb7d4621a7f2b1e40cea45c3a7c22372b55a6745cc9a55",
+      "copy_sha256_exact": true
+    },
+    {
+      "version": "v30",
+      "staged_path": "v30/SCENARIO_PREREGISTRATION.json",
+      "original_path": "E:/hospital_ies_v30_20261027/SCENARIO_PREREGISTRATION.json",
+      "original_relative_path": "SCENARIO_PREREGISTRATION.json",
+      "bytes": 25057,
+      "sha256": "86a68042c6362c478cbdbbe696868008b42785e34983015bd9ddfb16f5f99172",
+      "copy_sha256_exact": true
+    },
+    {
+      "version": "v30",
+      "staged_path": "v30/SOURCE_DELTA_V29_TO_V30.json",
+      "original_path": "E:/hospital_ies_v30_20261027/SOURCE_DELTA_V29_TO_V30.json",
+      "original_relative_path": "SOURCE_DELTA_V29_TO_V30.json",
+      "bytes": 3101,
+      "sha256": "136ee56c2ffb841b86ea8cf6314bd947e267998dc47ca911b9397ec457bbf4b7",
+      "copy_sha256_exact": true
+    },
+    {
+      "version": "v30",
+      "staged_path": "v30/comparison_audit_fix1/FROZEN_ACCOUNTING.json",
+      "original_path": "E:/hospital_ies_v30_20261027/comparison_audit_fix1/FROZEN_ACCOUNTING.json",
+      "original_relative_path": "comparison_audit_fix1/FROZEN_ACCOUNTING.json",
+      "bytes": 4538,
+      "sha256": "524f5fc0dc2cc46748b1a11792b768632c01a9a91b670411bec9b517d1d13f56",
+      "copy_sha256_exact": true
+    },
+    {
+      "version": "v30",
+      "staged_path": "v30/comparison_audit_fix1/FROZEN_AUDITOR_FIX1.json",
+      "original_path": "E:/hospital_ies_v30_20261027/comparison_audit_fix1/FROZEN_AUDITOR_FIX1.json",
+      "original_relative_path": "comparison_audit_fix1/FROZEN_AUDITOR_FIX1.json",
+      "bytes": 2248,
+      "sha256": "78cc1b9968b326ddc7c8ca315fefc35b786abc57b055e818a92747dfa82d154b",
+      "copy_sha256_exact": true
+    },
+    {
+      "version": "v30",
+      "staged_path": "v30/comparison_audit_fix1/GREEN_FINAL.stderr.log",
+      "original_path": "E:/hospital_ies_v30_20261027/comparison_audit_fix1/GREEN_FINAL.stderr.log",
+      "original_relative_path": "comparison_audit_fix1/GREEN_FINAL.stderr.log",
+      "bytes": 118,
+      "sha256": "d5d2c34d658039466d031f9041b731fc1fe44f9de963b86fedb818c39f9ffa29",
+      "copy_sha256_exact": true
+    },
+    {
+      "version": "v30",
+      "staged_path": "v30/comparison_audit_fix1/GREEN_FINAL.stdout.log",
+      "original_path": "E:/hospital_ies_v30_20261027/comparison_audit_fix1/GREEN_FINAL.stdout.log",
+      "original_relative_path": "comparison_audit_fix1/GREEN_FINAL.stdout.log",
+      "bytes": 518,
+      "sha256": "f29bd14a681983738eb88a7043ae11623cb6f0ec4f2b751c155efecf729770f8",
+      "copy_sha256_exact": true
+    },
+    {
+      "version": "v30",
+      "staged_path": "v30/comparison_audit_fix1/GREEN_FINAL_COMMAND.json",
+      "original_path": "E:/hospital_ies_v30_20261027/comparison_audit_fix1/GREEN_FINAL_COMMAND.json",
+      "original_relative_path": "comparison_audit_fix1/GREEN_FINAL_COMMAND.json",
+      "bytes": 267,
+      "sha256": "cfc35f4ee29a5d9b5f97b4c87ef0a2741317f1cbae6fc87544c2399a96d9377f",
+      "copy_sha256_exact": true
+    },
+    {
+      "version": "v30",
+      "staged_path": "v30/comparison_audit_fix1/GREEN_parameterization01.log",
+      "original_path": "E:/hospital_ies_v30_20261027/comparison_audit_fix1/GREEN_parameterization01.log",
+      "original_relative_path": "comparison_audit_fix1/GREEN_parameterization01.log",
+      "bytes": 1382,
+      "sha256": "737b77cb65196c26fe5f624a7df240f410428ab4f1414e48f7eb8a9fdb83dec4",
+      "copy_sha256_exact": true
+    },
+    {
+      "version": "v30",
+      "staged_path": "v30/comparison_audit_fix1/GREEN_percent_identity.log",
+      "original_path": "E:/hospital_ies_v30_20261027/comparison_audit_fix1/GREEN_percent_identity.log",
+      "original_relative_path": "comparison_audit_fix1/GREEN_percent_identity.log",
+      "bytes": 1904,
+      "sha256": "ebe3fc7abefb2f4732156c8dc9c5959e7835b4b2b15191c3be3b3351d43e96b3",
+      "copy_sha256_exact": true
+    },
+    {
+      "version": "v30",
+      "staged_path": "v30/comparison_audit_fix1/PARAMETERIZATION_REVIEW.md",
+      "original_path": "E:/hospital_ies_v30_20261027/comparison_audit_fix1/PARAMETERIZATION_REVIEW.md",
+      "original_relative_path": "comparison_audit_fix1/PARAMETERIZATION_REVIEW.md",
+      "bytes": 6710,
+      "sha256": "7c821a6e9d8b4ada965fbb07dfcac61e930d4c072b91d2e8a23efe5ab2a177a6",
+      "copy_sha256_exact": true
+    },
+    {
+      "version": "v30",
+      "staged_path": "v30/comparison_audit_fix1/README.md",
+      "original_path": "E:/hospital_ies_v30_20261027/comparison_audit_fix1/README.md",
+      "original_relative_path": "comparison_audit_fix1/README.md",
+      "bytes": 3116,
+      "sha256": "5330dc66b77fade1fdc1f3872700ac0acc711385e79e06f16a889d746da831f2",
+      "copy_sha256_exact": true
+    },
+    {
+      "version": "v30",
+      "staged_path": "v30/comparison_audit_fix1/RED_locked_target.log",
+      "original_path": "E:/hospital_ies_v30_20261027/comparison_audit_fix1/RED_locked_target.log",
+      "original_relative_path": "comparison_audit_fix1/RED_locked_target.log",
+      "bytes": 3184,
+      "sha256": "5c4db3a5802e58d3f43d90bbaa85941a58143c1703e3773bf11d651739aed5ae",
+      "copy_sha256_exact": true
+    },
+    {
+      "version": "v30",
+      "staged_path": "v30/comparison_audit_fix1/RED_parameterization.log",
+      "original_path": "E:/hospital_ies_v30_20261027/comparison_audit_fix1/RED_parameterization.log",
+      "original_relative_path": "comparison_audit_fix1/RED_parameterization.log",
+      "bytes": 7124,
+      "sha256": "deda7b0bdd1b04062fcd107efb82dae36ed64e4fbce99be8626d3d97842424a3",
+      "copy_sha256_exact": true
+    },
+    {
+      "version": "v30",
+      "staged_path": "v30/comparison_audit_fix1/RED_percent_identity.log",
+      "original_path": "E:/hospital_ies_v30_20261027/comparison_audit_fix1/RED_percent_identity.log",
+      "original_relative_path": "comparison_audit_fix1/RED_percent_identity.log",
+      "bytes": 4578,
+      "sha256": "a652dc97b0b823d7a8f27e947c234ab707a855f5be8000ba6f2ceaf4850dd69b",
+      "copy_sha256_exact": true
+    },
+    {
+      "version": "v30",
+      "staged_path": "v30/comparison_audit_fix1/final01/ATTEMPT_INDEX.json",
+      "original_path": "E:/hospital_ies_v30_20261027/comparison_audit_fix1/final01/ATTEMPT_INDEX.json",
+      "original_relative_path": "comparison_audit_fix1/final01/ATTEMPT_INDEX.json",
+      "bytes": 19509,
+      "sha256": "daf933b8cacdb81cd668040cef3be27a02300862a75dd9b6d90cb5bd8be81c07",
+      "copy_sha256_exact": true
+    },
+    {
+      "version": "v30",
+      "staged_path": "v30/comparison_audit_fix1/final01/CAMPAIGN_AUDIT.json",
+      "original_path": "E:/hospital_ies_v30_20261027/comparison_audit_fix1/final01/CAMPAIGN_AUDIT.json",
+      "original_relative_path": "comparison_audit_fix1/final01/CAMPAIGN_AUDIT.json",
+      "bytes": 1167397,
+      "sha256": "ab4c02a15b7437f118e17687c90ba07b69794d368eb023529e4af0d315896a56",
+      "copy_sha256_exact": true
+    },
+    {
+      "version": "v30",
+      "staged_path": "v30/comparison_audit_fix1/final01/CAMPAIGN_AUDIT.md",
+      "original_path": "E:/hospital_ies_v30_20261027/comparison_audit_fix1/final01/CAMPAIGN_AUDIT.md",
+      "original_relative_path": "comparison_audit_fix1/final01/CAMPAIGN_AUDIT.md",
+      "bytes": 1789,
+      "sha256": "8d875130191daf61b13028034b10856db031da0d94c68bb43d0c469cd9a624d2",
+      "copy_sha256_exact": true
+    },
+    {
+      "version": "v30",
+      "staged_path": "v30/engineering_report_tools/ACTUAL_FINAL01.stderr.log",
+      "original_path": "E:/hospital_ies_v30_20261027/engineering_report_tools/ACTUAL_FINAL01.stderr.log",
+      "original_relative_path": "engineering_report_tools/ACTUAL_FINAL01.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "copy_sha256_exact": true
+    },
+    {
+      "version": "v30",
+      "staged_path": "v30/engineering_report_tools/ACTUAL_FINAL01.stdout.log",
+      "original_path": "E:/hospital_ies_v30_20261027/engineering_report_tools/ACTUAL_FINAL01.stdout.log",
+      "original_relative_path": "engineering_report_tools/ACTUAL_FINAL01.stdout.log",
+      "bytes": 550,
+      "sha256": "1e1f9a54623b2579801975d5b93a5f6dccc75855a24111630c31c27938fa5822",
+      "copy_sha256_exact": true
+    },
+    {
+      "version": "v30",
+      "staged_path": "v30/engineering_report_tools/ACTUAL_FINAL01_COMMAND.json",
+      "original_path": "E:/hospital_ies_v30_20261027/engineering_report_tools/ACTUAL_FINAL01_COMMAND.json",
+      "original_relative_path": "engineering_report_tools/ACTUAL_FINAL01_COMMAND.json",
+      "bytes": 611,
+      "sha256": "e0b944d4edf7e865466397245c46264adaacde7fbb6d02fde7ee6e884dd11bc5",
+      "copy_sha256_exact": true
+    },
+    {
+      "version": "v30",
+      "staged_path": "v30/engineering_report_tools/ACTUAL_FINAL02.stderr.log",
+      "original_path": "E:/hospital_ies_v30_20261027/engineering_report_tools/ACTUAL_FINAL02.stderr.log",
+      "original_relative_path": "engineering_report_tools/ACTUAL_FINAL02.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "copy_sha256_exact": true
+    },
+    {
+      "version": "v30",
+      "staged_path": "v30/engineering_report_tools/ACTUAL_FINAL02.stdout.log",
+      "original_path": "E:/hospital_ies_v30_20261027/engineering_report_tools/ACTUAL_FINAL02.stdout.log",
+      "original_relative_path": "engineering_report_tools/ACTUAL_FINAL02.stdout.log",
+      "bytes": 582,
+      "sha256": "bc7062b696696adb6d51917c41fcac7cad3780b3314884190888e7450418da93",
+      "copy_sha256_exact": true
+    },
+    {
+      "version": "v30",
+      "staged_path": "v30/engineering_report_tools/ACTUAL_FINAL02_COMMAND.json",
+      "original_path": "E:/hospital_ies_v30_20261027/engineering_report_tools/ACTUAL_FINAL02_COMMAND.json",
+      "original_relative_path": "engineering_report_tools/ACTUAL_FINAL02_COMMAND.json",
+      "bytes": 689,
+      "sha256": "c16b7acf953cf49a07f9f5cf407c525bcbba777f2a61f29d7a84405f7cb1c3ff",
+      "copy_sha256_exact": true
+    },
+    {
+      "version": "v30",
+      "staged_path": "v30/engineering_report_tools/ACTUAL_PARTIAL_REFUSAL.log",
+      "original_path": "E:/hospital_ies_v30_20261027/engineering_report_tools/ACTUAL_PARTIAL_REFUSAL.log",
+      "original_relative_path": "engineering_report_tools/ACTUAL_PARTIAL_REFUSAL.log",
+      "bytes": 796,
+      "sha256": "6e0e38d7c14cf7cb23ba6ab99d4776195724783294cfcbc61110c59efc8afda9",
+      "copy_sha256_exact": true
+    },
+    {
+      "version": "v30",
+      "staged_path": "v30/engineering_report_tools/ACTUAL_PARTIAL_REFUSAL_COMMAND.json",
+      "original_path": "E:/hospital_ies_v30_20261027/engineering_report_tools/ACTUAL_PARTIAL_REFUSAL_COMMAND.json",
+      "original_relative_path": "engineering_report_tools/ACTUAL_PARTIAL_REFUSAL_COMMAND.json",
+      "bytes": 591,
+      "sha256": "680a1551086198b7d02622d6fe9723f81eb51c23fcace4888fd1608247704df8",
+      "copy_sha256_exact": true
+    },
+    {
+      "version": "v30",
+      "staged_path": "v30/engineering_report_tools/ACTUAL_REPORT_QA.json",
+      "original_path": "E:/hospital_ies_v30_20261027/engineering_report_tools/ACTUAL_REPORT_QA.json",
+      "original_relative_path": "engineering_report_tools/ACTUAL_REPORT_QA.json",
+      "bytes": 1028,
+      "sha256": "13686545d70ba4a1d76c2304d5a781969f5d7442bc29565b2d37676b39dd2e8f",
+      "copy_sha256_exact": true
+    },
+    {
+      "version": "v30",
+      "staged_path": "v30/engineering_report_tools/ACTUAL_SCHEMA_CHECK.json",
+      "original_path": "E:/hospital_ies_v30_20261027/engineering_report_tools/ACTUAL_SCHEMA_CHECK.json",
+      "original_relative_path": "engineering_report_tools/ACTUAL_SCHEMA_CHECK.json",
+      "bytes": 803,
+      "sha256": "75c72ed571bd5fc09c86f70a7203e41a16dc24114bb95cc6af3dac531c9c4577",
+      "copy_sha256_exact": true
+    },
+    {
+      "version": "v30",
+      "staged_path": "v30/engineering_report_tools/CODE_REVIEW.md",
+      "original_path": "E:/hospital_ies_v30_20261027/engineering_report_tools/CODE_REVIEW.md",
+      "original_relative_path": "engineering_report_tools/CODE_REVIEW.md",
+      "bytes": 6778,
+      "sha256": "1612737e659c9123416d7ad224a4bc376842cbc47958f7a9c86769a2904dc233",
+      "copy_sha256_exact": true
+    },
+    {
+      "version": "v30",
+      "staged_path": "v30/engineering_report_tools/EVIDENCE_NOTES.md",
+      "original_path": "E:/hospital_ies_v30_20261027/engineering_report_tools/EVIDENCE_NOTES.md",
+      "original_relative_path": "engineering_report_tools/EVIDENCE_NOTES.md",
+      "bytes": 13204,
+      "sha256": "a31964efa1418da97847f03e47eda98bc480b7ada566db1c109c919c926b481c",
+      "copy_sha256_exact": true
+    },
+    {
+      "version": "v30",
+      "staged_path": "v30/engineering_report_tools/FROZEN_REPORT_TOOLS.json",
+      "original_path": "E:/hospital_ies_v30_20261027/engineering_report_tools/FROZEN_REPORT_TOOLS.json",
+      "original_relative_path": "engineering_report_tools/FROZEN_REPORT_TOOLS.json",
+      "bytes": 4712,
+      "sha256": "ffd7b503a2005afb31c7dddf1439a4ef0333f2f1a71168d83eeeac5277c61b37",
+      "copy_sha256_exact": true
+    },
+    {
+      "version": "v30",
+      "staged_path": "v30/engineering_report_tools/GREEN_FINAL.log",
+      "original_path": "E:/hospital_ies_v30_20261027/engineering_report_tools/GREEN_FINAL.log",
+      "original_relative_path": "engineering_report_tools/GREEN_FINAL.log",
+      "bytes": 116,
+      "sha256": "3767377000168a566cfa7803c4901023875314e5f33dd93f3606101e7a63eb3e",
+      "copy_sha256_exact": true
+    },
+    {
+      "version": "v30",
+      "staged_path": "v30/engineering_report_tools/GREEN_FINAL_COMMAND.json",
+      "original_path": "E:/hospital_ies_v30_20261027/engineering_report_tools/GREEN_FINAL_COMMAND.json",
+      "original_relative_path": "engineering_report_tools/GREEN_FINAL_COMMAND.json",
+      "bytes": 262,
+      "sha256": "f56a5eb9b37f2e179b95318f55b227f70d4183a3945492f92f6bc810e54c87d2",
+      "copy_sha256_exact": true
+    },
+    {
+      "version": "v30",
+      "staged_path": "v30/engineering_report_tools/GREEN_attempt01.log",
+      "original_path": "E:/hospital_ies_v30_20261027/engineering_report_tools/GREEN_attempt01.log",
+      "original_relative_path": "engineering_report_tools/GREEN_attempt01.log",
+      "bytes": 111,
+      "sha256": "2c21cb151321af704d6c1ffcecaf9cc7f7983f354fc2fa744d52b9e21f417be3",
+      "copy_sha256_exact": true
+    },
+    {
+      "version": "v30",
+      "staged_path": "v30/engineering_report_tools/GREEN_review_guards.log",
+      "original_path": "E:/hospital_ies_v30_20261027/engineering_report_tools/GREEN_review_guards.log",
+      "original_relative_path": "engineering_report_tools/GREEN_review_guards.log",
+      "bytes": 116,
+      "sha256": "46a31d4db441488f413a0a073d5ecfe47745f9d47d5ecd5f1abcb9ae0858890f",
+      "copy_sha256_exact": true
+    },
+    {
+      "version": "v30",
+      "staged_path": "v30/engineering_report_tools/GREEN_strict_native.log",
+      "original_path": "E:/hospital_ies_v30_20261027/engineering_report_tools/GREEN_strict_native.log",
+      "original_relative_path": "engineering_report_tools/GREEN_strict_native.log",
+      "bytes": 112,
+      "sha256": "b9333b080a23f3e501ed32fd3e6910aeaecd26aea5d10daf0550ded8d6d09dcd",
+      "copy_sha256_exact": true
+    },
+    {
+      "version": "v30",
+      "staged_path": "v30/engineering_report_tools/README.md",
+      "original_path": "E:/hospital_ies_v30_20261027/engineering_report_tools/README.md",
+      "original_relative_path": "engineering_report_tools/README.md",
+      "bytes": 5341,
+      "sha256": "9b4ba2ad2b74d99c4f1d55eef9998ac7e7070ab61ea61f44ab3f8dfd1960b0fa",
+      "copy_sha256_exact": true
+    },
+    {
+      "version": "v30",
+      "staged_path": "v30/engineering_report_tools/RED.log",
+      "original_path": "E:/hospital_ies_v30_20261027/engineering_report_tools/RED.log",
+      "original_relative_path": "engineering_report_tools/RED.log",
+      "bytes": 5723,
+      "sha256": "4f2fb6bb40d48a5c8add37f2cd6b5652983ab464f87723aa4dad3fa8838755a6",
+      "copy_sha256_exact": true
+    },
+    {
+      "version": "v30",
+      "staged_path": "v30/engineering_report_tools/RED_review_guards.log",
+      "original_path": "E:/hospital_ies_v30_20261027/engineering_report_tools/RED_review_guards.log",
+      "original_relative_path": "engineering_report_tools/RED_review_guards.log",
+      "bytes": 2973,
+      "sha256": "aaa12f69c7beb20327e2a85dbef4d886da7dd7222b9320e625ffc3c75f5550de",
+      "copy_sha256_exact": true
+    },
+    {
+      "version": "v30",
+      "staged_path": "v30/engineering_report_tools/RED_strict_native.log",
+      "original_path": "E:/hospital_ies_v30_20261027/engineering_report_tools/RED_strict_native.log",
+      "original_relative_path": "engineering_report_tools/RED_strict_native.log",
+      "bytes": 1993,
+      "sha256": "5ed8d88f8137f38988811b8c1630dac8f4311167766befe65709a044afbc6064",
+      "copy_sha256_exact": true
+    },
+    {
+      "version": "v30",
+      "staged_path": "v30/engineering_report_tools/REVIEW_RESOLUTION.md",
+      "original_path": "E:/hospital_ies_v30_20261027/engineering_report_tools/REVIEW_RESOLUTION.md",
+      "original_relative_path": "engineering_report_tools/REVIEW_RESOLUTION.md",
+      "bytes": 4001,
+      "sha256": "23505f0423f1090df5da2d50ae695970f9a6edeabb1883c5f3e1b8dd82da0a0a",
+      "copy_sha256_exact": true
+    },
+    {
+      "version": "v30",
+      "staged_path": "v30/engineering_report_tools/V2_GREEN.log",
+      "original_path": "E:/hospital_ies_v30_20261027/engineering_report_tools/V2_GREEN.log",
+      "original_relative_path": "engineering_report_tools/V2_GREEN.log",
+      "bytes": 109,
+      "sha256": "cf16a5d519096da3af2ad199e6526d6fc404f74e37c4fead855c72824a62a49e",
+      "copy_sha256_exact": true
+    },
+    {
+      "version": "v30",
+      "staged_path": "v30/engineering_report_tools/V2_GREEN_COMMAND.json",
+      "original_path": "E:/hospital_ies_v30_20261027/engineering_report_tools/V2_GREEN_COMMAND.json",
+      "original_relative_path": "engineering_report_tools/V2_GREEN_COMMAND.json",
+      "bytes": 228,
+      "sha256": "968f5da1bf2274f7d68d5a9f1500dbd0beff506bbc161fc2e71f51d1c8b0ddf4",
+      "copy_sha256_exact": true
+    },
+    {
+      "version": "v30",
+      "staged_path": "v30/engineering_report_tools/V2_RED.log",
+      "original_path": "E:/hospital_ies_v30_20261027/engineering_report_tools/V2_RED.log",
+      "original_relative_path": "engineering_report_tools/V2_RED.log",
+      "bytes": 4348,
+      "sha256": "853d3daf365eddd5ff6bf957a704216d2049bf420e22734bc7989507723ed52f",
+      "copy_sha256_exact": true
+    },
+    {
+      "version": "v30",
+      "staged_path": "v30/engineering_report_tools/V2_RED_actual_ulp.log",
+      "original_path": "E:/hospital_ies_v30_20261027/engineering_report_tools/V2_RED_actual_ulp.log",
+      "original_relative_path": "engineering_report_tools/V2_RED_actual_ulp.log",
+      "bytes": 2203,
+      "sha256": "1b5759cd2fc824629ad7380fd5933ab5a4b89a1be08b8e9f846f1a6a9c8a46fe",
+      "copy_sha256_exact": true
+    },
+    {
+      "version": "v30",
+      "staged_path": "v30/engineering_report_tools/actual_final02/COMPLETION_MATRIX.json",
+      "original_path": "E:/hospital_ies_v30_20261027/engineering_report_tools/actual_final02/COMPLETION_MATRIX.json",
+      "original_relative_path": "engineering_report_tools/actual_final02/COMPLETION_MATRIX.json",
+      "bytes": 17651,
+      "sha256": "f3ca8d5c6fd5c8a34b0f68b395042388b8502838423bff59ff10a2218451adcf",
+      "copy_sha256_exact": true
+    },
+    {
+      "version": "v30",
+      "staged_path": "v30/engineering_report_tools/actual_final02/ENGINEERING_REPORT_ZH.md",
+      "original_path": "E:/hospital_ies_v30_20261027/engineering_report_tools/actual_final02/ENGINEERING_REPORT_ZH.md",
+      "original_relative_path": "engineering_report_tools/actual_final02/ENGINEERING_REPORT_ZH.md",
+      "bytes": 52813,
+      "sha256": "4f37444ce16b89d7bad76a72cbfa957ee8bb60860c7433677c817528c046f2e2",
+      "copy_sha256_exact": true
+    },
+    {
+      "version": "v30",
+      "staged_path": "v30/engineering_report_tools/actual_final02/MAIN_RESULT_TABLE.csv",
+      "original_path": "E:/hospital_ies_v30_20261027/engineering_report_tools/actual_final02/MAIN_RESULT_TABLE.csv",
+      "original_relative_path": "engineering_report_tools/actual_final02/MAIN_RESULT_TABLE.csv",
+      "bytes": 81847,
+      "sha256": "684448deb817b9478cffdc9bba9f0083a414c9dbfe1cf9ab46320f5192201ffe",
+      "copy_sha256_exact": true
+    },
+    {
+      "version": "v30",
+      "staged_path": "v30/evaluation/EVALUATION_CLOSEOUT.md",
+      "original_path": "E:/hospital_ies_v30_20261027/evaluation/EVALUATION_CLOSEOUT.md",
+      "original_relative_path": "evaluation/EVALUATION_CLOSEOUT.md",
+      "bytes": 4102,
+      "sha256": "ac94bb99513d9c1846e90d368add9d89d4f51dc84d469cb6a4b47c0a2b147a81",
+      "copy_sha256_exact": true
+    },
+    {
+      "version": "v30",
+      "staged_path": "v30/evaluation/final_01/VALIDATION_SUMMARY.json",
+      "original_path": "E:/hospital_ies_v30_20261027/evaluation/final_01/VALIDATION_SUMMARY.json",
+      "original_relative_path": "evaluation/final_01/VALIDATION_SUMMARY.json",
+      "bytes": 519,
+      "sha256": "74afee395aa1e85d096cac0082e5df89eceeaf6fac6e32ca9ab12ec6a5c0a75a",
+      "copy_sha256_exact": true
+    },
+    {
+      "version": "v30",
+      "staged_path": "v30/evaluation/final_validation01.log",
+      "original_path": "E:/hospital_ies_v30_20261027/evaluation/final_validation01.log",
+      "original_relative_path": "evaluation/final_validation01.log",
+      "bytes": 980,
+      "sha256": "032203de504b36bfe100cc8853d044ab8c4aac343fd3c2486970b647d18666b3",
+      "copy_sha256_exact": true
+    },
+    {
+      "version": "v30",
+      "staged_path": "v30/literature/hirwa/mapping.json",
+      "original_path": "E:/hospital_ies_v30_20261027/literature/hirwa/mapping.json",
+      "original_relative_path": "literature/hirwa/mapping.json",
+      "bytes": 14261,
+      "sha256": "2af36ade37cdc33bf23f9df400f933ccd89c090c29a24cce97c80664ffaa4a38",
+      "copy_sha256_exact": true
+    },
+    {
+      "version": "v30",
+      "staged_path": "v30/literature/rosales/mapping.json",
+      "original_path": "E:/hospital_ies_v30_20261027/literature/rosales/mapping.json",
+      "original_relative_path": "literature/rosales/mapping.json",
+      "bytes": 13210,
+      "sha256": "81989147e0f9a9b60b4b91fcd8f9647a204e9456d1aa2e52474729832dc4945a",
+      "copy_sha256_exact": true
+    },
+    {
+      "version": "v30",
+      "staged_path": "v30/physical_fix_review/COUNTEREXAMPLE_REVIEW.md",
+      "original_path": "E:/hospital_ies_v30_20261027/physical_fix_review/COUNTEREXAMPLE_REVIEW.md",
+      "original_relative_path": "physical_fix_review/COUNTEREXAMPLE_REVIEW.md",
+      "bytes": 5501,
+      "sha256": "3bcb8a4fb05e740137bff779403a380dc52a94feaa50177f0ca43f314b7245c8",
+      "copy_sha256_exact": true
+    },
+    {
+      "version": "v30",
+      "staged_path": "v30/physical_fix_review/README.md",
+      "original_path": "E:/hospital_ies_v30_20261027/physical_fix_review/README.md",
+      "original_relative_path": "physical_fix_review/README.md",
+      "bytes": 1529,
+      "sha256": "91fac9c90c23bfafdd4dc9accc4169d8645ff6c978d4a3bd92ce0444748ce4f4",
+      "copy_sha256_exact": true
+    },
+    {
+      "version": "v30",
+      "staged_path": "v30/physical_fix_review/scan02/IMPACT_AUDIT.json",
+      "original_path": "E:/hospital_ies_v30_20261027/physical_fix_review/scan02/IMPACT_AUDIT.json",
+      "original_relative_path": "physical_fix_review/scan02/IMPACT_AUDIT.json",
+      "bytes": 86443,
+      "sha256": "0759030b40b5276d6cdcb4699ec5213ee17a6663f8dfae8e901f9599f4f37c73",
+      "copy_sha256_exact": true
+    },
+    {
+      "version": "v30",
+      "staged_path": "v30/physical_fix_review/scan02/IMPACT_AUDIT.md",
+      "original_path": "E:/hospital_ies_v30_20261027/physical_fix_review/scan02/IMPACT_AUDIT.md",
+      "original_relative_path": "physical_fix_review/scan02/IMPACT_AUDIT.md",
+      "bytes": 2571,
+      "sha256": "b3631d015d92a26772d56c000bd643424ee36acbb53b7d821e595fbadecdba8f",
+      "copy_sha256_exact": true
+    },
+    {
+      "version": "v30",
+      "staged_path": "v30/reference_replay_audit/FINAL_READY.json",
+      "original_path": "E:/hospital_ies_v30_20261027/reference_replay_audit/FINAL_READY.json",
+      "original_relative_path": "reference_replay_audit/FINAL_READY.json",
+      "bytes": 2624,
+      "sha256": "2c18ec0d2d9d9e357def2427e881e9030d5ad0a3a6332cf7eb2ab89f9e37a1bf",
+      "copy_sha256_exact": true
+    },
+    {
+      "version": "v30",
+      "staged_path": "v30/reference_replay_audit/audit_02/PAPER_COMPLETION.json",
+      "original_path": "E:/hospital_ies_v30_20261027/reference_replay_audit/audit_02/PAPER_COMPLETION.json",
+      "original_relative_path": "reference_replay_audit/audit_02/PAPER_COMPLETION.json",
+      "bytes": 2746,
+      "sha256": "68cabf74eb9a7df99806f21d00e6e69ce9c8b05b99c9d10c57433bd83ee944bf",
+      "copy_sha256_exact": true
+    },
+    {
+      "version": "v30",
+      "staged_path": "v30/release_acceptance/DELIVERY_ACCEPTANCE_ZH.md",
+      "original_path": "E:/hospital_ies_v30_20261027/release_acceptance/DELIVERY_ACCEPTANCE_ZH.md",
+      "original_relative_path": "release_acceptance/DELIVERY_ACCEPTANCE_ZH.md",
+      "bytes": 3322,
+      "sha256": "a0de3cbfa5f94af84788b25d63d085134a06bdbd622580f6cf52cffbb38d1e74",
+      "copy_sha256_exact": true
+    },
+    {
+      "version": "v30",
+      "staged_path": "v30/release_acceptance/FINAL_RELEASE.json",
+      "original_path": "E:/hospital_ies_v30_20261027/release_acceptance/FINAL_RELEASE.json",
+      "original_relative_path": "release_acceptance/FINAL_RELEASE.json",
+      "bytes": 3706,
+      "sha256": "5c72b2641141687ba54cc83de5e4fccf2ad3d0a690138ba782f9be316bd4e0ea",
+      "copy_sha256_exact": true
+    },
+    {
+      "version": "v30",
+      "staged_path": "v30/release_acceptance/INDEPENDENT_UNPACK.json",
+      "original_path": "E:/hospital_ies_v30_20261027/release_acceptance/INDEPENDENT_UNPACK.json",
+      "original_relative_path": "release_acceptance/INDEPENDENT_UNPACK.json",
+      "bytes": 768,
+      "sha256": "c8ffc81305298a23aa741d576b6426f8b79c8df0238eb8bb63bbeabc21f8e055",
+      "copy_sha256_exact": true
+    },
+    {
+      "version": "v30",
+      "staged_path": "v30/release_acceptance/POST_DELIVERY_REPOSITORY.json",
+      "original_path": "E:/hospital_ies_v30_20261027/release_acceptance/POST_DELIVERY_REPOSITORY.json",
+      "original_relative_path": "release_acceptance/POST_DELIVERY_REPOSITORY.json",
+      "bytes": 458,
+      "sha256": "8043cb910bbff3f28100d5aa5a46419bfa19002cf795c4dbc10453a52fa08ef6",
+      "copy_sha256_exact": true
+    },
+    {
+      "version": "v30",
+      "staged_path": "v30/release_acceptance/ZIP_BUILD_VERIFICATION.json",
+      "original_path": "E:/hospital_ies_v30_20261027/release_acceptance/ZIP_BUILD_VERIFICATION.json",
+      "original_relative_path": "release_acceptance/ZIP_BUILD_VERIFICATION.json",
+      "bytes": 829,
+      "sha256": "ade90fa77d1d9c88330987b0fc727c781c8a443306d905d7fe3000fa010a9a8c",
+      "copy_sha256_exact": true
+    },
+    {
+      "version": "v30",
+      "staged_path": "v30/release_acceptance/execution_index/ACTUAL_ATTEMPTS.csv",
+      "original_path": "E:/hospital_ies_v30_20261027/release_acceptance/execution_index/ACTUAL_ATTEMPTS.csv",
+      "original_relative_path": "release_acceptance/execution_index/ACTUAL_ATTEMPTS.csv",
+      "bytes": 41570,
+      "sha256": "e723b4d66fa9d49494b7040cbf3ec24be02e342537dfae3d12197a0786f2cf8c",
+      "copy_sha256_exact": true
+    },
+    {
+      "version": "v30",
+      "staged_path": "v30/release_acceptance/execution_index/ACTUAL_ATTEMPTS.json",
+      "original_path": "E:/hospital_ies_v30_20261027/release_acceptance/execution_index/ACTUAL_ATTEMPTS.json",
+      "original_relative_path": "release_acceptance/execution_index/ACTUAL_ATTEMPTS.json",
+      "bytes": 1529210,
+      "sha256": "01295cfd4aac4fc7c6c199e0a57cfb0090726179c078c0e8c431c97047ee3521",
+      "copy_sha256_exact": true
+    },
+    {
+      "version": "v30",
+      "staged_path": "v30/release_acceptance/execution_index/FIXED_CORE_BINDINGS.json",
+      "original_path": "E:/hospital_ies_v30_20261027/release_acceptance/execution_index/FIXED_CORE_BINDINGS.json",
+      "original_relative_path": "release_acceptance/execution_index/FIXED_CORE_BINDINGS.json",
+      "bytes": 10590,
+      "sha256": "87d2b35f359b375a139dc727f67b9e45da28d143fa44d52990798225e848f955",
+      "copy_sha256_exact": true
+    },
+    {
+      "version": "v30",
+      "staged_path": "v30/release_acceptance/execution_index/PHYSICAL_FIX1_ONLY.patch",
+      "original_path": "E:/hospital_ies_v30_20261027/release_acceptance/execution_index/PHYSICAL_FIX1_ONLY.patch",
+      "original_relative_path": "release_acceptance/execution_index/PHYSICAL_FIX1_ONLY.patch",
+      "bytes": 1662,
+      "sha256": "90956b356d73d5a1397a42ce808ebf8565fffb61ea96b212566382ae26dc2b1d",
+      "copy_sha256_exact": true
+    },
+    {
+      "version": "v30",
+      "staged_path": "v30/release_acceptance/execution_index/README.md",
+      "original_path": "E:/hospital_ies_v30_20261027/release_acceptance/execution_index/README.md",
+      "original_relative_path": "release_acceptance/execution_index/README.md",
+      "bytes": 2846,
+      "sha256": "5625e46da9fde840b6fcf895731302d09921b5419c36b3d9f22429898e9fb92d",
+      "copy_sha256_exact": true
+    },
+    {
+      "version": "v30",
+      "staged_path": "v30/release_acceptance/execution_index/SOURCE_DELTA_FIX1.json",
+      "original_path": "E:/hospital_ies_v30_20261027/release_acceptance/execution_index/SOURCE_DELTA_FIX1.json",
+      "original_relative_path": "release_acceptance/execution_index/SOURCE_DELTA_FIX1.json",
+      "bytes": 31276,
+      "sha256": "a997c4a80bdc9832ee2c1889bd0ba0ddca6cfe034ba1ac2eae148345a23f4fd0",
+      "copy_sha256_exact": true
+    },
+    {
+      "version": "v30",
+      "staged_path": "v30/release_acceptance/readonly01/COMPLETION_RECEIPT.json",
+      "original_path": "E:/hospital_ies_v30_20261027/release_acceptance/readonly01/COMPLETION_RECEIPT.json",
+      "original_relative_path": "release_acceptance/readonly01/COMPLETION_RECEIPT.json",
+      "bytes": 26522,
+      "sha256": "995ca87018a93b9b6e3df345f052d6b7a1a39fc76f47b52f84949e84bfa2473d",
+      "copy_sha256_exact": true
+    },
+    {
+      "version": "v30",
+      "staged_path": "v30/release_acceptance/readonly01/FULL_RESTORE_RECEIPT.json",
+      "original_path": "E:/hospital_ies_v30_20261027/release_acceptance/readonly01/FULL_RESTORE_RECEIPT.json",
+      "original_relative_path": "release_acceptance/readonly01/FULL_RESTORE_RECEIPT.json",
+      "bytes": 1146,
+      "sha256": "426c777434ac5ac2350840240825b16b0d38ed64ab0a85de3c9312588610d044",
+      "copy_sha256_exact": true
+    },
+    {
+      "version": "v30",
+      "staged_path": "v30/release_acceptance/static_qa/STATIC_QA.json",
+      "original_path": "E:/hospital_ies_v30_20261027/release_acceptance/static_qa/STATIC_QA.json",
+      "original_relative_path": "release_acceptance/static_qa/STATIC_QA.json",
+      "bytes": 9384,
+      "sha256": "89b841538c0b322f25cc1531d6d3e123faeb8369eeffa79b4ea4b5c2dc1276f5",
+      "copy_sha256_exact": true
+    },
+    {
+      "version": "v30",
+      "staged_path": "v30/release_acceptance/static_qa/STATIC_QA_ZH.md",
+      "original_path": "E:/hospital_ies_v30_20261027/release_acceptance/static_qa/STATIC_QA_ZH.md",
+      "original_relative_path": "release_acceptance/static_qa/STATIC_QA_ZH.md",
+      "bytes": 1460,
+      "sha256": "3d17905837c8019be14572340fad1910cd03dd8899b2dc2bad6da0b1aec40b9b",
+      "copy_sha256_exact": true
+    },
+    {
+      "version": "v30",
+      "staged_path": "v30/release_narrative/ENGINEERING_INTERPRETATION_ZH.md",
+      "original_path": "E:/hospital_ies_v30_20261027/release_narrative/ENGINEERING_INTERPRETATION_ZH.md",
+      "original_relative_path": "release_narrative/ENGINEERING_INTERPRETATION_ZH.md",
+      "bytes": 9978,
+      "sha256": "db5723e4058ae14ef99fa52b39c08e58c1ac15c1d8cd2b06b42124c5b15f991f",
+      "copy_sha256_exact": true
+    },
+    {
+      "version": "v30",
+      "staged_path": "v30/runs/d01_b02_L1_heat_pump_disturbed_M/BINDINGS.json",
+      "original_path": "E:/hospital_ies_v30_20261027/runs/d01_b02_L1_heat_pump_disturbed_M/BINDINGS.json",
+      "original_relative_path": "runs/d01_b02_L1_heat_pump_disturbed_M/BINDINGS.json",
+      "bytes": 101496,
+      "sha256": "4e8565772390258e00db60561cc75923cfd5d5f91676b13df8bdbb1e03560c67",
+      "copy_sha256_exact": true
+    },
+    {
+      "version": "v30",
+      "staged_path": "v30/runs/d01_b02_L1_heat_pump_disturbed_M/INVOCATION.json",
+      "original_path": "E:/hospital_ies_v30_20261027/runs/d01_b02_L1_heat_pump_disturbed_M/INVOCATION.json",
+      "original_relative_path": "runs/d01_b02_L1_heat_pump_disturbed_M/INVOCATION.json",
+      "bytes": 836,
+      "sha256": "629dbb3381ccb1cfae15b57f810c683914d60360411d954c5a724352227b5216",
+      "copy_sha256_exact": true
+    },
+    {
+      "version": "v30",
+      "staged_path": "v30/runs/d01_b02_L1_heat_pump_disturbed_M/SOURCE_SCOPE.json",
+      "original_path": "E:/hospital_ies_v30_20261027/runs/d01_b02_L1_heat_pump_disturbed_M/SOURCE_SCOPE.json",
+      "original_relative_path": "runs/d01_b02_L1_heat_pump_disturbed_M/SOURCE_SCOPE.json",
+      "bytes": 3452,
+      "sha256": "72f3c1a51840d14aed406a76824d93c539e54028f71b27eb2e9300be397f2785",
+      "copy_sha256_exact": true
+    },
+    {
+      "version": "v30",
+      "staged_path": "v30/runs/d01_b02_L1_heat_pump_disturbed_M/STATUS.json",
+      "original_path": "E:/hospital_ies_v30_20261027/runs/d01_b02_L1_heat_pump_disturbed_M/STATUS.json",
+      "original_relative_path": "runs/d01_b02_L1_heat_pump_disturbed_M/STATUS.json",
+      "bytes": 261,
+      "sha256": "2aac8a280e64d69bb89715b0fe1cf164ae9f821aba8f3887d993036643300519",
+      "copy_sha256_exact": true
+    },
+    {
+      "version": "v30",
+      "staged_path": "v30/runs/d01_b02_L1_heat_pump_disturbed_M/stderr.log",
+      "original_path": "E:/hospital_ies_v30_20261027/runs/d01_b02_L1_heat_pump_disturbed_M/stderr.log",
+      "original_relative_path": "runs/d01_b02_L1_heat_pump_disturbed_M/stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "copy_sha256_exact": true
+    },
+    {
+      "version": "v30",
+      "staged_path": "v30/runs/d01_b02_L1_heat_pump_disturbed_M/stdout.log",
+      "original_path": "E:/hospital_ies_v30_20261027/runs/d01_b02_L1_heat_pump_disturbed_M/stdout.log",
+      "original_relative_path": "runs/d01_b02_L1_heat_pump_disturbed_M/stdout.log",
+      "bytes": 133,
+      "sha256": "dbecde9a869da3f3583bf1e03e09dcd994abcf959318aadc245b238b66b3c048",
+      "copy_sha256_exact": true
+    },
+    {
+      "version": "v30",
+      "staged_path": "v30/runs/r01_normal_R_off/BINDINGS.json",
+      "original_path": "E:/hospital_ies_v30_20261027/runs/r01_normal_R_off/BINDINGS.json",
+      "original_relative_path": "runs/r01_normal_R_off/BINDINGS.json",
+      "bytes": 101496,
+      "sha256": "7afe1c6cdbf9810cd92541b465ed42075ea859a98558e6067da3d3a653ef5987",
+      "copy_sha256_exact": true
+    },
+    {
+      "version": "v30",
+      "staged_path": "v30/runs/r01_normal_R_off/INVOCATION.json",
+      "original_path": "E:/hospital_ies_v30_20261027/runs/r01_normal_R_off/INVOCATION.json",
+      "original_relative_path": "runs/r01_normal_R_off/INVOCATION.json",
+      "bytes": 1675,
+      "sha256": "42c0be918299b68c7ba85ac1438baf79126120465136df62f55e5331f878aa80",
+      "copy_sha256_exact": true
+    },
+    {
+      "version": "v30",
+      "staged_path": "v30/runs/r01_normal_R_off/STATUS.json",
+      "original_path": "E:/hospital_ies_v30_20261027/runs/r01_normal_R_off/STATUS.json",
+      "original_relative_path": "runs/r01_normal_R_off/STATUS.json",
+      "bytes": 177,
+      "sha256": "1d49067eadf271533ab4cd5f3b8bcea2c97f700e1edd462d8fcf10b0f9694ac0",
+      "copy_sha256_exact": true
+    },
+    {
+      "version": "v30",
+      "staged_path": "v30/runs/r01_normal_R_off/stderr.log",
+      "original_path": "E:/hospital_ies_v30_20261027/runs/r01_normal_R_off/stderr.log",
+      "original_relative_path": "runs/r01_normal_R_off/stderr.log",
+      "bytes": 3320,
+      "sha256": "8f9fc7ef314f0ac5376a6648c2dfa33a11d9e798e69548c965fdf1de018c623f",
+      "copy_sha256_exact": true
+    },
+    {
+      "version": "v30",
+      "staged_path": "v30/runs/r01_normal_R_off/stdout.log",
+      "original_path": "E:/hospital_ies_v30_20261027/runs/r01_normal_R_off/stdout.log",
+      "original_relative_path": "runs/r01_normal_R_off/stdout.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "copy_sha256_exact": true
+    },
+    {
+      "version": "v30",
+      "staged_path": "v30/runs/r03_grid_R_off/RESOLVED_CASE.json",
+      "original_path": "E:/hospital_ies_v30_20261027/runs/r03_grid_R_off/RESOLVED_CASE.json",
+      "original_relative_path": "runs/r03_grid_R_off/RESOLVED_CASE.json",
+      "bytes": 14872,
+      "sha256": "01e1b1c9ca2ea673167f6d97a69ea5106f7f70f435a2798b6c24e99eb3048c00",
+      "copy_sha256_exact": true
+    },
+    {
+      "version": "v30",
+      "staged_path": "v30/runs/r03_normal_R_off/RESOLVED_CASE.json",
+      "original_path": "E:/hospital_ies_v30_20261027/runs/r03_normal_R_off/RESOLVED_CASE.json",
+      "original_relative_path": "runs/r03_normal_R_off/RESOLVED_CASE.json",
+      "bytes": 14848,
+      "sha256": "e64e3afbfe0d7107002e23a0f90bfbdf3a4e590ee35ec879adfb69462c19394b",
+      "copy_sha256_exact": true
+    },
+    {
+      "version": "v30",
+      "staged_path": "v30/steps/final_zip_build01/COMMAND.json",
+      "original_path": "E:/hospital_ies_v30_20261027/steps/final_zip_build01/COMMAND.json",
+      "original_relative_path": "steps/final_zip_build01/COMMAND.json",
+      "bytes": 586,
+      "sha256": "5b9faf20551f1a748c31054765fd0e99b71f039782a9e48161c15041f2bdca98",
+      "copy_sha256_exact": true
+    },
+    {
+      "version": "v30",
+      "staged_path": "v30/steps/final_zip_build01/stderr.log",
+      "original_path": "E:/hospital_ies_v30_20261027/steps/final_zip_build01/stderr.log",
+      "original_relative_path": "steps/final_zip_build01/stderr.log",
+      "bytes": 323,
+      "sha256": "a58f94e5eb09f37ce0220835bf0ad933a65fda1a16d9f54e9df087c78d3a9c81",
+      "copy_sha256_exact": true
+    },
+    {
+      "version": "v30",
+      "staged_path": "v30/steps/final_zip_build01/stdout.log",
+      "original_path": "E:/hospital_ies_v30_20261027/steps/final_zip_build01/stdout.log",
+      "original_relative_path": "steps/final_zip_build01/stdout.log",
+      "bytes": 419,
+      "sha256": "e4b3381fb8d110c77b2a23f908e50af36ddb27aa1b99799a3c5441e3b67c086b",
+      "copy_sha256_exact": true
+    },
+    {
+      "version": "v30",
+      "staged_path": "v30/steps/final_zip_build02/COMMAND.json",
+      "original_path": "E:/hospital_ies_v30_20261027/steps/final_zip_build02/COMMAND.json",
+      "original_relative_path": "steps/final_zip_build02/COMMAND.json",
+      "bytes": 591,
+      "sha256": "6621eb90ba505a14d7e3ed30870415d5154ce05900468197b57cb9c6c32205dc",
+      "copy_sha256_exact": true
+    },
+    {
+      "version": "v30",
+      "staged_path": "v30/steps/final_zip_build02/stderr.log",
+      "original_path": "E:/hospital_ies_v30_20261027/steps/final_zip_build02/stderr.log",
+      "original_relative_path": "steps/final_zip_build02/stderr.log",
+      "bytes": 121,
+      "sha256": "fe3fc5e3b2884d5150458b73590e22f7627f3f9280c88c0ed55a21a8f69bdd63",
+      "copy_sha256_exact": true
+    },
+    {
+      "version": "v30",
+      "staged_path": "v30/steps/final_zip_build02/stdout.log",
+      "original_path": "E:/hospital_ies_v30_20261027/steps/final_zip_build02/stdout.log",
+      "original_relative_path": "steps/final_zip_build02/stdout.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "copy_sha256_exact": true
+    },
+    {
+      "version": "v30",
+      "staged_path": "v30/steps/final_zip_build03/COMMAND.json",
+      "original_path": "E:/hospital_ies_v30_20261027/steps/final_zip_build03/COMMAND.json",
+      "original_relative_path": "steps/final_zip_build03/COMMAND.json",
+      "bytes": 588,
+      "sha256": "2b27050cdbea3e090579982c2c52e12848f9e4ca9a17212285c2e17bf8325460",
+      "copy_sha256_exact": true
+    },
+    {
+      "version": "v30",
+      "staged_path": "v30/steps/final_zip_build03/stderr.log",
+      "original_path": "E:/hospital_ies_v30_20261027/steps/final_zip_build03/stderr.log",
+      "original_relative_path": "steps/final_zip_build03/stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "copy_sha256_exact": true
+    },
+    {
+      "version": "v30",
+      "staged_path": "v30/steps/final_zip_build03/stdout.log",
+      "original_path": "E:/hospital_ies_v30_20261027/steps/final_zip_build03/stdout.log",
+      "original_relative_path": "steps/final_zip_build03/stdout.log",
+      "bytes": 1181,
+      "sha256": "8eaa2ff2a7c16f7f9ddcc23fab8b28d48c4563d31f0008ebf9fa7168c71df395",
+      "copy_sha256_exact": true
+    },
+    {
+      "version": "v30",
+      "staged_path": "v30/steps/full_default_after_fix01/COMMAND.json",
+      "original_path": "E:/hospital_ies_v30_20261027/steps/full_default_after_fix01/COMMAND.json",
+      "original_relative_path": "steps/full_default_after_fix01/COMMAND.json",
+      "bytes": 733,
+      "sha256": "33220ba53bc671757ffb3006db38a07802ef204ed91ca7c7f5cc67a69b0a3ba1",
+      "copy_sha256_exact": true
+    },
+    {
+      "version": "v30",
+      "staged_path": "v30/steps/full_default_after_fix01/stderr.log",
+      "original_path": "E:/hospital_ies_v30_20261027/steps/full_default_after_fix01/stderr.log",
+      "original_relative_path": "steps/full_default_after_fix01/stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "copy_sha256_exact": true
+    },
+    {
+      "version": "v30",
+      "staged_path": "v30/steps/full_default_after_fix01/stdout.log",
+      "original_path": "E:/hospital_ies_v30_20261027/steps/full_default_after_fix01/stdout.log",
+      "original_relative_path": "steps/full_default_after_fix01/stdout.log",
+      "bytes": 1573,
+      "sha256": "67087ccc41e04fae3675f0a39a9a6c5254cfcbf041eec8a21f40a2ef794d09a4",
+      "copy_sha256_exact": true
+    },
+    {
+      "version": "v30",
+      "staged_path": "v30/steps/physical_min_off_green03/COMMAND.json",
+      "original_path": "E:/hospital_ies_v30_20261027/steps/physical_min_off_green03/COMMAND.json",
+      "original_relative_path": "steps/physical_min_off_green03/COMMAND.json",
+      "bytes": 796,
+      "sha256": "bda473e669b70b64f5fa48d329c80d981238df60928dcc5e1853569ced0f08f1",
+      "copy_sha256_exact": true
+    },
+    {
+      "version": "v30",
+      "staged_path": "v30/steps/physical_min_off_green03/stderr.log",
+      "original_path": "E:/hospital_ies_v30_20261027/steps/physical_min_off_green03/stderr.log",
+      "original_relative_path": "steps/physical_min_off_green03/stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "copy_sha256_exact": true
+    },
+    {
+      "version": "v30",
+      "staged_path": "v30/steps/physical_min_off_green03/stdout.log",
+      "original_path": "E:/hospital_ies_v30_20261027/steps/physical_min_off_green03/stdout.log",
+      "original_relative_path": "steps/physical_min_off_green03/stdout.log",
+      "bytes": 102,
+      "sha256": "5aba048c6b7ac1e40026102b7df8544d3c597e1fec8bb7650da05b32fbaa286f",
+      "copy_sha256_exact": true
+    },
+    {
+      "version": "v30",
+      "staged_path": "v30/steps/physical_min_off_red03/COMMAND.json",
+      "original_path": "E:/hospital_ies_v30_20261027/steps/physical_min_off_red03/COMMAND.json",
+      "original_relative_path": "steps/physical_min_off_red03/COMMAND.json",
+      "bytes": 678,
+      "sha256": "a89f63c5f6a43c79e7955327f02c294ff1a8412ac323f16247af93dde27ad3b0",
+      "copy_sha256_exact": true
+    },
+    {
+      "version": "v30",
+      "staged_path": "v30/steps/physical_min_off_red03/stderr.log",
+      "original_path": "E:/hospital_ies_v30_20261027/steps/physical_min_off_red03/stderr.log",
+      "original_relative_path": "steps/physical_min_off_red03/stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "copy_sha256_exact": true
+    },
+    {
+      "version": "v30",
+      "staged_path": "v30/steps/physical_min_off_red03/stdout.log",
+      "original_path": "E:/hospital_ies_v30_20261027/steps/physical_min_off_red03/stdout.log",
+      "original_relative_path": "steps/physical_min_off_red03/stdout.log",
+      "bytes": 1798,
+      "sha256": "0ed2b79ef4b0f513338c246b6ef348f8803ab3457765f6e51ca9725c6fcccad5",
+      "copy_sha256_exact": true
+    },
+    {
+      "version": "v31",
+      "staged_path": "v31/EXPERIMENT_REGISTRATION.json",
+      "original_path": "E:/hospital_ies_v31_20261027/EXPERIMENT_REGISTRATION.json",
+      "original_relative_path": "EXPERIMENT_REGISTRATION.json",
+      "bytes": 54317,
+      "sha256": "bad2604b09bb409eaa78b11aeca90a81045d979c8f1de714d62cbf4c351d7739",
+      "copy_sha256_exact": true
+    },
+    {
+      "version": "v31",
+      "staged_path": "v31/FORMAL_ATTEMPTS.jsonl",
+      "original_path": "E:/hospital_ies_v31_20261027/FORMAL_ATTEMPTS.jsonl",
+      "original_relative_path": "FORMAL_ATTEMPTS.jsonl",
+      "bytes": 3656,
+      "sha256": "9f3e3f0d5aa560020f6dbf20beb2b4c98c1fffae6a1847ff9b5611b93015c99f",
+      "copy_sha256_exact": true
+    },
+    {
+      "version": "v31",
+      "staged_path": "v31/FROZEN_SOURCE_V31_P01.json",
+      "original_path": "E:/hospital_ies_v31_20261027/FROZEN_SOURCE_V31_P01.json",
+      "original_relative_path": "FROZEN_SOURCE_V31_P01.json",
+      "bytes": 150022,
+      "sha256": "e56d653fbc66824df944103fd8b69c6e3bb495a2589d2037171b991d27dd50b9",
+      "copy_sha256_exact": true
+    },
+    {
+      "version": "v31",
+      "staged_path": "v31/RUN_PLAN.json",
+      "original_path": "E:/hospital_ies_v31_20261027/RUN_PLAN.json",
+      "original_relative_path": "RUN_PLAN.json",
+      "bytes": 537,
+      "sha256": "faa47cf8bcbb07e73e1c39caa9337db02387caa8e39179cfa6c79b01ea819758",
+      "copy_sha256_exact": true
+    },
+    {
+      "version": "v31",
+      "staged_path": "v31/SOURCE_DELTA.json",
+      "original_path": "E:/hospital_ies_v31_20261027/SOURCE_DELTA.json",
+      "original_relative_path": "SOURCE_DELTA.json",
+      "bytes": 480,
+      "sha256": "2868551387a0c999bff3021cdf44b1afbd4da4352e4e766f99ff07ebe36c5c32",
+      "copy_sha256_exact": true
+    },
+    {
+      "version": "v31",
+      "staged_path": "v31/SOURCE_DIFF.patch",
+      "original_path": "E:/hospital_ies_v31_20261027/SOURCE_DIFF.patch",
+      "original_relative_path": "SOURCE_DIFF.patch",
+      "bytes": 249949,
+      "sha256": "a1a86516899b6b59e90db9d9b067c90efb0b537ac14a84677ea0eb807dae6652",
+      "copy_sha256_exact": true
+    },
+    {
+      "version": "v31",
+      "staged_path": "v31/acceptance/FINAL_ACCEPTANCE.json",
+      "original_path": "E:/hospital_ies_v31_20261027/acceptance/FINAL_ACCEPTANCE.json",
+      "original_relative_path": "acceptance/FINAL_ACCEPTANCE.json",
+      "bytes": 1532,
+      "sha256": "4e5a97ad1e00be7023ce227e8d85f8be9defcd1cb915610e29294495f32c856f",
+      "copy_sha256_exact": true
+    },
+    {
+      "version": "v31",
+      "staged_path": "v31/acceptance/ZIP_VERIFICATION.json",
+      "original_path": "E:/hospital_ies_v31_20261027/acceptance/ZIP_VERIFICATION.json",
+      "original_relative_path": "acceptance/ZIP_VERIFICATION.json",
+      "bytes": 908,
+      "sha256": "e4c261d7e2bb2921f52b7e98d0960bd77bbe937625731ef27f7add821f658b27",
+      "copy_sha256_exact": true
+    },
+    {
+      "version": "v31",
+      "staged_path": "v31/acceptance/independent_readonly01/RESTORE_RECEIPT.json",
+      "original_path": "E:/hospital_ies_v31_20261027/acceptance/independent_readonly01/RESTORE_RECEIPT.json",
+      "original_relative_path": "acceptance/independent_readonly01/RESTORE_RECEIPT.json",
+      "bytes": 912,
+      "sha256": "2e7f6503567f3fefa095e9aea59e8b6fee4325a7270a727801ea3779925e4d06",
+      "copy_sha256_exact": true
+    },
+    {
+      "version": "v31",
+      "staged_path": "v31/acceptance/independent_readonly01/REVIEW_RECEIPT.json",
+      "original_path": "E:/hospital_ies_v31_20261027/acceptance/independent_readonly01/REVIEW_RECEIPT.json",
+      "original_relative_path": "acceptance/independent_readonly01/REVIEW_RECEIPT.json",
+      "bytes": 3008,
+      "sha256": "234bba8f5aed6cb505203d76a62db1165cc95a7bce94d391faf89f9e89efa2be",
+      "copy_sha256_exact": true
+    },
+    {
+      "version": "v31",
+      "staged_path": "v31/acceptance/independent_review.stderr.log",
+      "original_path": "E:/hospital_ies_v31_20261027/acceptance/independent_review.stderr.log",
+      "original_relative_path": "acceptance/independent_review.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "copy_sha256_exact": true
+    },
+    {
+      "version": "v31",
+      "staged_path": "v31/acceptance/independent_review.stdout.log",
+      "original_path": "E:/hospital_ies_v31_20261027/acceptance/independent_review.stdout.log",
+      "original_relative_path": "acceptance/independent_review.stdout.log",
+      "bytes": 2517,
+      "sha256": "f337df2fa46d109efbcd12caa555686acf024f5b8f4cb45ce0cec651b7344b43",
+      "copy_sha256_exact": true
+    },
+    {
+      "version": "v31",
+      "staged_path": "v31/acceptance/independent_review_COMMAND.json",
+      "original_path": "E:/hospital_ies_v31_20261027/acceptance/independent_review_COMMAND.json",
+      "original_relative_path": "acceptance/independent_review_COMMAND.json",
+      "bytes": 601,
+      "sha256": "17a9f6020493fc068a9b3561414ba929c747d03471b9ff7dcf73f63e00be7dff",
+      "copy_sha256_exact": true
+    },
+    {
+      "version": "v31",
+      "staged_path": "v31/acceptance/static_qa/STATIC_QA.json",
+      "original_path": "E:/hospital_ies_v31_20261027/acceptance/static_qa/STATIC_QA.json",
+      "original_relative_path": "acceptance/static_qa/STATIC_QA.json",
+      "bytes": 13325,
+      "sha256": "85b6c9f1fe1f78353bb6b5f5328438ea267f2d6fa53920fe7b7b3a982f1341be",
+      "copy_sha256_exact": true
+    },
+    {
+      "version": "v31",
+      "staged_path": "v31/acceptance/static_qa/STATIC_QA_ZH.md",
+      "original_path": "E:/hospital_ies_v31_20261027/acceptance/static_qa/STATIC_QA_ZH.md",
+      "original_relative_path": "acceptance/static_qa/STATIC_QA_ZH.md",
+      "bytes": 1586,
+      "sha256": "ccbb8a617ab4dc001bfa93036dbc2dfe43100305f072f53a3360a9c125d604b2",
+      "copy_sha256_exact": true
+    },
+    {
+      "version": "v31",
+      "staged_path": "v31/baseline_audit/LOCK_PROVENANCE.json",
+      "original_path": "E:/hospital_ies_v31_20261027/baseline_audit/LOCK_PROVENANCE.json",
+      "original_relative_path": "baseline_audit/LOCK_PROVENANCE.json",
+      "bytes": 1748,
+      "sha256": "68138c48649032a2d2fd492636b0e52db2ce8d0f4545a0e74e014c57deb2cfa1",
+      "copy_sha256_exact": true
+    },
+    {
+      "version": "v31",
+      "staged_path": "v31/baseline_audit/README_ZH.md",
+      "original_path": "E:/hospital_ies_v31_20261027/baseline_audit/README_ZH.md",
+      "original_relative_path": "baseline_audit/README_ZH.md",
+      "bytes": 2065,
+      "sha256": "c5063433041d45a267c2b70f7b9fe47d17d8db7e65be30745c39bf77a42b1f6c",
+      "copy_sha256_exact": true
+    },
+    {
+      "version": "v31",
+      "staged_path": "v31/baseline_audit/READY.json",
+      "original_path": "E:/hospital_ies_v31_20261027/baseline_audit/READY.json",
+      "original_relative_path": "baseline_audit/READY.json",
+      "bytes": 3631,
+      "sha256": "c09b809436356d5f767e1097fc0510618c050f82dca50da6c49863154162e361",
+      "copy_sha256_exact": true
+    },
+    {
+      "version": "v31",
+      "staged_path": "v31/baseline_audit/REUSE_SELECTION.csv",
+      "original_path": "E:/hospital_ies_v31_20261027/baseline_audit/REUSE_SELECTION.csv",
+      "original_relative_path": "baseline_audit/REUSE_SELECTION.csv",
+      "bytes": 1943,
+      "sha256": "49f3e9d790959d5ec0983bbf811e692dbca7a8a4007cf3f5eb1c64e3b1fdd615",
+      "copy_sha256_exact": true
+    },
+    {
+      "version": "v31",
+      "staged_path": "v31/baseline_audit/REUSE_SELECTION.json",
+      "original_path": "E:/hospital_ies_v31_20261027/baseline_audit/REUSE_SELECTION.json",
+      "original_relative_path": "baseline_audit/REUSE_SELECTION.json",
+      "bytes": 18801,
+      "sha256": "3f25649b0cfac46fe007b7c3edc62c01ac6f7310223b6e68aab83c9960532db0",
+      "copy_sha256_exact": true
+    },
+    {
+      "version": "v31",
+      "staged_path": "v31/delivery_payload/project/docs/v31/MIGRATION.md",
+      "original_path": "E:/hospital_ies_v31_20261027/delivery_payload/project/docs/v31/MIGRATION.md",
+      "original_relative_path": "delivery_payload/project/docs/v31/MIGRATION.md",
+      "bytes": 2944,
+      "sha256": "b02d5fb049aa98e8446f44c9cc19c645ac9eaff188329f20b48c95016da11173",
+      "copy_sha256_exact": true
+    },
+    {
+      "version": "v31",
+      "staged_path": "v31/delivery_payload/project/docs/v31/SCOPE_AND_ASSUMPTIONS.md",
+      "original_path": "E:/hospital_ies_v31_20261027/delivery_payload/project/docs/v31/SCOPE_AND_ASSUMPTIONS.md",
+      "original_relative_path": "delivery_payload/project/docs/v31/SCOPE_AND_ASSUMPTIONS.md",
+      "bytes": 2811,
+      "sha256": "c7995c9c584b114bd4852cbac087bb5c0c1a9d8310601212608606b552669ef3",
+      "copy_sha256_exact": true
+    },
+    {
+      "version": "v31",
+      "staged_path": "v31/evaluation/B07_NATIVE_CHAIN_REVIEW.json",
+      "original_path": "E:/hospital_ies_v31_20261027/evaluation/B07_NATIVE_CHAIN_REVIEW.json",
+      "original_relative_path": "evaluation/B07_NATIVE_CHAIN_REVIEW.json",
+      "bytes": 15912,
+      "sha256": "b104fef70c95956ef703fbb2c97f077c28fac2c4d1a101c672f4e64e251cfcb1",
+      "copy_sha256_exact": true
+    },
+    {
+      "version": "v31",
+      "staged_path": "v31/evaluation/DESIGN_AND_PLAN.md",
+      "original_path": "E:/hospital_ies_v31_20261027/evaluation/DESIGN_AND_PLAN.md",
+      "original_relative_path": "evaluation/DESIGN_AND_PLAN.md",
+      "bytes": 2658,
+      "sha256": "8bd34f524b277a2bc88f862ff14e2e8f2e4a6dd4a5d3dfeaf357ea6234e5bc42",
+      "copy_sha256_exact": true
+    },
+    {
+      "version": "v31",
+      "staged_path": "v31/evaluation/FINAL01.stderr.log",
+      "original_path": "E:/hospital_ies_v31_20261027/evaluation/FINAL01.stderr.log",
+      "original_relative_path": "evaluation/FINAL01.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "copy_sha256_exact": true
+    },
+    {
+      "version": "v31",
+      "staged_path": "v31/evaluation/FINAL01.stdout.log",
+      "original_path": "E:/hospital_ies_v31_20261027/evaluation/FINAL01.stdout.log",
+      "original_relative_path": "evaluation/FINAL01.stdout.log",
+      "bytes": 662,
+      "sha256": "f498766177702ce735e9b4b734859ca616caa7e48e0504c48ba7c0f4508f9696",
+      "copy_sha256_exact": true
+    },
+    {
+      "version": "v31",
+      "staged_path": "v31/evaluation/FINAL01_COMMAND.json",
+      "original_path": "E:/hospital_ies_v31_20261027/evaluation/FINAL01_COMMAND.json",
+      "original_relative_path": "evaluation/FINAL01_COMMAND.json",
+      "bytes": 428,
+      "sha256": "6a5fb2cff762626caae5b07b48248aea25d71395880fe437d2fffb8d70256354",
+      "copy_sha256_exact": true
+    },
+    {
+      "version": "v31",
+      "staged_path": "v31/evaluation/FINAL01_QA.json",
+      "original_path": "E:/hospital_ies_v31_20261027/evaluation/FINAL01_QA.json",
+      "original_relative_path": "evaluation/FINAL01_QA.json",
+      "bytes": 1469,
+      "sha256": "15fe3351f31e319d4bd6a8d0b9523ec28b806db7cde306daff31e19a0ac0ddc6",
+      "copy_sha256_exact": true
+    },
+    {
+      "version": "v31",
+      "staged_path": "v31/evaluation/FINAL_DELIVERY_INDEX.json",
+      "original_path": "E:/hospital_ies_v31_20261027/evaluation/FINAL_DELIVERY_INDEX.json",
+      "original_relative_path": "evaluation/FINAL_DELIVERY_INDEX.json",
+      "bytes": 2816,
+      "sha256": "d36abe4dc16b23b44e0716279f2e42ef45734e0a61bca90d54d33187d28ae668",
+      "copy_sha256_exact": true
+    },
+    {
+      "version": "v31",
+      "staged_path": "v31/evaluation/FINAL_ENGINEERING_INTERPRETATION_ZH.md",
+      "original_path": "E:/hospital_ies_v31_20261027/evaluation/FINAL_ENGINEERING_INTERPRETATION_ZH.md",
+      "original_relative_path": "evaluation/FINAL_ENGINEERING_INTERPRETATION_ZH.md",
+      "bytes": 11781,
+      "sha256": "6e54c285bbb5e360bf1b32683cbc3ce4d548b9be1e2b4651d5a40510f85238c1",
+      "copy_sha256_exact": true
+    },
+    {
+      "version": "v31",
+      "staged_path": "v31/evaluation/FROZEN_EVALUATION_TOOLS_V31.json",
+      "original_path": "E:/hospital_ies_v31_20261027/evaluation/FROZEN_EVALUATION_TOOLS_V31.json",
+      "original_relative_path": "evaluation/FROZEN_EVALUATION_TOOLS_V31.json",
+      "bytes": 3179,
+      "sha256": "b50542b9f3c0f756b8a7be0f9d368e5769c8fb7e91da8eebce218ad42d0ab74c",
+      "copy_sha256_exact": true
+    },
+    {
+      "version": "v31",
+      "staged_path": "v31/evaluation/GREEN01.log",
+      "original_path": "E:/hospital_ies_v31_20261027/evaluation/GREEN01.log",
+      "original_relative_path": "evaluation/GREEN01.log",
+      "bytes": 2288,
+      "sha256": "b735d8b9d2619e8e831cf2d47bfc92a73ba3adf3fd97d5e3d6cf75138e97cdd8",
+      "copy_sha256_exact": true
+    },
+    {
+      "version": "v31",
+      "staged_path": "v31/evaluation/GREEN01_COMMAND.json",
+      "original_path": "E:/hospital_ies_v31_20261027/evaluation/GREEN01_COMMAND.json",
+      "original_relative_path": "evaluation/GREEN01_COMMAND.json",
+      "bytes": 211,
+      "sha256": "5b2e6106d893df7cac211f4bada19fe2e1c6195c7bfd9e299c7ad234c569bd9d",
+      "copy_sha256_exact": true
+    },
+    {
+      "version": "v31",
+      "staged_path": "v31/evaluation/GREEN02_COMMAND.json",
+      "original_path": "E:/hospital_ies_v31_20261027/evaluation/GREEN02_COMMAND.json",
+      "original_relative_path": "evaluation/GREEN02_COMMAND.json",
+      "bytes": 188,
+      "sha256": "0813db8ee9b81e700cd527c77cacc2ad815817127adfaa89ee45ea5cfd699d8e",
+      "copy_sha256_exact": true
+    },
+    {
+      "version": "v31",
+      "staged_path": "v31/evaluation/GREEN02_case_design.log",
+      "original_path": "E:/hospital_ies_v31_20261027/evaluation/GREEN02_case_design.log",
+      "original_relative_path": "evaluation/GREEN02_case_design.log",
+      "bytes": 2704,
+      "sha256": "6e7119ca66ff22a9ef190ff13b7e71b4165482223c3ee76ebb1f2b614e59787f",
+      "copy_sha256_exact": true
+    },
+    {
+      "version": "v31",
+      "staged_path": "v31/evaluation/GREEN03_COMMAND.json",
+      "original_path": "E:/hospital_ies_v31_20261027/evaluation/GREEN03_COMMAND.json",
+      "original_relative_path": "evaluation/GREEN03_COMMAND.json",
+      "bytes": 186,
+      "sha256": "499d52f0a5cd9a61fec4c0dacc28e567a6a40ff6ca08666e09888a8ad4b87c2e",
+      "copy_sha256_exact": true
+    },
+    {
+      "version": "v31",
+      "staged_path": "v31/evaluation/GREEN03_mechanism.log",
+      "original_path": "E:/hospital_ies_v31_20261027/evaluation/GREEN03_mechanism.log",
+      "original_relative_path": "evaluation/GREEN03_mechanism.log",
+      "bytes": 3124,
+      "sha256": "9e83765ffbbfdc01e88bf906076eaa7ba35d3eb9cdf2eae72564bd18d24fc4f0",
+      "copy_sha256_exact": true
+    },
+    {
+      "version": "v31",
+      "staged_path": "v31/evaluation/GREEN04_COMMAND.json",
+      "original_path": "E:/hospital_ies_v31_20261027/evaluation/GREEN04_COMMAND.json",
+      "original_relative_path": "evaluation/GREEN04_COMMAND.json",
+      "bytes": 185,
+      "sha256": "51c234005ad504f327e6be29cef937b9ac5d40e2202aefc7c5b095bd54c7e953",
+      "copy_sha256_exact": true
+    },
+    {
+      "version": "v31",
+      "staged_path": "v31/evaluation/GREEN04_coverage.log",
+      "original_path": "E:/hospital_ies_v31_20261027/evaluation/GREEN04_coverage.log",
+      "original_relative_path": "evaluation/GREEN04_coverage.log",
+      "bytes": 3316,
+      "sha256": "25fc088ff368f0cdc5dae95639495e3c1f77d711e58478071a645826f990ea9f",
+      "copy_sha256_exact": true
+    },
+    {
+      "version": "v31",
+      "staged_path": "v31/evaluation/GREEN05_COMMAND.json",
+      "original_path": "E:/hospital_ies_v31_20261027/evaluation/GREEN05_COMMAND.json",
+      "original_relative_path": "evaluation/GREEN05_COMMAND.json",
+      "bytes": 183,
+      "sha256": "21d08d944db262825514a7ea0950763ac79a690e45bd5fb7de651854eb19b419",
+      "copy_sha256_exact": true
+    },
+    {
+      "version": "v31",
+      "staged_path": "v31/evaluation/GREEN05_review.log",
+      "original_path": "E:/hospital_ies_v31_20261027/evaluation/GREEN05_review.log",
+      "original_relative_path": "evaluation/GREEN05_review.log",
+      "bytes": 3540,
+      "sha256": "cc005c4efe9457aa04b1ae45d887a55a838da5fe2d09bb41c0a55af3e1b307b4",
+      "copy_sha256_exact": true
+    },
+    {
+      "version": "v31",
+      "staged_path": "v31/evaluation/GREEN06_COMMAND.json",
+      "original_path": "E:/hospital_ies_v31_20261027/evaluation/GREEN06_COMMAND.json",
+      "original_relative_path": "evaluation/GREEN06_COMMAND.json",
+      "bytes": 193,
+      "sha256": "d6a6f6a78b7187def08629a18038f99127ace2131776541074d4ba0e93d05893",
+      "copy_sha256_exact": true
+    },
+    {
+      "version": "v31",
+      "staged_path": "v31/evaluation/GREEN06_provenance_trace.log",
+      "original_path": "E:/hospital_ies_v31_20261027/evaluation/GREEN06_provenance_trace.log",
+      "original_relative_path": "evaluation/GREEN06_provenance_trace.log",
+      "bytes": 4184,
+      "sha256": "49fedca1ee2bb84a34efbb0e12b269f20946dc7c7a07309b3aa66647264d8915",
+      "copy_sha256_exact": true
+    },
+    {
+      "version": "v31",
+      "staged_path": "v31/evaluation/GREEN07_COMMAND.json",
+      "original_path": "E:/hospital_ies_v31_20261027/evaluation/GREEN07_COMMAND.json",
+      "original_relative_path": "evaluation/GREEN07_COMMAND.json",
+      "bytes": 191,
+      "sha256": "bb89ba65e4030b79e816d75c69b7916562a8ec4d9fef0a920954d54b1de7efb1",
+      "copy_sha256_exact": true
+    },
+    {
+      "version": "v31",
+      "staged_path": "v31/evaluation/GREEN07_native_receipt.log",
+      "original_path": "E:/hospital_ies_v31_20261027/evaluation/GREEN07_native_receipt.log",
+      "original_relative_path": "evaluation/GREEN07_native_receipt.log",
+      "bytes": 4408,
+      "sha256": "4a6eb444c8505b233058e320dce29c6f40880b81b9100dcd7d8541639ea0d191",
+      "copy_sha256_exact": true
+    },
+    {
+      "version": "v31",
+      "staged_path": "v31/evaluation/PARTIAL01.stderr.log",
+      "original_path": "E:/hospital_ies_v31_20261027/evaluation/PARTIAL01.stderr.log",
+      "original_relative_path": "evaluation/PARTIAL01.stderr.log",
+      "bytes": 2538,
+      "sha256": "6d546fa3cfdcdd408c9303cddae1438c75a479dfc3023ac5068c8caaebac8c07",
+      "copy_sha256_exact": true
+    },
+    {
+      "version": "v31",
+      "staged_path": "v31/evaluation/PARTIAL01.stdout.log",
+      "original_path": "E:/hospital_ies_v31_20261027/evaluation/PARTIAL01.stdout.log",
+      "original_relative_path": "evaluation/PARTIAL01.stdout.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "copy_sha256_exact": true
+    },
+    {
+      "version": "v31",
+      "staged_path": "v31/evaluation/PARTIAL01_COMMAND.json",
+      "original_path": "E:/hospital_ies_v31_20261027/evaluation/PARTIAL01_COMMAND.json",
+      "original_relative_path": "evaluation/PARTIAL01_COMMAND.json",
+      "bytes": 448,
+      "sha256": "940512ea856b2388da2f96d09d3030615e9fec7c8e0d861127efdc61ba5fddb8",
+      "copy_sha256_exact": true
+    },
+    {
+      "version": "v31",
+      "staged_path": "v31/evaluation/PARTIAL02.stderr.log",
+      "original_path": "E:/hospital_ies_v31_20261027/evaluation/PARTIAL02.stderr.log",
+      "original_relative_path": "evaluation/PARTIAL02.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "copy_sha256_exact": true
+    },
+    {
+      "version": "v31",
+      "staged_path": "v31/evaluation/PARTIAL02.stdout.log",
+      "original_path": "E:/hospital_ies_v31_20261027/evaluation/PARTIAL02.stdout.log",
+      "original_relative_path": "evaluation/PARTIAL02.stdout.log",
+      "bytes": 880,
+      "sha256": "810c889e9497439939428050297bcb2a5063bb923366a62ec21af0ba8cd633f6",
+      "copy_sha256_exact": true
+    },
+    {
+      "version": "v31",
+      "staged_path": "v31/evaluation/PARTIAL02_COMMAND.json",
+      "original_path": "E:/hospital_ies_v31_20261027/evaluation/PARTIAL02_COMMAND.json",
+      "original_relative_path": "evaluation/PARTIAL02_COMMAND.json",
+      "bytes": 448,
+      "sha256": "074c3f0bef64023441a49e04ece38ab69c8b43869ebaa36765bceeeba23a24b9",
+      "copy_sha256_exact": true
+    },
+    {
+      "version": "v31",
+      "staged_path": "v31/evaluation/PARTIAL_SELECTION01.json",
+      "original_path": "E:/hospital_ies_v31_20261027/evaluation/PARTIAL_SELECTION01.json",
+      "original_relative_path": "evaluation/PARTIAL_SELECTION01.json",
+      "bytes": 4607,
+      "sha256": "7c888d9168febc7436945135b7a4313166d5bf35ccdd4c3ccfd7b11d9771209d",
+      "copy_sha256_exact": true
+    },
+    {
+      "version": "v31",
+      "staged_path": "v31/evaluation/README_ZH.md",
+      "original_path": "E:/hospital_ies_v31_20261027/evaluation/README_ZH.md",
+      "original_relative_path": "evaluation/README_ZH.md",
+      "bytes": 5878,
+      "sha256": "d06b33ba403bd2d504de52bc1c1eaaab59722b533c04c012424ef73764a09ad8",
+      "copy_sha256_exact": true
+    },
+    {
+      "version": "v31",
+      "staged_path": "v31/evaluation/RED01.log",
+      "original_path": "E:/hospital_ies_v31_20261027/evaluation/RED01.log",
+      "original_relative_path": "evaluation/RED01.log",
+      "bytes": 11004,
+      "sha256": "84d6908e26de77a6387aa9d7efd83f52c70d46a7ac93da2b9646e6eccbba3e05",
+      "copy_sha256_exact": true
+    },
+    {
+      "version": "v31",
+      "staged_path": "v31/evaluation/RED01_COMMAND.json",
+      "original_path": "E:/hospital_ies_v31_20261027/evaluation/RED01_COMMAND.json",
+      "original_relative_path": "evaluation/RED01_COMMAND.json",
+      "bytes": 263,
+      "sha256": "efa87f60bf22c21e795637bdd676aa08ff54e80a8d4052bf413a5feaab063601",
+      "copy_sha256_exact": true
+    },
+    {
+      "version": "v31",
+      "staged_path": "v31/evaluation/RED02_COMMAND.json",
+      "original_path": "E:/hospital_ies_v31_20261027/evaluation/RED02_COMMAND.json",
+      "original_relative_path": "evaluation/RED02_COMMAND.json",
+      "bytes": 234,
+      "sha256": "0d5a9f62c04577c38691375c9f4d041ead0993b96092808038488078e2c7356a",
+      "copy_sha256_exact": true
+    },
+    {
+      "version": "v31",
+      "staged_path": "v31/evaluation/RED02_case_design.log",
+      "original_path": "E:/hospital_ies_v31_20261027/evaluation/RED02_case_design.log",
+      "original_relative_path": "evaluation/RED02_case_design.log",
+      "bytes": 3894,
+      "sha256": "a1cd71a6e230fe47f6910947d25dfe4de39f5ed160a37c3d4e9b728159a255f3",
+      "copy_sha256_exact": true
+    },
+    {
+      "version": "v31",
+      "staged_path": "v31/evaluation/RED03_COMMAND.json",
+      "original_path": "E:/hospital_ies_v31_20261027/evaluation/RED03_COMMAND.json",
+      "original_relative_path": "evaluation/RED03_COMMAND.json",
+      "bytes": 252,
+      "sha256": "63922c51e1124b2f79c85001055e30257a6dff2d9b421514999955818eeefa1d",
+      "copy_sha256_exact": true
+    },
+    {
+      "version": "v31",
+      "staged_path": "v31/evaluation/RED03_mechanism.log",
+      "original_path": "E:/hospital_ies_v31_20261027/evaluation/RED03_mechanism.log",
+      "original_relative_path": "evaluation/RED03_mechanism.log",
+      "bytes": 5318,
+      "sha256": "c7ae4ce6ceb0715f9464f924f01687d7dc9cc1c3b82628b243464c1724a694eb",
+      "copy_sha256_exact": true
+    },
+    {
+      "version": "v31",
+      "staged_path": "v31/evaluation/RED04_COMMAND.json",
+      "original_path": "E:/hospital_ies_v31_20261027/evaluation/RED04_COMMAND.json",
+      "original_relative_path": "evaluation/RED04_COMMAND.json",
+      "bytes": 228,
+      "sha256": "c57305a064e6e3bdd8ff5e2c764c434a8c5dc8a04f60acd48b7410cba6971819",
+      "copy_sha256_exact": true
+    },
+    {
+      "version": "v31",
+      "staged_path": "v31/evaluation/RED04_coverage.log",
+      "original_path": "E:/hospital_ies_v31_20261027/evaluation/RED04_coverage.log",
+      "original_relative_path": "evaluation/RED04_coverage.log",
+      "bytes": 4476,
+      "sha256": "8c46c2f9a4f3aeb34a7ec53a24afc1623e420ebbd197f21929757ef670905b5c",
+      "copy_sha256_exact": true
+    },
+    {
+      "version": "v31",
+      "staged_path": "v31/evaluation/RED05_COMMAND.json",
+      "original_path": "E:/hospital_ies_v31_20261027/evaluation/RED05_COMMAND.json",
+      "original_relative_path": "evaluation/RED05_COMMAND.json",
+      "bytes": 268,
+      "sha256": "24aeeb78a0f6af3878e694e827c957497981de5e66dbe4138650c059c3a910f5",
+      "copy_sha256_exact": true
+    },
+    {
+      "version": "v31",
+      "staged_path": "v31/evaluation/RED05_review.log",
+      "original_path": "E:/hospital_ies_v31_20261027/evaluation/RED05_review.log",
+      "original_relative_path": "evaluation/RED05_review.log",
+      "bytes": 6136,
+      "sha256": "2dd611b312a336292c4a310f62e2370bd82f6ba1f1392af0f1f993ce2a516756",
+      "copy_sha256_exact": true
+    },
+    {
+      "version": "v31",
+      "staged_path": "v31/evaluation/RED06_COMMAND.json",
+      "original_path": "E:/hospital_ies_v31_20261027/evaluation/RED06_COMMAND.json",
+      "original_relative_path": "evaluation/RED06_COMMAND.json",
+      "bytes": 293,
+      "sha256": "77e570e32e5cbcd963cb6d1b45e0e57ba0621d1852e68259c14ea4f4eecd68b1",
+      "copy_sha256_exact": true
+    },
+    {
+      "version": "v31",
+      "staged_path": "v31/evaluation/RED06_provenance_trace.log",
+      "original_path": "E:/hospital_ies_v31_20261027/evaluation/RED06_provenance_trace.log",
+      "original_relative_path": "evaluation/RED06_provenance_trace.log",
+      "bytes": 9898,
+      "sha256": "df5c5d98adb6744a7e9807c3af4c0de3791d36c8194019610b9354606cd91a82",
+      "copy_sha256_exact": true
+    },
+    {
+      "version": "v31",
+      "staged_path": "v31/evaluation/RED07_COMMAND.json",
+      "original_path": "E:/hospital_ies_v31_20261027/evaluation/RED07_COMMAND.json",
+      "original_relative_path": "evaluation/RED07_COMMAND.json",
+      "bytes": 258,
+      "sha256": "e4ee09e86064d139532a370335ac8893e4c487ae23e354a32af6a4b8a66baed3",
+      "copy_sha256_exact": true
+    },
+    {
+      "version": "v31",
+      "staged_path": "v31/evaluation/RED07_native_receipt.log",
+      "original_path": "E:/hospital_ies_v31_20261027/evaluation/RED07_native_receipt.log",
+      "original_relative_path": "evaluation/RED07_native_receipt.log",
+      "bytes": 7014,
+      "sha256": "bad5759c301fdd20b2374a8b4e97d60d0fccbd08b4c438915c6fb989ef0c9e86",
+      "copy_sha256_exact": true
+    },
+    {
+      "version": "v31",
+      "staged_path": "v31/evaluation/final01/AUDIT.json",
+      "original_path": "E:/hospital_ies_v31_20261027/evaluation/final01/AUDIT.json",
+      "original_relative_path": "evaluation/final01/AUDIT.json",
+      "bytes": 1343051,
+      "sha256": "aa6f31b07aca98b932bb2d1108f587e419ed522b85242412d052157976b74780",
+      "copy_sha256_exact": true
+    },
+    {
+      "version": "v31",
+      "staged_path": "v31/evaluation/final01/COMPLETION_MATRIX.json",
+      "original_path": "E:/hospital_ies_v31_20261027/evaluation/final01/COMPLETION_MATRIX.json",
+      "original_relative_path": "evaluation/final01/COMPLETION_MATRIX.json",
+      "bytes": 8562,
+      "sha256": "ea70f9d319b3e9ab59dd1e9dee380bf7388a86c553b74f3b0b29ed25905b6704",
+      "copy_sha256_exact": true
+    },
+    {
+      "version": "v31",
+      "staged_path": "v31/evaluation/final01/ENGINEERING_REPORT_ZH.md",
+      "original_path": "E:/hospital_ies_v31_20261027/evaluation/final01/ENGINEERING_REPORT_ZH.md",
+      "original_relative_path": "evaluation/final01/ENGINEERING_REPORT_ZH.md",
+      "bytes": 9702,
+      "sha256": "98004cca1be9b0563f3dcb44f7da0656d121b3e7cb7d27a832917f3276a4ee06",
+      "copy_sha256_exact": true
+    },
+    {
+      "version": "v31",
+      "staged_path": "v31/evaluation/final01/MAIN_RESULT_TABLE.csv",
+      "original_path": "E:/hospital_ies_v31_20261027/evaluation/final01/MAIN_RESULT_TABLE.csv",
+      "original_relative_path": "evaluation/final01/MAIN_RESULT_TABLE.csv",
+      "bytes": 29328,
+      "sha256": "35812a9075312581ebde4388f9e82135572931252eb75b11dda99920b56297e2",
+      "copy_sha256_exact": true
+    },
+    {
+      "version": "v31",
+      "staged_path": "v31/evaluation/final01/METHOD_CONTRASTS.json",
+      "original_path": "E:/hospital_ies_v31_20261027/evaluation/final01/METHOD_CONTRASTS.json",
+      "original_relative_path": "evaluation/final01/METHOD_CONTRASTS.json",
+      "bytes": 12758,
+      "sha256": "0462dfb964ccecf882ed281703ea8eafe6201f1f7c02655de61cb7e185e3adb0",
+      "copy_sha256_exact": true
+    },
+    {
+      "version": "v31",
+      "staged_path": "v31/evaluation/final01/OUTPUT_SHA256.json",
+      "original_path": "E:/hospital_ies_v31_20261027/evaluation/final01/OUTPUT_SHA256.json",
+      "original_relative_path": "evaluation/final01/OUTPUT_SHA256.json",
+      "bytes": 571,
+      "sha256": "7f8da0d48910fbfb73f0f34eb5a48ac521ef683e1ffcc4d2aea4dcfded5788ca",
+      "copy_sha256_exact": true
+    },
+    {
+      "version": "v31",
+      "staged_path": "v31/evaluation/final01/PAIRED_DELTAS.json",
+      "original_path": "E:/hospital_ies_v31_20261027/evaluation/final01/PAIRED_DELTAS.json",
+      "original_relative_path": "evaluation/final01/PAIRED_DELTAS.json",
+      "bytes": 105438,
+      "sha256": "fb1d724136d4c75a2a36eb4f6ca7c09048e25d187e5c51677939feadb6a607f9",
+      "copy_sha256_exact": true
+    },
+    {
+      "version": "v31",
+      "staged_path": "v31/interface_review/INTERFACE_REVIEW.md",
+      "original_path": "E:/hospital_ies_v31_20261027/interface_review/INTERFACE_REVIEW.md",
+      "original_relative_path": "interface_review/INTERFACE_REVIEW.md",
+      "bytes": 10350,
+      "sha256": "2f7616e37a9aa1a3c09b5872b3c5369f778b143c13db2008d1ba402a0f8fa740",
+      "copy_sha256_exact": true
+    },
+    {
+      "version": "v31",
+      "staged_path": "v31/interface_review/SOURCE_EVIDENCE.json",
+      "original_path": "E:/hospital_ies_v31_20261027/interface_review/SOURCE_EVIDENCE.json",
+      "original_relative_path": "interface_review/SOURCE_EVIDENCE.json",
+      "bytes": 4326,
+      "sha256": "3272a8d5e16619e3f54137659cbfd88da6afc66426de424ade1868a309597acd",
+      "copy_sha256_exact": true
+    },
+    {
+      "version": "v31",
+      "staged_path": "v31/interface_review/final_code_review/CHECKS.json",
+      "original_path": "E:/hospital_ies_v31_20261027/interface_review/final_code_review/CHECKS.json",
+      "original_relative_path": "interface_review/final_code_review/CHECKS.json",
+      "bytes": 7733,
+      "sha256": "b6cfd7db28cb5bdadcdd1e597e515ed3bfd22d735e5cf89fb6966ca950a8771c",
+      "copy_sha256_exact": true
+    },
+    {
+      "version": "v31",
+      "staged_path": "v31/interface_review/final_code_review/CODE_REVIEW.md",
+      "original_path": "E:/hospital_ies_v31_20261027/interface_review/final_code_review/CODE_REVIEW.md",
+      "original_relative_path": "interface_review/final_code_review/CODE_REVIEW.md",
+      "bytes": 7069,
+      "sha256": "44727b00b4bc507b8d61c2614b1cde0c70bae284e4c60ebb12173a230e80f586",
+      "copy_sha256_exact": true
+    },
+    {
+      "version": "v31",
+      "staged_path": "v31/steps/freeze_and_four_formal01/COMMAND.json",
+      "original_path": "E:/hospital_ies_v31_20261027/steps/freeze_and_four_formal01/COMMAND.json",
+      "original_relative_path": "steps/freeze_and_four_formal01/COMMAND.json",
+      "bytes": 581,
+      "sha256": "b917bd7bfffbd8a9871432a273e0c8c1f260e10d78f85c35287f93cec317c5af",
+      "copy_sha256_exact": true
+    },
+    {
+      "version": "v31",
+      "staged_path": "v31/steps/freeze_and_four_formal01/stderr.log",
+      "original_path": "E:/hospital_ies_v31_20261027/steps/freeze_and_four_formal01/stderr.log",
+      "original_relative_path": "steps/freeze_and_four_formal01/stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "copy_sha256_exact": true
+    },
+    {
+      "version": "v31",
+      "staged_path": "v31/steps/freeze_and_four_formal01/stdout.log",
+      "original_path": "E:/hospital_ies_v31_20261027/steps/freeze_and_four_formal01/stdout.log",
+      "original_relative_path": "steps/freeze_and_four_formal01/stdout.log",
+      "bytes": 2885,
+      "sha256": "648e5c663e1833d3d6a3ee754b0a5e6011bef6dd820452091839a7c60910771f",
+      "copy_sha256_exact": true
+    },
+    {
+      "version": "v31",
+      "staged_path": "v31/steps/preparation_green02/COMMAND.json",
+      "original_path": "E:/hospital_ies_v31_20261027/steps/preparation_green02/COMMAND.json",
+      "original_relative_path": "steps/preparation_green02/COMMAND.json",
+      "bytes": 682,
+      "sha256": "06610a38eb7563645aa502c35c03a45b521a7d291a53bcfcf329ecfdddc90a3d",
+      "copy_sha256_exact": true
+    },
+    {
+      "version": "v31",
+      "staged_path": "v31/steps/preparation_green02/stderr.log",
+      "original_path": "E:/hospital_ies_v31_20261027/steps/preparation_green02/stderr.log",
+      "original_relative_path": "steps/preparation_green02/stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "copy_sha256_exact": true
+    },
+    {
+      "version": "v31",
+      "staged_path": "v31/steps/preparation_green02/stdout.log",
+      "original_path": "E:/hospital_ies_v31_20261027/steps/preparation_green02/stdout.log",
+      "original_relative_path": "steps/preparation_green02/stdout.log",
+      "bytes": 101,
+      "sha256": "3aad292ca00d095b135a951011c9e1ea9e19e7558a7a5aaa3c3e6ceba5a4c851",
+      "copy_sha256_exact": true
+    },
+    {
+      "version": "v31",
+      "staged_path": "v31/steps/preparation_red01/COMMAND.json",
+      "original_path": "E:/hospital_ies_v31_20261027/steps/preparation_red01/COMMAND.json",
+      "original_relative_path": "steps/preparation_red01/COMMAND.json",
+      "bytes": 679,
+      "sha256": "f53f61912a84c5d2003a2fe522892382ecfbf4e65f99cc9300d08f0f80918f19",
+      "copy_sha256_exact": true
+    },
+    {
+      "version": "v31",
+      "staged_path": "v31/steps/preparation_red01/stderr.log",
+      "original_path": "E:/hospital_ies_v31_20261027/steps/preparation_red01/stderr.log",
+      "original_relative_path": "steps/preparation_red01/stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "copy_sha256_exact": true
+    },
+    {
+      "version": "v31",
+      "staged_path": "v31/steps/preparation_red01/stdout.log",
+      "original_path": "E:/hospital_ies_v31_20261027/steps/preparation_red01/stdout.log",
+      "original_relative_path": "steps/preparation_red01/stdout.log",
+      "bytes": 30259,
+      "sha256": "9778f292acb4d3aa80394a8d49ade99b570e6a6764cb91dd7e25b24cbee985f1",
+      "copy_sha256_exact": true
+    },
+    {
+      "version": "v31",
+      "staged_path": "v31/steps/targeted_shared_green01/COMMAND.json",
+      "original_path": "E:/hospital_ies_v31_20261027/steps/targeted_shared_green01/COMMAND.json",
+      "original_relative_path": "steps/targeted_shared_green01/COMMAND.json",
+      "bytes": 852,
+      "sha256": "75cbc7e6b633ce44ed4010d4f2dc9af9a15644b8c8ab5a787488c4bdb9f03e16",
+      "copy_sha256_exact": true
+    },
+    {
+      "version": "v31",
+      "staged_path": "v31/steps/targeted_shared_green01/stderr.log",
+      "original_path": "E:/hospital_ies_v31_20261027/steps/targeted_shared_green01/stderr.log",
+      "original_relative_path": "steps/targeted_shared_green01/stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "copy_sha256_exact": true
+    },
+    {
+      "version": "v31",
+      "staged_path": "v31/steps/targeted_shared_green01/stdout.log",
+      "original_path": "E:/hospital_ies_v31_20261027/steps/targeted_shared_green01/stdout.log",
+      "original_relative_path": "steps/targeted_shared_green01/stdout.log",
+      "bytes": 102,
+      "sha256": "056e3555adb4b46e9e065f07a6230e2583ab77f7a0af8c0dc68f2b502f501104",
+      "copy_sha256_exact": true
+    },
+    {
+      "version": "v32",
+      "staged_path": "v32/ENGINEERING_REPORT_ZH.md",
+      "original_path": "E:/hospital_ies_v32_20261027/ENGINEERING_REPORT_ZH.md",
+      "original_relative_path": "ENGINEERING_REPORT_ZH.md",
+      "bytes": 10174,
+      "sha256": "97e5996558c33b86b1f18ce5011db583cab1b30ff659d98a83d5bc5c52cabc12",
+      "copy_sha256_exact": true
+    },
+    {
+      "version": "v32",
+      "staged_path": "v32/EXPERIMENT_REGISTRATION.json",
+      "original_path": "E:/hospital_ies_v32_20261027/EXPERIMENT_REGISTRATION.json",
+      "original_relative_path": "EXPERIMENT_REGISTRATION.json",
+      "bytes": 6344,
+      "sha256": "26dfcd41506d32a8103ac26e18451e7336e6bc205a5d2885d123db2024d836b0",
+      "copy_sha256_exact": true
+    },
+    {
+      "version": "v32",
+      "staged_path": "v32/FINAL_DELIVERY_STATUS.json",
+      "original_path": "E:/hospital_ies_v32_20261027/FINAL_DELIVERY_STATUS.json",
+      "original_relative_path": "FINAL_DELIVERY_STATUS.json",
+      "bytes": 10316,
+      "sha256": "bfcfbc155fe365325ce4e56064dc3ecb21cc8bb063862f8029e7f21fd554ef78",
+      "copy_sha256_exact": true
+    },
+    {
+      "version": "v32",
+      "staged_path": "v32/FORMAL_ATTEMPTS.jsonl",
+      "original_path": "E:/hospital_ies_v32_20261027/FORMAL_ATTEMPTS.jsonl",
+      "original_relative_path": "FORMAL_ATTEMPTS.jsonl",
+      "bytes": 2340,
+      "sha256": "c4c5172b68af89a1def59ce266bf38e5ea94aa6417a160613a99c4d4dfee4a1d",
+      "copy_sha256_exact": true
+    },
+    {
+      "version": "v32",
+      "staged_path": "v32/FROZEN_SOURCE_V32_P01.json",
+      "original_path": "E:/hospital_ies_v32_20261027/FROZEN_SOURCE_V32_P01.json",
+      "original_relative_path": "FROZEN_SOURCE_V32_P01.json",
+      "bytes": 133336,
+      "sha256": "14e95188ff44447c4f6e2e04ef9aad8b5f92bf6b0c961e90343d85d4259a998b",
+      "copy_sha256_exact": true
+    },
+    {
+      "version": "v32",
+      "staged_path": "v32/Hospital_IES_V32_External_Reference_20261027.zip.sha256",
+      "original_path": "E:/hospital_ies_v32_20261027/Hospital_IES_V32_External_Reference_20261027.zip.sha256",
+      "original_relative_path": "Hospital_IES_V32_External_Reference_20261027.zip.sha256",
+      "bytes": 116,
+      "sha256": "191c0d43d26adca33088fff0dfc23f21f73510f98810aaa375ef8abc9216958c",
+      "copy_sha256_exact": true
+    },
+    {
+      "version": "v32",
+      "staged_path": "v32/PLANNING_SOURCE_FREEZE.json",
+      "original_path": "E:/hospital_ies_v32_20261027/PLANNING_SOURCE_FREEZE.json",
+      "original_relative_path": "PLANNING_SOURCE_FREEZE.json",
+      "bytes": 104166,
+      "sha256": "8e0a58cae4516ff2c125463f21bfd55ff50e3228ffde9693d4c20fe53968401c",
+      "copy_sha256_exact": true
+    },
+    {
+      "version": "v32",
+      "staged_path": "v32/RUN_PLAN.json",
+      "original_path": "E:/hospital_ies_v32_20261027/RUN_PLAN.json",
+      "original_relative_path": "RUN_PLAN.json",
+      "bytes": 455,
+      "sha256": "e0b8d8cce2d6fa5f31e26887b6094a45401e2bf92b84fc7e182f52ca0c3dadff",
+      "copy_sha256_exact": true
+    },
+    {
+      "version": "v32",
+      "staged_path": "v32/SOURCE_DELTA.json",
+      "original_path": "E:/hospital_ies_v32_20261027/SOURCE_DELTA.json",
+      "original_relative_path": "SOURCE_DELTA.json",
+      "bytes": 470,
+      "sha256": "7161b23d40df96b13e4cb839c3a36ec6d5b9641ceb30263e2718834a1a5bd490",
+      "copy_sha256_exact": true
+    },
+    {
+      "version": "v32",
+      "staged_path": "v32/SOURCE_DIFF.patch",
+      "original_path": "E:/hospital_ies_v32_20261027/SOURCE_DIFF.patch",
+      "original_relative_path": "SOURCE_DIFF.patch",
+      "bytes": 209475,
+      "sha256": "08f0746333da722ef48a6c3d91a5bf0e0262a06df21e364e94d3c1b280413095",
+      "copy_sha256_exact": true
+    },
+    {
+      "version": "v32",
+      "staged_path": "v32/delivery_payload/project/docs/v32/MIGRATION_AND_ASSUMPTIONS.md",
+      "original_path": "E:/hospital_ies_v32_20261027/delivery_payload/project/docs/v32/MIGRATION_AND_ASSUMPTIONS.md",
+      "original_relative_path": "delivery_payload/project/docs/v32/MIGRATION_AND_ASSUMPTIONS.md",
+      "bytes": 5233,
+      "sha256": "3d40547524edb30d33314564200e37013abd24012583023be2f4dcd342f08581",
+      "copy_sha256_exact": true
+    },
+    {
+      "version": "v32",
+      "staged_path": "v32/evaluation/DESIGN_AND_API.md",
+      "original_path": "E:/hospital_ies_v32_20261027/evaluation/DESIGN_AND_API.md",
+      "original_relative_path": "evaluation/DESIGN_AND_API.md",
+      "bytes": 3196,
+      "sha256": "9f3ffe174f832f9af6ecd0c5cd0a7d4be5578e39d9b820748f3a1f89736e77e5",
+      "copy_sha256_exact": true
+    },
+    {
+      "version": "v32",
+      "staged_path": "v32/evaluation/ENGINEERING_SUPPLEMENT_ZH.md",
+      "original_path": "E:/hospital_ies_v32_20261027/evaluation/ENGINEERING_SUPPLEMENT_ZH.md",
+      "original_relative_path": "evaluation/ENGINEERING_SUPPLEMENT_ZH.md",
+      "bytes": 3185,
+      "sha256": "20846b09667fabbd1fbb1572f44acfb2c0b5fec8548e270159065a0131e64fe8",
+      "copy_sha256_exact": true
+    },
+    {
+      "version": "v32",
+      "staged_path": "v32/evaluation/FINAL01.stderr.log",
+      "original_path": "E:/hospital_ies_v32_20261027/evaluation/FINAL01.stderr.log",
+      "original_relative_path": "evaluation/FINAL01.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "copy_sha256_exact": true
+    },
+    {
+      "version": "v32",
+      "staged_path": "v32/evaluation/FINAL01.stdout.log",
+      "original_path": "E:/hospital_ies_v32_20261027/evaluation/FINAL01.stdout.log",
+      "original_relative_path": "evaluation/FINAL01.stdout.log",
+      "bytes": 439,
+      "sha256": "9fad2c31d83fca703ebfeab47182eb5ec3dc49bd664584e0155e80b1dcd7a7fc",
+      "copy_sha256_exact": true
+    },
+    {
+      "version": "v32",
+      "staged_path": "v32/evaluation/FINAL01_COMMAND.json",
+      "original_path": "E:/hospital_ies_v32_20261027/evaluation/FINAL01_COMMAND.json",
+      "original_relative_path": "evaluation/FINAL01_COMMAND.json",
+      "bytes": 556,
+      "sha256": "926be7790eff915c797023dd82ebf47eacf5f860635015b0aa54f92b99a865c4",
+      "copy_sha256_exact": true
+    },
+    {
+      "version": "v32",
+      "staged_path": "v32/evaluation/FINAL02.stderr.log",
+      "original_path": "E:/hospital_ies_v32_20261027/evaluation/FINAL02.stderr.log",
+      "original_relative_path": "evaluation/FINAL02.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "copy_sha256_exact": true
+    },
+    {
+      "version": "v32",
+      "staged_path": "v32/evaluation/FINAL02.stdout.log",
+      "original_path": "E:/hospital_ies_v32_20261027/evaluation/FINAL02.stdout.log",
+      "original_relative_path": "evaluation/FINAL02.stdout.log",
+      "bytes": 288,
+      "sha256": "36bc53895bd1be6aafd305d9da3842b2266045830722fc0a179eab58549393ad",
+      "copy_sha256_exact": true
+    },
+    {
+      "version": "v32",
+      "staged_path": "v32/evaluation/FINAL02_COMMAND.json",
+      "original_path": "E:/hospital_ies_v32_20261027/evaluation/FINAL02_COMMAND.json",
+      "original_relative_path": "evaluation/FINAL02_COMMAND.json",
+      "bytes": 589,
+      "sha256": "e482d5e800683c8d036ce57934ebb7482e74faf5ded3cad804085f40797d58c2",
+      "copy_sha256_exact": true
+    },
+    {
+      "version": "v32",
+      "staged_path": "v32/evaluation/FINAL_QA.stderr.log",
+      "original_path": "E:/hospital_ies_v32_20261027/evaluation/FINAL_QA.stderr.log",
+      "original_relative_path": "evaluation/FINAL_QA.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "copy_sha256_exact": true
+    },
+    {
+      "version": "v32",
+      "staged_path": "v32/evaluation/FINAL_QA.stdout.log",
+      "original_path": "E:/hospital_ies_v32_20261027/evaluation/FINAL_QA.stdout.log",
+      "original_relative_path": "evaluation/FINAL_QA.stdout.log",
+      "bytes": 335,
+      "sha256": "d201c8c54e2494c189a0442dfa933c702a70809f4a5e07a054204ee64de6006e",
+      "copy_sha256_exact": true
+    },
+    {
+      "version": "v32",
+      "staged_path": "v32/evaluation/FINAL_QA_INVOCATION.json",
+      "original_path": "E:/hospital_ies_v32_20261027/evaluation/FINAL_QA_INVOCATION.json",
+      "original_relative_path": "evaluation/FINAL_QA_INVOCATION.json",
+      "bytes": 294,
+      "sha256": "f20e04c229aa6fc96a1e49d3b25995fc48970d1e0d534ec4dab447c9d6445390",
+      "copy_sha256_exact": true
+    },
+    {
+      "version": "v32",
+      "staged_path": "v32/evaluation/FINAL_READY.json",
+      "original_path": "E:/hospital_ies_v32_20261027/evaluation/FINAL_READY.json",
+      "original_relative_path": "evaluation/FINAL_READY.json",
+      "bytes": 7775,
+      "sha256": "36bf49c041970502e4362afb73d40e6cdf94565bacb2680eeca5d5029aaf1ace",
+      "copy_sha256_exact": true
+    },
+    {
+      "version": "v32",
+      "staged_path": "v32/evaluation/FROZEN_EVALUATION_TOOLS_V32.json",
+      "original_path": "E:/hospital_ies_v32_20261027/evaluation/FROZEN_EVALUATION_TOOLS_V32.json",
+      "original_relative_path": "evaluation/FROZEN_EVALUATION_TOOLS_V32.json",
+      "bytes": 1569,
+      "sha256": "659b1fec55e169016bdaa0ded14989db5a58624af365f7800d22e6830874feb3",
+      "copy_sha256_exact": true
+    },
+    {
+      "version": "v32",
+      "staged_path": "v32/evaluation/FROZEN_EVALUATION_TOOLS_V32_V2.json",
+      "original_path": "E:/hospital_ies_v32_20261027/evaluation/FROZEN_EVALUATION_TOOLS_V32_V2.json",
+      "original_relative_path": "evaluation/FROZEN_EVALUATION_TOOLS_V32_V2.json",
+      "bytes": 2019,
+      "sha256": "1a97251aba09a0ab04885c7157dd68ce4122b7e221ed9e5d410a7acb03ce8da3",
+      "copy_sha256_exact": true
+    },
+    {
+      "version": "v32",
+      "staged_path": "v32/evaluation/GREEN01.stderr.log",
+      "original_path": "E:/hospital_ies_v32_20261027/evaluation/GREEN01.stderr.log",
+      "original_relative_path": "evaluation/GREEN01.stderr.log",
+      "bytes": 918,
+      "sha256": "55b65e16dae6c16723670e456ad30c7981fcb5809c70d13e800f39d28f4f8100",
+      "copy_sha256_exact": true
+    },
+    {
+      "version": "v32",
+      "staged_path": "v32/evaluation/GREEN01.stdout.log",
+      "original_path": "E:/hospital_ies_v32_20261027/evaluation/GREEN01.stdout.log",
+      "original_relative_path": "evaluation/GREEN01.stdout.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "copy_sha256_exact": true
+    },
+    {
+      "version": "v32",
+      "staged_path": "v32/evaluation/GREEN01_COMMAND.json",
+      "original_path": "E:/hospital_ies_v32_20261027/evaluation/GREEN01_COMMAND.json",
+      "original_relative_path": "evaluation/GREEN01_COMMAND.json",
+      "bytes": 361,
+      "sha256": "630a8b276d1cf65281f323ea159eaa53f854948635908e5bc82742e4ac71668f",
+      "copy_sha256_exact": true
+    },
+    {
+      "version": "v32",
+      "staged_path": "v32/evaluation/GREEN02.stderr.log",
+      "original_path": "E:/hospital_ies_v32_20261027/evaluation/GREEN02.stderr.log",
+      "original_relative_path": "evaluation/GREEN02.stderr.log",
+      "bytes": 1032,
+      "sha256": "77cb50eff186dd496b33577bee199aa348e973bdeb75de560e64a85886f2045b",
+      "copy_sha256_exact": true
+    },
+    {
+      "version": "v32",
+      "staged_path": "v32/evaluation/GREEN02.stdout.log",
+      "original_path": "E:/hospital_ies_v32_20261027/evaluation/GREEN02.stdout.log",
+      "original_relative_path": "evaluation/GREEN02.stdout.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "copy_sha256_exact": true
+    },
+    {
+      "version": "v32",
+      "staged_path": "v32/evaluation/GREEN02_COMMAND.json",
+      "original_path": "E:/hospital_ies_v32_20261027/evaluation/GREEN02_COMMAND.json",
+      "original_relative_path": "evaluation/GREEN02_COMMAND.json",
+      "bytes": 366,
+      "sha256": "ab219b067f86ddf64fa8513013df6ef005405731e63db7544f636b94b7a354e0",
+      "copy_sha256_exact": true
+    },
+    {
+      "version": "v32",
+      "staged_path": "v32/evaluation/GREEN03_lifecycle.stderr.log",
+      "original_path": "E:/hospital_ies_v32_20261027/evaluation/GREEN03_lifecycle.stderr.log",
+      "original_relative_path": "evaluation/GREEN03_lifecycle.stderr.log",
+      "bytes": 1264,
+      "sha256": "ceec50e40d539e49223762bc721b34912b81712876a74c6715ffdbdaf4141e10",
+      "copy_sha256_exact": true
+    },
+    {
+      "version": "v32",
+      "staged_path": "v32/evaluation/GREEN03_lifecycle.stdout.log",
+      "original_path": "E:/hospital_ies_v32_20261027/evaluation/GREEN03_lifecycle.stdout.log",
+      "original_relative_path": "evaluation/GREEN03_lifecycle.stdout.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "copy_sha256_exact": true
+    },
+    {
+      "version": "v32",
+      "staged_path": "v32/evaluation/GREEN03_lifecycle_COMMAND.json",
+      "original_path": "E:/hospital_ies_v32_20261027/evaluation/GREEN03_lifecycle_COMMAND.json",
+      "original_relative_path": "evaluation/GREEN03_lifecycle_COMMAND.json",
+      "bytes": 414,
+      "sha256": "48d895bbd005a7b0c0055cc2011555be2c9a2c9098530c09193ec39b4b95b0b0",
+      "copy_sha256_exact": true
+    },
+    {
+      "version": "v32",
+      "staged_path": "v32/evaluation/LIFECYCLE_CORRECTION_V2.md",
+      "original_path": "E:/hospital_ies_v32_20261027/evaluation/LIFECYCLE_CORRECTION_V2.md",
+      "original_relative_path": "evaluation/LIFECYCLE_CORRECTION_V2.md",
+      "bytes": 2389,
+      "sha256": "71f18ca7536ecc81ef798927511eaac582a58920351ee7143d2e94750749fbd6",
+      "copy_sha256_exact": true
+    },
+    {
+      "version": "v32",
+      "staged_path": "v32/evaluation/RED01.stderr.log",
+      "original_path": "E:/hospital_ies_v32_20261027/evaluation/RED01.stderr.log",
+      "original_relative_path": "evaluation/RED01.stderr.log",
+      "bytes": 6558,
+      "sha256": "7c50e1dec51184c99f71a588ca3129a5c38e45249f94a3c2e343ab0f76cbb340",
+      "copy_sha256_exact": true
+    },
+    {
+      "version": "v32",
+      "staged_path": "v32/evaluation/RED01.stdout.log",
+      "original_path": "E:/hospital_ies_v32_20261027/evaluation/RED01.stdout.log",
+      "original_relative_path": "evaluation/RED01.stdout.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "copy_sha256_exact": true
+    },
+    {
+      "version": "v32",
+      "staged_path": "v32/evaluation/RED01_COMMAND.json",
+      "original_path": "E:/hospital_ies_v32_20261027/evaluation/RED01_COMMAND.json",
+      "original_relative_path": "evaluation/RED01_COMMAND.json",
+      "bytes": 357,
+      "sha256": "b2d6826da10e74acb7548429a59749d8f9e683a7dd46280895160d832b0c5ca6",
+      "copy_sha256_exact": true
+    },
+    {
+      "version": "v32",
+      "staged_path": "v32/evaluation/RED02.stderr.log",
+      "original_path": "E:/hospital_ies_v32_20261027/evaluation/RED02.stderr.log",
+      "original_relative_path": "evaluation/RED02.stderr.log",
+      "bytes": 1667,
+      "sha256": "8437f44668966f35a2e24e47be152ffa845a18fc6ae19ca0e585f4c975db5ae1",
+      "copy_sha256_exact": true
+    },
+    {
+      "version": "v32",
+      "staged_path": "v32/evaluation/RED02.stdout.log",
+      "original_path": "E:/hospital_ies_v32_20261027/evaluation/RED02.stdout.log",
+      "original_relative_path": "evaluation/RED02.stdout.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "copy_sha256_exact": true
+    },
+    {
+      "version": "v32",
+      "staged_path": "v32/evaluation/RED02_COMMAND.json",
+      "original_path": "E:/hospital_ies_v32_20261027/evaluation/RED02_COMMAND.json",
+      "original_relative_path": "evaluation/RED02_COMMAND.json",
+      "bytes": 388,
+      "sha256": "335b4771c406a89618ee0f65b3f8f1ae1c9fc7bc623df5f838ae08c326c34df0",
+      "copy_sha256_exact": true
+    },
+    {
+      "version": "v32",
+      "staged_path": "v32/evaluation/RED03_lifecycle.stderr.log",
+      "original_path": "E:/hospital_ies_v32_20261027/evaluation/RED03_lifecycle.stderr.log",
+      "original_relative_path": "evaluation/RED03_lifecycle.stderr.log",
+      "bytes": 2467,
+      "sha256": "6aef49c05d4aae333e676bd1730893c7dd977b3325737f4f0dbf6b4d60d026a2",
+      "copy_sha256_exact": true
+    },
+    {
+      "version": "v32",
+      "staged_path": "v32/evaluation/RED03_lifecycle.stdout.log",
+      "original_path": "E:/hospital_ies_v32_20261027/evaluation/RED03_lifecycle.stdout.log",
+      "original_relative_path": "evaluation/RED03_lifecycle.stdout.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "copy_sha256_exact": true
+    },
+    {
+      "version": "v32",
+      "staged_path": "v32/evaluation/RED03_lifecycle_COMMAND.json",
+      "original_path": "E:/hospital_ies_v32_20261027/evaluation/RED03_lifecycle_COMMAND.json",
+      "original_relative_path": "evaluation/RED03_lifecycle_COMMAND.json",
+      "bytes": 395,
+      "sha256": "20be15f945fb1b9eb7c94c1413a3eca0cfe00c787a68739980d605e40acf1f92",
+      "copy_sha256_exact": true
+    },
+    {
+      "version": "v32",
+      "staged_path": "v32/evaluation/SUPPORT_LINEAGE.json",
+      "original_path": "E:/hospital_ies_v32_20261027/evaluation/SUPPORT_LINEAGE.json",
+      "original_relative_path": "evaluation/SUPPORT_LINEAGE.json",
+      "bytes": 919,
+      "sha256": "93bc883e348a07fdf790378ae25811e6ba7643056c65d613bfdbd8404c8a605b",
+      "copy_sha256_exact": true
+    },
+    {
+      "version": "v32",
+      "staged_path": "v32/evaluation/final02/AUDIT.json",
+      "original_path": "E:/hospital_ies_v32_20261027/evaluation/final02/AUDIT.json",
+      "original_relative_path": "evaluation/final02/AUDIT.json",
+      "bytes": 1486300,
+      "sha256": "9a3d26b8df17577fa42ead09b2403766bb778c7ab9c3903de9aa74054aac59e8",
+      "copy_sha256_exact": true
+    },
+    {
+      "version": "v32",
+      "staged_path": "v32/evaluation/final02/COMMAND_CHAIN.json",
+      "original_path": "E:/hospital_ies_v32_20261027/evaluation/final02/COMMAND_CHAIN.json",
+      "original_relative_path": "evaluation/final02/COMMAND_CHAIN.json",
+      "bytes": 865949,
+      "sha256": "6b0e987055787928ef4e5497783a45f26880b3ee79af810b0c880cd32f839429",
+      "copy_sha256_exact": true
+    },
+    {
+      "version": "v32",
+      "staged_path": "v32/evaluation/final02/COMPLETION_MATRIX.json",
+      "original_path": "E:/hospital_ies_v32_20261027/evaluation/final02/COMPLETION_MATRIX.json",
+      "original_relative_path": "evaluation/final02/COMPLETION_MATRIX.json",
+      "bytes": 4300,
+      "sha256": "0878ed4aaa4ed59295a720da06917dca529aba9c22a0d3aaceddff059735076a",
+      "copy_sha256_exact": true
+    },
+    {
+      "version": "v32",
+      "staged_path": "v32/evaluation/final02/ENGINEERING_REPORT_ZH.md",
+      "original_path": "E:/hospital_ies_v32_20261027/evaluation/final02/ENGINEERING_REPORT_ZH.md",
+      "original_relative_path": "evaluation/final02/ENGINEERING_REPORT_ZH.md",
+      "bytes": 4400,
+      "sha256": "248067716f7898632b883f582a61ff4385f26f62ab97576eca1622185a1c311b",
+      "copy_sha256_exact": true
+    },
+    {
+      "version": "v32",
+      "staged_path": "v32/evaluation/final02/MAIN_RESULT_TABLE.csv",
+      "original_path": "E:/hospital_ies_v32_20261027/evaluation/final02/MAIN_RESULT_TABLE.csv",
+      "original_relative_path": "evaluation/final02/MAIN_RESULT_TABLE.csv",
+      "bytes": 18308,
+      "sha256": "624dc8c5fd4ccbe0942327666acf42b8cb8c86d468786cb8c0d7cb22c84e2308",
+      "copy_sha256_exact": true
+    },
+    {
+      "version": "v32",
+      "staged_path": "v32/evaluation/final02/OUTPUT_SHA256.json",
+      "original_path": "E:/hospital_ies_v32_20261027/evaluation/final02/OUTPUT_SHA256.json",
+      "original_relative_path": "evaluation/final02/OUTPUT_SHA256.json",
+      "bytes": 662,
+      "sha256": "175a451ceaf9bb73aeeeb217e177100fda02aaec5f9227cb67bc561d5884bb1f",
+      "copy_sha256_exact": true
+    },
+    {
+      "version": "v32",
+      "staged_path": "v32/evaluation/final02/PAIRED_DELTAS.json",
+      "original_path": "E:/hospital_ies_v32_20261027/evaluation/final02/PAIRED_DELTAS.json",
+      "original_relative_path": "evaluation/final02/PAIRED_DELTAS.json",
+      "bytes": 25308,
+      "sha256": "11b5dbb11da3b360946bd6e4ad89aa69aa4ad046a82d5c177c970c1e9d94d1c9",
+      "copy_sha256_exact": true
+    },
+    {
+      "version": "v32",
+      "staged_path": "v32/evaluation/final02/PLAN_VS_ACTUAL.json",
+      "original_path": "E:/hospital_ies_v32_20261027/evaluation/final02/PLAN_VS_ACTUAL.json",
+      "original_relative_path": "evaluation/final02/PLAN_VS_ACTUAL.json",
+      "bytes": 13553,
+      "sha256": "22dda97da3404116a7a8e0bd4ba4757eff46a3572807a88737d77f592aaa7375",
+      "copy_sha256_exact": true
+    },
+    {
+      "version": "v32",
+      "staged_path": "v32/final_review/README_ZH.md",
+      "original_path": "E:/hospital_ies_v32_20261027/final_review/README_ZH.md",
+      "original_relative_path": "final_review/README_ZH.md",
+      "bytes": 3162,
+      "sha256": "2fb8959d6754a965a519fb18d1ab3af19f5ea9d3d59f349def970b6947d3ee54",
+      "copy_sha256_exact": true
+    },
+    {
+      "version": "v32",
+      "staged_path": "v32/final_review/READY.json",
+      "original_path": "E:/hospital_ies_v32_20261027/final_review/READY.json",
+      "original_relative_path": "final_review/READY.json",
+      "bytes": 999,
+      "sha256": "a1c956ebc68d168caa13d2bdd501bccdb21675ebb23ed739979db9a47114e33b",
+      "copy_sha256_exact": true
+    },
+    {
+      "version": "v32",
+      "staged_path": "v32/final_review/STATIC_REFERENCE_REVIEW.json",
+      "original_path": "E:/hospital_ies_v32_20261027/final_review/STATIC_REFERENCE_REVIEW.json",
+      "original_relative_path": "final_review/STATIC_REFERENCE_REVIEW.json",
+      "bytes": 25226,
+      "sha256": "49ed32736a0c797244e8d943b84ff686ad75a9b2ca5849c7a1689656e4000e80",
+      "copy_sha256_exact": true
+    },
+    {
+      "version": "v32",
+      "staged_path": "v32/final_review/STATIC_REVIEW01.log",
+      "original_path": "E:/hospital_ies_v32_20261027/final_review/STATIC_REVIEW01.log",
+      "original_relative_path": "final_review/STATIC_REVIEW01.log",
+      "bytes": 466,
+      "sha256": "1df79a11e7915abc3716181801b3cdcb16b8e6c83445f64baf75d8010d2cbd56",
+      "copy_sha256_exact": true
+    },
+    {
+      "version": "v32",
+      "staged_path": "v32/final_review/STATIC_REVIEW01_COMMAND.json",
+      "original_path": "E:/hospital_ies_v32_20261027/final_review/STATIC_REVIEW01_COMMAND.json",
+      "original_relative_path": "final_review/STATIC_REVIEW01_COMMAND.json",
+      "bytes": 696,
+      "sha256": "8ac506894dde64354cd945eb0fb06aee6a13a7753e8261ebe8d8b3634b70eb97",
+      "copy_sha256_exact": true
+    },
+    {
+      "version": "v32",
+      "staged_path": "v32/final_review/T0_LIFECYCLE_REVIEW.json",
+      "original_path": "E:/hospital_ies_v32_20261027/final_review/T0_LIFECYCLE_REVIEW.json",
+      "original_relative_path": "final_review/T0_LIFECYCLE_REVIEW.json",
+      "bytes": 23103,
+      "sha256": "7c18e79a3e90255cb88d4d984425d38fd4f4c511201c54f77e0970bca9827a10",
+      "copy_sha256_exact": true
+    },
+    {
+      "version": "v32",
+      "staged_path": "v32/independence_review/FINAL_INDEX.json",
+      "original_path": "E:/hospital_ies_v32_20261027/independence_review/FINAL_INDEX.json",
+      "original_relative_path": "independence_review/FINAL_INDEX.json",
+      "bytes": 2772,
+      "sha256": "f9e65d23b029be4679c2ca92a5f944942f12757e7bab7339331e3cabc102f9c3",
+      "copy_sha256_exact": true
+    },
+    {
+      "version": "v32",
+      "staged_path": "v32/independence_review/INDEPENDENCE_POSTERIOR_REVIEW_ZH.md",
+      "original_path": "E:/hospital_ies_v32_20261027/independence_review/INDEPENDENCE_POSTERIOR_REVIEW_ZH.md",
+      "original_relative_path": "independence_review/INDEPENDENCE_POSTERIOR_REVIEW_ZH.md",
+      "bytes": 6946,
+      "sha256": "bfebd37f1afbe332540eb39ae052bfd1699691d808d01756e5a045f8c3c20b51",
+      "copy_sha256_exact": true
+    },
+    {
+      "version": "v32",
+      "staged_path": "v32/independence_review/QA.json",
+      "original_path": "E:/hospital_ies_v32_20261027/independence_review/QA.json",
+      "original_relative_path": "independence_review/QA.json",
+      "bytes": 698,
+      "sha256": "b6c423023902ec6d219a06f2b145fa1e604146ffec7fda4a85821517aea0d5c9",
+      "copy_sha256_exact": true
+    },
+    {
+      "version": "v32",
+      "staged_path": "v32/independence_review/actual02/POSTERIOR_CONSISTENCY.json",
+      "original_path": "E:/hospital_ies_v32_20261027/independence_review/actual02/POSTERIOR_CONSISTENCY.json",
+      "original_relative_path": "independence_review/actual02/POSTERIOR_CONSISTENCY.json",
+      "bytes": 596215,
+      "sha256": "e573bb5d143ed1968ae519f565179b3bd8010ce2f001a98e8dc97b9b832a833e",
+      "copy_sha256_exact": true
+    },
+    {
+      "version": "v32",
+      "staged_path": "v32/input_build/FROZEN_INPUTS_GATE.json",
+      "original_path": "E:/hospital_ies_v32_20261027/input_build/FROZEN_INPUTS_GATE.json",
+      "original_relative_path": "input_build/FROZEN_INPUTS_GATE.json",
+      "bytes": 6881,
+      "sha256": "8f360b9da631fb3e9ebf09b31b74b890ac043468a1fb571201858b96e3ee5ac5",
+      "copy_sha256_exact": true
+    },
+    {
+      "version": "v32",
+      "staged_path": "v32/input_build/INDEPENDENT_SOURCE_REVIEW.json",
+      "original_path": "E:/hospital_ies_v32_20261027/input_build/INDEPENDENT_SOURCE_REVIEW.json",
+      "original_relative_path": "input_build/INDEPENDENT_SOURCE_REVIEW.json",
+      "bytes": 530,
+      "sha256": "d2575ab5dc9b95439a8aef6d1bfaeedce505f38010228349358bbb8403a9fbf0",
+      "copy_sha256_exact": true
+    },
+    {
+      "version": "v32",
+      "staged_path": "v32/input_build/README_ZH.md",
+      "original_path": "E:/hospital_ies_v32_20261027/input_build/README_ZH.md",
+      "original_relative_path": "input_build/README_ZH.md",
+      "bytes": 4293,
+      "sha256": "731c3bb749eaf132e95d9e5c14c7d5daa070cbf166defc18f1eb9c0811468826",
+      "copy_sha256_exact": true
+    },
+    {
+      "version": "v32",
+      "staged_path": "v32/input_build/SOURCE_FIELD_MAP.json",
+      "original_path": "E:/hospital_ies_v32_20261027/input_build/SOURCE_FIELD_MAP.json",
+      "original_relative_path": "input_build/SOURCE_FIELD_MAP.json",
+      "bytes": 4199,
+      "sha256": "0b52feab40a2eaf972a25ae71a911b0c0457504568739f7f9d503080950b114b",
+      "copy_sha256_exact": true
+    },
+    {
+      "version": "v32",
+      "staged_path": "v32/input_build/formal_isolated_01/BUILD_RECEIPT.json",
+      "original_path": "E:/hospital_ies_v32_20261027/input_build/formal_isolated_01/BUILD_RECEIPT.json",
+      "original_relative_path": "input_build/formal_isolated_01/BUILD_RECEIPT.json",
+      "bytes": 151144,
+      "sha256": "582cd4096e06aaaf3001f9bdcce6ce62e6dd3eafa368e872cd84b2f9985ccc88",
+      "copy_sha256_exact": true
+    },
+    {
+      "version": "v32",
+      "staged_path": "v32/literature_baseline/BASELINE_REUSE_ZH.md",
+      "original_path": "E:/hospital_ies_v32_20261027/literature_baseline/BASELINE_REUSE_ZH.md",
+      "original_relative_path": "literature_baseline/BASELINE_REUSE_ZH.md",
+      "bytes": 4784,
+      "sha256": "a7ee844c796df0e7b784fb96325ff6514dcd8eb1da87e92e5d8a8df2f53b6fb9",
+      "copy_sha256_exact": true
+    },
+    {
+      "version": "v32",
+      "staged_path": "v32/literature_baseline/FINAL_INDEX.json",
+      "original_path": "E:/hospital_ies_v32_20261027/literature_baseline/FINAL_INDEX.json",
+      "original_relative_path": "literature_baseline/FINAL_INDEX.json",
+      "bytes": 3412,
+      "sha256": "232e746dc07466c8a535208e251a28e5ed1b7c4db141a58327630f481160380e",
+      "copy_sha256_exact": true
+    },
+    {
+      "version": "v32",
+      "staged_path": "v32/literature_baseline/HIRWA_V32_MAPPING_ZH.md",
+      "original_path": "E:/hospital_ies_v32_20261027/literature_baseline/HIRWA_V32_MAPPING_ZH.md",
+      "original_relative_path": "literature_baseline/HIRWA_V32_MAPPING_ZH.md",
+      "bytes": 7877,
+      "sha256": "357f7809d9bc507318986d809b94c01616338928d8d22a8ad69879facd9f3b48",
+      "copy_sha256_exact": true
+    },
+    {
+      "version": "v32",
+      "staged_path": "v32/literature_baseline/ROSALES_V32_MAPPING_ZH.md",
+      "original_path": "E:/hospital_ies_v32_20261027/literature_baseline/ROSALES_V32_MAPPING_ZH.md",
+      "original_relative_path": "literature_baseline/ROSALES_V32_MAPPING_ZH.md",
+      "bytes": 7018,
+      "sha256": "c88426dfd45c67362719edb3d1b0ddb18fa5d4d7ee0b7ecd7ba44656a71b87fc",
+      "copy_sha256_exact": true
+    },
+    {
+      "version": "v32",
+      "staged_path": "v32/literature_baseline/THEORY_AND_FAIRNESS_REVIEW_ZH.md",
+      "original_path": "E:/hospital_ies_v32_20261027/literature_baseline/THEORY_AND_FAIRNESS_REVIEW_ZH.md",
+      "original_relative_path": "literature_baseline/THEORY_AND_FAIRNESS_REVIEW_ZH.md",
+      "bytes": 9428,
+      "sha256": "69b772cd524aca85837e02bb255a300c79e4cc277affdd63abadc7260a4c1a33",
+      "copy_sha256_exact": true
+    },
+    {
+      "version": "v32",
+      "staged_path": "v32/literature_baseline/actual02/READONLY_EVIDENCE.json",
+      "original_path": "E:/hospital_ies_v32_20261027/literature_baseline/actual02/READONLY_EVIDENCE.json",
+      "original_relative_path": "literature_baseline/actual02/READONLY_EVIDENCE.json",
+      "bytes": 316681,
+      "sha256": "623e1951cabe3a597061e5639f3609a2f2373ee930f0296b55fc1d91dfa9d5ae",
+      "copy_sha256_exact": true
+    },
+    {
+      "version": "v32",
+      "staged_path": "v32/package_build/EXTRACT_REVIEW.stderr.log",
+      "original_path": "E:/hospital_ies_v32_20261027/package_build/EXTRACT_REVIEW.stderr.log",
+      "original_relative_path": "package_build/EXTRACT_REVIEW.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "copy_sha256_exact": true
+    },
+    {
+      "version": "v32",
+      "staged_path": "v32/package_build/EXTRACT_REVIEW.stdout.log",
+      "original_path": "E:/hospital_ies_v32_20261027/package_build/EXTRACT_REVIEW.stdout.log",
+      "original_relative_path": "package_build/EXTRACT_REVIEW.stdout.log",
+      "bytes": 2312,
+      "sha256": "a5300cad0043a646943cc6a270b88960f6d8eb6611e9bbfff3feba5d9f181045",
+      "copy_sha256_exact": true
+    },
+    {
+      "version": "v32",
+      "staged_path": "v32/package_build/FINAL_AUDIT_POINTER.json",
+      "original_path": "E:/hospital_ies_v32_20261027/package_build/FINAL_AUDIT_POINTER.json",
+      "original_relative_path": "package_build/FINAL_AUDIT_POINTER.json",
+      "bytes": 376,
+      "sha256": "6a35ccbfe746fc5280059ee77e36e6e2465a41b7ea8e166d2e4a4bc8171f4b52",
+      "copy_sha256_exact": true
+    },
+    {
+      "version": "v32",
+      "staged_path": "v32/package_build/INDEPENDENT_EXTRACT_REVIEW.json",
+      "original_path": "E:/hospital_ies_v32_20261027/package_build/INDEPENDENT_EXTRACT_REVIEW.json",
+      "original_relative_path": "package_build/INDEPENDENT_EXTRACT_REVIEW.json",
+      "bytes": 3720,
+      "sha256": "31e846edea86af0d7f3fe8ad6b8972068319f1fc8fd113aa2b741dacc7a84ce9",
+      "copy_sha256_exact": true
+    },
+    {
+      "version": "v32",
+      "staged_path": "v32/package_build/LATE_QA_SYNC.json",
+      "original_path": "E:/hospital_ies_v32_20261027/package_build/LATE_QA_SYNC.json",
+      "original_relative_path": "package_build/LATE_QA_SYNC.json",
+      "bytes": 1489,
+      "sha256": "bad586cbe3425330d3a9185947928386f2ba9241d94906e5b17784b45fd7510e",
+      "copy_sha256_exact": true
+    },
+    {
+      "version": "v32",
+      "staged_path": "v32/package_build/SOURCE_AND_SCOPE_FINAL_CHECK.json",
+      "original_path": "E:/hospital_ies_v32_20261027/package_build/SOURCE_AND_SCOPE_FINAL_CHECK.json",
+      "original_relative_path": "package_build/SOURCE_AND_SCOPE_FINAL_CHECK.json",
+      "bytes": 457,
+      "sha256": "119de96c6c0fe820c604c63807e185a30e7ebdc64d617f1675793d1f190e07cf",
+      "copy_sha256_exact": true
+    },
+    {
+      "version": "v32",
+      "staged_path": "v32/package_build/SUPPORT_STAGE_RECEIPT.json",
+      "original_path": "E:/hospital_ies_v32_20261027/package_build/SUPPORT_STAGE_RECEIPT.json",
+      "original_relative_path": "package_build/SUPPORT_STAGE_RECEIPT.json",
+      "bytes": 59801,
+      "sha256": "fb1600bd5d8c452797b6147dc4310e137f553172e5dfd213ee2c7ecb24b23315",
+      "copy_sha256_exact": true
+    },
+    {
+      "version": "v32",
+      "staged_path": "v32/package_build/ZIP_VERIFICATION.json",
+      "original_path": "E:/hospital_ies_v32_20261027/package_build/ZIP_VERIFICATION.json",
+      "original_relative_path": "package_build/ZIP_VERIFICATION.json",
+      "bytes": 472,
+      "sha256": "75dd9630df373fdcf063f8f4f5382810a1c63241fe22f32da622bbb0021ee10e",
+      "copy_sha256_exact": true
+    },
+    {
+      "version": "v32",
+      "staged_path": "v32/package_review/actual01/README_ZH.md",
+      "original_path": "E:/hospital_ies_v32_20261027/package_review/actual01/README_ZH.md",
+      "original_relative_path": "package_review/actual01/README_ZH.md",
+      "bytes": 289,
+      "sha256": "02bde212803f72f58c1842f8709a211245a23d9e9e09b4313ced30857fb97028",
+      "copy_sha256_exact": true
+    },
+    {
+      "version": "v32",
+      "staged_path": "v32/package_review/actual01/STATIC_PACKAGE_REVIEW.json",
+      "original_path": "E:/hospital_ies_v32_20261027/package_review/actual01/STATIC_PACKAGE_REVIEW.json",
+      "original_relative_path": "package_review/actual01/STATIC_PACKAGE_REVIEW.json",
+      "bytes": 8584,
+      "sha256": "92a5d47e19e388f2e839e04d8a42c74cb666867aab96278a8c44f315da952fdd",
+      "copy_sha256_exact": true
+    },
+    {
+      "version": "v32",
+      "staged_path": "v32/planning/SELECTION.json",
+      "original_path": "E:/hospital_ies_v32_20261027/planning/SELECTION.json",
+      "original_relative_path": "planning/SELECTION.json",
+      "bytes": 763,
+      "sha256": "a463a7d6e95fa24fd6c956e094f5eb30cd657a1c6ff4e78656ff1ad06b1c3bbc",
+      "copy_sha256_exact": true
+    },
+    {
+      "version": "v32",
+      "staged_path": "v32/planning/SOLVE_ATTEMPTS.jsonl",
+      "original_path": "E:/hospital_ies_v32_20261027/planning/SOLVE_ATTEMPTS.jsonl",
+      "original_relative_path": "planning/SOLVE_ATTEMPTS.jsonl",
+      "bytes": 415,
+      "sha256": "38f19a5952ab1235e14083c5dda343edc87a15be79f3527fc0b8f9e330d7a3ec",
+      "copy_sha256_exact": true
+    },
+    {
+      "version": "v32",
+      "staged_path": "v32/planning/grid.adopted_plan.json",
+      "original_path": "E:/hospital_ies_v32_20261027/planning/grid.adopted_plan.json",
+      "original_relative_path": "planning/grid.adopted_plan.json",
+      "bytes": 15180,
+      "sha256": "bf92dbb66502af5223dac566a1ccf570be0186cdf3e9f8749f617d1c36f7eac3",
+      "copy_sha256_exact": true
+    },
+    {
+      "version": "v32",
+      "staged_path": "v32/planning/grid.requests.json",
+      "original_path": "E:/hospital_ies_v32_20261027/planning/grid.requests.json",
+      "original_relative_path": "planning/grid.requests.json",
+      "bytes": 31563,
+      "sha256": "b6a4903ee24a68304cd214f7efe929b275937b6ead2b2a160634ea4505df3864",
+      "copy_sha256_exact": true
+    },
+    {
+      "version": "v32",
+      "staged_path": "v32/planning/grid.strict.01.json",
+      "original_path": "E:/hospital_ies_v32_20261027/planning/grid.strict.01.json",
+      "original_relative_path": "planning/grid.strict.01.json",
+      "bytes": 14878,
+      "sha256": "255b19fd4a08b0f3d4805d6fc26ab772d69578e21ef19c5a2fa4e7f9e6b08c80",
+      "copy_sha256_exact": true
+    },
+    {
+      "version": "v32",
+      "staged_path": "v32/planning/grid.symmetry.json",
+      "original_path": "E:/hospital_ies_v32_20261027/planning/grid.symmetry.json",
+      "original_relative_path": "planning/grid.symmetry.json",
+      "bytes": 13480,
+      "sha256": "c50858fdd1b610dc4f90172b481130a07fb92478019fb6c825c5492187e258e7",
+      "copy_sha256_exact": true
+    },
+    {
+      "version": "v32",
+      "staged_path": "v32/planning/normal.adopted_plan.json",
+      "original_path": "E:/hospital_ies_v32_20261027/planning/normal.adopted_plan.json",
+      "original_relative_path": "planning/normal.adopted_plan.json",
+      "bytes": 15182,
+      "sha256": "f028799c8719f817c14582a4c6d3a346262441873131093ba92bf1d7b16cdaed",
+      "copy_sha256_exact": true
+    },
+    {
+      "version": "v32",
+      "staged_path": "v32/planning/normal.requests.json",
+      "original_path": "E:/hospital_ies_v32_20261027/planning/normal.requests.json",
+      "original_relative_path": "planning/normal.requests.json",
+      "bytes": 29205,
+      "sha256": "46f23d18fc91fee3af56989616bf87251c17e2733cf88d9c4900349f26f391b6",
+      "copy_sha256_exact": true
+    },
+    {
+      "version": "v32",
+      "staged_path": "v32/planning/normal.strict.01.json",
+      "original_path": "E:/hospital_ies_v32_20261027/planning/normal.strict.01.json",
+      "original_relative_path": "planning/normal.strict.01.json",
+      "bytes": 14896,
+      "sha256": "751ba9eb7c03d59df3a2e668b9f475ca33d60ce3866ba69f0bea431858b5e902",
+      "copy_sha256_exact": true
+    },
+    {
+      "version": "v32",
+      "staged_path": "v32/planning/normal.symmetry.json",
+      "original_path": "E:/hospital_ies_v32_20261027/planning/normal.symmetry.json",
+      "original_relative_path": "planning/normal.symmetry.json",
+      "bytes": 13771,
+      "sha256": "98806f73df26870c8ebbd5c6466130f8132d86468aa5afd4fd9c6659cb2ad1dd",
+      "copy_sha256_exact": true
+    },
+    {
+      "version": "v32",
+      "staged_path": "v32/steps/close_delivery01/COMMAND.json",
+      "original_path": "E:/hospital_ies_v32_20261027/steps/close_delivery01/COMMAND.json",
+      "original_relative_path": "steps/close_delivery01/COMMAND.json",
+      "bytes": 595,
+      "sha256": "182b5af3eb33beede41f8c883ebee289540781565e494efc26e360f5ff8b7e55",
+      "copy_sha256_exact": true
+    },
+    {
+      "version": "v32",
+      "staged_path": "v32/steps/close_delivery01/stderr.log",
+      "original_path": "E:/hospital_ies_v32_20261027/steps/close_delivery01/stderr.log",
+      "original_relative_path": "steps/close_delivery01/stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "copy_sha256_exact": true
+    },
+    {
+      "version": "v32",
+      "staged_path": "v32/steps/close_delivery01/stdout.log",
+      "original_path": "E:/hospital_ies_v32_20261027/steps/close_delivery01/stdout.log",
+      "original_relative_path": "steps/close_delivery01/stdout.log",
+      "bytes": 276,
+      "sha256": "4bf884d55c6be1d86ff303598b93e8cf998e1f06d68ef089504da71556d9d140",
+      "copy_sha256_exact": true
+    },
+    {
+      "version": "v32",
+      "staged_path": "v32/steps/common_initialization01/COMMAND.json",
+      "original_path": "E:/hospital_ies_v32_20261027/steps/common_initialization01/COMMAND.json",
+      "original_relative_path": "steps/common_initialization01/COMMAND.json",
+      "bytes": 584,
+      "sha256": "f04df2233e5260cb878c40df53fda8c74645c1d03563538f5ba156ce0ea02613",
+      "copy_sha256_exact": true
+    },
+    {
+      "version": "v32",
+      "staged_path": "v32/steps/common_initialization01/stderr.log",
+      "original_path": "E:/hospital_ies_v32_20261027/steps/common_initialization01/stderr.log",
+      "original_relative_path": "steps/common_initialization01/stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "copy_sha256_exact": true
+    },
+    {
+      "version": "v32",
+      "staged_path": "v32/steps/common_initialization01/stdout.log",
+      "original_path": "E:/hospital_ies_v32_20261027/steps/common_initialization01/stdout.log",
+      "original_relative_path": "steps/common_initialization01/stdout.log",
+      "bytes": 2168,
+      "sha256": "aada769dad9877335a5177246a4aba129f23050c3e6bc1f20c91eed9d5a8265f",
+      "copy_sha256_exact": true
+    },
+    {
+      "version": "v32",
+      "staged_path": "v32/steps/fresh_extract_readonly01/COMMAND.json",
+      "original_path": "E:/hospital_ies_v32_20261027/steps/fresh_extract_readonly01/COMMAND.json",
+      "original_relative_path": "steps/fresh_extract_readonly01/COMMAND.json",
+      "bytes": 802,
+      "sha256": "53ff85d92f4d58a004ca334693c8c7cb59d9e9a5c6abae7acafeaf59b02d7153",
+      "copy_sha256_exact": true
+    },
+    {
+      "version": "v32",
+      "staged_path": "v32/steps/fresh_extract_readonly01/stderr.log",
+      "original_path": "E:/hospital_ies_v32_20261027/steps/fresh_extract_readonly01/stderr.log",
+      "original_relative_path": "steps/fresh_extract_readonly01/stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "copy_sha256_exact": true
+    },
+    {
+      "version": "v32",
+      "staged_path": "v32/steps/fresh_extract_readonly01/stdout.log",
+      "original_path": "E:/hospital_ies_v32_20261027/steps/fresh_extract_readonly01/stdout.log",
+      "original_relative_path": "steps/fresh_extract_readonly01/stdout.log",
+      "bytes": 2999,
+      "sha256": "aa92330ee241558b9c6a3a442d6fa9551ac8c095e0faad5aa860d18832809436",
+      "copy_sha256_exact": true
+    },
+    {
+      "version": "v32",
+      "staged_path": "v32/steps/solve_registered_plans01/COMMAND.json",
+      "original_path": "E:/hospital_ies_v32_20261027/steps/solve_registered_plans01/COMMAND.json",
+      "original_relative_path": "steps/solve_registered_plans01/COMMAND.json",
+      "bytes": 577,
+      "sha256": "21dedea779391035bd5d07ea1b259b6a20ed853ce3920dabd0b6dfa3091a31d8",
+      "copy_sha256_exact": true
+    },
+    {
+      "version": "v32",
+      "staged_path": "v32/steps/solve_registered_plans01/stderr.log",
+      "original_path": "E:/hospital_ies_v32_20261027/steps/solve_registered_plans01/stderr.log",
+      "original_relative_path": "steps/solve_registered_plans01/stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "copy_sha256_exact": true
+    },
+    {
+      "version": "v32",
+      "staged_path": "v32/steps/solve_registered_plans01/stdout.log",
+      "original_path": "E:/hospital_ies_v32_20261027/steps/solve_registered_plans01/stdout.log",
+      "original_relative_path": "steps/solve_registered_plans01/stdout.log",
+      "bytes": 465,
+      "sha256": "37bd6290e060918404a2df8a0efc9b3b76e7152aecf0d7659661bf20fd28707c",
+      "copy_sha256_exact": true
+    },
+    {
+      "version": "v32",
+      "staged_path": "v32/steps/targeted_gate01/COMMAND.json",
+      "original_path": "E:/hospital_ies_v32_20261027/steps/targeted_gate01/COMMAND.json",
+      "original_relative_path": "steps/targeted_gate01/COMMAND.json",
+      "bytes": 840,
+      "sha256": "c1567764483ac9610310d5a05144f1f7cbc5bae50e5903f5568e921e1e2d8c32",
+      "copy_sha256_exact": true
+    },
+    {
+      "version": "v32",
+      "staged_path": "v32/steps/targeted_gate01/stderr.log",
+      "original_path": "E:/hospital_ies_v32_20261027/steps/targeted_gate01/stderr.log",
+      "original_relative_path": "steps/targeted_gate01/stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "copy_sha256_exact": true
+    },
+    {
+      "version": "v32",
+      "staged_path": "v32/steps/targeted_gate01/stdout.log",
+      "original_path": "E:/hospital_ies_v32_20261027/steps/targeted_gate01/stdout.log",
+      "original_relative_path": "steps/targeted_gate01/stdout.log",
+      "bytes": 101,
+      "sha256": "34ac5853323ad00dae0fbf502ced3b819df3f8d4f09c937ed24484557dcbf1d7",
+      "copy_sha256_exact": true
+    },
+    {
+      "version": "v32",
+      "staged_path": "v32/steps/two_formal_reference01/COMMAND.json",
+      "original_path": "E:/hospital_ies_v32_20261027/steps/two_formal_reference01/COMMAND.json",
+      "original_relative_path": "steps/two_formal_reference01/COMMAND.json",
+      "bytes": 577,
+      "sha256": "dac60741d2ffd377a64a7186cdb087bfc1daeea4b0e73bfd99ecf22821b5c070",
+      "copy_sha256_exact": true
+    },
+    {
+      "version": "v32",
+      "staged_path": "v32/steps/two_formal_reference01/stderr.log",
+      "original_path": "E:/hospital_ies_v32_20261027/steps/two_formal_reference01/stderr.log",
+      "original_relative_path": "steps/two_formal_reference01/stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "copy_sha256_exact": true
+    },
+    {
+      "version": "v32",
+      "staged_path": "v32/steps/two_formal_reference01/stdout.log",
+      "original_path": "E:/hospital_ies_v32_20261027/steps/two_formal_reference01/stdout.log",
+      "original_relative_path": "steps/two_formal_reference01/stdout.log",
+      "bytes": 2256,
+      "sha256": "8ecd4827cfa9435d21a7cf478852d6651942005af562aec60a7b56d711bae2d1",
+      "copy_sha256_exact": true
+    }
+  ],
+  "original_failure_locations": "ORIGINAL_FAILURE_LOCATIONS.json",
+  "historical_reference_separation": {
+    "old_v30_R03_start_hour": 211,
+    "old_v30_R03_cases": [
+      "v30/runs/r03_grid_R_off/RESOLVED_CASE.json",
+      "v30/runs/r03_normal_R_off/RESOLVED_CASE.json"
+    ],
+    "current_v32_b01_start_hour": 1160,
+    "old_R03_is_not_current_b01": true
+  },
+  "deduplication_note": "V31/V32 tables intentionally reuse frozen V30 records; do not add row counts as independent sample counts",
+  "native_and_pdf_policy": "No full native trajectories, raw scientific archives or source PDFs copied into Git results tree; original accepted ZIPs are release assets"
+}

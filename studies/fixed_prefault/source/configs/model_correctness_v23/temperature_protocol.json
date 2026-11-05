@@ -1,0 +1,94 @@
+{
+  "version": "V23",
+  "registered_utc": "2026-10-25T10:45:37.289812",
+  "pre_days": 2,
+  "post_days": 2,
+  "event_schedule_hour": 12,
+  "output_interval_minutes": 10,
+  "dates": [
+    {
+      "id": "cal_winter",
+      "split": "calibration",
+      "month": 1,
+      "day": 22
+    },
+    {
+      "id": "cal_summer",
+      "split": "calibration",
+      "month": 7,
+      "day": 20
+    },
+    {
+      "id": "test_winter",
+      "split": "validation",
+      "month": 2,
+      "day": 19
+    },
+    {
+      "id": "test_summer",
+      "split": "validation",
+      "month": 8,
+      "day": 22
+    }
+  ],
+  "outage_hours": [
+    0,
+    2,
+    6
+  ],
+  "zones": [
+    "OR1_FLR_2",
+    "OR2_MULT5_FLR_2",
+    "OR3_FLR_2",
+    "OR4_FLR_2"
+  ],
+  "shared_coil": "VAV_OR Cooling Coil",
+  "source_sha256": {
+    "D:\\hospital_ies_v22_20261025\\inputs\\energyplus\\Hospital_SanDiego.idf": "129bd06f9dccc1030d6461f284da788342569319c0d3d3fc933fa72ffcdcb8e2",
+    "D:\\云大文件\\论文\\医院ies\\Hospital_SanDiego_Starter\\modified_idf\\Hospital_SanDiego_262_engineering_audit.idf": "7b8a6c95743529e8174a7912992674e469a991d3cc6f0f58ae5a83d1fcd8b0d1",
+    "D:\\hospital_ies_v22_20261025\\inputs\\energyplus\\SanDiego_BrownField_TMY3.epw": "0cb0f545b288a7c05fde482b3a2f6061783e120e470d810b36d0585a094db37d",
+    "C:\\EnergyPlusV26-2-0\\energyplus.exe": "71278a62c9c3871922b3f7ee28a3c7c9f658caa995a934fccb92e8f8965a3977"
+  },
+  "engine_version": "EnergyPlus, Version 26.2.0-4bd7a1f26f",
+  "known_seen_temperature_dates": [
+    "01-15",
+    "06-15",
+    "08-15",
+    "09-15"
+  ],
+  "new_dates_never_used_for_temperature_fit": true,
+  "validation_read_rule": "No validation simulation or reading before parameter freeze file exists",
+  "precision_limits": {
+    "event_rmse_C": 1.0,
+    "recovery_first6h_rmse_C": 0.5,
+    "maximum_absolute_error_C": 2.0,
+    "first_crossing_error_minutes": 10.0,
+    "recovery_time_error_minutes": 20.0,
+    "maximum_complete_input_interval_minutes": 10.0
+  },
+  "threshold_C_above_setpoint": 2.0,
+  "recovery_band_C": 0.2,
+  "recovery_native_grid_minutes": 10.0,
+  "recovery_consecutive_native_samples": 3,
+  "recovery_phase_start": "Cooling availability restored; first following native sample",
+  "compatibility": "Original 22.1 IDF readonly; identical historical V21 26.2 qualified engineering derivative; no new capacity or physical object changes",
+  "input_boundary": "Actual minus normal representative-zone delivered net sensible=(Hactual-Cactual)-(Hbase-Cbase); Zone Air System Sensible Rates are not multiplied; mechanical OA already included; no coil energy added",
+  "diagnostics_only": [
+    "surface_convection_kW",
+    "radiant_C",
+    "air_storage_kW"
+  ],
+  "runtime_leakage_prohibition": "No post-event true walls, surface convection, future room temperature or event repair script in model inputs",
+  "allowed_models": [
+    "Existing 1R1C",
+    "One justified 2R2C slow indoor/fabric state"
+  ],
+  "fit_rule": "Calibration four outage trajectories only; identical parameters across days, at most three bounded starts per model for initial-value/convergence check; freeze both structures and parameters before validation",
+  "documentation": "https://energyplus.readthedocs.io/en/latest/guides/input-output-reference/1.10-group-thermal-zone-descriptiongeometry.html",
+  "amendment": {
+    "registered_utc": "2026-10-25T10:53:37.744868",
+    "validation_generated_or_viewed": false,
+    "reason": "Native 5min resizes 318/1090 equipment sizing fields even with original 60min averaging. Preserve exact original 10min timestep and 6-step=60min sizing. Genuine complete 10min inputs satisfy <=10min acceptance. Five-minute trials excluded from fitting and final validation.",
+    "approval": "Root confirmed interpretation of user hard capacity boundary and preferred 5min versus required <=10min"
+  }
+}

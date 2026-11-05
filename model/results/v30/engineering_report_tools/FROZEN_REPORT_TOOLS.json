@@ -1,0 +1,75 @@
+{
+  "schema": "hospital_ies.v30.engineering_report_tools_freeze.v2",
+  "files_sha256": {
+    "build_engineering_report.py": "38b54c318d137882fd08f4bc8196cb30aca6bf2dcabd2985da9c21519a1e42a1",
+    "test_report.py": "6d03f5f13050c3e62d382b1ebddb413b15debfbcc9da09d591445d81ebc9702b",
+    "report_presentation_v2.py": "057c6bd1f0e9c2c2097d6a403935f28316c83423f1eed2fe6bb7618e6ae6132e",
+    "test_presentation_v2.py": "504676ea46da9668c9d1524d25cc4fbc82f2bce4a7b2d21570eb3c90985cf391",
+    "RED.log": "4f2fb6bb40d48a5c8add37f2cd6b5652983ab464f87723aa4dad3fa8838755a6",
+    "GREEN_attempt01.log": "2c21cb151321af704d6c1ffcecaf9cc7f7983f354fc2fa744d52b9e21f417be3",
+    "RED_strict_native.log": "5ed8d88f8137f38988811b8c1630dac8f4311167766befe65709a044afbc6064",
+    "GREEN_strict_native.log": "b9333b080a23f3e501ed32fd3e6910aeaecd26aea5d10daf0550ded8d6d09dcd",
+    "RED_review_guards.log": "aaa12f69c7beb20327e2a85dbef4d886da7dd7222b9320e625ffc3c75f5550de",
+    "GREEN_review_guards.log": "46a31d4db441488f413a0a073d5ecfe47745f9d47d5ecd5f1abcb9ae0858890f",
+    "GREEN_FINAL.log": "3767377000168a566cfa7803c4901023875314e5f33dd93f3606101e7a63eb3e",
+    "GREEN_FINAL_COMMAND.json": "f56a5eb9b37f2e179b95318f55b227f70d4183a3945492f92f6bc810e54c87d2",
+    "ACTUAL_PARTIAL_REFUSAL.log": "6e0e38d7c14cf7cb23ba6ab99d4776195724783294cfcbc61110c59efc8afda9",
+    "ACTUAL_PARTIAL_REFUSAL_COMMAND.json": "680a1551086198b7d02622d6fe9723f81eb51c23fcace4888fd1608247704df8",
+    "ACTUAL_SCHEMA_CHECK.json": "75c72ed571bd5fc09c86f70a7203e41a16dc24114bb95cc6af3dac531c9c4577",
+    "ACTUAL_FINAL01.stdout.log": "1e1f9a54623b2579801975d5b93a5f6dccc75855a24111630c31c27938fa5822",
+    "ACTUAL_FINAL01.stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "ACTUAL_FINAL01_COMMAND.json": "e0b944d4edf7e865466397245c46264adaacde7fbb6d02fde7ee6e884dd11bc5",
+    "ACTUAL_REPORT_QA.json": "13686545d70ba4a1d76c2304d5a781969f5d7442bc29565b2d37676b39dd2e8f",
+    "V2_RED.log": "853d3daf365eddd5ff6bf957a704216d2049bf420e22734bc7989507723ed52f",
+    "V2_RED_actual_ulp.log": "1b5759cd2fc824629ad7380fd5933ab5a4b89a1be08b8e9f846f1a6a9c8a46fe",
+    "V2_GREEN.log": "cf16a5d519096da3af2ad199e6526d6fc404f74e37c4fead855c72824a62a49e",
+    "V2_GREEN_COMMAND.json": "968f5da1bf2274f7d68d5a9f1500dbd0beff506bbc161fc2e71f51d1c8b0ddf4",
+    "ACTUAL_FINAL02.stdout.log": "bc7062b696696adb6d51917c41fcac7cad3780b3314884190888e7450418da93",
+    "ACTUAL_FINAL02.stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "ACTUAL_FINAL02_COMMAND.json": "c16b7acf953cf49a07f9f5cf407c525bcbba777f2a61f29d7a84405f7cb1c3ff",
+    "EVIDENCE_NOTES.md": "a31964efa1418da97847f03e47eda98bc480b7ada566db1c109c919c926b481c",
+    "CODE_REVIEW.md": "1612737e659c9123416d7ad224a4bc376842cbc47958f7a9c86769a2904dc233",
+    "REVIEW_RESOLUTION.md": "23505f0423f1090df5da2d50ae695970f9a6edeabb1883c5f3e1b8dd82da0a0a",
+    "README.md": "9b4ba2ad2b74d99c4f1d55eef9998ac7e7070ab61ea61f44ab3f8dfd1960b0fa"
+  },
+  "base_generator_tests": {
+    "passed": 12,
+    "exit_code": 0
+  },
+  "presentation_v2_tests": {
+    "passed": 6,
+    "exit_code": 0
+  },
+  "actual_v1_report_receipt": {
+    "status": "bounded_model_and_evaluation_freeze_report_generated",
+    "output": "E:\\hospital_ies_v30_20261027\\engineering_report_tools\\actual_final01",
+    "rows": 32,
+    "default_passed": 1363,
+    "source_file_count": 858,
+    "input_file_count": 36,
+    "generated_files_sha256": {
+      "ENGINEERING_REPORT_ZH.md": "3db0f255e469e770514dec2629f761ff110a47636471f101015667b9f3f18945",
+      "MAIN_RESULT_TABLE.csv": "684448deb817b9478cffdc9bba9f0083a414c9dbfe1cf9ab46320f5192201ffe",
+      "COMPLETION_MATRIX.json": "254a3815b8eb6b667f8ebea3db99ca93703069c1906b3fb2f6b6d0f6c86da668"
+    }
+  },
+  "actual_v2_report_receipt": {
+    "status": "passed_display_only_v2",
+    "output": "E:\\hospital_ies_v30_20261027\\engineering_report_tools\\actual_final02",
+    "relabeled_cells": 11,
+    "original_report_unchanged": true,
+    "original_CSV_bytes_unchanged": true,
+    "new_simulations": 0,
+    "default_tests_rerun": false,
+    "generated_files_sha256": {
+      "ENGINEERING_REPORT_ZH.md": "4f37444ce16b89d7bad76a72cbfa957ee8bb60860c7433677c817528c046f2e2",
+      "MAIN_RESULT_TABLE.csv": "684448deb817b9478cffdc9bba9f0083a414c9dbfe1cf9ab46320f5192201ffe",
+      "COMPLETION_MATRIX.json": "f3ca8d5c6fd5c8a34b0f68b395042388b8502838423bff59ff10a2218451adcf"
+    }
+  },
+  "CSV_byte_identity_unchanged": true,
+  "scientific_producer_unchanged": true,
+  "new_simulations": 0,
+  "model_or_default_tests_rerun_for_presentation": false,
+  "D_source_edits": false
+}

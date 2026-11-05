@@ -1,0 +1,742 @@
+{
+  "contexts": [
+    {
+      "id": "b01_L1_grid",
+      "canonical_class": "L1",
+      "selection": {
+        "season": "winter",
+        "start_hour": 1160,
+        "timestamp": "2017-02-18 08:00:00",
+        "selection_column": "Q_h_demand_kW",
+        "selection_quantile": 0.5,
+        "selection_target": 153.00820757346048,
+        "selected_value": 155.46035212829017,
+        "annual_empirical_percentile": 0.5942922374429224,
+        "kind": "grid",
+        "hardware": "H1",
+        "full_source_hours": [
+          1160,
+          1161,
+          1162,
+          1163
+        ],
+        "prior_exposure": "New relative to V29 windows; not certified unseen across all historical campaigns"
+      },
+      "normal_preparation_minutes": 60.0,
+      "fault_window_minutes": [
+        60.0,
+        120.0
+      ],
+      "shock_window_minutes": null,
+      "common_observation_end_minute": 180.0,
+      "recovery_tail_minutes": 60.0,
+      "configuration": "H1",
+      "proposed_faults": {
+        "GRID": 0.0
+      },
+      "proposed_auxiliary_faults": {},
+      "shock_by_zone": {},
+      "GT_target_rule": null,
+      "information": "C/M current observations and lawful observed history only; future events and recovery truth unavailable",
+      "exposure_note": "Each method prefault operation reported separately; common-normal active-path gate before disturbance",
+      "scientific_role": "finite deterministic comparison, cross-season disjoint source windows; no certified historical blindness or annual probability"
+    },
+    {
+      "id": "b02_L1_heat_pump",
+      "canonical_class": "L1",
+      "selection": {
+        "season": "winter",
+        "start_hour": 1016,
+        "timestamp": "2017-02-12 08:00:00",
+        "selection_column": "Q_h_demand_kW",
+        "selection_quantile": 0.75,
+        "selection_target": 174.2985765998965,
+        "selected_value": 174.7717003554953,
+        "annual_empirical_percentile": 0.8223744292237443,
+        "kind": "heat_pump",
+        "hardware": "H0",
+        "full_source_hours": [
+          1016,
+          1017,
+          1018,
+          1019
+        ],
+        "prior_exposure": "New relative to V29 windows; not certified unseen across all historical campaigns"
+      },
+      "normal_preparation_minutes": 60.0,
+      "fault_window_minutes": [
+        60.0,
+        120.0
+      ],
+      "shock_window_minutes": null,
+      "common_observation_end_minute": 180.0,
+      "recovery_tail_minutes": 60.0,
+      "configuration": "H0",
+      "proposed_faults": {},
+      "proposed_auxiliary_faults": {
+        "AUX_HEAT_PUMP": 0.5
+      },
+      "shock_by_zone": {},
+      "GT_target_rule": null,
+      "information": "C/M current observations and lawful observed history only; future events and recovery truth unavailable",
+      "exposure_note": "Each method prefault operation reported separately; common-normal active-path gate before disturbance",
+      "scientific_role": "finite deterministic comparison, cross-season disjoint source windows; no certified historical blindness or annual probability"
+    },
+    {
+      "id": "b03_L2_tower",
+      "canonical_class": "L2",
+      "selection": {
+        "season": "summer",
+        "start_hour": 5816,
+        "timestamp": "2017-08-31 08:00:00",
+        "selection_column": "Q_c_demand_kW",
+        "selection_quantile": 0.5,
+        "selection_target": 611.6219234470834,
+        "selected_value": 611.6219234470834,
+        "annual_empirical_percentile": 0.8042237442922374,
+        "kind": "tower",
+        "hardware": "H2",
+        "full_source_hours": [
+          5816,
+          5817,
+          5818,
+          5819
+        ],
+        "prior_exposure": "New relative to V29 windows; not certified unseen across all historical campaigns"
+      },
+      "normal_preparation_minutes": 60.0,
+      "fault_window_minutes": [
+        60.0,
+        120.0
+      ],
+      "shock_window_minutes": null,
+      "common_observation_end_minute": 180.0,
+      "recovery_tail_minutes": 60.0,
+      "configuration": "H2",
+      "proposed_faults": {
+        "TOWER": 0.01
+      },
+      "proposed_auxiliary_faults": {},
+      "shock_by_zone": {},
+      "GT_target_rule": null,
+      "information": "C/M current observations and lawful observed history only; future events and recovery truth unavailable",
+      "exposure_note": "Each method prefault operation reported separately; common-normal active-path gate before disturbance",
+      "scientific_role": "finite deterministic comparison, cross-season disjoint source windows; no certified historical blindness or annual probability"
+    },
+    {
+      "id": "b04_L2_chw_pump",
+      "canonical_class": "L2",
+      "selection": {
+        "season": "summer",
+        "start_hour": 5072,
+        "timestamp": "2017-07-31 08:00:00",
+        "selection_column": "Q_c_demand_kW",
+        "selection_quantile": 0.75,
+        "selection_target": 788.5575147896081,
+        "selected_value": 789.4856683124806,
+        "annual_empirical_percentile": 0.8825342465753425,
+        "kind": "chw_pump",
+        "hardware": "H0",
+        "full_source_hours": [
+          5072,
+          5073,
+          5074,
+          5075
+        ],
+        "prior_exposure": "New relative to V29 windows; not certified unseen across all historical campaigns"
+      },
+      "normal_preparation_minutes": 60.0,
+      "fault_window_minutes": [
+        60.0,
+        120.0
+      ],
+      "shock_window_minutes": null,
+      "common_observation_end_minute": 180.0,
+      "recovery_tail_minutes": 60.0,
+      "configuration": "H0",
+      "proposed_faults": {},
+      "proposed_auxiliary_faults": {
+        "AUX_CHW_PUMP": 0.5
+      },
+      "shock_by_zone": {},
+      "GT_target_rule": null,
+      "information": "C/M current observations and lawful observed history only; future events and recovery truth unavailable",
+      "exposure_note": "Each method prefault operation reported separately; common-normal active-path gate before disturbance",
+      "scientific_role": "finite deterministic comparison, cross-season disjoint source windows; no certified historical blindness or annual probability"
+    },
+    {
+      "id": "b05_L3_ER",
+      "canonical_class": "L3",
+      "selection": {
+        "season": "spring",
+        "start_hour": 3416,
+        "timestamp": "2017-05-23 08:00:00",
+        "selection_column": "P_e_nonplant_kW",
+        "selection_quantile": 0.5,
+        "selection_target": 656.17213756159,
+        "selected_value": 655.9022355453686,
+        "annual_empirical_percentile": 0.7761415525114155,
+        "kind": "ER",
+        "hardware": "H0",
+        "full_source_hours": [
+          3416,
+          3417,
+          3418,
+          3419
+        ],
+        "prior_exposure": "New relative to V29 windows; not certified unseen across all historical campaigns"
+      },
+      "normal_preparation_minutes": 60.0,
+      "fault_window_minutes": [
+        60.0,
+        120.0
+      ],
+      "shock_window_minutes": [
+        60.0,
+        120.0
+      ],
+      "common_observation_end_minute": 180.0,
+      "recovery_tail_minutes": 60.0,
+      "configuration": "H0",
+      "proposed_faults": {},
+      "proposed_auxiliary_faults": {},
+      "shock_by_zone": {
+        "ER_TRAUMA1_FLR_1": {
+          "e": 0.25,
+          "h": 0.25,
+          "c": 0.25
+        },
+        "ER_TRAUMA2_FLR_1": {
+          "e": 0.25,
+          "h": 0.25,
+          "c": 0.25
+        },
+        "ER_EXAM1_MULT4_FLR_1": {
+          "e": 0.25,
+          "h": 0.25,
+          "c": 0.25
+        },
+        "ER_EXAM3_MULT4_FLR_1": {
+          "e": 0.25,
+          "h": 0.25,
+          "c": 0.25
+        }
+      },
+      "GT_target_rule": null,
+      "information": "C/M current observations and lawful observed history only; future events and recovery truth unavailable",
+      "exposure_note": "Each method prefault operation reported separately; common-normal active-path gate before disturbance",
+      "scientific_role": "finite deterministic comparison, cross-season disjoint source windows; no certified historical blindness or annual probability"
+    },
+    {
+      "id": "b06_L3_OR",
+      "canonical_class": "L3",
+      "selection": {
+        "season": "autumn",
+        "start_hour": 6704,
+        "timestamp": "2017-10-07 08:00:00",
+        "selection_column": "P_e_nonplant_kW",
+        "selection_quantile": 0.5,
+        "selection_target": 486.67068410681804,
+        "selected_value": 486.4844981841725,
+        "annual_empirical_percentile": 0.672945205479452,
+        "kind": "OR",
+        "hardware": "H0",
+        "full_source_hours": [
+          6704,
+          6705,
+          6706,
+          6707
+        ],
+        "prior_exposure": "New relative to V29 windows; not certified unseen across all historical campaigns"
+      },
+      "normal_preparation_minutes": 60.0,
+      "fault_window_minutes": [
+        60.0,
+        120.0
+      ],
+      "shock_window_minutes": [
+        60.0,
+        120.0
+      ],
+      "common_observation_end_minute": 180.0,
+      "recovery_tail_minutes": 60.0,
+      "configuration": "H0",
+      "proposed_faults": {},
+      "proposed_auxiliary_faults": {},
+      "shock_by_zone": {
+        "OR1_FLR_2": {
+          "e": 0.25,
+          "h": 0.25,
+          "c": 0.25
+        },
+        "OR2_MULT5_FLR_2": {
+          "e": 0.25,
+          "h": 0.25,
+          "c": 0.25
+        },
+        "OR3_FLR_2": {
+          "e": 0.25,
+          "h": 0.25,
+          "c": 0.25
+        },
+        "OR4_FLR_2": {
+          "e": 0.25,
+          "h": 0.25,
+          "c": 0.25
+        }
+      },
+      "GT_target_rule": null,
+      "information": "C/M current observations and lawful observed history only; future events and recovery truth unavailable",
+      "exposure_note": "Each method prefault operation reported separately; common-normal active-path gate before disturbance",
+      "scientific_role": "finite deterministic comparison, cross-season disjoint source windows; no certified historical blindness or annual probability"
+    },
+    {
+      "id": "b07_L4_GT_ER",
+      "canonical_class": "L4",
+      "selection": {
+        "season": "spring",
+        "start_hour": 3128,
+        "timestamp": "2017-05-11 08:00:00",
+        "selection_column": "P_e_nonplant_kW",
+        "selection_quantile": 0.75,
+        "selection_target": 658.1882205790523,
+        "selected_value": 658.1910766686308,
+        "annual_empirical_percentile": 0.7832191780821918,
+        "kind": "GT_ER",
+        "hardware": "H0",
+        "full_source_hours": [
+          3128,
+          3129,
+          3130,
+          3131
+        ],
+        "prior_exposure": "New relative to V29 windows; not certified unseen across all historical campaigns"
+      },
+      "normal_preparation_minutes": 60.0,
+      "fault_window_minutes": [
+        60.0,
+        120.0
+      ],
+      "shock_window_minutes": [
+        60.0,
+        120.0
+      ],
+      "common_observation_end_minute": 180.0,
+      "recovery_tail_minutes": 60.0,
+      "configuration": "H0",
+      "proposed_faults": {
+        "GT_2": 0.0
+      },
+      "proposed_auxiliary_faults": {},
+      "shock_by_zone": {
+        "ER_TRAUMA1_FLR_1": {
+          "e": 0.25,
+          "h": 0.25,
+          "c": 0.25
+        },
+        "ER_TRAUMA2_FLR_1": {
+          "e": 0.25,
+          "h": 0.25,
+          "c": 0.25
+        },
+        "ER_EXAM1_MULT4_FLR_1": {
+          "e": 0.25,
+          "h": 0.25,
+          "c": 0.25
+        },
+        "ER_EXAM3_MULT4_FLR_1": {
+          "e": 0.25,
+          "h": 0.25,
+          "c": 0.25
+        }
+      },
+      "GT_target_rule": "For b07 only: select largest actual GT output from C common-normal at [45,60), before any disturbance run; fixed target shared by both methods",
+      "information": "C/M current observations and lawful observed history only; future events and recovery truth unavailable",
+      "exposure_note": "Each method prefault operation reported separately; common-normal active-path gate before disturbance",
+      "scientific_role": "finite deterministic comparison, cross-season disjoint source windows; no certified historical blindness or annual probability"
+    },
+    {
+      "id": "b08_L4_GRID_OR",
+      "canonical_class": "L4",
+      "selection": {
+        "season": "autumn",
+        "start_hour": 7112,
+        "timestamp": "2017-10-24 08:00:00",
+        "selection_column": "P_e_nonplant_kW",
+        "selection_quantile": 0.75,
+        "selection_target": 658.8860868003756,
+        "selected_value": 658.8527176219874,
+        "annual_empirical_percentile": 0.7857305936073059,
+        "kind": "GRID_OR",
+        "hardware": "H1",
+        "full_source_hours": [
+          7112,
+          7113,
+          7114,
+          7115
+        ],
+        "prior_exposure": "New relative to V29 windows; not certified unseen across all historical campaigns"
+      },
+      "normal_preparation_minutes": 60.0,
+      "fault_window_minutes": [
+        60.0,
+        120.0
+      ],
+      "shock_window_minutes": [
+        60.0,
+        120.0
+      ],
+      "common_observation_end_minute": 180.0,
+      "recovery_tail_minutes": 60.0,
+      "configuration": "H1",
+      "proposed_faults": {
+        "GRID": 0.0
+      },
+      "proposed_auxiliary_faults": {},
+      "shock_by_zone": {
+        "OR1_FLR_2": {
+          "e": 0.25,
+          "h": 0.25,
+          "c": 0.25
+        },
+        "OR2_MULT5_FLR_2": {
+          "e": 0.25,
+          "h": 0.25,
+          "c": 0.25
+        },
+        "OR3_FLR_2": {
+          "e": 0.25,
+          "h": 0.25,
+          "c": 0.25
+        },
+        "OR4_FLR_2": {
+          "e": 0.25,
+          "h": 0.25,
+          "c": 0.25
+        }
+      },
+      "GT_target_rule": null,
+      "information": "C/M current observations and lawful observed history only; future events and recovery truth unavailable",
+      "exposure_note": "Each method prefault operation reported separately; common-normal active-path gate before disturbance",
+      "scientific_role": "finite deterministic comparison, cross-season disjoint source windows; no certified historical blindness or annual probability"
+    }
+  ],
+  "order": "All common/method normals first; active-function audit and b07 deterministic target lock, then primary disturbances",
+  "budget": {
+    "max_actual_trajectories": 48,
+    "max_experiment_wall_hours": 24,
+    "physical_workers": 1
+  },
+  "stopping": "No remaining trajectory after physics/export gate fails until diagnosis; reject drift; no expansion to force C wins",
+  "source_selection": {
+    "rule": "Per season 08:00 candidate hours, closest median/p75 original demand; avoid sealed days and adjacent day, V29 windows and prior chosen days. No strategy result read.",
+    "choices": [
+      {
+        "season": "winter",
+        "start_hour": 1160,
+        "timestamp": "2017-02-18 08:00:00",
+        "selection_column": "Q_h_demand_kW",
+        "selection_quantile": 0.5,
+        "selection_target": 153.00820757346048,
+        "selected_value": 155.46035212829017,
+        "annual_empirical_percentile": 0.5942922374429224,
+        "kind": "grid",
+        "hardware": "H1",
+        "full_source_hours": [
+          1160,
+          1161,
+          1162,
+          1163
+        ],
+        "prior_exposure": "New relative to V29 windows; not certified unseen across all historical campaigns"
+      },
+      {
+        "season": "winter",
+        "start_hour": 1016,
+        "timestamp": "2017-02-12 08:00:00",
+        "selection_column": "Q_h_demand_kW",
+        "selection_quantile": 0.75,
+        "selection_target": 174.2985765998965,
+        "selected_value": 174.7717003554953,
+        "annual_empirical_percentile": 0.8223744292237443,
+        "kind": "heat_pump",
+        "hardware": "H0",
+        "full_source_hours": [
+          1016,
+          1017,
+          1018,
+          1019
+        ],
+        "prior_exposure": "New relative to V29 windows; not certified unseen across all historical campaigns"
+      },
+      {
+        "season": "summer",
+        "start_hour": 5816,
+        "timestamp": "2017-08-31 08:00:00",
+        "selection_column": "Q_c_demand_kW",
+        "selection_quantile": 0.5,
+        "selection_target": 611.6219234470834,
+        "selected_value": 611.6219234470834,
+        "annual_empirical_percentile": 0.8042237442922374,
+        "kind": "tower",
+        "hardware": "H2",
+        "full_source_hours": [
+          5816,
+          5817,
+          5818,
+          5819
+        ],
+        "prior_exposure": "New relative to V29 windows; not certified unseen across all historical campaigns"
+      },
+      {
+        "season": "summer",
+        "start_hour": 5072,
+        "timestamp": "2017-07-31 08:00:00",
+        "selection_column": "Q_c_demand_kW",
+        "selection_quantile": 0.75,
+        "selection_target": 788.5575147896081,
+        "selected_value": 789.4856683124806,
+        "annual_empirical_percentile": 0.8825342465753425,
+        "kind": "chw_pump",
+        "hardware": "H0",
+        "full_source_hours": [
+          5072,
+          5073,
+          5074,
+          5075
+        ],
+        "prior_exposure": "New relative to V29 windows; not certified unseen across all historical campaigns"
+      },
+      {
+        "season": "spring",
+        "start_hour": 3416,
+        "timestamp": "2017-05-23 08:00:00",
+        "selection_column": "P_e_nonplant_kW",
+        "selection_quantile": 0.5,
+        "selection_target": 656.17213756159,
+        "selected_value": 655.9022355453686,
+        "annual_empirical_percentile": 0.7761415525114155,
+        "kind": "ER",
+        "hardware": "H0",
+        "full_source_hours": [
+          3416,
+          3417,
+          3418,
+          3419
+        ],
+        "prior_exposure": "New relative to V29 windows; not certified unseen across all historical campaigns"
+      },
+      {
+        "season": "autumn",
+        "start_hour": 6704,
+        "timestamp": "2017-10-07 08:00:00",
+        "selection_column": "P_e_nonplant_kW",
+        "selection_quantile": 0.5,
+        "selection_target": 486.67068410681804,
+        "selected_value": 486.4844981841725,
+        "annual_empirical_percentile": 0.672945205479452,
+        "kind": "OR",
+        "hardware": "H0",
+        "full_source_hours": [
+          6704,
+          6705,
+          6706,
+          6707
+        ],
+        "prior_exposure": "New relative to V29 windows; not certified unseen across all historical campaigns"
+      },
+      {
+        "season": "spring",
+        "start_hour": 3128,
+        "timestamp": "2017-05-11 08:00:00",
+        "selection_column": "P_e_nonplant_kW",
+        "selection_quantile": 0.75,
+        "selection_target": 658.1882205790523,
+        "selected_value": 658.1910766686308,
+        "annual_empirical_percentile": 0.7832191780821918,
+        "kind": "GT_ER",
+        "hardware": "H0",
+        "full_source_hours": [
+          3128,
+          3129,
+          3130,
+          3131
+        ],
+        "prior_exposure": "New relative to V29 windows; not certified unseen across all historical campaigns"
+      },
+      {
+        "season": "autumn",
+        "start_hour": 7112,
+        "timestamp": "2017-10-24 08:00:00",
+        "selection_column": "P_e_nonplant_kW",
+        "selection_quantile": 0.75,
+        "selection_target": 658.8860868003756,
+        "selected_value": 658.8527176219874,
+        "annual_empirical_percentile": 0.7857305936073059,
+        "kind": "GRID_OR",
+        "hardware": "H1",
+        "full_source_hours": [
+          7112,
+          7113,
+          7114,
+          7115
+        ],
+        "prior_exposure": "New relative to V29 windows; not certified unseen across all historical campaigns"
+      }
+    ]
+  },
+  "hardware_profiles": {
+    "H0": {
+      "gt_dynamics": {
+        "gt_start_delay_minutes": 10.0,
+        "minimum_up_minutes": 60.0,
+        "minimum_down_minutes": 30.0,
+        "interlock_rearm_wait_minutes": 30.0,
+        "interlock_rearm_enabled": true
+      },
+      "diesel_local_response": {
+        "inertia_H_seconds": 0.7359,
+        "power_factor_base": 0.8,
+        "governor_tau_seconds": 0.059,
+        "governor_delay_seconds": 0.05,
+        "speed_deadband_pu": 0.001,
+        "speed_min_pu": 0.9,
+        "speed_max_pu": 1.1,
+        "shaft_loss_fraction": 0.02,
+        "speed_regulation_pu": 0.05,
+        "integration_max_step_seconds": 0.01
+      },
+      "hrsg_thermal_readiness": {
+        "warmup_delay_minutes": 0.0
+      },
+      "gt_floor_correction": {
+        "enabled": true
+      },
+      "execution_recovery": {
+        "grid_return_prepare_minutes": 0.25,
+        "grid_open_transfer_minutes": 0.25,
+        "local_contact_restore_delay_minutes": 0.0
+      },
+      "model_closeout": {
+        "grid_bridge_wait_minutes": 30.0
+      },
+      "sci_engineering": {
+        "configuration_id": "H0",
+        "ups": {},
+        "cold_store": {},
+        "cold_pump_kW_per_kW": 0.02,
+        "storage_max_segment_minutes": 1.0,
+        "auxiliary_share_scale": 1.0,
+        "diesel_start_delay_minutes": 15.0,
+        "gt_protection_trip_multiple": 1.05,
+        "gt_overload_hold_minutes": 15.0
+      }
+    },
+    "H1": {
+      "gt_dynamics": {
+        "gt_start_delay_minutes": 10.0,
+        "minimum_up_minutes": 60.0,
+        "minimum_down_minutes": 30.0,
+        "interlock_rearm_wait_minutes": 30.0,
+        "interlock_rearm_enabled": true
+      },
+      "diesel_local_response": {
+        "inertia_H_seconds": 0.7359,
+        "power_factor_base": 0.8,
+        "governor_tau_seconds": 0.059,
+        "governor_delay_seconds": 0.05,
+        "speed_deadband_pu": 0.001,
+        "speed_min_pu": 0.9,
+        "speed_max_pu": 1.1,
+        "shaft_loss_fraction": 0.02,
+        "speed_regulation_pu": 0.05,
+        "integration_max_step_seconds": 0.01
+      },
+      "hrsg_thermal_readiness": {
+        "warmup_delay_minutes": 0.0
+      },
+      "gt_floor_correction": {
+        "enabled": true
+      },
+      "execution_recovery": {
+        "grid_return_prepare_minutes": 0.25,
+        "grid_open_transfer_minutes": 0.25,
+        "local_contact_restore_delay_minutes": 0.0
+      },
+      "model_closeout": {
+        "grid_bridge_wait_minutes": 30.0
+      },
+      "sci_engineering": {
+        "configuration_id": "H1",
+        "ups": {
+          "capacity_kWh": 40.0,
+          "power_kW": 160.0,
+          "initial_soc": 1.0,
+          "charge_efficiency": 0.95,
+          "discharge_efficiency": 0.95,
+          "loss_per_hour": 0.0
+        },
+        "cold_store": {},
+        "cold_pump_kW_per_kW": 0.02,
+        "storage_max_segment_minutes": 1.0,
+        "auxiliary_share_scale": 1.0,
+        "diesel_start_delay_minutes": 15.0,
+        "gt_protection_trip_multiple": 1.05,
+        "gt_overload_hold_minutes": 15.0
+      }
+    },
+    "H2": {
+      "gt_dynamics": {
+        "gt_start_delay_minutes": 10.0,
+        "minimum_up_minutes": 60.0,
+        "minimum_down_minutes": 30.0,
+        "interlock_rearm_wait_minutes": 30.0,
+        "interlock_rearm_enabled": true
+      },
+      "diesel_local_response": {
+        "inertia_H_seconds": 0.7359,
+        "power_factor_base": 0.8,
+        "governor_tau_seconds": 0.059,
+        "governor_delay_seconds": 0.05,
+        "speed_deadband_pu": 0.001,
+        "speed_min_pu": 0.9,
+        "speed_max_pu": 1.1,
+        "shaft_loss_fraction": 0.02,
+        "speed_regulation_pu": 0.05,
+        "integration_max_step_seconds": 0.01
+      },
+      "hrsg_thermal_readiness": {
+        "warmup_delay_minutes": 0.0
+      },
+      "gt_floor_correction": {
+        "enabled": true
+      },
+      "execution_recovery": {
+        "grid_return_prepare_minutes": 0.25,
+        "grid_open_transfer_minutes": 0.25,
+        "local_contact_restore_delay_minutes": 0.0
+      },
+      "model_closeout": {
+        "grid_bridge_wait_minutes": 30.0
+      },
+      "sci_engineering": {
+        "configuration_id": "H2",
+        "ups": {},
+        "cold_store": {
+          "capacity_kWh": 60.0,
+          "power_kW": 120.0,
+          "initial_soc": 1.0,
+          "charge_efficiency": 0.95,
+          "discharge_efficiency": 0.95,
+          "loss_per_hour": 0.01
+        },
+        "cold_pump_kW_per_kW": 0.02,
+        "storage_max_segment_minutes": 1.0,
+        "auxiliary_share_scale": 1.0,
+        "diesel_start_delay_minutes": 15.0,
+        "gt_protection_trip_multiple": 1.05,
+        "gt_overload_hold_minutes": 15.0
+      }
+    }
+  }
+}

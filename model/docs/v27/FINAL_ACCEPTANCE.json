@@ -1,0 +1,160 @@
+{
+  "schema": "hospital_ies.v27.final_scoped_acceptance.v1",
+  "utc": "2026-10-26T13:40:55.059115+00:00",
+  "authorized_bounded_study_complete": true,
+  "software": {
+    "default_test_command": [
+      "python",
+      "-B",
+      "-m",
+      "pytest",
+      "-q"
+    ],
+    "passed": 1237,
+    "failed": 0,
+    "skipped": 0,
+    "exit_code": 0,
+    "seconds_reported_by_pytest": 451.63,
+    "actual_test_source": "Source04 with SCI_SOURCE_ROOT temporarily set for readonly annual-source test",
+    "raw_logs": "steps/full_pytest_final01",
+    "clean_public_exit_code": 0,
+    "portable_readonly_replay_exit_codes": {
+      "load_source": 0,
+      "objective_fork": 0,
+      "new_four": 0,
+      "load_sensitivity": 0
+    },
+    "adopted_prefix04_portable_equivalence_exit_code": 0,
+    "independent_code_review_critical": 0,
+    "independent_code_review_important": 0
+  },
+  "engineering": {
+    "snapshot": "objective_order/prefix04/EXECUTION_SNAPSHOT.json",
+    "same_physical_snapshot_A0_A1": true,
+    "actual_continuations_completed": 2,
+    "new_matched_main_cases_completed": 4,
+    "new_sensitivity_cases_completed": 4,
+    "tail_actual_fee_delta_USD2001": -6.877046658979893,
+    "tail_paid_start_kWh": 3.3333333333333335,
+    "tail_conditional_CO2_delta_kg": 175.227612,
+    "terminal_GT_states_differ": true,
+    "aggregate_inventory_same": true,
+    "critical_engineering_interruption_minutes": 0,
+    "raw_nonzero_ENS_preserved": true,
+    "backend_rejected_or_infeasible_attempts_preserved": true,
+    "main_native_accounting_pass": 4,
+    "sensitivity_native_accounting_pass": 4
+  },
+  "load_source": {
+    "actual_annual_derived_source_recovered": true,
+    "original_four_CSV_reexport_byte_identical": true,
+    "annual_SQL_frequency": "Hourly only; native annual substeps not retained",
+    "annual_warning_occurrences": 22832532,
+    "annual_completed_flags_vs_success_end_unresolved": true,
+    "annual_measured_physical_truth_qualified": false
+  },
+  "sensitivity": {
+    "classification": "S",
+    "qualified_scope": "One registered14h July window; aggregate exogenous E/H fixed and original auxiliary/direct-electric reallocation assumption retained; original-plus-signed120h conditional cooling, all14 representative zones",
+    "operation_trajectory_changed": true,
+    "building_aux_kWh_delta": 15.3499828344,
+    "direct_electric_decomposition_delta_kWh": -15.3499828344,
+    "strong_individual_direct_clinical_demand_fixed": "U",
+    "annual_real_cooling_truth": "U"
+  },
+  "unqualified": {
+    "dynamic_cold": false,
+    "minPlant8_cold_fix": false,
+    "temperature_baseline_and_surface_qualified_cases": "0/8 each",
+    "thermal_coupling_default": null,
+    "explicit_public_requests_rejected": true,
+    "unconditional_global_economic_optimum": false,
+    "full_hospital_temperature_humidity_cleanliness": false
+  },
+  "attempts": {
+    "actual_trajectory_attempts_conservatively_counted": 16,
+    "breakdown": {
+      "failed_t0_prefix": 2,
+      "initialized_type_diagnostic_reset1_step0": 1,
+      "valid_prefix90_captures": 2,
+      "real_90_180_continuations": 2,
+      "new_full_main180": 4,
+      "paired_sensitivity840": 4,
+      "clean_public_smoke15": 1
+    },
+    "static_snapshot_groups_attempted": 2,
+    "static_solver_calls": 4,
+    "static_attempts": [
+      {
+        "attempt": "static_A0_01",
+        "status": "failed_unknown",
+        "mode": "inspect",
+        "source_sha256": "2364245464ab2ce9a669f583834bff2851c3d69fd256dd10fe7957aba4f68c7d",
+        "raw_result": "objective_order/static_A0_01/RESULT.json",
+        "result_sha256": "3e37fe6f94693a6af160aa38bc918d3912712abad9ae3c53bd3988d6c38386c9",
+        "time_advance_minutes": 0
+      },
+      {
+        "attempt": "static_A1_01",
+        "status": "failed_unknown",
+        "mode": "inspect",
+        "source_sha256": "2364245464ab2ce9a669f583834bff2851c3d69fd256dd10fe7957aba4f68c7d",
+        "raw_result": "objective_order/static_A1_01/RESULT.json",
+        "result_sha256": "c993b0223b82e08696893a19d860c6ac29cb83459ef22d7eb62f4b6df84d19a6",
+        "time_advance_minutes": 0
+      },
+      {
+        "attempt": "static_A0_02",
+        "status": "static_command_generated",
+        "mode": "inspect",
+        "source_sha256": "ac3a4f6aba22a4d0ef51ecfc427490af5d2e9d1be5d8b97764067a175a9c898a",
+        "raw_result": "objective_order/static_A0_02/RESULT.json",
+        "result_sha256": "d36d59ed6d0b4ed1d05710f6435456ba249b3430fa00ee779e30983b3a5a1105",
+        "time_advance_minutes": 0
+      },
+      {
+        "attempt": "static_A1_02",
+        "status": "static_command_generated",
+        "mode": "inspect",
+        "source_sha256": "ac3a4f6aba22a4d0ef51ecfc427490af5d2e9d1be5d8b97764067a175a9c898a",
+        "raw_result": "objective_order/static_A1_02/RESULT.json",
+        "result_sha256": "91bab96aebdd3186ae3df6c7efe59e4afeb14b96c9e25ba81f4b5f356b918693",
+        "time_advance_minutes": 0
+      }
+    ],
+    "actual_new_EnergyPlus_runs": 0,
+    "actual_new_fits": 0,
+    "conditional_extra_active_chain_runs": 0,
+    "additional_windows_run": 0,
+    "unexecuted": [
+      "extra active-chain four: not triggered because original GT2 target remained active",
+      "W2: no pre-existing closest critical dynamic record available",
+      "new EP and calibration: unnecessary for mapping or bounded conclusion",
+      "105/120/FD extra snapshots: evidence sufficient at F90"
+    ],
+    "scientific_failures_not_zero_imputed": true
+  },
+  "bindings": {
+    "production_git_head": "4cb5e019783591ce2ae1c8949c18c69b1d7c9e95",
+    "source_sha256": "ac3a4f6aba22a4d0ef51ecfc427490af5d2e9d1be5d8b97764067a175a9c898a",
+    "source_files": 826,
+    "input_sha256": "10070101f2b016f6e238fae4e4b1b1ccb0a9cdf8b36a70bfefcfb8ab6e44564a",
+    "input_files": 31,
+    "original_input_files": 28,
+    "new_separate_conditional_inputs": 3
+  },
+  "delivery": {
+    "single_zip": "HOSPITAL_IES_V27_REVIEW_under100MB.zip",
+    "strict_decimal_cap_bytes": 100000000,
+    "manifest": "MANIFEST.json excludes its own hash",
+    "archive_final_checks": "External ARCHIVE_VERIFICATION.json records actual ZIP byte length, full member CRC/SHA and archive SHA after payload freeze; not embedded to avoid a self-hash cycle.",
+    "omissions": "OMITTED_LOCAL_ARTIFACTS.json; all primary trajectories and full adopted snapshot retained; large original SQL retained separately with hashes",
+    "remote_push": false,
+    "main_merge": false
+  },
+  "necessary_followup": [
+    "Independent direct-electric and auxiliary baseline/meter boundary before stronger cold-to-electric demand claims",
+    "Resolve original annual Completed flags and many recurring physical warnings before annual-truth qualification",
+    "Dynamic cold-water and temperature qualification remain separate failed/withdrawn uses; no new fits or EnergyPlus runs in V27"
+  ]
+}

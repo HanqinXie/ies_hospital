@@ -1,0 +1,30 @@
+{
+  "schema": "hospital_ies.cooling_dynamics.diagnostic_serialization_separation.v1",
+  "utc": "2026-11-04T04:22:46.930787+00:00",
+  "trigger": "Third wave T02_N atminute3 mip_dual_bound nonfinite in solver diagnostic subtree;three peers preserved controlled-stop prefixes.",
+  "change": "Inside explicit diagnostic/solver_backend_layers/attempts/validation or *_validation subtrees,nonfinite optimizer diagnostic values are explicit tags carrying original path,sign,type,not_physical_measurement=true and accepted_as_physical_quantity=false. Outside diagnostics,physical nonfinite values remain rejected.",
+  "algorithm_input_separation": "record_observation retains raw snapshot/native types in current and deepcopied full history. Only detached emit/write payloads are cleaned/compacted;logger labels never feed controller.",
+  "test_contract_update": "Old assertion rejecting NaN inside true_validation was revised because new diagnostic contract retains failed-candidate NaN. Actual action/served/store NaN andInfinity rejection retained.",
+  "actual_red": {
+    "failed": 2,
+    "exit_code": 1
+  },
+  "actual_green": {
+    "command": "python -m pytest -q --noconftest tests/test_cooling_campaign_20261104.py",
+    "exit_code": 0,
+    "passed": 7,
+    "seconds": 0.5
+  },
+  "new_model_resets_or_runs": 0,
+  "old_bindings_or_attempts_modified": false,
+  "files": [
+    {
+      "path": "tools\\cooling_dynamics_20261104\\run_worker.py",
+      "sha256": "dce6e712a471bab5145cc5b3a233d313e0d44654bc5579ca7ad6ff4e748c5d39"
+    },
+    {
+      "path": "tests\\test_cooling_campaign_20261104.py",
+      "sha256": "89b43c110f1875676888400d5e0e7d62845a67508dc5327a883809e54b06d68a"
+    }
+  ]
+}

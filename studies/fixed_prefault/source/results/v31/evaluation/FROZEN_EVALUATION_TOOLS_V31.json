@@ -1,0 +1,55 @@
+{
+  "schema": "hospital_ies.v31.independent_evaluation_tool_freeze.v1",
+  "created_utc": "2026-10-27T12:26:06.816086+00:00",
+  "source_edits": false,
+  "reviewer_new_simulations": 0,
+  "tool_files_sha256": {
+    "audit_v31.py": "b8e618e57402def18ec468e6a43d80c83f1a7eabe44efdfb716ad45bb53ca803",
+    "test_audit_v31.py": "194fcb67ccc75d404f9ec95e1461a69f331d6825c9a464daef00f6656639b6d5",
+    "README_ZH.md": "d06b33ba403bd2d504de52bc1c1eaaab59722b533c04c012424ef73764a09ad8",
+    "DESIGN_AND_PLAN.md": "8bd34f524b277a2bc88f862ff14e2e8f2e4a6dd4a5d3dfeaf357ea6234e5bc42"
+  },
+  "support_files_sha256": {
+    "audit_campaign.py": "1236b5f310151d91ff643911cb811c1870254b15a9d64fe531e3d6978030d464",
+    "FROZEN_ACCOUNTING.json": "524f5fc0dc2cc46748b1a11792b768632c01a9a91b670411bec9b517d1d13f56"
+  },
+  "registration_sha256": "bad2604b09bb409eaa78b11aeca90a81045d979c8f1de714d62cbf4c351d7739",
+  "targeted_small_tests": {
+    "count": 17,
+    "exit_code": 0,
+    "command": "python -B -m unittest discover -s E:/hospital_ies_v31_20261027/evaluation -p test_audit_v31.py -v",
+    "log": "GREEN07_native_receipt.log",
+    "log_sha256": "4a6eb444c8505b233058e320dce29c6f40880b81b9100dcd7d8541639ea0d191"
+  },
+  "red_green_logs_sha256": {
+    "GREEN01.log": "b735d8b9d2619e8e831cf2d47bfc92a73ba3adf3fd97d5e3d6cf75138e97cdd8",
+    "GREEN02_case_design.log": "6e7119ca66ff22a9ef190ff13b7e71b4165482223c3ee76ebb1f2b614e59787f",
+    "GREEN03_mechanism.log": "9e83765ffbbfdc01e88bf906076eaa7ba35d3eb9cdf2eae72564bd18d24fc4f0",
+    "GREEN04_coverage.log": "25fc088ff368f0cdc5dae95639495e3c1f77d711e58478071a645826f990ea9f",
+    "GREEN05_review.log": "cc005c4efe9457aa04b1ae45d887a55a838da5fe2d09bb41c0a55af3e1b307b4",
+    "GREEN06_provenance_trace.log": "49fedca1ee2bb84a34efbb0e12b269f20946dc7c7a07309b3aa66647264d8915",
+    "GREEN07_native_receipt.log": "4a6eb444c8505b233058e320dce29c6f40880b81b9100dcd7d8541639ea0d191",
+    "RED01.log": "84d6908e26de77a6387aa9d7efd83f52c70d46a7ac93da2b9646e6eccbba3e05",
+    "RED02_case_design.log": "a1cd71a6e230fe47f6910947d25dfe4de39f5ed160a37c3d4e9b728159a255f3",
+    "RED03_mechanism.log": "c7ae4ce6ceb0715f9464f924f01687d7dc9cc1c3b82628b243464c1724a694eb",
+    "RED04_coverage.log": "8c46c2f9a4f3aeb34a7ec53a24afc1623e420ebbd197f21929757ef670905b5c",
+    "RED05_review.log": "2dd611b312a336292c4a310f62e2370bd82f6ba1f1392af0f1f993ce2a516756",
+    "RED06_provenance_trace.log": "df5c5d98adb6744a7e9807c3af4c0de3791d36c8194019610b9354606cd91a82",
+    "RED07_native_receipt.log": "bad5759c301fdd20b2374a8b4e97d60d0fccbd08b4c438915c6fb989ef0c9e86"
+  },
+  "initial_actual_partial": {
+    "path": "partial02/AUDIT.json",
+    "sha256": "f1bb6b4cfcd60a71ac7d8e115809dc90662a99f33edd278aacd3535fe1b64bfc",
+    "status": "partial",
+    "reused_actual_runs": 8,
+    "new_actual_runs": 0,
+    "explicit_missing": 4,
+    "old_partial_tool_version_preserved": true
+  },
+  "limits": [
+    "No simulation, solver, D source or frozen V30 edits",
+    "Partial DG receipts not interpolated",
+    "Original source arithmetic and material criteria unchanged",
+    "Archive acceptance belongs to parent task"
+  ]
+}

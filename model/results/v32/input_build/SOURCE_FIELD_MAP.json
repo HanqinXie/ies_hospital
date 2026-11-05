@@ -1,0 +1,56 @@
+{
+  "schema": "hospital_ies.v32.raw_input_field_mapping.v1",
+  "source_clock": {
+    "source": "inputs/loads/hospital_ies_demand_8760.csv",
+    "fields": ["hour_of_year", "timestamp"],
+    "transform": "hour=start_hour+floor((elapsed_minute+1e-9)/60), one-based CSV hour; original timestamp retained; array row=hour-1 only in original pipeline",
+    "interval_source_hours": [1160, 1161, 1162],
+    "terminal_source_support_hour": 1163,
+    "grid": "quarter-hour decision union hourly and registered exogenous edges; no native operating segments"
+  },
+  "building_grouping": {
+    "sources": ["inputs/loads/hospital_ies_demand_8760.csv", "inputs/loads/critical_zones_8760.csv"],
+    "fields": ["P_e_nonplant_kW", "P_e_unresolved_kW", "Q_h_demand_kW", "Q_c_demand_kW", "zone_name", "zone_multiplier", "interior_equipment_kW", "interior_lighting_kW", "associated_reheat_coil_heating_kW", "zone_sensible_cooling_kW"],
+    "transform": "original build_zone_groups: priority proxy scaled only within original building total; P3 residual; never add zone totals again",
+    "units": ["kW_e", "useful kW_h", "useful kW_c"]
+  },
+  "building_electric_direct_auxiliary": {
+    "sources": ["inputs/sci_engineering/auxiliary_allocation_8760.csv", "inputs/sci_engineering/auxiliary_metadata.json"],
+    "transform": "source_reference/construct_request: P3 original electric reference minus already included fan+CHW, then current building auxiliaries added once; separate HeatSys pump is an addition",
+    "fields": ["P*_base_e_kW", "P*_reference_e/h/c_kW", "P*_fan_kW", "P*_chw_pump_kW", "P*_heat_pump_kW", "source_fans_total_kW", "source_chw_pump_kW"],
+    "unit": "kW_e",
+    "no_double_count": true,
+    "device_auxiliary_boundary": "existing EC/ABS all-in coefficients already include registered condenser/tower auxiliaries; no separate duplicate plant fans"
+  },
+  "adopted_thermal": {
+    "sources": ["inputs/model_review_v28/THERMAL_SERVICE_COMPONENTS_8760.csv", "inputs/model_review_v28/THERMAL_INPUT_METADATA.json"],
+    "fields": ["space_heating_original_kW", "ordinary_DHW_target_kW", "ordinary_DHW_original_delivered_kW", "central_heat_request_kW"],
+    "transform": "P3_heat += target-legacy_delivered; total heat=space_original+ordinary_target; fan driver subtracts target and restores legacy proxy, heat circulation follows full current heat",
+    "unit": "useful kW_h",
+    "local_laundry_booster": "source references only; booster electricity already in direct baseline; no extra charge or assured central preheat"
+  },
+  "plant": {
+    "source": "configs/plant_configs.json",
+    "pure_functions": ["load_plant(doe_capacity_matched_exploratory)", "gt_level_properties", "illustrative_tariff"],
+    "transform": "GT electricity/steam/fuel full-load ratios retain common planner surrogate; all steam sources/sinks use steam_kWh_per_lb*exchanger_eff equivalent basis; raw useful loads are not multiplied by COP",
+    "units": {"GT": "kW_e", "steam": "lb/h", "gas": "MMBtu/h", "thermal": "useful kW", "cost": "USD2001"}
+  },
+  "hardware_and_events": {
+    "source": "configs/model_review_v30/cases.json",
+    "fields": ["hardware_profiles.H1", "model_closure_v22.station", "engineering_completion_v24.tower_rejection_capacity_kW", "cases[b01].scenario"],
+    "transform": "pure physical scenario copied consistently from both registered aliases; no policy or completed-result field used; GRID unavailable only at[60,120) for grid branch",
+    "capacity_changes": false
+  },
+  "initialization": {
+    "source": "explicit root-generated common initial_snapshot parameter",
+    "fields": ["initial_stocks", "diesel_shaft_budget_kWh", "initial_state", "provenance", "execution_contract", "operating_execution_contract"],
+    "historical_t0_read": false,
+    "recorded_core_solver_calls": 0,
+    "total_initialization_solver_calls": null,
+    "note": "0 is the existing certificate core log count only, not proof of no underlying initialization MILP; builder never initializes or solves"
+  },
+  "source_quality": {
+    "source": "tools/model_review_v29/source_scope.py on hash-bound raw inputs",
+    "role": "evaluation_only provenance, controller_input=false; no rescaling/deleting source demand"
+  }
+}

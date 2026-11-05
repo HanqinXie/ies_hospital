@@ -1,0 +1,45 @@
+Traceback (most recent call last):
+  File "D:\hospital_ies_v22_20261025\tools\model_correctness_v23\validation.py", line 258, in worker
+    payload=environment.run_episode(env,scene,controller,int(scene.get('initialization_seed',20261023)),manifest)
+  File "D:\hospital_ies_v22_20261025\tools\model_review_v30\environment.py", line 9, in execute
+    payload=adapter.run_episode(env,*args,**kwargs)
+  File "D:\hospital_ies_v22_20261025\tools\model_correctness_v23\environment.py", line 331, in run_episode
+    result=execute(env,scenario,controller,seed,manifest)
+  File "D:\hospital_ies_v22_20261025\tools\operating_response\environment.py", line 183, in run_episode
+    payload=fn(env,scenario,policy,seed,manifest)
+  File "D:\hospital_ies_v22_20261025\tools\integrated_learning\episode.py", line 88, in run_episode
+    payload['summary']['strategy_fallback_steps'] = sum(d['strategy_fallback'] for d in diagnostics)
+  File "D:\hospital_ies_v22_20261025\tools\integrated_learning\episode.py", line 88, in <genexpr>
+    payload['summary']['strategy_fallback_steps'] = sum(d['strategy_fallback'] for d in diagnostics)
+KeyError: 'strategy_fallback'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\hospital_ies_v22_20261025\tools\model_review_v30\reference.py", line 119, in <module>
+    if __name__=='__main__':raise SystemExit(main())
+  File "D:\hospital_ies_v22_20261025\tools\model_review_v30\reference.py", line 55, in main
+    code=common.worker(a.output,model_version='v25',study_identity=STUDY_ID,
+  File "D:\hospital_ies_v22_20261025\tools\model_correctness_v23\validation.py", line 269, in worker
+    if payload is None and env is not None:payload=recover_execution_prefix(env,scene,MODEL_ID,result['error'])
+  File "D:\hospital_ies_v22_20261025\tools\model_closure_v22\validation.py", line 221, in recover_execution_prefix
+    solver_calls=copy.deepcopy(getattr(core, 'solver_calls', [])),
+  File "C:\Users\HanqinXie\AppData\Local\Programs\Python\Python310\lib\copy.py", line 172, in deepcopy
+    y = _reconstruct(x, memo, *rv)
+  File "C:\Users\HanqinXie\AppData\Local\Programs\Python\Python310\lib\copy.py", line 271, in _reconstruct
+    state = deepcopy(state, memo)
+  File "C:\Users\HanqinXie\AppData\Local\Programs\Python\Python310\lib\copy.py", line 146, in deepcopy
+    y = copier(x, memo)
+  File "C:\Users\HanqinXie\AppData\Local\Programs\Python\Python310\lib\copy.py", line 231, in _deepcopy_dict
+    y[deepcopy(key, memo)] = deepcopy(value, memo)
+  File "C:\Users\HanqinXie\AppData\Local\Programs\Python\Python310\lib\copy.py", line 172, in deepcopy
+    y = _reconstruct(x, memo, *rv)
+  File "C:\Users\HanqinXie\AppData\Local\Programs\Python\Python310\lib\copy.py", line 271, in _reconstruct
+    state = deepcopy(state, memo)
+  File "C:\Users\HanqinXie\AppData\Local\Programs\Python\Python310\lib\copy.py", line 146, in deepcopy
+    y = copier(x, memo)
+  File "C:\Users\HanqinXie\AppData\Local\Programs\Python\Python310\lib\copy.py", line 231, in _deepcopy_dict
+    y[deepcopy(key, memo)] = deepcopy(value, memo)
+  File "C:\Users\HanqinXie\AppData\Local\Programs\Python\Python310\lib\copy.py", line 161, in deepcopy
+    rv = reductor(4)
+TypeError: cannot pickle '_io.BufferedWriter' object

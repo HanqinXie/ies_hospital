@@ -1,0 +1,184 @@
+{
+  "id": "boiler_low",
+  "purpose": "Registered source-auxiliary power range on same exact winter outage",
+  "scenario": {
+    "source_block_id": "m21_block_1706edd2c32b2937",
+    "start_hour": 211,
+    "source_calendar_days": [
+      8,
+      9
+    ],
+    "season_quarter": 1,
+    "role": "development",
+    "experiment_role": "development",
+    "duration_steps": 24,
+    "step_minutes": 15.0,
+    "pre_event_warmup_steps": 1,
+    "initialization_seed": 20261023,
+    "canonical_class": "X_GRID_ALL_GT0",
+    "event_class": "L1",
+    "analysis_class": "L1",
+    "stage": 1,
+    "enable_propagation": false,
+    "event_schema_version": "p2a.events.v1",
+    "faults": {
+      "GRID": 0.0,
+      "GT_1": 0.0,
+      "GT_2": 0.0,
+      "GT_3": 0.0
+    },
+    "auxiliary_faults": {},
+    "shock": {},
+    "shock_by_priority": {},
+    "shock_by_zone": {},
+    "fault_target": "GRID+ALL_GT",
+    "fault_availability": 0.0,
+    "demand_amplitude": 0.0,
+    "clinical_template_id": "emergency_department",
+    "clinical_coefficients_are_research_assumptions": true,
+    "response_delay_minutes": 15.0,
+    "fault_start_minute": 60.0,
+    "fault_duration_minutes": 120.0,
+    "shock_start_minute": 60.0,
+    "shock_duration_minutes": 120.0,
+    "first_event_minute": 60.0,
+    "recovery_start_minute": 180.0,
+    "history_interval_minutes": [
+      0.0,
+      60.0
+    ],
+    "tail_interval_minutes": [
+      180.0,
+      360.0
+    ],
+    "grid_limit_kW": 850.0,
+    "pre_event_grid_limit_kW": 850.0,
+    "automatic_fast_shedding": false,
+    "initial_reserve_kWh": 2400.0,
+    "initial_reserve_semantics": "finite shaft-equivalent work budget at reset; not chemical kWh or liters",
+    "requires_policy_freeze": false,
+    "selection_allowed": false,
+    "fit_allowed": false,
+    "is_final_blind": false,
+    "original_final12_evaluated": false,
+    "historical_exposure_status": "known_seen_or_development_reuse_not_new_confirmation",
+    "new_independent_background": false,
+    "prehistory_mode": "same_continuous_episode_no_reset",
+    "exogenous_events": [],
+    "family_id": "m21_block_1706edd2c32b2937",
+    "root_family_id": "m21_block_1706edd2c32b2937",
+    "design_family": "m21_block_1706edd2c32b2937",
+    "sampling_cohort": "extra_preregistered_engineering_diagnostic",
+    "include_in_main_L1": false,
+    "full_source_support": {
+      "raw_start_minute": 12600.0,
+      "raw_end_minute": 13020.0
+    },
+    "id": "m21_hardware_compound_5478464ed043b4fef98f",
+    "analysis_family": "extra_compound_hardware_bridge_diagnostic",
+    "hardware_factor_pair_preserved": true,
+    "pump_failure_is_negative_control": false,
+    "native_L1_is_parser_encoding_only": true,
+    "fixed_complete_source_minutes": 360.0,
+    "finite_bridge_requires_actual_gap_not_assumed": true,
+    "parent_template_id": "m21_block_1706edd2c32b2937",
+    "base_state_id": "initial:34e4c09ae7799339a32a87afc6a778512bc0f8fdbb365df179e4e8c8148cf9e3",
+    "exogenous_stream_id": "m21_exogenous:fd82cd4a86da929970db1710105709c6cc4dc1bf4b2cabb9f0332e88b083fd13",
+    "distribution_id": "fixed_development_no_probability",
+    "sampling_method": "fixed_development_regression",
+    "purpose": "development",
+    "q_design": "fixed_development_no_probability",
+    "p_reference": null,
+    "importance_weight": null,
+    "actual_p0_load_multiplier": {
+      "e": 1.0,
+      "h": 1.0,
+      "c": 1.0
+    },
+    "m21_physical_exogenous_sha256": "fd82cd4a86da929970db1710105709c6cc4dc1bf4b2cabb9f0332e88b083fd13"
+  },
+  "configuration": "H1",
+  "policy": {
+    "alias": "C",
+    "config": {
+      "response_minutes": 30.0,
+      "support_minutes": 60.0,
+      "delay_bound_minutes": 30.0,
+      "cooling_preparation": true,
+      "time_energy_preparation": true,
+      "execution_recovery": true,
+      "critical_reserve": true,
+      "policy_mode": "coordinated",
+      "reserve_enabled": true,
+      "critical_preparation_first": true,
+      "reserve_rule": "critical_current",
+      "legacy_C19_order": true,
+      "fixed_reserve_hours": 1.0,
+      "release_after_minutes": 120.0,
+      "release_floor_hours": 0.5,
+      "observed_outage_minutes": 0.0,
+      "critical_non_diesel_ready": false
+    }
+  },
+  "provenance": {
+    "source": {
+      "path": "E:\\hospital_ies_v21_20261023\\staging_panels\\candidate04\\HARDWARE_PROPOSAL.json",
+      "sha256": "345de5259ed5dd1b1218432d4ea2ff36b3ddc8de2441738f1a0564e5dbb6e339"
+    },
+    "exact_original_scenario": false,
+    "evaluation_role": "seen_development_or_regression",
+    "independent_validation": false,
+    "construction": "Explicit registered variant; original capacities, load rows and service classes retained",
+    "exact_original_physical_scenario": false,
+    "metadata_only_normalization": {
+      "method": "Existing normalize_study_scenario, missing exporter identity keys only",
+      "added_keys": [
+        "parent_template_id",
+        "base_state_id",
+        "exogenous_stream_id",
+        "distribution_id"
+      ],
+      "physical_parameters_unchanged": true,
+      "original_recipe_sha256": "b89a65270f800d9ec84195179a9e8f8bdb3786bcf95116a84ff4435006188287"
+    },
+    "metadata_normalization_completion": {
+      "method": "All missing fields from original normalize_study_scenario",
+      "added_keys": [
+        "actual_p0_load_multiplier",
+        "importance_weight",
+        "m21_physical_exogenous_sha256",
+        "p_reference",
+        "purpose",
+        "q_design",
+        "sampling_method"
+      ],
+      "all_prior_scene_fields_unchanged": true,
+      "original_recipe_sha256": "cf49247d057b44cb477493b6a53f8b9f2fa9e759d8e53976da00ac8f31bf0f97"
+    }
+  },
+  "model_closure_v22": {
+    "station": {
+      "boiler_fixed_kW": 0.25,
+      "boiler_kW_per_kWsteam": 0.008,
+      "boiler_restart_minutes": 1.0,
+      "gt_starter_kW_per_unit": 10.0,
+      "gt_control_dc_available": true,
+      "dg_start_dc_available": true,
+      "control_autonomy_minutes": 1440.0,
+      "dg_qualified_starts": 2
+    },
+    "storage": {
+      "preserve_bridge": true,
+      "bridge_observation_minutes": 15.0,
+      "cold_recharge_deadband_kWh": 1.0,
+      "cold_recharge_deadband_fraction": 0.02
+    },
+    "auxiliary": {
+      "pump_weight_exponent": 1.0,
+      "actual_power_scale": null,
+      "fan_priority_shares": null
+    },
+    "instantaneous_diesel_current": true,
+    "research_stress_proxy": false
+  }
+}

@@ -1,0 +1,2958 @@
+{
+  "active_root": ".",
+  "cause_counts": {
+    "actual_recorder_version_pin": 58,
+    "compiled_source_pin": 144,
+    "compiled_validator_version_pin": 18,
+    "direct_historical_profile_identity": 4,
+    "native_error_source_pin": 28,
+    "operation_fixed_source_pin": 41,
+    "thermal_native_exact_historical_profile": 30
+  },
+  "evidence": {
+    "migration_scope": "Package-relative paths plus authentic freshly verified historical tracked-file snapshot; original route nodeids and test bytes unchanged",
+    "original_route_manifest": {
+      "path": "../evidence/historical_profiles/ORIGINAL_MINUTE1_HISTORICAL_ROUTES.json",
+      "sha256": "e33195d8d87d6a6eb9041a7e483d840972c7cda9569774cd0853d34d8efadc78"
+    },
+    "original_snapshot_status": "Original absolute snapshot reference missing at packaging time; new snapshot derives from clean exact 7fa Git HEAD",
+    "prior_execution_scope": "Prior route failure evidence is provenance only; packaged source requires fresh server tests"
+  },
+  "expected_nodes": 323,
+  "frozen_head": "7fa3180769a76bfd263accef1e77325709ce19e5",
+  "frozen_root": "../legacy_context_7fa",
+  "legacy_fixture_plugin": {
+    "path": "../scripts/portable_historical_legacy_fixtures.py",
+    "sha256": "b12fa5bfd0ab6af82a45ff5fbb283901db1d6d9872c00d81e809a02ef5919fec"
+  },
+  "original_test_sha256": {
+    "tests/test_annual_compiled_packet_observer.py": "a480a5d2b96e9e56e335efbdd5c5bcf69bce9994ce936a7a182f1f1e30bee438",
+    "tests/test_annual_compiled_witness.py": "603354bc0a37f91f5fb9154c372d35e88215a8d164c70d51b36d0e3611b8f250",
+    "tests/test_annual_loaded_capture_sources.py": "a2118d88fd1b1540b7ae7d620dbdb67cb5a035f94b12d3b4966afa4a52a7e9ce",
+    "tests/test_annual_observer_source_compatibility.py": "57a65e63aa50401651b7745512a8715aa766d7a662348ea324bed57f47cbf8ac",
+    "tests/test_annual_operation_summary.py": "e63d9fc937c76329a34571db67cfa1031a5d9818e30d8077acd4396f541d6ba7",
+    "tests/test_annual_program_carrier_flow.py": "2c214c726e74f1636ae9e2fdcd8009ec983c9dcf5b9140293b030fad33427730",
+    "tests/test_annual_program_failure_history.py": "627e0f06dcb7bd210a36e999e91701162d2fdbea34f89345d4141958febc7026",
+    "tests/test_annual_program_steam.py": "f058cf1d02d611e7d7bd13f53280a6e2ab92006397d35e1cc1c7be5f8291b91a",
+    "tests/test_eight_fault_local_witness.py": "57609c8cd566e0ef5b82379be18545fb358be393c81e984de262f713a57e6d8e",
+    "tests/test_sf2_compiled_witness.py": "948e23d1f9a4d6a4f49e1f0d262c046b6f3a6acd23067f82cf25fa6714822964",
+    "tests/test_sf2_native_capture.py": "170af4d548c33cf49e505df24daa24426995aced1e20bcdbcba59d32242bc73b",
+    "tests/test_sf2_source_profile.py": "692dbd71062ae3843c4cfde327aa9f45062974e0377bee8bc6bf586950ad64c3",
+    "tests/test_single_fault_compiled_witness.py": "6416bde7083468769bebf65f192ebf7de5ca59035e9aedc1adc92460aebfba64"
+  },
+  "output_root": "../test_results/historical_profiles",
+  "routes": [
+    {
+      "cause": "operation_fixed_source_pin",
+      "explanation": "Historical operation observer autouse fixture requires its literal source SHA map.",
+      "failure_summary_line": 44,
+      "historical_profile": "historical annual operation observer literal SOURCE_SHA256",
+      "module": "tests/test_annual_operation_summary.py",
+      "nodeid": "tests/test_annual_operation_summary.py::test_historical_native_source_byte_drift_remains_rejected",
+      "original_result": "ERROR"
+    },
+    {
+      "cause": "operation_fixed_source_pin",
+      "explanation": "Historical operation observer autouse fixture requires its literal source SHA map.",
+      "failure_summary_line": 69,
+      "historical_profile": "historical annual operation observer literal SOURCE_SHA256",
+      "module": "tests/test_annual_operation_summary.py",
+      "nodeid": "tests/test_annual_operation_summary.py::test_boiler_interval_start_readiness_and_initial_online_are_not_starts",
+      "original_result": "ERROR"
+    },
+    {
+      "cause": "operation_fixed_source_pin",
+      "explanation": "Historical operation observer autouse fixture requires its literal source SHA map.",
+      "failure_summary_line": 94,
+      "historical_profile": "historical annual operation observer literal SOURCE_SHA256",
+      "module": "tests/test_annual_operation_summary.py",
+      "nodeid": "tests/test_annual_operation_summary.py::test_gt_events_are_distinct_and_native_linear_running_hours_match",
+      "original_result": "ERROR"
+    },
+    {
+      "cause": "operation_fixed_source_pin",
+      "explanation": "Historical operation observer autouse fixture requires its literal source SHA map.",
+      "failure_summary_line": 119,
+      "historical_profile": "historical annual operation observer literal SOURCE_SHA256",
+      "module": "tests/test_annual_operation_summary.py",
+      "nodeid": "tests/test_annual_operation_summary.py::test_dg_state_and_dc_event_count_one_attempt_and_skip_all_historical_tokens",
+      "original_result": "ERROR"
+    },
+    {
+      "cause": "operation_fixed_source_pin",
+      "explanation": "Historical operation observer autouse fixture requires its literal source SHA map.",
+      "failure_summary_line": 144,
+      "historical_profile": "historical annual operation observer literal SOURCE_SHA256",
+      "module": "tests/test_annual_operation_summary.py",
+      "nodeid": "tests/test_annual_operation_summary.py::test_month_boundary_preserves_open_gt_and_bank_production_state",
+      "original_result": "ERROR"
+    },
+    {
+      "cause": "operation_fixed_source_pin",
+      "explanation": "Historical operation observer autouse fixture requires its literal source SHA map.",
+      "failure_summary_line": 169,
+      "historical_profile": "historical annual operation observer literal SOURCE_SHA256",
+      "module": "tests/test_annual_operation_summary.py",
+      "nodeid": "tests/test_annual_operation_summary.py::test_storage_carriers_and_known_zero_missing_partial_receipts_remain_distinct",
+      "original_result": "ERROR"
+    },
+    {
+      "cause": "operation_fixed_source_pin",
+      "explanation": "Historical operation observer autouse fixture requires its literal source SHA map.",
+      "failure_summary_line": 194,
+      "historical_profile": "historical annual operation observer literal SOURCE_SHA256",
+      "module": "tests/test_annual_operation_summary.py",
+      "nodeid": "tests/test_annual_operation_summary.py::test_cross_month_integrated_storage_receipts_are_not_prorated",
+      "original_result": "ERROR"
+    },
+    {
+      "cause": "operation_fixed_source_pin",
+      "explanation": "Historical operation observer autouse fixture requires its literal source SHA map.",
+      "failure_summary_line": 219,
+      "historical_profile": "historical annual operation observer literal SOURCE_SHA256",
+      "module": "tests/test_annual_operation_summary.py",
+      "nodeid": "tests/test_annual_operation_summary.py::test_ambiguous_events_reject_instead_of_silent_dedup[duplicate_event]",
+      "original_result": "ERROR"
+    },
+    {
+      "cause": "operation_fixed_source_pin",
+      "explanation": "Historical operation observer autouse fixture requires its literal source SHA map.",
+      "failure_summary_line": 244,
+      "historical_profile": "historical annual operation observer literal SOURCE_SHA256",
+      "module": "tests/test_annual_operation_summary.py",
+      "nodeid": "tests/test_annual_operation_summary.py::test_ambiguous_events_reject_instead_of_silent_dedup[nonmonotonic_event]",
+      "original_result": "ERROR"
+    },
+    {
+      "cause": "operation_fixed_source_pin",
+      "explanation": "Historical operation observer autouse fixture requires its literal source SHA map.",
+      "failure_summary_line": 269,
+      "historical_profile": "historical annual operation observer literal SOURCE_SHA256",
+      "module": "tests/test_annual_operation_summary.py",
+      "nodeid": "tests/test_annual_operation_summary.py::test_ambiguous_events_reject_instead_of_silent_dedup[event_after_block]",
+      "original_result": "ERROR"
+    },
+    {
+      "cause": "operation_fixed_source_pin",
+      "explanation": "Historical operation observer autouse fixture requires its literal source SHA map.",
+      "failure_summary_line": 294,
+      "historical_profile": "historical annual operation observer literal SOURCE_SHA256",
+      "module": "tests/test_annual_operation_summary.py",
+      "nodeid": "tests/test_annual_operation_summary.py::test_ambiguous_events_reject_instead_of_silent_dedup[missing_event_id]",
+      "original_result": "ERROR"
+    },
+    {
+      "cause": "operation_fixed_source_pin",
+      "explanation": "Historical operation observer autouse fixture requires its literal source SHA map.",
+      "failure_summary_line": 319,
+      "historical_profile": "historical annual operation observer literal SOURCE_SHA256",
+      "module": "tests/test_annual_operation_summary.py",
+      "nodeid": "tests/test_annual_operation_summary.py::test_source_identity_integrity_or_live_writer_rejects_readonly[source_binding]",
+      "original_result": "ERROR"
+    },
+    {
+      "cause": "operation_fixed_source_pin",
+      "explanation": "Historical operation observer autouse fixture requires its literal source SHA map.",
+      "failure_summary_line": 344,
+      "historical_profile": "historical annual operation observer literal SOURCE_SHA256",
+      "module": "tests/test_annual_operation_summary.py",
+      "nodeid": "tests/test_annual_operation_summary.py::test_source_identity_integrity_or_live_writer_rejects_readonly[result_identity]",
+      "original_result": "ERROR"
+    },
+    {
+      "cause": "operation_fixed_source_pin",
+      "explanation": "Historical operation observer autouse fixture requires its literal source SHA map.",
+      "failure_summary_line": 369,
+      "historical_profile": "historical annual operation observer literal SOURCE_SHA256",
+      "module": "tests/test_annual_operation_summary.py",
+      "nodeid": "tests/test_annual_operation_summary.py::test_source_identity_integrity_or_live_writer_rejects_readonly[raw_change]",
+      "original_result": "ERROR"
+    },
+    {
+      "cause": "operation_fixed_source_pin",
+      "explanation": "Historical operation observer autouse fixture requires its literal source SHA map.",
+      "failure_summary_line": 394,
+      "historical_profile": "historical annual operation observer literal SOURCE_SHA256",
+      "module": "tests/test_annual_operation_summary.py",
+      "nodeid": "tests/test_annual_operation_summary.py::test_source_identity_integrity_or_live_writer_rejects_readonly[orphan]",
+      "original_result": "ERROR"
+    },
+    {
+      "cause": "operation_fixed_source_pin",
+      "explanation": "Historical operation observer autouse fixture requires its literal source SHA map.",
+      "failure_summary_line": 419,
+      "historical_profile": "historical annual operation observer literal SOURCE_SHA256",
+      "module": "tests/test_annual_operation_summary.py",
+      "nodeid": "tests/test_annual_operation_summary.py::test_source_identity_integrity_or_live_writer_rejects_readonly[open]",
+      "original_result": "ERROR"
+    },
+    {
+      "cause": "operation_fixed_source_pin",
+      "explanation": "Historical operation observer autouse fixture requires its literal source SHA map.",
+      "failure_summary_line": 444,
+      "historical_profile": "historical annual operation observer literal SOURCE_SHA256",
+      "module": "tests/test_annual_operation_summary.py",
+      "nodeid": "tests/test_annual_operation_summary.py::test_source_identity_integrity_or_live_writer_rejects_readonly[metadata_change]",
+      "original_result": "ERROR"
+    },
+    {
+      "cause": "operation_fixed_source_pin",
+      "explanation": "Historical operation observer autouse fixture requires its literal source SHA map.",
+      "failure_summary_line": 469,
+      "historical_profile": "historical annual operation observer literal SOURCE_SHA256",
+      "module": "tests/test_annual_operation_summary.py",
+      "nodeid": "tests/test_annual_operation_summary.py::test_failed_prefix_and_empty_prefix_keep_unknown_tail",
+      "original_result": "ERROR"
+    },
+    {
+      "cause": "operation_fixed_source_pin",
+      "explanation": "Historical operation observer autouse fixture requires its literal source SHA map.",
+      "failure_summary_line": 494,
+      "historical_profile": "historical annual operation observer literal SOURCE_SHA256",
+      "module": "tests/test_annual_operation_summary.py",
+      "nodeid": "tests/test_annual_operation_summary.py::test_selected_prefix_reports_scope_and_raw_read_bound_without_mutating_producer",
+      "original_result": "ERROR"
+    },
+    {
+      "cause": "operation_fixed_source_pin",
+      "explanation": "Historical operation observer autouse fixture requires its literal source SHA map.",
+      "failure_summary_line": 519,
+      "historical_profile": "historical annual operation observer literal SOURCE_SHA256",
+      "module": "tests/test_annual_operation_summary.py",
+      "nodeid": "tests/test_annual_operation_summary.py::test_missing_or_invalid_scientific_fields_are_unknown_not_zero[ready]",
+      "original_result": "ERROR"
+    },
+    {
+      "cause": "operation_fixed_source_pin",
+      "explanation": "Historical operation observer autouse fixture requires its literal source SHA map.",
+      "failure_summary_line": 544,
+      "historical_profile": "historical annual operation observer literal SOURCE_SHA256",
+      "module": "tests/test_annual_operation_summary.py",
+      "nodeid": "tests/test_annual_operation_summary.py::test_missing_or_invalid_scientific_fields_are_unknown_not_zero[GT_curve]",
+      "original_result": "ERROR"
+    },
+    {
+      "cause": "operation_fixed_source_pin",
+      "explanation": "Historical operation observer autouse fixture requires its literal source SHA map.",
+      "failure_summary_line": 569,
+      "historical_profile": "historical annual operation observer literal SOURCE_SHA256",
+      "module": "tests/test_annual_operation_summary.py",
+      "nodeid": "tests/test_annual_operation_summary.py::test_missing_or_invalid_scientific_fields_are_unknown_not_zero[boiler_permission]",
+      "original_result": "ERROR"
+    },
+    {
+      "cause": "operation_fixed_source_pin",
+      "explanation": "Historical operation observer autouse fixture requires its literal source SHA map.",
+      "failure_summary_line": 594,
+      "historical_profile": "historical annual operation observer literal SOURCE_SHA256",
+      "module": "tests/test_annual_operation_summary.py",
+      "nodeid": "tests/test_annual_operation_summary.py::test_missing_or_invalid_scientific_fields_are_unknown_not_zero[bad_storage_number]",
+      "original_result": "ERROR"
+    },
+    {
+      "cause": "operation_fixed_source_pin",
+      "explanation": "Historical operation observer autouse fixture requires its literal source SHA map.",
+      "failure_summary_line": 619,
+      "historical_profile": "historical annual operation observer literal SOURCE_SHA256",
+      "module": "tests/test_annual_operation_summary.py",
+      "nodeid": "tests/test_annual_operation_summary.py::test_native_eps_initial_flag_does_not_override_engineering_operating_threshold",
+      "original_result": "ERROR"
+    },
+    {
+      "cause": "operation_fixed_source_pin",
+      "explanation": "Historical operation observer autouse fixture requires its literal source SHA map.",
+      "failure_summary_line": 644,
+      "historical_profile": "historical annual operation observer literal SOURCE_SHA256",
+      "module": "tests/test_annual_operation_summary.py",
+      "nodeid": "tests/test_annual_operation_summary.py::test_first_output_respects_period_boundary_and_unknown_earlier_power",
+      "original_result": "ERROR"
+    },
+    {
+      "cause": "operation_fixed_source_pin",
+      "explanation": "Historical operation observer autouse fixture requires its literal source SHA map.",
+      "failure_summary_line": 669,
+      "historical_profile": "historical annual operation observer literal SOURCE_SHA256",
+      "module": "tests/test_annual_operation_summary.py",
+      "nodeid": "tests/test_annual_operation_summary.py::test_shared_starter_energy_is_electrical_and_not_allocated_per_gt",
+      "original_result": "ERROR"
+    },
+    {
+      "cause": "operation_fixed_source_pin",
+      "explanation": "Historical operation observer autouse fixture requires its literal source SHA map.",
+      "failure_summary_line": 694,
+      "historical_profile": "historical annual operation observer literal SOURCE_SHA256",
+      "module": "tests/test_annual_operation_summary.py",
+      "nodeid": "tests/test_annual_operation_summary.py::test_event_clock_regression_is_rejected_even_with_increasing_ids",
+      "original_result": "ERROR"
+    },
+    {
+      "cause": "operation_fixed_source_pin",
+      "explanation": "Historical operation observer autouse fixture requires its literal source SHA map.",
+      "failure_summary_line": 719,
+      "historical_profile": "historical annual operation observer literal SOURCE_SHA256",
+      "module": "tests/test_annual_operation_summary.py",
+      "nodeid": "tests/test_annual_operation_summary.py::test_completed_status_cannot_hide_requested_unobserved_tail",
+      "original_result": "ERROR"
+    },
+    {
+      "cause": "operation_fixed_source_pin",
+      "explanation": "Historical operation observer autouse fixture requires its literal source SHA map.",
+      "failure_summary_line": 744,
+      "historical_profile": "historical annual operation observer literal SOURCE_SHA256",
+      "module": "tests/test_annual_operation_summary.py",
+      "nodeid": "tests/test_annual_operation_summary.py::test_unknown_event_before_after_containers_never_capture_history",
+      "original_result": "ERROR"
+    },
+    {
+      "cause": "operation_fixed_source_pin",
+      "explanation": "Historical operation observer autouse fixture requires its literal source SHA map.",
+      "failure_summary_line": 769,
+      "historical_profile": "historical annual operation observer literal SOURCE_SHA256",
+      "module": "tests/test_annual_operation_summary.py",
+      "nodeid": "tests/test_annual_operation_summary.py::test_dg_attempt_duplicate_new_event_id_cannot_inflate_attempt_count",
+      "original_result": "ERROR"
+    },
+    {
+      "cause": "operation_fixed_source_pin",
+      "explanation": "Historical operation observer autouse fixture requires its literal source SHA map.",
+      "failure_summary_line": 794,
+      "historical_profile": "historical annual operation observer literal SOURCE_SHA256",
+      "module": "tests/test_annual_operation_summary.py",
+      "nodeid": "tests/test_annual_operation_summary.py::test_event_at_analysis_endpoint_is_counted_without_future_segments",
+      "original_result": "ERROR"
+    },
+    {
+      "cause": "operation_fixed_source_pin",
+      "explanation": "Historical operation observer autouse fixture requires its literal source SHA map.",
+      "failure_summary_line": 819,
+      "historical_profile": "historical annual operation observer literal SOURCE_SHA256",
+      "module": "tests/test_annual_operation_summary.py",
+      "nodeid": "tests/test_annual_operation_summary.py::test_native_summary_observation_and_integer_types_are_not_silently_accepted[boolean_count]",
+      "original_result": "ERROR"
+    },
+    {
+      "cause": "operation_fixed_source_pin",
+      "explanation": "Historical operation observer autouse fixture requires its literal source SHA map.",
+      "failure_summary_line": 844,
+      "historical_profile": "historical annual operation observer literal SOURCE_SHA256",
+      "module": "tests/test_annual_operation_summary.py",
+      "nodeid": "tests/test_annual_operation_summary.py::test_native_summary_observation_and_integer_types_are_not_silently_accepted[unknown_tail]",
+      "original_result": "ERROR"
+    },
+    {
+      "cause": "operation_fixed_source_pin",
+      "explanation": "Historical operation observer autouse fixture requires its literal source SHA map.",
+      "failure_summary_line": 869,
+      "historical_profile": "historical annual operation observer literal SOURCE_SHA256",
+      "module": "tests/test_annual_operation_summary.py",
+      "nodeid": "tests/test_annual_operation_summary.py::test_native_summary_observation_and_integer_types_are_not_silently_accepted[contiguous]",
+      "original_result": "ERROR"
+    },
+    {
+      "cause": "operation_fixed_source_pin",
+      "explanation": "Historical operation observer autouse fixture requires its literal source SHA map.",
+      "failure_summary_line": 894,
+      "historical_profile": "historical annual operation observer literal SOURCE_SHA256",
+      "module": "tests/test_annual_operation_summary.py",
+      "nodeid": "tests/test_annual_operation_summary.py::test_native_summary_observation_and_integer_types_are_not_silently_accepted[complete]",
+      "original_result": "ERROR"
+    },
+    {
+      "cause": "operation_fixed_source_pin",
+      "explanation": "Historical operation observer autouse fixture requires its literal source SHA map.",
+      "failure_summary_line": 919,
+      "historical_profile": "historical annual operation observer literal SOURCE_SHA256",
+      "module": "tests/test_annual_operation_summary.py",
+      "nodeid": "tests/test_annual_operation_summary.py::test_real_time_zero_activation_is_not_confused_with_given_initial_online",
+      "original_result": "ERROR"
+    },
+    {
+      "cause": "operation_fixed_source_pin",
+      "explanation": "Historical operation observer autouse fixture requires its literal source SHA map.",
+      "failure_summary_line": 944,
+      "historical_profile": "historical annual operation observer literal SOURCE_SHA256",
+      "module": "tests/test_annual_operation_summary.py",
+      "nodeid": "tests/test_annual_operation_summary.py::test_unknown_preceding_output_cannot_turn_cross_month_entry_into_known_zero",
+      "original_result": "ERROR"
+    },
+    {
+      "cause": "operation_fixed_source_pin",
+      "explanation": "Historical operation observer autouse fixture requires its literal source SHA map.",
+      "failure_summary_line": 969,
+      "historical_profile": "historical annual operation observer literal SOURCE_SHA256",
+      "module": "tests/test_annual_operation_summary.py",
+      "nodeid": "tests/test_annual_operation_summary.py::test_initial_flag_scope_and_inclusive_endpoint_do_not_imply_month_interval_coverage",
+      "original_result": "ERROR"
+    },
+    {
+      "cause": "operation_fixed_source_pin",
+      "explanation": "Historical operation observer autouse fixture requires its literal source SHA map.",
+      "failure_summary_line": 994,
+      "historical_profile": "historical annual operation observer literal SOURCE_SHA256",
+      "module": "tests/test_annual_operation_summary.py",
+      "nodeid": "tests/test_annual_operation_summary.py::test_actual_observer_source_byte_drift_is_rejected_without_touching_producer_sources[operation_summary.py]",
+      "original_result": "ERROR"
+    },
+    {
+      "cause": "operation_fixed_source_pin",
+      "explanation": "Historical operation observer autouse fixture requires its literal source SHA map.",
+      "failure_summary_line": 1019,
+      "historical_profile": "historical annual operation observer literal SOURCE_SHA256",
+      "module": "tests/test_annual_operation_summary.py",
+      "nodeid": "tests/test_annual_operation_summary.py::test_actual_observer_source_byte_drift_is_rejected_without_touching_producer_sources[engineering_summary.py]",
+      "original_result": "ERROR"
+    },
+    {
+      "cause": "operation_fixed_source_pin",
+      "explanation": "Historical operation observer autouse fixture requires its literal source SHA map.",
+      "failure_summary_line": 1044,
+      "historical_profile": "historical annual operation observer literal SOURCE_SHA256",
+      "module": "tests/test_annual_operation_summary.py",
+      "nodeid": "tests/test_annual_operation_summary.py::test_observer_and_reused_selector_before_after_bindings_are_independent_of_producer",
+      "original_result": "ERROR"
+    },
+    {
+      "cause": "compiled_source_pin",
+      "explanation": "Exact historical compiled producer source binding refuses changed minute runtime bytes before later assertion.",
+      "failure_summary_line": 1069,
+      "historical_profile": "historical compiled-capture profile selected by unchanged original test",
+      "module": "tests/test_annual_compiled_witness.py",
+      "nodeid": "tests/test_annual_compiled_witness.py::test_direct_recorder_call_cannot_qualify_a_packet_outside_the_actual_hook",
+      "original_result": "ERROR"
+    },
+    {
+      "cause": "compiled_source_pin",
+      "explanation": "Exact historical compiled producer source binding refuses changed minute runtime bytes before later assertion.",
+      "failure_summary_line": 1134,
+      "historical_profile": "historical compiled-capture profile selected by unchanged original test",
+      "module": "tests/test_annual_compiled_witness.py",
+      "nodeid": "tests/test_annual_compiled_witness.py::test_capture_identity_mismatches_fail_before_append_or_recorded_flag[raw_x]",
+      "original_result": "ERROR"
+    },
+    {
+      "cause": "compiled_source_pin",
+      "explanation": "Exact historical compiled producer source binding refuses changed minute runtime bytes before later assertion.",
+      "failure_summary_line": 1199,
+      "historical_profile": "historical compiled-capture profile selected by unchanged original test",
+      "module": "tests/test_annual_compiled_witness.py",
+      "nodeid": "tests/test_annual_compiled_witness.py::test_capture_identity_mismatches_fail_before_append_or_recorded_flag[dt]",
+      "original_result": "ERROR"
+    },
+    {
+      "cause": "compiled_source_pin",
+      "explanation": "Exact historical compiled producer source binding refuses changed minute runtime bytes before later assertion.",
+      "failure_summary_line": 1264,
+      "historical_profile": "historical compiled-capture profile selected by unchanged original test",
+      "module": "tests/test_annual_compiled_witness.py",
+      "nodeid": "tests/test_annual_compiled_witness.py::test_capture_identity_mismatches_fail_before_append_or_recorded_flag[root]",
+      "original_result": "ERROR"
+    },
+    {
+      "cause": "compiled_source_pin",
+      "explanation": "Exact historical compiled producer source binding refuses changed minute runtime bytes before later assertion.",
+      "failure_summary_line": 1329,
+      "historical_profile": "historical compiled-capture profile selected by unchanged original test",
+      "module": "tests/test_annual_compiled_witness.py",
+      "nodeid": "tests/test_annual_compiled_witness.py::test_capture_identity_mismatches_fail_before_append_or_recorded_flag[source]",
+      "original_result": "ERROR"
+    },
+    {
+      "cause": "compiled_source_pin",
+      "explanation": "Exact historical compiled producer source binding refuses changed minute runtime bytes before later assertion.",
+      "failure_summary_line": 1394,
+      "historical_profile": "historical compiled-capture profile selected by unchanged original test",
+      "module": "tests/test_annual_compiled_witness.py",
+      "nodeid": "tests/test_annual_compiled_witness.py::test_capture_identity_mismatches_fail_before_append_or_recorded_flag[hook_freeze]",
+      "original_result": "ERROR"
+    },
+    {
+      "cause": "compiled_source_pin",
+      "explanation": "Exact historical compiled producer source binding refuses changed minute runtime bytes before later assertion.",
+      "failure_summary_line": 1459,
+      "historical_profile": "historical compiled-capture profile selected by unchanged original test",
+      "module": "tests/test_annual_compiled_witness.py",
+      "nodeid": "tests/test_annual_compiled_witness.py::test_capture_identity_mismatches_fail_before_append_or_recorded_flag[helper_freeze]",
+      "original_result": "ERROR"
+    },
+    {
+      "cause": "compiled_source_pin",
+      "explanation": "Exact historical compiled producer source binding refuses changed minute runtime bytes before later assertion.",
+      "failure_summary_line": 1524,
+      "historical_profile": "historical compiled-capture profile selected by unchanged original test",
+      "module": "tests/test_annual_compiled_witness.py",
+      "nodeid": "tests/test_annual_compiled_witness.py::test_compiled_clock_roundoff_retains_original_solve_duration[107.0]",
+      "original_result": "ERROR"
+    },
+    {
+      "cause": "compiled_source_pin",
+      "explanation": "Exact historical compiled producer source binding refuses changed minute runtime bytes before later assertion.",
+      "failure_summary_line": 1589,
+      "historical_profile": "historical compiled-capture profile selected by unchanged original test",
+      "module": "tests/test_annual_compiled_witness.py",
+      "nodeid": "tests/test_annual_compiled_witness.py::test_compiled_clock_roundoff_retains_original_solve_duration[525500.0]",
+      "original_result": "ERROR"
+    },
+    {
+      "cause": "compiled_source_pin",
+      "explanation": "Exact historical compiled producer source binding refuses changed minute runtime bytes before later assertion.",
+      "failure_summary_line": 1654,
+      "historical_profile": "historical compiled-capture profile selected by unchanged original test",
+      "module": "tests/test_annual_compiled_witness.py",
+      "nodeid": "tests/test_annual_compiled_witness.py::test_invalid_interval_duration_does_not_publish_a_compiled_witness[0.016666666666666666]",
+      "original_result": "ERROR"
+    },
+    {
+      "cause": "compiled_source_pin",
+      "explanation": "Exact historical compiled producer source binding refuses changed minute runtime bytes before later assertion.",
+      "failure_summary_line": 1719,
+      "historical_profile": "historical compiled-capture profile selected by unchanged original test",
+      "module": "tests/test_annual_compiled_witness.py",
+      "nodeid": "tests/test_annual_compiled_witness.py::test_invalid_interval_duration_does_not_publish_a_compiled_witness[True]",
+      "original_result": "ERROR"
+    },
+    {
+      "cause": "compiled_source_pin",
+      "explanation": "Exact historical compiled producer source binding refuses changed minute runtime bytes before later assertion.",
+      "failure_summary_line": 1784,
+      "historical_profile": "historical compiled-capture profile selected by unchanged original test",
+      "module": "tests/test_annual_compiled_witness.py",
+      "nodeid": "tests/test_annual_compiled_witness.py::test_invalid_interval_duration_does_not_publish_a_compiled_witness[False]",
+      "original_result": "ERROR"
+    },
+    {
+      "cause": "compiled_source_pin",
+      "explanation": "Exact historical compiled producer source binding refuses changed minute runtime bytes before later assertion.",
+      "failure_summary_line": 1849,
+      "historical_profile": "historical compiled-capture profile selected by unchanged original test",
+      "module": "tests/test_annual_compiled_witness.py",
+      "nodeid": "tests/test_annual_compiled_witness.py::test_invalid_interval_duration_does_not_publish_a_compiled_witness[nan]",
+      "original_result": "ERROR"
+    },
+    {
+      "cause": "compiled_source_pin",
+      "explanation": "Exact historical compiled producer source binding refuses changed minute runtime bytes before later assertion.",
+      "failure_summary_line": 1914,
+      "historical_profile": "historical compiled-capture profile selected by unchanged original test",
+      "module": "tests/test_annual_compiled_witness.py",
+      "nodeid": "tests/test_annual_compiled_witness.py::test_invalid_interval_duration_does_not_publish_a_compiled_witness[inf]",
+      "original_result": "ERROR"
+    },
+    {
+      "cause": "compiled_source_pin",
+      "explanation": "Exact historical compiled producer source binding refuses changed minute runtime bytes before later assertion.",
+      "failure_summary_line": 1979,
+      "historical_profile": "historical compiled-capture profile selected by unchanged original test",
+      "module": "tests/test_annual_compiled_witness.py",
+      "nodeid": "tests/test_annual_compiled_witness.py::test_invalid_interval_duration_does_not_publish_a_compiled_witness[-1.0]",
+      "original_result": "ERROR"
+    },
+    {
+      "cause": "compiled_source_pin",
+      "explanation": "Exact historical compiled producer source binding refuses changed minute runtime bytes before later assertion.",
+      "failure_summary_line": 2044,
+      "historical_profile": "historical compiled-capture profile selected by unchanged original test",
+      "module": "tests/test_annual_compiled_witness.py",
+      "nodeid": "tests/test_annual_compiled_witness.py::test_invalid_interval_duration_does_not_publish_a_compiled_witness[0.0]",
+      "original_result": "ERROR"
+    },
+    {
+      "cause": "compiled_source_pin",
+      "explanation": "Exact historical compiled producer source binding refuses changed minute runtime bytes before later assertion.",
+      "failure_summary_line": 2109,
+      "historical_profile": "historical compiled-capture profile selected by unchanged original test",
+      "module": "tests/test_annual_loaded_capture_sources.py",
+      "nodeid": "tests/test_annual_loaded_capture_sources.py::test_unapproved_loaded_hook_cannot_claim_pinned_actual_hook",
+      "original_result": "ERROR"
+    },
+    {
+      "cause": "compiled_source_pin",
+      "explanation": "Exact historical compiled producer source binding refuses changed minute runtime bytes before later assertion.",
+      "failure_summary_line": 2174,
+      "historical_profile": "historical compiled-capture profile selected by unchanged original test",
+      "module": "tests/test_eight_fault_local_witness.py",
+      "nodeid": "tests/test_eight_fault_local_witness.py::test_local_compiled_capture_after_native_commit_preserves_exact_argument",
+      "original_result": "ERROR"
+    },
+    {
+      "cause": "compiled_source_pin",
+      "explanation": "Exact historical compiled producer source binding refuses changed minute runtime bytes before later assertion.",
+      "failure_summary_line": 2239,
+      "historical_profile": "historical compiled-capture profile selected by unchanged original test",
+      "module": "tests/test_eight_fault_local_witness.py",
+      "nodeid": "tests/test_eight_fault_local_witness.py::test_bad_local_binding_never_publishes_recorded[context]",
+      "original_result": "ERROR"
+    },
+    {
+      "cause": "compiled_source_pin",
+      "explanation": "Exact historical compiled producer source binding refuses changed minute runtime bytes before later assertion.",
+      "failure_summary_line": 2304,
+      "historical_profile": "historical compiled-capture profile selected by unchanged original test",
+      "module": "tests/test_eight_fault_local_witness.py",
+      "nodeid": "tests/test_eight_fault_local_witness.py::test_bad_local_binding_never_publishes_recorded[scene]",
+      "original_result": "ERROR"
+    },
+    {
+      "cause": "compiled_source_pin",
+      "explanation": "Exact historical compiled producer source binding refuses changed minute runtime bytes before later assertion.",
+      "failure_summary_line": 2369,
+      "historical_profile": "historical compiled-capture profile selected by unchanged original test",
+      "module": "tests/test_eight_fault_local_witness.py",
+      "nodeid": "tests/test_eight_fault_local_witness.py::test_bad_local_binding_never_publishes_recorded[calendar]",
+      "original_result": "ERROR"
+    },
+    {
+      "cause": "compiled_source_pin",
+      "explanation": "Exact historical compiled producer source binding refuses changed minute runtime bytes before later assertion.",
+      "failure_summary_line": 2434,
+      "historical_profile": "historical compiled-capture profile selected by unchanged original test",
+      "module": "tests/test_eight_fault_local_witness.py",
+      "nodeid": "tests/test_eight_fault_local_witness.py::test_bad_local_binding_never_publishes_recorded[config]",
+      "original_result": "ERROR"
+    },
+    {
+      "cause": "compiled_source_pin",
+      "explanation": "Exact historical compiled producer source binding refuses changed minute runtime bytes before later assertion.",
+      "failure_summary_line": 2499,
+      "historical_profile": "historical compiled-capture profile selected by unchanged original test",
+      "module": "tests/test_eight_fault_local_witness.py",
+      "nodeid": "tests/test_eight_fault_local_witness.py::test_bad_local_binding_never_publishes_recorded[operating_contract]",
+      "original_result": "ERROR"
+    },
+    {
+      "cause": "compiled_source_pin",
+      "explanation": "Exact historical compiled producer source binding refuses changed minute runtime bytes before later assertion.",
+      "failure_summary_line": 2564,
+      "historical_profile": "historical compiled-capture profile selected by unchanged original test",
+      "module": "tests/test_eight_fault_local_witness.py",
+      "nodeid": "tests/test_eight_fault_local_witness.py::test_bad_local_binding_never_publishes_recorded[dual]",
+      "original_result": "ERROR"
+    },
+    {
+      "cause": "compiled_source_pin",
+      "explanation": "Exact historical compiled producer source binding refuses changed minute runtime bytes before later assertion.",
+      "failure_summary_line": 2629,
+      "historical_profile": "historical compiled-capture profile selected by unchanged original test",
+      "module": "tests/test_eight_fault_local_witness.py",
+      "nodeid": "tests/test_eight_fault_local_witness.py::test_bad_local_binding_never_publishes_recorded[hook_source]",
+      "original_result": "ERROR"
+    },
+    {
+      "cause": "compiled_source_pin",
+      "explanation": "Exact historical compiled producer source binding refuses changed minute runtime bytes before later assertion.",
+      "failure_summary_line": 2694,
+      "historical_profile": "historical compiled-capture profile selected by unchanged original test",
+      "module": "tests/test_eight_fault_local_witness.py",
+      "nodeid": "tests/test_eight_fault_local_witness.py::test_root_drift_retains_native_unknown_source_receipt_without_recorded_flag",
+      "original_result": "ERROR"
+    },
+    {
+      "cause": "compiled_source_pin",
+      "explanation": "Exact historical compiled producer source binding refuses changed minute runtime bytes before later assertion.",
+      "failure_summary_line": 2759,
+      "historical_profile": "historical compiled-capture profile selected by unchanged original test",
+      "module": "tests/test_eight_fault_local_witness.py",
+      "nodeid": "tests/test_eight_fault_local_witness.py::test_equal_candidate_cannot_replace_the_exact_final_actual_result",
+      "original_result": "ERROR"
+    },
+    {
+      "cause": "compiled_source_pin",
+      "explanation": "Exact historical compiled producer source binding refuses changed minute runtime bytes before later assertion.",
+      "failure_summary_line": 2824,
+      "historical_profile": "historical compiled-capture profile selected by unchanged original test",
+      "module": "tests/test_eight_fault_local_witness.py",
+      "nodeid": "tests/test_eight_fault_local_witness.py::test_local_sink_io_failure_never_publishes_recorded",
+      "original_result": "ERROR"
+    },
+    {
+      "cause": "actual_recorder_version_pin",
+      "explanation": "Historical observer refuses the current minute witness recorder as unsupported_actual_witness_recorder_version.",
+      "failure_summary_line": 2890,
+      "historical_profile": "historical actual-witness recorder accepted pair",
+      "module": "tests/test_annual_program_steam.py",
+      "nodeid": "tests/test_annual_program_steam.py::test_optin_exact_actual_witness_does_not_choose_a_matching_guard_alternative[False]",
+      "original_result": "FAILED"
+    },
+    {
+      "cause": "actual_recorder_version_pin",
+      "explanation": "Historical observer refuses the current minute witness recorder as unsupported_actual_witness_recorder_version.",
+      "failure_summary_line": 2912,
+      "historical_profile": "historical actual-witness recorder accepted pair",
+      "module": "tests/test_annual_program_steam.py",
+      "nodeid": "tests/test_annual_program_steam.py::test_optin_exact_actual_witness_does_not_choose_a_matching_guard_alternative[True]",
+      "original_result": "FAILED"
+    },
+    {
+      "cause": "actual_recorder_version_pin",
+      "explanation": "Historical observer refuses the current minute witness recorder as unsupported_actual_witness_recorder_version.",
+      "failure_summary_line": 2934,
+      "historical_profile": "historical actual-witness recorder accepted pair",
+      "module": "tests/test_annual_program_steam.py",
+      "nodeid": "tests/test_annual_program_steam.py::test_optin_witness_contradiction_is_failed_without_legacy_fallback[scalar]",
+      "original_result": "FAILED"
+    },
+    {
+      "cause": "actual_recorder_version_pin",
+      "explanation": "Historical observer refuses the current minute witness recorder as unsupported_actual_witness_recorder_version.",
+      "failure_summary_line": 2964,
+      "historical_profile": "historical actual-witness recorder accepted pair",
+      "module": "tests/test_annual_program_steam.py",
+      "nodeid": "tests/test_annual_program_steam.py::test_optin_witness_contradiction_is_failed_without_legacy_fallback[vector_sha]",
+      "original_result": "FAILED"
+    },
+    {
+      "cause": "actual_recorder_version_pin",
+      "explanation": "Historical observer refuses the current minute witness recorder as unsupported_actual_witness_recorder_version.",
+      "failure_summary_line": 2994,
+      "historical_profile": "historical actual-witness recorder accepted pair",
+      "module": "tests/test_annual_program_steam.py",
+      "nodeid": "tests/test_annual_program_steam.py::test_optin_witness_contradiction_is_failed_without_legacy_fallback[row_owner]",
+      "original_result": "FAILED"
+    },
+    {
+      "cause": "actual_recorder_version_pin",
+      "explanation": "Historical observer refuses the current minute witness recorder as unsupported_actual_witness_recorder_version.",
+      "failure_summary_line": 3024,
+      "historical_profile": "historical actual-witness recorder accepted pair",
+      "module": "tests/test_annual_program_steam.py",
+      "nodeid": "tests/test_annual_program_steam.py::test_optin_witness_contradiction_is_failed_without_legacy_fallback[boolean_layer_index]",
+      "original_result": "FAILED"
+    },
+    {
+      "cause": "actual_recorder_version_pin",
+      "explanation": "Historical observer refuses the current minute witness recorder as unsupported_actual_witness_recorder_version.",
+      "failure_summary_line": 3054,
+      "historical_profile": "historical actual-witness recorder accepted pair",
+      "module": "tests/test_annual_program_steam.py",
+      "nodeid": "tests/test_annual_program_steam.py::test_optin_witness_contradiction_is_failed_without_legacy_fallback[boolean_attempt_index]",
+      "original_result": "FAILED"
+    },
+    {
+      "cause": "actual_recorder_version_pin",
+      "explanation": "Historical observer refuses the current minute witness recorder as unsupported_actual_witness_recorder_version.",
+      "failure_summary_line": 3084,
+      "historical_profile": "historical actual-witness recorder accepted pair",
+      "module": "tests/test_annual_program_steam.py",
+      "nodeid": "tests/test_annual_program_steam.py::test_flow_only_pure_electric_starter_has_owned_direct_discard_and_limited_scope[False-False]",
+      "original_result": "FAILED"
+    },
+    {
+      "cause": "actual_recorder_version_pin",
+      "explanation": "Historical observer refuses the current minute witness recorder as unsupported_actual_witness_recorder_version.",
+      "failure_summary_line": 3106,
+      "historical_profile": "historical actual-witness recorder accepted pair",
+      "module": "tests/test_annual_program_steam.py",
+      "nodeid": "tests/test_annual_program_steam.py::test_flow_only_pure_electric_starter_has_owned_direct_discard_and_limited_scope[False-True]",
+      "original_result": "FAILED"
+    },
+    {
+      "cause": "actual_recorder_version_pin",
+      "explanation": "Historical observer refuses the current minute witness recorder as unsupported_actual_witness_recorder_version.",
+      "failure_summary_line": 3128,
+      "historical_profile": "historical actual-witness recorder accepted pair",
+      "module": "tests/test_annual_program_steam.py",
+      "nodeid": "tests/test_annual_program_steam.py::test_flow_only_pure_electric_starter_has_owned_direct_discard_and_limited_scope[True-False]",
+      "original_result": "FAILED"
+    },
+    {
+      "cause": "actual_recorder_version_pin",
+      "explanation": "Historical observer refuses the current minute witness recorder as unsupported_actual_witness_recorder_version.",
+      "failure_summary_line": 3150,
+      "historical_profile": "historical actual-witness recorder accepted pair",
+      "module": "tests/test_annual_program_steam.py",
+      "nodeid": "tests/test_annual_program_steam.py::test_flow_only_pure_electric_starter_has_owned_direct_discard_and_limited_scope[True-True]",
+      "original_result": "FAILED"
+    },
+    {
+      "cause": "actual_recorder_version_pin",
+      "explanation": "Historical observer refuses the current minute witness recorder as unsupported_actual_witness_recorder_version.",
+      "failure_summary_line": 3172,
+      "historical_profile": "historical actual-witness recorder accepted pair",
+      "module": "tests/test_annual_program_steam.py",
+      "nodeid": "tests/test_annual_program_steam.py::test_flow_only_any_positive_recovery_is_unknown_without_original_context[-1.0]",
+      "original_result": "FAILED"
+    },
+    {
+      "cause": "actual_recorder_version_pin",
+      "explanation": "Historical observer refuses the current minute witness recorder as unsupported_actual_witness_recorder_version.",
+      "failure_summary_line": 3190,
+      "historical_profile": "historical actual-witness recorder accepted pair",
+      "module": "tests/test_annual_program_steam.py",
+      "nodeid": "tests/test_annual_program_steam.py::test_flow_only_any_positive_recovery_is_unknown_without_original_context[-1e-12]",
+      "original_result": "FAILED"
+    },
+    {
+      "cause": "actual_recorder_version_pin",
+      "explanation": "Historical observer refuses the current minute witness recorder as unsupported_actual_witness_recorder_version.",
+      "failure_summary_line": 3208,
+      "historical_profile": "historical actual-witness recorder accepted pair",
+      "module": "tests/test_annual_program_steam.py",
+      "nodeid": "tests/test_annual_program_steam.py::test_flow_only_any_positive_recovery_is_unknown_without_original_context[1e-12]",
+      "original_result": "FAILED"
+    },
+    {
+      "cause": "actual_recorder_version_pin",
+      "explanation": "Historical observer refuses the current minute witness recorder as unsupported_actual_witness_recorder_version.",
+      "failure_summary_line": 3226,
+      "historical_profile": "historical actual-witness recorder accepted pair",
+      "module": "tests/test_annual_program_steam.py",
+      "nodeid": "tests/test_annual_program_steam.py::test_flow_only_any_positive_recovery_is_unknown_without_original_context[0.5]",
+      "original_result": "FAILED"
+    },
+    {
+      "cause": "actual_recorder_version_pin",
+      "explanation": "Historical observer refuses the current minute witness recorder as unsupported_actual_witness_recorder_version.",
+      "failure_summary_line": 3244,
+      "historical_profile": "historical actual-witness recorder accepted pair",
+      "module": "tests/test_annual_program_steam.py",
+      "nodeid": "tests/test_annual_program_steam.py::test_flow_only_any_positive_recovery_is_unknown_without_original_context[1.0]",
+      "original_result": "FAILED"
+    },
+    {
+      "cause": "actual_recorder_version_pin",
+      "explanation": "Historical observer refuses the current minute witness recorder as unsupported_actual_witness_recorder_version.",
+      "failure_summary_line": 3262,
+      "historical_profile": "historical actual-witness recorder accepted pair",
+      "module": "tests/test_annual_program_steam.py",
+      "nodeid": "tests/test_annual_program_steam.py::test_flow_only_rejects_unsupported_starter_binary_without_widening_tolerance[-1.0]",
+      "original_result": "FAILED"
+    },
+    {
+      "cause": "actual_recorder_version_pin",
+      "explanation": "Historical observer refuses the current minute witness recorder as unsupported_actual_witness_recorder_version.",
+      "failure_summary_line": 3277,
+      "historical_profile": "historical actual-witness recorder accepted pair",
+      "module": "tests/test_annual_program_steam.py",
+      "nodeid": "tests/test_annual_program_steam.py::test_flow_only_rejects_unsupported_starter_binary_without_widening_tolerance[0.5]",
+      "original_result": "FAILED"
+    },
+    {
+      "cause": "actual_recorder_version_pin",
+      "explanation": "Historical observer refuses the current minute witness recorder as unsupported_actual_witness_recorder_version.",
+      "failure_summary_line": 3292,
+      "historical_profile": "historical actual-witness recorder accepted pair",
+      "module": "tests/test_annual_program_steam.py",
+      "nodeid": "tests/test_annual_program_steam.py::test_flow_only_rejects_unsupported_starter_binary_without_widening_tolerance[2.0]",
+      "original_result": "FAILED"
+    },
+    {
+      "cause": "actual_recorder_version_pin",
+      "explanation": "Historical observer refuses the current minute witness recorder as unsupported_actual_witness_recorder_version.",
+      "failure_summary_line": 3307,
+      "historical_profile": "historical actual-witness recorder accepted pair",
+      "module": "tests/test_annual_program_steam.py",
+      "nodeid": "tests/test_annual_program_steam.py::test_flow_only_rejects_unsupported_starter_binary_without_widening_tolerance[0.9999999995]",
+      "original_result": "FAILED"
+    },
+    {
+      "cause": "actual_recorder_version_pin",
+      "explanation": "Historical observer refuses the current minute witness recorder as unsupported_actual_witness_recorder_version.",
+      "failure_summary_line": 3322,
+      "historical_profile": "historical actual-witness recorder accepted pair",
+      "module": "tests/test_annual_program_steam.py",
+      "nodeid": "tests/test_annual_program_steam.py::test_flow_only_native_service_prefix_drift_is_explicit_unknown",
+      "original_result": "FAILED"
+    },
+    {
+      "cause": "actual_recorder_version_pin",
+      "explanation": "Historical observer refuses the current minute witness recorder as unsupported_actual_witness_recorder_version.",
+      "failure_summary_line": 3338,
+      "historical_profile": "historical actual-witness recorder accepted pair",
+      "module": "tests/test_annual_program_steam.py",
+      "nodeid": "tests/test_annual_program_steam.py::test_flow_only_missing_original_ambient_is_unknown",
+      "original_result": "FAILED"
+    },
+    {
+      "cause": "actual_recorder_version_pin",
+      "explanation": "Historical observer refuses the current minute witness recorder as unsupported_actual_witness_recorder_version.",
+      "failure_summary_line": 3355,
+      "historical_profile": "historical actual-witness recorder accepted pair",
+      "module": "tests/test_annual_program_steam.py",
+      "nodeid": "tests/test_annual_program_steam.py::test_flow_only_no_legacy_selection_no_global_patch_and_input_unchanged",
+      "original_result": "FAILED"
+    },
+    {
+      "cause": "actual_recorder_version_pin",
+      "explanation": "Historical observer refuses the current minute witness recorder as unsupported_actual_witness_recorder_version.",
+      "failure_summary_line": 3376,
+      "historical_profile": "historical actual-witness recorder accepted pair",
+      "module": "tests/test_annual_program_steam.py",
+      "nodeid": "tests/test_annual_program_steam.py::test_flow_only_self_consistent_waste_hash_and_row_cannot_replace_port_closure",
+      "original_result": "FAILED"
+    },
+    {
+      "cause": "native_error_source_pin",
+      "explanation": "Native _record_error implementation is pinned to the historical reviewed function bytes.",
+      "failure_summary_line": 3407,
+      "historical_profile": "historical annual native error-recorder literal function pin",
+      "module": "tests/test_annual_program_failure_history.py",
+      "nodeid": "tests/test_annual_program_failure_history.py::test_real_native_failure_keeps_exception_state_logs_and_recoverable_complete_history[ModelConstraintInfeasible]",
+      "original_result": "FAILED"
+    },
+    {
+      "cause": "native_error_source_pin",
+      "explanation": "Native _record_error implementation is pinned to the historical reviewed function bytes.",
+      "failure_summary_line": 3448,
+      "historical_profile": "historical annual native error-recorder literal function pin",
+      "module": "tests/test_annual_program_failure_history.py",
+      "nodeid": "tests/test_annual_program_failure_history.py::test_real_native_failure_keeps_exception_state_logs_and_recoverable_complete_history[SolverExecutionError]",
+      "original_result": "FAILED"
+    },
+    {
+      "cause": "native_error_source_pin",
+      "explanation": "Native _record_error implementation is pinned to the historical reviewed function bytes.",
+      "failure_summary_line": 3489,
+      "historical_profile": "historical annual native error-recorder literal function pin",
+      "module": "tests/test_annual_program_failure_history.py",
+      "nodeid": "tests/test_annual_program_failure_history.py::test_real_native_failure_keeps_exception_state_logs_and_recoverable_complete_history[ValueError]",
+      "original_result": "FAILED"
+    },
+    {
+      "cause": "native_error_source_pin",
+      "explanation": "Native _record_error implementation is pinned to the historical reviewed function bytes.",
+      "failure_summary_line": 3530,
+      "historical_profile": "historical annual native error-recorder literal function pin",
+      "module": "tests/test_annual_program_failure_history.py",
+      "nodeid": "tests/test_annual_program_failure_history.py::test_plain_lists_preserve_the_original_native_diagnostic_shape",
+      "original_result": "FAILED"
+    },
+    {
+      "cause": "native_error_source_pin",
+      "explanation": "Native _record_error implementation is pinned to the historical reviewed function bytes.",
+      "failure_summary_line": 3563,
+      "historical_profile": "historical annual native error-recorder literal function pin",
+      "module": "tests/test_annual_program_failure_history.py",
+      "nodeid": "tests/test_annual_program_failure_history.py::test_unclassified_exception_keeps_the_original_native_wrapping_and_cause",
+      "original_result": "FAILED"
+    },
+    {
+      "cause": "native_error_source_pin",
+      "explanation": "Native _record_error implementation is pinned to the historical reviewed function bytes.",
+      "failure_summary_line": 3592,
+      "historical_profile": "historical annual native error-recorder literal function pin",
+      "module": "tests/test_annual_program_failure_history.py",
+      "nodeid": "tests/test_annual_program_failure_history.py::test_exact_annual_terminal_native_error_keeps_primary_failure_and_direct_history_refs[ModelConstraintInfeasible]",
+      "original_result": "FAILED"
+    },
+    {
+      "cause": "native_error_source_pin",
+      "explanation": "Native _record_error implementation is pinned to the historical reviewed function bytes.",
+      "failure_summary_line": 3633,
+      "historical_profile": "historical annual native error-recorder literal function pin",
+      "module": "tests/test_annual_program_failure_history.py",
+      "nodeid": "tests/test_annual_program_failure_history.py::test_exact_annual_terminal_native_error_keeps_primary_failure_and_direct_history_refs[SolverExecutionError]",
+      "original_result": "FAILED"
+    },
+    {
+      "cause": "native_error_source_pin",
+      "explanation": "Native _record_error implementation is pinned to the historical reviewed function bytes.",
+      "failure_summary_line": 3674,
+      "historical_profile": "historical annual native error-recorder literal function pin",
+      "module": "tests/test_annual_program_failure_history.py",
+      "nodeid": "tests/test_annual_program_failure_history.py::test_exact_annual_terminal_native_error_keeps_primary_failure_and_direct_history_refs[ValueError]",
+      "original_result": "FAILED"
+    },
+    {
+      "cause": "native_error_source_pin",
+      "explanation": "Native _record_error implementation is pinned to the historical reviewed function bytes.",
+      "failure_summary_line": 3715,
+      "historical_profile": "historical annual native error-recorder literal function pin",
+      "module": "tests/test_annual_program_failure_history.py",
+      "nodeid": "tests/test_annual_program_failure_history.py::test_ordinary_native_error_keeps_current_row_query_without_terminal_annotation",
+      "original_result": "FAILED"
+    },
+    {
+      "cause": "native_error_source_pin",
+      "explanation": "Native _record_error implementation is pinned to the historical reviewed function bytes.",
+      "failure_summary_line": 3745,
+      "historical_profile": "historical annual native error-recorder literal function pin",
+      "module": "tests/test_annual_program_failure_history.py",
+      "nodeid": "tests/test_annual_program_failure_history.py::test_terminal_unclassified_error_retains_native_wrapping_and_original_cause",
+      "original_result": "FAILED"
+    },
+    {
+      "cause": "native_error_source_pin",
+      "explanation": "Native _record_error implementation is pinned to the historical reviewed function bytes.",
+      "failure_summary_line": 3774,
+      "historical_profile": "historical annual native error-recorder literal function pin",
+      "module": "tests/test_annual_program_failure_history.py",
+      "nodeid": "tests/test_annual_program_failure_history.py::test_unavailable_last_actual_source_row_retains_primary_native_error",
+      "original_result": "FAILED"
+    },
+    {
+      "cause": "native_error_source_pin",
+      "explanation": "Native _record_error implementation is pinned to the historical reviewed function bytes.",
+      "failure_summary_line": 3790,
+      "historical_profile": "historical annual native error-recorder literal function pin",
+      "module": "tests/test_annual_program_failure_history.py",
+      "nodeid": "tests/test_annual_program_failure_history.py::test_terminal_missing_or_malformed_interval_reports_unavailable_without_losing_primary_error[None]",
+      "original_result": "FAILED"
+    },
+    {
+      "cause": "native_error_source_pin",
+      "explanation": "Native _record_error implementation is pinned to the historical reviewed function bytes.",
+      "failure_summary_line": 3806,
+      "historical_profile": "historical annual native error-recorder literal function pin",
+      "module": "tests/test_annual_program_failure_history.py",
+      "nodeid": "tests/test_annual_program_failure_history.py::test_terminal_missing_or_malformed_interval_reports_unavailable_without_losing_primary_error[last1]",
+      "original_result": "FAILED"
+    },
+    {
+      "cause": "native_error_source_pin",
+      "explanation": "Native _record_error implementation is pinned to the historical reviewed function bytes.",
+      "failure_summary_line": 3822,
+      "historical_profile": "historical annual native error-recorder literal function pin",
+      "module": "tests/test_annual_program_failure_history.py",
+      "nodeid": "tests/test_annual_program_failure_history.py::test_terminal_missing_or_malformed_interval_reports_unavailable_without_losing_primary_error[last2]",
+      "original_result": "FAILED"
+    },
+    {
+      "cause": "native_error_source_pin",
+      "explanation": "Native _record_error implementation is pinned to the historical reviewed function bytes.",
+      "failure_summary_line": 3838,
+      "historical_profile": "historical annual native error-recorder literal function pin",
+      "module": "tests/test_annual_program_failure_history.py",
+      "nodeid": "tests/test_annual_program_failure_history.py::test_terminal_missing_or_malformed_interval_reports_unavailable_without_losing_primary_error[last3]",
+      "original_result": "FAILED"
+    },
+    {
+      "cause": "native_error_source_pin",
+      "explanation": "Native _record_error implementation is pinned to the historical reviewed function bytes.",
+      "failure_summary_line": 3854,
+      "historical_profile": "historical annual native error-recorder literal function pin",
+      "module": "tests/test_annual_program_failure_history.py",
+      "nodeid": "tests/test_annual_program_failure_history.py::test_terminal_missing_or_malformed_interval_reports_unavailable_without_losing_primary_error[last4]",
+      "original_result": "FAILED"
+    },
+    {
+      "cause": "native_error_source_pin",
+      "explanation": "Native _record_error implementation is pinned to the historical reviewed function bytes.",
+      "failure_summary_line": 3870,
+      "historical_profile": "historical annual native error-recorder literal function pin",
+      "module": "tests/test_annual_program_failure_history.py",
+      "nodeid": "tests/test_annual_program_failure_history.py::test_terminal_missing_or_malformed_interval_reports_unavailable_without_losing_primary_error[last5]",
+      "original_result": "FAILED"
+    },
+    {
+      "cause": "native_error_source_pin",
+      "explanation": "Native _record_error implementation is pinned to the historical reviewed function bytes.",
+      "failure_summary_line": 3886,
+      "historical_profile": "historical annual native error-recorder literal function pin",
+      "module": "tests/test_annual_program_failure_history.py",
+      "nodeid": "tests/test_annual_program_failure_history.py::test_terminal_missing_or_malformed_interval_reports_unavailable_without_losing_primary_error[last6]",
+      "original_result": "FAILED"
+    },
+    {
+      "cause": "native_error_source_pin",
+      "explanation": "Native _record_error implementation is pinned to the historical reviewed function bytes.",
+      "failure_summary_line": 3902,
+      "historical_profile": "historical annual native error-recorder literal function pin",
+      "module": "tests/test_annual_program_failure_history.py",
+      "nodeid": "tests/test_annual_program_failure_history.py::test_resolver_rejects_corruption_wrong_identity_or_changed_database_without_overwrite[content]",
+      "original_result": "FAILED"
+    },
+    {
+      "cause": "native_error_source_pin",
+      "explanation": "Native _record_error implementation is pinned to the historical reviewed function bytes.",
+      "failure_summary_line": 3933,
+      "historical_profile": "historical annual native error-recorder literal function pin",
+      "module": "tests/test_annual_program_failure_history.py",
+      "nodeid": "tests/test_annual_program_failure_history.py::test_resolver_rejects_corruption_wrong_identity_or_changed_database_without_overwrite[identity]",
+      "original_result": "FAILED"
+    },
+    {
+      "cause": "native_error_source_pin",
+      "explanation": "Native _record_error implementation is pinned to the historical reviewed function bytes.",
+      "failure_summary_line": 3964,
+      "historical_profile": "historical annual native error-recorder literal function pin",
+      "module": "tests/test_annual_program_failure_history.py",
+      "nodeid": "tests/test_annual_program_failure_history.py::test_resolver_rejects_corruption_wrong_identity_or_changed_database_without_overwrite[newer_version]",
+      "original_result": "FAILED"
+    },
+    {
+      "cause": "native_error_source_pin",
+      "explanation": "Native _record_error implementation is pinned to the historical reviewed function bytes.",
+      "failure_summary_line": 3995,
+      "historical_profile": "historical annual native error-recorder literal function pin",
+      "module": "tests/test_annual_program_failure_history.py",
+      "nodeid": "tests/test_annual_program_failure_history.py::test_resolver_rejects_corruption_wrong_identity_or_changed_database_without_overwrite[missing_database]",
+      "original_result": "FAILED"
+    },
+    {
+      "cause": "native_error_source_pin",
+      "explanation": "Native _record_error implementation is pinned to the historical reviewed function bytes.",
+      "failure_summary_line": 4026,
+      "historical_profile": "historical annual native error-recorder literal function pin",
+      "module": "tests/test_annual_program_failure_history.py",
+      "nodeid": "tests/test_annual_program_failure_history.py::test_resolver_rejects_corruption_wrong_identity_or_changed_database_without_overwrite[database_bytes]",
+      "original_result": "FAILED"
+    },
+    {
+      "cause": "native_error_source_pin",
+      "explanation": "Native _record_error implementation is pinned to the historical reviewed function bytes.",
+      "failure_summary_line": 4057,
+      "historical_profile": "historical annual native error-recorder literal function pin",
+      "module": "tests/test_annual_program_failure_history.py",
+      "nodeid": "tests/test_annual_program_failure_history.py::test_closed_history_raises_explicit_unknown_with_original_error_retained",
+      "original_result": "FAILED"
+    },
+    {
+      "cause": "native_error_source_pin",
+      "explanation": "Native _record_error implementation is pinned to the historical reviewed function bytes.",
+      "failure_summary_line": 4091,
+      "historical_profile": "historical annual native error-recorder literal function pin",
+      "module": "tests/test_annual_program_failure_history.py",
+      "nodeid": "tests/test_annual_program_failure_history.py::test_resolver_forces_readonly_immutable_uri_and_never_configures_a_writer",
+      "original_result": "FAILED"
+    },
+    {
+      "cause": "native_error_source_pin",
+      "explanation": "Native _record_error implementation is pinned to the historical reviewed function bytes.",
+      "failure_summary_line": 4121,
+      "historical_profile": "historical annual native error-recorder literal function pin",
+      "module": "tests/test_annual_program_failure_history.py",
+      "nodeid": "tests/test_annual_program_failure_history.py::test_resolver_rejects_ambiguous_sqlite_sidecars_without_touching_them[-journal]",
+      "original_result": "FAILED"
+    },
+    {
+      "cause": "native_error_source_pin",
+      "explanation": "Native _record_error implementation is pinned to the historical reviewed function bytes.",
+      "failure_summary_line": 4152,
+      "historical_profile": "historical annual native error-recorder literal function pin",
+      "module": "tests/test_annual_program_failure_history.py",
+      "nodeid": "tests/test_annual_program_failure_history.py::test_resolver_rejects_ambiguous_sqlite_sidecars_without_touching_them[-wal]",
+      "original_result": "FAILED"
+    },
+    {
+      "cause": "native_error_source_pin",
+      "explanation": "Native _record_error implementation is pinned to the historical reviewed function bytes.",
+      "failure_summary_line": 4183,
+      "historical_profile": "historical annual native error-recorder literal function pin",
+      "module": "tests/test_annual_program_failure_history.py",
+      "nodeid": "tests/test_annual_program_failure_history.py::test_resolver_rejects_ambiguous_sqlite_sidecars_without_touching_them[-shm]",
+      "original_result": "FAILED"
+    },
+    {
+      "cause": "actual_recorder_version_pin",
+      "explanation": "Historical observer refuses the current minute witness recorder as unsupported_actual_witness_recorder_version.",
+      "failure_summary_line": 4214,
+      "historical_profile": "historical actual-witness recorder accepted pair",
+      "module": "tests/test_annual_program_carrier_flow.py",
+      "nodeid": "tests/test_annual_program_carrier_flow.py::test_truthful_final_receipt_carries_E_C_scope_and_exact_global_owner[False-False]",
+      "original_result": "FAILED"
+    },
+    {
+      "cause": "actual_recorder_version_pin",
+      "explanation": "Historical observer refuses the current minute witness recorder as unsupported_actual_witness_recorder_version.",
+      "failure_summary_line": 4236,
+      "historical_profile": "historical actual-witness recorder accepted pair",
+      "module": "tests/test_annual_program_carrier_flow.py",
+      "nodeid": "tests/test_annual_program_carrier_flow.py::test_truthful_final_receipt_carries_E_C_scope_and_exact_global_owner[False-True]",
+      "original_result": "FAILED"
+    },
+    {
+      "cause": "actual_recorder_version_pin",
+      "explanation": "Historical observer refuses the current minute witness recorder as unsupported_actual_witness_recorder_version.",
+      "failure_summary_line": 4258,
+      "historical_profile": "historical actual-witness recorder accepted pair",
+      "module": "tests/test_annual_program_carrier_flow.py",
+      "nodeid": "tests/test_annual_program_carrier_flow.py::test_truthful_final_receipt_carries_E_C_scope_and_exact_global_owner[True-False]",
+      "original_result": "FAILED"
+    },
+    {
+      "cause": "actual_recorder_version_pin",
+      "explanation": "Historical observer refuses the current minute witness recorder as unsupported_actual_witness_recorder_version.",
+      "failure_summary_line": 4280,
+      "historical_profile": "historical actual-witness recorder accepted pair",
+      "module": "tests/test_annual_program_carrier_flow.py",
+      "nodeid": "tests/test_annual_program_carrier_flow.py::test_truthful_final_receipt_carries_E_C_scope_and_exact_global_owner[True-True]",
+      "original_result": "FAILED"
+    },
+    {
+      "cause": "actual_recorder_version_pin",
+      "explanation": "Historical observer refuses the current minute witness recorder as unsupported_actual_witness_recorder_version.",
+      "failure_summary_line": 4302,
+      "historical_profile": "historical actual-witness recorder accepted pair",
+      "module": "tests/test_annual_program_carrier_flow.py",
+      "nodeid": "tests/test_annual_program_carrier_flow.py::test_native_port_formulas_include_converters_stores_and_station_once[updates0]",
+      "original_result": "FAILED"
+    },
+    {
+      "cause": "actual_recorder_version_pin",
+      "explanation": "Historical observer refuses the current minute witness recorder as unsupported_actual_witness_recorder_version.",
+      "failure_summary_line": 4322,
+      "historical_profile": "historical actual-witness recorder accepted pair",
+      "module": "tests/test_annual_program_carrier_flow.py",
+      "nodeid": "tests/test_annual_program_carrier_flow.py::test_native_port_formulas_include_converters_stores_and_station_once[updates1]",
+      "original_result": "FAILED"
+    },
+    {
+      "cause": "actual_recorder_version_pin",
+      "explanation": "Historical observer refuses the current minute witness recorder as unsupported_actual_witness_recorder_version.",
+      "failure_summary_line": 4342,
+      "historical_profile": "historical actual-witness recorder accepted pair",
+      "module": "tests/test_annual_program_carrier_flow.py",
+      "nodeid": "tests/test_annual_program_carrier_flow.py::test_native_port_formulas_include_converters_stores_and_station_once[updates2]",
+      "original_result": "FAILED"
+    },
+    {
+      "cause": "actual_recorder_version_pin",
+      "explanation": "Historical observer refuses the current minute witness recorder as unsupported_actual_witness_recorder_version.",
+      "failure_summary_line": 4362,
+      "historical_profile": "historical actual-witness recorder accepted pair",
+      "module": "tests/test_annual_program_carrier_flow.py",
+      "nodeid": "tests/test_annual_program_carrier_flow.py::test_native_port_formulas_include_converters_stores_and_station_once[updates3]",
+      "original_result": "FAILED"
+    },
+    {
+      "cause": "actual_recorder_version_pin",
+      "explanation": "Historical observer refuses the current minute witness recorder as unsupported_actual_witness_recorder_version.",
+      "failure_summary_line": 4382,
+      "historical_profile": "historical actual-witness recorder accepted pair",
+      "module": "tests/test_annual_program_carrier_flow.py",
+      "nodeid": "tests/test_annual_program_carrier_flow.py::test_native_port_formulas_include_converters_stores_and_station_once[updates4]",
+      "original_result": "FAILED"
+    },
+    {
+      "cause": "actual_recorder_version_pin",
+      "explanation": "Historical observer refuses the current minute witness recorder as unsupported_actual_witness_recorder_version.",
+      "failure_summary_line": 4402,
+      "historical_profile": "historical actual-witness recorder accepted pair",
+      "module": "tests/test_annual_program_carrier_flow.py",
+      "nodeid": "tests/test_annual_program_carrier_flow.py::test_native_port_formulas_include_converters_stores_and_station_once[updates5]",
+      "original_result": "FAILED"
+    },
+    {
+      "cause": "actual_recorder_version_pin",
+      "explanation": "Historical observer refuses the current minute witness recorder as unsupported_actual_witness_recorder_version.",
+      "failure_summary_line": 4422,
+      "historical_profile": "historical actual-witness recorder accepted pair",
+      "module": "tests/test_annual_program_carrier_flow.py",
+      "nodeid": "tests/test_annual_program_carrier_flow.py::test_native_port_formulas_include_converters_stores_and_station_once[updates6]",
+      "original_result": "FAILED"
+    },
+    {
+      "cause": "actual_recorder_version_pin",
+      "explanation": "Historical observer refuses the current minute witness recorder as unsupported_actual_witness_recorder_version.",
+      "failure_summary_line": 4442,
+      "historical_profile": "historical actual-witness recorder accepted pair",
+      "module": "tests/test_annual_program_carrier_flow.py",
+      "nodeid": "tests/test_annual_program_carrier_flow.py::test_native_port_formulas_include_converters_stores_and_station_once[updates7]",
+      "original_result": "FAILED"
+    },
+    {
+      "cause": "actual_recorder_version_pin",
+      "explanation": "Historical observer refuses the current minute witness recorder as unsupported_actual_witness_recorder_version.",
+      "failure_summary_line": 4462,
+      "historical_profile": "historical actual-witness recorder accepted pair",
+      "module": "tests/test_annual_program_carrier_flow.py",
+      "nodeid": "tests/test_annual_program_carrier_flow.py::test_native_port_formulas_include_converters_stores_and_station_once[updates8]",
+      "original_result": "FAILED"
+    },
+    {
+      "cause": "actual_recorder_version_pin",
+      "explanation": "Historical observer refuses the current minute witness recorder as unsupported_actual_witness_recorder_version.",
+      "failure_summary_line": 4482,
+      "historical_profile": "historical actual-witness recorder accepted pair",
+      "module": "tests/test_annual_program_carrier_flow.py",
+      "nodeid": "tests/test_annual_program_carrier_flow.py::test_GT_starter_action_is_present_but_stronger_E_context_stays_unknown_C_passes",
+      "original_result": "FAILED"
+    },
+    {
+      "cause": "actual_recorder_version_pin",
+      "explanation": "Historical observer refuses the current minute witness recorder as unsupported_actual_witness_recorder_version.",
+      "failure_summary_line": 4498,
+      "historical_profile": "historical actual-witness recorder accepted pair",
+      "module": "tests/test_annual_program_carrier_flow.py",
+      "nodeid": "tests/test_annual_program_carrier_flow.py::test_missing_or_contradictory_binding_never_uses_matching_candidate[vector]",
+      "original_result": "FAILED"
+    },
+    {
+      "cause": "actual_recorder_version_pin",
+      "explanation": "Historical observer refuses the current minute witness recorder as unsupported_actual_witness_recorder_version.",
+      "failure_summary_line": 4528,
+      "historical_profile": "historical actual-witness recorder accepted pair",
+      "module": "tests/test_annual_program_carrier_flow.py",
+      "nodeid": "tests/test_annual_program_carrier_flow.py::test_missing_or_contradictory_binding_never_uses_matching_candidate[service]",
+      "original_result": "FAILED"
+    },
+    {
+      "cause": "actual_recorder_version_pin",
+      "explanation": "Historical observer refuses the current minute witness recorder as unsupported_actual_witness_recorder_version.",
+      "failure_summary_line": 4558,
+      "historical_profile": "historical actual-witness recorder accepted pair",
+      "module": "tests/test_annual_program_carrier_flow.py",
+      "nodeid": "tests/test_annual_program_carrier_flow.py::test_missing_or_contradictory_binding_never_uses_matching_candidate[row_ref]",
+      "original_result": "FAILED"
+    },
+    {
+      "cause": "actual_recorder_version_pin",
+      "explanation": "Historical observer refuses the current minute witness recorder as unsupported_actual_witness_recorder_version.",
+      "failure_summary_line": 4588,
+      "historical_profile": "historical actual-witness recorder accepted pair",
+      "module": "tests/test_annual_program_carrier_flow.py",
+      "nodeid": "tests/test_annual_program_carrier_flow.py::test_missing_or_contradictory_binding_never_uses_matching_candidate[row_activity]",
+      "original_result": "FAILED"
+    },
+    {
+      "cause": "actual_recorder_version_pin",
+      "explanation": "Historical observer refuses the current minute witness recorder as unsupported_actual_witness_recorder_version.",
+      "failure_summary_line": 4618,
+      "historical_profile": "historical actual-witness recorder accepted pair",
+      "module": "tests/test_annual_program_carrier_flow.py",
+      "nodeid": "tests/test_annual_program_carrier_flow.py::test_wrong_recorded_port_fails_its_mapping_before_any_integral[grid_import_kW-e]",
+      "original_result": "FAILED"
+    },
+    {
+      "cause": "actual_recorder_version_pin",
+      "explanation": "Historical observer refuses the current minute witness recorder as unsupported_actual_witness_recorder_version.",
+      "failure_summary_line": 4636,
+      "historical_profile": "historical actual-witness recorder accepted pair",
+      "module": "tests/test_annual_program_carrier_flow.py",
+      "nodeid": "tests/test_annual_program_carrier_flow.py::test_wrong_recorded_port_fails_its_mapping_before_any_integral[cold_discharge_kW-c]",
+      "original_result": "FAILED"
+    },
+    {
+      "cause": "actual_recorder_version_pin",
+      "explanation": "Historical observer refuses the current minute witness recorder as unsupported_actual_witness_recorder_version.",
+      "failure_summary_line": 4654,
+      "historical_profile": "historical actual-witness recorder accepted pair",
+      "module": "tests/test_annual_program_carrier_flow.py",
+      "nodeid": "tests/test_annual_program_carrier_flow.py::test_wrong_recorded_port_fails_its_mapping_before_any_integral[cold_storage_pump_kW-e]",
+      "original_result": "FAILED"
+    },
+    {
+      "cause": "actual_recorder_version_pin",
+      "explanation": "Historical observer refuses the current minute witness recorder as unsupported_actual_witness_recorder_version.",
+      "failure_summary_line": 4672,
+      "historical_profile": "historical actual-witness recorder accepted pair",
+      "module": "tests/test_annual_program_carrier_flow.py",
+      "nodeid": "tests/test_annual_program_carrier_flow.py::test_wrong_recorded_port_fails_its_mapping_before_any_integral[station_auxiliary_kW-e]",
+      "original_result": "FAILED"
+    },
+    {
+      "cause": "actual_recorder_version_pin",
+      "explanation": "Historical observer refuses the current minute witness recorder as unsupported_actual_witness_recorder_version.",
+      "failure_summary_line": 4690,
+      "historical_profile": "historical actual-witness recorder accepted pair",
+      "module": "tests/test_annual_program_carrier_flow.py",
+      "nodeid": "tests/test_annual_program_carrier_flow.py::test_wrong_recorded_port_fails_its_mapping_before_any_integral[absorption_cooling_kW-c]",
+      "original_result": "FAILED"
+    },
+    {
+      "cause": "actual_recorder_version_pin",
+      "explanation": "Historical observer refuses the current minute witness recorder as unsupported_actual_witness_recorder_version.",
+      "failure_summary_line": 4708,
+      "historical_profile": "historical actual-witness recorder accepted pair",
+      "module": "tests/test_annual_program_carrier_flow.py",
+      "nodeid": "tests/test_annual_program_carrier_flow.py::test_malformed_receipt_reference_is_reported_without_crashing_or_fallback[None]",
+      "original_result": "FAILED"
+    },
+    {
+      "cause": "actual_recorder_version_pin",
+      "explanation": "Historical observer refuses the current minute witness recorder as unsupported_actual_witness_recorder_version.",
+      "failure_summary_line": 4723,
+      "historical_profile": "historical actual-witness recorder accepted pair",
+      "module": "tests/test_annual_program_carrier_flow.py",
+      "nodeid": "tests/test_annual_program_carrier_flow.py::test_original_E_C_rows_have_their_own_unique_owned_equations[missing_E]",
+      "original_result": "FAILED"
+    },
+    {
+      "cause": "actual_recorder_version_pin",
+      "explanation": "Historical observer refuses the current minute witness recorder as unsupported_actual_witness_recorder_version.",
+      "failure_summary_line": 4753,
+      "historical_profile": "historical actual-witness recorder accepted pair",
+      "module": "tests/test_annual_program_carrier_flow.py",
+      "nodeid": "tests/test_annual_program_carrier_flow.py::test_original_E_C_rows_have_their_own_unique_owned_equations[duplicate_C]",
+      "original_result": "FAILED"
+    },
+    {
+      "cause": "actual_recorder_version_pin",
+      "explanation": "Historical observer refuses the current minute witness recorder as unsupported_actual_witness_recorder_version.",
+      "failure_summary_line": 4783,
+      "historical_profile": "historical actual-witness recorder accepted pair",
+      "module": "tests/test_annual_program_carrier_flow.py",
+      "nodeid": "tests/test_annual_program_carrier_flow.py::test_original_E_C_rows_have_their_own_unique_owned_equations[unit_C]",
+      "original_result": "FAILED"
+    },
+    {
+      "cause": "actual_recorder_version_pin",
+      "explanation": "Historical observer refuses the current minute witness recorder as unsupported_actual_witness_recorder_version.",
+      "failure_summary_line": 4812,
+      "historical_profile": "historical actual-witness recorder accepted pair",
+      "module": "tests/test_annual_program_carrier_flow.py",
+      "nodeid": "tests/test_annual_program_carrier_flow.py::test_original_E_C_rows_have_their_own_unique_owned_equations[bound_E]",
+      "original_result": "FAILED"
+    },
+    {
+      "cause": "actual_recorder_version_pin",
+      "explanation": "Historical observer refuses the current minute witness recorder as unsupported_actual_witness_recorder_version.",
+      "failure_summary_line": 4841,
+      "historical_profile": "historical actual-witness recorder accepted pair",
+      "module": "tests/test_annual_program_carrier_flow.py",
+      "nodeid": "tests/test_annual_program_carrier_flow.py::test_original_E_C_rows_have_their_own_unique_owned_equations[activity_C]",
+      "original_result": "FAILED"
+    },
+    {
+      "cause": "actual_recorder_version_pin",
+      "explanation": "Historical observer refuses the current minute witness recorder as unsupported_actual_witness_recorder_version.",
+      "failure_summary_line": 4870,
+      "historical_profile": "historical actual-witness recorder accepted pair",
+      "module": "tests/test_annual_program_carrier_flow.py",
+      "nodeid": "tests/test_annual_program_carrier_flow.py::test_carrier_scope_does_not_relabel_a_failed_steam_action_as_full_physics",
+      "original_result": "FAILED"
+    },
+    {
+      "cause": "actual_recorder_version_pin",
+      "explanation": "Historical observer refuses the current minute witness recorder as unsupported_actual_witness_recorder_version.",
+      "failure_summary_line": 4885,
+      "historical_profile": "historical actual-witness recorder accepted pair",
+      "module": "tests/test_annual_program_carrier_flow.py",
+      "nodeid": "tests/test_annual_program_carrier_flow.py::test_residual_metadata_is_checked_without_inventing_an_energy_dump",
+      "original_result": "FAILED"
+    },
+    {
+      "cause": "actual_recorder_version_pin",
+      "explanation": "Historical observer refuses the current minute witness recorder as unsupported_actual_witness_recorder_version.",
+      "failure_summary_line": 4900,
+      "historical_profile": "historical actual-witness recorder accepted pair",
+      "module": "tests/test_annual_program_carrier_flow.py",
+      "nodeid": "tests/test_annual_program_carrier_flow.py::test_unsupported_native_action_component_set_is_never_silently_ignored[new_uninterpreted_port]",
+      "original_result": "FAILED"
+    },
+    {
+      "cause": "actual_recorder_version_pin",
+      "explanation": "Historical observer refuses the current minute witness recorder as unsupported_actual_witness_recorder_version.",
+      "failure_summary_line": 4922,
+      "historical_profile": "historical actual-witness recorder accepted pair",
+      "module": "tests/test_annual_program_carrier_flow.py",
+      "nodeid": "tests/test_annual_program_carrier_flow.py::test_unsupported_native_action_component_set_is_never_silently_ignored[missing_original_component]",
+      "original_result": "FAILED"
+    },
+    {
+      "cause": "compiled_source_pin",
+      "explanation": "Exact historical compiled producer source binding refuses changed minute runtime bytes before later assertion.",
+      "failure_summary_line": 4944,
+      "historical_profile": "historical compiled-capture profile selected by unchanged original test",
+      "module": "tests/test_annual_loaded_capture_sources.py",
+      "nodeid": "tests/test_annual_loaded_capture_sources.py::test_loaded_leaf_metadata_cannot_bypass_source_gate[module_file-False]",
+      "original_result": "FAILED"
+    },
+    {
+      "cause": "compiled_source_pin",
+      "explanation": "Exact historical compiled producer source binding refuses changed minute runtime bytes before later assertion.",
+      "failure_summary_line": 4998,
+      "historical_profile": "historical compiled-capture profile selected by unchanged original test",
+      "module": "tests/test_annual_loaded_capture_sources.py",
+      "nodeid": "tests/test_annual_loaded_capture_sources.py::test_loaded_leaf_metadata_cannot_bypass_source_gate[module_file-True]",
+      "original_result": "FAILED"
+    },
+    {
+      "cause": "compiled_source_pin",
+      "explanation": "Exact historical compiled producer source binding refuses changed minute runtime bytes before later assertion.",
+      "failure_summary_line": 5052,
+      "historical_profile": "historical compiled-capture profile selected by unchanged original test",
+      "module": "tests/test_annual_loaded_capture_sources.py",
+      "nodeid": "tests/test_annual_loaded_capture_sources.py::test_loaded_leaf_metadata_cannot_bypass_source_gate[function_name-False]",
+      "original_result": "FAILED"
+    },
+    {
+      "cause": "compiled_source_pin",
+      "explanation": "Exact historical compiled producer source binding refuses changed minute runtime bytes before later assertion.",
+      "failure_summary_line": 5106,
+      "historical_profile": "historical compiled-capture profile selected by unchanged original test",
+      "module": "tests/test_annual_loaded_capture_sources.py",
+      "nodeid": "tests/test_annual_loaded_capture_sources.py::test_loaded_leaf_metadata_cannot_bypass_source_gate[function_name-True]",
+      "original_result": "FAILED"
+    },
+    {
+      "cause": "compiled_source_pin",
+      "explanation": "Exact historical compiled producer source binding refuses changed minute runtime bytes before later assertion.",
+      "failure_summary_line": 5160,
+      "historical_profile": "historical compiled-capture profile selected by unchanged original test",
+      "module": "tests/test_annual_loaded_capture_sources.py",
+      "nodeid": "tests/test_annual_loaded_capture_sources.py::test_same_leaf_code_cannot_use_foreign_runtime_globals",
+      "original_result": "FAILED"
+    },
+    {
+      "cause": "compiled_source_pin",
+      "explanation": "Exact historical compiled producer source binding refuses changed minute runtime bytes before later assertion.",
+      "failure_summary_line": 5211,
+      "historical_profile": "historical compiled-capture profile selected by unchanged original test",
+      "module": "tests/test_annual_loaded_capture_sources.py",
+      "nodeid": "tests/test_annual_loaded_capture_sources.py::test_loaded_capture_aliases_cannot_borrow_a_warm_source_receipt[_plain]",
+      "original_result": "FAILED"
+    },
+    {
+      "cause": "compiled_source_pin",
+      "explanation": "Exact historical compiled producer source binding refuses changed minute runtime bytes before later assertion.",
+      "failure_summary_line": 5265,
+      "historical_profile": "historical compiled-capture profile selected by unchanged original test",
+      "module": "tests/test_annual_loaded_capture_sources.py",
+      "nodeid": "tests/test_annual_loaded_capture_sources.py::test_loaded_capture_aliases_cannot_borrow_a_warm_source_receipt[_source]",
+      "original_result": "FAILED"
+    },
+    {
+      "cause": "compiled_source_pin",
+      "explanation": "Exact historical compiled producer source binding refuses changed minute runtime bytes before later assertion.",
+      "failure_summary_line": 5319,
+      "historical_profile": "historical compiled-capture profile selected by unchanged original test",
+      "module": "tests/test_annual_loaded_capture_sources.py",
+      "nodeid": "tests/test_annual_loaded_capture_sources.py::test_loaded_capture_aliases_cannot_borrow_a_warm_source_receipt[_index_map]",
+      "original_result": "FAILED"
+    },
+    {
+      "cause": "compiled_source_pin",
+      "explanation": "Exact historical compiled producer source binding refuses changed minute runtime bytes before later assertion.",
+      "failure_summary_line": 5373,
+      "historical_profile": "historical compiled-capture profile selected by unchanged original test",
+      "module": "tests/test_annual_loaded_capture_sources.py",
+      "nodeid": "tests/test_annual_loaded_capture_sources.py::test_loaded_capture_aliases_cannot_borrow_a_warm_source_receipt[build_compiled_flow_input]",
+      "original_result": "FAILED"
+    },
+    {
+      "cause": "compiled_source_pin",
+      "explanation": "Exact historical compiled producer source binding refuses changed minute runtime bytes before later assertion.",
+      "failure_summary_line": 5427,
+      "historical_profile": "historical compiled-capture profile selected by unchanged original test",
+      "module": "tests/test_annual_loaded_capture_sources.py",
+      "nodeid": "tests/test_annual_loaded_capture_sources.py::test_capture_callable_cannot_borrow_code_via_wrapped_metadata[False]",
+      "original_result": "FAILED"
+    },
+    {
+      "cause": "compiled_source_pin",
+      "explanation": "Exact historical compiled producer source binding refuses changed minute runtime bytes before later assertion.",
+      "failure_summary_line": 5481,
+      "historical_profile": "historical compiled-capture profile selected by unchanged original test",
+      "module": "tests/test_annual_loaded_capture_sources.py",
+      "nodeid": "tests/test_annual_loaded_capture_sources.py::test_capture_callable_cannot_borrow_code_via_wrapped_metadata[True]",
+      "original_result": "FAILED"
+    },
+    {
+      "cause": "compiled_source_pin",
+      "explanation": "Exact historical compiled producer source binding refuses changed minute runtime bytes before later assertion.",
+      "failure_summary_line": 5535,
+      "historical_profile": "historical compiled-capture profile selected by unchanged original test",
+      "module": "tests/test_annual_loaded_capture_sources.py",
+      "nodeid": "tests/test_annual_loaded_capture_sources.py::test_current_loaded_fuel_capture_has_independent_scientific_identity",
+      "original_result": "FAILED"
+    },
+    {
+      "cause": "actual_recorder_version_pin",
+      "explanation": "Historical observer refuses the current minute witness recorder as unsupported_actual_witness_recorder_version.",
+      "failure_summary_line": 5585,
+      "historical_profile": "historical actual-witness recorder accepted pair",
+      "module": "tests/test_annual_observer_source_compatibility.py",
+      "nodeid": "tests/test_annual_observer_source_compatibility.py::test_basic_new_recorder_old_leaf_does_not_treat_explicit_absence_as_future_schema",
+      "original_result": "FAILED"
+    },
+    {
+      "cause": "compiled_validator_version_pin",
+      "explanation": "Historical packet observer refuses the changed validator as unsupported_compiled_flow_validator_version.",
+      "failure_summary_line": 5600,
+      "historical_profile": "historical compiled-flow validator accepted pair",
+      "module": "tests/test_annual_compiled_packet_observer.py",
+      "nodeid": "tests/test_annual_compiled_packet_observer.py::test_genuine_final_packet_allows_electric_starter_algebra_only[47]",
+      "original_result": "FAILED"
+    },
+    {
+      "cause": "compiled_validator_version_pin",
+      "explanation": "Historical packet observer refuses the changed validator as unsupported_compiled_flow_validator_version.",
+      "failure_summary_line": 5614,
+      "historical_profile": "historical compiled-flow validator accepted pair",
+      "module": "tests/test_annual_compiled_packet_observer.py",
+      "nodeid": "tests/test_annual_compiled_packet_observer.py::test_genuine_final_packet_allows_electric_starter_algebra_only[48]",
+      "original_result": "FAILED"
+    },
+    {
+      "cause": "compiled_validator_version_pin",
+      "explanation": "Historical packet observer refuses the changed validator as unsupported_compiled_flow_validator_version.",
+      "failure_summary_line": 5628,
+      "historical_profile": "historical compiled-flow validator accepted pair",
+      "module": "tests/test_annual_compiled_packet_observer.py",
+      "nodeid": "tests/test_annual_compiled_packet_observer.py::test_contradictory_registered_packet_cannot_qualify_even_with_rehashed_DTO[47-Aeq_active]",
+      "original_result": "FAILED"
+    },
+    {
+      "cause": "compiled_validator_version_pin",
+      "explanation": "Historical packet observer refuses the changed validator as unsupported_compiled_flow_validator_version.",
+      "failure_summary_line": 5661,
+      "historical_profile": "historical compiled-flow validator accepted pair",
+      "module": "tests/test_annual_compiled_packet_observer.py",
+      "nodeid": "tests/test_annual_compiled_packet_observer.py::test_contradictory_registered_packet_cannot_qualify_even_with_rehashed_DTO[47-Aeq_inactive]",
+      "original_result": "FAILED"
+    },
+    {
+      "cause": "compiled_validator_version_pin",
+      "explanation": "Historical packet observer refuses the changed validator as unsupported_compiled_flow_validator_version.",
+      "failure_summary_line": 5694,
+      "historical_profile": "historical compiled-flow validator accepted pair",
+      "module": "tests/test_annual_compiled_packet_observer.py",
+      "nodeid": "tests/test_annual_compiled_packet_observer.py::test_contradictory_registered_packet_cannot_qualify_even_with_rehashed_DTO[47-closure_active]",
+      "original_result": "FAILED"
+    },
+    {
+      "cause": "compiled_validator_version_pin",
+      "explanation": "Historical packet observer refuses the changed validator as unsupported_compiled_flow_validator_version.",
+      "failure_summary_line": 5727,
+      "historical_profile": "historical compiled-flow validator accepted pair",
+      "module": "tests/test_annual_compiled_packet_observer.py",
+      "nodeid": "tests/test_annual_compiled_packet_observer.py::test_contradictory_registered_packet_cannot_qualify_even_with_rehashed_DTO[47-closure_inactive]",
+      "original_result": "FAILED"
+    },
+    {
+      "cause": "compiled_validator_version_pin",
+      "explanation": "Historical packet observer refuses the changed validator as unsupported_compiled_flow_validator_version.",
+      "failure_summary_line": 5760,
+      "historical_profile": "historical compiled-flow validator accepted pair",
+      "module": "tests/test_annual_compiled_packet_observer.py",
+      "nodeid": "tests/test_annual_compiled_packet_observer.py::test_contradictory_registered_packet_cannot_qualify_even_with_rehashed_DTO[47-beq]",
+      "original_result": "FAILED"
+    },
+    {
+      "cause": "compiled_validator_version_pin",
+      "explanation": "Historical packet observer refuses the changed validator as unsupported_compiled_flow_validator_version.",
+      "failure_summary_line": 5793,
+      "historical_profile": "historical compiled-flow validator accepted pair",
+      "module": "tests/test_annual_compiled_packet_observer.py",
+      "nodeid": "tests/test_annual_compiled_packet_observer.py::test_contradictory_registered_packet_cannot_qualify_even_with_rehashed_DTO[47-row_owner]",
+      "original_result": "FAILED"
+    },
+    {
+      "cause": "compiled_validator_version_pin",
+      "explanation": "Historical packet observer refuses the changed validator as unsupported_compiled_flow_validator_version.",
+      "failure_summary_line": 5826,
+      "historical_profile": "historical compiled-flow validator accepted pair",
+      "module": "tests/test_annual_compiled_packet_observer.py",
+      "nodeid": "tests/test_annual_compiled_packet_observer.py::test_contradictory_registered_packet_cannot_qualify_even_with_rehashed_DTO[48-Aeq_active]",
+      "original_result": "FAILED"
+    },
+    {
+      "cause": "compiled_validator_version_pin",
+      "explanation": "Historical packet observer refuses the changed validator as unsupported_compiled_flow_validator_version.",
+      "failure_summary_line": 5859,
+      "historical_profile": "historical compiled-flow validator accepted pair",
+      "module": "tests/test_annual_compiled_packet_observer.py",
+      "nodeid": "tests/test_annual_compiled_packet_observer.py::test_contradictory_registered_packet_cannot_qualify_even_with_rehashed_DTO[48-Aeq_inactive]",
+      "original_result": "FAILED"
+    },
+    {
+      "cause": "compiled_validator_version_pin",
+      "explanation": "Historical packet observer refuses the changed validator as unsupported_compiled_flow_validator_version.",
+      "failure_summary_line": 5892,
+      "historical_profile": "historical compiled-flow validator accepted pair",
+      "module": "tests/test_annual_compiled_packet_observer.py",
+      "nodeid": "tests/test_annual_compiled_packet_observer.py::test_contradictory_registered_packet_cannot_qualify_even_with_rehashed_DTO[48-closure_active]",
+      "original_result": "FAILED"
+    },
+    {
+      "cause": "compiled_validator_version_pin",
+      "explanation": "Historical packet observer refuses the changed validator as unsupported_compiled_flow_validator_version.",
+      "failure_summary_line": 5925,
+      "historical_profile": "historical compiled-flow validator accepted pair",
+      "module": "tests/test_annual_compiled_packet_observer.py",
+      "nodeid": "tests/test_annual_compiled_packet_observer.py::test_contradictory_registered_packet_cannot_qualify_even_with_rehashed_DTO[48-closure_inactive]",
+      "original_result": "FAILED"
+    },
+    {
+      "cause": "compiled_validator_version_pin",
+      "explanation": "Historical packet observer refuses the changed validator as unsupported_compiled_flow_validator_version.",
+      "failure_summary_line": 5958,
+      "historical_profile": "historical compiled-flow validator accepted pair",
+      "module": "tests/test_annual_compiled_packet_observer.py",
+      "nodeid": "tests/test_annual_compiled_packet_observer.py::test_contradictory_registered_packet_cannot_qualify_even_with_rehashed_DTO[48-beq]",
+      "original_result": "FAILED"
+    },
+    {
+      "cause": "compiled_validator_version_pin",
+      "explanation": "Historical packet observer refuses the changed validator as unsupported_compiled_flow_validator_version.",
+      "failure_summary_line": 5991,
+      "historical_profile": "historical compiled-flow validator accepted pair",
+      "module": "tests/test_annual_compiled_packet_observer.py",
+      "nodeid": "tests/test_annual_compiled_packet_observer.py::test_contradictory_registered_packet_cannot_qualify_even_with_rehashed_DTO[48-row_owner]",
+      "original_result": "FAILED"
+    },
+    {
+      "cause": "compiled_validator_version_pin",
+      "explanation": "Historical packet observer refuses the changed validator as unsupported_compiled_flow_validator_version.",
+      "failure_summary_line": 6024,
+      "historical_profile": "historical compiled-flow validator accepted pair",
+      "module": "tests/test_annual_compiled_packet_observer.py",
+      "nodeid": "tests/test_annual_compiled_packet_observer.py::test_observer_compiled_clock_roundoff_keeps_packet_unchanged[47-107.0]",
+      "original_result": "FAILED"
+    },
+    {
+      "cause": "compiled_validator_version_pin",
+      "explanation": "Historical packet observer refuses the changed validator as unsupported_compiled_flow_validator_version.",
+      "failure_summary_line": 6049,
+      "historical_profile": "historical compiled-flow validator accepted pair",
+      "module": "tests/test_annual_compiled_packet_observer.py",
+      "nodeid": "tests/test_annual_compiled_packet_observer.py::test_observer_compiled_clock_roundoff_keeps_packet_unchanged[47-525500.0]",
+      "original_result": "FAILED"
+    },
+    {
+      "cause": "compiled_validator_version_pin",
+      "explanation": "Historical packet observer refuses the changed validator as unsupported_compiled_flow_validator_version.",
+      "failure_summary_line": 6074,
+      "historical_profile": "historical compiled-flow validator accepted pair",
+      "module": "tests/test_annual_compiled_packet_observer.py",
+      "nodeid": "tests/test_annual_compiled_packet_observer.py::test_observer_compiled_clock_roundoff_keeps_packet_unchanged[48-107.0]",
+      "original_result": "FAILED"
+    },
+    {
+      "cause": "compiled_validator_version_pin",
+      "explanation": "Historical packet observer refuses the changed validator as unsupported_compiled_flow_validator_version.",
+      "failure_summary_line": 6099,
+      "historical_profile": "historical compiled-flow validator accepted pair",
+      "module": "tests/test_annual_compiled_packet_observer.py",
+      "nodeid": "tests/test_annual_compiled_packet_observer.py::test_observer_compiled_clock_roundoff_keeps_packet_unchanged[48-525500.0]",
+      "original_result": "FAILED"
+    },
+    {
+      "cause": "compiled_source_pin",
+      "explanation": "Exact historical compiled producer source binding refuses changed minute runtime bytes before later assertion.",
+      "failure_summary_line": 6124,
+      "historical_profile": "historical compiled-capture profile selected by unchanged original test",
+      "module": "tests/test_single_fault_compiled_witness.py",
+      "nodeid": "tests/test_single_fault_compiled_witness.py::test_scientific_final_argument_is_owned_by_original_hook_and_sink",
+      "original_result": "FAILED"
+    },
+    {
+      "cause": "compiled_source_pin",
+      "explanation": "Exact historical compiled producer source binding refuses changed minute runtime bytes before later assertion.",
+      "failure_summary_line": 6175,
+      "historical_profile": "historical compiled-capture profile selected by unchanged original test",
+      "module": "tests/test_single_fault_compiled_witness.py",
+      "nodeid": "tests/test_single_fault_compiled_witness.py::test_scientific_packet_cannot_be_recorded_outside_original_actual_hook",
+      "original_result": "FAILED"
+    },
+    {
+      "cause": "compiled_source_pin",
+      "explanation": "Exact historical compiled producer source binding refuses changed minute runtime bytes before later assertion.",
+      "failure_summary_line": 6226,
+      "historical_profile": "historical compiled-capture profile selected by unchanged original test",
+      "module": "tests/test_single_fault_compiled_witness.py",
+      "nodeid": "tests/test_single_fault_compiled_witness.py::test_scientific_actual_freeze_must_bind_every_extra_before_sink_append[configs/plant_configs.json]",
+      "original_result": "FAILED"
+    },
+    {
+      "cause": "compiled_source_pin",
+      "explanation": "Exact historical compiled producer source binding refuses changed minute runtime bytes before later assertion.",
+      "failure_summary_line": 6279,
+      "historical_profile": "historical compiled-capture profile selected by unchanged original test",
+      "module": "tests/test_single_fault_compiled_witness.py",
+      "nodeid": "tests/test_single_fault_compiled_witness.py::test_scientific_actual_freeze_must_bind_every_extra_before_sink_append[src/hospital_ies/control_env.py]",
+      "original_result": "FAILED"
+    },
+    {
+      "cause": "compiled_source_pin",
+      "explanation": "Exact historical compiled producer source binding refuses changed minute runtime bytes before later assertion.",
+      "failure_summary_line": 6332,
+      "historical_profile": "historical compiled-capture profile selected by unchanged original test",
+      "module": "tests/test_single_fault_compiled_witness.py",
+      "nodeid": "tests/test_single_fault_compiled_witness.py::test_scientific_actual_freeze_must_bind_every_extra_before_sink_append[src/hospital_ies/model.py]",
+      "original_result": "FAILED"
+    },
+    {
+      "cause": "compiled_source_pin",
+      "explanation": "Exact historical compiled producer source binding refuses changed minute runtime bytes before later assertion.",
+      "failure_summary_line": 6385,
+      "historical_profile": "historical compiled-capture profile selected by unchanged original test",
+      "module": "tests/test_single_fault_compiled_witness.py",
+      "nodeid": "tests/test_single_fault_compiled_witness.py::test_scientific_actual_freeze_must_bind_every_extra_before_sink_append[src/hospital_ies/nonlinear.py]",
+      "original_result": "FAILED"
+    },
+    {
+      "cause": "compiled_source_pin",
+      "explanation": "Exact historical compiled producer source binding refuses changed minute runtime bytes before later assertion.",
+      "failure_summary_line": 6438,
+      "historical_profile": "historical compiled-capture profile selected by unchanged original test",
+      "module": "tests/test_single_fault_compiled_witness.py",
+      "nodeid": "tests/test_single_fault_compiled_witness.py::test_scientific_actual_freeze_must_bind_every_extra_before_sink_append[src/hospital_ies/solver_result_cache.py]",
+      "original_result": "FAILED"
+    },
+    {
+      "cause": "compiled_source_pin",
+      "explanation": "Exact historical compiled producer source binding refuses changed minute runtime bytes before later assertion.",
+      "failure_summary_line": 6491,
+      "historical_profile": "historical compiled-capture profile selected by unchanged original test",
+      "module": "tests/test_single_fault_compiled_witness.py",
+      "nodeid": "tests/test_single_fault_compiled_witness.py::test_scientific_actual_freeze_must_bind_every_extra_before_sink_append[src/hospital_ies/state_transition.py]",
+      "original_result": "FAILED"
+    },
+    {
+      "cause": "compiled_source_pin",
+      "explanation": "Exact historical compiled producer source binding refuses changed minute runtime bytes before later assertion.",
+      "failure_summary_line": 6544,
+      "historical_profile": "historical compiled-capture profile selected by unchanged original test",
+      "module": "tests/test_single_fault_compiled_witness.py",
+      "nodeid": "tests/test_single_fault_compiled_witness.py::test_scientific_actual_freeze_must_bind_every_extra_before_sink_append[tools/annual_program/source_runtime.py]",
+      "original_result": "FAILED"
+    },
+    {
+      "cause": "compiled_source_pin",
+      "explanation": "Exact historical compiled producer source binding refuses changed minute runtime bytes before later assertion.",
+      "failure_summary_line": 6597,
+      "historical_profile": "historical compiled-capture profile selected by unchanged original test",
+      "module": "tests/test_single_fault_compiled_witness.py",
+      "nodeid": "tests/test_single_fault_compiled_witness.py::test_scientific_actual_freeze_must_bind_every_extra_before_sink_append[tools/annual_readiness/runner.py]",
+      "original_result": "FAILED"
+    },
+    {
+      "cause": "compiled_source_pin",
+      "explanation": "Exact historical compiled producer source binding refuses changed minute runtime bytes before later assertion.",
+      "failure_summary_line": 6650,
+      "historical_profile": "historical compiled-capture profile selected by unchanged original test",
+      "module": "tests/test_single_fault_compiled_witness.py",
+      "nodeid": "tests/test_single_fault_compiled_witness.py::test_scientific_actual_freeze_must_bind_every_extra_before_sink_append[tools/eight_fault_study/runtime.py]",
+      "original_result": "FAILED"
+    },
+    {
+      "cause": "compiled_source_pin",
+      "explanation": "Exact historical compiled producer source binding refuses changed minute runtime bytes before later assertion.",
+      "failure_summary_line": 6703,
+      "historical_profile": "historical compiled-capture profile selected by unchanged original test",
+      "module": "tests/test_single_fault_compiled_witness.py",
+      "nodeid": "tests/test_single_fault_compiled_witness.py::test_scientific_actual_freeze_must_bind_every_extra_before_sink_append[tools/integrated_learning/snapshot.py]",
+      "original_result": "FAILED"
+    },
+    {
+      "cause": "compiled_source_pin",
+      "explanation": "Exact historical compiled producer source binding refuses changed minute runtime bytes before later assertion.",
+      "failure_summary_line": 6756,
+      "historical_profile": "historical compiled-capture profile selected by unchanged original test",
+      "module": "tests/test_single_fault_compiled_witness.py",
+      "nodeid": "tests/test_single_fault_compiled_witness.py::test_scientific_actual_freeze_must_bind_every_extra_before_sink_append[tools/model_review_v27/objective_snapshot.py]",
+      "original_result": "FAILED"
+    },
+    {
+      "cause": "compiled_source_pin",
+      "explanation": "Exact historical compiled producer source binding refuses changed minute runtime bytes before later assertion.",
+      "failure_summary_line": 6809,
+      "historical_profile": "historical compiled-capture profile selected by unchanged original test",
+      "module": "tests/test_single_fault_compiled_witness.py",
+      "nodeid": "tests/test_single_fault_compiled_witness.py::test_scientific_actual_freeze_must_bind_every_extra_before_sink_append[tools/operating_response/execution.py]",
+      "original_result": "FAILED"
+    },
+    {
+      "cause": "compiled_source_pin",
+      "explanation": "Exact historical compiled producer source binding refuses changed minute runtime bytes before later assertion.",
+      "failure_summary_line": 6862,
+      "historical_profile": "historical compiled-capture profile selected by unchanged original test",
+      "module": "tests/test_single_fault_compiled_witness.py",
+      "nodeid": "tests/test_single_fault_compiled_witness.py::test_scientific_actual_freeze_must_bind_every_extra_before_sink_append[tools/operating_response/planner.py]",
+      "original_result": "FAILED"
+    },
+    {
+      "cause": "compiled_source_pin",
+      "explanation": "Exact historical compiled producer source binding refuses changed minute runtime bytes before later assertion.",
+      "failure_summary_line": 6915,
+      "historical_profile": "historical compiled-capture profile selected by unchanged original test",
+      "module": "tests/test_single_fault_compiled_witness.py",
+      "nodeid": "tests/test_single_fault_compiled_witness.py::test_scientific_actual_freeze_must_bind_every_extra_before_sink_append[tools/sci_engineering/planner.py]",
+      "original_result": "FAILED"
+    },
+    {
+      "cause": "compiled_source_pin",
+      "explanation": "Exact historical compiled producer source binding refuses changed minute runtime bytes before later assertion.",
+      "failure_summary_line": 6968,
+      "historical_profile": "historical compiled-capture profile selected by unchanged original test",
+      "module": "tests/test_single_fault_compiled_witness.py",
+      "nodeid": "tests/test_single_fault_compiled_witness.py::test_scientific_actual_freeze_must_bind_every_extra_before_sink_append[tools/sci_engineering/storage.py]",
+      "original_result": "FAILED"
+    },
+    {
+      "cause": "compiled_source_pin",
+      "explanation": "Exact historical compiled producer source binding refuses changed minute runtime bytes before later assertion.",
+      "failure_summary_line": 7021,
+      "historical_profile": "historical compiled-capture profile selected by unchanged original test",
+      "module": "tests/test_single_fault_compiled_witness.py",
+      "nodeid": "tests/test_single_fault_compiled_witness.py::test_scientific_actual_freeze_must_bind_every_extra_before_sink_append[tools/single_fault_fuel_20261102/__init__.py]",
+      "original_result": "FAILED"
+    },
+    {
+      "cause": "compiled_source_pin",
+      "explanation": "Exact historical compiled producer source binding refuses changed minute runtime bytes before later assertion.",
+      "failure_summary_line": 7074,
+      "historical_profile": "historical compiled-capture profile selected by unchanged original test",
+      "module": "tests/test_single_fault_compiled_witness.py",
+      "nodeid": "tests/test_single_fault_compiled_witness.py::test_scientific_actual_freeze_must_bind_every_extra_before_sink_append[tools/single_fault_fuel_20261102/environment.py]",
+      "original_result": "FAILED"
+    },
+    {
+      "cause": "compiled_source_pin",
+      "explanation": "Exact historical compiled producer source binding refuses changed minute runtime bytes before later assertion.",
+      "failure_summary_line": 7127,
+      "historical_profile": "historical compiled-capture profile selected by unchanged original test",
+      "module": "tests/test_single_fault_compiled_witness.py",
+      "nodeid": "tests/test_single_fault_compiled_witness.py::test_scientific_actual_freeze_must_bind_every_extra_before_sink_append[tools/single_fault_fuel_20261102/fuel.py]",
+      "original_result": "FAILED"
+    },
+    {
+      "cause": "compiled_source_pin",
+      "explanation": "Exact historical compiled producer source binding refuses changed minute runtime bytes before later assertion.",
+      "failure_summary_line": 7180,
+      "historical_profile": "historical compiled-capture profile selected by unchanged original test",
+      "module": "tests/test_single_fault_compiled_witness.py",
+      "nodeid": "tests/test_single_fault_compiled_witness.py::test_scientific_actual_freeze_must_bind_every_extra_before_sink_append[tools/single_fault_fuel_20261102/leaf.py]",
+      "original_result": "FAILED"
+    },
+    {
+      "cause": "compiled_source_pin",
+      "explanation": "Exact historical compiled producer source binding refuses changed minute runtime bytes before later assertion.",
+      "failure_summary_line": 7233,
+      "historical_profile": "historical compiled-capture profile selected by unchanged original test",
+      "module": "tests/test_single_fault_compiled_witness.py",
+      "nodeid": "tests/test_single_fault_compiled_witness.py::test_scientific_actual_freeze_must_bind_every_extra_before_sink_append[tools/single_fault_fuel_20261102/nl_store.py]",
+      "original_result": "FAILED"
+    },
+    {
+      "cause": "compiled_source_pin",
+      "explanation": "Exact historical compiled producer source binding refuses changed minute runtime bytes before later assertion.",
+      "failure_summary_line": 7286,
+      "historical_profile": "historical compiled-capture profile selected by unchanged original test",
+      "module": "tests/test_single_fault_compiled_witness.py",
+      "nodeid": "tests/test_single_fault_compiled_witness.py::test_scientific_actual_freeze_must_bind_every_extra_before_sink_append[tools/single_fault_fuel_20261102/runner.py]",
+      "original_result": "FAILED"
+    },
+    {
+      "cause": "compiled_source_pin",
+      "explanation": "Exact historical compiled producer source binding refuses changed minute runtime bytes before later assertion.",
+      "failure_summary_line": 7339,
+      "historical_profile": "historical compiled-capture profile selected by unchanged original test",
+      "module": "tests/test_single_fault_compiled_witness.py",
+      "nodeid": "tests/test_single_fault_compiled_witness.py::test_scientific_actual_freeze_must_bind_every_extra_before_sink_append[tools/single_fault_fuel_20261102/runtime.py]",
+      "original_result": "FAILED"
+    },
+    {
+      "cause": "compiled_source_pin",
+      "explanation": "Exact historical compiled producer source binding refuses changed minute runtime bytes before later assertion.",
+      "failure_summary_line": 7392,
+      "historical_profile": "historical compiled-capture profile selected by unchanged original test",
+      "module": "tests/test_single_fault_compiled_witness.py",
+      "nodeid": "tests/test_single_fault_compiled_witness.py::test_scientific_actual_freeze_must_bind_every_extra_before_sink_append[tools/single_fault_model_20261102/__init__.py]",
+      "original_result": "FAILED"
+    },
+    {
+      "cause": "compiled_source_pin",
+      "explanation": "Exact historical compiled producer source binding refuses changed minute runtime bytes before later assertion.",
+      "failure_summary_line": 7445,
+      "historical_profile": "historical compiled-capture profile selected by unchanged original test",
+      "module": "tests/test_single_fault_compiled_witness.py",
+      "nodeid": "tests/test_single_fault_compiled_witness.py::test_scientific_actual_freeze_must_bind_every_extra_before_sink_append[tools/single_fault_model_20261102/environment.py]",
+      "original_result": "FAILED"
+    },
+    {
+      "cause": "compiled_source_pin",
+      "explanation": "Exact historical compiled producer source binding refuses changed minute runtime bytes before later assertion.",
+      "failure_summary_line": 7498,
+      "historical_profile": "historical compiled-capture profile selected by unchanged original test",
+      "module": "tests/test_single_fault_compiled_witness.py",
+      "nodeid": "tests/test_single_fault_compiled_witness.py::test_scientific_actual_freeze_must_bind_every_extra_before_sink_append[tools/single_fault_model_20261102/runner.py]",
+      "original_result": "FAILED"
+    },
+    {
+      "cause": "compiled_source_pin",
+      "explanation": "Exact historical compiled producer source binding refuses changed minute runtime bytes before later assertion.",
+      "failure_summary_line": 7551,
+      "historical_profile": "historical compiled-capture profile selected by unchanged original test",
+      "module": "tests/test_single_fault_compiled_witness.py",
+      "nodeid": "tests/test_single_fault_compiled_witness.py::test_scientific_actual_freeze_must_bind_every_extra_before_sink_append[tools/single_fault_model_20261102/runtime.py]",
+      "original_result": "FAILED"
+    },
+    {
+      "cause": "compiled_source_pin",
+      "explanation": "Exact historical compiled producer source binding refuses changed minute runtime bytes before later assertion.",
+      "failure_summary_line": 7604,
+      "historical_profile": "historical compiled-capture profile selected by unchanged original test",
+      "module": "tests/test_single_fault_compiled_witness.py",
+      "nodeid": "tests/test_single_fault_compiled_witness.py::test_scientific_actual_freeze_must_bind_every_extra_before_sink_append[tools/single_fault_model_20261102/storage.py]",
+      "original_result": "FAILED"
+    },
+    {
+      "cause": "compiled_source_pin",
+      "explanation": "Exact historical compiled producer source binding refuses changed minute runtime bytes before later assertion.",
+      "failure_summary_line": 7657,
+      "historical_profile": "historical compiled-capture profile selected by unchanged original test",
+      "module": "tests/test_single_fault_compiled_witness.py",
+      "nodeid": "tests/test_single_fault_compiled_witness.py::test_equal_probe_packet_is_never_substituted_for_missing_final_argument",
+      "original_result": "FAILED"
+    },
+    {
+      "cause": "compiled_source_pin",
+      "explanation": "Exact historical compiled producer source binding refuses changed minute runtime bytes before later assertion.",
+      "failure_summary_line": 7708,
+      "historical_profile": "historical compiled-capture profile selected by unchanged original test",
+      "module": "tests/test_sf2_compiled_witness.py",
+      "nodeid": "tests/test_sf2_compiled_witness.py::test_actual_sf2_meter_cannot_commit_without_final_compiled_dto",
+      "original_result": "FAILED"
+    },
+    {
+      "cause": "compiled_source_pin",
+      "explanation": "Exact historical compiled producer source binding refuses changed minute runtime bytes before later assertion.",
+      "failure_summary_line": 7760,
+      "historical_profile": "historical compiled-capture profile selected by unchanged original test",
+      "module": "tests/test_sf2_compiled_witness.py",
+      "nodeid": "tests/test_sf2_compiled_witness.py::test_no_capture_request_can_only_copy_basic_rows_with_unknown_compiled_binding",
+      "original_result": "FAILED"
+    },
+    {
+      "cause": "compiled_source_pin",
+      "explanation": "Exact historical compiled producer source binding refuses changed minute runtime bytes before later assertion.",
+      "failure_summary_line": 7811,
+      "historical_profile": "historical compiled-capture profile selected by unchanged original test",
+      "module": "tests/test_sf2_native_capture.py",
+      "nodeid": "tests/test_sf2_native_capture.py::test_native_short_prefix_binds_source_actual_primal_and_closed_nl_store[1.0-H2-M_available-47]",
+      "original_result": "FAILED"
+    },
+    {
+      "cause": "compiled_source_pin",
+      "explanation": "Exact historical compiled producer source binding refuses changed minute runtime bytes before later assertion.",
+      "failure_summary_line": 7875,
+      "historical_profile": "historical compiled-capture profile selected by unchanged original test",
+      "module": "tests/test_sf2_native_capture.py",
+      "nodeid": "tests/test_sf2_native_capture.py::test_native_short_prefix_binds_source_actual_primal_and_closed_nl_store[0.5-H2-M_available-47]",
+      "original_result": "FAILED"
+    },
+    {
+      "cause": "compiled_source_pin",
+      "explanation": "Exact historical compiled producer source binding refuses changed minute runtime bytes before later assertion.",
+      "failure_summary_line": 7939,
+      "historical_profile": "historical compiled-capture profile selected by unchanged original test",
+      "module": "tests/test_sf2_native_capture.py",
+      "nodeid": "tests/test_sf2_native_capture.py::test_native_short_prefix_binds_source_actual_primal_and_closed_nl_store[1.0-H1-M_ready-48]",
+      "original_result": "FAILED"
+    },
+    {
+      "cause": "direct_historical_profile_identity",
+      "explanation": "The assertion explicitly identifies current source/recorder bytes with the old SCI_FUEL literal profile.",
+      "failure_summary_line": 8002,
+      "historical_profile": "single_fault_pnnl_exact_fuel_capture_v1",
+      "module": "tests/test_sf2_source_profile.py",
+      "nodeid": "tests/test_sf2_source_profile.py::test_fuel_recorder_cannot_borrow_any_old_scientific_pair",
+      "original_result": "FAILED"
+    },
+    {
+      "cause": "direct_historical_profile_identity",
+      "explanation": "The assertion explicitly identifies current source/recorder bytes with the old SCI_FUEL literal profile.",
+      "failure_summary_line": 8014,
+      "historical_profile": "single_fault_pnnl_exact_fuel_capture_v1",
+      "module": "tests/test_sf2_source_profile.py",
+      "nodeid": "tests/test_sf2_source_profile.py::test_fuel_source_extras_and_origin_bind_actual_new_dependencies",
+      "original_result": "FAILED"
+    },
+    {
+      "cause": "compiled_source_pin",
+      "explanation": "Exact historical compiled producer source binding refuses changed minute runtime bytes before later assertion.",
+      "failure_summary_line": 8036,
+      "historical_profile": "historical compiled-capture profile selected by unchanged original test",
+      "module": "tests/test_sf2_source_profile.py",
+      "nodeid": "tests/test_sf2_source_profile.py::test_loaded_current_leaf_cannot_be_replaced_under_correct_source_bindings",
+      "original_result": "FAILED"
+    },
+    {
+      "cause": "compiled_source_pin",
+      "explanation": "Exact historical compiled producer source binding refuses changed minute runtime bytes before later assertion.",
+      "failure_summary_line": 8049,
+      "historical_profile": "historical compiled-capture profile selected by unchanged original test",
+      "module": "tests/test_sf2_source_profile.py",
+      "nodeid": "tests/test_sf2_source_profile.py::test_loaded_capture_alias_cannot_change_under_correct_source_bindings",
+      "original_result": "FAILED"
+    },
+    {
+      "cause": "compiled_source_pin",
+      "explanation": "Exact historical compiled producer source binding refuses changed minute runtime bytes before later assertion.",
+      "failure_summary_line": 8062,
+      "historical_profile": "historical compiled-capture profile selected by unchanged original test",
+      "module": "tests/test_sf2_source_profile.py",
+      "nodeid": "tests/test_sf2_source_profile.py::test_scientific_source_gate_checks_actual_extra_digest_not_only_declaration",
+      "original_result": "FAILED"
+    },
+    {
+      "cause": "compiled_source_pin",
+      "explanation": "Exact historical compiled producer source binding refuses changed minute runtime bytes before later assertion.",
+      "failure_summary_line": 8078,
+      "historical_profile": "historical compiled-capture profile selected by unchanged original test",
+      "module": "tests/test_sf2_source_profile.py",
+      "nodeid": "tests/test_sf2_source_profile.py::test_fuel_loaded_owned_function_cannot_borrow_pinned_source[code-False]",
+      "original_result": "FAILED"
+    },
+    {
+      "cause": "compiled_source_pin",
+      "explanation": "Exact historical compiled producer source binding refuses changed minute runtime bytes before later assertion.",
+      "failure_summary_line": 8100,
+      "historical_profile": "historical compiled-capture profile selected by unchanged original test",
+      "module": "tests/test_sf2_source_profile.py",
+      "nodeid": "tests/test_sf2_source_profile.py::test_fuel_loaded_owned_function_cannot_borrow_pinned_source[code-True]",
+      "original_result": "FAILED"
+    },
+    {
+      "cause": "compiled_source_pin",
+      "explanation": "Exact historical compiled producer source binding refuses changed minute runtime bytes before later assertion.",
+      "failure_summary_line": 8152,
+      "historical_profile": "historical compiled-capture profile selected by unchanged original test",
+      "module": "tests/test_sf2_source_profile.py",
+      "nodeid": "tests/test_sf2_source_profile.py::test_fuel_loaded_owned_function_cannot_borrow_pinned_source[defaults-False]",
+      "original_result": "FAILED"
+    },
+    {
+      "cause": "compiled_source_pin",
+      "explanation": "Exact historical compiled producer source binding refuses changed minute runtime bytes before later assertion.",
+      "failure_summary_line": 8174,
+      "historical_profile": "historical compiled-capture profile selected by unchanged original test",
+      "module": "tests/test_sf2_source_profile.py",
+      "nodeid": "tests/test_sf2_source_profile.py::test_fuel_loaded_owned_function_cannot_borrow_pinned_source[defaults-True]",
+      "original_result": "FAILED"
+    },
+    {
+      "cause": "compiled_source_pin",
+      "explanation": "Exact historical compiled producer source binding refuses changed minute runtime bytes before later assertion.",
+      "failure_summary_line": 8226,
+      "historical_profile": "historical compiled-capture profile selected by unchanged original test",
+      "module": "tests/test_sf2_source_profile.py",
+      "nodeid": "tests/test_sf2_source_profile.py::test_fuel_loaded_owned_function_cannot_borrow_pinned_source[kwdefaults-False]",
+      "original_result": "FAILED"
+    },
+    {
+      "cause": "compiled_source_pin",
+      "explanation": "Exact historical compiled producer source binding refuses changed minute runtime bytes before later assertion.",
+      "failure_summary_line": 8248,
+      "historical_profile": "historical compiled-capture profile selected by unchanged original test",
+      "module": "tests/test_sf2_source_profile.py",
+      "nodeid": "tests/test_sf2_source_profile.py::test_fuel_loaded_owned_function_cannot_borrow_pinned_source[kwdefaults-True]",
+      "original_result": "FAILED"
+    },
+    {
+      "cause": "direct_historical_profile_identity",
+      "explanation": "The assertion explicitly identifies current source/recorder bytes with the old SCI_FUEL literal profile.",
+      "failure_summary_line": 8300,
+      "historical_profile": "single_fault_pnnl_exact_fuel_capture_v1",
+      "module": "tests/test_sf2_source_profile.py",
+      "nodeid": "tests/test_sf2_source_profile.py::test_fuel_recorder_exact_legacy_pair_remains_basic_only",
+      "original_result": "FAILED"
+    },
+    {
+      "cause": "direct_historical_profile_identity",
+      "explanation": "The assertion explicitly identifies current source/recorder bytes with the old SCI_FUEL literal profile.",
+      "failure_summary_line": 8310,
+      "historical_profile": "single_fault_pnnl_exact_fuel_capture_v1",
+      "module": "tests/test_sf2_source_profile.py",
+      "nodeid": "tests/test_sf2_source_profile.py::test_fuel_native_mixed_epochs_never_borrow_current_recorder[old_bits0]",
+      "original_result": "FAILED"
+    },
+    {
+      "cause": "compiled_source_pin",
+      "explanation": "Exact historical compiled producer source binding refuses changed minute runtime bytes before later assertion.",
+      "failure_summary_line": 8328,
+      "historical_profile": "historical compiled-capture profile selected by unchanged original test",
+      "module": "tests/test_sf2_source_profile.py",
+      "nodeid": "tests/test_sf2_source_profile.py::test_generated_runner_function_requires_reviewed_native_owner[code-False-_execute_loop]",
+      "original_result": "FAILED"
+    },
+    {
+      "cause": "compiled_source_pin",
+      "explanation": "Exact historical compiled producer source binding refuses changed minute runtime bytes before later assertion.",
+      "failure_summary_line": 8367,
+      "historical_profile": "historical compiled-capture profile selected by unchanged original test",
+      "module": "tests/test_sf2_source_profile.py",
+      "nodeid": "tests/test_sf2_source_profile.py::test_generated_runner_function_requires_reviewed_native_owner[code-False-_native_execute_attempt]",
+      "original_result": "FAILED"
+    },
+    {
+      "cause": "compiled_source_pin",
+      "explanation": "Exact historical compiled producer source binding refuses changed minute runtime bytes before later assertion.",
+      "failure_summary_line": 8406,
+      "historical_profile": "historical compiled-capture profile selected by unchanged original test",
+      "module": "tests/test_sf2_source_profile.py",
+      "nodeid": "tests/test_sf2_source_profile.py::test_generated_runner_function_requires_reviewed_native_owner[code-True-_execute_loop]",
+      "original_result": "FAILED"
+    },
+    {
+      "cause": "compiled_source_pin",
+      "explanation": "Exact historical compiled producer source binding refuses changed minute runtime bytes before later assertion.",
+      "failure_summary_line": 8459,
+      "historical_profile": "historical compiled-capture profile selected by unchanged original test",
+      "module": "tests/test_sf2_source_profile.py",
+      "nodeid": "tests/test_sf2_source_profile.py::test_generated_runner_function_requires_reviewed_native_owner[code-True-_native_execute_attempt]",
+      "original_result": "FAILED"
+    },
+    {
+      "cause": "compiled_source_pin",
+      "explanation": "Exact historical compiled producer source binding refuses changed minute runtime bytes before later assertion.",
+      "failure_summary_line": 8512,
+      "historical_profile": "historical compiled-capture profile selected by unchanged original test",
+      "module": "tests/test_sf2_source_profile.py",
+      "nodeid": "tests/test_sf2_source_profile.py::test_generated_runner_function_requires_reviewed_native_owner[name-False-_execute_loop]",
+      "original_result": "FAILED"
+    },
+    {
+      "cause": "compiled_source_pin",
+      "explanation": "Exact historical compiled producer source binding refuses changed minute runtime bytes before later assertion.",
+      "failure_summary_line": 8551,
+      "historical_profile": "historical compiled-capture profile selected by unchanged original test",
+      "module": "tests/test_sf2_source_profile.py",
+      "nodeid": "tests/test_sf2_source_profile.py::test_generated_runner_function_requires_reviewed_native_owner[name-False-_native_execute_attempt]",
+      "original_result": "FAILED"
+    },
+    {
+      "cause": "compiled_source_pin",
+      "explanation": "Exact historical compiled producer source binding refuses changed minute runtime bytes before later assertion.",
+      "failure_summary_line": 8590,
+      "historical_profile": "historical compiled-capture profile selected by unchanged original test",
+      "module": "tests/test_sf2_source_profile.py",
+      "nodeid": "tests/test_sf2_source_profile.py::test_generated_runner_function_requires_reviewed_native_owner[name-True-_execute_loop]",
+      "original_result": "FAILED"
+    },
+    {
+      "cause": "compiled_source_pin",
+      "explanation": "Exact historical compiled producer source binding refuses changed minute runtime bytes before later assertion.",
+      "failure_summary_line": 8643,
+      "historical_profile": "historical compiled-capture profile selected by unchanged original test",
+      "module": "tests/test_sf2_source_profile.py",
+      "nodeid": "tests/test_sf2_source_profile.py::test_generated_runner_function_requires_reviewed_native_owner[name-True-_native_execute_attempt]",
+      "original_result": "FAILED"
+    },
+    {
+      "cause": "compiled_source_pin",
+      "explanation": "Exact historical compiled producer source binding refuses changed minute runtime bytes before later assertion.",
+      "failure_summary_line": 8696,
+      "historical_profile": "historical compiled-capture profile selected by unchanged original test",
+      "module": "tests/test_sf2_source_profile.py",
+      "nodeid": "tests/test_sf2_source_profile.py::test_generated_runner_function_requires_reviewed_native_owner[file-False-_execute_loop]",
+      "original_result": "FAILED"
+    },
+    {
+      "cause": "compiled_source_pin",
+      "explanation": "Exact historical compiled producer source binding refuses changed minute runtime bytes before later assertion.",
+      "failure_summary_line": 8735,
+      "historical_profile": "historical compiled-capture profile selected by unchanged original test",
+      "module": "tests/test_sf2_source_profile.py",
+      "nodeid": "tests/test_sf2_source_profile.py::test_generated_runner_function_requires_reviewed_native_owner[file-False-_native_execute_attempt]",
+      "original_result": "FAILED"
+    },
+    {
+      "cause": "compiled_source_pin",
+      "explanation": "Exact historical compiled producer source binding refuses changed minute runtime bytes before later assertion.",
+      "failure_summary_line": 8774,
+      "historical_profile": "historical compiled-capture profile selected by unchanged original test",
+      "module": "tests/test_sf2_source_profile.py",
+      "nodeid": "tests/test_sf2_source_profile.py::test_generated_runner_function_requires_reviewed_native_owner[file-True-_execute_loop]",
+      "original_result": "FAILED"
+    },
+    {
+      "cause": "compiled_source_pin",
+      "explanation": "Exact historical compiled producer source binding refuses changed minute runtime bytes before later assertion.",
+      "failure_summary_line": 8827,
+      "historical_profile": "historical compiled-capture profile selected by unchanged original test",
+      "module": "tests/test_sf2_source_profile.py",
+      "nodeid": "tests/test_sf2_source_profile.py::test_generated_runner_function_requires_reviewed_native_owner[file-True-_native_execute_attempt]",
+      "original_result": "FAILED"
+    },
+    {
+      "cause": "compiled_source_pin",
+      "explanation": "Exact historical compiled producer source binding refuses changed minute runtime bytes before later assertion.",
+      "failure_summary_line": 8880,
+      "historical_profile": "historical compiled-capture profile selected by unchanged original test",
+      "module": "tests/test_sf2_source_profile.py",
+      "nodeid": "tests/test_sf2_source_profile.py::test_generated_runner_function_requires_reviewed_native_owner[module-False-_execute_loop]",
+      "original_result": "FAILED"
+    },
+    {
+      "cause": "compiled_source_pin",
+      "explanation": "Exact historical compiled producer source binding refuses changed minute runtime bytes before later assertion.",
+      "failure_summary_line": 8919,
+      "historical_profile": "historical compiled-capture profile selected by unchanged original test",
+      "module": "tests/test_sf2_source_profile.py",
+      "nodeid": "tests/test_sf2_source_profile.py::test_generated_runner_function_requires_reviewed_native_owner[module-False-_native_execute_attempt]",
+      "original_result": "FAILED"
+    },
+    {
+      "cause": "compiled_source_pin",
+      "explanation": "Exact historical compiled producer source binding refuses changed minute runtime bytes before later assertion.",
+      "failure_summary_line": 8958,
+      "historical_profile": "historical compiled-capture profile selected by unchanged original test",
+      "module": "tests/test_sf2_source_profile.py",
+      "nodeid": "tests/test_sf2_source_profile.py::test_generated_runner_function_requires_reviewed_native_owner[module-True-_execute_loop]",
+      "original_result": "FAILED"
+    },
+    {
+      "cause": "compiled_source_pin",
+      "explanation": "Exact historical compiled producer source binding refuses changed minute runtime bytes before later assertion.",
+      "failure_summary_line": 9011,
+      "historical_profile": "historical compiled-capture profile selected by unchanged original test",
+      "module": "tests/test_sf2_source_profile.py",
+      "nodeid": "tests/test_sf2_source_profile.py::test_generated_runner_function_requires_reviewed_native_owner[module-True-_native_execute_attempt]",
+      "original_result": "FAILED"
+    },
+    {
+      "cause": "compiled_source_pin",
+      "explanation": "Exact historical compiled producer source binding refuses changed minute runtime bytes before later assertion.",
+      "failure_summary_line": 9064,
+      "historical_profile": "historical compiled-capture profile selected by unchanged original test",
+      "module": "tests/test_sf2_source_profile.py",
+      "nodeid": "tests/test_sf2_source_profile.py::test_generated_runner_function_requires_reviewed_native_owner[defaults-False-_execute_loop]",
+      "original_result": "FAILED"
+    },
+    {
+      "cause": "compiled_source_pin",
+      "explanation": "Exact historical compiled producer source binding refuses changed minute runtime bytes before later assertion.",
+      "failure_summary_line": 9103,
+      "historical_profile": "historical compiled-capture profile selected by unchanged original test",
+      "module": "tests/test_sf2_source_profile.py",
+      "nodeid": "tests/test_sf2_source_profile.py::test_generated_runner_function_requires_reviewed_native_owner[defaults-False-_native_execute_attempt]",
+      "original_result": "FAILED"
+    },
+    {
+      "cause": "compiled_source_pin",
+      "explanation": "Exact historical compiled producer source binding refuses changed minute runtime bytes before later assertion.",
+      "failure_summary_line": 9142,
+      "historical_profile": "historical compiled-capture profile selected by unchanged original test",
+      "module": "tests/test_sf2_source_profile.py",
+      "nodeid": "tests/test_sf2_source_profile.py::test_generated_runner_function_requires_reviewed_native_owner[defaults-True-_execute_loop]",
+      "original_result": "FAILED"
+    },
+    {
+      "cause": "compiled_source_pin",
+      "explanation": "Exact historical compiled producer source binding refuses changed minute runtime bytes before later assertion.",
+      "failure_summary_line": 9195,
+      "historical_profile": "historical compiled-capture profile selected by unchanged original test",
+      "module": "tests/test_sf2_source_profile.py",
+      "nodeid": "tests/test_sf2_source_profile.py::test_generated_runner_function_requires_reviewed_native_owner[defaults-True-_native_execute_attempt]",
+      "original_result": "FAILED"
+    },
+    {
+      "cause": "compiled_source_pin",
+      "explanation": "Exact historical compiled producer source binding refuses changed minute runtime bytes before later assertion.",
+      "failure_summary_line": 9248,
+      "historical_profile": "historical compiled-capture profile selected by unchanged original test",
+      "module": "tests/test_sf2_source_profile.py",
+      "nodeid": "tests/test_sf2_source_profile.py::test_generated_runner_function_requires_reviewed_native_owner[kwdefaults-False-_execute_loop]",
+      "original_result": "FAILED"
+    },
+    {
+      "cause": "compiled_source_pin",
+      "explanation": "Exact historical compiled producer source binding refuses changed minute runtime bytes before later assertion.",
+      "failure_summary_line": 9287,
+      "historical_profile": "historical compiled-capture profile selected by unchanged original test",
+      "module": "tests/test_sf2_source_profile.py",
+      "nodeid": "tests/test_sf2_source_profile.py::test_generated_runner_function_requires_reviewed_native_owner[kwdefaults-False-_native_execute_attempt]",
+      "original_result": "FAILED"
+    },
+    {
+      "cause": "compiled_source_pin",
+      "explanation": "Exact historical compiled producer source binding refuses changed minute runtime bytes before later assertion.",
+      "failure_summary_line": 9326,
+      "historical_profile": "historical compiled-capture profile selected by unchanged original test",
+      "module": "tests/test_sf2_source_profile.py",
+      "nodeid": "tests/test_sf2_source_profile.py::test_generated_runner_function_requires_reviewed_native_owner[kwdefaults-True-_execute_loop]",
+      "original_result": "FAILED"
+    },
+    {
+      "cause": "compiled_source_pin",
+      "explanation": "Exact historical compiled producer source binding refuses changed minute runtime bytes before later assertion.",
+      "failure_summary_line": 9379,
+      "historical_profile": "historical compiled-capture profile selected by unchanged original test",
+      "module": "tests/test_sf2_source_profile.py",
+      "nodeid": "tests/test_sf2_source_profile.py::test_generated_runner_function_requires_reviewed_native_owner[kwdefaults-True-_native_execute_attempt]",
+      "original_result": "FAILED"
+    },
+    {
+      "cause": "compiled_source_pin",
+      "explanation": "Exact historical compiled producer source binding refuses changed minute runtime bytes before later assertion.",
+      "failure_summary_line": 9432,
+      "historical_profile": "historical compiled-capture profile selected by unchanged original test",
+      "module": "tests/test_sf2_source_profile.py",
+      "nodeid": "tests/test_sf2_source_profile.py::test_generated_runner_function_requires_reviewed_native_owner[injected_global-False-_execute_loop]",
+      "original_result": "FAILED"
+    },
+    {
+      "cause": "compiled_source_pin",
+      "explanation": "Exact historical compiled producer source binding refuses changed minute runtime bytes before later assertion.",
+      "failure_summary_line": 9471,
+      "historical_profile": "historical compiled-capture profile selected by unchanged original test",
+      "module": "tests/test_sf2_source_profile.py",
+      "nodeid": "tests/test_sf2_source_profile.py::test_generated_runner_function_requires_reviewed_native_owner[injected_global-False-_native_execute_attempt]",
+      "original_result": "FAILED"
+    },
+    {
+      "cause": "compiled_source_pin",
+      "explanation": "Exact historical compiled producer source binding refuses changed minute runtime bytes before later assertion.",
+      "failure_summary_line": 9510,
+      "historical_profile": "historical compiled-capture profile selected by unchanged original test",
+      "module": "tests/test_sf2_source_profile.py",
+      "nodeid": "tests/test_sf2_source_profile.py::test_generated_runner_function_requires_reviewed_native_owner[injected_global-True-_execute_loop]",
+      "original_result": "FAILED"
+    },
+    {
+      "cause": "compiled_source_pin",
+      "explanation": "Exact historical compiled producer source binding refuses changed minute runtime bytes before later assertion.",
+      "failure_summary_line": 9563,
+      "historical_profile": "historical compiled-capture profile selected by unchanged original test",
+      "module": "tests/test_sf2_source_profile.py",
+      "nodeid": "tests/test_sf2_source_profile.py::test_generated_runner_function_requires_reviewed_native_owner[injected_global-True-_native_execute_attempt]",
+      "original_result": "FAILED"
+    },
+    {
+      "cause": "compiled_source_pin",
+      "explanation": "Exact historical compiled producer source binding refuses changed minute runtime bytes before later assertion.",
+      "failure_summary_line": 9616,
+      "historical_profile": "historical compiled-capture profile selected by unchanged original test",
+      "module": "tests/test_sf2_source_profile.py",
+      "nodeid": "tests/test_sf2_source_profile.py::test_generated_runner_function_requires_reviewed_native_owner[referenced_global-False-_execute_loop]",
+      "original_result": "FAILED"
+    },
+    {
+      "cause": "compiled_source_pin",
+      "explanation": "Exact historical compiled producer source binding refuses changed minute runtime bytes before later assertion.",
+      "failure_summary_line": 9655,
+      "historical_profile": "historical compiled-capture profile selected by unchanged original test",
+      "module": "tests/test_sf2_source_profile.py",
+      "nodeid": "tests/test_sf2_source_profile.py::test_generated_runner_function_requires_reviewed_native_owner[referenced_global-False-_native_execute_attempt]",
+      "original_result": "FAILED"
+    },
+    {
+      "cause": "compiled_source_pin",
+      "explanation": "Exact historical compiled producer source binding refuses changed minute runtime bytes before later assertion.",
+      "failure_summary_line": 9694,
+      "historical_profile": "historical compiled-capture profile selected by unchanged original test",
+      "module": "tests/test_sf2_source_profile.py",
+      "nodeid": "tests/test_sf2_source_profile.py::test_generated_runner_function_requires_reviewed_native_owner[referenced_global-True-_execute_loop]",
+      "original_result": "FAILED"
+    },
+    {
+      "cause": "compiled_source_pin",
+      "explanation": "Exact historical compiled producer source binding refuses changed minute runtime bytes before later assertion.",
+      "failure_summary_line": 9747,
+      "historical_profile": "historical compiled-capture profile selected by unchanged original test",
+      "module": "tests/test_sf2_source_profile.py",
+      "nodeid": "tests/test_sf2_source_profile.py::test_generated_runner_function_requires_reviewed_native_owner[referenced_global-True-_native_execute_attempt]",
+      "original_result": "FAILED"
+    },
+    {
+      "cause": "compiled_source_pin",
+      "explanation": "Exact historical compiled producer source binding refuses changed minute runtime bytes before later assertion.",
+      "failure_summary_line": 9800,
+      "historical_profile": "historical compiled-capture profile selected by unchanged original test",
+      "module": "tests/test_sf2_source_profile.py",
+      "nodeid": "tests/test_sf2_source_profile.py::test_generated_runner_function_requires_reviewed_native_owner[globals_file-False-_execute_loop]",
+      "original_result": "FAILED"
+    },
+    {
+      "cause": "compiled_source_pin",
+      "explanation": "Exact historical compiled producer source binding refuses changed minute runtime bytes before later assertion.",
+      "failure_summary_line": 9839,
+      "historical_profile": "historical compiled-capture profile selected by unchanged original test",
+      "module": "tests/test_sf2_source_profile.py",
+      "nodeid": "tests/test_sf2_source_profile.py::test_generated_runner_function_requires_reviewed_native_owner[globals_file-False-_native_execute_attempt]",
+      "original_result": "FAILED"
+    },
+    {
+      "cause": "compiled_source_pin",
+      "explanation": "Exact historical compiled producer source binding refuses changed minute runtime bytes before later assertion.",
+      "failure_summary_line": 9878,
+      "historical_profile": "historical compiled-capture profile selected by unchanged original test",
+      "module": "tests/test_sf2_source_profile.py",
+      "nodeid": "tests/test_sf2_source_profile.py::test_generated_runner_function_requires_reviewed_native_owner[globals_file-True-_execute_loop]",
+      "original_result": "FAILED"
+    },
+    {
+      "cause": "compiled_source_pin",
+      "explanation": "Exact historical compiled producer source binding refuses changed minute runtime bytes before later assertion.",
+      "failure_summary_line": 9931,
+      "historical_profile": "historical compiled-capture profile selected by unchanged original test",
+      "module": "tests/test_sf2_source_profile.py",
+      "nodeid": "tests/test_sf2_source_profile.py::test_generated_runner_function_requires_reviewed_native_owner[globals_file-True-_native_execute_attempt]",
+      "original_result": "FAILED"
+    },
+    {
+      "cause": "compiled_source_pin",
+      "explanation": "Exact historical compiled producer source binding refuses changed minute runtime bytes before later assertion.",
+      "failure_summary_line": 9984,
+      "historical_profile": "historical compiled-capture profile selected by unchanged original test",
+      "module": "tests/test_sf2_source_profile.py",
+      "nodeid": "tests/test_sf2_source_profile.py::test_generated_runner_function_requires_reviewed_native_owner[globals_name-False-_execute_loop]",
+      "original_result": "FAILED"
+    },
+    {
+      "cause": "compiled_source_pin",
+      "explanation": "Exact historical compiled producer source binding refuses changed minute runtime bytes before later assertion.",
+      "failure_summary_line": 10023,
+      "historical_profile": "historical compiled-capture profile selected by unchanged original test",
+      "module": "tests/test_sf2_source_profile.py",
+      "nodeid": "tests/test_sf2_source_profile.py::test_generated_runner_function_requires_reviewed_native_owner[globals_name-False-_native_execute_attempt]",
+      "original_result": "FAILED"
+    },
+    {
+      "cause": "compiled_source_pin",
+      "explanation": "Exact historical compiled producer source binding refuses changed minute runtime bytes before later assertion.",
+      "failure_summary_line": 10062,
+      "historical_profile": "historical compiled-capture profile selected by unchanged original test",
+      "module": "tests/test_sf2_source_profile.py",
+      "nodeid": "tests/test_sf2_source_profile.py::test_generated_runner_function_requires_reviewed_native_owner[globals_name-True-_execute_loop]",
+      "original_result": "FAILED"
+    },
+    {
+      "cause": "compiled_source_pin",
+      "explanation": "Exact historical compiled producer source binding refuses changed minute runtime bytes before later assertion.",
+      "failure_summary_line": 10115,
+      "historical_profile": "historical compiled-capture profile selected by unchanged original test",
+      "module": "tests/test_sf2_source_profile.py",
+      "nodeid": "tests/test_sf2_source_profile.py::test_generated_runner_function_requires_reviewed_native_owner[globals_name-True-_native_execute_attempt]",
+      "original_result": "FAILED"
+    },
+    {
+      "cause": "compiled_source_pin",
+      "explanation": "Exact historical compiled producer source binding refuses changed minute runtime bytes before later assertion.",
+      "failure_summary_line": 10168,
+      "historical_profile": "historical compiled-capture profile selected by unchanged original test",
+      "module": "tests/test_sf2_source_profile.py",
+      "nodeid": "tests/test_sf2_source_profile.py::test_generated_runner_function_requires_reviewed_native_owner[builtins-False-_execute_loop]",
+      "original_result": "FAILED"
+    },
+    {
+      "cause": "compiled_source_pin",
+      "explanation": "Exact historical compiled producer source binding refuses changed minute runtime bytes before later assertion.",
+      "failure_summary_line": 10207,
+      "historical_profile": "historical compiled-capture profile selected by unchanged original test",
+      "module": "tests/test_sf2_source_profile.py",
+      "nodeid": "tests/test_sf2_source_profile.py::test_generated_runner_function_requires_reviewed_native_owner[builtins-False-_native_execute_attempt]",
+      "original_result": "FAILED"
+    },
+    {
+      "cause": "compiled_source_pin",
+      "explanation": "Exact historical compiled producer source binding refuses changed minute runtime bytes before later assertion.",
+      "failure_summary_line": 10246,
+      "historical_profile": "historical compiled-capture profile selected by unchanged original test",
+      "module": "tests/test_sf2_source_profile.py",
+      "nodeid": "tests/test_sf2_source_profile.py::test_generated_runner_function_requires_reviewed_native_owner[builtins-True-_execute_loop]",
+      "original_result": "FAILED"
+    },
+    {
+      "cause": "compiled_source_pin",
+      "explanation": "Exact historical compiled producer source binding refuses changed minute runtime bytes before later assertion.",
+      "failure_summary_line": 10299,
+      "historical_profile": "historical compiled-capture profile selected by unchanged original test",
+      "module": "tests/test_sf2_source_profile.py",
+      "nodeid": "tests/test_sf2_source_profile.py::test_generated_runner_function_requires_reviewed_native_owner[builtins-True-_native_execute_attempt]",
+      "original_result": "FAILED"
+    },
+    {
+      "cause": "compiled_source_pin",
+      "explanation": "Exact historical compiled producer source binding refuses changed minute runtime bytes before later assertion.",
+      "failure_summary_line": 10352,
+      "historical_profile": "historical compiled-capture profile selected by unchanged original test",
+      "module": "tests/test_sf2_source_profile.py",
+      "nodeid": "tests/test_sf2_source_profile.py::test_generated_runner_function_requires_reviewed_native_owner[shadow_builtin-False-_execute_loop]",
+      "original_result": "FAILED"
+    },
+    {
+      "cause": "compiled_source_pin",
+      "explanation": "Exact historical compiled producer source binding refuses changed minute runtime bytes before later assertion.",
+      "failure_summary_line": 10391,
+      "historical_profile": "historical compiled-capture profile selected by unchanged original test",
+      "module": "tests/test_sf2_source_profile.py",
+      "nodeid": "tests/test_sf2_source_profile.py::test_generated_runner_function_requires_reviewed_native_owner[shadow_builtin-False-_native_execute_attempt]",
+      "original_result": "FAILED"
+    },
+    {
+      "cause": "compiled_source_pin",
+      "explanation": "Exact historical compiled producer source binding refuses changed minute runtime bytes before later assertion.",
+      "failure_summary_line": 10430,
+      "historical_profile": "historical compiled-capture profile selected by unchanged original test",
+      "module": "tests/test_sf2_source_profile.py",
+      "nodeid": "tests/test_sf2_source_profile.py::test_generated_runner_function_requires_reviewed_native_owner[shadow_builtin-True-_execute_loop]",
+      "original_result": "FAILED"
+    },
+    {
+      "cause": "compiled_source_pin",
+      "explanation": "Exact historical compiled producer source binding refuses changed minute runtime bytes before later assertion.",
+      "failure_summary_line": 10483,
+      "historical_profile": "historical compiled-capture profile selected by unchanged original test",
+      "module": "tests/test_sf2_source_profile.py",
+      "nodeid": "tests/test_sf2_source_profile.py::test_generated_runner_function_requires_reviewed_native_owner[shadow_builtin-True-_native_execute_attempt]",
+      "original_result": "FAILED"
+    },
+    {
+      "cause": "compiled_source_pin",
+      "explanation": "Exact historical compiled producer source binding refuses changed minute runtime bytes before later assertion.",
+      "failure_summary_line": 10536,
+      "historical_profile": "historical compiled-capture profile selected by unchanged original test",
+      "module": "tests/test_sf2_source_profile.py",
+      "nodeid": "tests/test_sf2_source_profile.py::test_generated_runner_function_requires_reviewed_native_owner[native_code-False-_execute_loop]",
+      "original_result": "FAILED"
+    },
+    {
+      "cause": "compiled_source_pin",
+      "explanation": "Exact historical compiled producer source binding refuses changed minute runtime bytes before later assertion.",
+      "failure_summary_line": 10575,
+      "historical_profile": "historical compiled-capture profile selected by unchanged original test",
+      "module": "tests/test_sf2_source_profile.py",
+      "nodeid": "tests/test_sf2_source_profile.py::test_generated_runner_function_requires_reviewed_native_owner[native_code-False-_native_execute_attempt]",
+      "original_result": "FAILED"
+    },
+    {
+      "cause": "compiled_source_pin",
+      "explanation": "Exact historical compiled producer source binding refuses changed minute runtime bytes before later assertion.",
+      "failure_summary_line": 10614,
+      "historical_profile": "historical compiled-capture profile selected by unchanged original test",
+      "module": "tests/test_sf2_source_profile.py",
+      "nodeid": "tests/test_sf2_source_profile.py::test_generated_runner_function_requires_reviewed_native_owner[native_code-True-_execute_loop]",
+      "original_result": "FAILED"
+    },
+    {
+      "cause": "compiled_source_pin",
+      "explanation": "Exact historical compiled producer source binding refuses changed minute runtime bytes before later assertion.",
+      "failure_summary_line": 10667,
+      "historical_profile": "historical compiled-capture profile selected by unchanged original test",
+      "module": "tests/test_sf2_source_profile.py",
+      "nodeid": "tests/test_sf2_source_profile.py::test_generated_runner_function_requires_reviewed_native_owner[native_code-True-_native_execute_attempt]",
+      "original_result": "FAILED"
+    },
+    {
+      "cause": "compiled_source_pin",
+      "explanation": "Exact historical compiled producer source binding refuses changed minute runtime bytes before later assertion.",
+      "failure_summary_line": 10720,
+      "historical_profile": "historical compiled-capture profile selected by unchanged original test",
+      "module": "tests/test_sf2_source_profile.py",
+      "nodeid": "tests/test_sf2_source_profile.py::test_generated_guard_ignores_unreferenced_globals_and_attribute_names[False]",
+      "original_result": "FAILED"
+    },
+    {
+      "cause": "compiled_source_pin",
+      "explanation": "Exact historical compiled producer source binding refuses changed minute runtime bytes before later assertion.",
+      "failure_summary_line": 10777,
+      "historical_profile": "historical compiled-capture profile selected by unchanged original test",
+      "module": "tests/test_sf2_source_profile.py",
+      "nodeid": "tests/test_sf2_source_profile.py::test_generated_guard_ignores_unreferenced_globals_and_attribute_names[True]",
+      "original_result": "FAILED"
+    },
+    {
+      "cause": "compiled_source_pin",
+      "explanation": "Exact historical compiled producer source binding refuses changed minute runtime bytes before later assertion.",
+      "failure_summary_line": 10828,
+      "historical_profile": "historical compiled-capture profile selected by unchanged original test",
+      "module": "tests/test_sf2_source_profile.py",
+      "nodeid": "tests/test_sf2_source_profile.py::test_generated_callable_cannot_hide_captured_foreign_builtins[False-_execute_loop]",
+      "original_result": "FAILED"
+    },
+    {
+      "cause": "compiled_source_pin",
+      "explanation": "Exact historical compiled producer source binding refuses changed minute runtime bytes before later assertion.",
+      "failure_summary_line": 10856,
+      "historical_profile": "historical compiled-capture profile selected by unchanged original test",
+      "module": "tests/test_sf2_source_profile.py",
+      "nodeid": "tests/test_sf2_source_profile.py::test_generated_callable_cannot_hide_captured_foreign_builtins[False-_native_execute_attempt]",
+      "original_result": "FAILED"
+    },
+    {
+      "cause": "compiled_source_pin",
+      "explanation": "Exact historical compiled producer source binding refuses changed minute runtime bytes before later assertion.",
+      "failure_summary_line": 10884,
+      "historical_profile": "historical compiled-capture profile selected by unchanged original test",
+      "module": "tests/test_sf2_source_profile.py",
+      "nodeid": "tests/test_sf2_source_profile.py::test_generated_callable_cannot_hide_captured_foreign_builtins[True-_execute_loop]",
+      "original_result": "FAILED"
+    },
+    {
+      "cause": "compiled_source_pin",
+      "explanation": "Exact historical compiled producer source binding refuses changed minute runtime bytes before later assertion.",
+      "failure_summary_line": 10937,
+      "historical_profile": "historical compiled-capture profile selected by unchanged original test",
+      "module": "tests/test_sf2_source_profile.py",
+      "nodeid": "tests/test_sf2_source_profile.py::test_generated_callable_cannot_hide_captured_foreign_builtins[True-_native_execute_attempt]",
+      "original_result": "FAILED"
+    },
+    {
+      "cause": "compiled_source_pin",
+      "explanation": "Exact historical compiled producer source binding refuses changed minute runtime bytes before later assertion.",
+      "failure_summary_line": 10990,
+      "historical_profile": "historical compiled-capture profile selected by unchanged original test",
+      "module": "tests/test_sf2_source_profile.py",
+      "nodeid": "tests/test_sf2_source_profile.py::test_generated_callable_accepts_original_captured_builtins_and_empty_closure[False]",
+      "original_result": "FAILED"
+    },
+    {
+      "cause": "compiled_source_pin",
+      "explanation": "Exact historical compiled producer source binding refuses changed minute runtime bytes before later assertion.",
+      "failure_summary_line": 11046,
+      "historical_profile": "historical compiled-capture profile selected by unchanged original test",
+      "module": "tests/test_sf2_source_profile.py",
+      "nodeid": "tests/test_sf2_source_profile.py::test_generated_callable_accepts_original_captured_builtins_and_empty_closure[True]",
+      "original_result": "FAILED"
+    },
+    {
+      "cause": "thermal_native_exact_historical_profile",
+      "explanation": "Essential actual8eb3 differs from retained original literal0d1b; old native identity assertion intentionally cannot pass on revised actual source.",
+      "failure_summary_line": 439,
+      "historical_profile": "single_fault_pnnl_exact_fuel_capture_v1 or historical scientific literal native context",
+      "module": "tests/test_sf2_source_profile.py",
+      "nodeid": "tests/test_sf2_source_profile.py::test_current_fuel_source_has_separate_literal_profile",
+      "original_result": "FAILED"
+    },
+    {
+      "cause": "thermal_native_exact_historical_profile",
+      "explanation": "Resolver correctly returns None for new thermal native leaf; old test cannot construct its original FUEL fixture.",
+      "failure_summary_line": 440,
+      "historical_profile": "single_fault_pnnl_exact_fuel_capture_v1 or historical scientific literal native context",
+      "module": "tests/test_sf2_source_profile.py",
+      "nodeid": "tests/test_sf2_source_profile.py::test_old_formula_reader_rejects_current_fuel_science",
+      "original_result": "FAILED"
+    },
+    {
+      "cause": "thermal_native_exact_historical_profile",
+      "explanation": "New native without V2 admission correctly fails earlier at registered capture source profile. Original error-stage assertion needs original FUEL context.",
+      "failure_summary_line": 441,
+      "historical_profile": "single_fault_pnnl_exact_fuel_capture_v1 or historical scientific literal native context",
+      "module": "tests/test_sf2_source_profile.py",
+      "nodeid": "tests/test_sf2_source_profile.py::test_scientific_origin_rejects_missing_or_wrong_extra_freeze[configs/plant_configs.json]",
+      "original_result": "FAILED"
+    },
+    {
+      "cause": "thermal_native_exact_historical_profile",
+      "explanation": "New native without V2 admission correctly fails earlier at registered capture source profile. Original error-stage assertion needs original FUEL context.",
+      "failure_summary_line": 442,
+      "historical_profile": "single_fault_pnnl_exact_fuel_capture_v1 or historical scientific literal native context",
+      "module": "tests/test_sf2_source_profile.py",
+      "nodeid": "tests/test_sf2_source_profile.py::test_scientific_origin_rejects_missing_or_wrong_extra_freeze[src/hospital_ies/control_env.py]",
+      "original_result": "FAILED"
+    },
+    {
+      "cause": "thermal_native_exact_historical_profile",
+      "explanation": "New native without V2 admission correctly fails earlier at registered capture source profile. Original error-stage assertion needs original FUEL context.",
+      "failure_summary_line": 443,
+      "historical_profile": "single_fault_pnnl_exact_fuel_capture_v1 or historical scientific literal native context",
+      "module": "tests/test_sf2_source_profile.py",
+      "nodeid": "tests/test_sf2_source_profile.py::test_scientific_origin_rejects_missing_or_wrong_extra_freeze[src/hospital_ies/model.py]",
+      "original_result": "FAILED"
+    },
+    {
+      "cause": "thermal_native_exact_historical_profile",
+      "explanation": "New native without V2 admission correctly fails earlier at registered capture source profile. Original error-stage assertion needs original FUEL context.",
+      "failure_summary_line": 444,
+      "historical_profile": "single_fault_pnnl_exact_fuel_capture_v1 or historical scientific literal native context",
+      "module": "tests/test_sf2_source_profile.py",
+      "nodeid": "tests/test_sf2_source_profile.py::test_scientific_origin_rejects_missing_or_wrong_extra_freeze[src/hospital_ies/nonlinear.py]",
+      "original_result": "FAILED"
+    },
+    {
+      "cause": "thermal_native_exact_historical_profile",
+      "explanation": "New native without V2 admission correctly fails earlier at registered capture source profile. Original error-stage assertion needs original FUEL context.",
+      "failure_summary_line": 445,
+      "historical_profile": "single_fault_pnnl_exact_fuel_capture_v1 or historical scientific literal native context",
+      "module": "tests/test_sf2_source_profile.py",
+      "nodeid": "tests/test_sf2_source_profile.py::test_scientific_origin_rejects_missing_or_wrong_extra_freeze[src/hospital_ies/solver_result_cache.py]",
+      "original_result": "FAILED"
+    },
+    {
+      "cause": "thermal_native_exact_historical_profile",
+      "explanation": "New native without V2 admission correctly fails earlier at registered capture source profile. Original error-stage assertion needs original FUEL context.",
+      "failure_summary_line": 446,
+      "historical_profile": "single_fault_pnnl_exact_fuel_capture_v1 or historical scientific literal native context",
+      "module": "tests/test_sf2_source_profile.py",
+      "nodeid": "tests/test_sf2_source_profile.py::test_scientific_origin_rejects_missing_or_wrong_extra_freeze[src/hospital_ies/state_transition.py]",
+      "original_result": "FAILED"
+    },
+    {
+      "cause": "thermal_native_exact_historical_profile",
+      "explanation": "New native without V2 admission correctly fails earlier at registered capture source profile. Original error-stage assertion needs original FUEL context.",
+      "failure_summary_line": 447,
+      "historical_profile": "single_fault_pnnl_exact_fuel_capture_v1 or historical scientific literal native context",
+      "module": "tests/test_sf2_source_profile.py",
+      "nodeid": "tests/test_sf2_source_profile.py::test_scientific_origin_rejects_missing_or_wrong_extra_freeze[tools/annual_program/source_runtime.py]",
+      "original_result": "FAILED"
+    },
+    {
+      "cause": "thermal_native_exact_historical_profile",
+      "explanation": "New native without V2 admission correctly fails earlier at registered capture source profile. Original error-stage assertion needs original FUEL context.",
+      "failure_summary_line": 448,
+      "historical_profile": "single_fault_pnnl_exact_fuel_capture_v1 or historical scientific literal native context",
+      "module": "tests/test_sf2_source_profile.py",
+      "nodeid": "tests/test_sf2_source_profile.py::test_scientific_origin_rejects_missing_or_wrong_extra_freeze[tools/annual_readiness/runner.py]",
+      "original_result": "FAILED"
+    },
+    {
+      "cause": "thermal_native_exact_historical_profile",
+      "explanation": "New native without V2 admission correctly fails earlier at registered capture source profile. Original error-stage assertion needs original FUEL context.",
+      "failure_summary_line": 449,
+      "historical_profile": "single_fault_pnnl_exact_fuel_capture_v1 or historical scientific literal native context",
+      "module": "tests/test_sf2_source_profile.py",
+      "nodeid": "tests/test_sf2_source_profile.py::test_scientific_origin_rejects_missing_or_wrong_extra_freeze[tools/eight_fault_study/runtime.py]",
+      "original_result": "FAILED"
+    },
+    {
+      "cause": "thermal_native_exact_historical_profile",
+      "explanation": "New native without V2 admission correctly fails earlier at registered capture source profile. Original error-stage assertion needs original FUEL context.",
+      "failure_summary_line": 450,
+      "historical_profile": "single_fault_pnnl_exact_fuel_capture_v1 or historical scientific literal native context",
+      "module": "tests/test_sf2_source_profile.py",
+      "nodeid": "tests/test_sf2_source_profile.py::test_scientific_origin_rejects_missing_or_wrong_extra_freeze[tools/integrated_learning/snapshot.py]",
+      "original_result": "FAILED"
+    },
+    {
+      "cause": "thermal_native_exact_historical_profile",
+      "explanation": "New native without V2 admission correctly fails earlier at registered capture source profile. Original error-stage assertion needs original FUEL context.",
+      "failure_summary_line": 451,
+      "historical_profile": "single_fault_pnnl_exact_fuel_capture_v1 or historical scientific literal native context",
+      "module": "tests/test_sf2_source_profile.py",
+      "nodeid": "tests/test_sf2_source_profile.py::test_scientific_origin_rejects_missing_or_wrong_extra_freeze[tools/model_review_v27/objective_snapshot.py]",
+      "original_result": "FAILED"
+    },
+    {
+      "cause": "thermal_native_exact_historical_profile",
+      "explanation": "New native without V2 admission correctly fails earlier at registered capture source profile. Original error-stage assertion needs original FUEL context.",
+      "failure_summary_line": 452,
+      "historical_profile": "single_fault_pnnl_exact_fuel_capture_v1 or historical scientific literal native context",
+      "module": "tests/test_sf2_source_profile.py",
+      "nodeid": "tests/test_sf2_source_profile.py::test_scientific_origin_rejects_missing_or_wrong_extra_freeze[tools/operating_response/execution.py]",
+      "original_result": "FAILED"
+    },
+    {
+      "cause": "thermal_native_exact_historical_profile",
+      "explanation": "New native without V2 admission correctly fails earlier at registered capture source profile. Original error-stage assertion needs original FUEL context.",
+      "failure_summary_line": 453,
+      "historical_profile": "single_fault_pnnl_exact_fuel_capture_v1 or historical scientific literal native context",
+      "module": "tests/test_sf2_source_profile.py",
+      "nodeid": "tests/test_sf2_source_profile.py::test_scientific_origin_rejects_missing_or_wrong_extra_freeze[tools/operating_response/planner.py]",
+      "original_result": "FAILED"
+    },
+    {
+      "cause": "thermal_native_exact_historical_profile",
+      "explanation": "New native without V2 admission correctly fails earlier at registered capture source profile. Original error-stage assertion needs original FUEL context.",
+      "failure_summary_line": 454,
+      "historical_profile": "single_fault_pnnl_exact_fuel_capture_v1 or historical scientific literal native context",
+      "module": "tests/test_sf2_source_profile.py",
+      "nodeid": "tests/test_sf2_source_profile.py::test_scientific_origin_rejects_missing_or_wrong_extra_freeze[tools/sci_engineering/planner.py]",
+      "original_result": "FAILED"
+    },
+    {
+      "cause": "thermal_native_exact_historical_profile",
+      "explanation": "New native without V2 admission correctly fails earlier at registered capture source profile. Original error-stage assertion needs original FUEL context.",
+      "failure_summary_line": 455,
+      "historical_profile": "single_fault_pnnl_exact_fuel_capture_v1 or historical scientific literal native context",
+      "module": "tests/test_sf2_source_profile.py",
+      "nodeid": "tests/test_sf2_source_profile.py::test_scientific_origin_rejects_missing_or_wrong_extra_freeze[tools/sci_engineering/storage.py]",
+      "original_result": "FAILED"
+    },
+    {
+      "cause": "thermal_native_exact_historical_profile",
+      "explanation": "New native without V2 admission correctly fails earlier at registered capture source profile. Original error-stage assertion needs original FUEL context.",
+      "failure_summary_line": 456,
+      "historical_profile": "single_fault_pnnl_exact_fuel_capture_v1 or historical scientific literal native context",
+      "module": "tests/test_sf2_source_profile.py",
+      "nodeid": "tests/test_sf2_source_profile.py::test_scientific_origin_rejects_missing_or_wrong_extra_freeze[tools/single_fault_fuel_20261102/__init__.py]",
+      "original_result": "FAILED"
+    },
+    {
+      "cause": "thermal_native_exact_historical_profile",
+      "explanation": "New native without V2 admission correctly fails earlier at registered capture source profile. Original error-stage assertion needs original FUEL context.",
+      "failure_summary_line": 457,
+      "historical_profile": "single_fault_pnnl_exact_fuel_capture_v1 or historical scientific literal native context",
+      "module": "tests/test_sf2_source_profile.py",
+      "nodeid": "tests/test_sf2_source_profile.py::test_scientific_origin_rejects_missing_or_wrong_extra_freeze[tools/single_fault_fuel_20261102/environment.py]",
+      "original_result": "FAILED"
+    },
+    {
+      "cause": "thermal_native_exact_historical_profile",
+      "explanation": "New native without V2 admission correctly fails earlier at registered capture source profile. Original error-stage assertion needs original FUEL context.",
+      "failure_summary_line": 458,
+      "historical_profile": "single_fault_pnnl_exact_fuel_capture_v1 or historical scientific literal native context",
+      "module": "tests/test_sf2_source_profile.py",
+      "nodeid": "tests/test_sf2_source_profile.py::test_scientific_origin_rejects_missing_or_wrong_extra_freeze[tools/single_fault_fuel_20261102/fuel.py]",
+      "original_result": "FAILED"
+    },
+    {
+      "cause": "thermal_native_exact_historical_profile",
+      "explanation": "New native without V2 admission correctly fails earlier at registered capture source profile. Original error-stage assertion needs original FUEL context.",
+      "failure_summary_line": 459,
+      "historical_profile": "single_fault_pnnl_exact_fuel_capture_v1 or historical scientific literal native context",
+      "module": "tests/test_sf2_source_profile.py",
+      "nodeid": "tests/test_sf2_source_profile.py::test_scientific_origin_rejects_missing_or_wrong_extra_freeze[tools/single_fault_fuel_20261102/leaf.py]",
+      "original_result": "FAILED"
+    },
+    {
+      "cause": "thermal_native_exact_historical_profile",
+      "explanation": "New native without V2 admission correctly fails earlier at registered capture source profile. Original error-stage assertion needs original FUEL context.",
+      "failure_summary_line": 460,
+      "historical_profile": "single_fault_pnnl_exact_fuel_capture_v1 or historical scientific literal native context",
+      "module": "tests/test_sf2_source_profile.py",
+      "nodeid": "tests/test_sf2_source_profile.py::test_scientific_origin_rejects_missing_or_wrong_extra_freeze[tools/single_fault_fuel_20261102/nl_store.py]",
+      "original_result": "FAILED"
+    },
+    {
+      "cause": "thermal_native_exact_historical_profile",
+      "explanation": "New native without V2 admission correctly fails earlier at registered capture source profile. Original error-stage assertion needs original FUEL context.",
+      "failure_summary_line": 461,
+      "historical_profile": "single_fault_pnnl_exact_fuel_capture_v1 or historical scientific literal native context",
+      "module": "tests/test_sf2_source_profile.py",
+      "nodeid": "tests/test_sf2_source_profile.py::test_scientific_origin_rejects_missing_or_wrong_extra_freeze[tools/single_fault_fuel_20261102/runner.py]",
+      "original_result": "FAILED"
+    },
+    {
+      "cause": "thermal_native_exact_historical_profile",
+      "explanation": "New native without V2 admission correctly fails earlier at registered capture source profile. Original error-stage assertion needs original FUEL context.",
+      "failure_summary_line": 462,
+      "historical_profile": "single_fault_pnnl_exact_fuel_capture_v1 or historical scientific literal native context",
+      "module": "tests/test_sf2_source_profile.py",
+      "nodeid": "tests/test_sf2_source_profile.py::test_scientific_origin_rejects_missing_or_wrong_extra_freeze[tools/single_fault_fuel_20261102/runtime.py]",
+      "original_result": "FAILED"
+    },
+    {
+      "cause": "thermal_native_exact_historical_profile",
+      "explanation": "New native without V2 admission correctly fails earlier at registered capture source profile. Original error-stage assertion needs original FUEL context.",
+      "failure_summary_line": 463,
+      "historical_profile": "single_fault_pnnl_exact_fuel_capture_v1 or historical scientific literal native context",
+      "module": "tests/test_sf2_source_profile.py",
+      "nodeid": "tests/test_sf2_source_profile.py::test_scientific_origin_rejects_missing_or_wrong_extra_freeze[tools/single_fault_model_20261102/__init__.py]",
+      "original_result": "FAILED"
+    },
+    {
+      "cause": "thermal_native_exact_historical_profile",
+      "explanation": "New native without V2 admission correctly fails earlier at registered capture source profile. Original error-stage assertion needs original FUEL context.",
+      "failure_summary_line": 464,
+      "historical_profile": "single_fault_pnnl_exact_fuel_capture_v1 or historical scientific literal native context",
+      "module": "tests/test_sf2_source_profile.py",
+      "nodeid": "tests/test_sf2_source_profile.py::test_scientific_origin_rejects_missing_or_wrong_extra_freeze[tools/single_fault_model_20261102/environment.py]",
+      "original_result": "FAILED"
+    },
+    {
+      "cause": "thermal_native_exact_historical_profile",
+      "explanation": "New native without V2 admission correctly fails earlier at registered capture source profile. Original error-stage assertion needs original FUEL context.",
+      "failure_summary_line": 465,
+      "historical_profile": "single_fault_pnnl_exact_fuel_capture_v1 or historical scientific literal native context",
+      "module": "tests/test_sf2_source_profile.py",
+      "nodeid": "tests/test_sf2_source_profile.py::test_scientific_origin_rejects_missing_or_wrong_extra_freeze[tools/single_fault_model_20261102/runner.py]",
+      "original_result": "FAILED"
+    },
+    {
+      "cause": "thermal_native_exact_historical_profile",
+      "explanation": "New native without V2 admission correctly fails earlier at registered capture source profile. Original error-stage assertion needs original FUEL context.",
+      "failure_summary_line": 466,
+      "historical_profile": "single_fault_pnnl_exact_fuel_capture_v1 or historical scientific literal native context",
+      "module": "tests/test_sf2_source_profile.py",
+      "nodeid": "tests/test_sf2_source_profile.py::test_scientific_origin_rejects_missing_or_wrong_extra_freeze[tools/single_fault_model_20261102/runtime.py]",
+      "original_result": "FAILED"
+    },
+    {
+      "cause": "thermal_native_exact_historical_profile",
+      "explanation": "New native without V2 admission correctly fails earlier at registered capture source profile. Original error-stage assertion needs original FUEL context.",
+      "failure_summary_line": 467,
+      "historical_profile": "single_fault_pnnl_exact_fuel_capture_v1 or historical scientific literal native context",
+      "module": "tests/test_sf2_source_profile.py",
+      "nodeid": "tests/test_sf2_source_profile.py::test_scientific_origin_rejects_missing_or_wrong_extra_freeze[tools/single_fault_model_20261102/storage.py]",
+      "original_result": "FAILED"
+    },
+    {
+      "cause": "thermal_native_exact_historical_profile",
+      "explanation": "The separately changed actual Essential leaf remains8eb3, so that four-way mixed epoch correctly rejects as None.",
+      "failure_summary_line": 468,
+      "historical_profile": "single_fault_pnnl_exact_fuel_capture_v1 or historical scientific literal native context",
+      "module": "tests/test_sf2_source_profile.py",
+      "nodeid": "tests/test_sf2_source_profile.py::test_fuel_native_mixed_epochs_never_borrow_current_recorder[old_bits7]",
+      "original_result": "FAILED"
+    }
+  ],
+  "schema": "hospital_ies.minute1.historical_test_routes.v2",
+  "snapshot": {
+    "path": "../evidence/historical_profiles/HISTORICAL_7FA_TRACKED_SOURCE_SNAPSHOT.json",
+    "sha256": "0d54c0ac4a47bab9042f2095bde42c68d130cc99fc58bea4cdbe7c61e524b0ee"
+  }
+}

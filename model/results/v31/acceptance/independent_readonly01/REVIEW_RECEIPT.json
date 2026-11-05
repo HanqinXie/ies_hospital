@@ -1,0 +1,72 @@
+{
+  "status": "passed",
+  "started_utc": "2026-10-27T12:51:03.767300+00:00",
+  "new_physical_simulations": 0,
+  "new_solver_calls": 0,
+  "commands": [
+    {
+      "command": [
+        "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\python.exe",
+        "-B",
+        "E:\\v31_review_extract01\\transport_tools\\restore_all.py",
+        "--solid",
+        "E:\\v31_review_extract01\\EVIDENCE_BLOBS_V31.tar.xz",
+        "--map",
+        "E:\\v31_review_extract01\\TRANSPORT_MAP_V31.json",
+        "--destination",
+        "E:\\v31_review_extract01",
+        "--receipt",
+        "E:\\hospital_ies_v31_20261027\\acceptance\\independent_readonly01\\RESTORE_RECEIPT.json"
+      ],
+      "cwd": "E:\\v31_review_extract01",
+      "started_utc": "2026-10-27T12:51:04.355614+00:00",
+      "selected_environment": {
+        "PYTHONPATH": "E:\\v31_review_extract01\\project;E:\\v31_review_extract01\\project\\src",
+        "SCI_SOURCE_ROOT": null,
+        "TEMP": "E:\\hospital_ies_v31_20261027\\acceptance\\independent_readonly01\\temp",
+        "TMP": "E:\\hospital_ies_v31_20261027\\acceptance\\independent_readonly01\\temp",
+        "PYTHONDONTWRITEBYTECODE": "1"
+      },
+      "exit_code": 0,
+      "finished_utc": "2026-10-27T12:52:00.729595+00:00"
+    },
+    {
+      "command": [
+        "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\python.exe",
+        "-B",
+        "E:\\v31_review_extract01\\data\\evaluation\\audit_v31.py",
+        "--root",
+        "E:\\v31_review_extract01\\data",
+        "--manifest",
+        "PORTABLE_REGISTRATION.json",
+        "--support",
+        "E:\\v31_review_extract01\\data\\audit_support",
+        "--output",
+        "E:\\hospital_ies_v31_20261027\\acceptance\\independent_readonly01\\audit"
+      ],
+      "cwd": "E:\\v31_review_extract01\\project",
+      "started_utc": "2026-10-27T12:52:00.733360+00:00",
+      "selected_environment": {
+        "PYTHONPATH": "E:\\v31_review_extract01\\project;E:\\v31_review_extract01\\project\\src",
+        "SCI_SOURCE_ROOT": null,
+        "TEMP": "E:\\hospital_ies_v31_20261027\\acceptance\\independent_readonly01\\temp",
+        "TMP": "E:\\hospital_ies_v31_20261027\\acceptance\\independent_readonly01\\temp",
+        "PYTHONDONTWRITEBYTECODE": "1"
+      },
+      "exit_code": 0,
+      "finished_utc": "2026-10-27T12:52:23.261552+00:00"
+    }
+  ],
+  "packet": "E:\\v31_review_extract01",
+  "source_files_verified": 864,
+  "old_source_files_unchanged": 858,
+  "inputs_verified": 36,
+  "exact_native_files_verified": 6961,
+  "source_producer": "f009bdb66d5b9d53f1ff2331f2dc58404c2d056b",
+  "scientific_records": 12,
+  "historical_reused": 8,
+  "new_formal_runs": 4,
+  "native_restore_receipt_sha256": "2e7f6503567f3fefa095e9aea59e8b6fee4325a7270a727801ea3779925e4d06",
+  "readonly_audit_sha256": "a2da38127ceea4dacf093119438ad84a7884b2a4662b5d8a738d1dcc15f7e9ee",
+  "finished_utc": "2026-10-27T12:52:23.826760+00:00"
+}

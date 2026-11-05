@@ -1,0 +1,22 @@
+{
+  "selected_formulation": "strict",
+  "selection_reason": "both_strict_branches_have_independently_verified_incumbents",
+  "strict_status": {
+    "normal": "optimal",
+    "grid": "optimal"
+  },
+  "same_formulation_for_normal_and_grid": true,
+  "original_registration_sha256": "26dfcd41506d32a8103ac26e18451e7336e6bc205a5d2885d123db2024d836b0",
+  "adopted_source_files": {
+    "normal": "normal.strict.01.json",
+    "grid": "grid.strict.01.json"
+  },
+  "information_permission": "offline_known_window",
+  "actual_hospital_runs_started": false,
+  "stronger_claims_not_established": [
+    "same-information online ranking",
+    "strict dynamic feasibility guarantee",
+    "author/official software reproduction",
+    "cost lower bound"
+  ]
+}

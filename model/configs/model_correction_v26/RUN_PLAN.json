@@ -1,0 +1,46 @@
+{
+  "schema": "hospital_ies.v26.run_plan.v1",
+  "study_id": "hospital_ies.study.v26.v1",
+  "physical_model_id": "M25_model_correction",
+  "source_freeze_required_before_runs": true,
+  "launch_authorized_by_root_only": true,
+  "actual_runs_started": 0,
+  "old22_cases_rerun": false,
+  "runs": [
+    {
+      "case": "combined_N",
+      "policy": "C",
+      "configuration": "H0",
+      "operating_rule": "current_service_bridge",
+      "group": "factorial"
+    },
+    {
+      "case": "combined_F",
+      "policy": "C",
+      "configuration": "H0",
+      "operating_rule": "current_service_bridge",
+      "group": "factorial"
+    },
+    {
+      "case": "combined_D",
+      "policy": "C",
+      "configuration": "H0",
+      "operating_rule": "current_service_bridge",
+      "group": "factorial"
+    },
+    {
+      "case": "combined_FD",
+      "policy": "C",
+      "configuration": "H0",
+      "operating_rule": "current_service_bridge",
+      "group": "factorial"
+    },
+    {
+      "case": "smoke_normal",
+      "policy": "C",
+      "configuration": "H0",
+      "operating_rule": "current_service_bridge",
+      "group": "public_smoke"
+    }
+  ]
+}

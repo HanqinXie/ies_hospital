@@ -1,0 +1,151 @@
+{
+  "schema": "hospital_ies.v29.evidence_acceptance.v1",
+  "scientific_producer": "8926dfb7a1632d98b71b0692c6e37df9f4a61855",
+  "source_sha256": "ec2a2e8cd42470a70e87fdb5f8a8921374f409cb88267d7b45798b32eb6ee72d",
+  "input_sha256": "f414d21fc55d5a63282435b9bed9a1c8c289a049f24507f953fb86162fb41d15",
+  "scoped_model_finalization_recommended": true,
+  "known_mandatory_physical_implementation_defects_in_declared_scope": [],
+  "whole_hospital_physical_qualification": false,
+  "unsupported_claims": [
+    "full real hospital/annual all-accident capacity",
+    "indoor temperature/humidity/cleanliness/hydraulics",
+    "source continuous endpoint tank energy/fullwater loop",
+    "local high-temperature outage dynamic assurance",
+    "booster upstream source cost/CO2",
+    "measured DGcrankingDCkWh or OEM starting qualification",
+    "UPS/diesel exhaustion endurance",
+    "global C/M advantage"
+  ],
+  "not_executed": [
+    "conditional transfer300N/F",
+    "150/600budget matrix",
+    "all11oldV28reruns",
+    "newEP/fit/ML/MPC/paperfigures"
+  ],
+  "gates": [
+    {
+      "id": "core_and_demand_continuity",
+      "status": "verified",
+      "evidence": [
+        "execution/FROZEN_SOURCE_V29_01.json",
+        "execution/SPEC_AND_CODE_REVIEW.json"
+      ],
+      "conclusion": "836 original science files and33 old inputs byte-identical; adopted target/directaux/after_cost preserved; no new controller."
+    },
+    {
+      "id": "requests_actual_energy",
+      "status": "actual_verified",
+      "evidence": [
+        "native_audit/final01/MECHANISM_AUDIT.json"
+      ],
+      "conclusion": "All7 native D/A/E, original/connected/served/short,steam/cold/fees/CO2 pass; no early/unavailable output or unrecorded fallback."
+    },
+    {
+      "id": "grid_and_switch",
+      "status": "actual_verified_with_P3_shortage",
+      "evidence": [
+        "native_audit/interpretation01/LOCAL_DG_PERMISSION_CAUSAL_RECEIPT.json",
+        "native_audit/interpretation01/ACTUAL_COMMAND_TIMING.csv"
+      ],
+      "conclusion": "GRID0 no purchase;DG local60/positive75;actualgrid180.5;P3electric195;P0/P1no material interruption => recoveryNA."
+    },
+    {
+      "id": "shared_facility_propagation",
+      "status": "actual_verified_service_not_preserved",
+      "evidence": [
+        "native_audit/interpretation01/ENGINEERING_FACTS.json",
+        "native_audit/final01/MECHANISM_TABLE.csv"
+      ],
+      "conclusion": "Active tower→ABS/EC restriction;finitecoldempty57.935534;criticalcold17.064466;actual75/confirm76;no secondary damage fabricated."
+    },
+    {
+      "id": "adopted_pump",
+      "status": "actual_verified_service_not_preserved",
+      "evidence": [
+        "native_audit/interpretation01/ENGINEERING_TABLE.csv"
+      ],
+      "conclusion": "Adopted target not oldA relabel;heatENS73.709162,critical60min,actual120/confirm121."
+    },
+    {
+      "id": "installed_stock_and_start",
+      "status": "actual_verified_scoped",
+      "evidence": [
+        "native_audit/interpretation01/DG_STATION_QUALIFICATION_TIMELINE.csv",
+        "ASSUMPTIONS.md"
+      ],
+      "conclusion": "UPS/cold/DG shaft once;GT AC start paid and no output before ready;DG crankingDCkWhunknown,finite qualification assumptions notOEM claim."
+    },
+    {
+      "id": "L3_L4_and_classification",
+      "status": "reused_actual_verified",
+      "evidence": [
+        "execution/REUSED_RESULT_PROVENANCE.json",
+        "native_audit/reused_B3_audit01/MECHANISM_AUDIT.json"
+      ],
+      "conclusion": "B_D healthyfourER25%;B_FD activeGT2+same demand;not wholehospital25% or scripted secondary damage."
+    },
+    {
+      "id": "matching_and_information",
+      "status": "actual_verified_scoped",
+      "evidence": [
+        "native_audit/final01/MECHANISM_AUDIT.json"
+      ],
+      "conclusion": "3fullphysical/core/prefault history/queue/command pairs match except3explicit pure wallclock fields;RNGdiagnostics differ. Fixed route current lawful info,not a formal wholeproject proof."
+    },
+    {
+      "id": "quality_and_local_scope",
+      "status": "actual_readonly_verified",
+      "evidence": [
+        "project/inputs/model_review_v29/SOURCE_QUALITY_METADATA.json",
+        "portable_verification/portable_replays01/source_scope/SOURCE_SCOPE_REPLAY.json"
+      ],
+      "conclusion": "26rows/25hours/55screen;main10 nooverlap;deliveryproxyonly;Laundryreference/Boosteralreadydirect;upstreamunknownnull."
+    },
+    {
+      "id": "default_tests",
+      "status": "actual_passed",
+      "evidence": [
+        "steps/full_pytest_final01/COMMAND.json",
+        "steps/full_pytest_final01/stdout.log",
+        "execution/FULL_DEFAULT_TEST_CONTEXT.json"
+      ],
+      "conclusion": "1320passed,0skip,431.20s,exit0,selectedenvcapturedbeforeexecution;no science edits afterward."
+    },
+    {
+      "id": "clean_public_entry",
+      "status": "actual_passed",
+      "evidence": [
+        "execution/CLEAN_PUBLIC_ENTRY.json",
+        "portable_verification/clean_public01/RESULT.json"
+      ],
+      "conclusion": "Actual15min portable adoptedC/H0;source843/input36 exact;SCI_SOURCE_ROOT unset,oldSQL not requested."
+    },
+    {
+      "id": "portable_readonly",
+      "status": "actual_three_passed",
+      "evidence": [
+        "portable_verification/portable_replays01/REPLAY_REVIEW_SUMMARY.json",
+        "replay_review.py"
+      ],
+      "conclusion": "new7/reused3/source10 all actual exit0;22 originalCSV hashes verified;no new models/EP."
+    },
+    {
+      "id": "codec_and_native_preservation",
+      "status": "actual_lossless_verified",
+      "evidence": [
+        "COMPRESSED_NATIVE_ARTIFACTS.json",
+        "PACKET_EXCLUSIONS.json",
+        "OMITTED_LOCAL_ARTIFACTS.json"
+      ],
+      "conclusion": "22 wholeCSV standardXZ exactdecoded;all10 main trajectorygzip originals retained;no scenario/rejection filtering or precision loss."
+    },
+    {
+      "id": "archive_and_independent_extract",
+      "status": "mandatory_postarchive_external",
+      "evidence": [
+        "MANIFEST.json"
+      ],
+      "conclusion": "OneZIPstrictly<100000000;actualCRC/SHA/extractonce/public/replays completed externally after immutable archive creation;no advance blanketPASS."
+    }
+  ]
+}

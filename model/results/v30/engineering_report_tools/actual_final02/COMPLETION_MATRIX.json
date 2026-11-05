@@ -1,0 +1,397 @@
+{
+  "schema": "hospital_ies.v30.engineering_completion.fix1.v1",
+  "created_utc": "2026-10-27T09:40:07.132100+00:00",
+  "model_and_evaluation_can_freeze_within_registered_scope": true,
+  "archive_delivery_verified": false,
+  "final_case_count": 32,
+  "source": {
+    "producer": "3252727135645037cedc57ebc188a48d2aa34ccb",
+    "source_sha256": "2509d2fa562e672af3cfe4058ace55f0e38de6172d1ac2d633210d0e776f0776",
+    "input_sha256": "f414d21fc55d5a63282435b9bed9a1c8c289a049f24507f953fb86162fb41d15",
+    "source_file_count": 858,
+    "input_file_count": 36,
+    "patch_id": "hospital_ies.powered_start_minimum_off_readiness.v30.fix1"
+  },
+  "actual_default_tests": {
+    "command_path": "steps/full_default_after_fix01/COMMAND.json",
+    "stdout_path": "steps/full_default_after_fix01/stdout.log",
+    "command": [
+      "python",
+      "-B",
+      "-m",
+      "pytest",
+      "-q",
+      "--basetemp",
+      "E:/hospital_ies_v30_20261027/temp/full_default_after_fix01"
+    ],
+    "exit_code": 0,
+    "passed": 1363,
+    "pytest_seconds": 488.06,
+    "wrapper_elapsed_seconds": 488.84299999987707,
+    "finished_utc": "2026-10-27T08:27:52.387758+00:00",
+    "command_sha256": "33220ba53bc671757ffb3006db38a07802ef204ed91ca7c7f5cc67a69b0a3ba1",
+    "stdout_sha256": "67087ccc41e04fae3675f0a39a9a6c5254cfcbf041eec8a21f40a2ef794d09a4",
+    "source_SHA_is_not_embedded_in_test_log": true,
+    "source_identity_receipt": "FROZEN_SOURCE_V30_C02.json"
+  },
+  "audit": {
+    "path": "comparison_audit_fix1/final01/CAMPAIGN_AUDIT.json",
+    "sha256": "ab4c02a15b7437f118e17687c90ba07b69794d368eb023529e4af0d315896a56"
+  },
+  "evidence_sha256": {
+    "FROZEN_SOURCE_V30_C02.json": "7d5f96864801c01d2b242530cfd5239fedb58f863b44e5cb8e31c1ef29fff761",
+    "steps/full_default_after_fix01/COMMAND.json": "33220ba53bc671757ffb3006db38a07802ef204ed91ca7c7f5cc67a69b0a3ba1",
+    "steps/full_default_after_fix01/stdout.log": "67087ccc41e04fae3675f0a39a9a6c5254cfcbf041eec8a21f40a2ef794d09a4",
+    "evaluation/final_01/VALIDATION_SUMMARY.json": "74afee395aa1e85d096cac0082e5df89eceeaf6fac6e32ca9ab12ec6a5c0a75a",
+    "review/METHOD_CONFIGURATIONS.json": "9f6242bc57b416beb5ea43ab491a025b7dd8fa13b2cb7a04d946b85bd3f5e3a0",
+    "review/CAUSALITY_CHECK.json": "6b8d3948b5503266c35ff6c9dbe165e26fda4e995dd38b820340138ea6e0af05",
+    "physical_fix_review/scan02/IMPACT_AUDIT.json": "0759030b40b5276d6cdcb4699ec5213ee17a6663f8dfae8e901f9599f4f37c73",
+    "runs/fix01_b02_heat_pump_M/RESULT.json": "c3762f6321cbd4437c3359512c5f6ff8bdaab6271b6381393bc71450367debc5",
+    "runs/d01_b02_L1_heat_pump_disturbed_M/RESULT.json": "1c70000767be0490118430a9093789eb0943ca632117d34aea96ae432f9f5f4b",
+    "reference_replay_audit/FINAL_READY.json": "2c18ec0d2d9d9e357def2427e881e9030d5ad0a3a6332cf7eb2ab89f9e37a1bf",
+    "reference_replay_audit/audit_02/AUDIT_STATUS.json": "b856beec75fb290255c8bc7ff47a9de4e392d7187025f88b916f2a6b2274ef63",
+    "reference_replay_audit/audit_02/PAPER_COMPLETION.json": "68cabf74eb9a7df99806f21d00e6e69ce9c8b05b99c9d10c57433bd83ee944bf",
+    "reference_replay_audit/audit_02/file_manifest.json": "fdbd8839facdb203d35ab642da44065ee8c2c63f64e7467769f34850101ac512",
+    "reference_replay_audit/audit_02/normal_AUDIT.json": "c4e08b8b8839f38f31942a35126681551e67db8fbd14007e8acd7db95d27bf43",
+    "reference_replay_audit/audit_02/grid_AUDIT.json": "fc3b2fb8197cd43fd68e8152c0226fb3af31f1251a3e8178902196d5bcd8f967",
+    "reference_replay_audit/mechanisms_01/MECHANISMS.json": "15a344896bd7618166ee875476f0e409c6bf6ebffc056c30f37d49cc1324bc08",
+    "literature/hirwa/mapping.json": "2af36ade37cdc33bf23f9df400f933ccd89c090c29a24cce97c80664ffaa4a38",
+    "literature/rosales/mapping.json": "81989147e0f9a9b60b4b91fcd8f9647a204e9456d1aa2e52474729832dc4945a",
+    "offline_reference/hospital_tower.infeasibility_certificate.json": "dba7168d63db3b49fe469921d155430a13aa7face14e2bb2251afd0c4a4a907f",
+    "CALENDAR_LABEL_CORRECTIONS_FIX01.json": "292769379b02cfc3e69c914a4292b2f37dd7b9ea44eaf3cc61c136333ec856a0"
+  },
+  "G1_five_items": {
+    "actual_fee": {
+      "status": "passed_for_recorded_scope",
+      "evidence": [
+        "final actual audit",
+        "evaluation/final_01/VALIDATION_SUMMARY.json"
+      ]
+    },
+    "storage_stock_and_preparation": {
+      "status": "passed_for_recorded_scope",
+      "evidence": [
+        "final actual audit",
+        "evaluation/final_01/VALIDATION_SUMMARY.json"
+      ]
+    },
+    "native_carrier_service_and_recovery": {
+      "status": "passed_for_recorded_scope",
+      "evidence": [
+        "final actual audit",
+        "evaluation/final_01/VALIDATION_SUMMARY.json"
+      ]
+    },
+    "true_terminal": {
+      "status": "passed_for_recorded_scope",
+      "evidence": [
+        "final actual audit",
+        "evaluation/final_01/VALIDATION_SUMMARY.json"
+      ]
+    },
+    "expanded_configuration_semantics": {
+      "status": "passed_for_recorded_scope",
+      "evidence": [
+        "final actual audit",
+        "evaluation/final_01/VALIDATION_SUMMARY.json"
+      ]
+    }
+  },
+  "physical_fix": {
+    "patch_id": "hospital_ies.powered_start_minimum_off_readiness.v30.fix1",
+    "actual_counterexample_replay_status": "completed",
+    "actual_replay_observed_until_minute": 180.0,
+    "old_failed_prefix_and_unknown_tail_retained": true,
+    "capacity_price_service_protection_parameter_changes": 0,
+    "formula": "max(now, eligible_start) + remaining_actual_powered_work; both anchors"
+  },
+  "paper_completion": {
+    "Hirwa": {
+      "doi": "10.1016/j.apenergy.2023.121438",
+      "mapping_source": "literature/hirwa/mapping.json",
+      "mapping_sha256": "2af36ade37cdc33bf23f9df400f933ccd89c090c29a24cce97c80664ffaa4a38",
+      "frozen_mapping_status": {
+        "mapping_completed": true,
+        "equation_checked": true,
+        "equation_checked_scope": "fresh full text, rendered key equations, units and fixed-capacity algebra; no original solver execution",
+        "prototype_verified": false,
+        "replayed": false,
+        "blocked": [
+          "exact original numerical reproduction: author code/raw 8760 unavailable",
+          "DG size and O&M printed inconsistencies unresolved"
+        ]
+      },
+      "current_layers": {
+        "mapping_completed": true,
+        "printed_equation_checked": true,
+        "synthetic_multiperiod_prototype_verified": true,
+        "fixed_Hospital_static_envelope_verified": true,
+        "R_off_onoff_preparation_replayed_on_common_core": {
+          "normal": true,
+          "grid": true,
+          "tower": false
+        },
+        "full_continuous_or_storage_plan_replayed": false,
+        "original_author_software_executed": false,
+        "exact_paper_numerical_reproduction": false
+      },
+      "interpretation": "Shared R_off adaptation derives mathematics mainly from Hirwa; actual on/off/preparation replay is bounded evidence, not original paper replication"
+    },
+    "Rosales": {
+      "doi": "10.1016/j.jobe.2023.106096",
+      "mapping_source": "literature/rosales/mapping.json",
+      "mapping_sha256": "81989147e0f9a9b60b4b91fcd8f9647a204e9456d1aa2e52474729832dc4945a",
+      "frozen_mapping_completion": {
+        "mapping_completed": true,
+        "equation_checked": null,
+        "equation_checked_reason": "No numbered equations in this PDF",
+        "prototype_verified": false,
+        "replayed": false,
+        "exact_numerical_reproduction_blocked": true,
+        "blocked_reasons": [
+          "原始CSV与代码未取得",
+          "工具与求解器完整版本未知",
+          "终端库存和复测细节未公开"
+        ],
+        "core_code_modified": false,
+        "simulations_run": false,
+        "old_results_modified": false,
+        "fixed_hospital_adaptation_can_continue_independently": true
+      },
+      "current_layers": {
+        "mapping_completed": true,
+        "numbered_equation_check_not_applicable": true,
+        "independent_Rosales_algorithm_implemented": false,
+        "independent_Rosales_algorithm_replayed": false,
+        "boundary_reference_used_in_shared_R_off": true,
+        "exact_paper_numerical_reproduction": false
+      },
+      "interpretation": "Design/service/information boundary reference only; do not count shared R_off as a second reproduced online controller"
+    }
+  },
+  "reference_layer_status": {
+    "literature_mapping_completed": true,
+    "equation_and_synthetic_prototype_verified": true,
+    "static_Hospital_plan_verified": true,
+    "actual_queued_onoff_preparation_replay_verified": {
+      "normal": true,
+      "grid": true,
+      "tower": false
+    },
+    "actual_GT2_effect_verified": true,
+    "full_continuous_output_plan_replayed": false,
+    "storage_power_plan_replayed": false,
+    "actual_fee_independently_recomputed": true,
+    "terminal_receipt_and_last_segment_consistency_verified": true,
+    "live_terminal_side_effect_check_reexecuted": false,
+    "exact_original_paper_numerical_reproduction": false,
+    "independent_Rosales_controller_replayed": false
+  },
+  "reference_tower": {
+    "static_status": "infeasible",
+    "actual_run_performed": false,
+    "actual_fee": null,
+    "actual_supply": null,
+    "no_zero_imputation": true
+  },
+  "excluded_prior_attempt_status_counts": {
+    "completed": 26,
+    "failed_unknown": 2
+  },
+  "final_native_solver_errors": [],
+  "final_strategy_fallback_steps": {
+    "b01_L1_grid_disturbed_C": 0,
+    "b01_L1_grid_disturbed_M": 0,
+    "b02_L1_heat_pump_disturbed_C": 0,
+    "b02_L1_heat_pump_disturbed_M": 0,
+    "b03_L2_tower_disturbed_C": 0,
+    "b03_L2_tower_disturbed_M": 0,
+    "b04_L2_chw_pump_disturbed_C": 0,
+    "b04_L2_chw_pump_disturbed_M": 0,
+    "b05_L3_ER_disturbed_C": 0,
+    "b05_L3_ER_disturbed_M": 0,
+    "b06_L3_OR_disturbed_C": 0,
+    "b06_L3_OR_disturbed_M": 0,
+    "b07_L4_GT_ER_disturbed_C": 0,
+    "b07_L4_GT_ER_disturbed_M": 0,
+    "b08_L4_GRID_OR_disturbed_C": 0,
+    "b08_L4_GRID_OR_disturbed_M": 0,
+    "b01_L1_grid_normal_C": 0,
+    "b01_L1_grid_normal_M": 0,
+    "b02_L1_heat_pump_normal_C": 0,
+    "b02_L1_heat_pump_normal_M": 0,
+    "b03_L2_tower_normal_C": 0,
+    "b03_L2_tower_normal_M": 0,
+    "b04_L2_chw_pump_normal_C": 0,
+    "b04_L2_chw_pump_normal_M": 0,
+    "b05_L3_ER_normal_C": 0,
+    "b05_L3_ER_normal_M": 0,
+    "b06_L3_OR_normal_C": 0,
+    "b06_L3_OR_normal_M": 0,
+    "b07_L4_GT_ER_normal_C": 0,
+    "b07_L4_GT_ER_normal_M": 0,
+    "b08_L4_GRID_OR_normal_C": 0,
+    "b08_L4_GRID_OR_normal_M": 0
+  },
+  "limitations": [
+    "Finite deterministic cases are not annual reliability.",
+    "No cross-carrier ENS total or improvement percentages.",
+    "Lower fee with less service/end stock is a tradeoff, not net savings.",
+    "RNG differences retained separately from physical state/core equality.",
+    "No complete continuous/storage reference-plan replay, original author software execution or exact paper numerical reproduction.",
+    "Final global attempt index, source patch diff, full byte restore and ZIP size/manifest remain parent delivery assembly."
+  ],
+  "generator_sha256": "38b54c318d137882fd08f4bc8196cb30aca6bf2dcabd2985da9c21519a1e42a1",
+  "new_simulations": 0,
+  "D_source_edits": false,
+  "presentation_revision": {
+    "version": "v2_display_only_64ulp",
+    "created_utc": "2026-10-27T09:52:34.641679+00:00",
+    "rule": "same material/recovery outcome and abs(C-M) <= 64*max(ulp(C),ulp(M)); raw values and differences unchanged",
+    "base_generator_sha256": "38b54c318d137882fd08f4bc8196cb30aca6bf2dcabd2985da9c21519a1e42a1",
+    "processor_sha256": "057c6bd1f0e9c2c2097d6a403935f28316c83423f1eed2fe6bb7618e6ae6132e",
+    "base_report_files_sha256": {
+      "ENGINEERING_REPORT_ZH.md": "3db0f255e469e770514dec2629f761ff110a47636471f101015667b9f3f18945",
+      "MAIN_RESULT_TABLE.csv": "684448deb817b9478cffdc9bba9f0083a414c9dbfe1cf9ab46320f5192201ffe",
+      "COMPLETION_MATRIX.json": "254a3815b8eb6b667f8ebea3db99ca93703069c1906b3fb2f6b6d0f6c86da668"
+    },
+    "base_success_receipt_sha256": "1e1f9a54623b2579801975d5b93a5f6dccc75855a24111630c31c27938fa5822",
+    "CSV_byte_sha256_unchanged": "684448deb817b9478cffdc9bba9f0083a414c9dbfe1cf9ab46320f5192201ffe",
+    "scientific_producer_unchanged": true,
+    "model_or_default_test_rerun": false,
+    "relabeled_cells": [
+      {
+        "context": "b02_L1_heat_pump",
+        "priority": "P1",
+        "carrier": "h",
+        "C_ENS_kWh": 19.218339912503154,
+        "M_ENS_kWh": 19.21833991250315,
+        "raw_difference_C_minus_M": 3.552713678800501e-15,
+        "display_ulp_threshold": 2.2737367544323206e-13,
+        "old_label": "C_ENS_higher",
+        "new_label": "roundoff_only_same_material_outcome",
+        "same_material_and_recovery_outcome": true
+      },
+      {
+        "context": "b02_L1_heat_pump",
+        "priority": "P3",
+        "carrier": "h",
+        "C_ENS_kWh": 52.88374543597887,
+        "M_ENS_kWh": 52.883745435978874,
+        "raw_difference_C_minus_M": -7.105427357601002e-15,
+        "display_ulp_threshold": 4.547473508864641e-13,
+        "old_label": "C_ENS_lower",
+        "new_label": "roundoff_only_same_material_outcome",
+        "same_material_and_recovery_outcome": true
+      },
+      {
+        "context": "b03_L2_tower",
+        "priority": "P0",
+        "carrier": "c",
+        "C_ENS_kWh": 10.645878318739957,
+        "M_ENS_kWh": 10.645878318739959,
+        "raw_difference_C_minus_M": -1.7763568394002505e-15,
+        "display_ulp_threshold": 1.1368683772161603e-13,
+        "old_label": "C_ENS_lower",
+        "new_label": "roundoff_only_same_material_outcome",
+        "same_material_and_recovery_outcome": true
+      },
+      {
+        "context": "b03_L2_tower",
+        "priority": "P1",
+        "carrier": "c",
+        "C_ENS_kWh": 15.986279851973755,
+        "M_ENS_kWh": 15.986279851973801,
+        "raw_difference_C_minus_M": -4.618527782440651e-14,
+        "display_ulp_threshold": 1.1368683772161603e-13,
+        "old_label": "C_ENS_lower",
+        "new_label": "roundoff_only_same_material_outcome",
+        "same_material_and_recovery_outcome": true
+      },
+      {
+        "context": "b03_L2_tower",
+        "priority": "P2",
+        "carrier": "c",
+        "C_ENS_kWh": 21.88085503502125,
+        "M_ENS_kWh": 21.880855035021213,
+        "raw_difference_C_minus_M": 3.552713678800501e-14,
+        "display_ulp_threshold": 2.2737367544323206e-13,
+        "old_label": "C_ENS_higher",
+        "new_label": "roundoff_only_same_material_outcome",
+        "same_material_and_recovery_outcome": true
+      },
+      {
+        "context": "b03_L2_tower",
+        "priority": "P3",
+        "carrier": "c",
+        "C_ENS_kWh": 850.2393524866826,
+        "M_ENS_kWh": 850.2393524866827,
+        "raw_difference_C_minus_M": -1.1368683772161603e-13,
+        "display_ulp_threshold": 7.275957614183426e-12,
+        "old_label": "C_ENS_lower",
+        "new_label": "roundoff_only_same_material_outcome",
+        "same_material_and_recovery_outcome": true
+      },
+      {
+        "context": "b04_L2_chw_pump",
+        "priority": "P2",
+        "carrier": "e",
+        "C_ENS_kWh": 0.055038321421974956,
+        "M_ENS_kWh": 0.05503832142197495,
+        "raw_difference_C_minus_M": 6.938893903907228e-18,
+        "display_ulp_threshold": 4.440892098500626e-16,
+        "old_label": "C_ENS_higher",
+        "new_label": "roundoff_only_same_material_outcome",
+        "same_material_and_recovery_outcome": true
+      },
+      {
+        "context": "b04_L2_chw_pump",
+        "priority": "P2",
+        "carrier": "c",
+        "C_ENS_kWh": 27.1103910252372,
+        "M_ENS_kWh": 27.110391025237192,
+        "raw_difference_C_minus_M": 7.105427357601002e-15,
+        "display_ulp_threshold": 2.2737367544323206e-13,
+        "old_label": "C_ENS_higher",
+        "new_label": "roundoff_only_same_material_outcome",
+        "same_material_and_recovery_outcome": true
+      },
+      {
+        "context": "b04_L2_chw_pump",
+        "priority": "P3",
+        "carrier": "c",
+        "C_ENS_kWh": 719.7345968664146,
+        "M_ENS_kWh": 719.7345968664149,
+        "raw_difference_C_minus_M": -3.410605131648481e-13,
+        "display_ulp_threshold": 7.275957614183426e-12,
+        "old_label": "C_ENS_lower",
+        "new_label": "roundoff_only_same_material_outcome",
+        "same_material_and_recovery_outcome": true
+      },
+      {
+        "context": "b07_L4_GT_ER",
+        "priority": "P0",
+        "carrier": "e",
+        "C_ENS_kWh": 0.00018978166042771252,
+        "M_ENS_kWh": 0.0001897816604277125,
+        "raw_difference_C_minus_M": 2.710505431213761e-20,
+        "display_ulp_threshold": 1.734723475976807e-18,
+        "old_label": "raw_numerical_difference_without_material_interruption",
+        "new_label": "roundoff_only_same_material_outcome",
+        "same_material_and_recovery_outcome": true
+      },
+      {
+        "context": "b07_L4_GT_ER",
+        "priority": "P2",
+        "carrier": "e",
+        "C_ENS_kWh": 0.00020747984895308494,
+        "M_ENS_kWh": 0.0002074798489530849,
+        "raw_difference_C_minus_M": 2.710505431213761e-20,
+        "display_ulp_threshold": 1.734723475976807e-18,
+        "old_label": "raw_numerical_difference_without_material_interruption",
+        "new_label": "roundoff_only_same_material_outcome",
+        "same_material_and_recovery_outcome": true
+      }
+    ]
+  }
+}

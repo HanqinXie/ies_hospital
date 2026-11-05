@@ -1,0 +1,81 @@
+{
+  "frozen_at_utc": "2026-10-27T09:07:30.813242+00:00",
+  "adopted_audit": "audit_02",
+  "mechanism_supplement": "mechanisms_01",
+  "readme": "README.md",
+  "copy_ready": {
+    "audit.py": {
+      "path": "audit.py",
+      "sha256": "72640d503b033b00d33dcda79cf2ba1afd6a3d7fc117e20793da092693b3aeec"
+    },
+    "mechanism_audit.py": {
+      "path": "mechanism_audit.py",
+      "sha256": "e5da798889b712da60049a94b55b4c97a7fc73ba4d39a5303532250be780677b"
+    },
+    "test_audit.py": {
+      "path": "test_audit.py",
+      "sha256": "ae66ef9d8167449894795743e11b216ecdf3eceb13d789f9ace61795ebfa8698"
+    }
+  },
+  "tests": {
+    "command": [
+      "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\python.exe",
+      "-m",
+      "pytest",
+      "E:\\hospital_ies_v30_20261027\\reference_replay_audit\\test_audit.py",
+      "-q"
+    ],
+    "exit_code": 0,
+    "passed": 6,
+    "stdout": "final_pytest_stdout.log"
+  },
+  "actual_commands": [
+    {
+      "script": "audit.py",
+      "output": "audit_01",
+      "exit_code": 0,
+      "stdout": "audit_01.stdout.log"
+    },
+    {
+      "script": "audit.py",
+      "output": "audit_02",
+      "exit_code": 0,
+      "stdout": "audit_02.stdout.log"
+    },
+    {
+      "script": "mechanism_audit.py",
+      "output": "mechanisms_01",
+      "exit_code": 0,
+      "stdout": "mechanisms_01.stdout.log"
+    }
+  ],
+  "artifact_checks": [
+    {
+      "directory": "audit_01",
+      "file_hashes_verified": true
+    },
+    {
+      "directory": "audit_02",
+      "file_hashes_verified": true
+    },
+    {
+      "directory": "mechanisms_01",
+      "file_hashes_verified": true
+    }
+  ],
+  "D_source_writes": false,
+  "new_simulation_count": 0,
+  "new_solver_calls": 0,
+  "scope_gaps": [
+    "No complete continuous/storage plan replay",
+    "No tower R_off actual run because hard static plan infeasible",
+    "Original author/official REopt not run; exact original numerical reproduction unavailable",
+    "Cdev return-time comparison is prior-producer descriptive evidence",
+    "R01 formal failed_unknown remains; mechanical/queue gaps not imputed",
+    "R03 live terminal hashes are producer receipts cross-checked against final native segments; no live environment reconstructed",
+    "Unique active constraint behind120min registered-domain exhaustion not identified without a new solve"
+  ],
+  "producer_commit": "3252727135645037cedc57ebc188a48d2aa34ccb",
+  "producer_source_sha256": "2509d2fa562e672af3cfe4058ace55f0e38de6172d1ac2d633210d0e776f0776",
+  "ready_for_parent_freeze": true
+}

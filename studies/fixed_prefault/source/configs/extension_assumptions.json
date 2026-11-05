@@ -1,0 +1,24 @@
+{
+  "schema_version": "2.0",
+  "load_boundary": "DOE P_e_nonplant_kW + P_e_unresolved_kW; fans_kW already included in P_e_nonplant_kW",
+  "fan": {
+    "default_multiplier": 1.0,
+    "accounting": "fan_incremental_electric_kW=(fan_ratio-1)*fans_kW; fan_ratio is a scenario parameter, not validated ventilation/room pressure"
+  },
+  "oxygen_psa": {
+    "default_enabled": false,
+    "specific_electric_consumption_kWh_per_Nm3": 1.04,
+    "source": "H. Si et al., Chemical Engineering Journal 509 (2025) 161273, Table 7, PSA 4-bed 6-step, approximately 92% O2, not universal medical PSA",
+    "production_profile_Nm3_per_h": "User-provided fixed example or CSV; no real hospital data supplied",
+    "no_oxygen_inventory_or_pressure": true
+  },
+  "thermal_1R1C": {
+    "default_run": false,
+    "thermal_capacity_method": "Zone air thermal capacity + assumed fraction of InternalMass furniture construction heat capacity parsed from supplied San Diego IDF",
+    "mass_participation_fraction": 0.5,
+    "effective_conductance_W_per_m2_K_of_floor": 1.5,
+    "geometry_method": "IDF zone volume divided by zone ceiling height; unit zone without multiplier",
+    "parameter_status": "Illustrative; requires calibration or sensitivity analysis before quantitatively assessing medical outage risk",
+    "response_method": "Analytical hourly exact 1R1C disturbance on EnergyPlus base-case zone air temperature with sensible cooling interruption; not feedback to original MILP"
+  }
+}

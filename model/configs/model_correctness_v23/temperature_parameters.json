@@ -1,0 +1,31 @@
+{
+  "model_id": "M23_bounded_two_state_exploratory",
+  "parameter_freeze_sha256": "c31be6944e31330be573d26c87dd154b446add33682e9f8926bb98329b896608",
+  "reference_zone": "OR1_FLR_2",
+  "parameter_order": [
+    "air_capacity_kWh_K",
+    "mass_capacity_kWh_K",
+    "air_mass_conductance_kW_K",
+    "mass_outdoor_conductance_kW_K"
+  ],
+  "reference_parameters": [
+    0.16868902320035267,
+    5.07441921667201,
+    0.47897466814525125,
+    0.0533512731160491
+  ],
+  "zone_scales": {
+    "OR1_FLR_2": 1.0,
+    "OR2_MULT5_FLR_2": 1.0,
+    "OR3_FLR_2": 1.0,
+    "OR4_FLR_2": 4.000252196208651
+  },
+  "zone_multipliers": {
+    "OR1_FLR_2": 1.0,
+    "OR2_MULT5_FLR_2": 5.0,
+    "OR3_FLR_2": 1.0,
+    "OR4_FLR_2": 1.0
+  },
+  "use_status": "Exploratory research output; precision gate not met; cannot be used for critical guarantee or safety judgment",
+  "rate_boundary": "Native Zone Air System Sensible Heating/Cooling Rate per representative zone; no multiplier division. Priority-group allocation multiplies each normal zone rate once, then divides once when assigning delivered group kW back to representative zones."
+}

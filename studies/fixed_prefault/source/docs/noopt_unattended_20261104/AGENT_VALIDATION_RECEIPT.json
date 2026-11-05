@@ -1,0 +1,56 @@
+﻿{
+    "schema":  "hospital_ies.noopt_unattended.agent_delivery.v1",
+    "worktree":  "D:\\hospital_ies_noopt_20261104",
+    "base_commit":  "9198b6b",
+    "branch":  "research/noopt-unattended-20261104",
+    "status":  "legacy_route_fail_closed_forward_not_implemented",
+    "public_step_guard":  "U current_time + dt_minutes \u003e= 60 refuses before native step",
+    "latest_completed_prefix_end_minutes":  59,
+    "direct_core_calls_guarded":  false,
+    "new_scientific_simulations":  0,
+    "full_forward_implemented":  false,
+    "whole_suite_run":  false,
+    "tests":  [
+                  {
+                      "command":  "python -B -m pytest -q tests/test_noopt_unattended_guard.py -p no:cacheprovider",
+                      "result":  "no tests ran; inherited conftest bound to old worktree",
+                      "log":  "logs/01_red_legacy_u.txt",
+                      "exit_code":  4
+                  },
+                  {
+                      "command":  "python -B -m pytest -q tests/test_noopt_unattended_guard.py --noconftest -p no:cacheprovider",
+                      "result":  "2 failed before implementation; lower solve and terminal boundary probes reached",
+                      "log":  "logs/02_red_legacy_u.txt",
+                      "exit_code":  1
+                  },
+                  {
+                      "command":  "python -B -m pytest -q tests/test_noopt_unattended_guard.py tests/test_minute1_environment.py --noconftest -p no:cacheprovider",
+                      "result":  "13 passed after initial guard",
+                      "log":  "logs/03_green_guard.txt",
+                      "exit_code":  0
+                  },
+                  {
+                      "command":  "python -B -m pytest -q tests/test_noopt_unattended_guard.py tests/test_minute1_environment.py --noconftest -p no:cacheprovider",
+                      "result":  "15 passed final",
+                      "log":  "logs/04_final_guard.txt",
+                      "exit_code":  0
+                  },
+                  {
+                      "command":  "git diff --check",
+                      "result":  "no whitespace errors",
+                      "exit_code":  0
+                  }
+              ],
+    "sha256":  {
+                   "docs/noopt_unattended_20261104/logs/03_green_guard.txt":  "c93f4b92cca72fd6eac3b22cb2c5040fcda7f1bad892ca532089cc1fc14a369d",
+                   "docs/noopt_unattended_20261104/logs/01_red_legacy_u.txt":  "f3b8648b5cc2b3f130ae39561caaaaf4537dbf788dad2d6e22c3aaecebd70caf",
+                   "docs/noopt_unattended_20261104/logs/04_final_guard.txt":  "e4f354040b014e09a8a595464ca69bef301898235d8597c9397fdf6eb2bdbe33",
+                   "docs/noopt_unattended_20261104/IMPLEMENTATION_STATUS_ZH.md":  "84713363bce4c833df5f3b181e5758a5bef33d90a4f80765cccebb3e8e9ff57b",
+                   "tools/minute1_20261103/environment.py":  "68922ca0ba194461a1188206cbd49a22e87d6f9b11a28cfa2d37a3dc8a5aaae3",
+                   "tests/test_minute1_environment.py":  "1d5b04f2993786c30772416f94b4894b6d12661e90430cacc206ad7211baf954",
+                   "docs/noopt_unattended_20261104/AGENT_TRACKED_PATCH.diff":  "1c3dbe6de2a2d9d1eb06dad449a743d266b3e15786a72402b5850f3a0a6a7d11",
+                   "tests/test_noopt_unattended_guard.py":  "c6f3991bade77133367bd910564e4dd1addf67b1e3c389baf5b1ef596387d911",
+                   "docs/noopt_unattended_20261104/logs/02_red_legacy_u.txt":  "1f665125025caf57597f049dfbf09eebf94d1577e23f50599128b942e2e797d6",
+                   "docs/noopt_unattended_20261104/FORWARD_EXECUTION_TASKBOOK_ZH.md":  "de30e511912a4966652c718afec99a0254efee24af5ad25f605d86f0b0c1d7ed"
+               }
+}

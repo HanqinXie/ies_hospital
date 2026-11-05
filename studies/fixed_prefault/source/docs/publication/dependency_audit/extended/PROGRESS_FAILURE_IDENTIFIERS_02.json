@@ -1,0 +1,106 @@
+{
+  "created_utc": "2026-10-27T16:48:37.293560+00:00",
+  "snapshot_progress": 1005,
+  "failures": [
+    {
+      "ordinal": 94,
+      "nodeid": "tests/test_operating_environment.py::test_actual_joint_policy_accepts_explicit_m15_model_without_legacy_schema_leak[F]",
+      "progress_symbol": "F"
+    },
+    {
+      "ordinal": 95,
+      "nodeid": "tests/test_operating_environment.py::test_actual_joint_policy_accepts_explicit_m15_model_without_legacy_schema_leak[E]",
+      "progress_symbol": "F"
+    },
+    {
+      "ordinal": 96,
+      "nodeid": "tests/test_operating_environment.py::test_actual_joint_policy_accepts_explicit_m15_model_without_legacy_schema_leak[K2]",
+      "progress_symbol": "F"
+    },
+    {
+      "ordinal": 209,
+      "nodeid": "tests/test_execution_recovery_core.py::test_all_ordinary_policy_adapters_run_on_one_common_m18_model[E]",
+      "progress_symbol": "F"
+    },
+    {
+      "ordinal": 210,
+      "nodeid": "tests/test_execution_recovery_core.py::test_all_ordinary_policy_adapters_run_on_one_common_m18_model[K1]",
+      "progress_symbol": "F"
+    },
+    {
+      "ordinal": 211,
+      "nodeid": "tests/test_execution_recovery_core.py::test_all_ordinary_policy_adapters_run_on_one_common_m18_model[C]",
+      "progress_symbol": "F"
+    },
+    {
+      "ordinal": 212,
+      "nodeid": "tests/test_execution_recovery_core.py::test_all_ordinary_policy_adapters_run_on_one_common_m18_model[C4compat]",
+      "progress_symbol": "F"
+    },
+    {
+      "ordinal": 272,
+      "nodeid": "tests/test_model_closeout_environment.py::test_versioned_environment_routes_and_measured_service_ledger[E]",
+      "progress_symbol": "F"
+    },
+    {
+      "ordinal": 273,
+      "nodeid": "tests/test_model_closeout_environment.py::test_versioned_environment_routes_and_measured_service_ledger[K1]",
+      "progress_symbol": "F"
+    },
+    {
+      "ordinal": 314,
+      "nodeid": "tests/test_model_closeout_registration.py::test_v19_ids_and_baselines_preserve_original_preferences",
+      "progress_symbol": "F"
+    },
+    {
+      "ordinal": 323,
+      "nodeid": "tests/test_model_closeout_registration.py::test_final_freeze_binds_model_policy_and_declared_clock_sensitivity",
+      "progress_symbol": "F"
+    },
+    {
+      "ordinal": 326,
+      "nodeid": "tests/test_model_closeout_registration.py::test_unhandled_attempt_is_retained_with_unknown_tail_and_no_zero_substitute",
+      "progress_symbol": "F"
+    },
+    {
+      "ordinal": 328,
+      "nodeid": "tests/test_model_closeout_registration.py::test_real_metadata_manifest_binds_new_model_and_confirmation_denominator",
+      "progress_symbol": "F"
+    },
+    {
+      "ordinal": 329,
+      "nodeid": "tests/test_model_closeout_registration.py::test_changed_or_missing_final_artifact_rejected_before_environment_creation",
+      "progress_symbol": "F"
+    },
+    {
+      "ordinal": 334,
+      "nodeid": "tests/test_model_closeout_registration.py::test_freeze_refuses_source_change_during_protected_baseline_check",
+      "progress_symbol": "F"
+    },
+    {
+      "ordinal": 337,
+      "nodeid": "tests/test_model_closeout_registration.py::test_development_subset_keeps_evaluation_role_and_unfrozen_status",
+      "progress_symbol": "F"
+    },
+    {
+      "ordinal": 394,
+      "nodeid": "tests/test_execution_recovery_runner.py::test_new_runner_has_own_output_and_keeps_baseline_preferences",
+      "progress_symbol": "F"
+    },
+    {
+      "ordinal": 398,
+      "nodeid": "tests/test_execution_recovery_freeze.py::test_final_comparison_requires_exact_freeze_signature_source_config_and_policy",
+      "progress_symbol": "F"
+    },
+    {
+      "ordinal": 399,
+      "nodeid": "tests/test_execution_recovery_freeze.py::test_assumption_change_requires_signed_source_bound_preregistration",
+      "progress_symbol": "F"
+    },
+    {
+      "ordinal": 414,
+      "nodeid": "tests/test_v20_runtime.py::test_new_model_and_policy_preferences_are_explicit",
+      "progress_symbol": "F"
+    }
+  ]
+}

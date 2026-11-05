@@ -1,0 +1,665 @@
+{
+  "old_source_count": 843,
+  "new_source_count": 858,
+  "unchanged_common_count": 838,
+  "changed_original_files": [
+    "pytest.ini",
+    "tools/model_closure_v22/environment.py",
+    "tools/model_closure_v22/validation.py",
+    "tools/model_correctness_v23/validation.py",
+    "tools/sci_engineering/runner.py"
+  ],
+  "added_files": [
+    "configs/model_review_v30/cases.json",
+    "configs/model_review_v30/tiny_reference_fixture.json",
+    "tests/test_v30_evaluation.py",
+    "tests/test_v30_offline.py",
+    "tests/test_v30_public.py",
+    "tests/test_v30_reference.py",
+    "tests/test_v30_start_readiness.py",
+    "tests/test_v30_terminal.py",
+    "tools/model_review_v30/__init__.py",
+    "tools/model_review_v30/environment.py",
+    "tools/model_review_v30/evaluation.py",
+    "tools/model_review_v30/offline.py",
+    "tools/model_review_v30/reference.py",
+    "tools/model_review_v30/terminal.py",
+    "tools/model_review_v30/validation.py"
+  ],
+  "removed_files": [],
+  "old_input_count": 36,
+  "new_input_count": 36,
+  "input_sets_byte_identical": true,
+  "changed_inputs": [],
+  "added_inputs": [],
+  "removed_inputs": [],
+  "original_policy_planner_modules": {
+    "tools/autonomous_dispatch/planner.py": {
+      "old_sha256": "2e52c82783eb2eb4680510c77bc897527ce5303f34245a845d1c2e08b53e46b0",
+      "new_sha256": "2e52c82783eb2eb4680510c77bc897527ce5303f34245a845d1c2e08b53e46b0",
+      "unchanged": true
+    },
+    "tools/coordinated_dispatch/planner.py": {
+      "old_sha256": "89590cbfa5b1de42b640b49e544797a097a6f4b5a031e950b142304d2092dfa4",
+      "new_sha256": "89590cbfa5b1de42b640b49e544797a097a6f4b5a031e950b142304d2092dfa4",
+      "unchanged": true
+    },
+    "tools/coordinated_dispatch/policy.py": {
+      "old_sha256": "bf4dbe270fe238d169565c4ff2a69b4c8521c2f690fcfcf994884c88b96392c9",
+      "new_sha256": "bf4dbe270fe238d169565c4ff2a69b4c8521c2f690fcfcf994884c88b96392c9",
+      "unchanged": true
+    },
+    "tools/dispatch_closeout/policy.py": {
+      "old_sha256": "471fc1798bc5a35fa74d54ae2389185d6d2cc018e48499a10cc3ec1f38fd7d5f",
+      "new_sha256": "471fc1798bc5a35fa74d54ae2389185d6d2cc018e48499a10cc3ec1f38fd7d5f",
+      "unchanged": true
+    },
+    "tools/engineering_model/planner.py": {
+      "old_sha256": "1954c35c12a56dc40cab68115876c15cfe1c4fa37c42e31e0a017681813be1a3",
+      "new_sha256": "1954c35c12a56dc40cab68115876c15cfe1c4fa37c42e31e0a017681813be1a3",
+      "unchanged": true
+    },
+    "tools/engineering_model/policy.py": {
+      "old_sha256": "a8f75b6b26311d545041f7a58d15c42123e3e1ef690985587d99a87fe9b835e8",
+      "new_sha256": "a8f75b6b26311d545041f7a58d15c42123e3e1ef690985587d99a87fe9b835e8",
+      "unchanged": true
+    },
+    "tools/executed_service/policy.py": {
+      "old_sha256": "371b09936479355ed165f5bec3ee8f7f908c8a6b7f1168f5a82611a738ba8091",
+      "new_sha256": "371b09936479355ed165f5bec3ee8f7f908c8a6b7f1168f5a82611a738ba8091",
+      "unchanged": true
+    },
+    "tools/execution_recovery/engineering_planner.py": {
+      "old_sha256": "d04261b8313db28a3247032d2d42833a4ac655aadd80eb08be2fe2efc8ec51c4",
+      "new_sha256": "d04261b8313db28a3247032d2d42833a4ac655aadd80eb08be2fe2efc8ec51c4",
+      "unchanged": true
+    },
+    "tools/execution_recovery/operating_planner.py": {
+      "old_sha256": "6361f271f2640a34bdaf9f4c8cd9d90e7da73dc54fa390902b579bf7d606ae11",
+      "new_sha256": "6361f271f2640a34bdaf9f4c8cd9d90e7da73dc54fa390902b579bf7d606ae11",
+      "unchanged": true
+    },
+    "tools/execution_recovery/planner.py": {
+      "old_sha256": "0ca70bfa6fa8f40acd2648f490163cdcecc2b1d7a34dd8d941e3dad040e9379d",
+      "new_sha256": "0ca70bfa6fa8f40acd2648f490163cdcecc2b1d7a34dd8d941e3dad040e9379d",
+      "unchanged": true
+    },
+    "tools/execution_recovery/policy.py": {
+      "old_sha256": "1592baba0b9eef29aa30bd03a6615c0f4377dafc4119ee54c9547b0eb7574cb8",
+      "new_sha256": "1592baba0b9eef29aa30bd03a6615c0f4377dafc4119ee54c9547b0eb7574cb8",
+      "unchanged": true
+    },
+    "tools/model_closeout/engineering_planner.py": {
+      "old_sha256": "03430f793631a5c8a4596fb16eecdad553b42e6c4e835c311fbf0372124a7a5a",
+      "new_sha256": "03430f793631a5c8a4596fb16eecdad553b42e6c4e835c311fbf0372124a7a5a",
+      "unchanged": true
+    },
+    "tools/model_closeout/operating_planner.py": {
+      "old_sha256": "ad9aef7d7546499b945da1bb08c4459104e74973f01053124ed137d6151318a9",
+      "new_sha256": "ad9aef7d7546499b945da1bb08c4459104e74973f01053124ed137d6151318a9",
+      "unchanged": true
+    },
+    "tools/model_closeout/planner.py": {
+      "old_sha256": "1ca5e59416979b5bb7ad4e0d95343d11033faae541f75d5e3d34b1f58c5f97fe",
+      "new_sha256": "1ca5e59416979b5bb7ad4e0d95343d11033faae541f75d5e3d34b1f58c5f97fe",
+      "unchanged": true
+    },
+    "tools/model_closeout/policy.py": {
+      "old_sha256": "16256f6c0a81c20474d44cf561d8eb34735549eef58db4f74132a9a76759eff8",
+      "new_sha256": "16256f6c0a81c20474d44cf561d8eb34735549eef58db4f74132a9a76759eff8",
+      "unchanged": true
+    },
+    "tools/model_closure_v22/policy.py": {
+      "old_sha256": "f77e497d7d5fa7708305d3cb2f01c29ca254bb6aec26f465d2c4cf46ad976b8b",
+      "new_sha256": "f77e497d7d5fa7708305d3cb2f01c29ca254bb6aec26f465d2c4cf46ad976b8b",
+      "unchanged": true
+    },
+    "tools/model_correctness_v23/policy.py": {
+      "old_sha256": "b943f10398dede63e2a4f6fb3c970a2a456d060ca866f599d50018a43956d144",
+      "new_sha256": "b943f10398dede63e2a4f6fb3c970a2a456d060ca866f599d50018a43956d144",
+      "unchanged": true
+    },
+    "tools/operating_response/planner.py": {
+      "old_sha256": "53ee155f7f601afb0e88e5167be3c8b6f8a1bbd6066f08a5291e35ca78166c18",
+      "new_sha256": "53ee155f7f601afb0e88e5167be3c8b6f8a1bbd6066f08a5291e35ca78166c18",
+      "unchanged": true
+    },
+    "tools/operating_response/policy.py": {
+      "old_sha256": "bc592e71774fa1e12155a2fd2e4ea99ec4bb5d15b8c4f593d647bd7a8fcd152e",
+      "new_sha256": "bc592e71774fa1e12155a2fd2e4ea99ec4bb5d15b8c4f593d647bd7a8fcd152e",
+      "unchanged": true
+    },
+    "tools/policy_redesign/policy.py": {
+      "old_sha256": "850178cb44f0ad3ec3b65920cc9de2fbec15319bc78882291e5adff78182bdb9",
+      "new_sha256": "850178cb44f0ad3ec3b65920cc9de2fbec15319bc78882291e5adff78182bdb9",
+      "unchanged": true
+    },
+    "tools/policy_redesign/regime_policy.py": {
+      "old_sha256": "567efc707634e08aad262afd77ac3b17819da657a662b4e71667d18f699643ca",
+      "new_sha256": "567efc707634e08aad262afd77ac3b17819da657a662b4e71667d18f699643ca",
+      "unchanged": true
+    },
+    "tools/policy_redesign/reserve_policy.py": {
+      "old_sha256": "e1883aaebf093e6994431cd3b43d1d6b231e0ba8d94db25b9b96a175c789077c",
+      "new_sha256": "e1883aaebf093e6994431cd3b43d1d6b231e0ba8d94db25b9b96a175c789077c",
+      "unchanged": true
+    },
+    "tools/policy_redesign/security_policy.py": {
+      "old_sha256": "0cf27666983c0e017d9e4b19bf44612cd0116ee4172dc03e1a08f5df98cd0a80",
+      "new_sha256": "0cf27666983c0e017d9e4b19bf44612cd0116ee4172dc03e1a08f5df98cd0a80",
+      "unchanged": true
+    },
+    "tools/policy_search/policy.py": {
+      "old_sha256": "8cad0c5f09253f3810d12136ff102431bbe7d59d95dd05ee101af9fb179601e4",
+      "new_sha256": "8cad0c5f09253f3810d12136ff102431bbe7d59d95dd05ee101af9fb179601e4",
+      "unchanged": true
+    },
+    "tools/reliability_first/policy.py": {
+      "old_sha256": "da3ae3283377eb8657e4e7454bfe1c0e8aaed9ba2c62b587f7872ea9f8205cb8",
+      "new_sha256": "da3ae3283377eb8657e4e7454bfe1c0e8aaed9ba2c62b587f7872ea9f8205cb8",
+      "unchanged": true
+    },
+    "tools/sci_engineering/planner.py": {
+      "old_sha256": "2aca6fbd95ebc15f82d9d98b364d35a5bde9585a97be6e313f25973662d58b16",
+      "new_sha256": "2aca6fbd95ebc15f82d9d98b364d35a5bde9585a97be6e313f25973662d58b16",
+      "unchanged": true
+    },
+    "tools/sci_engineering/policy.py": {
+      "old_sha256": "8bf43d0d5fb3f5e609e84b8ecf6cf1e037bd1439f7f49a7d119f614ded66efbe",
+      "new_sha256": "8bf43d0d5fb3f5e609e84b8ecf6cf1e037bd1439f7f49a7d119f614ded66efbe",
+      "unchanged": true
+    },
+    "tools/state_coordinated/planner.py": {
+      "old_sha256": "3a3282d2af53411041e3c172865eceb31d3c71ef84ce78e94368f9747d92bb63",
+      "new_sha256": "3a3282d2af53411041e3c172865eceb31d3c71ef84ce78e94368f9747d92bb63",
+      "unchanged": true
+    },
+    "tools/state_coordinated/policy.py": {
+      "old_sha256": "b088183b596c7676d1e0e823bf870d495194f9344ace07ad78be902290ed0e98",
+      "new_sha256": "b088183b596c7676d1e0e823bf870d495194f9344ace07ad78be902290ed0e98",
+      "unchanged": true
+    },
+    "tools/state_dispatch/policy.py": {
+      "old_sha256": "c677261b25bf131437a5b5cdce4dd3f806997035d7d5982afa318c215ac42f18",
+      "new_sha256": "c677261b25bf131437a5b5cdce4dd3f806997035d7d5982afa318c215ac42f18",
+      "unchanged": true
+    }
+  },
+  "all_original_policy_planner_modules_unchanged": true,
+  "original_src_files_unchanged": true,
+  "old_freeze_file": {
+    "path": "@external/FROZEN_SOURCE_V29_01.json",
+    "sha256": "55f56c107a8970ce5fa22cee5e727a34d87dcda42c87bf0e08f31694a658e5a3",
+    "recorded_git_head": "8926dfb7a1632d98b71b0692c6e37df9f4a61855",
+    "recorded_source_sha256": "ec2a2e8cd42470a70e87fdb5f8a8921374f409cb88267d7b45798b32eb6ee72d"
+  },
+  "C02_freeze_file": {
+    "path": "FROZEN_SOURCE_V30_C02.json",
+    "sha256": "7d5f96864801c01d2b242530cfd5239fedb58f863b44e5cb8e31c1ef29fff761",
+    "producer": "3252727135645037cedc57ebc188a48d2aa34ccb",
+    "recorded_source_sha256": "2509d2fa562e672af3cfe4058ace55f0e38de6172d1ac2d633210d0e776f0776"
+  },
+  "compared_committed_range": "38c5259..3252727",
+  "C02_physical_patch_id": "hospital_ies.powered_start_minimum_off_readiness.v30.fix1",
+  "C02_expected_input_files": {
+    "inputs/energyplus/Hospital_SanDiego.idf": "129bd06f9dccc1030d6461f284da788342569319c0d3d3fc933fa72ffcdcb8e2",
+    "inputs/energyplus/README_setup.txt": "682d6bde4c855be12ec65cec74791ffe1ed2573726fc1c7012ea2986228b2969",
+    "inputs/energyplus/SanDiego_BrownField_TMY3.epw": "0cb0f545b288a7c05fde482b3a2f6061783e120e470d810b36d0585a094db37d",
+    "inputs/loads/critical_zones_8760.csv": "6577fa5bed87c5b53dae2a814231e8fbd98d34bf486ddb351224bedde60d88d6",
+    "inputs/loads/electricity_boundary_8760.csv": "f6c3a165363f617f20b63553974a727ae0489095d7c38224a773943d95914599",
+    "inputs/loads/hospital_ies_demand_8760.csv": "0adc2c3f2cd82d600cd17b38e634eae7701710fff0a146e588482dd3cd0a0627",
+    "inputs/loads/thermal_boundary_8760.csv": "f937d23a03357a3eb363a97410ee667fd53be20fd3531e3b22af69747b7b4741",
+    "inputs/model_review_v27/CONDITIONAL_COOLING_TOTAL_8760.csv": "f616452f05b91b1915f6faaad331407142ab853d1d8e7b56f1e4f7a247baae10",
+    "inputs/model_review_v27/CONDITIONAL_CRITICAL_ZONES_120H.csv": "d18c0130630aec6a29b0dd1d0192b87623835c768bbd0609c09ede3eb0621f86",
+    "inputs/model_review_v27/PRIORITY_CONDITIONAL_MAPPING_120H.csv": "d033102bdc2caf700ee9d220d5fdc5b9ad7f3155d0dd76e0acaf58609ab25d24",
+    "inputs/model_review_v28/THERMAL_INPUT_METADATA.json": "d24ab6a3458ffa02e57616969ea4866f2c3a051bed3d203748e9888ac0cb9ccb",
+    "inputs/model_review_v28/THERMAL_SERVICE_COMPONENTS_8760.csv": "27b608272ed268c16fc6fb86ce5fbcf66e4f4f177f3ed7feefacc15c823b11f4",
+    "inputs/model_review_v29/ALL55_ZONES_NATIVE_UNMET_SUMMARY.csv": "92a5346bb8954d3ba9cb6eb229b1c9ac8ab89b7b2c6cb3b308fbb554f0e6c2ba",
+    "inputs/model_review_v29/SOURCE_COOLING_UNMET_HOURS.csv": "8a33b9c050b8adf81aea5649328757cc71163a2ff96ef3d1cf900471d1c97799",
+    "inputs/model_review_v29/SOURCE_QUALITY_METADATA.json": "af3b7c276bb6ace2f48e50af80ef6259f221a3afb30a6989a1db0e6e980d53fd",
+    "inputs/optional/oxygen_flow_8760_TEMPLATE.csv": "c2ccf51c5ea0bff2db28f448f16ef3fbbfc5190ad167e5cb46d496d1d54a6286",
+    "inputs/reference/export_summary.json": "b2c2ac8a862b3cb5036a0949cc4ec63219ea08ca5e66f816ea45cb3ce51ee321",
+    "inputs/reference/input_boundary_dictionary.csv": "25749ea8e056579f50f8b1426c9aa3ce50db1f33dc83b7b6d96497864791ead9",
+    "inputs/reference/nmc_sd_existing_equipment.csv": "aa615f2b5ad96de5c9f3941f4634cd7c9264b75b0638c248661703cb2d6ca848",
+    "inputs/reference/nmc_sd_load_data_sources.csv": "0b7b7880951b75620dae9297d188a70652091148743d6892673825e06fabe435",
+    "inputs/reference/nmc_sd_performance_parameters.csv": "cf8569f1211a62e514a90239e8889fd06711e1d02888aad2d758326b7a8dc778",
+    "inputs/reference/nmc_sd_table1_original_dispatch_strategies.csv": "a976d9bbcdab0969622353456b472d4259f65cab195f2548604a22029d142822",
+    "inputs/reference/nmc_sd_table2_original_optimal_strategies.csv": "26851e4eac41438cd7e395987d0491eb14d3a29d9f1f8ca2a106fb2c54e37596",
+    "inputs/reference/nmc_sd_table3_optimal_proposed_capacities.csv": "9adb44ed00e0c1cb41477c157cb2a555d7bad6915884e78e81e7713c40697c46",
+    "inputs/reference/nmc_sd_tariff_2001.csv": "7b0ee424e36532f71000bb0429251276fb4f7b94626b40a08bcb850a1d2faba6",
+    "inputs/reference/provenance.json": "ac3566b579bc5057c4a45f5038d611720040d8b73e062c534b22955f0cb80157",
+    "inputs/reference/study_capacity_scenarios.csv": "5db2fb7570a25965f30f2c173abcdb328cc43cc6c68ac087bbc7a06dc0cb483b",
+    "inputs/reference/validation_summary.json": "78a861a59c6a21e365f43b7a2854dd73b88441a09d94f7cd6e96d182042c8c4e",
+    "inputs/sci_engineering/auxiliary_allocation_8760.csv": "f845d9d7c1dc131688951543381eb6e7c3020db8a8b088b38d01a1b64ab827b9",
+    "inputs/sci_engineering/auxiliary_metadata.json": "78f67a55903cac2c665d3055cd89149c7ccd1f456e7d4e5cf0bf8e642781f8da",
+    "inputs/sci_engineering/AUXILIARY_PARAMETER_AND_SOURCE_REGISTER.csv": "0856555e1bb5b33ecbeaa3ae1413691a102160f941201dcfaf8ff780861d2daf",
+    "inputs/sci_engineering/IDF_SERVICE_MAPPING.csv": "e66af2f2c63c4a1140fe9e02d097794a751ec3da8015b849a09e451f790951e0",
+    "requirements-saved-recheck.txt": "58c294ca3211bdf52cfb8b82e57878d03ad5996e1cc228860ec636d36b1019ee",
+    "requirements-training.txt": "4358269c52706f7c6511309c1d4b77f493dd1e78971da2ab84b527ccd8743aa1",
+    "requirements-v20.txt": "2ab20df3da306ddeaf885befa3909d460a44272b921c9af7ed2e6e18f395c4c9",
+    "requirements.txt": "3dbaf3d3898d8035a6cd4e91425661ac863ba1377d4334a14eb3394abe290e70"
+  },
+  "input_set_sha256_old": "f414d21fc55d5a63282435b9bed9a1c8c289a049f24507f953fb86162fb41d15",
+  "input_set_sha256_new": "f414d21fc55d5a63282435b9bed9a1c8c289a049f24507f953fb86162fb41d15",
+  "current_original_inputs": [
+    {
+      "path": "inputs/energyplus/Hospital_SanDiego.idf",
+      "expected_sha256": "129bd06f9dccc1030d6461f284da788342569319c0d3d3fc933fa72ffcdcb8e2",
+      "current_sha256": "129bd06f9dccc1030d6461f284da788342569319c0d3d3fc933fa72ffcdcb8e2",
+      "current_exists": true,
+      "bytes": 1616065,
+      "match": true
+    },
+    {
+      "path": "inputs/energyplus/README_setup.txt",
+      "expected_sha256": "682d6bde4c855be12ec65cec74791ffe1ed2573726fc1c7012ea2986228b2969",
+      "current_sha256": "682d6bde4c855be12ec65cec74791ffe1ed2573726fc1c7012ea2986228b2969",
+      "current_exists": true,
+      "bytes": 1265,
+      "match": true
+    },
+    {
+      "path": "inputs/energyplus/SanDiego_BrownField_TMY3.epw",
+      "expected_sha256": "0cb0f545b288a7c05fde482b3a2f6061783e120e470d810b36d0585a094db37d",
+      "current_sha256": "0cb0f545b288a7c05fde482b3a2f6061783e120e470d810b36d0585a094db37d",
+      "current_exists": true,
+      "bytes": 1636175,
+      "match": true
+    },
+    {
+      "path": "inputs/loads/critical_zones_8760.csv",
+      "expected_sha256": "6577fa5bed87c5b53dae2a814231e8fbd98d34bf486ddb351224bedde60d88d6",
+      "current_sha256": "6577fa5bed87c5b53dae2a814231e8fbd98d34bf486ddb351224bedde60d88d6",
+      "current_exists": true,
+      "bytes": 22560317,
+      "match": true
+    },
+    {
+      "path": "inputs/loads/electricity_boundary_8760.csv",
+      "expected_sha256": "f6c3a165363f617f20b63553974a727ae0489095d7c38224a773943d95914599",
+      "current_sha256": "f6c3a165363f617f20b63553974a727ae0489095d7c38224a773943d95914599",
+      "current_exists": true,
+      "bytes": 3659712,
+      "match": true
+    },
+    {
+      "path": "inputs/loads/hospital_ies_demand_8760.csv",
+      "expected_sha256": "0adc2c3f2cd82d600cd17b38e634eae7701710fff0a146e588482dd3cd0a0627",
+      "current_sha256": "0adc2c3f2cd82d600cd17b38e634eae7701710fff0a146e588482dd3cd0a0627",
+      "current_exists": true,
+      "bytes": 2122259,
+      "match": true
+    },
+    {
+      "path": "inputs/loads/thermal_boundary_8760.csv",
+      "expected_sha256": "f937d23a03357a3eb363a97410ee667fd53be20fd3531e3b22af69747b7b4741",
+      "current_sha256": "f937d23a03357a3eb363a97410ee667fd53be20fd3531e3b22af69747b7b4741",
+      "current_exists": true,
+      "bytes": 1381517,
+      "match": true
+    },
+    {
+      "path": "inputs/model_review_v27/CONDITIONAL_COOLING_TOTAL_8760.csv",
+      "expected_sha256": "f616452f05b91b1915f6faaad331407142ab853d1d8e7b56f1e4f7a247baae10",
+      "current_sha256": "f616452f05b91b1915f6faaad331407142ab853d1d8e7b56f1e4f7a247baae10",
+      "current_exists": true,
+      "bytes": 520941,
+      "match": true
+    },
+    {
+      "path": "inputs/model_review_v27/CONDITIONAL_CRITICAL_ZONES_120H.csv",
+      "expected_sha256": "d18c0130630aec6a29b0dd1d0192b87623835c768bbd0609c09ede3eb0621f86",
+      "current_sha256": "d18c0130630aec6a29b0dd1d0192b87623835c768bbd0609c09ede3eb0621f86",
+      "current_exists": true,
+      "bytes": 305427,
+      "match": true
+    },
+    {
+      "path": "inputs/model_review_v27/PRIORITY_CONDITIONAL_MAPPING_120H.csv",
+      "expected_sha256": "d033102bdc2caf700ee9d220d5fdc5b9ad7f3155d0dd76e0acaf58609ab25d24",
+      "current_sha256": "d033102bdc2caf700ee9d220d5fdc5b9ad7f3155d0dd76e0acaf58609ab25d24",
+      "current_exists": true,
+      "bytes": 38327,
+      "match": true
+    },
+    {
+      "path": "inputs/model_review_v28/THERMAL_INPUT_METADATA.json",
+      "expected_sha256": "d24ab6a3458ffa02e57616969ea4866f2c3a051bed3d203748e9888ac0cb9ccb",
+      "current_sha256": "d24ab6a3458ffa02e57616969ea4866f2c3a051bed3d203748e9888ac0cb9ccb",
+      "current_exists": true,
+      "bytes": 2046,
+      "match": true
+    },
+    {
+      "path": "inputs/model_review_v28/THERMAL_SERVICE_COMPONENTS_8760.csv",
+      "expected_sha256": "27b608272ed268c16fc6fb86ce5fbcf66e4f4f177f3ed7feefacc15c823b11f4",
+      "current_sha256": "27b608272ed268c16fc6fb86ce5fbcf66e4f4f177f3ed7feefacc15c823b11f4",
+      "current_exists": true,
+      "bytes": 2599130,
+      "match": true
+    },
+    {
+      "path": "inputs/model_review_v29/ALL55_ZONES_NATIVE_UNMET_SUMMARY.csv",
+      "expected_sha256": "92a5346bb8954d3ba9cb6eb229b1c9ac8ab89b7b2c6cb3b308fbb554f0e6c2ba",
+      "current_sha256": "92a5346bb8954d3ba9cb6eb229b1c9ac8ab89b7b2c6cb3b308fbb554f0e6c2ba",
+      "current_exists": true,
+      "bytes": 4351,
+      "match": true
+    },
+    {
+      "path": "inputs/model_review_v29/SOURCE_COOLING_UNMET_HOURS.csv",
+      "expected_sha256": "8a33b9c050b8adf81aea5649328757cc71163a2ff96ef3d1cf900471d1c97799",
+      "current_sha256": "8a33b9c050b8adf81aea5649328757cc71163a2ff96ef3d1cf900471d1c97799",
+      "current_exists": true,
+      "bytes": 8342,
+      "match": true
+    },
+    {
+      "path": "inputs/model_review_v29/SOURCE_QUALITY_METADATA.json",
+      "expected_sha256": "af3b7c276bb6ace2f48e50af80ef6259f221a3afb30a6989a1db0e6e980d53fd",
+      "current_sha256": "af3b7c276bb6ace2f48e50af80ef6259f221a3afb30a6989a1db0e6e980d53fd",
+      "current_exists": true,
+      "bytes": 3414,
+      "match": true
+    },
+    {
+      "path": "inputs/optional/oxygen_flow_8760_TEMPLATE.csv",
+      "expected_sha256": "c2ccf51c5ea0bff2db28f448f16ef3fbbfc5190ad167e5cb46d496d1d54a6286",
+      "current_sha256": "c2ccf51c5ea0bff2db28f448f16ef3fbbfc5190ad167e5cb46d496d1d54a6286",
+      "current_exists": true,
+      "bytes": 77770,
+      "match": true
+    },
+    {
+      "path": "inputs/reference/export_summary.json",
+      "expected_sha256": "b2c2ac8a862b3cb5036a0949cc4ec63219ea08ca5e66f816ea45cb3ce51ee321",
+      "current_sha256": "b2c2ac8a862b3cb5036a0949cc4ec63219ea08ca5e66f816ea45cb3ce51ee321",
+      "current_exists": true,
+      "bytes": 1772,
+      "match": true
+    },
+    {
+      "path": "inputs/reference/input_boundary_dictionary.csv",
+      "expected_sha256": "25749ea8e056579f50f8b1426c9aa3ce50db1f33dc83b7b6d96497864791ead9",
+      "current_sha256": "25749ea8e056579f50f8b1426c9aa3ce50db1f33dc83b7b6d96497864791ead9",
+      "current_exists": true,
+      "bytes": 1099,
+      "match": true
+    },
+    {
+      "path": "inputs/reference/nmc_sd_existing_equipment.csv",
+      "expected_sha256": "aa615f2b5ad96de5c9f3941f4634cd7c9264b75b0638c248661703cb2d6ca848",
+      "current_sha256": "aa615f2b5ad96de5c9f3941f4634cd7c9264b75b0638c248661703cb2d6ca848",
+      "current_exists": true,
+      "bytes": 1104,
+      "match": true
+    },
+    {
+      "path": "inputs/reference/nmc_sd_load_data_sources.csv",
+      "expected_sha256": "0b7b7880951b75620dae9297d188a70652091148743d6892673825e06fabe435",
+      "current_sha256": "0b7b7880951b75620dae9297d188a70652091148743d6892673825e06fabe435",
+      "current_exists": true,
+      "bytes": 728,
+      "match": true
+    },
+    {
+      "path": "inputs/reference/nmc_sd_performance_parameters.csv",
+      "expected_sha256": "cf8569f1211a62e514a90239e8889fd06711e1d02888aad2d758326b7a8dc778",
+      "current_sha256": "cf8569f1211a62e514a90239e8889fd06711e1d02888aad2d758326b7a8dc778",
+      "current_exists": true,
+      "bytes": 2942,
+      "match": true
+    },
+    {
+      "path": "inputs/reference/nmc_sd_table1_original_dispatch_strategies.csv",
+      "expected_sha256": "a976d9bbcdab0969622353456b472d4259f65cab195f2548604a22029d142822",
+      "current_sha256": "a976d9bbcdab0969622353456b472d4259f65cab195f2548604a22029d142822",
+      "current_exists": true,
+      "bytes": 1270,
+      "match": true
+    },
+    {
+      "path": "inputs/reference/nmc_sd_table2_original_optimal_strategies.csv",
+      "expected_sha256": "26851e4eac41438cd7e395987d0491eb14d3a29d9f1f8ca2a106fb2c54e37596",
+      "current_sha256": "26851e4eac41438cd7e395987d0491eb14d3a29d9f1f8ca2a106fb2c54e37596",
+      "current_exists": true,
+      "bytes": 642,
+      "match": true
+    },
+    {
+      "path": "inputs/reference/nmc_sd_table3_optimal_proposed_capacities.csv",
+      "expected_sha256": "9adb44ed00e0c1cb41477c157cb2a555d7bad6915884e78e81e7713c40697c46",
+      "current_sha256": "9adb44ed00e0c1cb41477c157cb2a555d7bad6915884e78e81e7713c40697c46",
+      "current_exists": true,
+      "bytes": 632,
+      "match": true
+    },
+    {
+      "path": "inputs/reference/nmc_sd_tariff_2001.csv",
+      "expected_sha256": "7b0ee424e36532f71000bb0429251276fb4f7b94626b40a08bcb850a1d2faba6",
+      "current_sha256": "7b0ee424e36532f71000bb0429251276fb4f7b94626b40a08bcb850a1d2faba6",
+      "current_exists": true,
+      "bytes": 390,
+      "match": true
+    },
+    {
+      "path": "inputs/reference/provenance.json",
+      "expected_sha256": "ac3566b579bc5057c4a45f5038d611720040d8b73e062c534b22955f0cb80157",
+      "current_sha256": "ac3566b579bc5057c4a45f5038d611720040d8b73e062c534b22955f0cb80157",
+      "current_exists": true,
+      "bytes": 2411,
+      "match": true
+    },
+    {
+      "path": "inputs/reference/study_capacity_scenarios.csv",
+      "expected_sha256": "5db2fb7570a25965f30f2c173abcdb328cc43cc6c68ac087bbc7a06dc0cb483b",
+      "current_sha256": "5db2fb7570a25965f30f2c173abcdb328cc43cc6c68ac087bbc7a06dc0cb483b",
+      "current_exists": true,
+      "bytes": 712,
+      "match": true
+    },
+    {
+      "path": "inputs/reference/validation_summary.json",
+      "expected_sha256": "78a861a59c6a21e365f43b7a2854dd73b88441a09d94f7cd6e96d182042c8c4e",
+      "current_sha256": "78a861a59c6a21e365f43b7a2854dd73b88441a09d94f7cd6e96d182042c8c4e",
+      "current_exists": true,
+      "bytes": 1935,
+      "match": true
+    },
+    {
+      "path": "inputs/sci_engineering/auxiliary_allocation_8760.csv",
+      "expected_sha256": "f845d9d7c1dc131688951543381eb6e7c3020db8a8b088b38d01a1b64ab827b9",
+      "current_sha256": "f845d9d7c1dc131688951543381eb6e7c3020db8a8b088b38d01a1b64ab827b9",
+      "current_exists": true,
+      "bytes": 5542935,
+      "match": true
+    },
+    {
+      "path": "inputs/sci_engineering/auxiliary_metadata.json",
+      "expected_sha256": "78f67a55903cac2c665d3055cd89149c7ccd1f456e7d4e5cf0bf8e642781f8da",
+      "current_sha256": "78f67a55903cac2c665d3055cd89149c7ccd1f456e7d4e5cf0bf8e642781f8da",
+      "current_exists": true,
+      "bytes": 25450,
+      "match": true
+    },
+    {
+      "path": "inputs/sci_engineering/AUXILIARY_PARAMETER_AND_SOURCE_REGISTER.csv",
+      "expected_sha256": "0856555e1bb5b33ecbeaa3ae1413691a102160f941201dcfaf8ff780861d2daf",
+      "current_sha256": "0856555e1bb5b33ecbeaa3ae1413691a102160f941201dcfaf8ff780861d2daf",
+      "current_exists": true,
+      "bytes": 1651,
+      "match": true
+    },
+    {
+      "path": "inputs/sci_engineering/IDF_SERVICE_MAPPING.csv",
+      "expected_sha256": "e66af2f2c63c4a1140fe9e02d097794a751ec3da8015b849a09e451f790951e0",
+      "current_sha256": "e66af2f2c63c4a1140fe9e02d097794a751ec3da8015b849a09e451f790951e0",
+      "current_exists": true,
+      "bytes": 5249,
+      "match": true
+    },
+    {
+      "path": "requirements-saved-recheck.txt",
+      "expected_sha256": "58c294ca3211bdf52cfb8b82e57878d03ad5996e1cc228860ec636d36b1019ee",
+      "current_sha256": "58c294ca3211bdf52cfb8b82e57878d03ad5996e1cc228860ec636d36b1019ee",
+      "current_exists": true,
+      "bytes": 177,
+      "match": true
+    },
+    {
+      "path": "requirements-training.txt",
+      "expected_sha256": "4358269c52706f7c6511309c1d4b77f493dd1e78971da2ab84b527ccd8743aa1",
+      "current_sha256": "4358269c52706f7c6511309c1d4b77f493dd1e78971da2ab84b527ccd8743aa1",
+      "current_exists": true,
+      "bytes": 50,
+      "match": true
+    },
+    {
+      "path": "requirements-v20.txt",
+      "expected_sha256": "2ab20df3da306ddeaf885befa3909d460a44272b921c9af7ed2e6e18f395c4c9",
+      "current_sha256": "2ab20df3da306ddeaf885befa3909d460a44272b921c9af7ed2e6e18f395c4c9",
+      "current_exists": true,
+      "bytes": 123,
+      "match": true
+    },
+    {
+      "path": "requirements.txt",
+      "expected_sha256": "3dbaf3d3898d8035a6cd4e91425661ac863ba1377d4334a14eb3394abe290e70",
+      "current_sha256": "3dbaf3d3898d8035a6cd4e91425661ac863ba1377d4334a14eb3394abe290e70",
+      "current_exists": true,
+      "bytes": 64,
+      "match": true
+    }
+  ],
+  "all_current_original_inputs_match_C02": true,
+  "current_original_input_bytes": 42128394,
+  "physical_core_change": {
+    "path": "tools/model_closure_v22/environment.py",
+    "method": "EngineeringCore._clamp",
+    "old_time_anchor_count": 2,
+    "new_time_anchor_count": 2,
+    "removed_lines": [
+      "pending['ready']=self.time+max(0.,required-self._m22_gt_progress.get(i,0.))",
+      "pending['ready']=self.time+max(0.,required-self._m22_gt_progress.get(i,0.))"
+    ],
+    "added_lines": [
+      "# V30 fix: remaining work begins no earlier than the actual min-off",
+      "# eligibility stored in pending.started, even while that lies ahead.",
+      "pending['ready']=max(self.time,pending['started'])+max(0.,required-self._m22_gt_progress.get(i,0.))",
+      "pending['ready']=max(self.time,pending['started'])+max(0.,required-self._m22_gt_progress.get(i,0.))"
+    ],
+    "only_two_time_anchors_plus_comments": true,
+    "semantics": "Remaining powered startup work starts no earlier than actual minimum-off eligibility pending.started; original capacity, work, delay and thresholds retained",
+    "physical_parameter_changes": false
+  },
+  "V29_freeze_to_38c5259_only_docs": true,
+  "existing_file_change_explanations": {
+    "tools/model_closure_v22/environment.py": "Only physical-core repair: two pending.ready anchors use max(now, actual min-off eligible process start), plus two comments.",
+    "tools/sci_engineering/runner.py": "Add actual_fee_USD2001 from actual source fee + DG difference once + initial inventory preparation once. Legacy energy_cost field retained; no new physical dispatch.",
+    "tools/model_correctness_v23/validation.py": "Opt-in explicit named-study/controller_factory. None still constructs existing SciPolicy; R_off registration is separate from causal C/M.",
+    "tools/model_closure_v22/validation.py": "Materialize solver_calls iterable before deepcopy and retain already-captured terminal snapshot when recovering a failed native prefix; no invented data or physical step.",
+    "pytest.ini": "Append six V30 test entry files; not a physical/policy parameter change."
+  },
+  "working_tree_state": {
+    "status_snapshot": "",
+    "uncommitted_docs_diff": "WORKTREE_DOCS_DIFF.patch",
+    "working_tree_was_not_modified": true,
+    "committed_or_reset_by_this_script": false
+  },
+  "git_diff_check": {
+    "exit_code": 2,
+    "raw_log": "GIT_DIFF_CHECK.txt",
+    "interpretation": "Preserved actual check result; do not silently repair whitespace or claim a clean exit"
+  },
+  "commands": [
+    {
+      "command": [
+        "git",
+        "-C",
+        "D:\\hospital_ies_v22_20261025",
+        "diff",
+        "--binary",
+        "--full-index",
+        "38c5259..3252727"
+      ],
+      "exit_code": 0,
+      "log": "CODE_DIFF.patch"
+    },
+    {
+      "command": [
+        "git",
+        "-C",
+        "D:\\hospital_ies_v22_20261025",
+        "diff",
+        "38c5259..3252727",
+        "--",
+        "tools/model_closure_v22/environment.py"
+      ],
+      "exit_code": 0,
+      "log": "PHYSICAL_FIX1_ONLY.patch"
+    },
+    {
+      "command": [
+        "git",
+        "-C",
+        "D:\\hospital_ies_v22_20261025",
+        "log",
+        "--reverse",
+        "--format=fuller",
+        "38c5259^..3252727"
+      ],
+      "exit_code": 0,
+      "log": "GIT_HISTORY.txt"
+    },
+    {
+      "command": [
+        "git",
+        "-C",
+        "D:\\hospital_ies_v22_20261025",
+        "status",
+        "--short"
+      ],
+      "exit_code": 0,
+      "log": "WORKTREE_STATUS.txt"
+    },
+    {
+      "command": [
+        "git",
+        "-C",
+        "D:\\hospital_ies_v22_20261025",
+        "diff",
+        "--",
+        "docs/v30/IMPLEMENTATION_PLAN.md"
+      ],
+      "exit_code": 0,
+      "log": "WORKTREE_DOCS_DIFF.patch"
+    },
+    {
+      "command": [
+        "git",
+        "-C",
+        "D:\\hospital_ies_v22_20261025",
+        "diff",
+        "--check",
+        "38c5259..3252727"
+      ],
+      "exit_code": 2,
+      "log": "GIT_DIFF_CHECK.txt"
+    },
+    {
+      "command": [
+        "git",
+        "-C",
+        "D:\\hospital_ies_v22_20261025",
+        "diff",
+        "--name-only",
+        "8926dfb7a1632d98b71b0692c6e37df9f4a61855",
+        "38c5259"
+      ],
+      "exit_code": 0,
+      "log": "V29_FREEZE_TO_BASE_NAMES.txt"
+    }
+  ],
+  "git_evidence_available": true,
+  "status": "verified_read_only"
+}

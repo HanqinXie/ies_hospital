@@ -1,0 +1,12 @@
+{
+  "registered_before_dispatch_alternative_runs": true,
+  "replaces_failed_method_for_source_cases_only": "Appended component EMS0 was not sufficient: partial actual source2 reached644.212205292kW while schedule0. Keep failure and original source/registration. Exact failure timing is not established; known component EMS override reset in official source is a mechanism to investigate, not proven sole cause.",
+  "same_reference_day_timestep_and_ratings": "Jul20 original10min/unchanged1090 sizing entries",
+  "maximum_additional_actual_runs": 2,
+  "cases": ["one_main_source_off", "all_cold_sources_off"],
+  "partial": "Switch main CoolSys1 operation to new CoolingLoad scheme using original Equipment List1 (only unchanged Chiller1) during12–18h; original scheme and PlantOnSched behavior outside event. HRC remains original.",
+  "zero_source": "Original main CoolSys1 and HRC cooling operation schemes unavailable during12–18h, original scheme outside; no fractional availability or capacity scaling",
+  "same_output_and_actual_zero_qualification": true,
+  "normal_and_fan_reuse_rule": "Reuse only if newly generated IDF is byte-identical to completed normal/fan derivedIDF; verifySHA. No new fit or temperature-validation dates.",
+  "thermal_coupling_default": null
+}

@@ -1,0 +1,263 @@
+{
+  "schema": "hospital_ies.v30.final_static_QA.v1",
+  "captured_utc": "2026-10-27T10:32:16.201714+00:00",
+  "status": "passed",
+  "issues": [],
+  "archive": {
+    "path": "E:\\hospital_ies_v30_20261027\\Hospital_IES_V30_REVIEW_under100MB.zip",
+    "bytes": 98896789,
+    "sha256": "48a93fcd391f9cbf903d1e6185fc12916ac91a219c75e0bd2c87bf420b96e54d",
+    "member_count": 1877
+  },
+  "checks": [
+    {
+      "check": "under_decimal_100MB",
+      "passed": true,
+      "actual_bytes": 98896789
+    },
+    {
+      "check": "member_count",
+      "passed": true,
+      "actual": 1877
+    },
+    {
+      "check": "safe_unique_member_names",
+      "passed": true,
+      "case_aliases": [],
+      "unsafe": [],
+      "links": []
+    },
+    {
+      "check": "inner_manifest_covers_central_directory",
+      "passed": true,
+      "manifest_files": 1876,
+      "missing": [],
+      "extra": [],
+      "size_mismatches": []
+    },
+    {
+      "check": "C02_858_scientific_sources_and_36_original_inputs",
+      "passed": true,
+      "source_count": 858,
+      "input_count": 36,
+      "zip_source_mismatches": [],
+      "zip_input_mismatches": [],
+      "independently_extracted_project_mismatches": [],
+      "producer": "3252727135645037cedc57ebc188a48d2aa34ccb",
+      "source_sha256": "2509d2fa562e672af3cfe4058ace55f0e38de6172d1ac2d633210d0e776f0776",
+      "input_sha256": "f414d21fc55d5a63282435b9bed9a1c8c289a049f24507f953fb86162fb41d15"
+    },
+    {
+      "check": "C02_copies_equal",
+      "passed": true,
+      "files": {
+        "data/execution_index/support/FROZEN_SOURCE_V30_C02.json": "7d5f96864801c01d2b242530cfd5239fedb58f863b44e5cb8e31c1ef29fff761",
+        "data/FROZEN_SOURCE_V30_C02.json": "7d5f96864801c01d2b242530cfd5239fedb58f863b44e5cb8e31c1ef29fff761"
+      }
+    },
+    {
+      "check": "project_extras_no_unfrozen_Python_or_MATLAB",
+      "passed": true,
+      "all_project_file_count": 956,
+      "expected_frozen_count": 894,
+      "extras": [
+        "AGENTS.md",
+        "README.md",
+        "README_V24.md",
+        "configs/model_correctness_v23/thermal_reference/summer.csv",
+        "configs/model_correctness_v23/thermal_reference/winter.csv",
+        "docs/v22/README.md",
+        "docs/v23/README.md",
+        "docs/v25/ASSUMPTIONS.md",
+        "docs/v25/IMPLEMENTATION_PLAN.md",
+        "docs/v25/MODEL_REPORT.md",
+        "docs/v25/USER_TASK_20261026.txt",
+        "docs/v26/ASSUMPTIONS.md",
+        "docs/v26/FINAL_ACCEPTANCE.json",
+        "docs/v26/IMPLEMENTATION_PLAN.md",
+        "docs/v26/MODEL_REPORT.md",
+        "docs/v26/README.md",
+        "docs/v26/USER_TASK_20261026.txt",
+        "docs/v27/ASSUMPTIONS.md",
+        "docs/v27/EXECUTION_CLOSURE.md",
+        "docs/v27/FINAL_ACCEPTANCE.json",
+        "docs/v27/IMPLEMENTATION_PLAN.md",
+        "docs/v27/MIGRATION.md",
+        "docs/v27/MODEL_REPORT.md",
+        "docs/v27/README.md",
+        "docs/v27/USER_TASK_20261026.txt",
+        "docs/v27/V26_Model_Review_20261026.txt",
+        "docs/v28/ASSUMPTIONS.md",
+        "docs/v28/ATTEMPT_LEDGER.json",
+        "docs/v28/EXECUTION_CLOSURE.md",
+        "docs/v28/FINAL_ACCEPTANCE.json",
+        "docs/v28/IMPLEMENTATION_PLAN.md",
+        "docs/v28/MIGRATION.md",
+        "docs/v28/MODEL_REPORT.md",
+        "docs/v28/README.md",
+        "docs/v28/USER_TASK_20261026.txt",
+        "docs/v28/V27_Model_Review_20261026.txt",
+        "docs/v29/ASSUMPTIONS.md",
+        "docs/v29/ATTEMPT_LEDGER.json",
+        "docs/v29/EXECUTION_CLOSURE.md",
+        "docs/v29/FINAL_ACCEPTANCE.json",
+        "docs/v29/IMPLEMENTATION_PLAN.md",
+        "docs/v29/MECHANISM_COVERAGE.csv",
+        "docs/v29/MIGRATION.md",
+        "docs/v29/MODEL_REPORT.md",
+        "docs/v29/README.md",
+        "docs/v29/USER_TASK_20261027.txt",
+        "docs/v29/V28_Model_Review_20261027.txt",
+        "docs/v30/ENGINEERING_REPORT_ZH.md",
+        "docs/v30/IMPLEMENTATION_PLAN.md",
+        "docs/v30/MAIN_RESULT_TABLE.csv",
+        "docs/v30/USER_TASK_20261027.txt",
+        "docs/v30/USER_TASK_EARLIER.txt",
+        "outputs/v15_engineering_operation_20261017_run01/source_data/p3_development_baseline/P3_SOURCE_RECEIPT.json",
+        "outputs/v15_engineering_operation_20261017_run01/source_data/p3_frozen_baseline/P3_SOURCE_RECEIPT.json",
+        "outputs/v20_load_accounting_20261019_run01/references/EMISSIONS_FACTOR_REGISTRY.json",
+        "outputs/v43_p2b_20261013_run01/experiment/global_manifest.json",
+        "tests/fixtures/p1b_fixed_scenarios.json",
+        "tests/fixtures/p2c_core_lex_counterexamples.json",
+        "tests/fixtures/p2c_lex_counterexamples.json",
+        "tests/fixtures/p2c_replay_new4_counterexamples.json",
+        "tests/fixtures/sci_heat_pump_start_surplus.json",
+        "tests/fixtures/v23_winter470_current_port.json"
+      ]
+    },
+    {
+      "check": "root_and_project_report_table_pairs",
+      "passed": true,
+      "pairs": [
+        {
+          "left": "ENGINEERING_REPORT_ZH.md",
+          "right": "project/docs/v30/ENGINEERING_REPORT_ZH.md",
+          "sha256": "207eed08285700d0bd61f3f12319c660f0655e72671f1dba26ab5f3710c79607",
+          "zip_paths_equal": true,
+          "extracted_paths_match": true
+        },
+        {
+          "left": "MAIN_RESULT_TABLE.csv",
+          "right": "project/docs/v30/MAIN_RESULT_TABLE.csv",
+          "sha256": "684448deb817b9478cffdc9bba9f0083a414c9dbfe1cf9ab46320f5192201ffe",
+          "zip_paths_equal": true,
+          "extracted_paths_match": true
+        }
+      ]
+    },
+    {
+      "check": "omission_list_disjoint_from_actual_members",
+      "passed": true,
+      "overlaps": [],
+      "omission_count": 505,
+      "native_run_files_omitted": false
+    },
+    {
+      "check": "portable_index_support_retained",
+      "passed": true,
+      "support_member_count": 45
+    },
+    {
+      "check": "PDF_deduplication_explicit_and_consistent",
+      "passed": true,
+      "files": [
+        {
+          "path": "literature/source_pdfs/Optimizing design and dispatch of a resilient renewable energy microgrid for a South African hospital.pdf",
+          "bytes": 3168129,
+          "sha256": "e051354256c9f389c0418aba285ef8cad8b70cda71d34194f981cca0d810e608",
+          "in_ZIP": false,
+          "declared_copied": false,
+          "original_exists": true,
+          "original_sha_matches": true,
+          "omission_row_matches": true
+        },
+        {
+          "path": "literature/source_pdfs/Peak load reduction and resilience benefits through optimized dispatch, heating and cooling strategies in buildings with critical microgrids.pdf",
+          "bytes": 7348485,
+          "sha256": "0487864648dc930f041fc28ead25dad074f80f448ae8db54a3b592cb9e25ef1d",
+          "in_ZIP": false,
+          "declared_copied": false,
+          "original_exists": true,
+          "original_sha_matches": true,
+          "omission_row_matches": true
+        }
+      ],
+      "limitation": "Original PDF bytes remain at user-provided D paths; final ZIP is not a self-contained source-PDF archive."
+    },
+    {
+      "check": "frozen_literature_prototype_actual_audit_manifests",
+      "passed": true,
+      "manifests": [
+        {
+          "manifest": "data/literature/hirwa/file_manifest.json",
+          "entries": 46,
+          "missing": [],
+          "mismatches": []
+        },
+        {
+          "manifest": "data/literature/rosales/artifact_manifest.json",
+          "entries": 21,
+          "missing": [],
+          "mismatches": []
+        },
+        {
+          "manifest": "data/offline_reference/file_manifest.json",
+          "entries": 55,
+          "missing": [],
+          "mismatches": []
+        },
+        {
+          "manifest": "data/reference_replay_audit/file_manifest.json",
+          "entries": 64,
+          "missing": [],
+          "mismatches": []
+        }
+      ]
+    },
+    {
+      "check": "hirwa_fulltext_mapping_and_retained_page_proofs_present",
+      "passed": true,
+      "required_count": 34,
+      "missing": []
+    },
+    {
+      "check": "rosales_fulltext_mapping_and_retained_page_proofs_present",
+      "passed": true,
+      "required_count": 13,
+      "missing": []
+    },
+    {
+      "check": "standard_ZIP_LZMA_properties_64MiB",
+      "passed": true,
+      "bad_members": [],
+      "property_groups": [
+        {
+          "version_bytes": "0904",
+          "property_bytes": 5,
+          "lc_lp_pb": 93,
+          "dictionary_bytes": 67108864,
+          "member_count": 1858
+        }
+      ],
+      "stock_zipfile_read": true,
+      "custom_decompressor_or_monkeypatch": false,
+      "full_archive_CRC_not_repeated": true
+    },
+    {
+      "check": "native_containers_map_and_portable_entry_present",
+      "passed": true
+    },
+    {
+      "check": "archive_unchanged_during_read",
+      "passed": true
+    }
+  ],
+  "new_models": 0,
+  "new_solver_calls": 0,
+  "native_runs_scanned": false,
+  "native_restore_touched": false,
+  "full_native_rehash_repeated": false,
+  "full_archive_CRC_repeated": false,
+  "ZIP_or_source_modified": false,
+  "scope_limit": "Static packaging checks only; native restoration, read-only replay and public15 acceptance remain independent root tasks."
+}

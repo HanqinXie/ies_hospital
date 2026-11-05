@@ -1,0 +1,29 @@
+{
+  "schema": "hospital_ies.v32.six_record_auditor_freeze.v1",
+  "created_utc": "2026-10-27T15:06:33.127481+00:00",
+  "tool_files_sha256": {
+    "audit_v32.py": "18607ddb0183951c7143c7d68ed7c9bf3d1d5046efc967a0f52f583284a61efa",
+    "reference_checks.py": "6097a6313c0080844b0afda1fad64146469506068633d17d0d5e70fc48e18c44",
+    "test_audit_v32.py": "fb0047f1b0ecb2d2b6c7817b9e250eee29a0f3fdbd7187fc38fe58d9442cfa91",
+    "DESIGN_AND_API.md": "9f3ffe174f832f9af6ecd0c5cd0a7d4be5578e39d9b820748f3a1f89736e77e5",
+    "v31_window_support.py": "b8e618e57402def18ec468e6a43d80c83f1a7eabe44efdfb716ad45bb53ca803",
+    "v30_support/audit_campaign.py": "1236b5f310151d91ff643911cb811c1870254b15a9d64fe531e3d6978030d464",
+    "v30_support/FROZEN_ACCOUNTING.json": "524f5fc0dc2cc46748b1a11792b768632c01a9a91b670411bec9b517d1d13f56",
+    "SUPPORT_LINEAGE.json": "93bc883e348a07fdf790378ae25811e6ba7643056c65d613bfdbd8404c8a605b"
+  },
+  "snapshot": "frozen_tools01",
+  "actual_small_tests": {
+    "count": 9,
+    "exit_code": 0,
+    "stdout": "GREEN02.stdout.log",
+    "stderr": "GREEN02.stderr.log"
+  },
+  "registration_sha256": "26dfcd41506d32a8103ac26e18451e7336e6bc205a5d2885d123db2024d836b0",
+  "scientific_freeze_sha256": "14e95188ff44447c4f6e2e04ef9aad8b5f92bf6b0c961e90343d85d4259a998b",
+  "project_planner_sha256": "fe43b7d259487a967123b1a963a0f8f0217febd8ded92f4b8f5d03b60cddae31",
+  "primary_formulas_changed": false,
+  "reviewer_model_calls": 0,
+  "reviewer_solver_calls": 0,
+  "D_source_edits": 0,
+  "offline_same_prefix_required": false
+}

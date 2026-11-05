@@ -1,0 +1,279 @@
+{
+  "schema": "hospital_ies.v23.fixed_small_run_plan.v1",
+  "registered_before_results": true,
+  "created_local": "2026-10-25T19:17:00+08:00",
+  "runs": [
+    {
+      "case": "boundary_067_600",
+      "policy": "R",
+      "configuration": "H0",
+      "tag": "main"
+    },
+    {
+      "case": "boundary_067_600",
+      "policy": "M",
+      "configuration": "H0",
+      "tag": "main"
+    },
+    {
+      "case": "boundary_067_600",
+      "policy": "F",
+      "configuration": "H0",
+      "tag": "main"
+    },
+    {
+      "case": "boundary_067_600",
+      "policy": "C",
+      "configuration": "H0",
+      "tag": "main"
+    },
+    {
+      "case": "boundary_067_600",
+      "policy": "A",
+      "configuration": "H0",
+      "tag": "main"
+    },
+    {
+      "case": "boundary_066_150",
+      "policy": "C",
+      "configuration": "H0",
+      "tag": "main"
+    },
+    {
+      "case": "boundary_066_150",
+      "policy": "F",
+      "configuration": "H0",
+      "tag": "main"
+    },
+    {
+      "case": "gt_hourly_floor_M",
+      "policy": "M",
+      "configuration": "H0",
+      "tag": "main"
+    },
+    {
+      "case": "normal_winter",
+      "policy": "R",
+      "configuration": "H0",
+      "tag": "main"
+    },
+    {
+      "case": "normal_winter",
+      "policy": "C",
+      "configuration": "H0",
+      "tag": "main"
+    },
+    {
+      "case": "normal_summer",
+      "policy": "R",
+      "configuration": "H0",
+      "tag": "main"
+    },
+    {
+      "case": "normal_summer",
+      "policy": "C",
+      "configuration": "H0",
+      "tag": "main"
+    },
+    {
+      "case": "ups_short_repeat",
+      "policy": "R",
+      "configuration": "H1_short_dg",
+      "tag": "main"
+    },
+    {
+      "case": "ups_short_repeat",
+      "policy": "M",
+      "configuration": "H1_short_dg",
+      "tag": "main"
+    },
+    {
+      "case": "ups_short_repeat",
+      "policy": "C",
+      "configuration": "H1_short_dg",
+      "tag": "main"
+    },
+    {
+      "case": "ups_long_repeat",
+      "policy": "C",
+      "configuration": "H1",
+      "tag": "main"
+    },
+    {
+      "case": "winter_grid_long_release",
+      "policy": "C",
+      "configuration": "H1",
+      "tag": "main"
+    },
+    {
+      "case": "winter_grid_long_release",
+      "policy": "A",
+      "configuration": "H1",
+      "tag": "main"
+    },
+    {
+      "case": "cold_partial_tower",
+      "policy": "C",
+      "configuration": "H2",
+      "tag": "main"
+    },
+    {
+      "case": "cold_partial_tower",
+      "policy": "M",
+      "configuration": "H2",
+      "tag": "main"
+    },
+    {
+      "case": "cold_partial_tower",
+      "policy": "C",
+      "configuration": "H0",
+      "tag": "main"
+    },
+    {
+      "case": "cold_partial_tower",
+      "policy": "C",
+      "configuration": "H2_half_minute",
+      "tag": "numerical_convergence"
+    },
+    {
+      "case": "cold_no_pump",
+      "policy": "C",
+      "configuration": "H2",
+      "tag": "main"
+    },
+    {
+      "case": "cold_no_fan",
+      "policy": "C",
+      "configuration": "H2",
+      "tag": "main"
+    },
+    {
+      "case": "cold_bank_t0_empty",
+      "policy": "C",
+      "configuration": "H2_empty",
+      "tag": "main"
+    },
+    {
+      "case": "cold_bank_t0_full",
+      "policy": "C",
+      "configuration": "H2",
+      "tag": "main"
+    },
+    {
+      "case": "cold_recharge_repeat",
+      "policy": "C",
+      "configuration": "H2",
+      "tag": "main"
+    },
+    {
+      "case": "station_ac_interrupt",
+      "policy": "C",
+      "configuration": "H1",
+      "tag": "main"
+    },
+    {
+      "case": "station_dg_dc_missing",
+      "policy": "C",
+      "configuration": "H1",
+      "tag": "main"
+    },
+    {
+      "case": "seen_L2_spring",
+      "policy": "C",
+      "configuration": "H0",
+      "tag": "main"
+    },
+    {
+      "case": "seen_L3_spring",
+      "policy": "C",
+      "configuration": "H0",
+      "tag": "main"
+    },
+    {
+      "case": "seen_L4_autumn",
+      "policy": "C",
+      "configuration": "H0",
+      "tag": "main"
+    },
+    {
+      "case": "mechanism_r0_p0",
+      "policy": "C",
+      "configuration": "H0",
+      "tag": "factorial_preparation_reserve"
+    },
+    {
+      "case": "mechanism_r0_p1",
+      "policy": "C",
+      "configuration": "H0",
+      "tag": "factorial_preparation_reserve"
+    },
+    {
+      "case": "mechanism_r1_p0",
+      "policy": "C",
+      "configuration": "H0",
+      "tag": "factorial_preparation_reserve"
+    },
+    {
+      "case": "mechanism_r1_p1",
+      "policy": "C",
+      "configuration": "H0",
+      "tag": "factorial_preparation_reserve"
+    },
+    {
+      "case": "thermal_winter",
+      "policy": "C",
+      "configuration": "H0",
+      "tag": "exploratory_thermal"
+    },
+    {
+      "case": "thermal_winter",
+      "policy": "C",
+      "configuration": "H2",
+      "tag": "exploratory_thermal"
+    },
+    {
+      "case": "thermal_summer",
+      "policy": "C",
+      "configuration": "H2",
+      "tag": "exploratory_thermal"
+    },
+    {
+      "case": "thermal_summer_repeat_path",
+      "policy": "C",
+      "configuration": "H2",
+      "tag": "exploratory_thermal"
+    },
+    {
+      "case": "seen_L2_proxy_same",
+      "policy": "C",
+      "configuration": "H0",
+      "tag": "L1_L2_classification_equivalence"
+    }
+  ],
+  "notes": [
+    "No forced new-policy superiority",
+    "No full Cartesian expansion",
+    "IES backgrounds are seen; thermal independent dates separately frozen",
+    "H2_half_minute changes numerical interval only"
+  ],
+  "runtime_amendment_before_final_source_comparisons": {
+    "utc": "2026-10-25T11:52:00+00:00",
+    "evidence": "Phase1 067C own worker exceeded21GB RSS; system virtual headroom2.43GB/61.78GB. 92.285% cold RAW bytes are duplicate success validation rows, not physical microsteps. Phase1 snapshot and aborted_unknown retained.",
+    "physical_scenarios_policies_hardware_unchanged": true,
+    "remedy": "Lossless solver row sidecar, content-addressed success-domain row references, streaming JSON, actual native prefix. Correct sustained nonDG witness separated from finite bridge.",
+    "initial_parallel_episodes": 2,
+    "maximum_owned_worker_RSS_bytes": 10000000000,
+    "stop_if_own_RSS_above_6GB_and_commit_above": 0.85,
+    "maximum_single_attempt_seconds": 1800,
+    "dispatch_commit_gate": 0.85,
+    "physical_failure_definition_unchanged": true,
+    "adaptive_parallel_episodes": 4,
+    "adaptive_parallel_basis": "Actual source02 067 full900min completed393s, peak owned1.97GB; cold90min1.34GB. Four<=8GB expected fits current26GB physical headroom and recorded85% commit gate; running own worker guard unchanged.",
+    "final_source04_export_only_fixes": [
+      "Single-pass exact legacy JSON semantics; original control loop and physical unchanged",
+      "Restore true paid initial-storage input field as in M22; original accounting formula unchanged"
+    ],
+    "at_most_simultaneous_thermal_episodes": 1,
+    "total_target_parallel_episodes": 4
+  }
+}

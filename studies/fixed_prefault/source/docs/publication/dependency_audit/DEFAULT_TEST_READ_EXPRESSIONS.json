@@ -1,0 +1,997 @@
+[
+  {
+    "file": "tests/test_resilience.py",
+    "line": 15,
+    "expression": "pd.read_csv(ROOT/'inputs/loads/critical_zones_8760.csv')"
+  },
+  {
+    "file": "tests/test_resilience.py",
+    "line": 18,
+    "expression": "(ROOT/'configs/resilience_assumptions.json').read_text()"
+  },
+  {
+    "file": "tests/test_engineering_planner.py",
+    "line": 35,
+    "expression": "(ROOT / 'configs/resilience_assumptions.json').read_text(encoding='utf-8')"
+  },
+  {
+    "file": "tests/test_engineering_thermal_prefix.py",
+    "line": 57,
+    "expression": "(tmp_path/'thermal/THERMAL_PREFIX.csv').open(encoding='utf-8-sig',newline='')"
+  },
+  {
+    "file": "tests/test_execution_recovery_planner.py",
+    "line": 10,
+    "expression": "importlib.util.spec_from_file_location('v18_replay',ROOT/'outputs/v18_execution_recovery_20261018_run01/review/c18_constraint_localization/replay.py')"
+  },
+  {
+    "file": "tests/test_execution_recovery_planner.py",
+    "line": 38,
+    "expression": "(replay.HERE/'day8_75_fixture.json').read_text(encoding='utf-8')"
+  },
+  {
+    "file": "tests/test_execution_recovery_planner_bridge.py",
+    "line": 7,
+    "expression": "importlib.util.spec_from_file_location('v18_bridge_math',ROOT/'outputs/v18_execution_recovery_20261018_run01/review/c18_key02_handoff/bridge_replay.py')"
+  },
+  {
+    "file": "tests/test_execution_recovery_planner_bridge.py",
+    "line": 81,
+    "expression": "(replay.HERE/'NUMERIC02_PENDING_FIXTURE.json').read_text(encoding='utf-8')"
+  },
+  {
+    "file": "tests/test_execution_recovery_planner_bridge.py",
+    "line": 100,
+    "expression": "(replay.HERE/'NUMERIC02_PENDING_FIXTURE.json').read_text(encoding='utf-8')"
+  },
+  {
+    "file": "tests/test_execution_recovery_planner_bridge.py",
+    "line": 67,
+    "expression": "(replay.HERE/'BRIDGE_FIXTURE.json').read_text(encoding='utf-8')"
+  },
+  {
+    "file": "tests/test_execution_recovery_protection_pressure.py",
+    "line": 8,
+    "expression": "importlib.util.spec_from_file_location('v18_stress_saved',ROOT/'outputs/v18_execution_recovery_20261018_run01/review/c18_constraint_localization/replay.py')"
+  },
+  {
+    "file": "tests/test_model_closeout_analysis.py",
+    "line": 231,
+    "expression": "shutil.copytree(directory, work / \"experiments/main_02\")"
+  },
+  {
+    "file": "tests/test_model_closeout_analysis.py",
+    "line": 76,
+    "expression": "path.open(encoding=\"utf-8-sig\", newline=\"\")"
+  },
+  {
+    "file": "tests/test_model_closeout_analysis.py",
+    "line": 120,
+    "expression": "(REAL_RUN / \"references/EMISSIONS_FACTOR_REGISTRY.json\").read_bytes()"
+  },
+  {
+    "file": "tests/test_model_closeout_analysis.py",
+    "line": 174,
+    "expression": "(out / \"SUMMARY.json\").read_text(encoding=\"utf-8\")"
+  },
+  {
+    "file": "tests/test_model_closeout_analysis.py",
+    "line": 234,
+    "expression": "(work / \"review/summary_duplicate01/SUMMARY.json\").read_text(encoding=\"utf-8\")"
+  },
+  {
+    "file": "tests/test_model_closeout_analysis.py",
+    "line": 88,
+    "expression": "path.read_bytes()"
+  },
+  {
+    "file": "tests/test_model_closeout_numerics.py",
+    "line": 18,
+    "expression": "base.with_suffix('.json').read_text(encoding='utf8')"
+  },
+  {
+    "file": "tests/test_model_closeout_numerics.py",
+    "line": 19,
+    "expression": "np.load(base.with_suffix('.npz'))"
+  },
+  {
+    "file": "tests/test_model_closeout_registration.py",
+    "line": 21,
+    "expression": "(root/'outputs/v18_execution_recovery_20261018_run01/design/MAIN_FINAL_R1_PROPOSAL.json').read_text(encoding='utf8')"
+  },
+  {
+    "file": "tests/test_model_closeout_registration.py",
+    "line": 192,
+    "expression": "(directory/'ATTEMPTS.jsonl').read_text(encoding='utf8')"
+  },
+  {
+    "file": "tests/test_execution_recovery_numerics.py",
+    "line": 46,
+    "expression": "np.load(FIXTURE / 'selected_original_domain.npz')"
+  },
+  {
+    "file": "tests/test_execution_recovery_numerics.py",
+    "line": 54,
+    "expression": "np.load(FIXTURE / 'selected_original_domain.npz')"
+  },
+  {
+    "file": "tests/test_execution_recovery_numerics.py",
+    "line": 57,
+    "expression": "(FIXTURE / 'original_rows.json').read_text(encoding='utf-8')"
+  },
+  {
+    "file": "tests/test_execution_recovery_numerics.py",
+    "line": 59,
+    "expression": "(FIXTURE / 'layers').glob('*.npz')"
+  },
+  {
+    "file": "tests/test_execution_recovery_numerics.py",
+    "line": 321,
+    "expression": "np.load(path/'domain.npz')"
+  },
+  {
+    "file": "tests/test_execution_recovery_numerics.py",
+    "line": 323,
+    "expression": "(path/'rows_variables.json').read_text(encoding='utf-8')"
+  },
+  {
+    "file": "tests/test_execution_recovery_numerics.py",
+    "line": 354,
+    "expression": "np.load(path/'domain.npz')"
+  },
+  {
+    "file": "tests/test_execution_recovery_numerics.py",
+    "line": 356,
+    "expression": "(path/'rows_variables.json').read_text(encoding='utf-8')"
+  },
+  {
+    "file": "tests/test_execution_recovery_numerics.py",
+    "line": 60,
+    "expression": "np.load(path)"
+  },
+  {
+    "file": "tests/test_execution_recovery_runner.py",
+    "line": 44,
+    "expression": "gzip.open(path, 'rt', encoding='utf8')"
+  },
+  {
+    "file": "tests/test_execution_recovery_runner.py",
+    "line": 48,
+    "expression": "gzip.open(path, 'rt', encoding='utf8')"
+  },
+  {
+    "file": "tests/test_execution_recovery_runner.py",
+    "line": 55,
+    "expression": "(m.ROOT / 'outputs/v17_state_coordinated_20261018_run01/design/MAIN_PROPOSAL.json').read_text(encoding='utf8')"
+  },
+  {
+    "file": "tests/test_execution_recovery_runner.py",
+    "line": 45,
+    "expression": "json.load(f)"
+  },
+  {
+    "file": "tests/test_execution_recovery_runner.py",
+    "line": 49,
+    "expression": "json.load(f)"
+  },
+  {
+    "file": "tests/test_v20_load_accounting.py",
+    "line": 19,
+    "expression": "pd.read_csv(ROOT / \"inputs/loads/hospital_ies_demand_8760.csv\")"
+  },
+  {
+    "file": "tests/test_v20_load_accounting.py",
+    "line": 20,
+    "expression": "pd.read_csv(ROOT / \"inputs/loads/critical_zones_8760.csv\")"
+  },
+  {
+    "file": "tests/test_v20_load_accounting.py",
+    "line": 147,
+    "expression": "(ROOT / \"outputs/v43_p2b_20261013_run01/experiment/global_manifest.json\").read_text(encoding=\"utf-8\")"
+  },
+  {
+    "file": "tests/test_v20_runtime.py",
+    "line": 19,
+    "expression": "(V19 / \"design\" / name).read_text(encoding=\"utf8\")"
+  },
+  {
+    "file": "tests/test_v20_runtime.py",
+    "line": 42,
+    "expression": "(V19 / \"M19_MODEL_CONFIG.json\").read_text(encoding=\"utf8\")"
+  },
+  {
+    "file": "tests/test_v20_runtime.py",
+    "line": 82,
+    "expression": "(V19 / \"M19_MODEL_CONFIG.json\").read_text(encoding=\"utf8\")"
+  },
+  {
+    "file": "tests/test_v20_runtime.py",
+    "line": 121,
+    "expression": "(V19 / \"M19_MODEL_CONFIG.json\").read_text(encoding=\"utf8\")"
+  },
+  {
+    "file": "tests/test_v20_runtime.py",
+    "line": 164,
+    "expression": "(V19 / \"M19_MODEL_CONFIG.json\").read_text(encoding=\"utf8\")"
+  },
+  {
+    "file": "tests/test_v20_runtime.py",
+    "line": 184,
+    "expression": "(V19 / \"M19_MODEL_CONFIG.json\").read_text(encoding=\"utf8\")"
+  },
+  {
+    "file": "tests/test_v20_runtime.py",
+    "line": 200,
+    "expression": "(directory / \"ATTEMPTS.jsonl\").read_text(encoding=\"utf8\")"
+  },
+  {
+    "file": "tests/test_v20_campaign.py",
+    "line": 24,
+    "expression": "(folder/'MAIN_FINAL_R1_PROPOSAL.json').read_text(encoding='utf-8-sig')"
+  },
+  {
+    "file": "tests/test_v20_campaign.py",
+    "line": 51,
+    "expression": "next((run/'orchestration').glob('*/RESULT.json')).read_text(encoding='utf-8')"
+  },
+  {
+    "file": "tests/test_v20_campaign.py",
+    "line": 91,
+    "expression": "next((run/'orchestration').glob('*/RESULT.json')).read_text(encoding='utf-8')"
+  },
+  {
+    "file": "tests/test_v20_campaign.py",
+    "line": 51,
+    "expression": "(run/'orchestration').glob('*/RESULT.json')"
+  },
+  {
+    "file": "tests/test_v20_campaign.py",
+    "line": 91,
+    "expression": "(run/'orchestration').glob('*/RESULT.json')"
+  },
+  {
+    "file": "tests/test_v20_reporting.py",
+    "line": 123,
+    "expression": "(directory/\"manifest.json\").read_text()"
+  },
+  {
+    "file": "tests/test_v20_reporting.py",
+    "line": 208,
+    "expression": "path.read_text()"
+  },
+  {
+    "file": "tests/test_v20_reporting.py",
+    "line": 190,
+    "expression": "journal.open(\"a\",encoding=\"utf8\")"
+  },
+  {
+    "file": "tests/test_v20_reporting.py",
+    "line": 182,
+    "expression": "journal.read_text()"
+  },
+  {
+    "file": "tests/test_v20_reporting.py",
+    "line": 210,
+    "expression": "journal.read_text()"
+  },
+  {
+    "file": "tests/test_sci_auxiliary.py",
+    "line": 94,
+    "expression": "pd.read_csv(REPO / 'inputs/loads/electricity_boundary_8760.csv')"
+  },
+  {
+    "file": "tests/test_sci_auxiliary.py",
+    "line": 112,
+    "expression": "pd.read_csv(REPO / 'inputs/loads/critical_zones_8760.csv')"
+  },
+  {
+    "file": "tests/test_sci_auxiliary.py",
+    "line": 113,
+    "expression": "pd.read_csv(REPO / 'inputs/loads/hospital_ies_demand_8760.csv')"
+  },
+  {
+    "file": "tests/test_sci_auxiliary.py",
+    "line": 130,
+    "expression": "allocation.read_bytes()"
+  },
+  {
+    "file": "tests/test_sci_environment.py",
+    "line": 24,
+    "expression": "(ROOT/'outputs/v43_p2b_20261013_run01/experiment/global_manifest.json').read_text(encoding='utf-8')"
+  },
+  {
+    "file": "tests/test_sci_design.py",
+    "line": 189,
+    "expression": "output.read_text(encoding='utf8')"
+  },
+  {
+    "file": "tests/test_sci_design.py",
+    "line": 204,
+    "expression": "output.read_text(encoding='utf8')"
+  },
+  {
+    "file": "tests/test_sci_runner.py",
+    "line": 176,
+    "expression": "failed.read_bytes()"
+  },
+  {
+    "file": "tests/test_sci_runner.py",
+    "line": 54,
+    "expression": "directory.glob('pairs/*/attempt_*/RESULT.json')"
+  },
+  {
+    "file": "tests/test_sci_runner.py",
+    "line": 147,
+    "expression": "next(directory.glob('pairs/s__C__H0/attempt_*/RESULT.json')).read_text(encoding='utf8')"
+  },
+  {
+    "file": "tests/test_sci_runner.py",
+    "line": 164,
+    "expression": "(directory/'PLAN.json').read_text(encoding='utf8')"
+  },
+  {
+    "file": "tests/test_sci_runner.py",
+    "line": 176,
+    "expression": "directory.glob('pairs/s__C__H0/attempt_*/RESULT.json')"
+  },
+  {
+    "file": "tests/test_sci_runner.py",
+    "line": 180,
+    "expression": "failed.read_bytes()"
+  },
+  {
+    "file": "tests/test_sci_runner.py",
+    "line": 233,
+    "expression": "directory.glob('pairs/s__C__H0/attempt_*/RESULT.json')"
+  },
+  {
+    "file": "tests/test_sci_runner.py",
+    "line": 234,
+    "expression": "path.read_text(encoding='utf8')"
+  },
+  {
+    "file": "tests/test_sci_runner.py",
+    "line": 32,
+    "expression": "directory.glob('pairs/*/attempt_*/RESULT.json')"
+  },
+  {
+    "file": "tests/test_sci_runner.py",
+    "line": 39,
+    "expression": "Path(record['raw_path']).read_bytes()"
+  },
+  {
+    "file": "tests/test_sci_runner.py",
+    "line": 61,
+    "expression": "target.open('ab')"
+  },
+  {
+    "file": "tests/test_sci_runner.py",
+    "line": 79,
+    "expression": "p.read_text(encoding='utf8')"
+  },
+  {
+    "file": "tests/test_sci_runner.py",
+    "line": 79,
+    "expression": "directory.glob('pairs/*/attempt_*/RESULT.json')"
+  },
+  {
+    "file": "tests/test_sci_runner.py",
+    "line": 130,
+    "expression": "p.read_text(encoding='utf8')"
+  },
+  {
+    "file": "tests/test_sci_runner.py",
+    "line": 130,
+    "expression": "directory.glob('pairs/*/attempt_*/RESULT.json')"
+  },
+  {
+    "file": "tests/test_sci_runner.py",
+    "line": 181,
+    "expression": "directory.glob('pairs/s__C__H0/attempt_*/RESULT.json')"
+  },
+  {
+    "file": "tests/test_sci_runner.py",
+    "line": 145,
+    "expression": "(directory/'ATTEMPTS.jsonl').read_text(encoding='utf8')"
+  },
+  {
+    "file": "tests/test_sci_runner.py",
+    "line": 147,
+    "expression": "directory.glob('pairs/s__C__H0/attempt_*/RESULT.json')"
+  },
+  {
+    "file": "tests/test_sci_auxiliary_surplus.py",
+    "line": 22,
+    "expression": "(ROOT/'tests/fixtures/sci_heat_pump_start_surplus.json').read_text()"
+  },
+  {
+    "file": "tests/test_sci_solver_log.py",
+    "line": 43,
+    "expression": "gzip.open(path,'rt',encoding='utf8')"
+  },
+  {
+    "file": "tests/test_sci_solver_log.py",
+    "line": 90,
+    "expression": "gzip.open(tampered,'wt',encoding='utf8')"
+  },
+  {
+    "file": "tests/test_sci_solver_log.py",
+    "line": 133,
+    "expression": "gzip.open(tampered,'wt',encoding='utf8')"
+  },
+  {
+    "file": "tests/test_sci_solver_log.py",
+    "line": 87,
+    "expression": "gzip.open(path,'rt',encoding='utf8')"
+  },
+  {
+    "file": "tests/test_sci_solver_log.py",
+    "line": 112,
+    "expression": "path.read_bytes()"
+  },
+  {
+    "file": "tests/test_sci_solver_log.py",
+    "line": 130,
+    "expression": "gzip.open(path,'rt',encoding='utf8')"
+  },
+  {
+    "file": "tests/test_sci_solver_log.py",
+    "line": 41,
+    "expression": "path.read_bytes()"
+  },
+  {
+    "file": "tests/test_sci_final_release.py",
+    "line": 96,
+    "expression": "importlib.util.spec_from_file_location('isolated_selective_data_staged',path)"
+  },
+  {
+    "file": "tests/test_sci_final_release_integration.py",
+    "line": 118,
+    "expression": "shutil.copytree(f.directory,copied)"
+  },
+  {
+    "file": "tests/test_sci_final_release_integration.py",
+    "line": 110,
+    "expression": "f.directory.glob('pairs/*/attempt_*/RESULT.json')"
+  },
+  {
+    "file": "tests/test_sci_analysis.py",
+    "line": 15,
+    "expression": "importlib.util.spec_from_file_location('sci_test_'+name,path)"
+  },
+  {
+    "file": "tests/test_sci_analysis.py",
+    "line": 130,
+    "expression": "gzip.open(raw,'wt',encoding='utf-8')"
+  },
+  {
+    "file": "tests/test_sci_analysis.py",
+    "line": 289,
+    "expression": "gzip.open(raw,'wt',encoding='utf-8')"
+  },
+  {
+    "file": "tests/test_sci_analysis.py",
+    "line": 307,
+    "expression": "path.open('wb')"
+  },
+  {
+    "file": "tests/test_sci_analysis.py",
+    "line": 138,
+    "expression": "(tmp_path/'actual'/'PROCESS.csv').open(encoding='utf-8-sig')"
+  },
+  {
+    "file": "tests/test_sci_analysis.py",
+    "line": 131,
+    "expression": "raw.read_bytes()"
+  },
+  {
+    "file": "tests/test_sci_analysis.py",
+    "line": 291,
+    "expression": "(tmp_path/'process'/'PROCESS.csv').open(encoding='utf-8-sig')"
+  },
+  {
+    "file": "tests/test_sci_analysis.py",
+    "line": 290,
+    "expression": "raw.read_bytes()"
+  },
+  {
+    "file": "tests/test_sci_analysis.py",
+    "line": 342,
+    "expression": "gzip.open(path,'wt',encoding='utf-8')"
+  },
+  {
+    "file": "tests/test_sci_analysis.py",
+    "line": 311,
+    "expression": "path.read_bytes()"
+  },
+  {
+    "file": "tests/test_sci_analysis.py",
+    "line": 313,
+    "expression": "main.read_bytes()"
+  },
+  {
+    "file": "tests/test_sci_analysis.py",
+    "line": 343,
+    "expression": "path.read_bytes()"
+  },
+  {
+    "file": "tests/test_sci_selection.py",
+    "line": 15,
+    "expression": "importlib.util.spec_from_file_location('sci_selection_test',path)"
+  },
+  {
+    "file": "tests/test_sci_selection.py",
+    "line": 98,
+    "expression": "importlib.util.spec_from_file_location('selection_arithmetic_fixture',fixture_path)"
+  },
+  {
+    "file": "tests/test_sci_dhw_dependency.py",
+    "line": 35,
+    "expression": "pd.read_csv(path,usecols=['hour_of_year'])"
+  },
+  {
+    "file": "tests/test_sci_dhw_dependency.py",
+    "line": 36,
+    "expression": "pd.read_csv(path,skiprows=[i+1 for i,h in enumerate(identity.hour_of_year) if int(h) not in hours])"
+  },
+  {
+    "file": "tests/test_v22_analysis.py",
+    "line": 61,
+    "expression": "path.open(encoding='utf-8-sig', newline='')"
+  },
+  {
+    "file": "tests/test_v22_analysis.py",
+    "line": 98,
+    "expression": "path.read_bytes()"
+  },
+  {
+    "file": "tests/test_v22_analysis.py",
+    "line": 110,
+    "expression": "path.read_bytes()"
+  },
+  {
+    "file": "tests/test_v22_auxiliary.py",
+    "line": 150,
+    "expression": "target.read_bytes()"
+  },
+  {
+    "file": "tests/test_v22_core_environment.py",
+    "line": 13,
+    "expression": "(ROOT/'outputs/v43_p2b_20261013_run01/experiment/global_manifest.json').read_text(encoding='utf-8')"
+  },
+  {
+    "file": "tests/test_v22_stress_proxy.py",
+    "line": 41,
+    "expression": "(ROOT / 'configs/resilience_assumptions.json').read_text(encoding='utf-8')"
+  },
+  {
+    "file": "tests/test_v22_validation.py",
+    "line": 203,
+    "expression": "path.read_bytes()"
+  },
+  {
+    "file": "tests/test_v22_validation.py",
+    "line": 129,
+    "expression": "path.open(encoding='utf-8-sig', newline='')"
+  },
+  {
+    "file": "tests/test_v22_validation.py",
+    "line": 163,
+    "expression": "gzip.open(result['raw_path'], 'rt', encoding='utf8')"
+  },
+  {
+    "file": "tests/test_v22_validation.py",
+    "line": 164,
+    "expression": "json.load(stream)"
+  },
+  {
+    "file": "tests/test_v22_validation.py",
+    "line": 208,
+    "expression": "path.read_bytes()"
+  },
+  {
+    "file": "tests/test_v23_recovery.py",
+    "line": 14,
+    "expression": "(ROOT/'outputs/v43_p2b_20261013_run01/experiment/global_manifest.json').read_text(encoding='utf-8')"
+  },
+  {
+    "file": "tests/test_v23_reporting.py",
+    "line": 44,
+    "expression": "path.open(encoding='utf-8-sig', newline='')"
+  },
+  {
+    "file": "tests/test_v23_reporting.py",
+    "line": 99,
+    "expression": "(run/'RESULT.json').read_text(encoding='utf-8')"
+  },
+  {
+    "file": "tests/test_v23_reporting.py",
+    "line": 102,
+    "expression": "gzip.open(run/'trajectory.json.gz', 'wt', encoding='utf-8')"
+  },
+  {
+    "file": "tests/test_v23_reporting.py",
+    "line": 37,
+    "expression": "gzip.open(run/'trajectory.json.gz', 'wt', encoding='utf-8')"
+  },
+  {
+    "file": "tests/test_v23_reporting.py",
+    "line": 50,
+    "expression": "p.read_bytes()"
+  },
+  {
+    "file": "tests/test_v23_reporting.py",
+    "line": 67,
+    "expression": "p.read_bytes()"
+  },
+  {
+    "file": "tests/test_v23_review.py",
+    "line": 58,
+    "expression": "gzip.open(path/'trajectory.json.gz', 'wt', encoding='utf-8')"
+  },
+  {
+    "file": "tests/test_v23_review.py",
+    "line": 81,
+    "expression": "path.open(encoding='utf-8-sig', newline='')"
+  },
+  {
+    "file": "tests/test_v23_review.py",
+    "line": 87,
+    "expression": "path.read_text(encoding='utf-8')"
+  },
+  {
+    "file": "tests/test_v23_review.py",
+    "line": 30,
+    "expression": "path.read_bytes()"
+  },
+  {
+    "file": "tests/test_v23_validation.py",
+    "line": 43,
+    "expression": "(existing/'unique.txt').read_text()"
+  },
+  {
+    "file": "tests/test_v23_validation.py",
+    "line": 86,
+    "expression": "gzip.open(path,'rt',encoding='utf8')"
+  },
+  {
+    "file": "tests/test_v23_validation.py",
+    "line": 86,
+    "expression": "json.load(f)"
+  },
+  {
+    "file": "tests/test_v23_validation.py",
+    "line": 94,
+    "expression": "path.read_bytes()"
+  },
+  {
+    "file": "tests/test_v23_export.py",
+    "line": 62,
+    "expression": "(ROOT/'configs/model_correctness_v23/cases.json').read_text(encoding='utf8')"
+  },
+  {
+    "file": "tests/test_v23_export.py",
+    "line": 63,
+    "expression": "(ROOT/registration['emissions_factor_registry']['path']).read_text(encoding='utf8')"
+  },
+  {
+    "file": "tests/test_v23_recovery_numerics.py",
+    "line": 21,
+    "expression": "(ROOT/'tests/fixtures/v23_winter470_current_port.json').read_text(encoding='utf8')"
+  },
+  {
+    "file": "tests/test_v24_cold_modes.py",
+    "line": 27,
+    "expression": "(ROOT/'outputs/v43_p2b_20261013_run01/experiment/global_manifest.json').read_text(encoding='utf-8')"
+  },
+  {
+    "file": "tests/test_v24_cold_admission.py",
+    "line": 42,
+    "expression": "(ROOT/'outputs/v43_p2b_20261013_run01/experiment/global_manifest.json').read_text(encoding='utf8')"
+  },
+  {
+    "file": "tests/test_v24_cold_admission.py",
+    "line": 117,
+    "expression": "snapshot.read_bytes()"
+  },
+  {
+    "file": "tests/test_v25_reserve.py",
+    "line": 17,
+    "expression": "(ROOT/'outputs/v43_p2b_20261013_run01/experiment/global_manifest.json').read_text(encoding='utf-8')"
+  },
+  {
+    "file": "tests/test_v26_cold_ledger.py",
+    "line": 51,
+    "expression": "Path('functional_bootstrap.txt').open('a')"
+  },
+  {
+    "file": "tests/test_v26_cold_ledger.py",
+    "line": 68,
+    "expression": "(output/'functional_bootstrap.txt').read_text()"
+  },
+  {
+    "file": "tests/test_v26_cold_observer.py",
+    "line": 20,
+    "expression": "(ROOT/'inputs/energyplus/Hospital_SanDiego.idf').read_text(encoding='utf-8-sig')"
+  },
+  {
+    "file": "tests/test_v26_cold_observer.py",
+    "line": 46,
+    "expression": "(ROOT/'inputs/energyplus/Hospital_SanDiego.idf').read_text(encoding='utf-8-sig')"
+  },
+  {
+    "file": "tests/test_v26_cold_observer.py",
+    "line": 96,
+    "expression": "(ROOT/'inputs/energyplus/Hospital_SanDiego.idf').read_text(encoding='utf-8-sig')"
+  },
+  {
+    "file": "tests/test_v26_cold_observer.py",
+    "line": 117,
+    "expression": "(ROOT/'inputs/energyplus/Hospital_SanDiego.idf').read_text(encoding='utf-8-sig')"
+  },
+  {
+    "file": "tests/test_v26_combined.py",
+    "line": 25,
+    "expression": "(ROOT/'configs/model_correction_v25/cases.json').read_text(encoding='utf-8')"
+  },
+  {
+    "file": "tests/test_v26_combined.py",
+    "line": 151,
+    "expression": "(ROOT/'configs/model_correction_v26/cases.json').read_text(encoding='utf-8')"
+  },
+  {
+    "file": "tests/test_v26_combined.py",
+    "line": 154,
+    "expression": "(ROOT/'configs/model_correction_v26/RUN_PLAN.json').read_text(encoding='utf-8')"
+  },
+  {
+    "file": "tests/test_v27_snapshot.py",
+    "line": 52,
+    "expression": "api().BoundExecutionSnapshot.load(p,template_env=e,binding={'science':'fixed','input':'fixed'})"
+  },
+  {
+    "file": "tests/test_v27_snapshot.py",
+    "line": 70,
+    "expression": "api().BoundExecutionSnapshot.load(path,template_env=template,binding={'science':'fixed','input':'fixed'})"
+  },
+  {
+    "file": "tests/test_v27_snapshot.py",
+    "line": 120,
+    "expression": "api().BoundExecutionSnapshot.load(path,template_env=e,binding={'science':'fixed','input':'fixed'})"
+  },
+  {
+    "file": "tests/test_v27_snapshot.py",
+    "line": 102,
+    "expression": "api().BoundExecutionSnapshot.load(p,template_env=e,binding={'science':'another'})"
+  },
+  {
+    "file": "tests/test_v27_snapshot.py",
+    "line": 103,
+    "expression": "p.read_text()"
+  },
+  {
+    "file": "tests/test_v27_snapshot.py",
+    "line": 105,
+    "expression": "api().BoundExecutionSnapshot.load(p,template_env=e,binding={'science':'fixed','input':'fixed'})"
+  },
+  {
+    "file": "tests/test_v27_factory.py",
+    "line": 11,
+    "expression": "(root/'configs/model_correction_v26/cases.json').read_text()"
+  },
+  {
+    "file": "tests/test_v27_factory.py",
+    "line": 25,
+    "expression": "(tmp_path/'context/FACTORY_IO_RECEIPT.json').read_text()"
+  },
+  {
+    "file": "tests/test_v27_public_contract.py",
+    "line": 9,
+    "expression": "(ROOT/'configs/model_correction_v26/cases.json').read_text()"
+  },
+  {
+    "file": "tests/test_v27_run_binding.py",
+    "line": 9,
+    "expression": "path.read_text()"
+  },
+  {
+    "file": "tests/test_v28_demand.py",
+    "line": 78,
+    "expression": "pd.read_csv(ROOT/'inputs/loads/hospital_ies_demand_8760.csv')"
+  },
+  {
+    "file": "tests/test_v28_demand.py",
+    "line": 79,
+    "expression": "pd.read_csv(ROOT/'inputs/loads/critical_zones_8760.csv')"
+  },
+  {
+    "file": "tests/test_v28_public_contract.py",
+    "line": 9,
+    "expression": "(ROOT/'configs/model_review_v27/cases.json').read_text(encoding='utf8')"
+  },
+  {
+    "file": "tests/test_v28_public_contract.py",
+    "line": 58,
+    "expression": "(ROOT/'configs/model_review_v28/cases.json').read_text(encoding='utf8')"
+  },
+  {
+    "file": "tests/test_v28_thermal_adapter.py",
+    "line": 20,
+    "expression": "source.read_bytes()"
+  },
+  {
+    "file": "tests/test_v28_thermal_adapter.py",
+    "line": 22,
+    "expression": "p.read_bytes()"
+  },
+  {
+    "file": "tests/test_v29_public_contract.py",
+    "line": 9,
+    "expression": "(ROOT/'configs/model_review_v28/cases.json').read_text(encoding='utf8')"
+  },
+  {
+    "file": "tests/test_v29_public_contract.py",
+    "line": 49,
+    "expression": "(ROOT/'configs/model_review_v29/cases.json').read_text(encoding='utf8')"
+  },
+  {
+    "file": "tests/test_v29_public_contract.py",
+    "line": 50,
+    "expression": "(ROOT/'configs/model_correction_v25/cases.json').read_text(encoding='utf8')"
+  },
+  {
+    "file": "tests/test_v29_public_contract.py",
+    "line": 64,
+    "expression": "(ROOT/'configs/model_review_v29/cases.json').read_text(encoding='utf8')"
+  },
+  {
+    "file": "tests/test_v29_public_contract.py",
+    "line": 82,
+    "expression": "(ROOT/'configs/model_review_v29/cases.json').read_text(encoding='utf8')"
+  },
+  {
+    "file": "tests/test_v29_public_contract.py",
+    "line": 73,
+    "expression": "(ROOT/'configs'/folder/'cases.json').read_text(encoding='utf8')"
+  },
+  {
+    "file": "tests/test_v29_source_scope.py",
+    "line": 25,
+    "expression": "importlib.util.spec_from_file_location('v29_source_scope_test', path)"
+  },
+  {
+    "file": "tests/test_v29_source_scope.py",
+    "line": 44,
+    "expression": "shutil.copyfile(ROOT / THERMAL, destination / THERMAL)"
+  },
+  {
+    "file": "tests/test_v29_source_scope.py",
+    "line": 43,
+    "expression": "shutil.copyfile(ROOT / QUALITY / name, destination / QUALITY / name)"
+  },
+  {
+    "file": "tests/test_v29_source_scope.py",
+    "line": 56,
+    "expression": "(ROOT / QUALITY / 'SOURCE_COOLING_UNMET_HOURS.csv').open(newline='')"
+  },
+  {
+    "file": "tests/test_v29_source_scope.py",
+    "line": 115,
+    "expression": "(ROOT / THERMAL).open(newline='')"
+  },
+  {
+    "file": "tests/test_v29_source_scope.py",
+    "line": 142,
+    "expression": "path.read_bytes()"
+  },
+  {
+    "file": "tests/test_v29_source_scope.py",
+    "line": 183,
+    "expression": "metadata_path.read_text(encoding='utf8')"
+  },
+  {
+    "file": "tests/test_v29_source_scope.py",
+    "line": 186,
+    "expression": "path.read_bytes()"
+  },
+  {
+    "file": "tests/test_v29_source_scope.py",
+    "line": 145,
+    "expression": "path.read_bytes()"
+  },
+  {
+    "file": "tests/test_v29_source_scope.py",
+    "line": 189,
+    "expression": "(isolated / QUALITY / 'ALL55_ZONES_NATIVE_UNMET_SUMMARY.csv').open('ab')"
+  },
+  {
+    "file": "tests/test_v29_source_scope.py",
+    "line": 192,
+    "expression": "(isolated / THERMAL).open('ab')"
+  },
+  {
+    "file": "tests/test_v29_source_scope.py",
+    "line": 61,
+    "expression": "(ROOT / QUALITY / name).read_bytes()"
+  },
+  {
+    "file": "tests/test_v30_public.py",
+    "line": 8,
+    "expression": "(ROOT/'configs/model_review_v29/cases.json').read_text()"
+  },
+  {
+    "file": "tests/test_v30_public.py",
+    "line": 46,
+    "expression": "(tmp_path/'open.log').open('w')"
+  },
+  {
+    "file": "tests/test_v30_evaluation.py",
+    "line": 181,
+    "expression": "config_path.read_bytes()"
+  },
+  {
+    "file": "tests/test_v30_evaluation.py",
+    "line": 182,
+    "expression": "csv_path.read_bytes()"
+  },
+  {
+    "file": "tests/test_v30_offline.py",
+    "line": 17,
+    "expression": "importlib.util.spec_from_file_location('reference_under_test',path)"
+  },
+  {
+    "file": "tests/test_v30_offline.py",
+    "line": 24,
+    "expression": "FIXTURE.read_text(encoding='utf-8')"
+  },
+  {
+    "file": "tests/test_v30_offline.py",
+    "line": 37,
+    "expression": "FIXTURE.read_text(encoding='utf-8')"
+  },
+  {
+    "file": "tests/test_v30_offline.py",
+    "line": 47,
+    "expression": "FIXTURE.read_text(encoding='utf-8')"
+  },
+  {
+    "file": "tests/test_v30_offline.py",
+    "line": 69,
+    "expression": "FIXTURE.read_text(encoding='utf-8')"
+  },
+  {
+    "file": "tests/test_v30_offline.py",
+    "line": 86,
+    "expression": "FIXTURE.read_text(encoding='utf-8')"
+  },
+  {
+    "file": "tests/test_v30_offline.py",
+    "line": 95,
+    "expression": "FIXTURE.read_text(encoding='utf-8')"
+  },
+  {
+    "file": "tests/test_v30_offline.py",
+    "line": 113,
+    "expression": "FIXTURE.read_text(encoding='utf-8')"
+  },
+  {
+    "file": "tests/test_v30_offline.py",
+    "line": 159,
+    "expression": "FIXTURE.read_text(encoding='utf-8')"
+  },
+  {
+    "file": "tests/test_v30_offline.py",
+    "line": 173,
+    "expression": "FIXTURE.read_text(encoding='utf-8')"
+  },
+  {
+    "file": "tests/test_v30_offline.py",
+    "line": 192,
+    "expression": "FIXTURE.read_text(encoding='utf-8')"
+  },
+  {
+    "file": "tests/test_v30_reference.py",
+    "line": 7,
+    "expression": "importlib.util.spec_from_file_location('v30_staged_reference',path)"
+  }
+]

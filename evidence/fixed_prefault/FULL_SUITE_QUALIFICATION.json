@@ -1,0 +1,1761 @@
+{
+  "schema": "hospital_ies.full_suite_qualification.v1",
+  "date": "2026-11-05",
+  "workspace": "D:\\hospital_ies_no_priority_20261105",
+  "reviewer_actions": "read_existing_logs_and_hash_sources_only_no_test_or_trajectory_execution",
+  "qualification": "single_default_full_suite_failed_then_exact_131_path_context_recheck_passed_not_a_single_full_suite_pass",
+  "current_summary": "133 failed, 2754 passed, 1 skipped, 13 errors in 568.15s",
+  "old_summary": "2 failed, 2885 passed, 1 skipped, 13 errors in 617.44s",
+  "recheck_summary": "131 passed in 27.77s",
+  "recheck_exit_marker": "ACTUAL_EXIT_CODE=ExitCode.OK",
+  "current_failed_nodes": [
+    "tests/test_engineering_thermal_prefix.py::test_single_pass_gzip_export_preserves_unknown_missing_fields_and_long_windows",
+    "tests/test_model_closeout_registration.py::test_path_gate_rejects_old_outputs_and_own_parent",
+    "tests/test_model_closeout_registration.py::test_unhandled_attempt_is_retained_with_unknown_tail_and_no_zero_substitute",
+    "tests/test_model_closeout_registration.py::test_changed_or_missing_final_artifact_rejected_before_environment_creation",
+    "tests/test_sci_runner.py::test_sidecar_close_failure_preserves_already_returned_physical_prefix",
+    "tests/test_sci_runner.py::test_retry_refuses_tampered_failed_terminal_evidence[result]",
+    "tests/test_sci_runner.py::test_retry_refuses_tampered_failed_terminal_evidence[raw]",
+    "tests/test_sci_runner.py::test_retry_refuses_tampered_failed_terminal_evidence[sidecar]",
+    "tests/test_sci_runner.py::test_real_registered_episode_has_complete_legacy_export_identity_and_actual_m21_ledger",
+    "tests/test_sci_runner.py::test_new_budget_does_not_inherit_historical_campaign_clock_and_raw_is_separate",
+    "tests/test_sci_runner.py::test_failure_retains_attempt_and_unknown_tail_and_later_pairs_continue",
+    "tests/test_sci_runner.py::test_source_drift_refuses_before_any_attempt",
+    "tests/test_sci_runner.py::test_formal_registration_requires_frozen_selection_and_actual_pilot",
+    "tests/test_sci_runner.py::test_resuming_skips_success_but_does_not_overwrite_failed_attempts",
+    "tests/test_sci_runner.py::test_default_policy_factory_receives_actual_common_plant",
+    "tests/test_sci_runner.py::test_resume_refuses_tampered_completed_result_even_if_raw_unchanged",
+    "tests/test_sci_runner.py::test_frozen_factor_registry_bytes_cannot_change_after_registration",
+    "tests/test_sci_final_release_integration.py::test_final_registration_binds_exact_normalized_panel_once",
+    "tests/test_sci_final_release_integration.py::test_all_other_phases_and_missing_grant_keep_sealed_rejected",
+    "tests/test_sci_final_release_integration.py::test_final_run_passes_runtime_receipt_and_retains_failed_attempt",
+    "tests/test_sci_final_release_integration.py::test_drift_and_wrong_execution_directory_reject_before_env",
+    "tests/test_sci_final_release_integration.py::test_authentic_fixture_receipt_reaches_input_stub_only_after_full_validation",
+    "tests/test_sci_final_release_integration.py::test_m21_reset_only_exact_registered_scene_and_complete_hours",
+    "tests/test_sci_final_release_integration.py::test_cli_normalize_grant_register_complete_metadata_route",
+    "tests/test_annual_program_analysis.py::test_analysis_cli_writes_only_a_fresh_detached_directory",
+    "tests/test_annual_program_selective_data.py::test_real_public_runner_keeps_orchestration_outside_exact_numeric_grant[False]",
+    "tests/test_annual_program_selective_data.py::test_real_public_runner_keeps_orchestration_outside_exact_numeric_grant[True]",
+    "tests/test_annual_program_recovery.py::test_advanced_journal_requires_new_branch_with_exact_snapshot_databases",
+    "tests/test_annual_program_recovery.py::test_incomplete_commit_keeps_previous_complete_point",
+    "tests/test_annual_program_recovery.py::test_zero_blob_domain_restores_its_registered_empty_directory",
+    "tests/test_annual_program_recovery.py::test_metadata_append_cannot_mutate_a_committed_snapshot",
+    "tests/test_annual_program_recovery.py::test_changed_database_identity_is_rejected_before_commit",
+    "tests/test_annual_program_recovery.py::test_restore_is_self_contained_when_original_attempt_is_absent",
+    "tests/test_annual_program_recovery.py::test_corrupt_or_missing_snapshot_member_is_not_a_recoverable_point[runtime]",
+    "tests/test_annual_program_recovery.py::test_corrupt_or_missing_snapshot_member_is_not_a_recoverable_point[delta]",
+    "tests/test_annual_program_recovery.py::test_corrupt_or_missing_snapshot_member_is_not_a_recoverable_point[raw]",
+    "tests/test_annual_program_recovery.py::test_nonzero_domain_missing_archived_blob_is_still_rejected",
+    "tests/test_annual_program_recovery.py::test_semantically_invalid_resealed_archive_is_rejected[negative_cursor]",
+    "tests/test_annual_program_recovery.py::test_semantically_invalid_resealed_archive_is_rejected[traversal]",
+    "tests/test_annual_program_recovery.py::test_restore_capture_new_generation_then_restore_again_is_self_contained",
+    "tests/test_annual_program_recovery.py::test_second_snapshot_does_not_hash_previously_archived_raw_members",
+    "tests/test_annual_program_recovery.py::test_real_sidecar_history_materializes_exact_relocated_receipt_for_reader_membership",
+    "tests/test_annual_program_runner.py::test_indexed_domain_installation_precedes_native_core_creation",
+    "tests/test_annual_program_runner.py::test_preexisting_stop_file_rejects_public_run_before_any_runtime_or_writer",
+    "tests/test_annual_program_runner.py::test_preexisting_stop_file_rejects_loop_before_reset_or_observation",
+    "tests/test_annual_program_runner.py::test_stop_created_during_admission_records_not_started_without_writers",
+    "tests/test_annual_program_runner.py::test_manual_stop_after_ack_forces_checkpoint_and_preserves_queue_without_extra_work",
+    "tests/test_annual_program_runner.py::test_manual_stop_at_final_positive_boundary_remains_explicitly_suspended",
+    "tests/test_annual_program_runner.py::test_public_driver_checkpoint_roundtrip_uses_no_reset_on_resume_and_closes_histories[96-registered_blocks]",
+    "tests/test_annual_program_runner.py::test_public_driver_checkpoint_roundtrip_uses_no_reset_on_resume_and_closes_histories[96-manual_file]",
+    "tests/test_annual_program_runner.py::test_public_driver_checkpoint_roundtrip_uses_no_reset_on_resume_and_closes_histories[35041-registered_blocks]",
+    "tests/test_annual_program_runner.py::test_public_driver_checkpoint_roundtrip_uses_no_reset_on_resume_and_closes_histories[35041-manual_file]",
+    "tests/test_annual_program_runner.py::test_incremental_recovery_orchestration_is_explicit_and_frozen",
+    "tests/test_annual_program_domain_catalogue.py::test_many_pending_and_committed_refs_preserve_native_order_and_bounded_cache",
+    "tests/test_annual_program_domain_catalogue.py::test_native_domain_store_lookup_dedup_and_receipt_work_without_source_changes",
+    "tests/test_annual_program_domain_catalogue.py::test_reads_and_insertion_inputs_are_detached_and_conflicts_never_overwrite",
+    "tests/test_annual_program_domain_catalogue.py::test_uncommitted_visibility_explicit_rollback_and_close_never_commit",
+    "tests/test_annual_program_domain_catalogue.py::test_failed_commit_requires_explicit_rollback_and_does_not_fabricate_ack",
+    "tests/test_annual_program_domain_catalogue.py::test_descriptor_restore_is_exact_and_writable_continuation_appends",
+    "tests/test_annual_program_domain_catalogue.py::test_missing_newer_or_corrupt_catalogue_never_accepts_old_prefix_or_recreates[state_checksum]",
+    "tests/test_annual_program_domain_catalogue.py::test_missing_newer_or_corrupt_catalogue_never_accepts_old_prefix_or_recreates[wrong_identity]",
+    "tests/test_annual_program_domain_catalogue.py::test_missing_newer_or_corrupt_catalogue_never_accepts_old_prefix_or_recreates[wrong_path]",
+    "tests/test_annual_program_domain_catalogue.py::test_missing_newer_or_corrupt_catalogue_never_accepts_old_prefix_or_recreates[missing]",
+    "tests/test_annual_program_domain_catalogue.py::test_missing_newer_or_corrupt_catalogue_never_accepts_old_prefix_or_recreates[newer]",
+    "tests/test_annual_program_domain_catalogue.py::test_missing_newer_or_corrupt_catalogue_never_accepts_old_prefix_or_recreates[payload]",
+    "tests/test_annual_program_domain_catalogue.py::test_missing_newer_or_corrupt_catalogue_never_accepts_old_prefix_or_recreates[orphan_row]",
+    "tests/test_annual_program_domain_catalogue.py::test_missing_newer_or_corrupt_catalogue_never_accepts_old_prefix_or_recreates[schema]",
+    "tests/test_annual_program_domain_catalogue.py::test_missing_newer_or_corrupt_catalogue_never_accepts_old_prefix_or_recreates[extra_table]",
+    "tests/test_annual_program_domain_catalogue.py::test_readonly_authentication_streams_rows_and_never_opens_a_writer",
+    "tests/test_annual_program_domain_catalogue.py::test_ambiguous_sqlite_sidecars_block_immutable_restore[-journal]",
+    "tests/test_annual_program_domain_catalogue.py::test_ambiguous_sqlite_sidecars_block_immutable_restore[-wal]",
+    "tests/test_annual_program_domain_catalogue.py::test_ambiguous_sqlite_sidecars_block_immutable_restore[-shm]",
+    "tests/test_annual_program_domain_catalogue.py::test_only_approved_native_reference_metadata_and_finite_primitive_types_are_accepted[key]",
+    "tests/test_annual_program_domain_catalogue.py::test_only_approved_native_reference_metadata_and_finite_primitive_types_are_accepted[uppercase_key]",
+    "tests/test_annual_program_domain_catalogue.py::test_only_approved_native_reference_metadata_and_finite_primitive_types_are_accepted[schema]",
+    "tests/test_annual_program_domain_catalogue.py::test_only_approved_native_reference_metadata_and_finite_primitive_types_are_accepted[directory]",
+    "tests/test_annual_program_domain_catalogue.py::test_only_approved_native_reference_metadata_and_finite_primitive_types_are_accepted[filename]",
+    "tests/test_annual_program_domain_catalogue.py::test_only_approved_native_reference_metadata_and_finite_primitive_types_are_accepted[row_sha]",
+    "tests/test_annual_program_domain_catalogue.py::test_only_approved_native_reference_metadata_and_finite_primitive_types_are_accepted[bool_count]",
+    "tests/test_annual_program_domain_catalogue.py::test_only_approved_native_reference_metadata_and_finite_primitive_types_are_accepted[float_count]",
+    "tests/test_annual_program_domain_catalogue.py::test_only_approved_native_reference_metadata_and_finite_primitive_types_are_accepted[negative_count]",
+    "tests/test_annual_program_domain_catalogue.py::test_only_approved_native_reference_metadata_and_finite_primitive_types_are_accepted[nonfinite_size]",
+    "tests/test_annual_program_domain_catalogue.py::test_only_approved_native_reference_metadata_and_finite_primitive_types_are_accepted[extra_field]",
+    "tests/test_annual_program_domain_catalogue.py::test_only_approved_native_reference_metadata_and_finite_primitive_types_are_accepted[canonicalization]",
+    "tests/test_annual_program_domain_catalogue.py::test_identity_is_case_and_source_bound_and_creation_never_overwrites",
+    "tests/test_annual_program_domain_catalogue.py::test_descriptor_identity_comparison_preserves_boolean_versus_integer_types",
+    "tests/test_annual_program_domain_catalogue.py::test_cache_bound_and_database_path_cannot_change_after_binding",
+    "tests/test_annual_program_domain_catalogue.py::test_reference_strings_require_plain_primitive_types",
+    "tests/test_annual_program_domain_catalogue.py::test_failure_after_sqlite_commit_is_ambiguous_and_never_erased_by_rollback",
+    "tests/test_annual_program_domain_catalogue.py::test_mapping_equality_does_not_inherit_a_hidden_full_dictionary_copy",
+    "tests/test_annual_program_domain_store.py::test_native_reference_json_bytes_match_after_duplicate_lookup_and_restore_cache_eviction[pending-False]",
+    "tests/test_annual_program_domain_store.py::test_native_reference_json_bytes_match_after_duplicate_lookup_and_restore_cache_eviction[pending-True]",
+    "tests/test_annual_program_domain_store.py::test_native_reference_json_bytes_match_after_duplicate_lookup_and_restore_cache_eviction[restored-False]",
+    "tests/test_annual_program_domain_store.py::test_native_reference_json_bytes_match_after_duplicate_lookup_and_restore_cache_eviction[restored-True]",
+    "tests/test_annual_program_domain_store.py::test_unexpected_native_reference_fields_reject_instead_of_being_dropped[extra-False]",
+    "tests/test_annual_program_domain_store.py::test_unexpected_native_reference_fields_reject_instead_of_being_dropped[extra-True]",
+    "tests/test_annual_program_domain_store.py::test_unexpected_native_reference_fields_reject_instead_of_being_dropped[missing-False]",
+    "tests/test_annual_program_domain_store.py::test_unexpected_native_reference_fields_reject_instead_of_being_dropped[missing-True]",
+    "tests/test_annual_program_domain_store.py::test_native_refs_and_deterministic_gzip_bytes_are_unchanged_including_infinite_bound_normalization[False]",
+    "tests/test_annual_program_domain_store.py::test_native_refs_and_deterministic_gzip_bytes_are_unchanged_including_infinite_bound_normalization[True]",
+    "tests/test_annual_program_domain_store.py::test_restore_rejects_changed_missing_or_orphan_evidence_without_repair[gzip_header]",
+    "tests/test_annual_program_domain_store.py::test_restore_rejects_changed_missing_or_orphan_evidence_without_repair[canonical_rows]",
+    "tests/test_annual_program_domain_store.py::test_restore_rejects_changed_missing_or_orphan_evidence_without_repair[extra_blob]",
+    "tests/test_annual_program_domain_store.py::test_restore_rejects_changed_missing_or_orphan_evidence_without_repair[missing_blob]",
+    "tests/test_annual_program_domain_store.py::test_restore_rejects_changed_missing_or_orphan_evidence_without_repair[extra_index]",
+    "tests/test_annual_program_domain_store.py::test_restore_rejects_changed_missing_or_orphan_evidence_without_repair[missing_index]",
+    "tests/test_annual_program_domain_store.py::test_restore_rejects_changed_missing_or_orphan_evidence_without_repair[missing_blob_directory]",
+    "tests/test_annual_program_domain_store.py::test_restore_rejects_changed_missing_or_orphan_evidence_without_repair[missing_index_directory]",
+    "tests/test_annual_program_domain_store.py::test_source_binding_and_exact_identity_or_path_drift_reject",
+    "tests/test_annual_program_domain_store.py::test_readonly_restore_uses_public_neutral_resolver_and_never_opens_a_writer",
+    "tests/test_annual_program_domain_store.py::test_pending_close_retains_raw_orphans_and_complete_pending_proof_state",
+    "tests/test_annual_program_domain_store.py::test_failure_between_commits_retains_the_proof_commit_and_rejects_old_snapshot",
+    "tests/test_annual_program_domain_store.py::test_changed_new_blob_before_commit_is_not_acknowledged",
+    "tests/test_annual_program_domain_store.py::test_consistent_but_wrong_order_proof_database_cannot_match_catalogue",
+    "tests/test_annual_program_domain_store.py::test_symlinked_blob_or_index_spelling_is_rejected_without_writes[blob]",
+    "tests/test_annual_program_domain_store.py::test_symlinked_blob_or_index_spelling_is_rejected_without_writes[catalogue_index]",
+    "tests/test_annual_program_domain_store.py::test_symlinked_blob_or_index_spelling_is_rejected_without_writes[proof_index]",
+    "tests/test_annual_program_domain_store.py::test_independent_new_blob_verifier_rejects_valid_gzip_with_wrong_canonical_rows_before_enqueue",
+    "tests/test_annual_program_domain_store.py::test_larger_acknowledgement_batch_has_compact_snapshot_and_one_decoded_blob",
+    "tests/test_annual_program_domain_store.py::test_exception_after_real_catalogue_commit_still_blocks_ack_and_old_restore",
+    "tests/test_annual_program_domain_store.py::test_neutral_adapter_flags_do_not_conflate_boolean_with_integer_metadata",
+    "tests/test_annual_program_domain_store.py::test_native_proof_commit_failure_retains_bounded_preimage_even_when_public_state_is_blocked[before_proof_persist]",
+    "tests/test_annual_program_domain_store.py::test_native_proof_commit_failure_retains_bounded_preimage_even_when_public_state_is_blocked[after_real_proof_sqlite_commit]",
+    "tests/test_annual_program_indexed_integration.py::test_real_proof_commit_failure_prevents_journal_ack_and_persists_pending_preimage",
+    "tests/test_annual_program_indexed_integration.py::test_store_commits_before_real_journal_ack_for_healthy_and_failed_native_prefix[False]",
+    "tests/test_annual_program_indexed_integration.py::test_store_commits_before_real_journal_ack_for_healthy_and_failed_native_prefix[True]",
+    "tests/test_annual_program_source_pin_cache.py::test_create_commit_snapshot_and_restore_force_full_pins",
+    "tests/test_annual_program_source_pin_cache.py::test_source_failure_after_both_database_commits_retains_unacknowledged_preimage",
+    "tests/test_annual_catalogue_position.py::test_position_sees_pending_rows_on_owner_and_returns_detached_native_reference",
+    "tests/test_annual_catalogue_position.py::test_position_works_readonly_and_has_no_silent_missing_key_or_closed_fallback",
+    "tests/test_sf2_source_profile.py::test_current_fuel_leaf_has_its_own_complete_scientific_ast",
+    "tests/test_sf2_capture_directory_lifecycle.py::test_real_runner_reaches_native_journal_before_controlled_preconstruction_stop",
+    "tests/test_minute1_historical_profiles.py::test_current_minute_source_cannot_borrow_historical_native_or_recorder_identity"
+  ],
+  "current_error_nodes": [
+    "tests/test_minute1_historical_profiles.py::test_frozen_historical_module[tests/test_annual_compiled_packet_observer.py]",
+    "tests/test_minute1_historical_profiles.py::test_frozen_historical_module[tests/test_annual_compiled_witness.py]",
+    "tests/test_minute1_historical_profiles.py::test_frozen_historical_module[tests/test_annual_loaded_capture_sources.py]",
+    "tests/test_minute1_historical_profiles.py::test_frozen_historical_module[tests/test_annual_observer_source_compatibility.py]",
+    "tests/test_minute1_historical_profiles.py::test_frozen_historical_module[tests/test_annual_operation_summary.py]",
+    "tests/test_minute1_historical_profiles.py::test_frozen_historical_module[tests/test_annual_program_carrier_flow.py]",
+    "tests/test_minute1_historical_profiles.py::test_frozen_historical_module[tests/test_annual_program_failure_history.py]",
+    "tests/test_minute1_historical_profiles.py::test_frozen_historical_module[tests/test_annual_program_steam.py]",
+    "tests/test_minute1_historical_profiles.py::test_frozen_historical_module[tests/test_eight_fault_local_witness.py]",
+    "tests/test_minute1_historical_profiles.py::test_frozen_historical_module[tests/test_sf2_compiled_witness.py]",
+    "tests/test_minute1_historical_profiles.py::test_frozen_historical_module[tests/test_sf2_native_capture.py]",
+    "tests/test_minute1_historical_profiles.py::test_frozen_historical_module[tests/test_sf2_source_profile.py]",
+    "tests/test_minute1_historical_profiles.py::test_frozen_historical_module[tests/test_single_fault_compiled_witness.py]"
+  ],
+  "old_failed_nodes": [
+    "tests/test_sf2_source_profile.py::test_current_fuel_leaf_has_its_own_complete_scientific_ast",
+    "tests/test_minute1_historical_profiles.py::test_current_minute_source_cannot_borrow_historical_native_or_recorder_identity"
+  ],
+  "old_error_nodes": [
+    "tests/test_minute1_historical_profiles.py::test_frozen_historical_module[tests/test_annual_compiled_packet_observer.py]",
+    "tests/test_minute1_historical_profiles.py::test_frozen_historical_module[tests/test_annual_compiled_witness.py]",
+    "tests/test_minute1_historical_profiles.py::test_frozen_historical_module[tests/test_annual_loaded_capture_sources.py]",
+    "tests/test_minute1_historical_profiles.py::test_frozen_historical_module[tests/test_annual_observer_source_compatibility.py]",
+    "tests/test_minute1_historical_profiles.py::test_frozen_historical_module[tests/test_annual_operation_summary.py]",
+    "tests/test_minute1_historical_profiles.py::test_frozen_historical_module[tests/test_annual_program_carrier_flow.py]",
+    "tests/test_minute1_historical_profiles.py::test_frozen_historical_module[tests/test_annual_program_failure_history.py]",
+    "tests/test_minute1_historical_profiles.py::test_frozen_historical_module[tests/test_annual_program_steam.py]",
+    "tests/test_minute1_historical_profiles.py::test_frozen_historical_module[tests/test_eight_fault_local_witness.py]",
+    "tests/test_minute1_historical_profiles.py::test_frozen_historical_module[tests/test_sf2_compiled_witness.py]",
+    "tests/test_minute1_historical_profiles.py::test_frozen_historical_module[tests/test_sf2_native_capture.py]",
+    "tests/test_minute1_historical_profiles.py::test_frozen_historical_module[tests/test_sf2_source_profile.py]",
+    "tests/test_minute1_historical_profiles.py::test_frozen_historical_module[tests/test_single_fault_compiled_witness.py]"
+  ],
+  "old_failed_exact_subset": true,
+  "error_node_sets_exact_equal": true,
+  "recheck_nodes": [
+    "tests/test_engineering_thermal_prefix.py::test_single_pass_gzip_export_preserves_unknown_missing_fields_and_long_windows",
+    "tests/test_model_closeout_registration.py::test_path_gate_rejects_old_outputs_and_own_parent",
+    "tests/test_model_closeout_registration.py::test_unhandled_attempt_is_retained_with_unknown_tail_and_no_zero_substitute",
+    "tests/test_model_closeout_registration.py::test_changed_or_missing_final_artifact_rejected_before_environment_creation",
+    "tests/test_sci_runner.py::test_sidecar_close_failure_preserves_already_returned_physical_prefix",
+    "tests/test_sci_runner.py::test_retry_refuses_tampered_failed_terminal_evidence[result]",
+    "tests/test_sci_runner.py::test_retry_refuses_tampered_failed_terminal_evidence[raw]",
+    "tests/test_sci_runner.py::test_retry_refuses_tampered_failed_terminal_evidence[sidecar]",
+    "tests/test_sci_runner.py::test_real_registered_episode_has_complete_legacy_export_identity_and_actual_m21_ledger",
+    "tests/test_sci_runner.py::test_new_budget_does_not_inherit_historical_campaign_clock_and_raw_is_separate",
+    "tests/test_sci_runner.py::test_failure_retains_attempt_and_unknown_tail_and_later_pairs_continue",
+    "tests/test_sci_runner.py::test_source_drift_refuses_before_any_attempt",
+    "tests/test_sci_runner.py::test_formal_registration_requires_frozen_selection_and_actual_pilot",
+    "tests/test_sci_runner.py::test_resuming_skips_success_but_does_not_overwrite_failed_attempts",
+    "tests/test_sci_runner.py::test_default_policy_factory_receives_actual_common_plant",
+    "tests/test_sci_runner.py::test_resume_refuses_tampered_completed_result_even_if_raw_unchanged",
+    "tests/test_sci_runner.py::test_frozen_factor_registry_bytes_cannot_change_after_registration",
+    "tests/test_sci_final_release_integration.py::test_final_registration_binds_exact_normalized_panel_once",
+    "tests/test_sci_final_release_integration.py::test_all_other_phases_and_missing_grant_keep_sealed_rejected",
+    "tests/test_sci_final_release_integration.py::test_final_run_passes_runtime_receipt_and_retains_failed_attempt",
+    "tests/test_sci_final_release_integration.py::test_drift_and_wrong_execution_directory_reject_before_env",
+    "tests/test_sci_final_release_integration.py::test_authentic_fixture_receipt_reaches_input_stub_only_after_full_validation",
+    "tests/test_sci_final_release_integration.py::test_m21_reset_only_exact_registered_scene_and_complete_hours",
+    "tests/test_sci_final_release_integration.py::test_cli_normalize_grant_register_complete_metadata_route",
+    "tests/test_annual_program_analysis.py::test_analysis_cli_writes_only_a_fresh_detached_directory",
+    "tests/test_annual_program_selective_data.py::test_real_public_runner_keeps_orchestration_outside_exact_numeric_grant[False]",
+    "tests/test_annual_program_selective_data.py::test_real_public_runner_keeps_orchestration_outside_exact_numeric_grant[True]",
+    "tests/test_annual_program_recovery.py::test_advanced_journal_requires_new_branch_with_exact_snapshot_databases",
+    "tests/test_annual_program_recovery.py::test_incomplete_commit_keeps_previous_complete_point",
+    "tests/test_annual_program_recovery.py::test_zero_blob_domain_restores_its_registered_empty_directory",
+    "tests/test_annual_program_recovery.py::test_metadata_append_cannot_mutate_a_committed_snapshot",
+    "tests/test_annual_program_recovery.py::test_changed_database_identity_is_rejected_before_commit",
+    "tests/test_annual_program_recovery.py::test_restore_is_self_contained_when_original_attempt_is_absent",
+    "tests/test_annual_program_recovery.py::test_corrupt_or_missing_snapshot_member_is_not_a_recoverable_point[runtime]",
+    "tests/test_annual_program_recovery.py::test_corrupt_or_missing_snapshot_member_is_not_a_recoverable_point[delta]",
+    "tests/test_annual_program_recovery.py::test_corrupt_or_missing_snapshot_member_is_not_a_recoverable_point[raw]",
+    "tests/test_annual_program_recovery.py::test_nonzero_domain_missing_archived_blob_is_still_rejected",
+    "tests/test_annual_program_recovery.py::test_semantically_invalid_resealed_archive_is_rejected[negative_cursor]",
+    "tests/test_annual_program_recovery.py::test_semantically_invalid_resealed_archive_is_rejected[traversal]",
+    "tests/test_annual_program_recovery.py::test_restore_capture_new_generation_then_restore_again_is_self_contained",
+    "tests/test_annual_program_recovery.py::test_second_snapshot_does_not_hash_previously_archived_raw_members",
+    "tests/test_annual_program_recovery.py::test_real_sidecar_history_materializes_exact_relocated_receipt_for_reader_membership",
+    "tests/test_annual_program_runner.py::test_indexed_domain_installation_precedes_native_core_creation",
+    "tests/test_annual_program_runner.py::test_preexisting_stop_file_rejects_public_run_before_any_runtime_or_writer",
+    "tests/test_annual_program_runner.py::test_preexisting_stop_file_rejects_loop_before_reset_or_observation",
+    "tests/test_annual_program_runner.py::test_stop_created_during_admission_records_not_started_without_writers",
+    "tests/test_annual_program_runner.py::test_manual_stop_after_ack_forces_checkpoint_and_preserves_queue_without_extra_work",
+    "tests/test_annual_program_runner.py::test_manual_stop_at_final_positive_boundary_remains_explicitly_suspended",
+    "tests/test_annual_program_runner.py::test_public_driver_checkpoint_roundtrip_uses_no_reset_on_resume_and_closes_histories[96-registered_blocks]",
+    "tests/test_annual_program_runner.py::test_public_driver_checkpoint_roundtrip_uses_no_reset_on_resume_and_closes_histories[96-manual_file]",
+    "tests/test_annual_program_runner.py::test_public_driver_checkpoint_roundtrip_uses_no_reset_on_resume_and_closes_histories[35041-registered_blocks]",
+    "tests/test_annual_program_runner.py::test_public_driver_checkpoint_roundtrip_uses_no_reset_on_resume_and_closes_histories[35041-manual_file]",
+    "tests/test_annual_program_runner.py::test_incremental_recovery_orchestration_is_explicit_and_frozen",
+    "tests/test_annual_program_domain_catalogue.py::test_many_pending_and_committed_refs_preserve_native_order_and_bounded_cache",
+    "tests/test_annual_program_domain_catalogue.py::test_native_domain_store_lookup_dedup_and_receipt_work_without_source_changes",
+    "tests/test_annual_program_domain_catalogue.py::test_reads_and_insertion_inputs_are_detached_and_conflicts_never_overwrite",
+    "tests/test_annual_program_domain_catalogue.py::test_uncommitted_visibility_explicit_rollback_and_close_never_commit",
+    "tests/test_annual_program_domain_catalogue.py::test_failed_commit_requires_explicit_rollback_and_does_not_fabricate_ack",
+    "tests/test_annual_program_domain_catalogue.py::test_descriptor_restore_is_exact_and_writable_continuation_appends",
+    "tests/test_annual_program_domain_catalogue.py::test_missing_newer_or_corrupt_catalogue_never_accepts_old_prefix_or_recreates[state_checksum]",
+    "tests/test_annual_program_domain_catalogue.py::test_missing_newer_or_corrupt_catalogue_never_accepts_old_prefix_or_recreates[wrong_identity]",
+    "tests/test_annual_program_domain_catalogue.py::test_missing_newer_or_corrupt_catalogue_never_accepts_old_prefix_or_recreates[wrong_path]",
+    "tests/test_annual_program_domain_catalogue.py::test_missing_newer_or_corrupt_catalogue_never_accepts_old_prefix_or_recreates[missing]",
+    "tests/test_annual_program_domain_catalogue.py::test_missing_newer_or_corrupt_catalogue_never_accepts_old_prefix_or_recreates[newer]",
+    "tests/test_annual_program_domain_catalogue.py::test_missing_newer_or_corrupt_catalogue_never_accepts_old_prefix_or_recreates[payload]",
+    "tests/test_annual_program_domain_catalogue.py::test_missing_newer_or_corrupt_catalogue_never_accepts_old_prefix_or_recreates[orphan_row]",
+    "tests/test_annual_program_domain_catalogue.py::test_missing_newer_or_corrupt_catalogue_never_accepts_old_prefix_or_recreates[schema]",
+    "tests/test_annual_program_domain_catalogue.py::test_missing_newer_or_corrupt_catalogue_never_accepts_old_prefix_or_recreates[extra_table]",
+    "tests/test_annual_program_domain_catalogue.py::test_readonly_authentication_streams_rows_and_never_opens_a_writer",
+    "tests/test_annual_program_domain_catalogue.py::test_ambiguous_sqlite_sidecars_block_immutable_restore[-journal]",
+    "tests/test_annual_program_domain_catalogue.py::test_ambiguous_sqlite_sidecars_block_immutable_restore[-wal]",
+    "tests/test_annual_program_domain_catalogue.py::test_ambiguous_sqlite_sidecars_block_immutable_restore[-shm]",
+    "tests/test_annual_program_domain_catalogue.py::test_only_approved_native_reference_metadata_and_finite_primitive_types_are_accepted[key]",
+    "tests/test_annual_program_domain_catalogue.py::test_only_approved_native_reference_metadata_and_finite_primitive_types_are_accepted[uppercase_key]",
+    "tests/test_annual_program_domain_catalogue.py::test_only_approved_native_reference_metadata_and_finite_primitive_types_are_accepted[schema]",
+    "tests/test_annual_program_domain_catalogue.py::test_only_approved_native_reference_metadata_and_finite_primitive_types_are_accepted[directory]",
+    "tests/test_annual_program_domain_catalogue.py::test_only_approved_native_reference_metadata_and_finite_primitive_types_are_accepted[filename]",
+    "tests/test_annual_program_domain_catalogue.py::test_only_approved_native_reference_metadata_and_finite_primitive_types_are_accepted[row_sha]",
+    "tests/test_annual_program_domain_catalogue.py::test_only_approved_native_reference_metadata_and_finite_primitive_types_are_accepted[bool_count]",
+    "tests/test_annual_program_domain_catalogue.py::test_only_approved_native_reference_metadata_and_finite_primitive_types_are_accepted[float_count]",
+    "tests/test_annual_program_domain_catalogue.py::test_only_approved_native_reference_metadata_and_finite_primitive_types_are_accepted[negative_count]",
+    "tests/test_annual_program_domain_catalogue.py::test_only_approved_native_reference_metadata_and_finite_primitive_types_are_accepted[nonfinite_size]",
+    "tests/test_annual_program_domain_catalogue.py::test_only_approved_native_reference_metadata_and_finite_primitive_types_are_accepted[extra_field]",
+    "tests/test_annual_program_domain_catalogue.py::test_only_approved_native_reference_metadata_and_finite_primitive_types_are_accepted[canonicalization]",
+    "tests/test_annual_program_domain_catalogue.py::test_identity_is_case_and_source_bound_and_creation_never_overwrites",
+    "tests/test_annual_program_domain_catalogue.py::test_descriptor_identity_comparison_preserves_boolean_versus_integer_types",
+    "tests/test_annual_program_domain_catalogue.py::test_cache_bound_and_database_path_cannot_change_after_binding",
+    "tests/test_annual_program_domain_catalogue.py::test_reference_strings_require_plain_primitive_types",
+    "tests/test_annual_program_domain_catalogue.py::test_failure_after_sqlite_commit_is_ambiguous_and_never_erased_by_rollback",
+    "tests/test_annual_program_domain_catalogue.py::test_mapping_equality_does_not_inherit_a_hidden_full_dictionary_copy",
+    "tests/test_annual_program_domain_store.py::test_native_reference_json_bytes_match_after_duplicate_lookup_and_restore_cache_eviction[pending-False]",
+    "tests/test_annual_program_domain_store.py::test_native_reference_json_bytes_match_after_duplicate_lookup_and_restore_cache_eviction[pending-True]",
+    "tests/test_annual_program_domain_store.py::test_native_reference_json_bytes_match_after_duplicate_lookup_and_restore_cache_eviction[restored-False]",
+    "tests/test_annual_program_domain_store.py::test_native_reference_json_bytes_match_after_duplicate_lookup_and_restore_cache_eviction[restored-True]",
+    "tests/test_annual_program_domain_store.py::test_unexpected_native_reference_fields_reject_instead_of_being_dropped[extra-False]",
+    "tests/test_annual_program_domain_store.py::test_unexpected_native_reference_fields_reject_instead_of_being_dropped[extra-True]",
+    "tests/test_annual_program_domain_store.py::test_unexpected_native_reference_fields_reject_instead_of_being_dropped[missing-False]",
+    "tests/test_annual_program_domain_store.py::test_unexpected_native_reference_fields_reject_instead_of_being_dropped[missing-True]",
+    "tests/test_annual_program_domain_store.py::test_native_refs_and_deterministic_gzip_bytes_are_unchanged_including_infinite_bound_normalization[False]",
+    "tests/test_annual_program_domain_store.py::test_native_refs_and_deterministic_gzip_bytes_are_unchanged_including_infinite_bound_normalization[True]",
+    "tests/test_annual_program_domain_store.py::test_restore_rejects_changed_missing_or_orphan_evidence_without_repair[gzip_header]",
+    "tests/test_annual_program_domain_store.py::test_restore_rejects_changed_missing_or_orphan_evidence_without_repair[canonical_rows]",
+    "tests/test_annual_program_domain_store.py::test_restore_rejects_changed_missing_or_orphan_evidence_without_repair[extra_blob]",
+    "tests/test_annual_program_domain_store.py::test_restore_rejects_changed_missing_or_orphan_evidence_without_repair[missing_blob]",
+    "tests/test_annual_program_domain_store.py::test_restore_rejects_changed_missing_or_orphan_evidence_without_repair[extra_index]",
+    "tests/test_annual_program_domain_store.py::test_restore_rejects_changed_missing_or_orphan_evidence_without_repair[missing_index]",
+    "tests/test_annual_program_domain_store.py::test_restore_rejects_changed_missing_or_orphan_evidence_without_repair[missing_blob_directory]",
+    "tests/test_annual_program_domain_store.py::test_restore_rejects_changed_missing_or_orphan_evidence_without_repair[missing_index_directory]",
+    "tests/test_annual_program_domain_store.py::test_source_binding_and_exact_identity_or_path_drift_reject",
+    "tests/test_annual_program_domain_store.py::test_readonly_restore_uses_public_neutral_resolver_and_never_opens_a_writer",
+    "tests/test_annual_program_domain_store.py::test_pending_close_retains_raw_orphans_and_complete_pending_proof_state",
+    "tests/test_annual_program_domain_store.py::test_failure_between_commits_retains_the_proof_commit_and_rejects_old_snapshot",
+    "tests/test_annual_program_domain_store.py::test_changed_new_blob_before_commit_is_not_acknowledged",
+    "tests/test_annual_program_domain_store.py::test_consistent_but_wrong_order_proof_database_cannot_match_catalogue",
+    "tests/test_annual_program_domain_store.py::test_symlinked_blob_or_index_spelling_is_rejected_without_writes[blob]",
+    "tests/test_annual_program_domain_store.py::test_symlinked_blob_or_index_spelling_is_rejected_without_writes[catalogue_index]",
+    "tests/test_annual_program_domain_store.py::test_symlinked_blob_or_index_spelling_is_rejected_without_writes[proof_index]",
+    "tests/test_annual_program_domain_store.py::test_independent_new_blob_verifier_rejects_valid_gzip_with_wrong_canonical_rows_before_enqueue",
+    "tests/test_annual_program_domain_store.py::test_larger_acknowledgement_batch_has_compact_snapshot_and_one_decoded_blob",
+    "tests/test_annual_program_domain_store.py::test_exception_after_real_catalogue_commit_still_blocks_ack_and_old_restore",
+    "tests/test_annual_program_domain_store.py::test_neutral_adapter_flags_do_not_conflate_boolean_with_integer_metadata",
+    "tests/test_annual_program_domain_store.py::test_native_proof_commit_failure_retains_bounded_preimage_even_when_public_state_is_blocked[before_proof_persist]",
+    "tests/test_annual_program_domain_store.py::test_native_proof_commit_failure_retains_bounded_preimage_even_when_public_state_is_blocked[after_real_proof_sqlite_commit]",
+    "tests/test_annual_program_indexed_integration.py::test_real_proof_commit_failure_prevents_journal_ack_and_persists_pending_preimage",
+    "tests/test_annual_program_indexed_integration.py::test_store_commits_before_real_journal_ack_for_healthy_and_failed_native_prefix[False]",
+    "tests/test_annual_program_indexed_integration.py::test_store_commits_before_real_journal_ack_for_healthy_and_failed_native_prefix[True]",
+    "tests/test_annual_program_source_pin_cache.py::test_create_commit_snapshot_and_restore_force_full_pins",
+    "tests/test_annual_program_source_pin_cache.py::test_source_failure_after_both_database_commits_retains_unacknowledged_preimage",
+    "tests/test_annual_catalogue_position.py::test_position_sees_pending_rows_on_owner_and_returns_detached_native_reference",
+    "tests/test_annual_catalogue_position.py::test_position_works_readonly_and_has_no_silent_missing_key_or_closed_fallback",
+    "tests/test_sf2_capture_directory_lifecycle.py::test_real_runner_reaches_native_journal_before_controlled_preconstruction_stop"
+  ],
+  "recheck_exactly_current_failed_minus_old_failed": true,
+  "recheck_count_unique": 131,
+  "recheck_missing_nodes": [],
+  "recheck_extra_nodes": [],
+  "per_node_original_failure_context": [
+    {
+      "nodeid": "tests/test_engineering_thermal_prefix.py::test_single_pass_gzip_export_preserves_unknown_missing_fields_and_long_windows",
+      "exact_failure_block_count": 1,
+      "original_c_temp_context": true,
+      "path_gate_rejection_present": true,
+      "terminal_path_errors": [
+        "E           ValueError: Use D/E for study exports"
+      ]
+    },
+    {
+      "nodeid": "tests/test_model_closeout_registration.py::test_path_gate_rejects_old_outputs_and_own_parent",
+      "exact_failure_block_count": 1,
+      "original_c_temp_context": true,
+      "path_gate_rejection_present": true,
+      "terminal_path_errors": [
+        "E           ValueError: Research data must use D/E, not C"
+      ]
+    },
+    {
+      "nodeid": "tests/test_model_closeout_registration.py::test_unhandled_attempt_is_retained_with_unknown_tail_and_no_zero_substitute",
+      "exact_failure_block_count": 1,
+      "original_c_temp_context": true,
+      "path_gate_rejection_present": true,
+      "terminal_path_errors": [
+        "E           ValueError: Research data must use D/E, not C"
+      ]
+    },
+    {
+      "nodeid": "tests/test_model_closeout_registration.py::test_changed_or_missing_final_artifact_rejected_before_environment_creation",
+      "exact_failure_block_count": 1,
+      "original_c_temp_context": true,
+      "path_gate_rejection_present": true,
+      "terminal_path_errors": [
+        "E           ValueError: Research data must use D/E, not C"
+      ]
+    },
+    {
+      "nodeid": "tests/test_sci_runner.py::test_sidecar_close_failure_preserves_already_returned_physical_prefix",
+      "exact_failure_block_count": 1,
+      "original_c_temp_context": true,
+      "path_gate_rejection_present": true,
+      "terminal_path_errors": [
+        "E           ValueError: Research raw and temporary data must use D/E, not C"
+      ]
+    },
+    {
+      "nodeid": "tests/test_sci_runner.py::test_retry_refuses_tampered_failed_terminal_evidence[result]",
+      "exact_failure_block_count": 1,
+      "original_c_temp_context": true,
+      "path_gate_rejection_present": true,
+      "terminal_path_errors": [
+        "E           ValueError: Research raw and temporary data must use D/E, not C"
+      ]
+    },
+    {
+      "nodeid": "tests/test_sci_runner.py::test_retry_refuses_tampered_failed_terminal_evidence[raw]",
+      "exact_failure_block_count": 1,
+      "original_c_temp_context": true,
+      "path_gate_rejection_present": true,
+      "terminal_path_errors": [
+        "E           ValueError: Research raw and temporary data must use D/E, not C"
+      ]
+    },
+    {
+      "nodeid": "tests/test_sci_runner.py::test_retry_refuses_tampered_failed_terminal_evidence[sidecar]",
+      "exact_failure_block_count": 1,
+      "original_c_temp_context": true,
+      "path_gate_rejection_present": true,
+      "terminal_path_errors": [
+        "E           ValueError: Research raw and temporary data must use D/E, not C"
+      ]
+    },
+    {
+      "nodeid": "tests/test_sci_runner.py::test_real_registered_episode_has_complete_legacy_export_identity_and_actual_m21_ledger",
+      "exact_failure_block_count": 1,
+      "original_c_temp_context": true,
+      "path_gate_rejection_present": true,
+      "terminal_path_errors": [
+        "E           ValueError: Research raw and temporary data must use D/E, not C"
+      ]
+    },
+    {
+      "nodeid": "tests/test_sci_runner.py::test_new_budget_does_not_inherit_historical_campaign_clock_and_raw_is_separate",
+      "exact_failure_block_count": 1,
+      "original_c_temp_context": true,
+      "path_gate_rejection_present": true,
+      "terminal_path_errors": [
+        "E           ValueError: Research raw and temporary data must use D/E, not C"
+      ]
+    },
+    {
+      "nodeid": "tests/test_sci_runner.py::test_failure_retains_attempt_and_unknown_tail_and_later_pairs_continue",
+      "exact_failure_block_count": 1,
+      "original_c_temp_context": true,
+      "path_gate_rejection_present": true,
+      "terminal_path_errors": [
+        "E           ValueError: Research raw and temporary data must use D/E, not C"
+      ]
+    },
+    {
+      "nodeid": "tests/test_sci_runner.py::test_source_drift_refuses_before_any_attempt",
+      "exact_failure_block_count": 1,
+      "original_c_temp_context": true,
+      "path_gate_rejection_present": true,
+      "terminal_path_errors": [
+        "E           ValueError: Research raw and temporary data must use D/E, not C"
+      ]
+    },
+    {
+      "nodeid": "tests/test_sci_runner.py::test_formal_registration_requires_frozen_selection_and_actual_pilot",
+      "exact_failure_block_count": 1,
+      "original_c_temp_context": true,
+      "path_gate_rejection_present": true,
+      "terminal_path_errors": [
+        "E           ValueError: Research raw and temporary data must use D/E, not C"
+      ]
+    },
+    {
+      "nodeid": "tests/test_sci_runner.py::test_resuming_skips_success_but_does_not_overwrite_failed_attempts",
+      "exact_failure_block_count": 1,
+      "original_c_temp_context": true,
+      "path_gate_rejection_present": true,
+      "terminal_path_errors": [
+        "E           ValueError: Research raw and temporary data must use D/E, not C"
+      ]
+    },
+    {
+      "nodeid": "tests/test_sci_runner.py::test_default_policy_factory_receives_actual_common_plant",
+      "exact_failure_block_count": 1,
+      "original_c_temp_context": true,
+      "path_gate_rejection_present": true,
+      "terminal_path_errors": [
+        "E           ValueError: Research raw and temporary data must use D/E, not C"
+      ]
+    },
+    {
+      "nodeid": "tests/test_sci_runner.py::test_resume_refuses_tampered_completed_result_even_if_raw_unchanged",
+      "exact_failure_block_count": 1,
+      "original_c_temp_context": true,
+      "path_gate_rejection_present": true,
+      "terminal_path_errors": [
+        "E           ValueError: Research raw and temporary data must use D/E, not C"
+      ]
+    },
+    {
+      "nodeid": "tests/test_sci_runner.py::test_frozen_factor_registry_bytes_cannot_change_after_registration",
+      "exact_failure_block_count": 1,
+      "original_c_temp_context": true,
+      "path_gate_rejection_present": true,
+      "terminal_path_errors": [
+        "E           ValueError: Research raw and temporary data must use D/E, not C"
+      ]
+    },
+    {
+      "nodeid": "tests/test_sci_final_release_integration.py::test_final_registration_binds_exact_normalized_panel_once",
+      "exact_failure_block_count": 1,
+      "original_c_temp_context": true,
+      "path_gate_rejection_present": true,
+      "terminal_path_errors": [
+        "E           ValueError: Research raw and temporary data must use D/E, not C"
+      ]
+    },
+    {
+      "nodeid": "tests/test_sci_final_release_integration.py::test_all_other_phases_and_missing_grant_keep_sealed_rejected",
+      "exact_failure_block_count": 1,
+      "original_c_temp_context": true,
+      "path_gate_rejection_present": true,
+      "terminal_path_errors": [
+        "E             Actual message: 'Research raw and temporary data must use D/E, not C'"
+      ]
+    },
+    {
+      "nodeid": "tests/test_sci_final_release_integration.py::test_final_run_passes_runtime_receipt_and_retains_failed_attempt",
+      "exact_failure_block_count": 1,
+      "original_c_temp_context": true,
+      "path_gate_rejection_present": true,
+      "terminal_path_errors": [
+        "E           ValueError: Research raw and temporary data must use D/E, not C"
+      ]
+    },
+    {
+      "nodeid": "tests/test_sci_final_release_integration.py::test_drift_and_wrong_execution_directory_reject_before_env",
+      "exact_failure_block_count": 1,
+      "original_c_temp_context": true,
+      "path_gate_rejection_present": true,
+      "terminal_path_errors": [
+        "E           ValueError: Research raw and temporary data must use D/E, not C"
+      ]
+    },
+    {
+      "nodeid": "tests/test_sci_final_release_integration.py::test_authentic_fixture_receipt_reaches_input_stub_only_after_full_validation",
+      "exact_failure_block_count": 1,
+      "original_c_temp_context": true,
+      "path_gate_rejection_present": true,
+      "terminal_path_errors": [
+        "E           ValueError: Research raw and temporary data must use D/E, not C"
+      ]
+    },
+    {
+      "nodeid": "tests/test_sci_final_release_integration.py::test_m21_reset_only_exact_registered_scene_and_complete_hours",
+      "exact_failure_block_count": 1,
+      "original_c_temp_context": true,
+      "path_gate_rejection_present": true,
+      "terminal_path_errors": [
+        "E           ValueError: Research raw and temporary data must use D/E, not C"
+      ]
+    },
+    {
+      "nodeid": "tests/test_sci_final_release_integration.py::test_cli_normalize_grant_register_complete_metadata_route",
+      "exact_failure_block_count": 1,
+      "original_c_temp_context": true,
+      "path_gate_rejection_present": true,
+      "terminal_path_errors": [
+        "E           ValueError: Research raw and temporary data must use D/E, not C"
+      ]
+    },
+    {
+      "nodeid": "tests/test_annual_program_analysis.py::test_analysis_cli_writes_only_a_fresh_detached_directory",
+      "exact_failure_block_count": 1,
+      "original_c_temp_context": true,
+      "path_gate_rejection_present": true,
+      "terminal_path_errors": [
+        "E       ValueError: Annual analysis output must remain on E"
+      ]
+    },
+    {
+      "nodeid": "tests/test_annual_program_selective_data.py::test_real_public_runner_keeps_orchestration_outside_exact_numeric_grant[False]",
+      "exact_failure_block_count": 1,
+      "original_c_temp_context": true,
+      "path_gate_rejection_present": true,
+      "terminal_path_errors": [
+        "E       ValueError: Annual scientific output must remain on E"
+      ]
+    },
+    {
+      "nodeid": "tests/test_annual_program_selective_data.py::test_real_public_runner_keeps_orchestration_outside_exact_numeric_grant[True]",
+      "exact_failure_block_count": 1,
+      "original_c_temp_context": true,
+      "path_gate_rejection_present": true,
+      "terminal_path_errors": [
+        "E       ValueError: Registered stop file must remain on E"
+      ]
+    },
+    {
+      "nodeid": "tests/test_annual_program_recovery.py::test_advanced_journal_requires_new_branch_with_exact_snapshot_databases",
+      "exact_failure_block_count": 1,
+      "original_c_temp_context": true,
+      "path_gate_rejection_present": true,
+      "terminal_path_errors": [
+        "E           ValueError: Domain-store data/index paths must remain on E"
+      ]
+    },
+    {
+      "nodeid": "tests/test_annual_program_recovery.py::test_incomplete_commit_keeps_previous_complete_point",
+      "exact_failure_block_count": 1,
+      "original_c_temp_context": true,
+      "path_gate_rejection_present": true,
+      "terminal_path_errors": [
+        "E           ValueError: Domain-store data/index paths must remain on E"
+      ]
+    },
+    {
+      "nodeid": "tests/test_annual_program_recovery.py::test_zero_blob_domain_restores_its_registered_empty_directory",
+      "exact_failure_block_count": 1,
+      "original_c_temp_context": true,
+      "path_gate_rejection_present": true,
+      "terminal_path_errors": [
+        "E           ValueError: Domain-store data/index paths must remain on E"
+      ]
+    },
+    {
+      "nodeid": "tests/test_annual_program_recovery.py::test_metadata_append_cannot_mutate_a_committed_snapshot",
+      "exact_failure_block_count": 1,
+      "original_c_temp_context": true,
+      "path_gate_rejection_present": true,
+      "terminal_path_errors": [
+        "E           ValueError: Domain-store data/index paths must remain on E"
+      ]
+    },
+    {
+      "nodeid": "tests/test_annual_program_recovery.py::test_changed_database_identity_is_rejected_before_commit",
+      "exact_failure_block_count": 1,
+      "original_c_temp_context": true,
+      "path_gate_rejection_present": true,
+      "terminal_path_errors": [
+        "E           ValueError: Domain-store data/index paths must remain on E"
+      ]
+    },
+    {
+      "nodeid": "tests/test_annual_program_recovery.py::test_restore_is_self_contained_when_original_attempt_is_absent",
+      "exact_failure_block_count": 1,
+      "original_c_temp_context": true,
+      "path_gate_rejection_present": true,
+      "terminal_path_errors": [
+        "E           ValueError: Domain-store data/index paths must remain on E"
+      ]
+    },
+    {
+      "nodeid": "tests/test_annual_program_recovery.py::test_corrupt_or_missing_snapshot_member_is_not_a_recoverable_point[runtime]",
+      "exact_failure_block_count": 1,
+      "original_c_temp_context": true,
+      "path_gate_rejection_present": true,
+      "terminal_path_errors": [
+        "E           ValueError: Domain-store data/index paths must remain on E"
+      ]
+    },
+    {
+      "nodeid": "tests/test_annual_program_recovery.py::test_corrupt_or_missing_snapshot_member_is_not_a_recoverable_point[delta]",
+      "exact_failure_block_count": 1,
+      "original_c_temp_context": true,
+      "path_gate_rejection_present": true,
+      "terminal_path_errors": [
+        "E           ValueError: Domain-store data/index paths must remain on E"
+      ]
+    },
+    {
+      "nodeid": "tests/test_annual_program_recovery.py::test_corrupt_or_missing_snapshot_member_is_not_a_recoverable_point[raw]",
+      "exact_failure_block_count": 1,
+      "original_c_temp_context": true,
+      "path_gate_rejection_present": true,
+      "terminal_path_errors": [
+        "E           ValueError: Domain-store data/index paths must remain on E"
+      ]
+    },
+    {
+      "nodeid": "tests/test_annual_program_recovery.py::test_nonzero_domain_missing_archived_blob_is_still_rejected",
+      "exact_failure_block_count": 1,
+      "original_c_temp_context": true,
+      "path_gate_rejection_present": true,
+      "terminal_path_errors": [
+        "E           ValueError: Domain-store data/index paths must remain on E"
+      ]
+    },
+    {
+      "nodeid": "tests/test_annual_program_recovery.py::test_semantically_invalid_resealed_archive_is_rejected[negative_cursor]",
+      "exact_failure_block_count": 1,
+      "original_c_temp_context": true,
+      "path_gate_rejection_present": true,
+      "terminal_path_errors": [
+        "E           ValueError: Domain-store data/index paths must remain on E"
+      ]
+    },
+    {
+      "nodeid": "tests/test_annual_program_recovery.py::test_semantically_invalid_resealed_archive_is_rejected[traversal]",
+      "exact_failure_block_count": 1,
+      "original_c_temp_context": true,
+      "path_gate_rejection_present": true,
+      "terminal_path_errors": [
+        "E           ValueError: Domain-store data/index paths must remain on E"
+      ]
+    },
+    {
+      "nodeid": "tests/test_annual_program_recovery.py::test_restore_capture_new_generation_then_restore_again_is_self_contained",
+      "exact_failure_block_count": 1,
+      "original_c_temp_context": true,
+      "path_gate_rejection_present": true,
+      "terminal_path_errors": [
+        "E           ValueError: Domain-store data/index paths must remain on E"
+      ]
+    },
+    {
+      "nodeid": "tests/test_annual_program_recovery.py::test_second_snapshot_does_not_hash_previously_archived_raw_members",
+      "exact_failure_block_count": 1,
+      "original_c_temp_context": true,
+      "path_gate_rejection_present": true,
+      "terminal_path_errors": [
+        "E           ValueError: Domain-store data/index paths must remain on E"
+      ]
+    },
+    {
+      "nodeid": "tests/test_annual_program_recovery.py::test_real_sidecar_history_materializes_exact_relocated_receipt_for_reader_membership",
+      "exact_failure_block_count": 1,
+      "original_c_temp_context": true,
+      "path_gate_rejection_present": true,
+      "terminal_path_errors": [
+        "E           ValueError: Domain-store data/index paths must remain on E"
+      ]
+    },
+    {
+      "nodeid": "tests/test_annual_program_runner.py::test_indexed_domain_installation_precedes_native_core_creation",
+      "exact_failure_block_count": 1,
+      "original_c_temp_context": true,
+      "path_gate_rejection_present": true,
+      "terminal_path_errors": [
+        "E           ValueError: Domain-store data/index paths must remain on E"
+      ]
+    },
+    {
+      "nodeid": "tests/test_annual_program_runner.py::test_preexisting_stop_file_rejects_public_run_before_any_runtime_or_writer",
+      "exact_failure_block_count": 1,
+      "original_c_temp_context": true,
+      "path_gate_rejection_present": true,
+      "terminal_path_errors": [
+        "E       ValueError: Registered stop file must remain on E"
+      ]
+    },
+    {
+      "nodeid": "tests/test_annual_program_runner.py::test_preexisting_stop_file_rejects_loop_before_reset_or_observation",
+      "exact_failure_block_count": 1,
+      "original_c_temp_context": true,
+      "path_gate_rejection_present": true,
+      "terminal_path_errors": [
+        "E       ValueError: Registered stop file must remain on E"
+      ]
+    },
+    {
+      "nodeid": "tests/test_annual_program_runner.py::test_stop_created_during_admission_records_not_started_without_writers",
+      "exact_failure_block_count": 1,
+      "original_c_temp_context": true,
+      "path_gate_rejection_present": true,
+      "terminal_path_errors": [
+        "E       ValueError: Registered stop file must remain on E"
+      ]
+    },
+    {
+      "nodeid": "tests/test_annual_program_runner.py::test_manual_stop_after_ack_forces_checkpoint_and_preserves_queue_without_extra_work",
+      "exact_failure_block_count": 1,
+      "original_c_temp_context": true,
+      "path_gate_rejection_present": true,
+      "terminal_path_errors": [
+        "E       ValueError: Registered stop file must remain on E"
+      ]
+    },
+    {
+      "nodeid": "tests/test_annual_program_runner.py::test_manual_stop_at_final_positive_boundary_remains_explicitly_suspended",
+      "exact_failure_block_count": 1,
+      "original_c_temp_context": true,
+      "path_gate_rejection_present": true,
+      "terminal_path_errors": [
+        "E       ValueError: Registered stop file must remain on E"
+      ]
+    },
+    {
+      "nodeid": "tests/test_annual_program_runner.py::test_public_driver_checkpoint_roundtrip_uses_no_reset_on_resume_and_closes_histories[96-registered_blocks]",
+      "exact_failure_block_count": 1,
+      "original_c_temp_context": true,
+      "path_gate_rejection_present": true,
+      "terminal_path_errors": [
+        "E       ValueError: Annual scientific output must remain on E"
+      ]
+    },
+    {
+      "nodeid": "tests/test_annual_program_runner.py::test_public_driver_checkpoint_roundtrip_uses_no_reset_on_resume_and_closes_histories[96-manual_file]",
+      "exact_failure_block_count": 1,
+      "original_c_temp_context": true,
+      "path_gate_rejection_present": true,
+      "terminal_path_errors": [
+        "E       ValueError: Registered stop file must remain on E"
+      ]
+    },
+    {
+      "nodeid": "tests/test_annual_program_runner.py::test_public_driver_checkpoint_roundtrip_uses_no_reset_on_resume_and_closes_histories[35041-registered_blocks]",
+      "exact_failure_block_count": 1,
+      "original_c_temp_context": true,
+      "path_gate_rejection_present": true,
+      "terminal_path_errors": [
+        "E       ValueError: Annual scientific output must remain on E"
+      ]
+    },
+    {
+      "nodeid": "tests/test_annual_program_runner.py::test_public_driver_checkpoint_roundtrip_uses_no_reset_on_resume_and_closes_histories[35041-manual_file]",
+      "exact_failure_block_count": 1,
+      "original_c_temp_context": true,
+      "path_gate_rejection_present": true,
+      "terminal_path_errors": [
+        "E       ValueError: Registered stop file must remain on E"
+      ]
+    },
+    {
+      "nodeid": "tests/test_annual_program_runner.py::test_incremental_recovery_orchestration_is_explicit_and_frozen",
+      "exact_failure_block_count": 1,
+      "original_c_temp_context": true,
+      "path_gate_rejection_present": true,
+      "terminal_path_errors": [
+        "E       ValueError: Recovery vault must remain on E"
+      ]
+    },
+    {
+      "nodeid": "tests/test_annual_program_domain_catalogue.py::test_many_pending_and_committed_refs_preserve_native_order_and_bounded_cache",
+      "exact_failure_block_count": 1,
+      "original_c_temp_context": true,
+      "path_gate_rejection_present": true,
+      "terminal_path_errors": [
+        "E           ValueError: Production catalogue databases must remain on E"
+      ]
+    },
+    {
+      "nodeid": "tests/test_annual_program_domain_catalogue.py::test_native_domain_store_lookup_dedup_and_receipt_work_without_source_changes",
+      "exact_failure_block_count": 1,
+      "original_c_temp_context": true,
+      "path_gate_rejection_present": true,
+      "terminal_path_errors": [
+        "E           ValueError: Production catalogue databases must remain on E"
+      ]
+    },
+    {
+      "nodeid": "tests/test_annual_program_domain_catalogue.py::test_reads_and_insertion_inputs_are_detached_and_conflicts_never_overwrite",
+      "exact_failure_block_count": 1,
+      "original_c_temp_context": true,
+      "path_gate_rejection_present": true,
+      "terminal_path_errors": [
+        "E           ValueError: Production catalogue databases must remain on E"
+      ]
+    },
+    {
+      "nodeid": "tests/test_annual_program_domain_catalogue.py::test_uncommitted_visibility_explicit_rollback_and_close_never_commit",
+      "exact_failure_block_count": 1,
+      "original_c_temp_context": true,
+      "path_gate_rejection_present": true,
+      "terminal_path_errors": [
+        "E           ValueError: Production catalogue databases must remain on E"
+      ]
+    },
+    {
+      "nodeid": "tests/test_annual_program_domain_catalogue.py::test_failed_commit_requires_explicit_rollback_and_does_not_fabricate_ack",
+      "exact_failure_block_count": 1,
+      "original_c_temp_context": true,
+      "path_gate_rejection_present": true,
+      "terminal_path_errors": [
+        "E           ValueError: Production catalogue databases must remain on E"
+      ]
+    },
+    {
+      "nodeid": "tests/test_annual_program_domain_catalogue.py::test_descriptor_restore_is_exact_and_writable_continuation_appends",
+      "exact_failure_block_count": 1,
+      "original_c_temp_context": true,
+      "path_gate_rejection_present": true,
+      "terminal_path_errors": [
+        "E           ValueError: Production catalogue databases must remain on E"
+      ]
+    },
+    {
+      "nodeid": "tests/test_annual_program_domain_catalogue.py::test_missing_newer_or_corrupt_catalogue_never_accepts_old_prefix_or_recreates[state_checksum]",
+      "exact_failure_block_count": 1,
+      "original_c_temp_context": true,
+      "path_gate_rejection_present": true,
+      "terminal_path_errors": [
+        "E           ValueError: Production catalogue databases must remain on E"
+      ]
+    },
+    {
+      "nodeid": "tests/test_annual_program_domain_catalogue.py::test_missing_newer_or_corrupt_catalogue_never_accepts_old_prefix_or_recreates[wrong_identity]",
+      "exact_failure_block_count": 1,
+      "original_c_temp_context": true,
+      "path_gate_rejection_present": true,
+      "terminal_path_errors": [
+        "E           ValueError: Production catalogue databases must remain on E"
+      ]
+    },
+    {
+      "nodeid": "tests/test_annual_program_domain_catalogue.py::test_missing_newer_or_corrupt_catalogue_never_accepts_old_prefix_or_recreates[wrong_path]",
+      "exact_failure_block_count": 1,
+      "original_c_temp_context": true,
+      "path_gate_rejection_present": true,
+      "terminal_path_errors": [
+        "E           ValueError: Production catalogue databases must remain on E"
+      ]
+    },
+    {
+      "nodeid": "tests/test_annual_program_domain_catalogue.py::test_missing_newer_or_corrupt_catalogue_never_accepts_old_prefix_or_recreates[missing]",
+      "exact_failure_block_count": 1,
+      "original_c_temp_context": true,
+      "path_gate_rejection_present": true,
+      "terminal_path_errors": [
+        "E           ValueError: Production catalogue databases must remain on E"
+      ]
+    },
+    {
+      "nodeid": "tests/test_annual_program_domain_catalogue.py::test_missing_newer_or_corrupt_catalogue_never_accepts_old_prefix_or_recreates[newer]",
+      "exact_failure_block_count": 1,
+      "original_c_temp_context": true,
+      "path_gate_rejection_present": true,
+      "terminal_path_errors": [
+        "E           ValueError: Production catalogue databases must remain on E"
+      ]
+    },
+    {
+      "nodeid": "tests/test_annual_program_domain_catalogue.py::test_missing_newer_or_corrupt_catalogue_never_accepts_old_prefix_or_recreates[payload]",
+      "exact_failure_block_count": 1,
+      "original_c_temp_context": true,
+      "path_gate_rejection_present": true,
+      "terminal_path_errors": [
+        "E           ValueError: Production catalogue databases must remain on E"
+      ]
+    },
+    {
+      "nodeid": "tests/test_annual_program_domain_catalogue.py::test_missing_newer_or_corrupt_catalogue_never_accepts_old_prefix_or_recreates[orphan_row]",
+      "exact_failure_block_count": 1,
+      "original_c_temp_context": true,
+      "path_gate_rejection_present": true,
+      "terminal_path_errors": [
+        "E           ValueError: Production catalogue databases must remain on E"
+      ]
+    },
+    {
+      "nodeid": "tests/test_annual_program_domain_catalogue.py::test_missing_newer_or_corrupt_catalogue_never_accepts_old_prefix_or_recreates[schema]",
+      "exact_failure_block_count": 1,
+      "original_c_temp_context": true,
+      "path_gate_rejection_present": true,
+      "terminal_path_errors": [
+        "E           ValueError: Production catalogue databases must remain on E"
+      ]
+    },
+    {
+      "nodeid": "tests/test_annual_program_domain_catalogue.py::test_missing_newer_or_corrupt_catalogue_never_accepts_old_prefix_or_recreates[extra_table]",
+      "exact_failure_block_count": 1,
+      "original_c_temp_context": true,
+      "path_gate_rejection_present": true,
+      "terminal_path_errors": [
+        "E           ValueError: Production catalogue databases must remain on E"
+      ]
+    },
+    {
+      "nodeid": "tests/test_annual_program_domain_catalogue.py::test_readonly_authentication_streams_rows_and_never_opens_a_writer",
+      "exact_failure_block_count": 1,
+      "original_c_temp_context": true,
+      "path_gate_rejection_present": true,
+      "terminal_path_errors": [
+        "E           ValueError: Production catalogue databases must remain on E"
+      ]
+    },
+    {
+      "nodeid": "tests/test_annual_program_domain_catalogue.py::test_ambiguous_sqlite_sidecars_block_immutable_restore[-journal]",
+      "exact_failure_block_count": 1,
+      "original_c_temp_context": true,
+      "path_gate_rejection_present": true,
+      "terminal_path_errors": [
+        "E           ValueError: Production catalogue databases must remain on E"
+      ]
+    },
+    {
+      "nodeid": "tests/test_annual_program_domain_catalogue.py::test_ambiguous_sqlite_sidecars_block_immutable_restore[-wal]",
+      "exact_failure_block_count": 1,
+      "original_c_temp_context": true,
+      "path_gate_rejection_present": true,
+      "terminal_path_errors": [
+        "E           ValueError: Production catalogue databases must remain on E"
+      ]
+    },
+    {
+      "nodeid": "tests/test_annual_program_domain_catalogue.py::test_ambiguous_sqlite_sidecars_block_immutable_restore[-shm]",
+      "exact_failure_block_count": 1,
+      "original_c_temp_context": true,
+      "path_gate_rejection_present": true,
+      "terminal_path_errors": [
+        "E           ValueError: Production catalogue databases must remain on E"
+      ]
+    },
+    {
+      "nodeid": "tests/test_annual_program_domain_catalogue.py::test_only_approved_native_reference_metadata_and_finite_primitive_types_are_accepted[key]",
+      "exact_failure_block_count": 1,
+      "original_c_temp_context": true,
+      "path_gate_rejection_present": true,
+      "terminal_path_errors": [
+        "E           ValueError: Production catalogue databases must remain on E"
+      ]
+    },
+    {
+      "nodeid": "tests/test_annual_program_domain_catalogue.py::test_only_approved_native_reference_metadata_and_finite_primitive_types_are_accepted[uppercase_key]",
+      "exact_failure_block_count": 1,
+      "original_c_temp_context": true,
+      "path_gate_rejection_present": true,
+      "terminal_path_errors": [
+        "E           ValueError: Production catalogue databases must remain on E"
+      ]
+    },
+    {
+      "nodeid": "tests/test_annual_program_domain_catalogue.py::test_only_approved_native_reference_metadata_and_finite_primitive_types_are_accepted[schema]",
+      "exact_failure_block_count": 1,
+      "original_c_temp_context": true,
+      "path_gate_rejection_present": true,
+      "terminal_path_errors": [
+        "E           ValueError: Production catalogue databases must remain on E"
+      ]
+    },
+    {
+      "nodeid": "tests/test_annual_program_domain_catalogue.py::test_only_approved_native_reference_metadata_and_finite_primitive_types_are_accepted[directory]",
+      "exact_failure_block_count": 1,
+      "original_c_temp_context": true,
+      "path_gate_rejection_present": true,
+      "terminal_path_errors": [
+        "E           ValueError: Production catalogue databases must remain on E"
+      ]
+    },
+    {
+      "nodeid": "tests/test_annual_program_domain_catalogue.py::test_only_approved_native_reference_metadata_and_finite_primitive_types_are_accepted[filename]",
+      "exact_failure_block_count": 1,
+      "original_c_temp_context": true,
+      "path_gate_rejection_present": true,
+      "terminal_path_errors": [
+        "E           ValueError: Production catalogue databases must remain on E"
+      ]
+    },
+    {
+      "nodeid": "tests/test_annual_program_domain_catalogue.py::test_only_approved_native_reference_metadata_and_finite_primitive_types_are_accepted[row_sha]",
+      "exact_failure_block_count": 1,
+      "original_c_temp_context": true,
+      "path_gate_rejection_present": true,
+      "terminal_path_errors": [
+        "E           ValueError: Production catalogue databases must remain on E"
+      ]
+    },
+    {
+      "nodeid": "tests/test_annual_program_domain_catalogue.py::test_only_approved_native_reference_metadata_and_finite_primitive_types_are_accepted[bool_count]",
+      "exact_failure_block_count": 1,
+      "original_c_temp_context": true,
+      "path_gate_rejection_present": true,
+      "terminal_path_errors": [
+        "E           ValueError: Production catalogue databases must remain on E"
+      ]
+    },
+    {
+      "nodeid": "tests/test_annual_program_domain_catalogue.py::test_only_approved_native_reference_metadata_and_finite_primitive_types_are_accepted[float_count]",
+      "exact_failure_block_count": 1,
+      "original_c_temp_context": true,
+      "path_gate_rejection_present": true,
+      "terminal_path_errors": [
+        "E           ValueError: Production catalogue databases must remain on E"
+      ]
+    },
+    {
+      "nodeid": "tests/test_annual_program_domain_catalogue.py::test_only_approved_native_reference_metadata_and_finite_primitive_types_are_accepted[negative_count]",
+      "exact_failure_block_count": 1,
+      "original_c_temp_context": true,
+      "path_gate_rejection_present": true,
+      "terminal_path_errors": [
+        "E           ValueError: Production catalogue databases must remain on E"
+      ]
+    },
+    {
+      "nodeid": "tests/test_annual_program_domain_catalogue.py::test_only_approved_native_reference_metadata_and_finite_primitive_types_are_accepted[nonfinite_size]",
+      "exact_failure_block_count": 1,
+      "original_c_temp_context": true,
+      "path_gate_rejection_present": true,
+      "terminal_path_errors": [
+        "E           ValueError: Production catalogue databases must remain on E"
+      ]
+    },
+    {
+      "nodeid": "tests/test_annual_program_domain_catalogue.py::test_only_approved_native_reference_metadata_and_finite_primitive_types_are_accepted[extra_field]",
+      "exact_failure_block_count": 1,
+      "original_c_temp_context": true,
+      "path_gate_rejection_present": true,
+      "terminal_path_errors": [
+        "E           ValueError: Production catalogue databases must remain on E"
+      ]
+    },
+    {
+      "nodeid": "tests/test_annual_program_domain_catalogue.py::test_only_approved_native_reference_metadata_and_finite_primitive_types_are_accepted[canonicalization]",
+      "exact_failure_block_count": 1,
+      "original_c_temp_context": true,
+      "path_gate_rejection_present": true,
+      "terminal_path_errors": [
+        "E           ValueError: Production catalogue databases must remain on E"
+      ]
+    },
+    {
+      "nodeid": "tests/test_annual_program_domain_catalogue.py::test_identity_is_case_and_source_bound_and_creation_never_overwrites",
+      "exact_failure_block_count": 1,
+      "original_c_temp_context": true,
+      "path_gate_rejection_present": true,
+      "terminal_path_errors": [
+        "E           ValueError: Production catalogue databases must remain on E"
+      ]
+    },
+    {
+      "nodeid": "tests/test_annual_program_domain_catalogue.py::test_descriptor_identity_comparison_preserves_boolean_versus_integer_types",
+      "exact_failure_block_count": 1,
+      "original_c_temp_context": true,
+      "path_gate_rejection_present": true,
+      "terminal_path_errors": [
+        "E           ValueError: Production catalogue databases must remain on E"
+      ]
+    },
+    {
+      "nodeid": "tests/test_annual_program_domain_catalogue.py::test_cache_bound_and_database_path_cannot_change_after_binding",
+      "exact_failure_block_count": 1,
+      "original_c_temp_context": true,
+      "path_gate_rejection_present": true,
+      "terminal_path_errors": [
+        "E           ValueError: Production catalogue databases must remain on E"
+      ]
+    },
+    {
+      "nodeid": "tests/test_annual_program_domain_catalogue.py::test_reference_strings_require_plain_primitive_types",
+      "exact_failure_block_count": 1,
+      "original_c_temp_context": true,
+      "path_gate_rejection_present": true,
+      "terminal_path_errors": [
+        "E           ValueError: Production catalogue databases must remain on E"
+      ]
+    },
+    {
+      "nodeid": "tests/test_annual_program_domain_catalogue.py::test_failure_after_sqlite_commit_is_ambiguous_and_never_erased_by_rollback",
+      "exact_failure_block_count": 1,
+      "original_c_temp_context": true,
+      "path_gate_rejection_present": true,
+      "terminal_path_errors": [
+        "E           ValueError: Production catalogue databases must remain on E"
+      ]
+    },
+    {
+      "nodeid": "tests/test_annual_program_domain_catalogue.py::test_mapping_equality_does_not_inherit_a_hidden_full_dictionary_copy",
+      "exact_failure_block_count": 1,
+      "original_c_temp_context": true,
+      "path_gate_rejection_present": true,
+      "terminal_path_errors": [
+        "E           ValueError: Production catalogue databases must remain on E"
+      ]
+    },
+    {
+      "nodeid": "tests/test_annual_program_domain_store.py::test_native_reference_json_bytes_match_after_duplicate_lookup_and_restore_cache_eviction[pending-False]",
+      "exact_failure_block_count": 1,
+      "original_c_temp_context": true,
+      "path_gate_rejection_present": true,
+      "terminal_path_errors": [
+        "E           ValueError: Domain-store data/index paths must remain on E"
+      ]
+    },
+    {
+      "nodeid": "tests/test_annual_program_domain_store.py::test_native_reference_json_bytes_match_after_duplicate_lookup_and_restore_cache_eviction[pending-True]",
+      "exact_failure_block_count": 1,
+      "original_c_temp_context": true,
+      "path_gate_rejection_present": true,
+      "terminal_path_errors": [
+        "E           ValueError: Domain-store data/index paths must remain on E"
+      ]
+    },
+    {
+      "nodeid": "tests/test_annual_program_domain_store.py::test_native_reference_json_bytes_match_after_duplicate_lookup_and_restore_cache_eviction[restored-False]",
+      "exact_failure_block_count": 1,
+      "original_c_temp_context": true,
+      "path_gate_rejection_present": true,
+      "terminal_path_errors": [
+        "E           ValueError: Domain-store data/index paths must remain on E"
+      ]
+    },
+    {
+      "nodeid": "tests/test_annual_program_domain_store.py::test_native_reference_json_bytes_match_after_duplicate_lookup_and_restore_cache_eviction[restored-True]",
+      "exact_failure_block_count": 1,
+      "original_c_temp_context": true,
+      "path_gate_rejection_present": true,
+      "terminal_path_errors": [
+        "E           ValueError: Domain-store data/index paths must remain on E"
+      ]
+    },
+    {
+      "nodeid": "tests/test_annual_program_domain_store.py::test_unexpected_native_reference_fields_reject_instead_of_being_dropped[extra-False]",
+      "exact_failure_block_count": 1,
+      "original_c_temp_context": true,
+      "path_gate_rejection_present": true,
+      "terminal_path_errors": [
+        "E           ValueError: Domain-store data/index paths must remain on E"
+      ]
+    },
+    {
+      "nodeid": "tests/test_annual_program_domain_store.py::test_unexpected_native_reference_fields_reject_instead_of_being_dropped[extra-True]",
+      "exact_failure_block_count": 1,
+      "original_c_temp_context": true,
+      "path_gate_rejection_present": true,
+      "terminal_path_errors": [
+        "E           ValueError: Domain-store data/index paths must remain on E"
+      ]
+    },
+    {
+      "nodeid": "tests/test_annual_program_domain_store.py::test_unexpected_native_reference_fields_reject_instead_of_being_dropped[missing-False]",
+      "exact_failure_block_count": 1,
+      "original_c_temp_context": true,
+      "path_gate_rejection_present": true,
+      "terminal_path_errors": [
+        "E           ValueError: Domain-store data/index paths must remain on E"
+      ]
+    },
+    {
+      "nodeid": "tests/test_annual_program_domain_store.py::test_unexpected_native_reference_fields_reject_instead_of_being_dropped[missing-True]",
+      "exact_failure_block_count": 1,
+      "original_c_temp_context": true,
+      "path_gate_rejection_present": true,
+      "terminal_path_errors": [
+        "E           ValueError: Domain-store data/index paths must remain on E"
+      ]
+    },
+    {
+      "nodeid": "tests/test_annual_program_domain_store.py::test_native_refs_and_deterministic_gzip_bytes_are_unchanged_including_infinite_bound_normalization[False]",
+      "exact_failure_block_count": 1,
+      "original_c_temp_context": true,
+      "path_gate_rejection_present": true,
+      "terminal_path_errors": [
+        "E           ValueError: Domain-store data/index paths must remain on E"
+      ]
+    },
+    {
+      "nodeid": "tests/test_annual_program_domain_store.py::test_native_refs_and_deterministic_gzip_bytes_are_unchanged_including_infinite_bound_normalization[True]",
+      "exact_failure_block_count": 1,
+      "original_c_temp_context": true,
+      "path_gate_rejection_present": true,
+      "terminal_path_errors": [
+        "E           ValueError: Domain-store data/index paths must remain on E"
+      ]
+    },
+    {
+      "nodeid": "tests/test_annual_program_domain_store.py::test_restore_rejects_changed_missing_or_orphan_evidence_without_repair[gzip_header]",
+      "exact_failure_block_count": 1,
+      "original_c_temp_context": true,
+      "path_gate_rejection_present": true,
+      "terminal_path_errors": [
+        "E           ValueError: Domain-store data/index paths must remain on E"
+      ]
+    },
+    {
+      "nodeid": "tests/test_annual_program_domain_store.py::test_restore_rejects_changed_missing_or_orphan_evidence_without_repair[canonical_rows]",
+      "exact_failure_block_count": 1,
+      "original_c_temp_context": true,
+      "path_gate_rejection_present": true,
+      "terminal_path_errors": [
+        "E           ValueError: Domain-store data/index paths must remain on E"
+      ]
+    },
+    {
+      "nodeid": "tests/test_annual_program_domain_store.py::test_restore_rejects_changed_missing_or_orphan_evidence_without_repair[extra_blob]",
+      "exact_failure_block_count": 1,
+      "original_c_temp_context": true,
+      "path_gate_rejection_present": true,
+      "terminal_path_errors": [
+        "E           ValueError: Domain-store data/index paths must remain on E"
+      ]
+    },
+    {
+      "nodeid": "tests/test_annual_program_domain_store.py::test_restore_rejects_changed_missing_or_orphan_evidence_without_repair[missing_blob]",
+      "exact_failure_block_count": 1,
+      "original_c_temp_context": true,
+      "path_gate_rejection_present": true,
+      "terminal_path_errors": [
+        "E           ValueError: Domain-store data/index paths must remain on E"
+      ]
+    },
+    {
+      "nodeid": "tests/test_annual_program_domain_store.py::test_restore_rejects_changed_missing_or_orphan_evidence_without_repair[extra_index]",
+      "exact_failure_block_count": 1,
+      "original_c_temp_context": true,
+      "path_gate_rejection_present": true,
+      "terminal_path_errors": [
+        "E           ValueError: Domain-store data/index paths must remain on E"
+      ]
+    },
+    {
+      "nodeid": "tests/test_annual_program_domain_store.py::test_restore_rejects_changed_missing_or_orphan_evidence_without_repair[missing_index]",
+      "exact_failure_block_count": 1,
+      "original_c_temp_context": true,
+      "path_gate_rejection_present": true,
+      "terminal_path_errors": [
+        "E           ValueError: Domain-store data/index paths must remain on E"
+      ]
+    },
+    {
+      "nodeid": "tests/test_annual_program_domain_store.py::test_restore_rejects_changed_missing_or_orphan_evidence_without_repair[missing_blob_directory]",
+      "exact_failure_block_count": 1,
+      "original_c_temp_context": true,
+      "path_gate_rejection_present": true,
+      "terminal_path_errors": [
+        "E           ValueError: Domain-store data/index paths must remain on E"
+      ]
+    },
+    {
+      "nodeid": "tests/test_annual_program_domain_store.py::test_restore_rejects_changed_missing_or_orphan_evidence_without_repair[missing_index_directory]",
+      "exact_failure_block_count": 1,
+      "original_c_temp_context": true,
+      "path_gate_rejection_present": true,
+      "terminal_path_errors": [
+        "E           ValueError: Domain-store data/index paths must remain on E"
+      ]
+    },
+    {
+      "nodeid": "tests/test_annual_program_domain_store.py::test_source_binding_and_exact_identity_or_path_drift_reject",
+      "exact_failure_block_count": 1,
+      "original_c_temp_context": true,
+      "path_gate_rejection_present": true,
+      "terminal_path_errors": [
+        "E           ValueError: Domain-store data/index paths must remain on E"
+      ]
+    },
+    {
+      "nodeid": "tests/test_annual_program_domain_store.py::test_readonly_restore_uses_public_neutral_resolver_and_never_opens_a_writer",
+      "exact_failure_block_count": 1,
+      "original_c_temp_context": true,
+      "path_gate_rejection_present": true,
+      "terminal_path_errors": [
+        "E           ValueError: Domain-store data/index paths must remain on E"
+      ]
+    },
+    {
+      "nodeid": "tests/test_annual_program_domain_store.py::test_pending_close_retains_raw_orphans_and_complete_pending_proof_state",
+      "exact_failure_block_count": 1,
+      "original_c_temp_context": true,
+      "path_gate_rejection_present": true,
+      "terminal_path_errors": [
+        "E           ValueError: Domain-store data/index paths must remain on E"
+      ]
+    },
+    {
+      "nodeid": "tests/test_annual_program_domain_store.py::test_failure_between_commits_retains_the_proof_commit_and_rejects_old_snapshot",
+      "exact_failure_block_count": 1,
+      "original_c_temp_context": true,
+      "path_gate_rejection_present": true,
+      "terminal_path_errors": [
+        "E           ValueError: Domain-store data/index paths must remain on E"
+      ]
+    },
+    {
+      "nodeid": "tests/test_annual_program_domain_store.py::test_changed_new_blob_before_commit_is_not_acknowledged",
+      "exact_failure_block_count": 1,
+      "original_c_temp_context": true,
+      "path_gate_rejection_present": true,
+      "terminal_path_errors": [
+        "E           ValueError: Domain-store data/index paths must remain on E"
+      ]
+    },
+    {
+      "nodeid": "tests/test_annual_program_domain_store.py::test_consistent_but_wrong_order_proof_database_cannot_match_catalogue",
+      "exact_failure_block_count": 1,
+      "original_c_temp_context": true,
+      "path_gate_rejection_present": true,
+      "terminal_path_errors": [
+        "E           ValueError: Domain-store data/index paths must remain on E"
+      ]
+    },
+    {
+      "nodeid": "tests/test_annual_program_domain_store.py::test_symlinked_blob_or_index_spelling_is_rejected_without_writes[blob]",
+      "exact_failure_block_count": 1,
+      "original_c_temp_context": true,
+      "path_gate_rejection_present": true,
+      "terminal_path_errors": [
+        "E           ValueError: Domain-store data/index paths must remain on E"
+      ]
+    },
+    {
+      "nodeid": "tests/test_annual_program_domain_store.py::test_symlinked_blob_or_index_spelling_is_rejected_without_writes[catalogue_index]",
+      "exact_failure_block_count": 1,
+      "original_c_temp_context": true,
+      "path_gate_rejection_present": true,
+      "terminal_path_errors": [
+        "E           ValueError: Domain-store data/index paths must remain on E"
+      ]
+    },
+    {
+      "nodeid": "tests/test_annual_program_domain_store.py::test_symlinked_blob_or_index_spelling_is_rejected_without_writes[proof_index]",
+      "exact_failure_block_count": 1,
+      "original_c_temp_context": true,
+      "path_gate_rejection_present": true,
+      "terminal_path_errors": [
+        "E           ValueError: Domain-store data/index paths must remain on E"
+      ]
+    },
+    {
+      "nodeid": "tests/test_annual_program_domain_store.py::test_independent_new_blob_verifier_rejects_valid_gzip_with_wrong_canonical_rows_before_enqueue",
+      "exact_failure_block_count": 1,
+      "original_c_temp_context": true,
+      "path_gate_rejection_present": true,
+      "terminal_path_errors": [
+        "E           ValueError: Domain-store data/index paths must remain on E"
+      ]
+    },
+    {
+      "nodeid": "tests/test_annual_program_domain_store.py::test_larger_acknowledgement_batch_has_compact_snapshot_and_one_decoded_blob",
+      "exact_failure_block_count": 1,
+      "original_c_temp_context": true,
+      "path_gate_rejection_present": true,
+      "terminal_path_errors": [
+        "E           ValueError: Domain-store data/index paths must remain on E"
+      ]
+    },
+    {
+      "nodeid": "tests/test_annual_program_domain_store.py::test_exception_after_real_catalogue_commit_still_blocks_ack_and_old_restore",
+      "exact_failure_block_count": 1,
+      "original_c_temp_context": true,
+      "path_gate_rejection_present": true,
+      "terminal_path_errors": [
+        "E           ValueError: Domain-store data/index paths must remain on E"
+      ]
+    },
+    {
+      "nodeid": "tests/test_annual_program_domain_store.py::test_neutral_adapter_flags_do_not_conflate_boolean_with_integer_metadata",
+      "exact_failure_block_count": 1,
+      "original_c_temp_context": true,
+      "path_gate_rejection_present": true,
+      "terminal_path_errors": [
+        "E           ValueError: Domain-store data/index paths must remain on E"
+      ]
+    },
+    {
+      "nodeid": "tests/test_annual_program_domain_store.py::test_native_proof_commit_failure_retains_bounded_preimage_even_when_public_state_is_blocked[before_proof_persist]",
+      "exact_failure_block_count": 1,
+      "original_c_temp_context": true,
+      "path_gate_rejection_present": true,
+      "terminal_path_errors": [
+        "E           ValueError: Domain-store data/index paths must remain on E"
+      ]
+    },
+    {
+      "nodeid": "tests/test_annual_program_domain_store.py::test_native_proof_commit_failure_retains_bounded_preimage_even_when_public_state_is_blocked[after_real_proof_sqlite_commit]",
+      "exact_failure_block_count": 1,
+      "original_c_temp_context": true,
+      "path_gate_rejection_present": true,
+      "terminal_path_errors": [
+        "E           ValueError: Domain-store data/index paths must remain on E"
+      ]
+    },
+    {
+      "nodeid": "tests/test_annual_program_indexed_integration.py::test_real_proof_commit_failure_prevents_journal_ack_and_persists_pending_preimage",
+      "exact_failure_block_count": 1,
+      "original_c_temp_context": true,
+      "path_gate_rejection_present": true,
+      "terminal_path_errors": [
+        "E       ValueError: Annual scientific output must remain on E"
+      ]
+    },
+    {
+      "nodeid": "tests/test_annual_program_indexed_integration.py::test_store_commits_before_real_journal_ack_for_healthy_and_failed_native_prefix[False]",
+      "exact_failure_block_count": 1,
+      "original_c_temp_context": true,
+      "path_gate_rejection_present": true,
+      "terminal_path_errors": [
+        "E       ValueError: Annual scientific output must remain on E"
+      ]
+    },
+    {
+      "nodeid": "tests/test_annual_program_indexed_integration.py::test_store_commits_before_real_journal_ack_for_healthy_and_failed_native_prefix[True]",
+      "exact_failure_block_count": 1,
+      "original_c_temp_context": true,
+      "path_gate_rejection_present": true,
+      "terminal_path_errors": [
+        "E       ValueError: Annual scientific output must remain on E"
+      ]
+    },
+    {
+      "nodeid": "tests/test_annual_program_source_pin_cache.py::test_create_commit_snapshot_and_restore_force_full_pins",
+      "exact_failure_block_count": 1,
+      "original_c_temp_context": true,
+      "path_gate_rejection_present": true,
+      "terminal_path_errors": [
+        "E           ValueError: Domain-store data/index paths must remain on E"
+      ]
+    },
+    {
+      "nodeid": "tests/test_annual_program_source_pin_cache.py::test_source_failure_after_both_database_commits_retains_unacknowledged_preimage",
+      "exact_failure_block_count": 1,
+      "original_c_temp_context": true,
+      "path_gate_rejection_present": true,
+      "terminal_path_errors": [
+        "E           ValueError: Domain-store data/index paths must remain on E"
+      ]
+    },
+    {
+      "nodeid": "tests/test_annual_catalogue_position.py::test_position_sees_pending_rows_on_owner_and_returns_detached_native_reference",
+      "exact_failure_block_count": 1,
+      "original_c_temp_context": true,
+      "path_gate_rejection_present": true,
+      "terminal_path_errors": [
+        "E           ValueError: Production catalogue databases must remain on E"
+      ]
+    },
+    {
+      "nodeid": "tests/test_annual_catalogue_position.py::test_position_works_readonly_and_has_no_silent_missing_key_or_closed_fallback",
+      "exact_failure_block_count": 1,
+      "original_c_temp_context": true,
+      "path_gate_rejection_present": true,
+      "terminal_path_errors": [
+        "E           ValueError: Production catalogue databases must remain on E"
+      ]
+    },
+    {
+      "nodeid": "tests/test_sf2_capture_directory_lifecycle.py::test_real_runner_reaches_native_journal_before_controlled_preconstruction_stop",
+      "exact_failure_block_count": 1,
+      "original_c_temp_context": true,
+      "path_gate_rejection_present": true,
+      "terminal_path_errors": [
+        "E           ValueError: Scientific outputs must remain on D/E"
+      ]
+    }
+  ],
+  "recheck_module_counts": {
+    "tests/test_engineering_thermal_prefix.py": 1,
+    "tests/test_model_closeout_registration.py": 3,
+    "tests/test_sci_runner.py": 13,
+    "tests/test_sci_final_release_integration.py": 7,
+    "tests/test_annual_program_analysis.py": 1,
+    "tests/test_annual_program_selective_data.py": 2,
+    "tests/test_annual_program_recovery.py": 15,
+    "tests/test_annual_program_runner.py": 11,
+    "tests/test_annual_program_domain_catalogue.py": 37,
+    "tests/test_annual_program_domain_store.py": 33,
+    "tests/test_annual_program_indexed_integration.py": 3,
+    "tests/test_annual_program_source_pin_cache.py": 2,
+    "tests/test_annual_catalogue_position.py": 2,
+    "tests/test_sf2_capture_directory_lifecycle.py": 1
+  },
+  "path_gate_error_counts": {
+    "E           ValueError: Use D/E for study exports": 1,
+    "E           ValueError: Research data must use D/E, not C": 3,
+    "E           ValueError: Research raw and temporary data must use D/E, not C": 19,
+    "E             Actual message: 'Research raw and temporary data must use D/E, not C'": 1,
+    "E       ValueError: Annual analysis output must remain on E": 1,
+    "E       ValueError: Annual scientific output must remain on E": 6,
+    "E       ValueError: Registered stop file must remain on E": 8,
+    "E           ValueError: Domain-store data/index paths must remain on E": 51,
+    "E       ValueError: Recovery vault must remain on E": 1,
+    "E           ValueError: Production catalogue databases must remain on E": 39,
+    "E           ValueError: Scientific outputs must remain on D/E": 1
+  },
+  "related_original_sources": [
+    {
+      "path": "tools/operating_response/physical_balance.py",
+      "current_sha256": "42238ae2f69d1998be0b9e059a1f6eef4ab659e433eb60c397a58efa676666ea",
+      "old_evidence_sha256": "42238ae2f69d1998be0b9e059a1f6eef4ab659e433eb60c397a58efa676666ea",
+      "unchanged": true,
+      "old_evidence": "E:\\hospital_ies_no_priority_20261105_run01\\INHERITED_FAILURE_IDENTITY.json"
+    },
+    {
+      "path": "tools/essential_fixes/execution.py",
+      "current_sha256": "8eb3b210c6615a7bd72bac2c5e7c6fe495164e92f850dc78cd7d70e8e69a2309",
+      "old_evidence_sha256": "8eb3b210c6615a7bd72bac2c5e7c6fe495164e92f850dc78cd7d70e8e69a2309",
+      "unchanged": true,
+      "old_evidence": "E:\\hospital_ies_no_priority_20261105_run01\\integration03\\SOURCE_BINDING.json"
+    },
+    {
+      "path": "tools/annual_program/flow_source_contracts.py",
+      "current_sha256": "f600fd58f7509f47992bec8102d2c871cb5698da8ea1b9834d92444e4c54450d",
+      "old_evidence_sha256": "f600fd58f7509f47992bec8102d2c871cb5698da8ea1b9834d92444e4c54450d",
+      "unchanged": true,
+      "old_evidence": "E:\\hospital_ies_no_priority_20261105_run01\\integration03\\SOURCE_BINDING.json"
+    },
+    {
+      "path": "tools/annual_program/witness.py",
+      "current_sha256": "cc41e8c926335c5d378a4913877f7f967683c46930c40dff35760f087ecdb4d2",
+      "old_evidence_sha256": "cc41e8c926335c5d378a4913877f7f967683c46930c40dff35760f087ecdb4d2",
+      "unchanged": true,
+      "old_evidence": "E:\\hospital_ies_no_priority_20261105_run01\\integration03\\SOURCE_BINDING.json"
+    },
+    {
+      "path": "src/hospital_ies/state_transition.py",
+      "current_sha256": "b3139703cb68ce833c6250bd4f3b39684c280bec546644290eb1f77d920c1966",
+      "old_evidence_sha256": "b3139703cb68ce833c6250bd4f3b39684c280bec546644290eb1f77d920c1966",
+      "unchanged": true,
+      "old_evidence": "E:\\hospital_ies_no_priority_20261105_run01\\integration03\\SOURCE_BINDING.json"
+    },
+    {
+      "path": "src/hospital_ies/execution.py",
+      "current_sha256": "bc6de41a07ccdbfe01f94dc8355f2fe3f1c5a856c22fe1fcd15b50fd11e6e18c",
+      "old_evidence_sha256": "bc6de41a07ccdbfe01f94dc8355f2fe3f1c5a856c22fe1fcd15b50fd11e6e18c",
+      "unchanged": true,
+      "old_evidence": "E:\\hospital_ies_no_priority_20261105_run01\\integration03\\SOURCE_BINDING.json"
+    },
+    {
+      "path": "tests/test_sf2_source_profile.py",
+      "current_sha256": "692dbd71062ae3843c4cfde327aa9f45062974e0377bee8bc6bf586950ad64c3",
+      "old_evidence_sha256": "692dbd71062ae3843c4cfde327aa9f45062974e0377bee8bc6bf586950ad64c3",
+      "unchanged": true,
+      "old_evidence": "E:\\hospital_ies_no_priority_20261105_run01\\INHERITED_FAILURE_IDENTITY.json"
+    },
+    {
+      "path": "tests/test_minute1_historical_profiles.py",
+      "current_sha256": "edc81d5141e9503380f511dc5a8671eac81a73c22b5010bc2ffae8c092baf39b",
+      "old_evidence_sha256": "edc81d5141e9503380f511dc5a8671eac81a73c22b5010bc2ffae8c092baf39b",
+      "unchanged": true,
+      "old_evidence": "E:\\hospital_ies_no_priority_20261105_run01\\INHERITED_FAILURE_IDENTITY.json"
+    },
+    {
+      "path": "tests/minute1_historical_routes.json",
+      "current_sha256": "e33195d8d87d6a6eb9041a7e483d840972c7cda9569774cd0853d34d8efadc78",
+      "old_evidence_sha256": "e33195d8d87d6a6eb9041a7e483d840972c7cda9569774cd0853d34d8efadc78",
+      "unchanged": true,
+      "old_evidence": "E:\\hospital_ies_no_priority_20261105_run01\\INHERITED_FAILURE_IDENTITY.json"
+    },
+    {
+      "path": "conftest.py",
+      "current_sha256": "eca519f0996664fa8a1cf2a2c51e0c177ea8781f82a87c5b67041d16b5ae4de6",
+      "old_evidence_sha256": "eca519f0996664fa8a1cf2a2c51e0c177ea8781f82a87c5b67041d16b5ae4de6",
+      "unchanged": true,
+      "old_evidence": "E:\\hospital_ies_no_priority_20261105_run01\\CHANGED_FILES_SHA256.json"
+    }
+  ],
+  "original_historical_test_pins": [
+    {
+      "path": "tests/test_annual_compiled_packet_observer.py",
+      "current_sha256": "a480a5d2b96e9e56e335efbdd5c5bcf69bce9994ce936a7a182f1f1e30bee438",
+      "route_sha256": "a480a5d2b96e9e56e335efbdd5c5bcf69bce9994ce936a7a182f1f1e30bee438",
+      "unchanged": true
+    },
+    {
+      "path": "tests/test_annual_compiled_witness.py",
+      "current_sha256": "603354bc0a37f91f5fb9154c372d35e88215a8d164c70d51b36d0e3611b8f250",
+      "route_sha256": "603354bc0a37f91f5fb9154c372d35e88215a8d164c70d51b36d0e3611b8f250",
+      "unchanged": true
+    },
+    {
+      "path": "tests/test_annual_loaded_capture_sources.py",
+      "current_sha256": "a2118d88fd1b1540b7ae7d620dbdb67cb5a035f94b12d3b4966afa4a52a7e9ce",
+      "route_sha256": "a2118d88fd1b1540b7ae7d620dbdb67cb5a035f94b12d3b4966afa4a52a7e9ce",
+      "unchanged": true
+    },
+    {
+      "path": "tests/test_annual_observer_source_compatibility.py",
+      "current_sha256": "57a65e63aa50401651b7745512a8715aa766d7a662348ea324bed57f47cbf8ac",
+      "route_sha256": "57a65e63aa50401651b7745512a8715aa766d7a662348ea324bed57f47cbf8ac",
+      "unchanged": true
+    },
+    {
+      "path": "tests/test_annual_operation_summary.py",
+      "current_sha256": "e63d9fc937c76329a34571db67cfa1031a5d9818e30d8077acd4396f541d6ba7",
+      "route_sha256": "e63d9fc937c76329a34571db67cfa1031a5d9818e30d8077acd4396f541d6ba7",
+      "unchanged": true
+    },
+    {
+      "path": "tests/test_annual_program_carrier_flow.py",
+      "current_sha256": "2c214c726e74f1636ae9e2fdcd8009ec983c9dcf5b9140293b030fad33427730",
+      "route_sha256": "2c214c726e74f1636ae9e2fdcd8009ec983c9dcf5b9140293b030fad33427730",
+      "unchanged": true
+    },
+    {
+      "path": "tests/test_annual_program_failure_history.py",
+      "current_sha256": "627e0f06dcb7bd210a36e999e91701162d2fdbea34f89345d4141958febc7026",
+      "route_sha256": "627e0f06dcb7bd210a36e999e91701162d2fdbea34f89345d4141958febc7026",
+      "unchanged": true
+    },
+    {
+      "path": "tests/test_annual_program_steam.py",
+      "current_sha256": "f058cf1d02d611e7d7bd13f53280a6e2ab92006397d35e1cc1c7be5f8291b91a",
+      "route_sha256": "f058cf1d02d611e7d7bd13f53280a6e2ab92006397d35e1cc1c7be5f8291b91a",
+      "unchanged": true
+    },
+    {
+      "path": "tests/test_eight_fault_local_witness.py",
+      "current_sha256": "57609c8cd566e0ef5b82379be18545fb358be393c81e984de262f713a57e6d8e",
+      "route_sha256": "57609c8cd566e0ef5b82379be18545fb358be393c81e984de262f713a57e6d8e",
+      "unchanged": true
+    },
+    {
+      "path": "tests/test_sf2_compiled_witness.py",
+      "current_sha256": "948e23d1f9a4d6a4f49e1f0d262c046b6f3a6acd23067f82cf25fa6714822964",
+      "route_sha256": "948e23d1f9a4d6a4f49e1f0d262c046b6f3a6acd23067f82cf25fa6714822964",
+      "unchanged": true
+    },
+    {
+      "path": "tests/test_sf2_native_capture.py",
+      "current_sha256": "170af4d548c33cf49e505df24daa24426995aced1e20bcdbcba59d32242bc73b",
+      "route_sha256": "170af4d548c33cf49e505df24daa24426995aced1e20bcdbcba59d32242bc73b",
+      "unchanged": true
+    },
+    {
+      "path": "tests/test_sf2_source_profile.py",
+      "current_sha256": "692dbd71062ae3843c4cfde327aa9f45062974e0377bee8bc6bf586950ad64c3",
+      "route_sha256": "692dbd71062ae3843c4cfde327aa9f45062974e0377bee8bc6bf586950ad64c3",
+      "unchanged": true
+    },
+    {
+      "path": "tests/test_single_fault_compiled_witness.py",
+      "current_sha256": "6416bde7083468769bebf65f192ebf7de5ca59035e9aedc1adc92460aebfba64",
+      "route_sha256": "6416bde7083468769bebf65f192ebf7de5ca59035e9aedc1adc92460aebfba64",
+      "unchanged": true
+    }
+  ],
+  "snapshot": {
+    "path": "E:\\hospital_ies_minute1_20261103_run01\\reviews\\HISTORICAL_7FA_TRACKED_SOURCE_SNAPSHOT.json",
+    "exists_now": false,
+    "expected_sha256": "7e5c51fc61aa612065fbb49488d70b88c0fa1c68267d0990a976d981fcfa4591",
+    "errors_current": 13,
+    "errors_old": 13
+  },
+  "recheck_command_provenance": {
+    "kind": "root_agent_report_of_executed_here_string_not_rerun_by_reviewer",
+    "environment_overrides": {
+      "TEMP": "E:\\hospital_ies_source_partition_fix_20261105_run01\\pytest_temp",
+      "TMP": "E:\\hospital_ies_source_partition_fix_20261105_run01\\pytest_temp"
+    },
+    "pytest_call": "pytest.main(['-q', '--basetemp='+str(root/'pytest_recheck'), *nodes])",
+    "root": "E:\\hospital_ies_source_partition_fix_20261105_run01",
+    "selection": "Parse FULL_SUITE.log FAILED nodeids, exclude the exact two old source identity failures, assert 131, save TEMP_FAILURE_RECHECK_NODES.json",
+    "stdout_stderr": "E:\\hospital_ies_source_partition_fix_20261105_run01\\TEMP_FAILURE_RECHECK.log",
+    "root_reports_actual_exit_code": 0,
+    "reviewer_independently_verified_log_exit_marker": true,
+    "recheck_directory_exists": true,
+    "process_temp_directory_exists": true,
+    "recheck_child_directory_count": 131,
+    "recheck_directory_sample": [
+      "test_advanced_journal_requires0",
+      "test_all_other_phases_and_miss0",
+      "test_ambiguous_sqlite_sidecars0",
+      "test_ambiguous_sqlite_sidecars1",
+      "test_ambiguous_sqlite_sidecars2",
+      "test_analysis_cli_writes_only_0"
+    ]
+  },
+  "evidence_artifacts": [
+    {
+      "path": "E:\\hospital_ies_source_partition_fix_20261105_run01\\FULL_SUITE.log",
+      "bytes": 610502,
+      "sha256": "9f2b109741f3bb26c098c6da7626af0df079b621c2a3ef0e9367fc61cef01f70"
+    },
+    {
+      "path": "E:\\hospital_ies_no_priority_20261105_run01\\logs\\09_FULL03.log",
+      "bytes": 56412,
+      "sha256": "cdc8a54f1f7e0d7356b15f53927a438b00ed1e5a9da483c01935066192bb0a91"
+    },
+    {
+      "path": "E:\\hospital_ies_source_partition_fix_20261105_run01\\TEMP_FAILURE_RECHECK.log",
+      "bytes": 216,
+      "sha256": "21e05614530a6286e2d2efc16f719546d75f21bd5d7f1d7d11e6fb69496303eb"
+    },
+    {
+      "path": "E:\\hospital_ies_source_partition_fix_20261105_run01\\TEMP_FAILURE_RECHECK_NODES.json",
+      "bytes": 16554,
+      "sha256": "73b2f754ab2d146600079a4c03bc5d3108c1fde26889104df694c2621b990a49"
+    },
+    {
+      "path": "E:\\hospital_ies_no_priority_20261105_run01\\integration03\\SOURCE_BINDING.json",
+      "bytes": 129029,
+      "sha256": "de6debeacf6a215baad29f85f360e50d88618ae060c1e2373360071e2b2e2c07"
+    },
+    {
+      "path": "E:\\hospital_ies_no_priority_20261105_run01\\INHERITED_FAILURE_IDENTITY.json",
+      "bytes": 1037,
+      "sha256": "2cbc7cd5e88930f2caee4464c0cbd3c106ae97d698447102dd423c2d92b52811"
+    },
+    {
+      "path": "E:\\hospital_ies_no_priority_20261105_run01\\CHANGED_FILES_SHA256.json",
+      "bytes": 1278,
+      "sha256": "24f87f525aaf8f08214496bd2403796f828a5db00016c42caf1887e6a9826e8f"
+    },
+    {
+      "path": "D:\\hospital_ies_no_priority_20261105\\tests\\minute1_historical_routes.json",
+      "bytes": 183253,
+      "sha256": "e33195d8d87d6a6eb9041a7e483d840972c7cda9569774cd0853d34d8efadc78"
+    }
+  ],
+  "limits": [
+    "Repeated executions are not one passing full-suite execution.",
+    "The two source identity failures remain failed; unchanged hashes do not repair their qualification.",
+    "All thirteen historical-wrapper setup errors remain blocked by the missing snapshot.",
+    "The recheck log records aggregate passing result and exit marker, not per-node report objects; selected exact nodeids are bound by the saved JSON and root execution receipt.",
+    "No project source, tests, pytest route or missing snapshot was modified by this review."
+  ]
+}

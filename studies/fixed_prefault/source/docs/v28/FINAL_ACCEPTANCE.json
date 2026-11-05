@@ -1,0 +1,181 @@
+{
+  "schema": "hospital_ies.v28.evidence_gates.v1",
+  "scientific_producer_commit": "09f922840b7cfaef209d693ebfdda3492e16e24a",
+  "source_sha256": "9cb3ea825662324cf7b718ffca7c581066506907859a5739c7d5a3c366fc18f9",
+  "input_sha256": "5c6fea468008561acefd81b16d4cd57a8524f7897f861ccb436f1a32adaaeae8",
+  "blanket_hospital_physical_qualification": false,
+  "thermal_coupling_default": null,
+  "gates": [
+    {
+      "id": "A_fixed_direct",
+      "status": "implemented_verified",
+      "evidence": [
+        "project/tools/model_review_v28/demand.py",
+        "A_native_audit/final01/ANNUAL_DIRECT_AUX_CHECK.json",
+        "steps/A_demand_red01/",
+        "steps/A_core_green02/"
+      ],
+      "conclusion": "D_ref unchanged by cold/aux faults;35040 annual groups finite nonnegative and original E closure; explicit shock once."
+    },
+    {
+      "id": "A_request_execution_service",
+      "status": "implemented_verified",
+      "evidence": [
+        "project/tools/sci_engineering/service.py",
+        "project/tools/sci_engineering/planner.py",
+        "project/tools/operating_response/physical_balance.py",
+        "steps/B_source_fault_green01/"
+      ],
+      "conclusion": "One request semantics, original component fault shares; connected subset and actual paid auxiliary separate; no released-aux direct sink."
+    },
+    {
+      "id": "A_four_W1_and_minimum_faults",
+      "status": "actual_math_verified",
+      "evidence": [
+        "A_native_audit/final01/A_NATIVE_AUDIT.json",
+        "A_native_audit/final01/interpretation01/A_ENGINEERING_FINDINGS_ZH.md"
+      ],
+      "conclusion": "6 actual episodes:4W1+clinical+pump. Pump interruption60min; actual120min and confirmation121min."
+    },
+    {
+      "id": "A_matching_initial_information",
+      "status": "verified_scoped",
+      "evidence": [
+        "A_native_audit/final01/A_NATIVE_AUDIT.json",
+        "execution/GLOBAL_RNG_USAGE_REVIEW.json"
+      ],
+      "conclusion": "Full physical/core/history equal, RNG diagnostics differ; fixed C/M path does not consume those globals. No blanket combined-receipt equality."
+    },
+    {
+      "id": "B_object_source_ledger",
+      "status": "source_accounting_verified",
+      "evidence": [
+        "thermal_source/THERMAL_SERVICE_LEDGER.md",
+        "thermal_source/service_ledger01/THERMAL_SERVICE_OBJECT_LEDGER.csv",
+        "thermal_source/document_amendment01/VALIDATION.json"
+      ],
+      "conclusion": "98 objects with actual topology/EIO or specific N/A; no invented data."
+    },
+    {
+      "id": "B_one_output_only_annual",
+      "status": "actual_observation_verified_with_flag_limit",
+      "evidence": [
+        "execution/ANNUAL_OBSERVATION_RESULT.json",
+        "thermal_source/observation_input03/",
+        "thermal_source/original_four_csv_equivalence01/"
+      ],
+      "conclusion": "694 appended outputs only, actual exit0, original4CSV byte-identical. SQL TEXT FALSE cause remains unresolved."
+    },
+    {
+      "id": "B_ordinary_target",
+      "status": "implemented_verified",
+      "evidence": [
+        "project/inputs/model_review_v28/THERMAL_SERVICE_COMPONENTS_8760.csv",
+        "project/inputs/model_review_v28/THERMAL_INPUT_METADATA.json",
+        "thermal_source/MINIMUM_NATIVE_REPLAY_VERIFICATION.json"
+      ],
+      "conclusion": "Accepted-native target124440.616805774kWh vs source delivery121338.554484042kWh; no false annual accident ENS."
+    },
+    {
+      "id": "B_local_high_temperature",
+      "status": "source_accounting_only",
+      "evidence": [
+        "thermal_source/THERMAL_SERVICE_LEDGER.md",
+        "B_native_audit/interpretation01/B_ENGINEERING_FINDINGS_ZH.md"
+      ],
+      "conclusion": "Laundry local gas preserved, booster electric not duplicated. Local failure/temperature dynamic assurance not qualified."
+    },
+    {
+      "id": "B_booster_preheat",
+      "status": "explicitly_outside_assurance_unknown_source",
+      "evidence": [
+        "ASSUMPTIONS.md",
+        "thermal_source/THERMAL_SERVICE_LEDGER.md"
+      ],
+      "conclusion": "60C upstream obligation disclosed; source energy/cost/CO2 unknown null, not zero or free backup."
+    },
+    {
+      "id": "B_tank_and_full_loop",
+      "status": "not_qualified_residuals_preserved",
+      "evidence": [
+        "thermal_source/THERMAL_SERVICE_LEDGER.md",
+        "thermal_source/minimum_native04/local_and_unmet/",
+        "thermal_source/commands/tank_property_residual_reproduction01/"
+      ],
+      "conclusion": "Native flows/net and continuous endpoint potential separated; no-flow cache/history and loop inventory missing. Qualificationfalse."
+    },
+    {
+      "id": "B_cooling_unmet",
+      "status": "localized_source_limit",
+      "evidence": [
+        "thermal_source/cooling_unmet_localization01/",
+        "thermal_source/minimum_native04/cold/",
+        "ASSUMPTIONS.md"
+      ],
+      "conclusion": "9.5 zoneh,26zone-hour rows/25uniquehours. No empirical correction or hydraulic/humidity/cleanliness qualification."
+    },
+    {
+      "id": "B_adopted_normal_fault_demand",
+      "status": "actual_math_verified",
+      "evidence": [
+        "B_native_audit/final01/B_NATIVE_AUDIT.json",
+        "B_native_audit/interpretation01/RECOVERY_AND_SCOPE.json"
+      ],
+      "conclusion": "N/F/D/FD+same-window old-heat control. ActualGT3 generation85min distinct fromGT2 availability90min; recoveryNA without interruption."
+    },
+    {
+      "id": "B_no_trace_A_identity",
+      "status": "exact_annual_and_perturbations",
+      "evidence": [
+        "execution/B_A_ONLY_EQUIVALENCE.json"
+      ],
+      "conclusion": "8760×4 plus16 nonzero perturbations exact to frozen A."
+    },
+    {
+      "id": "default_tests",
+      "status": "actual_passed",
+      "evidence": [
+        "steps/full_pytest_final01/COMMAND.json",
+        "steps/full_pytest_final01/stdout.log",
+        "execution/ENVIRONMENT_RECEIPT.json"
+      ],
+      "conclusion": "1278passed,0skip,exit0; SCI_SOURCE_ROOT execution-context supplement; no late scientific edits."
+    },
+    {
+      "id": "portable_public_entry",
+      "status": "actual_passed",
+      "evidence": [
+        "execution/CLEAN_PUBLIC_ENTRY.json",
+        "steps/clean_public_entry01/"
+      ],
+      "conclusion": "Portable source837/input33 exact, no oldSQL, actual15min exit0."
+    },
+    {
+      "id": "lossless_storage",
+      "status": "independently_decoded_verified",
+      "evidence": [
+        "COMPRESSED_NATIVE_ARTIFACTS.json",
+        "execution/RELEASE_STORAGE_CODEC_REVIEW.json",
+        "restore_native_tables.py"
+      ],
+      "conclusion": "25 complete outputCSV exact bytes preserved in standardXZ;11native trajectorygzip unchanged. No scenario/precision removal."
+    },
+    {
+      "id": "portable_readonly_replays",
+      "status": "actual_five_replays_passed",
+      "evidence": [
+        "portable_verification/portable_replays01/REPLAY_REVIEW_SUMMARY.json",
+        "replay_review.py"
+      ],
+      "conclusion": "All five registered readonly reconstructions actually exited0 from portable project;25 original CSV hashes verified; no new model/EP calls."
+    },
+    {
+      "id": "archive_size_crc_and_independent_extract",
+      "status": "mandatory_postarchive_external",
+      "evidence": [
+        "MANIFEST.json"
+      ],
+      "conclusion": "Exactly oneZIP<100000000B. External ARCHIVE_VERIFICATION.json/EXTRACTION_VERIFICATION.json and post_extract_verification01 close this gate after immutable archive creation; never claimed passed in advance."
+    }
+  ]
+}

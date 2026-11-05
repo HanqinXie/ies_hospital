@@ -1,0 +1,25 @@
+__pycache__/
+.pytest_cache/
+.venv/
+*.py[cod]
+.env
+.env.*
+gurobi.lic
+*.zip
+*.7z
+*.gz
+*.xz
+*.bundle
+*.pt
+*.pth
+*.ckpt
+*.pkl
+*.sqlite*
+*.sql
+/outputs/
+/temp/
+/tmp/
+/downloads/
+/publication_checks/
+/inputs/literature/
+# Existing tracked outputs are immutable regression fixtures; Git keeps them.

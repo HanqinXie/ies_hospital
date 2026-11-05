@@ -1,0 +1,1124 @@
+===== PDF PAGE 1 =====
+                                                   i n t e r n a t i o n a l  j o u r n a l o f r e f r i g e r a t i o n 3 1  ( 2 0 0 8 ) 1 4 3 7 – 1 4 5 2
+
+
+
+                                           available at www.sciencedirect.com
+
+
+
+
+
+                          www.iiﬁir.org
+
+                                  journal homepage: www.elsevier.com/locate/ijrefrig
+
+A comparison of moving-boundary and ﬁnite-volume
+formulations for transients in centrifugal chillers
+
+Satyam Bendapudia,*, James E. Braunb, Eckhard A. Grollb
+
+aUnited Technologies Research Center, East Hartford, CT, United States
+bSchool of Mechanical Engineering, Purdue University, West Lafayette, IN 47907, United States
+
+
+a r t i c l e  i n f o               a b s t r a c t
+
+
+Article history:                        Dynamic models of vapor compression systems are useful tools in developing feedback
+Received 12 January 2007                    controllers and are gaining increasing attention in recent years. The dominant dynamics
+Received in revised form 21 March         are typically those of the evaporator and condenser, which are difﬁcult to model. Accuracy
+2008                                and execution speed of system models therefore are highly dependent on the modeling ap-
+Accepted 24 March 2008                  proach of the heat exchangers. The two common approaches are the ﬁnite-volume (FV)
+Published online 1 April 2008            and the moving-boundary (MB) methods. Both have been used successfully and reported
+                                             in the literature, but there is little discussion presented for either choice. This paper pres-
+Keywords:                                 ents the development and comparative study of shell-and-tube heat exchanger dynamic
+Heat exchanger                        models using both the FV and the MB approaches. Detailed model formulations are pro-
+Shell-and-tube exchanger                 vided and stability is demonstrated as components and within a complete centrifugal
+Flooded evaporator                            chiller system model. The system models are validated using data from a 300 kW R134a
+Condenser                                   centrifugal chiller test stand. The FV formulation is found to be more robust through
+Comparison                                start-up and  all load-change transients, but executes slower. The moving-boundary
+Process                             method can handle all load-change transients but start-up stability is more sensitive to
+Calculation                             compressor and expansion valve formulations. The moving-boundary formulation also ex-
+Heat transfer                             ecutes about three times faster than the ﬁnite-volume while maintaining nearly identical
+Transient state                            accuracy. With the homogenous two-phase assumption, charge prediction is seen to be
+                                               less accurate in the moving-boundary approach.
+                                                       ª 2008 Elsevier Ltd and IIR. All rights reserved.
+
+
+Comparaison entre les formulations aux limites mobiles et
+aux volumes ﬁnis pour les re´gimes transitoires des
+refroidisseurs centrifuges
+
+
+Mots cle´s : E´changeur de chaleur ; E´changeur multitubulaire ; E´vaporateur noye´ ; Condenseur ; Comparaison ; Proce´de´ ; Calcul ; Transfert
+de chaleur ; Re´gime transitoire
+
+
+
+
+
+  * Corresponding author. Tel.: þ1 860 610 7215; fax: þ1 860 660 8837.
+   E-mail address: bendapudi@gmail.com (S. Bendapudi).
+0140-7007/$ – see front matter ª 2008 Elsevier Ltd and IIR. All rights reserved.
+doi:10.1016/j.ijrefrig.2008.03.006
+
+===== PDF PAGE 2 =====
+1438                                         i n t e r n a t i o n a l  j o u r n a l o f r e f r i g e r a t i o n 3 1  ( 2 0 0 8 ) 1 4 3 7 – 1 4 5 2
+
+
+
+
+  Nomenclature                                                       Tsat      saturation temperature of refrigerant ( C)
+                                                                            Tset      chilled water set-point temperature ( C)
+  Ao       refrigerant side (tube outside) area (m2)
+                                                                       Tt       tube material temperature ( C)
+   Ai      water side (tube inside) area (m2)
+                                                  Tw      water temperature ( C)
+  Ar       cross-sectional area of refrigerant ﬂow (m2)
+                                                                   Tewi     evaporator entering water temperature ( C)
+  At       cross-sectional area of tube material (m2)
+                                                            Tewo    evaporator leaving water temperature ( C)
+  Aw      cross-sectional ﬂow area of water (m2)
+                                                                    Tcwi     condenser entering water temperature ( C)
+   Cpt      speciﬁc heat of tube material (kJ/(kg K))
+                                                             Tcwo    condenser leaving water temperature ( C)
+  Cpw     speciﬁc heat of water (kJ/(kg K))
+                                                                 Tsh      superheat (K)
+   Csf,c     refrigerant side surface enhancement factor in
+                                                                   Tsub     sub-cooling (K)
+          condensing mode (ND)
+                                                                                          t       time (s)
+   Csf,sp     refrigerant side surface enhancement factor in
+                                                      u       speciﬁc internal energy (kJ/(kg K))
+          superheated mode (ND)
+                                             V      volume (m3)
+   Csf,sc     refrigerant side surface enhancement factor in
+                                                        wr       refrigerant ﬂow velocity (m/s)
+           sub-cooled mode (ND)
+                                           ww     water ﬂow velocity (m/s)
+   Csf,we   water side surface enhancement factor in the
+                                             X        state vector
+           evaporator (ND)
+                                                                z        length in the ﬂow direction (m)
+   Csf,wc   water side surface enhancement factor in the
+                                                              Z1       position of ﬁrst phase boundary from inlet end of
+          condenser (ND)
+                                                                    the heat exchanger (m)
+   Di       tube inside diameter (m)
+                                                              Z2       position of second phase boundary from inlet end
+  Do      tube outside diameter (m)
+                                                                           of the heat exchanger (m)
+    f         friction factor (ND)
+   h, hr     refrigerant enthalpy (kJ/(kg K))                       Greek symbols
+   hfg       latent heat of evaporation of                           ar        refrigerant side heat-transfer coefﬁcient
+            refrigerant (kJ/(kg K))                          aw      water side heat-transfer coefﬁcient
+  g        acceleration due to gravity (m/s2)                 g       normalized inlet guide vane position
+   kl       saturated liquid refrigerant thermal conductivity      ml      dynamic viscosity of saturated liquid refrigerant
+         (kW/(m K))                                                   rr        refrigerant density
+  L        length of heat exchanger tube (m)                          rl       density of saturated liquid refrigerant
+  Nu      Nusselt number (ND)                                  rv       density of saturated vapor refrigerant
+  mr       refrigerant mass ﬂow rate (kg/s)                           rt       tube material density
+  Mt     mass of tube material (kg)                       rw      water density
+  mw     water mass ﬂow rate (kg/s)
+                                                                       Subscripts
+  Mw     mass of water (kg)
+                                                          e        evaporator, evaporating
+   Pe       evaporating pressure (kPa)
+                                                              c       condenser, condensing
+   Pc      condensing pressure (kPa)
+                                                                   set      set point
+   PMotor   motor input power (kW)
+                                                                                                                  i          ith element
+   Pr       Prandtl number (ND)
+                                                           k       kth element
+  Re      Reynolds number (ND)
+                                                                 in        inlet
+   Q00r       refrigerant side heat ﬂux (kW/m2)
+                                                                         o, out    outlet
+  Qr       refrigerant side heat-transfer rate (kW/(m2 K))
+                                                                           r         refrigerant
+  Qw      water side heat-transfer rate (kW/(m2 K))
+                                     w      water
+   Tr       refrigerant temperature ( C)
+
+
+
+
+1.     Introduction                              ﬂow dynamics in heat exchangers. In an attempt to simplify
+                                                               representation of two-phase ﬂow, their model is built from
+Dynamic system models can be valuable tools to predict sys-    a moving-boundary formulation using a variable volume
+tem behavior during start-up, feedback control and poten-    form of the volumetric mean void fraction over the two-phase
+tially during shutdown. An accurate and computationally     region. A signiﬁcant achievement of this is that the complete
+efﬁcient system model can be used within a test-bed to evalu-    two-phase region can be treated in adequate detail even in
+ate algorithms for feedback controllers and thus minimize the    a lumped form, while avoiding the necessity of handling the
+time and expense of experimentation. A detailed review of lit-     transient form of the momentum equation.
+erature on dynamic modeling of vapor compression systems      Dhar and Soedel (1979) present one of the ﬁrst models of
+was presented by Bendapudi and Braun  (2002) and  is    a complete vapor compression refrigeration system. This
+summarized below.                                     model of a window air conditioner is based on a moving-
+  Wedekind et al. (1978) were among the earliest to study    boundary approach with the two phases of refrigerant in the
+transient behavior with their work on modeling of two-phase    heat exchangers treated as a coupled pair of lumps that
+
+===== PDF PAGE 3 =====
+                                                   i n t e r n a t i o n a l  j o u r n a l o f r e f r i g e r a t i o n 3 1  ( 2 0 0 8 ) 1 4 3 7 – 1 4 5 2                1439
+
+
+
+exchange mass internally and heat externally. The model also      Sami et al. (1987) used a lumped parameter approach to
+accounts for refrigerant dissolution in the oil of the hermetic,     build a set of component models including shell-and-tube
+reciprocating compressor. Despite using fairly simple repre-    condenser and  evaporator,  air-cooled  condenser,  direct
+sentations, all major transients are well captured. This could    expansion evaporator, capillary tube and thermostatic expan-
+arguably be used on liquid chillers with the selection of a suit-    sion valve. The model of the hermetically sealed reciprocating
+able compressor model.                                    compressor is taken from Yasuda et al. (1983) and enhanced
+   Goldschmidt and Hart (1982) developed a lumped model    by including oil dissolution in the refrigerant. The heat ex-
+for a refrigeration system with a view to study its seasonal    changers are modeled using a drift-ﬂux model that consists
+performance when coupled to a mobile home whose heat     of separating the vapor and liquid phases and coupling the
+losses were modeled in detail. The focus of this work being    mass and energy balances of the individual phases through
+on the dynamics of the residence, the air-to-air heat pump    the evaporation or condensation mass and energy exchange.
+system is modeled using an exponential ﬁt to steady-state   An air-cooled liquid chiller system model is then simulated
+performance which is ﬁtted to manufacturer’s data.         and validated for start-up performance.
+   Chi and Didion’s (1982) model is among the few that works       Nyers and Stoyan’s (1994) model of an evaporator is built
+with the transient form of the momentum equation. Their    on the moving-boundary formulation using ﬁnite differencing
+model of an air-to-air heat pump system is built on a mov-    within each phase. This model has been used to predict the
+ing-boundary lumped parameter formulation.                   evaporator’s behavior under step jump, exponential satura-
+  Yasuda et al. (1983) built a complete system model, on lines     tion, and periodic oscillation of the temperature and ﬂow
+similar to Dhar and Soedel (1979), except that the condenser     rate of the secondary ﬂuid, compressor speed, condenser
+modeled  is a shell-and-tube construction instead of  air-     pressure, and throttle coefﬁcient.
+cooled. The object of this model is to capture what are termed       Vargas and Parise (1995) studied the relative beneﬁts of an
+small transients as caused by feedback control and instabil-     alternative form of closed-loop control method, based on
+ities triggered by poor valve setting. For this narrowly deﬁned    a power-law, against the conventional on–off cycling. Their
+purpose, broad assumptions such as constant sub-cooling and    model is a highly simpliﬁed, component-level lumped param-
+uniform two-phase condition in the entire condenser are     eter formulation, used to highlight the improvements in cyclic
+found to work without serious consequence.                   energy efﬁciency when the proposed closed-loop control
+   MacArthur (1984) presents one of the earliest of models    method is used.
+that used a fully distributed formulation. This, along with      Sami and Comeau (1992) and Sami and Dahmani (1996) ex-
+MacArthur and Grald (1987) and Rasmussen et al. (1987), con-    panded on the model of Sami et al. (1987) to include ﬁnite dif-
+stitutes a body of work using similar formulations for the sys-    ferencing within the drift-ﬂux model. This model was used to
+tem components. The space–time-dependent conservation     predict system performance. While Sami and Comeau (1992)
+equations are simpliﬁed by assuming one-dimensional ﬂow     dealt with non-azeotropic refrigerant mixtures, speciﬁcally
+in both heat exchangers. The two-phase region in the con-    mixtures of R22–R114, R22–R114a, and R22–R152a, Sami and
+denser is treated as homogenous while in the evaporator the   Dahmani (1996) dealt with HFC alternatives to R22, speciﬁ-
+liquid and vapor phases are modeled separately. MacArthur     cally, R407a, R507 and NARM502 (a blend of R22, R23 and
+(1984) uses a simpler version of the heat exchanger formula-     R152a).
+tion in that, the pressure response of the heat exchangers is       Ploug-Sorensen  et  al.  (1997) constructed a model  of
+de-coupled from the thermal response by the imposition of    a domestic refrigerator, using the software package SINDA/
+uniform ﬂow velocities along the heat exchanger length.    FLUINT to demonstrate the  capabilities  of  this package
+This yielded inaccurate mass distribution predictions and    which is used extensively in the aerospace industry. Using
+the issue is addressed by MacArthur and Grald (1987) where    the domestic refrigerator as an example, the many features
+the mass balance is coupled to the energy balance and allowed    and  mathematical  infrastructure  of  the  package  are
+to dictate the pressure response. In all of these, the heat    explained.
+exchanger’s discretizations were fully implicit thereby allow-      He et al. (1997) developed a system model for a basic va-
+ing stable solutions for time steps up to 10 s. Rasmussen et al.    por compression refrigeration system, using the moving-
+(1987) built on this reﬁned model, and include the compres-    boundary lumped parameter formulation with the system
+sor’s prime mover, speciﬁcally an engine. The important ther-   mean void-fraction method of Wedekind et al. (1978), for
+mal and inertial dynamics of the engine are modeled and    the purpose of studying the effect of multivariable feedback
+coupled to the vapor compression heat pump system model.     control. This model was then used to study a multi-input–
+  Murphy and Goldschmidt (1984, 1985) developed simpliﬁed    multi-output (MIMO)  control method developed by He
+system models to study start-up and shutdown transients for     et al. (1998).
+an air-to-air system. The start-up model handles the dynam-       Williatzen et al. (1998) present a model for simulating the
+ics of the capillary tube and the phenomenon of liquid backing     transient ﬂow dynamics in a heat exchanger, in the form of
+up into the condenser. The compressor is modeled from    a set of lumped parameter moving-boundary formulations.
+steady-state measurements and test data are used in place    The model structure allows for any physically possible combi-
+of an evaporator model. The refrigerant pressure and the    nation of phases within the heat exchanger to be handled by
+tube material dynamics in the condenser are modeled. In    an algorithm that switches between the appropriate sets of
+the shutdown study, both the heat exchangers are modeled    equations. Pettit et al. (1998) applied this formulation to the
+as tanks containing two-phase refrigerant at different initial    case of an evaporator and studied the phenomena of the
+pressures, naturally convected by air on the outside.            formation and disappearance of phase regions.
+
+===== PDF PAGE 4 =====
+1440                                         i n t e r n a t i o n a l  j o u r n a l o f r e f r i g e r a t i o n 3 1  ( 2 0 0 8 ) 1 4 3 7 – 1 4 5 2
+
+
+
+   Rossi and Braun (1999) developed a fast yet largely mecha-    evaporators and condensers. Also, centrifugal chillers are
+nistic model of a roof-top air conditioning unit. The impor-    very lightly represented.
+tance of real-time simulation is emphasized, and a smart       In terms of approaches to modeling heat exchangers pre-
+automatic integration step sizing algorithm is presented that    sented in the literature, the most important differences are
+simulates start-up and on–off cycling. The system model is     in the way the refrigerant in the heat exchangers is treated.
+constructed using a fully ﬁnite-volume formulation of the    The two predominant approaches are the moving-boundary
+mass and energy balances in the heat exchangers. The model    (MB) and ﬁnite-volume (FV) methods. In the moving-boundary
+is validated to a 3-ton roof-top unit.                         method, each heat exchanger is divided into control volumes
+   Xia et al. (1999) developed a separated ﬂow model for an    that have moving boundaries that occur at the interfaces
+evaporator and studied the dynamics of the evaporator under    where the refrigerant transitions between single- and two-
+variations of compressor speed, condensing temperature, sec-    phase ﬂow. With the ﬁnite-volume method, each heat ex-
+ondary ﬂuid conditions and expansion valve opening.          changer is divided into a number of ﬁxed and equal-sized con-
+   Jakobsen et al. (1999) analyzed the relative accuracies of as-     trol volumes. The  transient  conservation equations  are
+suming homogenous ﬂow and slip-ﬂow patterns in the heat     discretized over these volumes and result in a system of ordi-
+exchanger, and concluded that the homogenous ﬂow model    nary differential equations.
+was an inadequate representation, which over-predicted the      Lumped capacitance models for heat exchangers have also
+sensitivity of the evaporator. They recommend the use of    been widely reported in the literature. However, one of the key
+the slip-ﬂow model when the dynamics of the refrigerant    deﬁciencies of lumped models is in superheat detection at
+are of interest.                                               evaporator exit which limits their use in terms of system-level
+   Svensson (1994) focuses exclusively on liquid chillers. This     controls or for FDD purposes. Bendapudi et al. (2005) found
+model is constructed on a phase-wise lumped parameter for-    that a minimum of four elements were necessary in the evap-
+mulation in the heat exchangers, which is adequate for the     orator to detect superheat while 15 were needed to do a good
+study of the dynamics of the system to load disturbances.    job at the system level. Also, lumped capacitance models typ-
+These disturbances are introduced by step changes in the con-     ically involve empirical constants ﬁtted to experimental data
+denser side water ﬂow rates.                                     to account for the assumptions; these constants do not con-
+   Mechanistic, single-stage and two-stage centrifugal chiller     tain adequate physics in them to be applicable across systems
+models are presented in Wang et al. (2000). A detailed model of     of different sizes. This limits the scalability which is an impor-
+the centrifugal compressor is developed from ﬁrst principles.    tant need for model developers. The two approaches docu-
+The heat exchanger models, however, are highly simpliﬁed    mented in this paper are, in fact, the preferred approaches
+and are treated as single entity lumps with overall conduc-     in the recent past.
+tances and effectivenesses correlated to the water ﬂow rate          It is important to understand the tradeoffs between the
+and constructional parameters. The dynamics of the chiller    ﬁnite-volume and moving-boundary model formulations.
+are introduced in the form of lumped thermal capacitances    The moving-boundary model should require signiﬁcantly
+to account for the refrigerant, heat exchanger body and the     less computation than the ﬁnite-volume approach because
+secondary ﬂuid (water in this case).                                           it utilizes fewer control volumes. However, this approach uti-
+  Browne and Bansal (2000) developed and compared a sim-     lizes lumped characteristics for each of the control volumes,
+ple physics-based dynamic model with a dynamic neural net-    such as a single void fraction for the entire two-phase section,
+work model of a screw water chiller. The screw compressors    which could lead to lower accuracy. The moving-boundary
+are modeled as steady-state devices incorporating capacity    approach also has difﬁculty in handling start-up and shut-
+control in the form of varying the swept volume. The modeled   down because it employs assumptions about the location of
+dynamics are in the form of lumped elements for the heat ex-    phase regions within a condenser and evaporator that do
+changer material and the water. The refrigerant in the heat    not apply when the unit is off and heat exchangers come to
+exchangers is treated quasi-statically.                           equilibrium.
+   Grace and Tassou (2000) developed a simpliﬁed dynamic       This paper presents the development and analysis of the
+model of a liquid chiller consisting of a reciprocating compres-    ﬁnite-volume (FV) and moving-boundary (MB) approaches ap-
+sor and shell–tube heat exchangers. The condenser is ﬂooded     plied to shell-and-tube heat exchangers. Models of a ﬂooded
+and the evaporator is direct expansion, and are modeled on    evaporator and a ﬂooded condenser are developed using
+the lines of MacArthur and Grald (1987). The isenthalpic ex-    both approaches, conﬁrmed for start-up stability as stand-
+pansion is achieved using a thermostatic valve with a sensing    alone components and then coupled with models of a centrif-
+bulb that is modeled in detail.                                  ugal compressor and a thermostatic expansion valve to form
+  More recently, Bendapudi et al. (2005) presented model de-    a complete system model. Results from the two system
+velopment and validation for a centrifugal chiller with ﬂooded    models are compared with data from a 300-kW centrifugal
+heat exchangers. The model employs the ﬁnite-volume ap-     chiller test stand. The relative beneﬁts of the FV and MB ap-
+proach and studies the impact of number of control volumes    proaches for the heat exchangers are identiﬁed.
+and time step on model accuracy and execution speed.
+  As can be seen, several dynamic models of air conditioners
+and heat pumps have been documented in the literature.    2.     Test stand description
+However, very few are for shell-and-tube heat exchangers
+used in chillers. No study was found that considered the    Comstock and Braun (1999) collected and analyzed experi-
+application of the moving-boundary approach to ﬂooded    mental data for a centrifugal chiller over a wide range of
+
+===== PDF PAGE 5 =====
+                                                   i n t e r n a t i o n a l  j o u r n a l o f r e f r i g e r a t i o n 3 1  ( 2 0 0 8 ) 1 4 3 7 – 1 4 5 2                1441
+
+
+
+operating conditions and transients. Their work also includes
+                                                           Table 1 – Sequence of steady-state conditions for
+a detailed description of the experimental test stand. The                                                                 validation of system model
+chiller is a 300-kW centrifugal system consisting of a shell-
+                                                               Test no.          Tset ( C)         Tcwi ( C)         Tewi ( C)
+and-tube evaporator, a shell-and-tube condenser, a ther-
+mostatic expansion valve and a  single-stage  centrifugal      1                     10.0               29.6               13.9
+compressor. Capacity control is achieved by varying the com-      2                     10.0               29.8               15.9
+                                                                    3                     10.0               29.5               12.0
+pressor’s inlet guide vanes. The refrigerant used in the system
+                                                                    4                     10.0               24.2               16.3
+is R134a and the secondary ﬂuid is water which ﬂows in the
+                                                                    5                     10.0               23.8               13.7
+tubes in both heat exchangers. A schematic of the system      6                     10.0               24.0               11.5
+and refrigerant ﬂow paths is shown in Fig. 1. Parallel to the liq-      7                     10.0               21.1               14.7
+uid line that carries the bulk of high-pressure refrigerant      8                     10.0               18.5               13.3
+through the expansion device, there is a cooling line tapped      9                     10.0               17.0               11.9
+at the exit of the condenser. This line carries liquid refrigerant      10                      7.2               29.6               13.4
+                                                                    11                      7.2               29.6               10.7
+to the motor and transmission housing where it is ﬁrst ex-
+                                                                    12                      7.2               29.4                 9.5
+panded across an oriﬁce to the evaporator pressure and then
+                                                                    13                      7.2               24.0               13.3
+used to cool the motor and transmission oil. This refrigerant      14                      7.2               24.0               10.1
+is then returned to the main refrigerant stream at the evapo-      15                      7.2               23.9                 9.1
+rator inlet. Transient data were collected beginning with      16                      7.2               21.2               13.1
+chiller start-up, followed by operation through a sequence of      17                      7.2               18.3               10.7
+27 different operating conditions (listed in Table 1) including      18                      7.2               18.2                 9.2
+                                                                    19                      4.4               26.7               10.0
+changes in return water temperature and chilled water set-
+                                                                    20                      4.4               26.7                 8.0
+point temperature. Data were collected at 10-s intervals                                                                    21                      4.4               23.7                 6.7
+capturing all transients associated with these changes.             22                      4.4               21.2               11.0
+                                                                    23                      4.4               20.7                 7.5
+                                                                    24                      4.4               20.1                 6.4
+                                                                    25                      4.4               17.4                 9.2
+3.    Model description                                      26                      4.4               16.2                 7.7
+                                                                    27                      4.4               16.0                 6.1
+
+3.1.    Compressor
+
+The compressor modeled is a single-stage centrifugal ma-    are independently adjustable but remain unaltered during op-
+chine with variable inlet guide vanes for capacity control.     eration. The dynamic associated with this is due to these pre-
+The impeller is driven by an electric motor through a transmis-     set speeds and not the mechanical dynamics of the actuator. A
+sion. Refrigerant from the liquid line is used to cool the motor     detailed presentation of the compressor formulation and so-
+winding and the  oil. The capacity controller adjusts the     lution is provided in Bendapudi et al. (2005) and Bendapudi
+position of the inlet guide vanes depending upon the error     (2004). For the sake of completeness, however, a brief descrip-
+between the temperature of the water leaving the evaporator     tion is included here.
+and the user-speciﬁed set-point temperature. The actuator is       Since the compressor operates at high speeds, the tran-
+a hydraulic device that has pre-determined speeds of re-     sients associated with changes in boundary conditions are
+sponse when opening and closing the vanes. These speeds    small in relation to those of the rest of the chiller system. As
+                                                       such the compressor can be modeled using a quasi-steady-
+                                                                   state assumption. The important dynamic of the compression
+                                                             process is the response delay of the controller’s actuator. The
+                                                        compressor and controller are modeled in three parts: the
+                                                                      controller, a maximum capacity map to represent the behav-
+                                                                         ior of the compressor if operating with wide-open vanes, and
+                                                        a quasi-steady-state relationship between compressor power
+                                                    and ﬂow with vanes partially closed. The operation of the con-
+                                                                           troller is by a simple step-and-wait logic. The control action in
+                                                            the physical system is the incremental opening or closing of
+                                                            the inlet guide vanes which is implemented in the model by
+                                                             varying a factor g (bounded between 0.05, to represent fully
+                                                                   closed, and 1.0, to represent fully open) which corresponds
+                                                                  to a normalized vane position. g is increased or decreased at
+                                                        a known and ﬁnite rate provided by the manufacturer. A max-
+                                            imum ﬂow rate is computed for the compressor, assuming
+                                                                that it is operating under measured inlet–outlet conditions
+                                                    and with wide-open vanes. The actual ﬂow rate is computed
+Fig. 1 – Refrigerant ﬂow schematic of experimental test       by applying the  controller’s  vane-position  correction  to
+stand.                                                               this maximum ﬂow. The corrected ﬂow rate is used in the
+
+===== PDF PAGE 6 =====
+1442                                         i n t e r n a t i o n a l  j o u r n a l o f r e f r i g e r a t i o n 3 1  ( 2 0 0 8 ) 1 4 3 7 – 1 4 5 2
+
+
+
+quasi-steady-state model to estimate the exit condition and                                                            Water
+power. The quasi-steady-state model of the compressor is                                                         Out
+built from steady-state data. This model takes as inputs the
+inlet pressure and enthalpy and the exit pressure and ﬂow
+rate. The model outputs are the exit enthalpy, power require-
+                                                                                                                                       Water
+ment and motor losses.                                                                                   1N
+  The compressor model equations are solved using the se-
+cant method. Since the overall model is a time-marching
+problem, and the overall solution is necessarily continuous                                                             Note:
+                                                                                                                                                All dimensions in ft.
+in time, compressor states from previous time steps are ade-                                                              Figure not to scale
+quate as guesses for the subsequent time step.
+                                                                               L
+
+3.2.    Expansion valve                                                                                                                                                    di
+
+The primary purpose of an expansion device is to expand the
+                                                                                                                    Tube            Shell
+refrigerant from the high condenser pressure to the low                                                  Di    Do   L     Ds
+evaporator pressure. With a thermostatic expansion valve                                  EVAP   0.0527  0.0643    8       1.289
+(or TXV), the sensing bulb responds to the refrigerant temper-                               COND   0.0510  0.0625    8       1.239
+ature at evaporator exit and disturbs the force balance in the                             do
+valve. This results in a change in the valve’s ﬂow area thus       Tube       No. of tubes
+                                                                          row   Evaporator    Condenser
+altering the refrigerant ﬂow. The expansion device on the          1          3             13
+experimental test stand is a cascaded arrangement consisting          2          6             14
+                                                                                          3         10            15
+of a main valve driven by a smaller, TX-type pilot valve.          4         12            16
+Physically modeling this arrangement required constructional          5         13            16
+                                                                                          6         14            16
+and performance data which were unavailable. Therefore, the                                                                                          7         16            16
+complicated arrangement was simpliﬁed in modeling to a sin-          8         16            14
+gle, TXV arrangement.                                                            9         16            13
+                                                                                         10         16            12
+   Bendapudi et al. (2005) provide a detailed presentation of         11         14            10
+the expansion device model and solution. The dynamics of         12         13             6
+                                                                                         13              -             3
+a TXV consist of the thermal component caused by the inertia          Total       149           164
+of the sensing element, and the xcomponent from the masses
+of the moving parts of the valve. A screening calculation           Fig. 2 – Physical details of the heat exchangers.
+during the model development revealed that the mechanical
+dynamics were an order  of magnitude  faster than the
+thermal dynamics, and that the latter were of the same scale    choice for approximating the true ﬂow. Physically this can
+as the overall system dynamics. The valve model was there-    be justiﬁed by the fact that
+fore simpliﬁed to include only the thermal inertia of the
+sensing element. The overall valve model therefore consists      the water temperature varies more signiﬁcantly along the
+of a lumped capacitance sensing bulb driving a quasi-static      length of the heat exchanger than across;
+force balance on a diaphragm that determines the ﬂow area      the refrigerant temperature also varies more signiﬁcantly
+associated with an opening that is modeled as an oriﬁce.         along the length of the heat exchanger in the single-phase
+                                                                    regions; and
+3.3.    Heat exchangers                                       the bulk of the heat transfer occurs in the two-phase region
+                                                      where the refrigerant temperature remains constant.
+The condenser and evaporator modeled are both ﬂooded
+types. Refrigerant ﬂowing on the shell side of a shell-and-         Fig. 3 shows the ﬂow-arrangement used in this model;
+tube heat exchanger follows a circuitous path that is a combi-    the outer tube is formed by the shell and has the refri-
+nation of cross- and counter-ﬂow. It typically enters at one    gerant ﬂowing through  it, and the inner tubes carry the
+end of the shell and is directed over the tubes several times    water.
+by bafﬂes before it leaves at the other end. Fig. 2 provides      The following simplifying assumptions are made in the
+the physical details of the two heat exchangers. Modeling    development  of the ﬁnite-volume and moving-boundary
+this ﬂow-pattern precisely is difﬁcult and may even be unnec-    modeling approaches:
+essary. In order to simplify the ﬂow-pattern, pure counter-
+ﬂow and pure cross-ﬂow patterns were developed and com-      One-dimensional ﬂow: While the water ﬂow through the tubes
+pared during the early stages of model development. It was        is clearly one dimensional, the refrigerant ﬂow is truly three
+found that while both approaches yielded comparable accura-      dimensional. However, there is a dominant ﬂow direction
+cies, the counter-ﬂow assumption had the added advantages     between refrigerant inlet and outlet and the primary conse-
+of capturing the temperature proﬁle of the water along the     quence of local ﬂow direction variations caused by turbu-
+heat exchanger, being more easily scalable and also simpler      lence is a heat-transfer enhancement. As a result, one-
+to implement. Therefore, it was used as the ﬂow-pattern of      dimensional refrigerant ﬂow is a reasonable assumption
+
+===== PDF PAGE 7 =====
+                                                 i n t e r n a t i o n a l  j o u r n a l o f r e f r i g e r a t i o n 3 1  ( 2 0 0 8 ) 1 4 3 7 – 1 4 5 2                1443
+
+
+
+
+
+             1             k               N
+                                                               Refrigerant                                                                        Refrigerant
+                                                      Water            SH             TP                SC       Water
+                                    z                    L                                                                                                    L1,Z1
+
+                                                                                                                        L2,Z2           L
+
+
+Fig. 3 – Discretizations of the shell–tube heat exchangers for the ﬁnite-volume and the moving-boundary formulations.
+
+
+
+ as long as an overall heat-transfer coefﬁcient is utilized that      be less than 1% of overall). This is because of the relatively
+ is speciﬁc to each heat exchanger.                              smaller area available on the inside of the shell for heat trans-
+ Negligible pressure drops: The water and the refrigerant expe-        fer, as compared with that on the tubes. As such, it was con-
+ rience some pressure drop in ﬂowing through the heat ex-      cluded that the shell capacitance could be neglected without
+ changer. On the water side, this has little impact on the     any noticeable impact on model accuracy. With larger heat
+ heat-transfer rate since the properties of water are a very      exchangers, this issue is expected to become even less signif-
+ weak function of pressure. On the refrigerant side, for       icant since the ratio of heat-transfer areas of the shell-and-
+ a ﬂooded heat exchanger, the ﬂow path between the inlet      tube outer surface would become even smaller.
+ and the outlet is fairly short and the ﬂow areas available
+ in the shell are large. This results in small pressure drops      The application of these assumptions to the general forms
+ that can be neglected.                                          of the conservation of mass, momentum and energy results in
+ Negligible viscous dissipation: As the refrigerant ﬂows through    eliminating the momentum equation from consideration, and
+ the shell, a small amount of ﬂow energy is irreversibly con-    the following mass and energy balances can be formulated:
+ verted to heat because of viscous effects between refriger-                                                                                                             vrr   vðrwÞr
+ ant particles. However, refrigerant viscosity even in liquid     Refrigerant mass balance :    vt þ  vz  ¼ 0                  (1)
+ phase is very small and the viscous dissipation is orders of
+ magnitude smaller than the more dominant energy transfer                                       vðruÞr  vðruw þ PwÞr                                                                Refrigerant energy balance :     þ
+ between the refrigerant and the heat exchanger tube mate-                                           vt          vz
+ rial, and can be safely ignored.                                          þ v½ar½Tr   Tt ¼ 0          ð2Þ
+                                                                                                      vz Negligible axial conduction: The refrigerant state, tube temper-
+ ature and water temperature vary along the length of the
+                                                                                                                  vTt   v½awðTt  TwÞ
+ heat exchanger and these temperature gradients can induce    Tube material energy balance :   CprA  t  þ                                                                                                                           vt        vz
+ diffusion heat transfer in the axial direction. However, ﬂow                                                   v½ar½Tr   Tt
+                                                                         ¼ 0      ð3Þ
+ rates of both the refrigerant and the water in the heat ex-                                               vz
+ changer are quite high, and the Pe´clet number (which quan-
+ tiﬁes the relative effects of convection and diffusion modes                                 vTw           vTw
+                                                     Water energy balance :   CprA w      CprAw w of heat transfer) is high enough to make diffusive heat                                             vt             vz
+                                                                                                    v½awðTt  TwÞ transfer a secondary effect that can be neglected. Also                              ¼ 0             ð4Þ
+                                                                                                   vz
+ neglected is the axial conduction heat transfer in the tube
+ material because the cross-sectional area available for axial                                                                       3.3.1.   Finite volume
+ conduction is very small.
+ Negligible tube material resistance: The conductivity and sur-                                                                       3.3.1.1. Formulation. The ﬁnite-volume formulation begins
+ face area of the tube are high and there is little resistance                                                        with dividing the total volume of the heat exchanger into N
+ to radial heat transfer between the refrigerant outside and                                                          equal control volumes along the length of the shell as shown
+ the water inside. The capacitance, however, is more signif-                                                                 in Fig. 3. The above equations are discretized and linearized as
+ icant and is accounted for.                                                         developed by Rossi and Braun (1999) resulting in the following
+ Negligible shell capacitance: The shell of the heat exchanger is                                                                    for the kth control volume:
+ made of steel and is thick enough to constitute a large ther-
+                                                                                dP    dhk
+ mal mass (calculated to be 8.4% of the overall). The refriger-     Refrigerant mass balance :   ak  þ bk   ¼ _mr;k 1    _mr;k     (5)
+                                                                                                dt     dt
+ ant on the shell side transfers heat to or from the shell and
+ some energy is stored therein. The shell capacitance was
+ considered as a dynamic during early studies, but it was dis-                               dP    dhk                                                                Refrigerant energy balance :   ck  þ dk   ¼ _mr;k 1hk 1
+ covered that although the capacitance is non-negligible, the                                     dt     dt
+ amount of heat transferred to it is very small (calculated to                                                         _mr;khk    _Qr;k         ð6Þ
+
+===== PDF PAGE 8 =====
+1444                                         i n t e r n a t i o n a l  j o u r n a l o f r e f r i g e r a t i o n 3 1  ( 2 0 0 8 ) 1 4 3 7 – 1 4 5 2
+
+
+
+where the coefﬁcients ak, bk, ck and dk are deﬁned as:            To solve the overall heat exchanger, the initial condition
+                                                                 consists of the refrigerant states and the temperatures of the
+               vrr;k                    vrr;k                              tube and the water. The boundary conditions are
+   ak ¼ Vk               ;   bk ¼ Vk              ;
+           vP    hk             vhk   P
+                  vrr;k                             vrr;k                    mass ﬂow rate of refrigerant entering the heat exchanger;
+   ck ¼ Vk hk         1  ;   dk ¼ Vk hk         þrr;k
+             vP    hk                    vhk   P                     enthalpy of refrigerant entering the heat exchanger;
+                                                    mass ﬂow rate of the water ﬂowing through the heat
+                                                 dTt;k                             ¼ _Qr;k   _Qw;k   (7)      exchanger;Tube material energy balance :  MCp  t;k                                         dt                                                            temperature of the water entering the heat exchanger; and
+                                  dTw;k                       mass ﬂow rate of refrigerant leaving the heat exchanger.
+Water energy balance :  MCp w;k                                  dt
+                ¼ _mCP w;kVk½Tw;kþ1   Tw;k þ _Qw;k   ð8Þ
+                                                                         3.3.1.2. Solution. The  solution  for each heat exchanger
+ When relations for refrigerant and water side heat trans-    (shown in Fig. 4) begins with an initial condition of the re-
+fer rate are introduced for each control volume, then Eqs. (5)     frigerant pressure and proﬁles of enthalpies, tube tempera-
+and (6), applied to all the N control volumes in the heat ex-    tures and water  temperatures. The ﬂow  rates  of  the
+changer result in a system of 2N coupled, ﬁrst-order, linear-     refrigerant entering and leaving the heat exchanger and
+ized, ordinary  differential equations with 2N unknowns,    the enthalpy of the refrigerant entering the heat exchanger
+namely the pressure, N enthalpies and N  1 intermediate    are obtained from the compressor and valve models and are
+ﬂow rates. The intermediate ﬂow rates are only of second-     referred to as the internal boundary conditions since they
+ary interest as they are not state variables, and can be alge-    are internal to the overall system model. The ﬂow rate
+braically eliminated as follows. First, the ﬂow rate leaving    and entering temperature of the water are the external
+the kth cell in (5) is substituted into (6). Using (5), a recursive    boundary conditions. From the current state information,
+formula is set up to relate _mr;k to _mr;in. This recursion is used    the internal boundary conditions and the refrigerant side
+in the (substituted) energy balance to obtain a modiﬁed    heat-transfer  coefﬁcients,  the  source  vector B can  be
+form of the energy balance equation for the kth  cell, as    obtained and (11) is solved for the refrigerant state deriva-
+below:                                                                  tives. Eq. (11) is not in a standard canonical form that would
+2                               k 1  3                                 allow exploitation of efﬁcient numerical solvers. It is there-        X                                   aj 5dP þ ðdk  bkhkÞdhk                   fore solved using LU decomposition with iterative improve-4ðck   akhkÞ   ðhk   hk 1Þ
+                                 j¼1    dt             dt              ment (Press et al., 2002) to reﬁne the solution.1 From current
+     Xk 1    dhj                                     tube and water temperatures and water side heat-transfer
+  þ ðhk   hk 1Þ      bj   ¼ _mr;inðhk   hk 1Þ    _Qr;k            ð9Þ    coefﬁcients, Eqs. (7) and (8) are used to determine the tube
+                       j¼1    dt
+                                                    and water temperature derivatives. Once all the state deriv-
+  Eq. (9) applied to the ﬁrst N  1 cells results in a system     atives are computed, an integration algorithm is applied to
+of N  1  independent  algebraic  equations  that do  not    advance the solution in time.
+explicitly involve the intermediate mass ﬂow rates. Two        In order to ensure fast and accurate execution, a numerical
+additional equations are required for closure. Since the    study was conducted on
+mass ﬂow rate leaving the heat exchanger  is known as
+a boundary condition, the remaining two equations used      (a) mesh reﬁnement;
+are the overall mass and energy balances obtained by      (b) integration order; and
+applying summations of (5) and (6) over all the cells, as      (c) integration step sizing.
+follows:
+0   1                                                             Details of this study have been reported in Bendapudi et al.
+@XN  aj AdP þ XN   bj dhj ¼ _mr;in   _mr;out                             (2005) and are not repeated here. The results were that a mesh
+   j¼1    dt    j¼1    dt                                            of 15 was necessary and sufﬁcient for both heat exchangers
+                                                    and that the second-order modiﬁed (non-iterative) Euler pre-
+                                                                  dictor–corrector integration method was the optimum choice
+0   1                                                          in terms of accuracy and execution speed.
+@XN  cj AdP þ XN   dj dhj ¼ _mr;inhr;in   _mr;outhN XN  _Qr;j       (10)
+   j¼1    dt    j¼1    dt                                  j¼1                   3.3.2.  Moving boundary
+
+  With the speciﬁcation of appropriate boundary conditions     3.3.2.1. Formulation. The moving-boundary formulation  is
+and an initial condition, Eqs. (9) and (10) constitute a closed    characterized by phase boundaries that move with time
+system of N þ 1 algebraic equations with N þ 1 unknowns,    within the heat exchanger. Subject to the same assumptions
+and can be represented as a matrix equation:                as with the ﬁnite-volume approach, the moving-boundary for-
+ !                                                     mulation begins with dividing the heat exchanger volume into
+!$A  _X ¼ B!                                                       (11)
+                                                                                     1 Although                                                                    one iteration                                                                          was found                                                                                                             to be sufﬁcient,                                                                                                    two                                                                                                                                                itera-     !Twhere     X ¼ ½P  h1 /  hN and the coefﬁcient matrix A and     tions                                                                        are included                                                                                              for robustness.                                                                                 The impact                                                                                          on execution                                                                                                               speed
+source vector B are as given in Appendix A.                   as a result of this was not detectable.
+
+===== PDF PAGE 9 =====
+                                                   i n t e r n a t i o n a l  j o u r n a l o f r e f r i g e r a t i o n 3 1  ( 2 0 0 8 ) 1 4 3 7 – 1 4 5 2                1445
+
+
+
+
+
+                                     Fig. 4 – Finite-volume heat exchanger solution ﬂowchart.
+
+
+
+variable control volumes that encompass each phase region     The mean enthalpies in each phase region are evaluated by
+existing in the heat exchanger. Eqs. (1)–(4) are integrated be-    making proﬁle assumptions for the refrigerant state over the
+tween arbitrary time-varying spatial limits Z1 and Z2 (Z2 > Z1)    phase region. The effectiveness-NTU method of computing
+which represent the beginning and end of any phase region.     heat-transfer rates in the single-phase regions yields an ex-
+Values of Z1 and Z2 are given in Table 2.                        ponential temperature proﬁle and an assumption of uniform
+   Integration under such time-varying limits requires the    heat ﬂux in the two-phase regions yields a linear quality pro-
+use of Leibnitz’s rule according to which:                           ﬁle. In this work, a linear enthalpy proﬁle assumption2 is
+                                     b2ðtÞ                              made in all phase regions, i.e. for any phase region:Z  b2ðtÞ vfðt; zÞ     d Z           dz ¼           fðt; zÞ dz þ fðt; b1ðtÞÞdb1ðtÞ
+  b1ðtÞ    vt        dt   b1ðtÞ                      dt                          hZ2 þ hZ1                                                        h ¼
+                                                                 2
+                          fðt; b2ðtÞÞdb2ðtÞ                             dt                                      All other refrigerant properties, including density, are calcu-
+                                                                  lated using the pressure and the mean enthalpy.
+where f is a well-behaved bi-variate function in a domain
+                                                      The energy balances on the tube material and water, re-
+bounded between time-varying limits arbitrarily denoted by
+                                                                     spectively, are similarly obtained as
+b1(t) and b2(t). Applying this rule to the integration of the gov-
+erning conservation equations and performing some simplify-                                       dZ2                                                         CprA tðZ2   Z1ÞdTt þ CprA  t Tt    Tt;Z2       CprA  t
+ing algebra results in the following general forms that are true                     dt                     dt
+for any phase region.                                                          ðTt   Tt;Z1ÞdZ1 ¼ pðZ2   Z1Þ
+                                                                                 dt
+The refrigerant mass balance is :                                        ½arDoðTr   TtÞ  awDiðTt  TwÞ                          ð14Þ
+          dZ2            dZ1Ar rr   rZ2       Ar rr   rZ1   þ ArðZ2   Z1Þdrr                                                    dZ2           dt               dt              dt                 CpwrwAw  ðZ2  Z1ÞdTw þ Tw   Tw;Z2       ðTw   Tw;Z1ÞdZ1
+                                                                                      dt               dt               dt  þ _mr;Z2    _mr;Z1 ¼ 0                                        ð12Þ
+                                           þ Cpw _mw  Tw;Z2   Tw;Z1 ¼ awpDiðZ2   Z1ÞðTt  TwÞ       ð15Þ
+
+and the refrigerant energy balance is
+                       dh     h          idZ2                     2ArðZ2  Z1Þhdrr þ ArðZ2   Z1Þrr  þ Ar rrh   ðrhÞZ2                  The key assumption here is that of the proﬁle for the enthalpy,            dt               dt                  dt
+                                                       and the form of the mean value arises out of this. Other proﬁle as-
+                   dZ1    Ar rrh   ðrrhrÞZ1       ArðZ2  Z1ÞdP                          sumptions, such as exponential – arising out of log-mean temper-                     dt             dt
+                                                                   ature variations through the zone, will result in different, but
+ þ _mr;Z2hZ2   _mr;Z1hZ1 þ ArðZ2  Z1Þ_Q000 ¼ 0                   ð13Þ     easily derivable, expressions for the mean enthalpy.
+
+===== PDF PAGE 10 =====
+1446                                         i n t e r n a t i o n a l  j o u r n a l o f r e f r i g e r a t i o n 3 1  ( 2 0 0 8 ) 1 4 3 7 – 1 4 5 2
+
+
+
+                                                                                  (3) two-zones – ETPSH: evaporator in two phase at entry and
+ Table 2 – Valid values of integration limits
+                                                           superheat at exit;
+  If Z1 ¼                               Then Z2 ¼         (4) two-zones – CSHTP: condenser with superheated vapor at
+  0                                                          L1 or L         entry and two phase at exit; and
+  L1                                                         L2 or L           5. three-zones – CSHTPSC: condenser with superheated vapor
+  L2                                                   L              at entry and sub-cooled at exit with two phase in between.
+
+
+                                                                                Fig. 5 shows the meaningful transitions between these
+where Tt and Tw are the mean tube and water temperatures in    modes. It should be noted here that the mode transitions are
+the phase region under consideration.                       such that phase boundaries enter or leave the heat exchanger
+   Recognizing the state postulate and expressing the density    only from the refrigerant outlet end. The model cannot handle
+as a function of pressure and enthalpy as                     a situation where the phase boundary enters or leaves from
+                                                            the refrigerant inlet end.
+drr     vrr            vrr                                              Eqs. (12)–(15), simpliﬁed using (16), can be applied to each of  ¼       $dP þ      $dh                                 (16)
+dt     vP   hr dt    vh  P dt                                  the modes listed above. As an example, Table 3 shows the sub-
+                                                                     stitutions of parameters for the CSHTPSC case. Such tables are
+further simpliﬁes these equations.                                 easily developed for the other modes.
+  The condenser and evaporator in a vapor compression       Using such substitutions and simplifying algebraically to
+system operate with different refrigerant state distributions;    eliminate the inter-zone refrigerant ﬂow rates _mr;L1 and _mr;L2,
+the condenser typically has a superheated vapor zone at    the refrigerant can be modeled as matrix equations of the
+                                      !the inlet followed by a two-phase condensing region and    form Bg;g$XMB ¼ DMB!, where g is 2, 3 or 4 depending upon the
+a sub-cooled region at the exit, while the evaporator has   number of zones that co-exist in the heat exchanger. Appen-
+a two-phase region over a large portion from the inlet and    dix B shows the fully developed equations.
+a superheated region at the exit. Thus the condenser has      The changes in equations during transient operation raise
+the saturated vapor boundary and the saturated  liquid    three issues:
+boundary within it while the evaporator has only the satu-
+rated vapor boundary. These differences make it necessary      (1) how to detect the occurrence of an event where a phase
+to customize the deployment of the MB formulation to the       boundary enters or leaves the heat exchanger;
+speciﬁc type of heat exchanger (i.e. evaporator or condenser),      (2) how to identify the type of event, and
+unlike the FV approach where it is possible to develop a ge-      (3) how to handle the change in equation set.
+neric model adaptable for either.
+   Another important issue in the moving-boundary formula-      The occurrence of these events is detected by comparing
+tion is the change of equation structure as refrigerant phases    the exit enthalpy with the saturated liquid or vapor enthalpy.
+move in and out of the heat exchanger. This issue is illustrated    Whenever the exit enthalpy crosses over the appropriate sat-
+by considering the refrigerant phases in a condenser during    urated enthalpy, an event has occurred. The speciﬁc event
+a typical start-up. When the compressor is switched on with    that has occurred is identiﬁed by the direction of cross-over.
+the system at thermal equilibrium with the ambient, refriger-    The third issue of handling the change in equation depends
+ant is pumped into the condenser much faster than can be re-    on the answers to the ﬁrst two issues. If a zone has exited
+moved through the liquid line. This increases the pressure of    the heat exchanger, some variables (such as L2,  Tt,2, Tw,2,
+the refrigerant in the condenser to a point where a two-phase      etc., for a change from CSHTPSC / CSHTP) become extrane-
+region develops. As more refrigerant is pumped in and heat is    ous. This does not alter the simulation since the variables in
+removed to the water, enough energy transfer occurs to drive    the reduced equation set are a subset of the preceding set.
+the leaving refrigerant into the liquid region creating a sub-    The same applies during the transitions of ETPSH / ETP or
+cooled zone. The heat-transfer areas shared between the   CSHTP / CSH. However, when the reverse transitions occur,
+phase regions eventually balance as the system approaches      i.e. zones enter the heat exchanger (ETP / ETPSH, CSH /
+steady-state operation. Under certain subsequent load condi-    CSHTP, and CSHTP / CSHTPSC), new variables enter the
+tions or transients, it is possible that the heat removal is insuf-    equation  set.  If  these  are not  properly  initialized,  the
+ﬁcient  to  sustain a  sub-cooled  region and the  leaving
+refrigerant is low-quality two-phase vapor.
+   Depending upon the number of phase regions in the heat
+exchanger, the number of equations to be solved changes dis-                                                CONDENSER
+cretely. It is thus necessary to identify beforehand what possi-
+                                                                  CSH           CSHTP           CSHTPSC
+ble phase region combinations can exist logically in the heat
+exchanger and in what manner they transition. In general,
+the following phase combinations existin the heat exchangers:     EVAPORATOR
+
+                                                                                ETP             ETPSH
+(1) one-zone – ETP: evaporator in fully two-phase condition
+(i.e. no superheat);
+(2) one-zone – CSH: condenser in fully superheated condition     Fig. 5 – Feasible phase-mode transitions in the moving-
+(i.e. no condensing or sub-cooling);                         boundary formulation.
+
+===== PDF PAGE 11 =====
+                                                   i n t e r n a t i o n a l  j o u r n a l o f r e f r i g e r a t i o n 3 1  ( 2 0 0 8 ) 1 4 3 7 – 1 4 5 2                1447
+
+
+
+
+                                                                             1000                                                      50
+ Table 3 – Variables to be substituted for the CSHTPSC case
+ Parameter    Superheated   Condensing    Sub-cooled           800                                                      40
+                 zone          zone         zone                       (kPa)  600                                                      30
+
+  Z1              0                   L1                L2                                                                               40                                                      20    Temperature  Z2                 L1                  L2              L
+                                                                                                                           Pc (FV)                                                                                                           Pc                                                                                                   (MB)                                                                                                                                                                                                                                                                  Pressure h                    ðhin þ hvÞ=2         ðhv þ hlÞ=2         ðhl þ houtÞ=2                                                                              200                                                                                              Tcwo                                                                                                     (MB)     Tcwo                                                                                                                                   (FV)                       10 (oC)
+  _mr;Z1                    _mr;in                      _mr;L1                   _mr;L2                                       Tsub (MB)      Tsub (FV)
+  _mr;Z2                    _mr;L1                      _mr;L2                  _mr;out                    0                                                      0
+                                                                                  0     200    400    600    800    1000   1200   1400
+  Tt                      Tt;1                      Tt;2                   Tt;3
+                                                                                  Time (s) Tw                 Tw;1                 Tw;2               Tw;3
+
+                                                                        Fig. 6 – FV vs. MB condenser simulations – start-up and
+                                                         load-change transients.
+
+simulation can numerically collapse. In a physically meaning-
+ful sense, the entering variables may be initialized to the
+values in the zone preceding it. This prevents numerical dis-
+continuities in the simulation. One variable, however, that re-                                   ðf=8ÞReDPr
+                                                         Condenser: Nu¼Csf;wc
+quires special attention is the initial length of the entering                           1:07þ12:7ðf=8Þ1=2 Pr2=3  1
+zone. If this starts exactly at 0, the refrigerant equations be-                 ðPetukhovetal:; 1970Þ
+come singular. To avoid this, the entering zone length is ini-
+tialized to a small, positive value. It was found, after a few     The friction factor f was computed using correlations pro-
+iterations during model development, that 10 3 m was sufﬁ-    vided by the manufacturer. During system validation, the
+cient to ensure smooth transition without introducing large     heat-transfer coefﬁcients were tuned using the scaling factors
+energy imbalances at the transition.                                      Csf, to account for surface enhancements on the tubes. The ﬁ-
+                                                              nal values of these constants are listed in Table 4.
+
+3.3.3.   Heat-transfer coefﬁcients
+The heat-transfer coefﬁcients on the refrigerant side are de-     3.3.4.   Property evaluations
+termined based on the phase using the following relations:       Refrigerant and water properties used in this model are com-
+                    "                  #1=4                     puted using routines developed speciﬁcally for this applica-
+                              grlðrl   rvÞk3l h0fg                              tion. Using EES   (engineering equation  solver), tables of
+Condensing:  ar ¼ Csf;c
+                               mlðTsat   TtÞD                           high-accuracy,  thermo-physical and  transport  properties
+              ðDhir and Lienhard; 1971Þ                    were generated. For the single-phase property tables, splines
+                                                              are ﬁtted for each property as a function of the enthalpy.
+                                                            This is a one-time computation that is done at the start of
+Evaporating: ar ¼C1þ _Q00r=C2 ðmanufacturer0sdataÞ               the simulation. Given the pressure and enthalpy as input vari-
+                                                                     ables, the two-phase properties are computed ﬁrst and the
+                                                       phase of the refrigerant is determined. In the two-phase re-
+                pﬃﬃﬃﬃﬃ
+Superheated: Nucore ¼Csf;sp  Re Pr                               gions and for water, this is achieved by a simple spline inter-
+             ðIncroperaandDewitt; 1996Þ                       polation on the pressure, followed by linear interpolation
+                                                            using the quality. In the single-phase regions, bi-cubic spline
+                                                                  interpolation is used to evaluate the other properties.
+              pﬃﬃﬃﬃﬃ
+Sub-cooled: Nuc ¼Csf;sc  Re Pr ðIncroperaandDewitt; 1996Þ
+
+  The water side heat-transfer coefﬁcients are determined
+using the following standard correlations:                      4.     Results and discussion
+
+                          ðf=8ÞðReD  1000ÞPr                  The FV and MB formulations of the condenser and evaporator3Evaporator: Nu¼Csf;we
+                       1þ12:7ðf=8Þ1=2 Pr2=3  1                  were ﬁrst modeled as standalone components, subjected to
+             ðGnielinski; 1976Þ                                 simulated boundary conditions of start-up and load change.
+                                                   The driving conditions were obtained by simulating simpliﬁed
+                                                       system models using lumped components. For example, the
+                                                             evaporator boundary conditions were obtained by running
+ Table 4 – Surface enhancement correction factors            a system model consisting of a lumped condenser and
+                                                        a map-based compressor model, while the condenser bound-
+ Heat-transfer              Evaporator      Condenser
+                                                              ary conditions were obtained by running a system model with  correlation
+                                                        a lumped evaporator, a map-based compressor and an oriﬁce.
+  Sub-cooled refrigerant      n.a.                              Csf;sc ¼ 1:5       This approach ensured that the input conditions for testing
+ Two-phase refrigerant     C1 ¼ 15.615 kW/(m2 C),     Csf;c ¼ 22:5
+                                                            the standalone components were physically meaningful and
+                           C2 ¼ 1.776 C
+  Superheated refrigerant     Csf;sp ¼ 2:5                     Csf;sp ¼ 6:0            3
+                                                         The evaporator was coupled with the expansion valve model
+ Water ﬂow                    Csf;we ¼ 1:25                 Csf;wc ¼ 3:0
+                                                                          for the standalone simulation.
+
+===== PDF PAGE 12 =====
+1448                                         i n t e r n a t i o n a l  j o u r n a l o f r e f r i g e r a t i o n 3 1  ( 2 0 0 8 ) 1 4 3 7 – 1 4 5 2
+
+
+
+
+    700                                                      30               1000
+                               Pe (MB)        Pe (FV)
+    600                                                      25
+                                                                                                        Pe (FV)      Pe (MB)                           Tewo (MB)     Tewo (FV)                                           (kPa)  800                                                                                                                              +5    500
+                               Tsh (MB)       Tsh (FV)        20  (kPa)                                                                                                    Pc (FV)      Pc (MB)    400
+                                                             15                600                                                         -5    300                                                                                                                                                                                                                                             pressure                                                                                                                                                                                                                                                                                                                      Temperature
+                                                             10   Pressure 200                                                                                               (oC)            400
+    100                                                      5                                                                                                                                                                                                                                                                                                       Predicted
+      0                                                      0
+                                                                               200
+        0    100    200   300   400   500    600   700   800
+                                                                                  200    300    400    500    600    700    800    900   1000
+                        Time (s)                                                 Measured pressure (kPa)
+
+Fig. 7 – FV vs. MB evaporator (with TXV) simulations –          Fig. 9 – System-level validation of steady-state condensing
+start-up and load-change transients.                     and evaporator pressures.
+
+
+
+less arbitrary. A consequence of this approach is that the driv-
+                                                                 start-up transient. The MB system model was initialized toing conditions imposed on the FV and the MB are slightly
+                                                        a condition corresponding to the ﬁrst steady-state conditiondifferent.
+                                                      from Table 1 and was driven through all subsequent condi-  The condenser was initialized to a condition of super-
+                                                                       tions. The reason for this difference in initialization methodsheated vapor at evaporator pressure and condenser water
+                                                                               is described below.temperature,  while  the  evaporator  was  initialized  to
+                                                      As developed in this work (and as is typical for normala two-phase condition  of thermal equilibrium with the
+                                                                         chiller operation), the condenser entry condition is expectedreturn  water  temperature.  Refrigerant  inlet and  outlet
+                                                                  to be superheated vapor and the evaporator entry conditionmass ﬂow rates, refrigerant inlet enthalpy and water inlet
+                                                                               is expected to be low-quality two-phase vapor. Phase bound-temperature were input to the condenser. For the evapora-
+                                                                    aries enter and leave the heat exchangers only at the exittor simulations, the liquid line pressure and enthalpy were
+                                                    end and not at the entry end. This requires the compressorprovided as input. Figs. 6 and 7 show the results of these
+                                                    and valve models to always provide these conditions to thesimulations.  Both  formulations  are  seen  to  progress
+                                                           heat exchangers. During the ﬁrst few seconds of start-up, itsmoothly through start-up and achieve steady-state condi-
+                                                                               is numerically (perhaps even physically) possible to havetions that are substantially identical. Differences in pres-
+                                                        a two-phase condition at compressor inlet and also at thesure  predictions  in  the  condenser  are  believed  to  be
+                                                        compressor outlet. Similarly,  it is possible to have super-a consequence of the refrigerant inventory approximations
+                                                          heated vapor at expansion valve outlet. Such abnormal entryarising  from  the  homogenous  two-phase  assumption,
+                                                              conditions to the moving-boundary heat exchangers result inwhich impacts the two formulations differently.
+                                                       phase boundaries entering or exiting from the entry end. It   After verifying that the component models were well be-
+                                                            could result in conditions where the heat exchangers havehaved, the heat exchanger models were coupled with the
+                                                          combinations of phase regions that cannot be adequatelycompressor and expansion device models and the system
+                                                known a priori to develop models. This is arguably more anmodel was validated using boundary condition data from
+                                                                issue with the compressor and valve models, but points tothe test stand. With the ﬁnite-volume heat exchangers, the
+                                                                   vulnerability in the MB formulation. Therefore, while thesystem validation consisted of start-up followed by the se-
+                                                           standalone MB models showed stability during start-up un-quence of operating conditions shown in Table 1. With the
+                                                            der well-behaved boundary conditions, the MB system simu-moving-boundary heat exchangers, the system validation
+                                                                    lation encountered  difﬁculties.  Fig. 8 shows the drivingwas performed over the same data set but without the
+
+
+              Tewi      Tcwi       Tewoset   mwe    mwc                   40
+      50                                                      20                (oC)         Tewo (FV)      Tewo (MB)      +5
+      40                                                                       30
+                                                                             Tcwo (FV)      Tcwo (MB)                                                             15   (oC)                                                                                                                                             Water
+                                                                                                                                                        -5
+      30
+                                                                              20
+                                                             10                                                                                                                                                                                                                                                                                                                                                                                                        temperatures
+      20                                                                                                                                                                                                                                                              flow-rate
+                                                                              10           Temperature 10                                                             5     (kg/s)                                                                                                                                                                                                                                                                                                      Predicted
+       0                                                      0                 0
+         0      2      4      6      8      10     12     14                    0             10             20             30             40
+                       Time (hrs)                                               Measured temperatures (oC)
+
+Fig. 8 – Boundary conditions used to drive the system           Fig. 10 – System-level validations of steady-state leaving
+model.                                                  water temperatures.
+
+===== PDF PAGE 13 =====
+                                                   i n t e r n a t i o n a l  j o u r n a l o f r e f r i g e r a t i o n 3 1  ( 2 0 0 8 ) 1 4 3 7 – 1 4 5 2                1449
+
+
+
+                    Pe Actual     Pe (FV)     Pe (MB)                                     Tewo Actual     Tewo (FV)    Tewo (MB)
+    1200
+                    Pc Actual     Pc (FV)     Pc (MB)                            40           Tcwo Actual     Tcwo (FV)    Tcwo (MB)
+    1000                                                                      35
+
+     800                                                                                                              (oC) 30  (kPa)
+                                                                              25
+     600
+                                                                              20
+     400                                                                      15   Pressure     200                                                                                                                                                                                                                                                                                                                               Temperature 10
+
+                                                                               5
+       0
+                                                                               0
+         0       2       4       6       8       10      12      14
+                                                                                 0       2        4       6        8       10       12      14
+                          Time (hrs)
+                                                                                    Time (hrs)
+
+Fig. 11 – Condensing and evaporating pressure predictions.
+                                                                        Fig. 12 – Condenser and evaporator leaving water
+                                                         temperature predictions.
+
+
+boundary conditions used in the simulations and are identi-
+cal to those used to drive the test stand during data collec-     realized advantage is a factor of approximately 3, primarily
+tion. The 27 steady states correspond to Table 1.              because of ﬁxed overheads in property calculations and data
+   Figs. 9 and 10 show the steady-state predictions by the     I/O. Also, as the heat exchangers become less computationally
+ﬁnite-volume and moving-boundary system models.  It  is    dominant, the compressor and expansion valve speeds be-
+seen that both formulations very closely capture the correct   come more relevant.
+steady-state pressures and leaving water temperatures. Figs.     A signiﬁcant difference between the ﬁnite-volume and
+11–15 show the pressures, water temperatures, motor power,    moving-boundary formulations, as already mentioned brieﬂy
+superheat and sub-cooling predictions during the complete     earlier, is in the refrigerant charge inventory. As described
+14 h run time. The steady-state and transient accuracies of    above, the FV heat exchanger is initialized by specifying the
+both formulations are seen to be nearly identical for all but    pressure on the shell side and a proﬁle of enthalpy over the
+the sub-cooling. The small differences between the two    length of the heat exchanger. The two-phase regions in
+predictions are because the moving-boundary formulation    the heat exchangers are treated as being homogenous and
+makes a coarser approximation of the mean refrigerant    the mean density in each control volume is computed at the
+properties over the length of each phase region. The apparent   mean enthalpy in that control volume and the prevailing pres-
+difference in the steady-state sub-cooling predictions be-     sure. By performing several simulations on the FV system
+tween the two formulations is due to the imprecision in tun-    model with different charge amounts, it was possible to iden-
+ing the refrigerant charge to a point where both would yield     tify a charge quantity where the sub-cooling matched the
+identical sub-cooling predictions.                           measurements. This was found to be roughly 75 kg when
+   While  the  accuracies  of  the two  formulations were    the true system charge was 136.4 kg. With the moving-bound-
+nearly identical, the execution speeds were markedly dif-    ary formulation, the refrigerant charge is also set by specifying
+ferent. The ﬁnite-volume system model executed at an av-    the initial condition. It was found that in order to predict sub-
+erage real-time factor4 of 1.2 (using a 1.8 GHz processor    cooling comparable to the measurements (and the charge-
+desktop computer). The moving-boundary system model,    tuned FV system model), the charge had to be adjusted to
+under identical conditions, executed at real-time factors     43.2 kg. The difference between the model and the actual
+between  0.35 and  0.55 on the same machine. This  is    charges is believed to be the homogenous two-phase assump-
+a 55–70% reduction in computation time for comparable     tion. Feenstra et al. (2000) experimentally investigated several
+accuracies.
+   This difference in execution speed between the two formu-
+lations can be traced to the signiﬁcantly different number of                       Pmotor Actual      Pmotor (FV)      Pmotor (MB)
+                                                                             100
+equations being integrated. In the FV model, each heat ex-
+                                                                              90
+changer is discretized into 15 control volumes (based on the          80
+numerical study mentioned earlier). The four conservation          70                                                                                                                                 (kW)
+equations thus result in 60 equations per heat exchanger, for          60
+a total of 120 equations for both at the system level. In the          50                                                                                                                                                                  power
+MB model, the maximum number of heat exchanger equa-          40
+tions at the system level is 20, with 12 in the condenser (in          30                                                                                                                                                                  Motor  20CSHTPSC mode) and eight in the evaporator  (in ETPSH
+                                                                              10
+mode). This suggests that the MB model can theoretically ex-
+                                                                               0
+ecute six times faster than the FV model. However, the
+                                                                                 0       2        4       6       8       10       12      14
+                                                                                   Time (hrs)
+  4 Time taken by the model  to execute one-time  unit  of
+simulation.                                                                          Fig. 13 – Motor power predictions.
+
+===== PDF PAGE 14 =====
+1450                                         i n t e r n a t i o n a l  j o u r n a l o f r e f r i g e r a t i o n 3 1  ( 2 0 0 8 ) 1 4 3 7 – 1 4 5 2
+
+
+
+     6             Tsh Actual    Tsh (FV)      Tsh (MB)                                   Tsh Actual     Tsh (FV)     Tsh (MB)
+                                                                              6
+     5
+  (oC)                                                                          5
+     4                                                                                                              (oC)
+                                                                              4
+     3
+                                                                              3
+     2       Temperature                                                                          2     1                                                                                                                                                                                                                                                                                                                                        Temperature
+                                                                              1
+     0
+       0       2       4       6       8       10      12      14          0
+                         Time (hrs)                                     0        2       4        6        8       10      12       14
+                                                                                   Time (hrs)
+      Fig. 14 – Evaporator exit superheat predictions.
+                                                                              Fig. 15 – Condenser exit sub-cooling predictions.
+
+
+void-fraction models for buoyancy-dominated upward cross-    5.    Conclusions
+ﬂow through horizontal tube-bundles using R11, and reported
+that the homogenous equilibrium model signiﬁcantly over-    Finite-volume (FV) and moving-boundary (MB) formulations
+predicted the void fraction from as much as 25% at a quality     for  ﬂooded  shell-and-tube  evaporators and  condensers
+of 0.1 to 80% at a quality of 0.01. While the refrigerant ﬂow    yielded comparable accuracy in predicting system-level tran-
+in a condenser (where most of the charge resides during     sients and steady-state behavior of a centrifugal chiller. The
+normal operation) is governed by gravity and not buoyancy,    FV formulation was found to be more robust through start-
+it is believed that a similar explanation holds here. The over-    up and all load-change transients in standalone as well as
+prediction of void fraction results in an under-prediction of    within a complete system. These advantages came at the
+the charge. The difference in charge accounting between the    cost of computational time which was typically 20% slower
+two formulations is due to the relatively more accurate esti-    than real time on a 1.8 GHz processor desktop computer.
+mate of density variation in the FV model. This is the reason    The moving-boundary direct solution method was also found
+for the discrepancy between the sub-cooling predictions of     to be robust and could handle all load-change transients. The
+the MB and FV model as seen in Fig. 15.                          start-up transients could be handled by the heat exchangers,
+   Void-fraction models can be incorporated  into these    but the speciﬁc implementation of the compressor and valve
+models with no changes to the equation structure or the solu-    models prevented the MB system model from being able to
+tion approach since the models use pressure and enthalpy as    solve through the start-up transient. The moving-boundary
+the state variables. The mass estimation in the two-phase re-    system model executed about three times faster than the ﬁ-
+gions can use the void-fraction model to get a better estimate    nite-volume while maintaining nearly identical accuracy in
+of the local density. For the MB formulation, it is also feasible    the predictions of system steady-state and transient-perfor-
+to modify the equation structure to incorporate the void frac-    mance. Charge prediction is an issue with either approach
+tion algebraically. Alternatively, integrated approaches such    due to the absence of accurate void-fraction models but was
+as proposed by Wedekind et al. (1978) can be applied to the    found to be less accurate in the moving-boundary heat
+two-phase regions.                                           exchangers.
+
+
+
+Appendix A
+
+Finite-volume formulation equations
+
+    2 N                                          3   P            aj    b1      b2      b3   /  / / / /   bN
+         j¼1
+   PN               cj    d1      d2      d3   /  / / / /   dN
+          j¼1                                          8                       /                         /                            /                    0                           0                                  0  /                                                        0                                                            ¼         e1                g1                                                                                                                      ej ¼                                                                                                                                  cj                                                                                                               ajhj;                                                                                                                           gj                                                                                                                                dj                                                                                                                              bjhj                                          ><!                         /                            /                                                                                                                                                                                                                                                       j                                                                                                                                    1                           0                                  0                                       0 /                                                        0         s2                b1r2                        g2A ¼                                                      where                                            P                                                   ¼                                                                                                                                       al;                         / /                                                                                                                            ej                                                                                                                hj   hj                                                                                                                               1                                                                                                                                                                        rj ¼ hj 1   hj                                  0                                       0                                           0                                                        0         s3                b1r3                        b2r3                                 g3                                          >: sj                                                                                                                                      l¼1
+         s4     b1r4     b2r4     b3r4      g4    0   0   0  /   0
+             «          «           «           «           «    1                    «
+             «          «           «           «           «      1              «                                                                           66666666666666666664   «          «           «           «           «         1      «                 77777777777777777775
+       sN 1  b1rN 1  b2rN 1  b3rN 1  b4rN 1 / / /  gN 1  0
+     "                                 N                                                                  #
+B!T ¼   _mr;in    _mr;out  _mr;inhr;in   _mr;outhN P _Qr;j  _mr;in  hr;in   h1     _Qr;1  _mr;inðh1   h2Þ    _Qr;2 / /  _mr;inðhN 2  hN 1Þ   _Qr;N 1
+                                                         j¼1
+
+===== PDF PAGE 15 =====
+                                                   i n t e r n a t i o n a l  j o u r n a l o f r e f r i g e r a t i o n 3 1  ( 2 0 0 8 ) 1 4 3 7 – 1 4 5 2                1451
+
+
+
+Appendix B                                                         Ar  L1 1 dhv   þ h1  vrr D þ h1  vrr     1                                                                          2 dPCrr;1      vh1         vP   h1
+                                                                                                               vrr   dhv   dhl      vrr
+                                                                    þ                                                                         þ
+                                                                                           dPMoving-boundary formulation equations                    þhv ðL2   L1ÞC12  vh2   dP                                                                                                               vP  h2D
+                                                                                                          vrr  dhl     vrr      dP                                                                       þðL  L2ÞC1      þ                                                                                 2 vh3  dP    vP  h3D   dt
+  CSH, ETP
+                                                                                     þArðrr;1h1   rr;2h2ÞdL1 þ Arhvðrr;3    rr;2Þ
+                                                                                                   dt
+       vrr       1     vrr   dhout  ArL      $dP þ           ¼ _mr;in    _mr;out                                dL2  1               vrr  dhout
+       vP  h dt  2ArL  vh  P  dt                                                   dt                                                       þ 2ArhvðL   L2Þ  vh3   dt
+     1      vrr   dhin
+                                                                            þ h1                                                                                                                                Ddhin
+                                                                                                                                    dt     2ArL  vh  P dt                                       ¼ _mr;inhin   _mr;outhout    _Qr;1  12ArL1Crr;1       vrr                                                                                                                                vh1
+          vrr            1           vrr    dhout  ArL h        1 $dP þ      r þ                                                  1 dhv   dhl              vrr          vrr         vP  h      dt  2ArL      vh  P   dt                              Ar  ðL2   L1Þ     þ      Crr;2 þ h2     D þ h2         1
+                                                                                2  dP   dP            vh2         vP   h2
+                            1           vrr    dhin
+   ¼ _mr;inhin   _mr;outhout  _Qr  2ArL r þ  vh  P  dt                                  hvðL2   L1Þ 1  vrr   dhv þ dhl þ  vrr
+                                                                                    2 vh2   dP   dP      vP   h2
+  dTt                                                                                        1  vrr  dhl                                                                                                                                 vrr     dP          _Qr   _Qw           dTw                                      _Qw þ ð_mCpÞwðTw;in  TwÞ                                                                      þ    ¼                      ¼                                                                                          ðhv   hlÞðL   L2Þ
+  dt   ðrACpÞtL               dt          ðrACpÞwL                                         2  vh3  dP    vP   h3   dt
+                                                                                                                             dL2                                                                                              Arrr;2ðh2   hvÞdL1 þ Ar rr;2ðh2   hvÞ þ rr;3ðhv   hlÞ
+                                                                                                 dt                                 dt  CSHTP, ETPSH
+                                                                          1                     vrr   dhout                                                                                                        hlÞðL   L2Þ        ¼ _mr;outðhv   hlÞ    _Qr;2
+        1 dhv  vrr                             1 dhv  vrr                                                        vrr     dP                       2Arðhv             vP   h3  dt                             þ  Ar  L1              þ ðL   L1Þ
+        2 dP  vh1  P           2 dP  vh2  P    vP   h1   dt
+                      1             vrr   dhout      þArðrr;1   rr;2ÞdL1 þ         L1Þ                    dt   2ArðL       vh2  P  dt                                                                               1 dhl              vrr;3          vrr
+                                                                                                               1                                                               þ h3                                                                                          D þ h3                    1       vrr   dhin                                    Ar  ðL   L2Þ 2 dPCrr;3                                                                                                          vh3    ¼ _mr;in    _mr;out                                                                                                              vP   h3                     2ArL1  vh1  P dt
+                                                                                  1  vrr;3  dhl     vrr     dP
+                                                                                           hlðL   L2Þ        þ
+                                                                                  2  vh3  dP    vP   h3   dt
+        1 dhv           vrr           vrr                                                        1                              vrr;3   dhout
+  Ar  L1           þ h1                   þ h1                                       1                                          Arrr;3ðh3   hlÞdL2        2 dPCr1                                                                                                dt   2ðL   L2Þ  rr;3 þ ðh3   hlÞ  vh3     dt                       vh1  PD                                  vP   h1
+                 1 dhv  vrr                                         vrr     dP                      ¼ _mr;outðhl   houtÞ    _Qr;3                    þ       þhvðL   L1Þ
+                 2 dP  vh2  P    vP   h1   dt
+                          1               vrr   dhout       þArðr1h1   r2hvÞdL1 þ           L1Þ                        dt   2ArhvðL       vh2  P  dt                                                           dL1
+                                                                                                                            _Qr;1   _Qw;1 þ ðrCpAÞt½Tt;2    Tt;1     ¼ _mr;inhin   _mr;outhout    _Qr;1  1      r1 þ h1  vrr    dhin                  dTt;1 ¼                                   2ArL1         vh1  P  dt                  dt                ðrCpAÞtL1         dt
+                                                                              n                                                                                                    o                                                                                                               dL1                                                                                                                              dL2                                        vr            1                                                                                                                                                     ½Tt;2    Tt;1                                                                                                                                                                           ½Tt;3    Tt;2                                                                                                                            _Qr;2   _Qw;2   ðrCpAÞt                                           1                                dTt;2  Ar  ðL   L1Þ              þ h2                       þ h2                                                                                                                    dt                                                                                                                                    dt                                                    ¼                                       vP              dhvdPCr2            2                             vh2                             vr  PD                                                                h2                                                                               dt                                                                                                                           L1Þ                                                                                                          ðrCpAÞtðL2
+               1 dhv  vr       vr     dP
+                   þ       hvðL   L1Þ                                                                                                                             _Qr;3   _Qw;3   ðrCpAÞt½Tt;3    Tt;2 dL2               2 dP  vh2  P                               vP  h2   dt                                        dTt;3                                                                                                                   dt                                                     ¼
+     þArr2ðh2   hvÞdL1 þ 1       L1Þ r2 þ h2  vr                               dt             ðrCpAÞtðL   L2Þ                    dt   2ArðL               vh2  P                                                                                                       dL1
+                                                                             dTw;1                                                                                       _Qw;1þð_mCpÞw½Tw;2  Tw;1 þðrCpAÞw½Tw;2  Tw;1  dt                                                    ¼           vr    dhout
+       hv         ¼ _mr;outðhv   houtÞ    _Qr;2                               dt                    ðrCpAÞwL1
+           vh2  P   dt                                                                      n              dL1                 dL2 o                                                                            dTw;2  _Qw;2þð_mCpÞw½Tw;3  Tw;2  ðrCpAÞw  ½Tw;2  Tw;1  dt   ½Tw;3  Tw;2  dt
+                                                   ¼
+                                                                             dt                                                                                                                               L1Þ                                                                                                      ðrCpAÞwðL2                                                                             dL1  dTt;1             _Qr;1                                                      _Qr;2                  _Qw;1             dTt;2                                                     _Qw;2 þ ðrACpÞt    ¼                      ¼                                                                                 dt                 dTw;3                                                                                       _Qw;3þð_mCpÞw½Tw;in  Tw;3                                                                                                            ðrCpAÞw½Tw;3                                                                                                                                    Tw;2 dL2dt   dt                               dt                                                        L1Þ          ðrACpÞtL1                                         ðrACpÞtðL                                                   ¼
+                                                                             dt                  ðrCpAÞwðL  L1Þ
+
+
+  dTw;1    _Qw;1 þ ð_mCpÞwðTw;in   Tw;1Þ     ¼                                                ;
+   dt            ðrACpÞwL1
+                                                     r e f e r e n c e s  dTw;2    _Qw;2 þ ð_mCpÞwðTw;1   Tw;2Þ þ ðrACpÞw dL1dt     ¼
+   dt               ðrACpÞwðL   L1Þ
+ CSHTPSC
+                                                              Bendapudi, S., 2004. Development and evaluation of modeling
+        1  vrr   dhv     vrr              1  vrr
+  Ar  L1        þ      þ ðL2   L1Þ                              approaches for transients in centrifugal chillers, Ph.D. thesis.
+        2  vh1  P dP     vP   h1            2  vh2  P
+                                                                  School of Mechanical Engineering, Purdue University, West
+         dhv   dhl      vrr             1  vrr   dhl
+         þ   þ      þ ðL   L2Þ                                    Lafayette, IN.
+         dP   dP      vP   h2           2  vh3  P dP                                                              Bendapudi, S., Braun, J.E., 2002. A Literature Review of Dynamic
+           vrr     dP    þ        þ Arðrr;1   rr;2ÞdL1                                Models of Vapor Compression Equipment. Technical Report
+         vP   h3   dt                dt                                                                    HL2002-8. Ray W. Herrick Laboratories, Purdue University.
+                       1             vrr   dhout    þ Arðrr;2   rr;3ÞdL2 þ         L2Þ                                Bendapudi, S., Braun, J.E., Groll, E.A., 2005. Dynamic model of                     dt   2ArðL       vh3  P  dt                                                               a centrifugal chiller system – model development, numerical
+                    1       vrr   dhin
+    ¼ _mr;in    _mr;out  2ArL1  vh1  P dt                                     study, and validation. Paper No. 4754. ASHRAE Transactions                                                                 111 (Part 1), 132–148.
+
+===== PDF PAGE 16 =====
+1452                                         i n t e r n a t i o n a l  j o u r n a l o f r e f r i g e r a t i o n 3 1  ( 2 0 0 8 ) 1 4 3 7 – 1 4 5 2
+
+
+
+Browne, M.H., Bansal, P.K., 2000. Modeling of in-situ liquid             Pettit, N.B.O.L., Williatzen, M., Ploug-Sorensen, L., 1998. A
+    chillers. In: Proceedings of the 16th International Refrigeration        general dynamic simulation model for evaporators and
+   Conference at Purdue, pp. 425–432.                               condensers in refrigeration. Part II: simulation and control of
+Chi, J., Didion, D., 1982. A simulation model of a heat pump’s         an evaporator. International Journal of Refrigeration 21 (5),
+   transient performance. International Journal of Refrigeration 5        404–414.
+    (3), 176–184.                                                  Petukhov, B.S., Irvine, T.F., Hartnett, J.P., 1970. Advances in Heat
+Comstock, M.C., Braun, J.E., 1999. Experimental Data from Fault         Transfer, vol. 6. Academic Press, New York.
+   Detection and Diagnostic Studies on a Centrifugal Chiller.        Ploug-Sorensen, L., Fredsted, J.P., Willatzen, M., 1997.
+   Technical Report HL99-18. Ray W. Herrick Laboratories,            Improvements in modeling and simulation of refrigerant
+   Purdue University.                                               systems: aerospace tools applied to a domestic refrigerator.
+Dhar, M., Soedel, W., 1979. Transient analysis of a vapor                International Journal of HVAC&R Research 3 (4).
+   compression refrigeration system. In: XV International            Press, W.H., Teutolsky, S.A., Vetterling, W.T., Flannery, B.P., 2002.
+   Congress of Refrigeration.                                      Numerical Recipes in Cþþ: The Art of Scientiﬁc Computing,
+Dhir, V.K., Lienhard, J.H., 1971. Laminar ﬁlm condensation on          second ed. Cambridge University Press.
+   plane and axisymmetric bodies in non-uniform gravity.         Rasmussen, R.W., MacArthur, J.W., Grald, E.W., Nowakowski, G.A.,
+   International Journal of Heat Transfer 93 (7).                         1987. Performance of engine-driven heat pumps under
+Feenstra, P.A., Weaver, D.S., Judd, R.L., 2000. An improved void          cycling conditions. ASHRAE Transactions 93 (Part 2),
+   fraction model for two-phase cross-ﬂow in horizontal tube          1078–1090.
+   bundles. International Journal of Multiphase Flow 26 (11),         Rossi, T.M., Braun, J.E., 1999. A real-time transient model for air
+   1851–1873.                                                           conditioners. In: Proceedings of the 20th International
+Gnielinski, V., 1976. New equation for heat and mass transfer in       Congress of Refrigeration, p. 743.
+   turbulent pipe and channel ﬂow. International Journal of        Sami, S.M., Comeau, M.A., 1992. Development of a simulation
+   Chemical Engineering 16, 359–368.                            model for predicting dynamic behavior of heat pumps with
+Goldschmidt, V.W., Hart, G.H., 1982. Heat pump system                non-azeotropic refrigerant mixtures. International Journal of
+   performance: experimental and theoretical results. ASHRAE         Energy Research 16, 443.
+   Transactions 88 (Part 1), 479–489.                              Sami, S.M., Dahmani, A., 1996. Numerical prediction of dynamic
+Grace, I.N., Tassou, S.A., 2000. Dynamic simulation of liquid           performance of vapor compression heat pump using new HFC
+    chillers. In: Proceedings of the 2000 International Refrigeration        alternatives to HCFC-22. Journal of Applied Thermal
+   Conference at Purdue, pp. 433–470.                                Engineering 16 (8/9), 691–705.
+He, X., Liu, S., Asada, H.H., 1997. Modeling of vapor compression       Sami, S.M., Duong, T., Mercadier, Y., Galanis, N., 1987. Prediction
+   cyclesfor multivariable feedback control ofHVACsystems. ASME        of the transient response of heat pumps. ASHRAE
+   Journal of Dynamic Systems, Measurement and Control 119 (2).        Transactions 93, 471.
+He, X., Liu, S., Asada, H.H., 1998. Multivariable control of vapor      Svensson, M.C., 1994. Studies on on-line optimizing control with
+   compression systems. International Journal of HVAC&R              application to a heat pump, Ph.D. thesis. The University of
+   Research 4 (3).                                               Trondheim.
+Incropera, F.P., Dewitt, D.P., 1996. Fundamentals of Heat and Mass     Vargas, J.V.C., Parise, J.A.R., 1995. Simulation in transient regime
+   Transfer, fourth ed. John Wiley and Sons.                             of a heat pump with closed-loop and on–off control.
+Jakobsen, A., Antonius, J., Hagaard-Knudsen, H.J., 1999.                  International Journal of Refrigeration 18 (4), 235–243.
+   Experimental evaluation of the use of homogeneous and slip-    Wang, S., Wang,  J., Burnett,  J., 2000. A mechanistic model of
+  ﬂow two-phase dynamic models in evaporator modelling. In:       a centrifugal chiller to study HVAC dynamics. Building
+   Proceedings of the 20th International Congress of                    Services Engineering Research and Technology 21 (2),
+   Refrigeration (Sydney), Paper no. 135.                                73–83.
+MacArthur, J.W., 1984. Analytical representation of the transient    Wedekind, G.L., Bhatt, B.L., Beck, B.T., 1978. A system mean void
+   energy interactions in vapor compression heat pumps.               fraction model for predicting various transient phenomena
+  ASHRAE Transactions 91 (Part 1B), 982–996.                         associated with two phase evaporating and condensing ﬂows.
+MacArthur, J.W., Grald, E.W., 1987. Prediction of cyclic heat pump        International Journal of Multiphase Flow 4, 97–114.
+   performance with a fully distributed model and a comparison     Williatzen, M., Pettit, N.B.O.L., Ploug-Sorensen, L., 1998. A general
+   with experimental data. ASHRAE Transactions 93 (Part 2),          dynamic simulation model for evaporators and condenser in
+   1159–1178.                                                               refrigeration. Part 1 – moving boundary formulation of two-
+Murphy, W., Goldschmidt, V., 1984. Transient response of air-         phase ﬂows with heat exchange. International Journal of
+   conditioners – a qualitative interpretation through a sample         Refrigeration 21 (5), 398–403.
+   case. ASHRAE Transactions 90 (Part 1).                             Xia, J., Zhou, X., Jin, X., Zhou, Z., 1999. Dynamic simulation of
+Murphy, W., Goldschmidt, V., 1985. Cyclic characteristics of            superheat at the evaporator outlet of the air-conditioner with
+   a typical residential air-conditioner – modeling of start-up            inverter. In: Proceedings of the 20th International Congress of
+   transients. ASHRAE Transactions 91 (Part 2).                         Refrigeration (Sydney), Paper no. 561.
+Nyers, J., Stoyan, G., 1994. A dynamical model adequate for         Yasuda, H., Touber, S., Machielsen, C.H.M., 1983. Simulation
+   controlling the evaporator of a heat pump. International          model of a vapor compression refrigeration system. ASHRAE
+   Journal of Refrigeration 17 (2), 101–108.                             Transactions 89 (Part 2A), 408–425.

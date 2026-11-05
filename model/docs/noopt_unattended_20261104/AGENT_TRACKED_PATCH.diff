@@ -1,0 +1,70 @@
+﻿diff --git a/tests/test_minute1_environment.py b/tests/test_minute1_environment.py
+index 93f4dc5..56fd306 100644
+--- a/tests/test_minute1_environment.py
++++ b/tests/test_minute1_environment.py
+@@ -107,17 +107,20 @@ def test_mixed_minute_bindings_fail_before_native_reset(monkeypatch,change):
+     assert env.reset_calls==[]
+ 
+ 
+-def test_unattended_boundary_stops_only_new_commands_and_retains_old_queue(monkeypatch):
++def test_unattended_boundary_refuses_legacy_lower_optimization_and_retains_state(monkeypatch):
++    # The old upper-only definition permitted post60 lower optimization. Under
++    # strict U that successful-step assumption is invalid. Preserve preboundary
++    # command/queue coverage and require an explicit, nonmutating refusal.
+     module,env,*_=create(monkeypatch,'unattended')
+     env.reset(scenario={'step_minutes':1.,'duration_steps':180},seed=7)
+-    env.core.time=59.;request={'targets':{'grid_import':1.}}
++    env.core.time=58.;request={'targets':{'grid_import':1.}}
+     env.step(request);queue=deepcopy(env.core.pending_commands)
+-    returned=env.step(None)
++    history=deepcopy(env.history)
++    with pytest.raises(module.StrictUnattendedForwardUnavailable):env.step(None)
+     assert env.core.generated==[request] and env.core.pending_commands==queue
+-    assert returned[4]['command_id'] is None and returned[4]['requested_action'] is None
+-    assert returned[4]['upper_commands_suppressed'] is True
+-    assert returned[4]['projection_status']=='held_command_no_upper_dispatch'
+-    assert env.history[-1]['upper_commands_suppressed'] is True
++    assert env.core.time==59. and env.history==history
++    env.core.time=60.
++    with pytest.raises(module.StrictUnattendedForwardUnavailable):env.step(None)
+     with pytest.raises(ValueError):env.step(request)
+ 
+ 
+diff --git a/tools/minute1_20261103/environment.py b/tools/minute1_20261103/environment.py
+index 36f9867..d28936e 100644
+--- a/tools/minute1_20261103/environment.py
++++ b/tools/minute1_20261103/environment.py
+@@ -21,6 +21,15 @@ from .source import MinuteSource
+ VARIANTS=('normal','unattended','responsive')
+ 
+ 
++class StrictUnattendedForwardUnavailable(RuntimeError):
++    """The legacy lower optimizer cannot implement the strict U definition.
++
++    This is an execution refusal, not an outage, all-zero result, or completed
++    forward model. The exception leaves the native step entirely unentered.
++    """
++    category='strict_unattended_forward_unavailable'
++
++
+ def with_minute1(method,*,minute_source,source_admission,source_freeze,
+                  sampling_spec=None,variant='responsive',requalification_minutes=None,
+                  overlay_spec=None,thermal_profile=None):
+@@ -102,6 +111,17 @@ def with_minute1(method,*,minute_source,source_admission,source_freeze,
+             check(self)
+             suppressed=variant=='unattended' and self.core.time>=60.
+             if suppressed and action is not None:raise ValueError('Unattended post60 step requires an explicit None command request')
++            if variant=='unattended' and self.core.time+self.dt_minutes>=60.:
++                # advance() calls boundary() at its endpoint. Refuse the whole
++                # crossing step so even a t59->t60 endpoint cannot enter the
++                # inherited optimizing physical/protection/port-selection path.
++                # No service, energy, inventory, queue, or clock is fabricated.
++                raise StrictUnattendedForwardUnavailable(
++                    'strict_unattended_forward_unavailable: legacy unattended '
++                    'execution still uses lower dispatch optimization; a '
++                    'validated arithmetic forward evaluator is not implemented. '
++                    'Refused before native step because its endpoint reaches '
++                    'minute60; this prefix is incomplete, not a strict U result.')
+             returned=old_step(action)
+             if suppressed:
+                 observation,reward,done,truncated,info=returned

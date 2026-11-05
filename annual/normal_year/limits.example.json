@@ -1,0 +1,15 @@
+{
+  "max_producers": 3,
+  "max_accounts": 1,
+  "max_total_processes": 4,
+  "threads_per_producer": 1,
+  "max_recoveries_global": 1,
+  "max_wall_seconds": 2592000,
+  "rss_limit_bytes": 10000000000,
+  "min_available_ram_bytes": 16000000000,
+  "min_free_disk_bytes": 30000000000,
+  "initial_free_disk_required_bytes": 600000000000,
+  "grace_seconds": 120,
+  "restore_timeout_seconds": 1800,
+  "poll_seconds": 1
+}

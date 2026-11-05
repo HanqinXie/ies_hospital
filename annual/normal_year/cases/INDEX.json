@@ -1,0 +1,74 @@
+{
+  "schema": "hospital_ies.normal_year_transfer_cases.v1",
+  "source_commit": "b4d1ed20dc37e6add516a20a96979c2e29efdd36",
+  "source_scientific_sha256": "4512618aee63dc7ca79483973499ce096ab2622d5fac4e2556cf550928456eaa",
+  "input_sha256": "f414d21fc55d5a63282435b9bed9a1c8c289a049f24507f953fb86162fb41d15",
+  "execution_revision": "annual_responsive_dynamic_bridge_20261104.v1",
+  "cases": [
+    {
+      "method": "M_available",
+      "path": "cases/M_available.json",
+      "file_sha256": "b430ca0c512d49daf87bd4e941b0f8107e99f0d21118fb8628c27bce9ac0c1f7",
+      "canonical_sha256": "00293d8a3aef824584e6b78edbd72c03af586a4249cadf4e11488cd4fa05d1fe",
+      "mode": "N",
+      "configuration": "H2",
+      "source_hour": 1,
+      "hours": 8760
+    },
+    {
+      "method": "M_ready",
+      "path": "cases/M_ready.json",
+      "file_sha256": "1e5886719df27a7a4b0f962071e4937b7843fbed68b1abac9bcb0433d0728d5f",
+      "canonical_sha256": "e395f115c08b3df1ec1e8ad298b12b0b5787667e2aa3112584c4bed31354eb71",
+      "mode": "N",
+      "configuration": "H2",
+      "source_hour": 1,
+      "hours": 8760
+    },
+    {
+      "method": "C_ready",
+      "path": "cases/C_ready.json",
+      "file_sha256": "7c518891633e100bbc3967bf37aa7322c93b82f9e4a32ec0ea59f413bae7b27b",
+      "canonical_sha256": "a8788ef41742dadb22e1fdc5a9ffc980c75e6a4ae602969625a6a4829854f73f",
+      "mode": "N",
+      "configuration": "H2",
+      "source_hour": 1,
+      "hours": 8760
+    }
+  ],
+  "physical_starts": 0,
+  "registration_is_not_a_result": true,
+  "numerical_execution": {
+    "schema": "hospital_ies.engineering_numerical_profile.v1",
+    "profile": "engineering_fast_v1",
+    "tolerances": {
+      "physical_rows_bounds": 1e-07,
+      "normalized_locks": 1e-10,
+      "integrality": 1e-09,
+      "nonlinear_equality_MMBtu_h": 1e-07
+    },
+    "native_parameters": {
+      "FeasibilityTol": 1e-09,
+      "OptimalityTol": 1e-09,
+      "IntFeasTol": 1e-09
+    },
+    "native_execution_policy": "unchanged_fresh_native_no_warm_start",
+    "native_acceptance_policy": "unchanged_original",
+    "candidate_gate": {
+      "physical_rows_bounds": 1e-07,
+      "normalized_locks": 1e-10,
+      "integrality": 1e-09
+    },
+    "objective_bound_abs_tolerance": 1e-10,
+    "mip_gap_policy": "caller_gap_unchanged_for_every_layer",
+    "candidate_policy": "linear_nonnegative_exact_zero_natural_bound_and_exact_zero_objective_exact_original_gate_only",
+    "nonlinear_policy": "unchanged_exact_nonlinear_fresh_native_no_candidate_reuse",
+    "state_policy": "process_thread_local_volatile_not_checkpointed_no_physical_rounding",
+    "initialization_policy": "unchanged_exact_reference_before_engineering_execution",
+    "planner_policy": "unchanged_exact_command_generation",
+    "validation_detail_policy": "zero_natural_bound_current_domain_maxima_else_full_rows",
+    "max_native_models": 32,
+    "max_candidate_families": 256,
+    "candidates_per_family": 3
+  }
+}

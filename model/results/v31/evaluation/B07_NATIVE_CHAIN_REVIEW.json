@@ -1,0 +1,558 @@
+[
+  {
+    "method": "M",
+    "id": "reused_b07_L4_GT_ER_disturbed_M",
+    "raw_sha256": "bccb8f6fd2dc14235a346697ba63c84cbd1cea051a6271dab1d942b5806f9dbd",
+    "decisions": [
+      {
+        "decision_time_minute": 45.0,
+        "command_id": 4,
+        "generated_minute": 45.0,
+        "planned_arrival_minute": 45.0,
+        "queued_dispatch": {
+          "boiler_steam_lbph": 177.86940203797968,
+          "absorption_cooling_kW": 147.81630759369506,
+          "electric_chiller_cooling_kW": [
+            184.41095412391294,
+            0.0,
+            0.0
+          ]
+        },
+        "actual_arrival_events": [
+          {
+            "event_id": 23,
+            "kind": "command_arrived",
+            "time_minute": 45.0,
+            "command_id": 4,
+            "generated_minute": 45.0
+          }
+        ],
+        "gt_physical_status": [
+          "OFF",
+          "OFF",
+          "RUNNING"
+        ],
+        "actual_gt_kW": [
+          0.0,
+          0.0,
+          128.23270399999998
+        ],
+        "steam_permission_receipts": []
+      },
+      {
+        "decision_time_minute": 60.0,
+        "command_id": 5,
+        "generated_minute": 60.0,
+        "planned_arrival_minute": 75.0,
+        "queued_dispatch": {
+          "boiler_steam_lbph": 638.1274264919052,
+          "absorption_cooling_kW": 0.0,
+          "electric_chiller_cooling_kW": [
+            451.83695132219395,
+            0.0,
+            0.0
+          ]
+        },
+        "actual_arrival_events": [],
+        "gt_physical_status": [
+          "OFF",
+          "OFF",
+          "EXOGENOUS_UNAVAILABLE"
+        ],
+        "actual_gt_kW": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "steam_permission_receipts": []
+      },
+      {
+        "decision_time_minute": 75.0,
+        "command_id": 6,
+        "generated_minute": 75.0,
+        "planned_arrival_minute": 75.0,
+        "queued_dispatch": {
+          "boiler_steam_lbph": 638.1274264919052,
+          "absorption_cooling_kW": 0.0,
+          "electric_chiller_cooling_kW": [
+            451.83695132219395,
+            0.0,
+            0.0
+          ]
+        },
+        "actual_arrival_events": [
+          {
+            "event_id": 32,
+            "kind": "command_arrived",
+            "time_minute": 75.0,
+            "command_id": 5,
+            "generated_minute": 60.0
+          },
+          {
+            "event_id": 36,
+            "kind": "command_arrived",
+            "time_minute": 75.0,
+            "command_id": 6,
+            "generated_minute": 75.0
+          }
+        ],
+        "gt_physical_status": [
+          "OFF",
+          "OFF",
+          "EXOGENOUS_UNAVAILABLE"
+        ],
+        "actual_gt_kW": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "steam_permission_receipts": []
+      }
+    ],
+    "actual_segments": [
+      {
+        "start": 45.0,
+        "end": 60.0,
+        "command_id": 4,
+        "arrived_boiler": 177.86940203797968,
+        "actual_boiler": 0.0,
+        "GT": [
+          0.0,
+          0.0,
+          128.23270399999998
+        ],
+        "boiler_ready": true,
+        "boiler_restart_kW": 0.0
+      },
+      {
+        "start": 60.0,
+        "end": 75.0,
+        "command_id": 4,
+        "arrived_boiler": 177.86940203797968,
+        "actual_boiler": 177.86940203797968,
+        "GT": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "boiler_ready": true,
+        "boiler_restart_kW": 0.0
+      }
+    ]
+  },
+  {
+    "method": "C",
+    "id": "reused_b07_L4_GT_ER_disturbed_C",
+    "raw_sha256": "8355be2e02a8a526bd61b11dd1a9fe55d0fd9182ffc7df3465f659d636218415",
+    "decisions": [
+      {
+        "decision_time_minute": 45.0,
+        "command_id": 4,
+        "generated_minute": 45.0,
+        "planned_arrival_minute": 45.0,
+        "queued_dispatch": {
+          "boiler_steam_lbph": 431.8361859946359,
+          "absorption_cooling_kW": 703.3705679999999,
+          "electric_chiller_cooling_kW": [
+            703.3705679999999,
+            703.3705679999999,
+            1055.055852
+          ]
+        },
+        "actual_arrival_events": [
+          {
+            "event_id": 32,
+            "kind": "command_arrived",
+            "time_minute": 45.0,
+            "command_id": 4,
+            "generated_minute": 45.0
+          }
+        ],
+        "gt_physical_status": [
+          "OFF",
+          "OFF",
+          "RUNNING"
+        ],
+        "actual_gt_kW": [
+          0.0,
+          0.0,
+          128.23270399999998
+        ],
+        "steam_permission_receipts": []
+      },
+      {
+        "decision_time_minute": 60.0,
+        "command_id": 5,
+        "generated_minute": 60.0,
+        "planned_arrival_minute": 75.0,
+        "queued_dispatch": {
+          "boiler_steam_lbph": 879.9544725718061,
+          "absorption_cooling_kW": 703.3705679999999,
+          "electric_chiller_cooling_kW": [
+            703.3705679999999,
+            703.3705679999999,
+            1055.055852
+          ]
+        },
+        "actual_arrival_events": [],
+        "gt_physical_status": [
+          "OFF",
+          "OFF",
+          "EXOGENOUS_UNAVAILABLE"
+        ],
+        "actual_gt_kW": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "steam_permission_receipts": []
+      },
+      {
+        "decision_time_minute": 75.0,
+        "command_id": 6,
+        "generated_minute": 75.0,
+        "planned_arrival_minute": 75.0,
+        "queued_dispatch": {
+          "boiler_steam_lbph": 725.4811382397028,
+          "absorption_cooling_kW": 703.3705679999999,
+          "electric_chiller_cooling_kW": [
+            703.3705679999999,
+            703.3705679999999,
+            1055.055852
+          ]
+        },
+        "actual_arrival_events": [
+          {
+            "event_id": 44,
+            "kind": "command_arrived",
+            "time_minute": 75.0,
+            "command_id": 5,
+            "generated_minute": 60.0
+          },
+          {
+            "event_id": 55,
+            "kind": "command_arrived",
+            "time_minute": 75.0,
+            "command_id": 6,
+            "generated_minute": 75.0
+          }
+        ],
+        "gt_physical_status": [
+          "STARTING",
+          "STARTING",
+          "EXOGENOUS_UNAVAILABLE"
+        ],
+        "actual_gt_kW": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "steam_permission_receipts": []
+      }
+    ],
+    "actual_segments": [
+      {
+        "start": 45.0,
+        "end": 45.25,
+        "command_id": 4,
+        "arrived_boiler": 431.8361859946359,
+        "actual_boiler": 0.0,
+        "GT": [
+          0.0,
+          0.0,
+          130.73623477608947
+        ],
+        "boiler_ready": true,
+        "boiler_restart_kW": 0.0
+      },
+      {
+        "start": 45.25,
+        "end": 45.4169020517393,
+        "command_id": 4,
+        "arrived_boiler": 431.8361859946359,
+        "actual_boiler": 0.0,
+        "GT": [
+          0.0,
+          0.0,
+          129.48446938804472
+        ],
+        "boiler_ready": true,
+        "boiler_restart_kW": 0.0
+      },
+      {
+        "start": 45.4169020517393,
+        "end": 60.0,
+        "command_id": 4,
+        "arrived_boiler": 431.8361859946359,
+        "actual_boiler": 0.0,
+        "GT": [
+          0.0,
+          0.0,
+          128.23270399999998
+        ],
+        "boiler_ready": true,
+        "boiler_restart_kW": 0.0
+      },
+      {
+        "start": 60.0,
+        "end": 75.0,
+        "command_id": 4,
+        "arrived_boiler": 431.8361859946359,
+        "actual_boiler": 431.8361859946359,
+        "GT": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "boiler_ready": true,
+        "boiler_restart_kW": 0.0
+      }
+    ]
+  },
+  {
+    "method": "M_steam_permission",
+    "id": "v31_b07_disturbed_M_steam_permission",
+    "raw_sha256": "403995e905c96d5aac47f3bcf228f13abadf599d5a87984fa8ef6b05e4fd80dd",
+    "decisions": [
+      {
+        "decision_time_minute": 45.0,
+        "command_id": 4,
+        "generated_minute": 45.0,
+        "planned_arrival_minute": 45.0,
+        "queued_dispatch": {
+          "boiler_steam_lbph": 3000.0,
+          "absorption_cooling_kW": 147.81630759369506,
+          "electric_chiller_cooling_kW": [
+            184.41095412391294,
+            0.0,
+            0.0
+          ]
+        },
+        "actual_arrival_events": [
+          {
+            "event_id": 23,
+            "kind": "command_arrived",
+            "time_minute": 45.0,
+            "command_id": 4,
+            "generated_minute": 45.0
+          }
+        ],
+        "gt_physical_status": [
+          "OFF",
+          "OFF",
+          "RUNNING"
+        ],
+        "actual_gt_kW": [
+          0.0,
+          0.0,
+          128.23270399999998
+        ],
+        "steam_permission_receipts": [
+          {
+            "native_pointer": "#/decisions/3/command_generated/joint_dispatch/diagnostic/v31_steam_permission",
+            "schema": "hospital_ies.v31.current_boiler_permission_observation.v1",
+            "decision_time_minute": 45.0,
+            "generated_minute": 45.0,
+            "method": "M_steam_permission",
+            "enabled": true,
+            "boiler_total_rating_lbph": 3000.0,
+            "original_planner_permission_lbph": 177.86940203797968,
+            "common_permission_lbph": 177.86940203797968,
+            "healthy_capacity_lbph": 3000.0,
+            "new_permission_lbph": 3000.0,
+            "observable_availability": {
+              "availability_BOILER_1": 1.0,
+              "availability_BOILER_2": 1.0,
+              "availability_BOILER_3": 1.0
+            },
+            "feature_clocks": {
+              "availability_BOILER_1": {
+                "available_time_min": 45.0,
+                "valid_time_min": 45.0
+              },
+              "availability_BOILER_2": {
+                "available_time_min": 45.0,
+                "valid_time_min": 45.0
+              },
+              "availability_BOILER_3": {
+                "available_time_min": 45.0,
+                "valid_time_min": 45.0
+              }
+            },
+            "future_event_or_repair_information_used": false,
+            "conditional_permission_is_actual_supply": false
+          }
+        ]
+      },
+      {
+        "decision_time_minute": 60.0,
+        "command_id": 5,
+        "generated_minute": 60.0,
+        "planned_arrival_minute": 75.0,
+        "queued_dispatch": {
+          "boiler_steam_lbph": 3000.0,
+          "absorption_cooling_kW": 0.0,
+          "electric_chiller_cooling_kW": [
+            451.83695132219395,
+            0.0,
+            0.0
+          ]
+        },
+        "actual_arrival_events": [],
+        "gt_physical_status": [
+          "OFF",
+          "OFF",
+          "EXOGENOUS_UNAVAILABLE"
+        ],
+        "actual_gt_kW": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "steam_permission_receipts": [
+          {
+            "native_pointer": "#/decisions/4/command_generated/joint_dispatch/diagnostic/v31_steam_permission",
+            "schema": "hospital_ies.v31.current_boiler_permission_observation.v1",
+            "decision_time_minute": 60.0,
+            "generated_minute": 60.0,
+            "method": "M_steam_permission",
+            "enabled": true,
+            "boiler_total_rating_lbph": 3000.0,
+            "original_planner_permission_lbph": 638.1274264919052,
+            "common_permission_lbph": 638.1274264919052,
+            "healthy_capacity_lbph": 3000.0,
+            "new_permission_lbph": 3000.0,
+            "observable_availability": {
+              "availability_BOILER_1": 1.0,
+              "availability_BOILER_2": 1.0,
+              "availability_BOILER_3": 1.0
+            },
+            "feature_clocks": {
+              "availability_BOILER_1": {
+                "available_time_min": 60.0,
+                "valid_time_min": 60.0
+              },
+              "availability_BOILER_2": {
+                "available_time_min": 60.0,
+                "valid_time_min": 60.0
+              },
+              "availability_BOILER_3": {
+                "available_time_min": 60.0,
+                "valid_time_min": 60.0
+              }
+            },
+            "future_event_or_repair_information_used": false,
+            "conditional_permission_is_actual_supply": false
+          }
+        ]
+      },
+      {
+        "decision_time_minute": 75.0,
+        "command_id": 6,
+        "generated_minute": 75.0,
+        "planned_arrival_minute": 75.0,
+        "queued_dispatch": {
+          "boiler_steam_lbph": 3000.0,
+          "absorption_cooling_kW": 0.0,
+          "electric_chiller_cooling_kW": [
+            451.83695132219395,
+            0.0,
+            0.0
+          ]
+        },
+        "actual_arrival_events": [
+          {
+            "event_id": 32,
+            "kind": "command_arrived",
+            "time_minute": 75.0,
+            "command_id": 5,
+            "generated_minute": 60.0
+          },
+          {
+            "event_id": 36,
+            "kind": "command_arrived",
+            "time_minute": 75.0,
+            "command_id": 6,
+            "generated_minute": 75.0
+          }
+        ],
+        "gt_physical_status": [
+          "OFF",
+          "OFF",
+          "EXOGENOUS_UNAVAILABLE"
+        ],
+        "actual_gt_kW": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "steam_permission_receipts": [
+          {
+            "native_pointer": "#/decisions/5/command_generated/joint_dispatch/diagnostic/v31_steam_permission",
+            "schema": "hospital_ies.v31.current_boiler_permission_observation.v1",
+            "decision_time_minute": 75.0,
+            "generated_minute": 75.0,
+            "method": "M_steam_permission",
+            "enabled": true,
+            "boiler_total_rating_lbph": 3000.0,
+            "original_planner_permission_lbph": 638.1274264919052,
+            "common_permission_lbph": 638.1274264919052,
+            "healthy_capacity_lbph": 3000.0,
+            "new_permission_lbph": 3000.0,
+            "observable_availability": {
+              "availability_BOILER_1": 1.0,
+              "availability_BOILER_2": 1.0,
+              "availability_BOILER_3": 1.0
+            },
+            "feature_clocks": {
+              "availability_BOILER_1": {
+                "available_time_min": 75.0,
+                "valid_time_min": 75.0
+              },
+              "availability_BOILER_2": {
+                "available_time_min": 75.0,
+                "valid_time_min": 75.0
+              },
+              "availability_BOILER_3": {
+                "available_time_min": 75.0,
+                "valid_time_min": 75.0
+              }
+            },
+            "future_event_or_repair_information_used": false,
+            "conditional_permission_is_actual_supply": false
+          }
+        ]
+      }
+    ],
+    "actual_segments": [
+      {
+        "start": 45.0,
+        "end": 60.0,
+        "command_id": 4,
+        "arrived_boiler": 3000.0,
+        "actual_boiler": 0.0,
+        "GT": [
+          0.0,
+          0.0,
+          128.23270399999998
+        ],
+        "boiler_ready": true,
+        "boiler_restart_kW": 0.0
+      },
+      {
+        "start": 60.0,
+        "end": 75.0,
+        "command_id": 4,
+        "arrived_boiler": 3000.0,
+        "actual_boiler": 1457.7289649165423,
+        "GT": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "boiler_ready": true,
+        "boiler_restart_kW": 0.0
+      }
+    ]
+  }
+]

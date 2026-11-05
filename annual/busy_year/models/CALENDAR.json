@@ -1,0 +1,102 @@
+{
+  "schema": "hospital_ies.busy_tear.calendar.v1",
+  "status": "candidate",
+  "year": 2001,
+  "horizon_minutes": 525600.0,
+  "configuration": "H2",
+  "methods": [
+    "M_available",
+    "M_ready",
+    "C_ready"
+  ],
+  "clock": "source nonleap simulation clock; Jan01 00:00 = minute0; half-open intervals",
+  "demand": {
+    "zone": "ER_TRAUMA1_FLR_1",
+    "carrier": "c",
+    "amplitude": 0.25,
+    "start_minute": 280800.0,
+    "duration_minutes": 40320.0
+  },
+  "fault_intervals": [
+    {
+      "event_id": "E1",
+      "device": "GT_3",
+      "start_minute": 20760.0,
+      "end_minute": 20820.0,
+      "availability": 0.0
+    },
+    {
+      "event_id": "E2",
+      "device": "BOILER_1",
+      "start_minute": 65400.0,
+      "end_minute": 66840.0,
+      "availability": 0.0
+    },
+    {
+      "event_id": "E3",
+      "device": "EC_1",
+      "start_minute": 150600.0,
+      "end_minute": 150660.0,
+      "availability": 0.0
+    },
+    {
+      "event_id": "E4",
+      "device": "ABS",
+      "start_minute": 193560.0,
+      "end_minute": 196440.0,
+      "availability": 0.0
+    },
+    {
+      "event_id": "E5",
+      "device": "TOWER_1",
+      "start_minute": 291720.0,
+      "end_minute": 291780.0,
+      "availability": 0.0
+    },
+    {
+      "event_id": "E6a",
+      "device": "TOWER",
+      "start_minute": 311880.0,
+      "end_minute": 311910.0,
+      "availability": 0.01
+    },
+    {
+      "event_id": "E6b",
+      "device": "TOWER",
+      "start_minute": 311915.0,
+      "end_minute": 311960.0,
+      "availability": 0.01
+    },
+    {
+      "event_id": "E7",
+      "device": "GRID",
+      "start_minute": 458520.0,
+      "end_minute": 458580.0,
+      "availability": 0.0
+    },
+    {
+      "event_id": "E8",
+      "device": "EC_1_PRIMARY_PUMP",
+      "start_minute": 370920.0,
+      "end_minute": 370980.0,
+      "availability": 0.0
+    }
+  ],
+  "anchor_rule": {
+    "reference_method": "M_ready",
+    "reference_mode": "N",
+    "events": [
+      "E1",
+      "E2",
+      "E3",
+      "E8"
+    ],
+    "previous_minutes": 60.0,
+    "max_forward_days": 6,
+    "selection": "first daily same-clock candidate with positive actual preceding production",
+    "sealed_support_excluded": true,
+    "no_post_disturbance_selection": true
+  },
+  "reference_proof": null,
+  "plan_sha256": "992bf129cb403fef94fa9e25171ccdb93af5482d583db1ee67527b0457e87761"
+}

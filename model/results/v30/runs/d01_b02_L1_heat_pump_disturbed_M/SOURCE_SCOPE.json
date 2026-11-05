@@ -1,0 +1,87 @@
+{
+  "schema": "hospital_ies.v29.offline_source_scope.v1",
+  "evaluation_only": true,
+  "controller_input": false,
+  "time_support": {
+    "coordinate": "absolute standard-year minutes; start_hour is 1-based",
+    "interval": "[start,end)",
+    "observed_until_minute_is_scenario_elapsed": true,
+    "planned": {
+      "absolute_start_minute": 60900,
+      "absolute_end_minute": 61080.0,
+      "duration_minutes": 180.0,
+      "status": "planned"
+    },
+    "observed": {
+      "absolute_start_minute": 60900,
+      "absolute_end_minute": 60990.0,
+      "duration_minutes": 90.0,
+      "status": "prefix"
+    }
+  },
+  "source_quality": {
+    "source_mode": "delivery_proxy",
+    "full_target_demand_qualified": false,
+    "humidity_hydraulics_cleanliness_qualified": false,
+    "local_source_unmet_is_whole_hospital_outage": false,
+    "source_hours_deleted": false,
+    "empirical_cooling_scale_applied": false,
+    "screened_zone_count": 55,
+    "annual_native_unmet_zone_hours": 9.5,
+    "annual_zone_hour_record_count": 26,
+    "annual_unique_hour_count": 25,
+    "metadata_binding": {
+      "path": "inputs/model_review_v29/SOURCE_QUALITY_METADATA.json",
+      "sha256": "af3b7c276bb6ace2f48e50af80ef6259f221a3afb30a6989a1db0e6e980d53fd"
+    },
+    "planned": {
+      "overlap_hours": [],
+      "regions": [],
+      "zone_hour_records": [],
+      "support_intersections": [],
+      "support_overlap_hours": 0.0,
+      "source_native_unmet_zone_hours_in_intersecting_rows": 0.0,
+      "exact_unmet_within_window_zone_hours": 0.0,
+      "within_hour_unmet_is_prorated": false
+    },
+    "observed": {
+      "overlap_hours": [],
+      "regions": [],
+      "zone_hour_records": [],
+      "support_intersections": [],
+      "support_overlap_hours": 0.0,
+      "source_native_unmet_zone_hours_in_intersecting_rows": 0.0,
+      "exact_unmet_within_window_zone_hours": 0.0,
+      "within_hour_unmet_is_prorated": false
+    }
+  },
+  "energy_service_boundary": {
+    "central_IES_actual": "separate actual ledger",
+    "source_reference_is_actual_IES_supply": false,
+    "local_dynamic_service_assurance": false,
+    "upstream_preheat_central_assurance": false,
+    "thermal_coupling": null,
+    "reference_binding": {
+      "path": "inputs/model_review_v28/THERMAL_SERVICE_COMPONENTS_8760.csv",
+      "sha256": "27b608272ed268c16fc6fb86ce5fbcf66e4f4f177f3ed7feefacc15c823b11f4",
+      "boundary": "ordinary_wateruse_central_target_v28",
+      "role": "Normal source-year reference only; not actual local service during an IES fault."
+    },
+    "reference_integration": "normal source hourly mean kW * half-open overlap minutes / 60; not fault actual supply",
+    "planned_source_reference": {
+      "laundry_source_reference_kWh": 119.99478496289703,
+      "booster_electric_already_in_direct_kWh": 0.264479918973059,
+      "booster_upstream_preheat_useful_kWh": 0.1304976351379996
+    },
+    "observed_source_reference": {
+      "laundry_source_reference_kWh": 30.89216254131145,
+      "booster_electric_already_in_direct_kWh": 0.13165803936818138,
+      "booster_upstream_preheat_useful_kWh": 0.0326244087844999
+    },
+    "unknown_upstream_energy_kWh": null,
+    "unknown_upstream_cost": null,
+    "unknown_upstream_CO2_kg": null,
+    "additional_booster_electric_charge_kWh": 0.0,
+    "additional_charge_reason": "already_in_direct_reference_no_duplication"
+  }
+}

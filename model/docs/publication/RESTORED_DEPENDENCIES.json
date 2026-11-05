@@ -1,0 +1,23 @@
+[
+  {
+    "path": "outputs/v13_executed_service_20261017_run01/design/DEVELOPMENT_POLICY_SPECS.json",
+    "sha256": "c89c50716465e8b0b3ee34e134e2a9ae7dcbf99f359472e69e3fe40885a15e9d",
+    "bytes": 744,
+    "reason": "tools/engineering_model/runner.py:51 policy_specs; inherited by V15/V16/V18/V19 policies; default failures 94-96,209-212,272-273,314,323,326,328,329,334,394,398,399,414",
+    "source_commit": "575cb02b2ac3a1bbdce99a6f283891dc05b3d51a"
+  },
+  {
+    "path": "outputs/v11_autonomous_dispatch_20261016_run01/new_data/standby_manifest.json",
+    "sha256": "ca01d42fd1e2cefdf5e9ead956d4237910eedcf382177695682a04e53088e1a3",
+    "bytes": 4326180,
+    "reason": "tools/coordinated_dispatch/data_design.py:356 unconditional signed metadata read in inherited build_manifest; source/input schema/options only, no physical call",
+    "source_commit": "575cb02b2ac3a1bbdce99a6f283891dc05b3d51a"
+  },
+  {
+    "path": "outputs/v18_execution_recovery_20261018_run01/design/LONG_FINAL_R1_PROPOSAL.json",
+    "sha256": "4c5ef87c24c4e8000bf8b54c663801178de8516b61a78090381cc392b34e3e48",
+    "bytes": 55229,
+    "reason": "tools/model_closeout/campaign.py:35 proposal(key), called by default test_model_closeout_registration.py test_development_subset_keeps_evaluation_role_and_unfrozen_status; MAIN already retained",
+    "source_commit": "575cb02b2ac3a1bbdce99a6f283891dc05b3d51a"
+  }
+]

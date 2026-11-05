@@ -1,0 +1,30 @@
+{
+  "schema": "hospital_ies.cooling_dynamics.structural_logging_sentinel_fix.v1",
+  "utc": "2026-11-04T04:17:39.305866+00:00",
+  "trigger": "Second formal wave exited on /joint_dispatch/diagnostic/sf2_fuel/final_validation/rows/1/upper;logging serialization,not physical flow failure.",
+  "structural_rule": "Ancestor validation or any *_validation AND rows/worst_rows table AND terminal lower/upper/*residual;only signedInfinity tagged. NaN or actual-flow nonfinite remains rejected.",
+  "physical_state_log_change": "pending_commands and active_command now compact_solver;largeproof arrays omitted with count/leading_shape/reason;actions,timing,parameters,state preserved. Actual in-memory controller inputs are unchanged.",
+  "actual_red": {
+    "command": "python -m pytest -q --noconftest tests/test_cooling_campaign_20261104.py::test_unbounded_constraint_table_uses_structural_validation_scope",
+    "exit_code": 1,
+    "failed": 1
+  },
+  "actual_green": {
+    "command": "python -m pytest -q --noconftest tests/test_cooling_campaign_20261104.py",
+    "exit_code": 0,
+    "passed": 5,
+    "seconds": 0.06
+  },
+  "model_resets_or_runs": 0,
+  "prior_bindings_or_attempts_modified": false,
+  "files": [
+    {
+      "path": "tools\\cooling_dynamics_20261104\\run_worker.py",
+      "sha256": "b9c8e95771bbe7db261b92246c785afaccda03c99be625466db560ec46fdd138"
+    },
+    {
+      "path": "tests\\test_cooling_campaign_20261104.py",
+      "sha256": "313699b6b4e86daad2d4cc2afcd8c21f5b4c482a30654bc65d8d3f0496723cf5"
+    }
+  ]
+}

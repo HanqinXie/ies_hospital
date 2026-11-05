@@ -1,0 +1,92 @@
+{
+  "archive": "E:\\hospital_ies_v32_20261027\\Hospital_IES_V32_External_Reference_20261027.zip",
+  "archive_sha256_before": "f884e2b8495f424303bfd18f49a7c2836c77cfcc4e79e7a7fdf129425b123f01",
+  "new_hospital_runs": 0,
+  "started_utc": "2026-10-27T15:25:49.480420+00:00",
+  "command": [
+    "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\python.exe",
+    "-B",
+    "E:\\v32_packet_verify01\\review_packet.py",
+    "--output",
+    "E:\\v32_readonly_verify01"
+  ],
+  "exit_code": 0,
+  "elapsed_seconds": 100.53200000012293,
+  "archive_sha256_after": "f884e2b8495f424303bfd18f49a7c2836c77cfcc4e79e7a7fdf129425b123f01",
+  "finished_utc": "2026-10-27T15:27:30.564817+00:00",
+  "review_receipt": {
+    "status": "passed",
+    "started_utc": "2026-10-27T15:25:50.053621+00:00",
+    "new_physical_simulations": 0,
+    "new_solver_calls": 0,
+    "commands": [
+      {
+        "command": [
+          "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\python.exe",
+          "-B",
+          "E:\\v32_packet_verify01\\transport_tools\\restore_all.py",
+          "--solid",
+          "E:\\v32_packet_verify01\\EVIDENCE_BLOBS_V32.tar.xz",
+          "--map",
+          "E:\\v32_packet_verify01\\TRANSPORT_MAP_V32.json",
+          "--destination",
+          "E:\\v32_packet_verify01",
+          "--receipt",
+          "E:\\v32_readonly_verify01\\RESTORE_RECEIPT.json"
+        ],
+        "cwd": "E:\\v32_packet_verify01",
+        "started_utc": "2026-10-27T15:25:51.520987+00:00",
+        "selected_environment": {
+          "PYTHONPATH": "E:\\v32_packet_verify01\\project;E:\\v32_packet_verify01\\project\\src",
+          "SCI_SOURCE_ROOT": null,
+          "TEMP": "E:\\v32_readonly_verify01\\temp",
+          "TMP": "E:\\v32_readonly_verify01\\temp",
+          "PYTHONDONTWRITEBYTECODE": "1"
+        },
+        "exit_code": 0,
+        "finished_utc": "2026-10-27T15:27:05.214231+00:00"
+      },
+      {
+        "command": [
+          "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\python.exe",
+          "-B",
+          "E:\\v32_packet_verify01\\data\\evaluation\\audit_v32.py",
+          "--root",
+          "E:\\v32_packet_verify01\\data",
+          "--manifest",
+          "PORTABLE_REGISTRATION.json",
+          "--support",
+          "E:\\v32_packet_verify01\\data\\audit_support",
+          "--project",
+          "E:\\v32_packet_verify01\\project",
+          "--output",
+          "E:\\v32_readonly_verify01\\audit"
+        ],
+        "cwd": "E:\\v32_packet_verify01\\project",
+        "started_utc": "2026-10-27T15:27:05.223753+00:00",
+        "selected_environment": {
+          "PYTHONPATH": "E:\\v32_packet_verify01\\project;E:\\v32_packet_verify01\\project\\src",
+          "SCI_SOURCE_ROOT": null,
+          "TEMP": "E:\\v32_readonly_verify01\\temp",
+          "TMP": "E:\\v32_readonly_verify01\\temp",
+          "PYTHONDONTWRITEBYTECODE": "1"
+        },
+        "exit_code": 0,
+        "finished_utc": "2026-10-27T15:27:29.967939+00:00"
+      }
+    ],
+    "packet": "E:\\v32_packet_verify01",
+    "source_files_verified": 873,
+    "old_source_files_unchanged": 864,
+    "inputs_verified": 36,
+    "exact_native_files_verified": 15430,
+    "source_producer": "575cb02b2ac3a1bbdce99a6f283891dc05b3d51a",
+    "scientific_records": 6,
+    "historical_reused": 4,
+    "new_formal_runs": 2,
+    "native_restore_receipt_sha256": "5d82bbe35cd38566a35a33b520f1a0fb54ba7668e81eca499f2ff1f4bdd4d35b",
+    "readonly_audit_sha256": "85b5a2449bc1c4ffe4bdb37cb29f041750f33a68ac8ad1cc8b355a38c14e20fa",
+    "finished_utc": "2026-10-27T15:27:30.527460+00:00"
+  },
+  "status": "passed"
+}

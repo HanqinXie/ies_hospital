@@ -1,0 +1,133 @@
+{
+  "schema": "hospital_ies.cooling_dynamics.runner_preparation_receipt.v1",
+  "created_utc": "2026-11-04T03:59:52.228172+00:00",
+  "source_root": "D:\\hospital_ies_noopt_20261104",
+  "new_result_root": "E:\\hospital_ies_cooling_dynamics_20261104_run01",
+  "formal_experiments_started_by_this_agent": 0,
+  "old_files_deleted_or_moved": 0,
+  "old_result_files_archived": 0,
+  "actual_commands": [
+    {
+      "command": "python -m pytest -q tests/test_cooling_campaign_20261104.py",
+      "exit_code": 1,
+      "outcome": "Inherited historical route hook rejects this new worktree before collection; historical hook untouched."
+    },
+    {
+      "command": "python -m pytest -q --noconftest tests/test_cooling_campaign_20261104.py",
+      "exit_code": 1,
+      "outcome": "Expected initial RED:2 failed because new extractor absent."
+    },
+    {
+      "command": "python -m pytest -q --noconftest tests/test_cooling_campaign_20261104.py",
+      "exit_code": 1,
+      "outcome": "1 passed1 failed; newly authored assertion incorrectly required exact binary floating-point equality, corrected to pytest.approx without changing scientific closure thresholds."
+    },
+    {
+      "command": "python -m pytest -q --noconftest tests/test_cooling_campaign_20261104.py",
+      "exit_code": 0,
+      "outcome": "2 passed after extractor implementation."
+    },
+    {
+      "command": "python -m pytest -q --noconftest tests/test_cooling_campaign_20261104.py",
+      "exit_code": 0,
+      "outcome": "3 passed after explicit sentinel coverage; physical NaN remains rejected."
+    },
+    {
+      "command": "python -B -m tools.cooling_dynamics_20261104.run_campaign prepare --root E:\\hospital_ies_cooling_dynamics_20261104_run01",
+      "exit_code": 1,
+      "outcome": "Refused existing component_checks root; no prior evidence changed."
+    },
+    {
+      "command": "python -B -m tools.cooling_dynamics_20261104.run_campaign prepare --root E:\\hospital_ies_cooling_dynamics_20261104_run01",
+      "exit_code": 0,
+      "outcome": "Prepared19 canonical cases and27 source-input/provenance/recipe copies;8792867 copied bytes;zero formal trajectory starts."
+    },
+    {
+      "command": "Read-only MinuteSource/new CASE validation before adding ROOT/src to sys.path",
+      "exit_code": 1,
+      "outcome": "ModuleNotFoundError hospital_ies; corrected only validation invocation sys.path, not source model."
+    },
+    {
+      "command": "Read-only MinuteSource/new CASE validation with explicit ROOT/src on sys.path",
+      "exit_code": 0,
+      "outcome": "New minute source loads and19 canonical cases validate;T08 exactT05 alias;no simulator construction."
+    },
+    {
+      "command": "python -m py_compile tools/cooling_dynamics_20261104/run_worker.py tools/cooling_dynamics_20261104/run_campaign.py tools/cooling_dynamics_20261104/extract_results.py",
+      "exit_code": 0,
+      "outcome": "All3 new runner modules compile."
+    }
+  ],
+  "files": [
+    {
+      "path": "tools/cooling_dynamics_20261104/run_worker.py",
+      "sha256": "305fa1e3ffb9e5c3f5d63cb20002564e341cb941f4cafa9443f9be864bb21ca3",
+      "bytes": 18042
+    },
+    {
+      "path": "tools/cooling_dynamics_20261104/run_campaign.py",
+      "sha256": "9722cfae108d23235be57663fe022e22a0af03bb59578c475e773cc1bc8b3cfc",
+      "bytes": 15976
+    },
+    {
+      "path": "tools/cooling_dynamics_20261104/extract_results.py",
+      "sha256": "f141c94d843bd6cd9506dc75b0aa83a1cfa1aeea0f60bc82678274fdd6a3b51e",
+      "bytes": 11605
+    },
+    {
+      "path": "tools/cooling_dynamics_20261104/audit_campaign.py",
+      "sha256": "1dd2c44800ce83c030b9ffca2cfccad2696f8219d28900627b3e70179fe3afac",
+      "bytes": 18423
+    },
+    {
+      "path": "tests/test_cooling_campaign_20261104.py",
+      "sha256": "c52fe30c2163088d0c51f669ff70b707859956b58dfcfe6a27d1f42dc87bf966",
+      "bytes": 2414
+    }
+  ],
+  "not_executed": [
+    "Formal19 trajectories",
+    "Formal data extraction",
+    "Formal figure rendering",
+    "Old directory deletion",
+    "SOURCE_BINDING freeze while physics integration still changing"
+  ],
+  "known_limits": [
+    "Small engineering ledger audit does not reconstruct native primal certificates.",
+    "Legacy P3 -Infinity means unsupported zone group;native unbounded constraint metadata uses explicit tagged sentinels.",
+    "After requested deletion of EnergyPlus SQL/ESO,reextracting original raw is unavailable;runtime replay uses preserved exact minute inputs.",
+    "Source must be frozen after all src/tools/scripts/tests/configs changes;workers reject in-flight source drift."
+  ],
+  "final_verification_utc": "2026-11-04T04:02:17.657422+00:00",
+  "final_focused_tests": {
+    "command": "python -m pytest -q --noconftest tests/test_cooling_campaign_20261104.py",
+    "exit_code": 0,
+    "passed": 3,
+    "seconds": 0.06
+  },
+  "final_compile_exit_code": 0,
+  "performance_changes": [
+    "Omitted native proof/primal arrays record count/leading_shape/reason only;no discarded-array serialization or hash. Actual evidence files remain hashed.",
+    "Exact audited read-only SciPolicy/StudySteamPolicy do not redundantly deep-copy the outer full history;all history and original internal legal_history copies retained. Unknown controller types retain the copy."
+  ],
+  "runner_ready_utc": "2026-11-04T04:10:47.766147+00:00",
+  "new_independent_audit": "tools/cooling_dynamics_20261104/audit_campaign.py",
+  "independent_audit_command": "python -B -m tools.cooling_dynamics_20261104.audit_campaign --root E:\\hospital_ies_cooling_dynamics_20261104_run01",
+  "formal_pipeline_order": [
+    "freeze after source convergence",
+    "root-authorized run",
+    "independent audit_campaign",
+    "extract_results",
+    "root render/publish/cleanup"
+  ],
+  "failure_policy": "A failed owned producer writes campaign STOP.request;other owned workers preserve prefix and stop at boundaries. No unrelated user process is terminated.",
+  "actual_component_audit": {
+    "receipt": "docs/cooling_dynamics_20261104/RUN_AND_CLEANUP_INVENTORY_AUDIT_COMPONENT.json",
+    "existing_raw_streams": 3,
+    "actual_rows_checked": 50,
+    "new_resets": 0,
+    "new_trajectory_steps": 0,
+    "status": "passed",
+    "scope": "Existing native prefix/synthetic anchored rows only;not19 formal trajectory acceptance"
+  }
+}

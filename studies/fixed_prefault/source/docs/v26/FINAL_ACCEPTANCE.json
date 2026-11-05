@@ -1,0 +1,139 @@
+{
+  "schema": "hospital_ies.v26.final_acceptance.v1",
+  "status": "bounded_research_delivered_with_failed_physical_qualification",
+  "code_implementation_and_recorded_experiments_complete": true,
+  "physical_model_fully_qualified": false,
+  "scientific_source": "bae2c575d16423ec61e762fef910bbea437b398dd0a928bc8d4cafd753100eb6",
+  "code_commit": "bb4b8e268d0be7187d67432c79089c812b1fb82b",
+  "physical_model": "M25_model_correction",
+  "study": "hospital_ies.study.v26.v1",
+  "default_test": {
+    "command": "python -B -m pytest -q",
+    "actual_final_default_runs": 1,
+    "passed": 1190,
+    "skipped": 1,
+    "failed": 0,
+    "xfail": 0,
+    "seconds": 433.34,
+    "exit_code": 0,
+    "skip": "Optional original annual SQL reconstruction: SCI_SOURCE_ROOT not set; published-allocation replay test passed",
+    "raw_log": "verification/steps/full_pytest_final01/stdout.log"
+  },
+  "actual_computation": {
+    "EnergyPlus_observational": 9,
+    "EnergyPlus_additional_diagnostic": 3,
+    "diagnostic_hypotheses": 2,
+    "diagnostic_fourth_run_used": false,
+    "optimizer_calls": 16,
+    "max_observed_nfev": 134,
+    "optimizer_max_nfev_cap": 200,
+    "fit_batch_seconds": 1583.8823931999505,
+    "fit_batch_exit_code": 0,
+    "main_public_IES_cases": 5,
+    "independent_portable_public_IES_smoke": 1
+  },
+  "passed": [
+    "original28 input bytes and historical V25 archive preserved",
+    "original9 observer sizing/17fields/clocks/PORT equivalence",
+    "6 half-loop source equations and reconstructed endpoint continuity",
+    "H1 original trajectory preserved and report-stage hypothesis discriminated",
+    "C matched active GT2 N/F/D/FD and original4 native accounting audits",
+    "full final default code tests",
+    "clean portable public IES entry",
+    "clean portable measured cold boundary replay9cases81phases",
+    "clean portable temperature64metrics16normal32traces24native16fits replay"
+  ],
+  "failed": [
+    "normal and all-off full cold three-loop closure at frozen thresholds",
+    "connected mixer temperature continuity and zero-main-pump hydraulic-driving proof",
+    "minPlant8 numerical diagnostic as an adoptable repair",
+    "raw H-C versus System sensible10W crosscheck in one constrained case",
+    "baseline and surface original8-summer absolute and paired temperature gates"
+  ],
+  "gate_consequences": {
+    "full_cold_interface_qualified": false,
+    "low_order_temperature_as_standalone_acceptance": "retired_after_finite_calibration",
+    "thermal_coupling_default": null,
+    "new_independent_summer_dates": "NOT_EXECUTED: prerequisite original8 temperature cases failed",
+    "own_clock_causal_validation": "NOT_EXECUTED: prerequisite original8 temperature cases failed",
+    "experimental_end_to_end_coupling": "NOT_EXECUTED: A and B admission failed"
+  },
+  "combined": {
+    "critical_engineering_interruption_minutes": {
+      "N": 0,
+      "F": 0,
+      "D": 0,
+      "FD": 0
+    },
+    "recovery_minutes": {
+      "N": null,
+      "F": null,
+      "D": null,
+      "FD": null
+    },
+    "fault_ends90_but_GT2_not_restarted_by180": true,
+    "arithmetic_audits": 4
+  },
+  "cold_replay": {
+    "status": "native signed boundary replay matches retained evidence",
+    "cases": 9,
+    "phases": 81,
+    "new_energyplus_runs": 0,
+    "new_optimizer_fits": 0,
+    "new_ies_runs": 0,
+    "full_cold_interface_qualified": false,
+    "scope": "Measured six-half-loop storage and all coils/pumps/evaporators; not a requalification or a re-run of reconstructed endpoints."
+  },
+  "temperature_replay": {
+    "read_only_replay_passed": true,
+    "recomputed_metric_rows": 64,
+    "verified_trace_rows": 23040,
+    "trace_series": 32,
+    "absolute_normal_rows": 16,
+    "maximum_metric_numeric_difference": 7.105427357601002e-15,
+    "actual_historical_fit_attempts": {
+      "terminal_attempts": 16,
+      "completed_attempts": 16,
+      "failed_attempts": 0,
+      "actual_historical_optimizer_fits": 16,
+      "new_optimizer_calls": 0
+    },
+    "fit_registration_sha256": "f9a2a60f59dacbf6a78021b9cc9949bc3754a59291e1f670d0b148d1f507ee9d",
+    "fit_result_sha256": "0ff2719d199311abbcd6864c3906e5990b65373bc727cf44528c3d39a47aa18d",
+    "source_metric_functions": {
+      "paired_metrics": "project/tools/model_correctness_v23/thermal_model.py",
+      "calibration_gate": "project/tools/engineering_completion_v24/thermal_diagnostics.py"
+    },
+    "original_absolute_paths_opened": false,
+    "optimizer_calls_in_this_replay": 0,
+    "thermal_model_forward_runs": 0,
+    "EnergyPlus_runs": 0,
+    "native_reference_series": 24,
+    "source_data_versions": "Original V25 native mean references; V26 fitted absolute traces retain their frozen source identity.",
+    "qualification_is_not_implied_by_replay": true,
+    "thermal_coupling_default": null
+  },
+  "preservation": {
+    "utc": "2026-10-26T09:30:16.346842+00:00",
+    "science_files_verified": 806,
+    "original_inputs_verified": 28,
+    "science_sha256": "bae2c575d16423ec61e762fef910bbea437b398dd0a928bc8d4cafd753100eb6",
+    "inputs_sha256": "659ecc488bda87c9338afde283cbb74135ca2ebdf2769ce463d0e61f0c6288d8",
+    "V25_archive_bytes": 97171881,
+    "V25_archive_sha256": "57b9b49ff004752ffabf4c14d17446ce27d027063242771c7928bd30f22038a1",
+    "all_frozen_science_bytes_unchanged": true
+  },
+  "scope_limits": [
+    "C is a matched previously observed background, not an unseen reliability probability sample",
+    "EnergyPlus original references and numerical8/8 diagnostics are separate cohorts",
+    "model constant-energy identities do not certify room-temperature accuracy",
+    "unresolved return/current-zone reference difference and hidden air history remain explicit",
+    "published native intervals complete; deep solver caches partly local with SHA omissions"
+  ],
+  "archive": {
+    "single_archive_name": "HOSPITAL_IES_V26_REVIEW_under100MB.zip",
+    "strict_decimal_limit_bytes": 100000000,
+    "self_sha_excluded": true,
+    "verification": "Final CRC/member-SHA/size/ZIP-SHA performed after one packaging pass; accompanying delivery reply supplies final ZIP identity"
+  }
+}

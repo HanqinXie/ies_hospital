@@ -1,0 +1,197 @@
+{
+  "schema": "hospital_ies.v32.frozen_independent_inputs.v1",
+  "status": "passed",
+  "created_utc": "2026-10-27T14:52:31.133485+00:00",
+  "owned_source_files_frozen": {
+    "tools/model_reference_v32/inputs.py": {
+      "path": "D:\\hospital_ies_v22_20261025\\tools\\model_reference_v32\\inputs.py",
+      "sha256": "7c3af3615c4133d8738eb8baf683500451c621431f7eefce6c6c29182eb35a44"
+    },
+    "tests/test_v32_inputs.py": {
+      "path": "D:\\hospital_ies_v22_20261025\\tests\\test_v32_inputs.py",
+      "sha256": "da6e03ff09c95e98d29f68051bde0b8af7619ba8a4c5554f42dcd6c0d9c4ef08"
+    }
+  },
+  "final_targeted_tests": {
+    "passed": 10,
+    "actual_exit_code": 0,
+    "log": "GREEN02.log",
+    "command": "GREEN02_COMMAND.json"
+  },
+  "retained_RED": [
+    "TDD_RED01.log",
+    "CERT_RED01.log",
+    "TIME_RED01.log"
+  ],
+  "formal_instances": {
+    "normal": {
+      "spec": "b01_normal.spec.json",
+      "spec_sha256": "6b027fa16e085e97e2bd28ec11cccced6641e82efcfdb99cb76b13f1bf10477e",
+      "ledger": "b01_normal.demand_ledger.json",
+      "ledger_sha256": "bbc1609344fac7f02173a230c262ffd7b548e02041baccaaf0ef0381c80be6d9",
+      "periods": 12,
+      "total_demand_kWh": {
+        "e": 1383.5059150240131,
+        "h": 510.2469939558224,
+        "c": 492.24366466160814
+      },
+      "planner_validation": 12,
+      "initialization_solver_scope": {
+        "recorded_core_solver_calls": 0,
+        "total_initialization_solver_calls": null,
+        "scope": "Common reset may solve before creating core logs; total not separately instrumented. This pure input builder performs no initialization or solve."
+      }
+    },
+    "grid": {
+      "spec": "b01_grid.spec.json",
+      "spec_sha256": "b2d9cb40409a003b2b247f13d3063eeda51aba0b07b187079c41392a056fec87",
+      "ledger": "b01_grid.demand_ledger.json",
+      "ledger_sha256": "bbc1609344fac7f02173a230c262ffd7b548e02041baccaaf0ef0381c80be6d9",
+      "periods": 12,
+      "total_demand_kWh": {
+        "e": 1383.5059150240131,
+        "h": 510.2469939558224,
+        "c": 492.24366466160814
+      },
+      "planner_validation": 12,
+      "initialization_solver_scope": {
+        "recorded_core_solver_calls": 0,
+        "total_initialization_solver_calls": null,
+        "scope": "Common reset may solve before creating core logs; total not separately instrumented. This pure input builder performs no initialization or solve."
+      }
+    }
+  },
+  "actual_build_exit_code": 0,
+  "raw_input_config_copies": 13,
+  "audit_read_events": 823,
+  "forbidden_operating_result_reads": 0,
+  "own_hospital_episodes": 0,
+  "own_planner_solver_calls": 0,
+  "common_initialization_total_solver_calls": null,
+  "common_initialization_recorded_core_solver_calls": 0,
+  "original_P01_sources_864_inputs_36_unchanged": true,
+  "historical_comparison_not_used_for_generation": true,
+  "files_excluding_gate": [
+    {
+      "path": "build_isolated.py",
+      "bytes": 6275,
+      "sha256": "0663bea0a9864620d4573d5fdf737c7384095b6c170be19c0b3bd42f7d9fda41"
+    },
+    {
+      "path": "CERT_RED01.log",
+      "bytes": 2514,
+      "sha256": "950789d44c61bfbf7d376c0b5e569e80819a63dcadda9f2af38b82d0240bfe6a"
+    },
+    {
+      "path": "CERT_RED01_COMMAND.json",
+      "bytes": 489,
+      "sha256": "5d2df856703a656bc13417cf2627e62e97fd10933215dc442e01b0fe176af8fd"
+    },
+    {
+      "path": "DESIGN_PLAN.md",
+      "bytes": 3310,
+      "sha256": "e206980a2166cc0f047f87eb9db12d6b15fc6fd8faca30251ee317c1106966fe"
+    },
+    {
+      "path": "FORMAL_BUILD01.log",
+      "bytes": 1453,
+      "sha256": "fdbeaeaf8f9b3d6ef2339fac6facb9ff089838272f16a9d01212ec6f3c72c1a7"
+    },
+    {
+      "path": "FORMAL_BUILD01_COMMAND.json",
+      "bytes": 432,
+      "sha256": "89a37884c8ce6a7bf8f66bf3cdcb2a0cc632c0af887c4d5960a1bcf5475acc52"
+    },
+    {
+      "path": "formal_isolated_01/b01_grid.demand_ledger.json",
+      "bytes": 95471,
+      "sha256": "bbc1609344fac7f02173a230c262ffd7b548e02041baccaaf0ef0381c80be6d9"
+    },
+    {
+      "path": "formal_isolated_01/b01_grid.spec.json",
+      "bytes": 456279,
+      "sha256": "b2d9cb40409a003b2b247f13d3063eeda51aba0b07b187079c41392a056fec87"
+    },
+    {
+      "path": "formal_isolated_01/b01_normal.demand_ledger.json",
+      "bytes": 95471,
+      "sha256": "bbc1609344fac7f02173a230c262ffd7b548e02041baccaaf0ef0381c80be6d9"
+    },
+    {
+      "path": "formal_isolated_01/b01_normal.spec.json",
+      "bytes": 456175,
+      "sha256": "6b027fa16e085e97e2bd28ec11cccced6641e82efcfdb99cb76b13f1bf10477e"
+    },
+    {
+      "path": "formal_isolated_01/BUILD_RECEIPT.json",
+      "bytes": 151144,
+      "sha256": "582cd4096e06aaaf3001f9bdcce6ce62e6dd3eafa368e872cd84b2f9985ccc88"
+    },
+    {
+      "path": "GREEN01.log",
+      "bytes": 100,
+      "sha256": "d666bdfa76b7f32db09be60a49a560230a7268c97bc0f73aa06b73db0a0f6716"
+    },
+    {
+      "path": "GREEN01_COMMAND.json",
+      "bytes": 415,
+      "sha256": "b0e762f691942c61b9f09bdd7b2836d47d068a3b99b706d382725c0622146e86"
+    },
+    {
+      "path": "GREEN02.log",
+      "bytes": 101,
+      "sha256": "c026f26cef7330e106e945d4f9aa60351117325e2d8d13c636505b2244204677"
+    },
+    {
+      "path": "GREEN02_COMMAND.json",
+      "bytes": 415,
+      "sha256": "c3e03fafed4d3ab30ee245a57ef4ed2e998d000958c485e8c72015ff20222250"
+    },
+    {
+      "path": "INDEPENDENT_SOURCE_REVIEW.json",
+      "bytes": 530,
+      "sha256": "d2575ab5dc9b95439a8aef6d1bfaeedce505f38010228349358bbb8403a9fbf0"
+    },
+    {
+      "path": "README_ZH.md",
+      "bytes": 4293,
+      "sha256": "731c3bb749eaf132e95d9e5c14c7d5daa070cbf166defc18f1eb9c0811468826"
+    },
+    {
+      "path": "SOURCE_FIELD_MAP.json",
+      "bytes": 4199,
+      "sha256": "0b52feab40a2eaf972a25ae71a911b0c0457504568739f7f9d503080950b114b"
+    },
+    {
+      "path": "TDD_RED01.log",
+      "bytes": 8455,
+      "sha256": "7dd9ea82936a84c3e202beb9780a7e013ab5be4d44bfb8679e9c5f94621f1805"
+    },
+    {
+      "path": "TDD_RED01_COMMAND.json",
+      "bytes": 413,
+      "sha256": "58c2b54f229b8c2c48048011b664b2ad99cdd476318828a61a8a9b7a33ccec46"
+    },
+    {
+      "path": "TIME_RED01.log",
+      "bytes": 726,
+      "sha256": "4e83b49db75e1c2cf340dab759567a9331e4616df99c71d666b4a8dbd33cdc93"
+    },
+    {
+      "path": "TIME_RED01_COMMAND.json",
+      "bytes": 458,
+      "sha256": "a899099003e045effbd21af21338d539930dbe667b78fc3bfd463e512ac8f31c"
+    },
+    {
+      "path": "UNCHANGED_BASELINE.json",
+      "bytes": 262,
+      "sha256": "9f511cff03b5bb80d847b273cf39b558ec85739b4fe521b95a18cf98e84cff49"
+    }
+  ],
+  "packaging_duplicate_or_regenerable_omissions": [
+    "test_tmp*/",
+    "pytest_cache/",
+    "formal_isolated_01/isolated_raw/"
+  ],
+  "code_further_edits_after_this_gate": false
+}

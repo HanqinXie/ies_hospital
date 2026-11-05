@@ -1,0 +1,370 @@
+[
+  {
+    "id": "v32_b01_normal_external",
+    "mode": "normal",
+    "service": {
+      "P0": {
+        "e": {
+          "plan_requested_kWh": 181.00201479188632,
+          "plan_served_kWh": 181.00201479188632,
+          "plan_ENS_kWh": 0.0,
+          "actual_requested_kWh": 181.00201479188584,
+          "actual_served_kWh": 181.00187644129502,
+          "actual_ENS_kWh": 0.00013835059162659028,
+          "actual_minus_plan_ENS_kWh": 0.00013835059162659028
+        },
+        "h": {
+          "plan_requested_kWh": 191.57636661139247,
+          "plan_served_kWh": 191.57636661139247,
+          "plan_ENS_kWh": 0.0,
+          "actual_requested_kWh": 191.57636661139284,
+          "actual_served_kWh": 191.57636661139284,
+          "actual_ENS_kWh": 0.0,
+          "actual_minus_plan_ENS_kWh": 0.0
+        },
+        "c": {
+          "plan_requested_kWh": 111.04424463963173,
+          "plan_served_kWh": 111.04424463963173,
+          "plan_ENS_kWh": 0.0,
+          "actual_requested_kWh": 111.04424463963149,
+          "actual_served_kWh": 111.04424463963149,
+          "actual_ENS_kWh": 0.0,
+          "actual_minus_plan_ENS_kWh": 0.0
+        }
+      },
+      "P1": {
+        "e": {
+          "plan_requested_kWh": 114.62956394119658,
+          "plan_served_kWh": 114.62956394119658,
+          "plan_ENS_kWh": 0.0,
+          "actual_requested_kWh": 114.62956394119699,
+          "actual_served_kWh": 114.6294255906054,
+          "actual_ENS_kWh": 0.00013835059150579823,
+          "actual_minus_plan_ENS_kWh": 0.00013835059150579823
+        },
+        "h": {
+          "plan_requested_kWh": 113.6673282773518,
+          "plan_served_kWh": 113.6673282773518,
+          "plan_ENS_kWh": 0.0,
+          "actual_requested_kWh": 113.66732827735161,
+          "actual_served_kWh": 113.66732827735161,
+          "actual_ENS_kWh": 0.0,
+          "actual_minus_plan_ENS_kWh": 0.0
+        },
+        "c": {
+          "plan_requested_kWh": 75.70342864260799,
+          "plan_served_kWh": 75.70342864260799,
+          "plan_ENS_kWh": 0.0,
+          "actual_requested_kWh": 75.70342864260799,
+          "actual_served_kWh": 75.70342864260799,
+          "actual_ENS_kWh": 0.0,
+          "actual_minus_plan_ENS_kWh": 0.0
+        }
+      },
+      "P2": {
+        "e": {
+          "plan_requested_kWh": 103.10617838220651,
+          "plan_served_kWh": 103.10617838220651,
+          "plan_ENS_kWh": 0.0,
+          "actual_requested_kWh": 103.10617838220676,
+          "actual_served_kWh": 103.10604003161517,
+          "actual_ENS_kWh": 0.0001383505915022455,
+          "actual_minus_plan_ENS_kWh": 0.0001383505915022455
+        },
+        "h": {
+          "plan_requested_kWh": 0.0,
+          "plan_served_kWh": 0.0,
+          "plan_ENS_kWh": 0.0,
+          "actual_requested_kWh": 0.0,
+          "actual_served_kWh": 0.0,
+          "actual_ENS_kWh": 0.0,
+          "actual_minus_plan_ENS_kWh": 0.0
+        },
+        "c": {
+          "plan_requested_kWh": 86.14280457251216,
+          "plan_served_kWh": 86.14280457251216,
+          "plan_ENS_kWh": 0.0,
+          "actual_requested_kWh": 86.14280457251226,
+          "actual_served_kWh": 86.14280457251226,
+          "actual_ENS_kWh": 0.0,
+          "actual_minus_plan_ENS_kWh": 0.0
+        }
+      },
+      "P3": {
+        "e": {
+          "plan_requested_kWh": 984.7681579087239,
+          "plan_served_kWh": 984.7681579087239,
+          "plan_ENS_kWh": 0.0,
+          "actual_requested_kWh": 984.7681579087256,
+          "actual_served_kWh": 967.9245863710308,
+          "actual_ENS_kWh": 16.843571537691822,
+          "actual_minus_plan_ENS_kWh": 16.843571537691822
+        },
+        "h": {
+          "plan_requested_kWh": 205.00329906707825,
+          "plan_served_kWh": 205.00329906707825,
+          "plan_ENS_kWh": 0.0,
+          "actual_requested_kWh": 205.00329906707796,
+          "actual_served_kWh": 205.00329906707796,
+          "actual_ENS_kWh": 0.0,
+          "actual_minus_plan_ENS_kWh": 0.0
+        },
+        "c": {
+          "plan_requested_kWh": 219.35318680685617,
+          "plan_served_kWh": 219.35318680685617,
+          "plan_ENS_kWh": 0.0,
+          "actual_requested_kWh": 219.35318680685643,
+          "actual_served_kWh": 219.35318680685643,
+          "actual_ENS_kWh": 0.0,
+          "actual_minus_plan_ENS_kWh": 0.0
+        }
+      }
+    },
+    "energy": {
+      "grid_kWh_e": {
+        "plan": 1045.7005543251294,
+        "actual": 1016.1359332727991,
+        "actual_minus_plan": -29.564621052330267
+      },
+      "gas_MMBtu": {
+        "plan": 6.300274587740001,
+        "actual": 6.304026634834501,
+        "actual_minus_plan": 0.003752047094500277
+      },
+      "DG_shaft_kWh": {
+        "plan": 0.0,
+        "actual": 0.0,
+        "actual_minus_plan": 0.0
+      },
+      "DG_electric_kWh": {
+        "plan": 0.0,
+        "actual": 0.0,
+        "actual_minus_plan": 0.0
+      }
+    },
+    "stock": {
+      "ups": {
+        "carrier": "e",
+        "plan_initial_stock_kWh": 40.0,
+        "plan_terminal_stock_kWh": 40.0,
+        "actual_initial_stock_kWh": 40.0,
+        "actual_terminal_stock_kWh": 26.337212095684556,
+        "actual_minus_plan_terminal_kWh": -13.662787904315444,
+        "planned_charge_input_kWh": 0.0,
+        "planned_useful_discharge_kWh": 0.0,
+        "actual_charged_input_kWh": 0.01325589958416119,
+        "actual_discharged_kWh": 12.99161195847429
+      },
+      "cold_store": {
+        "carrier": "c",
+        "plan_initial_stock_kWh": 0.0,
+        "plan_terminal_stock_kWh": 0.0,
+        "actual_initial_stock_kWh": 0.0,
+        "actual_terminal_stock_kWh": 0.0,
+        "actual_minus_plan_terminal_kWh": 0.0,
+        "planned_charge_input_kWh": 0.0,
+        "planned_useful_discharge_kWh": 0.0,
+        "actual_charged_input_kWh": 0.0,
+        "actual_discharged_kWh": 0.0
+      }
+    },
+    "fee": {
+      "plan_within_window_USD2001": 87.54675124864066,
+      "actual_initial_preparation_USD2001": 2.297263157894737,
+      "actual_operation_USD2001": 85.95186543196294,
+      "actual_total_USD2001": 88.24912858985768,
+      "actual_operation_minus_plan_USD2001": -1.5948858166777171,
+      "difference_is_solver_error": false,
+      "plan_initial_preparation_fee_included": false,
+      "components": "Plan surrogate versus actual queue/startup/rotor/local-allocation accounting; initial stock preparation separated once"
+    },
+    "full_continuous_plan_replayed": false,
+    "planned_storage_ports_executed": false,
+    "planned_unmet_directly_executed": false,
+    "plan_variables_are_not_actual_service_or_stock": true
+  },
+  {
+    "id": "v32_b01_grid_external",
+    "mode": "disturbed",
+    "service": {
+      "P0": {
+        "e": {
+          "plan_requested_kWh": 181.00201479188632,
+          "plan_served_kWh": 181.00201479188632,
+          "plan_ENS_kWh": 0.0,
+          "actual_requested_kWh": 181.00201479188584,
+          "actual_served_kWh": 181.00189536158754,
+          "actual_ENS_kWh": 0.00011943029925021513,
+          "actual_minus_plan_ENS_kWh": 0.00011943029925021513
+        },
+        "h": {
+          "plan_requested_kWh": 191.57636661139247,
+          "plan_served_kWh": 191.57636661139247,
+          "plan_ENS_kWh": 0.0,
+          "actual_requested_kWh": 191.57636661139284,
+          "actual_served_kWh": 191.57636661139284,
+          "actual_ENS_kWh": 0.0,
+          "actual_minus_plan_ENS_kWh": 0.0
+        },
+        "c": {
+          "plan_requested_kWh": 111.04424463963173,
+          "plan_served_kWh": 111.04424463963173,
+          "plan_ENS_kWh": 0.0,
+          "actual_requested_kWh": 111.0442446396315,
+          "actual_served_kWh": 111.0442446396315,
+          "actual_ENS_kWh": 0.0,
+          "actual_minus_plan_ENS_kWh": 0.0
+        }
+      },
+      "P1": {
+        "e": {
+          "plan_requested_kWh": 114.62956394119658,
+          "plan_served_kWh": 114.62956394119658,
+          "plan_ENS_kWh": 0.0,
+          "actual_requested_kWh": 114.62956394119692,
+          "actual_served_kWh": 114.62944451136528,
+          "actual_ENS_kWh": 0.00011942983167908306,
+          "actual_minus_plan_ENS_kWh": 0.00011942983167908306
+        },
+        "h": {
+          "plan_requested_kWh": 113.6673282773518,
+          "plan_served_kWh": 113.6673282773518,
+          "plan_ENS_kWh": 0.0,
+          "actual_requested_kWh": 113.66732827735156,
+          "actual_served_kWh": 113.66732827735156,
+          "actual_ENS_kWh": 0.0,
+          "actual_minus_plan_ENS_kWh": 0.0
+        },
+        "c": {
+          "plan_requested_kWh": 75.70342864260799,
+          "plan_served_kWh": 75.70342864260799,
+          "plan_ENS_kWh": 0.0,
+          "actual_requested_kWh": 75.70342864260803,
+          "actual_served_kWh": 75.70342864260803,
+          "actual_ENS_kWh": 0.0,
+          "actual_minus_plan_ENS_kWh": 0.0
+        }
+      },
+      "P2": {
+        "e": {
+          "plan_requested_kWh": 103.10617838220651,
+          "plan_served_kWh": 103.10617838220651,
+          "plan_ENS_kWh": 0.0,
+          "actual_requested_kWh": 103.10617838220676,
+          "actual_served_kWh": 101.82678890087922,
+          "actual_ENS_kWh": 1.2793894813275235,
+          "actual_minus_plan_ENS_kWh": 1.2793894813275235
+        },
+        "h": {
+          "plan_requested_kWh": 0.0,
+          "plan_served_kWh": 0.0,
+          "plan_ENS_kWh": 0.0,
+          "actual_requested_kWh": 0.0,
+          "actual_served_kWh": 0.0,
+          "actual_ENS_kWh": 0.0,
+          "actual_minus_plan_ENS_kWh": 0.0
+        },
+        "c": {
+          "plan_requested_kWh": 86.14280457251216,
+          "plan_served_kWh": 86.14280457251216,
+          "plan_ENS_kWh": 0.0,
+          "actual_requested_kWh": 86.14280457251223,
+          "actual_served_kWh": 86.08054985024748,
+          "actual_ENS_kWh": 0.06225472226475797,
+          "actual_minus_plan_ENS_kWh": 0.06225472226475797
+        }
+      },
+      "P3": {
+        "e": {
+          "plan_requested_kWh": 984.7681579087239,
+          "plan_served_kWh": 984.7681579087239,
+          "plan_ENS_kWh": 0.0,
+          "actual_requested_kWh": 984.7681579087252,
+          "actual_served_kWh": 783.8776475975659,
+          "actual_ENS_kWh": 200.89051031115704,
+          "actual_minus_plan_ENS_kWh": 200.89051031115704
+        },
+        "h": {
+          "plan_requested_kWh": 205.00329906707825,
+          "plan_served_kWh": 205.00329906707825,
+          "plan_ENS_kWh": 0.0,
+          "actual_requested_kWh": 205.003299067078,
+          "actual_served_kWh": 183.1272055796718,
+          "actual_ENS_kWh": 21.876093487406283,
+          "actual_minus_plan_ENS_kWh": 21.876093487406283
+        },
+        "c": {
+          "plan_requested_kWh": 219.35318680685617,
+          "plan_served_kWh": 219.35318680685617,
+          "plan_ENS_kWh": 0.0,
+          "actual_requested_kWh": 219.35318680685643,
+          "actual_served_kWh": 203.94448599699632,
+          "actual_ENS_kWh": 15.408700809859994,
+          "actual_minus_plan_ENS_kWh": 15.408700809859994
+        }
+      }
+    },
+    "energy": {
+      "grid_kWh_e": {
+        "plan": 681.0523410487402,
+        "actual": 619.528599461219,
+        "actual_minus_plan": -61.52374158752127
+      },
+      "gas_MMBtu": {
+        "plan": 11.532191933220592,
+        "actual": 9.747460244413325,
+        "actual_minus_plan": -1.7847316888072662
+      },
+      "DG_shaft_kWh": {
+        "plan": 0.0,
+        "actual": 16.13054368208118,
+        "actual_minus_plan": 16.13054368208118
+      },
+      "DG_electric_kWh": {
+        "plan": 0.0,
+        "actual": 0.0,
+        "actual_minus_plan": 0.0
+      }
+    },
+    "stock": {
+      "ups": {
+        "carrier": "e",
+        "plan_initial_stock_kWh": 40.0,
+        "plan_terminal_stock_kWh": -0.0,
+        "actual_initial_stock_kWh": 40.0,
+        "actual_terminal_stock_kWh": 26.333438641651593,
+        "actual_minus_plan_terminal_kWh": 26.333438641651593,
+        "planned_charge_input_kWh": 0.0,
+        "planned_useful_discharge_kWh": 38.0,
+        "actual_charged_input_kWh": 0.014652685509695767,
+        "actual_discharged_kWh": 12.996457339103488
+      },
+      "cold_store": {
+        "carrier": "c",
+        "plan_initial_stock_kWh": 0.0,
+        "plan_terminal_stock_kWh": 0.0,
+        "actual_initial_stock_kWh": 0.0,
+        "actual_terminal_stock_kWh": 0.0,
+        "actual_minus_plan_terminal_kWh": 0.0,
+        "planned_charge_input_kWh": 0.0,
+        "planned_useful_discharge_kWh": 0.0,
+        "actual_charged_input_kWh": 0.0,
+        "actual_discharged_kWh": 0.0
+      }
+    },
+    "fee": {
+      "plan_within_window_USD2001": 92.9740246844069,
+      "actual_initial_preparation_USD2001": 2.297263157894737,
+      "actual_operation_USD2001": 85.81835107418887,
+      "actual_total_USD2001": 88.1156142320836,
+      "actual_operation_minus_plan_USD2001": -7.155673610218031,
+      "difference_is_solver_error": false,
+      "plan_initial_preparation_fee_included": false,
+      "components": "Plan surrogate versus actual queue/startup/rotor/local-allocation accounting; initial stock preparation separated once"
+    },
+    "full_continuous_plan_replayed": false,
+    "planned_storage_ports_executed": false,
+    "planned_unmet_directly_executed": false,
+    "plan_variables_are_not_actual_service_or_stock": true
+  }
+]

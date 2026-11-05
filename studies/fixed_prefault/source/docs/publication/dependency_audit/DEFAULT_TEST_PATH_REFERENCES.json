@@ -1,0 +1,260 @@
+{
+  "default_test_files": 140,
+  "references": [
+    {
+      "file": "tests/test_execution_recovery_planner.py",
+      "line": 10,
+      "text": "spec=importlib.util.spec_from_file_location('v18_replay',ROOT/'outputs/v18_execution_recovery_20261018_run01/review/c18_constraint_localization/replay.py')"
+    },
+    {
+      "file": "tests/test_execution_recovery_planner.py",
+      "line": 38,
+      "text": "    f=json.loads((replay.HERE/'day8_75_fixture.json').read_text(encoding='utf-8'))"
+    },
+    {
+      "file": "tests/test_execution_recovery_planner_bridge.py",
+      "line": 7,
+      "text": "spec=importlib.util.spec_from_file_location('v18_bridge_math',ROOT/'outputs/v18_execution_recovery_20261018_run01/review/c18_key02_handoff/bridge_replay.py')"
+    },
+    {
+      "file": "tests/test_execution_recovery_planner_bridge.py",
+      "line": 67,
+      "text": "    original=replay.json.loads((replay.HERE/'BRIDGE_FIXTURE.json').read_text(encoding='utf-8'))['original_queued_dispatch']"
+    },
+    {
+      "file": "tests/test_execution_recovery_planner_bridge.py",
+      "line": 81,
+      "text": "    f=replay.json.loads((replay.HERE/'NUMERIC02_PENDING_FIXTURE.json').read_text(encoding='utf-8'))"
+    },
+    {
+      "file": "tests/test_execution_recovery_planner_bridge.py",
+      "line": 100,
+      "text": "    f=replay.json.loads((replay.HERE/'NUMERIC02_PENDING_FIXTURE.json').read_text(encoding='utf-8'))"
+    },
+    {
+      "file": "tests/test_execution_recovery_protection_pressure.py",
+      "line": 8,
+      "text": "spec=importlib.util.spec_from_file_location('v18_stress_saved',ROOT/'outputs/v18_execution_recovery_20261018_run01/review/c18_constraint_localization/replay.py')"
+    },
+    {
+      "file": "tests/test_model_closeout_analysis.py",
+      "line": 18,
+      "text": "REAL_RUN = ROOT / \"outputs/v19_model_closeout_20261018_run01\""
+    },
+    {
+      "file": "tests/test_model_closeout_analysis.py",
+      "line": 29,
+      "text": "    path = REAL_RUN / \"test_tmp\" / (\"analysis_\" + uuid.uuid4().hex)"
+    },
+    {
+      "file": "tests/test_model_closeout_analysis.py",
+      "line": 120,
+      "text": "        (REAL_RUN / \"references/EMISSIONS_FACTOR_REGISTRY.json\").read_bytes())"
+    },
+    {
+      "file": "tests/test_model_closeout_numerics.py",
+      "line": 17,
+      "text": "    base=ROOT/'outputs/v19_model_closeout_20261018_run01/review/c19_255_failure/replay01/layers/layer_20'"
+    },
+    {
+      "file": "tests/test_model_closeout_registration.py",
+      "line": 21,
+      "text": "    return json.loads((root/'outputs/v18_execution_recovery_20261018_run01/design/MAIN_FINAL_R1_PROPOSAL.json').read_text(encoding='utf8'))['scenarios']"
+    },
+    {
+      "file": "tests/test_model_closeout_registration.py",
+      "line": 162,
+      "text": "    monkeypatch.setattr(r,'ROOT',root);monkeypatch.setattr(r,'RUN',root/'outputs'/'v19')"
+    },
+    {
+      "file": "tests/test_model_closeout_registration.py",
+      "line": 197,
+      "text": "    b=api('baseline');old=tmp_path/'outputs'/'v18_execution_recovery_20261018_run01'"
+    },
+    {
+      "file": "tests/test_model_closeout_registration.py",
+      "line": 199,
+      "text": "    raw='outputs/v18_execution_recovery_20261018_run01/experiments/x/trajectory.json.gz'"
+    },
+    {
+      "file": "tests/test_model_closeout_registration.py",
+      "line": 206,
+      "text": "    assert 'outputs/v18_execution_recovery_20261018_run01/MODEL_FREEZE_RECOVERY01.json' in protected"
+    },
+    {
+      "file": "tests/test_execution_recovery_numerics.py",
+      "line": 20,
+      "text": "FIXTURE = ROOT / 'outputs/v17_state_coordinated_20261018_run01/review/ablation_interface_math_01'"
+    },
+    {
+      "file": "tests/test_execution_recovery_numerics.py",
+      "line": 320,
+      "text": "    path = ROOT/'outputs/v18_execution_recovery_20261018_run01/review/key01_c4_solver'/case"
+    },
+    {
+      "file": "tests/test_execution_recovery_numerics.py",
+      "line": 353,
+      "text": "    path = ROOT/'outputs/v18_execution_recovery_20261018_run01/review/key01_c4_solver/key01_000'"
+    },
+    {
+      "file": "tests/test_execution_recovery_runner.py",
+      "line": 30,
+      "text": "    tmp_path = m.ROOT / 'outputs' / 'v18_path_only_test'"
+    },
+    {
+      "file": "tests/test_execution_recovery_runner.py",
+      "line": 55,
+      "text": "    source = json.loads((m.ROOT / 'outputs/v17_state_coordinated_20261018_run01/design/MAIN_PROPOSAL.json').read_text(encoding='utf8'))"
+    },
+    {
+      "file": "tests/test_v20_load_accounting.py",
+      "line": 147,
+      "text": "    authority = json.loads((ROOT / \"outputs/v43_p2b_20261013_run01/experiment/global_manifest.json\").read_text(encoding=\"utf-8\"))"
+    },
+    {
+      "file": "tests/test_v20_runtime.py",
+      "line": 15,
+      "text": "V19 = ROOT / \"outputs/v19_model_closeout_20261018_run01\""
+    },
+    {
+      "file": "tests/test_v20_campaign.py",
+      "line": 9,
+      "text": "    jobs=campaign_jobs(ROOT/'outputs/v19_model_closeout_20261018_run01/design')"
+    },
+    {
+      "file": "tests/test_v20_campaign.py",
+      "line": 23,
+      "text": "    folder=ROOT/'outputs/v19_model_closeout_20261018_run01/design'"
+    },
+    {
+      "file": "tests/test_v20_campaign.py",
+      "line": 35,
+      "text": "    run=tmp_path/'outputs/run';(run/'design').mkdir(parents=True)"
+    },
+    {
+      "file": "tests/test_sci_environment.py",
+      "line": 24,
+      "text": "    authority=json.loads((ROOT/'outputs/v43_p2b_20261013_run01/experiment/global_manifest.json').read_text(encoding='utf-8'))"
+    },
+    {
+      "file": "tests/test_sci_design.py",
+      "line": 33,
+      "text": "    write(tmp_path/'outputs/run/design/PROPOSAL.json', dict(scenarios=[scene, planned]))"
+    },
+    {
+      "file": "tests/test_sci_design.py",
+      "line": 34,
+      "text": "    write(tmp_path/'outputs/run/manifest.json', dict(scenarios=[scene]))"
+    },
+    {
+      "file": "tests/test_sci_design.py",
+      "line": 35,
+      "text": "    (tmp_path/'outputs/run/ATTEMPTS.jsonl').write_text("
+    },
+    {
+      "file": "tests/test_sci_design.py",
+      "line": 37,
+      "text": "    write(tmp_path/'outputs/run/pairs/old_real__P/RESULT.json', dict(secret_result='must not be read'))"
+    },
+    {
+      "file": "tests/test_sci_design.py",
+      "line": 54,
+      "text": "    write(tmp_path/'outputs/real/manifest.json', dict(scenarios=[scene]))"
+    },
+    {
+      "file": "tests/test_sci_design.py",
+      "line": 55,
+      "text": "    (tmp_path/'outputs/real/attempts.jsonl').write_text("
+    },
+    {
+      "file": "tests/test_sci_design.py",
+      "line": 65,
+      "text": "    write(tmp_path/'outputs/real/manifest.json',dict(scenarios=[scene]))"
+    },
+    {
+      "file": "tests/test_sci_design.py",
+      "line": 69,
+      "text": "    (tmp_path/'outputs/real/attempts.jsonl').write_text('\\n'.join(json.dumps(x) for x in rows)+'\\n',encoding='utf8')"
+    },
+    {
+      "file": "tests/test_sci_design.py",
+      "line": 78,
+      "text": "    write(tmp_path/'outputs/real/manifest.json',dict(scenarios=[scene]))"
+    },
+    {
+      "file": "tests/test_sci_design.py",
+      "line": 79,
+      "text": "    directory=tmp_path/'outputs/real/probe/snapshot_002/attempt_0001'"
+    },
+    {
+      "file": "tests/test_sci_design.py",
+      "line": 82,
+      "text": "    fit=tmp_path/'outputs/real/fit_attempts.jsonl'"
+    },
+    {
+      "file": "tests/test_sci_design.py",
+      "line": 90,
+      "text": "    d=design();path=tmp_path/'outputs/real/workflow_plan_prelaunch.json'"
+    },
+    {
+      "file": "tests/test_sci_runner.py",
+      "line": 242,
+      "text": "    factor=root/'outputs/v20_load_accounting_20261019_run01/references/EMISSIONS_FACTOR_REGISTRY.json'"
+    },
+    {
+      "file": "tests/test_sci_final_release.py",
+      "line": 27,
+      "text": "    authority=root/'outputs/v43_p2b_20261013_run01/experiment/global_manifest.json'"
+    },
+    {
+      "file": "tests/test_sci_final_release.py",
+      "line": 132,
+      "text": "    write(root/'outputs/old/manifest.json',dict(scenarios=[scene]))"
+    },
+    {
+      "file": "tests/test_sci_final_release.py",
+      "line": 133,
+      "text": "    journal=root/'outputs/old/ATTEMPTS.jsonl'"
+    },
+    {
+      "file": "tests/test_sci_final_release_integration.py",
+      "line": 228,
+      "text": "    runner.write_new(f.root/'outputs/known_actual/manifest.json',dict(scenarios=[scene]))"
+    },
+    {
+      "file": "tests/test_sci_final_release_integration.py",
+      "line": 229,
+      "text": "    (f.root/'outputs/known_actual/ATTEMPTS.jsonl').write_text("
+    },
+    {
+      "file": "tests/test_v22_core_environment.py",
+      "line": 13,
+      "text": "    authority=json.loads((ROOT/'outputs/v43_p2b_20261013_run01/experiment/global_manifest.json').read_text(encoding='utf-8'))"
+    },
+    {
+      "file": "tests/test_v23_recovery.py",
+      "line": 14,
+      "text": "    authority=json.loads((ROOT/'outputs/v43_p2b_20261013_run01/experiment/global_manifest.json').read_text(encoding='utf-8'))"
+    },
+    {
+      "file": "tests/test_v24_cold_modes.py",
+      "line": 27,
+      "text": "    authority=json.loads((ROOT/'outputs/v43_p2b_20261013_run01/experiment/global_manifest.json').read_text(encoding='utf-8'))"
+    },
+    {
+      "file": "tests/test_v24_cold_admission.py",
+      "line": 42,
+      "text": "    authority=json.loads((ROOT/'outputs/v43_p2b_20261013_run01/experiment/global_manifest.json').read_text(encoding='utf8'))"
+    },
+    {
+      "file": "tests/test_v25_reserve.py",
+      "line": 17,
+      "text": "    authority=json.loads((ROOT/'outputs/v43_p2b_20261013_run01/experiment/global_manifest.json').read_text(encoding='utf-8'))"
+    },
+    {
+      "file": "tests/test_v30_offline.py",
+      "line": 11,
+      "text": "FIXTURE=ROOT/'configs/model_review_v30/tiny_reference_fixture.json'"
+    }
+  ]
+}

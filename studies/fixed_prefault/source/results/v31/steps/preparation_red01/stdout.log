@@ -1,0 +1,730 @@
+FFFFFFFFFFFFFF                                                           [100%]
+================================== FAILURES ===================================
+___________ test_only_the_cooling_bit_changes_in_complete_frozen_M ____________
+
+name = 'rules'
+
+    def api(name='rules'):
+>       try:return importlib.import_module('tools.model_closeout_v31.'+name)
+
+tests\test_v31_preparation.py:10: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+C:\Users\HanqinXie\AppData\Local\Programs\Python\Python310\lib\importlib\__init__.py:126: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+<frozen importlib._bootstrap>:1050: in _gcd_import
+    ???
+<frozen importlib._bootstrap>:1027: in _find_and_load
+    ???
+<frozen importlib._bootstrap>:992: in _find_and_load_unlocked
+    ???
+<frozen importlib._bootstrap>:241: in _call_with_frames_removed
+    ???
+<frozen importlib._bootstrap>:1050: in _gcd_import
+    ???
+<frozen importlib._bootstrap>:1027: in _find_and_load
+    ???
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+name = 'tools.model_closeout_v31'
+import_ = <function _gcd_import at 0x0000021F15B03490>
+
+>   ???
+E   ModuleNotFoundError: No module named 'tools.model_closeout_v31'
+
+<frozen importlib._bootstrap>:1004: ModuleNotFoundError
+
+During handling of the above exception, another exception occurred:
+
+    def test_only_the_cooling_bit_changes_in_complete_frozen_M():
+        from tools.model_correctness_v23.policy import SciPolicy
+>       base=frozen_m();new=api().expanded_method_config(base,'M_cooling_permission')
+
+tests\test_v31_preparation.py:27: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+name = 'rules'
+
+    def api(name='rules'):
+        try:return importlib.import_module('tools.model_closeout_v31.'+name)
+>       except ModuleNotFoundError as exc:pytest.fail('V31 registered preparation implementation is missing: '+str(exc))
+E       Failed: V31 registered preparation implementation is missing: No module named 'tools.model_closeout_v31'
+
+tests\test_v31_preparation.py:11: Failed
+___________ test_bare_factory_defaults_cannot_replace_after_cost_M ____________
+
+name = 'rules'
+
+    def api(name='rules'):
+>       try:return importlib.import_module('tools.model_closeout_v31.'+name)
+
+tests\test_v31_preparation.py:10: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+C:\Users\HanqinXie\AppData\Local\Programs\Python\Python310\lib\importlib\__init__.py:126: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+<frozen importlib._bootstrap>:1050: in _gcd_import
+    ???
+<frozen importlib._bootstrap>:1027: in _find_and_load
+    ???
+<frozen importlib._bootstrap>:992: in _find_and_load_unlocked
+    ???
+<frozen importlib._bootstrap>:241: in _call_with_frames_removed
+    ???
+<frozen importlib._bootstrap>:1050: in _gcd_import
+    ???
+<frozen importlib._bootstrap>:1027: in _find_and_load
+    ???
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+name = 'tools.model_closeout_v31'
+import_ = <function _gcd_import at 0x0000021F15B03490>
+
+>   ???
+E   ModuleNotFoundError: No module named 'tools.model_closeout_v31'
+
+<frozen importlib._bootstrap>:1004: ModuleNotFoundError
+
+During handling of the above exception, another exception occurred:
+
+    def test_bare_factory_defaults_cannot_replace_after_cost_M():
+        from tools.model_correctness_v23.policy import policy_config
+        base=policy_config('M');assert base['online_GT_count_order']=='legacy_before_cost'
+>       with pytest.raises(ValueError,match='frozen M'):api().expanded_method_config(base,'M_cooling_permission')
+
+tests\test_v31_preparation.py:37: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+name = 'rules'
+
+    def api(name='rules'):
+        try:return importlib.import_module('tools.model_closeout_v31.'+name)
+>       except ModuleNotFoundError as exc:pytest.fail('V31 registered preparation implementation is missing: '+str(exc))
+E       Failed: V31 registered preparation implementation is missing: No module named 'tools.model_closeout_v31'
+
+tests\test_v31_preparation.py:11: Failed
+_______ test_receipt_uses_only_three_current_features_and_fixed_rating ________
+
+name = 'rules'
+
+    def api(name='rules'):
+>       try:return importlib.import_module('tools.model_closeout_v31.'+name)
+
+tests\test_v31_preparation.py:10: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+C:\Users\HanqinXie\AppData\Local\Programs\Python\Python310\lib\importlib\__init__.py:126: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+<frozen importlib._bootstrap>:1050: in _gcd_import
+    ???
+<frozen importlib._bootstrap>:1027: in _find_and_load
+    ???
+<frozen importlib._bootstrap>:992: in _find_and_load_unlocked
+    ???
+<frozen importlib._bootstrap>:241: in _call_with_frames_removed
+    ???
+<frozen importlib._bootstrap>:1050: in _gcd_import
+    ???
+<frozen importlib._bootstrap>:1027: in _find_and_load
+    ???
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+name = 'tools.model_closeout_v31'
+import_ = <function _gcd_import at 0x0000021F15B03490>
+
+>   ???
+E   ModuleNotFoundError: No module named 'tools.model_closeout_v31'
+
+<frozen importlib._bootstrap>:1004: ModuleNotFoundError
+
+During handling of the above exception, another exception occurred:
+
+    def test_receipt_uses_only_three_current_features_and_fixed_rating():
+        r=record();r['future_fault_time']=object();before=copy.deepcopy(r['features'])
+>       receipt=api().observe_boiler_capacity(r,900.)
+
+tests\test_v31_preparation.py:41: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+name = 'rules'
+
+    def api(name='rules'):
+        try:return importlib.import_module('tools.model_closeout_v31.'+name)
+>       except ModuleNotFoundError as exc:pytest.fail('V31 registered preparation implementation is missing: '+str(exc))
+E       Failed: V31 registered preparation implementation is missing: No module named 'tools.model_closeout_v31'
+
+tests\test_v31_preparation.py:11: Failed
+___________ test_invalid_observable_availability_is_rejected[True] ____________
+
+name = 'rules'
+
+    def api(name='rules'):
+>       try:return importlib.import_module('tools.model_closeout_v31.'+name)
+
+tests\test_v31_preparation.py:10: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+C:\Users\HanqinXie\AppData\Local\Programs\Python\Python310\lib\importlib\__init__.py:126: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+<frozen importlib._bootstrap>:1050: in _gcd_import
+    ???
+<frozen importlib._bootstrap>:1027: in _find_and_load
+    ???
+<frozen importlib._bootstrap>:992: in _find_and_load_unlocked
+    ???
+<frozen importlib._bootstrap>:241: in _call_with_frames_removed
+    ???
+<frozen importlib._bootstrap>:1050: in _gcd_import
+    ???
+<frozen importlib._bootstrap>:1027: in _find_and_load
+    ???
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+name = 'tools.model_closeout_v31'
+import_ = <function _gcd_import at 0x0000021F15B03490>
+
+>   ???
+E   ModuleNotFoundError: No module named 'tools.model_closeout_v31'
+
+<frozen importlib._bootstrap>:1004: ModuleNotFoundError
+
+During handling of the above exception, another exception occurred:
+
+bad = True
+
+    @pytest.mark.parametrize('bad',[True,float('nan'),-0.1,1.1])
+    def test_invalid_observable_availability_is_rejected(bad):
+        r=record();r['features']['availability_BOILER_1']=bad
+>       with pytest.raises(ValueError):api().observe_boiler_capacity(r,900.)
+
+tests\test_v31_preparation.py:52: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+name = 'rules'
+
+    def api(name='rules'):
+        try:return importlib.import_module('tools.model_closeout_v31.'+name)
+>       except ModuleNotFoundError as exc:pytest.fail('V31 registered preparation implementation is missing: '+str(exc))
+E       Failed: V31 registered preparation implementation is missing: No module named 'tools.model_closeout_v31'
+
+tests\test_v31_preparation.py:11: Failed
+____________ test_invalid_observable_availability_is_rejected[nan] ____________
+
+name = 'rules'
+
+    def api(name='rules'):
+>       try:return importlib.import_module('tools.model_closeout_v31.'+name)
+
+tests\test_v31_preparation.py:10: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+C:\Users\HanqinXie\AppData\Local\Programs\Python\Python310\lib\importlib\__init__.py:126: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+<frozen importlib._bootstrap>:1050: in _gcd_import
+    ???
+<frozen importlib._bootstrap>:1027: in _find_and_load
+    ???
+<frozen importlib._bootstrap>:992: in _find_and_load_unlocked
+    ???
+<frozen importlib._bootstrap>:241: in _call_with_frames_removed
+    ???
+<frozen importlib._bootstrap>:1050: in _gcd_import
+    ???
+<frozen importlib._bootstrap>:1027: in _find_and_load
+    ???
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+name = 'tools.model_closeout_v31'
+import_ = <function _gcd_import at 0x0000021F15B03490>
+
+>   ???
+E   ModuleNotFoundError: No module named 'tools.model_closeout_v31'
+
+<frozen importlib._bootstrap>:1004: ModuleNotFoundError
+
+During handling of the above exception, another exception occurred:
+
+bad = nan
+
+    @pytest.mark.parametrize('bad',[True,float('nan'),-0.1,1.1])
+    def test_invalid_observable_availability_is_rejected(bad):
+        r=record();r['features']['availability_BOILER_1']=bad
+>       with pytest.raises(ValueError):api().observe_boiler_capacity(r,900.)
+
+tests\test_v31_preparation.py:52: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+name = 'rules'
+
+    def api(name='rules'):
+        try:return importlib.import_module('tools.model_closeout_v31.'+name)
+>       except ModuleNotFoundError as exc:pytest.fail('V31 registered preparation implementation is missing: '+str(exc))
+E       Failed: V31 registered preparation implementation is missing: No module named 'tools.model_closeout_v31'
+
+tests\test_v31_preparation.py:11: Failed
+___________ test_invalid_observable_availability_is_rejected[-0.1] ____________
+
+name = 'rules'
+
+    def api(name='rules'):
+>       try:return importlib.import_module('tools.model_closeout_v31.'+name)
+
+tests\test_v31_preparation.py:10: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+C:\Users\HanqinXie\AppData\Local\Programs\Python\Python310\lib\importlib\__init__.py:126: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+<frozen importlib._bootstrap>:1050: in _gcd_import
+    ???
+<frozen importlib._bootstrap>:1027: in _find_and_load
+    ???
+<frozen importlib._bootstrap>:992: in _find_and_load_unlocked
+    ???
+<frozen importlib._bootstrap>:241: in _call_with_frames_removed
+    ???
+<frozen importlib._bootstrap>:1050: in _gcd_import
+    ???
+<frozen importlib._bootstrap>:1027: in _find_and_load
+    ???
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+name = 'tools.model_closeout_v31'
+import_ = <function _gcd_import at 0x0000021F15B03490>
+
+>   ???
+E   ModuleNotFoundError: No module named 'tools.model_closeout_v31'
+
+<frozen importlib._bootstrap>:1004: ModuleNotFoundError
+
+During handling of the above exception, another exception occurred:
+
+bad = -0.1
+
+    @pytest.mark.parametrize('bad',[True,float('nan'),-0.1,1.1])
+    def test_invalid_observable_availability_is_rejected(bad):
+        r=record();r['features']['availability_BOILER_1']=bad
+>       with pytest.raises(ValueError):api().observe_boiler_capacity(r,900.)
+
+tests\test_v31_preparation.py:52: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+name = 'rules'
+
+    def api(name='rules'):
+        try:return importlib.import_module('tools.model_closeout_v31.'+name)
+>       except ModuleNotFoundError as exc:pytest.fail('V31 registered preparation implementation is missing: '+str(exc))
+E       Failed: V31 registered preparation implementation is missing: No module named 'tools.model_closeout_v31'
+
+tests\test_v31_preparation.py:11: Failed
+____________ test_invalid_observable_availability_is_rejected[1.1] ____________
+
+name = 'rules'
+
+    def api(name='rules'):
+>       try:return importlib.import_module('tools.model_closeout_v31.'+name)
+
+tests\test_v31_preparation.py:10: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+C:\Users\HanqinXie\AppData\Local\Programs\Python\Python310\lib\importlib\__init__.py:126: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+<frozen importlib._bootstrap>:1050: in _gcd_import
+    ???
+<frozen importlib._bootstrap>:1027: in _find_and_load
+    ???
+<frozen importlib._bootstrap>:992: in _find_and_load_unlocked
+    ???
+<frozen importlib._bootstrap>:241: in _call_with_frames_removed
+    ???
+<frozen importlib._bootstrap>:1050: in _gcd_import
+    ???
+<frozen importlib._bootstrap>:1027: in _find_and_load
+    ???
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+name = 'tools.model_closeout_v31'
+import_ = <function _gcd_import at 0x0000021F15B03490>
+
+>   ???
+E   ModuleNotFoundError: No module named 'tools.model_closeout_v31'
+
+<frozen importlib._bootstrap>:1004: ModuleNotFoundError
+
+During handling of the above exception, another exception occurred:
+
+bad = 1.1
+
+    @pytest.mark.parametrize('bad',[True,float('nan'),-0.1,1.1])
+    def test_invalid_observable_availability_is_rejected(bad):
+        r=record();r['features']['availability_BOILER_1']=bad
+>       with pytest.raises(ValueError):api().observe_boiler_capacity(r,900.)
+
+tests\test_v31_preparation.py:52: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+name = 'rules'
+
+    def api(name='rules'):
+        try:return importlib.import_module('tools.model_closeout_v31.'+name)
+>       except ModuleNotFoundError as exc:pytest.fail('V31 registered preparation implementation is missing: '+str(exc))
+E       Failed: V31 registered preparation implementation is missing: No module named 'tools.model_closeout_v31'
+
+tests\test_v31_preparation.py:11: Failed
+______________ test_future_or_missing_feature_clock_is_rejected _______________
+
+name = 'rules'
+
+    def api(name='rules'):
+>       try:return importlib.import_module('tools.model_closeout_v31.'+name)
+
+tests\test_v31_preparation.py:10: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+C:\Users\HanqinXie\AppData\Local\Programs\Python\Python310\lib\importlib\__init__.py:126: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+<frozen importlib._bootstrap>:1050: in _gcd_import
+    ???
+<frozen importlib._bootstrap>:1027: in _find_and_load
+    ???
+<frozen importlib._bootstrap>:992: in _find_and_load_unlocked
+    ???
+<frozen importlib._bootstrap>:241: in _call_with_frames_removed
+    ???
+<frozen importlib._bootstrap>:1050: in _gcd_import
+    ???
+<frozen importlib._bootstrap>:1027: in _find_and_load
+    ???
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+name = 'tools.model_closeout_v31'
+import_ = <function _gcd_import at 0x0000021F15B03490>
+
+>   ???
+E   ModuleNotFoundError: No module named 'tools.model_closeout_v31'
+
+<frozen importlib._bootstrap>:1004: ModuleNotFoundError
+
+During handling of the above exception, another exception occurred:
+
+    def test_future_or_missing_feature_clock_is_rejected():
+        r=record();r['feature_metadata']['availability_BOILER_2']['available_time_min']=46.
+>       with pytest.raises(ValueError):api().observe_boiler_capacity(r,900.)
+
+tests\test_v31_preparation.py:56: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+name = 'rules'
+
+    def api(name='rules'):
+        try:return importlib.import_module('tools.model_closeout_v31.'+name)
+>       except ModuleNotFoundError as exc:pytest.fail('V31 registered preparation implementation is missing: '+str(exc))
+E       Failed: V31 registered preparation implementation is missing: No module named 'tools.model_closeout_v31'
+
+tests\test_v31_preparation.py:11: Failed
+_____ test_only_boiler_permission_changes_without_mutating_common_result ______
+
+name = 'rules'
+
+    def api(name='rules'):
+>       try:return importlib.import_module('tools.model_closeout_v31.'+name)
+
+tests\test_v31_preparation.py:10: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+C:\Users\HanqinXie\AppData\Local\Programs\Python\Python310\lib\importlib\__init__.py:126: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+<frozen importlib._bootstrap>:1050: in _gcd_import
+    ???
+<frozen importlib._bootstrap>:1027: in _find_and_load
+    ???
+<frozen importlib._bootstrap>:992: in _find_and_load_unlocked
+    ???
+<frozen importlib._bootstrap>:241: in _call_with_frames_removed
+    ???
+<frozen importlib._bootstrap>:1050: in _gcd_import
+    ???
+<frozen importlib._bootstrap>:1027: in _find_and_load
+    ???
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+name = 'tools.model_closeout_v31'
+import_ = <function _gcd_import at 0x0000021F15B03490>
+
+>   ???
+E   ModuleNotFoundError: No module named 'tools.model_closeout_v31'
+
+<frozen importlib._bootstrap>:1004: ModuleNotFoundError
+
+During handling of the above exception, another exception occurred:
+
+    def test_only_boiler_permission_changes_without_mutating_common_result():
+        original=dispatch();diagnostic={'m23_preparation':{'original_boiler_target_lbph':100.}}
+>       evidence=api().observe_boiler_capacity(record(),900.)
+
+tests\test_v31_preparation.py:62: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+name = 'rules'
+
+    def api(name='rules'):
+        try:return importlib.import_module('tools.model_closeout_v31.'+name)
+>       except ModuleNotFoundError as exc:pytest.fail('V31 registered preparation implementation is missing: '+str(exc))
+E       Failed: V31 registered preparation implementation is missing: No module named 'tools.model_closeout_v31'
+
+tests\test_v31_preparation.py:11: Failed
+______ test_common_permission_is_never_lowered_and_overshoot_is_explicit ______
+
+name = 'rules'
+
+    def api(name='rules'):
+>       try:return importlib.import_module('tools.model_closeout_v31.'+name)
+
+tests\test_v31_preparation.py:10: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+C:\Users\HanqinXie\AppData\Local\Programs\Python\Python310\lib\importlib\__init__.py:126: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+<frozen importlib._bootstrap>:1050: in _gcd_import
+    ???
+<frozen importlib._bootstrap>:1027: in _find_and_load
+    ???
+<frozen importlib._bootstrap>:992: in _find_and_load_unlocked
+    ???
+<frozen importlib._bootstrap>:241: in _call_with_frames_removed
+    ???
+<frozen importlib._bootstrap>:1050: in _gcd_import
+    ???
+<frozen importlib._bootstrap>:1027: in _find_and_load
+    ???
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+name = 'tools.model_closeout_v31'
+import_ = <function _gcd_import at 0x0000021F15B03490>
+
+>   ???
+E   ModuleNotFoundError: No module named 'tools.model_closeout_v31'
+
+<frozen importlib._bootstrap>:1004: ModuleNotFoundError
+
+During handling of the above exception, another exception occurred:
+
+    def test_common_permission_is_never_lowered_and_overshoot_is_explicit():
+>       e=api().observe_boiler_capacity(record(),900.)
+
+tests\test_v31_preparation.py:72: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+name = 'rules'
+
+    def api(name='rules'):
+        try:return importlib.import_module('tools.model_closeout_v31.'+name)
+>       except ModuleNotFoundError as exc:pytest.fail('V31 registered preparation implementation is missing: '+str(exc))
+E       Failed: V31 registered preparation implementation is missing: No module named 'tools.model_closeout_v31'
+
+tests\test_v31_preparation.py:11: Failed
+____ test_shared_preparation_runs_first_and_ordinary_other_fields_survive _____
+
+name = 'environment'
+
+    def api(name='rules'):
+>       try:return importlib.import_module('tools.model_closeout_v31.'+name)
+
+tests\test_v31_preparation.py:10: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+C:\Users\HanqinXie\AppData\Local\Programs\Python\Python310\lib\importlib\__init__.py:126: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+<frozen importlib._bootstrap>:1050: in _gcd_import
+    ???
+<frozen importlib._bootstrap>:1027: in _find_and_load
+    ???
+<frozen importlib._bootstrap>:992: in _find_and_load_unlocked
+    ???
+<frozen importlib._bootstrap>:241: in _call_with_frames_removed
+    ???
+<frozen importlib._bootstrap>:1050: in _gcd_import
+    ???
+<frozen importlib._bootstrap>:1027: in _find_and_load
+    ???
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+name = 'tools.model_closeout_v31'
+import_ = <function _gcd_import at 0x0000021F15B03490>
+
+>   ???
+E   ModuleNotFoundError: No module named 'tools.model_closeout_v31'
+
+<frozen importlib._bootstrap>:1004: ModuleNotFoundError
+
+During handling of the above exception, another exception occurred:
+
+    def test_shared_preparation_runs_first_and_ordinary_other_fields_survive():
+>       mod=api('environment');events=[]
+
+tests\test_v31_preparation.py:79: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+name = 'environment'
+
+    def api(name='rules'):
+        try:return importlib.import_module('tools.model_closeout_v31.'+name)
+>       except ModuleNotFoundError as exc:pytest.fail('V31 registered preparation implementation is missing: '+str(exc))
+E       Failed: V31 registered preparation implementation is missing: No module named 'tools.model_closeout_v31'
+
+tests\test_v31_preparation.py:11: Failed
+____ test_disabled_and_cooling_adapter_leave_original_environment_factory _____
+
+name = 'environment'
+
+    def api(name='rules'):
+>       try:return importlib.import_module('tools.model_closeout_v31.'+name)
+
+tests\test_v31_preparation.py:10: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+C:\Users\HanqinXie\AppData\Local\Programs\Python\Python310\lib\importlib\__init__.py:126: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+<frozen importlib._bootstrap>:1050: in _gcd_import
+    ???
+<frozen importlib._bootstrap>:1027: in _find_and_load
+    ???
+<frozen importlib._bootstrap>:992: in _find_and_load_unlocked
+    ???
+<frozen importlib._bootstrap>:241: in _call_with_frames_removed
+    ???
+<frozen importlib._bootstrap>:1050: in _gcd_import
+    ???
+<frozen importlib._bootstrap>:1027: in _find_and_load
+    ???
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+name = 'tools.model_closeout_v31'
+import_ = <function _gcd_import at 0x0000021F15B03490>
+
+>   ???
+E   ModuleNotFoundError: No module named 'tools.model_closeout_v31'
+
+<frozen importlib._bootstrap>:1004: ModuleNotFoundError
+
+During handling of the above exception, another exception occurred:
+
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x0000021F7861A710>
+
+    def test_disabled_and_cooling_adapter_leave_original_environment_factory(monkeypatch):
+>       mod=api('environment');base=SimpleNamespace(OperatingHospitalIESEnv=object)
+
+tests\test_v31_preparation.py:92: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+name = 'environment'
+
+    def api(name='rules'):
+        try:return importlib.import_module('tools.model_closeout_v31.'+name)
+>       except ModuleNotFoundError as exc:pytest.fail('V31 registered preparation implementation is missing: '+str(exc))
+E       Failed: V31 registered preparation implementation is missing: No module named 'tools.model_closeout_v31'
+
+tests\test_v31_preparation.py:11: Failed
+___________ test_publishing_policy_retains_M23_request_and_witness ____________
+
+name = 'environment'
+
+    def api(name='rules'):
+>       try:return importlib.import_module('tools.model_closeout_v31.'+name)
+
+tests\test_v31_preparation.py:10: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+C:\Users\HanqinXie\AppData\Local\Programs\Python\Python310\lib\importlib\__init__.py:126: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+<frozen importlib._bootstrap>:1050: in _gcd_import
+    ???
+<frozen importlib._bootstrap>:1027: in _find_and_load
+    ???
+<frozen importlib._bootstrap>:992: in _find_and_load_unlocked
+    ???
+<frozen importlib._bootstrap>:241: in _call_with_frames_removed
+    ???
+<frozen importlib._bootstrap>:1050: in _gcd_import
+    ???
+<frozen importlib._bootstrap>:1027: in _find_and_load
+    ???
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+name = 'tools.model_closeout_v31'
+import_ = <function _gcd_import at 0x0000021F15B03490>
+
+>   ???
+E   ModuleNotFoundError: No module named 'tools.model_closeout_v31'
+
+<frozen importlib._bootstrap>:1004: ModuleNotFoundError
+
+During handling of the above exception, another exception occurred:
+
+    def test_publishing_policy_retains_M23_request_and_witness():
+        from test_sci_policy import observed
+        from tools.model_correctness_v23.policy import SciPolicy
+>       mod=api('environment');r=observed(time=45.)
+
+tests\test_v31_preparation.py:100: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+name = 'environment'
+
+    def api(name='rules'):
+        try:return importlib.import_module('tools.model_closeout_v31.'+name)
+>       except ModuleNotFoundError as exc:pytest.fail('V31 registered preparation implementation is missing: '+str(exc))
+E       Failed: V31 registered preparation implementation is missing: No module named 'tools.model_closeout_v31'
+
+tests\test_v31_preparation.py:11: Failed
+__ test_four_registered_scenarios_are_exact_originals_and_only_fixed_methods __
+
+name = 'validation'
+
+    def api(name='rules'):
+>       try:return importlib.import_module('tools.model_closeout_v31.'+name)
+
+tests\test_v31_preparation.py:10: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+C:\Users\HanqinXie\AppData\Local\Programs\Python\Python310\lib\importlib\__init__.py:126: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+<frozen importlib._bootstrap>:1050: in _gcd_import
+    ???
+<frozen importlib._bootstrap>:1027: in _find_and_load
+    ???
+<frozen importlib._bootstrap>:992: in _find_and_load_unlocked
+    ???
+<frozen importlib._bootstrap>:241: in _call_with_frames_removed
+    ???
+<frozen importlib._bootstrap>:1050: in _gcd_import
+    ???
+<frozen importlib._bootstrap>:1027: in _find_and_load
+    ???
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+name = 'tools.model_closeout_v31'
+import_ = <function _gcd_import at 0x0000021F15B03490>
+
+>   ???
+E   ModuleNotFoundError: No module named 'tools.model_closeout_v31'
+
+<frozen importlib._bootstrap>:1004: ModuleNotFoundError
+
+During handling of the above exception, another exception occurred:
+
+    def test_four_registered_scenarios_are_exact_originals_and_only_fixed_methods():
+>       mod=api('validation');reg=mod.load_registry()
+
+tests\test_v31_preparation.py:110: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+name = 'validation'
+
+    def api(name='rules'):
+        try:return importlib.import_module('tools.model_closeout_v31.'+name)
+>       except ModuleNotFoundError as exc:pytest.fail('V31 registered preparation implementation is missing: '+str(exc))
+E       Failed: V31 registered preparation implementation is missing: No module named 'tools.model_closeout_v31'
+
+tests\test_v31_preparation.py:11: Failed
+=========================== short test summary info ===========================
+FAILED tests/test_v31_preparation.py::test_only_the_cooling_bit_changes_in_complete_frozen_M
+FAILED tests/test_v31_preparation.py::test_bare_factory_defaults_cannot_replace_after_cost_M
+FAILED tests/test_v31_preparation.py::test_receipt_uses_only_three_current_features_and_fixed_rating
+FAILED tests/test_v31_preparation.py::test_invalid_observable_availability_is_rejected[True]
+FAILED tests/test_v31_preparation.py::test_invalid_observable_availability_is_rejected[nan]
+FAILED tests/test_v31_preparation.py::test_invalid_observable_availability_is_rejected[-0.1]
+FAILED tests/test_v31_preparation.py::test_invalid_observable_availability_is_rejected[1.1]
+FAILED tests/test_v31_preparation.py::test_future_or_missing_feature_clock_is_rejected
+FAILED tests/test_v31_preparation.py::test_only_boiler_permission_changes_without_mutating_common_result
+FAILED tests/test_v31_preparation.py::test_common_permission_is_never_lowered_and_overshoot_is_explicit
+FAILED tests/test_v31_preparation.py::test_shared_preparation_runs_first_and_ordinary_other_fields_survive
+FAILED tests/test_v31_preparation.py::test_disabled_and_cooling_adapter_leave_original_environment_factory
+FAILED tests/test_v31_preparation.py::test_publishing_policy_retains_M23_request_and_witness
+FAILED tests/test_v31_preparation.py::test_four_registered_scenarios_are_exact_originals_and_only_fixed_methods
+14 failed in 1.51s

@@ -1,0 +1,44 @@
+{
+  "source_sqlite": "D:\\云大文件\\论文\\医院ies\\Hospital_SanDiego_Starter\\simulation\\engineering_audit_20261010\\eplusout.sql",
+  "exterior_submeter_sqlite": "D:\\云大文件\\论文\\医院ies\\Hospital_SanDiego_Starter\\simulation\\engineering_audit_submeters_20261010\\eplusout.sql",
+  "annual_hours": 8760,
+  "critical_zones": 14,
+  "max_abs_electricity_balance_residual_kW": 6.297184995673888e-13,
+  "electricity_partition": {
+    "nonplant": [
+      "interior_lights",
+      "interior_equipment",
+      "refrigeration",
+      "exterior_lights",
+      "fans",
+      "humidifier",
+      "water_systems",
+      "elevator_lift",
+      "elevator_lights_fan",
+      "SWH hot-water circulation pump"
+    ],
+    "plant": [
+      "cooling",
+      "heat_rejection",
+      "primary chiller, condenser/tower, heating-loop and heat-recovery pumps"
+    ],
+    "unresolved": [
+      "transformer_distribution_loss",
+      "secondary chilled-water distribution pump",
+      "heating"
+    ]
+  },
+  "notes": [
+    "ExteriorEquipment parent meter is not added to its child meters; child meters exactly partition it.",
+    "Pump component rates are disjoint; their hourly sum is checked against Pumps:Electricity before assignment.",
+    "Electricity:Building and Electricity:HVAC are overlapping group meters and are not added to end-use meters.",
+    "Plant Supply Side Demand Rate series are diagnostics only and are not integrated as delivered annual energy.",
+    "Zone electricity meters are already adjusted for Zone/ZoneList multipliers; do not multiply again."
+  ],
+  "files": [
+    "electricity_boundary_8760.csv",
+    "hospital_ies_demand_8760.csv",
+    "thermal_boundary_8760.csv",
+    "critical_zones_8760.csv"
+  ]
+}

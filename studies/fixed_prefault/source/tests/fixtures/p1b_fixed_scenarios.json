@@ -1,0 +1,206 @@
+[
+  {
+    "id": "smoketest_L1_0000_h6013",
+    "stage": 1,
+    "start_hour": 6013,
+    "duration_steps": 6,
+    "step_minutes": 15,
+    "enable_propagation": false,
+    "response_delay_steps": 0,
+    "design_family": "smoketest_L1_0000",
+    "sampling_method": "unit_enum",
+    "sampling_weight_is_failure_probability": false,
+    "faults": {
+      "TOWER_1": 0.0
+    },
+    "fault_duration_steps": 6,
+    "initiating_device": "TOWER_1",
+    "contingency_class": "N-1"
+  },
+  {
+    "id": "smoketest_L1_0001_h1245",
+    "stage": 1,
+    "start_hour": 1245,
+    "duration_steps": 6,
+    "step_minutes": 15,
+    "enable_propagation": false,
+    "response_delay_steps": 0,
+    "design_family": "smoketest_L1_0001",
+    "sampling_method": "unit_enum",
+    "sampling_weight_is_failure_probability": false,
+    "faults": {
+      "EC_1": 0.5
+    },
+    "fault_duration_steps": 2,
+    "initiating_device": "EC_1",
+    "contingency_class": "N-1"
+  },
+  {
+    "id": "smoketest_L2_0000_h6926",
+    "stage": 2,
+    "start_hour": 6926,
+    "duration_steps": 6,
+    "step_minutes": 15,
+    "enable_propagation": false,
+    "response_delay_steps": 0,
+    "design_family": "smoketest_L2_0000",
+    "sampling_method": "sobol_stratified",
+    "sampling_weight_is_failure_probability": false,
+    "shock": {
+      "e": 0.2842,
+      "h": 0.0,
+      "c": 0.0
+    },
+    "shock_mode": "e"
+  },
+  {
+    "id": "smoketest_L2_0001_h8191",
+    "stage": 2,
+    "start_hour": 8191,
+    "duration_steps": 6,
+    "step_minutes": 15,
+    "enable_propagation": false,
+    "response_delay_steps": 0,
+    "design_family": "smoketest_L2_0001",
+    "sampling_method": "sobol_stratified",
+    "sampling_weight_is_failure_probability": false,
+    "shock": {
+      "e": 0.0,
+      "h": 0.3661,
+      "c": 0.0
+    },
+    "shock_mode": "h"
+  },
+  {
+    "id": "smoketest_L3_0000_h3255",
+    "stage": 3,
+    "start_hour": 3255,
+    "duration_steps": 6,
+    "step_minutes": 15,
+    "enable_propagation": true,
+    "response_delay_steps": 3,
+    "design_family": "smoketest_L3_0000",
+    "sampling_method": "initiator_enum",
+    "sampling_weight_is_failure_probability": false,
+    "faults": {
+      "TOWER_4": 0.5
+    },
+    "initiating_device": "TOWER_4",
+    "fault_duration_steps": 3,
+    "pre_event_warmup_steps": 6,
+    "grid_limit_kW": 160.0,
+    "fault_start_step": 2,
+    "modeled_secondary_protection": "GT_overload_only",
+    "automatic_fast_shedding": true,
+    "precontrol_sheddable_fraction_by_priority": {
+      "P3": 0.1,
+      "P2": 0.0,
+      "P1": 0.0
+    }
+  },
+  {
+    "id": "smoketest_L3_0001_h4233",
+    "stage": 3,
+    "start_hour": 4233,
+    "duration_steps": 6,
+    "step_minutes": 15,
+    "enable_propagation": true,
+    "response_delay_steps": 0,
+    "design_family": "smoketest_L3_0001",
+    "sampling_method": "initiator_enum",
+    "sampling_weight_is_failure_probability": false,
+    "faults": {
+      "ABS": 0.0
+    },
+    "initiating_device": "ABS",
+    "fault_duration_steps": 4,
+    "pre_event_warmup_steps": 6,
+    "grid_limit_kW": 850.0,
+    "fault_start_step": 0,
+    "modeled_secondary_protection": "GT_overload_only",
+    "automatic_fast_shedding": false,
+    "precontrol_sheddable_fraction_by_priority": {
+      "P3": 0.25,
+      "P2": 0.1,
+      "P1": 0.03
+    }
+  },
+  {
+    "id": "smoketest_L4_0000_h6515",
+    "stage": 4,
+    "start_hour": 6515,
+    "duration_steps": 6,
+    "step_minutes": 15,
+    "enable_propagation": true,
+    "response_delay_steps": 2,
+    "design_family": "smoketest_L4_0000",
+    "sampling_method": "sobol_stratified",
+    "sampling_weight_is_failure_probability": false,
+    "shock": {
+      "e": 0.0789,
+      "h": 0.1463,
+      "c": 0.3941
+    },
+    "grid_limit_kW": 250.0,
+    "pre_event_warmup_steps": 6,
+    "shock_start_step": 0,
+    "stratum": "ordinary",
+    "sampling_cohort": "main",
+    "shock_by_priority": {},
+    "automatic_fast_shedding": true,
+    "precontrol_sheddable_fraction_by_priority": {
+      "P3": 0.1,
+      "P2": 0.0,
+      "P1": 0.0
+    }
+  },
+  {
+    "id": "smoketest_L4_0001_h2379",
+    "stage": 4,
+    "start_hour": 2379,
+    "duration_steps": 6,
+    "step_minutes": 15,
+    "enable_propagation": true,
+    "response_delay_steps": 1,
+    "design_family": "smoketest_L4_0001",
+    "sampling_method": "sobol_stratified",
+    "sampling_weight_is_failure_probability": false,
+    "shock": {
+      "e": 1.2171,
+      "h": 0.2464,
+      "c": 0.3685
+    },
+    "grid_limit_kW": 350.0,
+    "pre_event_warmup_steps": 6,
+    "shock_start_step": 2,
+    "stratum": "elevated",
+    "sampling_cohort": "main",
+    "shock_by_priority": {
+      "P0": {
+        "e": 0.0354
+      }
+    },
+    "automatic_fast_shedding": false,
+    "precontrol_sheddable_fraction_by_priority": {
+      "P3": 0.25,
+      "P2": 0.1,
+      "P1": 0.03
+    }
+  },
+  {
+    "id": "testL4",
+    "stage": 4,
+    "start_hour": 4300,
+    "duration_steps": 2,
+    "step_minutes": 15,
+    "shock": {
+      "e": 0.85,
+      "c": 0.55
+    },
+    "enable_propagation": true,
+    "pre_event_warmup_steps": 8,
+    "grid_limit_kW": 250,
+    "response_delay_steps": 2,
+    "automatic_fast_shedding": true
+  }
+]

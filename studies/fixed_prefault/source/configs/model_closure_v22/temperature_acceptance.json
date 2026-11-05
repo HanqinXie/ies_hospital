@@ -1,0 +1,31 @@
+{
+  "model_id": "M22_temperature_net_sensible_1r1c",
+  "registered_before_v22_temperature_fit": true,
+  "old_four_dates_role": "seen_development_regression_only",
+  "clinical_standard": false,
+  "limits": {
+    "event_rmse_C": 1.0,
+    "recovery_first6h_rmse_C": 0.5,
+    "maximum_absolute_error_C": 2.0,
+    "first_crossing_error_minutes": 10.0,
+    "recovery_time_error_minutes": 20.0,
+    "maximum_complete_input_interval_minutes": 10.0
+  },
+  "research_threshold_above_setpoint_C": 2.0,
+  "recovery_band_C": 0.2,
+  "recovery_consecutive_native_samples": 3,
+  "recovery_native_sample_minutes": 10.0,
+  "phases": "event and first six recovery hours separately; retain full-tail maximum",
+  "missing_metric_or_incomplete_boundary_is_pass": false,
+  "no_crossing_rule": "observed and modeled crossing status must match",
+  "censoring_rule": "retain null recovery beyond window; never replace by zero",
+  "calibration_cases": ["cal_summer_2h", "cal_transition_4h"],
+  "regression_cases": ["val_winter_2h", "val_summer_4h"],
+  "physical_fit_bounds": {
+    "capacity": "IDF zone air capacity through air plus all recorded furniture capacity",
+    "effective_U_W_m2K": [0.5, 5.0],
+    "fit_attempts": 1,
+    "parameters": 2,
+    "extra_thermal_states": 0
+  }
+}

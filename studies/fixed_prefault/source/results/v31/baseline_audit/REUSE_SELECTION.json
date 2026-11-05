@@ -1,0 +1,477 @@
+{
+  "schema": "hospital_ies.v31.exact_historical_reuse.v1",
+  "status": "passed",
+  "baseline_root": "E:\\hospital_ies_v30_20261027",
+  "current_doc_HEAD": "e635b919dae9e1c89793a4c29eecbab4e27a05ec",
+  "producer": "3252727135645037cedc57ebc188a48d2aa34ccb",
+  "source_sha256": "2509d2fa562e672af3cfe4058ace55f0e38de6172d1ac2d633210d0e776f0776",
+  "input_sha256": "f414d21fc55d5a63282435b9bed9a1c8c289a049f24507f953fb86162fb41d15",
+  "new_V31_actual_executions": 0,
+  "run_count": 8,
+  "runs": [
+    {
+      "run_id": "n02_b05_L3_ER_normal_C",
+      "relative_path": "runs/n02_b05_L3_ER_normal_C",
+      "role": "historical_V30_C02_reuse_not_new_V31_execution",
+      "reuse_eligible": true,
+      "context": "b05_L3_ER",
+      "mode": "normal",
+      "method": "C",
+      "configuration": "H0",
+      "producer": "3252727135645037cedc57ebc188a48d2aa34ccb",
+      "policy_id": "C_fixed_direct_aux_v28_V28_adopted",
+      "expanded_policy_config": {
+        "response_minutes": 30.0,
+        "support_minutes": 60.0,
+        "delay_bound_minutes": 30.0,
+        "cooling_preparation": true,
+        "time_energy_preparation": true,
+        "execution_recovery": true,
+        "critical_reserve": true,
+        "policy_mode": "coordinated",
+        "reserve_enabled": true,
+        "critical_preparation_first": true,
+        "reserve_rule": "critical_current",
+        "legacy_C19_order": true,
+        "online_GT_count_order": "after_cost",
+        "fixed_reserve_hours": 1.0,
+        "release_after_minutes": 120.0,
+        "release_floor_hours": 0.5,
+        "observed_outage_minutes": 0.0,
+        "critical_non_diesel_ready": false
+      },
+      "start_hour": 3416,
+      "scenario_sha256": "bd391e4a552d70d0d803b1f7cb0f33d30fb941940aa5b2022e96f99042243338",
+      "case_sha256": "c87c86a2effa38b05c0f0e256dc8a8f8aef0c1771ec304129350201e037f3c9b",
+      "observed_until_minute": 180.0,
+      "unknown_tail_minutes": 0.0,
+      "physical_patch": "hospital_ies.powered_start_minimum_off_readiness.v30.fix1",
+      "native_hash_checks": [
+        {
+          "path": "trajectory.json.gz",
+          "expected_sha256": "b8ec6c6acc86322c5b6d5c3d69d51a3e4003f735a052b1dc0d6b4cc580f2fe4a",
+          "expected_bytes": 2663601,
+          "matches": true
+        },
+        {
+          "path": "ACTUAL_PREFIX.jsonl",
+          "expected_sha256": "ae781002fbe796ecd9bfa3531db23370290897514e87cd953345e7686130fc1a",
+          "expected_bytes": 483058,
+          "matches": true
+        },
+        {
+          "path": "solver_rows.jsonl.gz",
+          "expected_sha256": "42d49c1224408f2233099fae6952cb3b93edfbfa5d17dace35c2cd564ccc36d4",
+          "expected_bytes": 7940006,
+          "matches": true
+        }
+      ]
+    },
+    {
+      "run_id": "n02_b05_L3_ER_normal_M",
+      "relative_path": "runs/n02_b05_L3_ER_normal_M",
+      "role": "historical_V30_C02_reuse_not_new_V31_execution",
+      "reuse_eligible": true,
+      "context": "b05_L3_ER",
+      "mode": "normal",
+      "method": "M",
+      "configuration": "H0",
+      "producer": "3252727135645037cedc57ebc188a48d2aa34ccb",
+      "policy_id": "M_fixed_direct_aux_v28_V28_adopted",
+      "expanded_policy_config": {
+        "response_minutes": 30.0,
+        "support_minutes": 60.0,
+        "delay_bound_minutes": 30.0,
+        "cooling_preparation": false,
+        "time_energy_preparation": false,
+        "execution_recovery": true,
+        "critical_reserve": false,
+        "policy_mode": "current",
+        "reserve_enabled": false,
+        "critical_preparation_first": false,
+        "reserve_rule": "none",
+        "legacy_C19_order": false,
+        "online_GT_count_order": "after_cost",
+        "fixed_reserve_hours": 1.0,
+        "release_after_minutes": 120.0,
+        "release_floor_hours": 0.5,
+        "observed_outage_minutes": 0.0,
+        "critical_non_diesel_ready": false
+      },
+      "start_hour": 3416,
+      "scenario_sha256": "bd391e4a552d70d0d803b1f7cb0f33d30fb941940aa5b2022e96f99042243338",
+      "case_sha256": "5f51e29f2ae91a7cb230b6a48675b8fb0248747346d54db3099b88e459f6348d",
+      "observed_until_minute": 180.0,
+      "unknown_tail_minutes": 0.0,
+      "physical_patch": "hospital_ies.powered_start_minimum_off_readiness.v30.fix1",
+      "native_hash_checks": [
+        {
+          "path": "trajectory.json.gz",
+          "expected_sha256": "2c1906fc714154fa23513a3cb5bc7737814d03d087d2597a98993bda592c5d46",
+          "expected_bytes": 1391366,
+          "matches": true
+        },
+        {
+          "path": "ACTUAL_PREFIX.jsonl",
+          "expected_sha256": "898e143a98cb457728ba1cc18198e9f9e80cfb11092143dc89183c62ad26944b",
+          "expected_bytes": 357959,
+          "matches": true
+        },
+        {
+          "path": "solver_rows.jsonl.gz",
+          "expected_sha256": "45591a8840799fd7b1ef40230b38750599857ec41513d025ca922a9a356bda02",
+          "expected_bytes": 1609373,
+          "matches": true
+        }
+      ]
+    },
+    {
+      "run_id": "d02_b05_L3_ER_disturbed_C",
+      "relative_path": "runs/d02_b05_L3_ER_disturbed_C",
+      "role": "historical_V30_C02_reuse_not_new_V31_execution",
+      "reuse_eligible": true,
+      "context": "b05_L3_ER",
+      "mode": "disturbed",
+      "method": "C",
+      "configuration": "H0",
+      "producer": "3252727135645037cedc57ebc188a48d2aa34ccb",
+      "policy_id": "C_fixed_direct_aux_v28_V28_adopted",
+      "expanded_policy_config": {
+        "response_minutes": 30.0,
+        "support_minutes": 60.0,
+        "delay_bound_minutes": 30.0,
+        "cooling_preparation": true,
+        "time_energy_preparation": true,
+        "execution_recovery": true,
+        "critical_reserve": true,
+        "policy_mode": "coordinated",
+        "reserve_enabled": true,
+        "critical_preparation_first": true,
+        "reserve_rule": "critical_current",
+        "legacy_C19_order": true,
+        "online_GT_count_order": "after_cost",
+        "fixed_reserve_hours": 1.0,
+        "release_after_minutes": 120.0,
+        "release_floor_hours": 0.5,
+        "observed_outage_minutes": 0.0,
+        "critical_non_diesel_ready": false
+      },
+      "start_hour": 3416,
+      "scenario_sha256": "b568b331551219546e512572ec4a510499d7e812f08899b158b23c5a80567ed0",
+      "case_sha256": "393532a87113b78063586b1c0a8704ec7b71fe74c06d4d72cedbd48edc063460",
+      "observed_until_minute": 180.0,
+      "unknown_tail_minutes": 0.0,
+      "physical_patch": "hospital_ies.powered_start_minimum_off_readiness.v30.fix1",
+      "native_hash_checks": [
+        {
+          "path": "trajectory.json.gz",
+          "expected_sha256": "e8fb7781fe69eed1a83ed605a65982a98522afe34c2c17339d27caa93e036538",
+          "expected_bytes": 2950987,
+          "matches": true
+        },
+        {
+          "path": "ACTUAL_PREFIX.jsonl",
+          "expected_sha256": "ba8fcdccccd4ae25e09510159915a827efc9091c4ab2e6d842c99cc174698174",
+          "expected_bytes": 484948,
+          "matches": true
+        },
+        {
+          "path": "solver_rows.jsonl.gz",
+          "expected_sha256": "d82f5ee7fdf98f4272cc07c046957a4a25d70e7eb31a203bb931046f2d0d7e43",
+          "expected_bytes": 7933847,
+          "matches": true
+        }
+      ]
+    },
+    {
+      "run_id": "d02_b05_L3_ER_disturbed_M",
+      "relative_path": "runs/d02_b05_L3_ER_disturbed_M",
+      "role": "historical_V30_C02_reuse_not_new_V31_execution",
+      "reuse_eligible": true,
+      "context": "b05_L3_ER",
+      "mode": "disturbed",
+      "method": "M",
+      "configuration": "H0",
+      "producer": "3252727135645037cedc57ebc188a48d2aa34ccb",
+      "policy_id": "M_fixed_direct_aux_v28_V28_adopted",
+      "expanded_policy_config": {
+        "response_minutes": 30.0,
+        "support_minutes": 60.0,
+        "delay_bound_minutes": 30.0,
+        "cooling_preparation": false,
+        "time_energy_preparation": false,
+        "execution_recovery": true,
+        "critical_reserve": false,
+        "policy_mode": "current",
+        "reserve_enabled": false,
+        "critical_preparation_first": false,
+        "reserve_rule": "none",
+        "legacy_C19_order": false,
+        "online_GT_count_order": "after_cost",
+        "fixed_reserve_hours": 1.0,
+        "release_after_minutes": 120.0,
+        "release_floor_hours": 0.5,
+        "observed_outage_minutes": 0.0,
+        "critical_non_diesel_ready": false
+      },
+      "start_hour": 3416,
+      "scenario_sha256": "b568b331551219546e512572ec4a510499d7e812f08899b158b23c5a80567ed0",
+      "case_sha256": "878a7224a8c40ac8aa52961bd0f5a19c71f5b7ac69152eab3e95ceca8ca9329e",
+      "observed_until_minute": 180.0,
+      "unknown_tail_minutes": 0.0,
+      "physical_patch": "hospital_ies.powered_start_minimum_off_readiness.v30.fix1",
+      "native_hash_checks": [
+        {
+          "path": "trajectory.json.gz",
+          "expected_sha256": "a25a31645850a518e05ed1918070d18f2cba0f6319734b78e33563a337d3b64b",
+          "expected_bytes": 1399570,
+          "matches": true
+        },
+        {
+          "path": "ACTUAL_PREFIX.jsonl",
+          "expected_sha256": "f33686f4a22f8681744c6ae72ecb8e891bfe9b22d8f487a51352465dfeaf6e56",
+          "expected_bytes": 360319,
+          "matches": true
+        },
+        {
+          "path": "solver_rows.jsonl.gz",
+          "expected_sha256": "3d0204a480048f83583c4ed4a26fcf0c715cccfaa9eaef45b2a1b6a99452efcf",
+          "expected_bytes": 1611831,
+          "matches": true
+        }
+      ]
+    },
+    {
+      "run_id": "n02_b07_L4_GT_ER_normal_C",
+      "relative_path": "runs/n02_b07_L4_GT_ER_normal_C",
+      "role": "historical_V30_C02_reuse_not_new_V31_execution",
+      "reuse_eligible": true,
+      "context": "b07_L4_GT_ER",
+      "mode": "normal",
+      "method": "C",
+      "configuration": "H0",
+      "producer": "3252727135645037cedc57ebc188a48d2aa34ccb",
+      "policy_id": "C_fixed_direct_aux_v28_V28_adopted",
+      "expanded_policy_config": {
+        "response_minutes": 30.0,
+        "support_minutes": 60.0,
+        "delay_bound_minutes": 30.0,
+        "cooling_preparation": true,
+        "time_energy_preparation": true,
+        "execution_recovery": true,
+        "critical_reserve": true,
+        "policy_mode": "coordinated",
+        "reserve_enabled": true,
+        "critical_preparation_first": true,
+        "reserve_rule": "critical_current",
+        "legacy_C19_order": true,
+        "online_GT_count_order": "after_cost",
+        "fixed_reserve_hours": 1.0,
+        "release_after_minutes": 120.0,
+        "release_floor_hours": 0.5,
+        "observed_outage_minutes": 0.0,
+        "critical_non_diesel_ready": false
+      },
+      "start_hour": 3128,
+      "scenario_sha256": "dc0ca151184987a4be7f8e6d1ec380e04e5947cf69a678a9fe5129a890f87939",
+      "case_sha256": "c257e38c6229b4df0be212ffce5f8838fc87179584eaf86dfdb84a0458a99968",
+      "observed_until_minute": 180.0,
+      "unknown_tail_minutes": 0.0,
+      "physical_patch": "hospital_ies.powered_start_minimum_off_readiness.v30.fix1",
+      "native_hash_checks": [
+        {
+          "path": "trajectory.json.gz",
+          "expected_sha256": "0575ba651986f099d94a3b702c1c68a275db1759b3152153af2e4eb2801ceb82",
+          "expected_bytes": 2367498,
+          "matches": true
+        },
+        {
+          "path": "ACTUAL_PREFIX.jsonl",
+          "expected_sha256": "ed8817268cd771d8d26eb13267664c3e15d89681a2733f907c43dbf4a6ebd527",
+          "expected_bytes": 743384,
+          "matches": true
+        },
+        {
+          "path": "solver_rows.jsonl.gz",
+          "expected_sha256": "20cf660e384047235b306005bfeecc1b6eac3aa55bf4998d142ac4b38f38bdd8",
+          "expected_bytes": 7878160,
+          "matches": true
+        }
+      ]
+    },
+    {
+      "run_id": "n02_b07_L4_GT_ER_normal_M",
+      "relative_path": "runs/n02_b07_L4_GT_ER_normal_M",
+      "role": "historical_V30_C02_reuse_not_new_V31_execution",
+      "reuse_eligible": true,
+      "context": "b07_L4_GT_ER",
+      "mode": "normal",
+      "method": "M",
+      "configuration": "H0",
+      "producer": "3252727135645037cedc57ebc188a48d2aa34ccb",
+      "policy_id": "M_fixed_direct_aux_v28_V28_adopted",
+      "expanded_policy_config": {
+        "response_minutes": 30.0,
+        "support_minutes": 60.0,
+        "delay_bound_minutes": 30.0,
+        "cooling_preparation": false,
+        "time_energy_preparation": false,
+        "execution_recovery": true,
+        "critical_reserve": false,
+        "policy_mode": "current",
+        "reserve_enabled": false,
+        "critical_preparation_first": false,
+        "reserve_rule": "none",
+        "legacy_C19_order": false,
+        "online_GT_count_order": "after_cost",
+        "fixed_reserve_hours": 1.0,
+        "release_after_minutes": 120.0,
+        "release_floor_hours": 0.5,
+        "observed_outage_minutes": 0.0,
+        "critical_non_diesel_ready": false
+      },
+      "start_hour": 3128,
+      "scenario_sha256": "dc0ca151184987a4be7f8e6d1ec380e04e5947cf69a678a9fe5129a890f87939",
+      "case_sha256": "3df5c39d7afeb5212cb8613f25bedd649b272649722e8de4823dc942da521a71",
+      "observed_until_minute": 180.0,
+      "unknown_tail_minutes": 0.0,
+      "physical_patch": "hospital_ies.powered_start_minimum_off_readiness.v30.fix1",
+      "native_hash_checks": [
+        {
+          "path": "trajectory.json.gz",
+          "expected_sha256": "12e06bd6ac32630969804283673cbdf040c80aa3a60947e38fb47aa0c1b05117",
+          "expected_bytes": 1357875,
+          "matches": true
+        },
+        {
+          "path": "ACTUAL_PREFIX.jsonl",
+          "expected_sha256": "25bfa21863e15ac33fae2b00bb7bedc5f9782134499471a17c1105c9e612026f",
+          "expected_bytes": 320431,
+          "matches": true
+        },
+        {
+          "path": "solver_rows.jsonl.gz",
+          "expected_sha256": "31fd2113e9e9349ee0a48533ce8b59673359f48e3041aa12a56193aa90d5a36c",
+          "expected_bytes": 1606973,
+          "matches": true
+        }
+      ]
+    },
+    {
+      "run_id": "d02_b07_L4_GT_ER_disturbed_C",
+      "relative_path": "runs/d02_b07_L4_GT_ER_disturbed_C",
+      "role": "historical_V30_C02_reuse_not_new_V31_execution",
+      "reuse_eligible": true,
+      "context": "b07_L4_GT_ER",
+      "mode": "disturbed",
+      "method": "C",
+      "configuration": "H0",
+      "producer": "3252727135645037cedc57ebc188a48d2aa34ccb",
+      "policy_id": "C_fixed_direct_aux_v28_V28_adopted",
+      "expanded_policy_config": {
+        "response_minutes": 30.0,
+        "support_minutes": 60.0,
+        "delay_bound_minutes": 30.0,
+        "cooling_preparation": true,
+        "time_energy_preparation": true,
+        "execution_recovery": true,
+        "critical_reserve": true,
+        "policy_mode": "coordinated",
+        "reserve_enabled": true,
+        "critical_preparation_first": true,
+        "reserve_rule": "critical_current",
+        "legacy_C19_order": true,
+        "online_GT_count_order": "after_cost",
+        "fixed_reserve_hours": 1.0,
+        "release_after_minutes": 120.0,
+        "release_floor_hours": 0.5,
+        "observed_outage_minutes": 0.0,
+        "critical_non_diesel_ready": false
+      },
+      "start_hour": 3128,
+      "scenario_sha256": "61b350af595571837a9de7793a8a03b0af5aafe4d887347f5db4c39bea096999",
+      "case_sha256": "1fb5056dafffa10991cf596e0a6947d66ab80d37afd02b1eec706b35d2fcdd2b",
+      "observed_until_minute": 180.0,
+      "unknown_tail_minutes": 0.0,
+      "physical_patch": "hospital_ies.powered_start_minimum_off_readiness.v30.fix1",
+      "native_hash_checks": [
+        {
+          "path": "trajectory.json.gz",
+          "expected_sha256": "8355be2e02a8a526bd61b11dd1a9fe55d0fd9182ffc7df3465f659d636218415",
+          "expected_bytes": 2139362,
+          "matches": true
+        },
+        {
+          "path": "ACTUAL_PREFIX.jsonl",
+          "expected_sha256": "6ce6dbea34175f6280b03f8c525ebdd57d68238cb500da9baeaebcd2f0ea1246",
+          "expected_bytes": 577983,
+          "matches": true
+        },
+        {
+          "path": "solver_rows.jsonl.gz",
+          "expected_sha256": "9034fa50e496a4ea84f7f4aebf8ceffabdd40cc0dae76bd8c80c7d61c5554f6f",
+          "expected_bytes": 7726357,
+          "matches": true
+        }
+      ]
+    },
+    {
+      "run_id": "d02_b07_L4_GT_ER_disturbed_M",
+      "relative_path": "runs/d02_b07_L4_GT_ER_disturbed_M",
+      "role": "historical_V30_C02_reuse_not_new_V31_execution",
+      "reuse_eligible": true,
+      "context": "b07_L4_GT_ER",
+      "mode": "disturbed",
+      "method": "M",
+      "configuration": "H0",
+      "producer": "3252727135645037cedc57ebc188a48d2aa34ccb",
+      "policy_id": "M_fixed_direct_aux_v28_V28_adopted",
+      "expanded_policy_config": {
+        "response_minutes": 30.0,
+        "support_minutes": 60.0,
+        "delay_bound_minutes": 30.0,
+        "cooling_preparation": false,
+        "time_energy_preparation": false,
+        "execution_recovery": true,
+        "critical_reserve": false,
+        "policy_mode": "current",
+        "reserve_enabled": false,
+        "critical_preparation_first": false,
+        "reserve_rule": "none",
+        "legacy_C19_order": false,
+        "online_GT_count_order": "after_cost",
+        "fixed_reserve_hours": 1.0,
+        "release_after_minutes": 120.0,
+        "release_floor_hours": 0.5,
+        "observed_outage_minutes": 0.0,
+        "critical_non_diesel_ready": false
+      },
+      "start_hour": 3128,
+      "scenario_sha256": "61b350af595571837a9de7793a8a03b0af5aafe4d887347f5db4c39bea096999",
+      "case_sha256": "9e919b1c60a09c693e14ce25a13919641fd59c19798a835dfb6a1c655fb441b8",
+      "observed_until_minute": 180.0,
+      "unknown_tail_minutes": 0.0,
+      "physical_patch": "hospital_ies.powered_start_minimum_off_readiness.v30.fix1",
+      "native_hash_checks": [
+        {
+          "path": "trajectory.json.gz",
+          "expected_sha256": "bccb8f6fd2dc14235a346697ba63c84cbd1cea051a6271dab1d942b5806f9dbd",
+          "expected_bytes": 1107367,
+          "matches": true
+        },
+        {
+          "path": "ACTUAL_PREFIX.jsonl",
+          "expected_sha256": "47c95c24b998f4807d4361bf0a96a30dc134cf106334a33df7c434c8aa8cd4a7",
+          "expected_bytes": 241190,
+          "matches": true
+        },
+        {
+          "path": "solver_rows.jsonl.gz",
+          "expected_sha256": "1d003c843705debfdd2fd68fbe87dfea4ace02b5aacb0e72465756ced79ffd37",
+          "expected_bytes": 1545949,
+          "matches": true
+        }
+      ]
+    }
+  ]
+}

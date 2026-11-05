@@ -1,0 +1,86 @@
+{
+  "schema": "hospital_ies.v32.posterior_review.index.v1",
+  "created_utc": "2026-10-27T15:00:10.971026+00:00",
+  "status": "complete_readonly_consistency_review",
+  "primary_report": "INDEPENDENCE_POSTERIOR_REVIEW_ZH.md",
+  "primary_evidence": "actual02/POSTERIOR_CONSISTENCY.json",
+  "actual_commands": [
+    "ACTUAL01_COMMAND.json",
+    "ACTUAL02_COMMAND.json"
+  ],
+  "own_solver_calls": 0,
+  "own_model_episodes": 0,
+  "initialization_total_solver_calls": null,
+  "files": [
+    {
+      "path": "actual01/POSTERIOR_CONSISTENCY.json",
+      "bytes": 596047,
+      "sha256": "7b630b4433c5814de39561bbd1d6212c52907c758f53e8e5dc58c12af2ac2faa"
+    },
+    {
+      "path": "ACTUAL01.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "ACTUAL01.stdout.log",
+      "bytes": 690,
+      "sha256": "975abfa5e1c571657c0ccd6105946976a122ff8930bb901a684ade02a4e12c17"
+    },
+    {
+      "path": "ACTUAL01_COMMAND.json",
+      "bytes": 781,
+      "sha256": "b093cb1c44790cab280edef56c20b908645137285d2dba163ce04c804ce74035"
+    },
+    {
+      "path": "actual02/POSTERIOR_CONSISTENCY.json",
+      "bytes": 596215,
+      "sha256": "e573bb5d143ed1968ae519f565179b3bd8010ce2f001a98e8dc97b9b832a833e"
+    },
+    {
+      "path": "ACTUAL02.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "ACTUAL02.stdout.log",
+      "bytes": 690,
+      "sha256": "975abfa5e1c571657c0ccd6105946976a122ff8930bb901a684ade02a4e12c17"
+    },
+    {
+      "path": "ACTUAL02_COMMAND.json",
+      "bytes": 895,
+      "sha256": "edd0c2a7113d6c8e6a569cafc31334850853dffbcee9669cf5f588f7033cf96d"
+    },
+    {
+      "path": "crosscheck_posterior.py",
+      "bytes": 15283,
+      "sha256": "b4a6c3c354d445f206ce8c6cc3e09ffb5788f025eb8f4918fc1789d98ff775c2"
+    },
+    {
+      "path": "crosscheck_posterior_r1_preserved.py",
+      "bytes": 13970,
+      "sha256": "87f75dee1483be070112383b02129e6b83323e8f193102ad1f9c6889961df8d9"
+    },
+    {
+      "path": "INDEPENDENCE_POSTERIOR_REVIEW_ZH.md",
+      "bytes": 6946,
+      "sha256": "bfebd37f1afbe332540eb39ae052bfd1699691d808d01756e5a045f8c3c20b51"
+    },
+    {
+      "path": "QA.json",
+      "bytes": 698,
+      "sha256": "b6c423023902ec6d219a06f2b145fa1e604146ffec7fda4a85821517aea0d5c9"
+    },
+    {
+      "path": "README_ZH.md",
+      "bytes": 1376,
+      "sha256": "5e3437866e28012cd47c55cc725654058dc0244a0c5e648ff229b99095cc484a"
+    },
+    {
+      "path": "TOOL_FREEZE.json",
+      "bytes": 401,
+      "sha256": "e8384022562685089513b60d6912f6fbfaa92117f0bb90721e226237745cfc45"
+    }
+  ]
+}

@@ -1,0 +1,673 @@
+[
+  {
+    "method": "C",
+    "normal_id": "reused_b01_L1_grid_normal_C",
+    "disturbed_id": "reused_b01_L1_grid_disturbed_C",
+    "deltas": {
+      "definition": "disturbed minus own normal",
+      "ENS_kWh": {
+        "P0": {
+          "e": -5.5777344086276254e-06,
+          "h": 0.0,
+          "c": 0.0
+        },
+        "P1": {
+          "e": -5.577734410403955e-06,
+          "h": 0.0,
+          "c": 0.0
+        },
+        "P2": {
+          "e": 0.9811351698169539,
+          "h": 0.0,
+          "c": 0.0
+        },
+        "P3": {
+          "e": 130.80342556986048,
+          "h": 7.748543194290232,
+          "c": 4.506154220963266
+        }
+      },
+      "material_minutes": {
+        "P0": {
+          "e": 0,
+          "h": 0,
+          "c": 0
+        },
+        "P1": {
+          "e": 0,
+          "h": 0,
+          "c": 0
+        },
+        "P2": {
+          "e": 7.0,
+          "h": 0,
+          "c": 0
+        },
+        "P3": {
+          "e": 75.0,
+          "h": 7.0,
+          "c": 7.0
+        }
+      },
+      "recovery": {
+        "P0": {
+          "e": {
+            "normal": "not_applicable",
+            "disturbed": "not_applicable",
+            "absolute_minute_difference": null
+          },
+          "h": {
+            "normal": "not_applicable",
+            "disturbed": "not_applicable",
+            "absolute_minute_difference": null
+          },
+          "c": {
+            "normal": "not_applicable",
+            "disturbed": "not_applicable",
+            "absolute_minute_difference": null
+          }
+        },
+        "P1": {
+          "e": {
+            "normal": "not_applicable",
+            "disturbed": "not_applicable",
+            "absolute_minute_difference": null
+          },
+          "h": {
+            "normal": "not_applicable",
+            "disturbed": "not_applicable",
+            "absolute_minute_difference": null
+          },
+          "c": {
+            "normal": "not_applicable",
+            "disturbed": "not_applicable",
+            "absolute_minute_difference": null
+          }
+        },
+        "P2": {
+          "e": {
+            "normal": "not_applicable",
+            "disturbed": "observed",
+            "absolute_minute_difference": null
+          },
+          "h": {
+            "normal": "not_applicable",
+            "disturbed": "not_applicable",
+            "absolute_minute_difference": null
+          },
+          "c": {
+            "normal": "not_applicable",
+            "disturbed": "not_applicable",
+            "absolute_minute_difference": null
+          }
+        },
+        "P3": {
+          "e": {
+            "normal": "not_applicable",
+            "disturbed": "observed",
+            "absolute_minute_difference": null
+          },
+          "h": {
+            "normal": "not_applicable",
+            "disturbed": "observed",
+            "absolute_minute_difference": null
+          },
+          "c": {
+            "normal": "not_applicable",
+            "disturbed": "observed",
+            "absolute_minute_difference": null
+          }
+        }
+      },
+      "actual_fee_USD2001": 22.719501926708006,
+      "DG_shaft_work_kWh": 103.12506025451162,
+      "DG_electric_work_kWh": 86.99432138778116,
+      "final_stock_kWh": {
+        "ups": 0.0,
+        "cold_store": 0.0
+      },
+      "DG_remaining_shaft_budget_kWh": -103.1250602545042
+    },
+    "prefault_prefix": {
+      "required": true,
+      "equal": true,
+      "status": "checked",
+      "comparison": {
+        "equal_raw": false,
+        "equal_after_timing_normalization": true,
+        "timing_only_difference": true,
+        "raw": {
+          "difference_count": 656,
+          "samples": [
+            {
+              "path": "/decisions/0/command_generated/joint_dispatch/diagnostic/m23_boiler_domains/checked_domains/0/solver_backend_layers/0/attempts/0/elapsed_seconds",
+              "left": 0.01535769971087575,
+              "right": 0.014524600002914667
+            },
+            {
+              "path": "/decisions/0/command_generated/joint_dispatch/diagnostic/m23_boiler_domains/checked_domains/0/solver_backend_layers/0/attempts/0/parameters/TimeLimit",
+              "left": 5.9900838998146355,
+              "right": 5.990143199916929
+            },
+            {
+              "path": "/decisions/0/command_generated/joint_dispatch/diagnostic/m23_boiler_domains/checked_domains/0/solver_backend_layers/1/attempts/0/elapsed_seconds",
+              "left": 0.010919000022113323,
+              "right": 0.010994100011885166
+            },
+            {
+              "path": "/decisions/0/command_generated/joint_dispatch/diagnostic/m23_boiler_domains/checked_domains/0/solver_backend_layers/1/attempts/0/parameters/TimeLimit",
+              "left": 5.989454800263047,
+              "right": 5.989723200444132
+            },
+            {
+              "path": "/decisions/0/command_generated/joint_dispatch/diagnostic/m23_boiler_domains/checked_domains/0/solver_backend_layers/2/attempts/0/elapsed_seconds",
+              "left": 0.010673500131815672,
+              "right": 0.01065099984407425
+            },
+            {
+              "path": "/decisions/0/command_generated/joint_dispatch/diagnostic/m23_boiler_domains/checked_domains/0/solver_backend_layers/2/attempts/0/parameters/TimeLimit",
+              "left": 5.9892305000685155,
+              "right": 5.988696300424635
+            },
+            {
+              "path": "/decisions/0/command_generated/joint_dispatch/diagnostic/m23_boiler_domains/checked_domains/0/solver_backend_layers/3/attempts/0/elapsed_seconds",
+              "left": 0.009469399694353342,
+              "right": 0.010014799889177084
+            },
+            {
+              "path": "/decisions/0/command_generated/joint_dispatch/diagnostic/m23_boiler_domains/checked_domains/0/solver_backend_layers/3/attempts/0/parameters/TimeLimit",
+              "left": 5.988897300325334,
+              "right": 5.988546600565314
+            },
+            {
+              "path": "/decisions/0/command_generated/joint_dispatch/diagnostic/m23_boiler_domains/checked_domains/0/solver_backend_layers/4/attempts/0/elapsed_seconds",
+              "left": 0.03592030005529523,
+              "right": 0.035300899762660265
+            },
+            {
+              "path": "/decisions/0/command_generated/joint_dispatch/diagnostic/m23_boiler_domains/checked_domains/0/solver_backend_layers/4/attempts/0/parameters/TimeLimit",
+              "left": 5.98903590021655,
+              "right": 5.988580499775708
+            },
+            {
+              "path": "/decisions/0/command_generated/joint_dispatch/diagnostic/m23_boiler_domains/checked_domains/0/solver_backend_layers/5/attempts/0/elapsed_seconds",
+              "left": 0.011965099722146988,
+              "right": 0.012170599773526192
+            },
+            {
+              "path": "/decisions/0/command_generated/joint_dispatch/diagnostic/m23_boiler_domains/checked_domains/0/solver_backend_layers/5/attempts/0/parameters/TimeLimit",
+              "left": 5.987242199946195,
+              "right": 5.988394800107926
+            },
+            {
+              "path": "/decisions/0/command_generated/joint_dispatch/diagnostic/m23_boiler_domains/checked_domains/0/solver_backend_layers/6/attempts/0/elapsed_seconds",
+              "left": 0.010018100030720234,
+              "right": 0.011744999792426825
+            },
+            {
+              "path": "/decisions/0/command_generated/joint_dispatch/diagnostic/m23_boiler_domains/checked_domains/0/solver_backend_layers/6/attempts/0/parameters/TimeLimit",
+              "left": 5.988287799991667,
+              "right": 5.9890280002728105
+            },
+            {
+              "path": "/decisions/0/command_generated/joint_dispatch/diagnostic/m23_boiler_domains/checked_domains/0/solver_backend_layers/7/attempts/0/elapsed_seconds",
+              "left": 0.012073600199073553,
+              "right": 0.010380199644714594
+            },
+            {
+              "path": "/decisions/0/command_generated/joint_dispatch/diagnostic/m23_boiler_domains/checked_domains/0/solver_backend_layers/7/attempts/0/parameters/TimeLimit",
+              "left": 5.987274299841374,
+              "right": 5.987679299898446
+            },
+            {
+              "path": "/decisions/0/command_generated/joint_dispatch/diagnostic/m23_boiler_domains/checked_domains/0/solver_backend_layers/8/attempts/0/elapsed_seconds",
+              "left": 0.012464300263673067,
+              "right": 0.01188379991799593
+            },
+            {
+              "path": "/decisions/0/command_generated/joint_dispatch/diagnostic/m23_boiler_domains/checked_domains/0/solver_backend_layers/8/attempts/0/parameters/TimeLimit",
+              "left": 5.985322800464928,
+              "right": 5.988261699676514
+            },
+            {
+              "path": "/decisions/0/command_generated/joint_dispatch/diagnostic/m23_boiler_domains/checked_domains/0/solver_backend_layers/9/attempts/0/elapsed_seconds",
+              "left": 0.012012099847197533,
+              "right": 0.011717800050973892
+            },
+            {
+              "path": "/decisions/0/command_generated/joint_dispatch/diagnostic/m23_boiler_domains/checked_domains/0/solver_backend_layers/9/attempts/0/parameters/TimeLimit",
+              "left": 5.983113199938089,
+              "right": 5.98783229989931
+            }
+          ]
+        },
+        "normalized": {
+          "difference_count": 0,
+          "samples": []
+        },
+        "left_normalized_sha256": "7d83f65e974cf85684e2226f72f7fe916775605835c820e3b691947713b8a7fb",
+        "right_normalized_sha256": "7d83f65e974cf85684e2226f72f7fe916775605835c820e3b691947713b8a7fb"
+      }
+    },
+    "policy_comparison": {
+      "equal_control_configuration": true,
+      "branch_specific_binding_keys": [],
+      "branch_specific_bindings": {},
+      "scope": "Only registered per-branch schedule file path/SHA are separated; actual commands/state are not filtered"
+    },
+    "delta_includes_offline_preparation_differences": false
+  },
+  {
+    "method": "M",
+    "normal_id": "reused_b01_L1_grid_normal_M",
+    "disturbed_id": "reused_b01_L1_grid_disturbed_M",
+    "deltas": {
+      "definition": "disturbed minus own normal",
+      "ENS_kWh": {
+        "P0": {
+          "e": -1.8973538018496328e-19,
+          "h": 0.0,
+          "c": 0.0
+        },
+        "P1": {
+          "e": -6.555285424703289e-07,
+          "h": 0.0,
+          "c": 0.0
+        },
+        "P2": {
+          "e": 0.9811163774339899,
+          "h": 0.0,
+          "c": 0.0
+        },
+        "P3": {
+          "e": 76.78189198528285,
+          "h": 7.748543194404931,
+          "c": 4.506154220963266
+        }
+      },
+      "material_minutes": {
+        "P0": {
+          "e": 0,
+          "h": 0,
+          "c": 0
+        },
+        "P1": {
+          "e": 0,
+          "h": 0,
+          "c": 0
+        },
+        "P2": {
+          "e": 7.0,
+          "h": 0,
+          "c": 0
+        },
+        "P3": {
+          "e": 15.0,
+          "h": 7.0,
+          "c": 7.0
+        }
+      },
+      "recovery": {
+        "P0": {
+          "e": {
+            "normal": "not_applicable",
+            "disturbed": "not_applicable",
+            "absolute_minute_difference": null
+          },
+          "h": {
+            "normal": "not_applicable",
+            "disturbed": "not_applicable",
+            "absolute_minute_difference": null
+          },
+          "c": {
+            "normal": "not_applicable",
+            "disturbed": "not_applicable",
+            "absolute_minute_difference": null
+          }
+        },
+        "P1": {
+          "e": {
+            "normal": "not_applicable",
+            "disturbed": "not_applicable",
+            "absolute_minute_difference": null
+          },
+          "h": {
+            "normal": "not_applicable",
+            "disturbed": "not_applicable",
+            "absolute_minute_difference": null
+          },
+          "c": {
+            "normal": "not_applicable",
+            "disturbed": "not_applicable",
+            "absolute_minute_difference": null
+          }
+        },
+        "P2": {
+          "e": {
+            "normal": "not_applicable",
+            "disturbed": "observed",
+            "absolute_minute_difference": null
+          },
+          "h": {
+            "normal": "not_applicable",
+            "disturbed": "not_applicable",
+            "absolute_minute_difference": null
+          },
+          "c": {
+            "normal": "not_applicable",
+            "disturbed": "not_applicable",
+            "absolute_minute_difference": null
+          }
+        },
+        "P3": {
+          "e": {
+            "normal": "not_applicable",
+            "disturbed": "observed",
+            "absolute_minute_difference": null
+          },
+          "h": {
+            "normal": "not_applicable",
+            "disturbed": "observed",
+            "absolute_minute_difference": null
+          },
+          "c": {
+            "normal": "not_applicable",
+            "disturbed": "observed",
+            "absolute_minute_difference": null
+          }
+        }
+      },
+      "actual_fee_USD2001": 30.132228204653416,
+      "DG_shaft_work_kWh": 108.02065769475081,
+      "DG_electric_work_kWh": 91.88998913928062,
+      "final_stock_kWh": {
+        "ups": -7.105427357601002e-15,
+        "cold_store": 0.0
+      },
+      "DG_remaining_shaft_budget_kWh": -108.02065769475485
+    },
+    "prefault_prefix": {
+      "required": true,
+      "equal": true,
+      "status": "checked",
+      "comparison": {
+        "equal_raw": false,
+        "equal_after_timing_normalization": true,
+        "timing_only_difference": true,
+        "raw": {
+          "difference_count": 464,
+          "samples": [
+            {
+              "path": "/decisions/0/command_generated/joint_dispatch/diagnostic/m23_boiler_domains/checked_domains/0/solver_backend_layers/0/attempts/0/elapsed_seconds",
+              "left": 0.004880100023001432,
+              "right": 0.0035184998996555805
+            },
+            {
+              "path": "/decisions/0/command_generated/joint_dispatch/diagnostic/m23_boiler_domains/checked_domains/0/solver_backend_layers/0/attempts/0/parameters/TimeLimit",
+              "left": 5.998785200063139,
+              "right": 5.999218199867755
+            },
+            {
+              "path": "/decisions/0/command_generated/joint_dispatch/diagnostic/m23_boiler_domains/checked_domains/0/solver_backend_layers/1/attempts/0/elapsed_seconds",
+              "left": 0.004752299748361111,
+              "right": 0.002964199986308813
+            },
+            {
+              "path": "/decisions/0/command_generated/joint_dispatch/diagnostic/m23_boiler_domains/checked_domains/0/solver_backend_layers/1/attempts/0/parameters/TimeLimit",
+              "left": 5.998221700079739,
+              "right": 5.998913899995387
+            },
+            {
+              "path": "/decisions/0/command_generated/joint_dispatch/diagnostic/m23_boiler_domains/checked_domains/0/solver_backend_layers/2/attempts/0/elapsed_seconds",
+              "left": 0.004010299686342478,
+              "right": 0.0029531000182032585
+            },
+            {
+              "path": "/decisions/0/command_generated/joint_dispatch/diagnostic/m23_boiler_domains/checked_domains/0/solver_backend_layers/2/attempts/0/parameters/TimeLimit",
+              "left": 5.998409499879926,
+              "right": 5.9987792004831135
+            },
+            {
+              "path": "/decisions/0/command_generated/joint_dispatch/diagnostic/m23_boiler_domains/checked_domains/0/solver_backend_layers/3/attempts/0/elapsed_seconds",
+              "left": 0.002841799985617399,
+              "right": 0.0027356003411114216
+            },
+            {
+              "path": "/decisions/0/command_generated/joint_dispatch/diagnostic/m23_boiler_domains/checked_domains/0/solver_backend_layers/3/attempts/0/parameters/TimeLimit",
+              "left": 5.998598600272089,
+              "right": 5.9986481997184455
+            },
+            {
+              "path": "/decisions/0/command_generated/joint_dispatch/diagnostic/m23_boiler_domains/checked_domains/0/solver_backend_layers/4/attempts/0/elapsed_seconds",
+              "left": 0.0034175999462604523,
+              "right": 0.0035298001021146774
+            },
+            {
+              "path": "/decisions/0/command_generated/joint_dispatch/diagnostic/m23_boiler_domains/checked_domains/0/solver_backend_layers/4/attempts/0/parameters/TimeLimit",
+              "left": 5.9983061999082565,
+              "right": 5.998358400072902
+            },
+            {
+              "path": "/decisions/0/command_generated/joint_dispatch/diagnostic/m23_boiler_domains/checked_domains/0/solver_backend_layers/5/attempts/0/elapsed_seconds",
+              "left": 0.003598700277507305,
+              "right": 0.0042224000208079815
+            },
+            {
+              "path": "/decisions/0/command_generated/joint_dispatch/diagnostic/m23_boiler_domains/checked_domains/0/solver_backend_layers/5/attempts/0/parameters/TimeLimit",
+              "left": 5.9978282996453345,
+              "right": 5.997555500362068
+            },
+            {
+              "path": "/decisions/0/command_generated/joint_dispatch/diagnostic/m23_boiler_domains/checked_domains/0/solver_backend_layers/6/attempts/0/elapsed_seconds",
+              "left": 0.0030029001645743847,
+              "right": 0.003707300405949354
+            },
+            {
+              "path": "/decisions/0/command_generated/joint_dispatch/diagnostic/m23_boiler_domains/checked_domains/0/solver_backend_layers/6/attempts/0/parameters/TimeLimit",
+              "left": 5.9982503997161984,
+              "right": 5.997887700330466
+            },
+            {
+              "path": "/decisions/0/command_generated/joint_dispatch/diagnostic/m23_boiler_domains/checked_domains/0/solver_backend_layers/7/attempts/0/elapsed_seconds",
+              "left": 0.0034964000806212425,
+              "right": 0.005448200274258852
+            },
+            {
+              "path": "/decisions/0/command_generated/joint_dispatch/diagnostic/m23_boiler_domains/checked_domains/0/solver_backend_layers/7/attempts/0/parameters/TimeLimit",
+              "left": 5.997518199495971,
+              "right": 5.9957604999653995
+            },
+            {
+              "path": "/decisions/0/command_generated/joint_dispatch/diagnostic/m23_boiler_domains/checked_domains/0/solver_backend_layers/8/attempts/0/elapsed_seconds",
+              "left": 0.0029872003942728043,
+              "right": 0.004011699929833412
+            },
+            {
+              "path": "/decisions/0/command_generated/joint_dispatch/diagnostic/m23_boiler_domains/checked_domains/0/solver_backend_layers/8/attempts/0/parameters/TimeLimit",
+              "left": 5.997733400203288,
+              "right": 5.99702849984169
+            },
+            {
+              "path": "/decisions/0/command_generated/joint_dispatch/diagnostic/m23_boiler_domains/checked_domains/0/solver_backend_layers/9/attempts/0/elapsed_seconds",
+              "left": 0.0031170998699963093,
+              "right": 0.003582499921321869
+            },
+            {
+              "path": "/decisions/0/command_generated/joint_dispatch/diagnostic/m23_boiler_domains/checked_domains/0/solver_backend_layers/9/attempts/0/parameters/TimeLimit",
+              "left": 5.9976094998419285,
+              "right": 5.997249900363386
+            }
+          ]
+        },
+        "normalized": {
+          "difference_count": 0,
+          "samples": []
+        },
+        "left_normalized_sha256": "c2ab58a702344363c037a4780a2d42da6493b91dde229212e7adf41e49898e4a",
+        "right_normalized_sha256": "c2ab58a702344363c037a4780a2d42da6493b91dde229212e7adf41e49898e4a"
+      }
+    },
+    "policy_comparison": {
+      "equal_control_configuration": true,
+      "branch_specific_binding_keys": [],
+      "branch_specific_bindings": {},
+      "scope": "Only registered per-branch schedule file path/SHA are separated; actual commands/state are not filtered"
+    },
+    "delta_includes_offline_preparation_differences": false
+  },
+  {
+    "method": "R32_fixed_capacity_offline",
+    "normal_id": "v32_b01_normal_external",
+    "disturbed_id": "v32_b01_grid_external",
+    "deltas": {
+      "definition": "disturbed minus own normal",
+      "ENS_kWh": {
+        "P0": {
+          "e": -1.8920292376375147e-05,
+          "h": 0.0,
+          "c": 0.0
+        },
+        "P1": {
+          "e": -1.8920759826715166e-05,
+          "h": 0.0,
+          "c": 0.0
+        },
+        "P2": {
+          "e": 1.2792511307360213,
+          "h": 0.0,
+          "c": 0.06225472226475797
+        },
+        "P3": {
+          "e": 184.04693877346523,
+          "h": 21.876093487406283,
+          "c": 15.408700809859994
+        }
+      },
+      "material_minutes": {
+        "P0": {
+          "e": 0,
+          "h": 0,
+          "c": 0
+        },
+        "P1": {
+          "e": 0,
+          "h": 0,
+          "c": 0
+        },
+        "P2": {
+          "e": 7.5,
+          "h": 0,
+          "c": 0.5
+        },
+        "P3": {
+          "e": 22.208245333333323,
+          "h": 29.208245333333323,
+          "c": 29.208245333333323
+        }
+      },
+      "recovery": {
+        "P0": {
+          "e": {
+            "normal": "not_applicable",
+            "disturbed": "not_applicable",
+            "absolute_minute_difference": null
+          },
+          "h": {
+            "normal": "not_applicable",
+            "disturbed": "not_applicable",
+            "absolute_minute_difference": null
+          },
+          "c": {
+            "normal": "not_applicable",
+            "disturbed": "not_applicable",
+            "absolute_minute_difference": null
+          }
+        },
+        "P1": {
+          "e": {
+            "normal": "not_applicable",
+            "disturbed": "not_applicable",
+            "absolute_minute_difference": null
+          },
+          "h": {
+            "normal": "not_applicable",
+            "disturbed": "not_applicable",
+            "absolute_minute_difference": null
+          },
+          "c": {
+            "normal": "not_applicable",
+            "disturbed": "not_applicable",
+            "absolute_minute_difference": null
+          }
+        },
+        "P2": {
+          "e": {
+            "normal": "not_applicable",
+            "disturbed": "observed",
+            "absolute_minute_difference": null
+          },
+          "h": {
+            "normal": "not_applicable",
+            "disturbed": "not_applicable",
+            "absolute_minute_difference": null
+          },
+          "c": {
+            "normal": "not_applicable",
+            "disturbed": "observed",
+            "absolute_minute_difference": null
+          }
+        },
+        "P3": {
+          "e": {
+            "normal": "observed",
+            "disturbed": "observed",
+            "absolute_minute_difference": 45.5
+          },
+          "h": {
+            "normal": "not_applicable",
+            "disturbed": "observed",
+            "absolute_minute_difference": null
+          },
+          "c": {
+            "normal": "not_applicable",
+            "disturbed": "observed",
+            "absolute_minute_difference": null
+          }
+        }
+      },
+      "actual_fee_USD2001": -0.13351435777407517,
+      "DG_shaft_work_kWh": 16.13054368208118,
+      "DG_electric_work_kWh": 0.0,
+      "final_stock_kWh": {
+        "ups": -0.0037734540329630306,
+        "cold_store": 0.0
+      },
+      "DG_remaining_shaft_budget_kWh": -16.130543682088955
+    },
+    "prefault_prefix": {
+      "required": false,
+      "equal": null,
+      "status": "not_applicable_offline_known_window",
+      "reason": "Known future outage may change preparation; a same-prefix constraint is not imposed"
+    },
+    "policy_comparison": {
+      "equal_control_configuration": true,
+      "branch_specific_binding_keys": [
+        "actions_path",
+        "actions_sha256"
+      ],
+      "branch_specific_bindings": {
+        "actions_path": {
+          "normal": "E:\\hospital_ies_v32_20261027\\planning\\normal.requests.json",
+          "disturbed": "E:\\hospital_ies_v32_20261027\\planning\\grid.requests.json"
+        },
+        "actions_sha256": {
+          "normal": "46f23d18fc91fee3af56989616bf87251c17e2733cf88d9c4900349f26f391b6",
+          "disturbed": "b6a4903ee24a68304cd214f7efe929b275937b6ead2b2a160634ea4505df3864"
+        }
+      },
+      "scope": "Only registered per-branch schedule file path/SHA are separated; actual commands/state are not filtered"
+    },
+    "delta_includes_offline_preparation_differences": true
+  }
+]

@@ -1,0 +1,709 @@
+===== PDF PAGE 1 =====
+                                                              Journal of Process Control 68 (2018) 34–51
+                                             Contents lists available at ScienceDirect
+                          Journal of Process Control
+                                                              j our na l ho me pa g e: www.elsevier.com/locate/jprocont
+Dynamic modelling of induced draft cooling towers with parallel heat
+exchangers, pumps and cooling water network
+Department of Electrical, Electronic, and Computer Engineering, University of Pretoria, Pretoria, South Africa
+Article history:                                    In the process industries, cooling capacity is an important enabler for the facility to manufacture on
+Received 31 August 2017                         speciﬁcation product. The cooling water network is an important part of the over-all cooling system of
+Received in revised form 20 March 2018            the facility. In this paper a cooling water circuit consisting of 3 cooling towers in parallel, 2 cooling water
+                                   pumps in parallel, and 11 heat exchangers in parallel, is modelled. The model developed is based on
+                                                ﬁrst principles and captures the dynamic, non-linear nature of the plant. The modelled plant is further
+                                           complicated by continuous, as well as Boolean process variables, giving the model a hybrid nature. Energy
+                                        consumption is included in the model as it is a very important parameter for plant operation. The model
+                                                            is ﬁtted to real industry data by using a particle swarm optimisation approach. The model is suitable toCooling tower
+Cooling water network                       be used for optimisation and control purposes.
+Optimisation                                                           © 2018 Elsevier Ltd. All rights reserved.
+1. Introduction                                                       in the cooling water circuit. Another optimisation area enabled by
+                                                             deeper levels of modelling, is the ratio between the ﬂow rates to the
+   Optimisation and process control studies of Cooling Water (CW)     different parts of the plant as served by the different heat exchang-
+networks in the process industries are not common in the literature.     ers. For the purposes of control, more detailed modelling will add
+One reason for this is the relative scarcity of dynamic models of such    robustness to the closed loop system by decreasing the difference
+systems. Dynamic, ﬁrst principles modelling is done in this paper    between the actual plant and the controller plant model during
+with the aim of using the resulting model in process control and    both steady-state and dynamic transient conditions, as well as add
+optimisation studies.                                             degrees of freedom to be used by the controller.
+  Dynamic modelling has lately been applied by Muller and Craig     A cooling water system is mathematically complex due to the
+[1] to cooling water networks with the view to optimise and control     interaction between the thermodynamics and hydraulics [2,3].
+the entire process. In [1] a dual circuit cooling water network was    Mathematical modelling of a cooling water network has been done
+modelled including power consumption, with high-level models    by various researchers. Neural network modelling of a cooling
+for the cooling towers, and the plant exchangers. What distin-    water circuit for a petro-chemical facility was done by Malinowski
+guishes this paper from [1] is that a single circuit network is     et al. [4]. Multiple authors have done static hydraulic and static
+modelled with detailed heat and mass balance modelling of the    thermal modelling (see e.g. [2]).
+internals of the 3 cooling towers, as well as individual models for the      Power consumption efﬁciency optimisation is an important
+plant heat exchangers, and network hydraulics. In addition, in this     strategic focus area in the process industry. The power require-
+paper variable speed drives are added to the modelling of the cool-    ments for cooling water networks have been calculated in [1,5]. It
+ing tower fans and the CW pumps. For the purpose of optimisation,      is also included in the modelling done in this paper.
+more detailed modelling of the process enables better root cause      The cooling water network modelled in this paper is inherently
+understanding of process conditions, and enables greater increases     non-linear, as well as hybrid, since the pumps and cooling tower
+in efﬁciency in areas such as water loss and power consumption     fans can be in a running state, or can be off. This gives the state of the
+                                                          equipment a Boolean nature. The system therefore has a combina-
+                                                                      tion of continuous process state variables, as well as Boolean state
+                                                                          variables. This has an effect on the power consumption modelling of
+    E-mail addresses: henning@swissmail.org (J.H. Viljoen), nelismuller@gmail.com    the network, as well as the ultimate aim of control and optimisation.
+(C.J. Muller), ian.craig@up.ac.za (I.K. Craig).                                     In order to optimise and control a hybrid non-linear system, tech-
+https://doi.org/10.1016/j.jprocont.2018.04.005
+0959-1524/© 2018 Elsevier Ltd. All rights reserved.
+===== PDF PAGE 2 =====
+                                                                      J.H. Viljoen et al. / Journal of Process Control 68 (2018) 34–51                                           35
+niques from the realm of Mixed Integer Non-linear Programming        In the real plant this paper is based on, each heat exchanger has
+(MINLP) need to be used [6].                                      a hand valve upstream of it. In the model developed here, this hand
+                                                                   valve is modelled as a control valve for simulation purposes and
+                                                               motiving future advanced control strategies.
+   The cooling water circuit modelled in this paper is graphically     3. Model derivation
+depicted in Fig. 1. The cooling capacity is supplied by 3 Cooling
+Towers (CTs) in parallel. Cooling Water Return (CWR) is sprayed        In this section the modelling work done is documented, with ref-
+into each cooling tower at the top of the tower. At the bottom of the    erences to the literature, for each sub area of the model. Dynamic
+towers, the cooling water falls into a common Cooling Tower Basin    models for the major process unit operations (cooling towers,
+(CTB). Airﬂow through the cooling towers is induced by induction    pumps, valves and heat exchangers) are derived separately, and
+motor driven fans at the top of the cooling towers.                   the equations are developed to link the different operations. Model
+   Each tower is designed for a maximum cooling water ﬂow rate     variables and parameters used are given in Tables 1–4 .
+of 8700 m3/h, a heat duty of 101 MW, cooling water return tem-
+perature of 45 ◦C, and a supply temperature of 35 ◦C. The wet bulb
+temperature is designed to be 31 ◦C. Evaporative losses from the
+cooling tower are designed to be 1.83% of the total cooling tower
+                                                            The cooling tower model has been constructed with the follow-
+   The cooling tower fans are 9.1 m in diameter, and rotate at a
+design speed of 120.1 rpm. The design power consumption of each
+fan is 137 kW.                                                                1. The cooling tower operates under adiabatic thermodynamic con-
+   Each pump is designed for an operating ﬂow rate of 3850 m3/h        ditions.
+and an operating discharge pressure of 5.3 barg. Each pump was     2. The water and air streams are divided into 10 sections in the
+designed to run at an operating point of 740 rpm at which it con-        vertical dimension (see Fig. 2). The water ﬂow changes vertically
+sumes 811 kW. However, pumps on the actual plant consume more      between sections throughout the tower due to evaporation.
+power than this design power operating point.                           3. The density and speciﬁc heat of the water and dry air are con-
+  133 parallel cooling water heat exchangers are fed with cool-       stant across the height of the cooling tower, since the change in
+ing water by the cooling towers and the pumps. Most of the heat      temperatures are relatively small.
+exchangers are used to cool down process hydro-carbon streams     4. The ﬁll packing is uniformly wet and in thermal equilibrium.
+with the cooling water coming from the cooling water pumps.      with the aqueous phase, and covers all 10 sections in the vertical
+However, 73% of all the cooling water ﬂows through the 10 biggest      dimension of the tower.
+heat exchangers, and 27% ﬂows through the remaining 123 smaller     5. Water waste due to drifting is negligible. As per design this is
+exchangers. After having passed through the 133 heat exchangers,       0.02% of the water ﬂow through the tower. It is assumed zero for
+the cooling water ﬂows back to the cooling towers, completing the       the purposes of this paper.
+cooling water circuit. The 123 smaller exchangers were combined     6. There is no meaningful delay between the tower, the pumps and
+into a single 11th exchanger (see Section 5) for modelling purposes.       the heat exchangers.
+                                                               Fig. 1. The cooling network and associated equipment.
+===== PDF PAGE 3 =====
+36                                                                   J.H. Viljoen et al. / Journal of Process Control 68 (2018) 34–51
+Model variables and parameters (1).
+  Symbol                       Description                                                                    Steady-state value                      Units
+ A                          Heat exchanger heat exchange surface area                                    Per exchanger                   m2
+  act                           Contact area of water surface per volume unit in the tower                      399.9                           m2/m3
+  ah                            Horizontal section area of cooling tower                                      207.4                         m2
+  ap0                    Pump hydraulic curve constant 0                                           4514.46                             Pa s2
+  ap1                    Pump hydraulic curve constant 1                                           1926.25                             Pa s2/m3
+  ap2                    Pump hydraulic curve constant 2                                           −45,255.62                          Pa s2/m6
+  aseg                       The contact area of water surface per segment volume                         116,951                        m2
+  ca                         Heat capacity of air                                                        1008.5                                      J/(kg K)√
+  CvCV                          Control Valve valve Cv coefﬁcient                                          0.0040572                            m3/(s √Pa)
+  CvCT                          Cooling Tower water spray nozzel Cv                                         121.2                                 m3/(s  Pa)
+  cw                         Heat capacity of water                                                4185                                        J/(kg K)
+  F                        Mass ﬂow rate                                                              Per equipment                           kg/s
+   Fain                       Dry air ﬂow rate into a cooling tower segment                                 Per segment                             kg/s
+   Faout                       Dry air ﬂow rate out of a cooling tower segment                                Per segment                             kg/s
+   Ff                       Mass ﬂow rate through cooling tower fan                                     650.2                                    kg/s
+  Fwin                CW ﬂow rate into a cooling tower segment                                    Per segment                             kg/s
+  Fwout               CW ﬂow rate out of a cooling tower segment                                   Per segment                             kg/s
+  Fwevap                     Water evaporating rate per cooling tower segment                             Per segment                             kg/s
+  ha                           Cooling tower air phase heat transfer coefﬁcient                              0.6658                          W/(m2 K)
+  hCTB                         Height of Cooling Tower Basin                                                 13.2                   m
+  hD                           Cooling tower air phase mass transfer coefﬁcient                             0.000657                             kg/(m2 s)
+  hw                           Cooling tower water phase heat transfer coefﬁcient                            64.395                          W/(m2 K)
+Model variables and parameters (2).
+  Symbol               Description                                                                        Steady-state value               Units
+  IMaxCTB                Cooling tower basin maximum CW inventory                                     10,058,400                   kg
+  kHXi                 Heat exchanger hydraulic ﬂow coefﬁcient for stream i                              Per exchanger                   kg/s    m3kgPa
+  kP1                   Rotating equipment power transient response state space coefﬁcient 1               1.48                           dimensionless
+  kP2                   Rotating equipment power transient response state space coefﬁcient 2               0.52                           dimensionless
+  kP3                   Rotating equipment power transient response state space coefﬁcient 3               1.48                           dimensionless
+  n                   Fan rotational speed                                                                 2.0                             Revolutions per second
+  paout                  Pressure of moist air leaving the cooling tower                                   100,212                      Pa
+  pda                   Pressure of dry air coming into cooling tower                                    100,000                      Pa
+  pf                    Pressure head generated by cooling tower fan                                     211.9                        Pa
+  pp               Pump discharge differential pressure                                           736,600                      Pa
+  ps                   Standard atmospheric pressure                                                100,000                      Pa
+  pwCTin                 Pressure of CWR coming into cooling tower                                     250,000                      Pa
+  pwCTout                Pressure of CW at the bottom of the cooling tower                               100,000                      Pa
+  pwvap               Water vapour pressure at the interface                                            Per segment                   Pa
+  Pf                    Cooling tower fan power consumption                                            137,006.8           W
+  Pp               Pump power consumption                                                       932,989.9           W
+  REP                  Equal Percentage control valve characteristic constant                          40                             dimensionless
+  Ta                    Cooling tower air segment temperature                                           Per segment               K
+   Tain                 Temperature of dry air coming into cooling tower                             298                      K
+  Taout                Temperature of moist air leaving cooling tower                                   301.2                    K
+   Tint                   Cooling tower interface temperature                                              Per segment               K
+Model variables and parameters (3).
+  Symbol           Description                                                                                 Steady-state value           Units
+  Tw               Cooling tower water temperature                                                         Per segment            K
+ U               Heat exchanger overall heat transfer coefﬁcient                                            Per exchanger            W/(m2 K)
+  Vaseg           Volume of air in one Cooling Tower segment                                             147.04                m3
+  Vwseg           Volume of water in one Cooling Tower segment                                             29.3                  m3
+  Ya                Cooling tower air absolute humidity                                                       Per segment               kg water per kg dry air
+   Yint               Cooling tower interface absolute humidity                                                 Per segment               kg water per kg dry air
+    Tlm             Logarithmic Mean Temperature Difference (LMTD)                                         Per exchanger           K
+                    Latent heat of vaporisation of water                                                       2,257,000                     J/kg
+    a             Volume fraction of air in the cooling tower                                                  0.50                         Fraction
+  w             Volume fraction of water in the cooling tower                                                 0.1                          Fraction
+    a               Density of air at 25 ◦C                                                                 1.1694                   kg/m3
+   w               Density of water                                                               1000                     kg/m3
+    pCTin           Dynamic pressure time constant for cooling water return entering the cooling tower         60                            s
+    paout           Dynamic pressure time constant for moist air leaving cooling tower                      60                            s
+     pHX1          Dynamic differential pressure time constant for stream 1 of heat exchanger                60                            s
+     pHX2          Dynamic differential pressure time constant for stream 2 of heat exchanger                60                            s
+===== PDF PAGE 4 =====
+                                                                      J.H. Viljoen et al. / Journal of Process Control 68 (2018) 34–51                                           37
+Model variables and parameters (4).
+  Symbol              Description                                                                           Steady-state value              Units
+    THX2              Dynamic temperature time constant for stream 2 of heat exchanger output           360                              s
+     pCV             Dynamic pressure time constant for pressure drop over control valve                10                               s
+ ω              Pump rotational speed                                                            12.33                         Revolutions per second
+                                                               Fig. 2. Main streams in and out of each cooling tower.
+   Kloppers and Kröger [7] did a comparison of 3 methods in     for heat and mass transfer can be calculated from these assumed
+the literature that are historically used to evaluate and model the     values.
+steady-state behaviour and performance of Cooling Towers (CTs):        In [1] as well as [5], the mass balance for the cooling tower
+The Poppe, Merkel, and e-NTU methods. These methods, although    includes the make-up, evaporation, and blowdown streams in addi-
+helpful, do not provide dynamic models that can be used for con-     tion to the main in and outﬂow of cooling water into and from the
+trol and optimisation. Few dynamic models that describe cooling    tower. An assumption about the number of concentration cycles
+tower unit operation are available in the literature; see for example     in the system is included in most models (Castro et al. [2]). In this
+the dynamic, ﬁrst principles models built by Li, Li and Seem [8] and     paper, the mass balance is modelled with the streams as indicated
+Löfgren [9] that are used as a basis for the work described in this     in Fig. 2 for each cooling tower. It is assumed that if the cooling
+paper. In both [8] and [9] the authors developed dynamic models    tower fan (see Section 3.2) is switched off, then the cool dry air
+for a cooling tower by dividing the tower into segments like the    ﬂowing into the tower (Fain) is zero.
+authors have done in this paper. However in [8] the air side tran-        In Fig. 2, the level in the basin below the cooling tower is shared
+sient mass and energy transfer is neglected, whereas it is included    between all 3 cooling towers, and is modelled as an integrator.
+in [9]. It is also included in this paper in more detail, as the equa-        In [15], the cooling tower outlet temperature is modelled as a
+tions in [9] do not contain all the relevant detail for a numerical    function of the ﬂow rates and temperatures of the streams indicated
+simulation of the cooling towers modelled in this paper.               in Fig. 2, as well as the cooling water thermal effectiveness. In [3], an
+   For a number of the cooling tower models found in the literature    enthalpy balance is used to model the cooling tower, with the mass
+(e.g. in McCabe et al. [10]), as well as for practical operation, the wet     transfer coefﬁcient of the packing determined experimentally due
+bulb temperature is a key variable to be calculated (Green and Perry     to the complex surface geometries of the cooling tower ﬁllings. In
+[11]). A model for this variable is deﬁned by Stull [12]. Stull shows     [16], Ponce-Ortegaa et al. constructed a still more detailed enthalpy
+that the wet-bulb temperature depends on ambient temperature    model.
+(Ta) and humidity (Ya), and both these variables are included in the       Al-Nimr [17] constructed a simple dynamic model for a cool-
+model derived in this paper.                                         ing tower where both the sensible and latent heat transfer is taken
+   Fisenko et al. [13] constructed a detailed steady-state model for     into account. In [8], the dependence of the water density on tem-
+the evaporative cooling of a cooling tower, where it is assumed that    perature in each water cell is included in a dynamic model. Ma et al.
+all the water ﬂow that happens in the cooling tower, is in the form     [18] built a simpliﬁed dynamic model of the cooling tower, without
+of droplets. Similarly, in this paper, all heat and mass transfer is     discussing the details of model derivation. In [19], the heat trans-
+modelled as occurring between droplets and the surrounding air    mitted by convection to the packing in the tower was included in
+ﬂow. The average droplet radius is assumed to be 1 mm, and the    the dynamic model.
+total volume of packing per cooling tower is assumed 1161 m3 as       For this paper, the cooling tower height is divided into 10 seg-
+per the design data. Similar to [14], the volume fraction in the cool-    ments of equal height and volume to be modelled (see Fig. 2). The
+ing tower that is water, is assumed to be 10%. The contact area (act)    design dimensions of the tower were used to size each segment.
+===== PDF PAGE 5 =====
+38                                                                   J.H. Viljoen et al. / Journal of Process Control 68 (2018) 34–51
+                                                 Fig. 3. The main variables and interface for the jth segment of the cooling tower.
+   The interface between the water bulk and the air bulk is often     rate of water that evaporates from the jth segment can be calculated
+assumed to be saturated, i.e. the relative humidity is 100% [20]. This    as [9]
+is also the approach taken in this paper. Each water droplet in the
+cooling tower is modelled as shown in Fig. 3. Drops are aggregated      Fwevap,j = hDaseg(Yint ,j − Ya,j),                                    (3)
+into the 10 different segments with key variables describing the
+                                                        where Fwevap,j is the water evaporating rate for the jth cooling towercharacteristics of each segment. The interface between the water
+                                                              segment, and aseg is the contact area of the water surface per seg-and the air phases are modelled as shown in Fig. 3.
+                                                     ment volume. From (3) and Fig. 3, the mass balance of the water   Central to developing a dynamic model for the cooling tower is
+                                                     ﬁlm for the jth segment is then given bymodelling the mass and heat transfers that occur in the tower. Mid-
+dleman [21] uses a molar ﬂux equation at low rates of evaporation.
+                                                                                        Fwout,j = Fwin,j+1 − Fwevap,j.                                       (4)In this equation, the mass transfer rate of evaporated water into the
+air is directly proportional to the difference in the molar fraction of    From the energy balance for the water ﬁlm in (5), the water tem-
+the water vapour at the interface, and the molar fraction of water    perature in the jth segment, Tw,j, can be calculated [14] as
+of the bulk air. Since the dynamic transient of the heat transfer rate
+to reach steady state in the interface is assumed to be fast (Marques             ∂Tw,j    Fw,j   ∂Tw,j
+et al. [14]), a steady state energy balance equation can be used for    w wcw    =    cw    − hwact(Tw,j − Tint ,j),              (5)
+the interface of the jth segment in the tower as follows:
+                                                        where w is the volume fraction of water in the jth cooling tower
+hwact(Tw,j − Tint ,j) = haact(Tint ,j − Ta,j) + hD  act(Yint ,j − Ya,j).   (1)    segment, w is the density of water, cw is the heat capacity of water,
+                                                                         z is the vertical dimension in the tower, and ah is the horizon-Here, hD is the cooling tower air phase mass transfer coefﬁcient,
+                                                                                  tal cross-sectional area of the jth cooling tower segment. Similarlyis the latent heat of vaporisation of water, act is the cooling tower
+                                                          from the energy balance for the air ﬁlm in (6), the air temperaturecontact area of water surface per volume unit in the tower, Y is
+                                                                        in the jth segment, Ta,j, can be calculated [14] asabsolute humidity, ha is the cooling tower air phase heat trans-
+fer coefﬁcient, hw is the cooling tower water phase heat transfer
+coefﬁcient, and T is temperature. The symbols used were chosen       a  aca    = −    ca    − haact(Ta,j − Tint ,j),                (6)
+this way (h) with subscripts indicating which speciﬁc quantity is            ∂t       ah    ∂z
+being referred to, since the same symbols for heat and mass trans-
+                                                        where  a is the volume fraction of air in the cooling tower,  a is the
+fer coefﬁcients were used in some of the most prominent articles
+                                                                   density of air and ca is the heat capacity of air. The default ambient
+on cooling tower modelling: E.g. [14,7,22].
+                                                                               air temperature (Tain) is 25 ◦C, but it is changed as part of the model   According to [23], Buck’s formula can be used to estimate the
+                                                                 ﬁt and step testing that was done. The ambient cooling tower inlet
+saturation vapour pressure of water as a function of water tem-
+                                                                               air density and heat capacity is adjusted using the Peng–Robinson
+perature. From the Buck equation, the saturation water vapour
+                                                                 equations of state. From the mass balance in (7), the air humidity
+pressure at the segment interface can be calculated using the inter-
+                                                                          for segment j, Ya,j, can be written as follows:
+face temperature Tint as calculated from (1). From the water vapour
+pressure, the interface absolute humidity (water mass per mass dry          ∂Ya,j       Fa,j ∂Ya,j
+air) can be calculated as [11]                                                  a  a    = −      + hDact(Yint ,j − Ya,j).                    (7)
+Yint ,j = 0.622              ,                                       (2)     In [13], Fisenko et al. used relations to calculate the temperature
+                                                          dependence of mass and heat transfer coefﬁcients as a function of
+where pwvap is the water vapour pressure at the interface, and ps is    temperature. The relationship between the air mass transfer coef-
+the standard atmospheric pressure. From (1) and (2), the mass ﬂow     ﬁcient, and the air heat transfer coefﬁcient, has been modelled in
+===== PDF PAGE 6 =====
+                                                                      J.H. Viljoen et al. / Journal of Process Control 68 (2018) 34–51                                           39
+[24,22]. According to [10], the following relation can be used for    ear dynamic element (a similar approach was also used for other
+air-water cooling tower systems:                                      variables in the plant as per the below sections).
+                                                = X2PfThe pressure drop over the cooling tower is focused on the water       dt                                                                                                                                 (13)
+spray nozzle at the top of the tower. The nozzle is modelled with      dX2Pf
+an oriﬁce equation (9) relating pressure drop (observed at 2.5 barg       = −kP1X1Pf − kP2X2Pf + kP3Pfss                                                                          dt
+in the real plant process data) and ﬂow (FwCTin) through the nozzle
+                                                                                         Pf is then updated by integrating   dt    .
+  w               w                                                     3.3. Cooling tower basin modelling
+where CvCT is the Cv of the valve, and w is the density of the cooling                                                            The mass inventory in the cooling tower basin is modelled
+water. A ﬁrst-order transfer function is used to model the dynamic
+                                                             through the following mass balance:
+change of water pressure drop over the tower in response to a
+change in water mass ﬂow rate (time constant  pCTin).                    dICTB     3
+                                               =     FwCTout,i + FCWMU − FCWS,                         (14)                                                                         dt
+                                                        where ICTB is the basin mass inventory of water, FwCTout,i is the mass
+   Mechanical power, generated by the electric motor of each fan is   ﬂow rate of water out of the ith cooling tower, FCWMU is the mass
+partly converted to hydraulic work by the cooling tower fan, based   ﬂow rate of water make-up, and FCWS is the mass ﬂow rate of water
+on the hydraulic efﬁciency [25]. In [8], the ﬁrst two fan afﬁnity    from the basin as Cooling Water Supply.
+laws are shown that relates ﬂow through the fan (Ff), pressure head      Assuming perfect mixing of the water in the basin [14], the
+created (pf), and power (Pf) to fan speed (n), from one steady-state    energy balance of the basin is given by
+operating point (point 0) to another one (point 1) as follows:
+Ff 1 = Ff 0                                                            (10)     cwICTB  dt  =     cwFwCTout,iTwCTout,i
+          n0                                                        where the temperatures of the various streams are multiplied by
+                3                                                         their ﬂow rates and summed. FCWS is determined by the unit oper-          n1
+Pf 1 = Pf 0                                                    (12)     ation down stream of the basin (pumps), which in turn depends on
+                                                                 the pressure at the bottom of the basin. This pressure, pCTB, is given
+The dynamic transient of the pressure head (11) created by the fan    by
+as a function of fan speed is modelled with a ﬁrst-order response
+with time constant of  paout .                                            pCTB =  wghCTB     + ps,                                 (16)                                                                                             IMaxCTB   In [26,27] the power beneﬁts are shown that can be obtained
+by using Variable Speed Drives (VSDs), especially for fans given    where  w is the density of water, g is the gravitational constant,
+the highly non-linear relationship between fan speed and power     hCTB is the design height of the cooling tower basin, and IMaxCTB is
+consumption.                                                    the maximum mass inventory of the basin.
+   In [28], Sen points out that the starting current of induction
+motors can exceed steady-state current by 500–800%. This trans-      3.4. Pump modelling
+lates into very high power consumption during start-up which is
+a concern as most fans and pumps in industrial plants are driven        In [3,15] it is recommend to use a second degree polynomial
+by induction motors, including the fans and pumps studied in this     to represent a pump curve. In [30], Wang and Chen use a second
+paper.                                                         degree polynomial to also model pump output differential pressure
+   In [29], Szymczyk and Karaskiewicz modelled and simulated the      (  pp) as a function of rotational speed (ω) and mass ﬂow rate (F):
+initial transients of 11,500 m3/h centrifugal induction water pumps
+after start-up of the pump. The pumps exhibited an underdamped      pp = ap0ω2 + ap1ω  + ap2  2                             (17)
+dynamic response for the power consumption. The overshoot was                    w      w
+around 120%, and the pumps reached steady-state in fewer than    The steady-state power consumption of the pump (Ppss) can be cal-
+30 s. For this paper, the cooling tower fan power and pump power    culated as per (18) if mechanical losses are assumed to be negligible
+were modelled with a similar dynamic power transient. The power     [30]:
+overshoot is important for optimisation and control from a hybrid
+system perspective, as it will deter fans or pumps from being      Ppss = F                                                     (18)
+switched on unnecessarily if power minimisation forms part of the           w
+control objectives.                                                 For the pumps modelled in this paper, (17) and (18) yield the pump
+   Based on the above, the fan power is modelled as an under-    curves as displayed in Fig. 4.
+damped second order system with two state variables, X1Pf and
+X2Pf , where kP1, kP2 and kP3 are constant coefﬁcients, and Pfss is the      3.5. Hydraulic network modelling
+steady-state fan power consumption. The static and dynamic mod-
+els are thus combined similar to a Hammerstein model consisting of      The temperature of the resultant stream ﬂowing from a mixer
+a static valued non-linear element combined with a following lin-    (assuming no phase changes are occurring in the mixer), is mod-
+===== PDF PAGE 7 =====
+40                                                                   J.H. Viljoen et al. / Journal of Process Control 68 (2018) 34–51
+                                                            Fig. 4. Pump curves for the pumps –  pp vs. F and Ppss vs. F.
+elled as the sum of the temperatures of the input streams weighted    known, the known Kj values can be used to calculate the pressure
+by the mass ﬂow rate per input stream [3,5].                      drop over the network.
+   The pressure drop over a segment of pipe is calculated in [15]   ⎡                    ⎤
+which uses the fact that parallel branches of ﬂow must have equal      K1  −K2  0        · · ·  0      0   ⎡   ⎤
+pressure drop as part of the over-all hydraulic solution of the net-     0   K2   −K3    · · ·  0      0                0
+work (see also [31]). Parallel branches in a heat exchanger, valve                                              F2        0
+and pipe network can then be solved as a linear system as per [15].                                        ...                       ...         ...      ...              ...                                                 ...         F3        0   For this paper an algorithm was developed to model the distri-
+bution       of        mass ﬂow of                      cooling                          water                                through                                          the                                                    parallel                                                network                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        ...                                                          0   0    0        ...  −Km−1  0                                              ...       exchangers.                 The                       pressure                             drop                                     and                                        mass ﬂow                                                              rateof heat                                                 (  pei)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               ⎢⎢⎢⎢⎢⎢⎢⎣                                                                                                   0                 ⎥⎥⎥⎥⎥⎥⎥⎦(Fei) through each valve or exchanger (ith element in branch) in                                                                                                                                                                                                                                                                                     ⎢⎢⎢⎢⎢⎢⎢⎢⎢⎢⎣ Fm−1   ⎥⎥⎥⎥⎥⎥⎥⎥⎥⎥⎦                                                                                                                                       ...  Km−1   −Km    ⎥⎥⎥⎥⎥⎥⎥⎥⎥⎥⎥⎥⎦                    Ftotaleach branch of the network, will follow the rule in (19).                                                                                                                   ⎢⎢⎢⎢⎢⎢⎢⎢⎢⎢⎢⎢⎣ 0   0    0
+   Using (19), the pressure drop over the entire applicable branch
+  pj (jth branch) is given by (20) where there are n valves or      Most authors use a quadratic relationship scaled by valve open-
+exchangers in the branch.                                           ing (depending on the valve characteristic), between valve pressure
+                                                            drop and mass ﬂow, where the pressure drop is scaled by the den-
+  pj =    kiF2ei                                              (20)      The valves are modelled as per (25) in this paper [32]. The actual
+        i=1                                                volume ﬂow (F/ w) is proportional through the valve coefﬁcient
+                                                                      CvCV to the product of the valve characteristic f(·), given the valve
+           n                                                   opening (VOP), and the square root of the pressure drop over the
+  pj = F2j      ki                                              (21)    valve (  pvalve) divided by the speciﬁc gravity (gs).
+Kj =         ki                                               (22)        In this paper, equal percentage ﬂow characteristics are used for
+         i=1                                                       the control valves since   pvalve over the valves change depending
+                                                       on the operating point of the cooling water circuit. Therefore, a
+                                                      more linear installed ﬂow characteristic can be obtained through
+      pj = FjKj                                                (23)                                                                 using the non-linear equal percentage valve characteristic [32]
+   In (20), the mass ﬂow is common to all terms and can be removed       f (VOP) = (REP)VOP−1,                                         (26)
+from the summation to be Fj as per (21). The different k values are
+                                                        where REP is a valve design parameter.then summed, and taken the square root of to become Kj for the jth
+                                                            The pressure drop over the valve is modelled to follow a ﬁrst-branch in the network, out of a total of m branches as per (22). Kj
+                                                                 order dynamic transient response with a time constant of    pCV .can be calculated at each iteration of the simulation by using the
+square root of the pressure drop, and the mass ﬂow as per (23).
+   The different   pj values for the network must be the same for      3.7. Heat exchanger modelling
+all branches at all times, and the sum of the ﬂows Fj through the
+network will be equal to the known total inﬂow to the network        In order to calculate initial heat capacity values for the pro-
+(Ftotal). With these constraints, a system of linear equations with     cess hydrocarbon streams, as well as CW and input air streams,
+m unknowns and m equations can be constructed and solved for    the Peng–Robinson thermodynamic equations of state were used
+the different ﬂows through the network (24). Once the ﬂows are     [33].
+===== PDF PAGE 8 =====
+                                                                      J.H. Viljoen et al. / Journal of Process Control 68 (2018) 34–51                                           41
+                                                      Fig. 5. Generic cross-ﬂow heat exchanger for heat exchange modelling.
+   Various detailed heat exchanger dynamic models have been     4. Total system model
+published in the literature. In [34], a cross ﬂow heat exchanger
+was modelled dynamically. In [35], a dynamic model of 3 heat       Pressure drops over the heat exchangers and the cooling towers
+exchangers was built.                                                   will result in a particular system resistance curve as experienced by
+  Thermodynamic modelling of the heat exchangers is assisted    the pumps. The pump ﬂow produced will then be at the intersection
+by using the concept of Logarithmic Mean Temperature Difference     of the pump, and the network system curve. The system of equa-
+(LMTD) in [1] as well as in [31]. The LMTD is also deﬁned in [11]     tions, as developed for the total plant, will ﬁnd this intersection
+for different kinds of heat exchangers such as co-current ﬂow and    through iteration and convergence.
+counter-current ﬂow. It is deﬁned in (27) with reference to the      The blowdown ﬂow sent away from the cooling water circuit is
+temperatures and differential temperatures as portrayed in Fig. 5.    on average 0.7% of the total ﬂow in circulation, and is made-up with
+                                                                 the make-up ﬂow into the cooling tower basin. For the purposes of
+  Tlm =                                                     (27)     this paper, the blow down rate is assumed to be zero, resulting in
+           ln   TA                  TB                                                  the make-up ﬂow in the model focusing on replacing evaporative
+                                                                             losses, and not blow down as well. The make-up ﬂow rate is used in
+   The differential temperatures are deﬁned as follows:
+                                                               a Proportional-Integral-Derivative (PID) control loop that controls
+  TA = TI1 − TII2                                                    the level in the cooling tower basin.
+                                                            (28)                                                                          In [19], an explicit ﬁnite difference method was used to solve the
+  TB = TII1 − TI2                                               system of developed dynamic Partial Differential Equations (PDEs).
+   The heat energy ﬂow in the exchanger is the product of the heat     In this paper, numeric integration of the continuous equations are
+exchanger U factor, the heat exchange area (A), and the LMTD [1,15].     used. The system of differential and algebraic equations developed
+   For each exchanger, (29) will apply, with Q the heat duty of the    are of a stiff nature [36] for the cooling tower, but not for the rest
+exchanger, U the heat transfer rate coefﬁcient, and A the total heat     of the plant. The Runge–Kutta 4th order method with ﬁxed step
+exchange area for the exchanger.                                       size (200 ms) was used to numerically solve the stiff differential
+                                                                 equations [37], and the Euler method was used for the rest of the
+Q = U · A ·  Tlm                                             (29)                                                                          plant. Runge–Kutta methods are robust and accurate [37], but need
+For each exchanger, assuming no phase changes occur over the    small step sizes compared to system dynamics for stiff systems
+exchanger, (30) will apply per ﬂuid that is passing through the     [36]. Fixed step size methods are preferred since all the unit oper-
+exchanger. Here F is the mass ﬂow rate of the ﬂuid (stream 1 or     ations of the cooling water circuit will be solved at the same time
+2 as per Fig. 5), c is the heat capacity of the ﬂuid and   T is the    step as the numerical integration is performed over the simula-
+temperature difference between the inlet to the exchanger and the     tion horizon, which is simpler with a ﬁxed step size. The chosen
+outlet for the particular stream. The heat capacity is assumed con-    step size is shown through empirical simulation to converge for all
+stant per stream over time since the changes in temperature are    experimental simulations performed.
+relatively small.                                               The complete model equations are given below, for the model as
+                                                                 derived in Section 3. Differential state-space equations, and alge-
+Q = F · c ·  T                                                (30)                                                                       braic equations are grouped per section of the plant.
+By solving (27)–(30) simultaneously, closed form expressions for
+TI1, TII1 , TI2 and TII2 can be obtained. These temperature steady-state      4.1. Cooling tower model
+equations are given dynamic transients by adding a ﬁrst-order time
+constant per exchanger ( THX1 and  THX2), and turning the equations        In the below equations the subscript j refers to the jth section
+into ordinary differential equations.                                    of the ith cooling tower model. Steady-state values have ss as a
+   Pressure losses over the exchanger are divided between bundle     subscript.
+losses and nozzle losses according to [15], and can be approximated
+as a quadratic relationship between ﬂow and pressure drop scaled      4.1.1. State space model
+by a hydraulic coefﬁcient for stream 1 and 2 of the exchanger (kHXi).     dpCTin = −1  pCTin +  1   pCTinss                            (32)
+Each exchanger’s hydraulics are modelled assuming the mass ﬂow       dt         pCTin             pCTin
+rate is proportional to the square root of the pressure drop over                                                                     For each segment j:
+the particular ﬂuid path of the exchanger divided by the stream
+density, as per (31).                                                    dTw,j    Fw,j+1Tw,j+1 − Fw,jTw,j   hwaseg(Tw,j − Tint ,j)
+                                                                         dt             wVwseg             cw  wVwseg
+Fi = kHXi                                                    (31)      dTa,j    Fa,j−1Ta,j−1 − Fa,jTa,j    haaseg(Ta,j − Tint ,j)
+                                                                         dt               aVaseg                ca  aVaseg
+The dynamic transients of the pressure drops of the two streams
+over the heat exchanger, are modelled with ﬁrst order time con-     dYa,j    Fa,j−1Ya,j−1 + Fwevap − Fa,jYa,j
+stants    pHX1 and    pHX2.                                                dt                    aVaseg
+===== PDF PAGE 9 =====
+42                                                                   J.H. Viljoen et al. / Journal of Process Control 68 (2018) 34–51
+                                                                          Ppx1 is the current pump power, and is solved by integrating   dt   .
+pwCTin = pwCTout + w                                         (37)       For each pump:                     wCvCV
+                                                                     pp = pECWS − pCWS                                         (53)pmaout = pmain + pf 1                                          (38)
+   For each segment j:                                            −ap1ω +   (ap1ω)2 − 4ap2(ap0ω2 −  pp)
+       −(hD  act(Yint ,j − Ya,j) − haactTa,j − hwactTw,j)                   Fp = w                                                     (54)
+Fwevap,j = hDasegment(Yint ,j − Ya,j)                             (41)      4.6. Heat exchanger network splitter and mixer model
+Fwout,j = Fwin,j+1 − Fwevap,j                                    (42)      The ﬂow through each branch in the heat exchanger network,
+                                                                   as well as the pressure upstream of the network, are modelled by
+4.2. Fan model                                                   the algorithm given in Section 3.5, and (23) and (24).
+4.2.1. State space model                                                                                   4.7. Control valve model
+  dt         paout             paout                                                    4.7.1. State space model
+ dX1Pf                                             =        pCV +          pCVss                        (56)
+    = X2Pf                                                              dt          pCV              pCV  dt
+ dX2Pf                                                                             4.7.2. Algebraic equations
+  dt    = −kP1X1Pf − kP2X2Pf + kP3Pfss                                                     f (VOP) = (REP)VOP−1                                          (57)
+4.2.2. Algebraic equations                                                        pCTss = gs                                                 (58)
+          n0                                                         For each heat exchanger (i refers to either stream 1 or stream 2
+                3                                                        of the heat exchanger):
+4.3. Cooling tower basin model
+4.3.1. State space model                                                  dt        THXi           THXi
+    =     FwCTout,i + FCWMU − FCWS                          (49)      4.8.2. Algebraic equations2  dt
+dTCTB              i=1FwCTout,iTwCTout,i + FCWMUTCWMU − FCWSTCTB    =                                                    (50)
+                             ICTB                                                     F2c2  T1in + eKHX T2in − T2in − F1c1T1in
+pCTB = pCWS =  wghCTB     + ps                           (51)      THX1outss =                                                  (63)                         IMaxCTB                                                               F2c2eKHX − F1c1
+4.4.  Splitter and mixer around pumps model                                          F1c1(T1in − T1outss) + F2c2T2in
+   The ﬂow through each pump is determined by the pressure
+increase over the pump, which is deﬁned by (53).                        5. Parameter estimation
+4.5. Pump model                                                     For this paper, a data driven approach to ﬁtting each parameter
+                                                                        of the model as derived in the previous sections, is applied.
+4.5.1. State space model                                                 Least squares parameter estimation is a common technique used
+   For each pump:                                                   to ﬁt dynamic non-linear process models [38]. However, traditional
+                                                                   gradient decent techniques are not well suited to systems with local
+    = Ppx2                                             minima and maxima (i.e. non-convex problems), as well as exhibit-
+                                                            (52)    ing a hybrid nature. For future research the authors recommend
+ dPpx2                                                                 investigating gradient descent techniques as well for the parameter
+    = −kP1Ppx1 − kP2Ppx2 + kP3Ppss
+===== PDF PAGE 10 =====
+                                                                      J.H. Viljoen et al. / Journal of Process Control 68 (2018) 34–51                                           43
+Cooling tower coefﬁcients ﬁtted to plant data.
+  Parameter                          Description                                                                 Fitted to plant data                         Units
+  hD                                Cooling Tower mass transfer coefﬁcient                              0.000657                                kg/(m2 s)
+  hw                            Water heat transfer coefﬁcient in cooling tower                        64.395                             W/(m2 K)
+  ha                                   Air heat transfer coefﬁcient in cooling tower                           0.6658                             W/(m2 K)
+   In [1], a genetic algorithm was chosen for the optimisation of    The performance of each particle is evaluated at each iteration,
+the ﬁtting task due to the ability of this algorithm to handle non-    by evaluating the objective function of the optimiser with predic-
+linear, discontinuous, multi-parameter problems and its likelihood     tive horizon N. In this paper, predictive horizon spans the entire
+of ﬁnding a global optimum. In [39], a novel technique based on     dataset that is being ﬁtted against for each parameter. The objec-
+the biological DNA mechanism for utilising genetic algorithms to     tive function sums the square of the error between the variable
+estimate parameters of dynamic systems in the process industries,    being ﬁtted, and the real plant data for the variable, over the length
+was developed.                                                         of the prediction horizon.
+   In [40], Kennedy and Eberhart outlines the concept of using Par-        In [14], Marques et al. also ﬁtted their model utilising inlet and
+ticle Swarm Optimisation (PSO) for the optimisation of non-linear     outlet temperatures and ﬂow rate. The approach of [14] was used in
+continuous functions. The PSO algorithm is relatively simple, but     this paper in order to make use of the available data, as well as the
+very powerful for non-linear optimisation, including for hybrid sys-    model with parameters as developed. The cooling tower hydraulic
+tems [41]. PSO is an optimisation method that is built on swarm   ﬂow coefﬁcient is estimated from the measured cooling tower inlet
+intelligence as found in nature (bee swarms, bird swarms, etc.). It    pressure data.
+is a collective, iterative method, with an emphasis on cooperation        In order to increase the accuracy of the individual equipment
+[42]. There are a large number of examples of the usage of PSO    models, the preferred approach taken was to ﬁt each piece of equip-
+for parameter estimation in the literature. One example of PSO’s    ment separately to plant data where possible, and then combine all
+application to process modelling is given in [43]. The plant model    the ﬁtted equipment into the total model. The remaining param-
+developed in this paper has multiple local minima and maxima,     eters were then estimated. Initial values for all parameters were
+therefore the PSO algorithm, being a global optimiser, is effective at    obtained from design data and equipment data sheets. The param-
+ﬁnding a global optimum for the problem of ﬁtting the parameters     eters to be ﬁtted were then identiﬁed as the ones that are either not
+in the model to the plant data.                                         available in the data sheets to begin with, or that are most likely to
+   In this paper, a population of 30 particles was used. Each parti-    be different in the actual plant from the datasheet values.
+cle stores the speed and position of all the model parameters that       For the cooling towers, the parameters to be ﬁtted are the mass
+are to be optimised. The ith particle in the population’s jth param-     transfer coefﬁcient of air (hD), the heat transfer coefﬁcient of the
+eter’s speed (vj) is updated in each optimisation iteration for each    water (hw), and the heat transfer coefﬁcient of the air (ha). These
+parameter:                                                    parameters were ﬁtted for the cooling tower, using cooling tower
+                                                                 design sheet data, and then adjusted by ﬁtting them to the actual
+vj = vj + 2 (pj − xj) + 2  (gj − xj)                             (65)                                                                         data. The ﬁtted parameters are shown in Table 5.
+where  and  are random real numbers between 0 and 1 evaluated      The cooling tower model was ﬁtted by comparing the simu-
+for each optimisation iteration, pj is the value of the jth optimisation     lated Cooling Water Supply temperature to actual plant data for
+parameter for the ith particle that has had the best performance    two periods, as can be seen in Figs. 6 and 7. The ﬁrst period is
+in the latest solution space, gj is the position of the jth parame-    from 12 am at midnight to 12 pm noon. For the second period the
+ter for the particle in the entire population that has had the best    simulation was run over a 6-h period from 9:40 pm. The CWS tem-
+performance in the latest solution space, xj is the value of the jth    perature is the best available variable to validate the model with as
+parameter of the ith particle at the time of the iteration.                     it affects the plant the most, and is the only important output vari-
+   The position of the jth parameter for the ith particle is subse-     able that is measured. The model responds as expected to ambient
+quently updated with the newly calculated speed in each iteration:    temperature, humidity, as well as Cooling Water Return tempera-
+                                                                    ture changes. The variation in the ambient temperature was 12 K,
+xjk+1 = xjk + vj                                               (66)     for the ambient humidity it was 40% relative humidity change, and
+                                                Fig. 6. Cooling water supply temperature (TCWS) simulation vs. actual for period 1.
+===== PDF PAGE 11 =====
+44                                                                   J.H. Viljoen et al. / Journal of Process Control 68 (2018) 34–51
+Heat exchanger parameters ﬁtted to design, and more complete plant data.
+  Exchanger              UA design              UA ﬁtted                           THX1 ﬁtted                     kHX2 ﬁtted                    R2 of ﬁt
+                                                Fig. 7. Cooling water supply temperature (TCWS) simulation vs. actual for period 2.
+Table 7                                                            Simulated and actual process temperatures for the exchangers
+Heat exchanger parameters ﬁtted to design, and limited plant data.             where hydrocarbon temperatures and ﬂow rates are measured, are
+  Exchanger                UA design                        kHX2 ﬁtted     shown in Figs. 8–12. Actual and simulated data are compared for
+  HX-01                        142,639                       10.95        between 10 and 24 h per exchanger. The models for exchangers
+  HX-02                        142,639                       13.10         HX-06, HX-07, HX-04 and HX-09 follow the actual data very closely
+  HX-03                        533,096                        5.01          (within 0.5 ◦K over the operating envelope shown). For exchanger
+  HX-08                          301,030.1                      11.25        HX-05 there is an error of 1.3 ◦K in the worst case. This difference
+                                                                                       is due to an unmeasured disturbance in the data, but is considered
+                                                                   accurate enough for the purposes of this paper.
+the Cooling Water Return temperature varied 5 K over the testing     6. Simulation
+period. The R2 coefﬁcient of determination for the cooling tower ﬁt
+is 0.76.                                                                   In this section, the models developed in Sections 3 and 4 are sim-
+   Since more instruments providing plant data is available for    ulated to observe the response of the model outputs to steps in the
+the 10 bigger exchangers, each of these exchangers were mod-    model inputs. With a view to future work where the model could
+elled as separate process equipment. The 123 smaller exchangers    be used for control and optimisation purposes, the most important
+were combined into a single 11th exchanger in order to simplify the    measured model outputs are identiﬁed and called Controlled Vari-
+model (see Table 7). In [3], the ﬂow rate to each exchanger was mea-     ables (CVs). Input variables that can be readily actuated are called
+sured by an electromagnetic ﬂow meter and this data was used to    Manipulated Variables (MVs), and the environment variables that
+validate the model that was developed. The same approach is taken    are measured disturbances are called Disturbance Variables (DVs).
+in this paper: Measured ﬂow rates to the individual heat exchang-      The MVs and DVs are stepped one at a time while the remaining
+ers are not available, so an electromagnetic ﬂow meter was used    model inputs are held constant. The model was simulated on an
+to measure ﬂow rates by hand. These measurements were used     Intel Core i7 2.5 GHz machine, with 8 logical cores. The model was
+to calculate the ratios between ﬂows to each exchanger, and the    developed and implemented in Python and C#. The model is run
+total measured ﬂow rates were scaled accordingly to determine    with a sampling period of 200 ms. A high sampling frequency is
+the CW ﬂow to each exchanger. These ﬂow rates were used to ﬁt    needed due to the stiff nature of the cooling tower state space model
+the kHX2 hydraulic coefﬁcients on the cooling water side of each     (see Section 3.1) in order to ensure stability and convergence.
+exchanger. For the exchangers where hydrocarbon inlet and outlet        [44] shows that decreases in the L/G ratio (Liquid to Gas ratio, in
+stream temperatures and ﬂow rates are historised, the U value was     this paper water to air ﬂow ratio) results in an increase in the efﬁ-
+ﬁtted for each exchanger using the applicable hydrocarbon heat    ciency of the cooling tower. The air ﬂow in the model used in this
+capacity values. Heat exchanger heat exchange surface area values     paper, can be manipulated by changing the fan speed according to
+(A in Table 1) were obtained from the data sheets of each exchanger.     (10). Four equal steps of 0.6 rps were made every 4 h in the cool-
+The dynamic temperature time constant for the hydrocarbon side    ing water fan speed from 2.5 rps to 0.1 rps as shown in Fig. 13. The
+was also ﬁtted where temperatures are historised (see Table 6). The     resulting impact on cooling tower fan power is shown in Fig. 14,
+R2 coefﬁcient of determination for each heat exchanger ﬁt is also    and the impact on process temperature outlet of HX-03, cooling
+included in Table 6. For exchangers where historised measured data    water return temperature and cooling water supply temperature
+were not available, datasheet information was used (see Table 7).     are shown in Fig. 15. The impact of the fan speed on the plant tem-
+===== PDF PAGE 12 =====
+                                                                      J.H. Viljoen et al. / Journal of Process Control 68 (2018) 34–51                                           45
+                                                    Fig. 8. HX-06 process outlet temperature (THX06) simulated and actual data.
+                                                    Fig. 9. HX-07 process outlet temperature (THX07) simulated and actual data.
+                                                   Fig. 10. HX-04 process outlet temperature (THX04) simulated and actual data.
+peratures at the normal operating speed of 2 rps is much less than    going up to 313 K. This DV impact is also reﬂected in the validation
+when the speed moves to below 0.7 rps. This suggests that the plant    data in Fig. 6.
+could be optimised by running the fans at lower speed where less      The 3 cooling tower fans were shut down one by one in a hybrid
+power is consumed.                                                 control fashion and the impact on the plant temperatures simulated
+    Fig. 16 shows the impact of steps in the DV ambient temperature     (see Fig. 17). The lack of cooling capacity with fewer towers avail-
+on process temperature (HX-03; see Fig. 1), cooling water return     able, increases non-linearly as the fraction of cooling capacity lost
+temperature, and the cooling water supply temperature. The step    with each fan trip, increases. The settling time also increases non-
+increases are simulated to occur every 4 h, starting at 283 K and     linearly with the linear drop in cooling tower fans running, with
+===== PDF PAGE 13 =====
+46                                                                   J.H. Viljoen et al. / Journal of Process Control 68 (2018) 34–51
+                                                   Fig. 11. HX-09 process outlet temperature (THX09) simulated and actual data.
+                                                   Fig. 12. HX-05 process outlet temperature (THX05) simulated and actual data.
+                                                             each heat exchanger’s operating point) resulting in cooler hydro-
+                                                              carbon streams. In addition, it can be seen that larger ﬂow rates and
+                                                              speeds result in incrementally less increase in heat exchange, than
+                                                             lower ﬂow rates and pump speeds. This reﬂects the results from
+                                                                 the cooling tower air fan speed and resulting air ﬂow’s incremental
+                                                             impact on cooling in the tower. At lower pump speeds the cooling
+                                                             water network temperatures are more sensitive.
+                                                            The two running pumps were reduced to one running pump
+                                                          by tripping out one pump, and the resulting response of the total
+                                                ﬂow through the circuit, pump power, and plant temperatures are
+                                                     shown in Figs. 21 and 22. This is the natural extension of the pump
+                                                            speed simulations, where in this case the reduction in heat duty
+                                                                        in the heat exchangers are more severe. This results in the pumps
+                   Fig. 13. Cooling tower fan speed (n) as stepped.                 being turned into a potential hybrid control MV, just like the cooling
+                                                           tower fans, as an extension of its continuous MV control capability.
+                                                            The ambient relative humidity DV was stepped down from 100%
+the total cooling water network temperature dynamics becoming     to 0% every 4 h (see Fig. 23. At 100% humidity the evaporative cool-
+much slower as less fan draft is available.                            ing in the cooling towers is at minimum, and it is at maximum for
+   The pump speed was stepped hourly from 10.33 rps to 14.33 rps,     this DV at 0% humidity. The change in cooling in the process streams
+and the response of the pump power, total ﬂow through the cir-    follows the drop in evaporation due to the ambient humidity. The
+cuit, and the plant temperatures were simulated (see Figs. 18–20).     loss of cooling water in the network due to the extra evaporation
+These limits were chosen to be within a window of 15% around    following the drops in humidity, is replaced with additional make-
+the normal operating point of the pump speed. Larger steps in    up water ﬂow controlled by the PID level controller, as seen in
+pump speed reduces the convergence robustness of the model. The     Fig. 23.
+non-linear nature of the pump power consumption to pump speed      The control valve MV controlling cooling water ﬂow to the
+relationship is evident. Further, it can be seen from Fig. 20 that    2nd heat exchanger (HX-02) was stepped from turn down (1%)
+the pump speed will be a viable MV along with the other MVs for     to 100% open in 10 linear hourly steps, and the response of the
+control and optimisation purposes. Larger pump speeds result in    valve ﬂow, total circuit ﬂow, another process temperature (HX-06
+higher heat transfer rates in the heat exchangers (depending on    process temperature) and other plant temperatures are shown in
+===== PDF PAGE 14 =====
+                                                                      J.H. Viljoen et al. / Journal of Process Control 68 (2018) 34–51                                           47
+                                                        Fig. 14. Cooling tower fan power (Pf) response when speed stepped.
+Fig. 25–27. The linearisation achieved with the equal percentage
+characteristic is evident. Nevertheless, temperature controllability
+of the hydrocarbon stream of HX-02 is much greater, and quite
+effective, below 50% valve opening.
+   The impact on the rest of the system temperatures is much less,
+since only one valve was stepped. The HX-06 process temperature
+increases very slightly by a total of 0.3 K from 1% to 100% for the
+valve. The CW ﬂow through HX-06 decreases by around 4% over
+the full stepping sequence, which partly explains the small drop in
+temperature for the outlet process ﬂow of that exchanger.
+   The total ﬂow through the circuit increases (Fig. 26) with the
+valve being stepped open, since the total resistance of the circuit
+from the outlet of the pumps, is decreased with increased valve
+opening. Less pressure drop over the circuit results in the pumps
+                                                                                                Fig. 15. Plant model temperatures (THX03, TCWR, TCWS) response to stepped cooling
+moving down their operating curve towards higher ﬂow.               tower fan speed.
+                                                             time to steady-state) than air side changes (e.g. the process takes
+   The plant exhibits strong non-linear and integrated hydraulic    4 h or more to reach steady-state after changes in the DVs ambient
+and thermodynamic behaviour. This is true of both steady-state    humidity and ambient temperature, and the MV fan speed).
+process gains, and times to steady-state.                           The simulation results in Section 6 show that a number of
+   There are signiﬁcant differences in time to steady-state between   MVs can be used to control the process outlet temperatures of
+some of the MVs and the CVs. In general the closer the MVs    the heat exchangers. These MVs include the cooling tower fan
+are to the hydrocarbon streams, the faster the process dynamics.    speeds (Fig. 15), the pump speed of the cooling water supply pumps
+Changes in the water side of the cooling tower (e.g. pump speed      (Fig. 20), and the valve openings of the cooling water ﬂow to each
+changes), affect the process temperatures signiﬁcantly faster (1 h    exchanger (Fig. 27).
+                                    Fig. 16. Ambient temperature (Tain ) stepped and plant model temperatures (THX03, TCWR, TCWS) response.
+===== PDF PAGE 15 =====
+48                                                                   J.H. Viljoen et al. / Journal of Process Control 68 (2018) 34–51
+            Fig. 17. Cooling tower fans shut-down one-by-one and power response (Pftotal ) and subsequent plant model temperature (THX03, TCWR, TCWS) response.
+                                                         Fig. 18. Pump speed (ω) stepped, and pump power (Pp) response.
+                                             Fig. 19. Total mass ﬂow rate (FCWS) through circuit response to stepped pump speed (ω).
+   The integrated hydraulics of the plant is seen in the dynamic     state variables, especially fan power with respect to speed (Fig. 14).
+transients when the mass ﬂow of the circuit is changed (e.g.    The plant temperatures also exhibit a non-linear relationship with
+Figs. 19 and 26). The non-linear nature of the installed hydraulic    the cooling tower on-off status as shown in Fig. 17.
+characteristic of the cooling water ﬂow valve to each exchanger is       There exists an opportunity to minimise power consumption
+seen in Fig. 25. The power consumed by the rotating equipment in     (see e.g. [45]), and control process temperature by utilising some
+the circuit exhibits a non-linear relationship with respect to plant
+===== PDF PAGE 16 =====
+                                                                      J.H. Viljoen et al. / Journal of Process Control 68 (2018) 34–51                                           49
+                                           Fig. 20. Plant model temperatures (THX06, TCWR, TCWS) response to stepped pump speed (ω).
+Fig. 21. One of the two pumps tripped power response (Pp), and subsequent total          Fig. 23. Ambient humidity (Yain ) steps and make-up ﬂow (FCWMU) response.
+ﬂow through circuit (FCWS) response.
+Fig. 22. Plant model temperatures (THX06, TCWR, TCWS) response to one pump tripped
+                                                                                                Fig. 24. Plant model temperature (THX03, TCWR, TCWS) response to ambient humidity
+or all of the manipulated variables. For this purpose, an Advanced
+Process Control (APC) scheme could be utilised (see e.g. [46]).
+   The main DVs studied in the work, are the ambient tempera-
+ture and humidity (Figs. 16 and 24), as well as the hydro-carbon    a different process layout, when ﬁtted to relevant data and linked
+mass ﬂow rates and hydrocarbon input temperatures to the heat    through the appropriately conﬁgured hydraulic models.
+exchangers. The control scheme that will utilise the model devel-            ), and the effect of these changes on the response of plant tem-
+oped in this work could be used to reject these disturbances.          peratures are shown in Fig. 24
+   The overall model developed and simulated in this paper is     A ﬁrst principles dynamic model augmented with Hammerstein
+aimed at a speciﬁc process layout (Fig. 1). However, the developed    models, as constructed in this paper is also very useful in order to
+models are for unit operations, which have been linked in a mod-    analyse the performance of the actual plant, identify steady-state
+ular fashion through the hydraulic modelling performed and ﬁtted     deviations from design early, online dynamic early event detection,
+to the plant modelled. The developed models can also be used for    as well as in operator training.
+===== PDF PAGE 17 =====
+50                                                                   J.H. Viljoen et al. / Journal of Process Control 68 (2018) 34–51
+                                                                                               [4] P. Malinowski, M. Sulowicz, J. Bujak, Neural model for forecasting
+                                                                                  temperature in a distribution network of cooling water supplied to systems
+                                                                                  producing petroleum products, Int. J. Refrig. 34 (2011) 968–979.
+                                                                                               [5] E. Rubio-Castro, M. Serna-Gonzalez, J.M. Ponce-Ortega, M.M. El-Halwagi,
+                                                                                        Synthesis of cooling water systems with multiple cooling towers, Appl.
+                                                                                               [6] C.A. Floudas, Nonlinear and Mixed-Integer Optimization, Oxford University
+                                                                                                  Press, New York, USA, 1995.
+                                                                                               [7] J.C. Kloppers, D.G. Kröger, A critical investigation into the heat and mass
+                                                                                               transfer analysis of wet counter ﬂow cooling towers, Int. J. Heat Mass Transf.
+                                                                                               [8] X. Li, Y. Li, Dynamic modeling of mechanical draft counter-ﬂow wet cooling
+                                                                              tower with Modelica, in: Proceedings of the International Refrigeration and
+                                                                                              Air Conditioning Conference, Purdue University, West Lafayette, USA, 2010,
+                                                                                               [9] A. Löfgren, Modeling and Simulation of a Cooling Tower with Extended Uses,
+                                                                                      [10] W.L. McCabe, J.C. Smith, P. Harriott, Unit Operations of Chemical Engineering,
+Fig. 25. CW ﬂow valve (VOP) to one exchanger stepped, and mass ﬂow through valve
+                                                                                   7th edition, McGraw-Hill, New York, USA, 2005.
+                                                                                      [11] D. Green, R. Perry, Perry’s Chemical Engineers’ Handbook, 8th edition,
+                                                                                   McGraw-Hill, New York, USA, 2007.
+                                                                                      [12] R. Stull, Wet-bulb temperature from relative humidity and air temperature, J.
+                                                                                      [13] S.P. Fisenko, A.A. Brin, A.I. Petruchik, Evaporative cooling of water in a
+                                                                                  mechanical draft cooling tower, Int. J. Heat Mass Transf. 47 (2004) 165–177.
+                                                                                      [14] C.A.X. Marques, C.H. Fontes, M. Embiru c¸ u, R.A. Kalid, Efﬁciency control in a
+                                                                               commercial counter ﬂow wet cooling tower, Energy Convers. Manag. 50
+                                                                                      [15] M. Picon-Nunez, G.T. Polley, L. Canizalez-Davalos, E.K. Tamakloe, Design of
+                                                                                           coolers for use in an existing cooling water network, Appl. Therm. Eng. 43
+                                                                                      [16] J.M. Ponce-Ortegaa, M. Serna-Gonzalez, A.J. Gutierrez, Optimization model for
+                                                                                                re-circulating cooling water systems, Comput. Chem. Eng. 34 (2010) 177–195.
+                                                                                      [17] M.A. Al-Nimr, Dynamic thermal behaviour of cooling towers, Energy Convers.
+                                                                                      [18] Z. Ma, S. Wang, F. Xiao, Online performance evaluation of alternative control
+                                                                                                strategies for building cooling water systems prior to in situ implementation,
+                                                                                      [19] F. Alnaimat, J.F. Klausner, R. Mei, Transient analysis of direct contact
+Fig. 26. Total mass ﬂow through CW circuit (FCWR) response to CW exchanger ﬂow          evaporation and condensation within packed beds, Int. J. Heat Mass Transf. 54
+                                                                                      [20] M. Nasrabadi, D.P. Finn, Mathematical modeling of a low temperature low
+                                                                                approach direct cooling tower, Appl. Therm. Eng. 64 (2014) 273–282.
+                                                                                      [21] S. Middleman, An Introduction to Mass and Heat Transfer – Principles of
+                                                                                          Analysis and Design, John Wiley & Sons, New York, USA, 1998.
+                                                                                      [22] J.C. Kloppers, D.G. Kröger, The Lewis factor and its inﬂuence on the
+                                                                                performance prediction of wet-cooling towers, Int. J. Therm. Sci. 44 (2005)
+                                                                                      [23] Y. Huang, K. Zhang, S. Yang, Y. Jin, A method to measure humidity based on
+                                                                                     dry-bulb and wet bulb temperatures, Res. J. Appl. Sci. Eng. Technol. 6 (16)
+                                                                                      [24] W.K. Lewis, The evaporation of a liquid into a gas, Trans. ASME 44 (1922)
+                                                                                      [25] M. Vaccarini, A. Carbonari, M. Casals, Development and calibration of a model
+                                                                                                  for the dynamic simulation of fans with induction motors, Appl. Therm. Eng.
+                                                                                      [26] E. Al-Bassam, R. Alasseri, Measurable energy savings of installing variable
+                                                                                    frequency drives for cooling towers fans, compared to dual speed motors,
+                                                                                      [27] R. Saidur, S. Mekhilef, M.B. Ali, A. Safari, H.A. Mohammed, Applications of
+                                                                                             variable speed drive (VSD) in electrical motors energy savings, Renew.
+Fig. 27. Plant model temperature (THX02, THX06, TCWR, TCWS) response to CW ﬂow to           Sustain. Energy Rev. 16 (2012) 543–550.
+exchanger valve (VOP) steps.                                                           [28] P.C. Sen, Principles of Electric Machines and Power Electronics, John Wiley
+                                                                                      [29]  J. Szymczyk, K. Karaskiewicz, The modeling of centrifugal pump transients,
+                                                                                             Trans. Inst. Fluid Flow Mach. – Pol. Acad. Sci. 130 (2015) 83–92.
+Acknowledgements                                                             [30] Q.C.Y. Wang, A direct optimal control strategy of variable speed pumps in
+                                                                                     heat exchanger networks and experimental validations, Energy 85 (2015)
+   The authors would like to thank ORYX GTL for making plant data      [31]  J. Sun, X. Feng, Y. Wang, Cooling-water system optimisation with a novel
+available for this research. This work is based on research supported          two-step sequential method, Appl. Therm. Eng. (2015) 1–8.
+in part by the National Research Foundation of South Africa (Grant      [32] D.E. Seborg, T.F. Edgar, D.A. Mellichamp, F.J. Doyle, Process Dynamics and
+                                                                                              Control, 4th edition, John Wiley and Sons, Danvers, MA, USA, 2016.
+                                                                                      [33] J.R. Eliot, C.T. Lira, Introductory Chemical Engineering Thermodynamics, 2nd
+                                                                                                  edition, Prentice-Hall, Upper Saddle River, NJ, USA, 2012.
+                                                                                      [34] T. Gao, B.G. Sammakia, B.T. Murray, A. Ortega, R. Schmidt, Cross ﬂow heat
+References                                                                     exchanger modeling of transient temperature input conditions, IEEE Trans.
+                                                                         Compon. Packag. Manuf. Technol. 4 (11) (2014) 1796–1807.
+ [1] C.J. Muller, I.K. Craig, Modelling of a dual circuit induced draft cooling water        [35] M. Bakosova, J. Oravec, Robust model predictive control for heat exchanger
+    system for control and optimisation purposes, J. Process Control 25 (2015)             network, Appl. Therm. Eng. 73 (2014) 924–930.
+    105–114.                                                                        [36] W. Ramirez, Computational Methods for Process Simulation, 2nd edition,
+ [2] M.M. Castro, T.W. Song, J.M. Pinto, Minimization of operational costs in               Butterworth-Heinemann, Oxford, UK, 1997.
+     cooling water systems, Trans. Inst. Chem. Eng. 78 (2000) 192–201.                 [37] C.H. Edwards, D.E. Penney, Elementary Differential Equations with Boundary
+ [3] G.F. Cortinovis, M.T. Ribeiro, J.L. Paiva, T.W. Song, J.M. Pinto, Integrated                Value Problems, Prentice-Hall, New Jersey, USA, 1993.
+     analysis of cooling water systems: modeling and experimental validation,
+===== PDF PAGE 18 =====
+                                                                       J.H. Viljoen et al. / Journal of Process Control 68 (2018) 34–51                                           51
+[38] S.M. Safdarnejad, J.R. Gallacher, J.D. Hedengren, Dynamic parameter               [43] Q.B. Jin, Z.J. Cheng, J. Dou, L.T. Cao, K.W. Wang, A novel closed loop
+     estimation and optimization for batch distillation, Comput. Chem. Eng. 86              identiﬁcation method and its application of multivariable system, J. Process
+[39] K. Dai, N. Wang, A hybrid DNA based genetic algorithm for parameter              [44] S. Bedekar, P. Nithiarasu, K. Seetharamu, Experimental investigation of the
+     estimation of dynamic systems, Chem. Eng. Res. Des. 90 (2012) 2235–2246.           performance of a counter-ﬂow packed-bed mechanical cooling tower, Energy
+[40]  J. Kennedy, R.C. Eberhart, Particle swarm optimization, in: Proceedings of the         23 (11) (1998) 943–947.
+    1995 IEEE International Conference on Neural Networks, IEEE, Perth,               [45] C.J. Muller, I.K. Craig, Energy reduction for a dual circuit cooling water system
+     Australia, 1995, pp. 1942–1948.                                                    using advanced regulatory control, Appl. Energy 171 (2016) 287–295, http://
+[41]  J. Kennedy, R.C. Eberhart, A discrete binary version of the particle swarm                dx.doi.org/10.1016/j.apenergy.2016.03.069.
+     algorithm, in: Proceedings of the 1997 IEEE International Conference on           [46] C.J. Muller, I.K. Craig, Economic hybrid non-linear model predictive control of
+     Computational Cybernetics and Simulation, IEEE, Orlando, USA, 1997, pp.              a dual circuit induced draft cooling water system, J. Process Control 53 (2017)
+    4104–4108.                                                                    37–45, http://dx.doi.org/10.1017/j.jprocont.2017.02.009.
+[42] M. Clerc, Particle Swarm Optimisation, ISTE Ltd., London, UK, 2006.

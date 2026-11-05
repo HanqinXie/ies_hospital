@@ -1,0 +1,215 @@
+{
+  "schema": "hospital_ies.publish.independent_static_docs_review.v1",
+  "reviewed_utc": "2026-10-27T17:00:54.152707+00:00",
+  "verdict": "no scientific or interface blocker found; final publication assembly metadata links still pending",
+  "reviewed_artifacts": [
+    {
+      "path": "E:/hospital_ies_publish_20261028/README_DRAFT.md",
+      "bytes": 6668,
+      "sha256": "5474fd45e4135c618208a0e227d581992427977e67fb52a4664a945a956da846"
+    },
+    {
+      "path": "E:/hospital_ies_publish_20261028/AGENTS_DRAFT.md",
+      "bytes": 2355,
+      "sha256": "2e608c526dda5c03a40ff9a230125c1a7d2050b36671fe49233f1cdf2764ffb6"
+    },
+    {
+      "path": "E:/hospital_ies_publish_20261028/release_stage/verify_repository.py",
+      "bytes": 3212,
+      "sha256": "75ed8f67dc90591449ae5f17ad663ac0dfc6128a3d05ed76d146eeae8084e536"
+    },
+    {
+      "path": "E:/hospital_ies_publish_20261028/results_stage/CATALOG.json",
+      "bytes": 145942,
+      "sha256": "80a375a0a4374c50aa163da9b5be455f4514cd2debee3938f46b8e0ff4c3d17f"
+    },
+    {
+      "path": "E:/hospital_ies_publish_20261028/results_stage/README_RESULTS_ZH.md",
+      "bytes": 7106,
+      "sha256": "468d94a39b8c308823dc8183412187d8067105a40ce701288a1ea2715ea1f0b5"
+    }
+  ],
+  "AST_modules": [
+    "argparse",
+    "hashlib",
+    "json",
+    "pathlib"
+  ],
+  "AST_write_model_solver_or_process_calls": [],
+  "independent_current_D_source_hash_matches": 873,
+  "independent_current_D_input_hash_matches": 36,
+  "release_helpers_in_frozen_source_enumeration": false,
+  "result_copies_hash_matches": 315,
+  "versions": [
+    {
+      "version": "v30",
+      "scientific_producer": "3252727135645037cedc57ebc188a48d2aa34ccb",
+      "rows": 32,
+      "source_files": 858,
+      "final_audit": "comparison_audit_fix1/final01/CAMPAIGN_AUDIT.json",
+      "status": "complete_audit"
+    },
+    {
+      "version": "v31",
+      "scientific_producer": "f009bdb66d5b9d53f1ff2331f2dc58404c2d056b",
+      "rows": 12,
+      "source_files": 864,
+      "final_audit": "evaluation/final01/AUDIT.json",
+      "status": "complete_audit"
+    },
+    {
+      "version": "v32",
+      "scientific_producer": "575cb02b2ac3a1bbdce99a6f283891dc05b3d51a",
+      "rows": 6,
+      "source_files": 873,
+      "final_audit": "evaluation/final02/AUDIT.json",
+      "status": "complete_audit"
+    }
+  ],
+  "current_public_entry_files": [
+    {
+      "path": "D:/hospital_ies_v22_20261025/tools/model_review_v30/validation.py",
+      "bytes": 5742,
+      "sha256": "837de981bbd2c10255a34c57a90bf6f50380ae0c573fc313e15174987c9c4082"
+    },
+    {
+      "path": "D:/hospital_ies_v22_20261025/tools/model_closeout_v31/validation.py",
+      "bytes": 6036,
+      "sha256": "94dfe350ccff8f3d2dc0d4df3559fb83af63e0748ee25d9968e3c2046f4c2e49"
+    },
+    {
+      "path": "D:/hospital_ies_v22_20261025/tools/model_reference_v32/reference.py",
+      "bytes": 9489,
+      "sha256": "1f323a9361e78bfd8c5cc5e6c5a2d2d34dc7033517eaa88699ce7e2748a08b39"
+    }
+  ],
+  "README_links": [
+    {
+      "link": "https://github.com/HanqinXie/ies_hospital/releases/tag/research-v32-20261028",
+      "status": "remote publication target, not queried in static review"
+    },
+    {
+      "link": "https://github.com/HanqinXie/ies_hospital/tree/archive-main-before-v32-20261028",
+      "status": "remote publication target, not queried in static review"
+    },
+    {
+      "link": "results/v30/engineering_report_tools/actual_final02/MAIN_RESULT_TABLE.csv",
+      "resolved_review_path": "E:/hospital_ies_publish_20261028/results_stage/v30/engineering_report_tools/actual_final02/MAIN_RESULT_TABLE.csv",
+      "status": "exists"
+    },
+    {
+      "link": "results/v30/release_narrative/ENGINEERING_INTERPRETATION_ZH.md",
+      "resolved_review_path": "E:/hospital_ies_publish_20261028/results_stage/v30/release_narrative/ENGINEERING_INTERPRETATION_ZH.md",
+      "status": "exists"
+    },
+    {
+      "link": "results/v31/evaluation/final01/MAIN_RESULT_TABLE.csv",
+      "resolved_review_path": "E:/hospital_ies_publish_20261028/results_stage/v31/evaluation/final01/MAIN_RESULT_TABLE.csv",
+      "status": "exists"
+    },
+    {
+      "link": "results/v31/evaluation/FINAL_ENGINEERING_INTERPRETATION_ZH.md",
+      "resolved_review_path": "E:/hospital_ies_publish_20261028/results_stage/v31/evaluation/FINAL_ENGINEERING_INTERPRETATION_ZH.md",
+      "status": "exists"
+    },
+    {
+      "link": "results/v32/ENGINEERING_REPORT_ZH.md",
+      "resolved_review_path": "E:/hospital_ies_publish_20261028/results_stage/v32/ENGINEERING_REPORT_ZH.md",
+      "status": "exists"
+    },
+    {
+      "link": "results/v32/evaluation/final02/MAIN_RESULT_TABLE.csv",
+      "resolved_review_path": "E:/hospital_ies_publish_20261028/results_stage/v32/evaluation/final02/MAIN_RESULT_TABLE.csv",
+      "status": "exists"
+    },
+    {
+      "link": "results/README_RESULTS_ZH.md",
+      "resolved_review_path": "E:/hospital_ies_publish_20261028/results_stage/README_RESULTS_ZH.md",
+      "status": "exists"
+    },
+    {
+      "link": "results/CATALOG.json",
+      "resolved_review_path": "E:/hospital_ies_publish_20261028/results_stage/CATALOG.json",
+      "status": "exists"
+    },
+    {
+      "link": "release/FROZEN_SOURCE_V32_P01.json",
+      "resolved_review_path": "E:/hospital_ies_publish_20261028/release_stage/FROZEN_SOURCE_V32_P01.json",
+      "status": "pending final assembly"
+    },
+    {
+      "link": "release/VALIDATION.json",
+      "resolved_review_path": "E:/hospital_ies_publish_20261028/release_stage/VALIDATION.json",
+      "status": "pending final assembly"
+    },
+    {
+      "link": "docs/publication/CLEANUP_AND_DEPENDENCIES.md",
+      "resolved_review_path": "E:/hospital_ies_publish_20261028/CLEANUP_AND_DEPENDENCIES.md",
+      "status": "pending final assembly"
+    },
+    {
+      "link": "release/ENVIRONMENT.json",
+      "resolved_review_path": "E:/hospital_ies_publish_20261028/release_stage/ENVIRONMENT.json",
+      "status": "pending final assembly"
+    },
+    {
+      "link": "https://github.com/HanqinXie/ies_hospital/releases/tag/research-v32-20261028",
+      "status": "remote publication target, not queried in static review"
+    },
+    {
+      "link": "release/ASSETS.json",
+      "resolved_review_path": "E:/hospital_ies_publish_20261028/release_stage/ASSETS.json",
+      "status": "pending final assembly"
+    },
+    {
+      "link": "docs/publication/IMPLEMENTATION_PLAN.md",
+      "resolved_review_path": "E:/hospital_ies_publish_20261028/IMPLEMENTATION_PLAN.md",
+      "status": "exists"
+    },
+    {
+      "link": "docs/publication/CLEANUP_LEDGER.json",
+      "resolved_review_path": "E:/hospital_ies_publish_20261028/CLEANUP_LEDGER.json",
+      "status": "exists"
+    }
+  ],
+  "pending_local_publication_links": [
+    {
+      "link": "release/FROZEN_SOURCE_V32_P01.json",
+      "resolved_review_path": "E:/hospital_ies_publish_20261028/release_stage/FROZEN_SOURCE_V32_P01.json",
+      "status": "pending final assembly"
+    },
+    {
+      "link": "release/VALIDATION.json",
+      "resolved_review_path": "E:/hospital_ies_publish_20261028/release_stage/VALIDATION.json",
+      "status": "pending final assembly"
+    },
+    {
+      "link": "docs/publication/CLEANUP_AND_DEPENDENCIES.md",
+      "resolved_review_path": "E:/hospital_ies_publish_20261028/CLEANUP_AND_DEPENDENCIES.md",
+      "status": "pending final assembly"
+    },
+    {
+      "link": "release/ENVIRONMENT.json",
+      "resolved_review_path": "E:/hospital_ies_publish_20261028/release_stage/ENVIRONMENT.json",
+      "status": "pending final assembly"
+    },
+    {
+      "link": "release/ASSETS.json",
+      "resolved_review_path": "E:/hospital_ies_publish_20261028/release_stage/ASSETS.json",
+      "status": "pending final assembly"
+    }
+  ],
+  "current_publishing_tests": {
+    "V31_V32_explicit": {
+      "actual_passed": 61,
+      "exit_code": 0
+    },
+    "default_cleanup_rerun": "running_or_no_final_exit_receipt"
+  },
+  "nonblocking_wording_suggestion": "README: replace '在V32的b01一小时外网停电窗口，六条记录' with '在V32的b01 180分钟正常/扰动比较中（停电分支60-120分钟断网），六条记录' to make the episode horizon explicit",
+  "not_claimed": "No current full default-test pass; no assembled verify_repository pass; no remote publication URL validation",
+  "new_scientific_simulations": 0,
+  "new_solver_calls": 0,
+  "scientific_recomputations": 0,
+  "D_or_old_results_writes": 0
+}

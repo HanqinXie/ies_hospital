@@ -1,0 +1,3196 @@
+{
+  "schema": "hospital_ies.v32.independent_raw_input_build.v1",
+  "status": "passed",
+  "created_utc": "2026-10-27T14:47:44.480878+00:00",
+  "original_project": "D:\\hospital_ies_v22_20261025",
+  "isolated_root": "E:\\hospital_ies_v32_20261027\\input_build\\formal_isolated_01\\isolated_raw",
+  "copied_input_config_files": [
+    {
+      "path": "configs/plant_configs.json",
+      "bytes": 2431,
+      "sha256": "cd45c357de1a54bb9d98477a082d4703a65e28b3109556fd1d6161fb1cd2f109"
+    },
+    {
+      "path": "configs/model_review_v30/cases.json",
+      "bytes": 248011,
+      "sha256": "dfff76ce9c78dd995fce4a881a24a93b4e84267d710188838deb91ddb1b1ec5a"
+    },
+    {
+      "path": "inputs/loads/hospital_ies_demand_8760.csv",
+      "bytes": 2122259,
+      "sha256": "0adc2c3f2cd82d600cd17b38e634eae7701710fff0a146e588482dd3cd0a0627"
+    },
+    {
+      "path": "inputs/loads/electricity_boundary_8760.csv",
+      "bytes": 3659712,
+      "sha256": "f6c3a165363f617f20b63553974a727ae0489095d7c38224a773943d95914599"
+    },
+    {
+      "path": "inputs/loads/thermal_boundary_8760.csv",
+      "bytes": 1381517,
+      "sha256": "f937d23a03357a3eb363a97410ee667fd53be20fd3531e3b22af69747b7b4741"
+    },
+    {
+      "path": "inputs/loads/critical_zones_8760.csv",
+      "bytes": 22560317,
+      "sha256": "6577fa5bed87c5b53dae2a814231e8fbd98d34bf486ddb351224bedde60d88d6"
+    },
+    {
+      "path": "inputs/sci_engineering/auxiliary_allocation_8760.csv",
+      "bytes": 5542935,
+      "sha256": "f845d9d7c1dc131688951543381eb6e7c3020db8a8b088b38d01a1b64ab827b9"
+    },
+    {
+      "path": "inputs/sci_engineering/auxiliary_metadata.json",
+      "bytes": 25450,
+      "sha256": "78f67a55903cac2c665d3055cd89149c7ccd1f456e7d4e5cf0bf8e642781f8da"
+    },
+    {
+      "path": "inputs/model_review_v28/THERMAL_SERVICE_COMPONENTS_8760.csv",
+      "bytes": 2599130,
+      "sha256": "27b608272ed268c16fc6fb86ce5fbcf66e4f4f177f3ed7feefacc15c823b11f4"
+    },
+    {
+      "path": "inputs/model_review_v28/THERMAL_INPUT_METADATA.json",
+      "bytes": 2046,
+      "sha256": "d24ab6a3458ffa02e57616969ea4866f2c3a051bed3d203748e9888ac0cb9ccb"
+    },
+    {
+      "path": "inputs/model_review_v29/SOURCE_QUALITY_METADATA.json",
+      "bytes": 3414,
+      "sha256": "af3b7c276bb6ace2f48e50af80ef6259f221a3afb30a6989a1db0e6e980d53fd"
+    },
+    {
+      "path": "inputs/model_review_v29/SOURCE_COOLING_UNMET_HOURS.csv",
+      "bytes": 8342,
+      "sha256": "8a33b9c050b8adf81aea5649328757cc71163a2ff96ef3d1cf900471d1c97799"
+    },
+    {
+      "path": "inputs/model_review_v29/ALL55_ZONES_NATIVE_UNMET_SUMMARY.csv",
+      "bytes": 4351,
+      "sha256": "92a5346bb8954d3ba9cb6eb229b1c9ac8ab89b7b2c6cb3b308fbb554f0e6c2ba"
+    }
+  ],
+  "initialization_certificates": {
+    "normal": {
+      "path": "E:\\hospital_ies_v32_20261027\\initialization\\normal\\INITIALIZATION.json",
+      "sha256": "36dbed823fe7d642065c036d0d2fa573db7bbce16e2477154fe0e6c85ca30402"
+    },
+    "grid": {
+      "path": "E:\\hospital_ies_v32_20261027\\initialization\\grid\\INITIALIZATION.json",
+      "sha256": "70b5e1b0448e8e9e6e049bb7f25890cf4c261198ad8660182b00f96df3b02820"
+    }
+  },
+  "specs": {
+    "normal": {
+      "spec": "b01_normal.spec.json",
+      "spec_sha256": "6b027fa16e085e97e2bd28ec11cccced6641e82efcfdb99cb76b13f1bf10477e",
+      "ledger": "b01_normal.demand_ledger.json",
+      "ledger_sha256": "bbc1609344fac7f02173a230c262ffd7b548e02041baccaaf0ef0381c80be6d9",
+      "periods": 12,
+      "total_demand_kWh": {
+        "e": 1383.5059150240131,
+        "h": 510.2469939558224,
+        "c": 492.24366466160814
+      },
+      "planner_validation": 12,
+      "initialization_solver_scope": {
+        "recorded_core_solver_calls": 0,
+        "total_initialization_solver_calls": null,
+        "scope": "Common reset may solve before creating core logs; total not separately instrumented. This pure input builder performs no initialization or solve."
+      }
+    },
+    "grid": {
+      "spec": "b01_grid.spec.json",
+      "spec_sha256": "b2d9cb40409a003b2b247f13d3063eeda51aba0b07b187079c41392a056fec87",
+      "ledger": "b01_grid.demand_ledger.json",
+      "ledger_sha256": "bbc1609344fac7f02173a230c262ffd7b548e02041baccaaf0ef0381c80be6d9",
+      "periods": 12,
+      "total_demand_kWh": {
+        "e": 1383.5059150240131,
+        "h": 510.2469939558224,
+        "c": 492.24366466160814
+      },
+      "planner_validation": 12,
+      "initialization_solver_scope": {
+        "recorded_core_solver_calls": 0,
+        "total_initialization_solver_calls": null,
+        "scope": "Common reset may solve before creating core logs; total not separately instrumented. This pure input builder performs no initialization or solve."
+      }
+    }
+  },
+  "process_wide_audit_hook": true,
+  "read_events": 823,
+  "unique_read_paths": 762,
+  "read_trace": [
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\__pycache__\\_compat_pickle.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\__pycache__\\_strptime.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\__pycache__\\_weakrefset.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\__pycache__\\ast.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\__pycache__\\base64.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\__pycache__\\bisect.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\__pycache__\\calendar.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\__pycache__\\contextvars.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\__pycache__\\copy.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\__pycache__\\csv.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\__pycache__\\dataclasses.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\__pycache__\\decimal.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\__pycache__\\dis.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\__pycache__\\glob.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\__pycache__\\gzip.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\__pycache__\\heapq.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\__pycache__\\hmac.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\__pycache__\\inspect.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\__pycache__\\linecache.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\__pycache__\\numbers.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\__pycache__\\opcode.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\__pycache__\\pickle.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\__pycache__\\pkgutil.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\__pycache__\\platform.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\__pycache__\\pprint.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\__pycache__\\pydoc.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\__pycache__\\queue.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\__pycache__\\random.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\__pycache__\\secrets.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\__pycache__\\selectors.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\__pycache__\\signal.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\__pycache__\\socket.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\__pycache__\\string.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\__pycache__\\struct.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\__pycache__\\subprocess.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\__pycache__\\sysconfig.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\__pycache__\\tarfile.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\__pycache__\\tempfile.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\__pycache__\\textwrap.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\__pycache__\\threading.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\__pycache__\\timeit.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\__pycache__\\token.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\__pycache__\\tokenize.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\__pycache__\\traceback.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\__pycache__\\typing.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\__pycache__\\uuid.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\__pycache__\\weakref.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\__pycache__\\zipfile.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\collections\\__pycache__\\abc.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\ctypes\\__pycache__\\__init__.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\ctypes\\__pycache__\\_endian.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\ctypes\\__pycache__\\wintypes.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\encodings\\__pycache__\\utf_8_sig.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\logging\\__pycache__\\__init__.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\__pycache__\\six.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\bottleneck\\__pycache__\\__init__.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\bottleneck\\__pycache__\\_pytesttester.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\bottleneck\\__pycache__\\_version.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\bottleneck\\benchmark\\__pycache__\\__init__.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\bottleneck\\benchmark\\__pycache__\\autotimeit.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\bottleneck\\benchmark\\__pycache__\\bench.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\bottleneck\\benchmark\\__pycache__\\bench_detailed.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\bottleneck\\slow\\__pycache__\\__init__.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\bottleneck\\slow\\__pycache__\\move.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\bottleneck\\slow\\__pycache__\\nonreduce.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\bottleneck\\slow\\__pycache__\\nonreduce_axis.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\bottleneck\\slow\\__pycache__\\reduce.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\bottleneck\\tests\\__pycache__\\__init__.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\bottleneck\\tests\\__pycache__\\util.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\cloudpickle\\__pycache__\\__init__.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\cloudpickle\\__pycache__\\cloudpickle.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\dateutil\\__pycache__\\__init__.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\dateutil\\__pycache__\\_common.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\dateutil\\__pycache__\\_version.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\dateutil\\__pycache__\\relativedelta.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\dateutil\\parser\\__pycache__\\__init__.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\dateutil\\parser\\__pycache__\\_parser.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\dateutil\\parser\\__pycache__\\isoparser.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\dateutil\\tz\\__pycache__\\__init__.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\dateutil\\tz\\__pycache__\\_common.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\dateutil\\tz\\__pycache__\\_factories.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\dateutil\\tz\\__pycache__\\tz.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\dateutil\\tz\\__pycache__\\win.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\gurobipy\\__pycache__\\__init__.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\gurobipy\\__pycache__\\_attrconst.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\gurobipy\\__pycache__\\_callbackconst.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\gurobipy\\__pycache__\\_errorconst.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\gurobipy\\__pycache__\\_grb.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\gurobipy\\__pycache__\\_load_model.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\gurobipy\\__pycache__\\_paramconst.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\gurobipy\\__pycache__\\_statusconst.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\gurobipy\\__pycache__\\nlfunc.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\numexpr\\__pycache__\\__init__.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\numexpr\\__pycache__\\expressions.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\numexpr\\__pycache__\\necompiler.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\numexpr\\__pycache__\\utils.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\numexpr\\__pycache__\\version.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\numpy\\__pycache__\\__config__.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\numpy\\__pycache__\\__init__.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\numpy\\__pycache__\\_distributor_init.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\numpy\\__pycache__\\_globals.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\numpy\\__pycache__\\_pytesttester.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\numpy\\__pycache__\\ctypeslib.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\numpy\\__pycache__\\dtypes.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\numpy\\__pycache__\\exceptions.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\numpy\\__pycache__\\version.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\numpy\\_core\\__pycache__\\__init__.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\numpy\\_core\\__pycache__\\_multiarray_umath.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\numpy\\_typing\\__pycache__\\__init__.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\numpy\\_typing\\__pycache__\\_add_docstring.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\numpy\\_typing\\__pycache__\\_array_like.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\numpy\\_typing\\__pycache__\\_char_codes.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\numpy\\_typing\\__pycache__\\_dtype_like.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\numpy\\_typing\\__pycache__\\_nbit.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\numpy\\_typing\\__pycache__\\_nested_sequence.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\numpy\\_typing\\__pycache__\\_scalars.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\numpy\\_typing\\__pycache__\\_shape.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\numpy\\_utils\\__pycache__\\__init__.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\numpy\\_utils\\__pycache__\\_convertions.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\numpy\\_utils\\__pycache__\\_inspect.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\numpy\\compat\\__pycache__\\__init__.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\numpy\\compat\\__pycache__\\py3k.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\numpy\\core\\__pycache__\\__init__.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\numpy\\core\\__pycache__\\_add_newdocs.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\numpy\\core\\__pycache__\\_add_newdocs_scalars.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\numpy\\core\\__pycache__\\_asarray.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\numpy\\core\\__pycache__\\_dtype.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\numpy\\core\\__pycache__\\_dtype_ctypes.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\numpy\\core\\__pycache__\\_exceptions.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\numpy\\core\\__pycache__\\_internal.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\numpy\\core\\__pycache__\\_machar.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\numpy\\core\\__pycache__\\_methods.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\numpy\\core\\__pycache__\\_string_helpers.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\numpy\\core\\__pycache__\\_type_aliases.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\numpy\\core\\__pycache__\\_ufunc_config.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\numpy\\core\\__pycache__\\arrayprint.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\numpy\\core\\__pycache__\\defchararray.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\numpy\\core\\__pycache__\\einsumfunc.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\numpy\\core\\__pycache__\\fromnumeric.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\numpy\\core\\__pycache__\\function_base.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\numpy\\core\\__pycache__\\getlimits.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\numpy\\core\\__pycache__\\memmap.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\numpy\\core\\__pycache__\\multiarray.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\numpy\\core\\__pycache__\\numeric.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\numpy\\core\\__pycache__\\numerictypes.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\numpy\\core\\__pycache__\\overrides.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\numpy\\core\\__pycache__\\records.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\numpy\\core\\__pycache__\\shape_base.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\numpy\\core\\__pycache__\\umath.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\numpy\\fft\\__pycache__\\__init__.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\numpy\\fft\\__pycache__\\_pocketfft.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\numpy\\fft\\__pycache__\\helper.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\numpy\\lib\\__pycache__\\__init__.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\numpy\\lib\\__pycache__\\_datasource.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\numpy\\lib\\__pycache__\\_iotools.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\numpy\\lib\\__pycache__\\_version.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\numpy\\lib\\__pycache__\\arraypad.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\numpy\\lib\\__pycache__\\arraysetops.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\numpy\\lib\\__pycache__\\arrayterator.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\numpy\\lib\\__pycache__\\format.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\numpy\\lib\\__pycache__\\function_base.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\numpy\\lib\\__pycache__\\histograms.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\numpy\\lib\\__pycache__\\index_tricks.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\numpy\\lib\\__pycache__\\mixins.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\numpy\\lib\\__pycache__\\nanfunctions.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\numpy\\lib\\__pycache__\\npyio.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\numpy\\lib\\__pycache__\\polynomial.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\numpy\\lib\\__pycache__\\scimath.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\numpy\\lib\\__pycache__\\shape_base.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\numpy\\lib\\__pycache__\\stride_tricks.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\numpy\\lib\\__pycache__\\twodim_base.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\numpy\\lib\\__pycache__\\type_check.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\numpy\\lib\\__pycache__\\ufunclike.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\numpy\\lib\\__pycache__\\utils.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\numpy\\linalg\\__pycache__\\__init__.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\numpy\\linalg\\__pycache__\\linalg.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\numpy\\ma\\__pycache__\\__init__.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\numpy\\ma\\__pycache__\\core.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\numpy\\ma\\__pycache__\\extras.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\numpy\\matrixlib\\__pycache__\\__init__.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\numpy\\matrixlib\\__pycache__\\defmatrix.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\numpy\\polynomial\\__pycache__\\__init__.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\numpy\\polynomial\\__pycache__\\_polybase.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\numpy\\polynomial\\__pycache__\\chebyshev.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\numpy\\polynomial\\__pycache__\\hermite.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\numpy\\polynomial\\__pycache__\\hermite_e.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\numpy\\polynomial\\__pycache__\\laguerre.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\numpy\\polynomial\\__pycache__\\legendre.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\numpy\\polynomial\\__pycache__\\polynomial.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\numpy\\polynomial\\__pycache__\\polyutils.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\numpy\\random\\__pycache__\\__init__.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\numpy\\random\\__pycache__\\_pickle.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\numpy\\typing\\__pycache__\\__init__.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\pandas\\__pycache__\\__init__.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\pandas\\__pycache__\\_typing.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\pandas\\__pycache__\\_version_meson.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\pandas\\__pycache__\\testing.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\pandas\\_config\\__pycache__\\__init__.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\pandas\\_config\\__pycache__\\config.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\pandas\\_config\\__pycache__\\dates.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\pandas\\_config\\__pycache__\\display.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\pandas\\_config\\__pycache__\\localization.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\pandas\\_libs\\__pycache__\\__init__.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\pandas\\_libs\\tslibs\\__pycache__\\__init__.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\pandas\\_libs\\window\\__pycache__\\__init__.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\pandas\\_testing\\__pycache__\\__init__.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\pandas\\_testing\\__pycache__\\_io.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\pandas\\_testing\\__pycache__\\_warnings.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\pandas\\_testing\\__pycache__\\asserters.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\pandas\\_testing\\__pycache__\\compat.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\pandas\\_testing\\__pycache__\\contexts.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\pandas\\api\\__pycache__\\__init__.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\pandas\\api\\extensions\\__pycache__\\__init__.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\pandas\\api\\indexers\\__pycache__\\__init__.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\pandas\\api\\interchange\\__pycache__\\__init__.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\pandas\\api\\types\\__pycache__\\__init__.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\pandas\\api\\typing\\__pycache__\\__init__.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\pandas\\arrays\\__pycache__\\__init__.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\pandas\\compat\\__pycache__\\__init__.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\pandas\\compat\\__pycache__\\_constants.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\pandas\\compat\\__pycache__\\_optional.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\pandas\\compat\\__pycache__\\compressors.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\pandas\\compat\\__pycache__\\pickle_compat.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\pandas\\compat\\__pycache__\\pyarrow.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\pandas\\compat\\numpy\\__pycache__\\__init__.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\pandas\\compat\\numpy\\__pycache__\\function.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\pandas\\core\\__pycache__\\__init__.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\pandas\\core\\__pycache__\\accessor.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\pandas\\core\\__pycache__\\algorithms.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\pandas\\core\\__pycache__\\api.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\pandas\\core\\__pycache__\\apply.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\pandas\\core\\__pycache__\\arraylike.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\pandas\\core\\__pycache__\\base.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\pandas\\core\\__pycache__\\common.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\pandas\\core\\__pycache__\\config_init.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\pandas\\core\\__pycache__\\construction.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\pandas\\core\\__pycache__\\flags.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\pandas\\core\\__pycache__\\frame.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\pandas\\core\\__pycache__\\generic.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\pandas\\core\\__pycache__\\indexing.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\pandas\\core\\__pycache__\\missing.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\pandas\\core\\__pycache__\\nanops.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\pandas\\core\\__pycache__\\resample.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\pandas\\core\\__pycache__\\roperator.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\pandas\\core\\__pycache__\\sample.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\pandas\\core\\__pycache__\\series.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\pandas\\core\\__pycache__\\shared_docs.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\pandas\\core\\__pycache__\\sorting.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\pandas\\core\\_numba\\__pycache__\\__init__.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\pandas\\core\\_numba\\__pycache__\\executor.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\pandas\\core\\array_algos\\__pycache__\\__init__.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\pandas\\core\\array_algos\\__pycache__\\datetimelike_accumulations.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\pandas\\core\\array_algos\\__pycache__\\masked_accumulations.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\pandas\\core\\array_algos\\__pycache__\\masked_reductions.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\pandas\\core\\array_algos\\__pycache__\\putmask.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\pandas\\core\\array_algos\\__pycache__\\quantile.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\pandas\\core\\array_algos\\__pycache__\\replace.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\pandas\\core\\array_algos\\__pycache__\\take.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\pandas\\core\\array_algos\\__pycache__\\transforms.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\pandas\\core\\arrays\\__pycache__\\__init__.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\pandas\\core\\arrays\\__pycache__\\_arrow_string_mixins.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\pandas\\core\\arrays\\__pycache__\\_mixins.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\pandas\\core\\arrays\\__pycache__\\_ranges.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\pandas\\core\\arrays\\__pycache__\\_utils.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\pandas\\core\\arrays\\__pycache__\\base.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\pandas\\core\\arrays\\__pycache__\\boolean.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\pandas\\core\\arrays\\__pycache__\\categorical.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\pandas\\core\\arrays\\__pycache__\\datetimelike.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\pandas\\core\\arrays\\__pycache__\\datetimes.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\pandas\\core\\arrays\\__pycache__\\floating.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\pandas\\core\\arrays\\__pycache__\\integer.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\pandas\\core\\arrays\\__pycache__\\interval.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\pandas\\core\\arrays\\__pycache__\\masked.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\pandas\\core\\arrays\\__pycache__\\numeric.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\pandas\\core\\arrays\\__pycache__\\numpy_.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\pandas\\core\\arrays\\__pycache__\\period.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\pandas\\core\\arrays\\__pycache__\\string_.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\pandas\\core\\arrays\\__pycache__\\string_arrow.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\pandas\\core\\arrays\\__pycache__\\timedeltas.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\pandas\\core\\arrays\\arrow\\__pycache__\\__init__.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\pandas\\core\\arrays\\arrow\\__pycache__\\accessors.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\pandas\\core\\arrays\\arrow\\__pycache__\\array.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\pandas\\core\\arrays\\sparse\\__pycache__\\__init__.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\pandas\\core\\arrays\\sparse\\__pycache__\\accessor.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\pandas\\core\\arrays\\sparse\\__pycache__\\array.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\pandas\\core\\computation\\__pycache__\\__init__.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\pandas\\core\\computation\\__pycache__\\align.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\pandas\\core\\computation\\__pycache__\\api.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\pandas\\core\\computation\\__pycache__\\check.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\pandas\\core\\computation\\__pycache__\\common.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\pandas\\core\\computation\\__pycache__\\engines.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\pandas\\core\\computation\\__pycache__\\eval.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\pandas\\core\\computation\\__pycache__\\expr.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\pandas\\core\\computation\\__pycache__\\expressions.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\pandas\\core\\computation\\__pycache__\\ops.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\pandas\\core\\computation\\__pycache__\\parsing.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\pandas\\core\\computation\\__pycache__\\pytables.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\pandas\\core\\computation\\__pycache__\\scope.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\pandas\\core\\dtypes\\__pycache__\\__init__.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\pandas\\core\\dtypes\\__pycache__\\api.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\pandas\\core\\dtypes\\__pycache__\\astype.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\pandas\\core\\dtypes\\__pycache__\\base.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\pandas\\core\\dtypes\\__pycache__\\cast.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\pandas\\core\\dtypes\\__pycache__\\common.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\pandas\\core\\dtypes\\__pycache__\\concat.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\pandas\\core\\dtypes\\__pycache__\\dtypes.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\pandas\\core\\dtypes\\__pycache__\\generic.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\pandas\\core\\dtypes\\__pycache__\\inference.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\pandas\\core\\dtypes\\__pycache__\\missing.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\pandas\\core\\groupby\\__pycache__\\__init__.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\pandas\\core\\groupby\\__pycache__\\base.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\pandas\\core\\groupby\\__pycache__\\categorical.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\pandas\\core\\groupby\\__pycache__\\generic.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\pandas\\core\\groupby\\__pycache__\\groupby.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\pandas\\core\\groupby\\__pycache__\\grouper.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\pandas\\core\\groupby\\__pycache__\\indexing.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\pandas\\core\\groupby\\__pycache__\\numba_.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\pandas\\core\\groupby\\__pycache__\\ops.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\pandas\\core\\indexers\\__pycache__\\__init__.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\pandas\\core\\indexers\\__pycache__\\objects.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\pandas\\core\\indexers\\__pycache__\\utils.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\pandas\\core\\indexes\\__pycache__\\__init__.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\pandas\\core\\indexes\\__pycache__\\accessors.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\pandas\\core\\indexes\\__pycache__\\api.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\pandas\\core\\indexes\\__pycache__\\base.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\pandas\\core\\indexes\\__pycache__\\category.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\pandas\\core\\indexes\\__pycache__\\datetimelike.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\pandas\\core\\indexes\\__pycache__\\datetimes.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\pandas\\core\\indexes\\__pycache__\\extension.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\pandas\\core\\indexes\\__pycache__\\frozen.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\pandas\\core\\indexes\\__pycache__\\interval.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\pandas\\core\\indexes\\__pycache__\\multi.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\pandas\\core\\indexes\\__pycache__\\period.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\pandas\\core\\indexes\\__pycache__\\range.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\pandas\\core\\indexes\\__pycache__\\timedeltas.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\pandas\\core\\interchange\\__pycache__\\__init__.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\pandas\\core\\interchange\\__pycache__\\dataframe_protocol.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\pandas\\core\\interchange\\__pycache__\\from_dataframe.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\pandas\\core\\interchange\\__pycache__\\utils.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\pandas\\core\\internals\\__pycache__\\__init__.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\pandas\\core\\internals\\__pycache__\\api.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\pandas\\core\\internals\\__pycache__\\array_manager.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\pandas\\core\\internals\\__pycache__\\base.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\pandas\\core\\internals\\__pycache__\\blocks.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\pandas\\core\\internals\\__pycache__\\concat.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\pandas\\core\\internals\\__pycache__\\construction.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\pandas\\core\\internals\\__pycache__\\managers.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\pandas\\core\\internals\\__pycache__\\ops.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\pandas\\core\\methods\\__pycache__\\__init__.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\pandas\\core\\methods\\__pycache__\\describe.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\pandas\\core\\methods\\__pycache__\\selectn.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\pandas\\core\\ops\\__pycache__\\__init__.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\pandas\\core\\ops\\__pycache__\\array_ops.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\pandas\\core\\ops\\__pycache__\\common.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\pandas\\core\\ops\\__pycache__\\dispatch.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\pandas\\core\\ops\\__pycache__\\docstrings.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\pandas\\core\\ops\\__pycache__\\invalid.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\pandas\\core\\ops\\__pycache__\\mask_ops.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\pandas\\core\\ops\\__pycache__\\missing.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\pandas\\core\\reshape\\__pycache__\\__init__.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\pandas\\core\\reshape\\__pycache__\\api.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\pandas\\core\\reshape\\__pycache__\\concat.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\pandas\\core\\reshape\\__pycache__\\encoding.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\pandas\\core\\reshape\\__pycache__\\melt.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\pandas\\core\\reshape\\__pycache__\\merge.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\pandas\\core\\reshape\\__pycache__\\pivot.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\pandas\\core\\reshape\\__pycache__\\tile.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\pandas\\core\\reshape\\__pycache__\\util.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\pandas\\core\\strings\\__pycache__\\__init__.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\pandas\\core\\strings\\__pycache__\\accessor.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\pandas\\core\\strings\\__pycache__\\base.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\pandas\\core\\strings\\__pycache__\\object_array.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\pandas\\core\\tools\\__pycache__\\__init__.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\pandas\\core\\tools\\__pycache__\\datetimes.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\pandas\\core\\tools\\__pycache__\\numeric.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\pandas\\core\\tools\\__pycache__\\timedeltas.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\pandas\\core\\tools\\__pycache__\\times.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\pandas\\core\\util\\__pycache__\\__init__.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\pandas\\core\\util\\__pycache__\\hashing.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\pandas\\core\\util\\__pycache__\\numba_.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\pandas\\core\\window\\__pycache__\\__init__.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\pandas\\core\\window\\__pycache__\\common.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\pandas\\core\\window\\__pycache__\\doc.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\pandas\\core\\window\\__pycache__\\ewm.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\pandas\\core\\window\\__pycache__\\expanding.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\pandas\\core\\window\\__pycache__\\numba_.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\pandas\\core\\window\\__pycache__\\online.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\pandas\\core\\window\\__pycache__\\rolling.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\pandas\\errors\\__pycache__\\__init__.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\pandas\\io\\__pycache__\\__init__.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\pandas\\io\\__pycache__\\_util.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\pandas\\io\\__pycache__\\api.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\pandas\\io\\__pycache__\\clipboards.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\pandas\\io\\__pycache__\\common.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\pandas\\io\\__pycache__\\feather_format.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\pandas\\io\\__pycache__\\gbq.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\pandas\\io\\__pycache__\\html.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\pandas\\io\\__pycache__\\orc.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\pandas\\io\\__pycache__\\parquet.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\pandas\\io\\__pycache__\\pickle.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\pandas\\io\\__pycache__\\pytables.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\pandas\\io\\__pycache__\\spss.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\pandas\\io\\__pycache__\\sql.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\pandas\\io\\__pycache__\\stata.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\pandas\\io\\__pycache__\\xml.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\pandas\\io\\excel\\__pycache__\\__init__.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\pandas\\io\\excel\\__pycache__\\_base.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\pandas\\io\\excel\\__pycache__\\_calamine.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\pandas\\io\\excel\\__pycache__\\_odfreader.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\pandas\\io\\excel\\__pycache__\\_odswriter.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\pandas\\io\\excel\\__pycache__\\_openpyxl.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\pandas\\io\\excel\\__pycache__\\_pyxlsb.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\pandas\\io\\excel\\__pycache__\\_util.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\pandas\\io\\excel\\__pycache__\\_xlrd.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\pandas\\io\\excel\\__pycache__\\_xlsxwriter.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\pandas\\io\\formats\\__pycache__\\__init__.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\pandas\\io\\formats\\__pycache__\\console.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\pandas\\io\\formats\\__pycache__\\csvs.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\pandas\\io\\formats\\__pycache__\\format.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\pandas\\io\\formats\\__pycache__\\info.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\pandas\\io\\formats\\__pycache__\\printing.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\pandas\\io\\json\\__pycache__\\__init__.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\pandas\\io\\json\\__pycache__\\_json.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\pandas\\io\\json\\__pycache__\\_normalize.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\pandas\\io\\json\\__pycache__\\_table_schema.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\pandas\\io\\parsers\\__pycache__\\__init__.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\pandas\\io\\parsers\\__pycache__\\arrow_parser_wrapper.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\pandas\\io\\parsers\\__pycache__\\base_parser.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\pandas\\io\\parsers\\__pycache__\\c_parser_wrapper.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\pandas\\io\\parsers\\__pycache__\\python_parser.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\pandas\\io\\parsers\\__pycache__\\readers.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\pandas\\io\\sas\\__pycache__\\__init__.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\pandas\\io\\sas\\__pycache__\\sasreader.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\pandas\\plotting\\__pycache__\\__init__.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\pandas\\plotting\\__pycache__\\_core.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\pandas\\plotting\\__pycache__\\_misc.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\pandas\\tseries\\__pycache__\\__init__.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\pandas\\tseries\\__pycache__\\api.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\pandas\\tseries\\__pycache__\\frequencies.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\pandas\\tseries\\__pycache__\\offsets.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\pandas\\util\\__pycache__\\__init__.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\pandas\\util\\__pycache__\\_decorators.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\pandas\\util\\__pycache__\\_exceptions.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\pandas\\util\\__pycache__\\_print_versions.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\pandas\\util\\__pycache__\\_tester.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\pandas\\util\\__pycache__\\_validators.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\pandas\\util\\version\\__pycache__\\__init__.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\pyarrow\\__pycache__\\__init__.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\pyarrow\\__pycache__\\_compute_docstrings.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\pyarrow\\__pycache__\\_generated_version.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\pyarrow\\__pycache__\\compute.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\pyarrow\\__pycache__\\ipc.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\pyarrow\\__pycache__\\types.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\pyarrow\\__pycache__\\util.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\pyarrow\\vendored\\__pycache__\\__init__.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\pyarrow\\vendored\\__pycache__\\docscrape.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\pytz\\__pycache__\\__init__.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\pytz\\__pycache__\\exceptions.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\pytz\\__pycache__\\lazy.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\pytz\\__pycache__\\tzfile.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\pytz\\__pycache__\\tzinfo.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\scipy\\__pycache__\\__config__.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\scipy\\__pycache__\\__init__.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\scipy\\__pycache__\\_distributor_init.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\scipy\\__pycache__\\version.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\scipy\\_lib\\__pycache__\\__init__.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\scipy\\_lib\\__pycache__\\_array_api.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\scipy\\_lib\\__pycache__\\_ccallback.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\scipy\\_lib\\__pycache__\\_docscrape.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\scipy\\_lib\\__pycache__\\_pep440.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\scipy\\_lib\\__pycache__\\_testutils.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\scipy\\_lib\\__pycache__\\_threadsafety.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\scipy\\_lib\\__pycache__\\_util.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\scipy\\_lib\\__pycache__\\decorator.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\scipy\\_lib\\__pycache__\\deprecation.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\scipy\\_lib\\__pycache__\\uarray.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\scipy\\_lib\\_uarray\\__pycache__\\__init__.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\scipy\\_lib\\_uarray\\__pycache__\\_backend.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\scipy\\_lib\\array_api_compat\\__pycache__\\__init__.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\scipy\\_lib\\array_api_compat\\__pycache__\\_internal.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\scipy\\_lib\\array_api_compat\\common\\__pycache__\\__init__.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\scipy\\_lib\\array_api_compat\\common\\__pycache__\\_aliases.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\scipy\\_lib\\array_api_compat\\common\\__pycache__\\_fft.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\scipy\\_lib\\array_api_compat\\common\\__pycache__\\_helpers.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\scipy\\_lib\\array_api_compat\\common\\__pycache__\\_linalg.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\scipy\\_lib\\array_api_compat\\numpy\\__pycache__\\__init__.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\scipy\\_lib\\array_api_compat\\numpy\\__pycache__\\_aliases.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\scipy\\_lib\\array_api_compat\\numpy\\__pycache__\\_info.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\scipy\\_lib\\array_api_compat\\numpy\\__pycache__\\fft.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\scipy\\_lib\\array_api_compat\\numpy\\__pycache__\\linalg.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\scipy\\_lib\\array_api_extra\\__pycache__\\__init__.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\scipy\\_lib\\array_api_extra\\__pycache__\\_funcs.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\scipy\\constants\\__pycache__\\__init__.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\scipy\\constants\\__pycache__\\_codata.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\scipy\\constants\\__pycache__\\_constants.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\scipy\\constants\\__pycache__\\codata.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\scipy\\constants\\__pycache__\\constants.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\scipy\\fft\\__pycache__\\__init__.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\scipy\\fft\\__pycache__\\_backend.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\scipy\\fft\\__pycache__\\_basic.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\scipy\\fft\\__pycache__\\_basic_backend.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\scipy\\fft\\__pycache__\\_fftlog.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\scipy\\fft\\__pycache__\\_fftlog_backend.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\scipy\\fft\\__pycache__\\_helper.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\scipy\\fft\\__pycache__\\_realtransforms.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\scipy\\fft\\__pycache__\\_realtransforms_backend.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\scipy\\fft\\_pocketfft\\__pycache__\\__init__.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\scipy\\fft\\_pocketfft\\__pycache__\\basic.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\scipy\\fft\\_pocketfft\\__pycache__\\helper.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\scipy\\fft\\_pocketfft\\__pycache__\\realtransforms.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\scipy\\linalg\\__pycache__\\__init__.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\scipy\\linalg\\__pycache__\\_basic.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\scipy\\linalg\\__pycache__\\_decomp.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\scipy\\linalg\\__pycache__\\_decomp_cholesky.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\scipy\\linalg\\__pycache__\\_decomp_cossin.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\scipy\\linalg\\__pycache__\\_decomp_ldl.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\scipy\\linalg\\__pycache__\\_decomp_lu.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\scipy\\linalg\\__pycache__\\_decomp_polar.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\scipy\\linalg\\__pycache__\\_decomp_qr.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\scipy\\linalg\\__pycache__\\_decomp_qz.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\scipy\\linalg\\__pycache__\\_decomp_schur.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\scipy\\linalg\\__pycache__\\_decomp_svd.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\scipy\\linalg\\__pycache__\\_expm_frechet.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\scipy\\linalg\\__pycache__\\_matfuncs.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\scipy\\linalg\\__pycache__\\_matfuncs_sqrtm.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\scipy\\linalg\\__pycache__\\_misc.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\scipy\\linalg\\__pycache__\\_procrustes.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\scipy\\linalg\\__pycache__\\_sketches.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\scipy\\linalg\\__pycache__\\_solvers.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\scipy\\linalg\\__pycache__\\_special_matrices.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\scipy\\linalg\\__pycache__\\basic.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\scipy\\linalg\\__pycache__\\blas.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\scipy\\linalg\\__pycache__\\decomp.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\scipy\\linalg\\__pycache__\\decomp_cholesky.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\scipy\\linalg\\__pycache__\\decomp_lu.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\scipy\\linalg\\__pycache__\\decomp_qr.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\scipy\\linalg\\__pycache__\\decomp_schur.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\scipy\\linalg\\__pycache__\\decomp_svd.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\scipy\\linalg\\__pycache__\\interpolative.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\scipy\\linalg\\__pycache__\\lapack.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\scipy\\linalg\\__pycache__\\matfuncs.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\scipy\\linalg\\__pycache__\\misc.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\scipy\\linalg\\__pycache__\\special_matrices.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\scipy\\optimize\\__pycache__\\__init__.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\scipy\\optimize\\__pycache__\\_basinhopping.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\scipy\\optimize\\__pycache__\\_cobyla_py.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\scipy\\optimize\\__pycache__\\_cobyqa_py.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\scipy\\optimize\\__pycache__\\_constraints.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\scipy\\optimize\\__pycache__\\_dcsrch.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\scipy\\optimize\\__pycache__\\_differentiable_functions.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\scipy\\optimize\\__pycache__\\_differentialevolution.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\scipy\\optimize\\__pycache__\\_direct_py.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\scipy\\optimize\\__pycache__\\_dual_annealing.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\scipy\\optimize\\__pycache__\\_hessian_update_strategy.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\scipy\\optimize\\__pycache__\\_isotonic.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\scipy\\optimize\\__pycache__\\_lbfgsb_py.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\scipy\\optimize\\__pycache__\\_linesearch.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\scipy\\optimize\\__pycache__\\_linprog.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\scipy\\optimize\\__pycache__\\_linprog_doc.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\scipy\\optimize\\__pycache__\\_linprog_highs.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\scipy\\optimize\\__pycache__\\_linprog_ip.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\scipy\\optimize\\__pycache__\\_linprog_rs.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\scipy\\optimize\\__pycache__\\_linprog_simplex.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\scipy\\optimize\\__pycache__\\_linprog_util.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\scipy\\optimize\\__pycache__\\_milp.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\scipy\\optimize\\__pycache__\\_minimize.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\scipy\\optimize\\__pycache__\\_minpack_py.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\scipy\\optimize\\__pycache__\\_nnls.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\scipy\\optimize\\__pycache__\\_nonlin.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\scipy\\optimize\\__pycache__\\_numdiff.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\scipy\\optimize\\__pycache__\\_optimize.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\scipy\\optimize\\__pycache__\\_qap.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\scipy\\optimize\\__pycache__\\_remove_redundancy.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\scipy\\optimize\\__pycache__\\_root.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\scipy\\optimize\\__pycache__\\_root_scalar.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\scipy\\optimize\\__pycache__\\_shgo.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\scipy\\optimize\\__pycache__\\_slsqp_py.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\scipy\\optimize\\__pycache__\\_spectral.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\scipy\\optimize\\__pycache__\\_tnc.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\scipy\\optimize\\__pycache__\\_trustregion.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\scipy\\optimize\\__pycache__\\_trustregion_dogleg.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\scipy\\optimize\\__pycache__\\_trustregion_exact.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\scipy\\optimize\\__pycache__\\_trustregion_krylov.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\scipy\\optimize\\__pycache__\\_trustregion_ncg.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\scipy\\optimize\\__pycache__\\_zeros_py.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\scipy\\optimize\\__pycache__\\cobyla.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\scipy\\optimize\\__pycache__\\lbfgsb.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\scipy\\optimize\\__pycache__\\linesearch.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\scipy\\optimize\\__pycache__\\minpack.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\scipy\\optimize\\__pycache__\\minpack2.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\scipy\\optimize\\__pycache__\\moduleTNC.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\scipy\\optimize\\__pycache__\\nonlin.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\scipy\\optimize\\__pycache__\\optimize.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\scipy\\optimize\\__pycache__\\slsqp.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\scipy\\optimize\\__pycache__\\tnc.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\scipy\\optimize\\__pycache__\\zeros.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\scipy\\optimize\\_highspy\\__pycache__\\__init__.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\scipy\\optimize\\_highspy\\__pycache__\\_highs_wrapper.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\scipy\\optimize\\_lsq\\__pycache__\\__init__.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\scipy\\optimize\\_lsq\\__pycache__\\bvls.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\scipy\\optimize\\_lsq\\__pycache__\\common.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\scipy\\optimize\\_lsq\\__pycache__\\dogbox.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\scipy\\optimize\\_lsq\\__pycache__\\least_squares.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\scipy\\optimize\\_lsq\\__pycache__\\lsq_linear.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\scipy\\optimize\\_lsq\\__pycache__\\trf.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\scipy\\optimize\\_lsq\\__pycache__\\trf_linear.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\scipy\\optimize\\_shgo_lib\\__pycache__\\__init__.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\scipy\\optimize\\_shgo_lib\\__pycache__\\_complex.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\scipy\\optimize\\_shgo_lib\\__pycache__\\_vertex.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\scipy\\optimize\\_trlib\\__pycache__\\__init__.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\scipy\\optimize\\_trustregion_constr\\__pycache__\\__init__.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\scipy\\optimize\\_trustregion_constr\\__pycache__\\canonical_constraint.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\scipy\\optimize\\_trustregion_constr\\__pycache__\\equality_constrained_sqp.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\scipy\\optimize\\_trustregion_constr\\__pycache__\\minimize_trustregion_constr.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\scipy\\optimize\\_trustregion_constr\\__pycache__\\projections.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\scipy\\optimize\\_trustregion_constr\\__pycache__\\qp_subproblem.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\scipy\\optimize\\_trustregion_constr\\__pycache__\\report.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\scipy\\optimize\\_trustregion_constr\\__pycache__\\tr_interior_point.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\scipy\\sparse\\__pycache__\\__init__.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\scipy\\sparse\\__pycache__\\_base.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\scipy\\sparse\\__pycache__\\_bsr.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\scipy\\sparse\\__pycache__\\_compressed.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\scipy\\sparse\\__pycache__\\_construct.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\scipy\\sparse\\__pycache__\\_coo.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\scipy\\sparse\\__pycache__\\_csc.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\scipy\\sparse\\__pycache__\\_csr.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\scipy\\sparse\\__pycache__\\_data.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\scipy\\sparse\\__pycache__\\_dia.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\scipy\\sparse\\__pycache__\\_dok.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\scipy\\sparse\\__pycache__\\_extract.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\scipy\\sparse\\__pycache__\\_index.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\scipy\\sparse\\__pycache__\\_lil.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\scipy\\sparse\\__pycache__\\_matrix.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\scipy\\sparse\\__pycache__\\_matrix_io.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\scipy\\sparse\\__pycache__\\_sputils.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\scipy\\sparse\\__pycache__\\base.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\scipy\\sparse\\__pycache__\\bsr.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\scipy\\sparse\\__pycache__\\compressed.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\scipy\\sparse\\__pycache__\\construct.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\scipy\\sparse\\__pycache__\\coo.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\scipy\\sparse\\__pycache__\\csc.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\scipy\\sparse\\__pycache__\\csr.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\scipy\\sparse\\__pycache__\\data.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\scipy\\sparse\\__pycache__\\dia.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\scipy\\sparse\\__pycache__\\dok.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\scipy\\sparse\\__pycache__\\extract.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\scipy\\sparse\\__pycache__\\lil.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\scipy\\sparse\\__pycache__\\sparsetools.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\scipy\\sparse\\__pycache__\\sputils.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\scipy\\sparse\\csgraph\\__pycache__\\__init__.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\scipy\\sparse\\csgraph\\__pycache__\\_laplacian.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\scipy\\sparse\\csgraph\\__pycache__\\_validation.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\scipy\\sparse\\linalg\\__pycache__\\__init__.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\scipy\\sparse\\linalg\\__pycache__\\_expm_multiply.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\scipy\\sparse\\linalg\\__pycache__\\_interface.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\scipy\\sparse\\linalg\\__pycache__\\_matfuncs.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\scipy\\sparse\\linalg\\__pycache__\\_norm.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\scipy\\sparse\\linalg\\__pycache__\\_onenormest.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\scipy\\sparse\\linalg\\__pycache__\\_special_sparse_arrays.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\scipy\\sparse\\linalg\\__pycache__\\_svdp.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\scipy\\sparse\\linalg\\__pycache__\\dsolve.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\scipy\\sparse\\linalg\\__pycache__\\eigen.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\scipy\\sparse\\linalg\\__pycache__\\interface.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\scipy\\sparse\\linalg\\__pycache__\\isolve.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\scipy\\sparse\\linalg\\__pycache__\\matfuncs.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\scipy\\sparse\\linalg\\_dsolve\\__pycache__\\__init__.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\scipy\\sparse\\linalg\\_dsolve\\__pycache__\\_add_newdocs.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\scipy\\sparse\\linalg\\_dsolve\\__pycache__\\linsolve.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\scipy\\sparse\\linalg\\_eigen\\__pycache__\\__init__.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\scipy\\sparse\\linalg\\_eigen\\__pycache__\\_svds.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\scipy\\sparse\\linalg\\_eigen\\arpack\\__pycache__\\__init__.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\scipy\\sparse\\linalg\\_eigen\\arpack\\__pycache__\\arpack.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\scipy\\sparse\\linalg\\_eigen\\lobpcg\\__pycache__\\__init__.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\scipy\\sparse\\linalg\\_eigen\\lobpcg\\__pycache__\\lobpcg.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\scipy\\sparse\\linalg\\_isolve\\__pycache__\\__init__.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\scipy\\sparse\\linalg\\_isolve\\__pycache__\\_gcrotmk.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\scipy\\sparse\\linalg\\_isolve\\__pycache__\\iterative.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\scipy\\sparse\\linalg\\_isolve\\__pycache__\\lgmres.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\scipy\\sparse\\linalg\\_isolve\\__pycache__\\lsmr.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\scipy\\sparse\\linalg\\_isolve\\__pycache__\\lsqr.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\scipy\\sparse\\linalg\\_isolve\\__pycache__\\minres.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\scipy\\sparse\\linalg\\_isolve\\__pycache__\\tfqmr.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\scipy\\sparse\\linalg\\_isolve\\__pycache__\\utils.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\scipy\\spatial\\__pycache__\\__init__.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\scipy\\spatial\\__pycache__\\_geometric_slerp.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\scipy\\spatial\\__pycache__\\_kdtree.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\scipy\\spatial\\__pycache__\\_plotutils.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\scipy\\spatial\\__pycache__\\_procrustes.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\scipy\\spatial\\__pycache__\\_spherical_voronoi.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\scipy\\spatial\\__pycache__\\ckdtree.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\scipy\\spatial\\__pycache__\\distance.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\scipy\\spatial\\__pycache__\\kdtree.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\scipy\\spatial\\__pycache__\\qhull.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\scipy\\spatial\\transform\\__pycache__\\__init__.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\scipy\\spatial\\transform\\__pycache__\\_rotation_groups.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\scipy\\spatial\\transform\\__pycache__\\_rotation_spline.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\scipy\\spatial\\transform\\__pycache__\\rotation.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\scipy\\special\\__pycache__\\__init__.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\scipy\\special\\__pycache__\\_basic.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\scipy\\special\\__pycache__\\_ellip_harm.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\scipy\\special\\__pycache__\\_input_validation.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\scipy\\special\\__pycache__\\_lambertw.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\scipy\\special\\__pycache__\\_logsumexp.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\scipy\\special\\__pycache__\\_multiufuncs.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\scipy\\special\\__pycache__\\_orthogonal.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\scipy\\special\\__pycache__\\_sf_error.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\scipy\\special\\__pycache__\\_spfun_stats.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\scipy\\special\\__pycache__\\_spherical_bessel.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\scipy\\special\\__pycache__\\_support_alternative_backends.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\scipy\\special\\__pycache__\\add_newdocs.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\scipy\\special\\__pycache__\\basic.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\scipy\\special\\__pycache__\\orthogonal.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\scipy\\special\\__pycache__\\sf_error.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\scipy\\special\\__pycache__\\specfun.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\scipy\\special\\__pycache__\\spfun_stats.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\sqlite3\\__pycache__\\__init__.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\sqlite3\\__pycache__\\dbapi2.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\zoneinfo\\__pycache__\\__init__.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\zoneinfo\\__pycache__\\_common.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\zoneinfo\\__pycache__\\_tzpath.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "D:\\hospital_ies_v22_20261025\\src\\hospital_ies\\__pycache__\\__init__.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "D:\\hospital_ies_v22_20261025\\src\\hospital_ies\\__pycache__\\demand_extensions.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "D:\\hospital_ies_v22_20261025\\src\\hospital_ies\\__pycache__\\idf_parameters.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "D:\\hospital_ies_v22_20261025\\src\\hospital_ies\\__pycache__\\model.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "D:\\hospital_ies_v22_20261025\\src\\hospital_ies\\__pycache__\\pipeline.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "D:\\hospital_ies_v22_20261025\\src\\hospital_ies\\__pycache__\\resilience.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "D:\\hospital_ies_v22_20261025\\src\\hospital_ies\\__pycache__\\solver_backend.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "D:\\hospital_ies_v22_20261025\\src\\hospital_ies\\__pycache__\\thermal_inertia.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "D:\\hospital_ies_v22_20261025\\tools\\model_closure_v22\\__pycache__\\__init__.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "D:\\hospital_ies_v22_20261025\\tools\\model_closure_v22\\__pycache__\\auxiliary.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "D:\\hospital_ies_v22_20261025\\tools\\model_closure_v22\\auxiliary.py",
+      "count": 1
+    },
+    {
+      "path": "D:\\hospital_ies_v22_20261025\\tools\\model_reference_v32\\__init__.py",
+      "count": 1
+    },
+    {
+      "path": "D:\\hospital_ies_v22_20261025\\tools\\model_reference_v32\\__pycache__\\__init__.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "D:\\hospital_ies_v22_20261025\\tools\\model_reference_v32\\__pycache__\\inputs.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "D:\\hospital_ies_v22_20261025\\tools\\model_reference_v32\\__pycache__\\planner.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "D:\\hospital_ies_v22_20261025\\tools\\model_reference_v32\\inputs.py",
+      "count": 1
+    },
+    {
+      "path": "D:\\hospital_ies_v22_20261025\\tools\\model_reference_v32\\planner.py",
+      "count": 1
+    },
+    {
+      "path": "D:\\hospital_ies_v22_20261025\\tools\\model_review_v28\\__pycache__\\__init__.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "D:\\hospital_ies_v22_20261025\\tools\\model_review_v28\\__pycache__\\demand.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "D:\\hospital_ies_v22_20261025\\tools\\model_review_v28\\__pycache__\\thermal_adapter.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "D:\\hospital_ies_v22_20261025\\tools\\model_review_v28\\demand.py",
+      "count": 1
+    },
+    {
+      "path": "D:\\hospital_ies_v22_20261025\\tools\\model_review_v28\\thermal_adapter.py",
+      "count": 1
+    },
+    {
+      "path": "D:\\hospital_ies_v22_20261025\\tools\\model_review_v29\\__pycache__\\__init__.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "D:\\hospital_ies_v22_20261025\\tools\\model_review_v29\\__pycache__\\source_scope.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "D:\\hospital_ies_v22_20261025\\tools\\model_review_v30\\__pycache__\\__init__.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "D:\\hospital_ies_v22_20261025\\tools\\model_review_v30\\__pycache__\\offline.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "D:\\hospital_ies_v22_20261025\\tools\\model_review_v30\\offline.py",
+      "count": 1
+    },
+    {
+      "path": "D:\\hospital_ies_v22_20261025\\tools\\sci_engineering\\__pycache__\\__init__.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "D:\\hospital_ies_v22_20261025\\tools\\sci_engineering\\__pycache__\\auxiliary.cpython-310.pyc",
+      "count": 1
+    },
+    {
+      "path": "E:\\hospital_ies_v32_20261027\\input_build\\formal_isolated_01\\isolated_raw\\configs\\model_review_v30\\cases.json",
+      "count": 4
+    },
+    {
+      "path": "E:\\hospital_ies_v32_20261027\\input_build\\formal_isolated_01\\isolated_raw\\configs\\plant_configs.json",
+      "count": 4
+    },
+    {
+      "path": "E:\\hospital_ies_v32_20261027\\input_build\\formal_isolated_01\\isolated_raw\\inputs\\loads\\critical_zones_8760.csv",
+      "count": 8
+    },
+    {
+      "path": "E:\\hospital_ies_v32_20261027\\input_build\\formal_isolated_01\\isolated_raw\\inputs\\loads\\electricity_boundary_8760.csv",
+      "count": 6
+    },
+    {
+      "path": "E:\\hospital_ies_v32_20261027\\input_build\\formal_isolated_01\\isolated_raw\\inputs\\loads\\hospital_ies_demand_8760.csv",
+      "count": 8
+    },
+    {
+      "path": "E:\\hospital_ies_v32_20261027\\input_build\\formal_isolated_01\\isolated_raw\\inputs\\loads\\thermal_boundary_8760.csv",
+      "count": 4
+    },
+    {
+      "path": "E:\\hospital_ies_v32_20261027\\input_build\\formal_isolated_01\\isolated_raw\\inputs\\model_review_v28\\THERMAL_INPUT_METADATA.json",
+      "count": 6
+    },
+    {
+      "path": "E:\\hospital_ies_v32_20261027\\input_build\\formal_isolated_01\\isolated_raw\\inputs\\model_review_v28\\THERMAL_SERVICE_COMPONENTS_8760.csv",
+      "count": 10
+    },
+    {
+      "path": "E:\\hospital_ies_v32_20261027\\input_build\\formal_isolated_01\\isolated_raw\\inputs\\model_review_v29\\ALL55_ZONES_NATIVE_UNMET_SUMMARY.csv",
+      "count": 4
+    },
+    {
+      "path": "E:\\hospital_ies_v32_20261027\\input_build\\formal_isolated_01\\isolated_raw\\inputs\\model_review_v29\\SOURCE_COOLING_UNMET_HOURS.csv",
+      "count": 4
+    },
+    {
+      "path": "E:\\hospital_ies_v32_20261027\\input_build\\formal_isolated_01\\isolated_raw\\inputs\\model_review_v29\\SOURCE_QUALITY_METADATA.json",
+      "count": 4
+    },
+    {
+      "path": "E:\\hospital_ies_v32_20261027\\input_build\\formal_isolated_01\\isolated_raw\\inputs\\sci_engineering\\auxiliary_allocation_8760.csv",
+      "count": 6
+    },
+    {
+      "path": "E:\\hospital_ies_v32_20261027\\input_build\\formal_isolated_01\\isolated_raw\\inputs\\sci_engineering\\auxiliary_metadata.json",
+      "count": 6
+    }
+  ],
+  "forbidden_read_attempts": [],
+  "completed_operating_results_read": false,
+  "original_user_data_deleted_or_changed": false,
+  "normal_grid_demands_identical": true,
+  "independent_common_initialization_reexecuted": false,
+  "initialization_total_solver_calls": null,
+  "own_planner_solve_calls": 0,
+  "own_hospital_episodes": 0,
+  "own_C_M_decision_calls": 0,
+  "validation_only": true,
+  "code_bindings": {
+    "tools/model_reference_v32/inputs.py": "7c3af3615c4133d8738eb8baf683500451c621431f7eefce6c6c29182eb35a44",
+    "src/hospital_ies/pipeline.py": "34c4c60be6c172ce389ce1146affda99b8a8d84770ed5c8880bf75284ee371f9",
+    "src/hospital_ies/resilience.py": "c3923d6b8b59f5e7c9c169d169f3e3f0455d243ad07fd8c67ede73046a0459ad",
+    "src/hospital_ies/model.py": "096cdd42117e24024a0096d19c30275f95adce63e4427da4e3569b48969b4804",
+    "tools/sci_engineering/auxiliary.py": "22861a97cf6b2c8dbc17a957fcc57438060c57e53d2f9462346a77b38cb5d28e",
+    "tools/model_closure_v22/auxiliary.py": "b6f8b42eed7e564e68c19675b1948432f575d93e6dd5a5d6c8546ce722f324ea",
+    "tools/model_review_v28/demand.py": "c91b341bfd9aa9a21f5b995dcf0edda2f51cc9d51a41e1cdaffe7c5971c5e0aa",
+    "tools/model_review_v28/thermal_adapter.py": "696273e4039823af9693546c43d2f19f29af02ae2175cfd8eee9bcac2f4c448f",
+    "tools/model_review_v29/source_scope.py": "a4a51d86ce93b279efb230b1339990c442f75000fe35254655751e2f883a79e3"
+  }
+}

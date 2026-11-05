@@ -1,0 +1,76 @@
+{
+    "schema":  "hospital_ies.recovery_dispatch.policy_verification.v1",
+    "working_directory":  "D:/hospital_ies_recovery_dispatch_20261104",
+    "test_command":  "python -m pytest -q --confcutdir=docs/recovery_dispatch_20261104 docs/recovery_dispatch_20261104/test_policy.py --tb=short",
+    "runs":  [
+                 {
+                     "passed":  0,
+                     "failed":  11,
+                     "log":  "POLICY_RED.log",
+                     "exit_code":  1
+                 },
+                 {
+                     "passed":  11,
+                     "failed":  0,
+                     "log":  "POLICY_GREEN01.log",
+                     "exit_code":  0
+                 },
+                 {
+                     "passed":  12,
+                     "failed":  4,
+                     "log":  "POLICY_RED02.log",
+                     "exit_code":  1
+                 },
+                 {
+                     "passed":  16,
+                     "failed":  0,
+                     "log":  "POLICY_GREEN02.log",
+                     "exit_code":  0
+                 }
+             ],
+    "files":  [
+                  {
+                      "path":  "tools/recovery_dispatch_20261104/__init__.py",
+                      "bytes":  84,
+                      "sha256":  "26f24d2b31c01fa2f3378748cad25e4d24b089d2968cf1123911f367f823cef7"
+                  },
+                  {
+                      "path":  "tools/recovery_dispatch_20261104/policy.py",
+                      "bytes":  12217,
+                      "sha256":  "c679cd76cb40fd5506dc8b445a7f66adea881820a9cc7edb6871af48800624b4"
+                  },
+                  {
+                      "path":  "docs/recovery_dispatch_20261104/test_policy.py",
+                      "bytes":  12167,
+                      "sha256":  "9e182b2293c411edb488b0c65bfcfb052652b391977b23a1e296c9427964aec7"
+                  },
+                  {
+                      "path":  "docs/recovery_dispatch_20261104/POLICY_RED.log",
+                      "bytes":  36034,
+                      "sha256":  "88f165060163c15e64ac5c33b8b710e012346da8ca3919619d248d98d36f17f8"
+                  },
+                  {
+                      "path":  "docs/recovery_dispatch_20261104/POLICY_GREEN01.log",
+                      "bytes":  204,
+                      "sha256":  "fb1fa1967a8a759a7566f3fe1fb0da1958923db82829796aa8da0e2f635fc8a9"
+                  },
+                  {
+                      "path":  "docs/recovery_dispatch_20261104/POLICY_RED02.log",
+                      "bytes":  4218,
+                      "sha256":  "b18e52824c9bc20842dea0095a76f47454a537e8357a8684fd4d8d109db710cb"
+                  },
+                  {
+                      "path":  "docs/recovery_dispatch_20261104/POLICY_GREEN02.log",
+                      "bytes":  204,
+                      "sha256":  "34d4f102174f3b7907a5d32109ba24dd4ca4c8ffb73c5b2c37977969c9ce115f"
+                  },
+                  {
+                      "path":  "docs/recovery_dispatch_20261104/POLICY_IMPLEMENTATION_REPORT.md",
+                      "bytes":  5514,
+                      "sha256":  "576d67a7ad636ebedc89fa4b9b4599f6dd83f62a8b8f15926f9d7c7a50bca2de"
+                  }
+              ],
+    "trajectories_executed":  false,
+    "existing_core_modified":  false,
+    "committed":  false
+}

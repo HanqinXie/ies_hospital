@@ -1,0 +1,19 @@
+﻿parameter,value_or_formula,unit,source,page,applicability,model_used,caution
+Existing single-effect absorption steam,19.5,lb/(RT*h),Brown and Dirks,3,Existing system,YES,Do not confuse with 10 lb/RT*h new double-effect chiller
+"Existing absorption electricity, including circulation auxiliaries",0.14,kW_e/RT,Brown and Dirks,3,Existing system,YES,Includes pumps and tower fans per reported modelling
+Existing electric centrifugal chillers (total system),0.77,kW_e/RT,Brown and Dirks,3,Existing system,YES,Includes cooling tower and condenser pump assumptions; chilled water distribution pump left in hospital load
+Original boiler efficiency,0.80,HHV/LHV unspecified,Brown and Dirks appendix,8,Existing boiler,YES,Fuel accounting approximation
+New double-effect absorption steam,10,lb/(RT*h),Brown and Dirks appendix,8,Proposed replacement,NO,Do not apply to old single-stage unit
+New absorption auxiliaries,0.14,kW/RT,Brown and Dirks appendix,8,Proposed replacement,NO,
+Existing 1200RT electric chiller compressor,0.54,kW/RT,Brown and Dirks appendix,8,Proposed-equipment study retains 1200RT centrifugal chiller,NO,Appendix includes additional auxiliaries
+Electric chiller auxiliary electricity,0.09,kW/RT,Brown and Dirks appendix,8,Proposed-equipment study,NO,Not equivalent to existing 0.77 total reported in load reconstruction
+GT ISO full-load HHV heat rate,29477 - 1954.9*ln(kW),Btu fuel per kWh_e,Brown and Dirks appendix,8,Prospective turbine fitted curve,YES surrogate,Use original 800 kW for module-equivalent scaling
+GT part-load heat rate correction,0.9851*(load_fraction)^(-0.327),dimensionless,Brown and Dirks appendix,8,Prospective fit,YES,Discrete load levels 0.4/0.6/0.8/1.0 assumed
+"GT ambient heat-rate factor, F <=59",0.965544 + 0.000584*T_F,dimensionless,Brown and Dirks appendix,8,Prospective fit,YES,
+"GT ambient heat-rate factor, F >59",0.910320 + 0.00152*T_F,dimensionless,Brown and Dirks appendix,8,Prospective fit,YES,
+GT ambient max electric power factor,1.23836 - 0.00404*T_F,dimensionless,Brown and Dirks appendix,8,Prospective fit,YES,
+HRSG capacity per proposed GT unit,5623.74*exp(0.0003202*kW),lb steam/h,Brown and Dirks appendix,8,Prospective fit,YES surrogate,Not actual recorded existing HRSG capacity. Steam scaled with load assumed
+Steam enthalpy difference,0.30,kWh_th/lb,Research assumption,,Synthetic case,YES,Not measured NMCSD steam enthalpy; sensitivity needed
+Heat exchanger efficiency,0.95,dimensionless,Research assumption,,Synthetic case,YES,Not measured NMCSD efficiency
+Cooling-tower heat rejection duty,(3.51685 + electricity/RT)*electric_RT + (3.51685 + 19.5*0.30)*abs_RT,kW_th,Research assumption,,Synthetic case,YES,Heat rejection proxy only; verify actual equipment design rating
+GT steam generation at partial loading,rated_HRSG_lbph * load_fraction,lb/h,Research assumption,,Synthetic case,YES,Original PNNL provides capacity but no dynamic part-load HRSG output

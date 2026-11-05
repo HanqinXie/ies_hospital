@@ -1,0 +1,18 @@
+{
+  "command": [
+    "python",
+    "-B",
+    "-m",
+    "unittest",
+    "discover",
+    "-s",
+    "E:\\hospital_ies_v32_20261027\\evaluation",
+    "-p",
+    "test_audit_v32.py",
+    "-v"
+  ],
+  "exit_code": 1,
+  "stdout": "RED03_lifecycle.stdout.log",
+  "stderr": "RED03_lifecycle.stderr.log",
+  "role": "two complete lifecycle state checkpoints; actual v1 failure preserved"
+}

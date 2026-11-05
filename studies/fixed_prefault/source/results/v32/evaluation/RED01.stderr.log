@@ -1,0 +1,93 @@
+test_actual_demand_match_splits_native_segment_at_planning_edges (test_audit_v32.AuditV32Tests) ... FAIL
+test_all_missing_is_partial_six_unknowns_without_plan_or_zero_fees (test_audit_v32.AuditV32Tests) ... FAIL
+test_manifest_is_exact_six_and_reuse_must_be_C02 (test_audit_v32.AuditV32Tests) ... FAIL
+test_offline_prefix_is_not_required_but_C_M_real_change_fails (test_audit_v32.AuditV32Tests) ... FAIL
+test_plan_actual_cost_uses_operation_and_preserves_zero_electric_DG_work (test_audit_v32.AuditV32Tests) ... FAIL
+test_reference_portable_map_checks_original_case_and_result_SHA (test_audit_v32.AuditV32Tests) ... FAIL
+test_request_chain_keeps_planned_and_actual_arrival_separate (test_audit_v32.AuditV32Tests) ... FAIL
+test_signed_delta_keeps_carriers_tiny_values_and_stock_effect (test_audit_v32.AuditV32Tests) ... FAIL
+
+======================================================================
+FAIL: test_actual_demand_match_splits_native_segment_at_planning_edges (test_audit_v32.AuditV32Tests)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "E:\hospital_ies_v32_20261027\evaluation\test_audit_v32.py", line 61, in test_actual_demand_match_splits_native_segment_at_planning_edges
+    m=api();d=[[[1.,2.,3.],[0.,0.,0.],[0.,0.,0.],[0.,0.,0.]]]*2
+  File "E:\hospital_ies_v32_20261027\evaluation\test_audit_v32.py", line 14, in api
+    assert path.is_file(),'Missing six-record V32 auditor'
+AssertionError: Missing six-record V32 auditor
+
+======================================================================
+FAIL: test_all_missing_is_partial_six_unknowns_without_plan_or_zero_fees (test_audit_v32.AuditV32Tests)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "E:\hospital_ies_v32_20261027\evaluation\test_audit_v32.py", line 115, in test_all_missing_is_partial_six_unknowns_without_plan_or_zero_fees
+    m=api();sup=m.load_support(HERE/'v30_support');helpers=m.load_helpers()
+  File "E:\hospital_ies_v32_20261027\evaluation\test_audit_v32.py", line 14, in api
+    assert path.is_file(),'Missing six-record V32 auditor'
+AssertionError: Missing six-record V32 auditor
+
+======================================================================
+FAIL: test_manifest_is_exact_six_and_reuse_must_be_C02 (test_audit_v32.AuditV32Tests)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "E:\hospital_ies_v32_20261027\evaluation\test_audit_v32.py", line 45, in test_manifest_is_exact_six_and_reuse_must_be_C02
+    m=api();r=registration();self.assertEqual(len(m.validate_manifest(r)),6)
+  File "E:\hospital_ies_v32_20261027\evaluation\test_audit_v32.py", line 14, in api
+    assert path.is_file(),'Missing six-record V32 auditor'
+AssertionError: Missing six-record V32 auditor
+
+======================================================================
+FAIL: test_offline_prefix_is_not_required_but_C_M_real_change_fails (test_audit_v32.AuditV32Tests)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "E:\hospital_ies_v32_20261027\evaluation\test_audit_v32.py", line 52, in test_offline_prefix_is_not_required_but_C_M_real_change_fails
+    m=api();sup=m.load_support(HERE/'v30_support');helpers=m.load_helpers()
+  File "E:\hospital_ies_v32_20261027\evaluation\test_audit_v32.py", line 14, in api
+    assert path.is_file(),'Missing six-record V32 auditor'
+AssertionError: Missing six-record V32 auditor
+
+======================================================================
+FAIL: test_plan_actual_cost_uses_operation_and_preserves_zero_electric_DG_work (test_audit_v32.AuditV32Tests)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "E:\hospital_ies_v32_20261027\evaluation\test_audit_v32.py", line 84, in test_plan_actual_cost_uses_operation_and_preserves_zero_electric_DG_work
+    m=api();actual=metrics();service={p:{c:dict(requested_kWh=1.,served_kWh=1.,ENS_kWh=0.)
+  File "E:\hospital_ies_v32_20261027\evaluation\test_audit_v32.py", line 14, in api
+    assert path.is_file(),'Missing six-record V32 auditor'
+AssertionError: Missing six-record V32 auditor
+
+======================================================================
+FAIL: test_reference_portable_map_checks_original_case_and_result_SHA (test_audit_v32.AuditV32Tests)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "E:\hospital_ies_v32_20261027\evaluation\test_audit_v32.py", line 70, in test_reference_portable_map_checks_original_case_and_result_SHA
+    m=api();sup=m.load_support(HERE/'v30_support')
+  File "E:\hospital_ies_v32_20261027\evaluation\test_audit_v32.py", line 14, in api
+    assert path.is_file(),'Missing six-record V32 auditor'
+AssertionError: Missing six-record V32 auditor
+
+======================================================================
+FAIL: test_request_chain_keeps_planned_and_actual_arrival_separate (test_audit_v32.AuditV32Tests)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "E:\hospital_ies_v32_20261027\evaluation\test_audit_v32.py", line 99, in test_request_chain_keeps_planned_and_actual_arrival_separate
+    m=api();action=dict(ordinary_dispatch=dict(dispatch=dict(grid_import_kW=1.),disconnected_kW=[[0.,0.,0.]]*4))
+  File "E:\hospital_ies_v32_20261027\evaluation\test_audit_v32.py", line 14, in api
+    assert path.is_file(),'Missing six-record V32 auditor'
+AssertionError: Missing six-record V32 auditor
+
+======================================================================
+FAIL: test_signed_delta_keeps_carriers_tiny_values_and_stock_effect (test_audit_v32.AuditV32Tests)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "E:\hospital_ies_v32_20261027\evaluation\test_audit_v32.py", line 123, in test_signed_delta_keeps_carriers_tiny_values_and_stock_effect
+    m=api();helpers=m.load_helpers();a=metrics(ens=1e-12);b=metrics(ens=0.,total_fee=104.)
+  File "E:\hospital_ies_v32_20261027\evaluation\test_audit_v32.py", line 14, in api
+    assert path.is_file(),'Missing six-record V32 auditor'
+AssertionError: Missing six-record V32 auditor
+
+----------------------------------------------------------------------
+Ran 8 tests in 0.002s
+
+FAILED (failures=8)

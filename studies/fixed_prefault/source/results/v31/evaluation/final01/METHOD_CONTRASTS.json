@@ -1,0 +1,486 @@
+[
+  {
+    "context": "b05_L3_ER",
+    "mode": "normal",
+    "definition": "value minus reference",
+    "reference_id": "reused_b05_L3_ER_normal_M",
+    "value_id": "v31_b05_normal_M_cooling_permission",
+    "reference_method": "M",
+    "value_method": "M_cooling_permission",
+    "differences": {
+      "ENS_kWh": {
+        "P0": {
+          "e": 1.7495584771154427e-05,
+          "h": 0.0,
+          "c": -1.0859911656169174e-05
+        },
+        "P1": {
+          "e": 1.7496036015529626e-05,
+          "h": 0.0,
+          "c": -1.0860191753891968e-05
+        },
+        "P2": {
+          "e": 1.749603601375327e-05,
+          "h": 0.0,
+          "c": -1.0860191753891968e-05
+        },
+        "P3": {
+          "e": 7.113527539931441e-08,
+          "h": 0.0,
+          "c": -8.788847650063195
+        }
+      },
+      "actual_fee_USD2001": -0.08289642818289167,
+      "DG_shaft_work_kWh": 0.0,
+      "DG_electric_work_kWh": 0.0,
+      "DG_remaining_shaft_budget_kWh": 0.0,
+      "final_stock_kWh": {
+        "ups": 0.0,
+        "cold_store": 0.0
+      }
+    }
+  },
+  {
+    "context": "b05_L3_ER",
+    "mode": "normal",
+    "definition": "value minus reference",
+    "reference_id": "v31_b05_normal_M_cooling_permission",
+    "value_id": "reused_b05_L3_ER_normal_C",
+    "reference_method": "M_cooling_permission",
+    "value_method": "C",
+    "differences": {
+      "ENS_kWh": {
+        "P0": {
+          "e": 0.0,
+          "h": 0.0,
+          "c": 0.0
+        },
+        "P1": {
+          "e": 0.0,
+          "h": 0.0,
+          "c": 0.0
+        },
+        "P2": {
+          "e": 0.0,
+          "h": 0.0,
+          "c": 0.0
+        },
+        "P3": {
+          "e": 0.0,
+          "h": 0.0,
+          "c": 0.0
+        }
+      },
+      "actual_fee_USD2001": -4.9897379432132425,
+      "DG_shaft_work_kWh": 0.0,
+      "DG_electric_work_kWh": 0.0,
+      "DG_remaining_shaft_budget_kWh": 0.0,
+      "final_stock_kWh": {
+        "ups": 0.0,
+        "cold_store": 0.0
+      }
+    }
+  },
+  {
+    "context": "b05_L3_ER",
+    "mode": "disturbed",
+    "definition": "value minus reference",
+    "reference_id": "reused_b05_L3_ER_disturbed_M",
+    "value_id": "v31_b05_disturbed_M_cooling_permission",
+    "reference_method": "M",
+    "value_method": "M_cooling_permission",
+    "differences": {
+      "ENS_kWh": {
+        "P0": {
+          "e": 1.7560564049608467e-05,
+          "h": 0.0,
+          "c": -1.089150063205223e-05
+        },
+        "P1": {
+          "e": 1.756103114149344e-05,
+          "h": 0.0,
+          "c": -1.0891790334208158e-05
+        },
+        "P2": {
+          "e": 1.756103113972321e-05,
+          "h": 0.0,
+          "c": -1.0891790334208158e-05
+        },
+        "P3": {
+          "e": 2.5384569107486654e-07,
+          "h": 0.0,
+          "c": -10.593407344124453
+        }
+      },
+      "actual_fee_USD2001": -0.05383284808542044,
+      "DG_shaft_work_kWh": 0.0,
+      "DG_electric_work_kWh": 0.0,
+      "DG_remaining_shaft_budget_kWh": 0.0,
+      "final_stock_kWh": {
+        "ups": 0.0,
+        "cold_store": 0.0
+      }
+    }
+  },
+  {
+    "context": "b05_L3_ER",
+    "mode": "disturbed",
+    "definition": "value minus reference",
+    "reference_id": "v31_b05_disturbed_M_cooling_permission",
+    "value_id": "reused_b05_L3_ER_disturbed_C",
+    "reference_method": "M_cooling_permission",
+    "value_method": "C",
+    "differences": {
+      "ENS_kWh": {
+        "P0": {
+          "e": 0.0,
+          "h": 0.0,
+          "c": 0.0
+        },
+        "P1": {
+          "e": 0.0,
+          "h": 0.0,
+          "c": 0.0
+        },
+        "P2": {
+          "e": 0.0,
+          "h": 0.0,
+          "c": 0.0
+        },
+        "P3": {
+          "e": 0.0,
+          "h": 0.0,
+          "c": 0.0
+        }
+      },
+      "actual_fee_USD2001": -4.9897379432132425,
+      "DG_shaft_work_kWh": 0.0,
+      "DG_electric_work_kWh": 0.0,
+      "DG_remaining_shaft_budget_kWh": 0.0,
+      "final_stock_kWh": {
+        "ups": 0.0,
+        "cold_store": 0.0
+      }
+    }
+  },
+  {
+    "context": "b05_L3_ER",
+    "mode": "disturbance_delta_difference",
+    "definition": "(value disturbed minus own normal) minus (reference disturbed minus own normal)",
+    "reference_method": "M",
+    "value_method": "M_cooling_permission",
+    "differences": {
+      "ENS_kWh": {
+        "P0": {
+          "e": 6.49792784540408e-08,
+          "h": 0.0,
+          "c": -3.1588975883055744e-08
+        },
+        "P1": {
+          "e": 6.499512596381445e-08,
+          "h": 0.0,
+          "c": -3.1598580316189964e-08
+        },
+        "P2": {
+          "e": 6.499512596994019e-08,
+          "h": 0.0,
+          "c": -3.1598580316189964e-08
+        },
+        "P3": {
+          "e": 1.8271041567555213e-07,
+          "h": 0.0,
+          "c": -1.8045596940612576
+        }
+      },
+      "actual_fee_USD2001": 0.02906358009747123,
+      "DG_shaft_work_kWh": 0.0,
+      "DG_electric_work_kWh": 0.0,
+      "DG_remaining_shaft_budget_kWh": 0.0,
+      "final_stock_kWh": {
+        "ups": 0.0,
+        "cold_store": 0.0
+      }
+    }
+  },
+  {
+    "context": "b05_L3_ER",
+    "mode": "disturbance_delta_difference",
+    "definition": "(value disturbed minus own normal) minus (reference disturbed minus own normal)",
+    "reference_method": "M_cooling_permission",
+    "value_method": "C",
+    "differences": {
+      "ENS_kWh": {
+        "P0": {
+          "e": 0.0,
+          "h": 0.0,
+          "c": 0.0
+        },
+        "P1": {
+          "e": 0.0,
+          "h": 0.0,
+          "c": 0.0
+        },
+        "P2": {
+          "e": 0.0,
+          "h": 0.0,
+          "c": 0.0
+        },
+        "P3": {
+          "e": 0.0,
+          "h": 0.0,
+          "c": 0.0
+        }
+      },
+      "actual_fee_USD2001": 0.0,
+      "DG_shaft_work_kWh": 0.0,
+      "DG_electric_work_kWh": 0.0,
+      "DG_remaining_shaft_budget_kWh": 0.0,
+      "final_stock_kWh": {
+        "ups": 0.0,
+        "cold_store": 0.0
+      }
+    }
+  },
+  {
+    "context": "b07_L4_GT_ER",
+    "mode": "normal",
+    "definition": "value minus reference",
+    "reference_id": "reused_b07_L4_GT_ER_normal_M",
+    "value_id": "v31_b07_normal_M_steam_permission",
+    "reference_method": "M",
+    "value_method": "M_steam_permission",
+    "differences": {
+      "ENS_kWh": {
+        "P0": {
+          "e": 0.0,
+          "h": 0.0,
+          "c": 0.0
+        },
+        "P1": {
+          "e": 0.0,
+          "h": 0.0,
+          "c": 0.0
+        },
+        "P2": {
+          "e": 1.7386047541885074e-05,
+          "h": 0.0,
+          "c": -1.1107934735899774e-05
+        },
+        "P3": {
+          "e": -1.7385726433411658e-05,
+          "h": 0.0,
+          "c": -4.252233870291619
+        }
+      },
+      "actual_fee_USD2001": 0.16471220847617474,
+      "DG_shaft_work_kWh": 0.0,
+      "DG_electric_work_kWh": 0.0,
+      "DG_remaining_shaft_budget_kWh": 0.0,
+      "final_stock_kWh": {
+        "ups": 0.0,
+        "cold_store": 0.0
+      }
+    }
+  },
+  {
+    "context": "b07_L4_GT_ER",
+    "mode": "normal",
+    "definition": "value minus reference",
+    "reference_id": "v31_b07_normal_M_steam_permission",
+    "value_id": "reused_b07_L4_GT_ER_normal_C",
+    "reference_method": "M_steam_permission",
+    "value_method": "C",
+    "differences": {
+      "ENS_kWh": {
+        "P0": {
+          "e": 1.756119599960476e-05,
+          "h": 0.0,
+          "c": -1.12198369741634e-05
+        },
+        "P1": {
+          "e": 1.7561622556172606e-05,
+          "h": 0.0,
+          "c": -1.1220109501053344e-05
+        },
+        "P2": {
+          "e": 5.421010862427522e-20,
+          "h": 0.0,
+          "c": 0.0
+        },
+        "P3": {
+          "e": 1.759437667202962e-05,
+          "h": 0.0,
+          "c": -29.214012403496987
+        }
+      },
+      "actual_fee_USD2001": -3.0469220326701816,
+      "DG_shaft_work_kWh": 0.0,
+      "DG_electric_work_kWh": 0.0,
+      "DG_remaining_shaft_budget_kWh": 0.0,
+      "final_stock_kWh": {
+        "ups": 0.0,
+        "cold_store": 0.0
+      }
+    }
+  },
+  {
+    "context": "b07_L4_GT_ER",
+    "mode": "disturbed",
+    "definition": "value minus reference",
+    "reference_id": "reused_b07_L4_GT_ER_disturbed_M",
+    "value_id": "v31_b07_disturbed_M_steam_permission",
+    "reference_method": "M",
+    "value_method": "M_steam_permission",
+    "differences": {
+      "ENS_kWh": {
+        "P0": {
+          "e": 1.1427196966451447e-08,
+          "h": -12.99693845167845,
+          "c": 1.1288630338057715e-05
+        },
+        "P1": {
+          "e": 0.0,
+          "h": -8.790220719501372,
+          "c": -1.9539925233402755e-14
+        },
+        "P2": {
+          "e": 0.0,
+          "h": 0.0,
+          "c": 0.0
+        },
+        "P3": {
+          "e": -1.0984962273141718e-08,
+          "h": -11.006225071162369,
+          "c": -36.954088187054076
+        }
+      },
+      "actual_fee_USD2001": 2.17449887130752,
+      "DG_shaft_work_kWh": 0.0,
+      "DG_electric_work_kWh": 0.0,
+      "DG_remaining_shaft_budget_kWh": 0.0,
+      "final_stock_kWh": {
+        "ups": 0.0,
+        "cold_store": 0.0
+      }
+    }
+  },
+  {
+    "context": "b07_L4_GT_ER",
+    "mode": "disturbed",
+    "definition": "value minus reference",
+    "reference_id": "v31_b07_disturbed_M_steam_permission",
+    "value_id": "reused_b07_L4_GT_ER_disturbed_C",
+    "reference_method": "M_steam_permission",
+    "value_method": "C",
+    "differences": {
+      "ENS_kWh": {
+        "P0": {
+          "e": -1.1427196966424342e-08,
+          "h": 4.546657912385399e-06,
+          "c": -1.1288630338057715e-05
+        },
+        "P1": {
+          "e": -1.0984980036683007e-08,
+          "h": 3.6920258142680913,
+          "c": -1.1288912585172284e-05
+        },
+        "P2": {
+          "e": 2.710505431213761e-20,
+          "h": 0.0,
+          "c": 0.0
+        },
+        "P3": {
+          "e": 1.772015856715478e-05,
+          "h": 11.006220524504432,
+          "c": -29.902399823603297
+        }
+      },
+      "actual_fee_USD2001": -9.510080090273135,
+      "DG_shaft_work_kWh": 0.0,
+      "DG_electric_work_kWh": 0.0,
+      "DG_remaining_shaft_budget_kWh": 0.0,
+      "final_stock_kWh": {
+        "ups": 0.0,
+        "cold_store": 0.0
+      }
+    }
+  },
+  {
+    "context": "b07_L4_GT_ER",
+    "mode": "disturbance_delta_difference",
+    "definition": "(value disturbed minus own normal) minus (reference disturbed minus own normal)",
+    "reference_method": "M",
+    "value_method": "M_steam_permission",
+    "differences": {
+      "ENS_kWh": {
+        "P0": {
+          "e": 1.1427196966451447e-08,
+          "h": -12.99693845167845,
+          "c": 1.1288630338057715e-05
+        },
+        "P1": {
+          "e": 0.0,
+          "h": -8.790220719501372,
+          "c": -1.9539925233402755e-14
+        },
+        "P2": {
+          "e": -1.7386047541885074e-05,
+          "h": 0.0,
+          "c": 1.1107934735899774e-05
+        },
+        "P3": {
+          "e": 1.7374741471138516e-05,
+          "h": -11.006225071162369,
+          "c": -32.70185431676246
+        }
+      },
+      "actual_fee_USD2001": 2.0097866628313454,
+      "DG_shaft_work_kWh": 0.0,
+      "DG_electric_work_kWh": 0.0,
+      "DG_remaining_shaft_budget_kWh": 0.0,
+      "final_stock_kWh": {
+        "ups": 0.0,
+        "cold_store": 0.0
+      }
+    }
+  },
+  {
+    "context": "b07_L4_GT_ER",
+    "mode": "disturbance_delta_difference",
+    "definition": "(value disturbed minus own normal) minus (reference disturbed minus own normal)",
+    "reference_method": "M_steam_permission",
+    "value_method": "C",
+    "differences": {
+      "ENS_kWh": {
+        "P0": {
+          "e": -1.7572623196571185e-05,
+          "h": 4.546657912385399e-06,
+          "c": -6.879336389431501e-08
+        },
+        "P1": {
+          "e": -1.757260753620929e-05,
+          "h": 3.6920258142680913,
+          "c": -6.88030841189402e-08
+        },
+        "P2": {
+          "e": -2.710505431213761e-20,
+          "h": 0.0,
+          "c": 0.0
+        },
+        "P3": {
+          "e": 1.2578189512515991e-07,
+          "h": 11.006220524504432,
+          "c": -0.6883874201063094
+        }
+      },
+      "actual_fee_USD2001": -6.4631580576029535,
+      "DG_shaft_work_kWh": 0.0,
+      "DG_electric_work_kWh": 0.0,
+      "DG_remaining_shaft_budget_kWh": 0.0,
+      "final_stock_kWh": {
+        "ups": 0.0,
+        "cold_store": 0.0
+      }
+    }
+  }
+]

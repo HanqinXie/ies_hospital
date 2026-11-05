@@ -1,0 +1,75 @@
+﻿{
+    "schema":  "hospital_ies.noopt_forward.integration_receipt.v1",
+    "status":  "implemented_component_verified_pending_continuous_campaign",
+    "worktree":  "D:\\hospital_ies_noopt_20261104",
+    "new_factory":  "tools.noopt_unattended_20261104.environment.with_forward_minute1",
+    "legacy_factory":  "fail_closed_unchanged_since_first_stage",
+    "native_and_arithmetic_emergency_topology_flag":  "strict_emergency_source_partition",
+    "new_formal_campaign_started_by_this_agent":  false,
+    "synthetic_component_outputs":  [
+                                        "E:\\hospital_ies_cooling_dynamics_20261104_run01\\component_checks\\synthetic_onset04",
+                                        "E:\\hospital_ies_cooling_dynamics_20261104_run01\\component_checks\\synthetic_repair02"
+                                    ],
+    "tests":  [
+                  {
+                      "result":  "2 failed before forward implementation",
+                      "log":  "logs/05_forward_red.txt",
+                      "exit_code":  1
+                  },
+                  {
+                      "result":  "2 passed",
+                      "log":  "logs/06_forward_green.txt",
+                      "exit_code":  0
+                  },
+                  {
+                      "result":  "4 passed",
+                      "log":  "logs/12_forward_runtime_components.txt",
+                      "exit_code":  0
+                  },
+                  {
+                      "result":  "arithmetic bus regression failed before fix",
+                      "log":  "logs/14_emergency_bus_red.txt",
+                      "exit_code":  1
+                  },
+                  {
+                      "result":  "5 passed",
+                      "log":  "logs/15_emergency_bus_green.txt",
+                      "exit_code":  0
+                  },
+                  {
+                      "result":  "2 passed",
+                      "log":  "logs/16_storage_event_boundaries.txt",
+                      "exit_code":  0
+                  },
+                  {
+                      "result":  "synthetic real-env59-to62 interface completed",
+                      "log":  "logs/20_synthetic_onset04.txt",
+                      "exit_code":  0
+                  },
+                  {
+                      "result":  "synthetic119-to122 repair completed after initialization fix",
+                      "log":  "logs/22_synthetic_repair02.txt",
+                      "exit_code":  0
+                  },
+                  {
+                      "result":  "real native small MILP bus regression failed before flag fix",
+                      "log":  "logs/23_native_bus_red.txt",
+                      "exit_code":  1
+                  },
+                  {
+                      "result":  "2 focused native/arithmetic topology tests passed",
+                      "log":  "logs/24_native_bus_green.txt",
+                      "exit_code":  0
+                  }
+              ],
+    "diff_check_exit_code":  0,
+    "sha256":  {
+                   "tools/noopt_unattended_20261104/forward.py":  "b0f8f4a79caa3483e17688470177e74a2638daaf1e888085fe5d47da0b87a2f9",
+                   "tools/operating_response/physical_balance.py":  "42238ae2f69d1998be0b9e059a1f6eef4ab659e433eb60c397a58efa676666ea",
+                   "tools/noopt_unattended_20261104/__init__.py":  "c34618182d430f5f06d50e064925e35c01525f11022024c5d4ba1e1fc8867bbd",
+                   "tools/noopt_unattended_20261104/runtime.py":  "cb55bed7938e72dee856ef77b5d61b5dad96f47bfde6fc8088149ad1a15f048e",
+                   "tools/noopt_unattended_20261104/environment.py":  "b39c309df6073f85e5f3a5cf902436042bbc8b95d52caeb7aeaee8872f514a95",
+                   "tests/test_noopt_forward_arithmetic.py":  "403b95e24a9a740b8e8022430abe017cf8c50afbc186ce0c25f1bc52561b5dbb",
+                   "docs/noopt_unattended_20261104/FORWARD_INTEGRATION_STATUS_ZH.md":  "c60da52e1dc8536ec1507258c84e1c32ae8d132539b50c89f804fc89da5eff6c"
+               }
+}

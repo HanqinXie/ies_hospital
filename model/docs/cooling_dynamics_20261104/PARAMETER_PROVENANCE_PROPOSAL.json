@@ -1,0 +1,105 @@
+{
+  "schema": "hospital_ies.cooling_dynamics.parameter_provenance.proposal.v1",
+  "date": "2026-11-04",
+  "status": "literature_review_only_not_implemented",
+  "scope": "exact first-order engineering dynamics around unchanged existing steady-state targets; no physical water temperature claimed",
+  "time_unit": "s",
+  "power_unit": "kW",
+  "energy_unit": "kWh",
+  "source_manifest": "docs/cooling_dynamics_20261104/SOURCE_PDF_MANIFEST.json",
+  "parameters": {
+    "abs_cooling_tau_s": {
+      "selected_model_value": null,
+      "selection_status": "awaiting_explicit_engineering_proxy_selection",
+      "hospital_calibrated": false,
+      "source_value": 137.717,
+      "source_unit": "s",
+      "source_parameter": "tau_E",
+      "source_doi": "10.1016/j.enconman.2026.121191",
+      "source_pdf_sha256": "5f1edfa5e7588bf82d2a4790e4b1ed352e09a7b997b0e56ca217fb5bceb75c90",
+      "source_locator": "PDF page 12 Eq.85; PDF page 13 Table 2",
+      "source_device": "Yazaki WFC-SC10 hot-water-driven single-effect LiBr-H2O chiller",
+      "source_estimation": "linear model fitted to full-model response integral; reference trajectory is a 1 min hot-water ramp from 50% to 100% operating capacity",
+      "transfer_limit": "not hospital steam-driven machine identification; not cold-start dead time; not a minimum up/down time; no capacity-ratio scaling of tau",
+      "engineering_mapping": "tau*dq_dt + q = unchanged legal steady-state cooling target"
+    },
+    "ec_cooling_tau_s_each": {
+      "selected_model_value": [null, null, null],
+      "selection_status": "missing_published_first_order_tau_and_hospital_calibration",
+      "hospital_calibrated": false,
+      "source_value": null,
+      "source_unit": "s",
+      "source_doi": "10.1016/j.ijrefrig.2008.03.006",
+      "source_pdf_sha256": "bd245aea10bfbdcabcae7a5fd36fbe38b0ea445d68889a8d885bd4f45415f522",
+      "source_locator": "printed pp.1441, 1447-1449; PDF pages 5,11-13; section 3.1 and Figs.6,7,11,12",
+      "source_device": "300 kW R134a centrifugal chiller with flooded shell-and-tube heat exchangers",
+      "source_evidence": "finite guide-vane actuator rate and heat-exchanger dynamics; standalone component curves evolve over hundreds of seconds",
+      "transfer_limit": "standalone curves are simulations with simulated boundary conditions; no published whole-chiller first-order tau or start dead time; full validation plots span 14 h; cannot label any selected 5 min value as a measured literature tau",
+      "engineering_mapping": "explicit additional first-order reduction, with selected values and rationale registered separately"
+    },
+    "water_pressure_readiness_tau_s": {
+      "selected_model_value": null,
+      "selection_status": "awaiting_explicit_engineering_proxy_selection",
+      "hospital_calibrated": false,
+      "source_value": 60.0,
+      "source_unit": "s",
+      "source_parameter": "tau_pCTin and tau_pHXi",
+      "source_doi": "10.1016/j.jprocont.2018.04.005",
+      "source_pdf_sha256": "27b4245db38bd2a75c2d0f9e6c2f354963dc22d74766cf71acf813d8db1fdc39",
+      "source_locator": "PDF page 3 Table 3; PDF pages 8-9 Eqs.32,59",
+      "source_device": "ORYX GTL industrial network with 3 towers, 2 pumps, 11 modelled heat exchangers",
+      "transfer_limit": "pressure relaxation constant, not a directly measured hospital pump-flow or repair-restart time",
+      "engineering_mapping": "normalized pressure/flow-establishment readiness state only; r in [0,1], not calibrated pressure or mass flow"
+    },
+    "tower_heat_exchange_readiness_tau_s": {
+      "selected_model_value": null,
+      "selection_status": "awaiting_explicit_engineering_proxy_selection",
+      "hospital_calibrated": false,
+      "source_value": 360.0,
+      "source_unit": "s",
+      "source_parameter": "tau_THX2",
+      "source_doi": "10.1016/j.jprocont.2018.04.005",
+      "source_pdf_sha256": "27b4245db38bd2a75c2d0f9e6c2f354963dc22d74766cf71acf813d8db1fdc39",
+      "source_locator": "PDF page 4 Table 4; PDF page 9 Eq.60",
+      "source_device": "industrial heat exchanger water-side outlet-temperature model",
+      "transfer_limit": "not a cooling-tower whole-system recovery tau; using it for aggregate tower readiness is a further engineering proxy",
+      "engineering_mapping": "normalized heat-exchange readiness only, with unchanged existing tower capacity and rejection coefficients"
+    },
+    "cold_start_dead_time_s": {
+      "selected_model_value": null,
+      "selection_status": "not_given_for_hospital_in_the_three_papers",
+      "source_value": null,
+      "transfer_limit": "first-order tau and settling time cannot be substituted for cold-start dead time"
+    },
+    "minimum_up_down_time_s": {
+      "selected_model_value": null,
+      "selection_status": "not_quantified_by_the_three_papers",
+      "source_value": null,
+      "transfer_limit": "requires separate OEM/site evidence or explicitly selected engineering assumption"
+    },
+    "cold_start_additional_electric_or_heat_energy_kWh": {
+      "selected_model_value": null,
+      "selection_status": "not_identifiable_from_existing_all_in_and_steam_coefficients",
+      "source_value": null,
+      "transfer_limit": "retaining current steady-state consumption ratios does not reproduce transient heat overshoot or motor inrush"
+    },
+    "physical_loop_inventory_m3": {
+      "selected_model_value": null,
+      "selection_status": "missing_hospital_inventory_and_network_geometry",
+      "source_value": null,
+      "transfer_limit": "no inferred water temperature or free thermal storage may be claimed from readiness states"
+    }
+  },
+  "common_requirements": {
+    "selection_rationale_required_when_model_value_filled": true,
+    "allowed_proxy_status": "explicit_uncalibrated_engineering_proxy",
+    "oem_label_allowed": false,
+    "availability_repair_does_not_set_state_to_one": true,
+    "fault_hard_limits_apply_immediately": true,
+    "actual_energy_uses_interval_integral": true,
+    "seconds_to_kWh_divisor": 3600,
+    "future_event_information_allowed": false,
+    "constant_target_step_formula": "q1 = qss + (q0-qss)*exp(-dt_s/tau_s)",
+    "constant_target_cooling_energy_formula": "E_kWh = (qss*dt_s + (q0-qss)*tau_s*(1-exp(-dt_s/tau_s)))/3600"
+  }
+}

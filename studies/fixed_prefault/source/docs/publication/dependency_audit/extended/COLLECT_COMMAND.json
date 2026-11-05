@@ -1,0 +1,17 @@
+{
+  "command": [
+    "python",
+    "-B",
+    "-m",
+    "pytest",
+    "--collect-only",
+    "-q",
+    "-p",
+    "no:cacheprovider"
+  ],
+  "cwd": "D:\\hospital_ies_v22_20261025",
+  "started_utc": "2026-10-27T16:44:25.538956+00:00",
+  "reason": "collect identifiers only; no test functions, hospital model, or solver calls",
+  "exit_code": 0,
+  "finished_utc": "2026-10-27T16:44:33.584255+00:00"
+}

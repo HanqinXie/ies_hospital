@@ -1,0 +1,114 @@
+test_catalog_missing_or_changed_results_rejected (test_verify_repository.Guards) ... ERROR
+test_extra_model_source_changes_binding (test_verify_repository.Guards) ... ERROR
+test_frozen_bytes_mutation_is_rejected (test_verify_repository.Guards) ... ERROR
+test_missing_frozen_member_is_rejected (test_verify_repository.Guards) ... ok
+test_paths_cannot_escape_repository (test_verify_repository.Guards) ... test_release_scripts_do_not_change_model_binding (test_verify_repository.Guards) ... ERROR
+
+======================================================================
+ERROR: test_catalog_missing_or_changed_results_rejected (test_verify_repository.Guards)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "E:\hospital_ies_publish_20261028\release_stage\test_verify_repository.py", line 29, in test_catalog_missing_or_changed_results_rejected
+    m=module();r=self.root/'results';r.mkdir();p=r/'x.json';p.write_bytes(b'actual')
+  File "E:\hospital_ies_publish_20261028\release_stage\test_verify_repository.py", line 7, in module
+    m=importlib.util.module_from_spec(spec);spec.loader.exec_module(m);return m
+  File "<frozen importlib._bootstrap_external>", line 879, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 1016, in get_code
+  File "<frozen importlib._bootstrap_external>", line 1073, in get_data
+FileNotFoundError: [Errno 2] No such file or directory: 'E:\\hospital_ies_publish_20261028\\release_stage\\verify_repository.py'
+
+======================================================================
+ERROR: test_extra_model_source_changes_binding (test_verify_repository.Guards)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "E:\hospital_ies_publish_20261028\release_stage\test_verify_repository.py", line 21, in test_extra_model_source_changes_binding
+    m=module();p=self.root/'tools/a.py';p.parent.mkdir();p.write_bytes(b'first')
+  File "E:\hospital_ies_publish_20261028\release_stage\test_verify_repository.py", line 7, in module
+    m=importlib.util.module_from_spec(spec);spec.loader.exec_module(m);return m
+  File "<frozen importlib._bootstrap_external>", line 879, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 1016, in get_code
+  File "<frozen importlib._bootstrap_external>", line 1073, in get_data
+FileNotFoundError: [Errno 2] No such file or directory: 'E:\\hospital_ies_publish_20261028\\release_stage\\verify_repository.py'
+
+======================================================================
+ERROR: test_frozen_bytes_mutation_is_rejected (test_verify_repository.Guards)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "E:\hospital_ies_publish_20261028\release_stage\test_verify_repository.py", line 12, in test_frozen_bytes_mutation_is_rejected
+    m=module();p=self.root/'x.py';p.write_bytes(b'frozen');mapping={'x.py':m.sha(p)}
+  File "E:\hospital_ies_publish_20261028\release_stage\test_verify_repository.py", line 7, in module
+    m=importlib.util.module_from_spec(spec);spec.loader.exec_module(m);return m
+  File "<frozen importlib._bootstrap_external>", line 879, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 1016, in get_code
+  File "<frozen importlib._bootstrap_external>", line 1073, in get_data
+FileNotFoundError: [Errno 2] No such file or directory: 'E:\\hospital_ies_publish_20261028\\release_stage\\verify_repository.py'
+
+======================================================================
+ERROR: test_paths_cannot_escape_repository (test_verify_repository.Guards) (name='../outside')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "E:\hospital_ies_publish_20261028\release_stage\test_verify_repository.py", line 19, in test_paths_cannot_escape_repository
+    with self.subTest(name=name),self.assertRaises(ValueError):module().safe_member(self.root,name)
+  File "E:\hospital_ies_publish_20261028\release_stage\test_verify_repository.py", line 7, in module
+    m=importlib.util.module_from_spec(spec);spec.loader.exec_module(m);return m
+  File "<frozen importlib._bootstrap_external>", line 879, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 1016, in get_code
+  File "<frozen importlib._bootstrap_external>", line 1073, in get_data
+FileNotFoundError: [Errno 2] No such file or directory: 'E:\\hospital_ies_publish_20261028\\release_stage\\verify_repository.py'
+
+======================================================================
+ERROR: test_paths_cannot_escape_repository (test_verify_repository.Guards) (name='/rooted')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "E:\hospital_ies_publish_20261028\release_stage\test_verify_repository.py", line 19, in test_paths_cannot_escape_repository
+    with self.subTest(name=name),self.assertRaises(ValueError):module().safe_member(self.root,name)
+  File "E:\hospital_ies_publish_20261028\release_stage\test_verify_repository.py", line 7, in module
+    m=importlib.util.module_from_spec(spec);spec.loader.exec_module(m);return m
+  File "<frozen importlib._bootstrap_external>", line 879, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 1016, in get_code
+  File "<frozen importlib._bootstrap_external>", line 1073, in get_data
+FileNotFoundError: [Errno 2] No such file or directory: 'E:\\hospital_ies_publish_20261028\\release_stage\\verify_repository.py'
+
+======================================================================
+ERROR: test_paths_cannot_escape_repository (test_verify_repository.Guards) (name='D:/drive')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "E:\hospital_ies_publish_20261028\release_stage\test_verify_repository.py", line 19, in test_paths_cannot_escape_repository
+    with self.subTest(name=name),self.assertRaises(ValueError):module().safe_member(self.root,name)
+  File "E:\hospital_ies_publish_20261028\release_stage\test_verify_repository.py", line 7, in module
+    m=importlib.util.module_from_spec(spec);spec.loader.exec_module(m);return m
+  File "<frozen importlib._bootstrap_external>", line 879, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 1016, in get_code
+  File "<frozen importlib._bootstrap_external>", line 1073, in get_data
+FileNotFoundError: [Errno 2] No such file or directory: 'E:\\hospital_ies_publish_20261028\\release_stage\\verify_repository.py'
+
+======================================================================
+ERROR: test_paths_cannot_escape_repository (test_verify_repository.Guards) (name='x\\wrong')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "E:\hospital_ies_publish_20261028\release_stage\test_verify_repository.py", line 19, in test_paths_cannot_escape_repository
+    with self.subTest(name=name),self.assertRaises(ValueError):module().safe_member(self.root,name)
+  File "E:\hospital_ies_publish_20261028\release_stage\test_verify_repository.py", line 7, in module
+    m=importlib.util.module_from_spec(spec);spec.loader.exec_module(m);return m
+  File "<frozen importlib._bootstrap_external>", line 879, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 1016, in get_code
+  File "<frozen importlib._bootstrap_external>", line 1073, in get_data
+FileNotFoundError: [Errno 2] No such file or directory: 'E:\\hospital_ies_publish_20261028\\release_stage\\verify_repository.py'
+
+======================================================================
+ERROR: test_release_scripts_do_not_change_model_binding (test_verify_repository.Guards)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "E:\hospital_ies_publish_20261028\release_stage\test_verify_repository.py", line 25, in test_release_scripts_do_not_change_model_binding
+    m=module();p=self.root/'run.py';p.write_bytes(b'frozen');before=m.source_binding(self.root)
+  File "E:\hospital_ies_publish_20261028\release_stage\test_verify_repository.py", line 7, in module
+    m=importlib.util.module_from_spec(spec);spec.loader.exec_module(m);return m
+  File "<frozen importlib._bootstrap_external>", line 879, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 1016, in get_code
+  File "<frozen importlib._bootstrap_external>", line 1073, in get_data
+FileNotFoundError: [Errno 2] No such file or directory: 'E:\\hospital_ies_publish_20261028\\release_stage\\verify_repository.py'
+
+----------------------------------------------------------------------
+Ran 6 tests in 0.002s
+
+FAILED (errors=8)

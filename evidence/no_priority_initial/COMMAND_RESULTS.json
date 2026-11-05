@@ -1,0 +1,408 @@
+[
+  {
+    "log": "E:\\hospital_ies_no_priority_20261105_run01\\logs\\01_RED.log",
+    "exit_code": 1,
+    "purpose": "new behavior absent",
+    "working_directory": "D:\\hospital_ies_no_priority_20261105",
+    "command": [
+      "python",
+      "-B",
+      "-m",
+      "pytest",
+      "-q",
+      "tests/test_no_priority_fixed_branches.py",
+      "-p",
+      "no:cacheprovider",
+      "--basetemp",
+      "E:/hospital_ies_no_priority_20261105_run01/temp_red"
+    ]
+  },
+  {
+    "log": "E:\\hospital_ies_no_priority_20261105_run01\\logs\\02_GREEN01.log",
+    "exit_code": 0,
+    "purpose": "initial new tests",
+    "working_directory": "D:\\hospital_ies_no_priority_20261105",
+    "command": [
+      "python",
+      "-B",
+      "-m",
+      "pytest",
+      "-q",
+      "tests/test_no_priority_fixed_branches.py",
+      "-p",
+      "no:cacheprovider",
+      "--basetemp",
+      "E:/hospital_ies_no_priority_20261105_run01/temp_green01"
+    ]
+  },
+  {
+    "log": "E:\\hospital_ies_no_priority_20261105_run01\\logs\\03_RELATED01.log",
+    "exit_code": 1,
+    "purpose": "old-contract fixture migration required",
+    "working_directory": "D:\\hospital_ies_no_priority_20261105",
+    "command": [
+      "python",
+      "-B",
+      "-m",
+      "pytest",
+      "-q",
+      "tests/test_noopt_forward_arithmetic.py",
+      "tests/test_cooling_dynamics_proxy.py",
+      "tests/test_single_unit_runner_20261104.py",
+      "tests/test_noopt_unattended_guard.py",
+      "-p",
+      "no:cacheprovider",
+      "--basetemp",
+      "E:/hospital_ies_no_priority_20261105_run01/temp_related01"
+    ]
+  },
+  {
+    "log": "E:\\hospital_ies_no_priority_20261105_run01\\logs\\04_FORK_RED.log",
+    "exit_code": 1,
+    "purpose": "captured old bound method mutates original checkpoint",
+    "working_directory": "D:\\hospital_ies_no_priority_20261105",
+    "command": [
+      "python",
+      "-B",
+      "-m",
+      "pytest",
+      "-q",
+      "tests/test_no_priority_fixed_branches.py",
+      "tests/test_noopt_forward_arithmetic.py",
+      "-p",
+      "no:cacheprovider",
+      "--basetemp",
+      "E:/hospital_ies_no_priority_20261105_run01/temp_fork_red"
+    ]
+  },
+  {
+    "log": "E:\\hospital_ies_no_priority_20261105_run01\\logs\\05_GREEN02.log",
+    "exit_code": 0,
+    "purpose": "35 focused tests",
+    "working_directory": "D:\\hospital_ies_no_priority_20261105",
+    "command": [
+      "python",
+      "-B",
+      "-m",
+      "pytest",
+      "-q",
+      "tests/test_no_priority_fixed_branches.py",
+      "tests/test_noopt_forward_arithmetic.py",
+      "tests/test_cooling_dynamics_proxy.py",
+      "tests/test_single_unit_runner_20261104.py",
+      "tests/test_noopt_unattended_guard.py",
+      "-p",
+      "no:cacheprovider",
+      "--basetemp",
+      "E:/hospital_ies_no_priority_20261105_run01/temp_green02"
+    ]
+  },
+  {
+    "log": "E:\\hospital_ies_no_priority_20261105_run01\\logs\\06_FULL01.log",
+    "exit_code": 4,
+    "purpose": "collection rejected changed historical route manifest",
+    "working_directory": "D:\\hospital_ies_no_priority_20261105",
+    "command": [
+      "python",
+      "-B",
+      "-m",
+      "pytest",
+      "-q",
+      "-p",
+      "no:cacheprovider",
+      "--basetemp",
+      "E:/hospital_ies_no_priority_20261105_run01/temp_full01"
+    ]
+  },
+  {
+    "log": "E:\\hospital_ies_no_priority_20261105_run01\\logs\\07_STEAM_RED.log",
+    "exit_code": 1,
+    "purpose": "late command changes frozen steam fraction",
+    "working_directory": "D:\\hospital_ies_no_priority_20261105",
+    "command": [
+      "python",
+      "-B",
+      "-m",
+      "pytest",
+      "-q",
+      "tests/test_no_priority_fixed_branches.py::test_late_old_command_cannot_change_frozen_steam_branch_share",
+      "-p",
+      "no:cacheprovider"
+    ]
+  },
+  {
+    "log": "E:\\hospital_ies_no_priority_20261105_run01\\logs\\08_FULL02.log",
+    "exit_code": 4,
+    "purpose": "same route manifest mismatch before restoration",
+    "working_directory": "D:\\hospital_ies_no_priority_20261105",
+    "command": [
+      "python",
+      "-B",
+      "-m",
+      "pytest",
+      "-q",
+      "-p",
+      "no:cacheprovider",
+      "--basetemp",
+      "E:/hospital_ies_no_priority_20261105_run01/temp_full02"
+    ]
+  },
+  {
+    "log": "E:\\hospital_ies_no_priority_20261105_run01\\logs\\09_FULL03.log",
+    "exit_code": 1,
+    "purpose": "2885 passed, 2 inherited failures, 1 skip, 13 missing historical snapshot errors",
+    "working_directory": "D:\\hospital_ies_no_priority_20261105",
+    "command": [
+      "python",
+      "-B",
+      "-m",
+      "pytest",
+      "-q",
+      "-p",
+      "no:cacheprovider",
+      "--basetemp",
+      "E:/hospital_ies_no_priority_20261105_run01/temp_full03"
+    ]
+  },
+  {
+    "log": "E:\\hospital_ies_no_priority_20261105_run01\\logs\\10_SHED_RED.log",
+    "exit_code": 1,
+    "purpose": "priority automatic shedding inherited",
+    "working_directory": "D:\\hospital_ies_no_priority_20261105",
+    "command": [
+      "python",
+      "-B",
+      "-m",
+      "pytest",
+      "-q",
+      "tests/test_no_priority_fixed_branches.py::test_u_cannot_create_priority_automatic_shedding",
+      "-p",
+      "no:cacheprovider"
+    ]
+  },
+  {
+    "log": "E:\\hospital_ies_no_priority_20261105_run01\\logs\\11_GREEN03.log",
+    "exit_code": 0,
+    "purpose": "38 focused tests",
+    "working_directory": "D:\\hospital_ies_no_priority_20261105",
+    "command": [
+      "python",
+      "-B",
+      "-m",
+      "pytest",
+      "-q",
+      "tests/test_no_priority_fixed_branches.py",
+      "tests/test_noopt_forward_arithmetic.py",
+      "tests/test_cooling_dynamics_proxy.py",
+      "tests/test_single_unit_runner_20261104.py",
+      "tests/test_noopt_unattended_guard.py",
+      "-p",
+      "no:cacheprovider",
+      "--basetemp",
+      "E:/hospital_ies_no_priority_20261105_run01/temp_green03"
+    ]
+  },
+  {
+    "log": "E:\\hospital_ies_no_priority_20261105_run01\\logs\\12_INTEGRATION01.log",
+    "exit_code": 1,
+    "purpose": "duplicate time_minute in checkpoint activation log",
+    "working_directory": "D:\\hospital_ies_no_priority_20261105",
+    "command": [
+      "python",
+      "-B",
+      "tools/noopt_unattended_20261104/probe_checkpoint.py",
+      "--case",
+      "E:/hospital_ies_cooling_dynamics_20261104_run01/runs/T03_R_attempt02/CASE.json",
+      "--output",
+      "E:/hospital_ies_no_priority_20261105_run01/integration01",
+      "--minutes",
+      "3"
+    ]
+  },
+  {
+    "log": "E:\\hospital_ies_no_priority_20261105_run01\\logs\\13_FATAL_RED.log",
+    "exit_code": 1,
+    "purpose": "guard swallowed by ordinary exception fallback",
+    "working_directory": "D:\\hospital_ies_no_priority_20261105",
+    "command": [
+      "python",
+      "-B",
+      "-m",
+      "pytest",
+      "-q",
+      "tests/test_no_priority_fixed_branches.py::test_forbidden_optimizer_is_fatal_and_cannot_trigger_exception_fallback",
+      "-p",
+      "no:cacheprovider"
+    ]
+  },
+  {
+    "log": "E:\\hospital_ies_no_priority_20261105_run01\\logs\\14_GREEN04.log",
+    "exit_code": 0,
+    "purpose": "39 focused tests",
+    "working_directory": "D:\\hospital_ies_no_priority_20261105",
+    "command": [
+      "python",
+      "-B",
+      "-m",
+      "pytest",
+      "-q",
+      "tests/test_no_priority_fixed_branches.py",
+      "tests/test_noopt_forward_arithmetic.py",
+      "tests/test_cooling_dynamics_proxy.py",
+      "tests/test_single_unit_runner_20261104.py",
+      "tests/test_noopt_unattended_guard.py",
+      "-p",
+      "no:cacheprovider",
+      "--basetemp",
+      "E:/hospital_ies_no_priority_20261105_run01/temp_green04"
+    ]
+  },
+  {
+    "log": "E:\\hospital_ies_no_priority_20261105_run01\\logs\\15_GREEN05.log",
+    "exit_code": 1,
+    "purpose": "native Cython construction not observed by profile",
+    "working_directory": "D:\\hospital_ies_no_priority_20261105",
+    "command": [
+      "python",
+      "-B",
+      "-m",
+      "pytest",
+      "-q",
+      "tests/test_no_priority_fixed_branches.py",
+      "tests/test_noopt_forward_arithmetic.py",
+      "tests/test_cooling_dynamics_proxy.py",
+      "tests/test_single_unit_runner_20261104.py",
+      "tests/test_noopt_unattended_guard.py",
+      "-p",
+      "no:cacheprovider",
+      "--basetemp",
+      "E:/hospital_ies_no_priority_20261105_run01/temp_green05"
+    ]
+  },
+  {
+    "log": "E:\\hospital_ies_no_priority_20261105_run01\\logs\\16_INTEGRATION02.log",
+    "exit_code": -1,
+    "purpose": "controlled stop of stale run after known checkpoint-log failure",
+    "working_directory": "D:\\hospital_ies_no_priority_20261105",
+    "command": [
+      "python",
+      "-B",
+      "tools/noopt_unattended_20261104/probe_checkpoint.py",
+      "--case",
+      "E:/hospital_ies_cooling_dynamics_20261104_run01/runs/T03_R_attempt02/CASE.json",
+      "--output",
+      "E:/hospital_ies_no_priority_20261105_run01/integration02",
+      "--minutes",
+      "3"
+    ]
+  },
+  {
+    "log": "E:\\hospital_ies_no_priority_20261105_run01\\logs\\17_GREEN06.log",
+    "exit_code": 0,
+    "purpose": "42 focused tests including explicit native guards",
+    "working_directory": "D:\\hospital_ies_no_priority_20261105",
+    "command": [
+      "python",
+      "-B",
+      "-m",
+      "pytest",
+      "-q",
+      "tests/test_no_priority_fixed_branches.py",
+      "tests/test_noopt_forward_arithmetic.py",
+      "tests/test_cooling_dynamics_proxy.py",
+      "tests/test_single_unit_runner_20261104.py",
+      "tests/test_noopt_unattended_guard.py",
+      "-p",
+      "no:cacheprovider",
+      "--basetemp",
+      "E:/hospital_ies_no_priority_20261105_run01/temp_green06"
+    ]
+  },
+  {
+    "log": "E:\\hospital_ies_no_priority_20261105_run01\\logs\\18_CHECKPOINT_LOG_RED.log",
+    "exit_code": 1,
+    "purpose": "reproduced real logger signature",
+    "working_directory": "D:\\hospital_ies_no_priority_20261105",
+    "command": [
+      "python",
+      "-B",
+      "-m",
+      "pytest",
+      "-q",
+      "tests/test_no_priority_fixed_branches.py::test_fork_rebinds_captured_methods_and_keeps_common_checkpoint_untouched",
+      "-p",
+      "no:cacheprovider"
+    ]
+  },
+  {
+    "log": "E:\\hospital_ies_no_priority_20261105_run01\\logs\\19_INTEGRATION03.log",
+    "exit_code": 0,
+    "purpose": "real 3min U / 9 native intervals passed; common preparation separately disclosed",
+    "working_directory": "D:\\hospital_ies_no_priority_20261105",
+    "command": [
+      "python",
+      "-B",
+      "tools/noopt_unattended_20261104/probe_checkpoint.py",
+      "--case",
+      "E:/hospital_ies_cooling_dynamics_20261104_run01/runs/T03_R_attempt02/CASE.json",
+      "--output",
+      "E:/hospital_ies_no_priority_20261105_run01/integration03",
+      "--minutes",
+      "3"
+    ]
+  },
+  {
+    "log": "E:\\hospital_ies_no_priority_20261105_run01\\logs\\20_GREEN07.log",
+    "exit_code": 0,
+    "purpose": "42 focused tests after logger fix",
+    "working_directory": "D:\\hospital_ies_no_priority_20261105",
+    "command": [
+      "python",
+      "-B",
+      "-m",
+      "pytest",
+      "-q",
+      "tests/test_no_priority_fixed_branches.py",
+      "tests/test_noopt_forward_arithmetic.py",
+      "tests/test_cooling_dynamics_proxy.py",
+      "tests/test_single_unit_runner_20261104.py",
+      "tests/test_noopt_unattended_guard.py",
+      "-p",
+      "no:cacheprovider",
+      "--basetemp",
+      "E:/hospital_ies_no_priority_20261105_run01/temp_green07"
+    ]
+  },
+  {
+    "log": "E:\\hospital_ies_no_priority_20261105_run01\\logs\\21_BASELINE_FAILURES.log",
+    "exit_code": 4,
+    "purpose": "first isolated baseline invocation lacked src import path",
+    "working_directory": "D:/hospital_ies_single_unit_20261104",
+    "command": [
+      "python",
+      "-B",
+      "-m",
+      "pytest",
+      "-q",
+      "--noconftest",
+      "tests/test_sf2_source_profile.py::test_current_fuel_leaf_has_its_own_complete_scientific_ast",
+      "tests/test_minute1_historical_profiles.py::test_current_minute_source_cannot_borrow_historical_native_or_recorder_identity",
+      "-p",
+      "no:cacheprovider",
+      "--basetemp",
+      "E:/hospital_ies_no_priority_20261105_run01/temp_baseline_failures"
+    ]
+  },
+  {
+    "log": "E:\\hospital_ies_no_priority_20261105_run01\\logs\\22_BASELINE_FAILURES02.log",
+    "exit_code": 1,
+    "purpose": "two identical failures reproduced in original base",
+    "working_directory": "D:/hospital_ies_single_unit_20261104",
+    "command": [
+      "python",
+      "-B",
+      "-c",
+      "import sys; sys.path[:0]=['.','src']; import pytest; sys.exit(pytest.main(['-q', '--noconftest', 'tests/test_sf2_source_profile.py::test_current_fuel_leaf_has_its_own_complete_scientific_ast', 'tests/test_minute1_historical_profiles.py::test_current_minute_source_cannot_borrow_historical_native_or_recorder_identity', '-p', 'no:cacheprovider', '--basetemp=E:/hospital_ies_no_priority_20261105_run01/temp_baseline_failures02']))"
+    ]
+  }
+]

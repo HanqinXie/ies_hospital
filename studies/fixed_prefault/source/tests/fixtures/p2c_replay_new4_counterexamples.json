@@ -1,0 +1,974 @@
+[
+  {
+    "call_id": "case_000_p2b_L4a_boundary_p2b_day_241_2_priority_milp",
+    "scenario_id": "p2b_L4a_boundary_p2b_day_241_2",
+    "policy_id": "priority_milp",
+    "time_minute": 105.0,
+    "phase": "fixed_execution",
+    "old_error": "v3 MILP failure: rank=3, status=2, message=The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)",
+    "expected_complete_layers": 5,
+    "actual_checkpoint_path": "outputs\\v43_p2c_20261013_run01\\replay\\shards\\shard_03\\checkpoints\\8c3c9d15de5ee8d85e631425611e1cf7cfe5dc2abfee0c53ed0e72cc46135233.json.gz",
+    "source_layer00_path": "outputs/v43_p2c_20261013_run01/solver_diagnostics/replay_new_failures_v3_snapshot01/case_000_p2b_L4a_boundary_p2b_day_241_2_priority_milp/layer_00.json",
+    "source_layer00_sha256": "9ecc99e4b9fcbd2972fa960eeb83c70e3f5121ab24010d99af08488dc32732c5",
+    "source_input_context_extracted_without_changes": true,
+    "input_context": {
+      "row": {
+        "timestamp": "2017-08-30 08:00:00",
+        "outdoor_temperature_C": 18.58333333333333
+      },
+      "plant": {
+        "case": "doe_capacity_matched_exploratory",
+        "gt_count": 3,
+        "gt_rated_kW": 320.0,
+        "hrsg_rated_lbph": 2906.2575585007,
+        "absorption_rt": 200.0,
+        "electric_chillers_rt": [
+          200.0,
+          200.0,
+          300.0
+        ],
+        "boiler_steam_lbph": 3000.0,
+        "cooling_tower_rejection_kW": 4220.223408,
+        "emergency_diesel_kW": 900.0,
+        "steam_kWh_per_lb": 0.3,
+        "exchanger_eff": 0.95,
+        "abs_steam_lb_per_rt": 19.5,
+        "abs_electric_kW_per_rt": 0.14,
+        "ec_electric_kW_per_rt": 0.77,
+        "boiler_eff": 0.8,
+        "nominal_gt_capacity_used_for_heat_rate_kW": 800.0,
+        "tariff": {
+          "gas_per_MMBtu": 4.84,
+          "electricity_onpeak_per_kWh": 0.09256,
+          "electricity_midpeak_per_kWh": 0.07356,
+          "electricity_offpeak_per_kWh": 0.05456
+        },
+        "gas_price_usd_per_mmbtu": 4.84,
+        "levels": [
+          0.4,
+          0.6,
+          0.8,
+          1.0
+        ],
+        "inclusion_unresolved": "include_all"
+      },
+      "loads_kW": [
+        [
+          512.7883912640142,
+          19.823532950173963,
+          84.12600565628667
+        ],
+        [
+          258.16717595733604,
+          106.08518755095481,
+          59.12742202313052
+        ],
+        [
+          93.94559640244452,
+          0.0,
+          68.29849053653977
+        ],
+        [
+          0.0,
+          0.0,
+          0.0
+        ]
+      ],
+      "availability": {
+        "GT_1": 0.0,
+        "GT_2": 1.0,
+        "GT_3": 1.0,
+        "HRSG_1": 1.0,
+        "HRSG_2": 1.0,
+        "HRSG_3": 1.0,
+        "EC_1": 1.0,
+        "EC_2": 1.0,
+        "EC_3": 1.0,
+        "BOILER_1": 1.0,
+        "BOILER_2": 1.0,
+        "BOILER_3": 1.0,
+        "ABS": 1.0,
+        "TOWER": 1.0,
+        "GRID": 1.0,
+        "DIESEL": 1.0,
+        "TOWER_1": 1.0,
+        "TOWER_2": 1.0,
+        "TOWER_3": 1.0,
+        "TOWER_4": 1.0
+      },
+      "state": {
+        "gt_prev": [
+          0.0,
+          225.0,
+          225.0
+        ],
+        "diesel_energy_remaining_kWh": 2400.0,
+        "extra_faulted": [
+          "GT_1"
+        ],
+        "overload_minutes": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "thermal_delta": {
+          "ER_EXAM1_MULT4_FLR_1": 0.9199952887194716,
+          "ER_TRAUMA1_FLR_1": 0.6260689310555738,
+          "ER_EXAM3_MULT4_FLR_1": 0.8192210317556095,
+          "ER_TRAUMA2_FLR_1": 0.6143233765457355,
+          "OR1_FLR_2": 0.4375313668847223,
+          "OR2_MULT5_FLR_2": 0.431587031362446,
+          "OR3_FLR_2": 0.44148346300624164,
+          "OR4_FLR_2": 0.43822965716729184,
+          "IC_PATROOM1_MULT5_FLR_2": 0.994374017176412,
+          "IC_PATROOM2_FLR_2": 1.0669774069210871,
+          "IC_PATROOM3_MULT6_FLR_2": 1.0188306534053901,
+          "ICU_FLR_2": 0.4216003026618496,
+          "ICU_NURSESTN_LOBBY_FLR_2": 0.6522008530093913,
+          "RADIOLOGY_FLR_4": 2.111399062912224
+        },
+        "last_grid_import_kW": 249.9998098871547,
+        "last_diesel_kW": 0.0,
+        "auxiliary_request_kW": 8.421526261597565,
+        "cooling_reference_kW": 830.3776909809537,
+        "disconnected_loads": [
+          [
+            0.0001901146077446802,
+            0.0,
+            0.0
+          ],
+          [
+            0.0001901146077446802,
+            0.0,
+            0.0
+          ],
+          [
+            37.36297980063163,
+            0.0,
+            0.0
+          ],
+          [
+            998.88155379316,
+            0.0,
+            618.8257727649967
+          ]
+        ],
+        "diesel_status": "OFF",
+        "diesel_start_minute": null,
+        "topology_mode": "legacy_explicit_permission"
+      },
+      "dt_h": 0.25,
+      "grid_import_limit_kW": 250.0,
+      "diesel_start_available": false,
+      "gt_ramp_kW_per_h": 900.0,
+      "config": {
+        "schema_version": "4.1-research-prototype",
+        "provenance": "All limits here are illustrative research assumptions, NOT OEM relay or hospital safety ratings.",
+        "grid_import_limit_kW": 850.0,
+        "diesel_initial_energy_kWh": 2400.0,
+        "diesel_start_delay_minutes": 15.0,
+        "gt_ramp_kW_per_hour": 900.0,
+        "gt_short_term_overload_multiple": 1.05,
+        "gt_protection_trip_multiple": 1.05,
+        "gt_overload_hold_minutes": 15,
+        "thermal_setpoint_margin_C": 2.0,
+        "mass_participation": 0.5,
+        "effective_U_W_m2K": 1.5,
+        "solver_time_limit_sec": 6.0,
+        "priority": "strict lexicographic 0,1,2,3 then cost; each carrier normalized by total demand; P0-P2 lock abs tolerance 1e-7, P3 lock abs tolerance 1e-5, with relative tolerance",
+        "lex_lock_abs_tol_by_priority": [
+          1e-07,
+          1e-07,
+          1e-07,
+          1e-05
+        ],
+        "lex_lock_rel_tol_by_priority": [
+          0.0,
+          0.0,
+          0.0,
+          1e-08
+        ],
+        "p0_solver_feasibility_tol_kW": 0.001,
+        "p0_unserved_abs_tol_kW": 0.01,
+        "p0_unserved_rel_tol": 0.001,
+        "p0_unserved_abs_tol_kWh": 0.01,
+        "precontrol_load_shed_enabled": true,
+        "cascade": "Delayed pre-control proxy subtracts incremental grid headroom, diesel reserve available after start delay, and executable P3/P2/P1 shedding (P0 preserved) before sharing residual across surviving GTs; not a network or relay simulation.",
+        "dynamic_temperature": "baseline DOE zone mean temperature + uncalibrated 1R1C cold-loss perturbation",
+        "cost": "uses historical 2001 prices from v2; diesel $0.30/kWh illustrative only",
+        "precontrol_cooling_to_el_fraction": 0.6,
+        "cooling_tower_topology": "shared_common_tower_for_all_EC_and_ABS",
+        "mpc_cold_tracking_penalty_USD_per_kW_step": 0.2
+      },
+      "tracking_targets": {},
+      "security_gt_penalty_USD_per_kWh": 0.0,
+      "execution_action": {
+        "gt_electric_kW": [
+          0.0,
+          225.0,
+          225.0
+        ],
+        "grid_import_kW": 250.0,
+        "diesel_kW": 0.0,
+        "absorption_cooling_kW": 211.551918215957,
+        "electric_chiller_cooling_kW": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "boiler_steam_lbph": 0.0,
+        "hrsg_steam_lbph": 5812.513344173756,
+        "tower_rejection_kW": 563.4514084327125,
+        "gt_fuel_MMBtu_h": 10.174642078148706
+      },
+      "execution_contract": {
+        "name": "p1b_no_export_interlock",
+        "provenance": "Explicit uncalibrated research contract; see docs/v43/P1B_EXECUTION_CONTRACT.md. No OEM/ATS/relay data supplied. Not the default baseline.",
+        "grid_import_mode": "arrived_ceiling",
+        "gt_local_down_rate_kW_per_hour": 900.0,
+        "gt_local_down_delay_minutes": 0.25,
+        "local_max_segment_minutes": 0.25,
+        "surplus_interlock": "isolate_largest_gt",
+        "surplus_interlock_delay_minutes": 0.0,
+        "automatic_shedding_delay_minutes": 0.0,
+        "gt_start_delay_minutes": 0.0,
+        "diesel_mode": "legacy_explicit_permission",
+        "ats_transfer_minutes": 0.0,
+        "diesel_allowed_priorities": [
+          "P0",
+          "P1"
+        ],
+        "thermal_mode": "legacy_loss_fraction"
+      }
+    }
+  },
+  {
+    "call_id": "case_001_p2b_L4a_boundary_p2b_day_241_2_secure_milp",
+    "scenario_id": "p2b_L4a_boundary_p2b_day_241_2",
+    "policy_id": "secure_milp",
+    "time_minute": 105.0,
+    "phase": "fixed_execution",
+    "old_error": "v3 MILP failure: rank=3, status=2, message=The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)",
+    "expected_complete_layers": 5,
+    "actual_checkpoint_path": "outputs\\v43_p2c_20261013_run01\\replay\\shards\\shard_03\\checkpoints\\bd5f5ba964fb011e0160e4b83443eebeb17ecd8d9c483224c0770a43fc69d1b8.json.gz",
+    "source_layer00_path": "outputs/v43_p2c_20261013_run01/solver_diagnostics/replay_new_failures_v3_snapshot01/case_001_p2b_L4a_boundary_p2b_day_241_2_secure_milp/layer_00.json",
+    "source_layer00_sha256": "67bfaaf0ee13378e7311a60ef868f2d3dac851d34114fac1ea21036be154940f",
+    "source_input_context_extracted_without_changes": true,
+    "input_context": {
+      "row": {
+        "timestamp": "2017-08-30 08:00:00",
+        "outdoor_temperature_C": 18.58333333333333
+      },
+      "plant": {
+        "case": "doe_capacity_matched_exploratory",
+        "gt_count": 3,
+        "gt_rated_kW": 320.0,
+        "hrsg_rated_lbph": 2906.2575585007,
+        "absorption_rt": 200.0,
+        "electric_chillers_rt": [
+          200.0,
+          200.0,
+          300.0
+        ],
+        "boiler_steam_lbph": 3000.0,
+        "cooling_tower_rejection_kW": 4220.223408,
+        "emergency_diesel_kW": 900.0,
+        "steam_kWh_per_lb": 0.3,
+        "exchanger_eff": 0.95,
+        "abs_steam_lb_per_rt": 19.5,
+        "abs_electric_kW_per_rt": 0.14,
+        "ec_electric_kW_per_rt": 0.77,
+        "boiler_eff": 0.8,
+        "nominal_gt_capacity_used_for_heat_rate_kW": 800.0,
+        "tariff": {
+          "gas_per_MMBtu": 4.84,
+          "electricity_onpeak_per_kWh": 0.09256,
+          "electricity_midpeak_per_kWh": 0.07356,
+          "electricity_offpeak_per_kWh": 0.05456
+        },
+        "gas_price_usd_per_mmbtu": 4.84,
+        "levels": [
+          0.4,
+          0.6,
+          0.8,
+          1.0
+        ],
+        "inclusion_unresolved": "include_all"
+      },
+      "loads_kW": [
+        [
+          512.7883912640142,
+          19.823532950173963,
+          84.12600565628667
+        ],
+        [
+          258.16717595733604,
+          106.08518755095481,
+          59.12742202313052
+        ],
+        [
+          93.94559640244452,
+          0.0,
+          68.29849053653977
+        ],
+        [
+          0.0,
+          0.0,
+          0.0
+        ]
+      ],
+      "availability": {
+        "GT_1": 0.0,
+        "GT_2": 1.0,
+        "GT_3": 1.0,
+        "HRSG_1": 1.0,
+        "HRSG_2": 1.0,
+        "HRSG_3": 1.0,
+        "EC_1": 1.0,
+        "EC_2": 1.0,
+        "EC_3": 1.0,
+        "BOILER_1": 1.0,
+        "BOILER_2": 1.0,
+        "BOILER_3": 1.0,
+        "ABS": 1.0,
+        "TOWER": 1.0,
+        "GRID": 1.0,
+        "DIESEL": 1.0,
+        "TOWER_1": 1.0,
+        "TOWER_2": 1.0,
+        "TOWER_3": 1.0,
+        "TOWER_4": 1.0
+      },
+      "state": {
+        "gt_prev": [
+          0.0,
+          225.0,
+          225.0
+        ],
+        "diesel_energy_remaining_kWh": 2400.0,
+        "extra_faulted": [
+          "GT_1"
+        ],
+        "overload_minutes": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "thermal_delta": {
+          "ER_EXAM1_MULT4_FLR_1": 0.9199952887194718,
+          "ER_TRAUMA1_FLR_1": 0.670859815230993,
+          "ER_EXAM3_MULT4_FLR_1": 0.8192210317556097,
+          "ER_TRAUMA2_FLR_1": 0.6582739478649663,
+          "OR1_FLR_2": 0.46883369767472727,
+          "OR2_MULT5_FLR_2": 0.462464086227276,
+          "OR3_FLR_2": 0.4730685388277414,
+          "OR4_FLR_2": 0.46958194577761975,
+          "IC_PATROOM1_MULT5_FLR_2": 0.9943740171764122,
+          "IC_PATROOM2_FLR_2": 1.0669774069210873,
+          "IC_PATROOM3_MULT6_FLR_2": 1.0188306534053904,
+          "ICU_FLR_2": 0.451762876442679,
+          "ICU_NURSESTN_LOBBY_FLR_2": 0.6522008530093915,
+          "RADIOLOGY_FLR_4": 2.111399062912224
+        },
+        "last_grid_import_kW": 249.99998207543626,
+        "last_diesel_kW": 0.0,
+        "auxiliary_request_kW": 8.421526261597565,
+        "cooling_reference_kW": 830.3776909809537,
+        "disconnected_loads": [
+          [
+            0.0001901146077446802,
+            0.0,
+            0.0
+          ],
+          [
+            0.0001901146077446802,
+            0.0,
+            0.0
+          ],
+          [
+            37.36297980063163,
+            0.0,
+            0.0
+          ],
+          [
+            998.88155379316,
+            0.0,
+            618.8257727649967
+          ]
+        ],
+        "diesel_status": "OFF",
+        "diesel_start_minute": null,
+        "topology_mode": "legacy_explicit_permission"
+      },
+      "dt_h": 0.25,
+      "grid_import_limit_kW": 250.0,
+      "diesel_start_available": false,
+      "gt_ramp_kW_per_h": 900.0,
+      "config": {
+        "schema_version": "4.1-research-prototype",
+        "provenance": "All limits here are illustrative research assumptions, NOT OEM relay or hospital safety ratings.",
+        "grid_import_limit_kW": 850.0,
+        "diesel_initial_energy_kWh": 2400.0,
+        "diesel_start_delay_minutes": 15.0,
+        "gt_ramp_kW_per_hour": 900.0,
+        "gt_short_term_overload_multiple": 1.05,
+        "gt_protection_trip_multiple": 1.05,
+        "gt_overload_hold_minutes": 15,
+        "thermal_setpoint_margin_C": 2.0,
+        "mass_participation": 0.5,
+        "effective_U_W_m2K": 1.5,
+        "solver_time_limit_sec": 6.0,
+        "priority": "strict lexicographic 0,1,2,3 then cost; each carrier normalized by total demand; P0-P2 lock abs tolerance 1e-7, P3 lock abs tolerance 1e-5, with relative tolerance",
+        "lex_lock_abs_tol_by_priority": [
+          1e-07,
+          1e-07,
+          1e-07,
+          1e-05
+        ],
+        "lex_lock_rel_tol_by_priority": [
+          0.0,
+          0.0,
+          0.0,
+          1e-08
+        ],
+        "p0_solver_feasibility_tol_kW": 0.001,
+        "p0_unserved_abs_tol_kW": 0.01,
+        "p0_unserved_rel_tol": 0.001,
+        "p0_unserved_abs_tol_kWh": 0.01,
+        "precontrol_load_shed_enabled": true,
+        "cascade": "Delayed pre-control proxy subtracts incremental grid headroom, diesel reserve available after start delay, and executable P3/P2/P1 shedding (P0 preserved) before sharing residual across surviving GTs; not a network or relay simulation.",
+        "dynamic_temperature": "baseline DOE zone mean temperature + uncalibrated 1R1C cold-loss perturbation",
+        "cost": "uses historical 2001 prices from v2; diesel $0.30/kWh illustrative only",
+        "precontrol_cooling_to_el_fraction": 0.6,
+        "cooling_tower_topology": "shared_common_tower_for_all_EC_and_ABS",
+        "mpc_cold_tracking_penalty_USD_per_kW_step": 0.2
+      },
+      "tracking_targets": {},
+      "security_gt_penalty_USD_per_kWh": 0.35,
+      "execution_action": {
+        "gt_electric_kW": [
+          0.0,
+          225.0,
+          225.0
+        ],
+        "grid_import_kW": 250.0,
+        "diesel_kW": 0.0,
+        "absorption_cooling_kW": 211.551918215957,
+        "electric_chiller_cooling_kW": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "boiler_steam_lbph": 0.0,
+        "hrsg_steam_lbph": 5812.513344173756,
+        "tower_rejection_kW": 563.4514084327125,
+        "gt_fuel_MMBtu_h": 10.174642078148706
+      },
+      "execution_contract": {
+        "name": "p1b_no_export_interlock",
+        "provenance": "Explicit uncalibrated research contract; see docs/v43/P1B_EXECUTION_CONTRACT.md. No OEM/ATS/relay data supplied. Not the default baseline.",
+        "grid_import_mode": "arrived_ceiling",
+        "gt_local_down_rate_kW_per_hour": 900.0,
+        "gt_local_down_delay_minutes": 0.25,
+        "local_max_segment_minutes": 0.25,
+        "surplus_interlock": "isolate_largest_gt",
+        "surplus_interlock_delay_minutes": 0.0,
+        "automatic_shedding_delay_minutes": 0.0,
+        "gt_start_delay_minutes": 0.0,
+        "diesel_mode": "legacy_explicit_permission",
+        "ats_transfer_minutes": 0.0,
+        "diesel_allowed_priorities": [
+          "P0",
+          "P1"
+        ],
+        "thermal_mode": "legacy_loss_fraction"
+      }
+    }
+  },
+  {
+    "call_id": "case_002_p2b_L4a_boundary_p2b_day_241_3_priority_milp",
+    "scenario_id": "p2b_L4a_boundary_p2b_day_241_3",
+    "policy_id": "priority_milp",
+    "time_minute": 105.0,
+    "phase": "fixed_execution",
+    "old_error": "v3 MILP failure: rank=3, status=2, message=The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)",
+    "expected_complete_layers": 5,
+    "actual_checkpoint_path": "outputs\\v43_p2c_20261013_run01\\replay\\shards\\shard_03\\checkpoints\\5e69cefd9c1b3d1c78afceeba3b9bb81924f45298890aaba3c9c7107957b0160.json.gz",
+    "source_layer00_path": "outputs/v43_p2c_20261013_run01/solver_diagnostics/replay_new_failures_v3_snapshot01/case_002_p2b_L4a_boundary_p2b_day_241_3_priority_milp/layer_00.json",
+    "source_layer00_sha256": "1f0676e4b8091d4cb23f505c34a3762eb7eb52cbc70739dbf34b1150a7401319",
+    "source_input_context_extracted_without_changes": true,
+    "input_context": {
+      "row": {
+        "timestamp": "2017-08-30 08:00:00",
+        "outdoor_temperature_C": 18.58333333333333
+      },
+      "plant": {
+        "case": "doe_capacity_matched_exploratory",
+        "gt_count": 3,
+        "gt_rated_kW": 320.0,
+        "hrsg_rated_lbph": 2906.2575585007,
+        "absorption_rt": 200.0,
+        "electric_chillers_rt": [
+          200.0,
+          200.0,
+          300.0
+        ],
+        "boiler_steam_lbph": 3000.0,
+        "cooling_tower_rejection_kW": 4220.223408,
+        "emergency_diesel_kW": 900.0,
+        "steam_kWh_per_lb": 0.3,
+        "exchanger_eff": 0.95,
+        "abs_steam_lb_per_rt": 19.5,
+        "abs_electric_kW_per_rt": 0.14,
+        "ec_electric_kW_per_rt": 0.77,
+        "boiler_eff": 0.8,
+        "nominal_gt_capacity_used_for_heat_rate_kW": 800.0,
+        "tariff": {
+          "gas_per_MMBtu": 4.84,
+          "electricity_onpeak_per_kWh": 0.09256,
+          "electricity_midpeak_per_kWh": 0.07356,
+          "electricity_offpeak_per_kWh": 0.05456
+        },
+        "gas_price_usd_per_mmbtu": 4.84,
+        "levels": [
+          0.4,
+          0.6,
+          0.8,
+          1.0
+        ],
+        "inclusion_unresolved": "include_all"
+      },
+      "loads_kW": [
+        [
+          530.6751147697425,
+          19.823532950173963,
+          75.6986828519857
+        ],
+        [
+          267.1723815611932,
+          106.08518755095481,
+          53.20433239005202
+        ],
+        [
+          67.89728707345886,
+          0.0,
+          61.45668909467014
+        ],
+        [
+          0.0,
+          0.0,
+          0.0
+        ]
+      ],
+      "availability": {
+        "GT_1": 0.0,
+        "GT_2": 1.0,
+        "GT_3": 1.0,
+        "HRSG_1": 1.0,
+        "HRSG_2": 1.0,
+        "HRSG_3": 1.0,
+        "EC_1": 1.0,
+        "EC_2": 1.0,
+        "EC_3": 1.0,
+        "BOILER_1": 1.0,
+        "BOILER_2": 1.0,
+        "BOILER_3": 1.0,
+        "ABS": 1.0,
+        "TOWER": 1.0,
+        "GRID": 1.0,
+        "DIESEL": 1.0,
+        "TOWER_1": 1.0,
+        "TOWER_2": 1.0,
+        "TOWER_3": 1.0,
+        "TOWER_4": 1.0
+      },
+      "state": {
+        "gt_prev": [
+          0.0,
+          225.0,
+          225.0
+        ],
+        "diesel_energy_remaining_kWh": 2400.0,
+        "extra_faulted": [
+          "GT_1"
+        ],
+        "overload_minutes": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "thermal_delta": {
+          "ER_EXAM1_MULT4_FLR_1": 0.9199916195066034,
+          "ER_TRAUMA1_FLR_1": 0.5902258900004294,
+          "ER_EXAM3_MULT4_FLR_1": 0.819217764460235,
+          "ER_TRAUMA2_FLR_1": 0.5791527796443072,
+          "OR1_FLR_2": 0.4124822804850483,
+          "OR2_MULT5_FLR_2": 0.4068782638184152,
+          "OR3_FLR_2": 0.41620811534920327,
+          "OR4_FLR_2": 0.4131405929855798,
+          "IC_PATROOM1_MULT5_FLR_2": 0.9943700513135775,
+          "IC_PATROOM2_FLR_2": 1.0669731515001306,
+          "IC_PATROOM3_MULT6_FLR_2": 1.0188265900021303,
+          "ICU_FLR_2": 0.3974632848231085,
+          "ICU_NURSESTN_LOBBY_FLR_2": 0.6521982518402769,
+          "RADIOLOGY_FLR_4": 2.111399062912224
+        },
+        "last_grid_import_kW": 249.99980325577252,
+        "last_diesel_kW": 0.0,
+        "auxiliary_request_kW": 7.577899849553875,
+        "cooling_reference_kW": 747.1946039343903,
+        "disconnected_loads": [
+          [
+            0.00019674605159376358,
+            0.0,
+            0.0
+          ],
+          [
+            0.00019674605159376358,
+            0.0,
+            0.0
+          ],
+          [
+            67.99150240372403,
+            0.0,
+            0.0
+          ],
+          [
+            1033.7238366374138,
+            0.0,
+            556.8348995976825
+          ]
+        ],
+        "diesel_status": "OFF",
+        "diesel_start_minute": null,
+        "topology_mode": "legacy_explicit_permission"
+      },
+      "dt_h": 0.25,
+      "grid_import_limit_kW": 250.0,
+      "diesel_start_available": false,
+      "gt_ramp_kW_per_h": 900.0,
+      "config": {
+        "schema_version": "4.1-research-prototype",
+        "provenance": "All limits here are illustrative research assumptions, NOT OEM relay or hospital safety ratings.",
+        "grid_import_limit_kW": 850.0,
+        "diesel_initial_energy_kWh": 2400.0,
+        "diesel_start_delay_minutes": 15.0,
+        "gt_ramp_kW_per_hour": 900.0,
+        "gt_short_term_overload_multiple": 1.05,
+        "gt_protection_trip_multiple": 1.05,
+        "gt_overload_hold_minutes": 15,
+        "thermal_setpoint_margin_C": 2.0,
+        "mass_participation": 0.5,
+        "effective_U_W_m2K": 1.5,
+        "solver_time_limit_sec": 6.0,
+        "priority": "strict lexicographic 0,1,2,3 then cost; each carrier normalized by total demand; P0-P2 lock abs tolerance 1e-7, P3 lock abs tolerance 1e-5, with relative tolerance",
+        "lex_lock_abs_tol_by_priority": [
+          1e-07,
+          1e-07,
+          1e-07,
+          1e-05
+        ],
+        "lex_lock_rel_tol_by_priority": [
+          0.0,
+          0.0,
+          0.0,
+          1e-08
+        ],
+        "p0_solver_feasibility_tol_kW": 0.001,
+        "p0_unserved_abs_tol_kW": 0.01,
+        "p0_unserved_rel_tol": 0.001,
+        "p0_unserved_abs_tol_kWh": 0.01,
+        "precontrol_load_shed_enabled": true,
+        "cascade": "Delayed pre-control proxy subtracts incremental grid headroom, diesel reserve available after start delay, and executable P3/P2/P1 shedding (P0 preserved) before sharing residual across surviving GTs; not a network or relay simulation.",
+        "dynamic_temperature": "baseline DOE zone mean temperature + uncalibrated 1R1C cold-loss perturbation",
+        "cost": "uses historical 2001 prices from v2; diesel $0.30/kWh illustrative only",
+        "precontrol_cooling_to_el_fraction": 0.6,
+        "cooling_tower_topology": "shared_common_tower_for_all_EC_and_ABS",
+        "mpc_cold_tracking_penalty_USD_per_kW_step": 0.2
+      },
+      "tracking_targets": {},
+      "security_gt_penalty_USD_per_kWh": 0.0,
+      "execution_action": {
+        "gt_electric_kW": [
+          0.0,
+          225.0,
+          225.0
+        ],
+        "grid_import_kW": 250.0,
+        "diesel_kW": 0.0,
+        "absorption_cooling_kW": 190.35970433670795,
+        "electric_chiller_cooling_kW": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "boiler_steam_lbph": 0.0,
+        "hrsg_steam_lbph": 5812.513282335231,
+        "tower_rejection_kW": 507.0076623359234,
+        "gt_fuel_MMBtu_h": 10.174641969902098
+      },
+      "execution_contract": {
+        "name": "p1b_no_export_interlock",
+        "provenance": "Explicit uncalibrated research contract; see docs/v43/P1B_EXECUTION_CONTRACT.md. No OEM/ATS/relay data supplied. Not the default baseline.",
+        "grid_import_mode": "arrived_ceiling",
+        "gt_local_down_rate_kW_per_hour": 900.0,
+        "gt_local_down_delay_minutes": 0.25,
+        "local_max_segment_minutes": 0.25,
+        "surplus_interlock": "isolate_largest_gt",
+        "surplus_interlock_delay_minutes": 0.0,
+        "automatic_shedding_delay_minutes": 0.0,
+        "gt_start_delay_minutes": 0.0,
+        "diesel_mode": "legacy_explicit_permission",
+        "ats_transfer_minutes": 0.0,
+        "diesel_allowed_priorities": [
+          "P0",
+          "P1"
+        ],
+        "thermal_mode": "legacy_loss_fraction"
+      }
+    }
+  },
+  {
+    "call_id": "case_003_p2b_L4a_boundary_p2b_day_241_3_secure_milp",
+    "scenario_id": "p2b_L4a_boundary_p2b_day_241_3",
+    "policy_id": "secure_milp",
+    "time_minute": 105.0,
+    "phase": "fixed_execution",
+    "old_error": "v3 MILP failure: rank=3, status=2, message=The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)",
+    "expected_complete_layers": 5,
+    "actual_checkpoint_path": "outputs\\v43_p2c_20261013_run01\\replay\\shards\\shard_03\\checkpoints\\a79506e7a89e48ace382c97d84dd1fd278f97aee5934ce3c04a542a204841436.json.gz",
+    "source_layer00_path": "outputs/v43_p2c_20261013_run01/solver_diagnostics/replay_new_failures_v3_snapshot01/case_003_p2b_L4a_boundary_p2b_day_241_3_secure_milp/layer_00.json",
+    "source_layer00_sha256": "b74d47b0e43f29a0a323861e2f8624b25035c5b3bf112acedecbae7c80732354",
+    "source_input_context_extracted_without_changes": true,
+    "input_context": {
+      "row": {
+        "timestamp": "2017-08-30 08:00:00",
+        "outdoor_temperature_C": 18.58333333333333
+      },
+      "plant": {
+        "case": "doe_capacity_matched_exploratory",
+        "gt_count": 3,
+        "gt_rated_kW": 320.0,
+        "hrsg_rated_lbph": 2906.2575585007,
+        "absorption_rt": 200.0,
+        "electric_chillers_rt": [
+          200.0,
+          200.0,
+          300.0
+        ],
+        "boiler_steam_lbph": 3000.0,
+        "cooling_tower_rejection_kW": 4220.223408,
+        "emergency_diesel_kW": 900.0,
+        "steam_kWh_per_lb": 0.3,
+        "exchanger_eff": 0.95,
+        "abs_steam_lb_per_rt": 19.5,
+        "abs_electric_kW_per_rt": 0.14,
+        "ec_electric_kW_per_rt": 0.77,
+        "boiler_eff": 0.8,
+        "nominal_gt_capacity_used_for_heat_rate_kW": 800.0,
+        "tariff": {
+          "gas_per_MMBtu": 4.84,
+          "electricity_onpeak_per_kWh": 0.09256,
+          "electricity_midpeak_per_kWh": 0.07356,
+          "electricity_offpeak_per_kWh": 0.05456
+        },
+        "gas_price_usd_per_mmbtu": 4.84,
+        "levels": [
+          0.4,
+          0.6,
+          0.8,
+          1.0
+        ],
+        "inclusion_unresolved": "include_all"
+      },
+      "loads_kW": [
+        [
+          530.6751147697425,
+          19.823532950173963,
+          75.6986828519857
+        ],
+        [
+          267.1723815611932,
+          106.08518755095481,
+          53.20433239005202
+        ],
+        [
+          67.89728707345886,
+          0.0,
+          61.45668909467014
+        ],
+        [
+          0.0,
+          0.0,
+          0.0
+        ]
+      ],
+      "availability": {
+        "GT_1": 0.0,
+        "GT_2": 1.0,
+        "GT_3": 1.0,
+        "HRSG_1": 1.0,
+        "HRSG_2": 1.0,
+        "HRSG_3": 1.0,
+        "EC_1": 1.0,
+        "EC_2": 1.0,
+        "EC_3": 1.0,
+        "BOILER_1": 1.0,
+        "BOILER_2": 1.0,
+        "BOILER_3": 1.0,
+        "ABS": 1.0,
+        "TOWER": 1.0,
+        "GRID": 1.0,
+        "DIESEL": 1.0,
+        "TOWER_1": 1.0,
+        "TOWER_2": 1.0,
+        "TOWER_3": 1.0,
+        "TOWER_4": 1.0
+      },
+      "state": {
+        "gt_prev": [
+          0.0,
+          225.0,
+          225.0
+        ],
+        "diesel_energy_remaining_kWh": 2400.0,
+        "extra_faulted": [
+          "GT_1"
+        ],
+        "overload_minutes": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "thermal_delta": {
+          "ER_EXAM1_MULT4_FLR_1": 0.9199916195066027,
+          "ER_TRAUMA1_FLR_1": 0.6400031099186942,
+          "ER_EXAM3_MULT4_FLR_1": 0.8192177644602343,
+          "ER_TRAUMA2_FLR_1": 0.6279961390547324,
+          "OR1_FLR_2": 0.44726933665446966,
+          "OR2_MULT5_FLR_2": 0.4411927003099021,
+          "OR3_FLR_2": 0.45130939308117257,
+          "OR4_FLR_2": 0.44798316851914477,
+          "IC_PATROOM1_MULT5_FLR_2": 0.9943700513135769,
+          "IC_PATROOM2_FLR_2": 1.06697315150013,
+          "IC_PATROOM3_MULT6_FLR_2": 1.0188265900021296,
+          "ICU_FLR_2": 0.4309837007744681,
+          "ICU_NURSESTN_LOBBY_FLR_2": 0.6521982518402766,
+          "RADIOLOGY_FLR_4": 2.111399062912224
+        },
+        "last_grid_import_kW": 249.99997933750126,
+        "last_diesel_kW": 0.0,
+        "auxiliary_request_kW": 7.577899849553875,
+        "cooling_reference_kW": 747.1946039343903,
+        "disconnected_loads": [
+          [
+            0.00019674605159376358,
+            0.0,
+            0.0
+          ],
+          [
+            0.00019674605159376358,
+            0.0,
+            0.0
+          ],
+          [
+            67.99150240372403,
+            0.0,
+            0.0
+          ],
+          [
+            1033.7238366374138,
+            0.0,
+            556.8348995976825
+          ]
+        ],
+        "diesel_status": "OFF",
+        "diesel_start_minute": null,
+        "topology_mode": "legacy_explicit_permission"
+      },
+      "dt_h": 0.25,
+      "grid_import_limit_kW": 250.0,
+      "diesel_start_available": false,
+      "gt_ramp_kW_per_h": 900.0,
+      "config": {
+        "schema_version": "4.1-research-prototype",
+        "provenance": "All limits here are illustrative research assumptions, NOT OEM relay or hospital safety ratings.",
+        "grid_import_limit_kW": 850.0,
+        "diesel_initial_energy_kWh": 2400.0,
+        "diesel_start_delay_minutes": 15.0,
+        "gt_ramp_kW_per_hour": 900.0,
+        "gt_short_term_overload_multiple": 1.05,
+        "gt_protection_trip_multiple": 1.05,
+        "gt_overload_hold_minutes": 15,
+        "thermal_setpoint_margin_C": 2.0,
+        "mass_participation": 0.5,
+        "effective_U_W_m2K": 1.5,
+        "solver_time_limit_sec": 6.0,
+        "priority": "strict lexicographic 0,1,2,3 then cost; each carrier normalized by total demand; P0-P2 lock abs tolerance 1e-7, P3 lock abs tolerance 1e-5, with relative tolerance",
+        "lex_lock_abs_tol_by_priority": [
+          1e-07,
+          1e-07,
+          1e-07,
+          1e-05
+        ],
+        "lex_lock_rel_tol_by_priority": [
+          0.0,
+          0.0,
+          0.0,
+          1e-08
+        ],
+        "p0_solver_feasibility_tol_kW": 0.001,
+        "p0_unserved_abs_tol_kW": 0.01,
+        "p0_unserved_rel_tol": 0.001,
+        "p0_unserved_abs_tol_kWh": 0.01,
+        "precontrol_load_shed_enabled": true,
+        "cascade": "Delayed pre-control proxy subtracts incremental grid headroom, diesel reserve available after start delay, and executable P3/P2/P1 shedding (P0 preserved) before sharing residual across surviving GTs; not a network or relay simulation.",
+        "dynamic_temperature": "baseline DOE zone mean temperature + uncalibrated 1R1C cold-loss perturbation",
+        "cost": "uses historical 2001 prices from v2; diesel $0.30/kWh illustrative only",
+        "precontrol_cooling_to_el_fraction": 0.6,
+        "cooling_tower_topology": "shared_common_tower_for_all_EC_and_ABS",
+        "mpc_cold_tracking_penalty_USD_per_kW_step": 0.2
+      },
+      "tracking_targets": {},
+      "security_gt_penalty_USD_per_kWh": 0.35,
+      "execution_action": {
+        "gt_electric_kW": [
+          0.0,
+          225.0,
+          225.0
+        ],
+        "grid_import_kW": 250.0,
+        "diesel_kW": 0.0,
+        "absorption_cooling_kW": 190.35970433670795,
+        "electric_chiller_cooling_kW": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "boiler_steam_lbph": 0.0,
+        "hrsg_steam_lbph": 5812.513282335231,
+        "tower_rejection_kW": 507.0076623359234,
+        "gt_fuel_MMBtu_h": 10.174641969902098
+      },
+      "execution_contract": {
+        "name": "p1b_no_export_interlock",
+        "provenance": "Explicit uncalibrated research contract; see docs/v43/P1B_EXECUTION_CONTRACT.md. No OEM/ATS/relay data supplied. Not the default baseline.",
+        "grid_import_mode": "arrived_ceiling",
+        "gt_local_down_rate_kW_per_hour": 900.0,
+        "gt_local_down_delay_minutes": 0.25,
+        "local_max_segment_minutes": 0.25,
+        "surplus_interlock": "isolate_largest_gt",
+        "surplus_interlock_delay_minutes": 0.0,
+        "automatic_shedding_delay_minutes": 0.0,
+        "gt_start_delay_minutes": 0.0,
+        "diesel_mode": "legacy_explicit_permission",
+        "ats_transfer_minutes": 0.0,
+        "diesel_allowed_priorities": [
+          "P0",
+          "P1"
+        ],
+        "thermal_mode": "legacy_loss_fraction"
+      }
+    }
+  }
+]

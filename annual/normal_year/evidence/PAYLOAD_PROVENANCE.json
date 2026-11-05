@@ -1,0 +1,47 @@
+{
+  "schema": "hospital_ies.normal_year_transfer_payload.v2",
+  "source_commit": "b4d1ed20dc37e6add516a20a96979c2e29efdd36",
+  "execution_revision": "annual_responsive_dynamic_bridge_20261104.v1",
+  "source_is_independent_checkout": true,
+  "source_remote_removed": true,
+  "source_base_commit": "faa2a044309b2ed67d899e30debe5a6861b11553",
+  "historical_paths_are_provenance_only": true,
+  "historical_tests_are_not_server_tests": true,
+  "native_or_physical_runs_started_by_builder": 0,
+  "server_admission_granted_by_build": false,
+  "previous_package_backup_sha256": "48002698905cb223bb94c17b0395a2bbb2681d0b80652acfe2d8cda03b462039",
+  "runtime_migration": "Proven exact-zero layer reuse; compact complete-domain zero validation; original fresh native selection, hourly load and15-minute dispatch retained",
+  "numerical_execution": {
+    "schema": "hospital_ies.engineering_numerical_profile.v1",
+    "profile": "engineering_fast_v1",
+    "tolerances": {
+      "physical_rows_bounds": 1e-07,
+      "normalized_locks": 1e-10,
+      "integrality": 1e-09,
+      "nonlinear_equality_MMBtu_h": 1e-07
+    },
+    "native_parameters": {
+      "FeasibilityTol": 1e-09,
+      "OptimalityTol": 1e-09,
+      "IntFeasTol": 1e-09
+    },
+    "native_execution_policy": "unchanged_fresh_native_no_warm_start",
+    "native_acceptance_policy": "unchanged_original",
+    "candidate_gate": {
+      "physical_rows_bounds": 1e-07,
+      "normalized_locks": 1e-10,
+      "integrality": 1e-09
+    },
+    "objective_bound_abs_tolerance": 1e-10,
+    "mip_gap_policy": "caller_gap_unchanged_for_every_layer",
+    "candidate_policy": "linear_nonnegative_exact_zero_natural_bound_and_exact_zero_objective_exact_original_gate_only",
+    "nonlinear_policy": "unchanged_exact_nonlinear_fresh_native_no_candidate_reuse",
+    "state_policy": "process_thread_local_volatile_not_checkpointed_no_physical_rounding",
+    "initialization_policy": "unchanged_exact_reference_before_engineering_execution",
+    "planner_policy": "unchanged_exact_command_generation",
+    "validation_detail_policy": "zero_natural_bound_current_domain_maxima_else_full_rows",
+    "max_native_models": 32,
+    "max_candidate_families": 256,
+    "candidates_per_family": 3
+  }
+}

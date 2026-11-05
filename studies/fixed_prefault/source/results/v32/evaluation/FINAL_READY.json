@@ -1,0 +1,225 @@
+{
+  "schema": "hospital_ies.v32.evaluation_final_ready.v1",
+  "created_utc": "2026-10-27T15:22:52.072769+00:00",
+  "status": "ready_for_parent_stage_and_archive",
+  "actual_final_audit_exit_code": 0,
+  "final_matrix_complete_and_clean": true,
+  "summary": {
+    "expected": 6,
+    "not_started": 0,
+    "audited": 6,
+    "completed": 6,
+    "reused_v30": 4,
+    "new_v32": 2,
+    "unknown_or_incomplete": [],
+    "solver_error_runs": [],
+    "strategy_fallback_runs": [],
+    "audit_failure_runs": []
+  },
+  "actual_small_synthetic_tests_passed": 11,
+  "case_rows": 6,
+  "full_repr_ENS_cells_verified": 72,
+  "full_repr_fee_cells_verified": 6,
+  "producer_files_rehashed_unchanged": 42,
+  "reference_bindings_rehashed": 10,
+  "maximum_csv_cell_bytes": 480,
+  "frozen_tools02_source_and_snapshot_hashes_unchanged": true,
+  "frozen_tools01_snapshot_unchanged": true,
+  "failed_final01_preserved": true,
+  "full_reset_and_post_boundary_state_checks_passed": true,
+  "offline_same_prefix_required": false,
+  "selected_plan_actual_numbers": [
+    {
+      "mode": "normal",
+      "actual_fee_USD2001": 88.24912858985768,
+      "actual_operation_USD2001": 85.95186543196294,
+      "initial_preparation_USD2001": 2.297263157894737,
+      "planned_window_fee_USD2001": 87.54675124864066,
+      "plan_actual_UPS": {
+        "carrier": "e",
+        "plan_initial_stock_kWh": 40.0,
+        "plan_terminal_stock_kWh": 40.0,
+        "actual_initial_stock_kWh": 40.0,
+        "actual_terminal_stock_kWh": 26.337212095684556,
+        "actual_minus_plan_terminal_kWh": -13.662787904315444,
+        "planned_charge_input_kWh": 0.0,
+        "planned_useful_discharge_kWh": 0.0,
+        "actual_charged_input_kWh": 0.01325589958416119,
+        "actual_discharged_kWh": 12.99161195847429
+      },
+      "DG_shaft_kWh": 0.0,
+      "DG_electric_kWh": 0.0,
+      "DG_shaft_fee_USD2001": 0.0
+    },
+    {
+      "mode": "disturbed",
+      "actual_fee_USD2001": 88.1156142320836,
+      "actual_operation_USD2001": 85.81835107418887,
+      "initial_preparation_USD2001": 2.297263157894737,
+      "planned_window_fee_USD2001": 92.9740246844069,
+      "plan_actual_UPS": {
+        "carrier": "e",
+        "plan_initial_stock_kWh": 40.0,
+        "plan_terminal_stock_kWh": -0.0,
+        "actual_initial_stock_kWh": 40.0,
+        "actual_terminal_stock_kWh": 26.333438641651593,
+        "actual_minus_plan_terminal_kWh": 26.333438641651593,
+        "planned_charge_input_kWh": 0.0,
+        "planned_useful_discharge_kWh": 38.0,
+        "actual_charged_input_kWh": 0.014652685509695767,
+        "actual_discharged_kWh": 12.996457339103488
+      },
+      "DG_shaft_kWh": 16.13054368208118,
+      "DG_electric_kWh": 0.0,
+      "DG_shaft_fee_USD2001": 4.839163104624354
+    }
+  ],
+  "signed_reference_delta": {
+    "definition": "disturbed minus own normal",
+    "ENS_kWh": {
+      "P0": {
+        "e": -1.8920292376375147e-05,
+        "h": 0.0,
+        "c": 0.0
+      },
+      "P1": {
+        "e": -1.8920759826715166e-05,
+        "h": 0.0,
+        "c": 0.0
+      },
+      "P2": {
+        "e": 1.2792511307360213,
+        "h": 0.0,
+        "c": 0.06225472226475797
+      },
+      "P3": {
+        "e": 184.04693877346523,
+        "h": 21.876093487406283,
+        "c": 15.408700809859994
+      }
+    },
+    "material_minutes": {
+      "P0": {
+        "e": 0,
+        "h": 0,
+        "c": 0
+      },
+      "P1": {
+        "e": 0,
+        "h": 0,
+        "c": 0
+      },
+      "P2": {
+        "e": 7.5,
+        "h": 0,
+        "c": 0.5
+      },
+      "P3": {
+        "e": 22.208245333333323,
+        "h": 29.208245333333323,
+        "c": 29.208245333333323
+      }
+    },
+    "recovery": {
+      "P0": {
+        "e": {
+          "normal": "not_applicable",
+          "disturbed": "not_applicable",
+          "absolute_minute_difference": null
+        },
+        "h": {
+          "normal": "not_applicable",
+          "disturbed": "not_applicable",
+          "absolute_minute_difference": null
+        },
+        "c": {
+          "normal": "not_applicable",
+          "disturbed": "not_applicable",
+          "absolute_minute_difference": null
+        }
+      },
+      "P1": {
+        "e": {
+          "normal": "not_applicable",
+          "disturbed": "not_applicable",
+          "absolute_minute_difference": null
+        },
+        "h": {
+          "normal": "not_applicable",
+          "disturbed": "not_applicable",
+          "absolute_minute_difference": null
+        },
+        "c": {
+          "normal": "not_applicable",
+          "disturbed": "not_applicable",
+          "absolute_minute_difference": null
+        }
+      },
+      "P2": {
+        "e": {
+          "normal": "not_applicable",
+          "disturbed": "observed",
+          "absolute_minute_difference": null
+        },
+        "h": {
+          "normal": "not_applicable",
+          "disturbed": "not_applicable",
+          "absolute_minute_difference": null
+        },
+        "c": {
+          "normal": "not_applicable",
+          "disturbed": "observed",
+          "absolute_minute_difference": null
+        }
+      },
+      "P3": {
+        "e": {
+          "normal": "observed",
+          "disturbed": "observed",
+          "absolute_minute_difference": 45.5
+        },
+        "h": {
+          "normal": "not_applicable",
+          "disturbed": "observed",
+          "absolute_minute_difference": null
+        },
+        "c": {
+          "normal": "not_applicable",
+          "disturbed": "observed",
+          "absolute_minute_difference": null
+        }
+      }
+    },
+    "actual_fee_USD2001": -0.13351435777407517,
+    "DG_shaft_work_kWh": 16.13054368208118,
+    "DG_electric_work_kWh": 0.0,
+    "final_stock_kWh": {
+      "ups": -0.0037734540329630306,
+      "cold_store": 0.0
+    },
+    "DG_remaining_shaft_budget_kWh": -16.130543682088955
+  },
+  "files_sha256": {
+    "final02/AUDIT.json": "9a3d26b8df17577fa42ead09b2403766bb778c7ab9c3903de9aa74054aac59e8",
+    "final02/COMMAND_CHAIN.json": "6b0e987055787928ef4e5497783a45f26880b3ee79af810b0c880cd32f839429",
+    "final02/COMPLETION_MATRIX.json": "0878ed4aaa4ed59295a720da06917dca529aba9c22a0d3aaceddff059735076a",
+    "final02/ENGINEERING_REPORT_ZH.md": "248067716f7898632b883f582a61ff4385f26f62ab97576eca1622185a1c311b",
+    "final02/MAIN_RESULT_TABLE.csv": "624dc8c5fd4ccbe0942327666acf42b8cb8c86d468786cb8c0d7cb22c84e2308",
+    "final02/OUTPUT_SHA256.json": "175a451ceaf9bb73aeeeb217e177100fda02aaec5f9227cb67bc561d5884bb1f",
+    "final02/PAIRED_DELTAS.json": "11b5dbb11da3b360946bd6e4ad89aa69aa4ad046a82d5c177c970c1e9d94d1c9",
+    "final02/PLAN_VS_ACTUAL.json": "22dda97da3404116a7a8e0bd4ba4757eff46a3572807a88737d77f592aaa7375",
+    "FROZEN_EVALUATION_TOOLS_V32_V2.json": "1a97251aba09a0ab04885c7157dd68ce4122b7e221ed9e5d410a7acb03ce8da3",
+    "FINAL02_COMMAND.json": "e482d5e800683c8d036ce57934ebb7482e74faf5ded3cad804085f40797d58c2",
+    "FINAL02.stdout.log": "36bc53895bd1be6aafd305d9da3842b2266045830722fc0a179eab58549393ad",
+    "FINAL02.stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "ENGINEERING_SUPPLEMENT_ZH.md": "20846b09667fabbd1fbb1572f44acfb2c0b5fec8548e270159065a0131e64fe8",
+    "LIFECYCLE_CORRECTION_V2.md": "71f18ca7536ecc81ef798927511eaac582a58920351ee7143d2e94750749fbd6",
+    "FINAL_QA_COMMAND.py": "afd782278fe1747cfd909a740a1ea00cfefd2e97a07c383b21e3f1a08b7f9a1e"
+  },
+  "reviewer_model_calls": 0,
+  "reviewer_solver_calls": 0,
+  "actual_hospital_runs_repeated": 0,
+  "D_source_edits": 0,
+  "initialization_underlying_solver_total_calls": null,
+  "archive_acceptance": "parent_pending"
+}

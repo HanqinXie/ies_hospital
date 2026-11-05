@@ -1,0 +1,37 @@
+{
+  "command": [
+    "C:\\Users\\HanqinXie\\AppData\\Local\\Programs\\Python\\Python310\\python.exe",
+    "-I",
+    "D:\\hospital_ies_v22_20261025\\tools\\model_review_v30\\reference.py",
+    "--project",
+    "D:\\hospital_ies_v22_20261025",
+    "--_worker",
+    "--output",
+    "E:\\hospital_ies_v30_20261027\\runs\\r01_normal_R_off"
+  ],
+  "cwd": "D:\\hospital_ies_v22_20261025",
+  "started_utc": "2026-10-27T07:17:17.489819+00:00",
+  "study_id": "hospital_ies.evaluation_literature_comparison.v30.v1",
+  "reference_script_sha256": "27d985d8a51285cb3015b19c8f3e6f751c1ebf6bb789275375715884f84988a4",
+  "shared_runner_sha256": "8329b0537dbc0463c5375a1290c1b198ef81d0d68c9f7bbfa0e9fe15e5092ac9",
+  "reference_file_bindings": {
+    "offline_actions": {
+      "path": "E:\\hospital_ies_v30_20261027\\offline_reference\\hospital_normal.actions.json",
+      "sha256": "b0665568b98995e5760b14771826ab79e7101cd2ec68fa15706e5106a28a2ac5"
+    },
+    "offline_spec": {
+      "path": "E:\\hospital_ies_v30_20261027\\offline_reference\\hospital_normal.spec.json",
+      "sha256": "216515aaf7d5c5728e0d4d35e7e4c1294fe4b8be6a634c550dd34d5c82793be8"
+    },
+    "offline_plan": {
+      "path": "E:\\hospital_ies_v30_20261027\\offline_reference\\hospital_normal.plan.json",
+      "sha256": "ba6b51e470745201d58d2c04877d236d8e49633db87de5a9b117389e46bffec4"
+    },
+    "offline_snapshot": {
+      "path": "E:\\hospital_ies_v30_20261027\\offline_reference\\hospital_normal.snapshot.json",
+      "sha256": "6b241bdf807ba339bac1fadc2ecfa212a22a0f372f5c55b04cdfe502f87698d2"
+    }
+  },
+  "finished_utc": "2026-10-27T07:18:15.667470+00:00",
+  "exit_code": 1
+}

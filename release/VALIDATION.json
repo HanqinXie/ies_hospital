@@ -1,0 +1,32 @@
+{
+  "created_utc": "2026-11-05T17:20:47.888641+00:00",
+  "command": [
+    "python",
+    "-B",
+    "release/verify_publication.py"
+  ],
+  "exit_code": 0,
+  "result": {
+    "status": "passed",
+    "checked_files": 3797,
+    "checked_bytes": 205918860,
+    "python_syntax_files": 2208,
+    "source_snapshot_files": 3783,
+    "errors": [],
+    "scientific_tests_executed": false,
+    "model_or_training_runs_started": 0,
+    "scope": "Publication byte identity, syntax, coverage, basic secret and file-size checks only"
+  },
+  "annual_frozen_source_input_comparison": {
+    "checked": 1147,
+    "mismatches": 0
+  },
+  "local_campaign_binding_comparison": {
+    "source_files": 1096,
+    "runtime_inputs": 36,
+    "mismatches": 0
+  },
+  "scientific_default_tests": "not executed in this publication; historical failures disclosed in docs/VALIDATION_AND_LIMITATIONS.md",
+  "new_hospital_or_training_runs": 0,
+  "scientific_pass_claimed": false
+}

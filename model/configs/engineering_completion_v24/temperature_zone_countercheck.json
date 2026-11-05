@@ -1,0 +1,131 @@
+{
+  "registered_utc": "2026-10-25T17:55:23.477972+00:00",
+  "model": "M24_fixed_zone_2R2C_countercheck",
+  "purpose": "Falsify homogeneous per-floor-area pooling as sufficient explanation of the summer recovery tail; no new states or daily coefficients",
+  "same_structure_as_M23": true,
+  "parameter_order": [
+    "air_capacity_kWh_K",
+    "mass_capacity_kWh_K",
+    "air_mass_conductance_kW_K",
+    "mass_outdoor_conductance_kW_K"
+  ],
+  "basis": "Identical original geometry-informed bounds after normalizing each representative room by its original floor area; one fixed vector per physical zone",
+  "bounds": {
+    "OR1_FLR_2": {
+      "lower": [
+        0.07969984999999999,
+        0.7587852525,
+        0.12079071600000003,
+        0.0278694093667268
+      ],
+      "upper": [
+        0.8384851025,
+        16.80710913362157,
+        2.415814320000001,
+        0.278694093667268
+      ],
+      "starts": [
+        [
+          0.16868902320035267,
+          5.07441921667201,
+          0.47897466814525125,
+          0.0533512731160491
+        ]
+      ]
+    },
+    "OR2_MULT5_FLR_2": {
+      "lower": [
+        0.07969984999999999,
+        0.7587852525,
+        0.12079071600000003,
+        0.0278694093667268
+      ],
+      "upper": [
+        0.8384851025,
+        16.80710913362157,
+        2.415814320000001,
+        0.278694093667268
+      ],
+      "starts": [
+        [
+          0.16868902320035267,
+          5.07441921667201,
+          0.47897466814525125,
+          0.0533512731160491
+        ]
+      ]
+    },
+    "OR3_FLR_2": {
+      "lower": [
+        0.07969984999999999,
+        0.7587852525,
+        0.12079071600000003,
+        0.0278694093667268
+      ],
+      "upper": [
+        0.8384851025,
+        16.80710913362157,
+        2.415814320000001,
+        0.278694093667268
+      ],
+      "starts": [
+        [
+          0.16868902320035267,
+          5.07441921667201,
+          0.47897466814525125,
+          0.0533512731160491
+        ]
+      ]
+    },
+    "OR4_FLR_2": {
+      "lower": [
+        0.07969984999999999,
+        0.7587852525,
+        0.12079071600000003,
+        0.0278694093667268
+      ],
+      "upper": [
+        0.8384851025,
+        16.80710913362157,
+        2.415814320000001,
+        0.278694093667268
+      ],
+      "starts": [
+        [
+          0.16868902320035267,
+          5.07441921667201,
+          0.47897466814525125,
+          0.0533512731160491
+        ]
+      ]
+    }
+  },
+  "fit_sources": [
+    "cal_summer_2h",
+    "cal_summer_6h"
+  ],
+  "fit_date": "07-20",
+  "not_fitted": [
+    "cal_winter",
+    "test_winter",
+    "test_summer"
+  ],
+  "already_seen_development_dates": [
+    "01-22",
+    "07-20",
+    "02-19",
+    "08-22"
+  ],
+  "maximum_actual_optimizer_fits": 4,
+  "success_rule": "All eight strong summer original precision rows must pass before new preregistered summer validation. No winter numerator pooling.",
+  "limits": {
+    "event_rmse_C": 1.0,
+    "recovery_first6h_rmse_C": 0.5,
+    "maximum_absolute_error_C": 2.0,
+    "first_crossing_error_minutes": 10.0,
+    "recovery_time_error_minutes": 20.0,
+    "complete_input_interval_minutes": 10.0
+  },
+  "stop_rule": "If fixed-zone correction remains visibly inaccurate in summer calibration, do not expand backgrounds or promote recovery claims; retain as explicit exploratory countercheck.",
+  "physical_and_information_boundary": "No capacity, input data, thresholds, source controls or IES state transition changes; no true future walls/radiant state as prediction inputs"
+}

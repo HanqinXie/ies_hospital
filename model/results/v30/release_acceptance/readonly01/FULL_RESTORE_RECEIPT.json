@@ -1,0 +1,31 @@
+{
+  "schema": "hospital_ies.multi_container_exact_restore_receipt.v30.fix1.v1",
+  "status": "passed",
+  "started_utc": "2026-10-27T10:23:45.492343+00:00",
+  "finished_utc": "2026-10-27T10:30:55.382467+00:00",
+  "map_sha256": "f6be5595dfea50e6489a9bcef689fa60ec8573534ac331910951b325cb901ac2",
+  "containers": [
+    {
+      "name": "EVIDENCE_BLOBS_PROOF01.tar.xz",
+      "sha256": "ad1d441d05ab1dbacf144bb6f00bfc0fd69e90550637e7057fad29b47cddb8e0",
+      "payloads_verified": 32594,
+      "raw_bytes_verified": 9780330834
+    },
+    {
+      "name": "EVIDENCE_BLOBS_DELTA_FIX1.tar.xz",
+      "sha256": "2d603dc79999fa2f0b98377aa855c6dafdc5316b298636e6880ecd11619ce033",
+      "payloads_verified": 17511,
+      "raw_bytes_verified": 6322414235
+    }
+  ],
+  "raw_payloads_verified": 50105,
+  "exact_original_files_verified": 87668,
+  "original_bytes": 2733258186,
+  "existing_identical_files_reused": 0,
+  "prefix": "",
+  "all_container_members_and_raw_SHA_verified": true,
+  "all_mapped_original_files_restored": true,
+  "zlib_runtime": "1.2.12",
+  "no_models_or_solvers": true,
+  "originals_or_CAS_modified": false
+}

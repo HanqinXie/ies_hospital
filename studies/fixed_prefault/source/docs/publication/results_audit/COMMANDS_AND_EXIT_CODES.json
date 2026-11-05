@@ -1,0 +1,16 @@
+{
+  "scope": "Static curation and checksum validation only",
+  "new_scientific_calculations": 0,
+  "commands": [
+    {
+      "command": "python -B 'E:\\hospital_ies_publish_20261028\\results_audit\\curate_results.py'",
+      "exit_code": 0,
+      "stdout_and_stderr": "PREFLIGHT {\"v30\": {\"files\": 113, \"bytes\": 3956061}, \"v31\": {\"files\": 90, \"bytes\": 2220463}, \"v32\": {\"files\": 112, \"bytes\": 4356548}}\r\nCURATION_COMPLETE {\"files\": 315, \"bytes\": 10533072, \"per_version\": {\"v30\": {\"files\": 113, \"bytes\": 3956061}, \"v31\": {\"files\": 90, \"bytes\": 2220463}, \"v32\": {\"files\": 112, \"bytes\": 4356548}}}\r\n"
+    },
+    {
+      "command": "python -B 'E:\\hospital_ies_publish_20261028\\results_audit\\verify_results.py'",
+      "exit_code": 0,
+      "stdout_and_stderr": "{\r\n  \"status\": \"passed\",\r\n  \"verified_utc\": \"2026-10-27T16:41:37.921616+00:00\",\r\n  \"copied_artifacts_current_source_and_stage_sha_exact\": 315,\r\n  \"generated_metadata_files\": 3,\r\n  \"total_stage_files\": 318,\r\n  \"stage_bytes\": 10695662,\r\n  \"readme_relative_links_verified\": 12,\r\n  \"accepted_zip_current_sha_size_verified\": 3,\r\n  \"JSON_and_JSONL_parsed\": true,\r\n  \"final_saved_audits_complete_and_clean\": [\r\n    \"v30\",\r\n    \"v31\",\r\n    \"v32\"\r\n  ],\r\n  \"old_R03_211_separate_from_V32_b01_1160\": true,\r\n  \"b07_locked_target_GT3\": true,\r\n  \"original_failure_metadata_rehashed\": true,\r\n  \"new_scientific_simulations_or_solver_calls_or_recomputations\": 0,\r\n  \"scope\": \"Static publication artifacts only; existing scientific tests, solver results and independent native replays were read, not rerun\",\r\n  \"catalog_sha256\": \"80a375a0a4374c50aa163da9b5be455f4514cd2debee3938f46b8e0ff4c3d17f\",\r\n  \"readme_sha256\": \"468d94a39b8c308823dc8183412187d8067105a40ce701288a1ea2715ea1f0b5\"\r\n}\r\n"
+    }
+  ]
+}

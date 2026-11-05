@@ -1,0 +1,48 @@
+{
+  "model_id": "cooling_capability_first_order_engineering_20261104",
+  "cooling_tau_seconds": [
+    137.717,
+    120.0,
+    120.0,
+    120.0
+  ],
+  "tower_support_tau_seconds": 360.0,
+  "pump_support_tau_seconds": 60.0,
+  "qualification": "Literature-supported low-order engineering proxy; not hospital/OEM calibration",
+  "parameter_provenance": {
+    "ABS": {
+      "selected_seconds": 137.717,
+      "type": "reference_apparatus_parameter_used_as_explicit_proxy",
+      "doi": "10.1016/j.enconman.2026.121191",
+      "location": "Section 5.2.1 Eq(85), Table 2; operating single-effect hot-water chiller",
+      "limitation": "Not a calibrated steam-chiller startup or repair timer"
+    },
+    "EC_1_EC_2_EC_3": {
+      "selected_seconds": 120.0,
+      "type": "engineering_assumption_not_reported_or_fitted_in_reference",
+      "doi": "10.1016/j.ijrefrig.2008.03.006",
+      "location": "Figures 6/7 provide component-dynamics context only",
+      "limitation": "Paper does not supply a whole-machine first-order tau; no capacity-ratio scaling"
+    },
+    "tower_support": {
+      "selected_seconds": 360.0,
+      "type": "engineering_mapping_of_reference_water_side_temperature_response",
+      "doi": "10.1016/j.jprocont.2018.04.005",
+      "location": "Table 4 water-side exchanger temperature time constant",
+      "limitation": "Normalized support preparation, not tower temperature, hydraulic transit or measured repair time"
+    },
+    "pump_support": {
+      "selected_seconds": 60.0,
+      "type": "engineering_mapping_of_reference_pressure_response",
+      "doi": "10.1016/j.jprocont.2018.04.005",
+      "location": "Table 3 pressure dynamics",
+      "limitation": "Normalized support preparation, not calibrated pump flow or restart timer"
+    }
+  },
+  "unknowns": [
+    "OEM minimum-on/off and reset lockouts",
+    "startup-specific additional electricity/heat",
+    "hospital loop water volume/UA/transport delay",
+    "hospital dynamic calibration"
+  ]
+}

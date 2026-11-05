@@ -1,0 +1,30 @@
+{
+  "scope": "Focused new dynamic capability component only; no scientific runs",
+  "commands": [
+    {
+      "command": "python -B -m pytest -q tests/test_cooling_dynamics_proxy.py::test_constant_target_energy_and_endpoint_independent_of_partition --noconftest -p no:cacheprovider",
+      "exit_code": 1,
+      "result": "Missing preview/commit API reproduced; actual tool output retained in session"
+    },
+    {
+      "command": "python -B -m pytest -q tests/test_cooling_dynamics_proxy.py --noconftest -p no:cacheprovider",
+      "exit_code": 0,
+      "result": "4 passed in 0.07s"
+    },
+    {
+      "command": "python -B -m pytest -q tests/test_cooling_dynamics_proxy.py::test_trial_is_pure_and_unserved_devices_do_not_prewarm --noconftest -p no:cacheprovider",
+      "exit_code": 1,
+      "result": "Independent review regression reproduced: support_ready=1 with zero actual operation"
+    },
+    {
+      "command": "python -B -m pytest -q tests/test_cooling_dynamics_proxy.py --noconftest -p no:cacheprovider",
+      "exit_code": 0,
+      "result": "After support-running correction: 4 passed in 0.07s"
+    }
+  ],
+  "raw_output_location": "actual tool-call outputs; no standalone raw console log captured for these four invocations",
+  "not_run": [
+    "default whole repository pytest",
+    "new scientific trajectory in component checks"
+  ]
+}

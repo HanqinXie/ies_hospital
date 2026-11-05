@@ -1,0 +1,30 @@
+{
+  "schema": "hospital_ies.cooling_dynamics.logging_sentinel_fix.v1",
+  "utc": "2026-11-04T04:14:26.764783+00:00",
+  "trigger": "First4 formal workers exited on nested nonlinear true_validation/worst_rows unbounded native constraint lower=-Infinity;not physical flow failure.",
+  "change": "Recognize validation OR true_validation ancestors only for rows/worst_rows lower/upper/lower_residual/upper_residual infinity sentinels. Preserve sign,original JSON pointer and physical_quantity_imputed=false;NaN and actual nonfinite flows still fail.",
+  "new_regression": "test_actual_nested_nonlinear_true_validation_unbounded_row_is_explicit",
+  "actual_red": {
+    "exit_code": 1,
+    "failed": 1,
+    "path": "/command/joint_dispatch/diagnostic/m23_boiler_domains/checked_domains/0/solver_backend_layers/0/attempts/0/nonlinear_validation/true_validation/worst_rows/0/lower"
+  },
+  "actual_green": {
+    "command": "python -m pytest -q --noconftest tests/test_cooling_campaign_20261104.py",
+    "exit_code": 0,
+    "passed": 4,
+    "seconds": 0.06
+  },
+  "model_runs_started": 0,
+  "prior_source_binding_or_attempts_modified": false,
+  "changed_files": [
+    {
+      "path": "tools\\cooling_dynamics_20261104\\run_worker.py",
+      "sha256": "62fbff7fbc43dd1fdda6e57808f849338a403026bf5201d69671f5dc92796cc3"
+    },
+    {
+      "path": "tests\\test_cooling_campaign_20261104.py",
+      "sha256": "88edc36e3723bd40fcebac2a3ae95da26ee109c953576111304edff780f15192"
+    }
+  ]
+}

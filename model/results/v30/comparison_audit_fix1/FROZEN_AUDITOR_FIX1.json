@@ -1,0 +1,45 @@
+{
+  "schema": "hospital_ies.v30.fix1.auditor_freeze.v1",
+  "old_frozen_auditor_sha256": "8c9102eef5d93aab8c1c3263fbf17b59e66a61410dc9052124cbcff843668f4c",
+  "old_source_unchanged": true,
+  "files_sha256": {
+    "audit_campaign.py": "1236b5f310151d91ff643911cb811c1870254b15a9d64fe531e3d6978030d464",
+    "test_audit_campaign.py": "f3cda0772a18dc60df76357327f975983bc900f56926c2992128343fdbf6a4b3",
+    "FROZEN_ACCOUNTING.json": "524f5fc0dc2cc46748b1a11792b768632c01a9a91b670411bec9b517d1d13f56",
+    "RED_parameterization.log": "deda7b0bdd1b04062fcd107efb82dae36ed64e4fbce99be8626d3d97842424a3",
+    "GREEN_parameterization01.log": "737b77cb65196c26fe5f624a7df240f410428ab4f1414e48f7eb8a9fdb83dec4",
+    "RED_percent_identity.log": "a652dc97b0b823d7a8f27e947c234ab707a855f5be8000ba6f2ceaf4850dd69b",
+    "GREEN_percent_identity.log": "ebe3fc7abefb2f4732156c8dc9c5959e7835b4b2b15191c3be3b3351d43e96b3",
+    "RED_locked_target.log": "5c4db3a5802e58d3f43d90bbaa85941a58143c1703e3773bf11d651739aed5ae",
+    "GREEN_FINAL.stdout.log": "f29bd14a681983738eb88a7043ae11623cb6f0ec4f2b751c155efecf729770f8",
+    "GREEN_FINAL.stderr.log": "d5d2c34d658039466d031f9041b731fc1fe44f9de963b86fedb818c39f9ffa29",
+    "GREEN_FINAL_COMMAND.json": "cfc35f4ee29a5d9b5f97b4c87ef0a2741317f1cbae6fc87544c2399a96d9377f"
+  },
+  "unchanged_native_calculation_function_AST": {
+    "decode": true,
+    "normalize_timing": true,
+    "differences": true,
+    "compare": true,
+    "prefix_view": true,
+    "integrate_service": true,
+    "window_means": true,
+    "select_b07": true,
+    "required_function_gate": true,
+    "frozen_configuration_checks": true,
+    "context_integrity_failures": true,
+    "fee_audit": true,
+    "store_audit": true,
+    "load_payload": true
+  },
+  "intentional_changes": [
+    "Explicit normal/disturbed prefixes and one actual freeze",
+    "Exact phase/context/method/path/source/patch binding",
+    "Prior attempts excluded with recorded actual roles",
+    "All percentages suppressed; absolute native ENS/differences retained",
+    "b07 locked target read from single freeze"
+  ],
+  "last_actual_test_exit_code": 0,
+  "last_actual_test_count": 14,
+  "new_simulations": 0,
+  "D_source_edits": false
+}

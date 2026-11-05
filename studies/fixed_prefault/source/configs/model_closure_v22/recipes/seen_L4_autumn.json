@@ -1,0 +1,136 @@
+{
+  "id": "seen_L4_autumn",
+  "purpose": "Exact seen development class regression; canonical class retained separately from historical parser labels",
+  "scenario": {
+    "source_block_id": "m21_block_4d99796601b9e5b8",
+    "source_day_index": 334,
+    "season_quarter": 4,
+    "role": "development",
+    "experiment_role": "development",
+    "start_hour": 8036,
+    "duration_steps": 48,
+    "step_minutes": 15.0,
+    "pre_event_warmup_steps": 1,
+    "initialization_seed": 20261023,
+    "canonical_class": "L4",
+    "event_class": "L4b",
+    "analysis_class": "L4b",
+    "stage": 4,
+    "enable_propagation": true,
+    "event_schema_version": "p2a.events.v1",
+    "faults": {
+      "BOILER_1": 0.0
+    },
+    "auxiliary_faults": {},
+    "shock": {},
+    "shock_by_priority": {},
+    "shock_by_zone": {
+      "ER_TRAUMA1_FLR_1": {
+        "e": 0.25,
+        "h": 0.25,
+        "c": 0.25
+      },
+      "ER_TRAUMA2_FLR_1": {
+        "e": 0.25,
+        "h": 0.25,
+        "c": 0.25
+      },
+      "ER_EXAM1_MULT4_FLR_1": {
+        "e": 0.25,
+        "h": 0.25,
+        "c": 0.25
+      },
+      "ER_EXAM3_MULT4_FLR_1": {
+        "e": 0.25,
+        "h": 0.25,
+        "c": 0.25
+      }
+    },
+    "fault_target": "BOILER_1",
+    "fault_availability": 0.0,
+    "demand_amplitude": 0.25,
+    "clinical_template_id": "emergency_department",
+    "clinical_coefficients_are_research_assumptions": true,
+    "response_delay_minutes": 0.0,
+    "fault_start_minute": 120.0,
+    "fault_duration_minutes": 120.0,
+    "shock_start_minute": 120.0,
+    "shock_duration_minutes": 120.0,
+    "first_event_minute": 120.0,
+    "recovery_start_minute": 240.0,
+    "history_interval_minutes": [
+      0.0,
+      120.0
+    ],
+    "tail_interval_minutes": [
+      240.0,
+      720.0
+    ],
+    "matched_factor_id": "m21_factor_b13d33b0eabaabb8",
+    "root_family_id": "m21_block_4d99796601b9e5b8",
+    "family_id": "m21_block_4d99796601b9e5b8",
+    "design_family": "m21_block_4d99796601b9e5b8",
+    "sampling_cohort": "sci_v21_development",
+    "sampling_method": "preregistered_disjoint_source_blocks_and_independent_factor_permutations",
+    "grid_limit_kW": 850.0,
+    "pre_event_grid_limit_kW": 850.0,
+    "automatic_fast_shedding": false,
+    "requires_policy_freeze": false,
+    "selection_allowed": true,
+    "fit_allowed": false,
+    "is_final_blind": false,
+    "original_final12_evaluated": false,
+    "historical_exposure_status": "new_source_hours_on_historically_exposed_calendar_background",
+    "new_independent_background": false,
+    "background_independence": "Full source-block isolation within V21; historical exposure separately reported",
+    "prehistory_mode": "same_continuous_episode_no_reset",
+    "exogenous_events": [],
+    "full_source_support": {
+      "raw_start_minute": 482100.0,
+      "raw_end_minute": 482880.0
+    },
+    "id": "m21_L4_4562fb888f2899a8951d",
+    "parent_template_id": "m21_block_4d99796601b9e5b8",
+    "distribution_id": "fixed_development_no_probability",
+    "base_state_id": "initial:a2dd00ab930ac34962a8581632478f2442ffdd16e40efbd3f76edcfb18afbf7c",
+    "exogenous_stream_id": "m21_exogenous:1e138f14d505c97cb8dfd77f63c80aed95d00663fbce6398214fae39e49886a1",
+    "purpose": "development",
+    "q_design": "fixed_development_no_probability",
+    "p_reference": null,
+    "importance_weight": null,
+    "m21_physical_exogenous_sha256": "1e138f14d505c97cb8dfd77f63c80aed95d00663fbce6398214fae39e49886a1",
+    "m21_actual_demand_semantics": "hour-dependent original requests and zonal increments in segment ledger"
+  },
+  "configuration": "H0",
+  "policy": {
+    "alias": "C",
+    "config": {
+      "response_minutes": 30.0,
+      "support_minutes": 60.0,
+      "delay_bound_minutes": 30.0,
+      "cooling_preparation": true,
+      "time_energy_preparation": true,
+      "execution_recovery": true,
+      "critical_reserve": true,
+      "policy_mode": "coordinated",
+      "reserve_enabled": true,
+      "critical_preparation_first": true,
+      "reserve_rule": "critical_current",
+      "legacy_C19_order": true,
+      "fixed_reserve_hours": 1.0,
+      "release_after_minutes": 120.0,
+      "release_floor_hours": 0.5,
+      "observed_outage_minutes": 0.0,
+      "critical_non_diesel_ready": false
+    }
+  },
+  "provenance": {
+    "source": {
+      "path": "E:\\hospital_ies_v21_20261023\\study_design04\\DEVELOPMENT68.json",
+      "sha256": "437b4badaad2a14593d3d33a97df0aeff23d131ab4938e263dec0dc70f15d016"
+    },
+    "exact_original_scenario": true,
+    "evaluation_role": "seen_development_or_regression",
+    "independent_validation": false
+  }
+}

@@ -1,0 +1,165 @@
+{
+  "id": "aux_fault_1p0",
+  "purpose": "Conserving pump attribution, normal or same heat-pump fault",
+  "scenario": {
+    "source_block_id": "m21_block_1706edd2c32b2937",
+    "source_day_index": 8,
+    "season_quarter": 1,
+    "role": "development",
+    "experiment_role": "normal_verification",
+    "start_hour": 211,
+    "duration_steps": 12,
+    "step_minutes": 15.0,
+    "pre_event_warmup_steps": 1,
+    "initialization_seed": 20261023,
+    "canonical_class": "L1",
+    "event_class": "L1",
+    "analysis_class": "L1",
+    "stage": 1,
+    "enable_propagation": false,
+    "event_schema_version": "p2a.events.v1",
+    "faults": {},
+    "auxiliary_faults": {
+      "AUX_HEAT_PUMP": 0.5
+    },
+    "shock": {},
+    "shock_by_priority": {},
+    "shock_by_zone": {},
+    "fault_target": "AUX_HEAT_PUMP",
+    "fault_availability": 0.0,
+    "demand_amplitude": 0.0,
+    "clinical_template_id": "emergency_department",
+    "clinical_coefficients_are_research_assumptions": true,
+    "response_delay_minutes": 30.0,
+    "fault_start_minute": 60.0,
+    "fault_duration_minutes": 60.0,
+    "shock_start_minute": 60.0,
+    "shock_duration_minutes": 0.0,
+    "first_event_minute": 60.0,
+    "recovery_start_minute": 120.0,
+    "history_interval_minutes": [
+      0.0,
+      15.0
+    ],
+    "tail_interval_minutes": [
+      180.0,
+      180.0
+    ],
+    "root_family_id": "m21_block_1706edd2c32b2937",
+    "family_id": "m21_block_1706edd2c32b2937",
+    "design_family": "m21_block_1706edd2c32b2937",
+    "sampling_cohort": "v22_targeted_seen_regression",
+    "sampling_method": "preregistered_disjoint_source_blocks_and_independent_factor_permutations",
+    "grid_limit_kW": 850.0,
+    "pre_event_grid_limit_kW": 850.0,
+    "automatic_fast_shedding": false,
+    "requires_policy_freeze": false,
+    "selection_allowed": false,
+    "fit_allowed": false,
+    "is_final_blind": false,
+    "original_final12_evaluated": false,
+    "historical_exposure_status": "seen_background_derived_regression",
+    "new_independent_background": false,
+    "background_independence": "Full source-block isolation within V21; historical exposure separately reported",
+    "prehistory_mode": "same_continuous_episode_no_reset",
+    "exogenous_events": [],
+    "full_source_support": {
+      "raw_start_minute": 12600.0,
+      "raw_end_minute": 12840.0
+    },
+    "parent_template_id": "m21_block_1706edd2c32b2937",
+    "distribution_id": "fixed_development_no_probability",
+    "base_state_id": "v22_initialization:f133ed442582d85fef7d8ba62f6148d6a1cfdad6be3080f41f7ad678337e38f1",
+    "purpose": "development",
+    "q_design": "fixed_development_no_probability",
+    "p_reference": null,
+    "importance_weight": null,
+    "m21_actual_demand_semantics": "hour-dependent original requests and zonal increments in segment ledger",
+    "exclude_from_main_four_class_summary": true,
+    "normal_verification": true,
+    "normal_exogenous_fault_present": false,
+    "normal_clinical_shock_present": false,
+    "normal_eval_interval_minutes": [
+      0.0,
+      180.0
+    ],
+    "reference_phase_clocks_are_analysis_only": true,
+    "normal_is_new_independent_confirmation_background": false,
+    "id": "v22_seen_aux_fault",
+    "exogenous_stream_id": "v22_exogenous:fae959e42d5d78e1e1745c45234d6e3d5d393e84ed933dc4a664d3990fdad499",
+    "actual_p0_load_multiplier": {
+      "e": 1.0,
+      "h": 1.0,
+      "c": 1.0
+    },
+    "native_propagation_flag_is_parser_requirement": true,
+    "base_state_identity_is_declared_initialization_spec": true,
+    "m21_physical_exogenous_sha256": "073781d2f0636d0f38dcb0b59046b7680491b8ff147a53ca64f82176a76d101b"
+  },
+  "configuration": "H0",
+  "policy": {
+    "alias": "C",
+    "config": {
+      "response_minutes": 30.0,
+      "support_minutes": 60.0,
+      "delay_bound_minutes": 30.0,
+      "cooling_preparation": true,
+      "time_energy_preparation": true,
+      "execution_recovery": true,
+      "critical_reserve": true,
+      "policy_mode": "coordinated",
+      "reserve_enabled": true,
+      "critical_preparation_first": true,
+      "reserve_rule": "critical_current",
+      "legacy_C19_order": true,
+      "fixed_reserve_hours": 1.0,
+      "release_after_minutes": 120.0,
+      "release_floor_hours": 0.5,
+      "observed_outage_minutes": 0.0,
+      "critical_non_diesel_ready": false
+    }
+  },
+  "provenance": {
+    "source": {
+      "path": "E:\\hospital_ies_v21_20261023\\staging_panels\\candidate04\\HARDWARE_PROPOSAL.json",
+      "sha256": "345de5259ed5dd1b1218432d4ea2ff36b3ddc8de2441738f1a0564e5dbb6e339"
+    },
+    "exact_original_scenario": false,
+    "evaluation_role": "seen_development_or_regression",
+    "independent_validation": false,
+    "construction": "Explicit registered variant; original capacities, load rows and service classes retained",
+    "metadata_normalization_completion": {
+      "method": "All missing fields from original normalize_study_scenario",
+      "added_keys": [
+        "m21_physical_exogenous_sha256"
+      ],
+      "all_prior_scene_fields_unchanged": true,
+      "original_recipe_sha256": "54afdcb2f5bab4609d91273b7d475f50cfffabbe957f8acb3fa1524cf2cc916a"
+    }
+  },
+  "model_closure_v22": {
+    "station": {
+      "boiler_fixed_kW": 0.5,
+      "boiler_kW_per_kWsteam": 0.012,
+      "boiler_restart_minutes": 1.0,
+      "gt_starter_kW_per_unit": 10.0,
+      "gt_control_dc_available": true,
+      "dg_start_dc_available": true,
+      "control_autonomy_minutes": 1440.0,
+      "dg_qualified_starts": 2
+    },
+    "storage": {
+      "preserve_bridge": true,
+      "bridge_observation_minutes": 15.0,
+      "cold_recharge_deadband_kWh": 1.0,
+      "cold_recharge_deadband_fraction": 0.02
+    },
+    "auxiliary": {
+      "pump_weight_exponent": 1.0,
+      "actual_power_scale": null,
+      "fan_priority_shares": null
+    },
+    "instantaneous_diesel_current": true,
+    "research_stress_proxy": false
+  }
+}

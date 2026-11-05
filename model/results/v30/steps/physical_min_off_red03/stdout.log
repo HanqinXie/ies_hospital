@@ -1,0 +1,29 @@
+F...                                                                     [100%]
+================================== FAILURES ===================================
+_ test_powered_start_waits_for_actual_minimum_off_eligibility[90.0-0.0-115.0] _
+
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x0000018052D6EFB0>
+minute = 90.0, progress = 0.0, expected = 115.0
+
+    @pytest.mark.parametrize('minute,progress,expected',[(90.,0.,115.),(105.,0.,115.),(112.,7.,115.),(112.,3.,119.)])
+    def test_powered_start_waits_for_actual_minimum_off_eligibility(monkeypatch,minute,progress,expected):
+        from tools.model_closure_v22 import environment as module
+        seen=[]
+        def inherited(self,dispatch,availability,normal_ramp=False):
+            seen.append(copy.deepcopy(self.gt_start_pending))
+            return copy.deepcopy(dispatch)
+        monkeypatch.setattr(module.legacy.EngineeringCore,'_clamp',inherited)
+        core=object.__new__(module.EngineeringCore)
+        core.env=SimpleNamespace(execution_contract={'gt_start_delay_minutes':10.},config={'gt_ramp_kW_per_hour':900.})
+        core.time=minute
+        core.gt_start_pending={0:dict(started=105.,ready=115.,requested=126.83648,start_event_recorded=False)}
+        core._m22_gt_progress={0:progress}
+        before=copy.deepcopy(core.gt_start_pending)
+        result=core._clamp({'gt_electric_kW':[126.83648,0.,0.]},{},normal_ramp=True)
+>       assert seen[0][0]['ready']==expected
+E       assert 100.0 == 115.0
+
+tests\test_v30_start_readiness.py:28: AssertionError
+=========================== short test summary info ===========================
+FAILED tests/test_v30_start_readiness.py::test_powered_start_waits_for_actual_minimum_off_eligibility[90.0-0.0-115.0]
+1 failed, 3 passed in 0.69s

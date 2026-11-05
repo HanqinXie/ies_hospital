@@ -1,0 +1,1377 @@
+===== PDF PAGE 1 =====
+                                              Energy Conversion and Management 353 (2026) 121191
+
+
+                                                 Contents lists available at ScienceDirect
+
+                     Energy Conversion and Management
+
+
+                                         journal homepage: www.elsevier.com/locate/enconman
+
+
+Research paper
+
+Unraveling the absorption chiller dynamics, quasi-linear behavior and
+potential for advanced control applications
+Juan Manuel González a,b    ,∗, Alvaro Antonio Villa Ochoa c,d   , José M. Cardemil e   ,
+Felipe Godoy f, Mónica Zamora Zapata a
+
+a Department of Mechanical Engineering, University of Chile, Av. Beauchef 851, Santiago, Chile
+b Energy Center, University of Chile, Plaza Ercilla 847, Santiago, Chile
+c Department of Mechanical Engineering, Federal University of Pernambuco, Cidade Universitaria 1235, Recife, PE, Brazil
+d Department of Higher Education Courses, Federal Institute of Education, Science and Technology of Pernambuco, Av. Prof Luiz Freire 500, Recife, PE, Brazil
+e Department of Mechanical and Metallurgical Engineering, Pontificia Universidad Católica de Chile, Av. Vicuña Mackenna 4860, Macul, Santiago, Chile
+f Center for Solar Energy Technologies, Fraunhofer Chile Research, Bernarda Morin 510, Providencia, Santiago, Chile
+
+
+A R T I C L E   I N F O            A B S T R A C T
+
+
+Keywords:                                       Absorption chillers and heat pumps exhibit high decarbonization potential in various sectors, but their slow
+Absorption chiller                                 response and complex controllability severely limit their application under dynamic conditions. Hence, this
+Dynamic model                              work sets out to deepen the understanding of the dynamic behavior of these systems. A physics-based
+Transient                                         absorption chiller dynamic model was developed, featuring a novel control volume architecture based on falling
+Linear system
+                                                    film chillers, which attained small errors up to 0.18 K in the outlet temperatures, compared to experimental
+Control
+                                                    data. The results focus on the transient response to ramp-type changes in a control variable—the hot water
+                                               temperature and flow rate—studying the effect of the speed and magnitude of change on the response time
+                                          and the transient performance loss (TPL), a novel metric representing the accumulated inefficiency product of
+                                              system inertia. A general quasi-linear behavior in the absorption chiller’s dynamic response was observed, in
+                                              accordance with their well-known steady-state quasi-linear behavior represented by the characteristic equation.
+                                                 This insight inspired ad-hoc linear models representative of the cooling capacity and heat input dynamic
+                                                   responses, providing an analytical dimension to the analysis. As the key finding of this work, the quasi-linear
+                                                         chiller behavior proved the TPL of a transient response to be invariant with respect to the particular trajectory,
+                                             depending only on the ‘‘distance’’ between the endpoint states, and thus interpretable as the intrinsic cost of
+                                             changing the system state. Applying the developed tools in a simulated transient operation case, reduced the
+                                                 cooling TPL by 88% at the expense of 95% additional driving heat consumed.
+
+
+
+1. Introduction                                                         Rather, the main energy source of an absorption system is the low-
+                                                                     temperature heat that enters the generator, which makes them compat-
+   The growing demand for refrigeration requires the development of     ible with industrial heat recovery and renewable technologies such as
+more efficient, environmentally friendly, and controllable equipment     solar thermal [3]. Finally, since decarbonization has led to an increas-
+to effectively handle their operating conditions. While commercial re-     ing electrification trend worldwide, the lower electricity requirements
+frigeration technologies are currently dominated by vapor-compressor     of absorption systems can help relieve the electric grid and, if combined
+systems, absorption chillers have comparative advantages. First, refrig-     with energy storage, even provide grid flexibility [4].
+erants have become a relevant topic due to both their ozone-depleting       Commercial equipment usually provides performance indicators
+and global-warming potential, and absorption chillers usually work     that are valid only when the device operates at steady state and
+with absorbent–refrigerant pairs that have a lower impact than those    nominal capacity [5–8]. However, many applications require varying
+used in vapor-compression systems [1]. Second, absorption chillers     capacity; either to meet changing needs over the course of the day or
+have lower electricity consumption than compression-vapor systems,     to adapt to variable environmental conditions. For critical cases that
+due to having a small pump compared to a vapor compressor [2].     require fast adjustment to maintain specific operating conditions, the
+
+
+
+  ∗Corresponding author.
+     E-mail address: jma.gonzalez.r@gmail.com (J.M. González).
+
+https://doi.org/10.1016/j.enconman.2026.121191
+Received 2 December 2025; Received in revised form 19 January 2026; Accepted 4 February 2026
+Available online 17 February 2026
+0196-8904/© 2026 Elsevier Ltd. All rights are reserved, including those for text and data mining, AI training, and similar technologies.
+
+===== PDF PAGE 2 =====
+J.M. González et al.                                                                                                       Energy Conversion and Management 353 (2026) 121191
+
+
+  Nomenclature                                                                 𝑠𝑎𝑡                At saturated conditions
+                                                                                𝑠𝑠                   Steady-state or quasi-steady
+  Roman symbols                                                                      𝑠𝑡                  Stored or accumulated
+                                                                      𝑣                 Vapor portion of a mass flow rate
+    ̇𝑚                Mass flow rate
+    ̇𝑄                 Heat transfer rate                     𝑤              Weak solution
+                                                      H2O           A property of pure water    𝐟                  System function
+   𝐠                   Stored mass equation
+   𝐮                    Set of control/input variables
+   𝐱                    Set of state variables                                                                       device must incorporate a control system that is aware of the system
+   Pr                   Prandtl number                              dynamics to act with high precision and a short response time.
+   TPL                 Transient performance loss                         Absorption chillers are known for having slower response times
+  𝐴                   Surface area                                   than vapor compression systems, ranging from 5 to 20 min depending
+  𝐷                  Pipe diameter                              on the unit, as observed in the dynamic operation results reported
+  ℎ                  Enthalpy                                           in the scientific literature [9–13]. However, comprehensive response
+                                                                    time studies have barely been performed; the only found case being   𝑘                 Thermal conductivity
+                                                     Wang et al. [13], who rigorously defined the response time through a
+ 𝑀                  Stored mass
+                                                                             steady-state criterion and studied its dependency on the step change
+  𝑃                   Pressure                                                                magnitude 𝛥𝑇 of the three external temperatures.
+   𝑞                 Vapor quality                             Many works available in the literature concern the development
+   𝑇                  Temperature                                       of dynamic models for absorption chillers and heat pumps, to simu-
+  𝑈                   Overall heat transfer coefficient                     late and study the system behavior and performance during transient
+  𝑈𝐴               Thermal conductance                            evolution [10,11,14,15] or realistic variable operation [16,17]. Other
+   𝑣                     Specific volume                              works have focused on improving the state of absorption chiller dy-
+   𝑥                    LiBr concentration                           namic modeling with variable heat transfer coefficients [18], state-
+                                                                      space methods [19,20], data-driven approaches [21–23] or extensions
+  Greek symbols                                                          to the characteristic equation method [24]. Despite these advance-
+                                                                     ments, examples of exploiting the potential of dynamic models in
+   𝛿                     Steady-state convergence tolerance
+                                                                           control applications or other kinds of decision-making are very lim-
+  𝜇                Dynamic viscosity                                                                                     ited, which include performing optimal control in a few canonical
+   𝜌                   Density                                           cases [12], and the dynamic response of an absorption chiller to the use
+   𝜏                Time constant                                      of a PID controller [25,26]. Other works have developed advanced con-
+   𝜀                  Heat exchanger effectiveness                         trol schemes with quasi-dynamic models [27], yet these are typically
+   𝜗                  Response time                                  only able to predict the chiller dynamic behavior in limited operating
+                                                                                  situations. However, in previous works, intelligent control of absorption
+   Subscripts                                                                                    chillers has been typically assessed and implemented by means of
+   0                        Initial value                                        steady-state models [3,28–30]—including the characteristic equation
+                                                              and most commercial software—due to their lower mathematical and
+   LiBr                Property of the lithium bromide solution
+                                                                     computational complexity compared to dynamic models, besides often
+  ∞                    Final value
+                                                                     being considered sufficient in slowly-varying applications, such as air
+  ⋆                  Design point or rated value                                                                        conditioning systems with hourly demand profiles correlated to solar
+  𝐴                  Absorber                                          radiation and air temperature. Yet, these methodologies overlook the
+   𝑎𝑚𝑏                At ambient conditions                           relevance of the dynamic behavior of the system on its performance,
+   𝑎𝑡𝑚                At standard atmospheric conditions                particularly metrics of performance loss inherent to transient or dy-
+  𝐶                 Condenser                                  namic operation, concerning both energy efficiency and the speed of
+    𝑐ℎ𝑖𝑙𝑙                 Chilled water                                    the system response. This research gap has been previously identified
+                                                              by Goyal et al. asserting that ‘‘the design of control algorithms should   𝑐𝑜𝑜𝑙                Cooling water
+                                                                 be guided by accurate numerical models that can efficiently predict
+  𝐶𝑣                Condenser vapor space
+                                                                              transient system performance. These models should also be able to
+  𝐸                  Evaporator
+                                                                              participate in advanced control algorithms such as MIMO feedback,
+  𝐸𝑣                 Evaporator vapor space                                                         MPC, optimal control and advanced intelligent controllers’’ [31, p. 17].
+   𝑓                   Liquid portion of a mass flow rate                 As a response to this gap in absorption chiller dynamic control, this
+  𝐺                  Generator                                    paper aims to deepen the analysis of the dynamic behavior of an ab-
+   ℎ𝑖𝑔ℎ              High pressure                                    sorption chiller, through the development of a novel absorption chiller
+   ℎ𝑜𝑡               Hot water                                  dynamic model, a detailed characterization of its dynamic response, the
+   𝑙𝑜𝑠𝑠                 (Heat) loss to the environment                    introduction and parametric analysis of key transient performance met-
+                                                                                       rics and their role in efficiency-oriented advanced control. In addition,   𝑙𝑜𝑤             Low pressure
+                                                                              quasi-linear behavior in the absorption chiller dynamics is identified
+  𝑅                   Recuperator/Solution Heat Exchanger
+                                                              and explored by means of analytical methods, and seized for a simple
+   𝑟                    Refrigerant
+                                                                           control application. Specifically, the contributions of this paper can be
+   𝑠                   Strong solution                                                                                     listed as:
+
+                                                                                    1. Development of a falling film absorption chiller dynamic model
+                                                                         based on physical principles, with separated thermodynamic
+                                                                               process and accumulation control volumes, and modeling en-
+                                                                      hancements on heat loss and variable thermal conductance [32].
+
+                                                                        2
+
+===== PDF PAGE 3 =====
+J.M. González et al.                                                                                                       Energy Conversion and Management 353 (2026) 121191
+
+
+
+
+
+                                      Fig. 1. Single-effect LiBr – H2O falling film absorption chiller dynamic model diagram.
+
+
+
+    2. Detailed study of the absorption chiller response time and the       To perform a simulation, the dynamic model requires specifying an
+       transient performance loss (TPL)—a novel metric introduced in      initial system state and the inlet temperature and mass flow rate of each
+       this work representing the total performance loss during a tran-     external circuit, i.e., hot, cooling, and chilled water. With these inputs,
+       sient event product of system inertia—as a function of the speed     the numerical model solves for the thermodynamic state and flow rate
+     and magnitude of change in the control variable.                    of each internal process point, the amount of stored mass and properties
+    3. Application of the previously developed tools and insights in     in each sump and vapor space, as well as the outlet temperature of each
+      a theoretical transient control case study with the objective of     external circuit.
+      maximizing dynamic performance (minimizing the TPL) at the        Following the novel model architecture introduced in Fig. 1, the
+       cost of additional energy consumption, relevant in particularly     processes of heat and mass transfer, the solution pump and the ex-
+       sensitive or dynamically-demanding applications.                  pansion devices are assumed to rapidly attain internal equilibrium
+    4. Proposal and validation of a linear dynamic model for the main    compared to fluid accumulation in the sumps, and therefore are mod-
+      system output variables, used to provide an analytical dimension     eled as quasi-steady processes, separate from the fluid accumulation
+       to the study mentioned in point 2, and proposed as a simplified     processes (liquid sumps and vapor spaces). In this way, as 𝑡→∞,
+      dynamic control method in the application mentioned in point     the system of equations that comprises this dynamic model identically
+       3.                                                             converges to the steady-state absorption chiller model introduced in our
+                                                                       previous work [32]. This feature allows for the accurate measurement
+2. Absorption chiller dynamic model                                     of the system’s dynamic inertia by comparing the time evolution of the
+                                                              dynamic and steady-state models.
+  A dynamic lumped-parameter model was developed for a single-        In this work, the set of the system state variables 𝐱 is decomposed
+effect LiBr – H2O absorption chiller, by applying the principles of con-     into the process or steady-state variables 𝐱𝑠𝑠 (all the variables relevant to
+servation of mass and energy in the different components of the system,    a steady-state description, such as mass flow rates ̇𝑚, heat transfer rates
+represented as finite-sized control volumes. The absorption chiller rep-      ̇𝑄 and thermodynamic properties of the refrigerant and solution 𝑇, ℎ, 𝑃,
+resented by this model is of the falling film type. As such, it exhibits    𝑥 and 𝑞), and the stored variables 𝐱𝑠𝑡 (the stored solution and refrigerant
+fluid accumulation in several components: liquid accumulation at the    masses and their corresponding properties). This approach will prove
+absorber, generator and condenser outlets, as well as low-pressure and     relevant in the model formulation and in comparing the results of the
+high-pressure vapor spaces surrounding the evaporator and condenser,    dynamic and steady-state responses of the absorption chiller. Under
+respectively. Mass accumulation, which causes an imbalance of internal     steady operation, the process variables are directly related to the input
+mass flows in the system, constitutes an important contribution to the     variables 𝐮 through the steady-state model [32], which is an algebraic
+dynamic inertia of the absorption chiller, distinct from the thermal    system of equations represented by the function
+inertia caused by heat capacity. The main novelty of this dynamic
+                                                                             ̇𝐱𝑠𝑠= 𝐟𝑠𝑠(𝐮)                                                          (1)
+model lies in its architecture, displayed in Fig. 1, in which the heat
+and mass transfer processes are separated from the fluid accumulation      On the other hand, the dynamic model is constituted by a differe-
+volumes, i.e., liquid sumps and vapor spaces.                               ntial–algebraic system of equations depicting the system state, which
+
+                                                                        3
+
+===== PDF PAGE 4 =====
+J.M. González et al.                                                                                                       Energy Conversion and Management 353 (2026) 121191
+
+can be written as                                                              2.1. Absorber process
+
+ 0 = 𝐟(𝐱𝑠𝑠, 𝐱𝑠𝑡, 𝐮)                                                 (2a)                                                                The internal flows are the entering strong solution (6), the entering
+̇𝐱𝑠𝑡= 𝐠(𝐱𝑠𝑠, 𝐱𝑠𝑡, 𝐮)                                                (2b)    absorbed refrigerant (10o), and the exiting weak solution (1i), while
+                                                                        the external flow is the cooling water (13-14). By total and species mass
+   In contrast with basic single-effect absorption chiller thermody-
+                                                                          conservation,
+namic models used in the literature [33,34] and following our previous
+work [32], this enhanced model introduces two key improvements,    ̇𝑚𝑤𝑖= ̇𝑚𝑠𝑜+ ̇𝑚𝑟𝑒                                                     (4)
+which allow for a better model fit to steady-state manufacturer data:
+                                                                    ̇𝑚𝑤𝑖𝑥𝑤𝑖= ̇𝑚𝑠𝑜𝑥𝑠𝑜                                                     (5)
+    1. Heat loss to the environment at the generator.
+    2. Dependence of the generator thermal conductance 𝑈𝐴 on the       By energy conservation on the internal and external flows, respec-
+      hot water flow rate (other external flow rates are kept constant      tively, the heat in the absorber is both
+       in this work).                                          ̇𝑄𝐴= ̇𝑚𝑠𝑜ℎ6 + ̇𝑚𝑟𝑒ℎ10𝑜−̇𝑚𝑤𝑖ℎ1𝑖                                       (6)
+   The simplifying assumptions utilized in the model are:
+                                                          ̇𝑄𝐴= ̇𝑚𝑐𝑜𝑜𝑙(ℎ14 −ℎ13)                                                (7)
+    a. The fluid properties are uniform within each flow and compo-
+       nent.                                                      The relations between thermodynamic |properties are
+    b. The system operates at two distinct pressure levels, uniform
+                                                              𝑇1𝑖= 𝑇𝑠𝑎𝑡,LiBr(𝑥𝑤𝑖, 𝑃𝑙𝑜𝑤)                                              (8)
+      within each corresponding vessel, justified by the slow vapor
+       velocities inside the vessels.
+                                                             ℎ1𝑖= ℎLiBr(𝑇1𝑖, 𝑥𝑤𝑖, 𝑃𝑙𝑜𝑤)                                             (9)     c. The internal generator and condenser processes, as well as the
+       internal absorber and evaporator processes, respectively, occur
+       at the same pressure.                                                ℎ13 = ℎH2O(𝑇13, 𝑃𝑎𝑡𝑚)                                            (10)
+    d. The LiBr – H2O solution exits the absorber and generator in a
+       saturated state.                                                      ℎ14 = ℎH2O(𝑇14, 𝑃𝑎𝑡𝑚)                                            (11)
+    e. The refrigerant exits the condenser and evaporator processes at                                                                                      Lastly, the heat transfer equation between the internal and external
+       saturation state.                                                                        flows reads
+      f. The desorbed vapor temperature is equivalent to the saturation
+      temperature of the weak solution entering the generator.         ̇𝑄𝐴= 𝑈𝐴𝐴𝛥𝑇𝑙𝑚(𝑇6, 𝑇14, 𝑇1𝑖, 𝑇13)                                  (12)
+    g. The solution pump flow rate (weak solution) is a fixed model
+      parameter, as its value depends mainly on the characteristics of     2.2. Generator process
+      the pump.
+    h. The representative temperature difference for heat transfer across      The internal flows are the entering weak solution (3), the exiting
+      a heat exchanger is the log mean temperature difference, defined     desorbed refrigerant (7i) and the exiting strong solution (4i), while
+       as                                                                the external flow is the hot water (11-12). By total and species mass
+                       (𝑇𝐴−𝑇𝐵) −(𝑇𝐶−𝑇𝐷)                        conservation,
+      𝛥𝑇𝑙𝑚(𝑇𝐴, 𝑇𝐵, 𝑇𝐶, 𝑇𝐷) =                                        (3)                                 ln [(𝑇𝐴−𝑇𝐵)∕(𝑇𝐶−𝑇𝐷)]                                                               ̇𝑚𝑤𝑜= ̇𝑚𝑠𝑖+ ̇𝑚𝑟𝑔                                                 (13)
+     where 𝑇𝐴 and 𝑇𝐶 represent the inlet and outlet temperatures of
+      one fluid, whereas 𝑇𝐵 and 𝑇𝐷 correspond to the outlet and inlet    ̇𝑚𝑤𝑜𝑥𝑤𝑜= ̇𝑚𝑠𝑖𝑥𝑠𝑖                                                (14)
+      temperatures of the other fluid.
+                                                                     Energy conservation on the internal and external flows gives       i. In the general case, overall heat transfer coefficients 𝑈 are
+      assumed to remain constant with respect to the thermodynamic    ̇𝑄𝐺+ ̇𝑚𝑤𝑜ℎ3 = ̇𝑚𝑠𝑖ℎ4𝑖+ ̇𝑚𝑟𝑔ℎ7𝑖+ ̇𝑄𝑙𝑜𝑠𝑠                             (15)
+       properties of the fluids.
+       j. Heat losses to the environment are neglected, except at the    ̇𝑄𝐺= ̇𝑚ℎ𝑜𝑡(ℎ11 −ℎ12)                                            (16)
+       generator.
+    k. The solution pump process is isothermal, equivalent to an isen-       The relations between thermodynamic properties are
+       tropic process for an incompressible fluid.
+                                                              𝑇4𝑖= 𝑇𝑠𝑎𝑡,LiBr(𝑥𝑠𝑖, 𝑃ℎ𝑖𝑔ℎ)                                          (17)
+       l. The expansion device processes are adiabatic, therefore isen-
+       thalpic.
+                                                             ℎ4𝑖= ℎLiBr(𝑇4𝑖, 𝑥𝑠𝑖, 𝑃ℎ𝑖𝑔ℎ)                                        (18)
+  m. The external circuits are always at atmospheric pressure 𝑃𝑎𝑡𝑚=
+      101.325 kPa.
+    n. Ambient temperature is constant at 𝑇𝑎𝑚𝑏= 25 ◦C.                𝑇7𝑖= 𝑇3𝑠= 𝑇𝑠𝑎𝑡,LiBr(𝑥𝑤𝑜, 𝑃ℎ𝑖𝑔ℎ)                                   (19)
+    o. Kinetic and potential energy changes are neglected.
+    p. Fluid accumulated in liquid sumps or vapor spaces is well-mixed,    ℎ7𝑖= ℎH2O(𝑇7𝑖, 𝑃ℎ𝑖𝑔ℎ)                                            (20)
+      meaning its properties are uniform and equal to those of the
+       outflow.                                                             ℎ11 = ℎH2O(𝑇11, 𝑃𝑎𝑡𝑚)                                            (21)
+
+These assumptions and simplifications have been widely used and vali-     ℎ12 = ℎH2O(𝑇12, 𝑃𝑎𝑡𝑚)                                            (22)
+dated in the literature by several authors [11,14,34], yielding accurate
+modeling results.                                                  The heat transfer equation between the internal and external flows
+   For the relations between thermodynamic properties of water, the     holds
+IAPWS formulation 1995 [35] was used, whereas the formulation by    ̇𝑄𝐺= 𝑈𝐴𝐺𝛥𝑇𝑙𝑚(𝑇11, 𝑇4𝑖, 𝑇12, 𝑇3𝑠)                                 (23)
+Kim & Infante Ferreira [36] was considered for the properties of the
+LiBr – H2O solution.                                                    At the same time, heat is lost from the vapor contained in the
+  A detailed description of the model equations follows. Deeper jus-     generator (at temperature 𝑇7𝑜) to the environment at a rate
+tification and discussion of the model equations can be found in our                             )                                                                             ̇𝑄𝑙𝑜𝑠𝑠= 𝑈𝐴𝑙𝑜𝑠𝑠 (𝑇7𝑜−𝑇𝑎𝑚𝑏                                       (24)previous work [32].
+
+                                                                        4
+
+===== PDF PAGE 5 =====
+J.M. González et al.                                                                                                       Energy Conversion and Management 353 (2026) 121191
+
+2.3. Condenser process
+
+
+   The only internal flow consists of the entering refrigerant vapor (7o)
+at a rate of ̇𝑚𝑟𝑖, which exits as saturated liquid (8i), while the external
+flow is the cooling water (15-16). Energy conservation on the internal
+and external flows gives
+                  )̇𝑄𝐶= ̇𝑚𝑟𝑖 (ℎ7𝑜−ℎ8𝑖                                             (25)
+
+̇𝑄𝐶= ̇𝑚𝑐𝑜𝑜𝑙(ℎ16 −ℎ15)                                           (26)
+
+   The relations between thermodynamic properties are
+
+𝑇8𝑖= 𝑇𝑠𝑎𝑡,H2O(𝑃ℎ𝑖𝑔ℎ)                                             (27)
+
+ℎ8𝑖= ℎH2O(𝑃ℎ𝑖𝑔ℎ, 𝑞= 0)                                          (28)
+
+ℎ16 = ℎH2O(𝑇16, 𝑃𝑎𝑡𝑚)                                            (29)
+
+   The heat transfer equation between the internal and external flows
+reads                                                                                           Fig. 2. Falling film evaporator with refrigerant pump.
+
+̇𝑄𝐶= 𝑈𝐴𝐶𝛥𝑇𝑙𝑚(𝑇8𝑖, 𝑇15, 𝑇8𝑖, 𝑇16)                                  (30)
+
+where sensible cooling of the refrigerant vapor 𝑇7𝑜→𝑇8𝑖 is neglected.     the falling film heat exchanger with a refrigerant circulation pump. In
+   Assuming the cooling circuit traverses the absorber and condenser     the case of the latter, which is assumed to be the case of this work,
+in series, states 14 and 15 are identical, meaning 𝑇15 = 𝑇14 and ℎ15 =     the resulting steady-state behavior is equivalent to a submerged tube
+ℎ14.                                                                   heat exchanger, in which the refrigerant exits the component (10i) in a
+                                                                   pure vapor state. To explain this equivalence, we refer to Fig. 2. After
+2.4. Evaporator process                                         some of the refrigerant ̇𝑚𝑟,𝑓𝑖𝑙𝑚 entering the heat exchanger evaporates
+                                                                                                               ̇𝑚𝑟,𝑜𝑢𝑡 and exits the evaporator, the remaining liquid refrigerant ̇𝑚𝑟,𝑠𝑢𝑚𝑝
+   The only internal flow corresponds to the entering refrigerant in a      falls into a sump (often small), from where  it gets pumped back
+two-phase state coming from the expansion device (9) and, depending    by the refrigerant pump ̇𝑚𝑟,𝑝𝑢𝑚𝑝 into the heat exchanger, mixed with
+on the heat exchanger design, the refrigerant can exit this component     the incoming refrigerant from the expansion device  ̇𝑚𝑟,𝑖𝑛. Therefore,
+as saturated vapor (by simplification e) or as both vapor and liquid,     the only possible refrigerant outflow, relative to the control volume
+which can be thermodynamically described as a two-phase flow (10i).    encompassing the full figure, is the evaporated refrigerant (10i), with
+   Independent of the outlet conditions, energy conservation on the    an enthalpy according to
+internal and external flows gives
+                                                                 ℎ10𝑖= ℎH2O(𝑃𝑙𝑜𝑤, 𝑞= 1)                                          (37)                  )̇𝑄𝐸= ̇𝑚𝑟𝑜 (ℎ10𝑖−ℎ9                                             (31)                                                                      Moreover, considering that under steady operation the evaporator
+                                                         sump has a constant level, thus ̇𝑚𝑟,𝑠𝑢𝑚𝑝= ̇𝑚𝑟,𝑝𝑢𝑚𝑝, mass conservation on
+̇𝑄𝐸= ̇𝑚𝑐ℎ𝑖𝑙𝑙(ℎ17 −ℎ18)                                           (32)     the heat exchanger control volume gives ̇𝑚𝑟,𝑖𝑛=  ̇𝑚𝑟,𝑜𝑢𝑡, which in the
+                                                             main model notation (Fig. 1) is the same as
+and the relations between thermodynamic properties are
+                                                                                             ̇𝑚9 = ̇𝑚10𝑖= ̇𝑚𝑟𝑜                                                 (38)
+𝑇10𝑖= 𝑇𝑠𝑎𝑡,H2O(𝑃𝑙𝑜𝑤)                                             (33)
+                                                                  Assuming the refrigerant sump to be small, thus with no relevant
+ℎ17 = ℎH2O(𝑇17, 𝑃𝑎𝑡𝑚)                                            (34)    mass accumulation, what remains in practice is a falling film evaporator
+                                                                    with a permanently fully-wetted surface operating as a quasi-steady
+                                                                             process. Therefore, heat transfer can be straightforwardly modeled with
+ℎ18 = ℎH2O(𝑇18, 𝑃𝑎𝑡𝑚)                                            (35)    a constant thermal conductance 𝑈𝐴𝐸, since the heat transfer area is
+   Considering that the refrigerant enters and exits the evaporator in     constant [32].
+a general two-phase state, then 𝑇9 = 𝑇10. Therefore, the heat transfer
+equation between the internal and external flows reads                      2.5. Recuperator
+
+̇𝑄𝐸= 𝑈𝐴𝐸𝛥𝑇𝑙𝑚(𝑇17, 𝑇9, 𝑇18, 𝑇9)                                  (36)        In this component, also called solution heat exchanger, the weak (3)
+                                                              and strong (4) solutions exchange heat, which, by energy conservation,
+   The outlet state of the refrigerant (10), specifically the overall
+                                                                                                is equal to both
+vapor quality, is determined by the type of evaporator and its current
+operating regime. This work focuses on the case of an evaporator    ̇𝑄𝑅= ̇𝑚𝑤(ℎ3 −ℎ2) = ̇𝑚𝑠(ℎ4𝑜−ℎ5)                                 (39)
+with a permanently fully-wetted heat transfer surface, aligning with
+                                                                The relations between thermodynamic properties are
+the conventional steady-state absorption chiller model [33,34], whose
+validity has been repeatedly proven for several types of absorption     ℎ3 = ℎLiBr(𝑇3, 𝑥𝑤, 𝑃ℎ𝑖𝑔ℎ)                                         (40)
+chiller designs, thereby extending the generality and validity of the
+proposed approach. In consequence, the particular case of a partially-
+                                                                       ℎ5 = ℎLiBr(𝑇5, 𝑥𝑠, 𝑃ℎ𝑖𝑔ℎ)                                          (41)
+wetted evaporator, whose steady-state behavior has been analyzed in
+our previous work [32], is left out of the scope of this work.            and the heat transfer equation is
+   Several heat exchanger designs result in a fully-wetted evaporator,
+                                           𝑄𝑅= 𝑈𝐴𝑅𝛥𝑇𝑙𝑚(𝑇4𝑜, 𝑇3, 𝑇5, 𝑇2)                                   (42)
+where the most common are the submerged tube heat exchanger and
+
+                                                                        5
+
+===== PDF PAGE 6 =====
+J.M. González et al.                                                                                                       Energy Conversion and Management 353 (2026) 121191
+
+2.6. Solution pump
+
+
+   Assuming an incompressible flow by simplification k., the work
+done by the solution pump increases the enthalpy of the weak solution
+to
+                        )ℎ2 = ℎ1 + 𝑣1 (𝑃ℎ𝑖𝑔ℎ−𝑃𝑙𝑜𝑤                                        (43)
+
+where the thermodynamic properties are calculated as
+
+ℎ2 = ℎLiBr(𝑇2, 𝑥𝑤, 𝑃ℎ𝑖𝑔ℎ)                                         (44)
+
+𝑣1 = 𝑣LiBr(𝑇1, 𝑥𝑤)                                               (45)
+
+   The equation of state formulation by Kim & Infante Ferreira [36]
+used in this work neglects the pressure dependence of the specific
+volume of the LiBr – H2O solution.
+
+2.7. Solution expansion device                                                                                         Fig. 3. Hydraulic condition for the flow across an expansion device.
+
+   The expansion device does not necessarily refer to an expansion
+valve, but to the pressure loss mechanism intentionally incorporated
+                                                                                 2.9. Flow across the expansion devices
+in the system. In commercial systems, this is usually a long and curved
+pipe known as a u-tube. That said, the solution expansion device lowers
+the pressure of the strong solution coming from the recuperator (5) to       While the dynamic model determines the amount of fluid entering
+a state in which it enters the absorber (6). In the absence of work or     the liquid sumps at every instant, it is necessary to also describe their
+heat transfer, the flow conserves its enthalpy:                           corresponding outflow mechanism. In the case of the absorber sump,
+                                                                        the exiting weak solution ̇𝑚𝑤𝑜 is a fixed model parameter, as pointed out
+ℎ6 = ℎ5                                                        (46)     in simplification g. However, the strong solution and refrigerant flow
+                                                                              exiting the generator and condenser sumps, respectively, are passively   Now, according to the procedure described by González et al. [32],
+the outlet state of the solution expansion device is determined by the    determined by the fluid mechanics of the expansion devices. Following
+occurrence of flash evaporation, which is revealed by comparing ℎ6 to     Fig. 3, energy conservation for an incompressible, adiabatic, and zero-
+the saturated outlet enthalpy                                     work flow between the sump surface and the fluid outlet at the next
+                                                                       heat exchanger results in [11]:
+ℎ6𝑠= ℎ𝑠𝑎𝑡,LiBr(𝑥𝑠, 𝑃𝑙𝑜𝑤)                                          (47)    √                                                                            [          (      )]                                                                           2𝜌           𝑀
+                                                             ̇𝑚= 𝑎      𝑃ℎ𝑖𝑔ℎ−𝑃𝑙𝑜𝑤+ 𝜌𝑔 𝐻+                              (53)
+      • In particular, if ℎ6 ≤ℎ6𝑠, flash does not occur, so the outlet state is              𝜉                   𝜌𝐴
+     pure liquid, meaning the outlet temperature is simply determined    where 𝜉 is the overall head loss coefficient and 𝑀 is the stored mass
+      as                                                                      in the sump. In this way, the exiting flow rate responds to the liquid
+                                                                                level at the sump 𝑧= 𝑀∕(𝜌𝐴). Geometric parameters 𝐴, 𝑎, and 𝐻     𝑇6 = 𝑇LiBr(ℎ6, 𝑥𝑠, 𝑃𝑙𝑜𝑤)                                     (48)
+                                                               must be measured or estimated somehow, depending on the modeled
+      • On the other hand, if ℎ6 > ℎ6𝑠, flash does occur, and the outlet      chiller. In addition, the simple flow control function introduced by
+      state must be determined from the inlet conditions by solving the     Evola et al. [10] is used:
+     following system of equations:                           (   )−2
+                                                                            𝑧
+          ⎧ 𝑇6 = 𝑇𝑠𝑎𝑡,LiBr(𝑥𝑓, 𝑃𝑙𝑜𝑤)                        𝜉= 𝜉⋆  𝑧⋆                                                     (54)      ⎡ 𝑇6 ⎤  ⎪
+      ⎢ 𝑞6 ⎥  ⎪ 𝑞6 = (ℎ6 −ℎ𝑓)∕(ℎ𝑣−ℎ𝑓)                              where the reference values 𝑧⋆ and 𝜉⋆ are calculated at the design      ⎢   ⎥  ⎪
+      ⎢ 𝑥𝑓 ⎥ ← ⎨ 𝑥𝑓= 𝑥𝑠∕(1 −𝑞6)                                  (49)     point, based on their corresponding stored masses 𝑀⋆. Control laws
+                                                                              of this kind are typical in commercial absorption chillers, and serve for      ⎢ ℎ𝑓 ⎥  ⎪ ℎ𝑓= ℎ𝑠𝑎𝑡,LiBr(𝑥𝑓, 𝑃𝑙𝑜𝑤)
+            ⎢⎣ ℎ𝑣 ⎥⎦  ⎪                                                            regulating the sump levels to ensure stable operation [10].          ℎ𝑣= ℎH2O(𝑇6, 𝑃𝑙𝑜𝑤)                   ⎪⎩                                                                              Eqs. (53) and (54) are applied both to the solution expansion device
+                                                                 (where 𝑀= 𝑀𝐺, ̇𝑚= ̇𝑚𝑠) and the refrigerant expansion device (where2.8. Refrigerant expansion device
+                             𝑀= 𝑀𝐶, ̇𝑚=  ̇𝑚𝑟), with their respective geometric parameters and
+   This component induces substantial head loss to the saturated liquid    computation of the fluid density 𝜌(𝑇, 𝑃, 𝑥).
+refrigerant coming from the condenser (8), and delivers it in a two-
+phase state (9), since a small fraction of the refrigerant is subject to     2.10. Heat transfer dependence on external flow rates
+flash evaporation. In the absence of work or heat transfer, the flow
+conserves its enthalpy:                                                     Accurately modeling the dependence of heat exchanger behavior
+                                                             on the external flow rates requires taking into account the role of
+ℎ9 = ℎ8                                                        (50)
+                                                                      convection to determine the overall heat transfer coefficient. Based on
+and the outlet state of the refrigerant is determined by the following     the Dittus–Boelter correlation [37,38], González et al. [32] arrived at
+equations:                                                         a simple expression for the thermal conductance of one of the main
+                                                                       heat exchangers of the absorption chiller, in terms of the corresponding
+𝑇9 = 𝑇𝑠𝑎𝑡,H2O(𝑃𝑙𝑜𝑤)                                              (51)                                                                           external flow rate:
+                                                                            [                         ]−1
+ℎ9 = ℎH2O(𝑃𝑙𝑜𝑤, 𝑞9)                                              (52)   𝑈𝐴= 𝑈𝐴⋆  𝑈𝐴⋆  ( ̇𝑚−0.8 −̇𝑚−0.8⋆  ) + 1                          (55)
+                                                                              𝐴𝑒𝑥𝑡𝐾𝑚
+
+                                                                        6
+
+===== PDF PAGE 7 =====
+J.M. González et al.                                                                                                       Energy Conversion and Management 353 (2026) 121191
+
+where 𝐴𝑒𝑥𝑡 is the heat exchange surface area on the external side, and        For the evaporator (low-pressure) vapor space,
+the constant                                                      𝑑
+        (      )0.8                                           𝑑𝑡(𝑀𝐸𝑣) = ̇𝑚𝑟𝑜𝑣−̇𝑚𝑟𝑒                                           (71)         𝑘    4                         Pr𝑛                                     (56)𝐾𝑚= 0.023                                                                𝑑      𝐷  𝜋𝐷𝜇
+                                                               𝑑𝑡(𝑀𝐸𝑣ℎ𝐸𝑣) = ̇𝑚𝑟𝑜𝑣ℎ10𝑖−̇𝑚𝑟𝑒ℎ10𝑜                                (72)
+depends on the geometry and size of the heat exchanger, as well as the
+local properties of water (𝑛= 0.3 at the generator or evaporator, and    𝑇𝐶𝑣= 𝑇H2O(ℎ𝐸𝑣, 𝑃𝑙𝑜𝑤)                                           (73)
+𝑛= 0.4 at the absorber or condenser). Nevertheless, without knowledge
+of the individual values of 𝐴𝑒𝑥𝑡 and 𝐾𝑚, the combined parameter 𝐴𝑒𝑥𝑡𝐾𝑚    𝑇10𝑜= 𝑇𝐸𝑣 ;  ℎ10𝑜= ℎ𝐸𝑣                                        (74)
+can be used to fit the model to performance data. Studying the chiller
+                                                                                     Finally, for the condenser (high-pressure) vapor space,response to variations in external flow rates other than the hot water
+̇𝑚ℎ𝑜𝑡 is out of the scope of this work; thus, we only implement Eq. (55)     𝑑     = ̇𝑚𝑟𝑔−̇𝑚𝑟𝑖                                            (75)                                                                𝑑𝑡(𝑀𝐶𝑣)for the generator thermal conductance 𝑈𝐴𝐺.
+                                                                𝑑
+2.11. Dynamic computation of the stored masses                         𝑑𝑡(𝑀𝐶𝑣ℎ𝐶𝑣) = ̇𝑚𝑟𝑔ℎ7𝑖−̇𝑚𝑟𝑖ℎ7𝑜                                   (76)
+
+                                                      𝑇𝐶𝑣= 𝑇H2O(ℎ𝐶𝑣, 𝑃ℎ𝑖𝑔ℎ)                                          (77)   The mass accumulation volumes, i.e., absorber, generator, and con-
+denser sumps, as well as the low-pressure and high-pressure vapor
+                                                           𝑇7𝑜= 𝑇𝐶𝑣 ;  ℎ7𝑜= ℎ𝐶𝑣                                          (78)spaces, are the main source of inertia of the absorption chiller. This
+feature can be regarded as a kind of dynamic inertia, in contrast with        Further discussion is needed regarding the modeling of the vapor
+thermal inertia, which refers to internal energy accumulation in bodies     spaces. Mass accumulation at the refrigerant loop, and particularly at
+of a given mass due to their heat capacity, e.g., the heating of the heat     the vapor spaces, has been shown to have little effect on the dynamic
+exchanger solid mass or the chiller casing, which is neglected in the     response of an absorption chiller [26,39]. Ochoa et al. [14] neglected
+model presented in this work.                                                  this feature in their modeling, and no significant deviations in dynamic
+   Given the initial conditions, the stored mass and its properties at     inertia were observed with respect to experimental data. These findings
+the various mass accumulation volumes are determined by first-order     validate eliminating the condenser and evaporator vapor spaces from
+differential equations arising from mass and energy balances at their     the model (see Fig. 1). We now analyze whether such elimination is
+                                                                                feasible within our model.respective control volumes. Also, by simplification p of well-mixed
+                                                                               In the evaporator process, since the traversing refrigerant flow ratemasses, the outflow properties are identical to those of its respective
+stored mass. As indicated in the model diagram (Fig. 1), we can       ̇𝑚𝑟𝑜 is already determined by Eq. (53), a specific working pressure 𝑃𝑙𝑜𝑤
+                                                                                                is required to satisfy the outlet refrigerant saturation condition (sim-
+construct the following balances for the case of the absorber sump,
+                                                                                  plification e), which is solved by this subset of equations. Meanwhile,
+ 𝑑
+𝑑𝑡(𝑀𝐴) = ̇𝑚𝑤𝑖−̇𝑚𝑤𝑜                                            (57)     the absorber process is assumed to occur at the same pressure 𝑃𝑙𝑜𝑤, and                                                                                 similarly, a specific refrigerant absorption rate ̇𝑚𝑟𝑒 is required to satisfy
+ 𝑑                                                                                               its own outlet solution saturation condition (simplification d). There-
+𝑑𝑡(𝑀𝐴𝑥𝐴) = ̇𝑚𝑤𝑖𝑥𝑤𝑖−̇𝑚𝑤𝑜𝑥𝑤𝑜                                   (58)      fore, since ̇𝑚𝑟𝑜 and ̇𝑚𝑟𝑒 are determined independently, the inclusion of
+                                                                        the low-pressure vapor space is actually required for consistency, given
+ 𝑑
+𝑑𝑡(𝑀𝐴ℎ𝐴) = ̇𝑚𝑤𝑖ℎ1𝑖−̇𝑚𝑤𝑜ℎ1𝑜                                    (59)      this model architecture. Indeed, a model whose only mass accumulation
+                                                                volumes are separate from the thermodynamic processes, and in which
+                                                                                            all the outlet flow rates are fixed by independent equations (in this
+𝑇𝐴= 𝑇LiBr(ℎ𝐴, 𝑥𝐴, 𝑃𝑙𝑜𝑤)                                          (60)
+                                                                               case, by Eq. (53) and simplification g), is overdetermined by mass
+                                                                      balance redundancy, and the indulgence of eliminating an equation
+𝑇1𝑜= 𝑇𝐴 ;  ℎ1𝑜= ℎ𝐴 ;  𝑥𝑤𝑜= 𝑥𝐴                                (61)    might induce unrealistic results.
+                                                                           Conversely, in the condenser process, both the refrigerant con-
+   For the generator sump,
+                                                                       densation rate ̇𝑚𝑟𝑖 and the working pressure 𝑃ℎ𝑖𝑔ℎ are unknown. The
+ 𝑑
+𝑑𝑡(𝑀𝐺) = ̇𝑚𝑠𝑖−̇𝑚𝑠𝑜                                             (62)      latterto determinecannot bethedeterminedrefrigerantindesorptionthe generatorratesincė𝑚𝑟𝑔. itsThus,valuesettingis neededthe
+ 𝑑                                                                   high working pressure 𝑃ℎ𝑖𝑔ℎ as an unknown in the condenser process
+𝑑𝑡(𝑀𝐺𝑥𝐺) = ̇𝑚𝑠𝑖𝑥𝑠𝑖−̇𝑚𝑠𝑜𝑥𝑠𝑜                                     (63)     forces the condensation rate ̇𝑚𝑟𝑖 to be determined by another model
+                                                                                simplification, in this case, that the condensation rate is set to be equal
+ 𝑑
+𝑑𝑡(𝑀𝐺ℎ𝐺) = ̇𝑚𝑠𝑖ℎ4𝑖−̇𝑚𝑠𝑜ℎ4𝑜                                     (64)     to the desorption rate:
+                                                                          ̇𝑚𝑟𝑖= ̇𝑚𝑟𝑔                                                       (79)
+𝑇𝐺= 𝑇LiBr(ℎ𝐺, 𝑥𝐺, 𝑃ℎ𝑖𝑔ℎ)                                         (65)
+                                                                           In practice, this simplification implies removing the condenser vapor
+                                                                      space from the model, since the amount of vapor mass 𝑀𝐶𝑣 and its
+𝑇4𝑜= 𝑇𝐺 ;  ℎ4𝑜= ℎ𝐺 ;  𝑥𝑠𝑜= 𝑥𝐺                                (66)     properties will not change in time. In this way, the presented absorption
+                                                                                    chiller dynamic model becomes a well-determined system of equations.   For the condenser sump,
+
+ 𝑑
+𝑑𝑡(𝑀𝐶) = ̇𝑚𝑟𝑖−̇𝑚𝑟𝑜                                             (67)     3. Numerical procedure
+
+ 𝑑                                                                         This dynamic model was programmed in Python 3, along with the
+𝑑𝑡(𝑀𝐶ℎ𝐶) = ̇𝑚𝑟𝑖ℎ8𝑖−̇𝑚𝑟𝑜ℎ8𝑜                                     (68)     postprocessing and the visualization of the results. As illustrated in
+                                                                                  Fig. 4, the model takes as inputs time series arrays of the chiller input
+𝑇𝐶= 𝑇LiBr(ℎ𝐶, 𝑥𝐶, 𝑃ℎ𝑖𝑔ℎ)                                         (69)     variables, i.e., the external circuit inlet temperatures and flow rates, as
+                                                                        well as a time array, from where the number of steps and the time step
+                                                                          𝛥𝑡 are obtained. Additional model parameters, such as the 𝑈𝐴 values,
+𝑇8𝑜= 𝑇𝐶  ;  ℎ8𝑜= ℎ𝐶                                            (70)
+                                                                        the initial free masses, and other fitting parameters, are also specified.
+
+                                                                        7
+
+===== PDF PAGE 8 =====
+J.M. González et al.                                                                                                       Energy Conversion and Management 353 (2026) 121191
+
+                                                                                 3.2. Iterative solution
+
+
+                                                                The system state at each time step is calculated using a forward-
+                                                                            difference discretization of the first-order differential equations of mass
+                                                                      accumulation, Eqs. (57)–(79), while the process system of equations is
+                                                                        solved by conveniently defining two control volumes or blocks within
+                                                                        the absorption chiller model diagram (Fig. 1):
+
+                                                                                                                      • The thermal compressor + condenser block (A), comprising the
+                                                                               absorber, generator, recuperator, solution pump and solution ex-
+                                                                          pansion device processes, as well as the condenser,  i.e., eqs.
+                                                                                 ((4)–(30),(39)–(49),(53)–(56)). The input points of this block are
+                                                                                           (1𝑜), (4𝑜), (10𝑜), (11), (13) and (15), while its output points are
+                                                                                                  (1𝑖), (4𝑖), (8𝑖), (12), (14) and (16).
+                                                                                                                      • The evaporator + refrigerant expansion device block (B), i.e., eqs.
+                                                                                 ((31)–(37),(50)–(52)). The input points of this block are (8𝑜) and
+                                                                                         (17), while its output points are (10𝑖) and (18).
+
+                                                               Each block is solved as a joint system of equations using the fsolve
+                                                            method of the Scipy library [40]—a modification of Powell’s hybrid
+                                                            method—using the previous system state as the guess values for the
+                                                                                  iterative solution. Finally, the dynamic model simulations output the
+                                                                              resulting time series of all the system state variables.
+                                                                The mean log temperature differences (Eq. (3)) are approximated by
+                                                                  a power series expansion [41], resulting in greater numerical stability
+                                                                     while maintaining excellent precision:
+             Fig. 4. Numerical flowchart of the dynamic model.                𝛥𝑇𝑙𝑚(𝛥𝑇1, 𝛥𝑇2) ≈𝛥𝑇1 + 𝛥𝑇2 −1 (𝛥𝑇1 −𝛥𝑇2)2 −2 (𝛥𝑇1 −𝛥𝑇2)4    (82)
+                                                                                       2       6  𝛥𝑇1 + 𝛥𝑇2    45 (𝛥𝑇1 + 𝛥𝑇2)3
+                                                              where 𝛥𝑇1 = 𝑇𝐴−𝑇𝐵 and 𝛥𝑇2 = 𝑇𝐶−𝑇𝐷 in Eq. (3).
+                                                                   Appendix A studies the sensitivity of the numerical model to time
+3.1. Determination of initial conditions
+                                                                                 discretization, where Fig. A.1(a) depicts the numerical convergence as a
+                                                                         function of the time step 𝛥𝑡. As a good balance between model accuracy
+   The absorption chiller  is assumed to initially be in steady-state    and computation time, the time step used in this work is 𝛥𝑡= 1 s.
+operation at the conditions specified by the initial values of the input
+variables 𝐮(0). The process state variables are therefore directly com-     4. Model validation
+puted by the corresponding steady-state model (Eq. (1)), presented in
+our previous work [32].                                            The dynamic model developed in this work is set up according
+   Note that Eq. (53) implies the generator and condenser sump masses     to the operating characteristics of the Yazaki WFC-SC10 absorption
+to be uniquely determined by the chiller state, by a relationship of      chiller. This is one of the few commercial chillers exhibiting a falling
+                                                                            film evaporator with no recirculation pump, therefore subject to partialthe type 𝑀𝑘= ̃𝑔𝑘(𝐱𝑠𝑠). Moreover, the steady-state model formulation
+                                                                       wetting and overflow at the evaporator tubes when operating away
+(Eq. (1)) implies that in steady-state operation, 𝑀𝐺 and 𝑀𝐶 can be
+                                                              enough from its rated conditions. This particular unit was chosen to
+formulated as functions of the input variables,  i.e., 𝑀𝑘 =  ̃𝑔𝑘(𝐮).
+                                                                         incarnate the proposed model per its commercial popularity, as well as
+Therefore, the initial generator and condenser sump masses, 𝑀𝐺(0) and
+                                                                        the abundance of available steady-state experimental data. However,
+𝑀𝐶(0), are computed as a function of the initial inputs in this way, as                                                                            since the model instead assumes a fully wetted evaporator to generalize
+𝑀(0) = ̃𝑔(𝐮(0); 𝑀⋆)                                             (80)     the validity of the obtained results, as most absorption chillers are ap-
+                                                                            propriately described by this approximation, the criteria for validation
+where the functions  ̃𝑔 can be computed by numerically inverting      is focused primarily on overall behavior predictability.
+Eq. (53). The previous expression emphasizes that the parameters of ̃𝑔       The manufacturer of the WFC-SC10 chiller has provided data on its
+depend indirectly on the value of the corresponding mass at the rated     design point state of operation, including external circuit temperatures
+state 𝑀⋆, as described in Section 2.9.                               and flow rates, and some of its internal temperatures, as well as steady-
+   Following this procedure, the absorber sump and evaporator vapor     state operation data at partial loads in terms of the cooling capacity ̇𝑄𝐸
+space masses, 𝑀𝐴 and 𝑀𝐸𝑣, remain to be determined. Taking advan-    and heat input ̇𝑄𝐺 [42]. This collection of data has proven sufficient for
+tage of the fact that the effect of 𝑀𝐸𝑣 is negligible on the model results,     the development of a validated steady-state physics-based model that
+                                                                          accurately reproduces its off-design behavior [32], and exactly matchesas shown in Appendix A, it can be set to any arbitrary initial value
+                                                                        the developed dynamic model as 𝑡→∞, as previously mentioned inwithin a certain convergence criterion, which depends on the numerical
+                                                                         Section 2. The best-fit values for the model parameters are shown in
+stability of the model and, by extension, on the model parameters.
+                                                                        the third column of Table 1.
+Therefore, the total fluid mass in the chiller can be conveniently defined
+                                                                The validation of the proposed dynamic model is performed against
+as
+                                                                        the experimental operation data collected within a micro-cogeneration
+𝑀𝑡𝑜𝑡= 𝑀𝐴+ 𝑀𝐺+ 𝑀𝐶                                          (81)     laboratory with an instrumented test system for the Yazaki WFC-SC10
+                                                                        absorption chiller, detailed in the work of Ochoa et al. [14,18], whose
+which reflects that, in practice, only the liquid masses remain non-    main author  is also a co-author of this study. In this context, the
+negligible. By choosing a rated value for the absorber sump mass 𝑀𝐴,⋆,    remaining dynamic model parameters, which correspond to the stored
+Eq. (81) determines the total fluid mass 𝑀𝑡𝑜𝑡. Then, the initial absorber    masses at the design point 𝑀𝐴,⋆𝑀𝐺,⋆ and 𝑀𝐶,⋆ (which determine
+sump mass can be determined as 𝑀𝐴(0) = 𝑀𝑡𝑜𝑡−𝑀𝐺(0) −𝑀𝐶(0).           𝑀𝑡𝑜𝑡), will be assumed to take the values used in their work, which are
+
+                                                                        8
+
+===== PDF PAGE 9 =====
+J.M. González et al.                                                                                                       Energy Conversion and Management 353 (2026) 121191
+
+
+Table 1
+Free model parameters and their values applied to the WFC-SC10.
+
+ Parameter             Unit             Manufacturer            Ochoa et al.
+                                         data fit [32,42]            experimental
+                                                  (this work)                data fit [14]
+
+                          Overall thermal conductances
+
+ 𝑈𝐴𝐸             kW/K            6.655                     2.053
+ 𝑈𝐴𝐺,⋆            kW/K            5.156                     3.088
+ 𝑈𝐴𝐴             kW/K            8.148                     5.754
+ 𝑈𝐴𝐶              kW/K           18.444                   13.280
+ 𝑈𝐴𝑅             kW/K            2.089                     2.211
+  𝑈𝐴𝑙𝑜𝑠𝑠            kW/K            0.133                    0.2672
+
+                         Design point stored masses
+
+ 𝑀𝐴,⋆                kg                              10
+ 𝑀𝐺,⋆                kg                              10
+ 𝑀𝐶,⋆                kg                               5
+
+                           Other free parameters
+
+  ̇𝑚𝑤𝑜                   kg/s                             0.2167
+  𝐴𝑒𝑥𝑡               m2                                    2.0
+
+
+                        Expansion device parameters
+
+ Parameter           Unit             Solution                  Refrigerant
+
+ 𝑎                  m2               2.061 × 10−4                 1.075 × 10−4
+ 𝐴                 m2             0.08973                  0.174
+ 𝐻            m               0.170                     0.111
+
+  𝜉⋆                    –               31.778                   670.168
+
+
+
+
+shown in the last column of Table 1. These parameters only influence
+the dynamic inertia (the time constant) of the system, but not  its
+steady-state behavior.
+   The experimental data utilized for validation corresponds to their
+day 2 of experiments, consisting of time series for the inlet and outlet
+external circuit temperatures,  i.e., 𝑇11,  𝑇12,𝑒𝑥𝑝, 𝑇13,  𝑇16,𝑒𝑥𝑝, 𝑇17 and
+𝑇18,𝑒𝑥𝑝, shown in Fig. 5. Meanwhile, the external mass flow rates are
+constant and roughly equal to their rated values: ̇𝑚ℎ𝑜𝑡= 2.42 kg/s,
+̇𝑚𝑐𝑜𝑜𝑙= 5.10 kg/s, and ̇𝑚𝑐ℎ𝑖𝑙𝑙= 1.52 kg/s.
+   The chiller response differs when using the experimental data in
+contrast to using the model prediction with the parameter values deter-
+mined from manufacturer data. Consequently, appropriate parameter
+values for the operation data of Ochoa et al. [14] were determined
+by considering the steady state exhibited by the system at 𝑡= 83.33
+min, and using the steady-state model [32] to minimize the error on
+the outlet chilled water temperature 𝑇18 (circled in red in Fig. 5(a)),
+which is equivalent to minimizing the error on ̇𝑄𝐸 in virtue of Eqs. (32)
+and (35). The obtained parameter values are shown in the last column
+of Table 1. At this steady state, the dynamic model achieves a relative
+error of 2.1% on ̇𝑄𝐸.
+  When comparing the parameter values obtained based on the ex-
+perimental data with respect to the manufacturer data values, it can
+be noted that the thermal conductances 𝑈𝐴 of the four main heat
+exchangers are reduced by roughly 40% on average, and the heat
+loss coefficient  is doubled, factors which result in a lower chiller
+performance. Meanwhile, the recuperator conductance remains roughly      Fig. 5. Model simulation vs. experimental data in Ochoa et al. [14]. The red
+the same. Possible causes for this difference in behavior, other than      circle shows the chiller steady state used for the model fitting.
+sensor inaccuracy, are increased fouling at the external heat exchanger
+tubes due to system longevity and water hardness, different properties
+of the utilized water itself, or a different ambient temperature.                                                                  a misrepresentation of the initial state of the system by the model,
+    Fig. 5 also shows the experimental and simulated inlet and outlet     caused by assuming a steady-state initial operation in the model, while
+temperatures. In general, the model results in very accurate predictions     in reality the chiller may have not quite reached steady operation at
+of the chilled and hot water outlet temperatures (Figs. 5(a) and 5(b)),     that point.
+with mean absolute errors (MAE) of 0.06 K and 0.18 K, respectively.         Lastly, although the overall behavior of the simulated and ex-
+The largest error is found around the inlet hot water temperature rise     perimental outlet cooling water temperature in Fig. 5(c) is similar,
+at the beginning of the experiment, with the simulated response of     consistent quantitative differences resulted in a MAE of 1.32 K.  It
+the outlet hot water temperature being of a lower magnitude than    was observed that the experimental data does not quite fulfill energy
+the experimental behavior. A partial source of this error corresponds     conservation in the overall system with satisfactory accuracy, which
+
+                                                                        9
+
+===== PDF PAGE 10 =====
+J.M. González et al.                                                                                                       Energy Conversion and Management 353 (2026) 121191
+
+mostly explains its discrepancy with the model behavior. Considering     of 𝑇∞= 88 ◦C, effectively taking the chiller from 50% to 100% of its
+the high sensibility of the model to its input parameters, the most     rated cooling capacity (its design point).
+likely source of experimental error is the aggregated uncertainty in the       The time evolution of the cooling capacity ̇𝑄𝐸 and the driving heat
+temperature and flow rate measurements, which were 0.75% and 0.5%,     input ̇𝑄𝐺 are shown in Fig. 6(a), along with the control trajectory
+respectively [14]. Note that, since the fitted values were found by min-     of 𝑇11 just defined. Additionally, as a baseline of dynamically ideal
+imizing error on a single variable with its own associated uncertainty,     behavior, the quasi-steady evolution of these main output variables—
+not only the cooling water measurement uncertainties contribute to    computed by the steady-state model [32]—is also included in the plot.
+the observed differences, but the temperatures and flow rates of all     Indeed, both output variables exhibit exact convergence in time to their
+three circuits. Therefore, it can be concluded that the dynamic model     corresponding steady-state model values, since the models themselves
+presented in this work constitutes an accurate predictor of the overall    become identical as 𝑡→∞, since 𝑑∕𝑑𝑡→0. Regarding the cooling
+absorption chiller behavior.                                              capacity ̇𝑄𝐸, its response to the input temperature rise is a purely
+                                                                                    inertial and gradual increase, which breaks the initial steadiness with
+5. Results and discussion                                        an accelerating rate of change during the ramp itself, but then assumes
+                                                                          progressive convergence towards its final steady value. Conversely, the
+   The results of this work are founded on the study and characteriza-     driving heat input ̇𝑄𝐺 exhibits a fast initial rise, roughly in time with
+tion of the transient response of the absorption chiller to simple changes     the control trajectory of 𝑇11, with notable overshoot up to a peak value,
+in a single control variable, from an initial steady state to another     but once the ramp ends, it suddenly changes its tendency and begins
+final steady state. Most dynamic studies have focused on studying the     to converge towards its own final steady value.
+step response of thermal systems as the quintessential exercise [9,10,       Beyond matching the expected behavior of a first-order system,
+12–14,20,26,39,43–45]. However, an instantaneous shift in the control     the response of these two output variables, ̇𝑄𝐸 and ̇𝑄𝐺, is strikingly
+variable is neither feasible nor practical in most fluid-thermal systems,     reminiscent of the dynamics of a linear system. Indeed, the shape of
+where actuating a control valve can take seconds to minutes. Therefore,     these trajectories after the ramp (𝑡> 𝑡𝑟) matches the well-known step
+to better generalize the transient operation of an absorption chiller,     response of a linear system. The initial response of ̇𝑄𝐸 also matches the
+this work sets the studied control variable to undergo a ramp variation     response to a linear ramp. On the other hand, the overshoot undergone
+described by                                                    by ̇𝑄𝐺 results from the fact that, according to Eq. (23), heat transfer
+    {                  𝑡                                                       at the generator depends on both the controlled external temperature
+                                                              and the internal generator temperatures, subject to the system inertia,          (𝑢∞−𝑢0) 𝑡𝑟     if 𝑡< 𝑡𝑟                               (83)𝑢(𝑡) = 𝑢0 +
+         𝑢∞−𝑢0         if 𝑡≥𝑡𝑟                                      but does not constitute an inherently nonlinear feature. Rather, the
+                                                                  temporary synchrony between the rate of increase of the input and the
+where  𝑡𝑟  is the ramp duration, and the values 𝑢0 = 𝑢(𝑡=  0) and
+                                                                      response (where 𝑡< 𝑡𝑟) hints at the fact that the driving heat input𝑢∞= 𝑢(𝑡≥𝑡𝑟) are set according to particular initial and final steady                                                                            ̇𝑄𝐺 does not only depend on the instantaneous value of 𝑇11 but also on
+states of system operation. The difference 𝑢∞−𝑢0 is henceforth referred
+                                                                                                 its rate of change 𝑑𝑇11∕𝑑𝑡. Further study on the consequences of this
+to as the ramp magnitude. Additionally, note that Eq. (83) covers a
+                                                                              quasi-linear behavior of both output variables is a key feature of this
+step variation in the case where 𝑡𝑟= 0. Although more realistic inputs                                                                   work, and is later resumed in Section 5.2.
+trajectories could be defined, the ramp variation model allows for
+                                                                  As a complement to the previous discussion, the evolution of the
+introducing a time dependence in the behavior of the control variable
+                                                                              rate of heat dissipation through the cooling water circuit ̇𝑄𝐴+ ̇𝑄𝐶 is
+while maintaining simplicity and generality in the following results.
+                                                           shown in Fig. 6(b), along with its corresponding quasi-steady evolution
+   The results of this work are focused on the chiller behavior analysis
+                                                                          curve. During the initial ramp (𝑡< 𝑡𝑟), the total heat dissipation roughly
+with respect to the hot water inlet temperature 𝑇11 as a single control    matches the quasi-steady trajectory, although a slight overshoot  is
+variable, per its practical relevance as the energy source of the system.
+                                                                    observed soon after; the overall difference  is very small. However,
+This choice is also supported by the functional relation between an
+                                                                       analyzing the absorber and condenser heat transfer rates separately
+external chiller temperature and the main chiller output variables—
+                                                                          (not shown) would reveal that the dynamic response of the former is
+the cooling capacity and the driving heat input— proven in this work                                                                               qualitatively similar to that of ̇𝑄𝐸, while the latter behaves similarly to
+to hold key properties, as shown later. Nevertheless, we also analyze     ̇𝑄𝐺, because of the close coupling between these pairs of components.
+the chiller response to the hot water mass flow rate ̇𝑚ℎ𝑜𝑡 as the control    The consequent behavior of the sum cancels much of the overall
+variable in Section 5.5, contrasting the results with respect to 𝑇11 as the     response inertia, resulting in the observed trajectory.
+control variable, as the way in which they affect chiller performance is
+                                                                                      Fig. 6(b) also depicts the instantaneous coefficient of performance,
+fundamentally different. In practice, these two chiller input variables                                                                        defined as:
+are among the most common as control variables, especially in solar
+                                                                                               ̇𝑄𝐸(𝑡)cooling [3].                                                           COP(𝑡) =                                                                                                                                       (84)
+   The main results are presented in the following subsections. First,                ̇𝑄𝐺(𝑡)
+we characterize the chiller response in the context of the proposed        Technically, the definition of COP utilized in system description is
+full dynamic model. Then, based on the observed quasi-linear results,    a property of a particular steady state of operation, usually the design
+we propose an analytical dynamical linear model, showing that  it     point, where  it evaluates the proportion of cooling effect to energy
+can capture the main features of the full model response. We then     expenditure (heat, in this case) produced by the overall thermodynamic
+analyze the response time and transient performance loss by comparing     cycle. It is therefore fallacious to apply this exact concept to dynamic
+the application of the full dynamic model and the linear model to     operation as an instantaneous system variable, since the conversion
+a steady-state model. Finally, we perform a control exercise of the     of thermodynamic potential (exergy) from heat to cold does not oc-
+dynamic linear model to demonstrate its applicability and the potential     cur instantaneously. Nonetheless, this variable allows for an intuitive
+of dynamic models in general.                                               visualization of real-time deviation from the equilibrium proportion
+                                                                between ̇𝑄𝐸 and ̇𝑄𝐺. In particular, while the COP of the initial and final
+5.1. Full dynamic chiller response                                               states is not substantially different, the instantaneous COP(𝑡) is shown
+                                                                            to drop to roughly half of its original value during transient operation,
+   As a reference case in subsequent results, Fig. 6 displays the dy-     reaching its minimum at 𝑡= 𝑡𝑟. This drop means a temporary shortfall
+namic response of the absorption chiller dynamic model—its most     in the cooling effect relative to the driving heat input at that lapse,
+relevant variables—to a 1-minute ramp variation in the hot water     consistent with the previous observations on the opposing differences
+temperature 𝑇11, from an initial value of 𝑇0 = 69.239 ◦C to a final value    between the dynamic and quasi-steady responses of both variables.
+
+                                                                        10
+
+===== PDF PAGE 11 =====
+J.M. González et al.                                                                                                       Energy Conversion and Management 353 (2026) 121191
+
+
+
+
+
+               Fig. 6. Full dynamic chiller response to the inlet hot water temperature 𝑇11 under a 𝑡𝑟=1 min ramp from 50% to 100% capacity.
+
+
+    Fig. 6(c) shows a more dynamically complex behavior of the inter-     the high-pressure vapor temperature 𝑇𝐶𝑣 does not change due to the
+nal flow rates. In particular, the solution mass flow rates at the hotter    modeling simplification given by Eq. (79).
+side of the thermal compressor ( ̇𝑚𝑤𝑖 and ̇𝑚𝑠𝑜) exhibit non-monotonic         Lastly, Fig. 6(f) shows the evolution of the amounts of stored
+behavior during the ramp increase. This results from the coupling of the                                                               mass themselves, particularly in the liquid sumps. In consequence of
+different processes with different time constants inside the absorption                                                                        the higher rate of vapor desorption produced by a higher generator
+chiller. Nonetheless, this behavior is not seen to extrapolate to external
+                                                                     temperature while the weak solution flow rate ̇𝑚𝑤𝑜 remains constant,
+output variables, as previously discussed. Finally, all corresponding
+                                                                        the generator sump mass 𝑀𝐺 quickly decreases. In turn, this higher
+flow rates—weak solution, strong solution, and refrigerant—are shown
+                                                                    desorbed vapor flow rate traversing the condenser, increases its cor-
+to converge to the same final steady value at a similar response time.
+                                                                     responding sump mass 𝑀𝐶. At the same time, the lower amount ofThe same occurs to the different LiBr mass fractions 𝑥 in Fig. 6(e),
+                                                                         returning strong solution ̇𝑚𝑠𝑜 to the absorber makes its correspondingwhile the internal pressures 𝑃ℎ𝑖𝑔ℎ and 𝑃𝑙𝑜𝑤 behave similarly to their
+                                                         sump mass 𝑀𝐴 to ultimately decrease, but only after a slight initialcorresponding external heat transfer rates in Fig. 6(a).
+                                                                           increase due to the faster transport of the increase in the vapor flow    Fig. 6(d) shows the temperatures of the stored masses, as a represen-
+                                                                                    rate. In this way, the absorber and generator sump masses, 𝑀𝐴 and 𝑀𝐺,tative temperature of its corresponding chiller component. As opposed
+to the notable differences in dynamic behavior at different parts of the     exhibit a slightly non-monotonic evolution, with considerably less tran-
+absorption chiller, all of these temperatures evolve monotonically, in     sient perturbations than other system variables, while the condenser
+a similar fashion to the cooling capacity. As expected, with a higher    sump mass 𝑀𝐶 does evolve monotonically. The figure also depicts the
+final hot water temperature, the evaporator temperature decreases in      total chiller fluid mass 𝑀𝑡𝑜𝑡, defined by Eq. (81), normalized by its
+accordance with an increase in ̇𝑄𝐸, while other temperatures rise,      initial value, which is indeed seen to remain constant according to the
+especially the one at the generator sump. In this dynamic model,    dynamic model.
+
+                                                                        11
+
+===== PDF PAGE 12 =====
+J.M. González et al.                                                                                                       Energy Conversion and Management 353 (2026) 121191
+
+5.2. Linear model approximation                                               5.2.2. Driving heat input linear model
+                                                                        Recognizing from Fig. 6(d) that the internal generator temperature
+   As previously shown, the behavior of the dynamic model predictions     responds in a monotonic fashion to a change in the input variable 𝑇11,
+on the cooling capacity ̇𝑄𝐸, the driving heat input ̇𝑄𝐺 and several     similar to the cooling capacity ̇𝑄𝐸, then a differential equation for the
+other variables, is notably similar to the behavior of a first-order linear     former analogous to Eq. (85) may be posed. Considering also the rela-
+dynamical system when the control variable is the external hot water     tionship between the internal and external generator temperatures and
+inlet temperature 𝑇11. In this section, a simple linear model for the     the driving heat input ̇𝑄𝐺, given by Eq. (23), the following approximate
+two aforementioned output variables is proposed, and it will be shown                                                                               linear differential equation for ̇𝑄𝐺, in terms of the input variable 𝑇11,
+that this approximation is valid whenever a linear relationship can
+                                                                                                is proposed:
+be assumed between the control and output variables at steady-state
+behavior.                                                                𝑑̇𝑄𝐺                                                                    𝜏𝐺    + ̇𝑄𝐺= 𝑆𝐺(𝑇11(𝑡) −𝑇𝑚𝑖𝑛,𝐺) + 𝜏𝐺𝛾𝑑𝑇11                     (89)
+   The purpose of introducing these approximate linear models for         𝑑𝑡                                   𝑑𝑡
+̇𝑄𝐸 and ̇𝑄𝐺  is not merely to simplify the simulation of the system        Unlike Eq. (85), the evolution of the driving heat input also depends
+while maintaining high precision, but rather to constitute a theoret-     directly on the speed at which the control variable changes, and not
+ical background for better interpreting the observed behavior of the     only its instantaneous value. This implies an additional directly-driven
+absorption chiller, being used as a reference model in the following     (proportional) component in the response of ̇𝑄𝐺 to 𝑇11, besides the
+results. However, they may also serve as an estimative tool useful for     purely inertial response such as the one exhibited by ̇𝑄𝐸. This behavior
+developing efficient physics-based algorithms in system control.               is caused by the temporary imbalance between the internal and external
+                                                                      temperatures at the generator during transient operation. As noted by
+5.2.1. Cooling capacity linear model
+                                                                        the fact that the dynamic response of ̇𝑄𝐺 exhibits a roughly straight-line   The general behavior of the cooling capacity ̇𝑄𝐸 in response to
+                                                                         evolution overshooting at 𝑡= 𝑡𝑟, overtaking its corresponding steady-
+the inlet hot water temperature 𝑇11 is proposed to be captured by the                                                                                 state response at all times, as shown in Fig. 6(a), this direct response
+differential equation
+                                                                          evidently dominates over the inertial response. This relative dominance
+   𝑑̇𝑄𝐸                                                                                       is accounted for by the free parameter 𝛾 [kW/K], which is related to𝜏𝐸    + ̇𝑄𝐸= 𝑆𝐸(𝑇11(𝑡) −𝑇𝑚𝑖𝑛,𝐸)                               (85)
+    𝑑𝑡                                                                  the generator thermal conductance 𝑈𝐴𝐺. Thus, if 𝛾= 0, the equation
+   The time constant 𝜏𝐸 of this particular dynamic response must be es-     for ̇𝑄𝐺 naturally takes the form of the equation for ̇𝑄𝐸 (Eq. (85)).
+timated based on dynamic operating data. Note that at steady operation                                                                  With 𝑇11 under a ramp variation of duration  𝑡𝑟 and magnitude
+the first term vanishes, recovering a linear (affine) relationship between
+                                                           𝛥𝑇 = 𝑇∞−𝑇0, represented by Eq. (86), and a steady-state initial
+̇𝑄𝐸 and 𝑇11, which is known to hold for most absorption chillers as it     condition, obtained by setting 𝑑̇𝑄𝐺∕𝑑𝑡= 0 in Eq. (89), the solution
+is the conceptual basis for the derivation of the characteristic equation                                                                                for the evolution of the driving heat input ̇𝑄𝐺 can be expressed as:
+method and its improvements introduced in the literature [7,24,46,47].
+In this framework, a general absorption chiller thermodynamic model                    {
+is shown to approximately simplify into a set of affine relationships      ̇𝑄𝐺(𝑡) = 𝑆𝐺(𝑇11(𝑡) −𝑇𝑚𝑖𝑛,𝐺) + (𝛾−𝑆𝐺 ) 𝛥𝑇𝜏𝐺   1 −𝑒−𝑡∕𝜏𝐺               if 𝑡< 𝑡𝑟                                                                                                                                                                                     𝑡𝑟   (𝑒𝑡𝑟∕𝜏𝐺−1) 𝑒−𝑡∕𝜏𝐺     if 𝑡≥𝑡𝑟between one of the external heat transfer rates (including ̇𝑄𝐸 and ̇𝑄𝐺)
+and every external circuit temperature, grouped into a single variable                                                                    (90)
+known as the characteristic temperature difference 𝛥𝛥𝑇≈𝑇11 −𝑇13 −
+𝐵(𝑇15−𝑇17). It is therefore expected that Eq. (85) holds in the same way    where, similar to the cooling capacity, the first term ̇𝑄𝐺,𝑠𝑠= 𝑆𝐺(𝑇11(𝑡)−
+when the other external temperatures 𝑇13 and 𝑇17 are controlled as well.      𝑇𝑚𝑖𝑛,𝐺) can be regarded as the ideal quasi-steady evolution of ̇𝑄𝐺, while
+Finally, the static gain 𝑆𝐸 may theoretically be obtained by identifying     the second term accounts for its transient behavior.
+Eq. (85) to the characteristic equation, or be empirically obtained as      When the control of the input converges to a step variation as 𝑡𝑟→0,
+the slope of a linear fit of the steady-state operating curve of ̇𝑄𝐸 with     Eq. (90) reduces to
+respect to 𝑇11. In this work, the latter method is utilized.                                                          )                                                                                       ̇𝑄𝐺(𝑡; 𝑡𝑟= 0) = 𝑆𝐺(𝑇11(𝑡) −𝑇𝑚𝑖𝑛,𝐺) + (𝛾−𝑆𝐺  𝛥𝑇𝑒−𝑡∕𝜏𝐺              (91)   Let the control variable 𝑇11 undergo a ramp variation of duration 𝑡𝑟
+and magnitude 𝛥𝑇= 𝑇∞−𝑇0 according to Eq. (83), i.e.,                       In accordance with the previous analysis of the expected behavior of
+       { 𝑡                                 if 𝑡< 𝑡𝑟                                             Eqs. (89), (90) and (91) show that the transient behavior of the driving
+𝑇11(𝑡) = 𝑇0 + 𝛥𝑇      𝑡𝑟                                            (86)     heat input indeed overtakes its corresponding steady-state response,
+                1     if 𝑡≥𝑡𝑟                                            unlike the results found for the linear model of the cooling capacity.
+   Assuming steady operation at 𝑇0 as the initial condition, obtained     Specifically, ̇𝑄𝐺> ̇𝑄𝐺,𝑠𝑠 when 𝛥𝑇> 0 and vice versa, as long as 𝛾> 𝑆𝐺,
+by setting 𝑑̇𝑄𝐸∕𝑑𝑡= 0 in Eq. (85), the solution for the evolution of the    which is the realistic and observed case. Finally, the peak value reached
+cooling capacity ̇𝑄𝐸 can be expressed as:                            by ̇𝑄𝐺, which occurs exactly at 𝑡= 𝑡𝑟, can be derived from Eq. (90), and
+                {                                             is equal to
+                                    1 −𝑒−𝑡∕𝜏𝐸                if 𝑡< 𝑡𝑟̇𝑄𝐸(𝑡) = 𝑆𝐸(𝑇11(𝑡) −𝑇𝑚𝑖𝑛,𝐸) −𝑆𝐸𝛥𝑇𝜏𝐸                                                 [                                                   𝑡𝑟   (𝑒𝑡𝑟∕𝜏𝐸−1) 𝑒−𝑡∕𝜏𝐸     if 𝑡≥𝑡𝑟        ̇𝑄𝐺,𝑝𝑒𝑎𝑘= ̇𝑄𝐺,0 + 𝑆𝐺+ (𝛾−𝑆𝐺 )                                                                                                 𝜏𝐺 (1 −𝑒−𝑡𝑟∕𝜏𝐺)] 𝛥𝑇 ⟶ ̇𝑄𝐺,0 + 𝛾𝛥𝑇
+                                                                                                                                                             𝑡𝑟                     𝑡𝑟→0
+                                                               (87)
+                                                                                                                                       (92)
+where the first term ̇𝑄𝐸,𝑠𝑠= 𝑆𝐸(𝑇11(𝑡) −𝑇𝑚𝑖𝑛,𝐸) can be regarded as the
+ideal quasi-steady evolution of ̇𝑄𝐸, while the second term accounts for        For the linear model approximation of both ̇𝑄𝐸 and ̇𝑄𝐺, the static
+its transient behavior.                                                    gains 𝑆 and the activation temperatures 𝑇𝑚𝑖𝑛 were directly fitted to
+  When the control of the input converges to a step variation as 𝑡𝑟→0,     the steady-state model [32] by least squares minimization constrained
+Eq. (87) reduces to                                                         to the chiller design point. On the other hand, the time constant 𝜏 is
+                                                                      not fitted by directly measuring from the system response, since the
+̇𝑄𝐸(𝑡; 𝑡𝑟= 0) = 𝑆𝐸(𝑇11(𝑡) −𝑇𝑚𝑖𝑛,𝐸) −𝑆𝐸𝛥𝑇𝑒−𝑡∕𝜏𝐸                   (88)     result would be highly sensitive to the time step 𝛥𝑡, but by integrating
+   Eqs. (87) and (88) show that ̇𝑄𝐸> ̇𝑄𝐸,∞ when 𝛥𝑇> 0 and vice     the response in time and using Eqs. (96a) and (96b) (see Section 5.4
+versa, which mathematically implies that the transient behavior of the     for further explanation). The additional parameter 𝛾 in the heat input
+cooling capacity of the chiller always lags behind the value corre-     equation was determined by applying Eq. (92). A 20-minute simulation
+sponding to a quasi-steady/instantaneous evolution, which is exactly     of the reference case shown in Fig. 6 resulted in the linear model
+the behavior exhibited by ̇𝑄𝐸 in Fig. 6(a).                              parameter values presented in Table 2.
+
+                                                                        12
+
+===== PDF PAGE 13 =====
+J.M. González et al.                                                                                                       Energy Conversion and Management 353 (2026) 121191
+
+      Table 2                                                           Standardizing the change in the output variable by its design point
+      Linear model approximation parameter values.                         value ̇𝑄⋆ instead of the endpoint values ̇𝑄(∞) and ̇𝑄(0) delivers an
+        Parameter            Unit               ̇𝑄𝐸                  ̇𝑄𝐺               unbiased response time with respect to the particular off-design states
+      𝑆               kW/K           0.897             1.222               of operation (Eq. (93)). Instead, the response time is normalized only
+          𝑇𝑚𝑖𝑛                ◦C              48.793            46.919           by the overall system size. Additionally, the fact that this response time
+         𝜏                        s               137.717           150.803             definition is based on an absolute change in the output variable is
+          𝛾               kW/K           –                 2.384
+                                                                            consistent with the fact that sensor uncertainty, especially in the case
+                                                                              of temperature, is typically given in absolute terms (◦ C) rather than in
+                                                                                 relative terms (%). Thus, this kind of definition is particularly useful in
+                                                                                practice, since it allows matching the response time of a certain variable
+                                                                            to its corresponding range of uncertainty by adjusting the tolerance 𝛿.
+                                                                           In this work, the value 𝛿= 5% is assumed.
+                                                                               In the case of the linear models for ̇𝑄𝐸 and ̇𝑄𝐺 under a ramp
+                                                                            variation of duration 𝑡𝑟 with a change 𝛥𝑇 in the control variable, the
+                                                                      corresponding response time takes the following explicit forms:
+
+                                                          [                ]       [       ]
+                                               𝜗𝐸= 𝜏𝐸ln                                                                              1 𝑆𝐸|𝛥𝑇| 𝜏𝐸 (𝑒𝑡𝑟∕𝜏𝐸−1) ⟶ 𝜏𝐸ln  1 𝑆𝐸|𝛥𝑇|       (94a)
+                                                                                     𝛿  ̇𝑄𝐸,⋆    𝑡𝑟                𝑡𝑟→0       𝛿  ̇𝑄𝐸,⋆
+                                                          [                  ]       [         ]
+                                               𝜗𝐺= 𝜏𝐺ln                                                       𝛾−𝑆𝐺 |𝛥𝑇| 𝜏𝐺 (𝑒𝑡𝑟∕𝜏𝐺−1) ⟶ 𝜏𝐺ln 𝛾−𝑆𝐺 |𝛥𝑇|
+                                                                                       𝛿    ̇𝑄𝐺,⋆  𝑡𝑟                𝑡𝑟→0          𝛿    ̇𝑄𝐺,⋆
+
+                                                                                                                                 (94b)
+Fig. 7. Simulation of the dynamic and linear models under a 𝑡𝑟= 1 minute
+ramp from 50% to 100% capacity.                                                   Fig. 8 shows the response time 𝜗 of both ̇𝑄𝐸 and ̇𝑄𝐺 as a result of
+                                                                  a ramp variation of the hot water temperature 𝑇11, according to both
+                                                                        the physics-based dynamic model and the linear model approximation.
+                                                               As expected from low errors showcased by the linear model approxi-    Fig. 7 compares the time response of the cooling capacity ̇𝑄𝐸 and
+                                                                 mation in Appendix B, Eqs. (94a) and (94b) predict the behavior of thethe driving heat input ̇𝑄𝐺 according to the dynamic and linear models,
+                                                                      response time of the absorption chiller with great accuracy.for the specific case shown in Fig. 6, in which the hot water temperature
+is varied through a 1 min ramp from 50% to 100% capacity. Great         Fig. 8(a) shows the dependence of the response time on the ramp
+overall accuracy is observed, with very slight errors at the states further     duration 𝑡𝑟, which generalizes the case of the step variation repeatedly
+away from the final (rated) operating state, used as a data point to     studied in the literature. It is evident that the system takes more time
+fit the static gains 𝑆𝐸 and 𝑆𝐺. Appendix B contains a more detailed     to settle to the final steady state when the control variation is done
+analysis on the overall predictive accuracy of the linear models with    more slowly (a larger ramp duration 𝑡𝑟), thus in the limiting case of a
+respect to the physics-based dynamic model, as a function of the ramp     step variation (𝑡𝑟= 0) a minimum, nonzero response time is present,
+duration 𝑡𝑟 and magnitude 𝛥𝑇.                                           the value of which depends logarithmically on the particular ramp
+                                                                    magnitude, according to Eqs. (94a) and (94b). In this particular case,
+                                                                        the response time is shown to be in the order of minutes, where its5.3. Response time analysis
+                                                                      value for a 50%-to-100% load step variation is around 5 min, agreeing
+                                                                    with previous results for absorption chillers with a capacity of the same   Understanding the absorption  chiller responsiveness to changes
+                                                                       order of magnitude [10,13]. Next, note that for larger ramp durations,in its input variables is crucial for designing and evaluating control
+                                                                     although the response time rises accordingly, its difference to the rampschemes, from the simple on–off thermostat to more advanced dynamic
+                                                                       duration 𝑡𝑟 itself diminishes (𝜗→𝑡𝑟 as 𝑡𝑟→∞), meaning that in the casecontrol algorithms. For this purpose, the response time arises as a study
+                                                                              of slower control variations the settling time after the ramp durationobject, being a direct measure of the time taken for the system to evolve
+                                                                         shortens progressively, tending to zero. Conclusively, for variable loadbetween two steady states, i.e., the duration of the transient period.
+                                                                             (or part-load) operation with slower dynamics, the transient effects ofThis is especially relevant in absorption chillers due to their typical
+                                                                        the chiller response tend to vanish.slowness compared to vapor compression systems.
+                                                                        Furthermore, Fig. 8(b) shows the dependence of the response time   In the context of dynamical phenomena it is common to generalize
+                                                             on the ramp magnitude 𝛥𝑇, where the final state has been fixed atthe physical description by nondimensionalization, where the time
+                                                                  a cooling capacity of 100%, and so the initial state (shown in theevolution is then studied through a scale-invariant definition of the
+                                                                   lower x-axis) is set to match each value of 𝛥𝑇. As expected from theresponse time. Since in the case of first-order systems the response is
+                                                                              definition proposed in Eq. (93), the response time increases with aasymptotic, the response time 𝜗 is usually defined as the time taken by
+                                                                           greater demand on the net variation in the chiller state of operation,the system to change up to some large fraction of the total variation,
+                                                          𝛥̇𝑄= 𝑆𝛥𝑇, where for a quick variation of 50% of the chiller capacity—i.e. (𝑦(∞) −𝑦(𝜗))∕(𝑦(∞) −𝑦(0)), which  is usually a system constant
+                                                                      corresponding to the minimum operating hot water temperature at theproportional to its time constant 𝜏. However, such a definition fails to
+                                                                                          initial state—the absorption chiller takes up to 6 min to settle, whereasrepresent the fact that, in practice, the perceived notion of the response
+                                                                         capacity variations lower than 𝛿= 5% result in a response time oftime does depend on the magnitude of the perturbation. Therefore, this
+                                             𝜗= 0 since they fall under the convergence criterion threshold from thework redefines the response time of an output variable, particularly of
+                                                                                          start. In general, the linear model slightly overestimates the responsethe cooling capacity ̇𝑄𝐸 and driving heat input ̇𝑄𝐺, as the instant 𝑡= 𝜗
+                                                                    time of both output variables. Also note that, according to the linearwhere
+                                                             model approximation results in Eqs. (94a) and (94b), the response time
+|̇𝑄(∞) −̇𝑄(𝜗)|          = 𝛿                                              (93)     of the chiller is independent of the specific initial and final states of
+      ̇𝑄⋆                                                                  operation, depending only and symmetrically on the magnitude of the
+where the tolerance 𝛿 determines the maximum negligible discrepancy    change of state, that is, regardless of whether the system is increasing
+of the current system state with respect to the real final steady state.     or decreasing in capacity. Finally, the dependence of the response
+
+                                                                        13
+
+===== PDF PAGE 14 =====
+J.M. González et al.                                                                                                       Energy Conversion and Management 353 (2026) 121191
+
+
+
+
+
+                                     Fig. 8. Chiller response time to a ramp variation of the hot water inlet temperature 𝑇11.
+
+
+
+
+time on the net variation of the chiller state is not of a linear nature,       As already discussed, the nature of the inefficiency of the tran-
+but logarithmic, as revealed by Eqs. (94a) and (94b). Therefore, in a     sient process is revealed by the sign of the TPL. Hence, the following
+situation where the system must be taken to another state of operation,     analysis focuses on the absolute value of this indicator. Fig. 9 shows
+the chiller response will be faster if the control variation is imposed     the transient performance loss of both ̇𝑄𝐸 and ̇𝑄𝐺 resulting from a
+all at once, rather than in stages. However, the equivalent cannot be    ramp variation of the hot water temperature 𝑇11, according to both
+stated regarding the system efficiency during this transient period, as     the physics-based dynamic model and the linear model approximation,
+discussed later in Section 5.4.                                     where once again, the latter provides an excellent estimate to the real
+                                                                                  results of the absorption chiller dynamic model.
+
+5.4. Transient performance loss analysis                                            Fig. 9(a) clearly reveals that the TPL is independent of the ramp
+                                                                       duration 𝑡𝑟, in accordance with Eqs. (96a) and (96b). This means that
+   Aside from directly measuring the inertia of a dynamical system    no matter how slowly the system is taken between two steady states,
+in the form of the response time to a simple change in operation,     the temporary shortfall of cooling effect and excess of heat expenditure
+such as a step or ramp control function, it is of particular interest to     at the generator is not only inevitable, but constant. Therefore, as a
+quantify the potential lost during the corresponding transient period    consequence of a ramp variation, the TPL can only depend, at most, on
+in slow energy conversion systems. In this context, the ideal tran-     the particular endpoint states.
+sient behavior is defined as the instantaneous response of the system        In turn, Fig. 9(b), once again agreeing with the linear model approx-
+to a continuous change in control, which corresponds to a quasi-     imation, shows that the transient performance loss not only increases
+steady system evolution and is directly represented by the steady-state    with the ramp magnitude 𝛥𝑇, but they are actually proportional.
+model [32]. Conversely, the real inertial response is represented by the     Furthermore, Eqs. (96a) and (96b) reveal that the TPL does not re-
+dynamic model introduced in this work. Such an idea of performance      ally depend on the particular endpoints, but only on their difference,
+during a transient process can be quantified by the concept of transient    measured either by the ramp magnitude 𝛥𝑇 or by the net change in
+performance loss (TPL), herein defined as the overall difference between     cooling capacity or driving heat input 𝛥̇𝑄. Naturally, the case with
+the real and ideal system output—̇𝑄 and ̇𝑄𝑠𝑠, respectively—during    no change in the inputs (𝛥𝑇= 0) results in no difference between
+transient operation between two states:                                  the real and quasi-steady responses (TPL = 0), while for larger ramp
+      ∞ [                                                       magnitudes the TPL of both variables increase according to a constant
+TPL = ∫               ̇𝑄(𝑡) −̇𝑄𝑠𝑠(𝑡)] 𝑑𝑡                                     (95)      ratio, which interestingly roughly matches the rated system coefficient         0
+   Both the cooling capacity ̇𝑄𝐸 and the driving heat input ̇𝑄𝐺 are     of performance, TPL𝐸∕TPL𝐺≈COP⋆= 0.70. In the case of 𝑡𝑟= 1
+taken as output variables. Based on Fig. 6, in the case of the cooling    minute and 𝛥𝑇= 18.8 K (at the left end of Fig. 9(b)), the linear model
+capacity, the dynamic inertia of the system causes a lagged time    TPL exactly matches the values given by the dynamic model, since
+evolution of the cooling capacity; therefore, when a change in the      this particular case was used to fit the linear model time constants
+control variable results in an increase of ̇𝑄𝐸, the system experiments     𝜏 by means of Eqs. (96a) and (96b). Intermediate cases exhibit some
+a temporary cooling shortfall (TPL𝐸< 0), whereas in the opposite case     error, with a maximum of 20% in the case of TPL𝐸 at an initial cooling
+it represents a temporary cooling surplus (TPL𝐸> 0). In the case of the     capacity of around 60%. Evidently, a different fitting approach based
+driving heat input ̇𝑄𝐺, on the other hand, it is shown to experiment    on error minimization on the entire range can result in a better overall
+a positive overshoot when the capacity increases, implying an excess     lineal model accuracy.
+in delivered heat (TPL𝐺> 0), while a decrease in capacity causes a        Until now, the analysis has been centered on the chiller response
+negative overshoot, which is a hindrance in the flow of heat (TPL𝐺< 0).     to ramp variations, but in reality, the discussed results on the TPL
+   The linear model approximation allows deriving closed-form expres-    independence on the speed of induced change (represented by 𝑡𝑟) and
+sions for the transient performance loss of ̇𝑄𝐸 and ̇𝑄𝐺:                    the proportionality to the magnitude of the latter, are actually valid for
+                                                               any well-behaved system trajectory starting and ending in steady-state
+TPL𝐸= −𝜏𝐸𝑆𝐸𝛥𝑇                                             (96a)     operation, even non-monotonic or non-smooth trajectories. Indeed, in
+                                                                        the case of the cooling capacity, substituting ̇𝑄𝐸 directly from its linear                  )TPL𝐺= 𝜏𝐺 (𝛾−𝑆𝐺 𝛥𝑇                                       (96b)      differential equation (85) and the corresponding expression for ̇𝑄𝐸,𝑠𝑠
+
+                                                                        14
+
+===== PDF PAGE 15 =====
+J.M. González et al.                                                                                                       Energy Conversion and Management 353 (2026) 121191
+
+
+
+
+
+                  Fig. 9. Transient performance loss (in absolute value) in response to a ramp variation of the hot water inlet temperature 𝑇11.
+
+
+into the definition of the TPL (Eq. (95)), one obtains:                       loads, while closer to the design point the resulting change in the
+       ∞                ∞ (     )                     system state for the same variation 𝛥̇𝑚ℎ𝑜𝑡 is less significant. This can be                                          𝑑̇𝑄𝐸               [                                                                                       in                                                                                          transient                                                                                               conditions                                                                                                through                                                                                                                the duration                                                                                                                                     of a ramp                                                                                                                                                   varia-                                 −𝜏𝐸                                     𝑑𝑡= −𝜏𝐸𝛥̇𝑄𝐸         observedTPL𝐸= ∫               ̇𝑄𝐸(𝑡) −̇𝑄𝐸,𝑠𝑠(𝑡)] 𝑑𝑡= ∫                                              𝑑𝑡           0                                           0                                                                             tion in Fig.                                                                                 10a,                                                                                               in contrast                                                                                                        to the                                                                                                     corresponding                                                                                                                 temperature                                                                                                                                response
+                                                               (97)     in Fig. 6(a) with the same ramp parameters, but the convergence phase
+                                                                            to the final steady state is the almost the same in both cases, achieving
+which is equivalent to Eq. (96a), and a similar process for ̇𝑄𝐺 allows ar-    a similar response time for this particular case. These differences also
+riving at Eq. (96b). This means that the total difference between the real     translate to the resulting transient behavior of the total dissipated heat
+and ideal transient performance of an absorption chiller—or any quasi-    ̇𝑄𝐴+ ̇𝑄𝐶 and the COP(𝑡) values, where the only significant differences
+linear system with similar dynamics—is actually a path-independent     in behavior are observed during the time in which the control variable
+result, only depending on the difference between the initial and final    changes value.
+operating states. This finding entails a critical implication: when a                                                                           This all suggests that the dynamic response of the absorption chiller
+system in steady-state operation is required to change its load to a new                                                                            to any particular external variable—temperature or flow rate—is only
+operating state, it turns out that all possible system trajectories during                                                                          as unique as its corresponding steady-state response. For instance, this
+the transient period convey a fixed and inevitable amount of (posi-
+                                                            means that if 𝑇11 is controlled in such a way to emulate the steady-state
+tive or negative) performance loss with respect to the corresponding                                                                      response to a ramp variation in ̇𝑚ℎ𝑜𝑡, then the two dynamic responses
+ideal, inertia-less transition, projected in both the cooling production                                                             would also be identical. Moreover, given the proven success of the
+and heat expenditure. Thus, the transient performance loss essentially                                                                               linear model approximation to the absorption chiller dynamic response
+behaves as the intrinsic cost of changing steady states of operation.                                                                            to an external temperature, the previous deduction also hints that
+                                                                      extending the linear model to capture the response to its corresponding
+5.5. External flow rate as control variable                                flow rate  is only up to a variable transformation such as 𝑇(𝑡) =
+                                                                            𝐴exp(−̇𝑚(𝑡)∕𝑏). Nonetheless, further developing this idea is left out of
+   Throughout this work, the dynamic analysis of the absorption chiller     the scope of this work.
+has been centered on the response to changes in the inlet temperature         Fig. 11(a) measures the absorption chiller response time as a func-
+of the hot water external circuit, from which, overall, a behavior     tion of the ramp duration, which is inverse to the control variable rate
+characteristic of linear systems was observed and later validated. Yet,     of change. In the case of very short ramps, including the step variation,
+understanding the absorption chiller response to external flow rates     the response time reaches a minimum of around 5 min, roughly the
+is equally as important, since they serve as a key control variable    same result than in the temperature response of the chiller, shown
+in many applications, such as in solar cooling [3] or in optimized     in Fig. 8(a), agreeing with the previous discussion. However, with
+cooling strategies [48]. In this section, the chiller dynamic response     increasing ramp durations 𝑡𝑟, the response time 𝜗 does not increase as
+to controlling the hot water flow rate  is studied and compared to      fast as in the case of the temperature response, with the system roughly
+temperature control.                                                   reaching the final steady state in time with the ramp, for durations
+   The quasi-linear dynamic behavior of the resulting heat transfer     longer than 10 min. This occurs because, with sufficiently slow vari-
+rates as a function of external temperatures can be argued from the     ations in the control variable, the system is never forced enough to
+fact that the steady-state relationship between the external chiller     escape the convergence margin established in the convergence criterion
+temperatures and the heat transfer rates  is approximately a multi-     defined by Eq. (93). This means that the dynamic response to the flow
+variate affine relationship, as revealed by the characteristic equation     rate stays closer to the steady-state response during the ramp variation,
+method [7,47]. However, the steady-state relationship between the     than the corresponding temperature response.
+heat transfer rates—regarded as the chiller output variables—and exter-      On the other hand, as shown in 11(b), with the hot water flow rate
+nal flow rates is not linear but asymptotically increasing, more precisely     as the control variable, the chiller response time 𝜗 exhibits a logarith-
+a negative exponential relationship, as seen by comparing ̇𝑚ℎ𝑜𝑡 to ̇𝑄𝐸,𝑠𝑠    mic increase with the ramp magnitude in terms of 𝛥̇𝑄𝐸—representing
+and ̇𝑄𝐺,𝑠𝑠 in Fig. 10a. This is a consequence of the inner behavior of     the system state—with almost identical results to the response to the
+the corresponding heat exchanger, in which 𝜀→1 as ̇𝑚→∞.             hot water temperature, shown in 8(b), and no significant differences
+   This nonlinear, rate-decaying relationship between the hot water    toward smaller or larger magnitudes of variation. However, the nonlin-
+flow rate and both the cooling capacity ̇𝑄𝐸 and the driving heat input     ear relationship between the flow rate and the system output implies
+̇𝑄𝐺 means a more responsive evolution at lower capacities or partial     that if the results were shown directly as a function of ̇𝑚ℎ𝑜𝑡, they would
+
+                                                                        15
+
+===== PDF PAGE 16 =====
+J.M. González et al.                                                                                                       Energy Conversion and Management 353 (2026) 121191
+
+
+
+
+
+                    Fig. 10. Dynamic chiller response to the hot water flow rate ̇𝑚ℎ𝑜𝑡 under a 𝑡𝑟= 1 min ramp from 50% to 100% capacity.
+
+
+
+
+
+                                     Fig. 11. Chiller response time to a ramp variation of the hot water mass flow rate ̇𝑚ℎ𝑜𝑡.
+
+
+
+
+
+                  Fig. 12. Transient performance loss (in absolute value) in response to a ramp variation of the hot water mass flow rate ̇𝑚ℎ𝑜𝑡.
+
+
+greatly depend not only on the ramp magnitude but on the particular     proportional to each other. However, unlike the temperature response,
+endpoints, with insufficient generality.                                   the behavior of the TPL does change with the rate of change of the
+   As shown in Fig. 12, similar results are obtained when analyzing     control variable, as evidenced in Fig. 12(a), where in particular, the
+the parametric behavior of the transient performance loss (TPL) to     slower responses attain the same values as the temperature response,
+diverse ramp changes in the hot water flow rate, instead of its inlet     while, for faster responses the values of TPL𝐸 and TPL𝐺 are observed
+temperature (see Fig. 9). As shown in Fig. 12(b), its behavior with     to tend to each other with no average tendency, appearing to reach
+respect to different ramp magnitudes is practically the same, roughly     the same value in the limit of 𝑡𝑟→∞. It remains unknown  if this
+
+                                                                        16
+
+===== PDF PAGE 17 =====
+J.M. González et al.                                                                                                       Energy Conversion and Management 353 (2026) 121191
+
+curious behavior in the transient performance loss, absent in the chiller
+response to the hot water temperature, is of more general nature.
+
+
+5.6. Control application with a dynamic model
+
+
+   Control schemes based on steady-state modeling are particularly
+useful in steady-state operation with limited instances of state change,
+being able to compute the required change in the input variable for
+the system to reach a different operating state. Thus, in varying-load
+applications the current demand  is typically applied as the system
+setpoint. As established in Section 5.3, in applications with slower time
+variations—of several times the system response time, such as those
+driven by demand profiles of large time steps—transient effects become
+small, with the system responding closer in time to the input changes,
+making the use of steady-state models more appropriate.
+   However, as proven in Section 5.4, changing the state of operation
+of an absorption chiller has an intrinsic cost proportional to the mag-      Fig. 13. Inertia cancellation of the ̇𝑄𝐸 response to a 𝑡𝑟= 2 minute ramp from
+nitude of the change, defined by Eq. (95) as the transient performance    50% to 75% capacity.
+loss (TPL), and manifested in both the cooling capacity ̇𝑄𝐸 and the
+driving heat input ̇𝑄𝐺. Although such cost is unavoidable in typical
+setpoint control schemes, controlling the system evolution by means     proportional increase in the other. However, deeper exploration into
+of a dynamic model instead allows manipulating the resulting TPL      this question is left out of the scope of this work.
+relative to the default state-change trajectory, by means of a trade-        Since the dynamic chiller response is simulated through the physics-
+off between the costs associated to ̇𝑄𝐸 and ̇𝑄𝐺—for instance, favoring    based dynamic model, a complete reduction of the TPL is expected if
+cooling effectiveness at the expense of additional heat consumed during     the dynamic inversion were to be performed using the same dynamic
+the transient period.                                                 model; however such computational cost and complexity constitutes a
+   As a main example of the above possibility, a type of feedforward     significant limitation, and the magnitude of this increase in precision
+control is here applied to the cooling capacity ̇𝑄𝐸 ramp response, in    compared to the predictive error of the dynamic model itself is yet to
+which dynamic inversion is performed on the system model to obtain    be determined.
+the control law that minimizes the deviation of the system response       The particular strategy of inertia cancellation in this kind of thermal
+to the ideal quasi-steady ramp response. In other words, the goal of    system possesses two significant practical constraints, evidenced by the
+this particular control strategy is to find the input variable trajectory     required driving temperature profile in Fig. 13. On the one hand, the
+which makes the time trajectory of the output variable match that of an     temperature is theoretically required to instantly switch between two
+inertia-less version of the system (𝑑∕𝑑𝑡= 0 in the dynamic equation).     distant values. On the other hand, these values may fall out of the
+This particular concept has been termed inertia cancellation in previous     temperature operating range of the machine, risking crystallization or
+works on dynamical systems [49]. In this case, instead of directly     other forms of failure. Therefore, the success of inertia cancellation and
+using the dynamic model for this purpose, the proposed linear model is     other similar schemes is limited by both the maximum achievable speed
+utilized, while on the other hand, the physics-based dynamic model is     of change in the control variable and the allowed operating range of the
+to represent the real system dynamics. The linear model approximation     variable itself.
+fortunately provides a simple approach to dynamic inversion, in which
+                                                                               In general, dynamic inversion allows not only optimizing transient
+the sought control law can be obtained by directly substituting the
+                                                                         evolution between steady states of operation as demonstrated, but
+quasi-steady ramp response
+                                                                           ultimately driving the system output freely. This potential is especially
+              {
+                                            𝑡∕𝑡𝑟    if 𝑡< 𝑡𝑟                          relevant in the context of variable operation to match the system output
+̇𝑄𝐸,𝑠𝑠(𝑡) = 𝑆𝐸(𝑇0 −𝑇𝑚𝑖𝑛,𝐸) + 𝑆𝐸𝛥𝑇                                (98)     to a particular time-changing load, whether based on a predefined
+                                1       if 𝑡≥𝑡𝑟
+                                                         demand profile or to adjust the system output in real time with Model
+into Eq. (85), obtaining the linear inertia cancellation control law for     Predictive Control algorithms.
+the hot water temperature:
+       {
+                (𝑡+ 𝜏)∕𝑡𝑟    if 𝑡< 𝑡𝑟                                                               (99)     5.7. Final critical considerations𝑇11(𝑡) = 𝑇0 + 𝛥𝑇
+                1               if 𝑡≥𝑡𝑟
+
+   This control trajectory corresponds to a sudden, temporary over-       The results presented in this work were based on a dynamic model
+drive in the hot water temperature and, correspondingly, in the driving     representing a falling film absorption chiller with a fully-wetted evap-
+heat input ̇𝑄𝐺 of the absorption chiller. Fig. 13 shows the resulting     orator, in which the effective heat transfer area does not change.
+chiller behavior for the case of a 2-minute ramp from 50% to 75%     Currently, most commercial absorption chillers are of the falling film
+capacity, comprising the desired ramp inertia-less response, the dy-     type, as per their superior heat transfer performance, which allows
+namic response to a ramp input and the dynamic response to the inertia     for reducing costs. However, some absorption chillers, mostly of small
+cancellation linear control law (Eq. (99)). Indeed, this control strategy     to medium capacity, where no refrigerant recirculation pump is in-
+allowed an exceptionally responsive behavior in the cooling capacity     cluded, exhibit a partially-wetted evaporator, which causes a decrease
+during the transient period to the final steady state, reducing its tran-     in performance at partial loads [50]. Nevertheless, the success of the
+sient performance loss by 88%, but at the cost of a total increase of 95%     linear model approximation in representing the dynamic behavior of
+in the driving heat expenditure during this period, in this case supplied     the chiller performance suggests further applicability to any absorption
+by a higher driving temperature 𝑇11. Since the obtained reduction in      chiller as long as the steady relationship between the output variables
+TPL𝐸 is roughly similar in magnitude to the corresponding increase in     with the control variable is approximately linear, which does include
+TPL𝐺, this result suggests that intermediate cases of system responses     the case of partially-wetted evaporators [32] and other kinds of heat
+with partial reduction in one variable’s TPL may result in a roughly    exchangers—as typically displayed by steady-state models [33,34].
+
+                                                                        17
+
+===== PDF PAGE 18 =====
+J.M. González et al.                                                                                                       Energy Conversion and Management 353 (2026) 121191
+
+   The linear model approximation demonstrated great precision in     or output variable, and as such, it may be interpreted as the intrinsic
+modeling the dynamic response of the cooling capacity and the driving     cost of changing the state of the system. This novel concept provides a
+heat input to the driving temperature of the machine 𝑇11.  Its few     quantitative basis for addressing energy efficiency—or other definitions
+parameters, shown in Table 2, were fitted from a single response trajec-     of performance—of energy systems in transient or dynamic operation.
+tory corresponding to the base simulation case shown in Fig. 6. Thus,         Lastly, the potential of dynamic control of thermal energy systems
+a larger predictive error is expected to occur in operating situations    such as absorption chillers was demonstrated through a case study,
+differing significantly from step or ramp responses, or in situations with     consisting of determining a control strategy for minimizing the inertia
+extreme dynamic exigency, such as the case depicted in Fig. 13, where     of the time evolution of the cooling capacity of the chiller as a response
+drops in model accuracy with respect to the physics-based dynamic     to a rapid change in demand, where the linear model approximation
+model are observed whenever the input variable undergoes a large    was used as a proxy of dynamic modeling, and the physics-based model
+sudden change.                                                         represented the real system. The resulting control trajectory consists of
+    Lastly, since the linear models were constructed based on the linear    a highly intensive consumption of thermal power during the transient
+relationship between the input and output variables, the characteristic     period, in fact, revealing a trade-off of the transient performance losses
+equation method [7,47] suggests that an approximate linear model may    between input and output. Ultimately, this case study represents only
+be constructed as a function of not only the hot water temperature    an example of the potential of dynamic models for developing more
+𝑇11, but of a linear combination of all external temperatures, which is     adaptive, efficient or faster control strategies by exploiting known
+especially relevant in a system with multivariate control. For the same     information on the system dynamics.
+reason, however, this formulation may not be directly applicable to        Absorption chillers, typically known for their slow response com-
+other possible control variables, although it might be generalizable to    pared to vapor compression systems, can significantly improve their
+variables with clear nonlinear relationships to heat transfer rates. For     responsiveness and flexibility to varying demand with dynamic con-
+instance, in the case of the external flow rates, used as control variable      trol strategies. Furthermore, this possibility may even contribute to
+in many applications [3], since the mass flow rate in a heat exchanger     extending the field of applications for absorption chillers, particularly
+and the resulting heat transfer rate are roughly linked by a negative ex-    among those with stricter requirements on the responsiveness of the
+ponential relationship [32], a nonlinear variable transformation of this     cooling capacity or the robustness of setpoint temperature control,
+kind might enable the presented linear model approach to accurately    such as in the transportation field, in which the combustion system
+represent the corresponding dynamics [29]. Testing these possibilities     could synergize well with thermally-driven cooling technology. On the
+is nonetheless left out of the scope of this work.                          other hand, since in many thermal energy systems their efficiency is
+                                                                                 significantly sensitive to the operating conditions, system optimization
+6. Conclusions                                                                            is highly relevant in the field. In applications where thermal energy
+                                                                     systems are to be operated at partial load or more general variable
+   This paper takes the state of understanding the dynamic behavior     conditions, a control system based on dynamic modeling offers the
+of the absorption chiller a step forward, by characterizing the main     potential to reach higher overall efficiencies and lower losses during
+features of the system’s transient response to active control in two     transient or inherently dynamic operation.
+key input variables, and using the developed framework to propose                                                                         Future work in absorption chiller modeling and control can further
+an advanced control method based on simplified dynamic modeling.                                                                    develop the concepts and methods proposed in this work in several
+The physics-based absorption chiller dynamic model developed for this                                                                            possible aspects, such as:
+purpose introduced several enhancements compared to the literature,
+and showed excellent predictive accuracy with respect to experimental             • The development and implementation of control advanced con-
+data (0.06 K mean error on 𝑇18). The analysis of the model simulation            trol systems, based on tools such as feedforward or optimal
+results revealed a behavior characteristic of linear dynamical systems in                                                                                     control, aiming at energy efficiency, fast responsiveness, TPL
+the cooling capacity and the driving heat input, motivating the proposal                                                                            manipulation, or other objectives.
+of simple first-order linear models of these output variables which, once                                                                                                                      • To further validate or improve the linear model approximation,
+fitted to simulated operating data of the physics-based dynamic model,                                                                   by means of more diversified dynamic operation experimental
+also showed great accuracy (2.5% mean error on ̇𝑄𝐸). This linear model           data.
+approximation allowed synthesizing the later obtained results on the                                                                                                                      • To extend the characteristic equation method into a theoretical
+chiller dynamic behavior with a valuable symbolic mathematical rep-                                                                                     linear dynamic model, in agreement with the quasi-linear dy-
+resentation. Also, a detailed analysis of the system transient response to                                                                   namic behavior of absorption chillers identified in this work and
+finite ramp-type changes in the control variable—either the hot water                                                                             the subsequent empirical linear model proposed.
+temperature or flow rate—showed the response time to be limited
+by a minimum non-zero amount (step response), while for increas-
+ingly slower-changing inputs, the system inertia becomes negligible,    CRediT authorship contribution statement
+approaching quasi-steady behavior. On the other hand, the particular
+values of the response time were observed to increase nonlinearly with      Juan Manuel González: Writing – original draft, Visualization,
+the overall magnitude of the variation.                                   Software, Methodology, Investigation, Formal analysis, Conceptualiza-
+   Additionally, this work introduced the concept of transient perfor-      tion. Alvaro Antonio Villa Ochoa: Writing – review & editing, Writing
+mance loss (TPL), a measure of the overall difference in output, caused    – original draft, Validation. José M. Cardemil: Writing – review & edit-
+by manifestation of dynamic inertia, between the real system and an     ing, Conceptualization. Felipe Godoy: Supervision, Conceptualization.
+ideal instantaneous (quasi-steady) response, during a transient event.    Mónica Zamora Zapata: Writing – review & editing, Writing – original
+In the case of energy systems such as an absorption chiller, it manifests      draft, Supervision, Conceptualization.
+as a temporary undersupply of energy production and an excess of
+energy consumption under a commanded increase in capacity, and
+                                                                   Declaration of competing interestvice versa in the opposite case. Based on the established linear model
+approximation,  is was proven that this total undersupply/excess of
+produced/consumed energy during the transient process does not, in       The authors declare that they have no known competing finan-
+fact, depend on the particular control trajectory, being a sole proportion      cial interests or personal relationships that could have appeared to
+of the overall change in the system state—in terms of either the control     influence the work reported in this paper.
+
+                                                                        18
+
+===== PDF PAGE 19 =====
+J.M. González et al.                                                                                                       Energy Conversion and Management 353 (2026) 121191
+
+Acknowledgment                                                      Subsequently, Fig. A.1(b) shows the sensitivity of the numerical model
+                                                                            to the initial value of the low-pressure vapor space mass 𝑀𝐸𝑣, a 1-
+   The authors express their gratitude to Fraunhofer Chile Research,    minute ramp between 50% and 100% capacity (reference case in Fig.
+Chile for their support and expertise during the development of this      6), and once again in terms of the time constants 𝜏𝐸 and 𝜏𝐺 and the
+research project. J.M.C. and M.Z.Z. thank ANID-Chile project SERC     corresponding integrated heat transfers. It is concluded that the model
+Chile FONDAP, Chile grant 1523A0006 and the National Research     results are practically independent of the initial low-pressure vapor
+Centers of National Interest Program, Chile grant CIN250043. A.A.V.O.     space configuration, in accordance with the aforementioned discussion.
+also extends thanks to CNPq 590, Brazil for the support provided
+through the productivity grant N# 3303417/2022-6, FACEPE for fund-
+ing through 591 the research project, Brazil APV-0045-3.05/24, as    Appendix B. Linear model errors with respect to the physics-based
+well as the Federal Institute of Pernambuco and the Postgraduate 592    dynamic model
+Program at the Federal University of Pernambuco, Brazil.
+
+
+Appendix A. Model numerical sensibility analysis                           Fig. B.1 shows the mean value of the relative error (MRE) of the
+                                                                               linear models for ̇𝑄𝐸 and ̇𝑄𝐺 with respect to the physics-based dynamic
+    Fig. A.1(a) studies the sensitivity of the numerical dynamic model to    model, from 𝑡= 0 up to 𝑡= 𝜏, the time constant of the respective output
+the simulation time step 𝛥𝑡. In particular, the simulation corresponds to     variable:
+the reference case shown in Fig. 6, i.e., a 1-minute ramp between 50%                       𝜏                                                                           1      ̇𝑄𝑙𝑖𝑛𝑒𝑎𝑟−̇𝑄
+and 100% capacity. The resulting outputs correspond to the system   MRE =                   𝑑𝑡                                      (B.1)
+                                                     𝜏∫0        ̇𝑄time constants 𝜏𝐸 and 𝜏𝐺, along with the integrated heat transfer at                                                                                                                                  |||||                                                                             |||||
+the evaporator and the generator, and all of them show convergence        In Fig. B.1(a), the mean linear model error is observed to be lower
+to limiting values for smaller 𝛥𝑡 values. The time constants 𝜏 are     than 1.6% for any value of 𝑡𝑟 up to 20 min, while in the case of short
+observed to not change much at time steps smaller than 1 s, while the    ramps or even a step change, the error reaches values lower than 1.0%.
+integrated heat transfers ̇𝑄 converge at time steps smaller than 2–3 s.     Conversely, according to Fig. B.1(b), in the case of the cooling capacity
+Consequently, attaining a balance between accuracy and computational     ̇𝑄𝐸, the mean error is observed to reach a maximum value of roughly
+speed, the selected time step for the results of this work is of 𝛥𝑡= 1 s.    2.5% at a ramp magnitude equivalent to around 25% of the rated
+   The discussion in Section 2.11 established that the low-pressure     capacity (from 75% to 100%), while for the driving heat input ̇𝑄𝐺 the
+vapor space is necessary for consistency of the model, although its    mean error increases consistently with the magnitude of the ramp.
+particular state is unlikely to have a significant influence on the results
+
+
+
+
+
+                                                          Fig. A.1. Model numerical sensitivity analysis.
+
+
+
+
+
+     Fig. B.1. Mean relative error of the linear model approximation with respect to the dynamic model (up to 𝑡= 𝜏) in response to a ramp change in 𝑇11.
+
+                                                                        19
+
+===== PDF PAGE 20 =====
+J.M. González et al.                                                                                                       Energy Conversion and Management 353 (2026) 121191
+
+Data availability                                                                  [24]  Alcântara SCS, Lima AAS, Ochoa AAV, de G, da Costa JÂP, dos Santos CAC,
+                                                                                                 Cavalcanti EJC, Michima PSA. Implementation of the characteristic equation
+   Data will be made available on request.                                      method in quasi-dynamic simulation of absorption chillers: Modeling, validation
+                                                                                   and first results. Energy Convers Manage 2022;13:100165.
+                                                                                      [25]  Lubis A, Giannetti N, Alhamid MI, Saito K, Yabase H. Dynamic analysis of
+                                                                                                      single–double-effect absorption chiller with variable thermal conductance during
+References                                                                                          partial-load operation. Appl Therm Eng 2023;218:119424.
+                                                                                      [26] Xu Y, Zhang S, Xiao Y. Modeling the dynamic simulation and control of a single
+  [1]  Nikbakhti R, Wang X, Hussein AK, Iranmanesh A. Absorption cooling systems –              effect LiBr-H2O absorption chiller. Appl Therm Eng 2016;107:1183–91.
+      review of various techniques for energy performance enhancement. Alex Eng J      [27]  Delgado MGuerrero, Ramos JSánchez, Medina DCastro, Palomo Amores TR,
+      2020;59(2):707–38.                                                                   Cerezo-Narváez A, Álvarez.Domínguez S. Fresnel solar cooling plant for buildings:
+  [2] Lima AAS, Leite NP, Ochoa AAV, dos Santos CAC, da Costa JAP, Michima PSA,           Optimal operation of an absorption chiller through inverse modelling. Energy
+      Caldas AMA. Absorption refrigeration systems based on ammonia as refrigerant          Rep 2022;8:3189–212.
+      using different absorbents: Review and applications. Energies 2021;14(1):48.         [28]  Cardemil JM, Escobar R, Quiñones G, Cortés C, Pino A, Häberle A, Tenreiro C.
+  [3]  Ibrahim NI, Yahiaoui A, Garkuwa JA, Mansour R Ben, Rehman S. Solar cooling          Combined generation of heat and cooling for a winemaking process using a
+      with absorption chillers, thermal energy storage, and control strategies: A review.              solar-assisted absorption chiller. In: Proceedings of the solar world congress, vol.
+      J Energy Storage 2024;97:112762.                                                    2015, Daegu, Korea; 2015, p. 8–12.
+  [4] Kim I, Broesicke O, Crittenden J. Optimization of combined cooling, heating and      [29]  Castro J, Farnós J, Papakokkinos G, Zheng J, Torras S. A multivariable control
+     power with energy storage using an absorption chiller and energy storage control             strategy based on fuzzy logic interference rule for a solar-driven, direct air-cooled
+       strategy. J Energy Storage 2024;103(Part A):114133.                                  H2O-LiBr absorption chiller. Sol Energy 2024;274:112579.
+  [5]  Alcântara SCS, Ochoa AAV, da Costa JAP, Michima PSA, Silva HCN. Natural gas      [30]  Nienborg B, Dalibard A, Schnabel L, Eicker U. Approaches for the optimized
+      based trigeneration system proposal to an ice cream factory: An energetic and             control of solar thermally driven cooling systems. Appl Energy 2017;185:732–44.
+      economic assessment. Energy Convers Manage 2019;197:111860.                    [31]  Goyal A, Staedter MA, Garimella S. A review of control methodologies for vapor
+  [6]  Altamirano A,  Pierrès N  Le, Stutz  B. Review  of small-capacity  single-stage            compression and absorption heat pumps. Int J Refrig 2019;97:1–20.
+      continuous absorption systems operating on binary working fluids for cooling:      [32]  González JM, Ochoa AAV, Cardemil JM, Godoy F, Zapata MZamora. Improving
+       Theoretical, experimental and commercial cycles. Int J Refrig 2019;106:350–73.             the off-design modeling of a commercial absorption  chiller. Energy Convers
+  [7]  Fischer YR, Dutra JCC, Rohatgi J. Thermodynamic modelling of a LiBr-H2O          Manage 2025;326:119470.
+      absorption chiller by improvement of characteristic equation method. Int J Refrig      [33] Gommed K, Grossman G. Performance analysis of staged absorption heat pumps:
+      2020;120:420–9.                                                                          water-lithium bromide systems. ASHRAE Trans 1990;96(1):1590–8.
+  [8]  Chakravarty  K  Hara,  Sadi  M,  Chakravarty  H,   Alsagri  A  Sulaiman,      [34]  Herold KE, Radermacher R, Klein SA. Absorption chillers and heat pumps. CRC
+     Howard T  James, Arabkoohsar  A. A  review on  integration  of renewable              Press; 2016.
+      energy processes in vapor absorption chiller for sustainable cooling. Sustain      [35]  International Association for the Properties of Water and Steam, IAPWS R6-
+      Energy Technol Assess 2022;50:101822.                                                   95. Revised release on the IAPWS formulation 1995 for the thermodynamic
+  [9]  Castro J, Farnós J, Papakokkinos G, Zheng J, Oliet C. Transient model for the             properties of ordinary water substance for general and scientific use. 2018, 2018.
+      development of an air-cooled LiBr-H2O absorption chiller based on heat and      [36] Kim DS, Infante Ferreira CA. A gibbs energy equation for LiBr aqueous solutions.
+      mass transfer empirical correlations. Int J Refrig 2020;120:406–19.                            Int J Refrig 2006;29(1):36–46.
+[10]  Evola G, Pierrès NLe, Boudehenn F, Papillon P. Proposal and validation of a      [37]  Çengel YA, Ghajar AJ. Heat and mass transfer: fundamentals and applications.
+     model for the dynamic simulation of a solar-assisted single-stage LiBr/water           McGraw-Hill Education.; 2011.
+      absorption chiller. Int J Refrig 2013;36:1015–28.                                   [38]  Albers J, Ziegler F. Heat transfer calculation for absorption heat pumps under
+[11] Kohlenbach P, Ziegler F. A dynamic simulation model for transient absorption             variable flow rate conditions. In: Proceedings of the international sorption heat
+       chiller performance. Part I: The model. Int J Refrig 2008;31(2):217–25.               pump conference. Padua, Italy; 2011, 6-7-8, 2011.
+[12] Sabbagh AA, Gómez JM. Optimal control of single stage LiBr/water absorption      [39] Hu X, Zhang S, Peng Z, Tang S, Liu N. Dynamic modeling and operation charac-
+        chiller. Int J Refrig 2018;92:1–9.                                                                       teristics analysis of LiBr absorption heat pump. E3S Web Conf 2021;257:01022,
+[13] Wang J, Shang S, Li X, Wang B, Wu W, Shi W. Dynamic performance analysis for           2021.
+      an absorption chiller under different working conditions. Appl Sci 2017;7(8):797.      [40]  Virtanen P, Gommers R, Oliphant TE, Haberland M, Reddy T, Cournapeau D,
+[14] Ochoa AAV, Dutra JCC, Henríquez JRG, dos Santos CAC. Dynamic study of a            Burovski E, Peterson P, Weckesser W, Bright J, van der Walt SJ, Brett M, Wil-
+       single effect absorption chiller using the pair LiBr/H2O. Energy Convers Manage            son J, Millman KJ, Mayorov N, Nelson ARJ, Jones E, Kern R, Larson E, Carey CJ,
+      2016;108:30–42.                                                                            Polat  İ, Feng Y, Moore EW, VanderPlas J, Laxalde D, Perktold J, Cimrman R,
+[15]  Voeltzel N, Phan HT, Blondel Q, Gonzalez B, Tauveron N. Steady and dy-            Henriksen  I, Quintero EA, Harris CR, Archibald AM, Ribeiro AH, Pedregosa F,
+      namical analysis of a combined cooling and power cycle. Therm Sci Eng Prog           Mulbregt Pvan, SciPy 10 Contributors. Scipy 1.0: Fundamental algorithms for
+      2020;19:100650.                                                                                       scientific computing in python. Nature Methods 2020;17(3):261–72.
+[16]  Borg SP, Kelly NJ. The development and calibration of a generic dynamic      [41]  Zavala-Río A, Femat R, Santiesteban-Cos R. An analytical study of the logarithmic
+      absorption chiller model. Energy Build 2012;55:533–44.                           mean temperature difference. Rev Mex Ingeniería Química 2005;4:201–12.
+[17] Marc O, Sinama  F, Praene  JP, Lucas  F,  Castaing-Lasvignottes  J. Dynamic      [42]  Yazaki Energy Systems. WFC-SC(H)  Chiller &  Chiller-Heater,  Specifications.
+      modeling and experimental validation elements of a 30 kW LiBr/H2O single            Version 11-1.
+       effect absorption chiller for solar application. Appl Therm Eng 2015;90:180–993.      [43] Kohlenbach P, Ziegler F. A dynamic simulation model for transient absorption
+[18] Ochoa AAV, Dutra JCC, Henríquez JRG, dos Santos CAC, Rohatgi J. The influence              chiller performance. Part II: Numerical results and experimental verification. Int
+       of the overall heat transfer coefficients in the dynamic behavior of a single            J Refrig 2008;31(2):226–33.
+       effect absorption  chiller using the  pair LiBr/H2O. Energy Convers Manage      [44] Myat A, Thu K, Kim Y-D, Chakraborty A, Chun WG, Ng KC. A second law analysis
+      2017;136:270–82.                                                              and entropy generation minimization of an absorption chiller. Appl Therm Eng
+[19]  Staudt  S,  Unterberger  V,  Gölles M,  Wernhart M,  Rieberer  R, Horn M.           2011;31(14–15):2405–13.
+       Control-oriented modeling of a LiBr/H2O absorption heat pumping device and      [45]  Zinet M, Rulliere R, Haberschill P. A numerical model for the dynamic simula-
+      experimental validation. J Process Control 2023;128:103024.                                 tion of a recirculation single-effect absorption chiller. Energy Convers Manage
+[20] Zhao  S,  Li X, Wang  L, Chang M. State-space model development and dy-            2012;62:51–63.
+      namic performance simulation of solar-powered single-effect LiBr-H2O absorption      [46] Ochoa AAV, da Costa JÂP, dos Santos CAC. Energetic analysis using theoretical
+        chiller. Renew Energy 2025;241:122327.                                              modeling and the characteristic equation method in a small absorption chiller
+[21]  Alcântara SCS, Ochoa AAV, da Costa JÂP, de Menezes FD, Leite GdeNovaes Pires,            with LiBr/H2O. Acta Sci - Technology 2018;40:1–10.
+      Arruda Michima PS, Marques AdaSilva. Development of a method for predicting      [47]  Albers  J, Ziegler F. Analysis of the part load behaviour of sorption chillers
+      the  transient behavior  of an  absorption  chiller  using  artificial  intelligence            with thermally driven solution pumps. In: Proceedings of the 21st international
+      methods. Appl Therm Eng 2023;231:120978.                                              congress of refrigeration, IIR/iIF. WA; 2003, Paper No. ICR0570.
+[22] Hong G, Seong N. Optimization  of  the ANN model  for energy consump-      [48]  Dalibard A, Gürlich D, Schneider D, Eicker U. Control optimization of solar
+       tion prediction of direct-fired absorption  chillers for a short-term. Buildings            thermally driven chillers. Energies 2016;9(11):864.
+      2023;13(2526).                                                                  [49]  Suárez-Calderón  JC, Susarrey-Huerta O, Desiderio-Maya D, Rocha-Gómez  I,
+[23] Zhang Q, Yuan Y, Wang Z, Wang X, Chen Y. Enhance data-driven models for            Flores-Campos JA. Cancellation of inertial effects in 1 degree of freedom mech-
+       chiller plants by integrating empirical knowledge. J Build Eng 2025;111:113475.           anisms applying sliding mode control with response in finite time. Ingeniería,
+                                                                                                    Investigación y Tecnología 2023;24(2).
+                                                                                      [50]  Albers  J, Nurzia G,  Ziegler  F. Simulation and experimental  analysis  of a
+                                                                                                          solar driven absorption chiller with partially wetted evaporator. J Sol Energy
+                                                                                              Engineering 2010;132(1):011016.
+
+
+                                                                        20

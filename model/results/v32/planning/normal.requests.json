@@ -1,0 +1,1103 @@
+{
+  "schema": "hospital_ies.v32.frozen_offline_requests.v1",
+  "method_id": "R32_fixed_capacity_offline",
+  "execution_identity": "literature_adapted_offline_onoff_preparation_plus_common_realtime_allocation",
+  "formulation": "strict",
+  "information_permission": "offline_known_window",
+  "preparation_lead_minutes": 45,
+  "full_continuous_plan_replayed": false,
+  "planned_storage_ports_executed": false,
+  "planned_unmet_directly_executed": false,
+  "requests": [
+    {
+      "time_minute": 0.0,
+      "period": 0,
+      "preparation_requests": [],
+      "numeric_roundoff_corrections": [],
+      "action": {
+        "ordinary_dispatch": {
+          "dispatch": {
+            "gt_electric_kW": [
+              131.180288,
+              0.0,
+              0.0
+            ],
+            "grid_import_kW": 246.3897301870618,
+            "diesel_kW": 0.0,
+            "boiler_steam_lbph": 0.0,
+            "absorption_cooling_kW": 111.14619208122768,
+            "electric_chiller_cooling_kW": [
+              6.689921610758262,
+              0.0,
+              0.0
+            ],
+            "hrsg_steam_lbph": 1162.5030234002797,
+            "tower_rejection_kW": 304.18353655300785,
+            "gt_fuel_MMBtu_h": 2.11288119552188
+          },
+          "disconnected_kW": [
+            [
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0
+            ]
+          ],
+          "rule_diagnostic": {
+            "policy_id": "R32_fixed_capacity_offline",
+            "information_permission": "offline_known_window",
+            "full_continuous_plan_replayed": false,
+            "planned_storage_ports_executed": false,
+            "planned_unmet_directly_executed": false,
+            "preparation_lead_minutes": 45
+          }
+        }
+      },
+      "unexecuted_storage_plan": {
+        "ups.charge": 0.0,
+        "ups.discharge": 0.0,
+        "ups.stock": 40.0,
+        "cold_store.charge": 0.0,
+        "cold_store.discharge": 0.0,
+        "cold_store.stock": 0.0
+      },
+      "unexecuted_unmet_plan": {
+        "P0": {
+          "e": 0.0,
+          "h": 0.0,
+          "c": 0.0
+        },
+        "P1": {
+          "e": 0.0,
+          "h": 0.0,
+          "c": 0.0
+        },
+        "P2": {
+          "e": 0.0,
+          "h": 0.0,
+          "c": 0.0
+        },
+        "P3": {
+          "e": 0.0,
+          "h": 0.0,
+          "c": 0.0
+        }
+      },
+      "requested_dispatch_is_not_execution_receipt": true
+    },
+    {
+      "time_minute": 15.0,
+      "period": 1,
+      "preparation_requests": [],
+      "numeric_roundoff_corrections": [],
+      "action": {
+        "ordinary_dispatch": {
+          "dispatch": {
+            "gt_electric_kW": [
+              131.180288,
+              1.1173448085516883e-14,
+              0.0
+            ],
+            "grid_import_kW": 246.3897301870618,
+            "diesel_kW": 0.0,
+            "boiler_steam_lbph": 0.0,
+            "absorption_cooling_kW": 111.14619208122768,
+            "electric_chiller_cooling_kW": [
+              6.689921610758262,
+              0.0,
+              0.0
+            ],
+            "hrsg_steam_lbph": 1162.5030234002797,
+            "tower_rejection_kW": 304.18353655300785,
+            "gt_fuel_MMBtu_h": 2.11288119552188
+          },
+          "disconnected_kW": [
+            [
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0
+            ]
+          ],
+          "rule_diagnostic": {
+            "policy_id": "R32_fixed_capacity_offline",
+            "information_permission": "offline_known_window",
+            "full_continuous_plan_replayed": false,
+            "planned_storage_ports_executed": false,
+            "planned_unmet_directly_executed": false,
+            "preparation_lead_minutes": 45
+          }
+        }
+      },
+      "unexecuted_storage_plan": {
+        "ups.charge": 0.0,
+        "ups.discharge": 0.0,
+        "ups.stock": 40.0,
+        "cold_store.charge": 0.0,
+        "cold_store.discharge": 0.0,
+        "cold_store.stock": 0.0
+      },
+      "unexecuted_unmet_plan": {
+        "P0": {
+          "e": 0.0,
+          "h": 0.0,
+          "c": 0.0
+        },
+        "P1": {
+          "e": 0.0,
+          "h": 0.0,
+          "c": 0.0
+        },
+        "P2": {
+          "e": 0.0,
+          "h": 0.0,
+          "c": 0.0
+        },
+        "P3": {
+          "e": 0.0,
+          "h": 0.0,
+          "c": 0.0
+        }
+      },
+      "requested_dispatch_is_not_execution_receipt": true
+    },
+    {
+      "time_minute": 30.0,
+      "period": 2,
+      "preparation_requests": [],
+      "numeric_roundoff_corrections": [],
+      "action": {
+        "ordinary_dispatch": {
+          "dispatch": {
+            "gt_electric_kW": [
+              131.180288,
+              1.1173448085516883e-14,
+              0.0
+            ],
+            "grid_import_kW": 246.3897301870618,
+            "diesel_kW": 0.0,
+            "boiler_steam_lbph": 0.0,
+            "absorption_cooling_kW": 111.14619208122768,
+            "electric_chiller_cooling_kW": [
+              6.689921610758262,
+              0.0,
+              0.0
+            ],
+            "hrsg_steam_lbph": 1162.5030234002797,
+            "tower_rejection_kW": 304.18353655300785,
+            "gt_fuel_MMBtu_h": 2.11288119552188
+          },
+          "disconnected_kW": [
+            [
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0
+            ]
+          ],
+          "rule_diagnostic": {
+            "policy_id": "R32_fixed_capacity_offline",
+            "information_permission": "offline_known_window",
+            "full_continuous_plan_replayed": false,
+            "planned_storage_ports_executed": false,
+            "planned_unmet_directly_executed": false,
+            "preparation_lead_minutes": 45
+          }
+        }
+      },
+      "unexecuted_storage_plan": {
+        "ups.charge": 0.0,
+        "ups.discharge": 0.0,
+        "ups.stock": 40.0,
+        "cold_store.charge": 0.0,
+        "cold_store.discharge": 0.0,
+        "cold_store.stock": 0.0
+      },
+      "unexecuted_unmet_plan": {
+        "P0": {
+          "e": 0.0,
+          "h": 0.0,
+          "c": 0.0
+        },
+        "P1": {
+          "e": 0.0,
+          "h": 0.0,
+          "c": 0.0
+        },
+        "P2": {
+          "e": 0.0,
+          "h": 0.0,
+          "c": 0.0
+        },
+        "P3": {
+          "e": 0.0,
+          "h": 0.0,
+          "c": 0.0
+        }
+      },
+      "requested_dispatch_is_not_execution_receipt": true
+    },
+    {
+      "time_minute": 45.0,
+      "period": 3,
+      "preparation_requests": [],
+      "numeric_roundoff_corrections": [],
+      "action": {
+        "ordinary_dispatch": {
+          "dispatch": {
+            "gt_electric_kW": [
+              131.180288,
+              1.1173448085516883e-14,
+              0.0
+            ],
+            "grid_import_kW": 246.3897301870618,
+            "diesel_kW": 0.0,
+            "boiler_steam_lbph": 0.0,
+            "absorption_cooling_kW": 111.14619208122768,
+            "electric_chiller_cooling_kW": [
+              6.689921610758262,
+              0.0,
+              0.0
+            ],
+            "hrsg_steam_lbph": 1162.5030234002797,
+            "tower_rejection_kW": 304.18353655300785,
+            "gt_fuel_MMBtu_h": 2.11288119552188
+          },
+          "disconnected_kW": [
+            [
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0
+            ]
+          ],
+          "rule_diagnostic": {
+            "policy_id": "R32_fixed_capacity_offline",
+            "information_permission": "offline_known_window",
+            "full_continuous_plan_replayed": false,
+            "planned_storage_ports_executed": false,
+            "planned_unmet_directly_executed": false,
+            "preparation_lead_minutes": 45
+          }
+        }
+      },
+      "unexecuted_storage_plan": {
+        "ups.charge": 0.0,
+        "ups.discharge": 0.0,
+        "ups.stock": 40.0,
+        "cold_store.charge": 0.0,
+        "cold_store.discharge": 0.0,
+        "cold_store.stock": 0.0
+      },
+      "unexecuted_unmet_plan": {
+        "P0": {
+          "e": 0.0,
+          "h": 0.0,
+          "c": 0.0
+        },
+        "P1": {
+          "e": 0.0,
+          "h": 0.0,
+          "c": 0.0
+        },
+        "P2": {
+          "e": 0.0,
+          "h": 0.0,
+          "c": 0.0
+        },
+        "P3": {
+          "e": 0.0,
+          "h": 0.0,
+          "c": 0.0
+        }
+      },
+      "requested_dispatch_is_not_execution_receipt": true
+    },
+    {
+      "time_minute": 60.0,
+      "period": 4,
+      "preparation_requests": [],
+      "numeric_roundoff_corrections": [],
+      "action": {
+        "ordinary_dispatch": {
+          "dispatch": {
+            "gt_electric_kW": [
+              130.24947199999997,
+              1.1173448085516883e-14,
+              0.0
+            ],
+            "grid_import_kW": 364.64821327638924,
+            "diesel_kW": 0.0,
+            "boiler_steam_lbph": 0.0,
+            "absorption_cooling_kW": 121.91093838718405,
+            "electric_chiller_cooling_kW": [
+              12.068142006920255,
+              0.0,
+              0.0
+            ],
+            "hrsg_steam_lbph": 1162.50302340028,
+            "tower_rejection_kW": 339.4103258227175,
+            "gt_fuel_MMBtu_h": 2.1001020737723954
+          },
+          "disconnected_kW": [
+            [
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0
+            ]
+          ],
+          "rule_diagnostic": {
+            "policy_id": "R32_fixed_capacity_offline",
+            "information_permission": "offline_known_window",
+            "full_continuous_plan_replayed": false,
+            "planned_storage_ports_executed": false,
+            "planned_unmet_directly_executed": false,
+            "preparation_lead_minutes": 45
+          }
+        }
+      },
+      "unexecuted_storage_plan": {
+        "ups.charge": 0.0,
+        "ups.discharge": 0.0,
+        "ups.stock": 40.0,
+        "cold_store.charge": 0.0,
+        "cold_store.discharge": 0.0,
+        "cold_store.stock": 0.0
+      },
+      "unexecuted_unmet_plan": {
+        "P0": {
+          "e": 0.0,
+          "h": 0.0,
+          "c": 0.0
+        },
+        "P1": {
+          "e": 0.0,
+          "h": 0.0,
+          "c": 0.0
+        },
+        "P2": {
+          "e": 0.0,
+          "h": 0.0,
+          "c": 0.0
+        },
+        "P3": {
+          "e": 0.0,
+          "h": 0.0,
+          "c": 0.0
+        }
+      },
+      "requested_dispatch_is_not_execution_receipt": true
+    },
+    {
+      "time_minute": 75.0,
+      "period": 5,
+      "preparation_requests": [],
+      "numeric_roundoff_corrections": [],
+      "action": {
+        "ordinary_dispatch": {
+          "dispatch": {
+            "gt_electric_kW": [
+              130.24947199999997,
+              1.1173448085516883e-14,
+              0.0
+            ],
+            "grid_import_kW": 364.64821327638924,
+            "diesel_kW": 0.0,
+            "boiler_steam_lbph": 0.0,
+            "absorption_cooling_kW": 121.91093838718405,
+            "electric_chiller_cooling_kW": [
+              12.068142006920255,
+              0.0,
+              0.0
+            ],
+            "hrsg_steam_lbph": 1162.50302340028,
+            "tower_rejection_kW": 339.4103258227175,
+            "gt_fuel_MMBtu_h": 2.1001020737723954
+          },
+          "disconnected_kW": [
+            [
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0
+            ]
+          ],
+          "rule_diagnostic": {
+            "policy_id": "R32_fixed_capacity_offline",
+            "information_permission": "offline_known_window",
+            "full_continuous_plan_replayed": false,
+            "planned_storage_ports_executed": false,
+            "planned_unmet_directly_executed": false,
+            "preparation_lead_minutes": 45
+          }
+        }
+      },
+      "unexecuted_storage_plan": {
+        "ups.charge": 0.0,
+        "ups.discharge": 0.0,
+        "ups.stock": 40.0,
+        "cold_store.charge": 0.0,
+        "cold_store.discharge": 0.0,
+        "cold_store.stock": 0.0
+      },
+      "unexecuted_unmet_plan": {
+        "P0": {
+          "e": 0.0,
+          "h": 0.0,
+          "c": 0.0
+        },
+        "P1": {
+          "e": 0.0,
+          "h": 0.0,
+          "c": 0.0
+        },
+        "P2": {
+          "e": 0.0,
+          "h": 0.0,
+          "c": 0.0
+        },
+        "P3": {
+          "e": 0.0,
+          "h": 0.0,
+          "c": 0.0
+        }
+      },
+      "requested_dispatch_is_not_execution_receipt": true
+    },
+    {
+      "time_minute": 90.0,
+      "period": 6,
+      "preparation_requests": [],
+      "numeric_roundoff_corrections": [],
+      "action": {
+        "ordinary_dispatch": {
+          "dispatch": {
+            "gt_electric_kW": [
+              130.24947199999997,
+              0.0,
+              0.0
+            ],
+            "grid_import_kW": 364.64821327638924,
+            "diesel_kW": 0.0,
+            "boiler_steam_lbph": 0.0,
+            "absorption_cooling_kW": 121.91093838718405,
+            "electric_chiller_cooling_kW": [
+              12.068142006920255,
+              0.0,
+              0.0
+            ],
+            "hrsg_steam_lbph": 1162.50302340028,
+            "tower_rejection_kW": 339.4103258227175,
+            "gt_fuel_MMBtu_h": 2.1001020737723954
+          },
+          "disconnected_kW": [
+            [
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0
+            ]
+          ],
+          "rule_diagnostic": {
+            "policy_id": "R32_fixed_capacity_offline",
+            "information_permission": "offline_known_window",
+            "full_continuous_plan_replayed": false,
+            "planned_storage_ports_executed": false,
+            "planned_unmet_directly_executed": false,
+            "preparation_lead_minutes": 45
+          }
+        }
+      },
+      "unexecuted_storage_plan": {
+        "ups.charge": 0.0,
+        "ups.discharge": 0.0,
+        "ups.stock": 40.0,
+        "cold_store.charge": 0.0,
+        "cold_store.discharge": 0.0,
+        "cold_store.stock": 0.0
+      },
+      "unexecuted_unmet_plan": {
+        "P0": {
+          "e": 0.0,
+          "h": 0.0,
+          "c": 0.0
+        },
+        "P1": {
+          "e": 0.0,
+          "h": 0.0,
+          "c": 0.0
+        },
+        "P2": {
+          "e": 0.0,
+          "h": 0.0,
+          "c": 0.0
+        },
+        "P3": {
+          "e": 0.0,
+          "h": 0.0,
+          "c": 0.0
+        }
+      },
+      "requested_dispatch_is_not_execution_receipt": true
+    },
+    {
+      "time_minute": 105.0,
+      "period": 7,
+      "preparation_requests": [],
+      "numeric_roundoff_corrections": [],
+      "action": {
+        "ordinary_dispatch": {
+          "dispatch": {
+            "gt_electric_kW": [
+              130.24947199999997,
+              0.0,
+              0.0
+            ],
+            "grid_import_kW": 364.64821327638924,
+            "diesel_kW": 0.0,
+            "boiler_steam_lbph": 0.0,
+            "absorption_cooling_kW": 121.91093838718405,
+            "electric_chiller_cooling_kW": [
+              12.068142006920255,
+              0.0,
+              0.0
+            ],
+            "hrsg_steam_lbph": 1162.50302340028,
+            "tower_rejection_kW": 339.4103258227175,
+            "gt_fuel_MMBtu_h": 2.1001020737723954
+          },
+          "disconnected_kW": [
+            [
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0
+            ]
+          ],
+          "rule_diagnostic": {
+            "policy_id": "R32_fixed_capacity_offline",
+            "information_permission": "offline_known_window",
+            "full_continuous_plan_replayed": false,
+            "planned_storage_ports_executed": false,
+            "planned_unmet_directly_executed": false,
+            "preparation_lead_minutes": 45
+          }
+        }
+      },
+      "unexecuted_storage_plan": {
+        "ups.charge": 0.0,
+        "ups.discharge": 0.0,
+        "ups.stock": 40.0,
+        "cold_store.charge": 0.0,
+        "cold_store.discharge": 0.0,
+        "cold_store.stock": 0.0
+      },
+      "unexecuted_unmet_plan": {
+        "P0": {
+          "e": 0.0,
+          "h": 0.0,
+          "c": 0.0
+        },
+        "P1": {
+          "e": 0.0,
+          "h": 0.0,
+          "c": 0.0
+        },
+        "P2": {
+          "e": 0.0,
+          "h": 0.0,
+          "c": 0.0
+        },
+        "P3": {
+          "e": 0.0,
+          "h": 0.0,
+          "c": 0.0
+        }
+      },
+      "requested_dispatch_is_not_execution_receipt": true
+    },
+    {
+      "time_minute": 120.0,
+      "period": 8,
+      "preparation_requests": [],
+      "numeric_roundoff_corrections": [],
+      "action": {
+        "ordinary_dispatch": {
+          "dispatch": {
+            "gt_electric_kW": [
+              129.31865599999998,
+              0.0,
+              0.0
+            ],
+            "grid_import_kW": 434.66261086167844,
+            "diesel_kW": 0.0,
+            "boiler_steam_lbph": 0.0,
+            "absorption_cooling_kW": 73.02967492116163,
+            "electric_chiller_cooling_kW": [
+              167.3987956543562,
+              0.0,
+              0.0
+            ],
+            "hrsg_steam_lbph": 1162.50302340028,
+            "tower_rejection_kW": 398.55867853231416,
+            "gt_fuel_MMBtu_h": 2.0872913184457262
+          },
+          "disconnected_kW": [
+            [
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0
+            ]
+          ],
+          "rule_diagnostic": {
+            "policy_id": "R32_fixed_capacity_offline",
+            "information_permission": "offline_known_window",
+            "full_continuous_plan_replayed": false,
+            "planned_storage_ports_executed": false,
+            "planned_unmet_directly_executed": false,
+            "preparation_lead_minutes": 45
+          }
+        }
+      },
+      "unexecuted_storage_plan": {
+        "ups.charge": 0.0,
+        "ups.discharge": 0.0,
+        "ups.stock": 40.0,
+        "cold_store.charge": 0.0,
+        "cold_store.discharge": 0.0,
+        "cold_store.stock": 0.0
+      },
+      "unexecuted_unmet_plan": {
+        "P0": {
+          "e": 0.0,
+          "h": 0.0,
+          "c": 0.0
+        },
+        "P1": {
+          "e": 0.0,
+          "h": 0.0,
+          "c": 0.0
+        },
+        "P2": {
+          "e": 0.0,
+          "h": 0.0,
+          "c": 0.0
+        },
+        "P3": {
+          "e": 0.0,
+          "h": 0.0,
+          "c": 0.0
+        }
+      },
+      "requested_dispatch_is_not_execution_receipt": true
+    },
+    {
+      "time_minute": 135.0,
+      "period": 9,
+      "preparation_requests": [],
+      "numeric_roundoff_corrections": [],
+      "action": {
+        "ordinary_dispatch": {
+          "dispatch": {
+            "gt_electric_kW": [
+              129.31865599999998,
+              0.0,
+              0.0
+            ],
+            "grid_import_kW": 434.66261086167844,
+            "diesel_kW": 0.0,
+            "boiler_steam_lbph": 0.0,
+            "absorption_cooling_kW": 73.02967492116163,
+            "electric_chiller_cooling_kW": [
+              167.3987956543562,
+              0.0,
+              0.0
+            ],
+            "hrsg_steam_lbph": 1162.50302340028,
+            "tower_rejection_kW": 398.55867853231416,
+            "gt_fuel_MMBtu_h": 2.0872913184457262
+          },
+          "disconnected_kW": [
+            [
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0
+            ]
+          ],
+          "rule_diagnostic": {
+            "policy_id": "R32_fixed_capacity_offline",
+            "information_permission": "offline_known_window",
+            "full_continuous_plan_replayed": false,
+            "planned_storage_ports_executed": false,
+            "planned_unmet_directly_executed": false,
+            "preparation_lead_minutes": 45
+          }
+        }
+      },
+      "unexecuted_storage_plan": {
+        "ups.charge": 0.0,
+        "ups.discharge": 0.0,
+        "ups.stock": 40.0,
+        "cold_store.charge": 0.0,
+        "cold_store.discharge": 0.0,
+        "cold_store.stock": 0.0
+      },
+      "unexecuted_unmet_plan": {
+        "P0": {
+          "e": 0.0,
+          "h": 0.0,
+          "c": 0.0
+        },
+        "P1": {
+          "e": 0.0,
+          "h": 0.0,
+          "c": 0.0
+        },
+        "P2": {
+          "e": 0.0,
+          "h": 0.0,
+          "c": 0.0
+        },
+        "P3": {
+          "e": 0.0,
+          "h": 0.0,
+          "c": 0.0
+        }
+      },
+      "requested_dispatch_is_not_execution_receipt": true
+    },
+    {
+      "time_minute": 150.0,
+      "period": 10,
+      "preparation_requests": [],
+      "numeric_roundoff_corrections": [],
+      "action": {
+        "ordinary_dispatch": {
+          "dispatch": {
+            "gt_electric_kW": [
+              129.31865599999998,
+              0.0,
+              0.0
+            ],
+            "grid_import_kW": 434.66261086167844,
+            "diesel_kW": 0.0,
+            "boiler_steam_lbph": 0.0,
+            "absorption_cooling_kW": 73.02967492116163,
+            "electric_chiller_cooling_kW": [
+              167.3987956543562,
+              0.0,
+              0.0
+            ],
+            "hrsg_steam_lbph": 1162.50302340028,
+            "tower_rejection_kW": 398.55867853231416,
+            "gt_fuel_MMBtu_h": 2.0872913184457262
+          },
+          "disconnected_kW": [
+            [
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0
+            ]
+          ],
+          "rule_diagnostic": {
+            "policy_id": "R32_fixed_capacity_offline",
+            "information_permission": "offline_known_window",
+            "full_continuous_plan_replayed": false,
+            "planned_storage_ports_executed": false,
+            "planned_unmet_directly_executed": false,
+            "preparation_lead_minutes": 45
+          }
+        }
+      },
+      "unexecuted_storage_plan": {
+        "ups.charge": 0.0,
+        "ups.discharge": 0.0,
+        "ups.stock": 40.0,
+        "cold_store.charge": 0.0,
+        "cold_store.discharge": 0.0,
+        "cold_store.stock": 0.0
+      },
+      "unexecuted_unmet_plan": {
+        "P0": {
+          "e": 0.0,
+          "h": 0.0,
+          "c": 0.0
+        },
+        "P1": {
+          "e": 0.0,
+          "h": 0.0,
+          "c": 0.0
+        },
+        "P2": {
+          "e": 0.0,
+          "h": 0.0,
+          "c": 0.0
+        },
+        "P3": {
+          "e": 0.0,
+          "h": 0.0,
+          "c": 0.0
+        }
+      },
+      "requested_dispatch_is_not_execution_receipt": true
+    },
+    {
+      "time_minute": 165.0,
+      "period": 11,
+      "preparation_requests": [],
+      "numeric_roundoff_corrections": [],
+      "action": {
+        "ordinary_dispatch": {
+          "dispatch": {
+            "gt_electric_kW": [
+              129.31865599999998,
+              0.0,
+              0.0
+            ],
+            "grid_import_kW": 434.66261086167844,
+            "diesel_kW": 0.0,
+            "boiler_steam_lbph": 0.0,
+            "absorption_cooling_kW": 73.02967492116163,
+            "electric_chiller_cooling_kW": [
+              167.3987956543562,
+              0.0,
+              0.0
+            ],
+            "hrsg_steam_lbph": 1162.50302340028,
+            "tower_rejection_kW": 398.55867853231416,
+            "gt_fuel_MMBtu_h": 2.0872913184457262
+          },
+          "disconnected_kW": [
+            [
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0
+            ]
+          ],
+          "rule_diagnostic": {
+            "policy_id": "R32_fixed_capacity_offline",
+            "information_permission": "offline_known_window",
+            "full_continuous_plan_replayed": false,
+            "planned_storage_ports_executed": false,
+            "planned_unmet_directly_executed": false,
+            "preparation_lead_minutes": 45
+          }
+        }
+      },
+      "unexecuted_storage_plan": {
+        "ups.charge": 0.0,
+        "ups.discharge": 0.0,
+        "ups.stock": 40.0,
+        "cold_store.charge": 0.0,
+        "cold_store.discharge": 0.0,
+        "cold_store.stock": 0.0
+      },
+      "unexecuted_unmet_plan": {
+        "P0": {
+          "e": 0.0,
+          "h": 0.0,
+          "c": 0.0
+        },
+        "P1": {
+          "e": 0.0,
+          "h": 0.0,
+          "c": 0.0
+        },
+        "P2": {
+          "e": 0.0,
+          "h": 0.0,
+          "c": 0.0
+        },
+        "P3": {
+          "e": 0.0,
+          "h": 0.0,
+          "c": 0.0
+        }
+      },
+      "requested_dispatch_is_not_execution_receipt": true
+    }
+  ],
+  "adaptation_limits": [
+    "No ordinary UPS/cold charge/discharge command ports",
+    "Plan unmet is not mapped to active disconnection",
+    "Common M23 current minimum preparation may enlarge boiler/EC ceilings after the frozen controller request",
+    "Actual queue, powered startup, minimum on/off, ramp, transfer, protection and local reallocation remain original"
+  ],
+  "spec_sha256": "6b027fa16e085e97e2bd28ec11cccced6641e82efcfdb99cb76b13f1bf10477e",
+  "adopted_plan_sha256": "f028799c8719f817c14582a4c6d3a346262441873131093ba92bf1d7b16cdaed",
+  "initial_certificate_sha256": "36dbed823fe7d642065c036d0d2fa573db7bbce16e2477154fe0e6c85ca30402",
+  "registration_sha256": "26dfcd41506d32a8103ac26e18451e7336e6bc205a5d2885d123db2024d836b0"
+}

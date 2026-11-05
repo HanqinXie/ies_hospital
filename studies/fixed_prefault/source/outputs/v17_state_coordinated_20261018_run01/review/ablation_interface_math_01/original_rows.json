@@ -1,0 +1,3782 @@
+[
+  {
+    "name": "balance.electric",
+    "unit": "kW",
+    "source": "original energy hub equality",
+    "kind": "physical"
+  },
+  {
+    "name": "balance.steam",
+    "unit": "lb/h",
+    "source": "original energy hub equality",
+    "kind": "physical"
+  },
+  {
+    "name": "balance.cooling",
+    "unit": "kW",
+    "source": "original energy hub equality",
+    "kind": "physical"
+  },
+  {
+    "name": "GT_1.capacity",
+    "unit": "kW",
+    "source": "original physical constraint",
+    "kind": "physical"
+  },
+  {
+    "name": "GT_1.minimum_stable",
+    "unit": "kW",
+    "source": "original physical constraint",
+    "kind": "physical"
+  },
+  {
+    "name": "continuity.GT_1.positive_change",
+    "unit": "kW",
+    "source": "original physical constraint",
+    "kind": "preference"
+  },
+  {
+    "name": "continuity.GT_1.negative_change",
+    "unit": "kW",
+    "source": "original physical constraint",
+    "kind": "preference"
+  },
+  {
+    "name": "continuity.GT_1.actual_state_change",
+    "unit": "GT changes",
+    "source": "original physical constraint",
+    "kind": "preference"
+  },
+  {
+    "name": "GT_2.capacity",
+    "unit": "kW",
+    "source": "original physical constraint",
+    "kind": "physical"
+  },
+  {
+    "name": "GT_2.minimum_stable",
+    "unit": "kW",
+    "source": "original physical constraint",
+    "kind": "physical"
+  },
+  {
+    "name": "continuity.GT_2.positive_change",
+    "unit": "kW",
+    "source": "original physical constraint",
+    "kind": "preference"
+  },
+  {
+    "name": "continuity.GT_2.negative_change",
+    "unit": "kW",
+    "source": "original physical constraint",
+    "kind": "preference"
+  },
+  {
+    "name": "continuity.GT_2.actual_state_change",
+    "unit": "GT changes",
+    "source": "original physical constraint",
+    "kind": "preference"
+  },
+  {
+    "name": "GT_3.capacity",
+    "unit": "kW",
+    "source": "original physical constraint",
+    "kind": "physical"
+  },
+  {
+    "name": "GT_3.minimum_stable",
+    "unit": "kW",
+    "source": "original physical constraint",
+    "kind": "physical"
+  },
+  {
+    "name": "GT_3.ordinary_ramp",
+    "unit": "kW",
+    "source": "original physical constraint",
+    "kind": "physical"
+  },
+  {
+    "name": "continuity.GT_3.positive_change",
+    "unit": "kW",
+    "source": "original physical constraint",
+    "kind": "preference"
+  },
+  {
+    "name": "continuity.GT_3.negative_change",
+    "unit": "kW",
+    "source": "original physical constraint",
+    "kind": "preference"
+  },
+  {
+    "name": "continuity.GT_3.actual_state_change",
+    "unit": "GT changes",
+    "source": "original physical constraint",
+    "kind": "preference"
+  },
+  {
+    "name": "command.P2.e.cut_below_unserved",
+    "unit": "kW",
+    "source": "original physical constraint",
+    "kind": "physical"
+  },
+  {
+    "name": "command.P2.e.cut_equals_unserved",
+    "unit": "kW",
+    "source": "explicit old-cut scheduling comparator",
+    "kind": "physical"
+  },
+  {
+    "name": "command.P2.h.cut_below_unserved",
+    "unit": "kW",
+    "source": "original physical constraint",
+    "kind": "physical"
+  },
+  {
+    "name": "command.P2.h.cut_equals_unserved",
+    "unit": "kW",
+    "source": "explicit old-cut scheduling comparator",
+    "kind": "physical"
+  },
+  {
+    "name": "command.P2.c.cut_below_unserved",
+    "unit": "kW",
+    "source": "original physical constraint",
+    "kind": "physical"
+  },
+  {
+    "name": "command.P2.c.cut_equals_unserved",
+    "unit": "kW",
+    "source": "explicit old-cut scheduling comparator",
+    "kind": "physical"
+  },
+  {
+    "name": "command.P3.e.cut_below_unserved",
+    "unit": "kW",
+    "source": "original physical constraint",
+    "kind": "physical"
+  },
+  {
+    "name": "command.P3.e.cut_equals_unserved",
+    "unit": "kW",
+    "source": "explicit old-cut scheduling comparator",
+    "kind": "physical"
+  },
+  {
+    "name": "command.P3.h.cut_below_unserved",
+    "unit": "kW",
+    "source": "original physical constraint",
+    "kind": "physical"
+  },
+  {
+    "name": "command.P3.h.cut_equals_unserved",
+    "unit": "kW",
+    "source": "explicit old-cut scheduling comparator",
+    "kind": "physical"
+  },
+  {
+    "name": "command.P3.c.cut_below_unserved",
+    "unit": "kW",
+    "source": "original physical constraint",
+    "kind": "physical"
+  },
+  {
+    "name": "command.P3.c.cut_equals_unserved",
+    "unit": "kW",
+    "source": "explicit old-cut scheduling comparator",
+    "kind": "physical"
+  },
+  {
+    "name": "tower.rejection",
+    "unit": "kW",
+    "source": "original physical constraint",
+    "kind": "physical"
+  },
+  {
+    "name": "preference.command.absorption.cooling_ceiling.unused_identity",
+    "unit": "RT",
+    "source": "nonnegative permission headroom identity; no change to actual conversion capacity",
+    "kind": "preference"
+  },
+  {
+    "name": "preference.command.EC_1.cooling_ceiling.unused_identity",
+    "unit": "RT",
+    "source": "nonnegative permission headroom identity; no change to actual conversion capacity",
+    "kind": "preference"
+  },
+  {
+    "name": "preference.command.EC_2.cooling_ceiling.unused_identity",
+    "unit": "RT",
+    "source": "nonnegative permission headroom identity; no change to actual conversion capacity",
+    "kind": "preference"
+  },
+  {
+    "name": "preference.command.EC_3.cooling_ceiling.unused_identity",
+    "unit": "RT",
+    "source": "nonnegative permission headroom identity; no change to actual conversion capacity",
+    "kind": "preference"
+  },
+  {
+    "name": "command.absorption.cooling.below_arrived_ceiling",
+    "unit": "RT",
+    "source": "existing ordinary converter command ceiling, actual use remains balanced",
+    "kind": "physical"
+  },
+  {
+    "name": "command.EC_1.cooling.below_arrived_ceiling",
+    "unit": "RT",
+    "source": "existing ordinary converter command ceiling, actual use remains balanced",
+    "kind": "physical"
+  },
+  {
+    "name": "command.EC_2.cooling.below_arrived_ceiling",
+    "unit": "RT",
+    "source": "existing ordinary converter command ceiling, actual use remains balanced",
+    "kind": "physical"
+  },
+  {
+    "name": "command.EC_3.cooling.below_arrived_ceiling",
+    "unit": "RT",
+    "source": "existing ordinary converter command ceiling, actual use remains balanced",
+    "kind": "physical"
+  },
+  {
+    "name": "command.diesel_used_below_ceiling",
+    "unit": "kW",
+    "source": "original physical constraint",
+    "kind": "physical"
+  },
+  {
+    "name": "preference.actual_command_shaft_support",
+    "unit": "shaft equivalent kWh",
+    "source": "ordinary command ceiling duration plus startup, positive storage and bounded shaft loss; soft excess",
+    "kind": "preference"
+  },
+  {
+    "name": "command.import_used_below_ceiling",
+    "unit": "kW",
+    "source": "existing arrived_ceiling interface",
+    "kind": "physical"
+  },
+  {
+    "name": "phase.shared_response.GT_1.same_command_target",
+    "unit": "kW",
+    "source": "original physical constraint",
+    "kind": "physical"
+  },
+  {
+    "name": "phase.shared_response.GT_1.deterministic_ready",
+    "unit": "kW",
+    "source": "original physical constraint",
+    "kind": "physical"
+  },
+  {
+    "name": "phase.shared_response.GT_2.same_command_target",
+    "unit": "kW",
+    "source": "original physical constraint",
+    "kind": "physical"
+  },
+  {
+    "name": "phase.shared_response.GT_2.deterministic_ready",
+    "unit": "kW",
+    "source": "original physical constraint",
+    "kind": "physical"
+  },
+  {
+    "name": "phase.shared_response.GT_3.same_command_target",
+    "unit": "kW",
+    "source": "original physical constraint",
+    "kind": "physical"
+  },
+  {
+    "name": "phase.shared_response.GT_3.deterministic_ready",
+    "unit": "kW",
+    "source": "original physical constraint",
+    "kind": "physical"
+  },
+  {
+    "name": "phase.GRID_loss.diesel_below_same_command",
+    "unit": "kW",
+    "source": "original physical constraint",
+    "kind": "physical"
+  },
+  {
+    "name": "phase.GRID_loss.sustained_shaft_work",
+    "unit": "shaft equivalent kWh",
+    "source": "registered duration plus startup, positive storage and bounded shaft loss",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.GRID_loss.P0.e.same_disconnected_contacts",
+    "unit": "kW",
+    "source": "same generated physical contact cuts, not numerical unserved service",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.GRID_loss.P0.h.same_disconnected_contacts",
+    "unit": "kW",
+    "source": "same generated physical contact cuts, not numerical unserved service",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.GRID_loss.P0.c.same_disconnected_contacts",
+    "unit": "kW",
+    "source": "same generated physical contact cuts, not numerical unserved service",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.GRID_loss.P1.e.same_disconnected_contacts",
+    "unit": "kW",
+    "source": "same generated physical contact cuts, not numerical unserved service",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.GRID_loss.P1.h.same_disconnected_contacts",
+    "unit": "kW",
+    "source": "same generated physical contact cuts, not numerical unserved service",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.GRID_loss.P1.c.same_disconnected_contacts",
+    "unit": "kW",
+    "source": "same generated physical contact cuts, not numerical unserved service",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.GRID_loss.P2.e.same_disconnected_contacts",
+    "unit": "kW",
+    "source": "same generated physical contact cuts, not numerical unserved service",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.GRID_loss.P2.h.same_disconnected_contacts",
+    "unit": "kW",
+    "source": "same generated physical contact cuts, not numerical unserved service",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.GRID_loss.P2.c.same_disconnected_contacts",
+    "unit": "kW",
+    "source": "same generated physical contact cuts, not numerical unserved service",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.GRID_loss.P3.e.same_disconnected_contacts",
+    "unit": "kW",
+    "source": "same generated physical contact cuts, not numerical unserved service",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.GRID_loss.P3.h.same_disconnected_contacts",
+    "unit": "kW",
+    "source": "same generated physical contact cuts, not numerical unserved service",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.GRID_loss.P3.c.same_disconnected_contacts",
+    "unit": "kW",
+    "source": "same generated physical contact cuts, not numerical unserved service",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.GRID_loss.balance.electric",
+    "unit": "kW",
+    "source": "static single-command diagnostic; surplus defect is NOT real disposal",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.GRID_loss.balance.steam",
+    "unit": "lb/h",
+    "source": "static single-command diagnostic; surplus defect is NOT real disposal",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.GRID_loss.balance.cooling",
+    "unit": "kW",
+    "source": "static single-command diagnostic; surplus defect is NOT real disposal",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.GRID_loss.risk.GRID_loss.absorption.cooling.held_ceiling",
+    "unit": "RT",
+    "source": "original arrived converter ceiling, no new command",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.GRID_loss.risk.GRID_loss.EC_1.cooling.held_ceiling",
+    "unit": "RT",
+    "source": "original arrived converter ceiling, no new command",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.GRID_loss.risk.GRID_loss.EC_2.cooling.held_ceiling",
+    "unit": "RT",
+    "source": "original arrived converter ceiling, no new command",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.GRID_loss.risk.GRID_loss.EC_3.cooling.held_ceiling",
+    "unit": "RT",
+    "source": "original arrived converter ceiling, no new command",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.GRID_loss.tower.rejection",
+    "unit": "kW",
+    "source": "original physical constraint",
+    "kind": "physical"
+  },
+  {
+    "name": "phase.GT_1_loss.diesel_below_same_command",
+    "unit": "kW",
+    "source": "original physical constraint",
+    "kind": "physical"
+  },
+  {
+    "name": "phase.GT_1_loss.sustained_shaft_work",
+    "unit": "shaft equivalent kWh",
+    "source": "registered duration plus startup, positive storage and bounded shaft loss",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.GT_1_loss.P0.e.same_disconnected_contacts",
+    "unit": "kW",
+    "source": "same generated physical contact cuts, not numerical unserved service",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.GT_1_loss.P0.h.same_disconnected_contacts",
+    "unit": "kW",
+    "source": "same generated physical contact cuts, not numerical unserved service",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.GT_1_loss.P0.c.same_disconnected_contacts",
+    "unit": "kW",
+    "source": "same generated physical contact cuts, not numerical unserved service",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.GT_1_loss.P1.e.same_disconnected_contacts",
+    "unit": "kW",
+    "source": "same generated physical contact cuts, not numerical unserved service",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.GT_1_loss.P1.h.same_disconnected_contacts",
+    "unit": "kW",
+    "source": "same generated physical contact cuts, not numerical unserved service",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.GT_1_loss.P1.c.same_disconnected_contacts",
+    "unit": "kW",
+    "source": "same generated physical contact cuts, not numerical unserved service",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.GT_1_loss.P2.e.same_disconnected_contacts",
+    "unit": "kW",
+    "source": "same generated physical contact cuts, not numerical unserved service",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.GT_1_loss.P2.h.same_disconnected_contacts",
+    "unit": "kW",
+    "source": "same generated physical contact cuts, not numerical unserved service",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.GT_1_loss.P2.c.same_disconnected_contacts",
+    "unit": "kW",
+    "source": "same generated physical contact cuts, not numerical unserved service",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.GT_1_loss.P3.e.same_disconnected_contacts",
+    "unit": "kW",
+    "source": "same generated physical contact cuts, not numerical unserved service",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.GT_1_loss.P3.h.same_disconnected_contacts",
+    "unit": "kW",
+    "source": "same generated physical contact cuts, not numerical unserved service",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.GT_1_loss.P3.c.same_disconnected_contacts",
+    "unit": "kW",
+    "source": "same generated physical contact cuts, not numerical unserved service",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.GT_1_loss.balance.electric",
+    "unit": "kW",
+    "source": "static single-command diagnostic; surplus defect is NOT real disposal",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.GT_1_loss.balance.steam",
+    "unit": "lb/h",
+    "source": "static single-command diagnostic; surplus defect is NOT real disposal",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.GT_1_loss.balance.cooling",
+    "unit": "kW",
+    "source": "static single-command diagnostic; surplus defect is NOT real disposal",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.GT_1_loss.risk.GT_1_loss.absorption.cooling.held_ceiling",
+    "unit": "RT",
+    "source": "original arrived converter ceiling, no new command",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.GT_1_loss.risk.GT_1_loss.EC_1.cooling.held_ceiling",
+    "unit": "RT",
+    "source": "original arrived converter ceiling, no new command",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.GT_1_loss.risk.GT_1_loss.EC_2.cooling.held_ceiling",
+    "unit": "RT",
+    "source": "original arrived converter ceiling, no new command",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.GT_1_loss.risk.GT_1_loss.EC_3.cooling.held_ceiling",
+    "unit": "RT",
+    "source": "original arrived converter ceiling, no new command",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.GT_1_loss.shared_grid_command",
+    "unit": "kW",
+    "source": "original fixed or arrived_ceiling importer contract",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.GT_1_loss.tower.rejection",
+    "unit": "kW",
+    "source": "original physical constraint",
+    "kind": "physical"
+  },
+  {
+    "name": "phase.GT_2_loss.diesel_below_same_command",
+    "unit": "kW",
+    "source": "original physical constraint",
+    "kind": "physical"
+  },
+  {
+    "name": "phase.GT_2_loss.sustained_shaft_work",
+    "unit": "shaft equivalent kWh",
+    "source": "registered duration plus startup, positive storage and bounded shaft loss",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.GT_2_loss.P0.e.same_disconnected_contacts",
+    "unit": "kW",
+    "source": "same generated physical contact cuts, not numerical unserved service",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.GT_2_loss.P0.h.same_disconnected_contacts",
+    "unit": "kW",
+    "source": "same generated physical contact cuts, not numerical unserved service",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.GT_2_loss.P0.c.same_disconnected_contacts",
+    "unit": "kW",
+    "source": "same generated physical contact cuts, not numerical unserved service",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.GT_2_loss.P1.e.same_disconnected_contacts",
+    "unit": "kW",
+    "source": "same generated physical contact cuts, not numerical unserved service",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.GT_2_loss.P1.h.same_disconnected_contacts",
+    "unit": "kW",
+    "source": "same generated physical contact cuts, not numerical unserved service",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.GT_2_loss.P1.c.same_disconnected_contacts",
+    "unit": "kW",
+    "source": "same generated physical contact cuts, not numerical unserved service",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.GT_2_loss.P2.e.same_disconnected_contacts",
+    "unit": "kW",
+    "source": "same generated physical contact cuts, not numerical unserved service",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.GT_2_loss.P2.h.same_disconnected_contacts",
+    "unit": "kW",
+    "source": "same generated physical contact cuts, not numerical unserved service",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.GT_2_loss.P2.c.same_disconnected_contacts",
+    "unit": "kW",
+    "source": "same generated physical contact cuts, not numerical unserved service",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.GT_2_loss.P3.e.same_disconnected_contacts",
+    "unit": "kW",
+    "source": "same generated physical contact cuts, not numerical unserved service",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.GT_2_loss.P3.h.same_disconnected_contacts",
+    "unit": "kW",
+    "source": "same generated physical contact cuts, not numerical unserved service",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.GT_2_loss.P3.c.same_disconnected_contacts",
+    "unit": "kW",
+    "source": "same generated physical contact cuts, not numerical unserved service",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.GT_2_loss.balance.electric",
+    "unit": "kW",
+    "source": "static single-command diagnostic; surplus defect is NOT real disposal",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.GT_2_loss.balance.steam",
+    "unit": "lb/h",
+    "source": "static single-command diagnostic; surplus defect is NOT real disposal",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.GT_2_loss.balance.cooling",
+    "unit": "kW",
+    "source": "static single-command diagnostic; surplus defect is NOT real disposal",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.GT_2_loss.risk.GT_2_loss.absorption.cooling.held_ceiling",
+    "unit": "RT",
+    "source": "original arrived converter ceiling, no new command",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.GT_2_loss.risk.GT_2_loss.EC_1.cooling.held_ceiling",
+    "unit": "RT",
+    "source": "original arrived converter ceiling, no new command",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.GT_2_loss.risk.GT_2_loss.EC_2.cooling.held_ceiling",
+    "unit": "RT",
+    "source": "original arrived converter ceiling, no new command",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.GT_2_loss.risk.GT_2_loss.EC_3.cooling.held_ceiling",
+    "unit": "RT",
+    "source": "original arrived converter ceiling, no new command",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.GT_2_loss.shared_grid_command",
+    "unit": "kW",
+    "source": "original fixed or arrived_ceiling importer contract",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.GT_2_loss.tower.rejection",
+    "unit": "kW",
+    "source": "original physical constraint",
+    "kind": "physical"
+  },
+  {
+    "name": "phase.GT_3_loss.diesel_below_same_command",
+    "unit": "kW",
+    "source": "original physical constraint",
+    "kind": "physical"
+  },
+  {
+    "name": "phase.GT_3_loss.sustained_shaft_work",
+    "unit": "shaft equivalent kWh",
+    "source": "registered duration plus startup, positive storage and bounded shaft loss",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.GT_3_loss.P0.e.same_disconnected_contacts",
+    "unit": "kW",
+    "source": "same generated physical contact cuts, not numerical unserved service",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.GT_3_loss.P0.h.same_disconnected_contacts",
+    "unit": "kW",
+    "source": "same generated physical contact cuts, not numerical unserved service",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.GT_3_loss.P0.c.same_disconnected_contacts",
+    "unit": "kW",
+    "source": "same generated physical contact cuts, not numerical unserved service",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.GT_3_loss.P1.e.same_disconnected_contacts",
+    "unit": "kW",
+    "source": "same generated physical contact cuts, not numerical unserved service",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.GT_3_loss.P1.h.same_disconnected_contacts",
+    "unit": "kW",
+    "source": "same generated physical contact cuts, not numerical unserved service",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.GT_3_loss.P1.c.same_disconnected_contacts",
+    "unit": "kW",
+    "source": "same generated physical contact cuts, not numerical unserved service",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.GT_3_loss.P2.e.same_disconnected_contacts",
+    "unit": "kW",
+    "source": "same generated physical contact cuts, not numerical unserved service",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.GT_3_loss.P2.h.same_disconnected_contacts",
+    "unit": "kW",
+    "source": "same generated physical contact cuts, not numerical unserved service",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.GT_3_loss.P2.c.same_disconnected_contacts",
+    "unit": "kW",
+    "source": "same generated physical contact cuts, not numerical unserved service",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.GT_3_loss.P3.e.same_disconnected_contacts",
+    "unit": "kW",
+    "source": "same generated physical contact cuts, not numerical unserved service",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.GT_3_loss.P3.h.same_disconnected_contacts",
+    "unit": "kW",
+    "source": "same generated physical contact cuts, not numerical unserved service",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.GT_3_loss.P3.c.same_disconnected_contacts",
+    "unit": "kW",
+    "source": "same generated physical contact cuts, not numerical unserved service",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.GT_3_loss.balance.electric",
+    "unit": "kW",
+    "source": "static single-command diagnostic; surplus defect is NOT real disposal",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.GT_3_loss.balance.steam",
+    "unit": "lb/h",
+    "source": "static single-command diagnostic; surplus defect is NOT real disposal",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.GT_3_loss.balance.cooling",
+    "unit": "kW",
+    "source": "static single-command diagnostic; surplus defect is NOT real disposal",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.GT_3_loss.risk.GT_3_loss.absorption.cooling.held_ceiling",
+    "unit": "RT",
+    "source": "original arrived converter ceiling, no new command",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.GT_3_loss.risk.GT_3_loss.EC_1.cooling.held_ceiling",
+    "unit": "RT",
+    "source": "original arrived converter ceiling, no new command",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.GT_3_loss.risk.GT_3_loss.EC_2.cooling.held_ceiling",
+    "unit": "RT",
+    "source": "original arrived converter ceiling, no new command",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.GT_3_loss.risk.GT_3_loss.EC_3.cooling.held_ceiling",
+    "unit": "RT",
+    "source": "original arrived converter ceiling, no new command",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.GT_3_loss.shared_grid_command",
+    "unit": "kW",
+    "source": "original fixed or arrived_ceiling importer contract",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.GT_3_loss.tower.rejection",
+    "unit": "kW",
+    "source": "original physical constraint",
+    "kind": "physical"
+  },
+  {
+    "name": "phase.HRSG_1_loss.diesel_below_same_command",
+    "unit": "kW",
+    "source": "original physical constraint",
+    "kind": "physical"
+  },
+  {
+    "name": "phase.HRSG_1_loss.sustained_shaft_work",
+    "unit": "shaft equivalent kWh",
+    "source": "registered duration plus startup, positive storage and bounded shaft loss",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.HRSG_1_loss.P0.e.same_disconnected_contacts",
+    "unit": "kW",
+    "source": "same generated physical contact cuts, not numerical unserved service",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.HRSG_1_loss.P0.h.same_disconnected_contacts",
+    "unit": "kW",
+    "source": "same generated physical contact cuts, not numerical unserved service",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.HRSG_1_loss.P0.c.same_disconnected_contacts",
+    "unit": "kW",
+    "source": "same generated physical contact cuts, not numerical unserved service",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.HRSG_1_loss.P1.e.same_disconnected_contacts",
+    "unit": "kW",
+    "source": "same generated physical contact cuts, not numerical unserved service",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.HRSG_1_loss.P1.h.same_disconnected_contacts",
+    "unit": "kW",
+    "source": "same generated physical contact cuts, not numerical unserved service",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.HRSG_1_loss.P1.c.same_disconnected_contacts",
+    "unit": "kW",
+    "source": "same generated physical contact cuts, not numerical unserved service",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.HRSG_1_loss.P2.e.same_disconnected_contacts",
+    "unit": "kW",
+    "source": "same generated physical contact cuts, not numerical unserved service",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.HRSG_1_loss.P2.h.same_disconnected_contacts",
+    "unit": "kW",
+    "source": "same generated physical contact cuts, not numerical unserved service",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.HRSG_1_loss.P2.c.same_disconnected_contacts",
+    "unit": "kW",
+    "source": "same generated physical contact cuts, not numerical unserved service",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.HRSG_1_loss.P3.e.same_disconnected_contacts",
+    "unit": "kW",
+    "source": "same generated physical contact cuts, not numerical unserved service",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.HRSG_1_loss.P3.h.same_disconnected_contacts",
+    "unit": "kW",
+    "source": "same generated physical contact cuts, not numerical unserved service",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.HRSG_1_loss.P3.c.same_disconnected_contacts",
+    "unit": "kW",
+    "source": "same generated physical contact cuts, not numerical unserved service",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.HRSG_1_loss.balance.electric",
+    "unit": "kW",
+    "source": "static single-command diagnostic; surplus defect is NOT real disposal",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.HRSG_1_loss.balance.steam",
+    "unit": "lb/h",
+    "source": "static single-command diagnostic; surplus defect is NOT real disposal",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.HRSG_1_loss.balance.cooling",
+    "unit": "kW",
+    "source": "static single-command diagnostic; surplus defect is NOT real disposal",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.HRSG_1_loss.risk.HRSG_1_loss.absorption.cooling.held_ceiling",
+    "unit": "RT",
+    "source": "original arrived converter ceiling, no new command",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.HRSG_1_loss.risk.HRSG_1_loss.EC_1.cooling.held_ceiling",
+    "unit": "RT",
+    "source": "original arrived converter ceiling, no new command",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.HRSG_1_loss.risk.HRSG_1_loss.EC_2.cooling.held_ceiling",
+    "unit": "RT",
+    "source": "original arrived converter ceiling, no new command",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.HRSG_1_loss.risk.HRSG_1_loss.EC_3.cooling.held_ceiling",
+    "unit": "RT",
+    "source": "original arrived converter ceiling, no new command",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.HRSG_1_loss.shared_grid_command",
+    "unit": "kW",
+    "source": "original fixed or arrived_ceiling importer contract",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.HRSG_1_loss.tower.rejection",
+    "unit": "kW",
+    "source": "original physical constraint",
+    "kind": "physical"
+  },
+  {
+    "name": "phase.HRSG_2_loss.diesel_below_same_command",
+    "unit": "kW",
+    "source": "original physical constraint",
+    "kind": "physical"
+  },
+  {
+    "name": "phase.HRSG_2_loss.sustained_shaft_work",
+    "unit": "shaft equivalent kWh",
+    "source": "registered duration plus startup, positive storage and bounded shaft loss",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.HRSG_2_loss.P0.e.same_disconnected_contacts",
+    "unit": "kW",
+    "source": "same generated physical contact cuts, not numerical unserved service",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.HRSG_2_loss.P0.h.same_disconnected_contacts",
+    "unit": "kW",
+    "source": "same generated physical contact cuts, not numerical unserved service",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.HRSG_2_loss.P0.c.same_disconnected_contacts",
+    "unit": "kW",
+    "source": "same generated physical contact cuts, not numerical unserved service",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.HRSG_2_loss.P1.e.same_disconnected_contacts",
+    "unit": "kW",
+    "source": "same generated physical contact cuts, not numerical unserved service",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.HRSG_2_loss.P1.h.same_disconnected_contacts",
+    "unit": "kW",
+    "source": "same generated physical contact cuts, not numerical unserved service",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.HRSG_2_loss.P1.c.same_disconnected_contacts",
+    "unit": "kW",
+    "source": "same generated physical contact cuts, not numerical unserved service",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.HRSG_2_loss.P2.e.same_disconnected_contacts",
+    "unit": "kW",
+    "source": "same generated physical contact cuts, not numerical unserved service",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.HRSG_2_loss.P2.h.same_disconnected_contacts",
+    "unit": "kW",
+    "source": "same generated physical contact cuts, not numerical unserved service",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.HRSG_2_loss.P2.c.same_disconnected_contacts",
+    "unit": "kW",
+    "source": "same generated physical contact cuts, not numerical unserved service",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.HRSG_2_loss.P3.e.same_disconnected_contacts",
+    "unit": "kW",
+    "source": "same generated physical contact cuts, not numerical unserved service",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.HRSG_2_loss.P3.h.same_disconnected_contacts",
+    "unit": "kW",
+    "source": "same generated physical contact cuts, not numerical unserved service",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.HRSG_2_loss.P3.c.same_disconnected_contacts",
+    "unit": "kW",
+    "source": "same generated physical contact cuts, not numerical unserved service",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.HRSG_2_loss.balance.electric",
+    "unit": "kW",
+    "source": "static single-command diagnostic; surplus defect is NOT real disposal",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.HRSG_2_loss.balance.steam",
+    "unit": "lb/h",
+    "source": "static single-command diagnostic; surplus defect is NOT real disposal",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.HRSG_2_loss.balance.cooling",
+    "unit": "kW",
+    "source": "static single-command diagnostic; surplus defect is NOT real disposal",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.HRSG_2_loss.risk.HRSG_2_loss.absorption.cooling.held_ceiling",
+    "unit": "RT",
+    "source": "original arrived converter ceiling, no new command",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.HRSG_2_loss.risk.HRSG_2_loss.EC_1.cooling.held_ceiling",
+    "unit": "RT",
+    "source": "original arrived converter ceiling, no new command",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.HRSG_2_loss.risk.HRSG_2_loss.EC_2.cooling.held_ceiling",
+    "unit": "RT",
+    "source": "original arrived converter ceiling, no new command",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.HRSG_2_loss.risk.HRSG_2_loss.EC_3.cooling.held_ceiling",
+    "unit": "RT",
+    "source": "original arrived converter ceiling, no new command",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.HRSG_2_loss.shared_grid_command",
+    "unit": "kW",
+    "source": "original fixed or arrived_ceiling importer contract",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.HRSG_2_loss.tower.rejection",
+    "unit": "kW",
+    "source": "original physical constraint",
+    "kind": "physical"
+  },
+  {
+    "name": "phase.HRSG_3_loss.diesel_below_same_command",
+    "unit": "kW",
+    "source": "original physical constraint",
+    "kind": "physical"
+  },
+  {
+    "name": "phase.HRSG_3_loss.sustained_shaft_work",
+    "unit": "shaft equivalent kWh",
+    "source": "registered duration plus startup, positive storage and bounded shaft loss",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.HRSG_3_loss.P0.e.same_disconnected_contacts",
+    "unit": "kW",
+    "source": "same generated physical contact cuts, not numerical unserved service",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.HRSG_3_loss.P0.h.same_disconnected_contacts",
+    "unit": "kW",
+    "source": "same generated physical contact cuts, not numerical unserved service",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.HRSG_3_loss.P0.c.same_disconnected_contacts",
+    "unit": "kW",
+    "source": "same generated physical contact cuts, not numerical unserved service",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.HRSG_3_loss.P1.e.same_disconnected_contacts",
+    "unit": "kW",
+    "source": "same generated physical contact cuts, not numerical unserved service",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.HRSG_3_loss.P1.h.same_disconnected_contacts",
+    "unit": "kW",
+    "source": "same generated physical contact cuts, not numerical unserved service",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.HRSG_3_loss.P1.c.same_disconnected_contacts",
+    "unit": "kW",
+    "source": "same generated physical contact cuts, not numerical unserved service",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.HRSG_3_loss.P2.e.same_disconnected_contacts",
+    "unit": "kW",
+    "source": "same generated physical contact cuts, not numerical unserved service",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.HRSG_3_loss.P2.h.same_disconnected_contacts",
+    "unit": "kW",
+    "source": "same generated physical contact cuts, not numerical unserved service",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.HRSG_3_loss.P2.c.same_disconnected_contacts",
+    "unit": "kW",
+    "source": "same generated physical contact cuts, not numerical unserved service",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.HRSG_3_loss.P3.e.same_disconnected_contacts",
+    "unit": "kW",
+    "source": "same generated physical contact cuts, not numerical unserved service",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.HRSG_3_loss.P3.h.same_disconnected_contacts",
+    "unit": "kW",
+    "source": "same generated physical contact cuts, not numerical unserved service",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.HRSG_3_loss.P3.c.same_disconnected_contacts",
+    "unit": "kW",
+    "source": "same generated physical contact cuts, not numerical unserved service",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.HRSG_3_loss.balance.electric",
+    "unit": "kW",
+    "source": "static single-command diagnostic; surplus defect is NOT real disposal",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.HRSG_3_loss.balance.steam",
+    "unit": "lb/h",
+    "source": "static single-command diagnostic; surplus defect is NOT real disposal",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.HRSG_3_loss.balance.cooling",
+    "unit": "kW",
+    "source": "static single-command diagnostic; surplus defect is NOT real disposal",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.HRSG_3_loss.risk.HRSG_3_loss.absorption.cooling.held_ceiling",
+    "unit": "RT",
+    "source": "original arrived converter ceiling, no new command",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.HRSG_3_loss.risk.HRSG_3_loss.EC_1.cooling.held_ceiling",
+    "unit": "RT",
+    "source": "original arrived converter ceiling, no new command",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.HRSG_3_loss.risk.HRSG_3_loss.EC_2.cooling.held_ceiling",
+    "unit": "RT",
+    "source": "original arrived converter ceiling, no new command",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.HRSG_3_loss.risk.HRSG_3_loss.EC_3.cooling.held_ceiling",
+    "unit": "RT",
+    "source": "original arrived converter ceiling, no new command",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.HRSG_3_loss.shared_grid_command",
+    "unit": "kW",
+    "source": "original fixed or arrived_ceiling importer contract",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.HRSG_3_loss.tower.rejection",
+    "unit": "kW",
+    "source": "original physical constraint",
+    "kind": "physical"
+  },
+  {
+    "name": "phase.low_history.diesel_below_same_command",
+    "unit": "kW",
+    "source": "original physical constraint",
+    "kind": "physical"
+  },
+  {
+    "name": "phase.low_history.sustained_shaft_work",
+    "unit": "shaft equivalent kWh",
+    "source": "registered duration plus startup, positive storage and bounded shaft loss",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.low_history.P0.e.same_disconnected_contacts",
+    "unit": "kW",
+    "source": "same generated physical contact cuts, not numerical unserved service",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.low_history.P0.h.same_disconnected_contacts",
+    "unit": "kW",
+    "source": "same generated physical contact cuts, not numerical unserved service",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.low_history.P0.c.same_disconnected_contacts",
+    "unit": "kW",
+    "source": "same generated physical contact cuts, not numerical unserved service",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.low_history.P1.e.same_disconnected_contacts",
+    "unit": "kW",
+    "source": "same generated physical contact cuts, not numerical unserved service",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.low_history.P1.h.same_disconnected_contacts",
+    "unit": "kW",
+    "source": "same generated physical contact cuts, not numerical unserved service",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.low_history.P1.c.same_disconnected_contacts",
+    "unit": "kW",
+    "source": "same generated physical contact cuts, not numerical unserved service",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.low_history.P2.e.same_disconnected_contacts",
+    "unit": "kW",
+    "source": "same generated physical contact cuts, not numerical unserved service",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.low_history.P2.h.same_disconnected_contacts",
+    "unit": "kW",
+    "source": "same generated physical contact cuts, not numerical unserved service",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.low_history.P2.c.same_disconnected_contacts",
+    "unit": "kW",
+    "source": "same generated physical contact cuts, not numerical unserved service",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.low_history.P3.e.same_disconnected_contacts",
+    "unit": "kW",
+    "source": "same generated physical contact cuts, not numerical unserved service",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.low_history.P3.h.same_disconnected_contacts",
+    "unit": "kW",
+    "source": "same generated physical contact cuts, not numerical unserved service",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.low_history.P3.c.same_disconnected_contacts",
+    "unit": "kW",
+    "source": "same generated physical contact cuts, not numerical unserved service",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.low_history.balance.electric",
+    "unit": "kW",
+    "source": "static single-command diagnostic; surplus defect is NOT real disposal",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.low_history.balance.steam",
+    "unit": "lb/h",
+    "source": "static single-command diagnostic; surplus defect is NOT real disposal",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.low_history.balance.cooling",
+    "unit": "kW",
+    "source": "static single-command diagnostic; surplus defect is NOT real disposal",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.low_history.risk.low_history.absorption.cooling.held_ceiling",
+    "unit": "RT",
+    "source": "original arrived converter ceiling, no new command",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.low_history.risk.low_history.EC_1.cooling.held_ceiling",
+    "unit": "RT",
+    "source": "original arrived converter ceiling, no new command",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.low_history.risk.low_history.EC_2.cooling.held_ceiling",
+    "unit": "RT",
+    "source": "original arrived converter ceiling, no new command",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.low_history.risk.low_history.EC_3.cooling.held_ceiling",
+    "unit": "RT",
+    "source": "original arrived converter ceiling, no new command",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.low_history.shared_grid_command",
+    "unit": "kW",
+    "source": "original fixed or arrived_ceiling importer contract",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.low_history.tower.rejection",
+    "unit": "kW",
+    "source": "original physical constraint",
+    "kind": "physical"
+  },
+  {
+    "name": "phase.DG_withdrawal_GRID_ceiling.diesel_below_same_command",
+    "unit": "kW",
+    "source": "original physical constraint",
+    "kind": "physical"
+  },
+  {
+    "name": "phase.DG_withdrawal_GRID_ceiling.sustained_shaft_work",
+    "unit": "shaft equivalent kWh",
+    "source": "registered duration plus startup, positive storage and bounded shaft loss",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.DG_withdrawal_GRID_ceiling.P0.e.same_disconnected_contacts",
+    "unit": "kW",
+    "source": "same generated physical contact cuts, not numerical unserved service",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.DG_withdrawal_GRID_ceiling.P0.h.same_disconnected_contacts",
+    "unit": "kW",
+    "source": "same generated physical contact cuts, not numerical unserved service",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.DG_withdrawal_GRID_ceiling.P0.c.same_disconnected_contacts",
+    "unit": "kW",
+    "source": "same generated physical contact cuts, not numerical unserved service",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.DG_withdrawal_GRID_ceiling.P1.e.same_disconnected_contacts",
+    "unit": "kW",
+    "source": "same generated physical contact cuts, not numerical unserved service",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.DG_withdrawal_GRID_ceiling.P1.h.same_disconnected_contacts",
+    "unit": "kW",
+    "source": "same generated physical contact cuts, not numerical unserved service",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.DG_withdrawal_GRID_ceiling.P1.c.same_disconnected_contacts",
+    "unit": "kW",
+    "source": "same generated physical contact cuts, not numerical unserved service",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.DG_withdrawal_GRID_ceiling.P2.e.same_disconnected_contacts",
+    "unit": "kW",
+    "source": "same generated physical contact cuts, not numerical unserved service",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.DG_withdrawal_GRID_ceiling.P2.h.same_disconnected_contacts",
+    "unit": "kW",
+    "source": "same generated physical contact cuts, not numerical unserved service",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.DG_withdrawal_GRID_ceiling.P2.c.same_disconnected_contacts",
+    "unit": "kW",
+    "source": "same generated physical contact cuts, not numerical unserved service",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.DG_withdrawal_GRID_ceiling.P3.e.same_disconnected_contacts",
+    "unit": "kW",
+    "source": "same generated physical contact cuts, not numerical unserved service",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.DG_withdrawal_GRID_ceiling.P3.h.same_disconnected_contacts",
+    "unit": "kW",
+    "source": "same generated physical contact cuts, not numerical unserved service",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.DG_withdrawal_GRID_ceiling.P3.c.same_disconnected_contacts",
+    "unit": "kW",
+    "source": "same generated physical contact cuts, not numerical unserved service",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.DG_withdrawal_GRID_ceiling.balance.electric",
+    "unit": "kW",
+    "source": "static single-command diagnostic; surplus defect is NOT real disposal",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.DG_withdrawal_GRID_ceiling.balance.steam",
+    "unit": "lb/h",
+    "source": "static single-command diagnostic; surplus defect is NOT real disposal",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.DG_withdrawal_GRID_ceiling.balance.cooling",
+    "unit": "kW",
+    "source": "static single-command diagnostic; surplus defect is NOT real disposal",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.DG_withdrawal_GRID_ceiling.risk.DG_withdrawal_GRID_ceiling.absorption.cooling.held_ceiling",
+    "unit": "RT",
+    "source": "original arrived converter ceiling, no new command",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.DG_withdrawal_GRID_ceiling.risk.DG_withdrawal_GRID_ceiling.EC_1.cooling.held_ceiling",
+    "unit": "RT",
+    "source": "original arrived converter ceiling, no new command",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.DG_withdrawal_GRID_ceiling.risk.DG_withdrawal_GRID_ceiling.EC_2.cooling.held_ceiling",
+    "unit": "RT",
+    "source": "original arrived converter ceiling, no new command",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.DG_withdrawal_GRID_ceiling.risk.DG_withdrawal_GRID_ceiling.EC_3.cooling.held_ceiling",
+    "unit": "RT",
+    "source": "original arrived converter ceiling, no new command",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.DG_withdrawal_GRID_ceiling.shared_grid_command",
+    "unit": "kW",
+    "source": "original fixed or arrived_ceiling importer contract",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.DG_withdrawal_GRID_ceiling.tower.rejection",
+    "unit": "kW",
+    "source": "original physical constraint",
+    "kind": "physical"
+  },
+  {
+    "name": "phase.pre_GRID_loss.diesel_below_same_command",
+    "unit": "kW",
+    "source": "original physical constraint",
+    "kind": "physical"
+  },
+  {
+    "name": "phase.pre_GRID_loss.sustained_shaft_work",
+    "unit": "shaft equivalent kWh",
+    "source": "registered duration plus startup, positive storage and bounded shaft loss",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.pre_GRID_loss.P0.e.same_disconnected_contacts",
+    "unit": "kW",
+    "source": "same generated physical contact cuts, not numerical unserved service",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.pre_GRID_loss.P0.h.same_disconnected_contacts",
+    "unit": "kW",
+    "source": "same generated physical contact cuts, not numerical unserved service",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.pre_GRID_loss.P0.c.same_disconnected_contacts",
+    "unit": "kW",
+    "source": "same generated physical contact cuts, not numerical unserved service",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.pre_GRID_loss.P1.e.same_disconnected_contacts",
+    "unit": "kW",
+    "source": "same generated physical contact cuts, not numerical unserved service",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.pre_GRID_loss.P1.h.same_disconnected_contacts",
+    "unit": "kW",
+    "source": "same generated physical contact cuts, not numerical unserved service",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.pre_GRID_loss.P1.c.same_disconnected_contacts",
+    "unit": "kW",
+    "source": "same generated physical contact cuts, not numerical unserved service",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.pre_GRID_loss.P2.e.same_disconnected_contacts",
+    "unit": "kW",
+    "source": "same generated physical contact cuts, not numerical unserved service",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.pre_GRID_loss.P2.h.same_disconnected_contacts",
+    "unit": "kW",
+    "source": "same generated physical contact cuts, not numerical unserved service",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.pre_GRID_loss.P2.c.same_disconnected_contacts",
+    "unit": "kW",
+    "source": "same generated physical contact cuts, not numerical unserved service",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.pre_GRID_loss.P3.e.same_disconnected_contacts",
+    "unit": "kW",
+    "source": "same generated physical contact cuts, not numerical unserved service",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.pre_GRID_loss.P3.h.same_disconnected_contacts",
+    "unit": "kW",
+    "source": "same generated physical contact cuts, not numerical unserved service",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.pre_GRID_loss.P3.c.same_disconnected_contacts",
+    "unit": "kW",
+    "source": "same generated physical contact cuts, not numerical unserved service",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.pre_GRID_loss.balance.electric",
+    "unit": "kW",
+    "source": "static single-command diagnostic; surplus defect is NOT real disposal",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.pre_GRID_loss.balance.steam",
+    "unit": "lb/h",
+    "source": "static single-command diagnostic; surplus defect is NOT real disposal",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.pre_GRID_loss.balance.cooling",
+    "unit": "kW",
+    "source": "static single-command diagnostic; surplus defect is NOT real disposal",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.pre_GRID_loss.risk.pre_GRID_loss.absorption.cooling.held_ceiling",
+    "unit": "RT",
+    "source": "original arrived converter ceiling, no new command",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.pre_GRID_loss.risk.pre_GRID_loss.EC_1.cooling.held_ceiling",
+    "unit": "RT",
+    "source": "original arrived converter ceiling, no new command",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.pre_GRID_loss.risk.pre_GRID_loss.EC_2.cooling.held_ceiling",
+    "unit": "RT",
+    "source": "original arrived converter ceiling, no new command",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.pre_GRID_loss.risk.pre_GRID_loss.EC_3.cooling.held_ceiling",
+    "unit": "RT",
+    "source": "original arrived converter ceiling, no new command",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.pre_GRID_loss.tower.rejection",
+    "unit": "kW",
+    "source": "original physical constraint",
+    "kind": "physical"
+  },
+  {
+    "name": "phase.pre_GT_1_loss.diesel_below_same_command",
+    "unit": "kW",
+    "source": "original physical constraint",
+    "kind": "physical"
+  },
+  {
+    "name": "phase.pre_GT_1_loss.sustained_shaft_work",
+    "unit": "shaft equivalent kWh",
+    "source": "registered duration plus startup, positive storage and bounded shaft loss",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.pre_GT_1_loss.P0.e.same_disconnected_contacts",
+    "unit": "kW",
+    "source": "same generated physical contact cuts, not numerical unserved service",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.pre_GT_1_loss.P0.h.same_disconnected_contacts",
+    "unit": "kW",
+    "source": "same generated physical contact cuts, not numerical unserved service",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.pre_GT_1_loss.P0.c.same_disconnected_contacts",
+    "unit": "kW",
+    "source": "same generated physical contact cuts, not numerical unserved service",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.pre_GT_1_loss.P1.e.same_disconnected_contacts",
+    "unit": "kW",
+    "source": "same generated physical contact cuts, not numerical unserved service",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.pre_GT_1_loss.P1.h.same_disconnected_contacts",
+    "unit": "kW",
+    "source": "same generated physical contact cuts, not numerical unserved service",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.pre_GT_1_loss.P1.c.same_disconnected_contacts",
+    "unit": "kW",
+    "source": "same generated physical contact cuts, not numerical unserved service",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.pre_GT_1_loss.P2.e.same_disconnected_contacts",
+    "unit": "kW",
+    "source": "same generated physical contact cuts, not numerical unserved service",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.pre_GT_1_loss.P2.h.same_disconnected_contacts",
+    "unit": "kW",
+    "source": "same generated physical contact cuts, not numerical unserved service",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.pre_GT_1_loss.P2.c.same_disconnected_contacts",
+    "unit": "kW",
+    "source": "same generated physical contact cuts, not numerical unserved service",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.pre_GT_1_loss.P3.e.same_disconnected_contacts",
+    "unit": "kW",
+    "source": "same generated physical contact cuts, not numerical unserved service",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.pre_GT_1_loss.P3.h.same_disconnected_contacts",
+    "unit": "kW",
+    "source": "same generated physical contact cuts, not numerical unserved service",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.pre_GT_1_loss.P3.c.same_disconnected_contacts",
+    "unit": "kW",
+    "source": "same generated physical contact cuts, not numerical unserved service",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.pre_GT_1_loss.balance.electric",
+    "unit": "kW",
+    "source": "static single-command diagnostic; surplus defect is NOT real disposal",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.pre_GT_1_loss.balance.steam",
+    "unit": "lb/h",
+    "source": "static single-command diagnostic; surplus defect is NOT real disposal",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.pre_GT_1_loss.balance.cooling",
+    "unit": "kW",
+    "source": "static single-command diagnostic; surplus defect is NOT real disposal",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.pre_GT_1_loss.risk.pre_GT_1_loss.absorption.cooling.held_ceiling",
+    "unit": "RT",
+    "source": "original arrived converter ceiling, no new command",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.pre_GT_1_loss.risk.pre_GT_1_loss.EC_1.cooling.held_ceiling",
+    "unit": "RT",
+    "source": "original arrived converter ceiling, no new command",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.pre_GT_1_loss.risk.pre_GT_1_loss.EC_2.cooling.held_ceiling",
+    "unit": "RT",
+    "source": "original arrived converter ceiling, no new command",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.pre_GT_1_loss.risk.pre_GT_1_loss.EC_3.cooling.held_ceiling",
+    "unit": "RT",
+    "source": "original arrived converter ceiling, no new command",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.pre_GT_1_loss.shared_grid_command",
+    "unit": "kW",
+    "source": "original fixed or arrived_ceiling importer contract",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.pre_GT_1_loss.tower.rejection",
+    "unit": "kW",
+    "source": "original physical constraint",
+    "kind": "physical"
+  },
+  {
+    "name": "phase.pre_GT_2_loss.diesel_below_same_command",
+    "unit": "kW",
+    "source": "original physical constraint",
+    "kind": "physical"
+  },
+  {
+    "name": "phase.pre_GT_2_loss.sustained_shaft_work",
+    "unit": "shaft equivalent kWh",
+    "source": "registered duration plus startup, positive storage and bounded shaft loss",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.pre_GT_2_loss.P0.e.same_disconnected_contacts",
+    "unit": "kW",
+    "source": "same generated physical contact cuts, not numerical unserved service",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.pre_GT_2_loss.P0.h.same_disconnected_contacts",
+    "unit": "kW",
+    "source": "same generated physical contact cuts, not numerical unserved service",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.pre_GT_2_loss.P0.c.same_disconnected_contacts",
+    "unit": "kW",
+    "source": "same generated physical contact cuts, not numerical unserved service",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.pre_GT_2_loss.P1.e.same_disconnected_contacts",
+    "unit": "kW",
+    "source": "same generated physical contact cuts, not numerical unserved service",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.pre_GT_2_loss.P1.h.same_disconnected_contacts",
+    "unit": "kW",
+    "source": "same generated physical contact cuts, not numerical unserved service",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.pre_GT_2_loss.P1.c.same_disconnected_contacts",
+    "unit": "kW",
+    "source": "same generated physical contact cuts, not numerical unserved service",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.pre_GT_2_loss.P2.e.same_disconnected_contacts",
+    "unit": "kW",
+    "source": "same generated physical contact cuts, not numerical unserved service",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.pre_GT_2_loss.P2.h.same_disconnected_contacts",
+    "unit": "kW",
+    "source": "same generated physical contact cuts, not numerical unserved service",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.pre_GT_2_loss.P2.c.same_disconnected_contacts",
+    "unit": "kW",
+    "source": "same generated physical contact cuts, not numerical unserved service",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.pre_GT_2_loss.P3.e.same_disconnected_contacts",
+    "unit": "kW",
+    "source": "same generated physical contact cuts, not numerical unserved service",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.pre_GT_2_loss.P3.h.same_disconnected_contacts",
+    "unit": "kW",
+    "source": "same generated physical contact cuts, not numerical unserved service",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.pre_GT_2_loss.P3.c.same_disconnected_contacts",
+    "unit": "kW",
+    "source": "same generated physical contact cuts, not numerical unserved service",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.pre_GT_2_loss.balance.electric",
+    "unit": "kW",
+    "source": "static single-command diagnostic; surplus defect is NOT real disposal",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.pre_GT_2_loss.balance.steam",
+    "unit": "lb/h",
+    "source": "static single-command diagnostic; surplus defect is NOT real disposal",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.pre_GT_2_loss.balance.cooling",
+    "unit": "kW",
+    "source": "static single-command diagnostic; surplus defect is NOT real disposal",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.pre_GT_2_loss.risk.pre_GT_2_loss.absorption.cooling.held_ceiling",
+    "unit": "RT",
+    "source": "original arrived converter ceiling, no new command",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.pre_GT_2_loss.risk.pre_GT_2_loss.EC_1.cooling.held_ceiling",
+    "unit": "RT",
+    "source": "original arrived converter ceiling, no new command",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.pre_GT_2_loss.risk.pre_GT_2_loss.EC_2.cooling.held_ceiling",
+    "unit": "RT",
+    "source": "original arrived converter ceiling, no new command",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.pre_GT_2_loss.risk.pre_GT_2_loss.EC_3.cooling.held_ceiling",
+    "unit": "RT",
+    "source": "original arrived converter ceiling, no new command",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.pre_GT_2_loss.shared_grid_command",
+    "unit": "kW",
+    "source": "original fixed or arrived_ceiling importer contract",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.pre_GT_2_loss.tower.rejection",
+    "unit": "kW",
+    "source": "original physical constraint",
+    "kind": "physical"
+  },
+  {
+    "name": "phase.pre_GT_3_loss.diesel_below_same_command",
+    "unit": "kW",
+    "source": "original physical constraint",
+    "kind": "physical"
+  },
+  {
+    "name": "phase.pre_GT_3_loss.sustained_shaft_work",
+    "unit": "shaft equivalent kWh",
+    "source": "registered duration plus startup, positive storage and bounded shaft loss",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.pre_GT_3_loss.P0.e.same_disconnected_contacts",
+    "unit": "kW",
+    "source": "same generated physical contact cuts, not numerical unserved service",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.pre_GT_3_loss.P0.h.same_disconnected_contacts",
+    "unit": "kW",
+    "source": "same generated physical contact cuts, not numerical unserved service",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.pre_GT_3_loss.P0.c.same_disconnected_contacts",
+    "unit": "kW",
+    "source": "same generated physical contact cuts, not numerical unserved service",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.pre_GT_3_loss.P1.e.same_disconnected_contacts",
+    "unit": "kW",
+    "source": "same generated physical contact cuts, not numerical unserved service",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.pre_GT_3_loss.P1.h.same_disconnected_contacts",
+    "unit": "kW",
+    "source": "same generated physical contact cuts, not numerical unserved service",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.pre_GT_3_loss.P1.c.same_disconnected_contacts",
+    "unit": "kW",
+    "source": "same generated physical contact cuts, not numerical unserved service",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.pre_GT_3_loss.P2.e.same_disconnected_contacts",
+    "unit": "kW",
+    "source": "same generated physical contact cuts, not numerical unserved service",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.pre_GT_3_loss.P2.h.same_disconnected_contacts",
+    "unit": "kW",
+    "source": "same generated physical contact cuts, not numerical unserved service",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.pre_GT_3_loss.P2.c.same_disconnected_contacts",
+    "unit": "kW",
+    "source": "same generated physical contact cuts, not numerical unserved service",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.pre_GT_3_loss.P3.e.same_disconnected_contacts",
+    "unit": "kW",
+    "source": "same generated physical contact cuts, not numerical unserved service",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.pre_GT_3_loss.P3.h.same_disconnected_contacts",
+    "unit": "kW",
+    "source": "same generated physical contact cuts, not numerical unserved service",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.pre_GT_3_loss.P3.c.same_disconnected_contacts",
+    "unit": "kW",
+    "source": "same generated physical contact cuts, not numerical unserved service",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.pre_GT_3_loss.balance.electric",
+    "unit": "kW",
+    "source": "static single-command diagnostic; surplus defect is NOT real disposal",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.pre_GT_3_loss.balance.steam",
+    "unit": "lb/h",
+    "source": "static single-command diagnostic; surplus defect is NOT real disposal",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.pre_GT_3_loss.balance.cooling",
+    "unit": "kW",
+    "source": "static single-command diagnostic; surplus defect is NOT real disposal",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.pre_GT_3_loss.risk.pre_GT_3_loss.absorption.cooling.held_ceiling",
+    "unit": "RT",
+    "source": "original arrived converter ceiling, no new command",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.pre_GT_3_loss.risk.pre_GT_3_loss.EC_1.cooling.held_ceiling",
+    "unit": "RT",
+    "source": "original arrived converter ceiling, no new command",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.pre_GT_3_loss.risk.pre_GT_3_loss.EC_2.cooling.held_ceiling",
+    "unit": "RT",
+    "source": "original arrived converter ceiling, no new command",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.pre_GT_3_loss.risk.pre_GT_3_loss.EC_3.cooling.held_ceiling",
+    "unit": "RT",
+    "source": "original arrived converter ceiling, no new command",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.pre_GT_3_loss.shared_grid_command",
+    "unit": "kW",
+    "source": "original fixed or arrived_ceiling importer contract",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.pre_GT_3_loss.tower.rejection",
+    "unit": "kW",
+    "source": "original physical constraint",
+    "kind": "physical"
+  },
+  {
+    "name": "phase.pre_HRSG_1_loss.diesel_below_same_command",
+    "unit": "kW",
+    "source": "original physical constraint",
+    "kind": "physical"
+  },
+  {
+    "name": "phase.pre_HRSG_1_loss.sustained_shaft_work",
+    "unit": "shaft equivalent kWh",
+    "source": "registered duration plus startup, positive storage and bounded shaft loss",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.pre_HRSG_1_loss.P0.e.same_disconnected_contacts",
+    "unit": "kW",
+    "source": "same generated physical contact cuts, not numerical unserved service",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.pre_HRSG_1_loss.P0.h.same_disconnected_contacts",
+    "unit": "kW",
+    "source": "same generated physical contact cuts, not numerical unserved service",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.pre_HRSG_1_loss.P0.c.same_disconnected_contacts",
+    "unit": "kW",
+    "source": "same generated physical contact cuts, not numerical unserved service",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.pre_HRSG_1_loss.P1.e.same_disconnected_contacts",
+    "unit": "kW",
+    "source": "same generated physical contact cuts, not numerical unserved service",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.pre_HRSG_1_loss.P1.h.same_disconnected_contacts",
+    "unit": "kW",
+    "source": "same generated physical contact cuts, not numerical unserved service",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.pre_HRSG_1_loss.P1.c.same_disconnected_contacts",
+    "unit": "kW",
+    "source": "same generated physical contact cuts, not numerical unserved service",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.pre_HRSG_1_loss.P2.e.same_disconnected_contacts",
+    "unit": "kW",
+    "source": "same generated physical contact cuts, not numerical unserved service",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.pre_HRSG_1_loss.P2.h.same_disconnected_contacts",
+    "unit": "kW",
+    "source": "same generated physical contact cuts, not numerical unserved service",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.pre_HRSG_1_loss.P2.c.same_disconnected_contacts",
+    "unit": "kW",
+    "source": "same generated physical contact cuts, not numerical unserved service",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.pre_HRSG_1_loss.P3.e.same_disconnected_contacts",
+    "unit": "kW",
+    "source": "same generated physical contact cuts, not numerical unserved service",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.pre_HRSG_1_loss.P3.h.same_disconnected_contacts",
+    "unit": "kW",
+    "source": "same generated physical contact cuts, not numerical unserved service",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.pre_HRSG_1_loss.P3.c.same_disconnected_contacts",
+    "unit": "kW",
+    "source": "same generated physical contact cuts, not numerical unserved service",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.pre_HRSG_1_loss.balance.electric",
+    "unit": "kW",
+    "source": "static single-command diagnostic; surplus defect is NOT real disposal",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.pre_HRSG_1_loss.balance.steam",
+    "unit": "lb/h",
+    "source": "static single-command diagnostic; surplus defect is NOT real disposal",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.pre_HRSG_1_loss.balance.cooling",
+    "unit": "kW",
+    "source": "static single-command diagnostic; surplus defect is NOT real disposal",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.pre_HRSG_1_loss.risk.pre_HRSG_1_loss.absorption.cooling.held_ceiling",
+    "unit": "RT",
+    "source": "original arrived converter ceiling, no new command",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.pre_HRSG_1_loss.risk.pre_HRSG_1_loss.EC_1.cooling.held_ceiling",
+    "unit": "RT",
+    "source": "original arrived converter ceiling, no new command",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.pre_HRSG_1_loss.risk.pre_HRSG_1_loss.EC_2.cooling.held_ceiling",
+    "unit": "RT",
+    "source": "original arrived converter ceiling, no new command",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.pre_HRSG_1_loss.risk.pre_HRSG_1_loss.EC_3.cooling.held_ceiling",
+    "unit": "RT",
+    "source": "original arrived converter ceiling, no new command",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.pre_HRSG_1_loss.shared_grid_command",
+    "unit": "kW",
+    "source": "original fixed or arrived_ceiling importer contract",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.pre_HRSG_1_loss.tower.rejection",
+    "unit": "kW",
+    "source": "original physical constraint",
+    "kind": "physical"
+  },
+  {
+    "name": "phase.pre_HRSG_2_loss.diesel_below_same_command",
+    "unit": "kW",
+    "source": "original physical constraint",
+    "kind": "physical"
+  },
+  {
+    "name": "phase.pre_HRSG_2_loss.sustained_shaft_work",
+    "unit": "shaft equivalent kWh",
+    "source": "registered duration plus startup, positive storage and bounded shaft loss",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.pre_HRSG_2_loss.P0.e.same_disconnected_contacts",
+    "unit": "kW",
+    "source": "same generated physical contact cuts, not numerical unserved service",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.pre_HRSG_2_loss.P0.h.same_disconnected_contacts",
+    "unit": "kW",
+    "source": "same generated physical contact cuts, not numerical unserved service",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.pre_HRSG_2_loss.P0.c.same_disconnected_contacts",
+    "unit": "kW",
+    "source": "same generated physical contact cuts, not numerical unserved service",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.pre_HRSG_2_loss.P1.e.same_disconnected_contacts",
+    "unit": "kW",
+    "source": "same generated physical contact cuts, not numerical unserved service",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.pre_HRSG_2_loss.P1.h.same_disconnected_contacts",
+    "unit": "kW",
+    "source": "same generated physical contact cuts, not numerical unserved service",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.pre_HRSG_2_loss.P1.c.same_disconnected_contacts",
+    "unit": "kW",
+    "source": "same generated physical contact cuts, not numerical unserved service",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.pre_HRSG_2_loss.P2.e.same_disconnected_contacts",
+    "unit": "kW",
+    "source": "same generated physical contact cuts, not numerical unserved service",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.pre_HRSG_2_loss.P2.h.same_disconnected_contacts",
+    "unit": "kW",
+    "source": "same generated physical contact cuts, not numerical unserved service",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.pre_HRSG_2_loss.P2.c.same_disconnected_contacts",
+    "unit": "kW",
+    "source": "same generated physical contact cuts, not numerical unserved service",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.pre_HRSG_2_loss.P3.e.same_disconnected_contacts",
+    "unit": "kW",
+    "source": "same generated physical contact cuts, not numerical unserved service",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.pre_HRSG_2_loss.P3.h.same_disconnected_contacts",
+    "unit": "kW",
+    "source": "same generated physical contact cuts, not numerical unserved service",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.pre_HRSG_2_loss.P3.c.same_disconnected_contacts",
+    "unit": "kW",
+    "source": "same generated physical contact cuts, not numerical unserved service",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.pre_HRSG_2_loss.balance.electric",
+    "unit": "kW",
+    "source": "static single-command diagnostic; surplus defect is NOT real disposal",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.pre_HRSG_2_loss.balance.steam",
+    "unit": "lb/h",
+    "source": "static single-command diagnostic; surplus defect is NOT real disposal",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.pre_HRSG_2_loss.balance.cooling",
+    "unit": "kW",
+    "source": "static single-command diagnostic; surplus defect is NOT real disposal",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.pre_HRSG_2_loss.risk.pre_HRSG_2_loss.absorption.cooling.held_ceiling",
+    "unit": "RT",
+    "source": "original arrived converter ceiling, no new command",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.pre_HRSG_2_loss.risk.pre_HRSG_2_loss.EC_1.cooling.held_ceiling",
+    "unit": "RT",
+    "source": "original arrived converter ceiling, no new command",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.pre_HRSG_2_loss.risk.pre_HRSG_2_loss.EC_2.cooling.held_ceiling",
+    "unit": "RT",
+    "source": "original arrived converter ceiling, no new command",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.pre_HRSG_2_loss.risk.pre_HRSG_2_loss.EC_3.cooling.held_ceiling",
+    "unit": "RT",
+    "source": "original arrived converter ceiling, no new command",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.pre_HRSG_2_loss.shared_grid_command",
+    "unit": "kW",
+    "source": "original fixed or arrived_ceiling importer contract",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.pre_HRSG_2_loss.tower.rejection",
+    "unit": "kW",
+    "source": "original physical constraint",
+    "kind": "physical"
+  },
+  {
+    "name": "phase.pre_HRSG_3_loss.diesel_below_same_command",
+    "unit": "kW",
+    "source": "original physical constraint",
+    "kind": "physical"
+  },
+  {
+    "name": "phase.pre_HRSG_3_loss.sustained_shaft_work",
+    "unit": "shaft equivalent kWh",
+    "source": "registered duration plus startup, positive storage and bounded shaft loss",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.pre_HRSG_3_loss.P0.e.same_disconnected_contacts",
+    "unit": "kW",
+    "source": "same generated physical contact cuts, not numerical unserved service",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.pre_HRSG_3_loss.P0.h.same_disconnected_contacts",
+    "unit": "kW",
+    "source": "same generated physical contact cuts, not numerical unserved service",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.pre_HRSG_3_loss.P0.c.same_disconnected_contacts",
+    "unit": "kW",
+    "source": "same generated physical contact cuts, not numerical unserved service",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.pre_HRSG_3_loss.P1.e.same_disconnected_contacts",
+    "unit": "kW",
+    "source": "same generated physical contact cuts, not numerical unserved service",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.pre_HRSG_3_loss.P1.h.same_disconnected_contacts",
+    "unit": "kW",
+    "source": "same generated physical contact cuts, not numerical unserved service",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.pre_HRSG_3_loss.P1.c.same_disconnected_contacts",
+    "unit": "kW",
+    "source": "same generated physical contact cuts, not numerical unserved service",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.pre_HRSG_3_loss.P2.e.same_disconnected_contacts",
+    "unit": "kW",
+    "source": "same generated physical contact cuts, not numerical unserved service",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.pre_HRSG_3_loss.P2.h.same_disconnected_contacts",
+    "unit": "kW",
+    "source": "same generated physical contact cuts, not numerical unserved service",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.pre_HRSG_3_loss.P2.c.same_disconnected_contacts",
+    "unit": "kW",
+    "source": "same generated physical contact cuts, not numerical unserved service",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.pre_HRSG_3_loss.P3.e.same_disconnected_contacts",
+    "unit": "kW",
+    "source": "same generated physical contact cuts, not numerical unserved service",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.pre_HRSG_3_loss.P3.h.same_disconnected_contacts",
+    "unit": "kW",
+    "source": "same generated physical contact cuts, not numerical unserved service",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.pre_HRSG_3_loss.P3.c.same_disconnected_contacts",
+    "unit": "kW",
+    "source": "same generated physical contact cuts, not numerical unserved service",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.pre_HRSG_3_loss.balance.electric",
+    "unit": "kW",
+    "source": "static single-command diagnostic; surplus defect is NOT real disposal",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.pre_HRSG_3_loss.balance.steam",
+    "unit": "lb/h",
+    "source": "static single-command diagnostic; surplus defect is NOT real disposal",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.pre_HRSG_3_loss.balance.cooling",
+    "unit": "kW",
+    "source": "static single-command diagnostic; surplus defect is NOT real disposal",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.pre_HRSG_3_loss.risk.pre_HRSG_3_loss.absorption.cooling.held_ceiling",
+    "unit": "RT",
+    "source": "original arrived converter ceiling, no new command",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.pre_HRSG_3_loss.risk.pre_HRSG_3_loss.EC_1.cooling.held_ceiling",
+    "unit": "RT",
+    "source": "original arrived converter ceiling, no new command",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.pre_HRSG_3_loss.risk.pre_HRSG_3_loss.EC_2.cooling.held_ceiling",
+    "unit": "RT",
+    "source": "original arrived converter ceiling, no new command",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.pre_HRSG_3_loss.risk.pre_HRSG_3_loss.EC_3.cooling.held_ceiling",
+    "unit": "RT",
+    "source": "original arrived converter ceiling, no new command",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.pre_HRSG_3_loss.shared_grid_command",
+    "unit": "kW",
+    "source": "original fixed or arrived_ceiling importer contract",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.pre_HRSG_3_loss.tower.rejection",
+    "unit": "kW",
+    "source": "original physical constraint",
+    "kind": "physical"
+  },
+  {
+    "name": "phase.arrived_current.diesel_below_same_command",
+    "unit": "kW",
+    "source": "original physical constraint",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.arrived_current.P0.e.same_disconnected_contacts",
+    "unit": "kW",
+    "source": "same generated physical contact cuts, not numerical unserved service",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.arrived_current.P0.h.same_disconnected_contacts",
+    "unit": "kW",
+    "source": "same generated physical contact cuts, not numerical unserved service",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.arrived_current.P0.c.same_disconnected_contacts",
+    "unit": "kW",
+    "source": "same generated physical contact cuts, not numerical unserved service",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.arrived_current.P1.e.same_disconnected_contacts",
+    "unit": "kW",
+    "source": "same generated physical contact cuts, not numerical unserved service",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.arrived_current.P1.h.same_disconnected_contacts",
+    "unit": "kW",
+    "source": "same generated physical contact cuts, not numerical unserved service",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.arrived_current.P1.c.same_disconnected_contacts",
+    "unit": "kW",
+    "source": "same generated physical contact cuts, not numerical unserved service",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.arrived_current.P2.e.same_disconnected_contacts",
+    "unit": "kW",
+    "source": "same generated physical contact cuts, not numerical unserved service",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.arrived_current.P2.h.same_disconnected_contacts",
+    "unit": "kW",
+    "source": "same generated physical contact cuts, not numerical unserved service",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.arrived_current.P2.c.same_disconnected_contacts",
+    "unit": "kW",
+    "source": "same generated physical contact cuts, not numerical unserved service",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.arrived_current.P3.e.same_disconnected_contacts",
+    "unit": "kW",
+    "source": "same generated physical contact cuts, not numerical unserved service",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.arrived_current.P3.h.same_disconnected_contacts",
+    "unit": "kW",
+    "source": "same generated physical contact cuts, not numerical unserved service",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.arrived_current.P3.c.same_disconnected_contacts",
+    "unit": "kW",
+    "source": "same generated physical contact cuts, not numerical unserved service",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.arrived_current.balance.electric",
+    "unit": "kW",
+    "source": "static single-command diagnostic; surplus defect is NOT real disposal",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.arrived_current.balance.steam",
+    "unit": "lb/h",
+    "source": "static single-command diagnostic; surplus defect is NOT real disposal",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.arrived_current.balance.cooling",
+    "unit": "kW",
+    "source": "static single-command diagnostic; surplus defect is NOT real disposal",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.arrived_current.risk.arrived_current.absorption.cooling.held_ceiling",
+    "unit": "RT",
+    "source": "original arrived converter ceiling, no new command",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.arrived_current.risk.arrived_current.EC_1.cooling.held_ceiling",
+    "unit": "RT",
+    "source": "original arrived converter ceiling, no new command",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.arrived_current.risk.arrived_current.EC_2.cooling.held_ceiling",
+    "unit": "RT",
+    "source": "original arrived converter ceiling, no new command",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.arrived_current.risk.arrived_current.EC_3.cooling.held_ceiling",
+    "unit": "RT",
+    "source": "original arrived converter ceiling, no new command",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.arrived_current.shared_grid_command",
+    "unit": "kW",
+    "source": "original fixed or arrived_ceiling importer contract",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.arrived_current.tower.rejection",
+    "unit": "kW",
+    "source": "original physical constraint",
+    "kind": "physical"
+  },
+  {
+    "name": "phase.response_GRID_loss.diesel_below_same_command",
+    "unit": "kW",
+    "source": "original physical constraint",
+    "kind": "physical"
+  },
+  {
+    "name": "phase.response_GRID_loss.sustained_shaft_work",
+    "unit": "shaft equivalent kWh",
+    "source": "registered duration plus startup, positive storage and bounded shaft loss",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.response_GRID_loss.P0.e.same_disconnected_contacts",
+    "unit": "kW",
+    "source": "same generated physical contact cuts, not numerical unserved service",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.response_GRID_loss.P0.h.same_disconnected_contacts",
+    "unit": "kW",
+    "source": "same generated physical contact cuts, not numerical unserved service",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.response_GRID_loss.P0.c.same_disconnected_contacts",
+    "unit": "kW",
+    "source": "same generated physical contact cuts, not numerical unserved service",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.response_GRID_loss.P1.e.same_disconnected_contacts",
+    "unit": "kW",
+    "source": "same generated physical contact cuts, not numerical unserved service",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.response_GRID_loss.P1.h.same_disconnected_contacts",
+    "unit": "kW",
+    "source": "same generated physical contact cuts, not numerical unserved service",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.response_GRID_loss.P1.c.same_disconnected_contacts",
+    "unit": "kW",
+    "source": "same generated physical contact cuts, not numerical unserved service",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.response_GRID_loss.P2.e.same_disconnected_contacts",
+    "unit": "kW",
+    "source": "same generated physical contact cuts, not numerical unserved service",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.response_GRID_loss.P2.h.same_disconnected_contacts",
+    "unit": "kW",
+    "source": "same generated physical contact cuts, not numerical unserved service",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.response_GRID_loss.P2.c.same_disconnected_contacts",
+    "unit": "kW",
+    "source": "same generated physical contact cuts, not numerical unserved service",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.response_GRID_loss.P3.e.same_disconnected_contacts",
+    "unit": "kW",
+    "source": "same generated physical contact cuts, not numerical unserved service",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.response_GRID_loss.P3.h.same_disconnected_contacts",
+    "unit": "kW",
+    "source": "same generated physical contact cuts, not numerical unserved service",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.response_GRID_loss.P3.c.same_disconnected_contacts",
+    "unit": "kW",
+    "source": "same generated physical contact cuts, not numerical unserved service",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.response_GRID_loss.balance.electric",
+    "unit": "kW",
+    "source": "static single-command diagnostic; surplus defect is NOT real disposal",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.response_GRID_loss.balance.steam",
+    "unit": "lb/h",
+    "source": "static single-command diagnostic; surplus defect is NOT real disposal",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.response_GRID_loss.balance.cooling",
+    "unit": "kW",
+    "source": "static single-command diagnostic; surplus defect is NOT real disposal",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.response_GRID_loss.risk.response_GRID_loss.absorption.cooling.held_ceiling",
+    "unit": "RT",
+    "source": "original arrived converter ceiling, no new command",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.response_GRID_loss.risk.response_GRID_loss.EC_1.cooling.held_ceiling",
+    "unit": "RT",
+    "source": "original arrived converter ceiling, no new command",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.response_GRID_loss.risk.response_GRID_loss.EC_2.cooling.held_ceiling",
+    "unit": "RT",
+    "source": "original arrived converter ceiling, no new command",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.response_GRID_loss.risk.response_GRID_loss.EC_3.cooling.held_ceiling",
+    "unit": "RT",
+    "source": "original arrived converter ceiling, no new command",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.response_GRID_loss.tower.rejection",
+    "unit": "kW",
+    "source": "original physical constraint",
+    "kind": "physical"
+  },
+  {
+    "name": "phase.response_GT_1_loss.diesel_below_same_command",
+    "unit": "kW",
+    "source": "original physical constraint",
+    "kind": "physical"
+  },
+  {
+    "name": "phase.response_GT_1_loss.sustained_shaft_work",
+    "unit": "shaft equivalent kWh",
+    "source": "registered duration plus startup, positive storage and bounded shaft loss",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.response_GT_1_loss.P0.e.same_disconnected_contacts",
+    "unit": "kW",
+    "source": "same generated physical contact cuts, not numerical unserved service",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.response_GT_1_loss.P0.h.same_disconnected_contacts",
+    "unit": "kW",
+    "source": "same generated physical contact cuts, not numerical unserved service",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.response_GT_1_loss.P0.c.same_disconnected_contacts",
+    "unit": "kW",
+    "source": "same generated physical contact cuts, not numerical unserved service",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.response_GT_1_loss.P1.e.same_disconnected_contacts",
+    "unit": "kW",
+    "source": "same generated physical contact cuts, not numerical unserved service",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.response_GT_1_loss.P1.h.same_disconnected_contacts",
+    "unit": "kW",
+    "source": "same generated physical contact cuts, not numerical unserved service",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.response_GT_1_loss.P1.c.same_disconnected_contacts",
+    "unit": "kW",
+    "source": "same generated physical contact cuts, not numerical unserved service",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.response_GT_1_loss.P2.e.same_disconnected_contacts",
+    "unit": "kW",
+    "source": "same generated physical contact cuts, not numerical unserved service",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.response_GT_1_loss.P2.h.same_disconnected_contacts",
+    "unit": "kW",
+    "source": "same generated physical contact cuts, not numerical unserved service",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.response_GT_1_loss.P2.c.same_disconnected_contacts",
+    "unit": "kW",
+    "source": "same generated physical contact cuts, not numerical unserved service",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.response_GT_1_loss.P3.e.same_disconnected_contacts",
+    "unit": "kW",
+    "source": "same generated physical contact cuts, not numerical unserved service",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.response_GT_1_loss.P3.h.same_disconnected_contacts",
+    "unit": "kW",
+    "source": "same generated physical contact cuts, not numerical unserved service",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.response_GT_1_loss.P3.c.same_disconnected_contacts",
+    "unit": "kW",
+    "source": "same generated physical contact cuts, not numerical unserved service",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.response_GT_1_loss.balance.electric",
+    "unit": "kW",
+    "source": "static single-command diagnostic; surplus defect is NOT real disposal",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.response_GT_1_loss.balance.steam",
+    "unit": "lb/h",
+    "source": "static single-command diagnostic; surplus defect is NOT real disposal",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.response_GT_1_loss.balance.cooling",
+    "unit": "kW",
+    "source": "static single-command diagnostic; surplus defect is NOT real disposal",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.response_GT_1_loss.risk.response_GT_1_loss.absorption.cooling.held_ceiling",
+    "unit": "RT",
+    "source": "original arrived converter ceiling, no new command",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.response_GT_1_loss.risk.response_GT_1_loss.EC_1.cooling.held_ceiling",
+    "unit": "RT",
+    "source": "original arrived converter ceiling, no new command",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.response_GT_1_loss.risk.response_GT_1_loss.EC_2.cooling.held_ceiling",
+    "unit": "RT",
+    "source": "original arrived converter ceiling, no new command",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.response_GT_1_loss.risk.response_GT_1_loss.EC_3.cooling.held_ceiling",
+    "unit": "RT",
+    "source": "original arrived converter ceiling, no new command",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.response_GT_1_loss.shared_grid_command",
+    "unit": "kW",
+    "source": "original fixed or arrived_ceiling importer contract",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.response_GT_1_loss.tower.rejection",
+    "unit": "kW",
+    "source": "original physical constraint",
+    "kind": "physical"
+  },
+  {
+    "name": "phase.response_GT_2_loss.diesel_below_same_command",
+    "unit": "kW",
+    "source": "original physical constraint",
+    "kind": "physical"
+  },
+  {
+    "name": "phase.response_GT_2_loss.sustained_shaft_work",
+    "unit": "shaft equivalent kWh",
+    "source": "registered duration plus startup, positive storage and bounded shaft loss",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.response_GT_2_loss.P0.e.same_disconnected_contacts",
+    "unit": "kW",
+    "source": "same generated physical contact cuts, not numerical unserved service",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.response_GT_2_loss.P0.h.same_disconnected_contacts",
+    "unit": "kW",
+    "source": "same generated physical contact cuts, not numerical unserved service",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.response_GT_2_loss.P0.c.same_disconnected_contacts",
+    "unit": "kW",
+    "source": "same generated physical contact cuts, not numerical unserved service",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.response_GT_2_loss.P1.e.same_disconnected_contacts",
+    "unit": "kW",
+    "source": "same generated physical contact cuts, not numerical unserved service",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.response_GT_2_loss.P1.h.same_disconnected_contacts",
+    "unit": "kW",
+    "source": "same generated physical contact cuts, not numerical unserved service",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.response_GT_2_loss.P1.c.same_disconnected_contacts",
+    "unit": "kW",
+    "source": "same generated physical contact cuts, not numerical unserved service",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.response_GT_2_loss.P2.e.same_disconnected_contacts",
+    "unit": "kW",
+    "source": "same generated physical contact cuts, not numerical unserved service",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.response_GT_2_loss.P2.h.same_disconnected_contacts",
+    "unit": "kW",
+    "source": "same generated physical contact cuts, not numerical unserved service",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.response_GT_2_loss.P2.c.same_disconnected_contacts",
+    "unit": "kW",
+    "source": "same generated physical contact cuts, not numerical unserved service",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.response_GT_2_loss.P3.e.same_disconnected_contacts",
+    "unit": "kW",
+    "source": "same generated physical contact cuts, not numerical unserved service",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.response_GT_2_loss.P3.h.same_disconnected_contacts",
+    "unit": "kW",
+    "source": "same generated physical contact cuts, not numerical unserved service",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.response_GT_2_loss.P3.c.same_disconnected_contacts",
+    "unit": "kW",
+    "source": "same generated physical contact cuts, not numerical unserved service",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.response_GT_2_loss.balance.electric",
+    "unit": "kW",
+    "source": "static single-command diagnostic; surplus defect is NOT real disposal",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.response_GT_2_loss.balance.steam",
+    "unit": "lb/h",
+    "source": "static single-command diagnostic; surplus defect is NOT real disposal",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.response_GT_2_loss.balance.cooling",
+    "unit": "kW",
+    "source": "static single-command diagnostic; surplus defect is NOT real disposal",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.response_GT_2_loss.risk.response_GT_2_loss.absorption.cooling.held_ceiling",
+    "unit": "RT",
+    "source": "original arrived converter ceiling, no new command",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.response_GT_2_loss.risk.response_GT_2_loss.EC_1.cooling.held_ceiling",
+    "unit": "RT",
+    "source": "original arrived converter ceiling, no new command",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.response_GT_2_loss.risk.response_GT_2_loss.EC_2.cooling.held_ceiling",
+    "unit": "RT",
+    "source": "original arrived converter ceiling, no new command",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.response_GT_2_loss.risk.response_GT_2_loss.EC_3.cooling.held_ceiling",
+    "unit": "RT",
+    "source": "original arrived converter ceiling, no new command",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.response_GT_2_loss.shared_grid_command",
+    "unit": "kW",
+    "source": "original fixed or arrived_ceiling importer contract",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.response_GT_2_loss.tower.rejection",
+    "unit": "kW",
+    "source": "original physical constraint",
+    "kind": "physical"
+  },
+  {
+    "name": "phase.response_GT_3_loss.diesel_below_same_command",
+    "unit": "kW",
+    "source": "original physical constraint",
+    "kind": "physical"
+  },
+  {
+    "name": "phase.response_GT_3_loss.sustained_shaft_work",
+    "unit": "shaft equivalent kWh",
+    "source": "registered duration plus startup, positive storage and bounded shaft loss",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.response_GT_3_loss.P0.e.same_disconnected_contacts",
+    "unit": "kW",
+    "source": "same generated physical contact cuts, not numerical unserved service",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.response_GT_3_loss.P0.h.same_disconnected_contacts",
+    "unit": "kW",
+    "source": "same generated physical contact cuts, not numerical unserved service",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.response_GT_3_loss.P0.c.same_disconnected_contacts",
+    "unit": "kW",
+    "source": "same generated physical contact cuts, not numerical unserved service",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.response_GT_3_loss.P1.e.same_disconnected_contacts",
+    "unit": "kW",
+    "source": "same generated physical contact cuts, not numerical unserved service",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.response_GT_3_loss.P1.h.same_disconnected_contacts",
+    "unit": "kW",
+    "source": "same generated physical contact cuts, not numerical unserved service",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.response_GT_3_loss.P1.c.same_disconnected_contacts",
+    "unit": "kW",
+    "source": "same generated physical contact cuts, not numerical unserved service",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.response_GT_3_loss.P2.e.same_disconnected_contacts",
+    "unit": "kW",
+    "source": "same generated physical contact cuts, not numerical unserved service",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.response_GT_3_loss.P2.h.same_disconnected_contacts",
+    "unit": "kW",
+    "source": "same generated physical contact cuts, not numerical unserved service",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.response_GT_3_loss.P2.c.same_disconnected_contacts",
+    "unit": "kW",
+    "source": "same generated physical contact cuts, not numerical unserved service",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.response_GT_3_loss.P3.e.same_disconnected_contacts",
+    "unit": "kW",
+    "source": "same generated physical contact cuts, not numerical unserved service",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.response_GT_3_loss.P3.h.same_disconnected_contacts",
+    "unit": "kW",
+    "source": "same generated physical contact cuts, not numerical unserved service",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.response_GT_3_loss.P3.c.same_disconnected_contacts",
+    "unit": "kW",
+    "source": "same generated physical contact cuts, not numerical unserved service",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.response_GT_3_loss.balance.electric",
+    "unit": "kW",
+    "source": "static single-command diagnostic; surplus defect is NOT real disposal",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.response_GT_3_loss.balance.steam",
+    "unit": "lb/h",
+    "source": "static single-command diagnostic; surplus defect is NOT real disposal",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.response_GT_3_loss.balance.cooling",
+    "unit": "kW",
+    "source": "static single-command diagnostic; surplus defect is NOT real disposal",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.response_GT_3_loss.risk.response_GT_3_loss.absorption.cooling.held_ceiling",
+    "unit": "RT",
+    "source": "original arrived converter ceiling, no new command",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.response_GT_3_loss.risk.response_GT_3_loss.EC_1.cooling.held_ceiling",
+    "unit": "RT",
+    "source": "original arrived converter ceiling, no new command",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.response_GT_3_loss.risk.response_GT_3_loss.EC_2.cooling.held_ceiling",
+    "unit": "RT",
+    "source": "original arrived converter ceiling, no new command",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.response_GT_3_loss.risk.response_GT_3_loss.EC_3.cooling.held_ceiling",
+    "unit": "RT",
+    "source": "original arrived converter ceiling, no new command",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.response_GT_3_loss.shared_grid_command",
+    "unit": "kW",
+    "source": "original fixed or arrived_ceiling importer contract",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.response_GT_3_loss.tower.rejection",
+    "unit": "kW",
+    "source": "original physical constraint",
+    "kind": "physical"
+  },
+  {
+    "name": "phase.response_HRSG_1_loss.diesel_below_same_command",
+    "unit": "kW",
+    "source": "original physical constraint",
+    "kind": "physical"
+  },
+  {
+    "name": "phase.response_HRSG_1_loss.sustained_shaft_work",
+    "unit": "shaft equivalent kWh",
+    "source": "registered duration plus startup, positive storage and bounded shaft loss",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.response_HRSG_1_loss.P0.e.same_disconnected_contacts",
+    "unit": "kW",
+    "source": "same generated physical contact cuts, not numerical unserved service",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.response_HRSG_1_loss.P0.h.same_disconnected_contacts",
+    "unit": "kW",
+    "source": "same generated physical contact cuts, not numerical unserved service",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.response_HRSG_1_loss.P0.c.same_disconnected_contacts",
+    "unit": "kW",
+    "source": "same generated physical contact cuts, not numerical unserved service",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.response_HRSG_1_loss.P1.e.same_disconnected_contacts",
+    "unit": "kW",
+    "source": "same generated physical contact cuts, not numerical unserved service",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.response_HRSG_1_loss.P1.h.same_disconnected_contacts",
+    "unit": "kW",
+    "source": "same generated physical contact cuts, not numerical unserved service",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.response_HRSG_1_loss.P1.c.same_disconnected_contacts",
+    "unit": "kW",
+    "source": "same generated physical contact cuts, not numerical unserved service",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.response_HRSG_1_loss.P2.e.same_disconnected_contacts",
+    "unit": "kW",
+    "source": "same generated physical contact cuts, not numerical unserved service",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.response_HRSG_1_loss.P2.h.same_disconnected_contacts",
+    "unit": "kW",
+    "source": "same generated physical contact cuts, not numerical unserved service",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.response_HRSG_1_loss.P2.c.same_disconnected_contacts",
+    "unit": "kW",
+    "source": "same generated physical contact cuts, not numerical unserved service",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.response_HRSG_1_loss.P3.e.same_disconnected_contacts",
+    "unit": "kW",
+    "source": "same generated physical contact cuts, not numerical unserved service",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.response_HRSG_1_loss.P3.h.same_disconnected_contacts",
+    "unit": "kW",
+    "source": "same generated physical contact cuts, not numerical unserved service",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.response_HRSG_1_loss.P3.c.same_disconnected_contacts",
+    "unit": "kW",
+    "source": "same generated physical contact cuts, not numerical unserved service",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.response_HRSG_1_loss.balance.electric",
+    "unit": "kW",
+    "source": "static single-command diagnostic; surplus defect is NOT real disposal",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.response_HRSG_1_loss.balance.steam",
+    "unit": "lb/h",
+    "source": "static single-command diagnostic; surplus defect is NOT real disposal",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.response_HRSG_1_loss.balance.cooling",
+    "unit": "kW",
+    "source": "static single-command diagnostic; surplus defect is NOT real disposal",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.response_HRSG_1_loss.risk.response_HRSG_1_loss.absorption.cooling.held_ceiling",
+    "unit": "RT",
+    "source": "original arrived converter ceiling, no new command",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.response_HRSG_1_loss.risk.response_HRSG_1_loss.EC_1.cooling.held_ceiling",
+    "unit": "RT",
+    "source": "original arrived converter ceiling, no new command",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.response_HRSG_1_loss.risk.response_HRSG_1_loss.EC_2.cooling.held_ceiling",
+    "unit": "RT",
+    "source": "original arrived converter ceiling, no new command",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.response_HRSG_1_loss.risk.response_HRSG_1_loss.EC_3.cooling.held_ceiling",
+    "unit": "RT",
+    "source": "original arrived converter ceiling, no new command",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.response_HRSG_1_loss.shared_grid_command",
+    "unit": "kW",
+    "source": "original fixed or arrived_ceiling importer contract",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.response_HRSG_1_loss.tower.rejection",
+    "unit": "kW",
+    "source": "original physical constraint",
+    "kind": "physical"
+  },
+  {
+    "name": "phase.response_HRSG_2_loss.diesel_below_same_command",
+    "unit": "kW",
+    "source": "original physical constraint",
+    "kind": "physical"
+  },
+  {
+    "name": "phase.response_HRSG_2_loss.sustained_shaft_work",
+    "unit": "shaft equivalent kWh",
+    "source": "registered duration plus startup, positive storage and bounded shaft loss",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.response_HRSG_2_loss.P0.e.same_disconnected_contacts",
+    "unit": "kW",
+    "source": "same generated physical contact cuts, not numerical unserved service",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.response_HRSG_2_loss.P0.h.same_disconnected_contacts",
+    "unit": "kW",
+    "source": "same generated physical contact cuts, not numerical unserved service",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.response_HRSG_2_loss.P0.c.same_disconnected_contacts",
+    "unit": "kW",
+    "source": "same generated physical contact cuts, not numerical unserved service",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.response_HRSG_2_loss.P1.e.same_disconnected_contacts",
+    "unit": "kW",
+    "source": "same generated physical contact cuts, not numerical unserved service",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.response_HRSG_2_loss.P1.h.same_disconnected_contacts",
+    "unit": "kW",
+    "source": "same generated physical contact cuts, not numerical unserved service",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.response_HRSG_2_loss.P1.c.same_disconnected_contacts",
+    "unit": "kW",
+    "source": "same generated physical contact cuts, not numerical unserved service",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.response_HRSG_2_loss.P2.e.same_disconnected_contacts",
+    "unit": "kW",
+    "source": "same generated physical contact cuts, not numerical unserved service",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.response_HRSG_2_loss.P2.h.same_disconnected_contacts",
+    "unit": "kW",
+    "source": "same generated physical contact cuts, not numerical unserved service",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.response_HRSG_2_loss.P2.c.same_disconnected_contacts",
+    "unit": "kW",
+    "source": "same generated physical contact cuts, not numerical unserved service",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.response_HRSG_2_loss.P3.e.same_disconnected_contacts",
+    "unit": "kW",
+    "source": "same generated physical contact cuts, not numerical unserved service",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.response_HRSG_2_loss.P3.h.same_disconnected_contacts",
+    "unit": "kW",
+    "source": "same generated physical contact cuts, not numerical unserved service",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.response_HRSG_2_loss.P3.c.same_disconnected_contacts",
+    "unit": "kW",
+    "source": "same generated physical contact cuts, not numerical unserved service",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.response_HRSG_2_loss.balance.electric",
+    "unit": "kW",
+    "source": "static single-command diagnostic; surplus defect is NOT real disposal",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.response_HRSG_2_loss.balance.steam",
+    "unit": "lb/h",
+    "source": "static single-command diagnostic; surplus defect is NOT real disposal",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.response_HRSG_2_loss.balance.cooling",
+    "unit": "kW",
+    "source": "static single-command diagnostic; surplus defect is NOT real disposal",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.response_HRSG_2_loss.risk.response_HRSG_2_loss.absorption.cooling.held_ceiling",
+    "unit": "RT",
+    "source": "original arrived converter ceiling, no new command",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.response_HRSG_2_loss.risk.response_HRSG_2_loss.EC_1.cooling.held_ceiling",
+    "unit": "RT",
+    "source": "original arrived converter ceiling, no new command",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.response_HRSG_2_loss.risk.response_HRSG_2_loss.EC_2.cooling.held_ceiling",
+    "unit": "RT",
+    "source": "original arrived converter ceiling, no new command",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.response_HRSG_2_loss.risk.response_HRSG_2_loss.EC_3.cooling.held_ceiling",
+    "unit": "RT",
+    "source": "original arrived converter ceiling, no new command",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.response_HRSG_2_loss.shared_grid_command",
+    "unit": "kW",
+    "source": "original fixed or arrived_ceiling importer contract",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.response_HRSG_2_loss.tower.rejection",
+    "unit": "kW",
+    "source": "original physical constraint",
+    "kind": "physical"
+  },
+  {
+    "name": "phase.response_HRSG_3_loss.diesel_below_same_command",
+    "unit": "kW",
+    "source": "original physical constraint",
+    "kind": "physical"
+  },
+  {
+    "name": "phase.response_HRSG_3_loss.sustained_shaft_work",
+    "unit": "shaft equivalent kWh",
+    "source": "registered duration plus startup, positive storage and bounded shaft loss",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.response_HRSG_3_loss.P0.e.same_disconnected_contacts",
+    "unit": "kW",
+    "source": "same generated physical contact cuts, not numerical unserved service",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.response_HRSG_3_loss.P0.h.same_disconnected_contacts",
+    "unit": "kW",
+    "source": "same generated physical contact cuts, not numerical unserved service",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.response_HRSG_3_loss.P0.c.same_disconnected_contacts",
+    "unit": "kW",
+    "source": "same generated physical contact cuts, not numerical unserved service",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.response_HRSG_3_loss.P1.e.same_disconnected_contacts",
+    "unit": "kW",
+    "source": "same generated physical contact cuts, not numerical unserved service",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.response_HRSG_3_loss.P1.h.same_disconnected_contacts",
+    "unit": "kW",
+    "source": "same generated physical contact cuts, not numerical unserved service",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.response_HRSG_3_loss.P1.c.same_disconnected_contacts",
+    "unit": "kW",
+    "source": "same generated physical contact cuts, not numerical unserved service",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.response_HRSG_3_loss.P2.e.same_disconnected_contacts",
+    "unit": "kW",
+    "source": "same generated physical contact cuts, not numerical unserved service",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.response_HRSG_3_loss.P2.h.same_disconnected_contacts",
+    "unit": "kW",
+    "source": "same generated physical contact cuts, not numerical unserved service",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.response_HRSG_3_loss.P2.c.same_disconnected_contacts",
+    "unit": "kW",
+    "source": "same generated physical contact cuts, not numerical unserved service",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.response_HRSG_3_loss.P3.e.same_disconnected_contacts",
+    "unit": "kW",
+    "source": "same generated physical contact cuts, not numerical unserved service",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.response_HRSG_3_loss.P3.h.same_disconnected_contacts",
+    "unit": "kW",
+    "source": "same generated physical contact cuts, not numerical unserved service",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.response_HRSG_3_loss.P3.c.same_disconnected_contacts",
+    "unit": "kW",
+    "source": "same generated physical contact cuts, not numerical unserved service",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.response_HRSG_3_loss.balance.electric",
+    "unit": "kW",
+    "source": "static single-command diagnostic; surplus defect is NOT real disposal",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.response_HRSG_3_loss.balance.steam",
+    "unit": "lb/h",
+    "source": "static single-command diagnostic; surplus defect is NOT real disposal",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.response_HRSG_3_loss.balance.cooling",
+    "unit": "kW",
+    "source": "static single-command diagnostic; surplus defect is NOT real disposal",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.response_HRSG_3_loss.risk.response_HRSG_3_loss.absorption.cooling.held_ceiling",
+    "unit": "RT",
+    "source": "original arrived converter ceiling, no new command",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.response_HRSG_3_loss.risk.response_HRSG_3_loss.EC_1.cooling.held_ceiling",
+    "unit": "RT",
+    "source": "original arrived converter ceiling, no new command",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.response_HRSG_3_loss.risk.response_HRSG_3_loss.EC_2.cooling.held_ceiling",
+    "unit": "RT",
+    "source": "original arrived converter ceiling, no new command",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.response_HRSG_3_loss.risk.response_HRSG_3_loss.EC_3.cooling.held_ceiling",
+    "unit": "RT",
+    "source": "original arrived converter ceiling, no new command",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.response_HRSG_3_loss.shared_grid_command",
+    "unit": "kW",
+    "source": "original fixed or arrived_ceiling importer contract",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.response_HRSG_3_loss.tower.rejection",
+    "unit": "kW",
+    "source": "original physical constraint",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.held_actual.P0.e.same_disconnected_contacts",
+    "unit": "kW",
+    "source": "same generated physical contact cuts, not numerical unserved service",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.held_actual.P0.h.same_disconnected_contacts",
+    "unit": "kW",
+    "source": "same generated physical contact cuts, not numerical unserved service",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.held_actual.P0.c.same_disconnected_contacts",
+    "unit": "kW",
+    "source": "same generated physical contact cuts, not numerical unserved service",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.held_actual.P1.e.same_disconnected_contacts",
+    "unit": "kW",
+    "source": "same generated physical contact cuts, not numerical unserved service",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.held_actual.P1.h.same_disconnected_contacts",
+    "unit": "kW",
+    "source": "same generated physical contact cuts, not numerical unserved service",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.held_actual.P1.c.same_disconnected_contacts",
+    "unit": "kW",
+    "source": "same generated physical contact cuts, not numerical unserved service",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.held_actual.P2.e.same_disconnected_contacts",
+    "unit": "kW",
+    "source": "same generated physical contact cuts, not numerical unserved service",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.held_actual.P2.h.same_disconnected_contacts",
+    "unit": "kW",
+    "source": "same generated physical contact cuts, not numerical unserved service",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.held_actual.P2.c.same_disconnected_contacts",
+    "unit": "kW",
+    "source": "same generated physical contact cuts, not numerical unserved service",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.held_actual.P3.e.same_disconnected_contacts",
+    "unit": "kW",
+    "source": "same generated physical contact cuts, not numerical unserved service",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.held_actual.P3.h.same_disconnected_contacts",
+    "unit": "kW",
+    "source": "same generated physical contact cuts, not numerical unserved service",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.held_actual.P3.c.same_disconnected_contacts",
+    "unit": "kW",
+    "source": "same generated physical contact cuts, not numerical unserved service",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.held_actual.balance.electric",
+    "unit": "kW",
+    "source": "static single-command diagnostic; surplus defect is NOT real disposal",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.held_actual.balance.steam",
+    "unit": "lb/h",
+    "source": "static single-command diagnostic; surplus defect is NOT real disposal",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.held_actual.balance.cooling",
+    "unit": "kW",
+    "source": "static single-command diagnostic; surplus defect is NOT real disposal",
+    "kind": "physical"
+  },
+  {
+    "name": "risk.held_actual.tower.rejection",
+    "unit": "kW",
+    "source": "original physical constraint",
+    "kind": "physical"
+  },
+  {
+    "name": "preparation.third_GT_on_exposure",
+    "unit": "GT count",
+    "source": "soft current-command preference; no added physical standby capability",
+    "kind": "preference"
+  },
+  {
+    "name": "lock.current_P0",
+    "unit": "normalized carrier ENS",
+    "source": "explicit lexicographic lock",
+    "kind": "priority_lock"
+  },
+  {
+    "name": "lock.current_P1",
+    "unit": "normalized carrier ENS",
+    "source": "explicit lexicographic lock",
+    "kind": "priority_lock"
+  },
+  {
+    "name": "lock.arrived_current_P0",
+    "unit": "normalized conditional current carrier ENS at the named execution stage",
+    "source": "explicit lexicographic lock",
+    "kind": "priority_lock"
+  },
+  {
+    "name": "lock.arrived_current_P1",
+    "unit": "normalized conditional current carrier ENS at the named execution stage",
+    "source": "explicit lexicographic lock",
+    "kind": "priority_lock"
+  },
+  {
+    "name": "lock.preparation_P0",
+    "unit": "sum of normalized static carrier ENS; not probability",
+    "source": "explicit lexicographic lock",
+    "kind": "priority_lock"
+  },
+  {
+    "name": "lock.preparation_P1",
+    "unit": "sum of normalized static carrier ENS; not probability",
+    "source": "explicit lexicographic lock",
+    "kind": "priority_lock"
+  },
+  {
+    "name": "lock.preparation_defect",
+    "unit": "kW: fuel preference excess plus static unabsorbable surplus",
+    "source": "explicit lexicographic lock",
+    "kind": "priority_lock"
+  },
+  {
+    "name": "lock.actual_command_shaft_support",
+    "unit": "shaft equivalent kWh excess over registered duration budget",
+    "source": "explicit lexicographic lock",
+    "kind": "priority_lock"
+  },
+  {
+    "name": "lock.current_P2",
+    "unit": "normalized carrier ENS",
+    "source": "explicit lexicographic lock",
+    "kind": "priority_lock"
+  },
+  {
+    "name": "lock.current_P3",
+    "unit": "normalized carrier ENS",
+    "source": "explicit lexicographic lock",
+    "kind": "priority_lock"
+  },
+  {
+    "name": "lock.arrived_current_P2",
+    "unit": "normalized conditional current carrier ENS at the named execution stage",
+    "source": "explicit lexicographic lock",
+    "kind": "priority_lock"
+  },
+  {
+    "name": "lock.arrived_current_P3",
+    "unit": "normalized conditional current carrier ENS at the named execution stage",
+    "source": "explicit lexicographic lock",
+    "kind": "priority_lock"
+  },
+  {
+    "name": "lock.standby_third_GT_exposure",
+    "unit": "GT count above two commanded on; not minimum total GT count",
+    "source": "explicit lexicographic lock",
+    "kind": "priority_lock"
+  },
+  {
+    "name": "lock.normal_online_GT_count_after_preparation",
+    "unit": "commanded online GT count; soft preference only",
+    "source": "explicit lexicographic lock",
+    "kind": "priority_lock"
+  },
+  {
+    "name": "lock.operating_cost_and_original_preferences",
+    "unit": "USD per current step",
+    "source": "explicit lexicographic lock",
+    "kind": "priority_lock"
+  },
+  {
+    "name": "lock.actual_GT_combination_changes",
+    "unit": "GT changes",
+    "source": "explicit lexicographic lock",
+    "kind": "priority_lock"
+  }
+]
